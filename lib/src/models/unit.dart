@@ -55,15 +55,11 @@ abstract class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T get clone;
 
-  T get anchor;
-
   String get symbol;
 
   bool _convertAndCompare(String operator, T other);
 
   T _convertAndCombine(String operator, T other);
-
-  T convertTo(T other, [int precision]);
 
   (BaseType, ConversionRatio<T>) get ratio;
 

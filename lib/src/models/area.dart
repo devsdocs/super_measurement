@@ -17,8 +17,7 @@ abstract class Area extends Unit<Area> {
   @override
   int get hashCode => value.hashCode;
 
-  @override
-  Area convertTo(Area other, [int precision = 2]) {
+  Area _convertTo(Area other) {
     num conversionRatio;
     if (runtimeType == other.runtimeType) {
       conversionRatio = 1;
@@ -27,7 +26,7 @@ abstract class Area extends Unit<Area> {
         conversionRatio = ratio.$2.getRatio(other.runtimeType);
       } else {
         final baseValue = value! / ratio.$2.getRatio(runtimeType);
-        return (anchor..value = baseValue).convertTo(other);
+        return (_anchor..value = baseValue)._convertTo(other);
       }
     }
     return other..value = value! * conversionRatio;
@@ -35,8 +34,8 @@ abstract class Area extends Unit<Area> {
 
   @override
   bool _convertAndCompare(String operator, Area other) {
-    final otherValue = other.clone.convertTo(anchor).value!;
-    final currentValue = clone.convertTo(anchor).value;
+    final otherValue = other.clone._convertTo(_anchor).value!;
+    final currentValue = clone._convertTo(_anchor).value;
 
     if (operator == '==') {
       return currentValue! == otherValue;
@@ -55,12 +54,12 @@ abstract class Area extends Unit<Area> {
 
   @override
   Area _convertAndCombine(String operator, Area other) {
-    final otherValue = other.convertTo(anchor);
-    final currentValue = convertTo(anchor);
+    final otherValue = other._convertTo(_anchor);
+    final currentValue = _convertTo(_anchor);
 
     final combine =
         operator == '+' ? currentValue + otherValue : currentValue - otherValue;
-    return combine.convertTo(this);
+    return combine._convertTo(this);
   }
 
   @override
@@ -69,14 +68,14 @@ abstract class Area extends Unit<Area> {
       return value!.compareTo(other.value!);
     }
 
-    final otherConvertTo = other.clone.convertTo(anchor);
-    final currentConvertTo = clone.convertTo(anchor);
+    final otherConvertTo = other.clone._convertTo(_anchor);
+    final currentConvertTo = clone._convertTo(_anchor);
     return currentConvertTo.value!.compareTo(otherConvertTo.value!);
   }
 
   @override
   (BaseType, ConversionRatio<Area>) get ratio => (
-        anchor.runtimeType,
+        _anchor.runtimeType,
         ConversionRatio<Area>({
           SquareFeet: 10.7639104167,
           SquareInches: 1550.0031000062,
@@ -86,8 +85,19 @@ abstract class Area extends Unit<Area> {
         })
       );
 
-  @override
-  Area get anchor => SquareMeters();
+  Area get _anchor => SquareMeters();
+
+  Area get toSquareMeters => _convertTo(SquareMeters());
+
+  Area get toSquareFeet => _convertTo(SquareFeet());
+
+  Area get toSquareInches => _convertTo(SquareInches());
+
+  Area get toHectares => _convertTo(Hectares());
+
+  Area get toAcres => _convertTo(Acres());
+
+  Area get toSquareCentimeters => _convertTo(SquareCentimeters());
 }
 
 class SquareMeters extends Area {

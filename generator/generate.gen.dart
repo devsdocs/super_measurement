@@ -9,19 +9,26 @@ part 'distance.gen.dart';
 
 const exampleDir = 'example/super_measurement_example.dart';
 final exampleFile = File(exampleDir);
+const extensionDir = 'lib/src/extension';
+const iterableExtensionDir = '$extensionDir/iterable.dart';
+final iterableExtensionFile = File(iterableExtensionDir);
 const libDir = 'lib/super_measurement.dart';
 final libFile = File(libDir);
 const modelsDir = 'lib/src/models';
 final allData = [massUnit, distanceUnit, areaUnit, volumeUnit];
 
-int getRandom() => 10.getRandomNumberFromZeroToLessThanThis + 1;
+int getRandomNumber() => 3.getRandomNumberFromZeroToLessThanThis + 1;
 
 void main() {
   final exampleBuff = StringBuffer();
+  final iterableExtensionBuff = StringBuffer();
   exampleBuff
       .writeln("import 'package:super_measurement/super_measurement.dart';");
   exampleBuff.writeln();
   exampleBuff.writeln('void main() {');
+
+  iterableExtensionBuff.writeln("part of '../../super_measurement.dart';");
+  iterableExtensionBuff.writeln();
   for (final unit in allData) {
     final name = unit.keys.first;
     final anchor =
@@ -51,8 +58,8 @@ void main() {
     typeBuff.writeln('  @override');
     typeBuff.writeln('  int get hashCode => value.hashCode;');
     typeBuff.writeln();
-    typeBuff.writeln('  @override');
-    typeBuff.writeln('  $name convertTo($name other, [int precision = 2]) {');
+    // typeBuff.writeln('  @override');
+    typeBuff.writeln('  $name _convertTo($name other) {');
     typeBuff.writeln('    num conversionRatio;');
     typeBuff.writeln('    if (runtimeType == other.runtimeType) {');
     typeBuff.writeln('      conversionRatio = 1;');
@@ -66,20 +73,23 @@ void main() {
       r'        final baseValue = value! / ratio.$2.getRatio(runtimeType);',
     );
     typeBuff.writeln(
-      '        return (anchor..value = baseValue).convertTo(other);',
+      '        return (_anchor..value = baseValue)._convertTo(other);',
     );
     typeBuff.writeln('      }');
     typeBuff.writeln('    }');
-    typeBuff.writeln('    return other..value = value! * conversionRatio;');
+    typeBuff.writeln(
+      '    return other..value = value! * conversionRatio;',
+    );
     typeBuff.writeln('  }');
     typeBuff.writeln();
     typeBuff.writeln('  @override');
     typeBuff
         .writeln('  bool _convertAndCompare(String operator, $name other) {');
     typeBuff.writeln(
-      '    final otherValue = other.clone.convertTo(anchor).value!;',
+      '    final otherValue = other.clone._convertTo(_anchor).value!;',
     );
-    typeBuff.writeln('    final currentValue = clone.convertTo(anchor).value;');
+    typeBuff
+        .writeln('    final currentValue = clone._convertTo(_anchor).value;');
     typeBuff.writeln();
     typeBuff.writeln("    if (operator == '==') {");
     typeBuff.writeln('      return currentValue! == otherValue;');
@@ -99,13 +109,13 @@ void main() {
     typeBuff.writeln('  @override');
     typeBuff
         .writeln('  $name _convertAndCombine(String operator, $name other) {');
-    typeBuff.writeln('    final otherValue = other.convertTo(anchor);');
-    typeBuff.writeln('    final currentValue = convertTo(anchor);');
+    typeBuff.writeln('    final otherValue = other._convertTo(_anchor);');
+    typeBuff.writeln('    final currentValue = _convertTo(_anchor);');
     typeBuff.writeln();
     typeBuff.writeln('    final combine =');
     typeBuff.writeln("        operator == '+' ? currentValue + otherValue :");
     typeBuff.writeln('        currentValue - otherValue;');
-    typeBuff.writeln('    return combine.convertTo(this);');
+    typeBuff.writeln('    return combine._convertTo(this);');
     typeBuff.writeln('  }');
     typeBuff.writeln();
     typeBuff.writeln('  @override');
@@ -115,9 +125,9 @@ void main() {
     typeBuff.writeln('    }');
     typeBuff.writeln();
     typeBuff.writeln(
-      '    final otherConvertTo = other.clone.convertTo(anchor);',
+      '    final otherConvertTo = other.clone._convertTo(_anchor);',
     );
-    typeBuff.writeln('    final currentConvertTo = clone.convertTo(anchor);');
+    typeBuff.writeln('    final currentConvertTo = clone._convertTo(_anchor);');
     typeBuff.writeln(
       '    return currentConvertTo.value!.compareTo(otherConvertTo.value!);',
     );
@@ -125,7 +135,7 @@ void main() {
     typeBuff.writeln();
     typeBuff.writeln('  @override');
     typeBuff.writeln('  (BaseType, ConversionRatio<$name>) get ratio => (');
-    typeBuff.writeln('        anchor.runtimeType,');
+    typeBuff.writeln('        _anchor.runtimeType,');
     typeBuff.writeln('        ConversionRatio<$name>({');
     for (final e in unit.values.first) {
       if (e.keys.first == anchor.keys.first) continue;
@@ -134,8 +144,15 @@ void main() {
     typeBuff.writeln('        })');
     typeBuff.writeln('      );');
     typeBuff.writeln();
-    typeBuff.writeln('  @override');
-    typeBuff.writeln('  $name get anchor => ${anchor.keys.first}();');
+    // typeBuff.writeln('  @override');
+    typeBuff.writeln('  $name get _anchor => ${anchor.keys.first}();');
+    typeBuff.writeln();
+    for (final e in unit.values.first) {
+      typeBuff.writeln(
+        '$name get to${e.keys.first} => _convertTo(${e.keys.first}());',
+      );
+      typeBuff.writeln();
+    }
     typeBuff.writeln();
     typeBuff.writeln('  }');
     typeBuff.writeln();
@@ -160,19 +177,51 @@ void main() {
         mode: FileMode.append,
       );
     }
-    exampleBuff.writeln('final data${name.capitalizeWord} = [');
+    //!
+
+    iterableExtensionBuff
+        .writeln('extension IterableOf$name on Iterable<$name> {');
     for (final e in unit.values.first) {
-      exampleBuff.writeln('  ${e.keys.first}(${getRandom()}),');
+      iterableExtensionBuff.writeln(
+        '$name get to${e.keys.first} => _combineTo(${e.keys.first}());',
+      );
+    }
+    iterableExtensionBuff.writeln('}');
+    iterableExtensionBuff.writeln();
+    //!
+    exampleBuff.writeln("print('~Start of $name Example~');");
+    for (final e in unit.values.first) {
+      for (final x in unit.values.first) {
+        if (e.keys.first == x.keys.first) continue;
+        exampleBuff.writeln(
+          "print('1 ${e.keys.first} => \${${e.keys.first}(1).to${x.keys.first}}');",
+        );
+      }
+    }
+    final listName = 'listOf${name.capitalizeWord}';
+    exampleBuff.writeln('final $listName = [');
+    for (final e in unit.values.first) {
+      exampleBuff.writeln('  ${e.keys.first}(${getRandomNumber()}),');
     }
     exampleBuff.writeln('];');
-    exampleBuff
-        .writeln("print('Random $name => \$data${name.capitalizeWord}');");
-    exampleBuff.writeln('data${name.capitalizeWord}.sort();');
-    exampleBuff
-        .writeln("print('Sorted $name => \$data${name.capitalizeWord}');");
+    exampleBuff.writeln(
+      "print('Random $name List => \$$listName');",
+    );
+    exampleBuff.writeln('$listName.sort();');
+    exampleBuff.writeln(
+      "print('Smallest to Largest $name List => \$$listName');",
+    );
+    exampleBuff.writeln(
+      "print('Largest to Smallest $name List => \${$listName.reversed.toList()}');",
+    );
+
+    exampleBuff.writeln("print('~End of $name Example~');");
+    exampleBuff.writeln("print('======================');");
     exampleBuff.writeln();
   }
   exampleBuff.writeln('}');
   exampleFile.writeAsStringSync(exampleBuff.toString());
+  iterableExtensionFile.writeAsStringSync(iterableExtensionBuff.toString());
   Process.run('dart', ['format', '.']);
+  Process.run('dart', ['fix', '--apply']);
 }

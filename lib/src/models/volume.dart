@@ -17,8 +17,7 @@ abstract class Volume extends Unit<Volume> {
   @override
   int get hashCode => value.hashCode;
 
-  @override
-  Volume convertTo(Volume other, [int precision = 2]) {
+  Volume _convertTo(Volume other) {
     num conversionRatio;
     if (runtimeType == other.runtimeType) {
       conversionRatio = 1;
@@ -27,7 +26,7 @@ abstract class Volume extends Unit<Volume> {
         conversionRatio = ratio.$2.getRatio(other.runtimeType);
       } else {
         final baseValue = value! / ratio.$2.getRatio(runtimeType);
-        return (anchor..value = baseValue).convertTo(other);
+        return (_anchor..value = baseValue)._convertTo(other);
       }
     }
     return other..value = value! * conversionRatio;
@@ -35,8 +34,8 @@ abstract class Volume extends Unit<Volume> {
 
   @override
   bool _convertAndCompare(String operator, Volume other) {
-    final otherValue = other.clone.convertTo(anchor).value!;
-    final currentValue = clone.convertTo(anchor).value;
+    final otherValue = other.clone._convertTo(_anchor).value!;
+    final currentValue = clone._convertTo(_anchor).value;
 
     if (operator == '==') {
       return currentValue! == otherValue;
@@ -55,12 +54,12 @@ abstract class Volume extends Unit<Volume> {
 
   @override
   Volume _convertAndCombine(String operator, Volume other) {
-    final otherValue = other.convertTo(anchor);
-    final currentValue = convertTo(anchor);
+    final otherValue = other._convertTo(_anchor);
+    final currentValue = _convertTo(_anchor);
 
     final combine =
         operator == '+' ? currentValue + otherValue : currentValue - otherValue;
-    return combine.convertTo(this);
+    return combine._convertTo(this);
   }
 
   @override
@@ -69,14 +68,14 @@ abstract class Volume extends Unit<Volume> {
       return value!.compareTo(other.value!);
     }
 
-    final otherConvertTo = other.clone.convertTo(anchor);
-    final currentConvertTo = clone.convertTo(anchor);
+    final otherConvertTo = other.clone._convertTo(_anchor);
+    final currentConvertTo = clone._convertTo(_anchor);
     return currentConvertTo.value!.compareTo(otherConvertTo.value!);
   }
 
   @override
   (BaseType, ConversionRatio<Volume>) get ratio => (
-        anchor.runtimeType,
+        _anchor.runtimeType,
         ConversionRatio<Volume>({
           CubicFeet: 35.3146667215,
           CubicInches: 61023.744094732,
@@ -86,8 +85,19 @@ abstract class Volume extends Unit<Volume> {
         })
       );
 
-  @override
-  Volume get anchor => CubicMeters();
+  Volume get _anchor => CubicMeters();
+
+  Volume get toCubicMeters => _convertTo(CubicMeters());
+
+  Volume get toCubicFeet => _convertTo(CubicFeet());
+
+  Volume get toCubicInches => _convertTo(CubicInches());
+
+  Volume get toCubicCentimeters => _convertTo(CubicCentimeters());
+
+  Volume get toLiters => _convertTo(Liters());
+
+  Volume get toMilliliters => _convertTo(Milliliters());
 }
 
 class CubicMeters extends Volume {

@@ -17,8 +17,7 @@ abstract class Distance extends Unit<Distance> {
   @override
   int get hashCode => value.hashCode;
 
-  @override
-  Distance convertTo(Distance other, [int precision = 2]) {
+  Distance _convertTo(Distance other) {
     num conversionRatio;
     if (runtimeType == other.runtimeType) {
       conversionRatio = 1;
@@ -27,7 +26,7 @@ abstract class Distance extends Unit<Distance> {
         conversionRatio = ratio.$2.getRatio(other.runtimeType);
       } else {
         final baseValue = value! / ratio.$2.getRatio(runtimeType);
-        return (anchor..value = baseValue).convertTo(other);
+        return (_anchor..value = baseValue)._convertTo(other);
       }
     }
     return other..value = value! * conversionRatio;
@@ -35,8 +34,8 @@ abstract class Distance extends Unit<Distance> {
 
   @override
   bool _convertAndCompare(String operator, Distance other) {
-    final otherValue = other.clone.convertTo(anchor).value!;
-    final currentValue = clone.convertTo(anchor).value;
+    final otherValue = other.clone._convertTo(_anchor).value!;
+    final currentValue = clone._convertTo(_anchor).value;
 
     if (operator == '==') {
       return currentValue! == otherValue;
@@ -55,12 +54,12 @@ abstract class Distance extends Unit<Distance> {
 
   @override
   Distance _convertAndCombine(String operator, Distance other) {
-    final otherValue = other.convertTo(anchor);
-    final currentValue = convertTo(anchor);
+    final otherValue = other._convertTo(_anchor);
+    final currentValue = _convertTo(_anchor);
 
     final combine =
         operator == '+' ? currentValue + otherValue : currentValue - otherValue;
-    return combine.convertTo(this);
+    return combine._convertTo(this);
   }
 
   @override
@@ -69,14 +68,14 @@ abstract class Distance extends Unit<Distance> {
       return value!.compareTo(other.value!);
     }
 
-    final otherConvertTo = other.clone.convertTo(anchor);
-    final currentConvertTo = clone.convertTo(anchor);
+    final otherConvertTo = other.clone._convertTo(_anchor);
+    final currentConvertTo = clone._convertTo(_anchor);
     return currentConvertTo.value!.compareTo(otherConvertTo.value!);
   }
 
   @override
   (BaseType, ConversionRatio<Distance>) get ratio => (
-        anchor.runtimeType,
+        _anchor.runtimeType,
         ConversionRatio<Distance>({
           Centimeters: 100,
           Inches: 39.37008,
@@ -88,8 +87,23 @@ abstract class Distance extends Unit<Distance> {
         })
       );
 
-  @override
-  Distance get anchor => Meters();
+  Distance get _anchor => Meters();
+
+  Distance get toCentimeters => _convertTo(Centimeters());
+
+  Distance get toMeters => _convertTo(Meters());
+
+  Distance get toInches => _convertTo(Inches());
+
+  Distance get toFeet => _convertTo(Feet());
+
+  Distance get toKilometers => _convertTo(Kilometers());
+
+  Distance get toMiles => _convertTo(Miles());
+
+  Distance get toYards => _convertTo(Yards());
+
+  Distance get toNauticalMiles => _convertTo(NauticalMiles());
 }
 
 class Centimeters extends Distance {

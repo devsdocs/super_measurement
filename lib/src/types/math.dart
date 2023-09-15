@@ -9,3 +9,5 @@ enum DecimalPrecision {
   const DecimalPrecision._(this.value);
   final int value;
 }
+
+typedef BaseType = Type;

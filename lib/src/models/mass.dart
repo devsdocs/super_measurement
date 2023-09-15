@@ -17,8 +17,7 @@ abstract class Mass extends Unit<Mass> {
   @override
   int get hashCode => value.hashCode;
 
-  @override
-  Mass convertTo(Mass other, [int precision = 2]) {
+  Mass _convertTo(Mass other) {
     num conversionRatio;
     if (runtimeType == other.runtimeType) {
       conversionRatio = 1;
@@ -27,7 +26,7 @@ abstract class Mass extends Unit<Mass> {
         conversionRatio = ratio.$2.getRatio(other.runtimeType);
       } else {
         final baseValue = value! / ratio.$2.getRatio(runtimeType);
-        return (anchor..value = baseValue).convertTo(other);
+        return (_anchor..value = baseValue)._convertTo(other);
       }
     }
     return other..value = value! * conversionRatio;
@@ -35,8 +34,8 @@ abstract class Mass extends Unit<Mass> {
 
   @override
   bool _convertAndCompare(String operator, Mass other) {
-    final otherValue = other.clone.convertTo(anchor).value!;
-    final currentValue = clone.convertTo(anchor).value;
+    final otherValue = other.clone._convertTo(_anchor).value!;
+    final currentValue = clone._convertTo(_anchor).value;
 
     if (operator == '==') {
       return currentValue! == otherValue;
@@ -55,12 +54,12 @@ abstract class Mass extends Unit<Mass> {
 
   @override
   Mass _convertAndCombine(String operator, Mass other) {
-    final otherValue = other.convertTo(anchor);
-    final currentValue = convertTo(anchor);
+    final otherValue = other._convertTo(_anchor);
+    final currentValue = _convertTo(_anchor);
 
     final combine =
         operator == '+' ? currentValue + otherValue : currentValue - otherValue;
-    return combine.convertTo(this);
+    return combine._convertTo(this);
   }
 
   @override
@@ -69,14 +68,14 @@ abstract class Mass extends Unit<Mass> {
       return value!.compareTo(other.value!);
     }
 
-    final otherConvertTo = other.clone.convertTo(anchor);
-    final currentConvertTo = clone.convertTo(anchor);
+    final otherConvertTo = other.clone._convertTo(_anchor);
+    final currentConvertTo = clone._convertTo(_anchor);
     return currentConvertTo.value!.compareTo(otherConvertTo.value!);
   }
 
   @override
   (BaseType, ConversionRatio<Mass>) get ratio => (
-        anchor.runtimeType,
+        _anchor.runtimeType,
         ConversionRatio<Mass>({
           Pounds: 2.2046226218,
           Ounces: 35.2739619496,
@@ -84,8 +83,15 @@ abstract class Mass extends Unit<Mass> {
         })
       );
 
-  @override
-  Mass get anchor => Kilograms();
+  Mass get _anchor => Kilograms();
+
+  Mass get toKilograms => _convertTo(Kilograms());
+
+  Mass get toPounds => _convertTo(Pounds());
+
+  Mass get toOunces => _convertTo(Ounces());
+
+  Mass get toGrams => _convertTo(Grams());
 }
 
 class Kilograms extends Mass {
