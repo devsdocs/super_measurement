@@ -1,7 +1,7 @@
-part of 'generate.gen.dart';
+part of '_generate.gen.dart';
 
-final distanceUnit = {
-  'Distance': [
+final lengthUnit = {
+  'Length': [
     {
       'Centimeters': {'ratio': 100, 'symbol': 'cm'},
     },
@@ -9,10 +9,10 @@ final distanceUnit = {
       'Meters': {'ratio': 1, 'symbol': 'm'},
     },
     {
-      'Inches': {'ratio': 39.37008, 'symbol': 'in'},
+      'Inches': {'ratio': 39.3700787402, 'symbol': 'in'},
     },
     {
-      'Feet': {'ratio': 3.28084, 'symbol': 'ft'},
+      'Foot': {'ratio': 3.280839895, 'symbol': 'ft'},
     },
     {
       'Kilometers': {'ratio': 0.001, 'symbol': 'km'},

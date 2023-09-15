@@ -2,87 +2,28 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Mass]
 ///
-/// [Kilograms],[Pounds],[Ounces],[Grams],
-abstract class Mass extends Unit<Mass> {
+/// [Kilograms],[Pounds],[Ounces],[Grams],[StoneUK],[Carats],[Milligrams],[Tonne],[TonUK],[TonUS],[Quintal],
+abstract final class Mass extends Unit<Mass> {
   Mass([super.value]);
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is Mass &&
-          runtimeType == other.runtimeType &&
-          value == other.value ||
-      other is Mass && _convertAndCompare('==', other);
-
-  @override
-  int get hashCode => value.hashCode;
-
-  Mass _convertTo(Mass other) {
-    num conversionRatio;
-    if (runtimeType == other.runtimeType) {
-      conversionRatio = 1;
-    } else {
-      if (runtimeType == ratio.$1) {
-        conversionRatio = ratio.$2.getRatio(other.runtimeType);
-      } else {
-        final baseValue = value! / ratio.$2.getRatio(runtimeType);
-        return (_anchor..value = baseValue)._convertTo(other);
-      }
-    }
-    return other..value = value! * conversionRatio;
-  }
-
-  @override
-  bool _convertAndCompare(String operator, Mass other) {
-    final otherValue = other.clone._convertTo(_anchor).value!;
-    final currentValue = clone._convertTo(_anchor).value;
-
-    if (operator == '==') {
-      return currentValue! == otherValue;
-    }
-    if (operator == '>') {
-      return currentValue! > otherValue;
-    }
-    if (operator == '>=') {
-      return currentValue! >= otherValue;
-    }
-    if (operator == '<') {
-      return currentValue! < otherValue;
-    }
-    return currentValue! <= otherValue;
-  }
-
-  @override
-  Mass _convertAndCombine(String operator, Mass other) {
-    final otherValue = other._convertTo(_anchor);
-    final currentValue = _convertTo(_anchor);
-
-    final combine =
-        operator == '+' ? currentValue + otherValue : currentValue - otherValue;
-    return combine._convertTo(this);
-  }
-
-  @override
-  int compareTo(Mass other) {
-    if (runtimeType == other.runtimeType) {
-      return value!.compareTo(other.value!);
-    }
-
-    final otherConvertTo = other.clone._convertTo(_anchor);
-    final currentConvertTo = clone._convertTo(_anchor);
-    return currentConvertTo.value!.compareTo(otherConvertTo.value!);
-  }
-
-  @override
-  (BaseType, ConversionRatio<Mass>) get ratio => (
+  (BaseType, ConversionRatio<Mass>) get _ratio => (
         _anchor.runtimeType,
         ConversionRatio<Mass>({
           Pounds: 2.2046226218,
           Ounces: 35.2739619496,
           Grams: 1000,
+          StoneUK: 0.1574730444,
+          Carats: 5000,
+          Milligrams: 1000000,
+          Tonne: 0.001,
+          TonUK: 0.0009842065,
+          TonUS: 0.0011023113,
+          Quintal: 0.01,
         })
       );
 
+  @override
   Mass get _anchor => Kilograms();
 
   Mass get toKilograms => _convertTo(Kilograms());
@@ -92,44 +33,128 @@ abstract class Mass extends Unit<Mass> {
   Mass get toOunces => _convertTo(Ounces());
 
   Mass get toGrams => _convertTo(Grams());
+
+  Mass get toStoneUK => _convertTo(StoneUK());
+
+  Mass get toCarats => _convertTo(Carats());
+
+  Mass get toMilligrams => _convertTo(Milligrams());
+
+  Mass get toTonne => _convertTo(Tonne());
+
+  Mass get toTonUK => _convertTo(TonUK());
+
+  Mass get toTonUS => _convertTo(TonUS());
+
+  Mass get toQuintal => _convertTo(Quintal());
 }
 
-class Kilograms extends Mass {
+final class Kilograms extends Mass {
   Kilograms([super.value]);
 
   @override
-  Kilograms get clone => Kilograms(value);
+  Kilograms get _clone => Kilograms(value);
 
   @override
   String get symbol => 'kg';
 }
 
-class Pounds extends Mass {
+final class Pounds extends Mass {
   Pounds([super.value]);
 
   @override
-  Pounds get clone => Pounds(value);
+  Pounds get _clone => Pounds(value);
 
   @override
   String get symbol => 'lb';
 }
 
-class Ounces extends Mass {
+final class Ounces extends Mass {
   Ounces([super.value]);
 
   @override
-  Ounces get clone => Ounces(value);
+  Ounces get _clone => Ounces(value);
 
   @override
   String get symbol => 'oz';
 }
 
-class Grams extends Mass {
+final class Grams extends Mass {
   Grams([super.value]);
 
   @override
-  Grams get clone => Grams(value);
+  Grams get _clone => Grams(value);
 
   @override
   String get symbol => 'g';
+}
+
+final class StoneUK extends Mass {
+  StoneUK([super.value]);
+
+  @override
+  StoneUK get _clone => StoneUK(value);
+
+  @override
+  String get symbol => 'st';
+}
+
+final class Carats extends Mass {
+  Carats([super.value]);
+
+  @override
+  Carats get _clone => Carats(value);
+
+  @override
+  String get symbol => 'CD';
+}
+
+final class Milligrams extends Mass {
+  Milligrams([super.value]);
+
+  @override
+  Milligrams get _clone => Milligrams(value);
+
+  @override
+  String get symbol => 'mg';
+}
+
+final class Tonne extends Mass {
+  Tonne([super.value]);
+
+  @override
+  Tonne get _clone => Tonne(value);
+
+  @override
+  String get symbol => 'ton';
+}
+
+final class TonUK extends Mass {
+  TonUK([super.value]);
+
+  @override
+  TonUK get _clone => TonUK(value);
+
+  @override
+  String get symbol => 'ton';
+}
+
+final class TonUS extends Mass {
+  TonUS([super.value]);
+
+  @override
+  TonUS get _clone => TonUS(value);
+
+  @override
+  String get symbol => 'ton';
+}
+
+final class Quintal extends Mass {
+  Quintal([super.value]);
+
+  @override
+  Quintal get _clone => Quintal(value);
+
+  @override
+  String get symbol => 'q';
 }

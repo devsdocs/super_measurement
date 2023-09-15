@@ -1,4 +1,4 @@
-part of 'generate.gen.dart';
+part of '_generate.gen.dart';
 
 final areaUnit = {
   'Area': [
@@ -6,7 +6,7 @@ final areaUnit = {
       'SquareMeters': {'ratio': 1, 'symbol': 'm²'},
     },
     {
-      'SquareFeet': {'ratio': 10.7639104167, 'symbol': 'ft²'},
+      'SquareFoot': {'ratio': 10.7639104167, 'symbol': 'ft²'},
     },
     {
       'SquareInches': {'ratio': 1550.0031000062, 'symbol': 'in²'},
@@ -19,6 +19,15 @@ final areaUnit = {
     },
     {
       'SquareCentimeters': {'ratio': 10000, 'symbol': 'cm²'},
+    },
+    {
+      'SquareMiles': {'ratio': 0.000000386102159, 'symbol': 'mi²'},
+    },
+    {
+      'SquareYards': {'ratio': 1.1959900463, 'symbol': 'yd²'},
+    },
+    {
+      'SquareKilometers': {'ratio': 0.000001, 'symbol': 'km²'},
     }
   ],
 };

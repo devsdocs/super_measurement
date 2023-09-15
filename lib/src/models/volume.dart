@@ -2,94 +2,32 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Volume]
 ///
-/// [CubicMeters],[CubicFeet],[CubicInches],[CubicCentimeters],[Liters],[Milliliters],
-abstract class Volume extends Unit<Volume> {
+/// [CubicMeters],[CubicFoot],[CubicInches],[CubicCentimeters],[Liters],[Milliliters],[GallonsUS],[GallonsImperial],[BarrelsUS],[BarrelsImperial],
+abstract final class Volume extends Unit<Volume> {
   Volume([super.value]);
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is Volume &&
-          runtimeType == other.runtimeType &&
-          value == other.value ||
-      other is Volume && _convertAndCompare('==', other);
-
-  @override
-  int get hashCode => value.hashCode;
-
-  Volume _convertTo(Volume other) {
-    num conversionRatio;
-    if (runtimeType == other.runtimeType) {
-      conversionRatio = 1;
-    } else {
-      if (runtimeType == ratio.$1) {
-        conversionRatio = ratio.$2.getRatio(other.runtimeType);
-      } else {
-        final baseValue = value! / ratio.$2.getRatio(runtimeType);
-        return (_anchor..value = baseValue)._convertTo(other);
-      }
-    }
-    return other..value = value! * conversionRatio;
-  }
-
-  @override
-  bool _convertAndCompare(String operator, Volume other) {
-    final otherValue = other.clone._convertTo(_anchor).value!;
-    final currentValue = clone._convertTo(_anchor).value;
-
-    if (operator == '==') {
-      return currentValue! == otherValue;
-    }
-    if (operator == '>') {
-      return currentValue! > otherValue;
-    }
-    if (operator == '>=') {
-      return currentValue! >= otherValue;
-    }
-    if (operator == '<') {
-      return currentValue! < otherValue;
-    }
-    return currentValue! <= otherValue;
-  }
-
-  @override
-  Volume _convertAndCombine(String operator, Volume other) {
-    final otherValue = other._convertTo(_anchor);
-    final currentValue = _convertTo(_anchor);
-
-    final combine =
-        operator == '+' ? currentValue + otherValue : currentValue - otherValue;
-    return combine._convertTo(this);
-  }
-
-  @override
-  int compareTo(Volume other) {
-    if (runtimeType == other.runtimeType) {
-      return value!.compareTo(other.value!);
-    }
-
-    final otherConvertTo = other.clone._convertTo(_anchor);
-    final currentConvertTo = clone._convertTo(_anchor);
-    return currentConvertTo.value!.compareTo(otherConvertTo.value!);
-  }
-
-  @override
-  (BaseType, ConversionRatio<Volume>) get ratio => (
+  (BaseType, ConversionRatio<Volume>) get _ratio => (
         _anchor.runtimeType,
         ConversionRatio<Volume>({
-          CubicFeet: 35.3146667215,
+          CubicFoot: 35.3146667215,
           CubicInches: 61023.744094732,
           CubicCentimeters: 1000000,
           Liters: 1000,
           Milliliters: 1000000,
+          GallonsUS: 264.1720523581,
+          GallonsImperial: 219.9692482991,
+          BarrelsUS: 8.3864143606,
+          BarrelsImperial: 6.1102568972,
         })
       );
 
+  @override
   Volume get _anchor => CubicMeters();
 
   Volume get toCubicMeters => _convertTo(CubicMeters());
 
-  Volume get toCubicFeet => _convertTo(CubicFeet());
+  Volume get toCubicFoot => _convertTo(CubicFoot());
 
   Volume get toCubicInches => _convertTo(CubicInches());
 
@@ -98,64 +36,112 @@ abstract class Volume extends Unit<Volume> {
   Volume get toLiters => _convertTo(Liters());
 
   Volume get toMilliliters => _convertTo(Milliliters());
+
+  Volume get toGallonsUS => _convertTo(GallonsUS());
+
+  Volume get toGallonsImperial => _convertTo(GallonsImperial());
+
+  Volume get toBarrelsUS => _convertTo(BarrelsUS());
+
+  Volume get toBarrelsImperial => _convertTo(BarrelsImperial());
 }
 
-class CubicMeters extends Volume {
+final class CubicMeters extends Volume {
   CubicMeters([super.value]);
 
   @override
-  CubicMeters get clone => CubicMeters(value);
+  CubicMeters get _clone => CubicMeters(value);
 
   @override
   String get symbol => 'm³';
 }
 
-class CubicFeet extends Volume {
-  CubicFeet([super.value]);
+final class CubicFoot extends Volume {
+  CubicFoot([super.value]);
 
   @override
-  CubicFeet get clone => CubicFeet(value);
+  CubicFoot get _clone => CubicFoot(value);
 
   @override
   String get symbol => 'ft³';
 }
 
-class CubicInches extends Volume {
+final class CubicInches extends Volume {
   CubicInches([super.value]);
 
   @override
-  CubicInches get clone => CubicInches(value);
+  CubicInches get _clone => CubicInches(value);
 
   @override
   String get symbol => 'in³';
 }
 
-class CubicCentimeters extends Volume {
+final class CubicCentimeters extends Volume {
   CubicCentimeters([super.value]);
 
   @override
-  CubicCentimeters get clone => CubicCentimeters(value);
+  CubicCentimeters get _clone => CubicCentimeters(value);
 
   @override
   String get symbol => 'cm³';
 }
 
-class Liters extends Volume {
+final class Liters extends Volume {
   Liters([super.value]);
 
   @override
-  Liters get clone => Liters(value);
+  Liters get _clone => Liters(value);
 
   @override
   String get symbol => 'L';
 }
 
-class Milliliters extends Volume {
+final class Milliliters extends Volume {
   Milliliters([super.value]);
 
   @override
-  Milliliters get clone => Milliliters(value);
+  Milliliters get _clone => Milliliters(value);
 
   @override
   String get symbol => 'mL';
+}
+
+final class GallonsUS extends Volume {
+  GallonsUS([super.value]);
+
+  @override
+  GallonsUS get _clone => GallonsUS(value);
+
+  @override
+  String get symbol => 'gal';
+}
+
+final class GallonsImperial extends Volume {
+  GallonsImperial([super.value]);
+
+  @override
+  GallonsImperial get _clone => GallonsImperial(value);
+
+  @override
+  String get symbol => 'gal';
+}
+
+final class BarrelsUS extends Volume {
+  BarrelsUS([super.value]);
+
+  @override
+  BarrelsUS get _clone => BarrelsUS(value);
+
+  @override
+  String get symbol => 'bl';
+}
+
+final class BarrelsImperial extends Volume {
+  BarrelsImperial([super.value]);
+
+  @override
+  BarrelsImperial get _clone => BarrelsImperial(value);
+
+  @override
+  String get symbol => 'bl';
 }
