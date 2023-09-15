@@ -37,16 +37,6 @@ abstract class Unit<T extends Unit<T>> implements Comparable<T> {
     return result..value = this.value! / scalar;
   }
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is Unit<T> &&
-          runtimeType == other.runtimeType &&
-          value == other.value;
-
-  @override
-  int get hashCode => value.hashCode;
-
   bool operator >=(T other) => runtimeType == other.runtimeType
       ? this.value! >= other.value!
       : _convertAndCompare('>=', other);
@@ -65,7 +55,7 @@ abstract class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T get clone;
 
-  T get base;
+  T get anchor;
 
   String get symbol;
 

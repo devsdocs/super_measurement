@@ -4,6 +4,17 @@ abstract class Distance extends Unit<Distance> {
   Distance([super.value]);
 
   @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Distance &&
+          runtimeType == other.runtimeType &&
+          value == other.value ||
+      other is Distance && _convertAndCompare('==', other);
+
+  @override
+  int get hashCode => value.hashCode;
+
+  @override
   Distance convertTo(Distance other, [int precision = 2]) {
     num conversionRatio;
     if (runtimeType == other.runtimeType) {
@@ -13,7 +24,7 @@ abstract class Distance extends Unit<Distance> {
         conversionRatio = ratio.$2.getRatio(other.runtimeType);
       } else {
         final baseValue = value! / ratio.$2.getRatio(runtimeType);
-        return (base..value = baseValue).convertTo(other);
+        return (anchor..value = baseValue).convertTo(other);
       }
     }
     return other..value = value! * conversionRatio;
@@ -21,46 +32,48 @@ abstract class Distance extends Unit<Distance> {
 
   @override
   bool _convertAndCompare(String operator, Distance other) {
-    final otherValue = other.convertTo(this).value!;
+    final otherValue = other.clone.convertTo(anchor).value!;
+    final currentValue = clone.convertTo(anchor).value;
 
-    if (operator == '>') {
-      return value! > otherValue;
-    } else {
-      if (operator == '>=') {
-        return value! >= otherValue;
-      } else {
-        if (operator == '<') {
-          return value! < otherValue;
-        } else {
-          return value! <= otherValue;
-        }
-      }
+    if (operator == '==') {
+      return currentValue! == otherValue;
     }
+    if (operator == '>') {
+      return currentValue! > otherValue;
+    }
+    if (operator == '>=') {
+      return currentValue! >= otherValue;
+    }
+    if (operator == '<') {
+      return currentValue! < otherValue;
+    }
+    return currentValue! <= otherValue;
   }
 
   @override
   Distance _convertAndCombine(String operator, Distance other) {
-    final otherValue = other.convertTo(this);
+    final otherValue = other.convertTo(anchor);
+    final currentValue = convertTo(anchor);
 
-    return this
-      ..value = operator == '+'
-          ? value! + otherValue.value!
-          : value! - otherValue.value!;
+    final combine =
+        operator == '+' ? currentValue + otherValue : currentValue - otherValue;
+    return combine.convertTo(this);
   }
 
   @override
   int compareTo(Distance other) {
     if (runtimeType == other.runtimeType) {
       return value!.compareTo(other.value!);
-    } else {
-      final convertTo = other.clone.convertTo(this);
-      return convertTo.value!.compareTo(value!);
     }
+
+    final otherConvertTo = other.clone.convertTo(anchor);
+    final currentConvertTo = clone.convertTo(anchor);
+    return currentConvertTo.value!.compareTo(otherConvertTo.value!);
   }
 
   @override
   (BaseType, ConversionRatio<Distance>) get ratio => (
-        base.runtimeType,
+        anchor.runtimeType,
         ConversionRatio<Distance>({
           Centimeters: 100,
           Inches: 39.37008,
@@ -70,7 +83,7 @@ abstract class Distance extends Unit<Distance> {
       );
 
   @override
-  Distance get base => Meters();
+  Distance get anchor => Meters();
 }
 
 class Centimeters extends Distance {
