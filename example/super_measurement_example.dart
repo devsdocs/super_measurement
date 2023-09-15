@@ -1,6 +1,14 @@
 import 'package:super_measurement/super_measurement.dart';
 
 void main() {
+  exampleOfMass();
+  exampleOfDistance();
+  exampleOfArea();
+  exampleOfVolume();
+}
+
+/// [Mass] example
+void exampleOfMass() {
   print('~Start of Mass Example~');
   print('1 Kilograms => ${Kilograms(1).toPounds}');
   print('1 Kilograms => ${Kilograms(1).toOunces}');
@@ -16,9 +24,9 @@ void main() {
   print('1 Grams => ${Grams(1).toOunces}');
   final listOfMass = [
     Kilograms(1),
-    Pounds(1),
+    Pounds(3),
     Ounces(3),
-    Grams(2),
+    Grams(1),
   ];
   print('Random Mass List => $listOfMass');
   listOfMass.sort();
@@ -26,7 +34,10 @@ void main() {
   print('Largest to Smallest Mass List => ${listOfMass.reversed.toList()}');
   print('~End of Mass Example~');
   print('======================');
+}
 
+/// [Distance] example
+void exampleOfDistance() {
   print('~Start of Distance Example~');
   print('1 Centimeters => ${Centimeters(1).toMeters}');
   print('1 Centimeters => ${Centimeters(1).toInches}');
@@ -85,23 +96,27 @@ void main() {
   print('1 NauticalMiles => ${NauticalMiles(1).toMiles}');
   print('1 NauticalMiles => ${NauticalMiles(1).toYards}');
   final listOfDistance = [
-    Centimeters(3),
+    Centimeters(2),
     Meters(2),
-    Inches(3),
+    Inches(2),
     Feet(1),
-    Kilometers(3),
-    Miles(1),
+    Kilometers(1),
+    Miles(2),
     Yards(2),
-    NauticalMiles(1),
+    NauticalMiles(3),
   ];
   print('Random Distance List => $listOfDistance');
   listOfDistance.sort();
   print('Smallest to Largest Distance List => $listOfDistance');
   print(
-      'Largest to Smallest Distance List => ${listOfDistance.reversed.toList()}',);
+    'Largest to Smallest Distance List => ${listOfDistance.reversed.toList()}',
+  );
   print('~End of Distance Example~');
   print('======================');
+}
 
+/// [Area] example
+void exampleOfArea() {
   print('~Start of Area Example~');
   print('1 SquareMeters => ${SquareMeters(1).toSquareFeet}');
   print('1 SquareMeters => ${SquareMeters(1).toSquareInches}');
@@ -134,12 +149,12 @@ void main() {
   print('1 SquareCentimeters => ${SquareCentimeters(1).toHectares}');
   print('1 SquareCentimeters => ${SquareCentimeters(1).toAcres}');
   final listOfArea = [
-    SquareMeters(1),
-    SquareFeet(3),
+    SquareMeters(3),
+    SquareFeet(2),
     SquareInches(3),
-    Hectares(3),
-    Acres(3),
-    SquareCentimeters(3),
+    Hectares(2),
+    Acres(2),
+    SquareCentimeters(1),
   ];
   print('Random Area List => $listOfArea');
   listOfArea.sort();
@@ -147,7 +162,10 @@ void main() {
   print('Largest to Smallest Area List => ${listOfArea.reversed.toList()}');
   print('~End of Area Example~');
   print('======================');
+}
 
+/// [Volume] example
+void exampleOfVolume() {
   print('~Start of Volume Example~');
   print('1 CubicMeters => ${CubicMeters(1).toCubicFeet}');
   print('1 CubicMeters => ${CubicMeters(1).toCubicInches}');
@@ -180,12 +198,12 @@ void main() {
   print('1 Milliliters => ${Milliliters(1).toCubicCentimeters}');
   print('1 Milliliters => ${Milliliters(1).toLiters}');
   final listOfVolume = [
-    CubicMeters(3),
+    CubicMeters(2),
     CubicFeet(1),
     CubicInches(3),
-    CubicCentimeters(3),
-    Liters(2),
-    Milliliters(2),
+    CubicCentimeters(2),
+    Liters(3),
+    Milliliters(1),
   ];
   print('Random Volume List => $listOfVolume');
   listOfVolume.sort();

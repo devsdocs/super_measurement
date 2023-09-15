@@ -17,18 +17,87 @@ final libFile = File(libDir);
 const modelsDir = 'lib/src/models';
 final allData = [massUnit, distanceUnit, areaUnit, volumeUnit];
 
+void main() {
+  generateModels();
+  generateExtension();
+  generateExample();
+  Process.run('dart', ['format', '.']);
+  Process.run('dart', ['fix', '--apply']);
+}
+
 int getRandomNumber() => 3.getRandomNumberFromZeroToLessThanThis + 1;
 
-void main() {
+void generateExample() {
   final exampleBuff = StringBuffer();
-  final iterableExtensionBuff = StringBuffer();
   exampleBuff
       .writeln("import 'package:super_measurement/super_measurement.dart';");
   exampleBuff.writeln();
   exampleBuff.writeln('void main() {');
+  for (final unit in allData) {
+    final name = unit.keys.first;
+    exampleBuff.writeln('exampleOf$name();');
+  }
+  exampleBuff.writeln('}');
+  exampleBuff.writeln();
+  for (final unit in allData) {
+    final name = unit.keys.first;
+    exampleBuff.writeln('/// [$name] example');
+    exampleBuff.writeln('void exampleOf$name() {');
+    exampleBuff.writeln("print('~Start of $name Example~');");
+    for (final e in unit.values.first) {
+      for (final x in unit.values.first) {
+        if (e.keys.first == x.keys.first) continue;
+        exampleBuff.writeln(
+          "print('1 ${e.keys.first} => \${${e.keys.first}(1).to${x.keys.first}}');",
+        );
+      }
+    }
+    final listName = 'listOf${name.capitalizeWord}';
+    exampleBuff.writeln('final $listName = [');
+    for (final e in unit.values.first) {
+      exampleBuff.writeln('  ${e.keys.first}(${getRandomNumber()}),');
+    }
+    exampleBuff.writeln('];');
+    exampleBuff.writeln(
+      "print('Random $name List => \$$listName');",
+    );
+    exampleBuff.writeln('$listName.sort();');
+    exampleBuff.writeln(
+      "print('Smallest to Largest $name List => \$$listName');",
+    );
+    exampleBuff.writeln(
+      "print('Largest to Smallest $name List => \${$listName.reversed.toList()}');",
+    );
 
+    exampleBuff.writeln("print('~End of $name Example~');");
+    exampleBuff.writeln("print('======================');");
+    exampleBuff.writeln('}');
+    exampleBuff.writeln();
+  }
+
+  exampleFile.writeAsStringSync(exampleBuff.toString());
+}
+
+void generateExtension() {
+  final iterableExtensionBuff = StringBuffer();
   iterableExtensionBuff.writeln("part of '../../super_measurement.dart';");
   iterableExtensionBuff.writeln();
+  for (final unit in allData) {
+    final name = unit.keys.first;
+    iterableExtensionBuff
+        .writeln('extension IterableOf$name on Iterable<$name> {');
+    for (final e in unit.values.first) {
+      iterableExtensionBuff.writeln(
+        '$name get to${e.keys.first} => _combineTo(${e.keys.first}());',
+      );
+    }
+    iterableExtensionBuff.writeln('}');
+    iterableExtensionBuff.writeln();
+  }
+  iterableExtensionFile.writeAsStringSync(iterableExtensionBuff.toString());
+}
+
+void generateModels() {
   for (final unit in allData) {
     final name = unit.keys.first;
     final anchor =
@@ -177,51 +246,5 @@ void main() {
         mode: FileMode.append,
       );
     }
-    //!
-
-    iterableExtensionBuff
-        .writeln('extension IterableOf$name on Iterable<$name> {');
-    for (final e in unit.values.first) {
-      iterableExtensionBuff.writeln(
-        '$name get to${e.keys.first} => _combineTo(${e.keys.first}());',
-      );
-    }
-    iterableExtensionBuff.writeln('}');
-    iterableExtensionBuff.writeln();
-    //!
-    exampleBuff.writeln("print('~Start of $name Example~');");
-    for (final e in unit.values.first) {
-      for (final x in unit.values.first) {
-        if (e.keys.first == x.keys.first) continue;
-        exampleBuff.writeln(
-          "print('1 ${e.keys.first} => \${${e.keys.first}(1).to${x.keys.first}}');",
-        );
-      }
-    }
-    final listName = 'listOf${name.capitalizeWord}';
-    exampleBuff.writeln('final $listName = [');
-    for (final e in unit.values.first) {
-      exampleBuff.writeln('  ${e.keys.first}(${getRandomNumber()}),');
-    }
-    exampleBuff.writeln('];');
-    exampleBuff.writeln(
-      "print('Random $name List => \$$listName');",
-    );
-    exampleBuff.writeln('$listName.sort();');
-    exampleBuff.writeln(
-      "print('Smallest to Largest $name List => \$$listName');",
-    );
-    exampleBuff.writeln(
-      "print('Largest to Smallest $name List => \${$listName.reversed.toList()}');",
-    );
-
-    exampleBuff.writeln("print('~End of $name Example~');");
-    exampleBuff.writeln("print('======================');");
-    exampleBuff.writeln();
   }
-  exampleBuff.writeln('}');
-  exampleFile.writeAsStringSync(exampleBuff.toString());
-  iterableExtensionFile.writeAsStringSync(iterableExtensionBuff.toString());
-  Process.run('dart', ['format', '.']);
-  Process.run('dart', ['fix', '--apply']);
 }
