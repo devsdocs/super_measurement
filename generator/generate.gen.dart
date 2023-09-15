@@ -1,138 +1,158 @@
 import 'dart:io';
 
+import 'package:reusable_tools/reusable_tools.dart';
+
+part 'area.gen.dart';
+part 'volume.gen.dart';
 part 'mass.gen.dart';
 part 'distance.gen.dart';
 
+const exampleDir = 'example/super_measurement_example.dart';
+final exampleFile = File(exampleDir);
 const libDir = 'lib/super_measurement.dart';
 final libFile = File(libDir);
 const modelsDir = 'lib/src/models';
-final allData = [massUnit, distanceUnit];
+final allData = [massUnit, distanceUnit, areaUnit, volumeUnit];
+
+int getRandom() => 10.getRandomNumberFromZeroToLessThanThis + 1;
 
 void main() {
+  final exampleBuff = StringBuffer();
+  exampleBuff
+      .writeln("import 'package:super_measurement/super_measurement.dart';");
+  exampleBuff.writeln();
+  exampleBuff.writeln('void main() {');
   for (final unit in allData) {
     final name = unit.keys.first;
     final anchor =
         unit.values.first.singleWhere((e) => e.values.single['ratio'] == 1);
     final fileName = '${name.toLowerCase()}.dart';
     final file = File('$modelsDir/$fileName');
-    final buff = StringBuffer();
-    buff.writeln("part of '../../super_measurement.dart';");
-    buff.writeln();
-    buff.writeln('abstract class $name extends Unit<$name> {');
-    buff.writeln();
-    buff.writeln('  $name([super.value]);');
-    buff.writeln();
-    buff.writeln('  @override');
-    buff.writeln('  bool operator ==(Object other) =>');
-    buff.writeln('      identical(this, other) ||');
-    buff.writeln('      other is $name &&');
-    buff.writeln('          runtimeType == other.runtimeType &&');
-    buff.writeln('          value == other.value ||');
-    buff.writeln('      other is $name &&');
-    buff.writeln("          _convertAndCompare('==', other);");
-    buff.writeln();
-    buff.writeln('  @override');
-    buff.writeln('  int get hashCode => value.hashCode;');
-    buff.writeln();
-    buff.writeln('  @override');
-    buff.writeln('  $name convertTo($name other, [int precision = 2]) {');
-    buff.writeln('    num conversionRatio;');
-    buff.writeln('    if (runtimeType == other.runtimeType) {');
-    buff.writeln('      conversionRatio = 1;');
-    buff.writeln('    } else {');
-    buff.writeln(r'      if (runtimeType == ratio.$1) {');
-    buff.writeln(
+    final typeBuff = StringBuffer();
+    typeBuff.writeln("part of '../../super_measurement.dart';");
+    typeBuff.writeln();
+    typeBuff.writeln('/// Available units of measurement for [$name]');
+    typeBuff.writeln('///');
+    final types = unit.values.first.map((e) => '[${e.keys.first}],').join();
+    typeBuff.writeln('/// $types');
+    typeBuff.writeln('abstract class $name extends Unit<$name> {');
+    typeBuff.writeln();
+    typeBuff.writeln('  $name([super.value]);');
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln('  bool operator ==(Object other) =>');
+    typeBuff.writeln('      identical(this, other) ||');
+    typeBuff.writeln('      other is $name &&');
+    typeBuff.writeln('          runtimeType == other.runtimeType &&');
+    typeBuff.writeln('          value == other.value ||');
+    typeBuff.writeln('      other is $name &&');
+    typeBuff.writeln("          _convertAndCompare('==', other);");
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln('  int get hashCode => value.hashCode;');
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln('  $name convertTo($name other, [int precision = 2]) {');
+    typeBuff.writeln('    num conversionRatio;');
+    typeBuff.writeln('    if (runtimeType == other.runtimeType) {');
+    typeBuff.writeln('      conversionRatio = 1;');
+    typeBuff.writeln('    } else {');
+    typeBuff.writeln(r'      if (runtimeType == ratio.$1) {');
+    typeBuff.writeln(
       r'        conversionRatio = ratio.$2.getRatio(other.runtimeType);',
     );
-    buff.writeln('      } else {');
-    buff.writeln(
+    typeBuff.writeln('      } else {');
+    typeBuff.writeln(
       r'        final baseValue = value! / ratio.$2.getRatio(runtimeType);',
     );
-    buff.writeln(
+    typeBuff.writeln(
       '        return (anchor..value = baseValue).convertTo(other);',
     );
-    buff.writeln('      }');
-    buff.writeln('    }');
-    buff.writeln('    return other..value = value! * conversionRatio;');
-    buff.writeln('  }');
-    buff.writeln();
-    buff.writeln('  @override');
-    buff.writeln('  bool _convertAndCompare(String operator, $name other) {');
-    buff.writeln(
+    typeBuff.writeln('      }');
+    typeBuff.writeln('    }');
+    typeBuff.writeln('    return other..value = value! * conversionRatio;');
+    typeBuff.writeln('  }');
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff
+        .writeln('  bool _convertAndCompare(String operator, $name other) {');
+    typeBuff.writeln(
       '    final otherValue = other.clone.convertTo(anchor).value!;',
     );
-    buff.writeln('    final currentValue = clone.convertTo(anchor).value;');
-    buff.writeln();
-    buff.writeln("    if (operator == '==') {");
-    buff.writeln('      return currentValue! == otherValue;');
-    buff.writeln('    }');
-    buff.writeln("    if (operator == '>') {");
-    buff.writeln('      return currentValue! > otherValue;');
-    buff.writeln('    }');
-    buff.writeln("    if (operator == '>=') {");
-    buff.writeln('      return currentValue! >= otherValue;');
-    buff.writeln('    }');
-    buff.writeln("    if (operator == '<') {");
-    buff.writeln('      return currentValue! < otherValue;');
-    buff.writeln('    }');
-    buff.writeln('    return currentValue! <= otherValue;');
-    buff.writeln('  }');
-    buff.writeln();
-    buff.writeln('  @override');
-    buff.writeln('  $name _convertAndCombine(String operator, $name other) {');
-    buff.writeln('    final otherValue = other.convertTo(anchor);');
-    buff.writeln('    final currentValue = convertTo(anchor);');
-    buff.writeln();
-    buff.writeln('    final combine =');
-    buff.writeln("        operator == '+' ? currentValue + otherValue :");
-    buff.writeln('        currentValue - otherValue;');
-    buff.writeln('    return combine.convertTo(this);');
-    buff.writeln('  }');
-    buff.writeln();
-    buff.writeln('  @override');
-    buff.writeln('  int compareTo($name other) {');
-    buff.writeln('    if (runtimeType == other.runtimeType) {');
-    buff.writeln('      return value!.compareTo(other.value!);');
-    buff.writeln('    }');
-    buff.writeln();
-    buff.writeln(
+    typeBuff.writeln('    final currentValue = clone.convertTo(anchor).value;');
+    typeBuff.writeln();
+    typeBuff.writeln("    if (operator == '==') {");
+    typeBuff.writeln('      return currentValue! == otherValue;');
+    typeBuff.writeln('    }');
+    typeBuff.writeln("    if (operator == '>') {");
+    typeBuff.writeln('      return currentValue! > otherValue;');
+    typeBuff.writeln('    }');
+    typeBuff.writeln("    if (operator == '>=') {");
+    typeBuff.writeln('      return currentValue! >= otherValue;');
+    typeBuff.writeln('    }');
+    typeBuff.writeln("    if (operator == '<') {");
+    typeBuff.writeln('      return currentValue! < otherValue;');
+    typeBuff.writeln('    }');
+    typeBuff.writeln('    return currentValue! <= otherValue;');
+    typeBuff.writeln('  }');
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff
+        .writeln('  $name _convertAndCombine(String operator, $name other) {');
+    typeBuff.writeln('    final otherValue = other.convertTo(anchor);');
+    typeBuff.writeln('    final currentValue = convertTo(anchor);');
+    typeBuff.writeln();
+    typeBuff.writeln('    final combine =');
+    typeBuff.writeln("        operator == '+' ? currentValue + otherValue :");
+    typeBuff.writeln('        currentValue - otherValue;');
+    typeBuff.writeln('    return combine.convertTo(this);');
+    typeBuff.writeln('  }');
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln('  int compareTo($name other) {');
+    typeBuff.writeln('    if (runtimeType == other.runtimeType) {');
+    typeBuff.writeln('      return value!.compareTo(other.value!);');
+    typeBuff.writeln('    }');
+    typeBuff.writeln();
+    typeBuff.writeln(
       '    final otherConvertTo = other.clone.convertTo(anchor);',
     );
-    buff.writeln('    final currentConvertTo = clone.convertTo(anchor);');
-    buff.writeln(
+    typeBuff.writeln('    final currentConvertTo = clone.convertTo(anchor);');
+    typeBuff.writeln(
       '    return currentConvertTo.value!.compareTo(otherConvertTo.value!);',
     );
-    buff.writeln('  }');
-    buff.writeln();
-    buff.writeln('  @override');
-    buff.writeln('  (BaseType, ConversionRatio<$name>) get ratio => (');
-    buff.writeln('        anchor.runtimeType,');
-    buff.writeln('        ConversionRatio<$name>({');
+    typeBuff.writeln('  }');
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln('  (BaseType, ConversionRatio<$name>) get ratio => (');
+    typeBuff.writeln('        anchor.runtimeType,');
+    typeBuff.writeln('        ConversionRatio<$name>({');
     for (final e in unit.values.first) {
       if (e.keys.first == anchor.keys.first) continue;
-      buff.writeln('${e.keys.first}: ${e.values.first['ratio']},');
+      typeBuff.writeln('${e.keys.first}: ${e.values.first['ratio']},');
     }
-    buff.writeln('        })');
-    buff.writeln('      );');
-    buff.writeln();
-    buff.writeln('  @override');
-    buff.writeln('  $name get anchor => ${anchor.keys.first}();');
-    buff.writeln();
-    buff.writeln('  }');
-    buff.writeln();
+    typeBuff.writeln('        })');
+    typeBuff.writeln('      );');
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln('  $name get anchor => ${anchor.keys.first}();');
+    typeBuff.writeln();
+    typeBuff.writeln('  }');
+    typeBuff.writeln();
     for (final e in unit.values.first) {
-      buff.writeln('class ${e.keys.first} extends $name {');
-      buff.writeln('  ${e.keys.first}([super.value]);');
-      buff.writeln();
-      buff.writeln('  @override');
-      buff.writeln('  ${e.keys.first} get clone => ${e.keys.first}(value);');
-      buff.writeln();
-      buff.writeln('  @override');
-      buff.writeln("  String get symbol => '${e.values.first['symbol']}';");
-      buff.writeln('}');
-      buff.writeln();
+      typeBuff.writeln('class ${e.keys.first} extends $name {');
+      typeBuff.writeln('  ${e.keys.first}([super.value]);');
+      typeBuff.writeln();
+      typeBuff.writeln('  @override');
+      typeBuff
+          .writeln('  ${e.keys.first} get clone => ${e.keys.first}(value);');
+      typeBuff.writeln();
+      typeBuff.writeln('  @override');
+      typeBuff.writeln("  String get symbol => '${e.values.first['symbol']}';");
+      typeBuff.writeln('}');
+      typeBuff.writeln();
     }
-    file.writeAsStringSync(buff.toString());
+    file.writeAsStringSync(typeBuff.toString());
     final contents = "part 'src/models/$fileName';";
     if (!libFile.readAsLinesSync().contains(contents)) {
       libFile.writeAsStringSync(
@@ -140,6 +160,19 @@ void main() {
         mode: FileMode.append,
       );
     }
+    exampleBuff.writeln('final data${name.capitalizeWord} = [');
+    for (final e in unit.values.first) {
+      exampleBuff.writeln('  ${e.keys.first}(${getRandom()}),');
+    }
+    exampleBuff.writeln('];');
+    exampleBuff
+        .writeln("print('Random $name => \$data${name.capitalizeWord}');");
+    exampleBuff.writeln('data${name.capitalizeWord}.sort();');
+    exampleBuff
+        .writeln("print('Sorted $name => \$data${name.capitalizeWord}');");
+    exampleBuff.writeln();
   }
+  exampleBuff.writeln('}');
+  exampleFile.writeAsStringSync(exampleBuff.toString());
   Process.run('dart', ['format', '.']);
 }

@@ -1,24 +1,24 @@
 part of '../../super_measurement.dart';
 
-/// Available units of measurement for [Mass]
+/// Available units of measurement for [Volume]
 ///
-/// [Kilograms],[Pounds],[Ounces],[Grams],
-abstract class Mass extends Unit<Mass> {
-  Mass([super.value]);
+/// [CubicMeters],[CubicFeet],[CubicInches],[CubicCentimeters],[Liters],[Milliliters],
+abstract class Volume extends Unit<Volume> {
+  Volume([super.value]);
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is Mass &&
+      other is Volume &&
           runtimeType == other.runtimeType &&
           value == other.value ||
-      other is Mass && _convertAndCompare('==', other);
+      other is Volume && _convertAndCompare('==', other);
 
   @override
   int get hashCode => value.hashCode;
 
   @override
-  Mass convertTo(Mass other, [int precision = 2]) {
+  Volume convertTo(Volume other, [int precision = 2]) {
     num conversionRatio;
     if (runtimeType == other.runtimeType) {
       conversionRatio = 1;
@@ -34,7 +34,7 @@ abstract class Mass extends Unit<Mass> {
   }
 
   @override
-  bool _convertAndCompare(String operator, Mass other) {
+  bool _convertAndCompare(String operator, Volume other) {
     final otherValue = other.clone.convertTo(anchor).value!;
     final currentValue = clone.convertTo(anchor).value;
 
@@ -54,7 +54,7 @@ abstract class Mass extends Unit<Mass> {
   }
 
   @override
-  Mass _convertAndCombine(String operator, Mass other) {
+  Volume _convertAndCombine(String operator, Volume other) {
     final otherValue = other.convertTo(anchor);
     final currentValue = convertTo(anchor);
 
@@ -64,7 +64,7 @@ abstract class Mass extends Unit<Mass> {
   }
 
   @override
-  int compareTo(Mass other) {
+  int compareTo(Volume other) {
     if (runtimeType == other.runtimeType) {
       return value!.compareTo(other.value!);
     }
@@ -75,55 +75,77 @@ abstract class Mass extends Unit<Mass> {
   }
 
   @override
-  (BaseType, ConversionRatio<Mass>) get ratio => (
+  (BaseType, ConversionRatio<Volume>) get ratio => (
         anchor.runtimeType,
-        ConversionRatio<Mass>({
-          Pounds: 2.2046226218,
-          Ounces: 35.2739619496,
-          Grams: 1000,
+        ConversionRatio<Volume>({
+          CubicFeet: 35.3146667215,
+          CubicInches: 61023.744094732,
+          CubicCentimeters: 1000000,
+          Liters: 1000,
+          Milliliters: 1000000,
         })
       );
 
   @override
-  Mass get anchor => Kilograms();
+  Volume get anchor => CubicMeters();
 }
 
-class Kilograms extends Mass {
-  Kilograms([super.value]);
+class CubicMeters extends Volume {
+  CubicMeters([super.value]);
 
   @override
-  Kilograms get clone => Kilograms(value);
+  CubicMeters get clone => CubicMeters(value);
 
   @override
-  String get symbol => 'kg';
+  String get symbol => 'm³';
 }
 
-class Pounds extends Mass {
-  Pounds([super.value]);
+class CubicFeet extends Volume {
+  CubicFeet([super.value]);
 
   @override
-  Pounds get clone => Pounds(value);
+  CubicFeet get clone => CubicFeet(value);
 
   @override
-  String get symbol => 'lb';
+  String get symbol => 'ft³';
 }
 
-class Ounces extends Mass {
-  Ounces([super.value]);
+class CubicInches extends Volume {
+  CubicInches([super.value]);
 
   @override
-  Ounces get clone => Ounces(value);
+  CubicInches get clone => CubicInches(value);
 
   @override
-  String get symbol => 'oz';
+  String get symbol => 'in³';
 }
 
-class Grams extends Mass {
-  Grams([super.value]);
+class CubicCentimeters extends Volume {
+  CubicCentimeters([super.value]);
 
   @override
-  Grams get clone => Grams(value);
+  CubicCentimeters get clone => CubicCentimeters(value);
 
   @override
-  String get symbol => 'g';
+  String get symbol => 'cm³';
+}
+
+class Liters extends Volume {
+  Liters([super.value]);
+
+  @override
+  Liters get clone => Liters(value);
+
+  @override
+  String get symbol => 'L';
+}
+
+class Milliliters extends Volume {
+  Milliliters([super.value]);
+
+  @override
+  Milliliters get clone => Milliliters(value);
+
+  @override
+  String get symbol => 'mL';
 }

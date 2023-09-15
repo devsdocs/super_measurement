@@ -6,13 +6,13 @@ final massUnit = {
       'Kilograms': {'ratio': 1, 'symbol': 'kg'},
     },
     {
-      'Pounds': {'ratio': 2.204623, 'symbol': 'lb'},
+      'Pounds': {'ratio': 2.2046226218, 'symbol': 'lb'},
     },
     {
-      'Ounces': {'ratio': 35.27396, 'symbol': 'oz'},
+      'Ounces': {'ratio': 35.2739619496, 'symbol': 'oz'},
     },
     {
       'Grams': {'ratio': 1000, 'symbol': 'g'},
-    },
+    }
   ],
 };

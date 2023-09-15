@@ -1,5 +1,8 @@
 part of '../../super_measurement.dart';
 
+/// Available units of measurement for [Distance]
+///
+/// [Centimeters],[Meters],[Inches],[Feet],[Kilometers],[Miles],[Yards],[NauticalMiles],
 abstract class Distance extends Unit<Distance> {
   Distance([super.value]);
 
@@ -79,6 +82,9 @@ abstract class Distance extends Unit<Distance> {
           Inches: 39.37008,
           Feet: 3.28084,
           Kilometers: 0.001,
+          Miles: 0.0006213712,
+          Yards: 1.0936132983,
+          NauticalMiles: 0.000539956803,
         })
       );
 
@@ -134,4 +140,34 @@ class Kilometers extends Distance {
 
   @override
   String get symbol => 'km';
+}
+
+class Miles extends Distance {
+  Miles([super.value]);
+
+  @override
+  Miles get clone => Miles(value);
+
+  @override
+  String get symbol => 'mi';
+}
+
+class Yards extends Distance {
+  Yards([super.value]);
+
+  @override
+  Yards get clone => Yards(value);
+
+  @override
+  String get symbol => 'yd';
+}
+
+class NauticalMiles extends Distance {
+  NauticalMiles([super.value]);
+
+  @override
+  NauticalMiles get clone => NauticalMiles(value);
+
+  @override
+  String get symbol => 'NM';
 }

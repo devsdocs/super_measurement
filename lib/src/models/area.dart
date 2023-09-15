@@ -1,24 +1,24 @@
 part of '../../super_measurement.dart';
 
-/// Available units of measurement for [Mass]
+/// Available units of measurement for [Area]
 ///
-/// [Kilograms],[Pounds],[Ounces],[Grams],
-abstract class Mass extends Unit<Mass> {
-  Mass([super.value]);
+/// [SquareMeters],[SquareFeet],[SquareInches],[Hectares],[Acres],[SquareCentimeters],
+abstract class Area extends Unit<Area> {
+  Area([super.value]);
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is Mass &&
+      other is Area &&
           runtimeType == other.runtimeType &&
           value == other.value ||
-      other is Mass && _convertAndCompare('==', other);
+      other is Area && _convertAndCompare('==', other);
 
   @override
   int get hashCode => value.hashCode;
 
   @override
-  Mass convertTo(Mass other, [int precision = 2]) {
+  Area convertTo(Area other, [int precision = 2]) {
     num conversionRatio;
     if (runtimeType == other.runtimeType) {
       conversionRatio = 1;
@@ -34,7 +34,7 @@ abstract class Mass extends Unit<Mass> {
   }
 
   @override
-  bool _convertAndCompare(String operator, Mass other) {
+  bool _convertAndCompare(String operator, Area other) {
     final otherValue = other.clone.convertTo(anchor).value!;
     final currentValue = clone.convertTo(anchor).value;
 
@@ -54,7 +54,7 @@ abstract class Mass extends Unit<Mass> {
   }
 
   @override
-  Mass _convertAndCombine(String operator, Mass other) {
+  Area _convertAndCombine(String operator, Area other) {
     final otherValue = other.convertTo(anchor);
     final currentValue = convertTo(anchor);
 
@@ -64,7 +64,7 @@ abstract class Mass extends Unit<Mass> {
   }
 
   @override
-  int compareTo(Mass other) {
+  int compareTo(Area other) {
     if (runtimeType == other.runtimeType) {
       return value!.compareTo(other.value!);
     }
@@ -75,55 +75,77 @@ abstract class Mass extends Unit<Mass> {
   }
 
   @override
-  (BaseType, ConversionRatio<Mass>) get ratio => (
+  (BaseType, ConversionRatio<Area>) get ratio => (
         anchor.runtimeType,
-        ConversionRatio<Mass>({
-          Pounds: 2.2046226218,
-          Ounces: 35.2739619496,
-          Grams: 1000,
+        ConversionRatio<Area>({
+          SquareFeet: 10.7639104167,
+          SquareInches: 1550.0031000062,
+          Hectares: 0.0001,
+          Acres: 0.0002471054,
+          SquareCentimeters: 10000,
         })
       );
 
   @override
-  Mass get anchor => Kilograms();
+  Area get anchor => SquareMeters();
 }
 
-class Kilograms extends Mass {
-  Kilograms([super.value]);
+class SquareMeters extends Area {
+  SquareMeters([super.value]);
 
   @override
-  Kilograms get clone => Kilograms(value);
+  SquareMeters get clone => SquareMeters(value);
 
   @override
-  String get symbol => 'kg';
+  String get symbol => 'm²';
 }
 
-class Pounds extends Mass {
-  Pounds([super.value]);
+class SquareFeet extends Area {
+  SquareFeet([super.value]);
 
   @override
-  Pounds get clone => Pounds(value);
+  SquareFeet get clone => SquareFeet(value);
 
   @override
-  String get symbol => 'lb';
+  String get symbol => 'ft²';
 }
 
-class Ounces extends Mass {
-  Ounces([super.value]);
+class SquareInches extends Area {
+  SquareInches([super.value]);
 
   @override
-  Ounces get clone => Ounces(value);
+  SquareInches get clone => SquareInches(value);
 
   @override
-  String get symbol => 'oz';
+  String get symbol => 'in²';
 }
 
-class Grams extends Mass {
-  Grams([super.value]);
+class Hectares extends Area {
+  Hectares([super.value]);
 
   @override
-  Grams get clone => Grams(value);
+  Hectares get clone => Hectares(value);
 
   @override
-  String get symbol => 'g';
+  String get symbol => 'ha';
+}
+
+class Acres extends Area {
+  Acres([super.value]);
+
+  @override
+  Acres get clone => Acres(value);
+
+  @override
+  String get symbol => 'ac';
+}
+
+class SquareCentimeters extends Area {
+  SquareCentimeters([super.value]);
+
+  @override
+  SquareCentimeters get clone => SquareCentimeters(value);
+
+  @override
+  String get symbol => 'cm²';
 }

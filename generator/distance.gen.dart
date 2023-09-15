@@ -17,5 +17,14 @@ final distanceUnit = {
     {
       'Kilometers': {'ratio': 0.001, 'symbol': 'km'},
     },
+    {
+      'Miles': {'ratio': 0.0006213712, 'symbol': 'mi'},
+    },
+    {
+      'Yards': {'ratio': 1.0936132983, 'symbol': 'yd'},
+    },
+    {
+      'NauticalMiles': {'ratio': 0.000539956803, 'symbol': 'NM'},
+    },
   ],
 };
