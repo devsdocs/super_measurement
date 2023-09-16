@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Area]
 ///
-/// [Acres],[Hectares],[SquareMeters],[SquareFoot],[SquareInches],[SquareCentimeters],[SquareMiles],[SquareYards],[SquareKilometers],
+/// [Acres],[Hectares],[SquareCentimeters],[SquareFoot],[SquareInches],[SquareKilometers],[SquareMeters],[SquareMiles],[SquareYards],
 abstract final class Area extends Unit<Area> {
   Area([super.value]);
 
@@ -12,12 +12,12 @@ abstract final class Area extends Unit<Area> {
         ConversionRatio<Area>({
           Acres: 0.0002471054,
           Hectares: 0.0001,
+          SquareCentimeters: 10000,
           SquareFoot: 10.7639104167,
           SquareInches: 1550.0031000062,
-          SquareCentimeters: 10000,
+          SquareKilometers: 0.000001,
           SquareMiles: 3.86102159e-7,
           SquareYards: 1.1959900463,
-          SquareKilometers: 0.000001,
         })
       );
 
@@ -28,19 +28,19 @@ abstract final class Area extends Unit<Area> {
 
   Area get toHectares => _convertTo(Hectares());
 
-  Area get toSquareMeters => _convertTo(SquareMeters());
+  Area get toSquareCentimeters => _convertTo(SquareCentimeters());
 
   Area get toSquareFoot => _convertTo(SquareFoot());
 
   Area get toSquareInches => _convertTo(SquareInches());
 
-  Area get toSquareCentimeters => _convertTo(SquareCentimeters());
+  Area get toSquareKilometers => _convertTo(SquareKilometers());
+
+  Area get toSquareMeters => _convertTo(SquareMeters());
 
   Area get toSquareMiles => _convertTo(SquareMiles());
 
   Area get toSquareYards => _convertTo(SquareYards());
-
-  Area get toSquareKilometers => _convertTo(SquareKilometers());
 }
 
 final class Acres extends Area {
@@ -63,14 +63,14 @@ final class Hectares extends Area {
   String get symbol => 'ha';
 }
 
-final class SquareMeters extends Area {
-  SquareMeters([super.value]);
+final class SquareCentimeters extends Area {
+  SquareCentimeters([super.value]);
 
   @override
-  SquareMeters get _clone => SquareMeters(value);
+  SquareCentimeters get _clone => SquareCentimeters(value);
 
   @override
-  String get symbol => 'm²';
+  String get symbol => 'cm²';
 }
 
 final class SquareFoot extends Area {
@@ -93,14 +93,24 @@ final class SquareInches extends Area {
   String get symbol => 'in²';
 }
 
-final class SquareCentimeters extends Area {
-  SquareCentimeters([super.value]);
+final class SquareKilometers extends Area {
+  SquareKilometers([super.value]);
 
   @override
-  SquareCentimeters get _clone => SquareCentimeters(value);
+  SquareKilometers get _clone => SquareKilometers(value);
 
   @override
-  String get symbol => 'cm²';
+  String get symbol => 'km²';
+}
+
+final class SquareMeters extends Area {
+  SquareMeters([super.value]);
+
+  @override
+  SquareMeters get _clone => SquareMeters(value);
+
+  @override
+  String get symbol => 'm²';
 }
 
 final class SquareMiles extends Area {
@@ -121,14 +131,4 @@ final class SquareYards extends Area {
 
   @override
   String get symbol => 'yd²';
-}
-
-final class SquareKilometers extends Area {
-  SquareKilometers([super.value]);
-
-  @override
-  SquareKilometers get _clone => SquareKilometers(value);
-
-  @override
-  String get symbol => 'km²';
 }

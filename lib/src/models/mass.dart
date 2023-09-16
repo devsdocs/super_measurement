@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Mass]
 ///
-/// [Carats],[Grams],[Kilograms],[Milligrams],[Ounces],[Pounds],[Quintal],[StoneUK],[Tonne],[TonUK],[TonUS],
+/// [Carats],[Grams],[Kilograms],[Milligrams],[Ounces],[Pounds],[Quintal],[StoneUK],[TonUK],[TonUS],[Tonne],
 abstract final class Mass extends Unit<Mass> {
   Mass([super.value]);
 
@@ -17,9 +17,9 @@ abstract final class Mass extends Unit<Mass> {
           Pounds: 2.2046226218,
           Quintal: 0.01,
           StoneUK: 0.1574730444,
-          Tonne: 0.001,
           TonUK: 0.0009842065,
           TonUS: 0.0011023113,
+          Tonne: 0.001,
         })
       );
 
@@ -42,11 +42,11 @@ abstract final class Mass extends Unit<Mass> {
 
   Mass get toStoneUK => _convertTo(StoneUK());
 
-  Mass get toTonne => _convertTo(Tonne());
-
   Mass get toTonUK => _convertTo(TonUK());
 
   Mass get toTonUS => _convertTo(TonUS());
+
+  Mass get toTonne => _convertTo(Tonne());
 }
 
 final class Carats extends Mass {
@@ -129,16 +129,6 @@ final class StoneUK extends Mass {
   String get symbol => 'st';
 }
 
-final class Tonne extends Mass {
-  Tonne([super.value]);
-
-  @override
-  Tonne get _clone => Tonne(value);
-
-  @override
-  String get symbol => 'ton';
-}
-
 final class TonUK extends Mass {
   TonUK([super.value]);
 
@@ -154,6 +144,16 @@ final class TonUS extends Mass {
 
   @override
   TonUS get _clone => TonUS(value);
+
+  @override
+  String get symbol => 'ton';
+}
+
+final class Tonne extends Mass {
+  Tonne([super.value]);
+
+  @override
+  Tonne get _clone => Tonne(value);
 
   @override
   String get symbol => 'ton';

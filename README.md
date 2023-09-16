@@ -4,21 +4,21 @@
 ### Area
    - `Acres`
    - `Hectares`
-   - `SquareMeters`
+   - `SquareCentimeters`
    - `SquareFoot`
    - `SquareInches`
-   - `SquareCentimeters`
+   - `SquareKilometers`
+   - `SquareMeters`
    - `SquareMiles`
    - `SquareYards`
-   - `SquareKilometers`
 
 ### DataTransfer
-   - `GigabytePerSecond`
    - `GigabitPerSecond`
-   - `KilobytePerSecond`
+   - `GigabytePerSecond`
    - `KilobitPerSecond`
-   - `MegabytePerSecond`
+   - `KilobytePerSecond`
    - `MegabitPerSecond`
+   - `MegabytePerSecond`
 
 ### Length
    - `Centimeters`
@@ -39,9 +39,16 @@
    - `Pounds`
    - `Quintal`
    - `StoneUK`
-   - `Tonne`
    - `TonUK`
    - `TonUS`
+   - `Tonne`
+
+### Power
+   - `Horsepower`
+   - `Kilowatt`
+   - `Megawatt`
+   - `Milliwatt`
+   - `Watt`
 
 ### Pressure
    - `Bar`
@@ -52,17 +59,10 @@
    - `StandardAtmosphere`
    - `Torr`
 
-### Power
-   - `Horsepower`
-   - `Kilowatt`
-   - `Megawatt`
-   - `Milliwatt`
-   - `Watt`
-
 ### Speed
-   - `FootPerSecond`
-   - `FootPerMinute`
    - `FootPerHour`
+   - `FootPerMinute`
+   - `FootPerSecond`
    - `KilometerPerHour`
    - `Knot`
    - `MeterPerSecond`
@@ -72,21 +72,21 @@
 ### Time
    - `Day`
    - `Hour`
-   - `Minute`
    - `Millisecond`
+   - `Minute`
    - `Second`
    - `Week`
    - `Year`
 
 ### Volume
-   - `BarrelsUS`
    - `BarrelsImperial`
-   - `CubicMeters`
+   - `BarrelsUS`
+   - `CubicCentimeters`
    - `CubicFoot`
    - `CubicInches`
-   - `CubicCentimeters`
-   - `GallonsUS`
+   - `CubicMeters`
    - `GallonsImperial`
+   - `GallonsUS`
    - `Liters`
    - `Milliliters`
 

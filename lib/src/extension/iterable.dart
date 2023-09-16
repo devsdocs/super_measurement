@@ -3,22 +3,22 @@ part of '../../super_measurement.dart';
 extension IterableOfArea on Iterable<Area> {
   Area get toAcres => _combineTo(Acres());
   Area get toHectares => _combineTo(Hectares());
-  Area get toSquareMeters => _combineTo(SquareMeters());
+  Area get toSquareCentimeters => _combineTo(SquareCentimeters());
   Area get toSquareFoot => _combineTo(SquareFoot());
   Area get toSquareInches => _combineTo(SquareInches());
-  Area get toSquareCentimeters => _combineTo(SquareCentimeters());
+  Area get toSquareKilometers => _combineTo(SquareKilometers());
+  Area get toSquareMeters => _combineTo(SquareMeters());
   Area get toSquareMiles => _combineTo(SquareMiles());
   Area get toSquareYards => _combineTo(SquareYards());
-  Area get toSquareKilometers => _combineTo(SquareKilometers());
 }
 
 extension IterableOfDataTransfer on Iterable<DataTransfer> {
-  DataTransfer get toGigabytePerSecond => _combineTo(GigabytePerSecond());
   DataTransfer get toGigabitPerSecond => _combineTo(GigabitPerSecond());
-  DataTransfer get toKilobytePerSecond => _combineTo(KilobytePerSecond());
+  DataTransfer get toGigabytePerSecond => _combineTo(GigabytePerSecond());
   DataTransfer get toKilobitPerSecond => _combineTo(KilobitPerSecond());
-  DataTransfer get toMegabytePerSecond => _combineTo(MegabytePerSecond());
+  DataTransfer get toKilobytePerSecond => _combineTo(KilobytePerSecond());
   DataTransfer get toMegabitPerSecond => _combineTo(MegabitPerSecond());
+  DataTransfer get toMegabytePerSecond => _combineTo(MegabytePerSecond());
 }
 
 extension IterableOfLength on Iterable<Length> {
@@ -41,9 +41,17 @@ extension IterableOfMass on Iterable<Mass> {
   Mass get toPounds => _combineTo(Pounds());
   Mass get toQuintal => _combineTo(Quintal());
   Mass get toStoneUK => _combineTo(StoneUK());
-  Mass get toTonne => _combineTo(Tonne());
   Mass get toTonUK => _combineTo(TonUK());
   Mass get toTonUS => _combineTo(TonUS());
+  Mass get toTonne => _combineTo(Tonne());
+}
+
+extension IterableOfPower on Iterable<Power> {
+  Power get toHorsepower => _combineTo(Horsepower());
+  Power get toKilowatt => _combineTo(Kilowatt());
+  Power get toMegawatt => _combineTo(Megawatt());
+  Power get toMilliwatt => _combineTo(Milliwatt());
+  Power get toWatt => _combineTo(Watt());
 }
 
 extension IterableOfPressure on Iterable<Pressure> {
@@ -56,18 +64,10 @@ extension IterableOfPressure on Iterable<Pressure> {
   Pressure get toTorr => _combineTo(Torr());
 }
 
-extension IterableOfPower on Iterable<Power> {
-  Power get toHorsepower => _combineTo(Horsepower());
-  Power get toKilowatt => _combineTo(Kilowatt());
-  Power get toMegawatt => _combineTo(Megawatt());
-  Power get toMilliwatt => _combineTo(Milliwatt());
-  Power get toWatt => _combineTo(Watt());
-}
-
 extension IterableOfSpeed on Iterable<Speed> {
-  Speed get toFootPerSecond => _combineTo(FootPerSecond());
-  Speed get toFootPerMinute => _combineTo(FootPerMinute());
   Speed get toFootPerHour => _combineTo(FootPerHour());
+  Speed get toFootPerMinute => _combineTo(FootPerMinute());
+  Speed get toFootPerSecond => _combineTo(FootPerSecond());
   Speed get toKilometerPerHour => _combineTo(KilometerPerHour());
   Speed get toKnot => _combineTo(Knot());
   Speed get toMeterPerSecond => _combineTo(MeterPerSecond());
@@ -78,22 +78,22 @@ extension IterableOfSpeed on Iterable<Speed> {
 extension IterableOfTime on Iterable<Time> {
   Time get toDay => _combineTo(Day());
   Time get toHour => _combineTo(Hour());
-  Time get toMinute => _combineTo(Minute());
   Time get toMillisecond => _combineTo(Millisecond());
+  Time get toMinute => _combineTo(Minute());
   Time get toSecond => _combineTo(Second());
   Time get toWeek => _combineTo(Week());
   Time get toYear => _combineTo(Year());
 }
 
 extension IterableOfVolume on Iterable<Volume> {
-  Volume get toBarrelsUS => _combineTo(BarrelsUS());
   Volume get toBarrelsImperial => _combineTo(BarrelsImperial());
-  Volume get toCubicMeters => _combineTo(CubicMeters());
+  Volume get toBarrelsUS => _combineTo(BarrelsUS());
+  Volume get toCubicCentimeters => _combineTo(CubicCentimeters());
   Volume get toCubicFoot => _combineTo(CubicFoot());
   Volume get toCubicInches => _combineTo(CubicInches());
-  Volume get toCubicCentimeters => _combineTo(CubicCentimeters());
-  Volume get toGallonsUS => _combineTo(GallonsUS());
+  Volume get toCubicMeters => _combineTo(CubicMeters());
   Volume get toGallonsImperial => _combineTo(GallonsImperial());
+  Volume get toGallonsUS => _combineTo(GallonsUS());
   Volume get toLiters => _combineTo(Liters());
   Volume get toMilliliters => _combineTo(Milliliters());
 }

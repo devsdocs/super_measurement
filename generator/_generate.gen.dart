@@ -30,16 +30,14 @@ final allData = [
           key,
           value
             ..sort(
-              (a, b) => a.keys.first[0].codeUnits[0]
-                  .compareTo(b.keys.first[0].codeUnits[0]),
+              (a, b) => a.keys.first.compareTo(b.keys.first),
             ),
         ),
       ),
     )
     .toList()
   ..sort(
-    (a, b) =>
-        a.keys.first[0].codeUnits[0].compareTo(b.keys.first[0].codeUnits[0]),
+    (a, b) => a.keys.first.compareTo(b.keys.first),
   );
 
 const exampleDir = 'example/super_measurement_example.dart';

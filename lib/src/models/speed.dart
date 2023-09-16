@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Speed]
 ///
-/// [FootPerSecond],[FootPerMinute],[FootPerHour],[KilometerPerHour],[Knot],[MeterPerSecond],[MilesPerHour],[MilesPerMinute],
+/// [FootPerHour],[FootPerMinute],[FootPerSecond],[KilometerPerHour],[Knot],[MeterPerSecond],[MilesPerHour],[MilesPerMinute],
 abstract final class Speed extends Unit<Speed> {
   Speed([super.value]);
 
@@ -10,9 +10,9 @@ abstract final class Speed extends Unit<Speed> {
   (BaseType, ConversionRatio<Speed>) get _ratio => (
         _anchor.runtimeType,
         ConversionRatio<Speed>({
-          FootPerSecond: 0.9113444153,
-          FootPerMinute: 54.6806649169,
           FootPerHour: 3280.8398950131,
+          FootPerMinute: 54.6806649169,
+          FootPerSecond: 0.9113444153,
           Knot: 0.5399568035,
           MeterPerSecond: 0.2777777778,
           MilesPerHour: 0.6213711922,
@@ -23,11 +23,11 @@ abstract final class Speed extends Unit<Speed> {
   @override
   Speed get _anchor => KilometerPerHour();
 
-  Speed get toFootPerSecond => _convertTo(FootPerSecond());
+  Speed get toFootPerHour => _convertTo(FootPerHour());
 
   Speed get toFootPerMinute => _convertTo(FootPerMinute());
 
-  Speed get toFootPerHour => _convertTo(FootPerHour());
+  Speed get toFootPerSecond => _convertTo(FootPerSecond());
 
   Speed get toKilometerPerHour => _convertTo(KilometerPerHour());
 
@@ -40,14 +40,14 @@ abstract final class Speed extends Unit<Speed> {
   Speed get toMilesPerMinute => _convertTo(MilesPerMinute());
 }
 
-final class FootPerSecond extends Speed {
-  FootPerSecond([super.value]);
+final class FootPerHour extends Speed {
+  FootPerHour([super.value]);
 
   @override
-  FootPerSecond get _clone => FootPerSecond(value);
+  FootPerHour get _clone => FootPerHour(value);
 
   @override
-  String get symbol => 'ft/s';
+  String get symbol => 'ft/h';
 }
 
 final class FootPerMinute extends Speed {
@@ -60,14 +60,14 @@ final class FootPerMinute extends Speed {
   String get symbol => 'ft/min';
 }
 
-final class FootPerHour extends Speed {
-  FootPerHour([super.value]);
+final class FootPerSecond extends Speed {
+  FootPerSecond([super.value]);
 
   @override
-  FootPerHour get _clone => FootPerHour(value);
+  FootPerSecond get _clone => FootPerSecond(value);
 
   @override
-  String get symbol => 'ft/h';
+  String get symbol => 'ft/s';
 }
 
 final class KilometerPerHour extends Speed {
