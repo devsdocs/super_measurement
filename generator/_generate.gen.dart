@@ -333,6 +333,11 @@ void generateReadme() {
   readmeBuff.writeln();
   for (final unit in allData) {
     final name = unit.keys.first;
+    readmeBuff.writeln('  + [$name](#${name.toLowerCase()})');
+  }
+  readmeBuff.writeln();
+  for (final unit in allData) {
+    final name = unit.keys.first;
     readmeBuff.writeln('### $name');
     for (final e in unit.values.first) {
       readmeBuff.writeln('   - `${e.keys.first}`');
