@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Volume]
 ///
-/// [CubicMeters],[CubicFoot],[CubicInches],[CubicCentimeters],[Liters],[Milliliters],[GallonsUS],[GallonsImperial],[BarrelsUS],[BarrelsImperial],
+/// [BarrelsUS],[BarrelsImperial],[CubicMeters],[CubicFoot],[CubicInches],[CubicCentimeters],[GallonsUS],[GallonsImperial],[Liters],[Milliliters],
 abstract final class Volume extends Unit<Volume> {
   Volume([super.value]);
 
@@ -10,20 +10,24 @@ abstract final class Volume extends Unit<Volume> {
   (BaseType, ConversionRatio<Volume>) get _ratio => (
         _anchor.runtimeType,
         ConversionRatio<Volume>({
+          BarrelsUS: 8.3864143606,
+          BarrelsImperial: 6.1102568972,
           CubicFoot: 35.3146667215,
           CubicInches: 61023.744094732,
           CubicCentimeters: 1000000,
-          Liters: 1000,
-          Milliliters: 1000000,
           GallonsUS: 264.1720523581,
           GallonsImperial: 219.9692482991,
-          BarrelsUS: 8.3864143606,
-          BarrelsImperial: 6.1102568972,
+          Liters: 1000,
+          Milliliters: 1000000,
         })
       );
 
   @override
   Volume get _anchor => CubicMeters();
+
+  Volume get toBarrelsUS => _convertTo(BarrelsUS());
+
+  Volume get toBarrelsImperial => _convertTo(BarrelsImperial());
 
   Volume get toCubicMeters => _convertTo(CubicMeters());
 
@@ -33,17 +37,33 @@ abstract final class Volume extends Unit<Volume> {
 
   Volume get toCubicCentimeters => _convertTo(CubicCentimeters());
 
-  Volume get toLiters => _convertTo(Liters());
-
-  Volume get toMilliliters => _convertTo(Milliliters());
-
   Volume get toGallonsUS => _convertTo(GallonsUS());
 
   Volume get toGallonsImperial => _convertTo(GallonsImperial());
 
-  Volume get toBarrelsUS => _convertTo(BarrelsUS());
+  Volume get toLiters => _convertTo(Liters());
 
-  Volume get toBarrelsImperial => _convertTo(BarrelsImperial());
+  Volume get toMilliliters => _convertTo(Milliliters());
+}
+
+final class BarrelsUS extends Volume {
+  BarrelsUS([super.value]);
+
+  @override
+  BarrelsUS get _clone => BarrelsUS(value);
+
+  @override
+  String get symbol => 'bl';
+}
+
+final class BarrelsImperial extends Volume {
+  BarrelsImperial([super.value]);
+
+  @override
+  BarrelsImperial get _clone => BarrelsImperial(value);
+
+  @override
+  String get symbol => 'bl';
 }
 
 final class CubicMeters extends Volume {
@@ -86,26 +106,6 @@ final class CubicCentimeters extends Volume {
   String get symbol => 'cm³';
 }
 
-final class Liters extends Volume {
-  Liters([super.value]);
-
-  @override
-  Liters get _clone => Liters(value);
-
-  @override
-  String get symbol => 'L';
-}
-
-final class Milliliters extends Volume {
-  Milliliters([super.value]);
-
-  @override
-  Milliliters get _clone => Milliliters(value);
-
-  @override
-  String get symbol => 'mL';
-}
-
 final class GallonsUS extends Volume {
   GallonsUS([super.value]);
 
@@ -126,22 +126,22 @@ final class GallonsImperial extends Volume {
   String get symbol => 'gal';
 }
 
-final class BarrelsUS extends Volume {
-  BarrelsUS([super.value]);
+final class Liters extends Volume {
+  Liters([super.value]);
 
   @override
-  BarrelsUS get _clone => BarrelsUS(value);
+  Liters get _clone => Liters(value);
 
   @override
-  String get symbol => 'bl';
+  String get symbol => 'L';
 }
 
-final class BarrelsImperial extends Volume {
-  BarrelsImperial([super.value]);
+final class Milliliters extends Volume {
+  Milliliters([super.value]);
 
   @override
-  BarrelsImperial get _clone => BarrelsImperial(value);
+  Milliliters get _clone => Milliliters(value);
 
   @override
-  String get symbol => 'bl';
+  String get symbol => 'mL';
 }

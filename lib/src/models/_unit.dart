@@ -118,7 +118,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   @override
   String toString() {
-    final value = this.value! % 1 == 0 ? this.value!.toInt() : this.value!;
+    final value = this.value!.toDouble().toIntIfTrue;
     return '$value $runtimeType ($symbol)';
   }
 }

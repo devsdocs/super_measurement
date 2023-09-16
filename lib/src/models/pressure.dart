@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Pressure]
 ///
-/// [StandardAtmosphere],[Pascal],[Bar],[MillimeterOfMercury],[InchesOfMercury],[Torr],[PoundsPerSquareInch],
+/// [Bar],[InchesOfMercury],[MillimeterOfMercury],[Pascal],[PoundsPerSquareInch],[StandardAtmosphere],[Torr],
 abstract final class Pressure extends Unit<Pressure> {
   Pressure([super.value]);
 
@@ -10,51 +10,31 @@ abstract final class Pressure extends Unit<Pressure> {
   (BaseType, ConversionRatio<Pressure>) get _ratio => (
         _anchor.runtimeType,
         ConversionRatio<Pressure>({
-          Pascal: 101325,
           Bar: 1.01325,
-          MillimeterOfMercury: 759.9998917256,
           InchesOfMercury: 29.9212555797,
-          Torr: 760,
+          MillimeterOfMercury: 759.9998917256,
+          Pascal: 101325,
           PoundsPerSquareInch: 14.6959487755,
+          Torr: 760,
         })
       );
 
   @override
   Pressure get _anchor => StandardAtmosphere();
 
-  Pressure get toStandardAtmosphere => _convertTo(StandardAtmosphere());
-
-  Pressure get toPascal => _convertTo(Pascal());
-
   Pressure get toBar => _convertTo(Bar());
-
-  Pressure get toMillimeterOfMercury => _convertTo(MillimeterOfMercury());
 
   Pressure get toInchesOfMercury => _convertTo(InchesOfMercury());
 
-  Pressure get toTorr => _convertTo(Torr());
+  Pressure get toMillimeterOfMercury => _convertTo(MillimeterOfMercury());
+
+  Pressure get toPascal => _convertTo(Pascal());
 
   Pressure get toPoundsPerSquareInch => _convertTo(PoundsPerSquareInch());
-}
 
-final class StandardAtmosphere extends Pressure {
-  StandardAtmosphere([super.value]);
+  Pressure get toStandardAtmosphere => _convertTo(StandardAtmosphere());
 
-  @override
-  StandardAtmosphere get _clone => StandardAtmosphere(value);
-
-  @override
-  String get symbol => 'atm';
-}
-
-final class Pascal extends Pressure {
-  Pascal([super.value]);
-
-  @override
-  Pascal get _clone => Pascal(value);
-
-  @override
-  String get symbol => 'Pa';
+  Pressure get toTorr => _convertTo(Torr());
 }
 
 final class Bar extends Pressure {
@@ -67,16 +47,6 @@ final class Bar extends Pressure {
   String get symbol => 'bar';
 }
 
-final class MillimeterOfMercury extends Pressure {
-  MillimeterOfMercury([super.value]);
-
-  @override
-  MillimeterOfMercury get _clone => MillimeterOfMercury(value);
-
-  @override
-  String get symbol => 'mmHg';
-}
-
 final class InchesOfMercury extends Pressure {
   InchesOfMercury([super.value]);
 
@@ -87,14 +57,24 @@ final class InchesOfMercury extends Pressure {
   String get symbol => 'inHg';
 }
 
-final class Torr extends Pressure {
-  Torr([super.value]);
+final class MillimeterOfMercury extends Pressure {
+  MillimeterOfMercury([super.value]);
 
   @override
-  Torr get _clone => Torr(value);
+  MillimeterOfMercury get _clone => MillimeterOfMercury(value);
 
   @override
-  String get symbol => 'Torr';
+  String get symbol => 'mmHg';
+}
+
+final class Pascal extends Pressure {
+  Pascal([super.value]);
+
+  @override
+  Pascal get _clone => Pascal(value);
+
+  @override
+  String get symbol => 'Pa';
 }
 
 final class PoundsPerSquareInch extends Pressure {
@@ -105,4 +85,24 @@ final class PoundsPerSquareInch extends Pressure {
 
   @override
   String get symbol => 'psi';
+}
+
+final class StandardAtmosphere extends Pressure {
+  StandardAtmosphere([super.value]);
+
+  @override
+  StandardAtmosphere get _clone => StandardAtmosphere(value);
+
+  @override
+  String get symbol => 'atm';
+}
+
+final class Torr extends Pressure {
+  Torr([super.value]);
+
+  @override
+  Torr get _clone => Torr(value);
+
+  @override
+  String get symbol => 'Torr';
 }

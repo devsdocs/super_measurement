@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [DataTransfer]
 ///
-/// [MegabytePerSecond],[GigabytePerSecond],[KilobytePerSecond],[KilobitPerSecond],[MegabitPerSecond],[GigabitPerSecond],
+/// [GigabytePerSecond],[GigabitPerSecond],[KilobytePerSecond],[KilobitPerSecond],[MegabytePerSecond],[MegabitPerSecond],
 abstract final class DataTransfer extends Unit<DataTransfer> {
   DataTransfer([super.value]);
 
@@ -11,37 +11,27 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
         _anchor.runtimeType,
         ConversionRatio<DataTransfer>({
           GigabytePerSecond: 0.001,
+          GigabitPerSecond: 0.0008,
           KilobytePerSecond: 1000,
           KilobitPerSecond: 8000,
           MegabitPerSecond: 8,
-          GigabitPerSecond: 0.0008,
         })
       );
 
   @override
   DataTransfer get _anchor => MegabytePerSecond();
 
-  DataTransfer get toMegabytePerSecond => _convertTo(MegabytePerSecond());
-
   DataTransfer get toGigabytePerSecond => _convertTo(GigabytePerSecond());
+
+  DataTransfer get toGigabitPerSecond => _convertTo(GigabitPerSecond());
 
   DataTransfer get toKilobytePerSecond => _convertTo(KilobytePerSecond());
 
   DataTransfer get toKilobitPerSecond => _convertTo(KilobitPerSecond());
 
+  DataTransfer get toMegabytePerSecond => _convertTo(MegabytePerSecond());
+
   DataTransfer get toMegabitPerSecond => _convertTo(MegabitPerSecond());
-
-  DataTransfer get toGigabitPerSecond => _convertTo(GigabitPerSecond());
-}
-
-final class MegabytePerSecond extends DataTransfer {
-  MegabytePerSecond([super.value]);
-
-  @override
-  MegabytePerSecond get _clone => MegabytePerSecond(value);
-
-  @override
-  String get symbol => 'MB/S';
 }
 
 final class GigabytePerSecond extends DataTransfer {
@@ -52,6 +42,16 @@ final class GigabytePerSecond extends DataTransfer {
 
   @override
   String get symbol => 'GB/S';
+}
+
+final class GigabitPerSecond extends DataTransfer {
+  GigabitPerSecond([super.value]);
+
+  @override
+  GigabitPerSecond get _clone => GigabitPerSecond(value);
+
+  @override
+  String get symbol => 'Gb/S';
 }
 
 final class KilobytePerSecond extends DataTransfer {
@@ -74,6 +74,16 @@ final class KilobitPerSecond extends DataTransfer {
   String get symbol => 'kb/S';
 }
 
+final class MegabytePerSecond extends DataTransfer {
+  MegabytePerSecond([super.value]);
+
+  @override
+  MegabytePerSecond get _clone => MegabytePerSecond(value);
+
+  @override
+  String get symbol => 'MB/S';
+}
+
 final class MegabitPerSecond extends DataTransfer {
   MegabitPerSecond([super.value]);
 
@@ -82,14 +92,4 @@ final class MegabitPerSecond extends DataTransfer {
 
   @override
   String get symbol => 'Mb/S';
-}
-
-final class GigabitPerSecond extends DataTransfer {
-  GigabitPerSecond([super.value]);
-
-  @override
-  GigabitPerSecond get _clone => GigabitPerSecond(value);
-
-  @override
-  String get symbol => 'Gb/S';
 }

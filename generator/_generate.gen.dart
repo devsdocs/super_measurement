@@ -23,7 +23,24 @@ final allData = [
   powerUnit,
   dataTransferUnit,
   timeUnit,
-];
+]
+    .map(
+      (e) => e.map(
+        (key, value) => MapEntry(
+          key,
+          value
+            ..sort(
+              (a, b) => a.keys.first[0].codeUnits[0]
+                  .compareTo(b.keys.first[0].codeUnits[0]),
+            ),
+        ),
+      ),
+    )
+    .toList()
+  ..sort(
+    (a, b) =>
+        a.keys.first[0].codeUnits[0].compareTo(b.keys.first[0].codeUnits[0]),
+  );
 
 const exampleDir = 'example/super_measurement_example.dart';
 final exampleFile = File(exampleDir);

@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Area]
 ///
-/// [SquareMeters],[SquareFoot],[SquareInches],[Hectares],[Acres],[SquareCentimeters],[SquareMiles],[SquareYards],[SquareKilometers],
+/// [Acres],[Hectares],[SquareMeters],[SquareFoot],[SquareInches],[SquareCentimeters],[SquareMiles],[SquareYards],[SquareKilometers],
 abstract final class Area extends Unit<Area> {
   Area([super.value]);
 
@@ -10,10 +10,10 @@ abstract final class Area extends Unit<Area> {
   (BaseType, ConversionRatio<Area>) get _ratio => (
         _anchor.runtimeType,
         ConversionRatio<Area>({
+          Acres: 0.0002471054,
+          Hectares: 0.0001,
           SquareFoot: 10.7639104167,
           SquareInches: 1550.0031000062,
-          Hectares: 0.0001,
-          Acres: 0.0002471054,
           SquareCentimeters: 10000,
           SquareMiles: 3.86102159e-7,
           SquareYards: 1.1959900463,
@@ -24,15 +24,15 @@ abstract final class Area extends Unit<Area> {
   @override
   Area get _anchor => SquareMeters();
 
+  Area get toAcres => _convertTo(Acres());
+
+  Area get toHectares => _convertTo(Hectares());
+
   Area get toSquareMeters => _convertTo(SquareMeters());
 
   Area get toSquareFoot => _convertTo(SquareFoot());
 
   Area get toSquareInches => _convertTo(SquareInches());
-
-  Area get toHectares => _convertTo(Hectares());
-
-  Area get toAcres => _convertTo(Acres());
 
   Area get toSquareCentimeters => _convertTo(SquareCentimeters());
 
@@ -41,6 +41,26 @@ abstract final class Area extends Unit<Area> {
   Area get toSquareYards => _convertTo(SquareYards());
 
   Area get toSquareKilometers => _convertTo(SquareKilometers());
+}
+
+final class Acres extends Area {
+  Acres([super.value]);
+
+  @override
+  Acres get _clone => Acres(value);
+
+  @override
+  String get symbol => 'ac';
+}
+
+final class Hectares extends Area {
+  Hectares([super.value]);
+
+  @override
+  Hectares get _clone => Hectares(value);
+
+  @override
+  String get symbol => 'ha';
 }
 
 final class SquareMeters extends Area {
@@ -71,26 +91,6 @@ final class SquareInches extends Area {
 
   @override
   String get symbol => 'in²';
-}
-
-final class Hectares extends Area {
-  Hectares([super.value]);
-
-  @override
-  Hectares get _clone => Hectares(value);
-
-  @override
-  String get symbol => 'ha';
-}
-
-final class Acres extends Area {
-  Acres([super.value]);
-
-  @override
-  Acres get _clone => Acres(value);
-
-  @override
-  String get symbol => 'ac';
 }
 
 final class SquareCentimeters extends Area {

@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Length]
 ///
-/// [Centimeters],[Meters],[Inches],[Foot],[Kilometers],[Miles],[Yards],[NauticalMiles],
+/// [Centimeters],[Foot],[Inches],[Kilometers],[Meters],[Miles],[NauticalMiles],[Yards],
 abstract final class Length extends Unit<Length> {
   Length([super.value]);
 
@@ -11,12 +11,12 @@ abstract final class Length extends Unit<Length> {
         _anchor.runtimeType,
         ConversionRatio<Length>({
           Centimeters: 100,
-          Inches: 39.3700787402,
           Foot: 3.280839895,
+          Inches: 39.3700787402,
           Kilometers: 0.001,
           Miles: 0.0006213712,
-          Yards: 1.0936132983,
           NauticalMiles: 0.000539956803,
+          Yards: 1.0936132983,
         })
       );
 
@@ -25,19 +25,19 @@ abstract final class Length extends Unit<Length> {
 
   Length get toCentimeters => _convertTo(Centimeters());
 
-  Length get toMeters => _convertTo(Meters());
+  Length get toFoot => _convertTo(Foot());
 
   Length get toInches => _convertTo(Inches());
 
-  Length get toFoot => _convertTo(Foot());
-
   Length get toKilometers => _convertTo(Kilometers());
+
+  Length get toMeters => _convertTo(Meters());
 
   Length get toMiles => _convertTo(Miles());
 
-  Length get toYards => _convertTo(Yards());
-
   Length get toNauticalMiles => _convertTo(NauticalMiles());
+
+  Length get toYards => _convertTo(Yards());
 }
 
 final class Centimeters extends Length {
@@ -50,14 +50,14 @@ final class Centimeters extends Length {
   String get symbol => 'cm';
 }
 
-final class Meters extends Length {
-  Meters([super.value]);
+final class Foot extends Length {
+  Foot([super.value]);
 
   @override
-  Meters get _clone => Meters(value);
+  Foot get _clone => Foot(value);
 
   @override
-  String get symbol => 'm';
+  String get symbol => 'ft';
 }
 
 final class Inches extends Length {
@@ -70,16 +70,6 @@ final class Inches extends Length {
   String get symbol => 'in';
 }
 
-final class Foot extends Length {
-  Foot([super.value]);
-
-  @override
-  Foot get _clone => Foot(value);
-
-  @override
-  String get symbol => 'ft';
-}
-
 final class Kilometers extends Length {
   Kilometers([super.value]);
 
@@ -88,6 +78,16 @@ final class Kilometers extends Length {
 
   @override
   String get symbol => 'km';
+}
+
+final class Meters extends Length {
+  Meters([super.value]);
+
+  @override
+  Meters get _clone => Meters(value);
+
+  @override
+  String get symbol => 'm';
 }
 
 final class Miles extends Length {
@@ -100,16 +100,6 @@ final class Miles extends Length {
   String get symbol => 'mi';
 }
 
-final class Yards extends Length {
-  Yards([super.value]);
-
-  @override
-  Yards get _clone => Yards(value);
-
-  @override
-  String get symbol => 'yd';
-}
-
 final class NauticalMiles extends Length {
   NauticalMiles([super.value]);
 
@@ -118,4 +108,14 @@ final class NauticalMiles extends Length {
 
   @override
   String get symbol => 'NM';
+}
+
+final class Yards extends Length {
+  Yards([super.value]);
+
+  @override
+  Yards get _clone => Yards(value);
+
+  @override
+  String get symbol => 'yd';
 }
