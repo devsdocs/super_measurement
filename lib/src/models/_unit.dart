@@ -1,7 +1,7 @@
 part of '../../super_measurement.dart';
 
 abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
-  Unit([this.value]);
+  Unit([this.value = 0]);
   num? value;
 
   T get _clone;
