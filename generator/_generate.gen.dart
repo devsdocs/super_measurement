@@ -33,11 +33,14 @@ final iterableExtensionFile = File(iterableExtensionDir);
 const libDir = 'lib/super_measurement.dart';
 final libFile = File(libDir);
 const modelsDir = 'lib/src/models';
+const readmeDir = 'README.md';
+final readmeFile = File(readmeDir);
 
 void main() {
   generateModels();
   generateExtension();
   generateExample();
+  generateReadme();
   Process.run('dart', ['format', '.']);
   Process.run('dart', ['fix', '--apply']);
 }
@@ -60,22 +63,44 @@ void generateExample() {
     final name = unit.keys.first;
     exampleBuff.writeln('/// [$name] example');
     exampleBuff.writeln('void exampleOf$name() {');
-    exampleBuff.writeln("print('~Start of $name Example~');");
+    exampleBuff
+        .writeln("print('~Start of Randomly Generated $name Example~');");
     for (final e in unit.values.first) {
-      //TODO (devsdocs): Put comment line below to see all possible values
+      //TODO (devsdocs): Comment line below to see all possible values
       if (Random().nextBool()) continue;
+
       for (final x in unit.values.first) {
         if (e.keys.first == x.keys.first) continue;
-        //TODO (devsdocs): Put comment line below to see all possible values
+        //TODO (devsdocs): Comment line below to see all possible values
         if (Random().nextBool()) continue;
-        exampleBuff.writeln(
-          "print('${e.keys.first}(1) is equal to \${${e.keys.first}(1).to${x.keys.first}}');",
-        );
+        if (Random().nextBool()) {
+          if (Random().nextBool()) {
+            exampleBuff.writeln(
+              "print('1 ${e.keys.first} is equal to \${${e.keys.first}(1).to${x.keys.first}}');",
+            );
+          } else {
+            exampleBuff.writeln(
+              "print('1 ${e.keys.first} is equal to \${${e.keys.first}(1).to${x.keys.first}.withPrecision()} with Precision');",
+            );
+          }
+        } else {
+          if (Random().nextBool()) {
+            exampleBuff.writeln(
+              "print('1 ${e.keys.first} + 1 ${x.keys.first} = \${${e.keys.first}(1) + ${x.keys.first}(1)}');",
+            );
+          } else {
+            exampleBuff.writeln(
+              "print('1 ${e.keys.first} + 1 ${x.keys.first} with Precision = \${(${e.keys.first}(1) + ${x.keys.first}(1)).withPrecision()}');",
+            );
+          }
+        }
       }
     }
     final listName = 'listOf${name.capitalizeWord}';
     exampleBuff.writeln('final $listName = [');
     for (final e in unit.values.first) {
+      //TODO (devsdocs): Comment line below to see all possible values
+      if (Random().nextBool()) continue;
       exampleBuff.writeln('  ${e.keys.first}(${getRandomNumber()}),');
     }
     exampleBuff.writeln(']..shuffle();');
@@ -83,14 +108,30 @@ void generateExample() {
       "print('Random $name List => \$$listName');",
     );
     exampleBuff.writeln('$listName.sort();');
-    exampleBuff.writeln(
-      "print('Smallest to Largest $name List => \$$listName');",
-    );
-    exampleBuff.writeln(
-      "print('Largest to Smallest $name List => \${$listName.reversed.toList()}');",
-    );
+    if (Random().nextBool()) {
+      exampleBuff.writeln(
+        "print('Smallest to Largest $name List => \$$listName');",
+      );
+    } else {
+      exampleBuff.writeln(
+        "print('Largest to Smallest $name List => \${$listName.reversed.toList()}');",
+      );
+    }
+    for (final e in unit.values.first) {
+      //TODO (devsdocs): Comment line below to see all possible values
+      if (Random().nextBool()) continue;
+      if (Random().nextBool()) {
+        exampleBuff.writeln(
+          "print('$name List to ${e.keys.first} => \${$listName.to${e.keys.first}}');",
+        );
+      } else {
+        exampleBuff.writeln(
+          "print('$name List to ${e.keys.first} with Precision => \${$listName.to${e.keys.first}.withPrecision()}');",
+        );
+      }
+    }
 
-    exampleBuff.writeln("print('~End of $name Example~');");
+    exampleBuff.writeln("print('~End of Randomly Generated $name Example~');");
     exampleBuff.writeln("print('======================');");
     exampleBuff.writeln('}');
     exampleBuff.writeln();
@@ -268,4 +309,23 @@ void generateModels() {
       );
     }
   }
+}
+
+void generateReadme() {
+  final readmeBuff = StringBuffer();
+  readmeBuff.writeln('# Dart package for converting unit measurement');
+  readmeBuff.writeln('## Available Unit');
+  readmeBuff.writeln();
+  for (final unit in allData) {
+    final name = unit.keys.first;
+    readmeBuff.writeln('### $name');
+    for (final e in unit.values.first) {
+      readmeBuff.writeln('   - `${e.keys.first}`');
+    }
+    readmeBuff.writeln();
+  }
+  readmeBuff.writeln(
+    '### See [example](example/super_measurement_example.dart) for usage',
+  );
+  readmeFile.writeAsStringSync(readmeBuff.toString());
 }

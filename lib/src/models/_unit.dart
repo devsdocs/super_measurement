@@ -57,9 +57,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T operator +(T other) {
     if (other.runtimeType == runtimeType) {
-      final T result = _clone;
-      result.value = this.value! + other.value!;
-      return result;
+      return _clone..value = this.value! + other.value!;
     } else {
       return _convertAndCombine('+', other);
     }
@@ -67,25 +65,19 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T operator -(T other) {
     if (other.runtimeType == runtimeType) {
-      final T result = _clone;
-      result.value = this.value! - other.value!;
-      return result;
+      return _clone..value = this.value! - other.value!;
     } else {
       return _convertAndCombine('-', other);
     }
   }
 
-  T operator *(num scalar) {
-    final T result = _clone;
-    return result..value = this.value! * scalar;
-  }
+  T operator *(num scalar) => _clone..value = this.value! * scalar;
 
   T operator /(num scalar) {
     if (scalar == 0) {
       throw ArgumentError('Division by zero is not allowed.');
     }
-    final T result = _clone;
-    return result..value = this.value! / scalar;
+    return _clone..value = this.value! / scalar;
   }
 
   bool operator >=(T other) => runtimeType == other.runtimeType
@@ -126,10 +118,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   @override
   String toString() {
-    final value = this.value! % 1 == 0
-        ? this.value!.toInt().toString()
-        : this.value!.toString();
-    return '$runtimeType($value)';
+    final value = this.value! % 1 == 0 ? this.value!.toInt() : this.value!;
+    return '$value $runtimeType ($symbol)';
   }
 }
 
