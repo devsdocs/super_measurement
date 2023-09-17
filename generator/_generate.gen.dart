@@ -275,7 +275,7 @@ void generateReadme() {
     readmeBuff.writeln();
   }
   readmeBuff.writeln(
-    '### See [example](example/super_measurement_example.dart) for usage',
+    '### See [example](https://pub.dev/packages/super_measurement/example) for usage',
   );
   readmeFile.writeAsStringSync(readmeBuff.toString());
 }
