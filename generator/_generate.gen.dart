@@ -85,22 +85,36 @@ void generateExample() {
     exampleBuff
         .writeln("print('~Start of Randomly Generated $name Example~');");
     for (final e in unit.values.first) {
-      //TODO (devsdocs): Comment line below to see all possible values
       if (Random().nextBool()) continue;
 
       for (final x in unit.values.first) {
         if (e.keys.first == x.keys.first) continue;
-        //TODO (devsdocs): Comment line below to see all possible values
         if (Random().nextBool()) continue;
         if (Random().nextBool()) {
           if (Random().nextBool()) {
-            exampleBuff.writeln(
-              "print('1 ${e.keys.first} is equal to \${${e.keys.first}(1).to${x.keys.first}}');",
-            );
+            if (Random().nextBool()) {
+              exampleBuff.writeln(
+                "print('1 ${e.keys.first} to ${x.keys.first} \${${e.keys.first}(1).to${x.keys.first}}');",
+              );
+            } else {
+              exampleBuff.writeln(
+                "print('1 ${e.keys.first} to ${x.keys.first} with Presision \${${e.keys.first}(1).to${x.keys.first}.withPrecision()} with Precision');",
+              );
+            }
           } else {
-            exampleBuff.writeln(
-              "print('1 ${e.keys.first} is equal to \${${e.keys.first}(1).to${x.keys.first}.withPrecision()} with Precision');",
-            );
+            final randomNumber = getRandomNumber();
+            final randomNumber2 = getRandomNumber();
+            final s = e.keys.first[0].toLowerCase() + e.keys.first.substring(1);
+            final t = x.keys.first[0].toLowerCase() + x.keys.first.substring(1);
+            if (Random().nextBool()) {
+              exampleBuff.writeln(
+                "print('$randomNumber ${e.keys.first} + $randomNumber2 ${x.keys.first} \${$randomNumber.$s + $randomNumber2.$t}');",
+              );
+            } else {
+              exampleBuff.writeln(
+                "print('$randomNumber ${e.keys.first} + $randomNumber2 with Precision ${x.keys.first} \${($randomNumber.$s + $randomNumber2.$t).withPrecision()}');",
+              );
+            }
           }
         } else {
           if (Random().nextBool()) {
@@ -118,7 +132,6 @@ void generateExample() {
     final listName = 'listOf${name.capitalizeWord}';
     exampleBuff.writeln('final $listName = [');
     for (final e in unit.values.first) {
-      //TODO (devsdocs): Comment line below to see all possible values
       if (Random().nextBool()) continue;
       exampleBuff.writeln('  ${e.keys.first}(${getRandomNumber()}),');
     }
@@ -137,7 +150,6 @@ void generateExample() {
       );
     }
     for (final e in unit.values.first) {
-      //TODO (devsdocs): Comment line below to see all possible values
       if (Random().nextBool()) continue;
       if (Random().nextBool()) {
         exampleBuff.writeln(

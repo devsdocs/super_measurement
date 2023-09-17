@@ -116,4 +116,4 @@
    - `Liters`
    - `Milliliters`
 
-### See [example](example/super_measurement_example.dart) for usage
+### See [example](https://pub.dev/packages/super_measurement/example) for usage

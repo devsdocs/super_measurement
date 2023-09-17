@@ -10,8 +10,7 @@ enum Precision {
   six._(6),
   seven._(7),
   eight._(8),
-  nine._(9),
-  ten._(10);
+  nine._(9);
 
   const Precision._(this.value);
   final int value;
