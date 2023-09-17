@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Length]
 ///
-/// [Centimeters],[Foot],[Inches],[Kilometers],[Meters],[Miles],[NauticalMiles],[Yards],
+/// [Centimeters],[Foot],[Furlongs],[Inches],[Kilometers],[Meters],[Miles],[Millemeters],[NauticalMiles],[Yards],
 abstract final class Length extends Unit<Length> {
   Length([super.value]);
 
@@ -12,9 +12,11 @@ abstract final class Length extends Unit<Length> {
         ConversionRatio<Length>({
           Centimeters: 100,
           Foot: 3.280839895,
+          Furlongs: 0.004970969538,
           Inches: 39.3700787402,
           Kilometers: 0.001,
-          Miles: 0.0006213712,
+          Miles: 0.0006213711922,
+          Millemeters: 10000,
           NauticalMiles: 0.000539956803,
           Yards: 1.0936132983,
         })
@@ -27,6 +29,8 @@ abstract final class Length extends Unit<Length> {
 
   Length get toFoot => _convertTo(Foot());
 
+  Length get toFurlongs => _convertTo(Furlongs());
+
   Length get toInches => _convertTo(Inches());
 
   Length get toKilometers => _convertTo(Kilometers());
@@ -34,6 +38,8 @@ abstract final class Length extends Unit<Length> {
   Length get toMeters => _convertTo(Meters());
 
   Length get toMiles => _convertTo(Miles());
+
+  Length get toMillemeters => _convertTo(Millemeters());
 
   Length get toNauticalMiles => _convertTo(NauticalMiles());
 
@@ -58,6 +64,16 @@ final class Foot extends Length {
 
   @override
   String get symbol => 'ft';
+}
+
+final class Furlongs extends Length {
+  Furlongs([super.value]);
+
+  @override
+  Furlongs get _clone => Furlongs(value);
+
+  @override
+  String get symbol => 'fur';
 }
 
 final class Inches extends Length {
@@ -98,6 +114,16 @@ final class Miles extends Length {
 
   @override
   String get symbol => 'mi';
+}
+
+final class Millemeters extends Length {
+  Millemeters([super.value]);
+
+  @override
+  Millemeters get _clone => Millemeters(value);
+
+  @override
+  String get symbol => 'mm';
 }
 
 final class NauticalMiles extends Length {

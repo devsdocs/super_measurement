@@ -9,7 +9,10 @@ final volumeUnit = {
       'CubicFoot': {'ratio': 35.3146667215, 'symbol': 'ft³'},
     },
     {
-      'CubicInches': {'ratio': 61023.744094732, 'symbol': 'in³'},
+      'CubicInches': {'ratio': 61023.7440947323, 'symbol': 'in³'},
+    },
+    {
+      'CubicYards': {'ratio': 1.3079506, 'symbol': 'yd³'},
     },
     {
       'CubicCentimeters': {'ratio': 1000000, 'symbol': 'cm³'},

@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Volume]
 ///
-/// [BarrelsImperial],[BarrelsUS],[CubicCentimeters],[CubicFoot],[CubicInches],[CubicMeters],[GallonsImperial],[GallonsUS],[Liters],[Milliliters],
+/// [BarrelsImperial],[BarrelsUS],[CubicCentimeters],[CubicFoot],[CubicInches],[CubicMeters],[CubicYards],[GallonsImperial],[GallonsUS],[Liters],[Milliliters],
 abstract final class Volume extends Unit<Volume> {
   Volume([super.value]);
 
@@ -14,7 +14,8 @@ abstract final class Volume extends Unit<Volume> {
           BarrelsUS: 8.3864143606,
           CubicCentimeters: 1000000,
           CubicFoot: 35.3146667215,
-          CubicInches: 61023.744094732,
+          CubicInches: 61023.7440947323,
+          CubicYards: 1.3079506,
           GallonsImperial: 219.9692482991,
           GallonsUS: 264.1720523581,
           Liters: 1000,
@@ -36,6 +37,8 @@ abstract final class Volume extends Unit<Volume> {
   Volume get toCubicInches => _convertTo(CubicInches());
 
   Volume get toCubicMeters => _convertTo(CubicMeters());
+
+  Volume get toCubicYards => _convertTo(CubicYards());
 
   Volume get toGallonsImperial => _convertTo(GallonsImperial());
 
@@ -104,6 +107,16 @@ final class CubicMeters extends Volume {
 
   @override
   String get symbol => 'm³';
+}
+
+final class CubicYards extends Volume {
+  CubicYards([super.value]);
+
+  @override
+  CubicYards get _clone => CubicYards(value);
+
+  @override
+  String get symbol => 'yd³';
 }
 
 final class GallonsImperial extends Volume {

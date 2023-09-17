@@ -129,9 +129,7 @@ class ConversionRatio<T extends Unit<T>> {
 
   double getRatio(Type to) {
     final ratio = ratios[to];
-    if (ratio != null) {
-      return ratio;
-    }
-    throw ArgumentError('Unsupported conversion');
+    if (ratio == null) throw ArgumentError('Unsupported conversion');
+    return ratio;
   }
 }

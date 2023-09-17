@@ -2,6 +2,7 @@
 ## Available Unit
 
   + [Area](#area)
+  + [DataStorage](#datastorage)
   + [DataTransfer](#datatransfer)
   + [Length](#length)
   + [Mass](#mass)
@@ -22,6 +23,18 @@
    - `SquareMiles`
    - `SquareYards`
 
+### DataStorage
+   - `Bit`
+   - `Byte`
+   - `Gigabit`
+   - `Gigabyte`
+   - `Kilobit`
+   - `Kilobyte`
+   - `Megabit`
+   - `Megabyte`
+   - `Terabit`
+   - `Terabyte`
+
 ### DataTransfer
    - `GigabitPerSecond`
    - `GigabytePerSecond`
@@ -33,10 +46,12 @@
 ### Length
    - `Centimeters`
    - `Foot`
+   - `Furlongs`
    - `Inches`
    - `Kilometers`
    - `Meters`
    - `Miles`
+   - `Millemeters`
    - `NauticalMiles`
    - `Yards`
 
@@ -95,6 +110,7 @@
    - `CubicFoot`
    - `CubicInches`
    - `CubicMeters`
+   - `CubicYards`
    - `GallonsImperial`
    - `GallonsUS`
    - `Liters`

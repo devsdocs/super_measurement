@@ -12,6 +12,19 @@ extension IterableOfArea on Iterable<Area> {
   Area get toSquareYards => _combineTo(SquareYards());
 }
 
+extension IterableOfDataStorage on Iterable<DataStorage> {
+  DataStorage get toBit => _combineTo(Bit());
+  DataStorage get toByte => _combineTo(Byte());
+  DataStorage get toGigabit => _combineTo(Gigabit());
+  DataStorage get toGigabyte => _combineTo(Gigabyte());
+  DataStorage get toKilobit => _combineTo(Kilobit());
+  DataStorage get toKilobyte => _combineTo(Kilobyte());
+  DataStorage get toMegabit => _combineTo(Megabit());
+  DataStorage get toMegabyte => _combineTo(Megabyte());
+  DataStorage get toTerabit => _combineTo(Terabit());
+  DataStorage get toTerabyte => _combineTo(Terabyte());
+}
+
 extension IterableOfDataTransfer on Iterable<DataTransfer> {
   DataTransfer get toGigabitPerSecond => _combineTo(GigabitPerSecond());
   DataTransfer get toGigabytePerSecond => _combineTo(GigabytePerSecond());
@@ -24,10 +37,12 @@ extension IterableOfDataTransfer on Iterable<DataTransfer> {
 extension IterableOfLength on Iterable<Length> {
   Length get toCentimeters => _combineTo(Centimeters());
   Length get toFoot => _combineTo(Foot());
+  Length get toFurlongs => _combineTo(Furlongs());
   Length get toInches => _combineTo(Inches());
   Length get toKilometers => _combineTo(Kilometers());
   Length get toMeters => _combineTo(Meters());
   Length get toMiles => _combineTo(Miles());
+  Length get toMillemeters => _combineTo(Millemeters());
   Length get toNauticalMiles => _combineTo(NauticalMiles());
   Length get toYards => _combineTo(Yards());
 }
@@ -92,6 +107,7 @@ extension IterableOfVolume on Iterable<Volume> {
   Volume get toCubicFoot => _combineTo(CubicFoot());
   Volume get toCubicInches => _combineTo(CubicInches());
   Volume get toCubicMeters => _combineTo(CubicMeters());
+  Volume get toCubicYards => _combineTo(CubicYards());
   Volume get toGallonsImperial => _combineTo(GallonsImperial());
   Volume get toGallonsUS => _combineTo(GallonsUS());
   Volume get toLiters => _combineTo(Liters());

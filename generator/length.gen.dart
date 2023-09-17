@@ -6,6 +6,12 @@ final lengthUnit = {
       'Centimeters': {'ratio': 100, 'symbol': 'cm'},
     },
     {
+      'Millemeters': {'ratio': 10000, 'symbol': 'mm'},
+    },
+    {
+      'Furlongs': {'ratio': 0.004970969538, 'symbol': 'fur'},
+    },
+    {
       'Meters': {'ratio': 1, 'symbol': 'm'},
     },
     {
@@ -18,7 +24,7 @@ final lengthUnit = {
       'Kilometers': {'ratio': 0.001, 'symbol': 'km'},
     },
     {
-      'Miles': {'ratio': 0.0006213712, 'symbol': 'mi'},
+      'Miles': {'ratio': 0.0006213711922, 'symbol': 'mi'},
     },
     {
       'Yards': {'ratio': 1.0936132983, 'symbol': 'yd'},
