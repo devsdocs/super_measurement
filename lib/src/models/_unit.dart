@@ -6,9 +6,9 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T get _clone;
 
-  String get symbol;
-
   T get _anchor;
+
+  String get symbol;
 
   (BaseType, ConversionRatio<T>) get _ratio;
 
@@ -69,15 +69,6 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     } else {
       return _convertAndCombine('-', other);
     }
-  }
-
-  T operator *(num scalar) => _clone..value = this.value! * scalar;
-
-  T operator /(num scalar) {
-    if (scalar == 0) {
-      throw ArgumentError('Division by zero is not allowed.');
-    }
-    return _clone..value = this.value! / scalar;
   }
 
   bool operator >=(T other) => runtimeType == other.runtimeType

@@ -112,7 +112,7 @@ void generateExample() {
               );
             } else {
               exampleBuff.writeln(
-                "print('$randomNumber ${e.keys.first} + $randomNumber2 with Precision ${x.keys.first} \${($randomNumber.$s + $randomNumber2.$t).withPrecision()}');",
+                "print('$randomNumber ${e.keys.first} + $randomNumber2 ${x.keys.first} with Precision \${($randomNumber.$s + $randomNumber2.$t).withPrecision()}');",
               );
             }
           }
@@ -286,6 +286,7 @@ void generateReadme() {
     }
     readmeBuff.writeln();
   }
+  readmeBuff.writeln();
   readmeBuff.writeln(
     '### See [example](https://pub.dev/packages/super_measurement/example) for usage',
   );
