@@ -1,3 +1,7 @@
+## 1.0.3
+- Add few test
+- Removing `*` and `/` operator
+
 ## 1.0.2
 - Add `num` extension
 - Add `DataStorage` unit
