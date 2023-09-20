@@ -1,3 +1,6 @@
+## 1.0.4
+- Add `toFeetAndInches` to `Length`
+
 ## 1.0.3
 - Add few test
 - Removing `*` and `/` operator

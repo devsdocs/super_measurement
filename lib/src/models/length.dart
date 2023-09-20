@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Length]
 ///
-/// [Centimeters],[Foot],[Furlongs],[Inches],[Kilometers],[Meters],[Miles],[Millemeters],[NauticalMiles],[Yards],
+/// [Centimeters],[Feet],[Furlongs],[Inches],[Kilometers],[Meters],[Miles],[Millemeters],[NauticalMiles],[Yards],
 abstract final class Length extends Unit<Length> {
   Length([super.value]);
 
@@ -11,7 +11,7 @@ abstract final class Length extends Unit<Length> {
         _anchor.runtimeType,
         ConversionRatio<Length>({
           Centimeters: 100,
-          Foot: 3.280839895,
+          Feet: 3.280839895,
           Furlongs: 0.004970969538,
           Inches: 39.3700787402,
           Kilometers: 0.001,
@@ -27,7 +27,7 @@ abstract final class Length extends Unit<Length> {
 
   Length get toCentimeters => _convertTo(Centimeters());
 
-  Length get toFoot => _convertTo(Foot());
+  Length get toFeet => _convertTo(Feet());
 
   Length get toFurlongs => _convertTo(Furlongs());
 
@@ -56,11 +56,11 @@ final class Centimeters extends Length {
   String get symbol => 'cm';
 }
 
-final class Foot extends Length {
-  Foot([super.value]);
+final class Feet extends Length {
+  Feet([super.value]);
 
   @override
-  Foot get _clone => Foot(value);
+  Feet get _clone => Feet(value);
 
   @override
   String get symbol => 'ft';

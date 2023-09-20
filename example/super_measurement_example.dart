@@ -205,16 +205,16 @@ void exampleOfLength() {
     '1 Centimeters + 1 Millemeters with Precision = ${(Centimeters(1) + Millemeters(1)).withPrecision()}',
   );
   print('3 Centimeters + 1 Yards ${3.centimeters + 1.yards}');
-  print('1 Foot to Centimeters ${Foot(1).toCentimeters}');
-  print('1 Foot to Furlongs ${Foot(1).toFurlongs}');
+  print('1 Foot to Centimeters ${Feet(1).toCentimeters}');
+  print('1 Foot to Furlongs ${Feet(1).toFurlongs}');
   print(
-    '1 Foot + 1 Kilometers with Precision = ${(Foot(1) + Kilometers(1)).withPrecision()}',
+    '1 Foot + 1 Kilometers with Precision = ${(Feet(1) + Kilometers(1)).withPrecision()}',
   );
   print('2 Foot + 2 Millemeters ${2.foot + 2.millemeters}');
   print(
-    '1 Foot to NauticalMiles with Presision ${Foot(1).toNauticalMiles.withPrecision()} with Precision',
+    '1 Foot to NauticalMiles with Presision ${Feet(1).toNauticalMiles.withPrecision()} with Precision',
   );
-  print('1 Foot to Yards ${Foot(1).toYards}');
+  print('1 Foot to Yards ${Feet(1).toYards}');
   print(
     '2 Kilometers + 2 Foot with Precision ${(2.kilometers + 2.foot).withPrecision()}',
   );
@@ -237,7 +237,7 @@ void exampleOfLength() {
     '1 NauticalMiles + 1 Meters with Precision ${(1.nauticalMiles + 1.meters).withPrecision()}',
   );
   final listOfLength = [
-    Foot(1),
+    Feet(1),
     Inches(3),
     Millemeters(2),
   ]..shuffle();

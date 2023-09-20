@@ -36,7 +36,7 @@ extension NumOfDataTransfer on num {
 
 extension NumOfLength on num {
   Centimeters get centimeters => Centimeters(this);
-  Foot get foot => Foot(this);
+  Feet get foot => Feet(this);
   Furlongs get furlongs => Furlongs(this);
   Inches get inches => Inches(this);
   Kilometers get kilometers => Kilometers(this);
