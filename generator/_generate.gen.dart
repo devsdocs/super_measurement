@@ -64,7 +64,7 @@ void main() {
   Process.run('dart', ['fix', '--apply']);
 }
 
-int getRandomNumber() => 3.getRandomNumberFromZeroToLessThanThis + 1;
+int getRandomNumber() => 3.getRandomInt + 1;
 
 void generateExample() {
   final exampleBuff = StringBuffer();

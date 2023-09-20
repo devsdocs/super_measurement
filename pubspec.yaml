@@ -7,7 +7,7 @@ environment:
   sdk: ^3.1.1
 
 dependencies:
-  reusable_tools: ^1.0.12
+  reusable_tools: ^1.0.13
 
 dev_dependencies:
   lint: ^2.1.2

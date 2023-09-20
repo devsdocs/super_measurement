@@ -36,7 +36,7 @@ extension IterableOfDataTransfer on Iterable<DataTransfer> {
 
 extension IterableOfLength on Iterable<Length> {
   Length get toCentimeters => _combineTo(Centimeters());
-  Length get toFoot => _combineTo(Feet());
+  Length get toFeet => _combineTo(Feet());
   Length get toFurlongs => _combineTo(Furlongs());
   Length get toInches => _combineTo(Inches());
   Length get toKilometers => _combineTo(Kilometers());
