@@ -2,7 +2,8 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [DataStorage]
 ///
-/// [Bit],[Byte],[Gigabit],[Gigabyte],[Kilobit],[Kilobyte],[Megabit],[Megabyte],[Terabit],[Terabyte],
+/// [Bit],[Byte],[Gigabit],[Gigabyte],[Kilobit],[Kilobyte],[Megabit],[Megabyte],
+/// [Terabyte]
 abstract final class DataStorage extends Unit<DataStorage> {
   DataStorage([super.value]);
 

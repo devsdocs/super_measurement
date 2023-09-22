@@ -45,7 +45,7 @@
 
 ### Length
    - `Centimeters`
-   - `Foot`
+   - `Feet`
    - `Furlongs`
    - `Inches`
    - `Kilometers`

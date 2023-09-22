@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Power]
 ///
-/// [Horsepower],[Kilowatt],[Megawatt],[Milliwatt],[Watt],
+/// [Horsepower],[Kilowatt],[Megawatt],[Milliwatt],[Watt]
 abstract final class Power extends Unit<Power> {
   Power([super.value]);
 

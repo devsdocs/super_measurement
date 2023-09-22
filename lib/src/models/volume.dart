@@ -2,7 +2,8 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Volume]
 ///
-/// [BarrelsImperial],[BarrelsUS],[CubicCentimeters],[CubicFoot],[CubicInches],[CubicMeters],[CubicYards],[GallonsImperial],[GallonsUS],[Liters],[Milliliters],
+/// [BarrelsImperial],[BarrelsUS],[CubicCentimeters],[CubicFoot],[CubicInches],
+/// [CubicYards],[GallonsImperial],[GallonsUS],[Liters],[Milliliters]
 abstract final class Volume extends Unit<Volume> {
   Volume([super.value]);
 

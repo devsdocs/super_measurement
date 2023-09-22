@@ -2,7 +2,7 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Time]
 ///
-/// [Day],[Hour],[Millisecond],[Minute],[Second],[Week],[Year],
+/// [Day],[Hour],[Millisecond],[Minute],[Second],[Week],[Year]
 abstract final class Time extends Unit<Time> {
   Time([super.value]);
 

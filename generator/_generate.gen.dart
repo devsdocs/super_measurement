@@ -215,8 +215,26 @@ void generateModels() {
     typeBuff.writeln();
     typeBuff.writeln('/// Available units of measurement for [$name]');
     typeBuff.writeln('///');
-    final types = unit.values.first.map((e) => '[${e.keys.first}],').join();
-    typeBuff.writeln('/// $types');
+    final map = unit.values.first.map((e) => '[${e.keys.first}],').toList();
+    map[map.length - 1] = map[map.length - 1].split(',').first;
+    final types = '/// ${map.join()}';
+    if (types.length >= 80) {
+      typeBuff.write('/// ');
+      int len = 4;
+      for (final e in map) {
+        if (e.length + len > 80) {
+          len = 4;
+          typeBuff.writeln();
+          typeBuff.write('/// ');
+        } else {
+          len += e.length;
+          typeBuff.write(e);
+        }
+      }
+      typeBuff.writeln();
+    } else {
+      typeBuff.writeln(types);
+    }
     typeBuff.writeln('abstract final class $name extends Unit<$name> {');
     typeBuff.writeln();
     typeBuff.writeln('  $name([super.value]);');

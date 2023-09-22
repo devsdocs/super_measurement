@@ -18,7 +18,7 @@ final lengthUnit = {
       'Inches': {'ratio': 39.3700787402, 'symbol': 'in'},
     },
     {
-      'Foot': {'ratio': 3.280839895, 'symbol': 'ft'},
+      'Feet': {'ratio': 3.280839895, 'symbol': 'ft'},
     },
     {
       'Kilometers': {'ratio': 0.001, 'symbol': 'km'},

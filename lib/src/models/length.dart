@@ -2,7 +2,8 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Length]
 ///
-/// [Centimeters],[Feet],[Furlongs],[Inches],[Kilometers],[Meters],[Miles],[Millemeters],[NauticalMiles],[Yards],
+/// [Centimeters],[Feet],[Furlongs],[Inches],[Kilometers],[Meters],[Miles],
+/// [NauticalMiles],[Yards]
 abstract final class Length extends Unit<Length> {
   Length([super.value]);
 
