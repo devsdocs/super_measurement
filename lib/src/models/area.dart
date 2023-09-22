@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Area]
 ///
 /// [Acres],[Hectares],[SquareCentimeters],[SquareFoot],[SquareInches],
-/// [SquareMeters],[SquareMiles],[SquareYards]
+/// [SquareKilometers],[SquareMeters],[SquareMiles],[SquareYards]
 abstract final class Area extends Unit<Area> {
   Area([super.value]);
 

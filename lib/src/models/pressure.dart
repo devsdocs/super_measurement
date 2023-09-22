@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Pressure]
 ///
 /// [Bar],[InchesOfMercury],[MillimeterOfMercury],[Pascal],
-/// [StandardAtmosphere],[Torr]
+/// [PoundsPerSquareInch],[StandardAtmosphere],[Torr]
 abstract final class Pressure extends Unit<Pressure> {
   Pressure([super.value]);
 

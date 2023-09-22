@@ -34,6 +34,20 @@ extension IterableOfDataTransfer on Iterable<DataTransfer> {
   DataTransfer get toMegabytePerSecond => _combineTo(MegabytePerSecond());
 }
 
+extension IterableOfEnergy on Iterable<Energy> {
+  Energy get toCalorieInternational => _combineTo(CalorieInternational());
+  Energy get toCalorieNutritional => _combineTo(CalorieNutritional());
+  Energy get toCalorieThermochemical => _combineTo(CalorieThermochemical());
+  Energy get toElectronVolt => _combineTo(ElectronVolt());
+  Energy get toGigajoule => _combineTo(Gigajoule());
+  Energy get toJoule => _combineTo(Joule());
+  Energy get toKiloJoule => _combineTo(KiloJoule());
+  Energy get toKilowattHour => _combineTo(KilowattHour());
+  Energy get toMegaJoule => _combineTo(MegaJoule());
+  Energy get toMegawattHour => _combineTo(MegawattHour());
+  Energy get toWattHour => _combineTo(WattHour());
+}
+
 extension IterableOfLength on Iterable<Length> {
   Length get toCentimeters => _combineTo(Centimeters());
   Length get toFeet => _combineTo(Feet());

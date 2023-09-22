@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [DataTransfer]
 ///
 /// [GigabitPerSecond],[GigabytePerSecond],[KilobitPerSecond],
-/// [MegabitPerSecond],[MegabytePerSecond]
+/// [KilobytePerSecond],[MegabitPerSecond],[MegabytePerSecond]
 abstract final class DataTransfer extends Unit<DataTransfer> {
   DataTransfer([super.value]);
 

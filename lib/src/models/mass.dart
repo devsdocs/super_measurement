@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Mass]
 ///
 /// [Carats],[Grams],[Kilograms],[Milligrams],[Ounces],[Pounds],[Quintal],
-/// [TonUK],[TonUS],[Tonne]
+/// [StoneUK],[TonUK],[TonUS],[Tonne]
 abstract final class Mass extends Unit<Mass> {
   Mass([super.value]);
 

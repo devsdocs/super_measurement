@@ -4,6 +4,7 @@
   + [Area](#area)
   + [DataStorage](#datastorage)
   + [DataTransfer](#datatransfer)
+  + [Energy](#energy)
   + [Length](#length)
   + [Mass](#mass)
   + [Power](#power)
@@ -42,6 +43,19 @@
    - `KilobytePerSecond`
    - `MegabitPerSecond`
    - `MegabytePerSecond`
+
+### Energy
+   - `CalorieInternational`
+   - `CalorieNutritional`
+   - `CalorieThermochemical`
+   - `ElectronVolt`
+   - `Gigajoule`
+   - `Joule`
+   - `KiloJoule`
+   - `KilowattHour`
+   - `MegaJoule`
+   - `MegawattHour`
+   - `WattHour`
 
 ### Length
    - `Centimeters`

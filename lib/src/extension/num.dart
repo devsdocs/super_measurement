@@ -34,6 +34,21 @@ extension NumOfDataTransfer on num {
   MegabytePerSecond get megabytePerSecond => MegabytePerSecond(this);
 }
 
+extension NumOfEnergy on num {
+  CalorieInternational get calorieInternational => CalorieInternational(this);
+  CalorieNutritional get calorieNutritional => CalorieNutritional(this);
+  CalorieThermochemical get calorieThermochemical =>
+      CalorieThermochemical(this);
+  ElectronVolt get electronVolt => ElectronVolt(this);
+  Gigajoule get gigajoule => Gigajoule(this);
+  Joule get joule => Joule(this);
+  KiloJoule get kiloJoule => KiloJoule(this);
+  KilowattHour get kilowattHour => KilowattHour(this);
+  MegaJoule get megaJoule => MegaJoule(this);
+  MegawattHour get megawattHour => MegawattHour(this);
+  WattHour get wattHour => WattHour(this);
+}
+
 extension NumOfLength on num {
   Centimeters get centimeters => Centimeters(this);
   Feet get feet => Feet(this);

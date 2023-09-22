@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:reusable_tools/reusable_tools.dart';
 
 part 'area.gen.dart';
+part 'energy.gen.dart';
 part 'volume.gen.dart';
 part 'mass.gen.dart';
 part 'length.gen.dart';
@@ -25,6 +26,7 @@ final allData = [
   dataTransferUnit,
   timeUnit,
   dataStorageUnit,
+  energyUnit,
 ]
     .map(
       (e) => e.map(
@@ -223,9 +225,10 @@ void generateModels() {
       int len = 4;
       for (final e in map) {
         if (e.length + len > 80) {
-          len = 4;
           typeBuff.writeln();
           typeBuff.write('/// ');
+          typeBuff.write(e);
+          len = 4;
         } else {
           len += e.length;
           typeBuff.write(e);

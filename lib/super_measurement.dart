@@ -20,3 +20,4 @@ part 'src/models/power.dart';
 part 'src/models/datatransfer.dart';
 part 'src/models/time.dart';
 part 'src/models/datastorage.dart';
+part 'src/models/energy.dart';

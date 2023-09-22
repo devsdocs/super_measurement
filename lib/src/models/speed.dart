@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Speed]
 ///
 /// [FootPerHour],[FootPerMinute],[FootPerSecond],[KilometerPerHour],[Knot],
-/// [MilesPerHour],[MilesPerMinute]
+/// [MeterPerSecond],[MilesPerHour],[MilesPerMinute]
 abstract final class Speed extends Unit<Speed> {
   Speed([super.value]);
 
