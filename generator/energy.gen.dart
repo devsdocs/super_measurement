@@ -1,4 +1,4 @@
-part of '_generate.gen.dart';
+part of '__generate.gen.dart';
 
 final energyUnit = {
   'Energy': [
@@ -21,7 +21,7 @@ final energyUnit = {
       'MegaJoule': {'ratio': 1e-6, 'symbol': 'MJ'},
     },
     {
-      'Gigajoule': {'ratio': 1e-9, 'symbol': 'GJ'},
+      'GigaJoule': {'ratio': 1e-9, 'symbol': 'GJ'},
     },
     {
       'WattHour': {'ratio': 0.0002777777778, 'symbol': 'Wh'},
