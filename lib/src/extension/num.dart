@@ -40,7 +40,7 @@ extension NumOfEnergy on num {
   CalorieThermochemical get calorieThermochemical =>
       CalorieThermochemical(this);
   ElectronVolt get electronVolt => ElectronVolt(this);
-  Gigajoule get gigajoule => Gigajoule(this);
+  GigaJoule get gigaJoule => GigaJoule(this);
   Joule get joule => Joule(this);
   KiloJoule get kiloJoule => KiloJoule(this);
   KilowattHour get kilowattHour => KilowattHour(this);

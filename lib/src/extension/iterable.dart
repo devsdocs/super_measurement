@@ -39,7 +39,7 @@ extension IterableOfEnergy on Iterable<Energy> {
   Energy get toCalorieNutritional => _combineTo(CalorieNutritional());
   Energy get toCalorieThermochemical => _combineTo(CalorieThermochemical());
   Energy get toElectronVolt => _combineTo(ElectronVolt());
-  Energy get toGigajoule => _combineTo(Gigajoule());
+  Energy get toGigaJoule => _combineTo(GigaJoule());
   Energy get toJoule => _combineTo(Joule());
   Energy get toKiloJoule => _combineTo(KiloJoule());
   Energy get toKilowattHour => _combineTo(KilowattHour());

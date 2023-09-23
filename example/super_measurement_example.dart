@@ -17,77 +17,52 @@ void main() {
 /// [Area] example
 void exampleOfArea() {
   print('~Start of Randomly Generated Area Example~');
+  print('1 Hectares to SquareCentimeters ${Hectares(1).toSquareCentimeters}');
+  print('1 Hectares to SquareFoot ${Hectares(1).toSquareFoot}');
+  print('1 Hectares + 2 SquareKilometers ${1.hectares + 2.squareKilometers}');
+  print('1 Hectares to SquareMeters ${Hectares(1).toSquareMeters}');
   print(
-    '1 Hectares + 1 Acres with Precision = ${(Hectares(1) + Acres(1)).withPrecision()}',
+    '2 Hectares + 1 SquareYards with Precision ${(2.hectares + 1.squareYards).withPrecision()}',
   );
-  print('1 Hectares + 1 SquareFoot = ${Hectares(1) + SquareFoot(1)}');
-  print('1 Hectares + 1 SquareInches = ${Hectares(1) + SquareInches(1)}');
-  print('2 Hectares + 3 SquareKilometers ${2.hectares + 3.squareKilometers}');
-  print('2 Hectares + 2 SquareMiles ${2.hectares + 2.squareMiles}');
+  print('1 SquareFoot + 1 Acres = ${SquareFoot(1) + Acres(1)}');
+  print('2 SquareFoot + 3 Hectares ${2.squareFoot + 3.hectares}');
   print(
-    '1 Hectares + 1 SquareYards with Precision = ${(Hectares(1) + SquareYards(1)).withPrecision()}',
-  );
-  print(
-    '1 SquareCentimeters + 1 SquareFoot ${1.squareCentimeters + 1.squareFoot}',
-  );
-  print(
-    '1 SquareCentimeters to SquareInches with Presision ${SquareCentimeters(1).toSquareInches.withPrecision()} with Precision',
+    '1 SquareFoot to SquareCentimeters ${SquareFoot(1).toSquareCentimeters}',
   );
   print(
-    '1 SquareCentimeters + 1 SquareKilometers = ${SquareCentimeters(1) + SquareKilometers(1)}',
+    '2 SquareFoot + 1 SquareInches with Precision ${(2.squareFoot + 1.squareInches).withPrecision()}',
   );
   print(
-    '1 SquareCentimeters to SquareMeters ${SquareCentimeters(1).toSquareMeters}',
+    '2 SquareFoot + 2 SquareMiles with Precision ${(2.squareFoot + 2.squareMiles).withPrecision()}',
+  );
+  print('1 SquareMeters to Acres ${SquareMeters(1).toAcres}');
+  print(
+    '1 SquareMeters to SquareFoot with Presision ${SquareMeters(1).toSquareFoot.withPrecision()} with Precision',
+  );
+  print('1 SquareMeters to SquareMiles ${SquareMeters(1).toSquareMiles}');
+  print('2 SquareMeters + 2 SquareYards ${2.squareMeters + 2.squareYards}');
+  print('1 SquareMiles to Hectares ${SquareMiles(1).toHectares}');
+  print(
+    '1 SquareMiles + 1 SquareMeters with Precision ${(1.squareMiles + 1.squareMeters).withPrecision()}',
+  );
+  print('3 SquareMiles + 1 SquareYards ${3.squareMiles + 1.squareYards}');
+  print('1 SquareYards + 1 Acres = ${SquareYards(1) + Acres(1)}');
+  print('1 SquareYards + 1 Hectares = ${SquareYards(1) + Hectares(1)}');
+  print(
+    '2 SquareYards + 1 SquareCentimeters ${2.squareYards + 1.squareCentimeters}',
   );
   print(
-    '1 SquareCentimeters + 1 SquareYards = ${SquareCentimeters(1) + SquareYards(1)}',
+    '1 SquareYards + 1 SquareFoot with Precision = ${(SquareYards(1) + SquareFoot(1)).withPrecision()}',
   );
-  print('1 SquareFoot to Acres ${SquareFoot(1).toAcres}');
+  print('1 SquareYards to SquareInches ${SquareYards(1).toSquareInches}');
   print(
-    '3 SquareFoot + 1 SquareCentimeters ${3.squareFoot + 1.squareCentimeters}',
+    '1 SquareYards + 1 SquareKilometers ${1.squareYards + 1.squareKilometers}',
   );
-  print(
-    '1 SquareFoot + 1 SquareKilometers with Precision = ${(SquareFoot(1) + SquareKilometers(1)).withPrecision()}',
-  );
-  print(
-    '1 SquareFoot + 1 SquareMeters with Precision = ${(SquareFoot(1) + SquareMeters(1)).withPrecision()}',
-  );
-  print('3 SquareFoot + 1 SquareMiles ${3.squareFoot + 1.squareMiles}');
-  print(
-    '1 SquareFoot to SquareYards with Presision ${SquareFoot(1).toSquareYards.withPrecision()} with Precision',
-  );
-  print('1 SquareMeters + 1 Acres = ${SquareMeters(1) + Acres(1)}');
-  print(
-    '1 SquareMeters + 1 SquareCentimeters with Precision = ${(SquareMeters(1) + SquareCentimeters(1)).withPrecision()}',
-  );
-  print('3 SquareMeters + 3 SquareFoot ${3.squareMeters + 3.squareFoot}');
-  print('1 SquareMeters to SquareYards ${SquareMeters(1).toSquareYards}');
-  print(
-    '1 SquareMiles + 1 Acres with Precision = ${(SquareMiles(1) + Acres(1)).withPrecision()}',
-  );
-  print(
-    '1 SquareMiles + 1 Hectares with Precision = ${(SquareMiles(1) + Hectares(1)).withPrecision()}',
-  );
-  print(
-    '1 SquareMiles to SquareInches with Presision ${SquareMiles(1).toSquareInches.withPrecision()} with Precision',
-  );
-  print(
-    '1 SquareMiles to SquareKilometers with Presision ${SquareMiles(1).toSquareKilometers.withPrecision()} with Precision',
-  );
-  print(
-    '1 SquareYards + 1 SquareCentimeters ${1.squareYards + 1.squareCentimeters}',
-  );
-  print(
-    '1 SquareYards + 1 SquareKilometers with Precision = ${(SquareYards(1) + SquareKilometers(1)).withPrecision()}',
-  );
-  print(
-    '1 SquareYards to SquareMiles with Presision ${SquareYards(1).toSquareMiles.withPrecision()} with Precision',
-  );
+  print('1 SquareYards + 3 SquareMeters ${1.squareYards + 3.squareMeters}');
   final listOfArea = [
-    Hectares(3),
-    SquareCentimeters(3),
     SquareFoot(3),
-    SquareKilometers(1),
+    SquareInches(3),
+    SquareYards(1),
   ]..shuffle();
   print('Random Area List => $listOfArea');
   listOfArea.sort();
@@ -95,13 +70,16 @@ void exampleOfArea() {
   print(
     'Area List to Acres with Precision => ${listOfArea.toAcres.withPrecision()}',
   );
+  print('Area List to Hectares => ${listOfArea.toHectares}');
+  print('Area List to SquareCentimeters => ${listOfArea.toSquareCentimeters}');
   print(
-    'Area List to Hectares with Precision => ${listOfArea.toHectares.withPrecision()}',
+    'Area List to SquareFoot with Precision => ${listOfArea.toSquareFoot.withPrecision()}',
   );
+  print('Area List to SquareMeters => ${listOfArea.toSquareMeters}');
   print(
-    'Area List to SquareCentimeters with Precision => ${listOfArea.toSquareCentimeters.withPrecision()}',
+    'Area List to SquareMiles with Precision => ${listOfArea.toSquareMiles.withPrecision()}',
   );
-  print('Area List to SquareInches => ${listOfArea.toSquareInches}');
+  print('Area List to SquareYards => ${listOfArea.toSquareYards}');
   print('~End of Randomly Generated Area Example~');
   print('======================');
 }
@@ -109,46 +87,96 @@ void exampleOfArea() {
 /// [DataStorage] example
 void exampleOfDataStorage() {
   print('~Start of Randomly Generated DataStorage Example~');
+  print('1 Bit to Byte ${Bit(1).toByte}');
   print(
-    '1 Bit + 1 Kilobyte with Precision = ${(Bit(1) + Kilobyte(1)).withPrecision()}',
+    '1 Bit + 1 Gigabit with Precision = ${(Bit(1) + Gigabit(1)).withPrecision()}',
   );
   print(
-    '1 Bit to Megabyte with Presision ${Bit(1).toMegabyte.withPrecision()} with Precision',
-  );
-  print('1 Bit to Terabit ${Bit(1).toTerabit}');
-  print(
-    '1 Bit + 1 Terabyte with Precision = ${(Bit(1) + Terabyte(1)).withPrecision()}',
-  );
-  print('1 Gigabyte + 1 Bit = ${Gigabyte(1) + Bit(1)}');
-  print('3 Gigabyte + 3 Byte ${3.gigabyte + 3.byte}');
-  print('1 Gigabyte + 1 Gigabit = ${Gigabyte(1) + Gigabit(1)}');
-  print(
-    '1 Gigabyte + 1 Kilobit with Precision = ${(Gigabyte(1) + Kilobit(1)).withPrecision()}',
+    '1 Bit + 1 Gigabyte with Precision = ${(Bit(1) + Gigabyte(1)).withPrecision()}',
   );
   print(
-    '1 Gigabyte + 1 Megabyte with Precision = ${(Gigabyte(1) + Megabyte(1)).withPrecision()}',
+    '3 Bit + 1 Kilobit with Precision ${(3.bit + 1.kilobit).withPrecision()}',
   );
-  print('1 Gigabyte + 1 Terabit ${1.gigabyte + 1.terabit}');
+  print('1 Bit to Kilobyte ${Bit(1).toKilobyte}');
+  print(
+    '1 Bit + 1 Megabit with Precision = ${(Bit(1) + Megabit(1)).withPrecision()}',
+  );
+  print('2 Bit + 2 Megabyte ${2.bit + 2.megabyte}');
+  print(
+    '1 Byte + 1 Gigabyte with Precision = ${(Byte(1) + Gigabyte(1)).withPrecision()}',
+  );
+  print('1 Byte + 1 Megabit = ${Byte(1) + Megabit(1)}');
+  print(
+    '1 Byte + 1 Megabyte with Precision = ${(Byte(1) + Megabyte(1)).withPrecision()}',
+  );
+  print(
+    '1 Byte + 1 Terabit with Precision = ${(Byte(1) + Terabit(1)).withPrecision()}',
+  );
+  print(
+    '1 Byte to Terabyte with Presision ${Byte(1).toTerabyte.withPrecision()} with Precision',
+  );
+  print('1 Gigabit + 1 Byte = ${Gigabit(1) + Byte(1)}');
+  print('1 Gigabit to Kilobit ${Gigabit(1).toKilobit}');
+  print('1 Gigabit + 3 Megabyte ${1.gigabit + 3.megabyte}');
+  print(
+    '1 Gigabit + 1 Terabit with Precision = ${(Gigabit(1) + Terabit(1)).withPrecision()}',
+  );
+  print(
+    '3 Gigabyte + 1 Megabyte with Precision ${(3.gigabyte + 1.megabyte).withPrecision()}',
+  );
+  print('1 Gigabyte to Terabyte ${Gigabyte(1).toTerabyte}');
+  print('1 Megabit to Bit ${Megabit(1).toBit}');
+  print('1 Megabit to Kilobyte ${Megabit(1).toKilobyte}');
+  print('1 Megabit + 1 Terabit = ${Megabit(1) + Terabit(1)}');
+  print('2 Megabyte + 2 Byte ${2.megabyte + 2.byte}');
+  print(
+    '1 Megabyte + 1 Gigabit with Precision = ${(Megabyte(1) + Gigabit(1)).withPrecision()}',
+  );
+  print(
+    '1 Megabyte to Kilobit with Presision ${Megabyte(1).toKilobit.withPrecision()} with Precision',
+  );
+  print(
+    '1 Megabyte to Terabit with Presision ${Megabyte(1).toTerabit.withPrecision()} with Precision',
+  );
+  print('1 Terabit + 1 Bit = ${Terabit(1) + Bit(1)}');
+  print(
+    '1 Terabit to Megabit with Presision ${Terabit(1).toMegabit.withPrecision()} with Precision',
+  );
+  print(
+    '1 Terabit to Megabyte with Presision ${Terabit(1).toMegabyte.withPrecision()} with Precision',
+  );
+  print(
+    '1 Terabyte + 1 Byte with Precision = ${(Terabyte(1) + Byte(1)).withPrecision()}',
+  );
+  print(
+    '1 Terabyte + 1 Gigabyte with Precision = ${(Terabyte(1) + Gigabyte(1)).withPrecision()}',
+  );
+  print(
+    '1 Terabyte to Megabit with Presision ${Terabyte(1).toMegabit.withPrecision()} with Precision',
+  );
   final listOfDatastorage = [
-    Bit(1),
-    Byte(1),
-    Gigabit(3),
+    Bit(3),
     Gigabyte(1),
     Kilobit(1),
-    Kilobyte(3),
-    Terabyte(1),
+    Kilobyte(1),
+    Megabit(2),
+    Terabit(3),
   ]..shuffle();
   print('Random DataStorage List => $listOfDatastorage');
   listOfDatastorage.sort();
   print('Smallest to Largest DataStorage List => $listOfDatastorage');
   print('DataStorage List to Bit => ${listOfDatastorage.toBit}');
-  print('DataStorage List to Kilobit => ${listOfDatastorage.toKilobit}');
-  print('DataStorage List to Kilobyte => ${listOfDatastorage.toKilobyte}');
-  print('DataStorage List to Megabyte => ${listOfDatastorage.toMegabyte}');
-  print('DataStorage List to Terabit => ${listOfDatastorage.toTerabit}');
   print(
-    'DataStorage List to Terabyte with Precision => ${listOfDatastorage.toTerabyte.withPrecision()}',
+    'DataStorage List to Gigabit with Precision => ${listOfDatastorage.toGigabit.withPrecision()}',
   );
+  print(
+    'DataStorage List to Kilobit with Precision => ${listOfDatastorage.toKilobit.withPrecision()}',
+  );
+  print(
+    'DataStorage List to Megabit with Precision => ${listOfDatastorage.toMegabit.withPrecision()}',
+  );
+  print('DataStorage List to Megabyte => ${listOfDatastorage.toMegabyte}');
+  print('DataStorage List to Terabyte => ${listOfDatastorage.toTerabyte}');
   print('~End of Randomly Generated DataStorage Example~');
   print('======================');
 }
@@ -157,31 +185,23 @@ void exampleOfDataStorage() {
 void exampleOfDataTransfer() {
   print('~Start of Randomly Generated DataTransfer Example~');
   print(
-    '3 GigabitPerSecond + 1 GigabytePerSecond ${3.gigabitPerSecond + 1.gigabytePerSecond}',
+    '1 GigabytePerSecond to MegabytePerSecond with Presision ${GigabytePerSecond(1).toMegabytePerSecond.withPrecision()} with Precision',
   );
   print(
-    '1 GigabitPerSecond to KilobitPerSecond with Presision ${GigabitPerSecond(1).toKilobitPerSecond.withPrecision()} with Precision',
+    '1 KilobitPerSecond to GigabitPerSecond ${KilobitPerSecond(1).toGigabitPerSecond}',
   );
   print(
-    '1 GigabitPerSecond + 1 MegabytePerSecond with Precision = ${(GigabitPerSecond(1) + MegabytePerSecond(1)).withPrecision()}',
+    '1 KilobitPerSecond + 1 GigabytePerSecond = ${KilobitPerSecond(1) + GigabytePerSecond(1)}',
   );
   print(
-    '1 GigabytePerSecond to GigabitPerSecond with Presision ${GigabytePerSecond(1).toGigabitPerSecond.withPrecision()} with Precision',
+    '1 KilobitPerSecond to KilobytePerSecond with Presision ${KilobitPerSecond(1).toKilobytePerSecond.withPrecision()} with Precision',
   );
   print(
-    '3 GigabytePerSecond + 3 KilobitPerSecond with Precision ${(3.gigabytePerSecond + 3.kilobitPerSecond).withPrecision()}',
-  );
-  print(
-    '1 MegabitPerSecond + 1 KilobytePerSecond = ${MegabitPerSecond(1) + KilobytePerSecond(1)}',
-  );
-  print(
-    '3 MegabitPerSecond + 3 MegabytePerSecond with Precision ${(3.megabitPerSecond + 3.megabytePerSecond).withPrecision()}',
+    '1 KilobitPerSecond + 1 MegabitPerSecond = ${KilobitPerSecond(1) + MegabitPerSecond(1)}',
   );
   final listOfDatatransfer = [
-    GigabitPerSecond(2),
-    GigabytePerSecond(1),
-    KilobitPerSecond(3),
-    KilobytePerSecond(3),
+    GigabytePerSecond(2),
+    KilobitPerSecond(1),
     MegabytePerSecond(2),
   ]..shuffle();
   print('Random DataTransfer List => $listOfDatatransfer');
@@ -190,16 +210,10 @@ void exampleOfDataTransfer() {
     'Largest to Smallest DataTransfer List => ${listOfDatatransfer.reversed.toList()}',
   );
   print(
-    'DataTransfer List to GigabitPerSecond => ${listOfDatatransfer.toGigabitPerSecond}',
+    'DataTransfer List to GigabytePerSecond with Precision => ${listOfDatatransfer.toGigabytePerSecond.withPrecision()}',
   );
   print(
-    'DataTransfer List to KilobitPerSecond => ${listOfDatatransfer.toKilobitPerSecond}',
-  );
-  print(
-    'DataTransfer List to KilobytePerSecond => ${listOfDatatransfer.toKilobytePerSecond}',
-  );
-  print(
-    'DataTransfer List to MegabitPerSecond => ${listOfDatatransfer.toMegabitPerSecond}',
+    'DataTransfer List to MegabytePerSecond => ${listOfDatatransfer.toMegabytePerSecond}',
   );
   print('~End of Randomly Generated DataTransfer Example~');
   print('======================');
@@ -209,92 +223,47 @@ void exampleOfDataTransfer() {
 void exampleOfEnergy() {
   print('~Start of Randomly Generated Energy Example~');
   print(
-    '1 CalorieInternational to CalorieThermochemical with Presision ${CalorieInternational(1).toCalorieThermochemical.withPrecision()} with Precision',
-  );
-  print('3 CalorieInternational + 1 Joule ${3.calorieInternational + 1.joule}');
-  print(
-    '1 CalorieInternational to KiloJoule with Presision ${CalorieInternational(1).toKiloJoule.withPrecision()} with Precision',
+    '1 GigaJoule + 3 KilowattHour with Precision ${(1.gigaJoule + 3.kilowattHour).withPrecision()}',
   );
   print(
-    '1 CalorieInternational + 1 MegawattHour = ${CalorieInternational(1) + MegawattHour(1)}',
+    '1 KiloJoule + 1 CalorieInternational = ${KiloJoule(1) + CalorieInternational(1)}',
   );
   print(
-    '2 CalorieInternational + 2 WattHour ${2.calorieInternational + 2.wattHour}',
+    '1 KiloJoule to Joule with Presision ${KiloJoule(1).toJoule.withPrecision()} with Precision',
+  );
+  print('1 KiloJoule + 1 KilowattHour = ${KiloJoule(1) + KilowattHour(1)}');
+  print('1 KiloJoule + 1 MegaJoule = ${KiloJoule(1) + MegaJoule(1)}');
+  print('1 KiloJoule + 1 WattHour = ${KiloJoule(1) + WattHour(1)}');
+  print(
+    '1 MegaJoule + 1 CalorieInternational = ${MegaJoule(1) + CalorieInternational(1)}',
   );
   print(
-    '2 ElectronVolt + 3 CalorieNutritional ${2.electronVolt + 3.calorieNutritional}',
+    '1 MegaJoule + 1 CalorieNutritional with Precision = ${(MegaJoule(1) + CalorieNutritional(1)).withPrecision()}',
   );
-  print('2 ElectronVolt + 3 Gigajoule ${2.electronVolt + 3.gigajoule}');
-  print('1 ElectronVolt to Joule ${ElectronVolt(1).toJoule}');
-  print('1 ElectronVolt + 1 KiloJoule = ${ElectronVolt(1) + KiloJoule(1)}');
+  print('1 MegaJoule + 1 ElectronVolt = ${MegaJoule(1) + ElectronVolt(1)}');
+  print('1 MegaJoule to GigaJoule ${MegaJoule(1).toGigaJoule}');
   print(
-    '1 ElectronVolt to KilowattHour with Presision ${ElectronVolt(1).toKilowattHour.withPrecision()} with Precision',
+    '3 MegaJoule + 1 MegawattHour with Precision ${(3.megaJoule + 1.megawattHour).withPrecision()}',
   );
-  print('1 ElectronVolt + 1 WattHour = ${ElectronVolt(1) + WattHour(1)}');
-  print(
-    '1 Gigajoule + 1 CalorieThermochemical with Precision = ${(Gigajoule(1) + CalorieThermochemical(1)).withPrecision()}',
-  );
-  print(
-    '3 Gigajoule + 1 Joule with Precision ${(3.gigajoule + 1.joule).withPrecision()}',
-  );
-  print(
-    '1 Gigajoule + 1 KilowattHour with Precision = ${(Gigajoule(1) + KilowattHour(1)).withPrecision()}',
-  );
-  print('1 Gigajoule to MegawattHour ${Gigajoule(1).toMegawattHour}');
-  print(
-    '1 KiloJoule + 3 CalorieInternational with Precision ${(1.kiloJoule + 3.calorieInternational).withPrecision()}',
-  );
-  print('1 KiloJoule + 1 Joule ${1.kiloJoule + 1.joule}');
-  print('1 KiloJoule + 2 MegawattHour ${1.kiloJoule + 2.megawattHour}');
-  print(
-    '3 KiloJoule + 2 WattHour with Precision ${(3.kiloJoule + 2.wattHour).withPrecision()}',
-  );
-  print(
-    '1 MegawattHour to CalorieInternational ${MegawattHour(1).toCalorieInternational}',
-  );
-  print(
-    '1 MegawattHour to KiloJoule with Presision ${MegawattHour(1).toKiloJoule.withPrecision()} with Precision',
-  );
-  print(
-    '1 MegawattHour to KilowattHour with Presision ${MegawattHour(1).toKilowattHour.withPrecision()} with Precision',
-  );
-  print('1 MegawattHour + 1 MegaJoule = ${MegawattHour(1) + MegaJoule(1)}');
-  print(
-    '2 WattHour + 1 CalorieNutritional with Precision ${(2.wattHour + 1.calorieNutritional).withPrecision()}',
-  );
-  print(
-    '1 WattHour to CalorieThermochemical with Presision ${WattHour(1).toCalorieThermochemical.withPrecision()} with Precision',
-  );
-  print('1 WattHour to ElectronVolt ${WattHour(1).toElectronVolt}');
-  print(
-    '2 WattHour + 2 KiloJoule with Precision ${(2.wattHour + 2.kiloJoule).withPrecision()}',
-  );
-  print(
-    '1 WattHour to KilowattHour with Presision ${WattHour(1).toKilowattHour.withPrecision()} with Precision',
-  );
-  print('1 WattHour to MegawattHour ${WattHour(1).toMegawattHour}');
   final listOfEnergy = [
-    CalorieInternational(3),
-    CalorieNutritional(3),
-    CalorieThermochemical(3),
-    Gigajoule(3),
-    KiloJoule(2),
-    MegaJoule(1),
+    ElectronVolt(1),
+    GigaJoule(2),
+    KiloJoule(3),
+    WattHour(3),
   ]..shuffle();
   print('Random Energy List => $listOfEnergy');
   listOfEnergy.sort();
   print('Smallest to Largest Energy List => $listOfEnergy');
   print(
-    'Energy List to CalorieInternational with Precision => ${listOfEnergy.toCalorieInternational.withPrecision()}',
-  );
-  print(
     'Energy List to CalorieThermochemical with Precision => ${listOfEnergy.toCalorieThermochemical.withPrecision()}',
   );
-  print('Energy List to Joule => ${listOfEnergy.toJoule}');
-  print('Energy List to KilowattHour => ${listOfEnergy.toKilowattHour}');
+  print('Energy List to GigaJoule => ${listOfEnergy.toGigaJoule}');
+  print('Energy List to KiloJoule => ${listOfEnergy.toKiloJoule}');
+  print('Energy List to MegaJoule => ${listOfEnergy.toMegaJoule}');
   print(
-    'Energy List to MegaJoule with Precision => ${listOfEnergy.toMegaJoule.withPrecision()}',
+    'Energy List to MegawattHour with Precision => ${listOfEnergy.toMegawattHour.withPrecision()}',
   );
+  print('Energy List to WattHour => ${listOfEnergy.toWattHour}');
   print('~End of Randomly Generated Energy Example~');
   print('======================');
 }
@@ -303,62 +272,93 @@ void exampleOfEnergy() {
 void exampleOfLength() {
   print('~Start of Randomly Generated Length Example~');
   print(
-    '1 Feet + 1 Centimeters with Precision = ${(Feet(1) + Centimeters(1)).withPrecision()}',
-  );
-  print('1 Feet + 1 Kilometers = ${Feet(1) + Kilometers(1)}');
-  print('1 Feet + 1 Meters = ${Feet(1) + Meters(1)}');
-  print(
-    '1 Feet + 1 Millemeters with Precision = ${(Feet(1) + Millemeters(1)).withPrecision()}',
-  );
-  print('1 Feet + 1 NauticalMiles = ${Feet(1) + NauticalMiles(1)}');
-  print(
-    '1 Feet to Yards with Presision ${Feet(1).toYards.withPrecision()} with Precision',
+    '1 Centimeters + 1 Inches with Precision = ${(Centimeters(1) + Inches(1)).withPrecision()}',
   );
   print(
-    '1 Furlongs + 1 Feet with Precision ${(1.furlongs + 1.feet).withPrecision()}',
-  );
-  print('2 Furlongs + 2 Kilometers ${2.furlongs + 2.kilometers}');
-  print('1 Furlongs + 1 Meters = ${Furlongs(1) + Meters(1)}');
-  print('1 Furlongs to NauticalMiles ${Furlongs(1).toNauticalMiles}');
-  print('2 Kilometers + 3 Centimeters ${2.kilometers + 3.centimeters}');
-  print('1 Kilometers + 1 Meters = ${Kilometers(1) + Meters(1)}');
-  print('1 Kilometers to Miles ${Kilometers(1).toMiles}');
-  print('1 Kilometers + 1 NauticalMiles = ${Kilometers(1) + NauticalMiles(1)}');
-  print('1 Meters + 1 Feet = ${Meters(1) + Feet(1)}');
-  print('1 Meters + 1 Furlongs = ${Meters(1) + Furlongs(1)}');
-  print('1 Meters to Kilometers ${Meters(1).toKilometers}');
-  print('1 Meters + 1 Miles = ${Meters(1) + Miles(1)}');
-  print(
-    '1 Meters + 1 Yards with Precision = ${(Meters(1) + Yards(1)).withPrecision()}',
+    '1 Centimeters + 1 Meters with Precision = ${(Centimeters(1) + Meters(1)).withPrecision()}',
   );
   print(
-    '1 Millemeters + 1 Feet with Precision = ${(Millemeters(1) + Feet(1)).withPrecision()}',
+    '1 Centimeters to Millemeters with Presision ${Centimeters(1).toMillemeters.withPrecision()} with Precision',
   );
-  print('3 Millemeters + 1 Inches ${3.millemeters + 1.inches}');
+  print(
+    '1 Centimeters to NauticalMiles with Presision ${Centimeters(1).toNauticalMiles.withPrecision()} with Precision',
+  );
+  print('1 Centimeters to Yards ${Centimeters(1).toYards}');
+  print(
+    '1 Furlongs + 1 Centimeters with Precision = ${(Furlongs(1) + Centimeters(1)).withPrecision()}',
+  );
+  print(
+    '2 Furlongs + 1 Inches with Precision ${(2.furlongs + 1.inches).withPrecision()}',
+  );
+  print('1 Furlongs to Kilometers ${Furlongs(1).toKilometers}');
+  print(
+    '1 Furlongs + 1 NauticalMiles with Precision = ${(Furlongs(1) + NauticalMiles(1)).withPrecision()}',
+  );
+  print(
+    '1 Miles + 1 Furlongs with Precision = ${(Miles(1) + Furlongs(1)).withPrecision()}',
+  );
+  print(
+    '1 Miles + 1 Millemeters with Precision = ${(Miles(1) + Millemeters(1)).withPrecision()}',
+  );
+  print(
+    '1 Millemeters + 1 Furlongs with Precision = ${(Millemeters(1) + Furlongs(1)).withPrecision()}',
+  );
+  print('2 Millemeters + 3 Inches ${2.millemeters + 3.inches}');
+  print(
+    '1 Millemeters to Kilometers with Presision ${Millemeters(1).toKilometers.withPrecision()} with Precision',
+  );
   print('1 Millemeters + 1 Meters = ${Millemeters(1) + Meters(1)}');
   print(
-    '1 Millemeters + 1 NauticalMiles with Precision = ${(Millemeters(1) + NauticalMiles(1)).withPrecision()}',
+    '1 NauticalMiles + 2 Feet with Precision ${(1.nauticalMiles + 2.feet).withPrecision()}',
   );
-  print('1 Yards + 1 Furlongs = ${Yards(1) + Furlongs(1)}');
   print(
-    '1 Yards + 3 Inches with Precision ${(1.yards + 3.inches).withPrecision()}',
+    '3 NauticalMiles + 2 Inches with Precision ${(3.nauticalMiles + 2.inches).withPrecision()}',
   );
-  print('1 Yards to Miles ${Yards(1).toMiles}');
+  print('1 NauticalMiles + 1 Kilometers = ${NauticalMiles(1) + Kilometers(1)}');
+  print(
+    '1 NauticalMiles + 1 Meters with Precision = ${(NauticalMiles(1) + Meters(1)).withPrecision()}',
+  );
+  print('1 NauticalMiles to Yards ${NauticalMiles(1).toYards}');
+  print(
+    '1 Yards + 1 Centimeters with Precision = ${(Yards(1) + Centimeters(1)).withPrecision()}',
+  );
+  print(
+    '1 Yards + 1 Feet with Precision = ${(Yards(1) + Feet(1)).withPrecision()}',
+  );
+  print(
+    '1 Yards to Furlongs with Presision ${Yards(1).toFurlongs.withPrecision()} with Precision',
+  );
+  print(
+    '3 Yards + 2 Meters with Precision ${(3.yards + 2.meters).withPrecision()}',
+  );
+  print('3 Yards + 1 Miles ${3.yards + 1.miles}');
+  print(
+    '1 Yards + 1 Millemeters with Precision = ${(Yards(1) + Millemeters(1)).withPrecision()}',
+  );
   final listOfLength = [
+    Centimeters(2),
     Feet(3),
-    Inches(3),
-    Miles(2),
+    Furlongs(1),
+    Inches(1),
+    Kilometers(3),
+    Millemeters(2),
+    Yards(2),
   ]..shuffle();
   print('Random Length List => $listOfLength');
   listOfLength.sort();
-  print('Smallest to Largest Length List => $listOfLength');
-  print('Length List to Centimeters => ${listOfLength.toCentimeters}');
+  print('Largest to Smallest Length List => ${listOfLength.reversed.toList()}');
   print(
     'Length List to Feet with Precision => ${listOfLength.toFeet.withPrecision()}',
   );
-  print('Length List to Kilometers => ${listOfLength.toKilometers}');
+  print(
+    'Length List to Inches with Precision => ${listOfLength.toInches.withPrecision()}',
+  );
+  print('Length List to Meters => ${listOfLength.toMeters}');
   print(
     'Length List to Miles with Precision => ${listOfLength.toMiles.withPrecision()}',
+  );
+  print(
+    'Length List to NauticalMiles with Precision => ${listOfLength.toNauticalMiles.withPrecision()}',
   );
   print('Length List to Yards => ${listOfLength.toYards}');
   print('~End of Randomly Generated Length Example~');
@@ -368,92 +368,59 @@ void exampleOfLength() {
 /// [Mass] example
 void exampleOfMass() {
   print('~Start of Randomly Generated Mass Example~');
-  print('1 Carats + 1 Milligrams = ${Carats(1) + Milligrams(1)}');
   print(
-    '1 Carats + 1 Ounces with Precision = ${(Carats(1) + Ounces(1)).withPrecision()}',
+    '1 Grams to Carats with Presision ${Grams(1).toCarats.withPrecision()} with Precision',
+  );
+  print('1 Grams to Kilograms ${Grams(1).toKilograms}');
+  print('1 Grams to Milligrams ${Grams(1).toMilligrams}');
+  print(
+    '2 Grams + 1 Quintal with Precision ${(2.grams + 1.quintal).withPrecision()}',
   );
   print(
-    '1 Carats to Quintal with Presision ${Carats(1).toQuintal.withPrecision()} with Precision',
+    '1 Grams + 1 StoneUK with Precision = ${(Grams(1) + StoneUK(1)).withPrecision()}',
+  );
+  print('1 StoneUK + 1 Carats = ${StoneUK(1) + Carats(1)}');
+  print('1 StoneUK + 3 Grams ${1.stoneUK + 3.grams}');
+  print(
+    '1 StoneUK + 1 Ounces with Precision = ${(StoneUK(1) + Ounces(1)).withPrecision()}',
   );
   print(
-    '1 Carats + 1 TonUS with Precision = ${(Carats(1) + TonUS(1)).withPrecision()}',
-  );
-  print('3 Carats + 1 Tonne ${3.carats + 1.tonne}');
-  print('1 Grams + 1 Carats = ${Grams(1) + Carats(1)}');
-  print(
-    '1 Grams + 1 Milligrams with Precision ${(1.grams + 1.milligrams).withPrecision()}',
-  );
-  print('3 Grams + 2 Ounces ${3.grams + 2.ounces}');
-  print('1 Grams + 1 Quintal = ${Grams(1) + Quintal(1)}');
-  print(
-    '1 Kilograms + 1 Carats with Precision = ${(Kilograms(1) + Carats(1)).withPrecision()}',
-  );
-  print('1 Kilograms + 2 Grams ${1.kilograms + 2.grams}');
-  print('1 Kilograms + 1 Pounds = ${Kilograms(1) + Pounds(1)}');
-  print('1 Kilograms + 1 StoneUK ${1.kilograms + 1.stoneUK}');
-  print(
-    '1 Kilograms to Tonne with Presision ${Kilograms(1).toTonne.withPrecision()} with Precision',
-  );
-  print('1 Quintal + 1 Grams = ${Quintal(1) + Grams(1)}');
-  print(
-    '1 Quintal + 1 Milligrams with Precision = ${(Quintal(1) + Milligrams(1)).withPrecision()}',
-  );
-  print('3 Quintal + 3 Pounds ${3.quintal + 3.pounds}');
-  print('1 Quintal to StoneUK ${Quintal(1).toStoneUK}');
-  print('1 Quintal + 1 TonUK = ${Quintal(1) + TonUK(1)}');
-  print('1 Quintal to Tonne ${Quintal(1).toTonne}');
-  print('1 StoneUK to Milligrams ${StoneUK(1).toMilligrams}');
-  print(
-    '3 StoneUK + 3 Ounces with Precision ${(3.stoneUK + 3.ounces).withPrecision()}',
+    '1 StoneUK + 1 Quintal with Precision = ${(StoneUK(1) + Quintal(1)).withPrecision()}',
   );
   print(
-    '1 StoneUK + 1 Pounds with Precision = ${(StoneUK(1) + Pounds(1)).withPrecision()}',
-  );
-  print('1 StoneUK + 1 Quintal = ${StoneUK(1) + Quintal(1)}');
-  print(
-    '2 StoneUK + 3 TonUK with Precision ${(2.stoneUK + 3.tonUK).withPrecision()}',
+    '3 StoneUK + 3 Tonne with Precision ${(3.stoneUK + 3.tonne).withPrecision()}',
   );
   print(
-    '1 StoneUK to TonUS with Presision ${StoneUK(1).toTonUS.withPrecision()} with Precision',
-  );
-  print('1 StoneUK + 1 Tonne = ${StoneUK(1) + Tonne(1)}');
-  print(
-    '1 Tonne + 1 Carats with Precision = ${(Tonne(1) + Carats(1)).withPrecision()}',
+    '1 TonUS + 1 Carats with Precision = ${(TonUS(1) + Carats(1)).withPrecision()}',
   );
   print(
-    '1 Tonne + 2 Kilograms with Precision ${(1.tonne + 2.kilograms).withPrecision()}',
-  );
-  print('1 Tonne + 1 Milligrams = ${Tonne(1) + Milligrams(1)}');
-  print('1 Tonne + 1 Ounces = ${Tonne(1) + Ounces(1)}');
-  print(
-    '1 Tonne + 1 Quintal with Precision = ${(Tonne(1) + Quintal(1)).withPrecision()}',
+    '1 TonUS + 1 Kilograms with Precision = ${(TonUS(1) + Kilograms(1)).withPrecision()}',
   );
   print(
-    '1 Tonne + 3 TonUS with Precision ${(1.tonne + 3.tonUS).withPrecision()}',
+    '1 TonUS to Ounces with Presision ${TonUS(1).toOunces.withPrecision()} with Precision',
   );
+  print('1 TonUS + 1 Quintal = ${TonUS(1) + Quintal(1)}');
+  print('1 TonUS + 1 StoneUK ${1.tonUS + 1.stoneUK}');
+  print(
+    '1 TonUS + 1 TonUK with Precision = ${(TonUS(1) + TonUK(1)).withPrecision()}',
+  );
+  print('1 TonUS + 3 Tonne ${1.tonUS + 3.tonne}');
   final listOfMass = [
-    Kilograms(1),
-    Ounces(2),
-    Pounds(3),
-    StoneUK(2),
+    Carats(2),
+    Grams(3),
+    Kilograms(3),
+    Milligrams(1),
+    Tonne(2),
   ]..shuffle();
   print('Random Mass List => $listOfMass');
   listOfMass.sort();
-  print('Largest to Smallest Mass List => ${listOfMass.reversed.toList()}');
+  print('Smallest to Largest Mass List => $listOfMass');
+  print('Mass List to Grams => ${listOfMass.toGrams}');
   print(
-    'Mass List to Kilograms with Precision => ${listOfMass.toKilograms.withPrecision()}',
+    'Mass List to Pounds with Precision => ${listOfMass.toPounds.withPrecision()}',
   );
-  print(
-    'Mass List to Milligrams with Precision => ${listOfMass.toMilligrams.withPrecision()}',
-  );
-  print('Mass List to Pounds => ${listOfMass.toPounds}');
-  print(
-    'Mass List to Quintal with Precision => ${listOfMass.toQuintal.withPrecision()}',
-  );
-  print('Mass List to StoneUK => ${listOfMass.toStoneUK}');
-  print(
-    'Mass List to TonUK with Precision => ${listOfMass.toTonUK.withPrecision()}',
-  );
+  print('Mass List to Quintal => ${listOfMass.toQuintal}');
+  print('Mass List to TonUK => ${listOfMass.toTonUK}');
   print(
     'Mass List to Tonne with Precision => ${listOfMass.toTonne.withPrecision()}',
   );
@@ -464,20 +431,21 @@ void exampleOfMass() {
 /// [Power] example
 void exampleOfPower() {
   print('~Start of Randomly Generated Power Example~');
-  print(
-    '1 Kilowatt + 1 Milliwatt with Precision = ${(Kilowatt(1) + Milliwatt(1)).withPrecision()}',
-  );
-  print(
-    '1 Kilowatt + 1 Watt with Precision = ${(Kilowatt(1) + Watt(1)).withPrecision()}',
-  );
-  print('1 Milliwatt + 3 Megawatt ${1.milliwatt + 3.megawatt}');
+  print('1 Milliwatt to Kilowatt ${Milliwatt(1).toKilowatt}');
   final listOfPower = [
-    Megawatt(1),
-    Milliwatt(1),
+    Horsepower(1),
+    Milliwatt(2),
+    Watt(2),
   ]..shuffle();
   print('Random Power List => $listOfPower');
   listOfPower.sort();
   print('Smallest to Largest Power List => $listOfPower');
+  print(
+    'Power List to Horsepower with Precision => ${listOfPower.toHorsepower.withPrecision()}',
+  );
+  print(
+    'Power List to Kilowatt with Precision => ${listOfPower.toKilowatt.withPrecision()}',
+  );
   print('Power List to Megawatt => ${listOfPower.toMegawatt}');
   print(
     'Power List to Milliwatt with Precision => ${listOfPower.toMilliwatt.withPrecision()}',
@@ -492,28 +460,59 @@ void exampleOfPower() {
 /// [Pressure] example
 void exampleOfPressure() {
   print('~Start of Randomly Generated Pressure Example~');
-  print('1 InchesOfMercury to Bar ${InchesOfMercury(1).toBar}');
   print(
-    '1 InchesOfMercury + 2 PoundsPerSquareInch ${1.inchesOfMercury + 2.poundsPerSquareInch}',
+    '1 Bar + 1 InchesOfMercury with Precision = ${(Bar(1) + InchesOfMercury(1)).withPrecision()}',
   );
-  print('1 InchesOfMercury + 1 Torr = ${InchesOfMercury(1) + Torr(1)}');
-  print('1 Pascal to Bar ${Pascal(1).toBar}');
-  print('1 Pascal + 1 InchesOfMercury = ${Pascal(1) + InchesOfMercury(1)}');
+  print('1 Bar to MillimeterOfMercury ${Bar(1).toMillimeterOfMercury}');
+  print('1 Bar + 1 Pascal = ${Bar(1) + Pascal(1)}');
   print(
-    '1 Pascal to StandardAtmosphere with Presision ${Pascal(1).toStandardAtmosphere.withPrecision()} with Precision',
+    '3 Bar + 3 PoundsPerSquareInch with Precision ${(3.bar + 3.poundsPerSquareInch).withPrecision()}',
+  );
+  print(
+    '1 Bar to StandardAtmosphere with Presision ${Bar(1).toStandardAtmosphere.withPrecision()} with Precision',
+  );
+  print('3 Bar + 1 Torr ${3.bar + 1.torr}');
+  print(
+    '1 InchesOfMercury to MillimeterOfMercury ${InchesOfMercury(1).toMillimeterOfMercury}',
+  );
+  print('1 InchesOfMercury to Pascal ${InchesOfMercury(1).toPascal}');
+  print(
+    '1 InchesOfMercury to PoundsPerSquareInch with Presision ${InchesOfMercury(1).toPoundsPerSquareInch.withPrecision()} with Precision',
+  );
+  print(
+    '1 PoundsPerSquareInch + 2 MillimeterOfMercury with Precision ${(1.poundsPerSquareInch + 2.millimeterOfMercury).withPrecision()}',
+  );
+  print(
+    '1 PoundsPerSquareInch to StandardAtmosphere with Presision ${PoundsPerSquareInch(1).toStandardAtmosphere.withPrecision()} with Precision',
+  );
+  print(
+    '1 StandardAtmosphere to Bar with Presision ${StandardAtmosphere(1).toBar.withPrecision()} with Precision',
+  );
+  print(
+    '1 StandardAtmosphere + 3 InchesOfMercury with Precision ${(1.standardAtmosphere + 3.inchesOfMercury).withPrecision()}',
+  );
+  print('3 Torr + 3 Bar ${3.torr + 3.bar}');
+  print('1 Torr + 1 InchesOfMercury = ${Torr(1) + InchesOfMercury(1)}');
+  print(
+    '1 Torr + 1 MillimeterOfMercury with Precision = ${(Torr(1) + MillimeterOfMercury(1)).withPrecision()}',
+  );
+  print(
+    '3 Torr + 3 Pascal with Precision ${(3.torr + 3.pascal).withPrecision()}',
   );
   final listOfPressure = [
-    Bar(3),
-    InchesOfMercury(1),
-    StandardAtmosphere(3),
+    Bar(2),
+    PoundsPerSquareInch(1),
+    StandardAtmosphere(1),
+    Torr(3),
   ]..shuffle();
   print('Random Pressure List => $listOfPressure');
   listOfPressure.sort();
+  print('Smallest to Largest Pressure List => $listOfPressure');
   print(
-    'Largest to Smallest Pressure List => ${listOfPressure.reversed.toList()}',
+    'Pressure List to InchesOfMercury => ${listOfPressure.toInchesOfMercury}',
   );
   print(
-    'Pressure List to PoundsPerSquareInch => ${listOfPressure.toPoundsPerSquareInch}',
+    'Pressure List to MillimeterOfMercury with Precision => ${listOfPressure.toMillimeterOfMercury.withPrecision()}',
   );
   print('~End of Randomly Generated Pressure Example~');
   print('======================');
@@ -523,38 +522,54 @@ void exampleOfPressure() {
 void exampleOfSpeed() {
   print('~Start of Randomly Generated Speed Example~');
   print(
-    '2 FootPerHour + 1 MeterPerSecond with Precision ${(2.footPerHour + 1.meterPerSecond).withPrecision()}',
+    '1 FootPerHour + 1 Knot with Precision = ${(FootPerHour(1) + Knot(1)).withPrecision()}',
+  );
+  print('1 FootPerHour to MeterPerSecond ${FootPerHour(1).toMeterPerSecond}');
+  print(
+    '1 FootPerHour + 1 MilesPerHour with Precision = ${(FootPerHour(1) + MilesPerHour(1)).withPrecision()}',
   );
   print(
-    '1 FootPerHour + 1 MilesPerMinute = ${FootPerHour(1) + MilesPerMinute(1)}',
+    '1 FootPerMinute + 1 FootPerSecond = ${FootPerMinute(1) + FootPerSecond(1)}',
   );
   print(
-    '1 Knot + 1 FootPerHour with Precision = ${(Knot(1) + FootPerHour(1)).withPrecision()}',
+    '1 FootPerMinute to MeterPerSecond with Presision ${FootPerMinute(1).toMeterPerSecond.withPrecision()} with Precision',
   );
-  print('1 Knot + 1 MilesPerHour = ${Knot(1) + MilesPerHour(1)}');
+  print('3 KilometerPerHour + 2 Knot ${3.kilometerPerHour + 2.knot}');
   print(
-    '1 Knot + 1 MilesPerMinute with Precision = ${(Knot(1) + MilesPerMinute(1)).withPrecision()}',
+    '1 KilometerPerHour + 1 MilesPerHour = ${KilometerPerHour(1) + MilesPerHour(1)}',
   );
-  print('1 MeterPerSecond + 1 Knot = ${MeterPerSecond(1) + Knot(1)}');
   print(
-    '2 MeterPerSecond + 3 MilesPerHour with Precision ${(2.meterPerSecond + 3.milesPerHour).withPrecision()}',
+    '1 KilometerPerHour + 1 MilesPerMinute = ${KilometerPerHour(1) + MilesPerMinute(1)}',
+  );
+  print('1 Knot to FootPerMinute ${Knot(1).toFootPerMinute}');
+  print(
+    '3 Knot + 1 KilometerPerHour with Precision ${(3.knot + 1.kilometerPerHour).withPrecision()}',
+  );
+  print(
+    '1 Knot + 1 MeterPerSecond with Precision = ${(Knot(1) + MeterPerSecond(1)).withPrecision()}',
+  );
+  print(
+    '1 MeterPerSecond + 1 KilometerPerHour with Precision = ${(MeterPerSecond(1) + KilometerPerHour(1)).withPrecision()}',
+  );
+  print(
+    '1 MeterPerSecond + 3 MilesPerHour with Precision ${(1.meterPerSecond + 3.milesPerHour).withPrecision()}',
+  );
+  print(
+    '1 MeterPerSecond to MilesPerMinute with Presision ${MeterPerSecond(1).toMilesPerMinute.withPrecision()} with Precision',
   );
   final listOfSpeed = [
-    FootPerHour(3),
-    FootPerSecond(3),
-    MeterPerSecond(1),
+    FootPerHour(2),
+    FootPerMinute(3),
+    MeterPerSecond(2),
   ]..shuffle();
   print('Random Speed List => $listOfSpeed');
   listOfSpeed.sort();
-  print('Largest to Smallest Speed List => ${listOfSpeed.reversed.toList()}');
+  print('Smallest to Largest Speed List => $listOfSpeed');
+  print('Speed List to FootPerHour => ${listOfSpeed.toFootPerHour}');
+  print('Speed List to FootPerMinute => ${listOfSpeed.toFootPerMinute}');
+  print('Speed List to MilesPerHour => ${listOfSpeed.toMilesPerHour}');
   print(
-    'Speed List to FootPerSecond with Precision => ${listOfSpeed.toFootPerSecond.withPrecision()}',
-  );
-  print(
-    'Speed List to Knot with Precision => ${listOfSpeed.toKnot.withPrecision()}',
-  );
-  print(
-    'Speed List to MeterPerSecond with Precision => ${listOfSpeed.toMeterPerSecond.withPrecision()}',
+    'Speed List to MilesPerMinute with Precision => ${listOfSpeed.toMilesPerMinute.withPrecision()}',
   );
   print('~End of Randomly Generated Speed Example~');
   print('======================');
@@ -563,35 +578,51 @@ void exampleOfSpeed() {
 /// [Time] example
 void exampleOfTime() {
   print('~Start of Randomly Generated Time Example~');
-  print('1 Day + 1 Millisecond = ${Day(1) + Millisecond(1)}');
-  print('1 Day + 1 Minute = ${Day(1) + Minute(1)}');
+  print('1 Day + 1 Hour = ${Day(1) + Hour(1)}');
   print(
-    '1 Day + 1 Year with Precision = ${(Day(1) + Year(1)).withPrecision()}',
+    '1 Millisecond + 2 Hour with Precision ${(1.millisecond + 2.hour).withPrecision()}',
+  );
+  print('1 Millisecond + 1 Minute = ${Millisecond(1) + Minute(1)}');
+  print(
+    '1 Minute + 1 Week with Precision = ${(Minute(1) + Week(1)).withPrecision()}',
   );
   print(
-    '1 Millisecond + 1 Minute with Precision = ${(Millisecond(1) + Minute(1)).withPrecision()}',
+    '1 Second + 1 Day with Precision = ${(Second(1) + Day(1)).withPrecision()}',
+  );
+  print('1 Second + 1 Hour = ${Second(1) + Hour(1)}');
+  print(
+    '1 Second + 2 Week with Precision ${(1.second + 2.week).withPrecision()}',
   );
   print(
-    '1 Millisecond to Second with Presision ${Millisecond(1).toSecond.withPrecision()} with Precision',
+    '1 Second + 1 Year with Precision ${(1.second + 1.year).withPrecision()}',
   );
-  print('1 Millisecond to Week ${Millisecond(1).toWeek}');
+  print('1 Year + 1 Hour with Precision ${(1.year + 1.hour).withPrecision()}');
   print(
-    '1 Millisecond + 3 Year with Precision ${(1.millisecond + 3.year).withPrecision()}',
+    '1 Year + 1 Millisecond with Precision = ${(Year(1) + Millisecond(1)).withPrecision()}',
   );
   print(
-    '1 Week to Year with Presision ${Week(1).toYear.withPrecision()} with Precision',
+    '1 Year + 2 Minute with Precision ${(1.year + 2.minute).withPrecision()}',
+  );
+  print(
+    '1 Year to Week with Presision ${Year(1).toWeek.withPrecision()} with Precision',
   );
   final listOfTime = [
-    Hour(2),
-    Millisecond(2),
-    Week(1),
+    Day(2),
+    Minute(2),
+    Second(1),
+    Week(2),
+    Year(3),
   ]..shuffle();
   print('Random Time List => $listOfTime');
   listOfTime.sort();
   print('Smallest to Largest Time List => $listOfTime');
-  print('Time List to Hour => ${listOfTime.toHour}');
-  print('Time List to Millisecond => ${listOfTime.toMillisecond}');
-  print('Time List to Second => ${listOfTime.toSecond}');
+  print(
+    'Time List to Millisecond with Precision => ${listOfTime.toMillisecond.withPrecision()}',
+  );
+  print(
+    'Time List to Week with Precision => ${listOfTime.toWeek.withPrecision()}',
+  );
+  print('Time List to Year => ${listOfTime.toYear}');
   print('~End of Randomly Generated Time Example~');
   print('======================');
 }
@@ -599,103 +630,75 @@ void exampleOfTime() {
 /// [Volume] example
 void exampleOfVolume() {
   print('~Start of Randomly Generated Volume Example~');
+  print('1 BarrelsUS + 1 CubicInches ${1.barrelsUS + 1.cubicInches}');
   print(
-    '1 CubicFoot + 1 BarrelsImperial = ${CubicFoot(1) + BarrelsImperial(1)}',
+    '1 BarrelsUS + 1 GallonsImperial = ${BarrelsUS(1) + GallonsImperial(1)}',
+  );
+  print('1 BarrelsUS + 1 Liters = ${BarrelsUS(1) + Liters(1)}');
+  print(
+    '1 CubicCentimeters to BarrelsImperial ${CubicCentimeters(1).toBarrelsImperial}',
   );
   print(
-    '1 CubicFoot to CubicCentimeters with Presision ${CubicFoot(1).toCubicCentimeters.withPrecision()} with Precision',
+    '1 CubicCentimeters + 2 CubicInches with Precision ${(1.cubicCentimeters + 2.cubicInches).withPrecision()}',
   );
   print(
-    '1 CubicFoot + 1 CubicMeters with Precision = ${(CubicFoot(1) + CubicMeters(1)).withPrecision()}',
+    '2 CubicCentimeters + 2 CubicYards with Precision ${(2.cubicCentimeters + 2.cubicYards).withPrecision()}',
   );
   print(
-    '1 CubicFoot to CubicYards with Presision ${CubicFoot(1).toCubicYards.withPrecision()} with Precision',
+    '1 CubicCentimeters to GallonsImperial ${CubicCentimeters(1).toGallonsImperial}',
   );
   print(
-    '1 CubicFoot to GallonsImperial with Presision ${CubicFoot(1).toGallonsImperial.withPrecision()} with Precision',
+    '1 CubicInches + 1 BarrelsImperial with Precision = ${(CubicInches(1) + BarrelsImperial(1)).withPrecision()}',
   );
-  print('1 CubicInches + 1 CubicFoot = ${CubicInches(1) + CubicFoot(1)}');
-  print('1 CubicInches to CubicMeters ${CubicInches(1).toCubicMeters}');
-  print('1 CubicInches + 2 Liters ${1.cubicInches + 2.liters}');
+  print('1 CubicInches + 1 Liters = ${CubicInches(1) + Liters(1)}');
+  print('1 CubicInches to Milliliters ${CubicInches(1).toMilliliters}');
   print(
-    '2 GallonsImperial + 2 BarrelsImperial ${2.gallonsImperial + 2.barrelsImperial}',
+    '1 CubicYards + 1 BarrelsImperial with Precision = ${(CubicYards(1) + BarrelsImperial(1)).withPrecision()}',
   );
+  print('2 CubicYards + 3 CubicFoot ${2.cubicYards + 3.cubicFoot}');
   print(
-    '2 GallonsImperial + 2 BarrelsUS with Precision ${(2.gallonsImperial + 2.barrelsUS).withPrecision()}',
-  );
-  print(
-    '1 GallonsImperial + 1 CubicFoot = ${GallonsImperial(1) + CubicFoot(1)}',
+    '1 CubicYards to CubicInches with Presision ${CubicYards(1).toCubicInches.withPrecision()} with Precision',
   );
   print(
-    '1 GallonsImperial to CubicInches with Presision ${GallonsImperial(1).toCubicInches.withPrecision()} with Precision',
+    '1 GallonsUS + 1 BarrelsImperial = ${GallonsUS(1) + BarrelsImperial(1)}',
   );
   print(
-    '1 GallonsImperial to CubicMeters with Presision ${GallonsImperial(1).toCubicMeters.withPrecision()} with Precision',
-  );
-  print('3 GallonsImperial + 2 CubicYards ${3.gallonsImperial + 2.cubicYards}');
-  print(
-    '1 GallonsImperial + 1 Milliliters = ${GallonsImperial(1) + Milliliters(1)}',
-  );
-  print('3 GallonsUS + 2 BarrelsImperial ${3.gallonsUS + 2.barrelsImperial}');
-  print(
-    '3 GallonsUS + 3 CubicCentimeters with Precision ${(3.gallonsUS + 3.cubicCentimeters).withPrecision()}',
+    '1 GallonsUS + 1 CubicCentimeters with Precision = ${(GallonsUS(1) + CubicCentimeters(1)).withPrecision()}',
   );
   print(
-    '1 GallonsUS to CubicFoot with Presision ${GallonsUS(1).toCubicFoot.withPrecision()} with Precision',
+    '1 GallonsUS + 1 CubicInches with Precision = ${(GallonsUS(1) + CubicInches(1)).withPrecision()}',
   );
-  print('1 GallonsUS to CubicInches ${GallonsUS(1).toCubicInches}');
-  print('1 GallonsUS + 1 CubicMeters ${1.gallonsUS + 1.cubicMeters}');
-  print('1 GallonsUS + 3 CubicYards ${1.gallonsUS + 3.cubicYards}');
+  print('1 GallonsUS to CubicYards ${GallonsUS(1).toCubicYards}');
   print(
-    '1 GallonsUS + 1 GallonsImperial = ${GallonsUS(1) + GallonsImperial(1)}',
-  );
-  print('1 Liters + 1 BarrelsImperial = ${Liters(1) + BarrelsImperial(1)}');
-  print('1 Liters + 3 BarrelsUS ${1.liters + 3.barrelsUS}');
-  print('1 Liters to CubicInches ${Liters(1).toCubicInches}');
-  print(
-    '1 Liters to CubicMeters with Presision ${Liters(1).toCubicMeters.withPrecision()} with Precision',
+    '1 GallonsUS + 1 GallonsImperial with Precision = ${(GallonsUS(1) + GallonsImperial(1)).withPrecision()}',
   );
   print(
-    '1 Milliliters + 1 BarrelsUS with Precision = ${(Milliliters(1) + BarrelsUS(1)).withPrecision()}',
+    '1 GallonsUS to Liters with Presision ${GallonsUS(1).toLiters.withPrecision()} with Precision',
   );
+  print('3 Liters + 3 CubicInches ${3.liters + 3.cubicInches}');
   print(
-    '1 Milliliters + 1 CubicCentimeters = ${Milliliters(1) + CubicCentimeters(1)}',
-  );
-  print(
-    '1 Milliliters + 1 CubicFoot with Precision = ${(Milliliters(1) + CubicFoot(1)).withPrecision()}',
-  );
-  print(
-    '1 Milliliters to CubicInches with Presision ${Milliliters(1).toCubicInches.withPrecision()} with Precision',
-  );
-  print('1 Milliliters + 1 CubicMeters = ${Milliliters(1) + CubicMeters(1)}');
-  print(
-    '1 Milliliters + 1 GallonsImperial with Precision = ${(Milliliters(1) + GallonsImperial(1)).withPrecision()}',
+    '1 Liters + 1 CubicMeters with Precision = ${(Liters(1) + CubicMeters(1)).withPrecision()}',
   );
   final listOfVolume = [
     BarrelsImperial(2),
-    CubicCentimeters(1),
+    BarrelsUS(1),
     CubicFoot(1),
-    CubicMeters(2),
+    CubicInches(1),
+    CubicMeters(1),
     GallonsImperial(3),
-    GallonsUS(2),
+    Milliliters(3),
   ]..shuffle();
   print('Random Volume List => $listOfVolume');
   listOfVolume.sort();
   print('Smallest to Largest Volume List => $listOfVolume');
   print('Volume List to BarrelsImperial => ${listOfVolume.toBarrelsImperial}');
-  print('Volume List to BarrelsUS => ${listOfVolume.toBarrelsUS}');
   print(
-    'Volume List to CubicFoot with Precision => ${listOfVolume.toCubicFoot.withPrecision()}',
+    'Volume List to CubicCentimeters with Precision => ${listOfVolume.toCubicCentimeters.withPrecision()}',
   );
   print('Volume List to CubicInches => ${listOfVolume.toCubicInches}');
-  print('Volume List to CubicMeters => ${listOfVolume.toCubicMeters}');
   print('Volume List to GallonsImperial => ${listOfVolume.toGallonsImperial}');
   print(
-    'Volume List to GallonsUS with Precision => ${listOfVolume.toGallonsUS.withPrecision()}',
-  );
-  print('Volume List to Liters => ${listOfVolume.toLiters}');
-  print(
-    'Volume List to Milliliters with Precision => ${listOfVolume.toMilliliters.withPrecision()}',
+    'Volume List to Liters with Precision => ${listOfVolume.toLiters.withPrecision()}',
   );
   print('~End of Randomly Generated Volume Example~');
   print('======================');

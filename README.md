@@ -49,7 +49,7 @@
    - `CalorieNutritional`
    - `CalorieThermochemical`
    - `ElectronVolt`
-   - `Gigajoule`
+   - `GigaJoule`
    - `Joule`
    - `KiloJoule`
    - `KilowattHour`

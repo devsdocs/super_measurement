@@ -62,13 +62,13 @@ const modelsDir = 'lib/src/models';
 const readmeDir = 'README.md';
 final readmeFile = File(readmeDir);
 
-void main() {
+void main() async {
   generateModels();
   generateExtension();
   generateExample();
   generateReadme();
-  Process.run('dart', ['format', '.']);
-  Process.run('dart', ['fix', '--apply']);
+  await Process.run('dart', ['format', '.']);
+  await Process.run('dart', ['fix', '--apply']);
 }
 
 int getRandomNumber() => 3.getRandomInt + 1;

@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Energy]
 ///
 /// [CalorieInternational],[CalorieNutritional],[CalorieThermochemical],
-/// [ElectronVolt],[Gigajoule],[Joule],[KiloJoule],[KilowattHour],[MegaJoule],[MegawattHour],
+/// [ElectronVolt],[GigaJoule],[Joule],[KiloJoule],[KilowattHour],[MegaJoule],[MegawattHour],
 /// [WattHour]
 abstract final class Energy extends Unit<Energy> {
   Energy([super.value]);
@@ -16,7 +16,7 @@ abstract final class Energy extends Unit<Energy> {
           CalorieNutritional: 0.0002388458966,
           CalorieThermochemical: 0.2390057361,
           ElectronVolt: 6241807627000000000.0,
-          Gigajoule: 1e-9,
+          GigaJoule: 1e-9,
           KiloJoule: 0.001,
           KilowattHour: 2.777777778e-7,
           MegaJoule: 0.000001,
@@ -36,7 +36,7 @@ abstract final class Energy extends Unit<Energy> {
 
   Energy get toElectronVolt => _convertTo(ElectronVolt());
 
-  Energy get toGigajoule => _convertTo(Gigajoule());
+  Energy get toGigaJoule => _convertTo(GigaJoule());
 
   Energy get toJoule => _convertTo(Joule());
 
@@ -91,11 +91,11 @@ final class ElectronVolt extends Energy {
   String get symbol => 'eV';
 }
 
-final class Gigajoule extends Energy {
-  Gigajoule([super.value]);
+final class GigaJoule extends Energy {
+  GigaJoule([super.value]);
 
   @override
-  Gigajoule get _clone => Gigajoule(value);
+  GigaJoule get _clone => GigaJoule(value);
 
   @override
   String get symbol => 'GJ';
