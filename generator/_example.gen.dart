@@ -32,7 +32,7 @@ void generateExample() {
               );
             } else {
               exampleBuff.writeln(
-                "print('1 ${e.keys.first} to ${x.keys.first} with Presision \${${e.keys.first}(1).to${x.keys.first}.withPrecision()} with Precision');",
+                "print('1 ${e.keys.first} to ${x.keys.first} with Presision \${${e.keys.first}(1).to${x.keys.first}.withPrecision()}');",
               );
             }
           } else {

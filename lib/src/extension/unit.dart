@@ -7,7 +7,7 @@ extension UnitExtension<T extends Unit<T>> on T {
 
 extension CustomLengthExtension on Length {
   (Feet, Inches) get toFeetAndInches {
-    final totalInches = toInches.value!;
+    final totalInches = this is Inches ? value! : toInches.value!;
     final feet = (totalInches / 12).floor();
     final remainingInches = totalInches - (feet * 12);
     return (
