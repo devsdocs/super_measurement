@@ -30,7 +30,7 @@ final energyUnit = {
       'KilowattHour': {'ratio': 2.777777778e-7, 'symbol': 'kWh'},
     },
     {
-      'ElectronVolt': {'ratio': 6.241807627e+18, 'symbol': 'eV'},
+      'ElectronVolt': {'ratio': 6.241807627e18, 'symbol': 'eV'},
     },
     {
       'MegawattHour': {'ratio': 2.777777778e-10, 'symbol': 'MWh'},
