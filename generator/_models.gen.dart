@@ -16,23 +16,23 @@ void generateModels() {
     map[map.length - 1] = map[map.length - 1].split(',').first;
     final types = '/// ${map.join()}';
     if (types.length >= 80) {
-      typeBuff.write('/// ');
-      int len = 4;
+      typeBuff.write('///');
+      int len = 3;
       for (final e in map) {
-        if (e.length + len > 80) {
+        if (e.length + len + 1 > 78) {
           typeBuff.writeln();
-          typeBuff.write('/// ');
-          typeBuff.write(e);
-          len = 4;
+          typeBuff.write('///');
+          typeBuff.write(' $e');
+          len = 4 + e.length;
         } else {
-          len += e.length;
-          typeBuff.write(e);
+          len += e.length + 1;
+          typeBuff.write(' $e');
         }
       }
-      typeBuff.writeln();
     } else {
-      typeBuff.writeln(types);
+      typeBuff.write(types);
     }
+    typeBuff.writeln();
     typeBuff.writeln('abstract final class $name extends Unit<$name> {');
     typeBuff.writeln();
     typeBuff.writeln('  $name([super.value]);');

@@ -2,9 +2,9 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Energy]
 ///
-/// [CalorieInternational],[CalorieNutritional],[CalorieThermochemical],
-/// [ElectronVolt],[GigaJoule],[Joule],[KiloJoule],[KilowattHour],[MegaJoule],[MegawattHour],
-/// [WattHour]
+/// [CalorieInternational], [CalorieNutritional], [CalorieThermochemical],
+/// [ElectronVolt], [GigaJoule], [Joule], [KiloJoule], [KilowattHour],
+/// [MegaJoule], [MegawattHour], [WattHour]
 abstract final class Energy extends Unit<Energy> {
   Energy([super.value]);
 

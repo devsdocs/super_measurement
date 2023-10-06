@@ -13,22 +13,22 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   (BaseType, ConversionRatio<T>) get _ratio;
 
   bool _convertAndCompare(String operator, T other) {
-    final otherValue = other._clone._convertTo(_anchor).value!;
-    final currentValue = _clone._convertTo(_anchor).value;
+    final otherValue = other._clone._convertTo(_anchor).withPrecision().value;
+    final currentValue = _clone._convertTo(_anchor).withPrecision().value;
 
     if (operator == '==') {
-      return currentValue! == otherValue;
+      return currentValue == otherValue;
     }
     if (operator == '>') {
-      return currentValue! > otherValue;
+      return currentValue! > otherValue!;
     }
     if (operator == '>=') {
-      return currentValue! >= otherValue;
+      return currentValue! >= otherValue!;
     }
     if (operator == '<') {
-      return currentValue! < otherValue;
+      return currentValue! < otherValue!;
     }
-    return currentValue! <= otherValue;
+    return currentValue! <= otherValue!;
   }
 
   T _convertAndCombine(String operator, T other) {
