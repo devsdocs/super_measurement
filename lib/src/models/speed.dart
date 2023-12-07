@@ -3,7 +3,8 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Speed]
 ///
 /// [FootPerHour], [FootPerMinute], [FootPerSecond], [KilometerPerHour],
-/// [Knot], [MeterPerSecond], [MilesPerHour], [MilesPerMinute]
+/// [Knot], [Light], [MeterPerHour], [MeterPerMinute], [MeterPerSecond],
+/// [MilesPerHour], [MilesPerMinute], [YardPerMinute]
 abstract final class Speed extends Unit<Speed> {
   Speed([super.value]);
 
@@ -15,9 +16,13 @@ abstract final class Speed extends Unit<Speed> {
           FootPerMinute: 54.6806649169,
           FootPerSecond: 0.9113444153,
           Knot: 0.5399568035,
+          Light: 9.265669311e-10,
+          MeterPerHour: 1000,
+          MeterPerMinute: 16.66666667,
           MeterPerSecond: 0.2777777778,
           MilesPerHour: 0.6213711922,
           MilesPerMinute: 0.0103561865,
+          YardPerMinute: 18.22688831,
         })
       );
 
@@ -34,11 +39,19 @@ abstract final class Speed extends Unit<Speed> {
 
   Speed get toKnot => _convertTo(Knot());
 
+  Speed get toLight => _convertTo(Light());
+
+  Speed get toMeterPerHour => _convertTo(MeterPerHour());
+
+  Speed get toMeterPerMinute => _convertTo(MeterPerMinute());
+
   Speed get toMeterPerSecond => _convertTo(MeterPerSecond());
 
   Speed get toMilesPerHour => _convertTo(MilesPerHour());
 
   Speed get toMilesPerMinute => _convertTo(MilesPerMinute());
+
+  Speed get toYardPerMinute => _convertTo(YardPerMinute());
 }
 
 final class FootPerHour extends Speed {
@@ -91,6 +104,36 @@ final class Knot extends Speed {
   String get symbol => 'kn';
 }
 
+final class Light extends Speed {
+  Light([super.value]);
+
+  @override
+  Light get _clone => Light(value);
+
+  @override
+  String get symbol => 'c';
+}
+
+final class MeterPerHour extends Speed {
+  MeterPerHour([super.value]);
+
+  @override
+  MeterPerHour get _clone => MeterPerHour(value);
+
+  @override
+  String get symbol => 'm/h';
+}
+
+final class MeterPerMinute extends Speed {
+  MeterPerMinute([super.value]);
+
+  @override
+  MeterPerMinute get _clone => MeterPerMinute(value);
+
+  @override
+  String get symbol => 'm/min';
+}
+
 final class MeterPerSecond extends Speed {
   MeterPerSecond([super.value]);
 
@@ -119,4 +162,14 @@ final class MilesPerMinute extends Speed {
 
   @override
   String get symbol => 'mi/min';
+}
+
+final class YardPerMinute extends Speed {
+  YardPerMinute([super.value]);
+
+  @override
+  YardPerMinute get _clone => YardPerMinute(value);
+
+  @override
+  String get symbol => 'yd/min';
 }

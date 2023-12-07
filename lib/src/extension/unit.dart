@@ -6,37 +6,37 @@ extension UnitExtension<T extends Unit<T>> on T {
 }
 
 extension CustomLengthExtension on Length {
-  (Feet, Inches) get toFeetAndInches {
+  FeetInches get toFeetInches {
     final totalInches = this is Inches ? value! : toInches.value!;
     final feet = (totalInches / 12).floor();
     final remainingInches = totalInches - (feet * 12);
-    return (
-      Feet(feet),
-      Inches(remainingInches),
-    );
+    return (feet: Feet(feet), inches: Inches(remainingInches));
   }
 }
 
 extension CustomIterableExtension on Iterable<Length> {
-  (Feet, Inches) get toFeetAndInches => toInches.toFeetAndInches;
+  FeetInches get toFeetInches => toInches.toFeetInches;
 }
 
 extension CustomNumExtension on num {
-  (Feet, Inches) get toFeetAndInches => inches.toFeetAndInches;
+  FeetInches get toFeetInches => inches.toFeetInches;
 }
 
-extension CustomRecordsOfLengthExtension on (Feet, Inches) {
-  (Feet, Inches) withPrecision([Precision precision = Precision.two]) =>
-      ($1, $2..value = $2.value!.toDouble().toPrecision(precision.value));
+extension CustomRecordsOfLengthExtension on FeetInches {
+  FeetInches withPrecision([Precision precision = Precision.two]) => (
+        feet: feet,
+        inches: inches
+          ..value = inches.value!.toDouble().toPrecision(precision.value)
+      );
 
-  Length get toCentimeters => [$1, $2]._combineTo(Centimeters());
-  Length get toFeet => [$1, $2]._combineTo(Feet());
-  Length get toFurlongs => [$1, $2]._combineTo(Furlongs());
-  Length get toInches => [$1, $2]._combineTo(Inches());
-  Length get toKilometers => [$1, $2]._combineTo(Kilometers());
-  Length get toMeters => [$1, $2]._combineTo(Meters());
-  Length get toMiles => [$1, $2]._combineTo(Miles());
-  Length get toMillemeters => [$1, $2]._combineTo(Millemeters());
-  Length get toNauticalMiles => [$1, $2]._combineTo(NauticalMiles());
-  Length get toYards => [$1, $2]._combineTo(Yards());
+  Length get toCentimeters => [feet, inches]._combineTo(Centimeters());
+  Length get toFeet => [feet, inches]._combineTo(Feet());
+  Length get toFurlongs => [feet, inches]._combineTo(Furlongs());
+  Length get toInches => [feet, inches]._combineTo(Inches());
+  Length get toKilometers => [feet, inches]._combineTo(Kilometers());
+  Length get toMeters => [feet, inches]._combineTo(Meters());
+  Length get toMiles => [feet, inches]._combineTo(Miles());
+  Length get toMillemeters => [feet, inches]._combineTo(Millemeters());
+  Length get toNauticalMiles => [feet, inches]._combineTo(NauticalMiles());
+  Length get toYards => [feet, inches]._combineTo(Yards());
 }

@@ -17,3 +17,4 @@ enum Precision {
 }
 
 typedef BaseType = Type;
+typedef FeetInches = ({Feet feet, Inches inches});

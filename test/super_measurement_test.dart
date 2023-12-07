@@ -20,6 +20,14 @@ void main() {
         Kilograms(2.5),
         equals(Grams(2500)),
       );
+      expect(
+        Kilograms(2.5),
+        isNot(equals(Grams(2501))),
+      );
+      expect(
+        Grams(2500),
+        equals(Kilograms(2.5)),
+      );
     });
   });
 }

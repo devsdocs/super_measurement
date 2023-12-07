@@ -1,3 +1,5 @@
 .dart_tool/
 pubspec.lock
 generator/
+
+*_test.dart

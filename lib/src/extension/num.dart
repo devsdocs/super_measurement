@@ -1,5 +1,20 @@
 part of '../../super_measurement.dart';
 
+extension NumOfAngularSpeed on num {
+  DegreePerDay get degreePerDay => DegreePerDay(this);
+  DegreePerHour get degreePerHour => DegreePerHour(this);
+  DegreePerMinute get degreePerMinute => DegreePerMinute(this);
+  DegreePerSecond get degreePerSecond => DegreePerSecond(this);
+  RadianPerDay get radianPerDay => RadianPerDay(this);
+  RadianPerHour get radianPerHour => RadianPerHour(this);
+  RadianPerMinute get radianPerMinute => RadianPerMinute(this);
+  RadianPerSecond get radianPerSecond => RadianPerSecond(this);
+  RevolutionPerDay get revolutionPerDay => RevolutionPerDay(this);
+  RevolutionPerHour get revolutionPerHour => RevolutionPerHour(this);
+  RevolutionPerMinute get revolutionPerMinute => RevolutionPerMinute(this);
+  RevolutionPerSecond get revolutionPerSecond => RevolutionPerSecond(this);
+}
+
 extension NumOfArea on num {
   Acres get acres => Acres(this);
   Hectares get hectares => Hectares(this);
@@ -100,9 +115,13 @@ extension NumOfSpeed on num {
   FootPerSecond get footPerSecond => FootPerSecond(this);
   KilometerPerHour get kilometerPerHour => KilometerPerHour(this);
   Knot get knot => Knot(this);
+  Light get light => Light(this);
+  MeterPerHour get meterPerHour => MeterPerHour(this);
+  MeterPerMinute get meterPerMinute => MeterPerMinute(this);
   MeterPerSecond get meterPerSecond => MeterPerSecond(this);
   MilesPerHour get milesPerHour => MilesPerHour(this);
   MilesPerMinute get milesPerMinute => MilesPerMinute(this);
+  YardPerMinute get yardPerMinute => YardPerMinute(this);
 }
 
 extension NumOfTime on num {

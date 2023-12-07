@@ -6,6 +6,12 @@ final speedUnit = {
       'KilometerPerHour': {'ratio': 1, 'symbol': 'km/h'},
     },
     {
+      'MeterPerHour': {'ratio': 1000, 'symbol': 'm/h'},
+    },
+    {
+      'MeterPerMinute': {'ratio': 16.66666667, 'symbol': 'm/min'},
+    },
+    {
       'MeterPerSecond': {'ratio': 0.2777777778, 'symbol': 'm/s'},
     },
     {
@@ -25,6 +31,12 @@ final speedUnit = {
     },
     {
       'MilesPerMinute': {'ratio': 0.0103561865, 'symbol': 'mi/min'},
-    }
+    },
+    {
+      'Light': {'ratio': 9.265669311e-10, 'symbol': 'c'},
+    },
+    {
+      'YardPerMinute': {'ratio': 18.22688831, 'symbol': 'yd/min'},
+    },
   ],
 };

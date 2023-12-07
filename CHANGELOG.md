@@ -1,4 +1,7 @@
 ## 1.0.5
+- Add `AngularSpeed` model
+
+## 1.0.5
 - Add `Energy` Unit
 
 ## 1.0.4

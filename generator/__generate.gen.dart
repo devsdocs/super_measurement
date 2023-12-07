@@ -14,6 +14,7 @@ part 'volume.gen.dart';
 part 'mass.gen.dart';
 part 'length.gen.dart';
 part 'speed.gen.dart';
+part 'angularspeed.gen.dart';
 part 'pressure.gen.dart';
 part 'power.gen.dart';
 part 'datatransfer.gen.dart';
@@ -41,6 +42,7 @@ final allData = [
   timeUnit,
   dataStorageUnit,
   energyUnit,
+  angularSpeedUnit,
 ]
     .map(
       (e) => e.map(

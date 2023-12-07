@@ -1,5 +1,20 @@
 part of '../../super_measurement.dart';
 
+extension IterableOfAngularSpeed on Iterable<AngularSpeed> {
+  AngularSpeed get toDegreePerDay => _combineTo(DegreePerDay());
+  AngularSpeed get toDegreePerHour => _combineTo(DegreePerHour());
+  AngularSpeed get toDegreePerMinute => _combineTo(DegreePerMinute());
+  AngularSpeed get toDegreePerSecond => _combineTo(DegreePerSecond());
+  AngularSpeed get toRadianPerDay => _combineTo(RadianPerDay());
+  AngularSpeed get toRadianPerHour => _combineTo(RadianPerHour());
+  AngularSpeed get toRadianPerMinute => _combineTo(RadianPerMinute());
+  AngularSpeed get toRadianPerSecond => _combineTo(RadianPerSecond());
+  AngularSpeed get toRevolutionPerDay => _combineTo(RevolutionPerDay());
+  AngularSpeed get toRevolutionPerHour => _combineTo(RevolutionPerHour());
+  AngularSpeed get toRevolutionPerMinute => _combineTo(RevolutionPerMinute());
+  AngularSpeed get toRevolutionPerSecond => _combineTo(RevolutionPerSecond());
+}
+
 extension IterableOfArea on Iterable<Area> {
   Area get toAcres => _combineTo(Acres());
   Area get toHectares => _combineTo(Hectares());
@@ -99,9 +114,13 @@ extension IterableOfSpeed on Iterable<Speed> {
   Speed get toFootPerSecond => _combineTo(FootPerSecond());
   Speed get toKilometerPerHour => _combineTo(KilometerPerHour());
   Speed get toKnot => _combineTo(Knot());
+  Speed get toLight => _combineTo(Light());
+  Speed get toMeterPerHour => _combineTo(MeterPerHour());
+  Speed get toMeterPerMinute => _combineTo(MeterPerMinute());
   Speed get toMeterPerSecond => _combineTo(MeterPerSecond());
   Speed get toMilesPerHour => _combineTo(MilesPerHour());
   Speed get toMilesPerMinute => _combineTo(MilesPerMinute());
+  Speed get toYardPerMinute => _combineTo(YardPerMinute());
 }
 
 extension IterableOfTime on Iterable<Time> {

@@ -97,6 +97,9 @@ void generateExample() {
     }
 
     exampleBuff.writeln("print('~End of Randomly Generated $name Example~');");
+    exampleBuff.writeln(
+      "print('Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake');",
+    );
     exampleBuff.writeln("print('======================');");
     exampleBuff.writeln('}');
     exampleBuff.writeln();
