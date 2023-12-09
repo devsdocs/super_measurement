@@ -6,12 +6,12 @@ part of '../../super_measurement.dart';
 /// [Knot], [Light], [MeterPerHour], [MeterPerMinute], [MeterPerSecond],
 /// [MilesPerHour], [MilesPerMinute], [YardPerMinute]
 abstract final class Speed extends Unit<Speed> {
-  Speed([super.value]);
+  const Speed([super.value]);
 
   @override
-  (BaseType, ConversionRatio<Speed>) get _ratio => (
-        _anchor.runtimeType,
-        ConversionRatio<Speed>({
+  AnchorRatio<Speed> get _anchorRatio => (
+        anchor: _anchor.runtimeType,
+        ratio: ConversionRatio<Speed>({
           FootPerHour: 3280.8398950131,
           FootPerMinute: 54.6806649169,
           FootPerSecond: 0.9113444153,
@@ -27,149 +27,206 @@ abstract final class Speed extends Unit<Speed> {
       );
 
   @override
-  Speed get _anchor => KilometerPerHour();
+  Speed get _anchor => const KilometerPerHour();
 
-  Speed get toFootPerHour => _convertTo(FootPerHour());
+  Speed get toFootPerHour => _convertTo(const FootPerHour());
 
-  Speed get toFootPerMinute => _convertTo(FootPerMinute());
+  Speed get toFootPerMinute => _convertTo(const FootPerMinute());
 
-  Speed get toFootPerSecond => _convertTo(FootPerSecond());
+  Speed get toFootPerSecond => _convertTo(const FootPerSecond());
 
-  Speed get toKilometerPerHour => _convertTo(KilometerPerHour());
+  Speed get toKilometerPerHour => _convertTo(const KilometerPerHour());
 
-  Speed get toKnot => _convertTo(Knot());
+  Speed get toKnot => _convertTo(const Knot());
 
-  Speed get toLight => _convertTo(Light());
+  Speed get toLight => _convertTo(const Light());
 
-  Speed get toMeterPerHour => _convertTo(MeterPerHour());
+  Speed get toMeterPerHour => _convertTo(const MeterPerHour());
 
-  Speed get toMeterPerMinute => _convertTo(MeterPerMinute());
+  Speed get toMeterPerMinute => _convertTo(const MeterPerMinute());
 
-  Speed get toMeterPerSecond => _convertTo(MeterPerSecond());
+  Speed get toMeterPerSecond => _convertTo(const MeterPerSecond());
 
-  Speed get toMilesPerHour => _convertTo(MilesPerHour());
+  Speed get toMilesPerHour => _convertTo(const MilesPerHour());
 
-  Speed get toMilesPerMinute => _convertTo(MilesPerMinute());
+  Speed get toMilesPerMinute => _convertTo(const MilesPerMinute());
 
-  Speed get toYardPerMinute => _convertTo(YardPerMinute());
+  Speed get toYardPerMinute => _convertTo(const YardPerMinute());
 }
 
 final class FootPerHour extends Speed {
-  FootPerHour([super.value]);
+  const FootPerHour([super.value]);
 
   @override
   FootPerHour get _clone => FootPerHour(value);
+
+  @override
+  FootPerHour withValue([num? value]) => FootPerHour(value ?? this.value);
 
   @override
   String get symbol => 'ft/h';
 }
 
 final class FootPerMinute extends Speed {
-  FootPerMinute([super.value]);
+  const FootPerMinute([super.value]);
 
   @override
   FootPerMinute get _clone => FootPerMinute(value);
+
+  @override
+  FootPerMinute withValue([num? value]) => FootPerMinute(value ?? this.value);
 
   @override
   String get symbol => 'ft/min';
 }
 
 final class FootPerSecond extends Speed {
-  FootPerSecond([super.value]);
+  const FootPerSecond([super.value]);
 
   @override
   FootPerSecond get _clone => FootPerSecond(value);
+
+  @override
+  FootPerSecond withValue([num? value]) => FootPerSecond(value ?? this.value);
 
   @override
   String get symbol => 'ft/s';
 }
 
 final class KilometerPerHour extends Speed {
-  KilometerPerHour([super.value]);
+  const KilometerPerHour([super.value]);
 
   @override
   KilometerPerHour get _clone => KilometerPerHour(value);
+
+  @override
+  KilometerPerHour withValue([num? value]) =>
+      KilometerPerHour(value ?? this.value);
 
   @override
   String get symbol => 'km/h';
 }
 
 final class Knot extends Speed {
-  Knot([super.value]);
+  const Knot([super.value]);
 
   @override
   Knot get _clone => Knot(value);
+
+  @override
+  Knot withValue([num? value]) => Knot(value ?? this.value);
 
   @override
   String get symbol => 'kn';
 }
 
 final class Light extends Speed {
-  Light([super.value]);
+  const Light([super.value]);
 
   @override
   Light get _clone => Light(value);
+
+  @override
+  Light withValue([num? value]) => Light(value ?? this.value);
 
   @override
   String get symbol => 'c';
 }
 
 final class MeterPerHour extends Speed {
-  MeterPerHour([super.value]);
+  const MeterPerHour([super.value]);
 
   @override
   MeterPerHour get _clone => MeterPerHour(value);
+
+  @override
+  MeterPerHour withValue([num? value]) => MeterPerHour(value ?? this.value);
 
   @override
   String get symbol => 'm/h';
 }
 
 final class MeterPerMinute extends Speed {
-  MeterPerMinute([super.value]);
+  const MeterPerMinute([super.value]);
 
   @override
   MeterPerMinute get _clone => MeterPerMinute(value);
+
+  @override
+  MeterPerMinute withValue([num? value]) => MeterPerMinute(value ?? this.value);
 
   @override
   String get symbol => 'm/min';
 }
 
 final class MeterPerSecond extends Speed {
-  MeterPerSecond([super.value]);
+  const MeterPerSecond([super.value]);
 
   @override
   MeterPerSecond get _clone => MeterPerSecond(value);
+
+  @override
+  MeterPerSecond withValue([num? value]) => MeterPerSecond(value ?? this.value);
 
   @override
   String get symbol => 'm/s';
 }
 
 final class MilesPerHour extends Speed {
-  MilesPerHour([super.value]);
+  const MilesPerHour([super.value]);
 
   @override
   MilesPerHour get _clone => MilesPerHour(value);
+
+  @override
+  MilesPerHour withValue([num? value]) => MilesPerHour(value ?? this.value);
 
   @override
   String get symbol => 'mi/h';
 }
 
 final class MilesPerMinute extends Speed {
-  MilesPerMinute([super.value]);
+  const MilesPerMinute([super.value]);
 
   @override
   MilesPerMinute get _clone => MilesPerMinute(value);
+
+  @override
+  MilesPerMinute withValue([num? value]) => MilesPerMinute(value ?? this.value);
 
   @override
   String get symbol => 'mi/min';
 }
 
 final class YardPerMinute extends Speed {
-  YardPerMinute([super.value]);
+  const YardPerMinute([super.value]);
 
   @override
   YardPerMinute get _clone => YardPerMinute(value);
 
   @override
+  YardPerMinute withValue([num? value]) => YardPerMinute(value ?? this.value);
+
+  @override
   String get symbol => 'yd/min';
+}
+
+enum SpeedUnit {
+  footPerHour._(FootPerHour()),
+  footPerMinute._(FootPerMinute()),
+  footPerSecond._(FootPerSecond()),
+  kilometerPerHour._(KilometerPerHour()),
+  knot._(Knot()),
+  light._(Light()),
+  meterPerHour._(MeterPerHour()),
+  meterPerMinute._(MeterPerMinute()),
+  meterPerSecond._(MeterPerSecond()),
+  milesPerHour._(MilesPerHour()),
+  milesPerMinute._(MilesPerMinute()),
+  yardPerMinute._(YardPerMinute()),
+  ;
+
+  const SpeedUnit._(this.construct);
+
+  final Speed construct;
 }

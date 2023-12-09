@@ -5,12 +5,12 @@ part of '../../super_measurement.dart';
 /// [Bar], [InchesOfMercury], [MillimeterOfMercury], [Pascal],
 /// [PoundsPerSquareInch], [StandardAtmosphere], [Torr]
 abstract final class Pressure extends Unit<Pressure> {
-  Pressure([super.value]);
+  const Pressure([super.value]);
 
   @override
-  (BaseType, ConversionRatio<Pressure>) get _ratio => (
-        _anchor.runtimeType,
-        ConversionRatio<Pressure>({
+  AnchorRatio<Pressure> get _anchorRatio => (
+        anchor: _anchor.runtimeType,
+        ratio: ConversionRatio<Pressure>({
           Bar: 1.01325,
           InchesOfMercury: 29.9212555797,
           MillimeterOfMercury: 759.9998917256,
@@ -21,89 +21,129 @@ abstract final class Pressure extends Unit<Pressure> {
       );
 
   @override
-  Pressure get _anchor => StandardAtmosphere();
+  Pressure get _anchor => const StandardAtmosphere();
 
-  Pressure get toBar => _convertTo(Bar());
+  Pressure get toBar => _convertTo(const Bar());
 
-  Pressure get toInchesOfMercury => _convertTo(InchesOfMercury());
+  Pressure get toInchesOfMercury => _convertTo(const InchesOfMercury());
 
-  Pressure get toMillimeterOfMercury => _convertTo(MillimeterOfMercury());
+  Pressure get toMillimeterOfMercury => _convertTo(const MillimeterOfMercury());
 
-  Pressure get toPascal => _convertTo(Pascal());
+  Pressure get toPascal => _convertTo(const Pascal());
 
-  Pressure get toPoundsPerSquareInch => _convertTo(PoundsPerSquareInch());
+  Pressure get toPoundsPerSquareInch => _convertTo(const PoundsPerSquareInch());
 
-  Pressure get toStandardAtmosphere => _convertTo(StandardAtmosphere());
+  Pressure get toStandardAtmosphere => _convertTo(const StandardAtmosphere());
 
-  Pressure get toTorr => _convertTo(Torr());
+  Pressure get toTorr => _convertTo(const Torr());
 }
 
 final class Bar extends Pressure {
-  Bar([super.value]);
+  const Bar([super.value]);
 
   @override
   Bar get _clone => Bar(value);
+
+  @override
+  Bar withValue([num? value]) => Bar(value ?? this.value);
 
   @override
   String get symbol => 'bar';
 }
 
 final class InchesOfMercury extends Pressure {
-  InchesOfMercury([super.value]);
+  const InchesOfMercury([super.value]);
 
   @override
   InchesOfMercury get _clone => InchesOfMercury(value);
+
+  @override
+  InchesOfMercury withValue([num? value]) =>
+      InchesOfMercury(value ?? this.value);
 
   @override
   String get symbol => 'inHg';
 }
 
 final class MillimeterOfMercury extends Pressure {
-  MillimeterOfMercury([super.value]);
+  const MillimeterOfMercury([super.value]);
 
   @override
   MillimeterOfMercury get _clone => MillimeterOfMercury(value);
+
+  @override
+  MillimeterOfMercury withValue([num? value]) =>
+      MillimeterOfMercury(value ?? this.value);
 
   @override
   String get symbol => 'mmHg';
 }
 
 final class Pascal extends Pressure {
-  Pascal([super.value]);
+  const Pascal([super.value]);
 
   @override
   Pascal get _clone => Pascal(value);
+
+  @override
+  Pascal withValue([num? value]) => Pascal(value ?? this.value);
 
   @override
   String get symbol => 'Pa';
 }
 
 final class PoundsPerSquareInch extends Pressure {
-  PoundsPerSquareInch([super.value]);
+  const PoundsPerSquareInch([super.value]);
 
   @override
   PoundsPerSquareInch get _clone => PoundsPerSquareInch(value);
+
+  @override
+  PoundsPerSquareInch withValue([num? value]) =>
+      PoundsPerSquareInch(value ?? this.value);
 
   @override
   String get symbol => 'psi';
 }
 
 final class StandardAtmosphere extends Pressure {
-  StandardAtmosphere([super.value]);
+  const StandardAtmosphere([super.value]);
 
   @override
   StandardAtmosphere get _clone => StandardAtmosphere(value);
+
+  @override
+  StandardAtmosphere withValue([num? value]) =>
+      StandardAtmosphere(value ?? this.value);
 
   @override
   String get symbol => 'atm';
 }
 
 final class Torr extends Pressure {
-  Torr([super.value]);
+  const Torr([super.value]);
 
   @override
   Torr get _clone => Torr(value);
 
   @override
+  Torr withValue([num? value]) => Torr(value ?? this.value);
+
+  @override
   String get symbol => 'Torr';
+}
+
+enum PressureUnit {
+  bar._(Bar()),
+  inchesOfMercury._(InchesOfMercury()),
+  millimeterOfMercury._(MillimeterOfMercury()),
+  pascal._(Pascal()),
+  poundsPerSquareInch._(PoundsPerSquareInch()),
+  standardAtmosphere._(StandardAtmosphere()),
+  torr._(Torr()),
+  ;
+
+  const PressureUnit._(this.construct);
+
+  final Pressure construct;
 }

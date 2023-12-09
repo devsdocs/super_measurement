@@ -16,5 +16,7 @@ enum Precision {
   final int value;
 }
 
-typedef BaseType = Type;
-typedef FeetInches = ({Feet feet, Inches inches});
+typedef AnchorRatio<T extends Unit<T>> = ({
+  Type anchor,
+  ConversionRatio<T> ratio
+});

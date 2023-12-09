@@ -5,12 +5,12 @@ part of '../../super_measurement.dart';
 /// [Bit], [Byte], [Gigabit], [Gigabyte], [Kilobit], [Kilobyte], [Megabit],
 /// [Megabyte], [Terabit], [Terabyte]
 abstract final class DataStorage extends Unit<DataStorage> {
-  DataStorage([super.value]);
+  const DataStorage([super.value]);
 
   @override
-  (BaseType, ConversionRatio<DataStorage>) get _ratio => (
-        _anchor.runtimeType,
-        ConversionRatio<DataStorage>({
+  AnchorRatio<DataStorage> get _anchorRatio => (
+        anchor: _anchor.runtimeType,
+        ratio: ConversionRatio<DataStorage>({
           Bit: 8589934592,
           Byte: 1073741824,
           Gigabit: 8,
@@ -24,125 +24,173 @@ abstract final class DataStorage extends Unit<DataStorage> {
       );
 
   @override
-  DataStorage get _anchor => Gigabyte();
+  DataStorage get _anchor => const Gigabyte();
 
-  DataStorage get toBit => _convertTo(Bit());
+  DataStorage get toBit => _convertTo(const Bit());
 
-  DataStorage get toByte => _convertTo(Byte());
+  DataStorage get toByte => _convertTo(const Byte());
 
-  DataStorage get toGigabit => _convertTo(Gigabit());
+  DataStorage get toGigabit => _convertTo(const Gigabit());
 
-  DataStorage get toGigabyte => _convertTo(Gigabyte());
+  DataStorage get toGigabyte => _convertTo(const Gigabyte());
 
-  DataStorage get toKilobit => _convertTo(Kilobit());
+  DataStorage get toKilobit => _convertTo(const Kilobit());
 
-  DataStorage get toKilobyte => _convertTo(Kilobyte());
+  DataStorage get toKilobyte => _convertTo(const Kilobyte());
 
-  DataStorage get toMegabit => _convertTo(Megabit());
+  DataStorage get toMegabit => _convertTo(const Megabit());
 
-  DataStorage get toMegabyte => _convertTo(Megabyte());
+  DataStorage get toMegabyte => _convertTo(const Megabyte());
 
-  DataStorage get toTerabit => _convertTo(Terabit());
+  DataStorage get toTerabit => _convertTo(const Terabit());
 
-  DataStorage get toTerabyte => _convertTo(Terabyte());
+  DataStorage get toTerabyte => _convertTo(const Terabyte());
 }
 
 final class Bit extends DataStorage {
-  Bit([super.value]);
+  const Bit([super.value]);
 
   @override
   Bit get _clone => Bit(value);
+
+  @override
+  Bit withValue([num? value]) => Bit(value ?? this.value);
 
   @override
   String get symbol => 'b';
 }
 
 final class Byte extends DataStorage {
-  Byte([super.value]);
+  const Byte([super.value]);
 
   @override
   Byte get _clone => Byte(value);
+
+  @override
+  Byte withValue([num? value]) => Byte(value ?? this.value);
 
   @override
   String get symbol => 'B';
 }
 
 final class Gigabit extends DataStorage {
-  Gigabit([super.value]);
+  const Gigabit([super.value]);
 
   @override
   Gigabit get _clone => Gigabit(value);
+
+  @override
+  Gigabit withValue([num? value]) => Gigabit(value ?? this.value);
 
   @override
   String get symbol => 'Gb';
 }
 
 final class Gigabyte extends DataStorage {
-  Gigabyte([super.value]);
+  const Gigabyte([super.value]);
 
   @override
   Gigabyte get _clone => Gigabyte(value);
+
+  @override
+  Gigabyte withValue([num? value]) => Gigabyte(value ?? this.value);
 
   @override
   String get symbol => 'GB';
 }
 
 final class Kilobit extends DataStorage {
-  Kilobit([super.value]);
+  const Kilobit([super.value]);
 
   @override
   Kilobit get _clone => Kilobit(value);
+
+  @override
+  Kilobit withValue([num? value]) => Kilobit(value ?? this.value);
 
   @override
   String get symbol => 'kb';
 }
 
 final class Kilobyte extends DataStorage {
-  Kilobyte([super.value]);
+  const Kilobyte([super.value]);
 
   @override
   Kilobyte get _clone => Kilobyte(value);
+
+  @override
+  Kilobyte withValue([num? value]) => Kilobyte(value ?? this.value);
 
   @override
   String get symbol => 'kB';
 }
 
 final class Megabit extends DataStorage {
-  Megabit([super.value]);
+  const Megabit([super.value]);
 
   @override
   Megabit get _clone => Megabit(value);
+
+  @override
+  Megabit withValue([num? value]) => Megabit(value ?? this.value);
 
   @override
   String get symbol => 'Mb';
 }
 
 final class Megabyte extends DataStorage {
-  Megabyte([super.value]);
+  const Megabyte([super.value]);
 
   @override
   Megabyte get _clone => Megabyte(value);
+
+  @override
+  Megabyte withValue([num? value]) => Megabyte(value ?? this.value);
 
   @override
   String get symbol => 'MB';
 }
 
 final class Terabit extends DataStorage {
-  Terabit([super.value]);
+  const Terabit([super.value]);
 
   @override
   Terabit get _clone => Terabit(value);
+
+  @override
+  Terabit withValue([num? value]) => Terabit(value ?? this.value);
 
   @override
   String get symbol => 'Tb';
 }
 
 final class Terabyte extends DataStorage {
-  Terabyte([super.value]);
+  const Terabyte([super.value]);
 
   @override
   Terabyte get _clone => Terabyte(value);
 
   @override
+  Terabyte withValue([num? value]) => Terabyte(value ?? this.value);
+
+  @override
   String get symbol => 'TB';
+}
+
+enum DataStorageUnit {
+  bit._(Bit()),
+  byte._(Byte()),
+  gigabit._(Gigabit()),
+  gigabyte._(Gigabyte()),
+  kilobit._(Kilobit()),
+  kilobyte._(Kilobyte()),
+  megabit._(Megabit()),
+  megabyte._(Megabyte()),
+  terabit._(Terabit()),
+  terabyte._(Terabyte()),
+  ;
+
+  const DataStorageUnit._(this.construct);
+
+  final DataStorage construct;
 }

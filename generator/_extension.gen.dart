@@ -16,7 +16,7 @@ void generateExtension() {
 
     for (final e in unit.values.first) {
       iterableExtensionBuff.writeln(
-        '$name get to${e.keys.first} => _combineTo(${e.keys.first}());',
+        '$name get to${e.keys.first} => _combineTo(const ${e.keys.first}());',
       );
 
       numExtensionBuff.writeln(

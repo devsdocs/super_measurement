@@ -5,28 +5,26 @@ void main() {
   group('A group of tests', () {
     test('Equality test', () {
       expect(
-        Meters(1),
-        equals(Centimeters(100)),
+        const Centimeters(200),
+        equals(LengthUnit.meters.construct.withValue(2)),
       );
       expect(
-        Kilometers(1),
-        equals(Meters(100) + Centimeters(90000)),
+        const Meters(2),
+        equals(LengthUnit.meters.construct.withValue(2)),
       );
       expect(
-        Meters(2),
-        isNot(equals(Centimeters(201))),
+        LengthUnit.centimeters.construct.withValue(200) +
+            LengthUnit.centimeters.construct.withValue(200),
+        equals(LengthUnit.meters.construct.withValue(4)),
       );
       expect(
-        Kilograms(2.5),
-        equals(Grams(2500)),
+        LengthUnit.centimeters.construct.withValue(200) +
+            LengthUnit.centimeters.construct.withValue(200),
+        isNot(equals(LengthUnit.meters.construct.withValue(3))),
       );
       expect(
-        Kilograms(2.5),
-        isNot(equals(Grams(2501))),
-      );
-      expect(
-        Grams(2500),
-        equals(Kilograms(2.5)),
+        const Meters(1),
+        isNot(equals(const Centimeters(100.0000001))),
       );
     });
   });

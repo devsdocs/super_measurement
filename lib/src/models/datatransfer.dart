@@ -5,12 +5,12 @@ part of '../../super_measurement.dart';
 /// [GigabitPerSecond], [GigabytePerSecond], [KilobitPerSecond],
 /// [KilobytePerSecond], [MegabitPerSecond], [MegabytePerSecond]
 abstract final class DataTransfer extends Unit<DataTransfer> {
-  DataTransfer([super.value]);
+  const DataTransfer([super.value]);
 
   @override
-  (BaseType, ConversionRatio<DataTransfer>) get _ratio => (
-        _anchor.runtimeType,
-        ConversionRatio<DataTransfer>({
+  AnchorRatio<DataTransfer> get _anchorRatio => (
+        anchor: _anchor.runtimeType,
+        ratio: ConversionRatio<DataTransfer>({
           GigabitPerSecond: 0.0008,
           GigabytePerSecond: 0.001,
           KilobitPerSecond: 8000,
@@ -20,77 +20,115 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
       );
 
   @override
-  DataTransfer get _anchor => MegabytePerSecond();
+  DataTransfer get _anchor => const MegabytePerSecond();
 
-  DataTransfer get toGigabitPerSecond => _convertTo(GigabitPerSecond());
+  DataTransfer get toGigabitPerSecond => _convertTo(const GigabitPerSecond());
 
-  DataTransfer get toGigabytePerSecond => _convertTo(GigabytePerSecond());
+  DataTransfer get toGigabytePerSecond => _convertTo(const GigabytePerSecond());
 
-  DataTransfer get toKilobitPerSecond => _convertTo(KilobitPerSecond());
+  DataTransfer get toKilobitPerSecond => _convertTo(const KilobitPerSecond());
 
-  DataTransfer get toKilobytePerSecond => _convertTo(KilobytePerSecond());
+  DataTransfer get toKilobytePerSecond => _convertTo(const KilobytePerSecond());
 
-  DataTransfer get toMegabitPerSecond => _convertTo(MegabitPerSecond());
+  DataTransfer get toMegabitPerSecond => _convertTo(const MegabitPerSecond());
 
-  DataTransfer get toMegabytePerSecond => _convertTo(MegabytePerSecond());
+  DataTransfer get toMegabytePerSecond => _convertTo(const MegabytePerSecond());
 }
 
 final class GigabitPerSecond extends DataTransfer {
-  GigabitPerSecond([super.value]);
+  const GigabitPerSecond([super.value]);
 
   @override
   GigabitPerSecond get _clone => GigabitPerSecond(value);
+
+  @override
+  GigabitPerSecond withValue([num? value]) =>
+      GigabitPerSecond(value ?? this.value);
 
   @override
   String get symbol => 'Gb/S';
 }
 
 final class GigabytePerSecond extends DataTransfer {
-  GigabytePerSecond([super.value]);
+  const GigabytePerSecond([super.value]);
 
   @override
   GigabytePerSecond get _clone => GigabytePerSecond(value);
+
+  @override
+  GigabytePerSecond withValue([num? value]) =>
+      GigabytePerSecond(value ?? this.value);
 
   @override
   String get symbol => 'GB/S';
 }
 
 final class KilobitPerSecond extends DataTransfer {
-  KilobitPerSecond([super.value]);
+  const KilobitPerSecond([super.value]);
 
   @override
   KilobitPerSecond get _clone => KilobitPerSecond(value);
+
+  @override
+  KilobitPerSecond withValue([num? value]) =>
+      KilobitPerSecond(value ?? this.value);
 
   @override
   String get symbol => 'kb/S';
 }
 
 final class KilobytePerSecond extends DataTransfer {
-  KilobytePerSecond([super.value]);
+  const KilobytePerSecond([super.value]);
 
   @override
   KilobytePerSecond get _clone => KilobytePerSecond(value);
+
+  @override
+  KilobytePerSecond withValue([num? value]) =>
+      KilobytePerSecond(value ?? this.value);
 
   @override
   String get symbol => 'kB/S';
 }
 
 final class MegabitPerSecond extends DataTransfer {
-  MegabitPerSecond([super.value]);
+  const MegabitPerSecond([super.value]);
 
   @override
   MegabitPerSecond get _clone => MegabitPerSecond(value);
+
+  @override
+  MegabitPerSecond withValue([num? value]) =>
+      MegabitPerSecond(value ?? this.value);
 
   @override
   String get symbol => 'Mb/S';
 }
 
 final class MegabytePerSecond extends DataTransfer {
-  MegabytePerSecond([super.value]);
+  const MegabytePerSecond([super.value]);
 
   @override
   MegabytePerSecond get _clone => MegabytePerSecond(value);
 
   @override
+  MegabytePerSecond withValue([num? value]) =>
+      MegabytePerSecond(value ?? this.value);
+
+  @override
   String get symbol => 'MB/S';
+}
+
+enum DataTransferUnit {
+  gigabitPerSecond._(GigabitPerSecond()),
+  gigabytePerSecond._(GigabytePerSecond()),
+  kilobitPerSecond._(KilobitPerSecond()),
+  kilobytePerSecond._(KilobytePerSecond()),
+  megabitPerSecond._(MegabitPerSecond()),
+  megabytePerSecond._(MegabytePerSecond()),
+  ;
+
+  const DataTransferUnit._(this.construct);
+
+  final DataTransfer construct;
 }

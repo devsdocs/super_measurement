@@ -4,12 +4,12 @@ part of '../../super_measurement.dart';
 ///
 /// [Day],[Hour],[Millisecond],[Minute],[Second],[Week],[Year]
 abstract final class Time extends Unit<Time> {
-  Time([super.value]);
+  const Time([super.value]);
 
   @override
-  (BaseType, ConversionRatio<Time>) get _ratio => (
-        _anchor.runtimeType,
-        ConversionRatio<Time>({
+  AnchorRatio<Time> get _anchorRatio => (
+        anchor: _anchor.runtimeType,
+        ratio: ConversionRatio<Time>({
           Day: 365.2425,
           Hour: 8765.82,
           Millisecond: 31556952000,
@@ -20,89 +20,125 @@ abstract final class Time extends Unit<Time> {
       );
 
   @override
-  Time get _anchor => Year();
+  Time get _anchor => const Year();
 
-  Time get toDay => _convertTo(Day());
+  Time get toDay => _convertTo(const Day());
 
-  Time get toHour => _convertTo(Hour());
+  Time get toHour => _convertTo(const Hour());
 
-  Time get toMillisecond => _convertTo(Millisecond());
+  Time get toMillisecond => _convertTo(const Millisecond());
 
-  Time get toMinute => _convertTo(Minute());
+  Time get toMinute => _convertTo(const Minute());
 
-  Time get toSecond => _convertTo(Second());
+  Time get toSecond => _convertTo(const Second());
 
-  Time get toWeek => _convertTo(Week());
+  Time get toWeek => _convertTo(const Week());
 
-  Time get toYear => _convertTo(Year());
+  Time get toYear => _convertTo(const Year());
 }
 
 final class Day extends Time {
-  Day([super.value]);
+  const Day([super.value]);
 
   @override
   Day get _clone => Day(value);
+
+  @override
+  Day withValue([num? value]) => Day(value ?? this.value);
 
   @override
   String get symbol => 'd';
 }
 
 final class Hour extends Time {
-  Hour([super.value]);
+  const Hour([super.value]);
 
   @override
   Hour get _clone => Hour(value);
+
+  @override
+  Hour withValue([num? value]) => Hour(value ?? this.value);
 
   @override
   String get symbol => 'h';
 }
 
 final class Millisecond extends Time {
-  Millisecond([super.value]);
+  const Millisecond([super.value]);
 
   @override
   Millisecond get _clone => Millisecond(value);
+
+  @override
+  Millisecond withValue([num? value]) => Millisecond(value ?? this.value);
 
   @override
   String get symbol => 'ms';
 }
 
 final class Minute extends Time {
-  Minute([super.value]);
+  const Minute([super.value]);
 
   @override
   Minute get _clone => Minute(value);
+
+  @override
+  Minute withValue([num? value]) => Minute(value ?? this.value);
 
   @override
   String get symbol => 'm';
 }
 
 final class Second extends Time {
-  Second([super.value]);
+  const Second([super.value]);
 
   @override
   Second get _clone => Second(value);
+
+  @override
+  Second withValue([num? value]) => Second(value ?? this.value);
 
   @override
   String get symbol => 's';
 }
 
 final class Week extends Time {
-  Week([super.value]);
+  const Week([super.value]);
 
   @override
   Week get _clone => Week(value);
+
+  @override
+  Week withValue([num? value]) => Week(value ?? this.value);
 
   @override
   String get symbol => 'wk';
 }
 
 final class Year extends Time {
-  Year([super.value]);
+  const Year([super.value]);
 
   @override
   Year get _clone => Year(value);
 
   @override
+  Year withValue([num? value]) => Year(value ?? this.value);
+
+  @override
   String get symbol => 'y';
+}
+
+enum TimeUnit {
+  day._(Day()),
+  hour._(Hour()),
+  millisecond._(Millisecond()),
+  minute._(Minute()),
+  second._(Second()),
+  week._(Week()),
+  year._(Year()),
+  ;
+
+  const TimeUnit._(this.construct);
+
+  final Time construct;
 }

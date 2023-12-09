@@ -5,12 +5,12 @@ part of '../../super_measurement.dart';
 /// [Centimeters], [Feet], [Furlongs], [Inches], [Kilometers], [Meters],
 /// [Miles], [Millemeters], [NauticalMiles], [Yards]
 abstract final class Length extends Unit<Length> {
-  Length([super.value]);
+  const Length([super.value]);
 
   @override
-  (BaseType, ConversionRatio<Length>) get _ratio => (
-        _anchor.runtimeType,
-        ConversionRatio<Length>({
+  AnchorRatio<Length> get _anchorRatio => (
+        anchor: _anchor.runtimeType,
+        ratio: ConversionRatio<Length>({
           Centimeters: 100,
           Feet: 3.280839895,
           Furlongs: 0.004970969538,
@@ -24,125 +24,173 @@ abstract final class Length extends Unit<Length> {
       );
 
   @override
-  Length get _anchor => Meters();
+  Length get _anchor => const Meters();
 
-  Length get toCentimeters => _convertTo(Centimeters());
+  Length get toCentimeters => _convertTo(const Centimeters());
 
-  Length get toFeet => _convertTo(Feet());
+  Length get toFeet => _convertTo(const Feet());
 
-  Length get toFurlongs => _convertTo(Furlongs());
+  Length get toFurlongs => _convertTo(const Furlongs());
 
-  Length get toInches => _convertTo(Inches());
+  Length get toInches => _convertTo(const Inches());
 
-  Length get toKilometers => _convertTo(Kilometers());
+  Length get toKilometers => _convertTo(const Kilometers());
 
-  Length get toMeters => _convertTo(Meters());
+  Length get toMeters => _convertTo(const Meters());
 
-  Length get toMiles => _convertTo(Miles());
+  Length get toMiles => _convertTo(const Miles());
 
-  Length get toMillemeters => _convertTo(Millemeters());
+  Length get toMillemeters => _convertTo(const Millemeters());
 
-  Length get toNauticalMiles => _convertTo(NauticalMiles());
+  Length get toNauticalMiles => _convertTo(const NauticalMiles());
 
-  Length get toYards => _convertTo(Yards());
+  Length get toYards => _convertTo(const Yards());
 }
 
 final class Centimeters extends Length {
-  Centimeters([super.value]);
+  const Centimeters([super.value]);
 
   @override
   Centimeters get _clone => Centimeters(value);
+
+  @override
+  Centimeters withValue([num? value]) => Centimeters(value ?? this.value);
 
   @override
   String get symbol => 'cm';
 }
 
 final class Feet extends Length {
-  Feet([super.value]);
+  const Feet([super.value]);
 
   @override
   Feet get _clone => Feet(value);
+
+  @override
+  Feet withValue([num? value]) => Feet(value ?? this.value);
 
   @override
   String get symbol => 'ft';
 }
 
 final class Furlongs extends Length {
-  Furlongs([super.value]);
+  const Furlongs([super.value]);
 
   @override
   Furlongs get _clone => Furlongs(value);
+
+  @override
+  Furlongs withValue([num? value]) => Furlongs(value ?? this.value);
 
   @override
   String get symbol => 'fur';
 }
 
 final class Inches extends Length {
-  Inches([super.value]);
+  const Inches([super.value]);
 
   @override
   Inches get _clone => Inches(value);
+
+  @override
+  Inches withValue([num? value]) => Inches(value ?? this.value);
 
   @override
   String get symbol => 'in';
 }
 
 final class Kilometers extends Length {
-  Kilometers([super.value]);
+  const Kilometers([super.value]);
 
   @override
   Kilometers get _clone => Kilometers(value);
+
+  @override
+  Kilometers withValue([num? value]) => Kilometers(value ?? this.value);
 
   @override
   String get symbol => 'km';
 }
 
 final class Meters extends Length {
-  Meters([super.value]);
+  const Meters([super.value]);
 
   @override
   Meters get _clone => Meters(value);
+
+  @override
+  Meters withValue([num? value]) => Meters(value ?? this.value);
 
   @override
   String get symbol => 'm';
 }
 
 final class Miles extends Length {
-  Miles([super.value]);
+  const Miles([super.value]);
 
   @override
   Miles get _clone => Miles(value);
+
+  @override
+  Miles withValue([num? value]) => Miles(value ?? this.value);
 
   @override
   String get symbol => 'mi';
 }
 
 final class Millemeters extends Length {
-  Millemeters([super.value]);
+  const Millemeters([super.value]);
 
   @override
   Millemeters get _clone => Millemeters(value);
+
+  @override
+  Millemeters withValue([num? value]) => Millemeters(value ?? this.value);
 
   @override
   String get symbol => 'mm';
 }
 
 final class NauticalMiles extends Length {
-  NauticalMiles([super.value]);
+  const NauticalMiles([super.value]);
 
   @override
   NauticalMiles get _clone => NauticalMiles(value);
+
+  @override
+  NauticalMiles withValue([num? value]) => NauticalMiles(value ?? this.value);
 
   @override
   String get symbol => 'NM';
 }
 
 final class Yards extends Length {
-  Yards([super.value]);
+  const Yards([super.value]);
 
   @override
   Yards get _clone => Yards(value);
 
   @override
+  Yards withValue([num? value]) => Yards(value ?? this.value);
+
+  @override
   String get symbol => 'yd';
+}
+
+enum LengthUnit {
+  centimeters._(Centimeters()),
+  feet._(Feet()),
+  furlongs._(Furlongs()),
+  inches._(Inches()),
+  kilometers._(Kilometers()),
+  meters._(Meters()),
+  miles._(Miles()),
+  millemeters._(Millemeters()),
+  nauticalMiles._(NauticalMiles()),
+  yards._(Yards()),
+  ;
+
+  const LengthUnit._(this.construct);
+
+  final Length construct;
 }

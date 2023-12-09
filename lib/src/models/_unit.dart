@@ -1,8 +1,9 @@
 part of '../../super_measurement.dart';
 
 abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
-  Unit([this.value = 0]);
-  num? value;
+  const Unit([this.value = 0]);
+
+  final num? value;
 
   T get _clone;
 
@@ -10,11 +11,15 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   String get symbol;
 
-  (BaseType, ConversionRatio<T>) get _ratio;
+  T withValue([num? value]);
+
+  AnchorRatio<T> get _anchorRatio;
 
   bool _convertAndCompare(String operator, T other) {
-    final otherValue = other._clone._convertTo(_anchor).withPrecision().value;
-    final currentValue = _clone._convertTo(_anchor).withPrecision().value;
+    final otherValue =
+        other._clone._convertTo(_anchor).withPrecision(Precision.nine).value;
+    final currentValue =
+        _clone._convertTo(_anchor).withPrecision(Precision.nine).value;
 
     if (operator == '==') {
       return currentValue == otherValue;
@@ -45,19 +50,19 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     if (runtimeType == other.runtimeType) {
       conversionRatio = 1;
     } else {
-      if (runtimeType == _ratio.$1) {
-        conversionRatio = _ratio.$2.getRatio(other.runtimeType);
+      if (runtimeType == _anchorRatio.anchor) {
+        conversionRatio = _anchorRatio.ratio.getRatio(other.runtimeType);
       } else {
-        final baseValue = value! / _ratio.$2.getRatio(runtimeType);
-        return (_anchor..value = baseValue)._convertTo(other);
+        final baseValue = value! / _anchorRatio.ratio.getRatio(runtimeType);
+        return _anchor.withValue(baseValue)._convertTo(other);
       }
     }
-    return (other as T)..value = value! * conversionRatio;
+    return (other as T).withValue(value! * conversionRatio);
   }
 
   T operator +(T other) {
     if (other.runtimeType == runtimeType) {
-      return _clone..value = this.value! + other.value!;
+      return _clone.withValue(this.value! + other.value!);
     } else {
       return _convertAndCombine('+', other);
     }
@@ -65,7 +70,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T operator -(T other) {
     if (other.runtimeType == runtimeType) {
-      return _clone..value = this.value! - other.value!;
+      return _clone.withValue(this.value! - other.value!);
     } else {
       return _convertAndCombine('-', other);
     }

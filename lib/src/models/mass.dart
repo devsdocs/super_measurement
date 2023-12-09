@@ -5,12 +5,12 @@ part of '../../super_measurement.dart';
 /// [Carats], [Grams], [Kilograms], [Milligrams], [Ounces], [Pounds],
 /// [Quintal], [StoneUK], [TonUK], [TonUS], [Tonne]
 abstract final class Mass extends Unit<Mass> {
-  Mass([super.value]);
+  const Mass([super.value]);
 
   @override
-  (BaseType, ConversionRatio<Mass>) get _ratio => (
-        _anchor.runtimeType,
-        ConversionRatio<Mass>({
+  AnchorRatio<Mass> get _anchorRatio => (
+        anchor: _anchor.runtimeType,
+        ratio: ConversionRatio<Mass>({
           Carats: 5000,
           Grams: 1000,
           Milligrams: 1000000,
@@ -25,137 +25,189 @@ abstract final class Mass extends Unit<Mass> {
       );
 
   @override
-  Mass get _anchor => Kilograms();
+  Mass get _anchor => const Kilograms();
 
-  Mass get toCarats => _convertTo(Carats());
+  Mass get toCarats => _convertTo(const Carats());
 
-  Mass get toGrams => _convertTo(Grams());
+  Mass get toGrams => _convertTo(const Grams());
 
-  Mass get toKilograms => _convertTo(Kilograms());
+  Mass get toKilograms => _convertTo(const Kilograms());
 
-  Mass get toMilligrams => _convertTo(Milligrams());
+  Mass get toMilligrams => _convertTo(const Milligrams());
 
-  Mass get toOunces => _convertTo(Ounces());
+  Mass get toOunces => _convertTo(const Ounces());
 
-  Mass get toPounds => _convertTo(Pounds());
+  Mass get toPounds => _convertTo(const Pounds());
 
-  Mass get toQuintal => _convertTo(Quintal());
+  Mass get toQuintal => _convertTo(const Quintal());
 
-  Mass get toStoneUK => _convertTo(StoneUK());
+  Mass get toStoneUK => _convertTo(const StoneUK());
 
-  Mass get toTonUK => _convertTo(TonUK());
+  Mass get toTonUK => _convertTo(const TonUK());
 
-  Mass get toTonUS => _convertTo(TonUS());
+  Mass get toTonUS => _convertTo(const TonUS());
 
-  Mass get toTonne => _convertTo(Tonne());
+  Mass get toTonne => _convertTo(const Tonne());
 }
 
 final class Carats extends Mass {
-  Carats([super.value]);
+  const Carats([super.value]);
 
   @override
   Carats get _clone => Carats(value);
+
+  @override
+  Carats withValue([num? value]) => Carats(value ?? this.value);
 
   @override
   String get symbol => 'CD';
 }
 
 final class Grams extends Mass {
-  Grams([super.value]);
+  const Grams([super.value]);
 
   @override
   Grams get _clone => Grams(value);
+
+  @override
+  Grams withValue([num? value]) => Grams(value ?? this.value);
 
   @override
   String get symbol => 'g';
 }
 
 final class Kilograms extends Mass {
-  Kilograms([super.value]);
+  const Kilograms([super.value]);
 
   @override
   Kilograms get _clone => Kilograms(value);
+
+  @override
+  Kilograms withValue([num? value]) => Kilograms(value ?? this.value);
 
   @override
   String get symbol => 'kg';
 }
 
 final class Milligrams extends Mass {
-  Milligrams([super.value]);
+  const Milligrams([super.value]);
 
   @override
   Milligrams get _clone => Milligrams(value);
+
+  @override
+  Milligrams withValue([num? value]) => Milligrams(value ?? this.value);
 
   @override
   String get symbol => 'mg';
 }
 
 final class Ounces extends Mass {
-  Ounces([super.value]);
+  const Ounces([super.value]);
 
   @override
   Ounces get _clone => Ounces(value);
+
+  @override
+  Ounces withValue([num? value]) => Ounces(value ?? this.value);
 
   @override
   String get symbol => 'oz';
 }
 
 final class Pounds extends Mass {
-  Pounds([super.value]);
+  const Pounds([super.value]);
 
   @override
   Pounds get _clone => Pounds(value);
+
+  @override
+  Pounds withValue([num? value]) => Pounds(value ?? this.value);
 
   @override
   String get symbol => 'lb';
 }
 
 final class Quintal extends Mass {
-  Quintal([super.value]);
+  const Quintal([super.value]);
 
   @override
   Quintal get _clone => Quintal(value);
+
+  @override
+  Quintal withValue([num? value]) => Quintal(value ?? this.value);
 
   @override
   String get symbol => 'q';
 }
 
 final class StoneUK extends Mass {
-  StoneUK([super.value]);
+  const StoneUK([super.value]);
 
   @override
   StoneUK get _clone => StoneUK(value);
+
+  @override
+  StoneUK withValue([num? value]) => StoneUK(value ?? this.value);
 
   @override
   String get symbol => 'st';
 }
 
 final class TonUK extends Mass {
-  TonUK([super.value]);
+  const TonUK([super.value]);
 
   @override
   TonUK get _clone => TonUK(value);
+
+  @override
+  TonUK withValue([num? value]) => TonUK(value ?? this.value);
 
   @override
   String get symbol => 'ton';
 }
 
 final class TonUS extends Mass {
-  TonUS([super.value]);
+  const TonUS([super.value]);
 
   @override
   TonUS get _clone => TonUS(value);
+
+  @override
+  TonUS withValue([num? value]) => TonUS(value ?? this.value);
 
   @override
   String get symbol => 'ton';
 }
 
 final class Tonne extends Mass {
-  Tonne([super.value]);
+  const Tonne([super.value]);
 
   @override
   Tonne get _clone => Tonne(value);
 
   @override
+  Tonne withValue([num? value]) => Tonne(value ?? this.value);
+
+  @override
   String get symbol => 'ton';
+}
+
+enum MassUnit {
+  carats._(Carats()),
+  grams._(Grams()),
+  kilograms._(Kilograms()),
+  milligrams._(Milligrams()),
+  ounces._(Ounces()),
+  pounds._(Pounds()),
+  quintal._(Quintal()),
+  stoneUK._(StoneUK()),
+  tonUK._(TonUK()),
+  tonUS._(TonUS()),
+  tonne._(Tonne()),
+  ;
+
+  const MassUnit._(this.construct);
+
+  final Mass construct;
 }

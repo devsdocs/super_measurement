@@ -1,3 +1,6 @@
+## 1.0.7
+- Add `Enum` for more granular way accessing the `Object`
+
 ## 1.0.6
 - Add `AngularSpeed` model
 
