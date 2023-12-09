@@ -1,5 +1,6 @@
 # Dart package for converting unit measurement
 ## Available Unit
+### Can be accessed using enum
 
   + [AngularSpeed](#angularspeed)
   + [Area](#area)
@@ -15,139 +16,139 @@
   + [Volume](#volume)
 
 ### AngularSpeed
-   - `DegreePerDay`
-   - `DegreePerHour`
-   - `DegreePerMinute`
-   - `DegreePerSecond`
-   - `RadianPerDay`
-   - `RadianPerHour`
-   - `RadianPerMinute`
-   - `RadianPerSecond`
-   - `RevolutionPerDay`
-   - `RevolutionPerHour`
-   - `RevolutionPerMinute`
-   - `RevolutionPerSecond`
+   - `DegreePerDay` => AngularSpeedUnit.degreePerDay
+   - `DegreePerHour` => AngularSpeedUnit.degreePerHour
+   - `DegreePerMinute` => AngularSpeedUnit.degreePerMinute
+   - `DegreePerSecond` => AngularSpeedUnit.degreePerSecond
+   - `RadianPerDay` => AngularSpeedUnit.radianPerDay
+   - `RadianPerHour` => AngularSpeedUnit.radianPerHour
+   - `RadianPerMinute` => AngularSpeedUnit.radianPerMinute
+   - `RadianPerSecond` => AngularSpeedUnit.radianPerSecond
+   - `RevolutionPerDay` => AngularSpeedUnit.revolutionPerDay
+   - `RevolutionPerHour` => AngularSpeedUnit.revolutionPerHour
+   - `RevolutionPerMinute` => AngularSpeedUnit.revolutionPerMinute
+   - `RevolutionPerSecond` => AngularSpeedUnit.revolutionPerSecond
 
 ### Area
-   - `Acres`
-   - `Hectares`
-   - `SquareCentimeters`
-   - `SquareFoot`
-   - `SquareInches`
-   - `SquareKilometers`
-   - `SquareMeters`
-   - `SquareMiles`
-   - `SquareYards`
+   - `Acres` => AreaUnit.acres
+   - `Hectares` => AreaUnit.hectares
+   - `SquareCentimeters` => AreaUnit.squareCentimeters
+   - `SquareFoot` => AreaUnit.squareFoot
+   - `SquareInches` => AreaUnit.squareInches
+   - `SquareKilometers` => AreaUnit.squareKilometers
+   - `SquareMeters` => AreaUnit.squareMeters
+   - `SquareMiles` => AreaUnit.squareMiles
+   - `SquareYards` => AreaUnit.squareYards
 
 ### DataStorage
-   - `Bit`
-   - `Byte`
-   - `Gigabit`
-   - `Gigabyte`
-   - `Kilobit`
-   - `Kilobyte`
-   - `Megabit`
-   - `Megabyte`
-   - `Terabit`
-   - `Terabyte`
+   - `Bit` => DataStorageUnit.bit
+   - `Byte` => DataStorageUnit.byte
+   - `Gigabit` => DataStorageUnit.gigabit
+   - `Gigabyte` => DataStorageUnit.gigabyte
+   - `Kilobit` => DataStorageUnit.kilobit
+   - `Kilobyte` => DataStorageUnit.kilobyte
+   - `Megabit` => DataStorageUnit.megabit
+   - `Megabyte` => DataStorageUnit.megabyte
+   - `Terabit` => DataStorageUnit.terabit
+   - `Terabyte` => DataStorageUnit.terabyte
 
 ### DataTransfer
-   - `GigabitPerSecond`
-   - `GigabytePerSecond`
-   - `KilobitPerSecond`
-   - `KilobytePerSecond`
-   - `MegabitPerSecond`
-   - `MegabytePerSecond`
+   - `GigabitPerSecond` => DataTransferUnit.gigabitPerSecond
+   - `GigabytePerSecond` => DataTransferUnit.gigabytePerSecond
+   - `KilobitPerSecond` => DataTransferUnit.kilobitPerSecond
+   - `KilobytePerSecond` => DataTransferUnit.kilobytePerSecond
+   - `MegabitPerSecond` => DataTransferUnit.megabitPerSecond
+   - `MegabytePerSecond` => DataTransferUnit.megabytePerSecond
 
 ### Energy
-   - `CalorieInternational`
-   - `CalorieNutritional`
-   - `CalorieThermochemical`
-   - `ElectronVolt`
-   - `GigaJoule`
-   - `Joule`
-   - `KiloJoule`
-   - `KilowattHour`
-   - `MegaJoule`
-   - `MegawattHour`
-   - `WattHour`
+   - `CalorieInternational` => EnergyUnit.calorieInternational
+   - `CalorieNutritional` => EnergyUnit.calorieNutritional
+   - `CalorieThermochemical` => EnergyUnit.calorieThermochemical
+   - `ElectronVolt` => EnergyUnit.electronVolt
+   - `GigaJoule` => EnergyUnit.gigaJoule
+   - `Joule` => EnergyUnit.joule
+   - `KiloJoule` => EnergyUnit.kiloJoule
+   - `KilowattHour` => EnergyUnit.kilowattHour
+   - `MegaJoule` => EnergyUnit.megaJoule
+   - `MegawattHour` => EnergyUnit.megawattHour
+   - `WattHour` => EnergyUnit.wattHour
 
 ### Length
-   - `Centimeters`
-   - `Feet`
-   - `Furlongs`
-   - `Inches`
-   - `Kilometers`
-   - `Meters`
-   - `Miles`
-   - `Millemeters`
-   - `NauticalMiles`
-   - `Yards`
+   - `Centimeters` => LengthUnit.centimeters
+   - `Feet` => LengthUnit.feet
+   - `Furlongs` => LengthUnit.furlongs
+   - `Inches` => LengthUnit.inches
+   - `Kilometers` => LengthUnit.kilometers
+   - `Meters` => LengthUnit.meters
+   - `Miles` => LengthUnit.miles
+   - `Millemeters` => LengthUnit.millemeters
+   - `NauticalMiles` => LengthUnit.nauticalMiles
+   - `Yards` => LengthUnit.yards
 
 ### Mass
-   - `Carats`
-   - `Grams`
-   - `Kilograms`
-   - `Milligrams`
-   - `Ounces`
-   - `Pounds`
-   - `Quintal`
-   - `StoneUK`
-   - `TonUK`
-   - `TonUS`
-   - `Tonne`
+   - `Carats` => MassUnit.carats
+   - `Grams` => MassUnit.grams
+   - `Kilograms` => MassUnit.kilograms
+   - `Milligrams` => MassUnit.milligrams
+   - `Ounces` => MassUnit.ounces
+   - `Pounds` => MassUnit.pounds
+   - `Quintal` => MassUnit.quintal
+   - `StoneUK` => MassUnit.stoneUK
+   - `TonUK` => MassUnit.tonUK
+   - `TonUS` => MassUnit.tonUS
+   - `Tonne` => MassUnit.tonne
 
 ### Power
-   - `Horsepower`
-   - `Kilowatt`
-   - `Megawatt`
-   - `Milliwatt`
-   - `Watt`
+   - `Horsepower` => PowerUnit.horsepower
+   - `Kilowatt` => PowerUnit.kilowatt
+   - `Megawatt` => PowerUnit.megawatt
+   - `Milliwatt` => PowerUnit.milliwatt
+   - `Watt` => PowerUnit.watt
 
 ### Pressure
-   - `Bar`
-   - `InchesOfMercury`
-   - `MillimeterOfMercury`
-   - `Pascal`
-   - `PoundsPerSquareInch`
-   - `StandardAtmosphere`
-   - `Torr`
+   - `Bar` => PressureUnit.bar
+   - `InchesOfMercury` => PressureUnit.inchesOfMercury
+   - `MillimeterOfMercury` => PressureUnit.millimeterOfMercury
+   - `Pascal` => PressureUnit.pascal
+   - `PoundsPerSquareInch` => PressureUnit.poundsPerSquareInch
+   - `StandardAtmosphere` => PressureUnit.standardAtmosphere
+   - `Torr` => PressureUnit.torr
 
 ### Speed
-   - `FootPerHour`
-   - `FootPerMinute`
-   - `FootPerSecond`
-   - `KilometerPerHour`
-   - `Knot`
-   - `Light`
-   - `MeterPerHour`
-   - `MeterPerMinute`
-   - `MeterPerSecond`
-   - `MilesPerHour`
-   - `MilesPerMinute`
-   - `YardPerMinute`
+   - `FootPerHour` => SpeedUnit.footPerHour
+   - `FootPerMinute` => SpeedUnit.footPerMinute
+   - `FootPerSecond` => SpeedUnit.footPerSecond
+   - `KilometerPerHour` => SpeedUnit.kilometerPerHour
+   - `Knot` => SpeedUnit.knot
+   - `Light` => SpeedUnit.light
+   - `MeterPerHour` => SpeedUnit.meterPerHour
+   - `MeterPerMinute` => SpeedUnit.meterPerMinute
+   - `MeterPerSecond` => SpeedUnit.meterPerSecond
+   - `MilesPerHour` => SpeedUnit.milesPerHour
+   - `MilesPerMinute` => SpeedUnit.milesPerMinute
+   - `YardPerMinute` => SpeedUnit.yardPerMinute
 
 ### Time
-   - `Day`
-   - `Hour`
-   - `Millisecond`
-   - `Minute`
-   - `Second`
-   - `Week`
-   - `Year`
+   - `Day` => TimeUnit.day
+   - `Hour` => TimeUnit.hour
+   - `Millisecond` => TimeUnit.millisecond
+   - `Minute` => TimeUnit.minute
+   - `Second` => TimeUnit.second
+   - `Week` => TimeUnit.week
+   - `Year` => TimeUnit.year
 
 ### Volume
-   - `BarrelsImperial`
-   - `BarrelsUS`
-   - `CubicCentimeters`
-   - `CubicFoot`
-   - `CubicInches`
-   - `CubicMeters`
-   - `CubicYards`
-   - `GallonsImperial`
-   - `GallonsUS`
-   - `Liters`
-   - `Milliliters`
+   - `BarrelsImperial` => VolumeUnit.barrelsImperial
+   - `BarrelsUS` => VolumeUnit.barrelsUS
+   - `CubicCentimeters` => VolumeUnit.cubicCentimeters
+   - `CubicFoot` => VolumeUnit.cubicFoot
+   - `CubicInches` => VolumeUnit.cubicInches
+   - `CubicMeters` => VolumeUnit.cubicMeters
+   - `CubicYards` => VolumeUnit.cubicYards
+   - `GallonsImperial` => VolumeUnit.gallonsImperial
+   - `GallonsUS` => VolumeUnit.gallonsUS
+   - `Liters` => VolumeUnit.liters
+   - `Milliliters` => VolumeUnit.milliliters
 
 
 Because the nature of this package, some raw conversion does not resulting in same value, for example:

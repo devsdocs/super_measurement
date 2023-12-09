@@ -64,6 +64,7 @@ void generateExample() {
       }
     }
     final listName = 'listOf${name.capitalizeWord}';
+
     exampleBuff.writeln('final $listName = [');
     for (final e in unit.values.first) {
       if (Random().nextBool()) continue;
@@ -95,6 +96,12 @@ void generateExample() {
         );
       }
     }
+
+    final listNameByEnum = 'listOf${name.capitalizeWord}ByEnum';
+    exampleBuff.writeln('final $listNameByEnum = ${name}Unit.values;');
+    exampleBuff.writeln(
+      '$listNameByEnum.forEach((e) => print("Access \${e.construct.runtimeType} with \$e"));',
+    );
 
     exampleBuff.writeln("print('~End of Randomly Generated $name Example~');");
     exampleBuff.writeln(

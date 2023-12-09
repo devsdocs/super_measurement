@@ -4,6 +4,7 @@ void generateReadme() {
   final readmeBuff = StringBuffer();
   readmeBuff.writeln('# Dart package for converting unit measurement');
   readmeBuff.writeln('## Available Unit');
+  readmeBuff.writeln('### Can be accessed using enum');
   readmeBuff.writeln();
   for (final unit in allData) {
     final name = unit.keys.first;
@@ -14,7 +15,9 @@ void generateReadme() {
     final name = unit.keys.first;
     readmeBuff.writeln('### $name');
     for (final e in unit.values.first) {
-      readmeBuff.writeln('   - `${e.keys.first}`');
+      readmeBuff.writeln(
+        '   - `${e.keys.first}` => ${name}Unit.${e.keys.first.snakeCase}',
+      );
     }
     readmeBuff.writeln();
   }
