@@ -74,7 +74,7 @@ extension IterableOfLength on Iterable<Length> {
   Length get toKilometers => _combineTo(const Kilometers());
   Length get toMeters => _combineTo(const Meters());
   Length get toMiles => _combineTo(const Miles());
-  Length get toMillemeters => _combineTo(const Millemeters());
+  Length get toMillimeters => _combineTo(const Millimeters());
   Length get toNauticalMiles => _combineTo(const NauticalMiles());
   Length get toYards => _combineTo(const Yards());
 }

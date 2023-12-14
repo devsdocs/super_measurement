@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Length]
 ///
 /// [Centimeters], [Feet], [Furlongs], [Inches], [Kilometers], [Meters],
-/// [Miles], [Millemeters], [NauticalMiles], [Yards]
+/// [Miles], [Millimeters], [NauticalMiles], [Yards]
 abstract final class Length extends Unit<Length> {
   const Length([super.value]);
 
@@ -17,7 +17,7 @@ abstract final class Length extends Unit<Length> {
           Inches: 39.3700787402,
           Kilometers: 0.001,
           Miles: 0.0006213711922,
-          Millemeters: 10000,
+          Millimeters: 10000,
           NauticalMiles: 0.000539956803,
           Yards: 1.0936132983,
         })
@@ -40,7 +40,7 @@ abstract final class Length extends Unit<Length> {
 
   Length get toMiles => _convertTo(const Miles());
 
-  Length get toMillemeters => _convertTo(const Millemeters());
+  Length get toMillimeters => _convertTo(const Millimeters());
 
   Length get toNauticalMiles => _convertTo(const NauticalMiles());
 
@@ -138,14 +138,14 @@ final class Miles extends Length {
   String get symbol => 'mi';
 }
 
-final class Millemeters extends Length {
-  const Millemeters([super.value]);
+final class Millimeters extends Length {
+  const Millimeters([super.value]);
 
   @override
-  Millemeters get _clone => Millemeters(value);
+  Millimeters get _clone => Millimeters(value);
 
   @override
-  Millemeters withValue([num? value]) => Millemeters(value ?? this.value);
+  Millimeters withValue([num? value]) => Millimeters(value ?? this.value);
 
   @override
   String get symbol => 'mm';
@@ -185,7 +185,7 @@ enum LengthUnit {
   kilometers._(Kilometers()),
   meters._(Meters()),
   miles._(Miles()),
-  millemeters._(Millemeters()),
+  millimeters._(Millimeters()),
   nauticalMiles._(NauticalMiles()),
   yards._(Yards()),
   ;

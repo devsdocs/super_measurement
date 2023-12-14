@@ -1,3 +1,7 @@
+## 1.0.8
+- Fix typo
+- Minor performance tweak
+
 ## 1.0.7
 - Add `Enum` for more granular way accessing the `Object`
 

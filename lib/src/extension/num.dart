@@ -72,7 +72,7 @@ extension NumOfLength on num {
   Kilometers get kilometers => Kilometers(this);
   Meters get meters => Meters(this);
   Miles get miles => Miles(this);
-  Millemeters get millemeters => Millemeters(this);
+  Millimeters get millimeters => Millimeters(this);
   NauticalMiles get nauticalMiles => NauticalMiles(this);
   Yards get yards => Yards(this);
 }

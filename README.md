@@ -81,7 +81,7 @@
    - `Kilometers` => LengthUnit.kilometers
    - `Meters` => LengthUnit.meters
    - `Miles` => LengthUnit.miles
-   - `Millemeters` => LengthUnit.millemeters
+   - `Millimeters` => LengthUnit.millimeters
    - `NauticalMiles` => LengthUnit.nauticalMiles
    - `Yards` => LengthUnit.yards
 

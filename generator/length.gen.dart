@@ -6,7 +6,7 @@ final lengthUnit = {
       'Centimeters': {'ratio': 100, 'symbol': 'cm'},
     },
     {
-      'Millemeters': {'ratio': 10000, 'symbol': 'mm'},
+      'Millimeters': {'ratio': 10000, 'symbol': 'mm'},
     },
     {
       'Furlongs': {'ratio': 0.004970969538, 'symbol': 'fur'},
