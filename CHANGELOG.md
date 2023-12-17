@@ -1,3 +1,6 @@
+## 1.0.9
+- Remove unused dependecies
+
 ## 1.0.8
 - Add from/to Json
 - Fix typo
