@@ -4,6 +4,7 @@ void generateModels() {
   for (final unit in allData) {
     final name = unit.keys.first;
     final enumSymbol = '${name}Unit';
+    final enumValuesSymbol = '${enumSymbol}Values'.snakeCase;
     final anchor =
         unit.values.first.singleWhere((e) => e.values.single['ratio'] == 1);
     final fileName = '${name.toLowerCase()}.dart';
@@ -61,16 +62,6 @@ void generateModels() {
       );
       typeBuff.writeln();
     }
-    typeBuff.writeln('  @override');
-    typeBuff.writeln(
-      "  $name fromJson(Map<String,dynamic> json) => $enumSymbol.values.singleWhere((e) => e.name == json['unit']).construct.withValue(json['value'] as num);",
-    );
-    typeBuff.writeln();
-
-    typeBuff.writeln('  @override');
-    typeBuff.writeln(
-      "  Map<String, dynamic> toJson($name unit) => {'unit': $enumSymbol.values.singleWhere((e) => e.construct.runtimeType == unit.runtimeType).name,'value': value,};",
-    );
     typeBuff.writeln();
     typeBuff.writeln('  }');
     typeBuff.writeln();
@@ -90,6 +81,21 @@ void generateModels() {
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       typeBuff.writeln("  String get symbol => '${unitProps['symbol']}';");
+      typeBuff.writeln();
+      typeBuff.writeln('  @override');
+      typeBuff.writeln(
+        '  $name fromJson(Map<String,dynamic> json) {',
+      );
+      typeBuff.writeln(
+        "return checkJson('${name.snakeCase}',json, $enumValuesSymbol) ? $enumValuesSymbol.map[json['unit']]!.construct.withValue(json['value'] as num)._convertTo(this) : this;",
+      );
+      typeBuff.writeln('}');
+      typeBuff.writeln();
+
+      typeBuff.writeln('  @override');
+      typeBuff.writeln(
+        "  Map<String, dynamic> toJson() => {'${name.snakeCase}' :{'unit': '${unitType.snakeCase}','value': value,},};",
+      );
       typeBuff.writeln('}');
       typeBuff.writeln();
     }
@@ -105,6 +111,16 @@ void generateModels() {
     typeBuff.writeln();
     typeBuff.writeln('final $name construct;');
     typeBuff.writeln('}');
+    typeBuff.writeln();
+
+    typeBuff.writeln('final $enumValuesSymbol = EnumValues({');
+    for (final e in unit.values.first) {
+      final unitType = e.keys.first;
+      typeBuff.writeln(
+        "'${unitType.snakeCase}': $enumSymbol.${unitType.snakeCase},",
+      );
+    }
+    typeBuff.writeln('});');
     typeBuff.writeln();
     file.writeAsStringSync(typeBuff.toString());
     final contents = "part 'src/models/$fileName';";

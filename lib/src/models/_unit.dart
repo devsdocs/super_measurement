@@ -15,7 +15,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T fromJson(Map<String, dynamic> json);
 
-  Map<String, dynamic> toJson(T unit);
+  Map<String, dynamic> toJson();
 
   AnchorRatio<T> get _anchorRatio;
 
@@ -132,4 +132,24 @@ class ConversionRatio<T extends Unit<T>> {
     if (ratio == null) throw ArgumentError('Unsupported conversion');
     return ratio;
   }
+}
+
+class EnumValues<T> {
+  EnumValues(this.map);
+  Map<String, T> map;
+
+  Map<T, String> get reverse => map.map((k, v) => MapEntry(v, k));
+}
+
+bool checkJson<T>(String key, Map<String, dynamic> json, EnumValues<T> enumV) {
+  final map = json[key] as Map<String, dynamic>?;
+
+  if (map != null &&
+      map['unit'] != null &&
+      map['value'] != null &&
+      enumV.map[json['unit']] != null) {
+    return true;
+  }
+
+  return false;
 }

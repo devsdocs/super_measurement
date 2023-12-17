@@ -48,20 +48,6 @@ abstract final class Mass extends Unit<Mass> {
   Mass get toTonUS => _convertTo(const TonUS());
 
   Mass get toTonne => _convertTo(const Tonne());
-
-  @override
-  Mass fromJson(Map<String, dynamic> json) => MassUnit.values
-      .singleWhere((e) => e.name == json['unit'])
-      .construct
-      .withValue(json['value'] as num);
-
-  @override
-  Map<String, dynamic> toJson(Mass unit) => {
-        'unit': MassUnit.values
-            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
-            .name,
-        'value': value,
-      };
 }
 
 final class Carats extends Mass {
@@ -75,6 +61,23 @@ final class Carats extends Mass {
 
   @override
   String get symbol => 'CD';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'carats',
+          'value': value,
+        },
+      };
 }
 
 final class Grams extends Mass {
@@ -88,6 +91,23 @@ final class Grams extends Mass {
 
   @override
   String get symbol => 'g';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'grams',
+          'value': value,
+        },
+      };
 }
 
 final class Kilograms extends Mass {
@@ -101,6 +121,23 @@ final class Kilograms extends Mass {
 
   @override
   String get symbol => 'kg';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'kilograms',
+          'value': value,
+        },
+      };
 }
 
 final class Milligrams extends Mass {
@@ -114,6 +151,23 @@ final class Milligrams extends Mass {
 
   @override
   String get symbol => 'mg';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'milligrams',
+          'value': value,
+        },
+      };
 }
 
 final class Ounces extends Mass {
@@ -127,6 +181,23 @@ final class Ounces extends Mass {
 
   @override
   String get symbol => 'oz';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'ounces',
+          'value': value,
+        },
+      };
 }
 
 final class Pounds extends Mass {
@@ -140,6 +211,23 @@ final class Pounds extends Mass {
 
   @override
   String get symbol => 'lb';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'pounds',
+          'value': value,
+        },
+      };
 }
 
 final class Quintal extends Mass {
@@ -153,6 +241,23 @@ final class Quintal extends Mass {
 
   @override
   String get symbol => 'q';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'quintal',
+          'value': value,
+        },
+      };
 }
 
 final class StoneUK extends Mass {
@@ -166,6 +271,23 @@ final class StoneUK extends Mass {
 
   @override
   String get symbol => 'st';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'stoneUK',
+          'value': value,
+        },
+      };
 }
 
 final class TonUK extends Mass {
@@ -179,6 +301,23 @@ final class TonUK extends Mass {
 
   @override
   String get symbol => 'ton';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'tonUK',
+          'value': value,
+        },
+      };
 }
 
 final class TonUS extends Mass {
@@ -192,6 +331,23 @@ final class TonUS extends Mass {
 
   @override
   String get symbol => 'ton';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'tonUS',
+          'value': value,
+        },
+      };
 }
 
 final class Tonne extends Mass {
@@ -205,6 +361,23 @@ final class Tonne extends Mass {
 
   @override
   String get symbol => 'ton';
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) {
+    return checkJson('mass', json, massUnitValues)
+        ? massUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'mass': {
+          'unit': 'tonne',
+          'value': value,
+        },
+      };
 }
 
 enum MassUnit {
@@ -225,3 +398,17 @@ enum MassUnit {
 
   final Mass construct;
 }
+
+final massUnitValues = EnumValues({
+  'carats': MassUnit.carats,
+  'grams': MassUnit.grams,
+  'kilograms': MassUnit.kilograms,
+  'milligrams': MassUnit.milligrams,
+  'ounces': MassUnit.ounces,
+  'pounds': MassUnit.pounds,
+  'quintal': MassUnit.quintal,
+  'stoneUK': MassUnit.stoneUK,
+  'tonUK': MassUnit.tonUK,
+  'tonUS': MassUnit.tonUS,
+  'tonne': MassUnit.tonne,
+});

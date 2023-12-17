@@ -45,20 +45,6 @@ abstract final class DataStorage extends Unit<DataStorage> {
   DataStorage get toTerabit => _convertTo(const Terabit());
 
   DataStorage get toTerabyte => _convertTo(const Terabyte());
-
-  @override
-  DataStorage fromJson(Map<String, dynamic> json) => DataStorageUnit.values
-      .singleWhere((e) => e.name == json['unit'])
-      .construct
-      .withValue(json['value'] as num);
-
-  @override
-  Map<String, dynamic> toJson(DataStorage unit) => {
-        'unit': DataStorageUnit.values
-            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
-            .name,
-        'value': value,
-      };
 }
 
 final class Bit extends DataStorage {
@@ -72,6 +58,23 @@ final class Bit extends DataStorage {
 
   @override
   String get symbol => 'b';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'bit',
+          'value': value,
+        },
+      };
 }
 
 final class Byte extends DataStorage {
@@ -85,6 +88,23 @@ final class Byte extends DataStorage {
 
   @override
   String get symbol => 'B';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'byte',
+          'value': value,
+        },
+      };
 }
 
 final class Gigabit extends DataStorage {
@@ -98,6 +118,23 @@ final class Gigabit extends DataStorage {
 
   @override
   String get symbol => 'Gb';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'gigabit',
+          'value': value,
+        },
+      };
 }
 
 final class Gigabyte extends DataStorage {
@@ -111,6 +148,23 @@ final class Gigabyte extends DataStorage {
 
   @override
   String get symbol => 'GB';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'gigabyte',
+          'value': value,
+        },
+      };
 }
 
 final class Kilobit extends DataStorage {
@@ -124,6 +178,23 @@ final class Kilobit extends DataStorage {
 
   @override
   String get symbol => 'kb';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'kilobit',
+          'value': value,
+        },
+      };
 }
 
 final class Kilobyte extends DataStorage {
@@ -137,6 +208,23 @@ final class Kilobyte extends DataStorage {
 
   @override
   String get symbol => 'kB';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'kilobyte',
+          'value': value,
+        },
+      };
 }
 
 final class Megabit extends DataStorage {
@@ -150,6 +238,23 @@ final class Megabit extends DataStorage {
 
   @override
   String get symbol => 'Mb';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'megabit',
+          'value': value,
+        },
+      };
 }
 
 final class Megabyte extends DataStorage {
@@ -163,6 +268,23 @@ final class Megabyte extends DataStorage {
 
   @override
   String get symbol => 'MB';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'megabyte',
+          'value': value,
+        },
+      };
 }
 
 final class Terabit extends DataStorage {
@@ -176,6 +298,23 @@ final class Terabit extends DataStorage {
 
   @override
   String get symbol => 'Tb';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'terabit',
+          'value': value,
+        },
+      };
 }
 
 final class Terabyte extends DataStorage {
@@ -189,6 +328,23 @@ final class Terabyte extends DataStorage {
 
   @override
   String get symbol => 'TB';
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) {
+    return checkJson('dataStorage', json, dataStorageUnitValues)
+        ? dataStorageUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataStorage': {
+          'unit': 'terabyte',
+          'value': value,
+        },
+      };
 }
 
 enum DataStorageUnit {
@@ -208,3 +364,16 @@ enum DataStorageUnit {
 
   final DataStorage construct;
 }
+
+final dataStorageUnitValues = EnumValues({
+  'bit': DataStorageUnit.bit,
+  'byte': DataStorageUnit.byte,
+  'gigabit': DataStorageUnit.gigabit,
+  'gigabyte': DataStorageUnit.gigabyte,
+  'kilobit': DataStorageUnit.kilobit,
+  'kilobyte': DataStorageUnit.kilobyte,
+  'megabit': DataStorageUnit.megabit,
+  'megabyte': DataStorageUnit.megabyte,
+  'terabit': DataStorageUnit.terabit,
+  'terabyte': DataStorageUnit.terabyte,
+});

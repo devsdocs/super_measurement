@@ -33,20 +33,6 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
   DataTransfer get toMegabitPerSecond => _convertTo(const MegabitPerSecond());
 
   DataTransfer get toMegabytePerSecond => _convertTo(const MegabytePerSecond());
-
-  @override
-  DataTransfer fromJson(Map<String, dynamic> json) => DataTransferUnit.values
-      .singleWhere((e) => e.name == json['unit'])
-      .construct
-      .withValue(json['value'] as num);
-
-  @override
-  Map<String, dynamic> toJson(DataTransfer unit) => {
-        'unit': DataTransferUnit.values
-            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
-            .name,
-        'value': value,
-      };
 }
 
 final class GigabitPerSecond extends DataTransfer {
@@ -61,6 +47,23 @@ final class GigabitPerSecond extends DataTransfer {
 
   @override
   String get symbol => 'Gb/S';
+
+  @override
+  DataTransfer fromJson(Map<String, dynamic> json) {
+    return checkJson('dataTransfer', json, dataTransferUnitValues)
+        ? dataTransferUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataTransfer': {
+          'unit': 'gigabitPerSecond',
+          'value': value,
+        },
+      };
 }
 
 final class GigabytePerSecond extends DataTransfer {
@@ -75,6 +78,23 @@ final class GigabytePerSecond extends DataTransfer {
 
   @override
   String get symbol => 'GB/S';
+
+  @override
+  DataTransfer fromJson(Map<String, dynamic> json) {
+    return checkJson('dataTransfer', json, dataTransferUnitValues)
+        ? dataTransferUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataTransfer': {
+          'unit': 'gigabytePerSecond',
+          'value': value,
+        },
+      };
 }
 
 final class KilobitPerSecond extends DataTransfer {
@@ -89,6 +109,23 @@ final class KilobitPerSecond extends DataTransfer {
 
   @override
   String get symbol => 'kb/S';
+
+  @override
+  DataTransfer fromJson(Map<String, dynamic> json) {
+    return checkJson('dataTransfer', json, dataTransferUnitValues)
+        ? dataTransferUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataTransfer': {
+          'unit': 'kilobitPerSecond',
+          'value': value,
+        },
+      };
 }
 
 final class KilobytePerSecond extends DataTransfer {
@@ -103,6 +140,23 @@ final class KilobytePerSecond extends DataTransfer {
 
   @override
   String get symbol => 'kB/S';
+
+  @override
+  DataTransfer fromJson(Map<String, dynamic> json) {
+    return checkJson('dataTransfer', json, dataTransferUnitValues)
+        ? dataTransferUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataTransfer': {
+          'unit': 'kilobytePerSecond',
+          'value': value,
+        },
+      };
 }
 
 final class MegabitPerSecond extends DataTransfer {
@@ -117,6 +171,23 @@ final class MegabitPerSecond extends DataTransfer {
 
   @override
   String get symbol => 'Mb/S';
+
+  @override
+  DataTransfer fromJson(Map<String, dynamic> json) {
+    return checkJson('dataTransfer', json, dataTransferUnitValues)
+        ? dataTransferUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataTransfer': {
+          'unit': 'megabitPerSecond',
+          'value': value,
+        },
+      };
 }
 
 final class MegabytePerSecond extends DataTransfer {
@@ -131,6 +202,23 @@ final class MegabytePerSecond extends DataTransfer {
 
   @override
   String get symbol => 'MB/S';
+
+  @override
+  DataTransfer fromJson(Map<String, dynamic> json) {
+    return checkJson('dataTransfer', json, dataTransferUnitValues)
+        ? dataTransferUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'dataTransfer': {
+          'unit': 'megabytePerSecond',
+          'value': value,
+        },
+      };
 }
 
 enum DataTransferUnit {
@@ -146,3 +234,12 @@ enum DataTransferUnit {
 
   final DataTransfer construct;
 }
+
+final dataTransferUnitValues = EnumValues({
+  'gigabitPerSecond': DataTransferUnit.gigabitPerSecond,
+  'gigabytePerSecond': DataTransferUnit.gigabytePerSecond,
+  'kilobitPerSecond': DataTransferUnit.kilobitPerSecond,
+  'kilobytePerSecond': DataTransferUnit.kilobytePerSecond,
+  'megabitPerSecond': DataTransferUnit.megabitPerSecond,
+  'megabytePerSecond': DataTransferUnit.megabytePerSecond,
+});

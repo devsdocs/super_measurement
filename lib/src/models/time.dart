@@ -35,20 +35,6 @@ abstract final class Time extends Unit<Time> {
   Time get toWeek => _convertTo(const Week());
 
   Time get toYear => _convertTo(const Year());
-
-  @override
-  Time fromJson(Map<String, dynamic> json) => TimeUnit.values
-      .singleWhere((e) => e.name == json['unit'])
-      .construct
-      .withValue(json['value'] as num);
-
-  @override
-  Map<String, dynamic> toJson(Time unit) => {
-        'unit': TimeUnit.values
-            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
-            .name,
-        'value': value,
-      };
 }
 
 final class Day extends Time {
@@ -62,6 +48,23 @@ final class Day extends Time {
 
   @override
   String get symbol => 'd';
+
+  @override
+  Time fromJson(Map<String, dynamic> json) {
+    return checkJson('time', json, timeUnitValues)
+        ? timeUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'time': {
+          'unit': 'day',
+          'value': value,
+        },
+      };
 }
 
 final class Hour extends Time {
@@ -75,6 +78,23 @@ final class Hour extends Time {
 
   @override
   String get symbol => 'h';
+
+  @override
+  Time fromJson(Map<String, dynamic> json) {
+    return checkJson('time', json, timeUnitValues)
+        ? timeUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'time': {
+          'unit': 'hour',
+          'value': value,
+        },
+      };
 }
 
 final class Millisecond extends Time {
@@ -88,6 +108,23 @@ final class Millisecond extends Time {
 
   @override
   String get symbol => 'ms';
+
+  @override
+  Time fromJson(Map<String, dynamic> json) {
+    return checkJson('time', json, timeUnitValues)
+        ? timeUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'time': {
+          'unit': 'millisecond',
+          'value': value,
+        },
+      };
 }
 
 final class Minute extends Time {
@@ -101,6 +138,23 @@ final class Minute extends Time {
 
   @override
   String get symbol => 'm';
+
+  @override
+  Time fromJson(Map<String, dynamic> json) {
+    return checkJson('time', json, timeUnitValues)
+        ? timeUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'time': {
+          'unit': 'minute',
+          'value': value,
+        },
+      };
 }
 
 final class Second extends Time {
@@ -114,6 +168,23 @@ final class Second extends Time {
 
   @override
   String get symbol => 's';
+
+  @override
+  Time fromJson(Map<String, dynamic> json) {
+    return checkJson('time', json, timeUnitValues)
+        ? timeUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'time': {
+          'unit': 'second',
+          'value': value,
+        },
+      };
 }
 
 final class Week extends Time {
@@ -127,6 +198,23 @@ final class Week extends Time {
 
   @override
   String get symbol => 'wk';
+
+  @override
+  Time fromJson(Map<String, dynamic> json) {
+    return checkJson('time', json, timeUnitValues)
+        ? timeUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'time': {
+          'unit': 'week',
+          'value': value,
+        },
+      };
 }
 
 final class Year extends Time {
@@ -140,6 +228,23 @@ final class Year extends Time {
 
   @override
   String get symbol => 'y';
+
+  @override
+  Time fromJson(Map<String, dynamic> json) {
+    return checkJson('time', json, timeUnitValues)
+        ? timeUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'time': {
+          'unit': 'year',
+          'value': value,
+        },
+      };
 }
 
 enum TimeUnit {
@@ -156,3 +261,13 @@ enum TimeUnit {
 
   final Time construct;
 }
+
+final timeUnitValues = EnumValues({
+  'day': TimeUnit.day,
+  'hour': TimeUnit.hour,
+  'millisecond': TimeUnit.millisecond,
+  'minute': TimeUnit.minute,
+  'second': TimeUnit.second,
+  'week': TimeUnit.week,
+  'year': TimeUnit.year,
+});

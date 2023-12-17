@@ -42,20 +42,6 @@ abstract final class Area extends Unit<Area> {
   Area get toSquareMiles => _convertTo(const SquareMiles());
 
   Area get toSquareYards => _convertTo(const SquareYards());
-
-  @override
-  Area fromJson(Map<String, dynamic> json) => AreaUnit.values
-      .singleWhere((e) => e.name == json['unit'])
-      .construct
-      .withValue(json['value'] as num);
-
-  @override
-  Map<String, dynamic> toJson(Area unit) => {
-        'unit': AreaUnit.values
-            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
-            .name,
-        'value': value,
-      };
 }
 
 final class Acres extends Area {
@@ -69,6 +55,23 @@ final class Acres extends Area {
 
   @override
   String get symbol => 'ac';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'acres',
+          'value': value,
+        },
+      };
 }
 
 final class Hectares extends Area {
@@ -82,6 +85,23 @@ final class Hectares extends Area {
 
   @override
   String get symbol => 'ha';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'hectares',
+          'value': value,
+        },
+      };
 }
 
 final class SquareCentimeters extends Area {
@@ -96,6 +116,23 @@ final class SquareCentimeters extends Area {
 
   @override
   String get symbol => 'cm²';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'squareCentimeters',
+          'value': value,
+        },
+      };
 }
 
 final class SquareFoot extends Area {
@@ -109,6 +146,23 @@ final class SquareFoot extends Area {
 
   @override
   String get symbol => 'ft²';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'squareFoot',
+          'value': value,
+        },
+      };
 }
 
 final class SquareInches extends Area {
@@ -122,6 +176,23 @@ final class SquareInches extends Area {
 
   @override
   String get symbol => 'in²';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'squareInches',
+          'value': value,
+        },
+      };
 }
 
 final class SquareKilometers extends Area {
@@ -136,6 +207,23 @@ final class SquareKilometers extends Area {
 
   @override
   String get symbol => 'km²';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'squareKilometers',
+          'value': value,
+        },
+      };
 }
 
 final class SquareMeters extends Area {
@@ -149,6 +237,23 @@ final class SquareMeters extends Area {
 
   @override
   String get symbol => 'm²';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'squareMeters',
+          'value': value,
+        },
+      };
 }
 
 final class SquareMiles extends Area {
@@ -162,6 +267,23 @@ final class SquareMiles extends Area {
 
   @override
   String get symbol => 'mi²';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'squareMiles',
+          'value': value,
+        },
+      };
 }
 
 final class SquareYards extends Area {
@@ -175,6 +297,23 @@ final class SquareYards extends Area {
 
   @override
   String get symbol => 'yd²';
+
+  @override
+  Area fromJson(Map<String, dynamic> json) {
+    return checkJson('area', json, areaUnitValues)
+        ? areaUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'area': {
+          'unit': 'squareYards',
+          'value': value,
+        },
+      };
 }
 
 enum AreaUnit {
@@ -193,3 +332,15 @@ enum AreaUnit {
 
   final Area construct;
 }
+
+final areaUnitValues = EnumValues({
+  'acres': AreaUnit.acres,
+  'hectares': AreaUnit.hectares,
+  'squareCentimeters': AreaUnit.squareCentimeters,
+  'squareFoot': AreaUnit.squareFoot,
+  'squareInches': AreaUnit.squareInches,
+  'squareKilometers': AreaUnit.squareKilometers,
+  'squareMeters': AreaUnit.squareMeters,
+  'squareMiles': AreaUnit.squareMiles,
+  'squareYards': AreaUnit.squareYards,
+});

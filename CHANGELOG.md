@@ -1,3 +1,6 @@
+## 1.0.10
+- Fix from/to Json?
+
 ## 1.0.9
 - Remove unused dependecies
 

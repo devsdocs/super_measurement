@@ -50,20 +50,6 @@ abstract final class Energy extends Unit<Energy> {
   Energy get toMegawattHour => _convertTo(const MegawattHour());
 
   Energy get toWattHour => _convertTo(const WattHour());
-
-  @override
-  Energy fromJson(Map<String, dynamic> json) => EnergyUnit.values
-      .singleWhere((e) => e.name == json['unit'])
-      .construct
-      .withValue(json['value'] as num);
-
-  @override
-  Map<String, dynamic> toJson(Energy unit) => {
-        'unit': EnergyUnit.values
-            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
-            .name,
-        'value': value,
-      };
 }
 
 final class CalorieInternational extends Energy {
@@ -78,6 +64,23 @@ final class CalorieInternational extends Energy {
 
   @override
   String get symbol => 'cal';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'calorieInternational',
+          'value': value,
+        },
+      };
 }
 
 final class CalorieNutritional extends Energy {
@@ -92,6 +95,23 @@ final class CalorieNutritional extends Energy {
 
   @override
   String get symbol => 'cal';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'calorieNutritional',
+          'value': value,
+        },
+      };
 }
 
 final class CalorieThermochemical extends Energy {
@@ -106,6 +126,23 @@ final class CalorieThermochemical extends Energy {
 
   @override
   String get symbol => 'cal';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'calorieThermochemical',
+          'value': value,
+        },
+      };
 }
 
 final class ElectronVolt extends Energy {
@@ -119,6 +156,23 @@ final class ElectronVolt extends Energy {
 
   @override
   String get symbol => 'eV';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'electronVolt',
+          'value': value,
+        },
+      };
 }
 
 final class GigaJoule extends Energy {
@@ -132,6 +186,23 @@ final class GigaJoule extends Energy {
 
   @override
   String get symbol => 'GJ';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'gigaJoule',
+          'value': value,
+        },
+      };
 }
 
 final class Joule extends Energy {
@@ -145,6 +216,23 @@ final class Joule extends Energy {
 
   @override
   String get symbol => 'J';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'joule',
+          'value': value,
+        },
+      };
 }
 
 final class KiloJoule extends Energy {
@@ -158,6 +246,23 @@ final class KiloJoule extends Energy {
 
   @override
   String get symbol => 'kJ';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'kiloJoule',
+          'value': value,
+        },
+      };
 }
 
 final class KilowattHour extends Energy {
@@ -171,6 +276,23 @@ final class KilowattHour extends Energy {
 
   @override
   String get symbol => 'kWh';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'kilowattHour',
+          'value': value,
+        },
+      };
 }
 
 final class MegaJoule extends Energy {
@@ -184,6 +306,23 @@ final class MegaJoule extends Energy {
 
   @override
   String get symbol => 'MJ';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'megaJoule',
+          'value': value,
+        },
+      };
 }
 
 final class MegawattHour extends Energy {
@@ -197,6 +336,23 @@ final class MegawattHour extends Energy {
 
   @override
   String get symbol => 'MWh';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'megawattHour',
+          'value': value,
+        },
+      };
 }
 
 final class WattHour extends Energy {
@@ -210,6 +366,23 @@ final class WattHour extends Energy {
 
   @override
   String get symbol => 'Wh';
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) {
+    return checkJson('energy', json, energyUnitValues)
+        ? energyUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'energy': {
+          'unit': 'wattHour',
+          'value': value,
+        },
+      };
 }
 
 enum EnergyUnit {
@@ -230,3 +403,17 @@ enum EnergyUnit {
 
   final Energy construct;
 }
+
+final energyUnitValues = EnumValues({
+  'calorieInternational': EnergyUnit.calorieInternational,
+  'calorieNutritional': EnergyUnit.calorieNutritional,
+  'calorieThermochemical': EnergyUnit.calorieThermochemical,
+  'electronVolt': EnergyUnit.electronVolt,
+  'gigaJoule': EnergyUnit.gigaJoule,
+  'joule': EnergyUnit.joule,
+  'kiloJoule': EnergyUnit.kiloJoule,
+  'kilowattHour': EnergyUnit.kilowattHour,
+  'megaJoule': EnergyUnit.megaJoule,
+  'megawattHour': EnergyUnit.megawattHour,
+  'wattHour': EnergyUnit.wattHour,
+});

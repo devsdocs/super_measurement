@@ -52,20 +52,6 @@ abstract final class Speed extends Unit<Speed> {
   Speed get toMilesPerMinute => _convertTo(const MilesPerMinute());
 
   Speed get toYardPerMinute => _convertTo(const YardPerMinute());
-
-  @override
-  Speed fromJson(Map<String, dynamic> json) => SpeedUnit.values
-      .singleWhere((e) => e.name == json['unit'])
-      .construct
-      .withValue(json['value'] as num);
-
-  @override
-  Map<String, dynamic> toJson(Speed unit) => {
-        'unit': SpeedUnit.values
-            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
-            .name,
-        'value': value,
-      };
 }
 
 final class FootPerHour extends Speed {
@@ -79,6 +65,23 @@ final class FootPerHour extends Speed {
 
   @override
   String get symbol => 'ft/h';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'footPerHour',
+          'value': value,
+        },
+      };
 }
 
 final class FootPerMinute extends Speed {
@@ -92,6 +95,23 @@ final class FootPerMinute extends Speed {
 
   @override
   String get symbol => 'ft/min';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'footPerMinute',
+          'value': value,
+        },
+      };
 }
 
 final class FootPerSecond extends Speed {
@@ -105,6 +125,23 @@ final class FootPerSecond extends Speed {
 
   @override
   String get symbol => 'ft/s';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'footPerSecond',
+          'value': value,
+        },
+      };
 }
 
 final class KilometerPerHour extends Speed {
@@ -119,6 +156,23 @@ final class KilometerPerHour extends Speed {
 
   @override
   String get symbol => 'km/h';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'kilometerPerHour',
+          'value': value,
+        },
+      };
 }
 
 final class Knot extends Speed {
@@ -132,6 +186,23 @@ final class Knot extends Speed {
 
   @override
   String get symbol => 'kn';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'knot',
+          'value': value,
+        },
+      };
 }
 
 final class Light extends Speed {
@@ -145,6 +216,23 @@ final class Light extends Speed {
 
   @override
   String get symbol => 'c';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'light',
+          'value': value,
+        },
+      };
 }
 
 final class MeterPerHour extends Speed {
@@ -158,6 +246,23 @@ final class MeterPerHour extends Speed {
 
   @override
   String get symbol => 'm/h';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'meterPerHour',
+          'value': value,
+        },
+      };
 }
 
 final class MeterPerMinute extends Speed {
@@ -171,6 +276,23 @@ final class MeterPerMinute extends Speed {
 
   @override
   String get symbol => 'm/min';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'meterPerMinute',
+          'value': value,
+        },
+      };
 }
 
 final class MeterPerSecond extends Speed {
@@ -184,6 +306,23 @@ final class MeterPerSecond extends Speed {
 
   @override
   String get symbol => 'm/s';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'meterPerSecond',
+          'value': value,
+        },
+      };
 }
 
 final class MilesPerHour extends Speed {
@@ -197,6 +336,23 @@ final class MilesPerHour extends Speed {
 
   @override
   String get symbol => 'mi/h';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'milesPerHour',
+          'value': value,
+        },
+      };
 }
 
 final class MilesPerMinute extends Speed {
@@ -210,6 +366,23 @@ final class MilesPerMinute extends Speed {
 
   @override
   String get symbol => 'mi/min';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'milesPerMinute',
+          'value': value,
+        },
+      };
 }
 
 final class YardPerMinute extends Speed {
@@ -223,6 +396,23 @@ final class YardPerMinute extends Speed {
 
   @override
   String get symbol => 'yd/min';
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) {
+    return checkJson('speed', json, speedUnitValues)
+        ? speedUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'speed': {
+          'unit': 'yardPerMinute',
+          'value': value,
+        },
+      };
 }
 
 enum SpeedUnit {
@@ -244,3 +434,18 @@ enum SpeedUnit {
 
   final Speed construct;
 }
+
+final speedUnitValues = EnumValues({
+  'footPerHour': SpeedUnit.footPerHour,
+  'footPerMinute': SpeedUnit.footPerMinute,
+  'footPerSecond': SpeedUnit.footPerSecond,
+  'kilometerPerHour': SpeedUnit.kilometerPerHour,
+  'knot': SpeedUnit.knot,
+  'light': SpeedUnit.light,
+  'meterPerHour': SpeedUnit.meterPerHour,
+  'meterPerMinute': SpeedUnit.meterPerMinute,
+  'meterPerSecond': SpeedUnit.meterPerSecond,
+  'milesPerHour': SpeedUnit.milesPerHour,
+  'milesPerMinute': SpeedUnit.milesPerMinute,
+  'yardPerMinute': SpeedUnit.yardPerMinute,
+});

@@ -29,20 +29,6 @@ abstract final class Power extends Unit<Power> {
   Power get toMilliwatt => _convertTo(const Milliwatt());
 
   Power get toWatt => _convertTo(const Watt());
-
-  @override
-  Power fromJson(Map<String, dynamic> json) => PowerUnit.values
-      .singleWhere((e) => e.name == json['unit'])
-      .construct
-      .withValue(json['value'] as num);
-
-  @override
-  Map<String, dynamic> toJson(Power unit) => {
-        'unit': PowerUnit.values
-            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
-            .name,
-        'value': value,
-      };
 }
 
 final class Horsepower extends Power {
@@ -56,6 +42,23 @@ final class Horsepower extends Power {
 
   @override
   String get symbol => 'hp';
+
+  @override
+  Power fromJson(Map<String, dynamic> json) {
+    return checkJson('power', json, powerUnitValues)
+        ? powerUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'power': {
+          'unit': 'horsepower',
+          'value': value,
+        },
+      };
 }
 
 final class Kilowatt extends Power {
@@ -69,6 +72,23 @@ final class Kilowatt extends Power {
 
   @override
   String get symbol => 'kW';
+
+  @override
+  Power fromJson(Map<String, dynamic> json) {
+    return checkJson('power', json, powerUnitValues)
+        ? powerUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'power': {
+          'unit': 'kilowatt',
+          'value': value,
+        },
+      };
 }
 
 final class Megawatt extends Power {
@@ -82,6 +102,23 @@ final class Megawatt extends Power {
 
   @override
   String get symbol => 'MW';
+
+  @override
+  Power fromJson(Map<String, dynamic> json) {
+    return checkJson('power', json, powerUnitValues)
+        ? powerUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'power': {
+          'unit': 'megawatt',
+          'value': value,
+        },
+      };
 }
 
 final class Milliwatt extends Power {
@@ -95,6 +132,23 @@ final class Milliwatt extends Power {
 
   @override
   String get symbol => 'mW';
+
+  @override
+  Power fromJson(Map<String, dynamic> json) {
+    return checkJson('power', json, powerUnitValues)
+        ? powerUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'power': {
+          'unit': 'milliwatt',
+          'value': value,
+        },
+      };
 }
 
 final class Watt extends Power {
@@ -108,6 +162,23 @@ final class Watt extends Power {
 
   @override
   String get symbol => 'W';
+
+  @override
+  Power fromJson(Map<String, dynamic> json) {
+    return checkJson('power', json, powerUnitValues)
+        ? powerUnitValues.map[json['unit']]!.construct
+            .withValue(json['value'] as num)
+            ._convertTo(this)
+        : this;
+  }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'power': {
+          'unit': 'watt',
+          'value': value,
+        },
+      };
 }
 
 enum PowerUnit {
@@ -122,3 +193,11 @@ enum PowerUnit {
 
   final Power construct;
 }
+
+final powerUnitValues = EnumValues({
+  'horsepower': PowerUnit.horsepower,
+  'kilowatt': PowerUnit.kilowatt,
+  'megawatt': PowerUnit.megawatt,
+  'milliwatt': PowerUnit.milliwatt,
+  'watt': PowerUnit.watt,
+});
