@@ -55,6 +55,20 @@ abstract final class AngularSpeed extends Unit<AngularSpeed> {
 
   AngularSpeed get toRevolutionPerSecond =>
       _convertTo(const RevolutionPerSecond());
+
+  @override
+  AngularSpeed fromJson(Map<String, dynamic> json) => AngularSpeedUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(AngularSpeed unit) => {
+        'unit': AngularSpeedUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class DegreePerDay extends AngularSpeed {

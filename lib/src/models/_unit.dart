@@ -13,6 +13,10 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T withValue([num? value]);
 
+  T fromJson(Map<String, dynamic> json);
+
+  Map<String, dynamic> toJson(T unit);
+
   AnchorRatio<T> get _anchorRatio;
 
   bool _convertAndCompare(String operator, T other) {

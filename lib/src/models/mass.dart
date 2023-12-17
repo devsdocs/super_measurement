@@ -48,6 +48,20 @@ abstract final class Mass extends Unit<Mass> {
   Mass get toTonUS => _convertTo(const TonUS());
 
   Mass get toTonne => _convertTo(const Tonne());
+
+  @override
+  Mass fromJson(Map<String, dynamic> json) => MassUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(Mass unit) => {
+        'unit': MassUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class Carats extends Mass {

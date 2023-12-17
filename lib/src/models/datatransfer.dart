@@ -33,6 +33,20 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
   DataTransfer get toMegabitPerSecond => _convertTo(const MegabitPerSecond());
 
   DataTransfer get toMegabytePerSecond => _convertTo(const MegabytePerSecond());
+
+  @override
+  DataTransfer fromJson(Map<String, dynamic> json) => DataTransferUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(DataTransfer unit) => {
+        'unit': DataTransferUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class GigabitPerSecond extends DataTransfer {

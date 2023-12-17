@@ -7,6 +7,8 @@ include: package:lint/strict.yaml # For production apps
 
 # You might want to exclude auto-generated files from dart analysis
 analyzer:
+  errors:
+    invalid_annotation_target: ignore
   exclude:
     #- '**.freezed.dart'
     #- '**.g.dart'

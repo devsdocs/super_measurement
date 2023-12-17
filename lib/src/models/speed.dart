@@ -52,6 +52,20 @@ abstract final class Speed extends Unit<Speed> {
   Speed get toMilesPerMinute => _convertTo(const MilesPerMinute());
 
   Speed get toYardPerMinute => _convertTo(const YardPerMinute());
+
+  @override
+  Speed fromJson(Map<String, dynamic> json) => SpeedUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(Speed unit) => {
+        'unit': SpeedUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class FootPerHour extends Speed {

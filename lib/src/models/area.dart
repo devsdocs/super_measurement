@@ -42,6 +42,20 @@ abstract final class Area extends Unit<Area> {
   Area get toSquareMiles => _convertTo(const SquareMiles());
 
   Area get toSquareYards => _convertTo(const SquareYards());
+
+  @override
+  Area fromJson(Map<String, dynamic> json) => AreaUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(Area unit) => {
+        'unit': AreaUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class Acres extends Area {

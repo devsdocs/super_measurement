@@ -3,6 +3,7 @@ part of '__generate.gen.dart';
 void generateModels() {
   for (final unit in allData) {
     final name = unit.keys.first;
+    final enumSymbol = '${name}Unit';
     final anchor =
         unit.values.first.singleWhere((e) => e.values.single['ratio'] == 1);
     final fileName = '${name.toLowerCase()}.dart';
@@ -60,6 +61,16 @@ void generateModels() {
       );
       typeBuff.writeln();
     }
+    typeBuff.writeln('  @override');
+    typeBuff.writeln(
+      "  $name fromJson(Map<String,dynamic> json) => $enumSymbol.values.singleWhere((e) => e.name == json['unit']).construct.withValue(json['value'] as num);",
+    );
+    typeBuff.writeln();
+
+    typeBuff.writeln('  @override');
+    typeBuff.writeln(
+      "  Map<String, dynamic> toJson($name unit) => {'unit': $enumSymbol.values.singleWhere((e) => e.construct.runtimeType == unit.runtimeType).name,'value': value,};",
+    );
     typeBuff.writeln();
     typeBuff.writeln('  }');
     typeBuff.writeln();
@@ -83,7 +94,7 @@ void generateModels() {
       typeBuff.writeln();
     }
     typeBuff.writeln();
-    final enumSymbol = '${name}Unit';
+
     typeBuff.writeln('enum $enumSymbol {');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;

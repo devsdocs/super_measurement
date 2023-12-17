@@ -36,6 +36,20 @@ abstract final class Pressure extends Unit<Pressure> {
   Pressure get toStandardAtmosphere => _convertTo(const StandardAtmosphere());
 
   Pressure get toTorr => _convertTo(const Torr());
+
+  @override
+  Pressure fromJson(Map<String, dynamic> json) => PressureUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(Pressure unit) => {
+        'unit': PressureUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class Bar extends Pressure {

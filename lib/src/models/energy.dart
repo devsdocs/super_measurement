@@ -50,6 +50,20 @@ abstract final class Energy extends Unit<Energy> {
   Energy get toMegawattHour => _convertTo(const MegawattHour());
 
   Energy get toWattHour => _convertTo(const WattHour());
+
+  @override
+  Energy fromJson(Map<String, dynamic> json) => EnergyUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(Energy unit) => {
+        'unit': EnergyUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class CalorieInternational extends Energy {

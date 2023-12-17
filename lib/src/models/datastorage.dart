@@ -45,6 +45,20 @@ abstract final class DataStorage extends Unit<DataStorage> {
   DataStorage get toTerabit => _convertTo(const Terabit());
 
   DataStorage get toTerabyte => _convertTo(const Terabyte());
+
+  @override
+  DataStorage fromJson(Map<String, dynamic> json) => DataStorageUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(DataStorage unit) => {
+        'unit': DataStorageUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class Bit extends DataStorage {

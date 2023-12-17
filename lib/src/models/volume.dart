@@ -49,6 +49,20 @@ abstract final class Volume extends Unit<Volume> {
   Volume get toLiters => _convertTo(const Liters());
 
   Volume get toMilliliters => _convertTo(const Milliliters());
+
+  @override
+  Volume fromJson(Map<String, dynamic> json) => VolumeUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(Volume unit) => {
+        'unit': VolumeUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class BarrelsImperial extends Volume {

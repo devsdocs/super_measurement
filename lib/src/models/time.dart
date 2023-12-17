@@ -35,6 +35,20 @@ abstract final class Time extends Unit<Time> {
   Time get toWeek => _convertTo(const Week());
 
   Time get toYear => _convertTo(const Year());
+
+  @override
+  Time fromJson(Map<String, dynamic> json) => TimeUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(Time unit) => {
+        'unit': TimeUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class Day extends Time {

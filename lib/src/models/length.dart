@@ -45,6 +45,20 @@ abstract final class Length extends Unit<Length> {
   Length get toNauticalMiles => _convertTo(const NauticalMiles());
 
   Length get toYards => _convertTo(const Yards());
+
+  @override
+  Length fromJson(Map<String, dynamic> json) => LengthUnit.values
+      .singleWhere((e) => e.name == json['unit'])
+      .construct
+      .withValue(json['value'] as num);
+
+  @override
+  Map<String, dynamic> toJson(Length unit) => {
+        'unit': LengthUnit.values
+            .singleWhere((e) => e.construct.runtimeType == unit.runtimeType)
+            .name,
+        'value': value,
+      };
 }
 
 final class Centimeters extends Length {
