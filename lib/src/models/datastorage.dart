@@ -62,7 +62,9 @@ final class Bit extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -92,7 +94,9 @@ final class Byte extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -122,7 +126,9 @@ final class Gigabit extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -152,7 +158,9 @@ final class Gigabyte extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -182,7 +190,9 @@ final class Kilobit extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -212,7 +222,9 @@ final class Kilobyte extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -242,7 +254,9 @@ final class Megabit extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -272,7 +286,9 @@ final class Megabyte extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -302,7 +318,9 @@ final class Terabit extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -332,7 +350,9 @@ final class Terabyte extends DataStorage {
   @override
   DataStorage fromJson(Map<String, dynamic> json) {
     return checkJson('dataStorage', json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[json['unit']]!.construct
+        ? dataStorageUnitValues
+            .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;

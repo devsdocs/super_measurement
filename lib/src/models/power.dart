@@ -46,7 +46,8 @@ final class Horsepower extends Power {
   @override
   Power fromJson(Map<String, dynamic> json) {
     return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues.map[json['unit']]!.construct
+        ? powerUnitValues
+            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -76,7 +77,8 @@ final class Kilowatt extends Power {
   @override
   Power fromJson(Map<String, dynamic> json) {
     return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues.map[json['unit']]!.construct
+        ? powerUnitValues
+            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -106,7 +108,8 @@ final class Megawatt extends Power {
   @override
   Power fromJson(Map<String, dynamic> json) {
     return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues.map[json['unit']]!.construct
+        ? powerUnitValues
+            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -136,7 +139,8 @@ final class Milliwatt extends Power {
   @override
   Power fromJson(Map<String, dynamic> json) {
     return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues.map[json['unit']]!.construct
+        ? powerUnitValues
+            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -166,7 +170,8 @@ final class Watt extends Power {
   @override
   Power fromJson(Map<String, dynamic> json) {
     return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues.map[json['unit']]!.construct
+        ? powerUnitValues
+            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;

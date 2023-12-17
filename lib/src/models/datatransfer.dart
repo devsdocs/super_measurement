@@ -51,7 +51,9 @@ final class GigabitPerSecond extends DataTransfer {
   @override
   DataTransfer fromJson(Map<String, dynamic> json) {
     return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues.map[json['unit']]!.construct
+        ? dataTransferUnitValues
+            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -82,7 +84,9 @@ final class GigabytePerSecond extends DataTransfer {
   @override
   DataTransfer fromJson(Map<String, dynamic> json) {
     return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues.map[json['unit']]!.construct
+        ? dataTransferUnitValues
+            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -113,7 +117,9 @@ final class KilobitPerSecond extends DataTransfer {
   @override
   DataTransfer fromJson(Map<String, dynamic> json) {
     return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues.map[json['unit']]!.construct
+        ? dataTransferUnitValues
+            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -144,7 +150,9 @@ final class KilobytePerSecond extends DataTransfer {
   @override
   DataTransfer fromJson(Map<String, dynamic> json) {
     return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues.map[json['unit']]!.construct
+        ? dataTransferUnitValues
+            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -175,7 +183,9 @@ final class MegabitPerSecond extends DataTransfer {
   @override
   DataTransfer fromJson(Map<String, dynamic> json) {
     return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues.map[json['unit']]!.construct
+        ? dataTransferUnitValues
+            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -206,7 +216,9 @@ final class MegabytePerSecond extends DataTransfer {
   @override
   DataTransfer fromJson(Map<String, dynamic> json) {
     return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues.map[json['unit']]!.construct
+        ? dataTransferUnitValues
+            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;

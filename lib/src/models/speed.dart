@@ -69,7 +69,8 @@ final class FootPerHour extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -99,7 +100,8 @@ final class FootPerMinute extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -129,7 +131,8 @@ final class FootPerSecond extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -160,7 +163,8 @@ final class KilometerPerHour extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -190,7 +194,8 @@ final class Knot extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -220,7 +225,8 @@ final class Light extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -250,7 +256,8 @@ final class MeterPerHour extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -280,7 +287,8 @@ final class MeterPerMinute extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -310,7 +318,8 @@ final class MeterPerSecond extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -340,7 +349,8 @@ final class MilesPerHour extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -370,7 +380,8 @@ final class MilesPerMinute extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -400,7 +411,8 @@ final class YardPerMinute extends Speed {
   @override
   Speed fromJson(Map<String, dynamic> json) {
     return checkJson('speed', json, speedUnitValues)
-        ? speedUnitValues.map[json['unit']]!.construct
+        ? speedUnitValues
+            .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;

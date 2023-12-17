@@ -67,7 +67,8 @@ final class BarrelsImperial extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -97,7 +98,8 @@ final class BarrelsUS extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -128,7 +130,8 @@ final class CubicCentimeters extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -158,7 +161,8 @@ final class CubicFoot extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -188,7 +192,8 @@ final class CubicInches extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -218,7 +223,8 @@ final class CubicMeters extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -248,7 +254,8 @@ final class CubicYards extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -279,7 +286,8 @@ final class GallonsImperial extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -309,7 +317,8 @@ final class GallonsUS extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -339,7 +348,8 @@ final class Liters extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -369,7 +379,8 @@ final class Milliliters extends Volume {
   @override
   Volume fromJson(Map<String, dynamic> json) {
     return checkJson('volume', json, volumeUnitValues)
-        ? volumeUnitValues.map[json['unit']]!.construct
+        ? volumeUnitValues
+            .map[(json['volume'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;

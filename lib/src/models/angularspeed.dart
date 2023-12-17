@@ -72,7 +72,9 @@ final class DegreePerDay extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -102,7 +104,9 @@ final class DegreePerHour extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -133,7 +137,9 @@ final class DegreePerMinute extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -164,7 +170,9 @@ final class DegreePerSecond extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -194,7 +202,9 @@ final class RadianPerDay extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -224,7 +234,9 @@ final class RadianPerHour extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -255,7 +267,9 @@ final class RadianPerMinute extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -286,7 +300,9 @@ final class RadianPerSecond extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -317,7 +333,9 @@ final class RevolutionPerDay extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -348,7 +366,9 @@ final class RevolutionPerHour extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -379,7 +399,9 @@ final class RevolutionPerMinute extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -410,7 +432,9 @@ final class RevolutionPerSecond extends AngularSpeed {
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) {
     return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[json['unit']]!.construct
+        ? angularSpeedUnitValues
+            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+            .construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;

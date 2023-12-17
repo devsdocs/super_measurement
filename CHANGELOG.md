@@ -1,3 +1,6 @@
+## 1.0.11
+- Fix typo
+
 ## 1.0.10
 - Fix from/to Json?
 

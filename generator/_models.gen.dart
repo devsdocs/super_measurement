@@ -87,7 +87,7 @@ void generateModels() {
         '  $name fromJson(Map<String,dynamic> json) {',
       );
       typeBuff.writeln(
-        "return checkJson('${name.snakeCase}',json, $enumValuesSymbol) ? $enumValuesSymbol.map[json['unit']]!.construct.withValue(json['value'] as num)._convertTo(this) : this;",
+        "return checkJson('${name.snakeCase}',json, $enumValuesSymbol) ? $enumValuesSymbol.map[(json['${name.snakeCase}'] as Map<String, dynamic>)['unit']]!.construct.withValue(json['value'] as num)._convertTo(this) : this;",
       );
       typeBuff.writeln('}');
       typeBuff.writeln();

@@ -65,7 +65,8 @@ final class Carats extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -95,7 +96,8 @@ final class Grams extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -125,7 +127,8 @@ final class Kilograms extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -155,7 +158,8 @@ final class Milligrams extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -185,7 +189,8 @@ final class Ounces extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -215,7 +220,8 @@ final class Pounds extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -245,7 +251,8 @@ final class Quintal extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -275,7 +282,8 @@ final class StoneUK extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -305,7 +313,8 @@ final class TonUK extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -335,7 +344,8 @@ final class TonUS extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
@@ -365,7 +375,8 @@ final class Tonne extends Mass {
   @override
   Mass fromJson(Map<String, dynamic> json) {
     return checkJson('mass', json, massUnitValues)
-        ? massUnitValues.map[json['unit']]!.construct
+        ? massUnitValues
+            .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
             .withValue(json['value'] as num)
             ._convertTo(this)
         : this;
