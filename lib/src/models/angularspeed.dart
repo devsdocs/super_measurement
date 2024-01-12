@@ -55,10 +55,15 @@ abstract final class AngularSpeed extends Unit<AngularSpeed> {
 
   AngularSpeed get toRevolutionPerSecond =>
       _convertTo(const RevolutionPerSecond());
+
+  @override
+  String get majorName => 'angularSpeed';
 }
 
 final class DegreePerDay extends AngularSpeed {
   const DegreePerDay([super.value]);
+
+  static const minorName = 'degreePerDay';
 
   @override
   DegreePerDay get _clone => DegreePerDay(value);
@@ -71,20 +76,19 @@ final class DegreePerDay extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'degreePerDay',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -92,6 +96,8 @@ final class DegreePerDay extends AngularSpeed {
 
 final class DegreePerHour extends AngularSpeed {
   const DegreePerHour([super.value]);
+
+  static const minorName = 'degreePerHour';
 
   @override
   DegreePerHour get _clone => DegreePerHour(value);
@@ -104,20 +110,19 @@ final class DegreePerHour extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'degreePerHour',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -125,6 +130,8 @@ final class DegreePerHour extends AngularSpeed {
 
 final class DegreePerMinute extends AngularSpeed {
   const DegreePerMinute([super.value]);
+
+  static const minorName = 'degreePerMinute';
 
   @override
   DegreePerMinute get _clone => DegreePerMinute(value);
@@ -138,20 +145,19 @@ final class DegreePerMinute extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'degreePerMinute',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -159,6 +165,8 @@ final class DegreePerMinute extends AngularSpeed {
 
 final class DegreePerSecond extends AngularSpeed {
   const DegreePerSecond([super.value]);
+
+  static const minorName = 'degreePerSecond';
 
   @override
   DegreePerSecond get _clone => DegreePerSecond(value);
@@ -172,20 +180,19 @@ final class DegreePerSecond extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'degreePerSecond',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -193,6 +200,8 @@ final class DegreePerSecond extends AngularSpeed {
 
 final class RadianPerDay extends AngularSpeed {
   const RadianPerDay([super.value]);
+
+  static const minorName = 'radianPerDay';
 
   @override
   RadianPerDay get _clone => RadianPerDay(value);
@@ -205,20 +214,19 @@ final class RadianPerDay extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'radianPerDay',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -226,6 +234,8 @@ final class RadianPerDay extends AngularSpeed {
 
 final class RadianPerHour extends AngularSpeed {
   const RadianPerHour([super.value]);
+
+  static const minorName = 'radianPerHour';
 
   @override
   RadianPerHour get _clone => RadianPerHour(value);
@@ -238,20 +248,19 @@ final class RadianPerHour extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'radianPerHour',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -259,6 +268,8 @@ final class RadianPerHour extends AngularSpeed {
 
 final class RadianPerMinute extends AngularSpeed {
   const RadianPerMinute([super.value]);
+
+  static const minorName = 'radianPerMinute';
 
   @override
   RadianPerMinute get _clone => RadianPerMinute(value);
@@ -272,20 +283,19 @@ final class RadianPerMinute extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'radianPerMinute',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -293,6 +303,8 @@ final class RadianPerMinute extends AngularSpeed {
 
 final class RadianPerSecond extends AngularSpeed {
   const RadianPerSecond([super.value]);
+
+  static const minorName = 'radianPerSecond';
 
   @override
   RadianPerSecond get _clone => RadianPerSecond(value);
@@ -306,20 +318,19 @@ final class RadianPerSecond extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'radianPerSecond',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -327,6 +338,8 @@ final class RadianPerSecond extends AngularSpeed {
 
 final class RevolutionPerDay extends AngularSpeed {
   const RevolutionPerDay([super.value]);
+
+  static const minorName = 'revolutionPerDay';
 
   @override
   RevolutionPerDay get _clone => RevolutionPerDay(value);
@@ -340,20 +353,19 @@ final class RevolutionPerDay extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'revolutionPerDay',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -361,6 +373,8 @@ final class RevolutionPerDay extends AngularSpeed {
 
 final class RevolutionPerHour extends AngularSpeed {
   const RevolutionPerHour([super.value]);
+
+  static const minorName = 'revolutionPerHour';
 
   @override
   RevolutionPerHour get _clone => RevolutionPerHour(value);
@@ -374,20 +388,19 @@ final class RevolutionPerHour extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'revolutionPerHour',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -395,6 +408,8 @@ final class RevolutionPerHour extends AngularSpeed {
 
 final class RevolutionPerMinute extends AngularSpeed {
   const RevolutionPerMinute([super.value]);
+
+  static const minorName = 'revolutionPerMinute';
 
   @override
   RevolutionPerMinute get _clone => RevolutionPerMinute(value);
@@ -408,20 +423,19 @@ final class RevolutionPerMinute extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'revolutionPerMinute',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -429,6 +443,8 @@ final class RevolutionPerMinute extends AngularSpeed {
 
 final class RevolutionPerSecond extends AngularSpeed {
   const RevolutionPerSecond([super.value]);
+
+  static const minorName = 'revolutionPerSecond';
 
   @override
   RevolutionPerSecond get _clone => RevolutionPerSecond(value);
@@ -442,20 +458,19 @@ final class RevolutionPerSecond extends AngularSpeed {
 
   @override
   AngularSpeed fromJson(Map<String, dynamic> json) =>
-      checkJson('angularSpeed', json, angularSpeedUnitValues)
+      checkJson(majorName, json, angularSpeedUnitValues)
           ? angularSpeedUnitValues
-              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-              .construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'angularSpeed': {
-          'unit': 'revolutionPerSecond',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -482,16 +497,16 @@ enum AngularSpeedUnit {
 }
 
 const angularSpeedUnitValues = EnumValues({
-  'degreePerDay': AngularSpeedUnit.degreePerDay,
-  'degreePerHour': AngularSpeedUnit.degreePerHour,
-  'degreePerMinute': AngularSpeedUnit.degreePerMinute,
-  'degreePerSecond': AngularSpeedUnit.degreePerSecond,
-  'radianPerDay': AngularSpeedUnit.radianPerDay,
-  'radianPerHour': AngularSpeedUnit.radianPerHour,
-  'radianPerMinute': AngularSpeedUnit.radianPerMinute,
-  'radianPerSecond': AngularSpeedUnit.radianPerSecond,
-  'revolutionPerDay': AngularSpeedUnit.revolutionPerDay,
-  'revolutionPerHour': AngularSpeedUnit.revolutionPerHour,
-  'revolutionPerMinute': AngularSpeedUnit.revolutionPerMinute,
-  'revolutionPerSecond': AngularSpeedUnit.revolutionPerSecond,
+  DegreePerDay.minorName: AngularSpeedUnit.degreePerDay,
+  DegreePerHour.minorName: AngularSpeedUnit.degreePerHour,
+  DegreePerMinute.minorName: AngularSpeedUnit.degreePerMinute,
+  DegreePerSecond.minorName: AngularSpeedUnit.degreePerSecond,
+  RadianPerDay.minorName: AngularSpeedUnit.radianPerDay,
+  RadianPerHour.minorName: AngularSpeedUnit.radianPerHour,
+  RadianPerMinute.minorName: AngularSpeedUnit.radianPerMinute,
+  RadianPerSecond.minorName: AngularSpeedUnit.radianPerSecond,
+  RevolutionPerDay.minorName: AngularSpeedUnit.revolutionPerDay,
+  RevolutionPerHour.minorName: AngularSpeedUnit.revolutionPerHour,
+  RevolutionPerMinute.minorName: AngularSpeedUnit.revolutionPerMinute,
+  RevolutionPerSecond.minorName: AngularSpeedUnit.revolutionPerSecond,
 });

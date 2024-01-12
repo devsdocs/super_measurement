@@ -52,10 +52,15 @@ abstract final class Speed extends Unit<Speed> {
   Speed get toMilesPerMinute => _convertTo(const MilesPerMinute());
 
   Speed get toYardPerMinute => _convertTo(const YardPerMinute());
+
+  @override
+  String get majorName => 'speed';
 }
 
 final class FootPerHour extends Speed {
   const FootPerHour([super.value]);
+
+  static const minorName = 'footPerHour';
 
   @override
   FootPerHour get _clone => FootPerHour(value);
@@ -68,19 +73,19 @@ final class FootPerHour extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'footPerHour',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -88,6 +93,8 @@ final class FootPerHour extends Speed {
 
 final class FootPerMinute extends Speed {
   const FootPerMinute([super.value]);
+
+  static const minorName = 'footPerMinute';
 
   @override
   FootPerMinute get _clone => FootPerMinute(value);
@@ -100,19 +107,19 @@ final class FootPerMinute extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'footPerMinute',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -120,6 +127,8 @@ final class FootPerMinute extends Speed {
 
 final class FootPerSecond extends Speed {
   const FootPerSecond([super.value]);
+
+  static const minorName = 'footPerSecond';
 
   @override
   FootPerSecond get _clone => FootPerSecond(value);
@@ -132,19 +141,19 @@ final class FootPerSecond extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'footPerSecond',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -152,6 +161,8 @@ final class FootPerSecond extends Speed {
 
 final class KilometerPerHour extends Speed {
   const KilometerPerHour([super.value]);
+
+  static const minorName = 'kilometerPerHour';
 
   @override
   KilometerPerHour get _clone => KilometerPerHour(value);
@@ -165,19 +176,19 @@ final class KilometerPerHour extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'kilometerPerHour',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -185,6 +196,8 @@ final class KilometerPerHour extends Speed {
 
 final class Knot extends Speed {
   const Knot([super.value]);
+
+  static const minorName = 'knot';
 
   @override
   Knot get _clone => Knot(value);
@@ -197,19 +210,19 @@ final class Knot extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'knot',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -217,6 +230,8 @@ final class Knot extends Speed {
 
 final class Light extends Speed {
   const Light([super.value]);
+
+  static const minorName = 'light';
 
   @override
   Light get _clone => Light(value);
@@ -229,19 +244,19 @@ final class Light extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'light',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -249,6 +264,8 @@ final class Light extends Speed {
 
 final class MeterPerHour extends Speed {
   const MeterPerHour([super.value]);
+
+  static const minorName = 'meterPerHour';
 
   @override
   MeterPerHour get _clone => MeterPerHour(value);
@@ -261,19 +278,19 @@ final class MeterPerHour extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'meterPerHour',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -281,6 +298,8 @@ final class MeterPerHour extends Speed {
 
 final class MeterPerMinute extends Speed {
   const MeterPerMinute([super.value]);
+
+  static const minorName = 'meterPerMinute';
 
   @override
   MeterPerMinute get _clone => MeterPerMinute(value);
@@ -293,19 +312,19 @@ final class MeterPerMinute extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'meterPerMinute',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -313,6 +332,8 @@ final class MeterPerMinute extends Speed {
 
 final class MeterPerSecond extends Speed {
   const MeterPerSecond([super.value]);
+
+  static const minorName = 'meterPerSecond';
 
   @override
   MeterPerSecond get _clone => MeterPerSecond(value);
@@ -325,19 +346,19 @@ final class MeterPerSecond extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'meterPerSecond',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -345,6 +366,8 @@ final class MeterPerSecond extends Speed {
 
 final class MilesPerHour extends Speed {
   const MilesPerHour([super.value]);
+
+  static const minorName = 'milesPerHour';
 
   @override
   MilesPerHour get _clone => MilesPerHour(value);
@@ -357,19 +380,19 @@ final class MilesPerHour extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'milesPerHour',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -377,6 +400,8 @@ final class MilesPerHour extends Speed {
 
 final class MilesPerMinute extends Speed {
   const MilesPerMinute([super.value]);
+
+  static const minorName = 'milesPerMinute';
 
   @override
   MilesPerMinute get _clone => MilesPerMinute(value);
@@ -389,19 +414,19 @@ final class MilesPerMinute extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'milesPerMinute',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -409,6 +434,8 @@ final class MilesPerMinute extends Speed {
 
 final class YardPerMinute extends Speed {
   const YardPerMinute([super.value]);
+
+  static const minorName = 'yardPerMinute';
 
   @override
   YardPerMinute get _clone => YardPerMinute(value);
@@ -421,19 +448,19 @@ final class YardPerMinute extends Speed {
 
   @override
   Speed fromJson(Map<String, dynamic> json) =>
-      checkJson('speed', json, speedUnitValues)
+      checkJson(majorName, json, speedUnitValues)
           ? speedUnitValues
-              .map[(json['speed'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['speed'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'speed': {
-          'unit': 'yardPerMinute',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -460,16 +487,16 @@ enum SpeedUnit {
 }
 
 const speedUnitValues = EnumValues({
-  'footPerHour': SpeedUnit.footPerHour,
-  'footPerMinute': SpeedUnit.footPerMinute,
-  'footPerSecond': SpeedUnit.footPerSecond,
-  'kilometerPerHour': SpeedUnit.kilometerPerHour,
-  'knot': SpeedUnit.knot,
-  'light': SpeedUnit.light,
-  'meterPerHour': SpeedUnit.meterPerHour,
-  'meterPerMinute': SpeedUnit.meterPerMinute,
-  'meterPerSecond': SpeedUnit.meterPerSecond,
-  'milesPerHour': SpeedUnit.milesPerHour,
-  'milesPerMinute': SpeedUnit.milesPerMinute,
-  'yardPerMinute': SpeedUnit.yardPerMinute,
+  FootPerHour.minorName: SpeedUnit.footPerHour,
+  FootPerMinute.minorName: SpeedUnit.footPerMinute,
+  FootPerSecond.minorName: SpeedUnit.footPerSecond,
+  KilometerPerHour.minorName: SpeedUnit.kilometerPerHour,
+  Knot.minorName: SpeedUnit.knot,
+  Light.minorName: SpeedUnit.light,
+  MeterPerHour.minorName: SpeedUnit.meterPerHour,
+  MeterPerMinute.minorName: SpeedUnit.meterPerMinute,
+  MeterPerSecond.minorName: SpeedUnit.meterPerSecond,
+  MilesPerHour.minorName: SpeedUnit.milesPerHour,
+  MilesPerMinute.minorName: SpeedUnit.milesPerMinute,
+  YardPerMinute.minorName: SpeedUnit.yardPerMinute,
 });

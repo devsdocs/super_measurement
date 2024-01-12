@@ -35,10 +35,15 @@ abstract final class Time extends Unit<Time> {
   Time get toWeek => _convertTo(const Week());
 
   Time get toYear => _convertTo(const Year());
+
+  @override
+  String get majorName => 'time';
 }
 
 final class Day extends Time {
   const Day([super.value]);
+
+  static const minorName = 'day';
 
   @override
   Day get _clone => Day(value);
@@ -51,19 +56,19 @@ final class Day extends Time {
 
   @override
   Time fromJson(Map<String, dynamic> json) =>
-      checkJson('time', json, timeUnitValues)
+      checkJson(majorName, json, timeUnitValues)
           ? timeUnitValues
-              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['time'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'time': {
-          'unit': 'day',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -71,6 +76,8 @@ final class Day extends Time {
 
 final class Hour extends Time {
   const Hour([super.value]);
+
+  static const minorName = 'hour';
 
   @override
   Hour get _clone => Hour(value);
@@ -83,19 +90,19 @@ final class Hour extends Time {
 
   @override
   Time fromJson(Map<String, dynamic> json) =>
-      checkJson('time', json, timeUnitValues)
+      checkJson(majorName, json, timeUnitValues)
           ? timeUnitValues
-              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['time'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'time': {
-          'unit': 'hour',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -103,6 +110,8 @@ final class Hour extends Time {
 
 final class Millisecond extends Time {
   const Millisecond([super.value]);
+
+  static const minorName = 'millisecond';
 
   @override
   Millisecond get _clone => Millisecond(value);
@@ -115,19 +124,19 @@ final class Millisecond extends Time {
 
   @override
   Time fromJson(Map<String, dynamic> json) =>
-      checkJson('time', json, timeUnitValues)
+      checkJson(majorName, json, timeUnitValues)
           ? timeUnitValues
-              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['time'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'time': {
-          'unit': 'millisecond',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -135,6 +144,8 @@ final class Millisecond extends Time {
 
 final class Minute extends Time {
   const Minute([super.value]);
+
+  static const minorName = 'minute';
 
   @override
   Minute get _clone => Minute(value);
@@ -147,19 +158,19 @@ final class Minute extends Time {
 
   @override
   Time fromJson(Map<String, dynamic> json) =>
-      checkJson('time', json, timeUnitValues)
+      checkJson(majorName, json, timeUnitValues)
           ? timeUnitValues
-              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['time'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'time': {
-          'unit': 'minute',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -167,6 +178,8 @@ final class Minute extends Time {
 
 final class Second extends Time {
   const Second([super.value]);
+
+  static const minorName = 'second';
 
   @override
   Second get _clone => Second(value);
@@ -179,19 +192,19 @@ final class Second extends Time {
 
   @override
   Time fromJson(Map<String, dynamic> json) =>
-      checkJson('time', json, timeUnitValues)
+      checkJson(majorName, json, timeUnitValues)
           ? timeUnitValues
-              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['time'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'time': {
-          'unit': 'second',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -199,6 +212,8 @@ final class Second extends Time {
 
 final class Week extends Time {
   const Week([super.value]);
+
+  static const minorName = 'week';
 
   @override
   Week get _clone => Week(value);
@@ -211,19 +226,19 @@ final class Week extends Time {
 
   @override
   Time fromJson(Map<String, dynamic> json) =>
-      checkJson('time', json, timeUnitValues)
+      checkJson(majorName, json, timeUnitValues)
           ? timeUnitValues
-              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['time'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'time': {
-          'unit': 'week',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -231,6 +246,8 @@ final class Week extends Time {
 
 final class Year extends Time {
   const Year([super.value]);
+
+  static const minorName = 'year';
 
   @override
   Year get _clone => Year(value);
@@ -243,19 +260,19 @@ final class Year extends Time {
 
   @override
   Time fromJson(Map<String, dynamic> json) =>
-      checkJson('time', json, timeUnitValues)
+      checkJson(majorName, json, timeUnitValues)
           ? timeUnitValues
-              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
               .withValue(
-                (json['time'] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)['value'] as num,
               )
               ._convertTo(this)
           : this;
 
   @override
   Map<String, dynamic> toJson() => {
-        'time': {
-          'unit': 'year',
+        majorName: {
+          'unit': minorName,
           'value': value,
         },
       };
@@ -277,11 +294,11 @@ enum TimeUnit {
 }
 
 const timeUnitValues = EnumValues({
-  'day': TimeUnit.day,
-  'hour': TimeUnit.hour,
-  'millisecond': TimeUnit.millisecond,
-  'minute': TimeUnit.minute,
-  'second': TimeUnit.second,
-  'week': TimeUnit.week,
-  'year': TimeUnit.year,
+  Day.minorName: TimeUnit.day,
+  Hour.minorName: TimeUnit.hour,
+  Millisecond.minorName: TimeUnit.millisecond,
+  Minute.minorName: TimeUnit.minute,
+  Second.minorName: TimeUnit.second,
+  Week.minorName: TimeUnit.week,
+  Year.minorName: TimeUnit.year,
 });

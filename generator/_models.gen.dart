@@ -63,6 +63,9 @@ void generateModels() {
       typeBuff.writeln();
     }
     typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln("  String get majorName => '${name.snakeCase}';");
+    typeBuff.writeln();
     typeBuff.writeln('  }');
     typeBuff.writeln();
     for (final e in unit.values.first) {
@@ -70,6 +73,8 @@ void generateModels() {
       final unitProps = e.values.first;
       typeBuff.writeln('final class $unitType extends $name {');
       typeBuff.writeln('  const $unitType([super.value]);');
+      typeBuff.writeln();
+      typeBuff.writeln("  static const minorName = '${unitType.snakeCase}';");
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       typeBuff.writeln('  $unitType get _clone => $unitType(value);');
@@ -87,14 +92,14 @@ void generateModels() {
         '  $name fromJson(Map<String,dynamic> json) =>',
       );
       typeBuff.writeln(
-        "checkJson('${name.snakeCase}',json, $enumValuesSymbol) ? $enumValuesSymbol.map[(json['${name.snakeCase}'] as Map<String, dynamic>)['unit']]!.construct.withValue((json['${name.snakeCase}'] as Map<String, dynamic>)['value'] as num,)._convertTo(this) : this;",
+        "checkJson(majorName,json, $enumValuesSymbol) ? $enumValuesSymbol.map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct.withValue((json[majorName] as Map<String, dynamic>)['value'] as num,)._convertTo(this) : this;",
       );
 
       typeBuff.writeln();
 
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        "  Map<String, dynamic> toJson() => {'${name.snakeCase}' :{'unit': '${unitType.snakeCase}','value': value,},};",
+        "  Map<String, dynamic> toJson() => {majorName :{'unit': minorName,'value': value,},};",
       );
       typeBuff.writeln('}');
       typeBuff.writeln();
@@ -117,7 +122,7 @@ void generateModels() {
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(
-        "'${unitType.snakeCase}': $enumSymbol.${unitType.snakeCase},",
+        '$unitType.minorName: $enumSymbol.${unitType.snakeCase},',
       );
     }
     typeBuff.writeln('});');

@@ -11,6 +11,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   String get symbol;
 
+  String get majorName;
+
   T withValue([num? value]);
 
   T fromJson(Map<String, dynamic> json);
