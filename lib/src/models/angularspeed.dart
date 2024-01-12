@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [RevolutionPerDay], [RevolutionPerHour], [RevolutionPerMinute],
 /// [RevolutionPerSecond]
 abstract final class AngularSpeed extends Unit<AngularSpeed> {
-  const AngularSpeed([super.val]);
+  const AngularSpeed([super.value]);
 
   @override
   AnchorRatio<AngularSpeed> get _anchorRatio => (
@@ -61,15 +61,15 @@ abstract final class AngularSpeed extends Unit<AngularSpeed> {
 }
 
 final class DegreePerDay extends AngularSpeed {
-  const DegreePerDay([super.val]);
+  const DegreePerDay([super.value]);
 
   static const minorName = 'degreePerDay';
 
   @override
-  DegreePerDay get _clone => DegreePerDay(val);
+  DegreePerDay get _clone => DegreePerDay(value);
 
   @override
-  DegreePerDay withValue([num? val]) => DegreePerDay(val ?? this.val);
+  DegreePerDay withValue([num? val]) => DegreePerDay(val ?? value);
 
   @override
   String get symbol => '°/d';
@@ -89,21 +89,21 @@ final class DegreePerDay extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class DegreePerHour extends AngularSpeed {
-  const DegreePerHour([super.val]);
+  const DegreePerHour([super.value]);
 
   static const minorName = 'degreePerHour';
 
   @override
-  DegreePerHour get _clone => DegreePerHour(val);
+  DegreePerHour get _clone => DegreePerHour(value);
 
   @override
-  DegreePerHour withValue([num? val]) => DegreePerHour(val ?? this.val);
+  DegreePerHour withValue([num? val]) => DegreePerHour(val ?? value);
 
   @override
   String get symbol => '°/h';
@@ -123,21 +123,21 @@ final class DegreePerHour extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class DegreePerMinute extends AngularSpeed {
-  const DegreePerMinute([super.val]);
+  const DegreePerMinute([super.value]);
 
   static const minorName = 'degreePerMinute';
 
   @override
-  DegreePerMinute get _clone => DegreePerMinute(val);
+  DegreePerMinute get _clone => DegreePerMinute(value);
 
   @override
-  DegreePerMinute withValue([num? val]) => DegreePerMinute(val ?? this.val);
+  DegreePerMinute withValue([num? val]) => DegreePerMinute(val ?? value);
 
   @override
   String get symbol => '°/min';
@@ -157,21 +157,21 @@ final class DegreePerMinute extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class DegreePerSecond extends AngularSpeed {
-  const DegreePerSecond([super.val]);
+  const DegreePerSecond([super.value]);
 
   static const minorName = 'degreePerSecond';
 
   @override
-  DegreePerSecond get _clone => DegreePerSecond(val);
+  DegreePerSecond get _clone => DegreePerSecond(value);
 
   @override
-  DegreePerSecond withValue([num? val]) => DegreePerSecond(val ?? this.val);
+  DegreePerSecond withValue([num? val]) => DegreePerSecond(val ?? value);
 
   @override
   String get symbol => '°/s';
@@ -191,21 +191,21 @@ final class DegreePerSecond extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class RadianPerDay extends AngularSpeed {
-  const RadianPerDay([super.val]);
+  const RadianPerDay([super.value]);
 
   static const minorName = 'radianPerDay';
 
   @override
-  RadianPerDay get _clone => RadianPerDay(val);
+  RadianPerDay get _clone => RadianPerDay(value);
 
   @override
-  RadianPerDay withValue([num? val]) => RadianPerDay(val ?? this.val);
+  RadianPerDay withValue([num? val]) => RadianPerDay(val ?? value);
 
   @override
   String get symbol => 'rad/d';
@@ -225,21 +225,21 @@ final class RadianPerDay extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class RadianPerHour extends AngularSpeed {
-  const RadianPerHour([super.val]);
+  const RadianPerHour([super.value]);
 
   static const minorName = 'radianPerHour';
 
   @override
-  RadianPerHour get _clone => RadianPerHour(val);
+  RadianPerHour get _clone => RadianPerHour(value);
 
   @override
-  RadianPerHour withValue([num? val]) => RadianPerHour(val ?? this.val);
+  RadianPerHour withValue([num? val]) => RadianPerHour(val ?? value);
 
   @override
   String get symbol => 'rad/h';
@@ -259,21 +259,21 @@ final class RadianPerHour extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class RadianPerMinute extends AngularSpeed {
-  const RadianPerMinute([super.val]);
+  const RadianPerMinute([super.value]);
 
   static const minorName = 'radianPerMinute';
 
   @override
-  RadianPerMinute get _clone => RadianPerMinute(val);
+  RadianPerMinute get _clone => RadianPerMinute(value);
 
   @override
-  RadianPerMinute withValue([num? val]) => RadianPerMinute(val ?? this.val);
+  RadianPerMinute withValue([num? val]) => RadianPerMinute(val ?? value);
 
   @override
   String get symbol => 'rad/min';
@@ -293,21 +293,21 @@ final class RadianPerMinute extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class RadianPerSecond extends AngularSpeed {
-  const RadianPerSecond([super.val]);
+  const RadianPerSecond([super.value]);
 
   static const minorName = 'radianPerSecond';
 
   @override
-  RadianPerSecond get _clone => RadianPerSecond(val);
+  RadianPerSecond get _clone => RadianPerSecond(value);
 
   @override
-  RadianPerSecond withValue([num? val]) => RadianPerSecond(val ?? this.val);
+  RadianPerSecond withValue([num? val]) => RadianPerSecond(val ?? value);
 
   @override
   String get symbol => 'rad/s';
@@ -327,21 +327,21 @@ final class RadianPerSecond extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class RevolutionPerDay extends AngularSpeed {
-  const RevolutionPerDay([super.val]);
+  const RevolutionPerDay([super.value]);
 
   static const minorName = 'revolutionPerDay';
 
   @override
-  RevolutionPerDay get _clone => RevolutionPerDay(val);
+  RevolutionPerDay get _clone => RevolutionPerDay(value);
 
   @override
-  RevolutionPerDay withValue([num? val]) => RevolutionPerDay(val ?? this.val);
+  RevolutionPerDay withValue([num? val]) => RevolutionPerDay(val ?? value);
 
   @override
   String get symbol => 'rev/d';
@@ -361,21 +361,21 @@ final class RevolutionPerDay extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class RevolutionPerHour extends AngularSpeed {
-  const RevolutionPerHour([super.val]);
+  const RevolutionPerHour([super.value]);
 
   static const minorName = 'revolutionPerHour';
 
   @override
-  RevolutionPerHour get _clone => RevolutionPerHour(val);
+  RevolutionPerHour get _clone => RevolutionPerHour(value);
 
   @override
-  RevolutionPerHour withValue([num? val]) => RevolutionPerHour(val ?? this.val);
+  RevolutionPerHour withValue([num? val]) => RevolutionPerHour(val ?? value);
 
   @override
   String get symbol => 'rev/h';
@@ -395,22 +395,22 @@ final class RevolutionPerHour extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class RevolutionPerMinute extends AngularSpeed {
-  const RevolutionPerMinute([super.val]);
+  const RevolutionPerMinute([super.value]);
 
   static const minorName = 'revolutionPerMinute';
 
   @override
-  RevolutionPerMinute get _clone => RevolutionPerMinute(val);
+  RevolutionPerMinute get _clone => RevolutionPerMinute(value);
 
   @override
   RevolutionPerMinute withValue([num? val]) =>
-      RevolutionPerMinute(val ?? this.val);
+      RevolutionPerMinute(val ?? value);
 
   @override
   String get symbol => 'rev/min';
@@ -430,22 +430,22 @@ final class RevolutionPerMinute extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class RevolutionPerSecond extends AngularSpeed {
-  const RevolutionPerSecond([super.val]);
+  const RevolutionPerSecond([super.value]);
 
   static const minorName = 'revolutionPerSecond';
 
   @override
-  RevolutionPerSecond get _clone => RevolutionPerSecond(val);
+  RevolutionPerSecond get _clone => RevolutionPerSecond(value);
 
   @override
   RevolutionPerSecond withValue([num? val]) =>
-      RevolutionPerSecond(val ?? this.val);
+      RevolutionPerSecond(val ?? value);
 
   @override
   String get symbol => 'rev/s';
@@ -465,7 +465,7 @@ final class RevolutionPerSecond extends AngularSpeed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

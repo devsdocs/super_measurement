@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [Acres], [Hectares], [SquareCentimeters], [SquareFoot], [SquareInches],
 /// [SquareKilometers], [SquareMeters], [SquareMiles], [SquareYards]
 abstract final class Area extends Unit<Area> {
-  const Area([super.val]);
+  const Area([super.value]);
 
   @override
   AnchorRatio<Area> get _anchorRatio => (
@@ -48,15 +48,15 @@ abstract final class Area extends Unit<Area> {
 }
 
 final class Acres extends Area {
-  const Acres([super.val]);
+  const Acres([super.value]);
 
   static const minorName = 'acres';
 
   @override
-  Acres get _clone => Acres(val);
+  Acres get _clone => Acres(value);
 
   @override
-  Acres withValue([num? val]) => Acres(val ?? this.val);
+  Acres withValue([num? val]) => Acres(val ?? value);
 
   @override
   String get symbol => 'ac';
@@ -76,21 +76,21 @@ final class Acres extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Hectares extends Area {
-  const Hectares([super.val]);
+  const Hectares([super.value]);
 
   static const minorName = 'hectares';
 
   @override
-  Hectares get _clone => Hectares(val);
+  Hectares get _clone => Hectares(value);
 
   @override
-  Hectares withValue([num? val]) => Hectares(val ?? this.val);
+  Hectares withValue([num? val]) => Hectares(val ?? value);
 
   @override
   String get symbol => 'ha';
@@ -110,21 +110,21 @@ final class Hectares extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class SquareCentimeters extends Area {
-  const SquareCentimeters([super.val]);
+  const SquareCentimeters([super.value]);
 
   static const minorName = 'squareCentimeters';
 
   @override
-  SquareCentimeters get _clone => SquareCentimeters(val);
+  SquareCentimeters get _clone => SquareCentimeters(value);
 
   @override
-  SquareCentimeters withValue([num? val]) => SquareCentimeters(val ?? this.val);
+  SquareCentimeters withValue([num? val]) => SquareCentimeters(val ?? value);
 
   @override
   String get symbol => 'cm²';
@@ -144,21 +144,21 @@ final class SquareCentimeters extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class SquareFoot extends Area {
-  const SquareFoot([super.val]);
+  const SquareFoot([super.value]);
 
   static const minorName = 'squareFoot';
 
   @override
-  SquareFoot get _clone => SquareFoot(val);
+  SquareFoot get _clone => SquareFoot(value);
 
   @override
-  SquareFoot withValue([num? val]) => SquareFoot(val ?? this.val);
+  SquareFoot withValue([num? val]) => SquareFoot(val ?? value);
 
   @override
   String get symbol => 'ft²';
@@ -178,21 +178,21 @@ final class SquareFoot extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class SquareInches extends Area {
-  const SquareInches([super.val]);
+  const SquareInches([super.value]);
 
   static const minorName = 'squareInches';
 
   @override
-  SquareInches get _clone => SquareInches(val);
+  SquareInches get _clone => SquareInches(value);
 
   @override
-  SquareInches withValue([num? val]) => SquareInches(val ?? this.val);
+  SquareInches withValue([num? val]) => SquareInches(val ?? value);
 
   @override
   String get symbol => 'in²';
@@ -212,21 +212,21 @@ final class SquareInches extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class SquareKilometers extends Area {
-  const SquareKilometers([super.val]);
+  const SquareKilometers([super.value]);
 
   static const minorName = 'squareKilometers';
 
   @override
-  SquareKilometers get _clone => SquareKilometers(val);
+  SquareKilometers get _clone => SquareKilometers(value);
 
   @override
-  SquareKilometers withValue([num? val]) => SquareKilometers(val ?? this.val);
+  SquareKilometers withValue([num? val]) => SquareKilometers(val ?? value);
 
   @override
   String get symbol => 'km²';
@@ -246,21 +246,21 @@ final class SquareKilometers extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class SquareMeters extends Area {
-  const SquareMeters([super.val]);
+  const SquareMeters([super.value]);
 
   static const minorName = 'squareMeters';
 
   @override
-  SquareMeters get _clone => SquareMeters(val);
+  SquareMeters get _clone => SquareMeters(value);
 
   @override
-  SquareMeters withValue([num? val]) => SquareMeters(val ?? this.val);
+  SquareMeters withValue([num? val]) => SquareMeters(val ?? value);
 
   @override
   String get symbol => 'm²';
@@ -280,21 +280,21 @@ final class SquareMeters extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class SquareMiles extends Area {
-  const SquareMiles([super.val]);
+  const SquareMiles([super.value]);
 
   static const minorName = 'squareMiles';
 
   @override
-  SquareMiles get _clone => SquareMiles(val);
+  SquareMiles get _clone => SquareMiles(value);
 
   @override
-  SquareMiles withValue([num? val]) => SquareMiles(val ?? this.val);
+  SquareMiles withValue([num? val]) => SquareMiles(val ?? value);
 
   @override
   String get symbol => 'mi²';
@@ -314,21 +314,21 @@ final class SquareMiles extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class SquareYards extends Area {
-  const SquareYards([super.val]);
+  const SquareYards([super.value]);
 
   static const minorName = 'squareYards';
 
   @override
-  SquareYards get _clone => SquareYards(val);
+  SquareYards get _clone => SquareYards(value);
 
   @override
-  SquareYards withValue([num? val]) => SquareYards(val ?? this.val);
+  SquareYards withValue([num? val]) => SquareYards(val ?? value);
 
   @override
   String get symbol => 'yd²';
@@ -348,7 +348,7 @@ final class SquareYards extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

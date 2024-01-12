@@ -37,7 +37,7 @@ void generateModels() {
     typeBuff.writeln();
     typeBuff.writeln('abstract final class $name extends Unit<$name> {');
     typeBuff.writeln();
-    typeBuff.writeln('  const $name([super.val]);');
+    typeBuff.writeln('  const $name([super.value]);');
     typeBuff.writeln();
     typeBuff.writeln('  @override');
     typeBuff.writeln('  AnchorRatio<$name> get _anchorRatio => (');
@@ -72,16 +72,16 @@ void generateModels() {
       final unitType = e.keys.first;
       final unitProps = e.values.first;
       typeBuff.writeln('final class $unitType extends $name {');
-      typeBuff.writeln('  const $unitType([super.val]);');
+      typeBuff.writeln('  const $unitType([super.value]);');
       typeBuff.writeln();
       typeBuff.writeln("  static const minorName = '${unitType.snakeCase}';");
       typeBuff.writeln();
       typeBuff.writeln('  @override');
-      typeBuff.writeln('  $unitType get _clone => $unitType(val);');
+      typeBuff.writeln('  $unitType get _clone => $unitType(value);');
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        '  $unitType withValue([num? val]) => $unitType(val ?? this.val);',
+        '  $unitType withValue([num? val]) => $unitType(val ?? value);',
       );
       typeBuff.writeln();
       typeBuff.writeln('  @override');
@@ -99,7 +99,7 @@ void generateModels() {
 
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        '  Map<String, dynamic> toJson() => {majorName :{_unit: minorName,_value: val,},};',
+        '  Map<String, dynamic> toJson() => {majorName :{_unit: minorName,_value: value,},};',
       );
       typeBuff.writeln('}');
       typeBuff.writeln();

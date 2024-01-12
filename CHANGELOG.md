@@ -1,3 +1,6 @@
+## 1.0.14
+- Use `value` instead of `val`
+
 ## 1.0.13
 - Bug fix
 - More typesafe style

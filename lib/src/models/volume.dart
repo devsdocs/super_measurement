@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [CubicInches], [CubicMeters], [CubicYards], [GallonsImperial],
 /// [GallonsUS], [Liters], [Milliliters]
 abstract final class Volume extends Unit<Volume> {
-  const Volume([super.val]);
+  const Volume([super.value]);
 
   @override
   AnchorRatio<Volume> get _anchorRatio => (
@@ -55,15 +55,15 @@ abstract final class Volume extends Unit<Volume> {
 }
 
 final class BarrelsImperial extends Volume {
-  const BarrelsImperial([super.val]);
+  const BarrelsImperial([super.value]);
 
   static const minorName = 'barrelsImperial';
 
   @override
-  BarrelsImperial get _clone => BarrelsImperial(val);
+  BarrelsImperial get _clone => BarrelsImperial(value);
 
   @override
-  BarrelsImperial withValue([num? val]) => BarrelsImperial(val ?? this.val);
+  BarrelsImperial withValue([num? val]) => BarrelsImperial(val ?? value);
 
   @override
   String get symbol => 'bl';
@@ -83,21 +83,21 @@ final class BarrelsImperial extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class BarrelsUS extends Volume {
-  const BarrelsUS([super.val]);
+  const BarrelsUS([super.value]);
 
   static const minorName = 'barrelsUS';
 
   @override
-  BarrelsUS get _clone => BarrelsUS(val);
+  BarrelsUS get _clone => BarrelsUS(value);
 
   @override
-  BarrelsUS withValue([num? val]) => BarrelsUS(val ?? this.val);
+  BarrelsUS withValue([num? val]) => BarrelsUS(val ?? value);
 
   @override
   String get symbol => 'bl';
@@ -117,21 +117,21 @@ final class BarrelsUS extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class CubicCentimeters extends Volume {
-  const CubicCentimeters([super.val]);
+  const CubicCentimeters([super.value]);
 
   static const minorName = 'cubicCentimeters';
 
   @override
-  CubicCentimeters get _clone => CubicCentimeters(val);
+  CubicCentimeters get _clone => CubicCentimeters(value);
 
   @override
-  CubicCentimeters withValue([num? val]) => CubicCentimeters(val ?? this.val);
+  CubicCentimeters withValue([num? val]) => CubicCentimeters(val ?? value);
 
   @override
   String get symbol => 'cm³';
@@ -151,21 +151,21 @@ final class CubicCentimeters extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class CubicFoot extends Volume {
-  const CubicFoot([super.val]);
+  const CubicFoot([super.value]);
 
   static const minorName = 'cubicFoot';
 
   @override
-  CubicFoot get _clone => CubicFoot(val);
+  CubicFoot get _clone => CubicFoot(value);
 
   @override
-  CubicFoot withValue([num? val]) => CubicFoot(val ?? this.val);
+  CubicFoot withValue([num? val]) => CubicFoot(val ?? value);
 
   @override
   String get symbol => 'ft³';
@@ -185,21 +185,21 @@ final class CubicFoot extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class CubicInches extends Volume {
-  const CubicInches([super.val]);
+  const CubicInches([super.value]);
 
   static const minorName = 'cubicInches';
 
   @override
-  CubicInches get _clone => CubicInches(val);
+  CubicInches get _clone => CubicInches(value);
 
   @override
-  CubicInches withValue([num? val]) => CubicInches(val ?? this.val);
+  CubicInches withValue([num? val]) => CubicInches(val ?? value);
 
   @override
   String get symbol => 'in³';
@@ -219,21 +219,21 @@ final class CubicInches extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class CubicMeters extends Volume {
-  const CubicMeters([super.val]);
+  const CubicMeters([super.value]);
 
   static const minorName = 'cubicMeters';
 
   @override
-  CubicMeters get _clone => CubicMeters(val);
+  CubicMeters get _clone => CubicMeters(value);
 
   @override
-  CubicMeters withValue([num? val]) => CubicMeters(val ?? this.val);
+  CubicMeters withValue([num? val]) => CubicMeters(val ?? value);
 
   @override
   String get symbol => 'm³';
@@ -253,21 +253,21 @@ final class CubicMeters extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class CubicYards extends Volume {
-  const CubicYards([super.val]);
+  const CubicYards([super.value]);
 
   static const minorName = 'cubicYards';
 
   @override
-  CubicYards get _clone => CubicYards(val);
+  CubicYards get _clone => CubicYards(value);
 
   @override
-  CubicYards withValue([num? val]) => CubicYards(val ?? this.val);
+  CubicYards withValue([num? val]) => CubicYards(val ?? value);
 
   @override
   String get symbol => 'yd³';
@@ -287,21 +287,21 @@ final class CubicYards extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class GallonsImperial extends Volume {
-  const GallonsImperial([super.val]);
+  const GallonsImperial([super.value]);
 
   static const minorName = 'gallonsImperial';
 
   @override
-  GallonsImperial get _clone => GallonsImperial(val);
+  GallonsImperial get _clone => GallonsImperial(value);
 
   @override
-  GallonsImperial withValue([num? val]) => GallonsImperial(val ?? this.val);
+  GallonsImperial withValue([num? val]) => GallonsImperial(val ?? value);
 
   @override
   String get symbol => 'gal';
@@ -321,21 +321,21 @@ final class GallonsImperial extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class GallonsUS extends Volume {
-  const GallonsUS([super.val]);
+  const GallonsUS([super.value]);
 
   static const minorName = 'gallonsUS';
 
   @override
-  GallonsUS get _clone => GallonsUS(val);
+  GallonsUS get _clone => GallonsUS(value);
 
   @override
-  GallonsUS withValue([num? val]) => GallonsUS(val ?? this.val);
+  GallonsUS withValue([num? val]) => GallonsUS(val ?? value);
 
   @override
   String get symbol => 'gal';
@@ -355,21 +355,21 @@ final class GallonsUS extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Liters extends Volume {
-  const Liters([super.val]);
+  const Liters([super.value]);
 
   static const minorName = 'liters';
 
   @override
-  Liters get _clone => Liters(val);
+  Liters get _clone => Liters(value);
 
   @override
-  Liters withValue([num? val]) => Liters(val ?? this.val);
+  Liters withValue([num? val]) => Liters(val ?? value);
 
   @override
   String get symbol => 'L';
@@ -389,21 +389,21 @@ final class Liters extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Milliliters extends Volume {
-  const Milliliters([super.val]);
+  const Milliliters([super.value]);
 
   static const minorName = 'milliliters';
 
   @override
-  Milliliters get _clone => Milliliters(val);
+  Milliliters get _clone => Milliliters(value);
 
   @override
-  Milliliters withValue([num? val]) => Milliliters(val ?? this.val);
+  Milliliters withValue([num? val]) => Milliliters(val ?? value);
 
   @override
   String get symbol => 'mL';
@@ -423,7 +423,7 @@ final class Milliliters extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [Centimeters], [Feet], [Furlongs], [Inches], [Kilometers], [Meters],
 /// [Miles], [Millimeters], [NauticalMiles], [Yards]
 abstract final class Length extends Unit<Length> {
-  const Length([super.val]);
+  const Length([super.value]);
 
   @override
   AnchorRatio<Length> get _anchorRatio => (
@@ -51,15 +51,15 @@ abstract final class Length extends Unit<Length> {
 }
 
 final class Centimeters extends Length {
-  const Centimeters([super.val]);
+  const Centimeters([super.value]);
 
   static const minorName = 'centimeters';
 
   @override
-  Centimeters get _clone => Centimeters(val);
+  Centimeters get _clone => Centimeters(value);
 
   @override
-  Centimeters withValue([num? val]) => Centimeters(val ?? this.val);
+  Centimeters withValue([num? val]) => Centimeters(val ?? value);
 
   @override
   String get symbol => 'cm';
@@ -79,21 +79,21 @@ final class Centimeters extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Feet extends Length {
-  const Feet([super.val]);
+  const Feet([super.value]);
 
   static const minorName = 'feet';
 
   @override
-  Feet get _clone => Feet(val);
+  Feet get _clone => Feet(value);
 
   @override
-  Feet withValue([num? val]) => Feet(val ?? this.val);
+  Feet withValue([num? val]) => Feet(val ?? value);
 
   @override
   String get symbol => 'ft';
@@ -113,21 +113,21 @@ final class Feet extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Furlongs extends Length {
-  const Furlongs([super.val]);
+  const Furlongs([super.value]);
 
   static const minorName = 'furlongs';
 
   @override
-  Furlongs get _clone => Furlongs(val);
+  Furlongs get _clone => Furlongs(value);
 
   @override
-  Furlongs withValue([num? val]) => Furlongs(val ?? this.val);
+  Furlongs withValue([num? val]) => Furlongs(val ?? value);
 
   @override
   String get symbol => 'fur';
@@ -147,21 +147,21 @@ final class Furlongs extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Inches extends Length {
-  const Inches([super.val]);
+  const Inches([super.value]);
 
   static const minorName = 'inches';
 
   @override
-  Inches get _clone => Inches(val);
+  Inches get _clone => Inches(value);
 
   @override
-  Inches withValue([num? val]) => Inches(val ?? this.val);
+  Inches withValue([num? val]) => Inches(val ?? value);
 
   @override
   String get symbol => 'in';
@@ -181,21 +181,21 @@ final class Inches extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Kilometers extends Length {
-  const Kilometers([super.val]);
+  const Kilometers([super.value]);
 
   static const minorName = 'kilometers';
 
   @override
-  Kilometers get _clone => Kilometers(val);
+  Kilometers get _clone => Kilometers(value);
 
   @override
-  Kilometers withValue([num? val]) => Kilometers(val ?? this.val);
+  Kilometers withValue([num? val]) => Kilometers(val ?? value);
 
   @override
   String get symbol => 'km';
@@ -215,21 +215,21 @@ final class Kilometers extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Meters extends Length {
-  const Meters([super.val]);
+  const Meters([super.value]);
 
   static const minorName = 'meters';
 
   @override
-  Meters get _clone => Meters(val);
+  Meters get _clone => Meters(value);
 
   @override
-  Meters withValue([num? val]) => Meters(val ?? this.val);
+  Meters withValue([num? val]) => Meters(val ?? value);
 
   @override
   String get symbol => 'm';
@@ -249,21 +249,21 @@ final class Meters extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Miles extends Length {
-  const Miles([super.val]);
+  const Miles([super.value]);
 
   static const minorName = 'miles';
 
   @override
-  Miles get _clone => Miles(val);
+  Miles get _clone => Miles(value);
 
   @override
-  Miles withValue([num? val]) => Miles(val ?? this.val);
+  Miles withValue([num? val]) => Miles(val ?? value);
 
   @override
   String get symbol => 'mi';
@@ -283,21 +283,21 @@ final class Miles extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Millimeters extends Length {
-  const Millimeters([super.val]);
+  const Millimeters([super.value]);
 
   static const minorName = 'millimeters';
 
   @override
-  Millimeters get _clone => Millimeters(val);
+  Millimeters get _clone => Millimeters(value);
 
   @override
-  Millimeters withValue([num? val]) => Millimeters(val ?? this.val);
+  Millimeters withValue([num? val]) => Millimeters(val ?? value);
 
   @override
   String get symbol => 'mm';
@@ -317,21 +317,21 @@ final class Millimeters extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class NauticalMiles extends Length {
-  const NauticalMiles([super.val]);
+  const NauticalMiles([super.value]);
 
   static const minorName = 'nauticalMiles';
 
   @override
-  NauticalMiles get _clone => NauticalMiles(val);
+  NauticalMiles get _clone => NauticalMiles(value);
 
   @override
-  NauticalMiles withValue([num? val]) => NauticalMiles(val ?? this.val);
+  NauticalMiles withValue([num? val]) => NauticalMiles(val ?? value);
 
   @override
   String get symbol => 'NM';
@@ -351,21 +351,21 @@ final class NauticalMiles extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Yards extends Length {
-  const Yards([super.val]);
+  const Yards([super.value]);
 
   static const minorName = 'yards';
 
   @override
-  Yards get _clone => Yards(val);
+  Yards get _clone => Yards(value);
 
   @override
-  Yards withValue([num? val]) => Yards(val ?? this.val);
+  Yards withValue([num? val]) => Yards(val ?? value);
 
   @override
   String get symbol => 'yd';
@@ -385,7 +385,7 @@ final class Yards extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

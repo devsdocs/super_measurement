@@ -4,7 +4,7 @@ part of '../../super_measurement.dart';
 ///
 /// [Horsepower],[Kilowatt],[Megawatt],[Milliwatt],[Watt]
 abstract final class Power extends Unit<Power> {
-  const Power([super.val]);
+  const Power([super.value]);
 
   @override
   AnchorRatio<Power> get _anchorRatio => (
@@ -35,15 +35,15 @@ abstract final class Power extends Unit<Power> {
 }
 
 final class Horsepower extends Power {
-  const Horsepower([super.val]);
+  const Horsepower([super.value]);
 
   static const minorName = 'horsepower';
 
   @override
-  Horsepower get _clone => Horsepower(val);
+  Horsepower get _clone => Horsepower(value);
 
   @override
-  Horsepower withValue([num? val]) => Horsepower(val ?? this.val);
+  Horsepower withValue([num? val]) => Horsepower(val ?? value);
 
   @override
   String get symbol => 'hp';
@@ -63,21 +63,21 @@ final class Horsepower extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Kilowatt extends Power {
-  const Kilowatt([super.val]);
+  const Kilowatt([super.value]);
 
   static const minorName = 'kilowatt';
 
   @override
-  Kilowatt get _clone => Kilowatt(val);
+  Kilowatt get _clone => Kilowatt(value);
 
   @override
-  Kilowatt withValue([num? val]) => Kilowatt(val ?? this.val);
+  Kilowatt withValue([num? val]) => Kilowatt(val ?? value);
 
   @override
   String get symbol => 'kW';
@@ -97,21 +97,21 @@ final class Kilowatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Megawatt extends Power {
-  const Megawatt([super.val]);
+  const Megawatt([super.value]);
 
   static const minorName = 'megawatt';
 
   @override
-  Megawatt get _clone => Megawatt(val);
+  Megawatt get _clone => Megawatt(value);
 
   @override
-  Megawatt withValue([num? val]) => Megawatt(val ?? this.val);
+  Megawatt withValue([num? val]) => Megawatt(val ?? value);
 
   @override
   String get symbol => 'MW';
@@ -131,21 +131,21 @@ final class Megawatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Milliwatt extends Power {
-  const Milliwatt([super.val]);
+  const Milliwatt([super.value]);
 
   static const minorName = 'milliwatt';
 
   @override
-  Milliwatt get _clone => Milliwatt(val);
+  Milliwatt get _clone => Milliwatt(value);
 
   @override
-  Milliwatt withValue([num? val]) => Milliwatt(val ?? this.val);
+  Milliwatt withValue([num? val]) => Milliwatt(val ?? value);
 
   @override
   String get symbol => 'mW';
@@ -165,21 +165,21 @@ final class Milliwatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Watt extends Power {
-  const Watt([super.val]);
+  const Watt([super.value]);
 
   static const minorName = 'watt';
 
   @override
-  Watt get _clone => Watt(val);
+  Watt get _clone => Watt(value);
 
   @override
-  Watt withValue([num? val]) => Watt(val ?? this.val);
+  Watt withValue([num? val]) => Watt(val ?? value);
 
   @override
   String get symbol => 'W';
@@ -199,7 +199,7 @@ final class Watt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

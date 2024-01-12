@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [Bar], [InchesOfMercury], [MillimeterOfMercury], [Pascal],
 /// [PoundsPerSquareInch], [StandardAtmosphere], [Torr]
 abstract final class Pressure extends Unit<Pressure> {
-  const Pressure([super.val]);
+  const Pressure([super.value]);
 
   @override
   AnchorRatio<Pressure> get _anchorRatio => (
@@ -42,15 +42,15 @@ abstract final class Pressure extends Unit<Pressure> {
 }
 
 final class Bar extends Pressure {
-  const Bar([super.val]);
+  const Bar([super.value]);
 
   static const minorName = 'bar';
 
   @override
-  Bar get _clone => Bar(val);
+  Bar get _clone => Bar(value);
 
   @override
-  Bar withValue([num? val]) => Bar(val ?? this.val);
+  Bar withValue([num? val]) => Bar(val ?? value);
 
   @override
   String get symbol => 'bar';
@@ -70,21 +70,21 @@ final class Bar extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class InchesOfMercury extends Pressure {
-  const InchesOfMercury([super.val]);
+  const InchesOfMercury([super.value]);
 
   static const minorName = 'inchesOfMercury';
 
   @override
-  InchesOfMercury get _clone => InchesOfMercury(val);
+  InchesOfMercury get _clone => InchesOfMercury(value);
 
   @override
-  InchesOfMercury withValue([num? val]) => InchesOfMercury(val ?? this.val);
+  InchesOfMercury withValue([num? val]) => InchesOfMercury(val ?? value);
 
   @override
   String get symbol => 'inHg';
@@ -104,22 +104,22 @@ final class InchesOfMercury extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class MillimeterOfMercury extends Pressure {
-  const MillimeterOfMercury([super.val]);
+  const MillimeterOfMercury([super.value]);
 
   static const minorName = 'millimeterOfMercury';
 
   @override
-  MillimeterOfMercury get _clone => MillimeterOfMercury(val);
+  MillimeterOfMercury get _clone => MillimeterOfMercury(value);
 
   @override
   MillimeterOfMercury withValue([num? val]) =>
-      MillimeterOfMercury(val ?? this.val);
+      MillimeterOfMercury(val ?? value);
 
   @override
   String get symbol => 'mmHg';
@@ -139,21 +139,21 @@ final class MillimeterOfMercury extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Pascal extends Pressure {
-  const Pascal([super.val]);
+  const Pascal([super.value]);
 
   static const minorName = 'pascal';
 
   @override
-  Pascal get _clone => Pascal(val);
+  Pascal get _clone => Pascal(value);
 
   @override
-  Pascal withValue([num? val]) => Pascal(val ?? this.val);
+  Pascal withValue([num? val]) => Pascal(val ?? value);
 
   @override
   String get symbol => 'Pa';
@@ -173,22 +173,22 @@ final class Pascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class PoundsPerSquareInch extends Pressure {
-  const PoundsPerSquareInch([super.val]);
+  const PoundsPerSquareInch([super.value]);
 
   static const minorName = 'poundsPerSquareInch';
 
   @override
-  PoundsPerSquareInch get _clone => PoundsPerSquareInch(val);
+  PoundsPerSquareInch get _clone => PoundsPerSquareInch(value);
 
   @override
   PoundsPerSquareInch withValue([num? val]) =>
-      PoundsPerSquareInch(val ?? this.val);
+      PoundsPerSquareInch(val ?? value);
 
   @override
   String get symbol => 'psi';
@@ -208,22 +208,21 @@ final class PoundsPerSquareInch extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class StandardAtmosphere extends Pressure {
-  const StandardAtmosphere([super.val]);
+  const StandardAtmosphere([super.value]);
 
   static const minorName = 'standardAtmosphere';
 
   @override
-  StandardAtmosphere get _clone => StandardAtmosphere(val);
+  StandardAtmosphere get _clone => StandardAtmosphere(value);
 
   @override
-  StandardAtmosphere withValue([num? val]) =>
-      StandardAtmosphere(val ?? this.val);
+  StandardAtmosphere withValue([num? val]) => StandardAtmosphere(val ?? value);
 
   @override
   String get symbol => 'atm';
@@ -243,21 +242,21 @@ final class StandardAtmosphere extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Torr extends Pressure {
-  const Torr([super.val]);
+  const Torr([super.value]);
 
   static const minorName = 'torr';
 
   @override
-  Torr get _clone => Torr(val);
+  Torr get _clone => Torr(value);
 
   @override
-  Torr withValue([num? val]) => Torr(val ?? this.val);
+  Torr withValue([num? val]) => Torr(val ?? value);
 
   @override
   String get symbol => 'Torr';
@@ -277,7 +276,7 @@ final class Torr extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

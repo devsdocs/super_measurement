@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [Carats], [Grams], [Kilograms], [Milligrams], [Ounces], [Pounds],
 /// [Quintal], [StoneUK], [TonUK], [TonUS], [Tonne]
 abstract final class Mass extends Unit<Mass> {
-  const Mass([super.val]);
+  const Mass([super.value]);
 
   @override
   AnchorRatio<Mass> get _anchorRatio => (
@@ -54,15 +54,15 @@ abstract final class Mass extends Unit<Mass> {
 }
 
 final class Carats extends Mass {
-  const Carats([super.val]);
+  const Carats([super.value]);
 
   static const minorName = 'carats';
 
   @override
-  Carats get _clone => Carats(val);
+  Carats get _clone => Carats(value);
 
   @override
-  Carats withValue([num? val]) => Carats(val ?? this.val);
+  Carats withValue([num? val]) => Carats(val ?? value);
 
   @override
   String get symbol => 'CD';
@@ -82,21 +82,21 @@ final class Carats extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Grams extends Mass {
-  const Grams([super.val]);
+  const Grams([super.value]);
 
   static const minorName = 'grams';
 
   @override
-  Grams get _clone => Grams(val);
+  Grams get _clone => Grams(value);
 
   @override
-  Grams withValue([num? val]) => Grams(val ?? this.val);
+  Grams withValue([num? val]) => Grams(val ?? value);
 
   @override
   String get symbol => 'g';
@@ -116,21 +116,21 @@ final class Grams extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Kilograms extends Mass {
-  const Kilograms([super.val]);
+  const Kilograms([super.value]);
 
   static const minorName = 'kilograms';
 
   @override
-  Kilograms get _clone => Kilograms(val);
+  Kilograms get _clone => Kilograms(value);
 
   @override
-  Kilograms withValue([num? val]) => Kilograms(val ?? this.val);
+  Kilograms withValue([num? val]) => Kilograms(val ?? value);
 
   @override
   String get symbol => 'kg';
@@ -150,21 +150,21 @@ final class Kilograms extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Milligrams extends Mass {
-  const Milligrams([super.val]);
+  const Milligrams([super.value]);
 
   static const minorName = 'milligrams';
 
   @override
-  Milligrams get _clone => Milligrams(val);
+  Milligrams get _clone => Milligrams(value);
 
   @override
-  Milligrams withValue([num? val]) => Milligrams(val ?? this.val);
+  Milligrams withValue([num? val]) => Milligrams(val ?? value);
 
   @override
   String get symbol => 'mg';
@@ -184,21 +184,21 @@ final class Milligrams extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Ounces extends Mass {
-  const Ounces([super.val]);
+  const Ounces([super.value]);
 
   static const minorName = 'ounces';
 
   @override
-  Ounces get _clone => Ounces(val);
+  Ounces get _clone => Ounces(value);
 
   @override
-  Ounces withValue([num? val]) => Ounces(val ?? this.val);
+  Ounces withValue([num? val]) => Ounces(val ?? value);
 
   @override
   String get symbol => 'oz';
@@ -218,21 +218,21 @@ final class Ounces extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Pounds extends Mass {
-  const Pounds([super.val]);
+  const Pounds([super.value]);
 
   static const minorName = 'pounds';
 
   @override
-  Pounds get _clone => Pounds(val);
+  Pounds get _clone => Pounds(value);
 
   @override
-  Pounds withValue([num? val]) => Pounds(val ?? this.val);
+  Pounds withValue([num? val]) => Pounds(val ?? value);
 
   @override
   String get symbol => 'lb';
@@ -252,21 +252,21 @@ final class Pounds extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Quintal extends Mass {
-  const Quintal([super.val]);
+  const Quintal([super.value]);
 
   static const minorName = 'quintal';
 
   @override
-  Quintal get _clone => Quintal(val);
+  Quintal get _clone => Quintal(value);
 
   @override
-  Quintal withValue([num? val]) => Quintal(val ?? this.val);
+  Quintal withValue([num? val]) => Quintal(val ?? value);
 
   @override
   String get symbol => 'q';
@@ -286,21 +286,21 @@ final class Quintal extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class StoneUK extends Mass {
-  const StoneUK([super.val]);
+  const StoneUK([super.value]);
 
   static const minorName = 'stoneUK';
 
   @override
-  StoneUK get _clone => StoneUK(val);
+  StoneUK get _clone => StoneUK(value);
 
   @override
-  StoneUK withValue([num? val]) => StoneUK(val ?? this.val);
+  StoneUK withValue([num? val]) => StoneUK(val ?? value);
 
   @override
   String get symbol => 'st';
@@ -320,21 +320,21 @@ final class StoneUK extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class TonUK extends Mass {
-  const TonUK([super.val]);
+  const TonUK([super.value]);
 
   static const minorName = 'tonUK';
 
   @override
-  TonUK get _clone => TonUK(val);
+  TonUK get _clone => TonUK(value);
 
   @override
-  TonUK withValue([num? val]) => TonUK(val ?? this.val);
+  TonUK withValue([num? val]) => TonUK(val ?? value);
 
   @override
   String get symbol => 'ton';
@@ -354,21 +354,21 @@ final class TonUK extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class TonUS extends Mass {
-  const TonUS([super.val]);
+  const TonUS([super.value]);
 
   static const minorName = 'tonUS';
 
   @override
-  TonUS get _clone => TonUS(val);
+  TonUS get _clone => TonUS(value);
 
   @override
-  TonUS withValue([num? val]) => TonUS(val ?? this.val);
+  TonUS withValue([num? val]) => TonUS(val ?? value);
 
   @override
   String get symbol => 'ton';
@@ -388,21 +388,21 @@ final class TonUS extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Tonne extends Mass {
-  const Tonne([super.val]);
+  const Tonne([super.value]);
 
   static const minorName = 'tonne';
 
   @override
-  Tonne get _clone => Tonne(val);
+  Tonne get _clone => Tonne(value);
 
   @override
-  Tonne withValue([num? val]) => Tonne(val ?? this.val);
+  Tonne withValue([num? val]) => Tonne(val ?? value);
 
   @override
   String get symbol => 'ton';
@@ -422,7 +422,7 @@ final class Tonne extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

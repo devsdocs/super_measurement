@@ -4,7 +4,7 @@ part of '../../super_measurement.dart';
 ///
 /// [Day],[Hour],[Millisecond],[Minute],[Second],[Week],[Year]
 abstract final class Time extends Unit<Time> {
-  const Time([super.val]);
+  const Time([super.value]);
 
   @override
   AnchorRatio<Time> get _anchorRatio => (
@@ -41,15 +41,15 @@ abstract final class Time extends Unit<Time> {
 }
 
 final class Day extends Time {
-  const Day([super.val]);
+  const Day([super.value]);
 
   static const minorName = 'day';
 
   @override
-  Day get _clone => Day(val);
+  Day get _clone => Day(value);
 
   @override
-  Day withValue([num? val]) => Day(val ?? this.val);
+  Day withValue([num? val]) => Day(val ?? value);
 
   @override
   String get symbol => 'd';
@@ -69,21 +69,21 @@ final class Day extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Hour extends Time {
-  const Hour([super.val]);
+  const Hour([super.value]);
 
   static const minorName = 'hour';
 
   @override
-  Hour get _clone => Hour(val);
+  Hour get _clone => Hour(value);
 
   @override
-  Hour withValue([num? val]) => Hour(val ?? this.val);
+  Hour withValue([num? val]) => Hour(val ?? value);
 
   @override
   String get symbol => 'h';
@@ -103,21 +103,21 @@ final class Hour extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Millisecond extends Time {
-  const Millisecond([super.val]);
+  const Millisecond([super.value]);
 
   static const minorName = 'millisecond';
 
   @override
-  Millisecond get _clone => Millisecond(val);
+  Millisecond get _clone => Millisecond(value);
 
   @override
-  Millisecond withValue([num? val]) => Millisecond(val ?? this.val);
+  Millisecond withValue([num? val]) => Millisecond(val ?? value);
 
   @override
   String get symbol => 'ms';
@@ -137,21 +137,21 @@ final class Millisecond extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Minute extends Time {
-  const Minute([super.val]);
+  const Minute([super.value]);
 
   static const minorName = 'minute';
 
   @override
-  Minute get _clone => Minute(val);
+  Minute get _clone => Minute(value);
 
   @override
-  Minute withValue([num? val]) => Minute(val ?? this.val);
+  Minute withValue([num? val]) => Minute(val ?? value);
 
   @override
   String get symbol => 'm';
@@ -171,21 +171,21 @@ final class Minute extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Second extends Time {
-  const Second([super.val]);
+  const Second([super.value]);
 
   static const minorName = 'second';
 
   @override
-  Second get _clone => Second(val);
+  Second get _clone => Second(value);
 
   @override
-  Second withValue([num? val]) => Second(val ?? this.val);
+  Second withValue([num? val]) => Second(val ?? value);
 
   @override
   String get symbol => 's';
@@ -205,21 +205,21 @@ final class Second extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Week extends Time {
-  const Week([super.val]);
+  const Week([super.value]);
 
   static const minorName = 'week';
 
   @override
-  Week get _clone => Week(val);
+  Week get _clone => Week(value);
 
   @override
-  Week withValue([num? val]) => Week(val ?? this.val);
+  Week withValue([num? val]) => Week(val ?? value);
 
   @override
   String get symbol => 'wk';
@@ -239,21 +239,21 @@ final class Week extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Year extends Time {
-  const Year([super.val]);
+  const Year([super.value]);
 
   static const minorName = 'year';
 
   @override
-  Year get _clone => Year(val);
+  Year get _clone => Year(value);
 
   @override
-  Year withValue([num? val]) => Year(val ?? this.val);
+  Year withValue([num? val]) => Year(val ?? value);
 
   @override
   String get symbol => 'y';
@@ -273,7 +273,7 @@ final class Year extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [ElectronVolt], [GigaJoule], [Joule], [KiloJoule], [KilowattHour],
 /// [MegaJoule], [MegawattHour], [WattHour]
 abstract final class Energy extends Unit<Energy> {
-  const Energy([super.val]);
+  const Energy([super.value]);
 
   @override
   AnchorRatio<Energy> get _anchorRatio => (
@@ -56,16 +56,16 @@ abstract final class Energy extends Unit<Energy> {
 }
 
 final class CalorieInternational extends Energy {
-  const CalorieInternational([super.val]);
+  const CalorieInternational([super.value]);
 
   static const minorName = 'calorieInternational';
 
   @override
-  CalorieInternational get _clone => CalorieInternational(val);
+  CalorieInternational get _clone => CalorieInternational(value);
 
   @override
   CalorieInternational withValue([num? val]) =>
-      CalorieInternational(val ?? this.val);
+      CalorieInternational(val ?? value);
 
   @override
   String get symbol => 'cal';
@@ -85,22 +85,21 @@ final class CalorieInternational extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class CalorieNutritional extends Energy {
-  const CalorieNutritional([super.val]);
+  const CalorieNutritional([super.value]);
 
   static const minorName = 'calorieNutritional';
 
   @override
-  CalorieNutritional get _clone => CalorieNutritional(val);
+  CalorieNutritional get _clone => CalorieNutritional(value);
 
   @override
-  CalorieNutritional withValue([num? val]) =>
-      CalorieNutritional(val ?? this.val);
+  CalorieNutritional withValue([num? val]) => CalorieNutritional(val ?? value);
 
   @override
   String get symbol => 'cal';
@@ -120,22 +119,22 @@ final class CalorieNutritional extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class CalorieThermochemical extends Energy {
-  const CalorieThermochemical([super.val]);
+  const CalorieThermochemical([super.value]);
 
   static const minorName = 'calorieThermochemical';
 
   @override
-  CalorieThermochemical get _clone => CalorieThermochemical(val);
+  CalorieThermochemical get _clone => CalorieThermochemical(value);
 
   @override
   CalorieThermochemical withValue([num? val]) =>
-      CalorieThermochemical(val ?? this.val);
+      CalorieThermochemical(val ?? value);
 
   @override
   String get symbol => 'cal';
@@ -155,21 +154,21 @@ final class CalorieThermochemical extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class ElectronVolt extends Energy {
-  const ElectronVolt([super.val]);
+  const ElectronVolt([super.value]);
 
   static const minorName = 'electronVolt';
 
   @override
-  ElectronVolt get _clone => ElectronVolt(val);
+  ElectronVolt get _clone => ElectronVolt(value);
 
   @override
-  ElectronVolt withValue([num? val]) => ElectronVolt(val ?? this.val);
+  ElectronVolt withValue([num? val]) => ElectronVolt(val ?? value);
 
   @override
   String get symbol => 'eV';
@@ -189,21 +188,21 @@ final class ElectronVolt extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class GigaJoule extends Energy {
-  const GigaJoule([super.val]);
+  const GigaJoule([super.value]);
 
   static const minorName = 'gigaJoule';
 
   @override
-  GigaJoule get _clone => GigaJoule(val);
+  GigaJoule get _clone => GigaJoule(value);
 
   @override
-  GigaJoule withValue([num? val]) => GigaJoule(val ?? this.val);
+  GigaJoule withValue([num? val]) => GigaJoule(val ?? value);
 
   @override
   String get symbol => 'GJ';
@@ -223,21 +222,21 @@ final class GigaJoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Joule extends Energy {
-  const Joule([super.val]);
+  const Joule([super.value]);
 
   static const minorName = 'joule';
 
   @override
-  Joule get _clone => Joule(val);
+  Joule get _clone => Joule(value);
 
   @override
-  Joule withValue([num? val]) => Joule(val ?? this.val);
+  Joule withValue([num? val]) => Joule(val ?? value);
 
   @override
   String get symbol => 'J';
@@ -257,21 +256,21 @@ final class Joule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class KiloJoule extends Energy {
-  const KiloJoule([super.val]);
+  const KiloJoule([super.value]);
 
   static const minorName = 'kiloJoule';
 
   @override
-  KiloJoule get _clone => KiloJoule(val);
+  KiloJoule get _clone => KiloJoule(value);
 
   @override
-  KiloJoule withValue([num? val]) => KiloJoule(val ?? this.val);
+  KiloJoule withValue([num? val]) => KiloJoule(val ?? value);
 
   @override
   String get symbol => 'kJ';
@@ -291,21 +290,21 @@ final class KiloJoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class KilowattHour extends Energy {
-  const KilowattHour([super.val]);
+  const KilowattHour([super.value]);
 
   static const minorName = 'kilowattHour';
 
   @override
-  KilowattHour get _clone => KilowattHour(val);
+  KilowattHour get _clone => KilowattHour(value);
 
   @override
-  KilowattHour withValue([num? val]) => KilowattHour(val ?? this.val);
+  KilowattHour withValue([num? val]) => KilowattHour(val ?? value);
 
   @override
   String get symbol => 'kWh';
@@ -325,21 +324,21 @@ final class KilowattHour extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class MegaJoule extends Energy {
-  const MegaJoule([super.val]);
+  const MegaJoule([super.value]);
 
   static const minorName = 'megaJoule';
 
   @override
-  MegaJoule get _clone => MegaJoule(val);
+  MegaJoule get _clone => MegaJoule(value);
 
   @override
-  MegaJoule withValue([num? val]) => MegaJoule(val ?? this.val);
+  MegaJoule withValue([num? val]) => MegaJoule(val ?? value);
 
   @override
   String get symbol => 'MJ';
@@ -359,21 +358,21 @@ final class MegaJoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class MegawattHour extends Energy {
-  const MegawattHour([super.val]);
+  const MegawattHour([super.value]);
 
   static const minorName = 'megawattHour';
 
   @override
-  MegawattHour get _clone => MegawattHour(val);
+  MegawattHour get _clone => MegawattHour(value);
 
   @override
-  MegawattHour withValue([num? val]) => MegawattHour(val ?? this.val);
+  MegawattHour withValue([num? val]) => MegawattHour(val ?? value);
 
   @override
   String get symbol => 'MWh';
@@ -393,21 +392,21 @@ final class MegawattHour extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class WattHour extends Energy {
-  const WattHour([super.val]);
+  const WattHour([super.value]);
 
   static const minorName = 'wattHour';
 
   @override
-  WattHour get _clone => WattHour(val);
+  WattHour get _clone => WattHour(value);
 
   @override
-  WattHour withValue([num? val]) => WattHour(val ?? this.val);
+  WattHour withValue([num? val]) => WattHour(val ?? value);
 
   @override
   String get symbol => 'Wh';
@@ -427,7 +426,7 @@ final class WattHour extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }

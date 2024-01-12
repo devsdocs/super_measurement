@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [Knot], [Light], [MeterPerHour], [MeterPerMinute], [MeterPerSecond],
 /// [MilesPerHour], [MilesPerMinute], [YardPerMinute]
 abstract final class Speed extends Unit<Speed> {
-  const Speed([super.val]);
+  const Speed([super.value]);
 
   @override
   AnchorRatio<Speed> get _anchorRatio => (
@@ -58,15 +58,15 @@ abstract final class Speed extends Unit<Speed> {
 }
 
 final class FootPerHour extends Speed {
-  const FootPerHour([super.val]);
+  const FootPerHour([super.value]);
 
   static const minorName = 'footPerHour';
 
   @override
-  FootPerHour get _clone => FootPerHour(val);
+  FootPerHour get _clone => FootPerHour(value);
 
   @override
-  FootPerHour withValue([num? val]) => FootPerHour(val ?? this.val);
+  FootPerHour withValue([num? val]) => FootPerHour(val ?? value);
 
   @override
   String get symbol => 'ft/h';
@@ -86,21 +86,21 @@ final class FootPerHour extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class FootPerMinute extends Speed {
-  const FootPerMinute([super.val]);
+  const FootPerMinute([super.value]);
 
   static const minorName = 'footPerMinute';
 
   @override
-  FootPerMinute get _clone => FootPerMinute(val);
+  FootPerMinute get _clone => FootPerMinute(value);
 
   @override
-  FootPerMinute withValue([num? val]) => FootPerMinute(val ?? this.val);
+  FootPerMinute withValue([num? val]) => FootPerMinute(val ?? value);
 
   @override
   String get symbol => 'ft/min';
@@ -120,21 +120,21 @@ final class FootPerMinute extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class FootPerSecond extends Speed {
-  const FootPerSecond([super.val]);
+  const FootPerSecond([super.value]);
 
   static const minorName = 'footPerSecond';
 
   @override
-  FootPerSecond get _clone => FootPerSecond(val);
+  FootPerSecond get _clone => FootPerSecond(value);
 
   @override
-  FootPerSecond withValue([num? val]) => FootPerSecond(val ?? this.val);
+  FootPerSecond withValue([num? val]) => FootPerSecond(val ?? value);
 
   @override
   String get symbol => 'ft/s';
@@ -154,21 +154,21 @@ final class FootPerSecond extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class KilometerPerHour extends Speed {
-  const KilometerPerHour([super.val]);
+  const KilometerPerHour([super.value]);
 
   static const minorName = 'kilometerPerHour';
 
   @override
-  KilometerPerHour get _clone => KilometerPerHour(val);
+  KilometerPerHour get _clone => KilometerPerHour(value);
 
   @override
-  KilometerPerHour withValue([num? val]) => KilometerPerHour(val ?? this.val);
+  KilometerPerHour withValue([num? val]) => KilometerPerHour(val ?? value);
 
   @override
   String get symbol => 'km/h';
@@ -188,21 +188,21 @@ final class KilometerPerHour extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Knot extends Speed {
-  const Knot([super.val]);
+  const Knot([super.value]);
 
   static const minorName = 'knot';
 
   @override
-  Knot get _clone => Knot(val);
+  Knot get _clone => Knot(value);
 
   @override
-  Knot withValue([num? val]) => Knot(val ?? this.val);
+  Knot withValue([num? val]) => Knot(val ?? value);
 
   @override
   String get symbol => 'kn';
@@ -222,21 +222,21 @@ final class Knot extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class Light extends Speed {
-  const Light([super.val]);
+  const Light([super.value]);
 
   static const minorName = 'light';
 
   @override
-  Light get _clone => Light(val);
+  Light get _clone => Light(value);
 
   @override
-  Light withValue([num? val]) => Light(val ?? this.val);
+  Light withValue([num? val]) => Light(val ?? value);
 
   @override
   String get symbol => 'c';
@@ -256,21 +256,21 @@ final class Light extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class MeterPerHour extends Speed {
-  const MeterPerHour([super.val]);
+  const MeterPerHour([super.value]);
 
   static const minorName = 'meterPerHour';
 
   @override
-  MeterPerHour get _clone => MeterPerHour(val);
+  MeterPerHour get _clone => MeterPerHour(value);
 
   @override
-  MeterPerHour withValue([num? val]) => MeterPerHour(val ?? this.val);
+  MeterPerHour withValue([num? val]) => MeterPerHour(val ?? value);
 
   @override
   String get symbol => 'm/h';
@@ -290,21 +290,21 @@ final class MeterPerHour extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class MeterPerMinute extends Speed {
-  const MeterPerMinute([super.val]);
+  const MeterPerMinute([super.value]);
 
   static const minorName = 'meterPerMinute';
 
   @override
-  MeterPerMinute get _clone => MeterPerMinute(val);
+  MeterPerMinute get _clone => MeterPerMinute(value);
 
   @override
-  MeterPerMinute withValue([num? val]) => MeterPerMinute(val ?? this.val);
+  MeterPerMinute withValue([num? val]) => MeterPerMinute(val ?? value);
 
   @override
   String get symbol => 'm/min';
@@ -324,21 +324,21 @@ final class MeterPerMinute extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class MeterPerSecond extends Speed {
-  const MeterPerSecond([super.val]);
+  const MeterPerSecond([super.value]);
 
   static const minorName = 'meterPerSecond';
 
   @override
-  MeterPerSecond get _clone => MeterPerSecond(val);
+  MeterPerSecond get _clone => MeterPerSecond(value);
 
   @override
-  MeterPerSecond withValue([num? val]) => MeterPerSecond(val ?? this.val);
+  MeterPerSecond withValue([num? val]) => MeterPerSecond(val ?? value);
 
   @override
   String get symbol => 'm/s';
@@ -358,21 +358,21 @@ final class MeterPerSecond extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class MilesPerHour extends Speed {
-  const MilesPerHour([super.val]);
+  const MilesPerHour([super.value]);
 
   static const minorName = 'milesPerHour';
 
   @override
-  MilesPerHour get _clone => MilesPerHour(val);
+  MilesPerHour get _clone => MilesPerHour(value);
 
   @override
-  MilesPerHour withValue([num? val]) => MilesPerHour(val ?? this.val);
+  MilesPerHour withValue([num? val]) => MilesPerHour(val ?? value);
 
   @override
   String get symbol => 'mi/h';
@@ -392,21 +392,21 @@ final class MilesPerHour extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class MilesPerMinute extends Speed {
-  const MilesPerMinute([super.val]);
+  const MilesPerMinute([super.value]);
 
   static const minorName = 'milesPerMinute';
 
   @override
-  MilesPerMinute get _clone => MilesPerMinute(val);
+  MilesPerMinute get _clone => MilesPerMinute(value);
 
   @override
-  MilesPerMinute withValue([num? val]) => MilesPerMinute(val ?? this.val);
+  MilesPerMinute withValue([num? val]) => MilesPerMinute(val ?? value);
 
   @override
   String get symbol => 'mi/min';
@@ -426,21 +426,21 @@ final class MilesPerMinute extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
 
 final class YardPerMinute extends Speed {
-  const YardPerMinute([super.val]);
+  const YardPerMinute([super.value]);
 
   static const minorName = 'yardPerMinute';
 
   @override
-  YardPerMinute get _clone => YardPerMinute(val);
+  YardPerMinute get _clone => YardPerMinute(value);
 
   @override
-  YardPerMinute withValue([num? val]) => YardPerMinute(val ?? this.val);
+  YardPerMinute withValue([num? val]) => YardPerMinute(val ?? value);
 
   @override
   String get symbol => 'yd/min';
@@ -460,7 +460,7 @@ final class YardPerMinute extends Speed {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
-          _value: val,
+          _value: value,
         },
       };
 }
