@@ -1,5 +1,6 @@
 ## 1.0.13
 - Bug fix
+- More typesafe style
 
 ## 1.0.12
 - Fix typo
