@@ -49,17 +49,16 @@ final class GigabitPerSecond extends DataTransfer {
   String get symbol => 'Gb/S';
 
   @override
-  DataTransfer fromJson(Map<String, dynamic> json) {
-    return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues
-            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  DataTransfer fromJson(Map<String, dynamic> json) =>
+      checkJson('dataTransfer', json, dataTransferUnitValues)
+          ? dataTransferUnitValues
+              .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -84,17 +83,16 @@ final class GigabytePerSecond extends DataTransfer {
   String get symbol => 'GB/S';
 
   @override
-  DataTransfer fromJson(Map<String, dynamic> json) {
-    return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues
-            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  DataTransfer fromJson(Map<String, dynamic> json) =>
+      checkJson('dataTransfer', json, dataTransferUnitValues)
+          ? dataTransferUnitValues
+              .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -119,17 +117,16 @@ final class KilobitPerSecond extends DataTransfer {
   String get symbol => 'kb/S';
 
   @override
-  DataTransfer fromJson(Map<String, dynamic> json) {
-    return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues
-            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  DataTransfer fromJson(Map<String, dynamic> json) =>
+      checkJson('dataTransfer', json, dataTransferUnitValues)
+          ? dataTransferUnitValues
+              .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -154,17 +151,16 @@ final class KilobytePerSecond extends DataTransfer {
   String get symbol => 'kB/S';
 
   @override
-  DataTransfer fromJson(Map<String, dynamic> json) {
-    return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues
-            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  DataTransfer fromJson(Map<String, dynamic> json) =>
+      checkJson('dataTransfer', json, dataTransferUnitValues)
+          ? dataTransferUnitValues
+              .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -189,17 +185,16 @@ final class MegabitPerSecond extends DataTransfer {
   String get symbol => 'Mb/S';
 
   @override
-  DataTransfer fromJson(Map<String, dynamic> json) {
-    return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues
-            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  DataTransfer fromJson(Map<String, dynamic> json) =>
+      checkJson('dataTransfer', json, dataTransferUnitValues)
+          ? dataTransferUnitValues
+              .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -224,17 +219,16 @@ final class MegabytePerSecond extends DataTransfer {
   String get symbol => 'MB/S';
 
   @override
-  DataTransfer fromJson(Map<String, dynamic> json) {
-    return checkJson('dataTransfer', json, dataTransferUnitValues)
-        ? dataTransferUnitValues
-            .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  DataTransfer fromJson(Map<String, dynamic> json) =>
+      checkJson('dataTransfer', json, dataTransferUnitValues)
+          ? dataTransferUnitValues
+              .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {

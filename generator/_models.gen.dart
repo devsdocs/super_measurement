@@ -84,12 +84,12 @@ void generateModels() {
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        '  $name fromJson(Map<String,dynamic> json) {',
+        '  $name fromJson(Map<String,dynamic> json) =>',
       );
       typeBuff.writeln(
-        "return checkJson('${name.snakeCase}',json, $enumValuesSymbol) ? $enumValuesSymbol.map[(json['${name.snakeCase}'] as Map<String, dynamic>)['unit']]!.construct.withValue((json['${name.snakeCase}'] as Map<String, dynamic>)['value'] as num,)._convertTo(this) : this;",
+        "checkJson('${name.snakeCase}',json, $enumValuesSymbol) ? $enumValuesSymbol.map[(json['${name.snakeCase}'] as Map<String, dynamic>)['unit']]!.construct.withValue((json['${name.snakeCase}'] as Map<String, dynamic>)['value'] as num,)._convertTo(this) : this;",
       );
-      typeBuff.writeln('}');
+
       typeBuff.writeln();
 
       typeBuff.writeln('  @override');

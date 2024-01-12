@@ -50,16 +50,15 @@ final class Day extends Time {
   String get symbol => 'd';
 
   @override
-  Time fromJson(Map<String, dynamic> json) {
-    return checkJson('time', json, timeUnitValues)
-        ? timeUnitValues
-            .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['time'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Time fromJson(Map<String, dynamic> json) =>
+      checkJson('time', json, timeUnitValues)
+          ? timeUnitValues
+              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['time'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -83,16 +82,15 @@ final class Hour extends Time {
   String get symbol => 'h';
 
   @override
-  Time fromJson(Map<String, dynamic> json) {
-    return checkJson('time', json, timeUnitValues)
-        ? timeUnitValues
-            .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['time'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Time fromJson(Map<String, dynamic> json) =>
+      checkJson('time', json, timeUnitValues)
+          ? timeUnitValues
+              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['time'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -116,16 +114,15 @@ final class Millisecond extends Time {
   String get symbol => 'ms';
 
   @override
-  Time fromJson(Map<String, dynamic> json) {
-    return checkJson('time', json, timeUnitValues)
-        ? timeUnitValues
-            .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['time'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Time fromJson(Map<String, dynamic> json) =>
+      checkJson('time', json, timeUnitValues)
+          ? timeUnitValues
+              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['time'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -149,16 +146,15 @@ final class Minute extends Time {
   String get symbol => 'm';
 
   @override
-  Time fromJson(Map<String, dynamic> json) {
-    return checkJson('time', json, timeUnitValues)
-        ? timeUnitValues
-            .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['time'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Time fromJson(Map<String, dynamic> json) =>
+      checkJson('time', json, timeUnitValues)
+          ? timeUnitValues
+              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['time'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -182,16 +178,15 @@ final class Second extends Time {
   String get symbol => 's';
 
   @override
-  Time fromJson(Map<String, dynamic> json) {
-    return checkJson('time', json, timeUnitValues)
-        ? timeUnitValues
-            .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['time'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Time fromJson(Map<String, dynamic> json) =>
+      checkJson('time', json, timeUnitValues)
+          ? timeUnitValues
+              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['time'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -215,16 +210,15 @@ final class Week extends Time {
   String get symbol => 'wk';
 
   @override
-  Time fromJson(Map<String, dynamic> json) {
-    return checkJson('time', json, timeUnitValues)
-        ? timeUnitValues
-            .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['time'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Time fromJson(Map<String, dynamic> json) =>
+      checkJson('time', json, timeUnitValues)
+          ? timeUnitValues
+              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['time'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -248,16 +242,15 @@ final class Year extends Time {
   String get symbol => 'y';
 
   @override
-  Time fromJson(Map<String, dynamic> json) {
-    return checkJson('time', json, timeUnitValues)
-        ? timeUnitValues
-            .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['time'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Time fromJson(Map<String, dynamic> json) =>
+      checkJson('time', json, timeUnitValues)
+          ? timeUnitValues
+              .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['time'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {

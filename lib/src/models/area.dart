@@ -57,16 +57,15 @@ final class Acres extends Area {
   String get symbol => 'ac';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -90,16 +89,15 @@ final class Hectares extends Area {
   String get symbol => 'ha';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -124,16 +122,15 @@ final class SquareCentimeters extends Area {
   String get symbol => 'cm²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -157,16 +154,15 @@ final class SquareFoot extends Area {
   String get symbol => 'ft²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -190,16 +186,15 @@ final class SquareInches extends Area {
   String get symbol => 'in²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -224,16 +219,15 @@ final class SquareKilometers extends Area {
   String get symbol => 'km²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -257,16 +251,15 @@ final class SquareMeters extends Area {
   String get symbol => 'm²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -290,16 +283,15 @@ final class SquareMiles extends Area {
   String get symbol => 'mi²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -323,16 +315,15 @@ final class SquareYards extends Area {
   String get symbol => 'yd²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) {
-    return checkJson('area', json, areaUnitValues)
-        ? areaUnitValues
-            .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['area'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Area fromJson(Map<String, dynamic> json) =>
+      checkJson('area', json, areaUnitValues)
+          ? areaUnitValues
+              .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['area'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {

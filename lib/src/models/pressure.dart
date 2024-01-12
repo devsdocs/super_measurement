@@ -51,16 +51,16 @@ final class Bar extends Pressure {
   String get symbol => 'bar';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) {
-    return checkJson('pressure', json, pressureUnitValues)
-        ? pressureUnitValues
-            .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['pressure'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Pressure fromJson(Map<String, dynamic> json) =>
+      checkJson('pressure', json, pressureUnitValues)
+          ? pressureUnitValues
+              .map[(json['pressure'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['pressure'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -85,16 +85,16 @@ final class InchesOfMercury extends Pressure {
   String get symbol => 'inHg';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) {
-    return checkJson('pressure', json, pressureUnitValues)
-        ? pressureUnitValues
-            .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['pressure'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Pressure fromJson(Map<String, dynamic> json) =>
+      checkJson('pressure', json, pressureUnitValues)
+          ? pressureUnitValues
+              .map[(json['pressure'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['pressure'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -119,16 +119,16 @@ final class MillimeterOfMercury extends Pressure {
   String get symbol => 'mmHg';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) {
-    return checkJson('pressure', json, pressureUnitValues)
-        ? pressureUnitValues
-            .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['pressure'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Pressure fromJson(Map<String, dynamic> json) =>
+      checkJson('pressure', json, pressureUnitValues)
+          ? pressureUnitValues
+              .map[(json['pressure'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['pressure'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -152,16 +152,16 @@ final class Pascal extends Pressure {
   String get symbol => 'Pa';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) {
-    return checkJson('pressure', json, pressureUnitValues)
-        ? pressureUnitValues
-            .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['pressure'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Pressure fromJson(Map<String, dynamic> json) =>
+      checkJson('pressure', json, pressureUnitValues)
+          ? pressureUnitValues
+              .map[(json['pressure'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['pressure'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -186,16 +186,16 @@ final class PoundsPerSquareInch extends Pressure {
   String get symbol => 'psi';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) {
-    return checkJson('pressure', json, pressureUnitValues)
-        ? pressureUnitValues
-            .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['pressure'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Pressure fromJson(Map<String, dynamic> json) =>
+      checkJson('pressure', json, pressureUnitValues)
+          ? pressureUnitValues
+              .map[(json['pressure'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['pressure'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -220,16 +220,16 @@ final class StandardAtmosphere extends Pressure {
   String get symbol => 'atm';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) {
-    return checkJson('pressure', json, pressureUnitValues)
-        ? pressureUnitValues
-            .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['pressure'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Pressure fromJson(Map<String, dynamic> json) =>
+      checkJson('pressure', json, pressureUnitValues)
+          ? pressureUnitValues
+              .map[(json['pressure'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['pressure'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -253,16 +253,16 @@ final class Torr extends Pressure {
   String get symbol => 'Torr';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) {
-    return checkJson('pressure', json, pressureUnitValues)
-        ? pressureUnitValues
-            .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['pressure'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Pressure fromJson(Map<String, dynamic> json) =>
+      checkJson('pressure', json, pressureUnitValues)
+          ? pressureUnitValues
+              .map[(json['pressure'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['pressure'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {

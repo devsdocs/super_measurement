@@ -70,17 +70,16 @@ final class DegreePerDay extends AngularSpeed {
   String get symbol => '°/d';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -104,17 +103,16 @@ final class DegreePerHour extends AngularSpeed {
   String get symbol => '°/h';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -139,17 +137,16 @@ final class DegreePerMinute extends AngularSpeed {
   String get symbol => '°/min';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -174,17 +171,16 @@ final class DegreePerSecond extends AngularSpeed {
   String get symbol => '°/s';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -208,17 +204,16 @@ final class RadianPerDay extends AngularSpeed {
   String get symbol => 'rad/d';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -242,17 +237,16 @@ final class RadianPerHour extends AngularSpeed {
   String get symbol => 'rad/h';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -277,17 +271,16 @@ final class RadianPerMinute extends AngularSpeed {
   String get symbol => 'rad/min';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -312,17 +305,16 @@ final class RadianPerSecond extends AngularSpeed {
   String get symbol => 'rad/s';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -347,17 +339,16 @@ final class RevolutionPerDay extends AngularSpeed {
   String get symbol => 'rev/d';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -382,17 +373,16 @@ final class RevolutionPerHour extends AngularSpeed {
   String get symbol => 'rev/h';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -417,17 +407,16 @@ final class RevolutionPerMinute extends AngularSpeed {
   String get symbol => 'rev/min';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -452,17 +441,16 @@ final class RevolutionPerSecond extends AngularSpeed {
   String get symbol => 'rev/s';
 
   @override
-  AngularSpeed fromJson(Map<String, dynamic> json) {
-    return checkJson('angularSpeed', json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues
-            .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
-            .construct
-            .withValue(
-              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  AngularSpeed fromJson(Map<String, dynamic> json) =>
+      checkJson('angularSpeed', json, angularSpeedUnitValues)
+          ? angularSpeedUnitValues
+              .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
+              .construct
+              .withValue(
+                (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {

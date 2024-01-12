@@ -44,16 +44,15 @@ final class Horsepower extends Power {
   String get symbol => 'hp';
 
   @override
-  Power fromJson(Map<String, dynamic> json) {
-    return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues
-            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['power'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Power fromJson(Map<String, dynamic> json) =>
+      checkJson('power', json, powerUnitValues)
+          ? powerUnitValues
+              .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['power'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -77,16 +76,15 @@ final class Kilowatt extends Power {
   String get symbol => 'kW';
 
   @override
-  Power fromJson(Map<String, dynamic> json) {
-    return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues
-            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['power'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Power fromJson(Map<String, dynamic> json) =>
+      checkJson('power', json, powerUnitValues)
+          ? powerUnitValues
+              .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['power'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -110,16 +108,15 @@ final class Megawatt extends Power {
   String get symbol => 'MW';
 
   @override
-  Power fromJson(Map<String, dynamic> json) {
-    return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues
-            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['power'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Power fromJson(Map<String, dynamic> json) =>
+      checkJson('power', json, powerUnitValues)
+          ? powerUnitValues
+              .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['power'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -143,16 +140,15 @@ final class Milliwatt extends Power {
   String get symbol => 'mW';
 
   @override
-  Power fromJson(Map<String, dynamic> json) {
-    return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues
-            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['power'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Power fromJson(Map<String, dynamic> json) =>
+      checkJson('power', json, powerUnitValues)
+          ? powerUnitValues
+              .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['power'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -176,16 +172,15 @@ final class Watt extends Power {
   String get symbol => 'W';
 
   @override
-  Power fromJson(Map<String, dynamic> json) {
-    return checkJson('power', json, powerUnitValues)
-        ? powerUnitValues
-            .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(
-              (json['power'] as Map<String, dynamic>)['value'] as num,
-            )
-            ._convertTo(this)
-        : this;
-  }
+  Power fromJson(Map<String, dynamic> json) =>
+      checkJson('power', json, powerUnitValues)
+          ? powerUnitValues
+              .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
+              .withValue(
+                (json['power'] as Map<String, dynamic>)['value'] as num,
+              )
+              ._convertTo(this)
+          : this;
 
   @override
   Map<String, dynamic> toJson() => {
