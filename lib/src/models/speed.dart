@@ -459,7 +459,7 @@ enum SpeedUnit {
   final Speed construct;
 }
 
-final speedUnitValues = EnumValues({
+const speedUnitValues = EnumValues({
   'footPerHour': SpeedUnit.footPerHour,
   'footPerMinute': SpeedUnit.footPerMinute,
   'footPerSecond': SpeedUnit.footPerSecond,

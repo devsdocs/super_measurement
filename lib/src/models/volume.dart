@@ -425,7 +425,7 @@ enum VolumeUnit {
   final Volume construct;
 }
 
-final volumeUnitValues = EnumValues({
+const volumeUnitValues = EnumValues({
   'barrelsImperial': VolumeUnit.barrelsImperial,
   'barrelsUS': VolumeUnit.barrelsUS,
   'cubicCentimeters': VolumeUnit.cubicCentimeters,

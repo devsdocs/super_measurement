@@ -204,7 +204,7 @@ enum PowerUnit {
   final Power construct;
 }
 
-final powerUnitValues = EnumValues({
+const powerUnitValues = EnumValues({
   'horsepower': PowerUnit.horsepower,
   'kilowatt': PowerUnit.kilowatt,
   'megawatt': PowerUnit.megawatt,

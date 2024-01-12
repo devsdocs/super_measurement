@@ -426,7 +426,7 @@ enum EnergyUnit {
   final Energy construct;
 }
 
-final energyUnitValues = EnumValues({
+const energyUnitValues = EnumValues({
   'calorieInternational': EnergyUnit.calorieInternational,
   'calorieNutritional': EnergyUnit.calorieNutritional,
   'calorieThermochemical': EnergyUnit.calorieThermochemical,

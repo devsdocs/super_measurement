@@ -385,7 +385,7 @@ enum LengthUnit {
   final Length construct;
 }
 
-final lengthUnitValues = EnumValues({
+const lengthUnitValues = EnumValues({
   'centimeters': LengthUnit.centimeters,
   'feet': LengthUnit.feet,
   'furlongs': LengthUnit.furlongs,

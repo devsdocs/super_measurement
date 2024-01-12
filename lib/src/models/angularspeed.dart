@@ -481,7 +481,7 @@ enum AngularSpeedUnit {
   final AngularSpeed construct;
 }
 
-final angularSpeedUnitValues = EnumValues({
+const angularSpeedUnitValues = EnumValues({
   'degreePerDay': AngularSpeedUnit.degreePerDay,
   'degreePerHour': AngularSpeedUnit.degreePerHour,
   'degreePerMinute': AngularSpeedUnit.degreePerMinute,

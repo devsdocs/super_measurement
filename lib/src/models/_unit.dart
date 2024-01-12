@@ -135,8 +135,8 @@ class ConversionRatio<T extends Unit<T>> {
 }
 
 class EnumValues<T> {
-  EnumValues(this.map);
-  Map<String, T> map;
+  const EnumValues(this.map);
+  final Map<String, T> map;
 
   Map<T, String> get reverse => map.map((k, v) => MapEntry(v, k));
 }

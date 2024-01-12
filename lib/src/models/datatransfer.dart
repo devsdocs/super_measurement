@@ -253,7 +253,7 @@ enum DataTransferUnit {
   final DataTransfer construct;
 }
 
-final dataTransferUnitValues = EnumValues({
+const dataTransferUnitValues = EnumValues({
   'gigabitPerSecond': DataTransferUnit.gigabitPerSecond,
   'gigabytePerSecond': DataTransferUnit.gigabytePerSecond,
   'kilobitPerSecond': DataTransferUnit.kilobitPerSecond,

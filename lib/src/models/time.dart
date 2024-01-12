@@ -276,7 +276,7 @@ enum TimeUnit {
   final Time construct;
 }
 
-final timeUnitValues = EnumValues({
+const timeUnitValues = EnumValues({
   'day': TimeUnit.day,
   'hour': TimeUnit.hour,
   'millisecond': TimeUnit.millisecond,

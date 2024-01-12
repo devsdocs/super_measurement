@@ -288,7 +288,7 @@ enum PressureUnit {
   final Pressure construct;
 }
 
-final pressureUnitValues = EnumValues({
+const pressureUnitValues = EnumValues({
   'bar': PressureUnit.bar,
   'inchesOfMercury': PressureUnit.inchesOfMercury,
   'millimeterOfMercury': PressureUnit.millimeterOfMercury,

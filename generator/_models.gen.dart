@@ -113,7 +113,7 @@ void generateModels() {
     typeBuff.writeln('}');
     typeBuff.writeln();
 
-    typeBuff.writeln('final $enumValuesSymbol = EnumValues({');
+    typeBuff.writeln('const $enumValuesSymbol = EnumValues({');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(

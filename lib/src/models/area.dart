@@ -351,7 +351,7 @@ enum AreaUnit {
   final Area construct;
 }
 
-final areaUnitValues = EnumValues({
+const areaUnitValues = EnumValues({
   'acres': AreaUnit.acres,
   'hectares': AreaUnit.hectares,
   'squareCentimeters': AreaUnit.squareCentimeters,

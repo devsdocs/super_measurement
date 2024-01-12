@@ -421,7 +421,7 @@ enum MassUnit {
   final Mass construct;
 }
 
-final massUnitValues = EnumValues({
+const massUnitValues = EnumValues({
   'carats': MassUnit.carats,
   'grams': MassUnit.grams,
   'kilograms': MassUnit.kilograms,

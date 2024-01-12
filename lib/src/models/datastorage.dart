@@ -395,7 +395,7 @@ enum DataStorageUnit {
   final DataStorage construct;
 }
 
-final dataStorageUnitValues = EnumValues({
+const dataStorageUnitValues = EnumValues({
   'bit': DataStorageUnit.bit,
   'byte': DataStorageUnit.byte,
   'gigabit': DataStorageUnit.gigabit,
