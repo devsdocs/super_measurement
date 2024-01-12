@@ -5,12 +5,12 @@ part of '../../super_measurement.dart';
 /// [GigabitPerSecond], [GigabytePerSecond], [KilobitPerSecond],
 /// [KilobytePerSecond], [MegabitPerSecond], [MegabytePerSecond]
 abstract final class DataTransfer extends Unit<DataTransfer> {
-  const DataTransfer([super.value]);
+  const DataTransfer([super.val]);
 
   @override
   AnchorRatio<DataTransfer> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: const ConversionRatio<DataTransfer>({
+        ratio: const _ConversionRatio<DataTransfer>({
           GigabitPerSecond: 0.0008,
           GigabytePerSecond: 0.001,
           KilobitPerSecond: 8000,
@@ -39,27 +39,26 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
 }
 
 final class GigabitPerSecond extends DataTransfer {
-  const GigabitPerSecond([super.value]);
+  const GigabitPerSecond([super.val]);
 
   static const minorName = 'gigabitPerSecond';
 
   @override
-  GigabitPerSecond get _clone => GigabitPerSecond(value);
+  GigabitPerSecond get _clone => GigabitPerSecond(val);
 
   @override
-  GigabitPerSecond withValue([num? value]) =>
-      GigabitPerSecond(value ?? this.value);
+  GigabitPerSecond withValue([num? val]) => GigabitPerSecond(val ?? this.val);
 
   @override
   String get symbol => 'Gb/S';
 
   @override
   DataTransfer fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataTransferUnitValues)
+      _checkJson(majorName, json, dataTransferUnitValues)
           ? dataTransferUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -67,34 +66,33 @@ final class GigabitPerSecond extends DataTransfer {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class GigabytePerSecond extends DataTransfer {
-  const GigabytePerSecond([super.value]);
+  const GigabytePerSecond([super.val]);
 
   static const minorName = 'gigabytePerSecond';
 
   @override
-  GigabytePerSecond get _clone => GigabytePerSecond(value);
+  GigabytePerSecond get _clone => GigabytePerSecond(val);
 
   @override
-  GigabytePerSecond withValue([num? value]) =>
-      GigabytePerSecond(value ?? this.value);
+  GigabytePerSecond withValue([num? val]) => GigabytePerSecond(val ?? this.val);
 
   @override
   String get symbol => 'GB/S';
 
   @override
   DataTransfer fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataTransferUnitValues)
+      _checkJson(majorName, json, dataTransferUnitValues)
           ? dataTransferUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -102,34 +100,33 @@ final class GigabytePerSecond extends DataTransfer {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class KilobitPerSecond extends DataTransfer {
-  const KilobitPerSecond([super.value]);
+  const KilobitPerSecond([super.val]);
 
   static const minorName = 'kilobitPerSecond';
 
   @override
-  KilobitPerSecond get _clone => KilobitPerSecond(value);
+  KilobitPerSecond get _clone => KilobitPerSecond(val);
 
   @override
-  KilobitPerSecond withValue([num? value]) =>
-      KilobitPerSecond(value ?? this.value);
+  KilobitPerSecond withValue([num? val]) => KilobitPerSecond(val ?? this.val);
 
   @override
   String get symbol => 'kb/S';
 
   @override
   DataTransfer fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataTransferUnitValues)
+      _checkJson(majorName, json, dataTransferUnitValues)
           ? dataTransferUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -137,34 +134,33 @@ final class KilobitPerSecond extends DataTransfer {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class KilobytePerSecond extends DataTransfer {
-  const KilobytePerSecond([super.value]);
+  const KilobytePerSecond([super.val]);
 
   static const minorName = 'kilobytePerSecond';
 
   @override
-  KilobytePerSecond get _clone => KilobytePerSecond(value);
+  KilobytePerSecond get _clone => KilobytePerSecond(val);
 
   @override
-  KilobytePerSecond withValue([num? value]) =>
-      KilobytePerSecond(value ?? this.value);
+  KilobytePerSecond withValue([num? val]) => KilobytePerSecond(val ?? this.val);
 
   @override
   String get symbol => 'kB/S';
 
   @override
   DataTransfer fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataTransferUnitValues)
+      _checkJson(majorName, json, dataTransferUnitValues)
           ? dataTransferUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -172,34 +168,33 @@ final class KilobytePerSecond extends DataTransfer {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class MegabitPerSecond extends DataTransfer {
-  const MegabitPerSecond([super.value]);
+  const MegabitPerSecond([super.val]);
 
   static const minorName = 'megabitPerSecond';
 
   @override
-  MegabitPerSecond get _clone => MegabitPerSecond(value);
+  MegabitPerSecond get _clone => MegabitPerSecond(val);
 
   @override
-  MegabitPerSecond withValue([num? value]) =>
-      MegabitPerSecond(value ?? this.value);
+  MegabitPerSecond withValue([num? val]) => MegabitPerSecond(val ?? this.val);
 
   @override
   String get symbol => 'Mb/S';
 
   @override
   DataTransfer fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataTransferUnitValues)
+      _checkJson(majorName, json, dataTransferUnitValues)
           ? dataTransferUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -207,34 +202,33 @@ final class MegabitPerSecond extends DataTransfer {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class MegabytePerSecond extends DataTransfer {
-  const MegabytePerSecond([super.value]);
+  const MegabytePerSecond([super.val]);
 
   static const minorName = 'megabytePerSecond';
 
   @override
-  MegabytePerSecond get _clone => MegabytePerSecond(value);
+  MegabytePerSecond get _clone => MegabytePerSecond(val);
 
   @override
-  MegabytePerSecond withValue([num? value]) =>
-      MegabytePerSecond(value ?? this.value);
+  MegabytePerSecond withValue([num? val]) => MegabytePerSecond(val ?? this.val);
 
   @override
   String get symbol => 'MB/S';
 
   @override
   DataTransfer fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataTransferUnitValues)
+      _checkJson(majorName, json, dataTransferUnitValues)
           ? dataTransferUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -242,8 +236,8 @@ final class MegabytePerSecond extends DataTransfer {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
@@ -262,7 +256,7 @@ enum DataTransferUnit {
   final DataTransfer construct;
 }
 
-const dataTransferUnitValues = EnumValues({
+const dataTransferUnitValues = _EnumValues({
   GigabitPerSecond.minorName: DataTransferUnit.gigabitPerSecond,
   GigabytePerSecond.minorName: DataTransferUnit.gigabytePerSecond,
   KilobitPerSecond.minorName: DataTransferUnit.kilobitPerSecond,

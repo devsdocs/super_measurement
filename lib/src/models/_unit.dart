@@ -1,9 +1,9 @@
 part of '../../super_measurement.dart';
 
 abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
-  const Unit([this.value = 0]);
+  const Unit([this.val = 0]);
 
-  final num? value;
+  final num? val;
 
   T get _clone;
 
@@ -13,7 +13,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   String get majorName;
 
-  T withValue([num? value]);
+  T withValue([num? val]);
 
   T fromJson(Map<String, dynamic> json);
 
@@ -23,9 +23,9 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   bool _convertAndCompare(String operator, T other) {
     final otherValue =
-        other._clone._convertTo(_anchor).withPrecision(Precision.nine).value;
+        other._clone._convertTo(_anchor).withPrecision(Precision.nine).val;
     final currentValue =
-        _clone._convertTo(_anchor).withPrecision(Precision.nine).value;
+        _clone._convertTo(_anchor).withPrecision(Precision.nine).val;
 
     if (operator == '==') {
       return currentValue == otherValue;
@@ -59,16 +59,16 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
       if (runtimeType == _anchorRatio.anchor) {
         conversionRatio = _anchorRatio.ratio.getRatio(other.runtimeType);
       } else {
-        final baseValue = value! / _anchorRatio.ratio.getRatio(runtimeType);
+        final baseValue = val! / _anchorRatio.ratio.getRatio(runtimeType);
         return _anchor.withValue(baseValue)._convertTo(other);
       }
     }
-    return (other as T).withValue(value! * conversionRatio);
+    return (other as T).withValue(val! * conversionRatio);
   }
 
   T operator +(T other) {
     if (other.runtimeType == runtimeType) {
-      return _clone.withValue(this.value! + other.value!);
+      return _clone.withValue(this.val! + other.val!);
     } else {
       return _convertAndCombine('+', other);
     }
@@ -76,57 +76,57 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T operator -(T other) {
     if (other.runtimeType == runtimeType) {
-      return _clone.withValue(this.value! - other.value!);
+      return _clone.withValue(this.val! - other.val!);
     } else {
       return _convertAndCombine('-', other);
     }
   }
 
   bool operator >=(T other) => runtimeType == other.runtimeType
-      ? this.value! >= other.value!
+      ? this.val! >= other.val!
       : _convertAndCompare('>=', other);
 
   bool operator >(T other) => runtimeType == other.runtimeType
-      ? this.value! > other.value!
+      ? this.val! > other.val!
       : _convertAndCompare('>', other);
 
   bool operator <=(T other) => runtimeType == other.runtimeType
-      ? this.value! <= other.value!
+      ? this.val! <= other.val!
       : _convertAndCompare('<=', other);
 
   bool operator <(T other) => runtimeType == other.runtimeType
-      ? this.value! < other.value!
+      ? this.val! < other.val!
       : _convertAndCompare('<', other);
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is T && runtimeType == other.runtimeType && value == other.value ||
+      other is T && runtimeType == other.runtimeType && val == other.val ||
       other is T && _convertAndCompare('==', other);
 
   @override
-  int get hashCode => value.hashCode;
+  int get hashCode => val.hashCode;
 
   @override
   int compareTo(T other) {
     if (runtimeType == other.runtimeType) {
-      return value!.compareTo(other.value!);
+      return val!.compareTo(other.val!);
     }
 
     final otherConvertTo = other._clone._convertTo(_anchor);
     final currentConvertTo = _clone._convertTo(_anchor);
-    return currentConvertTo.value!.compareTo(otherConvertTo.value!);
+    return currentConvertTo.val!.compareTo(otherConvertTo.val!);
   }
 
   @override
   String toString() {
-    final value = this.value!.toDouble().toIntIfTrue;
+    final value = this.val!.toDouble().toIntIfTrue;
     return '$value $runtimeType ($symbol)';
   }
 }
 
-class ConversionRatio<T extends Unit<T>> {
-  const ConversionRatio(this.ratios);
+class _ConversionRatio<T extends Unit<T>> {
+  const _ConversionRatio(this.ratios);
   final Map<Type, double> ratios;
 
   double getRatio(Type to) {
@@ -136,22 +136,29 @@ class ConversionRatio<T extends Unit<T>> {
   }
 }
 
-class EnumValues<T> {
-  const EnumValues(this.map);
+class _EnumValues<T> {
+  const _EnumValues(this.map);
   final Map<String, T> map;
 
   Map<T, String> get reverse => map.map((k, v) => MapEntry(v, k));
 }
 
-bool checkJson<T>(String key, Map<String, dynamic> json, EnumValues<T> enumV) {
+bool _checkJson<T>(
+  String key,
+  Map<String, dynamic> json,
+  _EnumValues<T> enumV,
+) {
   final map = json[key] as Map<String, dynamic>?;
 
   if (map != null &&
-      map['unit'] != null &&
-      map['value'] != null &&
-      enumV.map[map['unit']] != null) {
+      map[_unit] != null &&
+      map[_value] != null &&
+      enumV.map[map[_unit]] != null) {
     return true;
   }
 
   return false;
 }
+
+const _unit = 'unit';
+const _value = 'value';

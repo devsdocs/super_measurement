@@ -5,12 +5,12 @@ part of '../../super_measurement.dart';
 /// [Bit], [Byte], [Gigabit], [Gigabyte], [Kilobit], [Kilobyte], [Megabit],
 /// [Megabyte], [Terabit], [Terabyte]
 abstract final class DataStorage extends Unit<DataStorage> {
-  const DataStorage([super.value]);
+  const DataStorage([super.val]);
 
   @override
   AnchorRatio<DataStorage> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: const ConversionRatio<DataStorage>({
+        ratio: const _ConversionRatio<DataStorage>({
           Bit: 8589934592,
           Byte: 1073741824,
           Gigabit: 8,
@@ -51,26 +51,26 @@ abstract final class DataStorage extends Unit<DataStorage> {
 }
 
 final class Bit extends DataStorage {
-  const Bit([super.value]);
+  const Bit([super.val]);
 
   static const minorName = 'bit';
 
   @override
-  Bit get _clone => Bit(value);
+  Bit get _clone => Bit(val);
 
   @override
-  Bit withValue([num? value]) => Bit(value ?? this.value);
+  Bit withValue([num? val]) => Bit(val ?? this.val);
 
   @override
   String get symbol => 'b';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -78,33 +78,33 @@ final class Bit extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Byte extends DataStorage {
-  const Byte([super.value]);
+  const Byte([super.val]);
 
   static const minorName = 'byte';
 
   @override
-  Byte get _clone => Byte(value);
+  Byte get _clone => Byte(val);
 
   @override
-  Byte withValue([num? value]) => Byte(value ?? this.value);
+  Byte withValue([num? val]) => Byte(val ?? this.val);
 
   @override
   String get symbol => 'B';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -112,33 +112,33 @@ final class Byte extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Gigabit extends DataStorage {
-  const Gigabit([super.value]);
+  const Gigabit([super.val]);
 
   static const minorName = 'gigabit';
 
   @override
-  Gigabit get _clone => Gigabit(value);
+  Gigabit get _clone => Gigabit(val);
 
   @override
-  Gigabit withValue([num? value]) => Gigabit(value ?? this.value);
+  Gigabit withValue([num? val]) => Gigabit(val ?? this.val);
 
   @override
   String get symbol => 'Gb';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -146,33 +146,33 @@ final class Gigabit extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Gigabyte extends DataStorage {
-  const Gigabyte([super.value]);
+  const Gigabyte([super.val]);
 
   static const minorName = 'gigabyte';
 
   @override
-  Gigabyte get _clone => Gigabyte(value);
+  Gigabyte get _clone => Gigabyte(val);
 
   @override
-  Gigabyte withValue([num? value]) => Gigabyte(value ?? this.value);
+  Gigabyte withValue([num? val]) => Gigabyte(val ?? this.val);
 
   @override
   String get symbol => 'GB';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -180,33 +180,33 @@ final class Gigabyte extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Kilobit extends DataStorage {
-  const Kilobit([super.value]);
+  const Kilobit([super.val]);
 
   static const minorName = 'kilobit';
 
   @override
-  Kilobit get _clone => Kilobit(value);
+  Kilobit get _clone => Kilobit(val);
 
   @override
-  Kilobit withValue([num? value]) => Kilobit(value ?? this.value);
+  Kilobit withValue([num? val]) => Kilobit(val ?? this.val);
 
   @override
   String get symbol => 'kb';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -214,33 +214,33 @@ final class Kilobit extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Kilobyte extends DataStorage {
-  const Kilobyte([super.value]);
+  const Kilobyte([super.val]);
 
   static const minorName = 'kilobyte';
 
   @override
-  Kilobyte get _clone => Kilobyte(value);
+  Kilobyte get _clone => Kilobyte(val);
 
   @override
-  Kilobyte withValue([num? value]) => Kilobyte(value ?? this.value);
+  Kilobyte withValue([num? val]) => Kilobyte(val ?? this.val);
 
   @override
   String get symbol => 'kB';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -248,33 +248,33 @@ final class Kilobyte extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Megabit extends DataStorage {
-  const Megabit([super.value]);
+  const Megabit([super.val]);
 
   static const minorName = 'megabit';
 
   @override
-  Megabit get _clone => Megabit(value);
+  Megabit get _clone => Megabit(val);
 
   @override
-  Megabit withValue([num? value]) => Megabit(value ?? this.value);
+  Megabit withValue([num? val]) => Megabit(val ?? this.val);
 
   @override
   String get symbol => 'Mb';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -282,33 +282,33 @@ final class Megabit extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Megabyte extends DataStorage {
-  const Megabyte([super.value]);
+  const Megabyte([super.val]);
 
   static const minorName = 'megabyte';
 
   @override
-  Megabyte get _clone => Megabyte(value);
+  Megabyte get _clone => Megabyte(val);
 
   @override
-  Megabyte withValue([num? value]) => Megabyte(value ?? this.value);
+  Megabyte withValue([num? val]) => Megabyte(val ?? this.val);
 
   @override
   String get symbol => 'MB';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -316,33 +316,33 @@ final class Megabyte extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Terabit extends DataStorage {
-  const Terabit([super.value]);
+  const Terabit([super.val]);
 
   static const minorName = 'terabit';
 
   @override
-  Terabit get _clone => Terabit(value);
+  Terabit get _clone => Terabit(val);
 
   @override
-  Terabit withValue([num? value]) => Terabit(value ?? this.value);
+  Terabit withValue([num? val]) => Terabit(val ?? this.val);
 
   @override
   String get symbol => 'Tb';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -350,33 +350,33 @@ final class Terabit extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Terabyte extends DataStorage {
-  const Terabyte([super.value]);
+  const Terabyte([super.val]);
 
   static const minorName = 'terabyte';
 
   @override
-  Terabyte get _clone => Terabyte(value);
+  Terabyte get _clone => Terabyte(val);
 
   @override
-  Terabyte withValue([num? value]) => Terabyte(value ?? this.value);
+  Terabyte withValue([num? val]) => Terabyte(val ?? this.val);
 
   @override
   String get symbol => 'TB';
 
   @override
   DataStorage fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, dataStorageUnitValues)
+      _checkJson(majorName, json, dataStorageUnitValues)
           ? dataStorageUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -384,8 +384,8 @@ final class Terabyte extends DataStorage {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
@@ -408,7 +408,7 @@ enum DataStorageUnit {
   final DataStorage construct;
 }
 
-const dataStorageUnitValues = EnumValues({
+const dataStorageUnitValues = _EnumValues({
   Bit.minorName: DataStorageUnit.bit,
   Byte.minorName: DataStorageUnit.byte,
   Gigabit.minorName: DataStorageUnit.gigabit,

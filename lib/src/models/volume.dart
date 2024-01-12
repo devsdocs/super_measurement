@@ -6,12 +6,12 @@ part of '../../super_measurement.dart';
 /// [CubicInches], [CubicMeters], [CubicYards], [GallonsImperial],
 /// [GallonsUS], [Liters], [Milliliters]
 abstract final class Volume extends Unit<Volume> {
-  const Volume([super.value]);
+  const Volume([super.val]);
 
   @override
   AnchorRatio<Volume> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: const ConversionRatio<Volume>({
+        ratio: const _ConversionRatio<Volume>({
           BarrelsImperial: 6.1102568972,
           BarrelsUS: 8.3864143606,
           CubicCentimeters: 1000000,
@@ -55,27 +55,26 @@ abstract final class Volume extends Unit<Volume> {
 }
 
 final class BarrelsImperial extends Volume {
-  const BarrelsImperial([super.value]);
+  const BarrelsImperial([super.val]);
 
   static const minorName = 'barrelsImperial';
 
   @override
-  BarrelsImperial get _clone => BarrelsImperial(value);
+  BarrelsImperial get _clone => BarrelsImperial(val);
 
   @override
-  BarrelsImperial withValue([num? value]) =>
-      BarrelsImperial(value ?? this.value);
+  BarrelsImperial withValue([num? val]) => BarrelsImperial(val ?? this.val);
 
   @override
   String get symbol => 'bl';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -83,33 +82,33 @@ final class BarrelsImperial extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class BarrelsUS extends Volume {
-  const BarrelsUS([super.value]);
+  const BarrelsUS([super.val]);
 
   static const minorName = 'barrelsUS';
 
   @override
-  BarrelsUS get _clone => BarrelsUS(value);
+  BarrelsUS get _clone => BarrelsUS(val);
 
   @override
-  BarrelsUS withValue([num? value]) => BarrelsUS(value ?? this.value);
+  BarrelsUS withValue([num? val]) => BarrelsUS(val ?? this.val);
 
   @override
   String get symbol => 'bl';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -117,34 +116,33 @@ final class BarrelsUS extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class CubicCentimeters extends Volume {
-  const CubicCentimeters([super.value]);
+  const CubicCentimeters([super.val]);
 
   static const minorName = 'cubicCentimeters';
 
   @override
-  CubicCentimeters get _clone => CubicCentimeters(value);
+  CubicCentimeters get _clone => CubicCentimeters(val);
 
   @override
-  CubicCentimeters withValue([num? value]) =>
-      CubicCentimeters(value ?? this.value);
+  CubicCentimeters withValue([num? val]) => CubicCentimeters(val ?? this.val);
 
   @override
   String get symbol => 'cm³';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -152,33 +150,33 @@ final class CubicCentimeters extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class CubicFoot extends Volume {
-  const CubicFoot([super.value]);
+  const CubicFoot([super.val]);
 
   static const minorName = 'cubicFoot';
 
   @override
-  CubicFoot get _clone => CubicFoot(value);
+  CubicFoot get _clone => CubicFoot(val);
 
   @override
-  CubicFoot withValue([num? value]) => CubicFoot(value ?? this.value);
+  CubicFoot withValue([num? val]) => CubicFoot(val ?? this.val);
 
   @override
   String get symbol => 'ft³';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -186,33 +184,33 @@ final class CubicFoot extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class CubicInches extends Volume {
-  const CubicInches([super.value]);
+  const CubicInches([super.val]);
 
   static const minorName = 'cubicInches';
 
   @override
-  CubicInches get _clone => CubicInches(value);
+  CubicInches get _clone => CubicInches(val);
 
   @override
-  CubicInches withValue([num? value]) => CubicInches(value ?? this.value);
+  CubicInches withValue([num? val]) => CubicInches(val ?? this.val);
 
   @override
   String get symbol => 'in³';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -220,33 +218,33 @@ final class CubicInches extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class CubicMeters extends Volume {
-  const CubicMeters([super.value]);
+  const CubicMeters([super.val]);
 
   static const minorName = 'cubicMeters';
 
   @override
-  CubicMeters get _clone => CubicMeters(value);
+  CubicMeters get _clone => CubicMeters(val);
 
   @override
-  CubicMeters withValue([num? value]) => CubicMeters(value ?? this.value);
+  CubicMeters withValue([num? val]) => CubicMeters(val ?? this.val);
 
   @override
   String get symbol => 'm³';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -254,33 +252,33 @@ final class CubicMeters extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class CubicYards extends Volume {
-  const CubicYards([super.value]);
+  const CubicYards([super.val]);
 
   static const minorName = 'cubicYards';
 
   @override
-  CubicYards get _clone => CubicYards(value);
+  CubicYards get _clone => CubicYards(val);
 
   @override
-  CubicYards withValue([num? value]) => CubicYards(value ?? this.value);
+  CubicYards withValue([num? val]) => CubicYards(val ?? this.val);
 
   @override
   String get symbol => 'yd³';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -288,34 +286,33 @@ final class CubicYards extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class GallonsImperial extends Volume {
-  const GallonsImperial([super.value]);
+  const GallonsImperial([super.val]);
 
   static const minorName = 'gallonsImperial';
 
   @override
-  GallonsImperial get _clone => GallonsImperial(value);
+  GallonsImperial get _clone => GallonsImperial(val);
 
   @override
-  GallonsImperial withValue([num? value]) =>
-      GallonsImperial(value ?? this.value);
+  GallonsImperial withValue([num? val]) => GallonsImperial(val ?? this.val);
 
   @override
   String get symbol => 'gal';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -323,33 +320,33 @@ final class GallonsImperial extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class GallonsUS extends Volume {
-  const GallonsUS([super.value]);
+  const GallonsUS([super.val]);
 
   static const minorName = 'gallonsUS';
 
   @override
-  GallonsUS get _clone => GallonsUS(value);
+  GallonsUS get _clone => GallonsUS(val);
 
   @override
-  GallonsUS withValue([num? value]) => GallonsUS(value ?? this.value);
+  GallonsUS withValue([num? val]) => GallonsUS(val ?? this.val);
 
   @override
   String get symbol => 'gal';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -357,33 +354,33 @@ final class GallonsUS extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Liters extends Volume {
-  const Liters([super.value]);
+  const Liters([super.val]);
 
   static const minorName = 'liters';
 
   @override
-  Liters get _clone => Liters(value);
+  Liters get _clone => Liters(val);
 
   @override
-  Liters withValue([num? value]) => Liters(value ?? this.value);
+  Liters withValue([num? val]) => Liters(val ?? this.val);
 
   @override
   String get symbol => 'L';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -391,33 +388,33 @@ final class Liters extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Milliliters extends Volume {
-  const Milliliters([super.value]);
+  const Milliliters([super.val]);
 
   static const minorName = 'milliliters';
 
   @override
-  Milliliters get _clone => Milliliters(value);
+  Milliliters get _clone => Milliliters(val);
 
   @override
-  Milliliters withValue([num? value]) => Milliliters(value ?? this.value);
+  Milliliters withValue([num? val]) => Milliliters(val ?? this.val);
 
   @override
   String get symbol => 'mL';
 
   @override
   Volume fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, volumeUnitValues)
+      _checkJson(majorName, json, volumeUnitValues)
           ? volumeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -425,8 +422,8 @@ final class Milliliters extends Volume {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
@@ -450,7 +447,7 @@ enum VolumeUnit {
   final Volume construct;
 }
 
-const volumeUnitValues = EnumValues({
+const volumeUnitValues = _EnumValues({
   BarrelsImperial.minorName: VolumeUnit.barrelsImperial,
   BarrelsUS.minorName: VolumeUnit.barrelsUS,
   CubicCentimeters.minorName: VolumeUnit.cubicCentimeters,

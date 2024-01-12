@@ -5,12 +5,12 @@ part of '../../super_measurement.dart';
 /// [Acres], [Hectares], [SquareCentimeters], [SquareFoot], [SquareInches],
 /// [SquareKilometers], [SquareMeters], [SquareMiles], [SquareYards]
 abstract final class Area extends Unit<Area> {
-  const Area([super.value]);
+  const Area([super.val]);
 
   @override
   AnchorRatio<Area> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: const ConversionRatio<Area>({
+        ratio: const _ConversionRatio<Area>({
           Acres: 0.0002471054,
           Hectares: 0.0001,
           SquareCentimeters: 10000,
@@ -48,26 +48,26 @@ abstract final class Area extends Unit<Area> {
 }
 
 final class Acres extends Area {
-  const Acres([super.value]);
+  const Acres([super.val]);
 
   static const minorName = 'acres';
 
   @override
-  Acres get _clone => Acres(value);
+  Acres get _clone => Acres(val);
 
   @override
-  Acres withValue([num? value]) => Acres(value ?? this.value);
+  Acres withValue([num? val]) => Acres(val ?? this.val);
 
   @override
   String get symbol => 'ac';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -75,33 +75,33 @@ final class Acres extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class Hectares extends Area {
-  const Hectares([super.value]);
+  const Hectares([super.val]);
 
   static const minorName = 'hectares';
 
   @override
-  Hectares get _clone => Hectares(value);
+  Hectares get _clone => Hectares(val);
 
   @override
-  Hectares withValue([num? value]) => Hectares(value ?? this.value);
+  Hectares withValue([num? val]) => Hectares(val ?? this.val);
 
   @override
   String get symbol => 'ha';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -109,34 +109,33 @@ final class Hectares extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class SquareCentimeters extends Area {
-  const SquareCentimeters([super.value]);
+  const SquareCentimeters([super.val]);
 
   static const minorName = 'squareCentimeters';
 
   @override
-  SquareCentimeters get _clone => SquareCentimeters(value);
+  SquareCentimeters get _clone => SquareCentimeters(val);
 
   @override
-  SquareCentimeters withValue([num? value]) =>
-      SquareCentimeters(value ?? this.value);
+  SquareCentimeters withValue([num? val]) => SquareCentimeters(val ?? this.val);
 
   @override
   String get symbol => 'cm²';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -144,33 +143,33 @@ final class SquareCentimeters extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class SquareFoot extends Area {
-  const SquareFoot([super.value]);
+  const SquareFoot([super.val]);
 
   static const minorName = 'squareFoot';
 
   @override
-  SquareFoot get _clone => SquareFoot(value);
+  SquareFoot get _clone => SquareFoot(val);
 
   @override
-  SquareFoot withValue([num? value]) => SquareFoot(value ?? this.value);
+  SquareFoot withValue([num? val]) => SquareFoot(val ?? this.val);
 
   @override
   String get symbol => 'ft²';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -178,33 +177,33 @@ final class SquareFoot extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class SquareInches extends Area {
-  const SquareInches([super.value]);
+  const SquareInches([super.val]);
 
   static const minorName = 'squareInches';
 
   @override
-  SquareInches get _clone => SquareInches(value);
+  SquareInches get _clone => SquareInches(val);
 
   @override
-  SquareInches withValue([num? value]) => SquareInches(value ?? this.value);
+  SquareInches withValue([num? val]) => SquareInches(val ?? this.val);
 
   @override
   String get symbol => 'in²';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -212,34 +211,33 @@ final class SquareInches extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class SquareKilometers extends Area {
-  const SquareKilometers([super.value]);
+  const SquareKilometers([super.val]);
 
   static const minorName = 'squareKilometers';
 
   @override
-  SquareKilometers get _clone => SquareKilometers(value);
+  SquareKilometers get _clone => SquareKilometers(val);
 
   @override
-  SquareKilometers withValue([num? value]) =>
-      SquareKilometers(value ?? this.value);
+  SquareKilometers withValue([num? val]) => SquareKilometers(val ?? this.val);
 
   @override
   String get symbol => 'km²';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -247,33 +245,33 @@ final class SquareKilometers extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class SquareMeters extends Area {
-  const SquareMeters([super.value]);
+  const SquareMeters([super.val]);
 
   static const minorName = 'squareMeters';
 
   @override
-  SquareMeters get _clone => SquareMeters(value);
+  SquareMeters get _clone => SquareMeters(val);
 
   @override
-  SquareMeters withValue([num? value]) => SquareMeters(value ?? this.value);
+  SquareMeters withValue([num? val]) => SquareMeters(val ?? this.val);
 
   @override
   String get symbol => 'm²';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -281,33 +279,33 @@ final class SquareMeters extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class SquareMiles extends Area {
-  const SquareMiles([super.value]);
+  const SquareMiles([super.val]);
 
   static const minorName = 'squareMiles';
 
   @override
-  SquareMiles get _clone => SquareMiles(value);
+  SquareMiles get _clone => SquareMiles(val);
 
   @override
-  SquareMiles withValue([num? value]) => SquareMiles(value ?? this.value);
+  SquareMiles withValue([num? val]) => SquareMiles(val ?? this.val);
 
   @override
   String get symbol => 'mi²';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -315,33 +313,33 @@ final class SquareMiles extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
 
 final class SquareYards extends Area {
-  const SquareYards([super.value]);
+  const SquareYards([super.val]);
 
   static const minorName = 'squareYards';
 
   @override
-  SquareYards get _clone => SquareYards(value);
+  SquareYards get _clone => SquareYards(val);
 
   @override
-  SquareYards withValue([num? value]) => SquareYards(value ?? this.value);
+  SquareYards withValue([num? val]) => SquareYards(val ?? this.val);
 
   @override
   String get symbol => 'yd²';
 
   @override
   Area fromJson(Map<String, dynamic> json) =>
-      checkJson(majorName, json, areaUnitValues)
+      _checkJson(majorName, json, areaUnitValues)
           ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)['unit']]!.construct
+              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
               .withValue(
-                (json[majorName] as Map<String, dynamic>)['value'] as num,
+                (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
               ._convertTo(this)
           : this;
@@ -349,8 +347,8 @@ final class SquareYards extends Area {
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          'unit': minorName,
-          'value': value,
+          _unit: minorName,
+          _value: val,
         },
       };
 }
@@ -372,7 +370,7 @@ enum AreaUnit {
   final Area construct;
 }
 
-const areaUnitValues = EnumValues({
+const areaUnitValues = _EnumValues({
   Acres.minorName: AreaUnit.acres,
   Hectares.minorName: AreaUnit.hectares,
   SquareCentimeters.minorName: AreaUnit.squareCentimeters,

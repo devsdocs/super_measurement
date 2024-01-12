@@ -22,5 +22,5 @@ enum Precision {
 
 typedef AnchorRatio<T extends Unit<T>> = ({
   Type anchor,
-  ConversionRatio<T> ratio
+  _ConversionRatio<T> ratio
 });
