@@ -11,7 +11,7 @@ abstract final class Speed extends Unit<Speed> {
   @override
   AnchorRatio<Speed> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Speed>({
+        ratio: const ConversionRatio<Speed>({
           FootPerHour: 3280.8398950131,
           FootPerMinute: 54.6806649169,
           FootPerSecond: 0.9113444153,

@@ -42,7 +42,7 @@ void generateModels() {
     typeBuff.writeln('  @override');
     typeBuff.writeln('  AnchorRatio<$name> get _anchorRatio => (');
     typeBuff.writeln('        anchor: _anchor.runtimeType,');
-    typeBuff.writeln('        ratio: ConversionRatio<$name>({');
+    typeBuff.writeln('        ratio: const ConversionRatio<$name>({');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       final unitProps = e.values.first;

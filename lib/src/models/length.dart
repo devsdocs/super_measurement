@@ -10,7 +10,7 @@ abstract final class Length extends Unit<Length> {
   @override
   AnchorRatio<Length> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Length>({
+        ratio: const ConversionRatio<Length>({
           Centimeters: 100,
           Feet: 3.280839895,
           Furlongs: 0.004970969538,

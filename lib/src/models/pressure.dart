@@ -10,7 +10,7 @@ abstract final class Pressure extends Unit<Pressure> {
   @override
   AnchorRatio<Pressure> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Pressure>({
+        ratio: const ConversionRatio<Pressure>({
           Bar: 1.01325,
           InchesOfMercury: 29.9212555797,
           MillimeterOfMercury: 759.9998917256,

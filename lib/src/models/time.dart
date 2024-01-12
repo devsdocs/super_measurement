@@ -9,7 +9,7 @@ abstract final class Time extends Unit<Time> {
   @override
   AnchorRatio<Time> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Time>({
+        ratio: const ConversionRatio<Time>({
           Day: 365.2425,
           Hour: 8765.82,
           Millisecond: 31556952000,

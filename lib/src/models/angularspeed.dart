@@ -12,7 +12,7 @@ abstract final class AngularSpeed extends Unit<AngularSpeed> {
   @override
   AnchorRatio<AngularSpeed> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<AngularSpeed>({
+        ratio: const ConversionRatio<AngularSpeed>({
           DegreePerDay: 1375.098708,
           DegreePerHour: 57.29577951,
           DegreePerMinute: 0.9549296586,

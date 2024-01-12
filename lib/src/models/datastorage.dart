@@ -10,7 +10,7 @@ abstract final class DataStorage extends Unit<DataStorage> {
   @override
   AnchorRatio<DataStorage> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<DataStorage>({
+        ratio: const ConversionRatio<DataStorage>({
           Bit: 8589934592,
           Byte: 1073741824,
           Gigabit: 8,

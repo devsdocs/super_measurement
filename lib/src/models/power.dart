@@ -9,7 +9,7 @@ abstract final class Power extends Unit<Power> {
   @override
   AnchorRatio<Power> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Power>({
+        ratio: const ConversionRatio<Power>({
           Horsepower: 1.3410220896,
           Megawatt: 0.001,
           Milliwatt: 1000000,

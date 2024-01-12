@@ -10,7 +10,7 @@ abstract final class Area extends Unit<Area> {
   @override
   AnchorRatio<Area> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Area>({
+        ratio: const ConversionRatio<Area>({
           Acres: 0.0002471054,
           Hectares: 0.0001,
           SquareCentimeters: 10000,

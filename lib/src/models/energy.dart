@@ -11,7 +11,7 @@ abstract final class Energy extends Unit<Energy> {
   @override
   AnchorRatio<Energy> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Energy>({
+        ratio: const ConversionRatio<Energy>({
           CalorieInternational: 0.2388458966,
           CalorieNutritional: 0.0002388458966,
           CalorieThermochemical: 0.2390057361,

@@ -124,7 +124,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 }
 
 class ConversionRatio<T extends Unit<T>> {
-  ConversionRatio(this.ratios);
+  const ConversionRatio(this.ratios);
   final Map<Type, double> ratios;
 
   double getRatio(Type to) {

@@ -10,7 +10,7 @@ abstract final class Mass extends Unit<Mass> {
   @override
   AnchorRatio<Mass> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Mass>({
+        ratio: const ConversionRatio<Mass>({
           Carats: 5000,
           Grams: 1000,
           Milligrams: 1000000,

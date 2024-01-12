@@ -10,7 +10,7 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
   @override
   AnchorRatio<DataTransfer> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<DataTransfer>({
+        ratio: const ConversionRatio<DataTransfer>({
           GigabitPerSecond: 0.0008,
           GigabytePerSecond: 0.001,
           KilobitPerSecond: 8000,

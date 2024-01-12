@@ -11,7 +11,7 @@ abstract final class Volume extends Unit<Volume> {
   @override
   AnchorRatio<Volume> get _anchorRatio => (
         anchor: _anchor.runtimeType,
-        ratio: ConversionRatio<Volume>({
+        ratio: const ConversionRatio<Volume>({
           BarrelsImperial: 6.1102568972,
           BarrelsUS: 8.3864143606,
           CubicCentimeters: 1000000,
