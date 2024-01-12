@@ -61,7 +61,9 @@ final class Acres extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -92,7 +94,9 @@ final class Hectares extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -124,7 +128,9 @@ final class SquareCentimeters extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -155,7 +161,9 @@ final class SquareFoot extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -186,7 +194,9 @@ final class SquareInches extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -218,7 +228,9 @@ final class SquareKilometers extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -249,7 +261,9 @@ final class SquareMeters extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -280,7 +294,9 @@ final class SquareMiles extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -311,7 +327,9 @@ final class SquareYards extends Area {
     return checkJson('area', json, areaUnitValues)
         ? areaUnitValues
             .map[(json['area'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['area'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

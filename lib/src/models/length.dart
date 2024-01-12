@@ -64,7 +64,9 @@ final class Centimeters extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -95,7 +97,9 @@ final class Feet extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -126,7 +130,9 @@ final class Furlongs extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -157,7 +163,9 @@ final class Inches extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -188,7 +196,9 @@ final class Kilometers extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -219,7 +229,9 @@ final class Meters extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -250,7 +262,9 @@ final class Miles extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -281,7 +295,9 @@ final class Millimeters extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -312,7 +328,9 @@ final class NauticalMiles extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -343,7 +361,9 @@ final class Yards extends Length {
     return checkJson('length', json, lengthUnitValues)
         ? lengthUnitValues
             .map[(json['length'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['length'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

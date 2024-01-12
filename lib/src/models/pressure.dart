@@ -55,7 +55,9 @@ final class Bar extends Pressure {
     return checkJson('pressure', json, pressureUnitValues)
         ? pressureUnitValues
             .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['pressure'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -87,7 +89,9 @@ final class InchesOfMercury extends Pressure {
     return checkJson('pressure', json, pressureUnitValues)
         ? pressureUnitValues
             .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['pressure'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -119,7 +123,9 @@ final class MillimeterOfMercury extends Pressure {
     return checkJson('pressure', json, pressureUnitValues)
         ? pressureUnitValues
             .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['pressure'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -150,7 +156,9 @@ final class Pascal extends Pressure {
     return checkJson('pressure', json, pressureUnitValues)
         ? pressureUnitValues
             .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['pressure'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -182,7 +190,9 @@ final class PoundsPerSquareInch extends Pressure {
     return checkJson('pressure', json, pressureUnitValues)
         ? pressureUnitValues
             .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['pressure'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -214,7 +224,9 @@ final class StandardAtmosphere extends Pressure {
     return checkJson('pressure', json, pressureUnitValues)
         ? pressureUnitValues
             .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['pressure'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -245,7 +257,9 @@ final class Torr extends Pressure {
     return checkJson('pressure', json, pressureUnitValues)
         ? pressureUnitValues
             .map[(json['pressure'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['pressure'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

@@ -70,7 +70,9 @@ final class CalorieInternational extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -102,7 +104,9 @@ final class CalorieNutritional extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -134,7 +138,9 @@ final class CalorieThermochemical extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -165,7 +171,9 @@ final class ElectronVolt extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -196,7 +204,9 @@ final class GigaJoule extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -227,7 +237,9 @@ final class Joule extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -258,7 +270,9 @@ final class KiloJoule extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -289,7 +303,9 @@ final class KilowattHour extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -320,7 +336,9 @@ final class MegaJoule extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -351,7 +369,9 @@ final class MegawattHour extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -382,7 +402,9 @@ final class WattHour extends Energy {
     return checkJson('energy', json, energyUnitValues)
         ? energyUnitValues
             .map[(json['energy'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['energy'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

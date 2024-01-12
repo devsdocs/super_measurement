@@ -54,7 +54,9 @@ final class GigabitPerSecond extends DataTransfer {
         ? dataTransferUnitValues
             .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -87,7 +89,9 @@ final class GigabytePerSecond extends DataTransfer {
         ? dataTransferUnitValues
             .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -120,7 +124,9 @@ final class KilobitPerSecond extends DataTransfer {
         ? dataTransferUnitValues
             .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -153,7 +159,9 @@ final class KilobytePerSecond extends DataTransfer {
         ? dataTransferUnitValues
             .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -186,7 +194,9 @@ final class MegabitPerSecond extends DataTransfer {
         ? dataTransferUnitValues
             .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -219,7 +229,9 @@ final class MegabytePerSecond extends DataTransfer {
         ? dataTransferUnitValues
             .map[(json['dataTransfer'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataTransfer'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

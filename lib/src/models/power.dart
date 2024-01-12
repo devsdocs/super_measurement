@@ -48,7 +48,9 @@ final class Horsepower extends Power {
     return checkJson('power', json, powerUnitValues)
         ? powerUnitValues
             .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['power'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -79,7 +81,9 @@ final class Kilowatt extends Power {
     return checkJson('power', json, powerUnitValues)
         ? powerUnitValues
             .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['power'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -110,7 +114,9 @@ final class Megawatt extends Power {
     return checkJson('power', json, powerUnitValues)
         ? powerUnitValues
             .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['power'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -141,7 +147,9 @@ final class Milliwatt extends Power {
     return checkJson('power', json, powerUnitValues)
         ? powerUnitValues
             .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['power'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -172,7 +180,9 @@ final class Watt extends Power {
     return checkJson('power', json, powerUnitValues)
         ? powerUnitValues
             .map[(json['power'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['power'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

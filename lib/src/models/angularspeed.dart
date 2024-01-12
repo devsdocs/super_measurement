@@ -75,7 +75,9 @@ final class DegreePerDay extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -107,7 +109,9 @@ final class DegreePerHour extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -140,7 +144,9 @@ final class DegreePerMinute extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -173,7 +179,9 @@ final class DegreePerSecond extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -205,7 +213,9 @@ final class RadianPerDay extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -237,7 +247,9 @@ final class RadianPerHour extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -270,7 +282,9 @@ final class RadianPerMinute extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -303,7 +317,9 @@ final class RadianPerSecond extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -336,7 +352,9 @@ final class RevolutionPerDay extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -369,7 +387,9 @@ final class RevolutionPerHour extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -402,7 +422,9 @@ final class RevolutionPerMinute extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -435,7 +457,9 @@ final class RevolutionPerSecond extends AngularSpeed {
         ? angularSpeedUnitValues
             .map[(json['angularSpeed'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['angularSpeed'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

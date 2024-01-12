@@ -67,7 +67,9 @@ final class Carats extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -98,7 +100,9 @@ final class Grams extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -129,7 +133,9 @@ final class Kilograms extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -160,7 +166,9 @@ final class Milligrams extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -191,7 +199,9 @@ final class Ounces extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -222,7 +232,9 @@ final class Pounds extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -253,7 +265,9 @@ final class Quintal extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -284,7 +298,9 @@ final class StoneUK extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -315,7 +331,9 @@ final class TonUK extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -346,7 +364,9 @@ final class TonUS extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -377,7 +397,9 @@ final class Tonne extends Mass {
     return checkJson('mass', json, massUnitValues)
         ? massUnitValues
             .map[(json['mass'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['mass'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

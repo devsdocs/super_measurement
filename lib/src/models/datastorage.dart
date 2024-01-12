@@ -65,7 +65,9 @@ final class Bit extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -97,7 +99,9 @@ final class Byte extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -129,7 +133,9 @@ final class Gigabit extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -161,7 +167,9 @@ final class Gigabyte extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -193,7 +201,9 @@ final class Kilobit extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -225,7 +235,9 @@ final class Kilobyte extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -257,7 +269,9 @@ final class Megabit extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -289,7 +303,9 @@ final class Megabyte extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -321,7 +337,9 @@ final class Terabit extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -353,7 +371,9 @@ final class Terabyte extends DataStorage {
         ? dataStorageUnitValues
             .map[(json['dataStorage'] as Map<String, dynamic>)['unit']]!
             .construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['dataStorage'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

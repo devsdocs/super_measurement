@@ -54,7 +54,9 @@ final class Day extends Time {
     return checkJson('time', json, timeUnitValues)
         ? timeUnitValues
             .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['time'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -85,7 +87,9 @@ final class Hour extends Time {
     return checkJson('time', json, timeUnitValues)
         ? timeUnitValues
             .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['time'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -116,7 +120,9 @@ final class Millisecond extends Time {
     return checkJson('time', json, timeUnitValues)
         ? timeUnitValues
             .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['time'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -147,7 +153,9 @@ final class Minute extends Time {
     return checkJson('time', json, timeUnitValues)
         ? timeUnitValues
             .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['time'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -178,7 +186,9 @@ final class Second extends Time {
     return checkJson('time', json, timeUnitValues)
         ? timeUnitValues
             .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['time'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -209,7 +219,9 @@ final class Week extends Time {
     return checkJson('time', json, timeUnitValues)
         ? timeUnitValues
             .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['time'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }
@@ -240,7 +252,9 @@ final class Year extends Time {
     return checkJson('time', json, timeUnitValues)
         ? timeUnitValues
             .map[(json['time'] as Map<String, dynamic>)['unit']]!.construct
-            .withValue(json['value'] as num)
+            .withValue(
+              (json['time'] as Map<String, dynamic>)['value'] as num,
+            )
             ._convertTo(this)
         : this;
   }

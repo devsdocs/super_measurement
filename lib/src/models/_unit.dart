@@ -147,7 +147,7 @@ bool checkJson<T>(String key, Map<String, dynamic> json, EnumValues<T> enumV) {
   if (map != null &&
       map['unit'] != null &&
       map['value'] != null &&
-      enumV.map[json['unit']] != null) {
+      enumV.map[map['unit']] != null) {
     return true;
   }
 
