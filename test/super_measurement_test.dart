@@ -27,12 +27,21 @@ void main() {
       );
       expect(TimeUnit.day.construct.withValue(1), const Hour(24));
       expect(const Centimeters(200).convertTo(const Meters()).value, 2);
+      final list = [
+        const Centimeters(200),
+        const Centimeters(300),
+        const Meters(4),
+        const Meters(1),
+      ];
       expect(
-        [const Centimeters(200), const Centimeters(200), const Meters(1)]
-            .combineTo(const Meters())
-            .value,
-        5,
+        list.combineTo(const Meters()).value,
+        10,
       );
+      expect(list.lowest, const Meters(1));
+      expect(list.highest, const Centimeters(400));
+      expect(list.averageValueIn(const Meters()), 2.5);
+      expect(list.averageValueIn(const Centimeters()), 250);
+      expect(list.totalValueIn(const Centimeters()), 1000);
     });
   });
 }

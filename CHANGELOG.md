@@ -1,5 +1,6 @@
 ## 1.0.16
 - Exposing `convertTo()` and `combineTo()`
+- Add some extension to `Iterable`
 ## 1.0.15
 - Updating dependencies
 ## 1.0.14
