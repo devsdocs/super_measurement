@@ -28,27 +28,27 @@ abstract final class Volume extends Unit<Volume> {
   @override
   Volume get _anchor => const CubicMeters();
 
-  Volume get toBarrelsImperial => _convertTo(const BarrelsImperial());
+  Volume get toBarrelsImperial => convertTo(const BarrelsImperial());
 
-  Volume get toBarrelsUS => _convertTo(const BarrelsUS());
+  Volume get toBarrelsUS => convertTo(const BarrelsUS());
 
-  Volume get toCubicCentimeters => _convertTo(const CubicCentimeters());
+  Volume get toCubicCentimeters => convertTo(const CubicCentimeters());
 
-  Volume get toCubicFoot => _convertTo(const CubicFoot());
+  Volume get toCubicFoot => convertTo(const CubicFoot());
 
-  Volume get toCubicInches => _convertTo(const CubicInches());
+  Volume get toCubicInches => convertTo(const CubicInches());
 
-  Volume get toCubicMeters => _convertTo(const CubicMeters());
+  Volume get toCubicMeters => convertTo(const CubicMeters());
 
-  Volume get toCubicYards => _convertTo(const CubicYards());
+  Volume get toCubicYards => convertTo(const CubicYards());
 
-  Volume get toGallonsImperial => _convertTo(const GallonsImperial());
+  Volume get toGallonsImperial => convertTo(const GallonsImperial());
 
-  Volume get toGallonsUS => _convertTo(const GallonsUS());
+  Volume get toGallonsUS => convertTo(const GallonsUS());
 
-  Volume get toLiters => _convertTo(const Liters());
+  Volume get toLiters => convertTo(const Liters());
 
-  Volume get toMilliliters => _convertTo(const Milliliters());
+  Volume get toMilliliters => convertTo(const Milliliters());
 
   @override
   String get majorName => 'volume';
@@ -76,7 +76,7 @@ final class BarrelsImperial extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -110,7 +110,7 @@ final class BarrelsUS extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -144,7 +144,7 @@ final class CubicCentimeters extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -178,7 +178,7 @@ final class CubicFoot extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -212,7 +212,7 @@ final class CubicInches extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -246,7 +246,7 @@ final class CubicMeters extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -280,7 +280,7 @@ final class CubicYards extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -314,7 +314,7 @@ final class GallonsImperial extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -348,7 +348,7 @@ final class GallonsUS extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -382,7 +382,7 @@ final class Liters extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -416,7 +416,7 @@ final class Milliliters extends Volume {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

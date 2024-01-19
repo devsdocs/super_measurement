@@ -20,15 +20,15 @@ abstract final class Power extends Unit<Power> {
   @override
   Power get _anchor => const Kilowatt();
 
-  Power get toHorsepower => _convertTo(const Horsepower());
+  Power get toHorsepower => convertTo(const Horsepower());
 
-  Power get toKilowatt => _convertTo(const Kilowatt());
+  Power get toKilowatt => convertTo(const Kilowatt());
 
-  Power get toMegawatt => _convertTo(const Megawatt());
+  Power get toMegawatt => convertTo(const Megawatt());
 
-  Power get toMilliwatt => _convertTo(const Milliwatt());
+  Power get toMilliwatt => convertTo(const Milliwatt());
 
-  Power get toWatt => _convertTo(const Watt());
+  Power get toWatt => convertTo(const Watt());
 
   @override
   String get majorName => 'power';
@@ -56,7 +56,7 @@ final class Horsepower extends Power {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -90,7 +90,7 @@ final class Kilowatt extends Power {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -124,7 +124,7 @@ final class Megawatt extends Power {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -158,7 +158,7 @@ final class Milliwatt extends Power {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -192,7 +192,7 @@ final class Watt extends Power {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

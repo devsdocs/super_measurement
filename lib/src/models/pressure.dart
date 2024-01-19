@@ -23,19 +23,19 @@ abstract final class Pressure extends Unit<Pressure> {
   @override
   Pressure get _anchor => const StandardAtmosphere();
 
-  Pressure get toBar => _convertTo(const Bar());
+  Pressure get toBar => convertTo(const Bar());
 
-  Pressure get toInchesOfMercury => _convertTo(const InchesOfMercury());
+  Pressure get toInchesOfMercury => convertTo(const InchesOfMercury());
 
-  Pressure get toMillimeterOfMercury => _convertTo(const MillimeterOfMercury());
+  Pressure get toMillimeterOfMercury => convertTo(const MillimeterOfMercury());
 
-  Pressure get toPascal => _convertTo(const Pascal());
+  Pressure get toPascal => convertTo(const Pascal());
 
-  Pressure get toPoundsPerSquareInch => _convertTo(const PoundsPerSquareInch());
+  Pressure get toPoundsPerSquareInch => convertTo(const PoundsPerSquareInch());
 
-  Pressure get toStandardAtmosphere => _convertTo(const StandardAtmosphere());
+  Pressure get toStandardAtmosphere => convertTo(const StandardAtmosphere());
 
-  Pressure get toTorr => _convertTo(const Torr());
+  Pressure get toTorr => convertTo(const Torr());
 
   @override
   String get majorName => 'pressure';
@@ -63,7 +63,7 @@ final class Bar extends Pressure {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -97,7 +97,7 @@ final class InchesOfMercury extends Pressure {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -132,7 +132,7 @@ final class MillimeterOfMercury extends Pressure {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -166,7 +166,7 @@ final class Pascal extends Pressure {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -201,7 +201,7 @@ final class PoundsPerSquareInch extends Pressure {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -235,7 +235,7 @@ final class StandardAtmosphere extends Pressure {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -269,7 +269,7 @@ final class Torr extends Pressure {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

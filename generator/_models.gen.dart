@@ -58,7 +58,7 @@ void generateModels() {
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(
-        '$name get to$unitType => _convertTo(const $unitType());',
+        '$name get to$unitType => convertTo(const $unitType());',
       );
       typeBuff.writeln();
     }
@@ -92,7 +92,7 @@ void generateModels() {
         '  $name fromJson(Map<String,dynamic> json) =>',
       );
       typeBuff.writeln(
-        '_checkJson(majorName,json, $enumValuesSymbol) ? $enumValuesSymbol.map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct.withValue((json[majorName] as Map<String, dynamic>)[_value] as num,)._convertTo(this) : this;',
+        '_checkJson(majorName,json, $enumValuesSymbol) ? $enumValuesSymbol.map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct.withValue((json[majorName] as Map<String, dynamic>)[_value] as num,).convertTo(this) : this;',
       );
 
       typeBuff.writeln();

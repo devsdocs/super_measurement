@@ -29,29 +29,29 @@ abstract final class Speed extends Unit<Speed> {
   @override
   Speed get _anchor => const KilometerPerHour();
 
-  Speed get toFootPerHour => _convertTo(const FootPerHour());
+  Speed get toFootPerHour => convertTo(const FootPerHour());
 
-  Speed get toFootPerMinute => _convertTo(const FootPerMinute());
+  Speed get toFootPerMinute => convertTo(const FootPerMinute());
 
-  Speed get toFootPerSecond => _convertTo(const FootPerSecond());
+  Speed get toFootPerSecond => convertTo(const FootPerSecond());
 
-  Speed get toKilometerPerHour => _convertTo(const KilometerPerHour());
+  Speed get toKilometerPerHour => convertTo(const KilometerPerHour());
 
-  Speed get toKnot => _convertTo(const Knot());
+  Speed get toKnot => convertTo(const Knot());
 
-  Speed get toLight => _convertTo(const Light());
+  Speed get toLight => convertTo(const Light());
 
-  Speed get toMeterPerHour => _convertTo(const MeterPerHour());
+  Speed get toMeterPerHour => convertTo(const MeterPerHour());
 
-  Speed get toMeterPerMinute => _convertTo(const MeterPerMinute());
+  Speed get toMeterPerMinute => convertTo(const MeterPerMinute());
 
-  Speed get toMeterPerSecond => _convertTo(const MeterPerSecond());
+  Speed get toMeterPerSecond => convertTo(const MeterPerSecond());
 
-  Speed get toMilesPerHour => _convertTo(const MilesPerHour());
+  Speed get toMilesPerHour => convertTo(const MilesPerHour());
 
-  Speed get toMilesPerMinute => _convertTo(const MilesPerMinute());
+  Speed get toMilesPerMinute => convertTo(const MilesPerMinute());
 
-  Speed get toYardPerMinute => _convertTo(const YardPerMinute());
+  Speed get toYardPerMinute => convertTo(const YardPerMinute());
 
   @override
   String get majorName => 'speed';
@@ -79,7 +79,7 @@ final class FootPerHour extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -113,7 +113,7 @@ final class FootPerMinute extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -147,7 +147,7 @@ final class FootPerSecond extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -181,7 +181,7 @@ final class KilometerPerHour extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -215,7 +215,7 @@ final class Knot extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -249,7 +249,7 @@ final class Light extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -283,7 +283,7 @@ final class MeterPerHour extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -317,7 +317,7 @@ final class MeterPerMinute extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -351,7 +351,7 @@ final class MeterPerSecond extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -385,7 +385,7 @@ final class MilesPerHour extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -419,7 +419,7 @@ final class MilesPerMinute extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -453,7 +453,7 @@ final class YardPerMinute extends Speed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

@@ -27,27 +27,27 @@ abstract final class Mass extends Unit<Mass> {
   @override
   Mass get _anchor => const Kilograms();
 
-  Mass get toCarats => _convertTo(const Carats());
+  Mass get toCarats => convertTo(const Carats());
 
-  Mass get toGrams => _convertTo(const Grams());
+  Mass get toGrams => convertTo(const Grams());
 
-  Mass get toKilograms => _convertTo(const Kilograms());
+  Mass get toKilograms => convertTo(const Kilograms());
 
-  Mass get toMilligrams => _convertTo(const Milligrams());
+  Mass get toMilligrams => convertTo(const Milligrams());
 
-  Mass get toOunces => _convertTo(const Ounces());
+  Mass get toOunces => convertTo(const Ounces());
 
-  Mass get toPounds => _convertTo(const Pounds());
+  Mass get toPounds => convertTo(const Pounds());
 
-  Mass get toQuintal => _convertTo(const Quintal());
+  Mass get toQuintal => convertTo(const Quintal());
 
-  Mass get toStoneUK => _convertTo(const StoneUK());
+  Mass get toStoneUK => convertTo(const StoneUK());
 
-  Mass get toTonUK => _convertTo(const TonUK());
+  Mass get toTonUK => convertTo(const TonUK());
 
-  Mass get toTonUS => _convertTo(const TonUS());
+  Mass get toTonUS => convertTo(const TonUS());
 
-  Mass get toTonne => _convertTo(const Tonne());
+  Mass get toTonne => convertTo(const Tonne());
 
   @override
   String get majorName => 'mass';
@@ -75,7 +75,7 @@ final class Carats extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -109,7 +109,7 @@ final class Grams extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -143,7 +143,7 @@ final class Kilograms extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -177,7 +177,7 @@ final class Milligrams extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -211,7 +211,7 @@ final class Ounces extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -245,7 +245,7 @@ final class Pounds extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -279,7 +279,7 @@ final class Quintal extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -313,7 +313,7 @@ final class StoneUK extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -347,7 +347,7 @@ final class TonUK extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -381,7 +381,7 @@ final class TonUS extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -415,7 +415,7 @@ final class Tonne extends Mass {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

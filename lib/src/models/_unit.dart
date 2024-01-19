@@ -23,9 +23,9 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   bool _convertAndCompare(String operator, T other) {
     final otherValue =
-        other._clone._convertTo(_anchor).withPrecision(Precision.nine).value;
+        other._clone.convertTo(_anchor).withPrecision(Precision.nine).value;
     final currentValue =
-        _clone._convertTo(_anchor).withPrecision(Precision.nine).value;
+        _clone.convertTo(_anchor).withPrecision(Precision.nine).value;
 
     if (operator == '==') {
       return currentValue == otherValue;
@@ -43,27 +43,27 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   }
 
   T _convertAndCombine(String operator, T other) {
-    final otherValue = other._convertTo(_anchor);
-    final currentValue = _convertTo(_anchor);
+    final otherValue = other.convertTo(_anchor);
+    final currentValue = convertTo(_anchor);
 
     final combine =
         operator == '+' ? currentValue + otherValue : currentValue - otherValue;
-    return combine._convertTo(this);
+    return combine.convertTo(this);
   }
 
-  T _convertTo<E extends Unit<T>>(E other) {
+  T convertTo<E extends Unit<T>>(E to) {
     num conversionRatio;
-    if (runtimeType == other.runtimeType) {
+    if (runtimeType == to.runtimeType) {
       conversionRatio = 1;
     } else {
       if (runtimeType == _anchorRatio.anchor) {
-        conversionRatio = _anchorRatio.ratio.getRatio(other.runtimeType);
+        conversionRatio = _anchorRatio.ratio.getRatio(to.runtimeType);
       } else {
         final baseValue = value! / _anchorRatio.ratio.getRatio(runtimeType);
-        return _anchor.withValue(baseValue)._convertTo(other);
+        return _anchor.withValue(baseValue).convertTo(to);
       }
     }
-    return (other as T).withValue(value! * conversionRatio);
+    return (to as T).withValue(value! * conversionRatio);
   }
 
   T operator +(T other) {
@@ -113,8 +113,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
       return value!.compareTo(other.value!);
     }
 
-    final otherConvertTo = other._clone._convertTo(_anchor);
-    final currentConvertTo = _clone._convertTo(_anchor);
+    final otherConvertTo = other._clone.convertTo(_anchor);
+    final currentConvertTo = _clone.convertTo(_anchor);
     return currentConvertTo.value!.compareTo(otherConvertTo.value!);
   }
 

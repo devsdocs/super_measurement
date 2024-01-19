@@ -22,19 +22,19 @@ abstract final class Time extends Unit<Time> {
   @override
   Time get _anchor => const Year();
 
-  Time get toDay => _convertTo(const Day());
+  Time get toDay => convertTo(const Day());
 
-  Time get toHour => _convertTo(const Hour());
+  Time get toHour => convertTo(const Hour());
 
-  Time get toMillisecond => _convertTo(const Millisecond());
+  Time get toMillisecond => convertTo(const Millisecond());
 
-  Time get toMinute => _convertTo(const Minute());
+  Time get toMinute => convertTo(const Minute());
 
-  Time get toSecond => _convertTo(const Second());
+  Time get toSecond => convertTo(const Second());
 
-  Time get toWeek => _convertTo(const Week());
+  Time get toWeek => convertTo(const Week());
 
-  Time get toYear => _convertTo(const Year());
+  Time get toYear => convertTo(const Year());
 
   @override
   String get majorName => 'time';
@@ -62,7 +62,7 @@ final class Day extends Time {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -96,7 +96,7 @@ final class Hour extends Time {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -130,7 +130,7 @@ final class Millisecond extends Time {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -164,7 +164,7 @@ final class Minute extends Time {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -198,7 +198,7 @@ final class Second extends Time {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -232,7 +232,7 @@ final class Week extends Time {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -266,7 +266,7 @@ final class Year extends Time {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

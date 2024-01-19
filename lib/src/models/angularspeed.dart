@@ -30,31 +30,31 @@ abstract final class AngularSpeed extends Unit<AngularSpeed> {
   @override
   AngularSpeed get _anchor => const RadianPerHour();
 
-  AngularSpeed get toDegreePerDay => _convertTo(const DegreePerDay());
+  AngularSpeed get toDegreePerDay => convertTo(const DegreePerDay());
 
-  AngularSpeed get toDegreePerHour => _convertTo(const DegreePerHour());
+  AngularSpeed get toDegreePerHour => convertTo(const DegreePerHour());
 
-  AngularSpeed get toDegreePerMinute => _convertTo(const DegreePerMinute());
+  AngularSpeed get toDegreePerMinute => convertTo(const DegreePerMinute());
 
-  AngularSpeed get toDegreePerSecond => _convertTo(const DegreePerSecond());
+  AngularSpeed get toDegreePerSecond => convertTo(const DegreePerSecond());
 
-  AngularSpeed get toRadianPerDay => _convertTo(const RadianPerDay());
+  AngularSpeed get toRadianPerDay => convertTo(const RadianPerDay());
 
-  AngularSpeed get toRadianPerHour => _convertTo(const RadianPerHour());
+  AngularSpeed get toRadianPerHour => convertTo(const RadianPerHour());
 
-  AngularSpeed get toRadianPerMinute => _convertTo(const RadianPerMinute());
+  AngularSpeed get toRadianPerMinute => convertTo(const RadianPerMinute());
 
-  AngularSpeed get toRadianPerSecond => _convertTo(const RadianPerSecond());
+  AngularSpeed get toRadianPerSecond => convertTo(const RadianPerSecond());
 
-  AngularSpeed get toRevolutionPerDay => _convertTo(const RevolutionPerDay());
+  AngularSpeed get toRevolutionPerDay => convertTo(const RevolutionPerDay());
 
-  AngularSpeed get toRevolutionPerHour => _convertTo(const RevolutionPerHour());
+  AngularSpeed get toRevolutionPerHour => convertTo(const RevolutionPerHour());
 
   AngularSpeed get toRevolutionPerMinute =>
-      _convertTo(const RevolutionPerMinute());
+      convertTo(const RevolutionPerMinute());
 
   AngularSpeed get toRevolutionPerSecond =>
-      _convertTo(const RevolutionPerSecond());
+      convertTo(const RevolutionPerSecond());
 
   @override
   String get majorName => 'angularSpeed';
@@ -82,7 +82,7 @@ final class DegreePerDay extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -116,7 +116,7 @@ final class DegreePerHour extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -150,7 +150,7 @@ final class DegreePerMinute extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -184,7 +184,7 @@ final class DegreePerSecond extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -218,7 +218,7 @@ final class RadianPerDay extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -252,7 +252,7 @@ final class RadianPerHour extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -286,7 +286,7 @@ final class RadianPerMinute extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -320,7 +320,7 @@ final class RadianPerSecond extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -354,7 +354,7 @@ final class RevolutionPerDay extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -388,7 +388,7 @@ final class RevolutionPerHour extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -423,7 +423,7 @@ final class RevolutionPerMinute extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -458,7 +458,7 @@ final class RevolutionPerSecond extends AngularSpeed {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

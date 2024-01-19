@@ -22,17 +22,17 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
   @override
   DataTransfer get _anchor => const MegabytePerSecond();
 
-  DataTransfer get toGigabitPerSecond => _convertTo(const GigabitPerSecond());
+  DataTransfer get toGigabitPerSecond => convertTo(const GigabitPerSecond());
 
-  DataTransfer get toGigabytePerSecond => _convertTo(const GigabytePerSecond());
+  DataTransfer get toGigabytePerSecond => convertTo(const GigabytePerSecond());
 
-  DataTransfer get toKilobitPerSecond => _convertTo(const KilobitPerSecond());
+  DataTransfer get toKilobitPerSecond => convertTo(const KilobitPerSecond());
 
-  DataTransfer get toKilobytePerSecond => _convertTo(const KilobytePerSecond());
+  DataTransfer get toKilobytePerSecond => convertTo(const KilobytePerSecond());
 
-  DataTransfer get toMegabitPerSecond => _convertTo(const MegabitPerSecond());
+  DataTransfer get toMegabitPerSecond => convertTo(const MegabitPerSecond());
 
-  DataTransfer get toMegabytePerSecond => _convertTo(const MegabytePerSecond());
+  DataTransfer get toMegabytePerSecond => convertTo(const MegabytePerSecond());
 
   @override
   String get majorName => 'dataTransfer';
@@ -60,7 +60,7 @@ final class GigabitPerSecond extends DataTransfer {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -94,7 +94,7 @@ final class GigabytePerSecond extends DataTransfer {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -128,7 +128,7 @@ final class KilobitPerSecond extends DataTransfer {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -162,7 +162,7 @@ final class KilobytePerSecond extends DataTransfer {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -196,7 +196,7 @@ final class MegabitPerSecond extends DataTransfer {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -230,7 +230,7 @@ final class MegabytePerSecond extends DataTransfer {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

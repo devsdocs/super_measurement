@@ -1,3 +1,5 @@
+## 1.0.16
+- Exposing `convertTo()` and `combineTo()`
 ## 1.0.15
 - Updating dependencies
 ## 1.0.14

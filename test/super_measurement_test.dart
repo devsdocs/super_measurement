@@ -26,6 +26,13 @@ void main() {
         equals(const Grams(2000)),
       );
       expect(TimeUnit.day.construct.withValue(1), const Hour(24));
+      expect(const Centimeters(200).convertTo(const Meters()).value, 2);
+      expect(
+        [const Centimeters(200), const Centimeters(200), const Meters(1)]
+            .combineTo(const Meters())
+            .value,
+        5,
+      );
     });
   });
 }

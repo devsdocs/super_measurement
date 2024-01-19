@@ -28,28 +28,28 @@ abstract final class Energy extends Unit<Energy> {
   @override
   Energy get _anchor => const Joule();
 
-  Energy get toCalorieInternational => _convertTo(const CalorieInternational());
+  Energy get toCalorieInternational => convertTo(const CalorieInternational());
 
-  Energy get toCalorieNutritional => _convertTo(const CalorieNutritional());
+  Energy get toCalorieNutritional => convertTo(const CalorieNutritional());
 
   Energy get toCalorieThermochemical =>
-      _convertTo(const CalorieThermochemical());
+      convertTo(const CalorieThermochemical());
 
-  Energy get toElectronVolt => _convertTo(const ElectronVolt());
+  Energy get toElectronVolt => convertTo(const ElectronVolt());
 
-  Energy get toGigaJoule => _convertTo(const GigaJoule());
+  Energy get toGigaJoule => convertTo(const GigaJoule());
 
-  Energy get toJoule => _convertTo(const Joule());
+  Energy get toJoule => convertTo(const Joule());
 
-  Energy get toKiloJoule => _convertTo(const KiloJoule());
+  Energy get toKiloJoule => convertTo(const KiloJoule());
 
-  Energy get toKilowattHour => _convertTo(const KilowattHour());
+  Energy get toKilowattHour => convertTo(const KilowattHour());
 
-  Energy get toMegaJoule => _convertTo(const MegaJoule());
+  Energy get toMegaJoule => convertTo(const MegaJoule());
 
-  Energy get toMegawattHour => _convertTo(const MegawattHour());
+  Energy get toMegawattHour => convertTo(const MegawattHour());
 
-  Energy get toWattHour => _convertTo(const WattHour());
+  Energy get toWattHour => convertTo(const WattHour());
 
   @override
   String get majorName => 'energy';
@@ -78,7 +78,7 @@ final class CalorieInternational extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -112,7 +112,7 @@ final class CalorieNutritional extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -147,7 +147,7 @@ final class CalorieThermochemical extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -181,7 +181,7 @@ final class ElectronVolt extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -215,7 +215,7 @@ final class GigaJoule extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -249,7 +249,7 @@ final class Joule extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -283,7 +283,7 @@ final class KiloJoule extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -317,7 +317,7 @@ final class KilowattHour extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -351,7 +351,7 @@ final class MegaJoule extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -385,7 +385,7 @@ final class MegawattHour extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -419,7 +419,7 @@ final class WattHour extends Energy {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

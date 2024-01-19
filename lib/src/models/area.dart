@@ -25,23 +25,23 @@ abstract final class Area extends Unit<Area> {
   @override
   Area get _anchor => const SquareMeters();
 
-  Area get toAcres => _convertTo(const Acres());
+  Area get toAcres => convertTo(const Acres());
 
-  Area get toHectares => _convertTo(const Hectares());
+  Area get toHectares => convertTo(const Hectares());
 
-  Area get toSquareCentimeters => _convertTo(const SquareCentimeters());
+  Area get toSquareCentimeters => convertTo(const SquareCentimeters());
 
-  Area get toSquareFoot => _convertTo(const SquareFoot());
+  Area get toSquareFoot => convertTo(const SquareFoot());
 
-  Area get toSquareInches => _convertTo(const SquareInches());
+  Area get toSquareInches => convertTo(const SquareInches());
 
-  Area get toSquareKilometers => _convertTo(const SquareKilometers());
+  Area get toSquareKilometers => convertTo(const SquareKilometers());
 
-  Area get toSquareMeters => _convertTo(const SquareMeters());
+  Area get toSquareMeters => convertTo(const SquareMeters());
 
-  Area get toSquareMiles => _convertTo(const SquareMiles());
+  Area get toSquareMiles => convertTo(const SquareMiles());
 
-  Area get toSquareYards => _convertTo(const SquareYards());
+  Area get toSquareYards => convertTo(const SquareYards());
 
   @override
   String get majorName => 'area';
@@ -69,7 +69,7 @@ final class Acres extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -103,7 +103,7 @@ final class Hectares extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -137,7 +137,7 @@ final class SquareCentimeters extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -171,7 +171,7 @@ final class SquareFoot extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -205,7 +205,7 @@ final class SquareInches extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -239,7 +239,7 @@ final class SquareKilometers extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -273,7 +273,7 @@ final class SquareMeters extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -307,7 +307,7 @@ final class SquareMiles extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -341,7 +341,7 @@ final class SquareYards extends Area {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override

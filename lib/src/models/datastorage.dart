@@ -26,25 +26,25 @@ abstract final class DataStorage extends Unit<DataStorage> {
   @override
   DataStorage get _anchor => const Gigabyte();
 
-  DataStorage get toBit => _convertTo(const Bit());
+  DataStorage get toBit => convertTo(const Bit());
 
-  DataStorage get toByte => _convertTo(const Byte());
+  DataStorage get toByte => convertTo(const Byte());
 
-  DataStorage get toGigabit => _convertTo(const Gigabit());
+  DataStorage get toGigabit => convertTo(const Gigabit());
 
-  DataStorage get toGigabyte => _convertTo(const Gigabyte());
+  DataStorage get toGigabyte => convertTo(const Gigabyte());
 
-  DataStorage get toKilobit => _convertTo(const Kilobit());
+  DataStorage get toKilobit => convertTo(const Kilobit());
 
-  DataStorage get toKilobyte => _convertTo(const Kilobyte());
+  DataStorage get toKilobyte => convertTo(const Kilobyte());
 
-  DataStorage get toMegabit => _convertTo(const Megabit());
+  DataStorage get toMegabit => convertTo(const Megabit());
 
-  DataStorage get toMegabyte => _convertTo(const Megabyte());
+  DataStorage get toMegabyte => convertTo(const Megabyte());
 
-  DataStorage get toTerabit => _convertTo(const Terabit());
+  DataStorage get toTerabit => convertTo(const Terabit());
 
-  DataStorage get toTerabyte => _convertTo(const Terabyte());
+  DataStorage get toTerabyte => convertTo(const Terabyte());
 
   @override
   String get majorName => 'dataStorage';
@@ -72,7 +72,7 @@ final class Bit extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -106,7 +106,7 @@ final class Byte extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -140,7 +140,7 @@ final class Gigabit extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -174,7 +174,7 @@ final class Gigabyte extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -208,7 +208,7 @@ final class Kilobit extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -242,7 +242,7 @@ final class Kilobyte extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -276,7 +276,7 @@ final class Megabit extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -310,7 +310,7 @@ final class Megabyte extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -344,7 +344,7 @@ final class Terabit extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
@@ -378,7 +378,7 @@ final class Terabyte extends DataStorage {
               .withValue(
                 (json[majorName] as Map<String, dynamic>)[_value] as num,
               )
-              ._convertTo(this)
+              .convertTo(this)
           : this;
 
   @override
