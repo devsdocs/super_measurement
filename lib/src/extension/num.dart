@@ -27,6 +27,15 @@ extension NumOfArea on num {
   SquareYards get squareYards => SquareYards(this);
 }
 
+extension NumOfCurrent on num {
+  Abampere get abampere => Abampere(this);
+  Ampere get ampere => Ampere(this);
+  Biot get biot => Biot(this);
+  KiloAmpere get kiloAmpere => KiloAmpere(this);
+  MilliAmpere get milliAmpere => MilliAmpere(this);
+  StatAmpere get statAmpere => StatAmpere(this);
+}
+
 extension NumOfDataStorage on num {
   Bit get bit => Bit(this);
   Byte get byte => Byte(this);
@@ -107,6 +116,12 @@ extension NumOfPressure on num {
   PoundsPerSquareInch get poundsPerSquareInch => PoundsPerSquareInch(this);
   StandardAtmosphere get standardAtmosphere => StandardAtmosphere(this);
   Torr get torr => Torr(this);
+}
+
+extension NumOfSound on num {
+  Bel get bel => Bel(this);
+  Decibel get decibel => Decibel(this);
+  Neper get neper => Neper(this);
 }
 
 extension NumOfSpeed on num {

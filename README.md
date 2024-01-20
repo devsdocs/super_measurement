@@ -4,6 +4,7 @@
 
   + [AngularSpeed](#angularspeed)
   + [Area](#area)
+  + [Current](#current)
   + [DataStorage](#datastorage)
   + [DataTransfer](#datatransfer)
   + [Energy](#energy)
@@ -11,6 +12,7 @@
   + [Mass](#mass)
   + [Power](#power)
   + [Pressure](#pressure)
+  + [Sound](#sound)
   + [Speed](#speed)
   + [Time](#time)
   + [Volume](#volume)
@@ -39,6 +41,14 @@
    - `SquareMeters` => AreaUnit.squareMeters
    - `SquareMiles` => AreaUnit.squareMiles
    - `SquareYards` => AreaUnit.squareYards
+
+### Current
+   - `Abampere` => CurrentUnit.abampere
+   - `Ampere` => CurrentUnit.ampere
+   - `Biot` => CurrentUnit.biot
+   - `KiloAmpere` => CurrentUnit.kiloAmpere
+   - `MilliAmpere` => CurrentUnit.milliAmpere
+   - `StatAmpere` => CurrentUnit.statAmpere
 
 ### DataStorage
    - `Bit` => DataStorageUnit.bit
@@ -113,6 +123,11 @@
    - `PoundsPerSquareInch` => PressureUnit.poundsPerSquareInch
    - `StandardAtmosphere` => PressureUnit.standardAtmosphere
    - `Torr` => PressureUnit.torr
+
+### Sound
+   - `Bel` => SoundUnit.bel
+   - `Decibel` => SoundUnit.decibel
+   - `Neper` => SoundUnit.neper
 
 ### Speed
    - `FootPerHour` => SpeedUnit.footPerHour

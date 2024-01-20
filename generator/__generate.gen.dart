@@ -20,6 +20,8 @@ part 'power.gen.dart';
 part 'datatransfer.gen.dart';
 part 'datastorage.gen.dart';
 part 'time.gen.dart';
+part 'sound.gen.dart';
+part 'current.gen.dart';
 
 void main() async {
   generateModels();
@@ -31,6 +33,7 @@ void main() async {
 }
 
 final allData = [
+  currentUnit,
   massUnit,
   lengthUnit,
   areaUnit,
@@ -43,6 +46,7 @@ final allData = [
   dataStorageUnit,
   energyUnit,
   angularSpeedUnit,
+  soundUnit,
 ]
     .map(
       (e) => e.map(

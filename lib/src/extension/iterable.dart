@@ -29,6 +29,15 @@ extension IterableOfArea on Iterable<Area> {
   Area get toSquareYards => combineTo(const SquareYards());
 }
 
+extension IterableOfCurrent on Iterable<Current> {
+  Current get toAbampere => combineTo(const Abampere());
+  Current get toAmpere => combineTo(const Ampere());
+  Current get toBiot => combineTo(const Biot());
+  Current get toKiloAmpere => combineTo(const KiloAmpere());
+  Current get toMilliAmpere => combineTo(const MilliAmpere());
+  Current get toStatAmpere => combineTo(const StatAmpere());
+}
+
 extension IterableOfDataStorage on Iterable<DataStorage> {
   DataStorage get toBit => combineTo(const Bit());
   DataStorage get toByte => combineTo(const Byte());
@@ -109,6 +118,12 @@ extension IterableOfPressure on Iterable<Pressure> {
   Pressure get toPoundsPerSquareInch => combineTo(const PoundsPerSquareInch());
   Pressure get toStandardAtmosphere => combineTo(const StandardAtmosphere());
   Pressure get toTorr => combineTo(const Torr());
+}
+
+extension IterableOfSound on Iterable<Sound> {
+  Sound get toBel => combineTo(const Bel());
+  Sound get toDecibel => combineTo(const Decibel());
+  Sound get toNeper => combineTo(const Neper());
 }
 
 extension IterableOfSpeed on Iterable<Speed> {
