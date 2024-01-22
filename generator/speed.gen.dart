@@ -21,6 +21,12 @@ final speedUnit = {
       'Knot': {'ratio': 0.5399568035, 'symbol': 'kn'},
     },
     {
+      'MachInternational': {'ratio': 0.0009414715034, 'symbol': 'mach'},
+    },
+    {
+      'MachAtSeaLevel': {'ratio': 0.0008380431358, 'symbol': 'mach'},
+    },
+    {
       'FootPerSecond': {'ratio': 0.9113444153, 'symbol': 'ft/s'},
     },
     {

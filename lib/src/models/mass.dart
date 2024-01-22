@@ -7,6 +7,14 @@ part of '../../super_measurement.dart';
 abstract final class Mass extends Unit<Mass> {
   const Mass([super.value]);
 
+  factory Mass.fromJson(Map<String, dynamic> json) {
+    final obj = json[_majorName] as Map<String, dynamic>;
+    return _checkJson(_majorName, json, massUnitValues)
+        ? massUnitValues.map[obj[_unit]]!.construct
+            .withValue(obj[_value] as num)
+        : const Kilograms();
+  }
+
   @override
   AnchorRatio<Mass> get _anchorRatio => (
         anchor: _anchor.runtimeType,
@@ -50,11 +58,18 @@ abstract final class Mass extends Unit<Mass> {
   Mass get toTonne => convertTo(const Tonne());
 
   @override
-  String get majorName => 'mass';
+  String get majorName => _majorName;
+
+  static const _majorName = 'mass';
 }
 
 final class Carats extends Mass {
   const Carats([super.value]);
+
+  factory Carats.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toCarats.value;
+    return Carats(val);
+  }
 
   static const minorName = 'carats';
 
@@ -68,17 +83,6 @@ final class Carats extends Mass {
   String get symbol => 'CD';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -89,6 +93,11 @@ final class Carats extends Mass {
 
 final class Grams extends Mass {
   const Grams([super.value]);
+
+  factory Grams.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toGrams.value;
+    return Grams(val);
+  }
 
   static const minorName = 'grams';
 
@@ -102,17 +111,6 @@ final class Grams extends Mass {
   String get symbol => 'g';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -123,6 +121,11 @@ final class Grams extends Mass {
 
 final class Kilograms extends Mass {
   const Kilograms([super.value]);
+
+  factory Kilograms.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toKilograms.value;
+    return Kilograms(val);
+  }
 
   static const minorName = 'kilograms';
 
@@ -136,17 +139,6 @@ final class Kilograms extends Mass {
   String get symbol => 'kg';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -157,6 +149,11 @@ final class Kilograms extends Mass {
 
 final class Milligrams extends Mass {
   const Milligrams([super.value]);
+
+  factory Milligrams.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toMilligrams.value;
+    return Milligrams(val);
+  }
 
   static const minorName = 'milligrams';
 
@@ -170,17 +167,6 @@ final class Milligrams extends Mass {
   String get symbol => 'mg';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -191,6 +177,11 @@ final class Milligrams extends Mass {
 
 final class Ounces extends Mass {
   const Ounces([super.value]);
+
+  factory Ounces.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toOunces.value;
+    return Ounces(val);
+  }
 
   static const minorName = 'ounces';
 
@@ -204,17 +195,6 @@ final class Ounces extends Mass {
   String get symbol => 'oz';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -225,6 +205,11 @@ final class Ounces extends Mass {
 
 final class Pounds extends Mass {
   const Pounds([super.value]);
+
+  factory Pounds.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toPounds.value;
+    return Pounds(val);
+  }
 
   static const minorName = 'pounds';
 
@@ -238,17 +223,6 @@ final class Pounds extends Mass {
   String get symbol => 'lb';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -259,6 +233,11 @@ final class Pounds extends Mass {
 
 final class Quintal extends Mass {
   const Quintal([super.value]);
+
+  factory Quintal.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toQuintal.value;
+    return Quintal(val);
+  }
 
   static const minorName = 'quintal';
 
@@ -272,17 +251,6 @@ final class Quintal extends Mass {
   String get symbol => 'q';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -293,6 +261,11 @@ final class Quintal extends Mass {
 
 final class StoneUK extends Mass {
   const StoneUK([super.value]);
+
+  factory StoneUK.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toStoneUK.value;
+    return StoneUK(val);
+  }
 
   static const minorName = 'stoneUK';
 
@@ -306,17 +279,6 @@ final class StoneUK extends Mass {
   String get symbol => 'st';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -327,6 +289,11 @@ final class StoneUK extends Mass {
 
 final class TonUK extends Mass {
   const TonUK([super.value]);
+
+  factory TonUK.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toTonUK.value;
+    return TonUK(val);
+  }
 
   static const minorName = 'tonUK';
 
@@ -340,17 +307,6 @@ final class TonUK extends Mass {
   String get symbol => 'ton';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -361,6 +317,11 @@ final class TonUK extends Mass {
 
 final class TonUS extends Mass {
   const TonUS([super.value]);
+
+  factory TonUS.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toTonUS.value;
+    return TonUS(val);
+  }
 
   static const minorName = 'tonUS';
 
@@ -374,17 +335,6 @@ final class TonUS extends Mass {
   String get symbol => 'ton';
 
   @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -396,6 +346,11 @@ final class TonUS extends Mass {
 final class Tonne extends Mass {
   const Tonne([super.value]);
 
+  factory Tonne.fromJson(Map<String, dynamic> json) {
+    final val = Mass.fromJson(json).toTonne.value;
+    return Tonne(val);
+  }
+
   static const minorName = 'tonne';
 
   @override
@@ -406,17 +361,6 @@ final class Tonne extends Mass {
 
   @override
   String get symbol => 'ton';
-
-  @override
-  Mass fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, massUnitValues)
-          ? massUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {

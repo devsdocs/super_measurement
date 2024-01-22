@@ -7,6 +7,14 @@ part of '../../super_measurement.dart';
 abstract final class Pressure extends Unit<Pressure> {
   const Pressure([super.value]);
 
+  factory Pressure.fromJson(Map<String, dynamic> json) {
+    final obj = json[_majorName] as Map<String, dynamic>;
+    return _checkJson(_majorName, json, pressureUnitValues)
+        ? pressureUnitValues.map[obj[_unit]]!.construct
+            .withValue(obj[_value] as num)
+        : const StandardAtmosphere();
+  }
+
   @override
   AnchorRatio<Pressure> get _anchorRatio => (
         anchor: _anchor.runtimeType,
@@ -38,11 +46,18 @@ abstract final class Pressure extends Unit<Pressure> {
   Pressure get toTorr => convertTo(const Torr());
 
   @override
-  String get majorName => 'pressure';
+  String get majorName => _majorName;
+
+  static const _majorName = 'pressure';
 }
 
 final class Bar extends Pressure {
   const Bar([super.value]);
+
+  factory Bar.fromJson(Map<String, dynamic> json) {
+    final val = Pressure.fromJson(json).toBar.value;
+    return Bar(val);
+  }
 
   static const minorName = 'bar';
 
@@ -56,17 +71,6 @@ final class Bar extends Pressure {
   String get symbol => 'bar';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, pressureUnitValues)
-          ? pressureUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -77,6 +81,11 @@ final class Bar extends Pressure {
 
 final class InchesOfMercury extends Pressure {
   const InchesOfMercury([super.value]);
+
+  factory InchesOfMercury.fromJson(Map<String, dynamic> json) {
+    final val = Pressure.fromJson(json).toInchesOfMercury.value;
+    return InchesOfMercury(val);
+  }
 
   static const minorName = 'inchesOfMercury';
 
@@ -90,17 +99,6 @@ final class InchesOfMercury extends Pressure {
   String get symbol => 'inHg';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, pressureUnitValues)
-          ? pressureUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -111,6 +109,11 @@ final class InchesOfMercury extends Pressure {
 
 final class MillimeterOfMercury extends Pressure {
   const MillimeterOfMercury([super.value]);
+
+  factory MillimeterOfMercury.fromJson(Map<String, dynamic> json) {
+    final val = Pressure.fromJson(json).toMillimeterOfMercury.value;
+    return MillimeterOfMercury(val);
+  }
 
   static const minorName = 'millimeterOfMercury';
 
@@ -125,17 +128,6 @@ final class MillimeterOfMercury extends Pressure {
   String get symbol => 'mmHg';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, pressureUnitValues)
-          ? pressureUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -146,6 +138,11 @@ final class MillimeterOfMercury extends Pressure {
 
 final class Pascal extends Pressure {
   const Pascal([super.value]);
+
+  factory Pascal.fromJson(Map<String, dynamic> json) {
+    final val = Pressure.fromJson(json).toPascal.value;
+    return Pascal(val);
+  }
 
   static const minorName = 'pascal';
 
@@ -159,17 +156,6 @@ final class Pascal extends Pressure {
   String get symbol => 'Pa';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, pressureUnitValues)
-          ? pressureUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -180,6 +166,11 @@ final class Pascal extends Pressure {
 
 final class PoundsPerSquareInch extends Pressure {
   const PoundsPerSquareInch([super.value]);
+
+  factory PoundsPerSquareInch.fromJson(Map<String, dynamic> json) {
+    final val = Pressure.fromJson(json).toPoundsPerSquareInch.value;
+    return PoundsPerSquareInch(val);
+  }
 
   static const minorName = 'poundsPerSquareInch';
 
@@ -194,17 +185,6 @@ final class PoundsPerSquareInch extends Pressure {
   String get symbol => 'psi';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, pressureUnitValues)
-          ? pressureUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -215,6 +195,11 @@ final class PoundsPerSquareInch extends Pressure {
 
 final class StandardAtmosphere extends Pressure {
   const StandardAtmosphere([super.value]);
+
+  factory StandardAtmosphere.fromJson(Map<String, dynamic> json) {
+    final val = Pressure.fromJson(json).toStandardAtmosphere.value;
+    return StandardAtmosphere(val);
+  }
 
   static const minorName = 'standardAtmosphere';
 
@@ -228,17 +213,6 @@ final class StandardAtmosphere extends Pressure {
   String get symbol => 'atm';
 
   @override
-  Pressure fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, pressureUnitValues)
-          ? pressureUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -250,6 +224,11 @@ final class StandardAtmosphere extends Pressure {
 final class Torr extends Pressure {
   const Torr([super.value]);
 
+  factory Torr.fromJson(Map<String, dynamic> json) {
+    final val = Pressure.fromJson(json).toTorr.value;
+    return Torr(val);
+  }
+
   static const minorName = 'torr';
 
   @override
@@ -260,17 +239,6 @@ final class Torr extends Pressure {
 
   @override
   String get symbol => 'Torr';
-
-  @override
-  Pressure fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, pressureUnitValues)
-          ? pressureUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {

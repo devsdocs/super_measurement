@@ -6,6 +6,14 @@ part of '../../super_measurement.dart';
 abstract final class Time extends Unit<Time> {
   const Time([super.value]);
 
+  factory Time.fromJson(Map<String, dynamic> json) {
+    final obj = json[_majorName] as Map<String, dynamic>;
+    return _checkJson(_majorName, json, timeUnitValues)
+        ? timeUnitValues.map[obj[_unit]]!.construct
+            .withValue(obj[_value] as num)
+        : const Year();
+  }
+
   @override
   AnchorRatio<Time> get _anchorRatio => (
         anchor: _anchor.runtimeType,
@@ -37,11 +45,18 @@ abstract final class Time extends Unit<Time> {
   Time get toYear => convertTo(const Year());
 
   @override
-  String get majorName => 'time';
+  String get majorName => _majorName;
+
+  static const _majorName = 'time';
 }
 
 final class Day extends Time {
   const Day([super.value]);
+
+  factory Day.fromJson(Map<String, dynamic> json) {
+    final val = Time.fromJson(json).toDay.value;
+    return Day(val);
+  }
 
   static const minorName = 'day';
 
@@ -55,17 +70,6 @@ final class Day extends Time {
   String get symbol => 'd';
 
   @override
-  Time fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, timeUnitValues)
-          ? timeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -76,6 +80,11 @@ final class Day extends Time {
 
 final class Hour extends Time {
   const Hour([super.value]);
+
+  factory Hour.fromJson(Map<String, dynamic> json) {
+    final val = Time.fromJson(json).toHour.value;
+    return Hour(val);
+  }
 
   static const minorName = 'hour';
 
@@ -89,17 +98,6 @@ final class Hour extends Time {
   String get symbol => 'h';
 
   @override
-  Time fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, timeUnitValues)
-          ? timeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -110,6 +108,11 @@ final class Hour extends Time {
 
 final class Millisecond extends Time {
   const Millisecond([super.value]);
+
+  factory Millisecond.fromJson(Map<String, dynamic> json) {
+    final val = Time.fromJson(json).toMillisecond.value;
+    return Millisecond(val);
+  }
 
   static const minorName = 'millisecond';
 
@@ -123,17 +126,6 @@ final class Millisecond extends Time {
   String get symbol => 'ms';
 
   @override
-  Time fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, timeUnitValues)
-          ? timeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -144,6 +136,11 @@ final class Millisecond extends Time {
 
 final class Minute extends Time {
   const Minute([super.value]);
+
+  factory Minute.fromJson(Map<String, dynamic> json) {
+    final val = Time.fromJson(json).toMinute.value;
+    return Minute(val);
+  }
 
   static const minorName = 'minute';
 
@@ -157,17 +154,6 @@ final class Minute extends Time {
   String get symbol => 'm';
 
   @override
-  Time fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, timeUnitValues)
-          ? timeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -178,6 +164,11 @@ final class Minute extends Time {
 
 final class Second extends Time {
   const Second([super.value]);
+
+  factory Second.fromJson(Map<String, dynamic> json) {
+    final val = Time.fromJson(json).toSecond.value;
+    return Second(val);
+  }
 
   static const minorName = 'second';
 
@@ -191,17 +182,6 @@ final class Second extends Time {
   String get symbol => 's';
 
   @override
-  Time fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, timeUnitValues)
-          ? timeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -212,6 +192,11 @@ final class Second extends Time {
 
 final class Week extends Time {
   const Week([super.value]);
+
+  factory Week.fromJson(Map<String, dynamic> json) {
+    final val = Time.fromJson(json).toWeek.value;
+    return Week(val);
+  }
 
   static const minorName = 'week';
 
@@ -225,17 +210,6 @@ final class Week extends Time {
   String get symbol => 'wk';
 
   @override
-  Time fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, timeUnitValues)
-          ? timeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -247,6 +221,11 @@ final class Week extends Time {
 final class Year extends Time {
   const Year([super.value]);
 
+  factory Year.fromJson(Map<String, dynamic> json) {
+    final val = Time.fromJson(json).toYear.value;
+    return Year(val);
+  }
+
   static const minorName = 'year';
 
   @override
@@ -257,17 +236,6 @@ final class Year extends Time {
 
   @override
   String get symbol => 'y';
-
-  @override
-  Time fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, timeUnitValues)
-          ? timeUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {

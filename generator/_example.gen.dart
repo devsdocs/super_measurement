@@ -28,11 +28,11 @@ void generateExample() {
           if (Random().nextBool()) {
             if (Random().nextBool()) {
               exampleBuff.writeln(
-                "print('1 ${e.keys.first} to ${x.keys.first} \${${e.keys.first}(1).to${x.keys.first}}');",
+                "print('1 ${e.keys.first} to ${x.keys.first} \${const ${e.keys.first}(1).to${x.keys.first}}');",
               );
             } else {
               exampleBuff.writeln(
-                "print('1 ${e.keys.first} to ${x.keys.first} with Presision \${${e.keys.first}(1).to${x.keys.first}.withPrecision()}');",
+                "print('1 ${e.keys.first} to ${x.keys.first} with Presision \${const ${e.keys.first}(1).to${x.keys.first}.withPrecision()}');",
               );
             }
           } else {
@@ -53,11 +53,11 @@ void generateExample() {
         } else {
           if (Random().nextBool()) {
             exampleBuff.writeln(
-              "print('1 ${e.keys.first} + 1 ${x.keys.first} = \${${e.keys.first}(1) + ${x.keys.first}(1)}');",
+              "print('1 ${e.keys.first} + 1 ${x.keys.first} = \${const ${e.keys.first}(1) + ${x.keys.first}(1)}');",
             );
           } else {
             exampleBuff.writeln(
-              "print('1 ${e.keys.first} + 1 ${x.keys.first} with Precision = \${(${e.keys.first}(1) + ${x.keys.first}(1)).withPrecision()}');",
+              "print('1 ${e.keys.first} + 1 ${x.keys.first} with Precision = \${(const ${e.keys.first}(1) + ${x.keys.first}(1)).withPrecision()}');",
             );
           }
         }
@@ -68,7 +68,7 @@ void generateExample() {
     exampleBuff.writeln('final $listName = [');
     for (final e in unit.values.first) {
       if (Random().nextBool()) continue;
-      exampleBuff.writeln('  ${e.keys.first}(${getRandomNumber()}),');
+      exampleBuff.writeln('  const ${e.keys.first}(${getRandomNumber()}),');
     }
     exampleBuff.writeln(']..shuffle();');
     exampleBuff.writeln(
@@ -112,5 +112,11 @@ void generateExample() {
     exampleBuff.writeln();
   }
 
-  exampleFile.writeAsStringSync(exampleBuff.toString());
+  final res = exampleBuff.toString().clean;
+
+  if (res.contains('[]') || res.contains('[ ]')) {
+    generateExample();
+  } else {
+    exampleFile.writeAsStringSync(exampleBuff.toString());
+  }
 }

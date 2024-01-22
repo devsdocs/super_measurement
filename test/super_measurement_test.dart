@@ -42,6 +42,10 @@ void main() {
       expect(list.averageValueIn(const Meters()), 2.5);
       expect(list.averageValueIn(const Centimeters()), 250);
       expect(list.totalValueIn(const Centimeters()), 1000);
+      final json = const DegreePerDay(2).toDegreePerHour.toJson();
+      final angularSpeed = AngularSpeed.fromJson(json);
+      expect(angularSpeed, const DegreePerDay(2));
+      expect(angularSpeed, DegreePerDay.fromJson(json));
     });
   });
 }

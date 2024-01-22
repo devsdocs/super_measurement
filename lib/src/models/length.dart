@@ -7,6 +7,14 @@ part of '../../super_measurement.dart';
 abstract final class Length extends Unit<Length> {
   const Length([super.value]);
 
+  factory Length.fromJson(Map<String, dynamic> json) {
+    final obj = json[_majorName] as Map<String, dynamic>;
+    return _checkJson(_majorName, json, lengthUnitValues)
+        ? lengthUnitValues.map[obj[_unit]]!.construct
+            .withValue(obj[_value] as num)
+        : const Meters();
+  }
+
   @override
   AnchorRatio<Length> get _anchorRatio => (
         anchor: _anchor.runtimeType,
@@ -47,11 +55,18 @@ abstract final class Length extends Unit<Length> {
   Length get toYards => convertTo(const Yards());
 
   @override
-  String get majorName => 'length';
+  String get majorName => _majorName;
+
+  static const _majorName = 'length';
 }
 
 final class Centimeters extends Length {
   const Centimeters([super.value]);
+
+  factory Centimeters.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toCentimeters.value;
+    return Centimeters(val);
+  }
 
   static const minorName = 'centimeters';
 
@@ -65,17 +80,6 @@ final class Centimeters extends Length {
   String get symbol => 'cm';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -86,6 +90,11 @@ final class Centimeters extends Length {
 
 final class Feet extends Length {
   const Feet([super.value]);
+
+  factory Feet.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toFeet.value;
+    return Feet(val);
+  }
 
   static const minorName = 'feet';
 
@@ -99,17 +108,6 @@ final class Feet extends Length {
   String get symbol => 'ft';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -120,6 +118,11 @@ final class Feet extends Length {
 
 final class Furlongs extends Length {
   const Furlongs([super.value]);
+
+  factory Furlongs.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toFurlongs.value;
+    return Furlongs(val);
+  }
 
   static const minorName = 'furlongs';
 
@@ -133,17 +136,6 @@ final class Furlongs extends Length {
   String get symbol => 'fur';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -154,6 +146,11 @@ final class Furlongs extends Length {
 
 final class Inches extends Length {
   const Inches([super.value]);
+
+  factory Inches.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toInches.value;
+    return Inches(val);
+  }
 
   static const minorName = 'inches';
 
@@ -167,17 +164,6 @@ final class Inches extends Length {
   String get symbol => 'in';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -188,6 +174,11 @@ final class Inches extends Length {
 
 final class Kilometers extends Length {
   const Kilometers([super.value]);
+
+  factory Kilometers.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toKilometers.value;
+    return Kilometers(val);
+  }
 
   static const minorName = 'kilometers';
 
@@ -201,17 +192,6 @@ final class Kilometers extends Length {
   String get symbol => 'km';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -222,6 +202,11 @@ final class Kilometers extends Length {
 
 final class Meters extends Length {
   const Meters([super.value]);
+
+  factory Meters.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toMeters.value;
+    return Meters(val);
+  }
 
   static const minorName = 'meters';
 
@@ -235,17 +220,6 @@ final class Meters extends Length {
   String get symbol => 'm';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -256,6 +230,11 @@ final class Meters extends Length {
 
 final class Miles extends Length {
   const Miles([super.value]);
+
+  factory Miles.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toMiles.value;
+    return Miles(val);
+  }
 
   static const minorName = 'miles';
 
@@ -269,17 +248,6 @@ final class Miles extends Length {
   String get symbol => 'mi';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -290,6 +258,11 @@ final class Miles extends Length {
 
 final class Millimeters extends Length {
   const Millimeters([super.value]);
+
+  factory Millimeters.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toMillimeters.value;
+    return Millimeters(val);
+  }
 
   static const minorName = 'millimeters';
 
@@ -303,17 +276,6 @@ final class Millimeters extends Length {
   String get symbol => 'mm';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -324,6 +286,11 @@ final class Millimeters extends Length {
 
 final class NauticalMiles extends Length {
   const NauticalMiles([super.value]);
+
+  factory NauticalMiles.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toNauticalMiles.value;
+    return NauticalMiles(val);
+  }
 
   static const minorName = 'nauticalMiles';
 
@@ -337,17 +304,6 @@ final class NauticalMiles extends Length {
   String get symbol => 'NM';
 
   @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -359,6 +315,11 @@ final class NauticalMiles extends Length {
 final class Yards extends Length {
   const Yards([super.value]);
 
+  factory Yards.fromJson(Map<String, dynamic> json) {
+    final val = Length.fromJson(json).toYards.value;
+    return Yards(val);
+  }
+
   static const minorName = 'yards';
 
   @override
@@ -369,17 +330,6 @@ final class Yards extends Length {
 
   @override
   String get symbol => 'yd';
-
-  @override
-  Length fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, lengthUnitValues)
-          ? lengthUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {

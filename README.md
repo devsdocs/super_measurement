@@ -7,9 +7,15 @@
   + [Current](#current)
   + [DataStorage](#datastorage)
   + [DataTransfer](#datatransfer)
+  + [ElectricField](#electricfield)
   + [Energy](#energy)
+  + [Entropy](#entropy)
+  + [Flow](#flow)
+  + [Force](#force)
+  + [Illumination](#illumination)
   + [Length](#length)
   + [Mass](#mass)
+  + [MetricPrefix](#metricprefix)
   + [Power](#power)
   + [Pressure](#pressure)
   + [Sound](#sound)
@@ -70,6 +76,15 @@
    - `MegabitPerSecond` => DataTransferUnit.megabitPerSecond
    - `MegabytePerSecond` => DataTransferUnit.megabytePerSecond
 
+### ElectricField
+   - `MicrovoltPerMeter` => ElectricFieldUnit.microvoltPerMeter
+   - `MilivoltPerMeter` => ElectricFieldUnit.milivoltPerMeter
+   - `StatvoltPerCentimeter` => ElectricFieldUnit.statvoltPerCentimeter
+   - `StatvoltPerInch` => ElectricFieldUnit.statvoltPerInch
+   - `VoltPerCentimeter` => ElectricFieldUnit.voltPerCentimeter
+   - `VoltPerInch` => ElectricFieldUnit.voltPerInch
+   - `VoltPerMeter` => ElectricFieldUnit.voltPerMeter
+
 ### Energy
    - `CalorieInternational` => EnergyUnit.calorieInternational
    - `CalorieNutritional` => EnergyUnit.calorieNutritional
@@ -82,6 +97,39 @@
    - `MegaJoule` => EnergyUnit.megaJoule
    - `MegawattHour` => EnergyUnit.megawattHour
    - `WattHour` => EnergyUnit.wattHour
+
+### Entropy
+   - `JoulePerKilogramCelcius` => EntropyUnit.joulePerKilogramCelcius
+   - `KilocaloriePerKilogramCelcius` => EntropyUnit.kilocaloriePerKilogramCelcius
+   - `KilojoulePerKilogramCelcius` => EntropyUnit.kilojoulePerKilogramCelcius
+
+### Flow
+   - `FootCubicPerHour` => FlowUnit.footCubicPerHour
+   - `FootCubicPerMinute` => FlowUnit.footCubicPerMinute
+   - `InchCubicPerHour` => FlowUnit.inchCubicPerHour
+   - `InchCubicPerMinute` => FlowUnit.inchCubicPerMinute
+   - `LiterPerDay` => FlowUnit.literPerDay
+   - `LiterPerHour` => FlowUnit.literPerHour
+   - `LiterPerMinute` => FlowUnit.literPerMinute
+   - `MeterCubicPerDay` => FlowUnit.meterCubicPerDay
+   - `MeterCubicPerHour` => FlowUnit.meterCubicPerHour
+   - `MeterCubicPerMinute` => FlowUnit.meterCubicPerMinute
+
+### Force
+   - `GramForce` => ForceUnit.gramForce
+   - `JoulePerCentimeter` => ForceUnit.joulePerCentimeter
+   - `KilogramForce` => ForceUnit.kilogramForce
+   - `Kilonewton` => ForceUnit.kilonewton
+   - `Newton` => ForceUnit.newton
+   - `OunceForce` => ForceUnit.ounceForce
+   - `PoundForce` => ForceUnit.poundForce
+   - `Poundal` => ForceUnit.poundal
+
+### Illumination
+   - `Flame` => IlluminationUnit.flame
+   - `LumenPerFootSquare` => IlluminationUnit.lumenPerFootSquare
+   - `LumenPerMeterSquare` => IlluminationUnit.lumenPerMeterSquare
+   - `Phot` => IlluminationUnit.phot
 
 ### Length
    - `Centimeters` => LengthUnit.centimeters
@@ -107,6 +155,29 @@
    - `TonUK` => MassUnit.tonUK
    - `TonUS` => MassUnit.tonUS
    - `Tonne` => MassUnit.tonne
+
+### MetricPrefix
+   - `Atto` => MetricPrefixUnit.atto
+   - `Centi` => MetricPrefixUnit.centi
+   - `Deci` => MetricPrefixUnit.deci
+   - `Deka` => MetricPrefixUnit.deka
+   - `Exa` => MetricPrefixUnit.exa
+   - `Femto` => MetricPrefixUnit.femto
+   - `Giga` => MetricPrefixUnit.giga
+   - `Hecto` => MetricPrefixUnit.hecto
+   - `Kilo` => MetricPrefixUnit.kilo
+   - `Mega` => MetricPrefixUnit.mega
+   - `MetricUnit` => MetricPrefixUnit.metricUnit
+   - `Micro` => MetricPrefixUnit.micro
+   - `Milli` => MetricPrefixUnit.milli
+   - `Nano` => MetricPrefixUnit.nano
+   - `Peta` => MetricPrefixUnit.peta
+   - `Pico` => MetricPrefixUnit.pico
+   - `Tera` => MetricPrefixUnit.tera
+   - `Yocto` => MetricPrefixUnit.yocto
+   - `Yotta` => MetricPrefixUnit.yotta
+   - `Zepto` => MetricPrefixUnit.zepto
+   - `Zetta` => MetricPrefixUnit.zetta
 
 ### Power
    - `Horsepower` => PowerUnit.horsepower
@@ -136,6 +207,8 @@
    - `KilometerPerHour` => SpeedUnit.kilometerPerHour
    - `Knot` => SpeedUnit.knot
    - `Light` => SpeedUnit.light
+   - `MachAtSeaLevel` => SpeedUnit.machAtSeaLevel
+   - `MachInternational` => SpeedUnit.machInternational
    - `MeterPerHour` => SpeedUnit.meterPerHour
    - `MeterPerMinute` => SpeedUnit.meterPerMinute
    - `MeterPerSecond` => SpeedUnit.meterPerSecond

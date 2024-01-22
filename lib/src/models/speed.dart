@@ -3,10 +3,19 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Speed]
 ///
 /// [FootPerHour], [FootPerMinute], [FootPerSecond], [KilometerPerHour],
-/// [Knot], [Light], [MeterPerHour], [MeterPerMinute], [MeterPerSecond],
-/// [MilesPerHour], [MilesPerMinute], [YardPerMinute]
+/// [Knot], [Light], [MachAtSeaLevel], [MachInternational], [MeterPerHour],
+/// [MeterPerMinute], [MeterPerSecond], [MilesPerHour], [MilesPerMinute],
+/// [YardPerMinute]
 abstract final class Speed extends Unit<Speed> {
   const Speed([super.value]);
+
+  factory Speed.fromJson(Map<String, dynamic> json) {
+    final obj = json[_majorName] as Map<String, dynamic>;
+    return _checkJson(_majorName, json, speedUnitValues)
+        ? speedUnitValues.map[obj[_unit]]!.construct
+            .withValue(obj[_value] as num)
+        : const KilometerPerHour();
+  }
 
   @override
   AnchorRatio<Speed> get _anchorRatio => (
@@ -17,6 +26,8 @@ abstract final class Speed extends Unit<Speed> {
           FootPerSecond: 0.9113444153,
           Knot: 0.5399568035,
           Light: 9.265669311e-10,
+          MachAtSeaLevel: 0.0008380431358,
+          MachInternational: 0.0009414715034,
           MeterPerHour: 1000,
           MeterPerMinute: 16.66666667,
           MeterPerSecond: 0.2777777778,
@@ -41,6 +52,10 @@ abstract final class Speed extends Unit<Speed> {
 
   Speed get toLight => convertTo(const Light());
 
+  Speed get toMachAtSeaLevel => convertTo(const MachAtSeaLevel());
+
+  Speed get toMachInternational => convertTo(const MachInternational());
+
   Speed get toMeterPerHour => convertTo(const MeterPerHour());
 
   Speed get toMeterPerMinute => convertTo(const MeterPerMinute());
@@ -54,11 +69,18 @@ abstract final class Speed extends Unit<Speed> {
   Speed get toYardPerMinute => convertTo(const YardPerMinute());
 
   @override
-  String get majorName => 'speed';
+  String get majorName => _majorName;
+
+  static const _majorName = 'speed';
 }
 
 final class FootPerHour extends Speed {
   const FootPerHour([super.value]);
+
+  factory FootPerHour.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toFootPerHour.value;
+    return FootPerHour(val);
+  }
 
   static const minorName = 'footPerHour';
 
@@ -72,17 +94,6 @@ final class FootPerHour extends Speed {
   String get symbol => 'ft/h';
 
   @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -93,6 +104,11 @@ final class FootPerHour extends Speed {
 
 final class FootPerMinute extends Speed {
   const FootPerMinute([super.value]);
+
+  factory FootPerMinute.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toFootPerMinute.value;
+    return FootPerMinute(val);
+  }
 
   static const minorName = 'footPerMinute';
 
@@ -106,17 +122,6 @@ final class FootPerMinute extends Speed {
   String get symbol => 'ft/min';
 
   @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -127,6 +132,11 @@ final class FootPerMinute extends Speed {
 
 final class FootPerSecond extends Speed {
   const FootPerSecond([super.value]);
+
+  factory FootPerSecond.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toFootPerSecond.value;
+    return FootPerSecond(val);
+  }
 
   static const minorName = 'footPerSecond';
 
@@ -140,17 +150,6 @@ final class FootPerSecond extends Speed {
   String get symbol => 'ft/s';
 
   @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -161,6 +160,11 @@ final class FootPerSecond extends Speed {
 
 final class KilometerPerHour extends Speed {
   const KilometerPerHour([super.value]);
+
+  factory KilometerPerHour.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toKilometerPerHour.value;
+    return KilometerPerHour(val);
+  }
 
   static const minorName = 'kilometerPerHour';
 
@@ -174,17 +178,6 @@ final class KilometerPerHour extends Speed {
   String get symbol => 'km/h';
 
   @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -195,6 +188,11 @@ final class KilometerPerHour extends Speed {
 
 final class Knot extends Speed {
   const Knot([super.value]);
+
+  factory Knot.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toKnot.value;
+    return Knot(val);
+  }
 
   static const minorName = 'knot';
 
@@ -208,17 +206,6 @@ final class Knot extends Speed {
   String get symbol => 'kn';
 
   @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -229,6 +216,11 @@ final class Knot extends Speed {
 
 final class Light extends Speed {
   const Light([super.value]);
+
+  factory Light.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toLight.value;
+    return Light(val);
+  }
 
   static const minorName = 'light';
 
@@ -242,15 +234,60 @@ final class Light extends Speed {
   String get symbol => 'c';
 
   @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+final class MachAtSeaLevel extends Speed {
+  const MachAtSeaLevel([super.value]);
+
+  factory MachAtSeaLevel.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toMachAtSeaLevel.value;
+    return MachAtSeaLevel(val);
+  }
+
+  static const minorName = 'machAtSeaLevel';
+
+  @override
+  MachAtSeaLevel get _clone => MachAtSeaLevel(value);
+
+  @override
+  MachAtSeaLevel withValue([num? val]) => MachAtSeaLevel(val ?? value);
+
+  @override
+  String get symbol => 'mach';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+final class MachInternational extends Speed {
+  const MachInternational([super.value]);
+
+  factory MachInternational.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toMachInternational.value;
+    return MachInternational(val);
+  }
+
+  static const minorName = 'machInternational';
+
+  @override
+  MachInternational get _clone => MachInternational(value);
+
+  @override
+  MachInternational withValue([num? val]) => MachInternational(val ?? value);
+
+  @override
+  String get symbol => 'mach';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -264,6 +301,11 @@ final class Light extends Speed {
 final class MeterPerHour extends Speed {
   const MeterPerHour([super.value]);
 
+  factory MeterPerHour.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toMeterPerHour.value;
+    return MeterPerHour(val);
+  }
+
   static const minorName = 'meterPerHour';
 
   @override
@@ -274,17 +316,6 @@ final class MeterPerHour extends Speed {
 
   @override
   String get symbol => 'm/h';
-
-  @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -298,6 +329,11 @@ final class MeterPerHour extends Speed {
 final class MeterPerMinute extends Speed {
   const MeterPerMinute([super.value]);
 
+  factory MeterPerMinute.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toMeterPerMinute.value;
+    return MeterPerMinute(val);
+  }
+
   static const minorName = 'meterPerMinute';
 
   @override
@@ -308,17 +344,6 @@ final class MeterPerMinute extends Speed {
 
   @override
   String get symbol => 'm/min';
-
-  @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -332,6 +357,11 @@ final class MeterPerMinute extends Speed {
 final class MeterPerSecond extends Speed {
   const MeterPerSecond([super.value]);
 
+  factory MeterPerSecond.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toMeterPerSecond.value;
+    return MeterPerSecond(val);
+  }
+
   static const minorName = 'meterPerSecond';
 
   @override
@@ -342,17 +372,6 @@ final class MeterPerSecond extends Speed {
 
   @override
   String get symbol => 'm/s';
-
-  @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -366,6 +385,11 @@ final class MeterPerSecond extends Speed {
 final class MilesPerHour extends Speed {
   const MilesPerHour([super.value]);
 
+  factory MilesPerHour.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toMilesPerHour.value;
+    return MilesPerHour(val);
+  }
+
   static const minorName = 'milesPerHour';
 
   @override
@@ -376,17 +400,6 @@ final class MilesPerHour extends Speed {
 
   @override
   String get symbol => 'mi/h';
-
-  @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -400,6 +413,11 @@ final class MilesPerHour extends Speed {
 final class MilesPerMinute extends Speed {
   const MilesPerMinute([super.value]);
 
+  factory MilesPerMinute.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toMilesPerMinute.value;
+    return MilesPerMinute(val);
+  }
+
   static const minorName = 'milesPerMinute';
 
   @override
@@ -410,17 +428,6 @@ final class MilesPerMinute extends Speed {
 
   @override
   String get symbol => 'mi/min';
-
-  @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -434,6 +441,11 @@ final class MilesPerMinute extends Speed {
 final class YardPerMinute extends Speed {
   const YardPerMinute([super.value]);
 
+  factory YardPerMinute.fromJson(Map<String, dynamic> json) {
+    final val = Speed.fromJson(json).toYardPerMinute.value;
+    return YardPerMinute(val);
+  }
+
   static const minorName = 'yardPerMinute';
 
   @override
@@ -444,17 +456,6 @@ final class YardPerMinute extends Speed {
 
   @override
   String get symbol => 'yd/min';
-
-  @override
-  Speed fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, speedUnitValues)
-          ? speedUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {
@@ -472,6 +473,8 @@ enum SpeedUnit {
   kilometerPerHour._(KilometerPerHour()),
   knot._(Knot()),
   light._(Light()),
+  machAtSeaLevel._(MachAtSeaLevel()),
+  machInternational._(MachInternational()),
   meterPerHour._(MeterPerHour()),
   meterPerMinute._(MeterPerMinute()),
   meterPerSecond._(MeterPerSecond()),
@@ -492,6 +495,8 @@ const speedUnitValues = _EnumValues({
   KilometerPerHour.minorName: SpeedUnit.kilometerPerHour,
   Knot.minorName: SpeedUnit.knot,
   Light.minorName: SpeedUnit.light,
+  MachAtSeaLevel.minorName: SpeedUnit.machAtSeaLevel,
+  MachInternational.minorName: SpeedUnit.machInternational,
   MeterPerHour.minorName: SpeedUnit.meterPerHour,
   MeterPerMinute.minorName: SpeedUnit.meterPerMinute,
   MeterPerSecond.minorName: SpeedUnit.meterPerSecond,

@@ -8,6 +8,14 @@ part of '../../super_measurement.dart';
 abstract final class Energy extends Unit<Energy> {
   const Energy([super.value]);
 
+  factory Energy.fromJson(Map<String, dynamic> json) {
+    final obj = json[_majorName] as Map<String, dynamic>;
+    return _checkJson(_majorName, json, energyUnitValues)
+        ? energyUnitValues.map[obj[_unit]]!.construct
+            .withValue(obj[_value] as num)
+        : const Joule();
+  }
+
   @override
   AnchorRatio<Energy> get _anchorRatio => (
         anchor: _anchor.runtimeType,
@@ -52,11 +60,18 @@ abstract final class Energy extends Unit<Energy> {
   Energy get toWattHour => convertTo(const WattHour());
 
   @override
-  String get majorName => 'energy';
+  String get majorName => _majorName;
+
+  static const _majorName = 'energy';
 }
 
 final class CalorieInternational extends Energy {
   const CalorieInternational([super.value]);
+
+  factory CalorieInternational.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toCalorieInternational.value;
+    return CalorieInternational(val);
+  }
 
   static const minorName = 'calorieInternational';
 
@@ -71,17 +86,6 @@ final class CalorieInternational extends Energy {
   String get symbol => 'cal';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -92,6 +96,11 @@ final class CalorieInternational extends Energy {
 
 final class CalorieNutritional extends Energy {
   const CalorieNutritional([super.value]);
+
+  factory CalorieNutritional.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toCalorieNutritional.value;
+    return CalorieNutritional(val);
+  }
 
   static const minorName = 'calorieNutritional';
 
@@ -105,17 +114,6 @@ final class CalorieNutritional extends Energy {
   String get symbol => 'cal';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -126,6 +124,11 @@ final class CalorieNutritional extends Energy {
 
 final class CalorieThermochemical extends Energy {
   const CalorieThermochemical([super.value]);
+
+  factory CalorieThermochemical.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toCalorieThermochemical.value;
+    return CalorieThermochemical(val);
+  }
 
   static const minorName = 'calorieThermochemical';
 
@@ -140,17 +143,6 @@ final class CalorieThermochemical extends Energy {
   String get symbol => 'cal';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -161,6 +153,11 @@ final class CalorieThermochemical extends Energy {
 
 final class ElectronVolt extends Energy {
   const ElectronVolt([super.value]);
+
+  factory ElectronVolt.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toElectronVolt.value;
+    return ElectronVolt(val);
+  }
 
   static const minorName = 'electronVolt';
 
@@ -174,17 +171,6 @@ final class ElectronVolt extends Energy {
   String get symbol => 'eV';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -195,6 +181,11 @@ final class ElectronVolt extends Energy {
 
 final class GigaJoule extends Energy {
   const GigaJoule([super.value]);
+
+  factory GigaJoule.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toGigaJoule.value;
+    return GigaJoule(val);
+  }
 
   static const minorName = 'gigaJoule';
 
@@ -208,17 +199,6 @@ final class GigaJoule extends Energy {
   String get symbol => 'GJ';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -229,6 +209,11 @@ final class GigaJoule extends Energy {
 
 final class Joule extends Energy {
   const Joule([super.value]);
+
+  factory Joule.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toJoule.value;
+    return Joule(val);
+  }
 
   static const minorName = 'joule';
 
@@ -242,17 +227,6 @@ final class Joule extends Energy {
   String get symbol => 'J';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -263,6 +237,11 @@ final class Joule extends Energy {
 
 final class KiloJoule extends Energy {
   const KiloJoule([super.value]);
+
+  factory KiloJoule.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toKiloJoule.value;
+    return KiloJoule(val);
+  }
 
   static const minorName = 'kiloJoule';
 
@@ -276,17 +255,6 @@ final class KiloJoule extends Energy {
   String get symbol => 'kJ';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -297,6 +265,11 @@ final class KiloJoule extends Energy {
 
 final class KilowattHour extends Energy {
   const KilowattHour([super.value]);
+
+  factory KilowattHour.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toKilowattHour.value;
+    return KilowattHour(val);
+  }
 
   static const minorName = 'kilowattHour';
 
@@ -310,17 +283,6 @@ final class KilowattHour extends Energy {
   String get symbol => 'kWh';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -331,6 +293,11 @@ final class KilowattHour extends Energy {
 
 final class MegaJoule extends Energy {
   const MegaJoule([super.value]);
+
+  factory MegaJoule.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toMegaJoule.value;
+    return MegaJoule(val);
+  }
 
   static const minorName = 'megaJoule';
 
@@ -344,17 +311,6 @@ final class MegaJoule extends Energy {
   String get symbol => 'MJ';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -365,6 +321,11 @@ final class MegaJoule extends Energy {
 
 final class MegawattHour extends Energy {
   const MegawattHour([super.value]);
+
+  factory MegawattHour.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toMegawattHour.value;
+    return MegawattHour(val);
+  }
 
   static const minorName = 'megawattHour';
 
@@ -378,17 +339,6 @@ final class MegawattHour extends Energy {
   String get symbol => 'MWh';
 
   @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -400,6 +350,11 @@ final class MegawattHour extends Energy {
 final class WattHour extends Energy {
   const WattHour([super.value]);
 
+  factory WattHour.fromJson(Map<String, dynamic> json) {
+    final val = Energy.fromJson(json).toWattHour.value;
+    return WattHour(val);
+  }
+
   static const minorName = 'wattHour';
 
   @override
@@ -410,17 +365,6 @@ final class WattHour extends Energy {
 
   @override
   String get symbol => 'Wh';
-
-  @override
-  Energy fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, energyUnitValues)
-          ? energyUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {

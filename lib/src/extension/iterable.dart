@@ -60,6 +60,17 @@ extension IterableOfDataTransfer on Iterable<DataTransfer> {
   DataTransfer get toMegabytePerSecond => combineTo(const MegabytePerSecond());
 }
 
+extension IterableOfElectricField on Iterable<ElectricField> {
+  ElectricField get toMicrovoltPerMeter => combineTo(const MicrovoltPerMeter());
+  ElectricField get toMilivoltPerMeter => combineTo(const MilivoltPerMeter());
+  ElectricField get toStatvoltPerCentimeter =>
+      combineTo(const StatvoltPerCentimeter());
+  ElectricField get toStatvoltPerInch => combineTo(const StatvoltPerInch());
+  ElectricField get toVoltPerCentimeter => combineTo(const VoltPerCentimeter());
+  ElectricField get toVoltPerInch => combineTo(const VoltPerInch());
+  ElectricField get toVoltPerMeter => combineTo(const VoltPerMeter());
+}
+
 extension IterableOfEnergy on Iterable<Energy> {
   Energy get toCalorieInternational => combineTo(const CalorieInternational());
   Energy get toCalorieNutritional => combineTo(const CalorieNutritional());
@@ -73,6 +84,48 @@ extension IterableOfEnergy on Iterable<Energy> {
   Energy get toMegaJoule => combineTo(const MegaJoule());
   Energy get toMegawattHour => combineTo(const MegawattHour());
   Energy get toWattHour => combineTo(const WattHour());
+}
+
+extension IterableOfEntropy on Iterable<Entropy> {
+  Entropy get toJoulePerKilogramCelcius =>
+      combineTo(const JoulePerKilogramCelcius());
+  Entropy get toKilocaloriePerKilogramCelcius =>
+      combineTo(const KilocaloriePerKilogramCelcius());
+  Entropy get toKilojoulePerKilogramCelcius =>
+      combineTo(const KilojoulePerKilogramCelcius());
+}
+
+extension IterableOfFlow on Iterable<Flow> {
+  Flow get toFootCubicPerHour => combineTo(const FootCubicPerHour());
+  Flow get toFootCubicPerMinute => combineTo(const FootCubicPerMinute());
+  Flow get toInchCubicPerHour => combineTo(const InchCubicPerHour());
+  Flow get toInchCubicPerMinute => combineTo(const InchCubicPerMinute());
+  Flow get toLiterPerDay => combineTo(const LiterPerDay());
+  Flow get toLiterPerHour => combineTo(const LiterPerHour());
+  Flow get toLiterPerMinute => combineTo(const LiterPerMinute());
+  Flow get toMeterCubicPerDay => combineTo(const MeterCubicPerDay());
+  Flow get toMeterCubicPerHour => combineTo(const MeterCubicPerHour());
+  Flow get toMeterCubicPerMinute => combineTo(const MeterCubicPerMinute());
+}
+
+extension IterableOfForce on Iterable<Force> {
+  Force get toGramForce => combineTo(const GramForce());
+  Force get toJoulePerCentimeter => combineTo(const JoulePerCentimeter());
+  Force get toKilogramForce => combineTo(const KilogramForce());
+  Force get toKilonewton => combineTo(const Kilonewton());
+  Force get toNewton => combineTo(const Newton());
+  Force get toOunceForce => combineTo(const OunceForce());
+  Force get toPoundForce => combineTo(const PoundForce());
+  Force get toPoundal => combineTo(const Poundal());
+}
+
+extension IterableOfIllumination on Iterable<Illumination> {
+  Illumination get toFlame => combineTo(const Flame());
+  Illumination get toLumenPerFootSquare =>
+      combineTo(const LumenPerFootSquare());
+  Illumination get toLumenPerMeterSquare =>
+      combineTo(const LumenPerMeterSquare());
+  Illumination get toPhot => combineTo(const Phot());
 }
 
 extension IterableOfLength on Iterable<Length> {
@@ -100,6 +153,30 @@ extension IterableOfMass on Iterable<Mass> {
   Mass get toTonUK => combineTo(const TonUK());
   Mass get toTonUS => combineTo(const TonUS());
   Mass get toTonne => combineTo(const Tonne());
+}
+
+extension IterableOfMetricPrefix on Iterable<MetricPrefix> {
+  MetricPrefix get toAtto => combineTo(const Atto());
+  MetricPrefix get toCenti => combineTo(const Centi());
+  MetricPrefix get toDeci => combineTo(const Deci());
+  MetricPrefix get toDeka => combineTo(const Deka());
+  MetricPrefix get toExa => combineTo(const Exa());
+  MetricPrefix get toFemto => combineTo(const Femto());
+  MetricPrefix get toGiga => combineTo(const Giga());
+  MetricPrefix get toHecto => combineTo(const Hecto());
+  MetricPrefix get toKilo => combineTo(const Kilo());
+  MetricPrefix get toMega => combineTo(const Mega());
+  MetricPrefix get toMetricUnit => combineTo(const MetricUnit());
+  MetricPrefix get toMicro => combineTo(const Micro());
+  MetricPrefix get toMilli => combineTo(const Milli());
+  MetricPrefix get toNano => combineTo(const Nano());
+  MetricPrefix get toPeta => combineTo(const Peta());
+  MetricPrefix get toPico => combineTo(const Pico());
+  MetricPrefix get toTera => combineTo(const Tera());
+  MetricPrefix get toYocto => combineTo(const Yocto());
+  MetricPrefix get toYotta => combineTo(const Yotta());
+  MetricPrefix get toZepto => combineTo(const Zepto());
+  MetricPrefix get toZetta => combineTo(const Zetta());
 }
 
 extension IterableOfPower on Iterable<Power> {
@@ -133,6 +210,8 @@ extension IterableOfSpeed on Iterable<Speed> {
   Speed get toKilometerPerHour => combineTo(const KilometerPerHour());
   Speed get toKnot => combineTo(const Knot());
   Speed get toLight => combineTo(const Light());
+  Speed get toMachAtSeaLevel => combineTo(const MachAtSeaLevel());
+  Speed get toMachInternational => combineTo(const MachInternational());
   Speed get toMeterPerHour => combineTo(const MeterPerHour());
   Speed get toMeterPerMinute => combineTo(const MeterPerMinute());
   Speed get toMeterPerSecond => combineTo(const MeterPerSecond());

@@ -15,8 +15,6 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T withValue([num? val]);
 
-  T fromJson(Map<String, dynamic> json);
-
   Map<String, dynamic> toJson();
 
   AnchorRatio<T> get _anchorRatio;
@@ -53,17 +51,21 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T convertTo<E extends Unit<T>>(E to) {
     num conversionRatio;
-    if (runtimeType == to.runtimeType) {
-      conversionRatio = 1;
+    if (value == 0) {
+      return (to as T).withValue(0);
     } else {
-      if (runtimeType == _anchorRatio.anchor) {
-        conversionRatio = _anchorRatio.ratio.getRatio(to.runtimeType);
+      if (runtimeType == to.runtimeType) {
+        conversionRatio = 1;
       } else {
-        final baseValue = value! / _anchorRatio.ratio.getRatio(runtimeType);
-        return _anchor.withValue(baseValue).convertTo(to);
+        if (runtimeType == _anchorRatio.anchor) {
+          conversionRatio = _anchorRatio.ratio.getRatio(to.runtimeType);
+        } else {
+          final baseValue = value! / _anchorRatio.ratio.getRatio(runtimeType);
+          return _anchor.withValue(baseValue).convertTo(to);
+        }
       }
+      return (to as T).withValue(value! * conversionRatio);
     }
-    return (to as T).withValue(value! * conversionRatio);
   }
 
   T operator +(T other) {

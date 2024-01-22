@@ -6,6 +6,14 @@ part of '../../super_measurement.dart';
 abstract final class Sound extends Unit<Sound> {
   const Sound([super.value]);
 
+  factory Sound.fromJson(Map<String, dynamic> json) {
+    final obj = json[_majorName] as Map<String, dynamic>;
+    return _checkJson(_majorName, json, soundUnitValues)
+        ? soundUnitValues.map[obj[_unit]]!.construct
+            .withValue(obj[_value] as num)
+        : const Decibel();
+  }
+
   @override
   AnchorRatio<Sound> get _anchorRatio => (
         anchor: _anchor.runtimeType,
@@ -25,11 +33,18 @@ abstract final class Sound extends Unit<Sound> {
   Sound get toNeper => convertTo(const Neper());
 
   @override
-  String get majorName => 'sound';
+  String get majorName => _majorName;
+
+  static const _majorName = 'sound';
 }
 
 final class Bel extends Sound {
   const Bel([super.value]);
+
+  factory Bel.fromJson(Map<String, dynamic> json) {
+    final val = Sound.fromJson(json).toBel.value;
+    return Bel(val);
+  }
 
   static const minorName = 'bel';
 
@@ -43,17 +58,6 @@ final class Bel extends Sound {
   String get symbol => 'B';
 
   @override
-  Sound fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, soundUnitValues)
-          ? soundUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -64,6 +68,11 @@ final class Bel extends Sound {
 
 final class Decibel extends Sound {
   const Decibel([super.value]);
+
+  factory Decibel.fromJson(Map<String, dynamic> json) {
+    final val = Sound.fromJson(json).toDecibel.value;
+    return Decibel(val);
+  }
 
   static const minorName = 'decibel';
 
@@ -77,17 +86,6 @@ final class Decibel extends Sound {
   String get symbol => 'dB';
 
   @override
-  Sound fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, soundUnitValues)
-          ? soundUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -99,6 +97,11 @@ final class Decibel extends Sound {
 final class Neper extends Sound {
   const Neper([super.value]);
 
+  factory Neper.fromJson(Map<String, dynamic> json) {
+    final val = Sound.fromJson(json).toNeper.value;
+    return Neper(val);
+  }
+
   static const minorName = 'neper';
 
   @override
@@ -109,17 +112,6 @@ final class Neper extends Sound {
 
   @override
   String get symbol => 'Np';
-
-  @override
-  Sound fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, soundUnitValues)
-          ? soundUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {

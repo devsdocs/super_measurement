@@ -22,6 +22,12 @@ part 'datastorage.gen.dart';
 part 'time.gen.dart';
 part 'sound.gen.dart';
 part 'current.gen.dart';
+part 'entropy.gen.dart';
+part 'illumination.gen.dart';
+part 'force.gen.dart';
+part 'electricfield.gen.dart';
+part 'flow.gen.dart';
+part 'metricprefix.gen.dart';
 
 void main() async {
   generateModels();
@@ -33,6 +39,12 @@ void main() async {
 }
 
 final allData = [
+  metricPrefixUnit,
+  flowUnit,
+  electricFieldUnit,
+  illumintionUnit,
+  forceUnit,
+  entropyUnit,
   currentUnit,
   massUnit,
   lengthUnit,

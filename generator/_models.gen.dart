@@ -39,6 +39,15 @@ void generateModels() {
     typeBuff.writeln();
     typeBuff.writeln('  const $name([super.value]);');
     typeBuff.writeln();
+    typeBuff.writeln(
+      '  factory $name.fromJson(Map<String,dynamic> json) {',
+    );
+    typeBuff.writeln('  final obj = json[_majorName] as Map<String, dynamic>;');
+    typeBuff.writeln(
+      'return _checkJson(_majorName,json, $enumValuesSymbol) ? $enumValuesSymbol.map[obj[_unit]]!.construct.withValue(obj[_value] as num) : const ${anchor.keys.first}();',
+    );
+    typeBuff.writeln('}');
+    typeBuff.writeln();
     typeBuff.writeln('  @override');
     typeBuff.writeln('  AnchorRatio<$name> get _anchorRatio => (');
     typeBuff.writeln('        anchor: _anchor.runtimeType,');
@@ -64,7 +73,9 @@ void generateModels() {
     }
     typeBuff.writeln();
     typeBuff.writeln('  @override');
-    typeBuff.writeln("  String get majorName => '${name.snakeCase}';");
+    typeBuff.writeln('  String get majorName => _majorName;');
+    typeBuff.writeln();
+    typeBuff.writeln("  static const _majorName = '${name.snakeCase}';");
     typeBuff.writeln();
     typeBuff.writeln('  }');
     typeBuff.writeln();
@@ -73,6 +84,15 @@ void generateModels() {
       final unitProps = e.values.first;
       typeBuff.writeln('final class $unitType extends $name {');
       typeBuff.writeln('  const $unitType([super.value]);');
+      typeBuff.writeln();
+      typeBuff.writeln(
+        '  factory $unitType.fromJson(Map<String,dynamic> json) {',
+      );
+      typeBuff.writeln('  final val = $name.fromJson(json).to$unitType.value;');
+      typeBuff.writeln(
+        'return $unitType(val);',
+      );
+      typeBuff.writeln('}');
       typeBuff.writeln();
       typeBuff.writeln("  static const minorName = '${unitType.snakeCase}';");
       typeBuff.writeln();
@@ -86,14 +106,6 @@ void generateModels() {
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       typeBuff.writeln("  String get symbol => '${unitProps['symbol']}';");
-      typeBuff.writeln();
-      typeBuff.writeln('  @override');
-      typeBuff.writeln(
-        '  $name fromJson(Map<String,dynamic> json) =>',
-      );
-      typeBuff.writeln(
-        '_checkJson(majorName,json, $enumValuesSymbol) ? $enumValuesSymbol.map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct.withValue((json[majorName] as Map<String, dynamic>)[_value] as num,).convertTo(this) : this;',
-      );
 
       typeBuff.writeln();
 

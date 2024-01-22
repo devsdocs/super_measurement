@@ -58,6 +58,17 @@ extension NumOfDataTransfer on num {
   MegabytePerSecond get megabytePerSecond => MegabytePerSecond(this);
 }
 
+extension NumOfElectricField on num {
+  MicrovoltPerMeter get microvoltPerMeter => MicrovoltPerMeter(this);
+  MilivoltPerMeter get milivoltPerMeter => MilivoltPerMeter(this);
+  StatvoltPerCentimeter get statvoltPerCentimeter =>
+      StatvoltPerCentimeter(this);
+  StatvoltPerInch get statvoltPerInch => StatvoltPerInch(this);
+  VoltPerCentimeter get voltPerCentimeter => VoltPerCentimeter(this);
+  VoltPerInch get voltPerInch => VoltPerInch(this);
+  VoltPerMeter get voltPerMeter => VoltPerMeter(this);
+}
+
 extension NumOfEnergy on num {
   CalorieInternational get calorieInternational => CalorieInternational(this);
   CalorieNutritional get calorieNutritional => CalorieNutritional(this);
@@ -71,6 +82,46 @@ extension NumOfEnergy on num {
   MegaJoule get megaJoule => MegaJoule(this);
   MegawattHour get megawattHour => MegawattHour(this);
   WattHour get wattHour => WattHour(this);
+}
+
+extension NumOfEntropy on num {
+  JoulePerKilogramCelcius get joulePerKilogramCelcius =>
+      JoulePerKilogramCelcius(this);
+  KilocaloriePerKilogramCelcius get kilocaloriePerKilogramCelcius =>
+      KilocaloriePerKilogramCelcius(this);
+  KilojoulePerKilogramCelcius get kilojoulePerKilogramCelcius =>
+      KilojoulePerKilogramCelcius(this);
+}
+
+extension NumOfFlow on num {
+  FootCubicPerHour get footCubicPerHour => FootCubicPerHour(this);
+  FootCubicPerMinute get footCubicPerMinute => FootCubicPerMinute(this);
+  InchCubicPerHour get inchCubicPerHour => InchCubicPerHour(this);
+  InchCubicPerMinute get inchCubicPerMinute => InchCubicPerMinute(this);
+  LiterPerDay get literPerDay => LiterPerDay(this);
+  LiterPerHour get literPerHour => LiterPerHour(this);
+  LiterPerMinute get literPerMinute => LiterPerMinute(this);
+  MeterCubicPerDay get meterCubicPerDay => MeterCubicPerDay(this);
+  MeterCubicPerHour get meterCubicPerHour => MeterCubicPerHour(this);
+  MeterCubicPerMinute get meterCubicPerMinute => MeterCubicPerMinute(this);
+}
+
+extension NumOfForce on num {
+  GramForce get gramForce => GramForce(this);
+  JoulePerCentimeter get joulePerCentimeter => JoulePerCentimeter(this);
+  KilogramForce get kilogramForce => KilogramForce(this);
+  Kilonewton get kilonewton => Kilonewton(this);
+  Newton get newton => Newton(this);
+  OunceForce get ounceForce => OunceForce(this);
+  PoundForce get poundForce => PoundForce(this);
+  Poundal get poundal => Poundal(this);
+}
+
+extension NumOfIllumination on num {
+  Flame get flame => Flame(this);
+  LumenPerFootSquare get lumenPerFootSquare => LumenPerFootSquare(this);
+  LumenPerMeterSquare get lumenPerMeterSquare => LumenPerMeterSquare(this);
+  Phot get phot => Phot(this);
 }
 
 extension NumOfLength on num {
@@ -98,6 +149,30 @@ extension NumOfMass on num {
   TonUK get tonUK => TonUK(this);
   TonUS get tonUS => TonUS(this);
   Tonne get tonne => Tonne(this);
+}
+
+extension NumOfMetricPrefix on num {
+  Atto get atto => Atto(this);
+  Centi get centi => Centi(this);
+  Deci get deci => Deci(this);
+  Deka get deka => Deka(this);
+  Exa get exa => Exa(this);
+  Femto get femto => Femto(this);
+  Giga get giga => Giga(this);
+  Hecto get hecto => Hecto(this);
+  Kilo get kilo => Kilo(this);
+  Mega get mega => Mega(this);
+  MetricUnit get metricUnit => MetricUnit(this);
+  Micro get micro => Micro(this);
+  Milli get milli => Milli(this);
+  Nano get nano => Nano(this);
+  Peta get peta => Peta(this);
+  Pico get pico => Pico(this);
+  Tera get tera => Tera(this);
+  Yocto get yocto => Yocto(this);
+  Yotta get yotta => Yotta(this);
+  Zepto get zepto => Zepto(this);
+  Zetta get zetta => Zetta(this);
 }
 
 extension NumOfPower on num {
@@ -131,6 +206,8 @@ extension NumOfSpeed on num {
   KilometerPerHour get kilometerPerHour => KilometerPerHour(this);
   Knot get knot => Knot(this);
   Light get light => Light(this);
+  MachAtSeaLevel get machAtSeaLevel => MachAtSeaLevel(this);
+  MachInternational get machInternational => MachInternational(this);
   MeterPerHour get meterPerHour => MeterPerHour(this);
   MeterPerMinute get meterPerMinute => MeterPerMinute(this);
   MeterPerSecond get meterPerSecond => MeterPerSecond(this);

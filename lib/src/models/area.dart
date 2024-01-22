@@ -7,6 +7,14 @@ part of '../../super_measurement.dart';
 abstract final class Area extends Unit<Area> {
   const Area([super.value]);
 
+  factory Area.fromJson(Map<String, dynamic> json) {
+    final obj = json[_majorName] as Map<String, dynamic>;
+    return _checkJson(_majorName, json, areaUnitValues)
+        ? areaUnitValues.map[obj[_unit]]!.construct
+            .withValue(obj[_value] as num)
+        : const SquareMeters();
+  }
+
   @override
   AnchorRatio<Area> get _anchorRatio => (
         anchor: _anchor.runtimeType,
@@ -44,11 +52,18 @@ abstract final class Area extends Unit<Area> {
   Area get toSquareYards => convertTo(const SquareYards());
 
   @override
-  String get majorName => 'area';
+  String get majorName => _majorName;
+
+  static const _majorName = 'area';
 }
 
 final class Acres extends Area {
   const Acres([super.value]);
+
+  factory Acres.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toAcres.value;
+    return Acres(val);
+  }
 
   static const minorName = 'acres';
 
@@ -62,17 +77,6 @@ final class Acres extends Area {
   String get symbol => 'ac';
 
   @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -83,6 +87,11 @@ final class Acres extends Area {
 
 final class Hectares extends Area {
   const Hectares([super.value]);
+
+  factory Hectares.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toHectares.value;
+    return Hectares(val);
+  }
 
   static const minorName = 'hectares';
 
@@ -96,17 +105,6 @@ final class Hectares extends Area {
   String get symbol => 'ha';
 
   @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -117,6 +115,11 @@ final class Hectares extends Area {
 
 final class SquareCentimeters extends Area {
   const SquareCentimeters([super.value]);
+
+  factory SquareCentimeters.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toSquareCentimeters.value;
+    return SquareCentimeters(val);
+  }
 
   static const minorName = 'squareCentimeters';
 
@@ -130,17 +133,6 @@ final class SquareCentimeters extends Area {
   String get symbol => 'cm²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -151,6 +143,11 @@ final class SquareCentimeters extends Area {
 
 final class SquareFoot extends Area {
   const SquareFoot([super.value]);
+
+  factory SquareFoot.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toSquareFoot.value;
+    return SquareFoot(val);
+  }
 
   static const minorName = 'squareFoot';
 
@@ -164,17 +161,6 @@ final class SquareFoot extends Area {
   String get symbol => 'ft²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -185,6 +171,11 @@ final class SquareFoot extends Area {
 
 final class SquareInches extends Area {
   const SquareInches([super.value]);
+
+  factory SquareInches.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toSquareInches.value;
+    return SquareInches(val);
+  }
 
   static const minorName = 'squareInches';
 
@@ -198,17 +189,6 @@ final class SquareInches extends Area {
   String get symbol => 'in²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -219,6 +199,11 @@ final class SquareInches extends Area {
 
 final class SquareKilometers extends Area {
   const SquareKilometers([super.value]);
+
+  factory SquareKilometers.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toSquareKilometers.value;
+    return SquareKilometers(val);
+  }
 
   static const minorName = 'squareKilometers';
 
@@ -232,17 +217,6 @@ final class SquareKilometers extends Area {
   String get symbol => 'km²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -253,6 +227,11 @@ final class SquareKilometers extends Area {
 
 final class SquareMeters extends Area {
   const SquareMeters([super.value]);
+
+  factory SquareMeters.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toSquareMeters.value;
+    return SquareMeters(val);
+  }
 
   static const minorName = 'squareMeters';
 
@@ -266,17 +245,6 @@ final class SquareMeters extends Area {
   String get symbol => 'm²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -287,6 +255,11 @@ final class SquareMeters extends Area {
 
 final class SquareMiles extends Area {
   const SquareMiles([super.value]);
+
+  factory SquareMiles.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toSquareMiles.value;
+    return SquareMiles(val);
+  }
 
   static const minorName = 'squareMiles';
 
@@ -300,17 +273,6 @@ final class SquareMiles extends Area {
   String get symbol => 'mi²';
 
   @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
-
-  @override
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: minorName,
@@ -322,6 +284,11 @@ final class SquareMiles extends Area {
 final class SquareYards extends Area {
   const SquareYards([super.value]);
 
+  factory SquareYards.fromJson(Map<String, dynamic> json) {
+    final val = Area.fromJson(json).toSquareYards.value;
+    return SquareYards(val);
+  }
+
   static const minorName = 'squareYards';
 
   @override
@@ -332,17 +299,6 @@ final class SquareYards extends Area {
 
   @override
   String get symbol => 'yd²';
-
-  @override
-  Area fromJson(Map<String, dynamic> json) =>
-      _checkJson(majorName, json, areaUnitValues)
-          ? areaUnitValues
-              .map[(json[majorName] as Map<String, dynamic>)[_unit]]!.construct
-              .withValue(
-                (json[majorName] as Map<String, dynamic>)[_value] as num,
-              )
-              .convertTo(this)
-          : this;
 
   @override
   Map<String, dynamic> toJson() => {
