@@ -1,3 +1,8 @@
+## 1.0.17
+- Expand supported units and improve API consistency
+- Enhancements include the addition of new measurement units such as
+`ElectricField`, `Entropy`, `Flow`, `Force`, and `Illumination`
+
 ## 1.0.16
 - Exposing `convertTo()` and `combineTo()`
 - Add some extension to `Iterable`
