@@ -1,3 +1,4 @@
+/// Dart library for doing various unit conversion with ease
 library super_measurement;
 
 import 'package:reusable_tools/reusable_tools.dart';
