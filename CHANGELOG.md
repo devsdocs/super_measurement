@@ -1,3 +1,9 @@
+## 1.0.18
+- Add `Angle`
+- Add `SurfaceTension`
+- Add some unit to `DataStorage`
+- Add docs
+
 ## 1.0.17
 - Expand supported units and improve API consistency
 - Enhancements include the addition of new measurement units such as
