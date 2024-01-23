@@ -54,7 +54,7 @@ final class JoulePerKilogramCelcius extends Entropy {
   factory JoulePerKilogramCelcius.fromJson(Map<String, dynamic> json) =>
       JoulePerKilogramCelcius.from(Entropy.fromJson(json));
 
-  /// More ways to creating [JoulePerKilogramCelcius]
+  /// Construct [JoulePerKilogramCelcius] from other [Entropy]
   factory JoulePerKilogramCelcius.from(Entropy unit) =>
       JoulePerKilogramCelcius(unit.toJoulePerKilogramCelcius.value);
 
@@ -93,7 +93,7 @@ final class KilocaloriePerKilogramCelcius extends Entropy {
   factory KilocaloriePerKilogramCelcius.fromJson(Map<String, dynamic> json) =>
       KilocaloriePerKilogramCelcius.from(Entropy.fromJson(json));
 
-  /// More ways to creating [KilocaloriePerKilogramCelcius]
+  /// Construct [KilocaloriePerKilogramCelcius] from other [Entropy]
   factory KilocaloriePerKilogramCelcius.from(Entropy unit) =>
       KilocaloriePerKilogramCelcius(unit.toKilocaloriePerKilogramCelcius.value);
 
@@ -133,7 +133,7 @@ final class KilojoulePerKilogramCelcius extends Entropy {
   factory KilojoulePerKilogramCelcius.fromJson(Map<String, dynamic> json) =>
       KilojoulePerKilogramCelcius.from(Entropy.fromJson(json));
 
-  /// More ways to creating [KilojoulePerKilogramCelcius]
+  /// Construct [KilojoulePerKilogramCelcius] from other [Entropy]
   factory KilojoulePerKilogramCelcius.from(Entropy unit) =>
       KilojoulePerKilogramCelcius(unit.toKilojoulePerKilogramCelcius.value);
 

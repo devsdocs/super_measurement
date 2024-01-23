@@ -68,7 +68,7 @@ final class MicrovoltPerMeter extends ElectricField {
   factory MicrovoltPerMeter.fromJson(Map<String, dynamic> json) =>
       MicrovoltPerMeter.from(ElectricField.fromJson(json));
 
-  /// More ways to creating [MicrovoltPerMeter]
+  /// Construct [MicrovoltPerMeter] from other [ElectricField]
   factory MicrovoltPerMeter.from(ElectricField unit) =>
       MicrovoltPerMeter(unit.toMicrovoltPerMeter.value);
 
@@ -106,7 +106,7 @@ final class MilivoltPerMeter extends ElectricField {
   factory MilivoltPerMeter.fromJson(Map<String, dynamic> json) =>
       MilivoltPerMeter.from(ElectricField.fromJson(json));
 
-  /// More ways to creating [MilivoltPerMeter]
+  /// Construct [MilivoltPerMeter] from other [ElectricField]
   factory MilivoltPerMeter.from(ElectricField unit) =>
       MilivoltPerMeter(unit.toMilivoltPerMeter.value);
 
@@ -144,7 +144,7 @@ final class StatvoltPerCentimeter extends ElectricField {
   factory StatvoltPerCentimeter.fromJson(Map<String, dynamic> json) =>
       StatvoltPerCentimeter.from(ElectricField.fromJson(json));
 
-  /// More ways to creating [StatvoltPerCentimeter]
+  /// Construct [StatvoltPerCentimeter] from other [ElectricField]
   factory StatvoltPerCentimeter.from(ElectricField unit) =>
       StatvoltPerCentimeter(unit.toStatvoltPerCentimeter.value);
 
@@ -183,7 +183,7 @@ final class StatvoltPerInch extends ElectricField {
   factory StatvoltPerInch.fromJson(Map<String, dynamic> json) =>
       StatvoltPerInch.from(ElectricField.fromJson(json));
 
-  /// More ways to creating [StatvoltPerInch]
+  /// Construct [StatvoltPerInch] from other [ElectricField]
   factory StatvoltPerInch.from(ElectricField unit) =>
       StatvoltPerInch(unit.toStatvoltPerInch.value);
 
@@ -221,7 +221,7 @@ final class VoltPerCentimeter extends ElectricField {
   factory VoltPerCentimeter.fromJson(Map<String, dynamic> json) =>
       VoltPerCentimeter.from(ElectricField.fromJson(json));
 
-  /// More ways to creating [VoltPerCentimeter]
+  /// Construct [VoltPerCentimeter] from other [ElectricField]
   factory VoltPerCentimeter.from(ElectricField unit) =>
       VoltPerCentimeter(unit.toVoltPerCentimeter.value);
 
@@ -259,7 +259,7 @@ final class VoltPerInch extends ElectricField {
   factory VoltPerInch.fromJson(Map<String, dynamic> json) =>
       VoltPerInch.from(ElectricField.fromJson(json));
 
-  /// More ways to creating [VoltPerInch]
+  /// Construct [VoltPerInch] from other [ElectricField]
   factory VoltPerInch.from(ElectricField unit) =>
       VoltPerInch(unit.toVoltPerInch.value);
 
@@ -297,7 +297,7 @@ final class VoltPerMeter extends ElectricField {
   factory VoltPerMeter.fromJson(Map<String, dynamic> json) =>
       VoltPerMeter.from(ElectricField.fromJson(json));
 
-  /// More ways to creating [VoltPerMeter]
+  /// Construct [VoltPerMeter] from other [ElectricField]
   factory VoltPerMeter.from(ElectricField unit) =>
       VoltPerMeter(unit.toVoltPerMeter.value);
 

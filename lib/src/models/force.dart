@@ -71,7 +71,7 @@ final class GramForce extends Force {
   factory GramForce.fromJson(Map<String, dynamic> json) =>
       GramForce.from(Force.fromJson(json));
 
-  /// More ways to creating [GramForce]
+  /// Construct [GramForce] from other [Force]
   factory GramForce.from(Force unit) => GramForce(unit.toGramForce.value);
 
   static const minorName = 'gramForce';
@@ -108,7 +108,7 @@ final class JoulePerCentimeter extends Force {
   factory JoulePerCentimeter.fromJson(Map<String, dynamic> json) =>
       JoulePerCentimeter.from(Force.fromJson(json));
 
-  /// More ways to creating [JoulePerCentimeter]
+  /// Construct [JoulePerCentimeter] from other [Force]
   factory JoulePerCentimeter.from(Force unit) =>
       JoulePerCentimeter(unit.toJoulePerCentimeter.value);
 
@@ -146,7 +146,7 @@ final class KilogramForce extends Force {
   factory KilogramForce.fromJson(Map<String, dynamic> json) =>
       KilogramForce.from(Force.fromJson(json));
 
-  /// More ways to creating [KilogramForce]
+  /// Construct [KilogramForce] from other [Force]
   factory KilogramForce.from(Force unit) =>
       KilogramForce(unit.toKilogramForce.value);
 
@@ -184,7 +184,7 @@ final class Kilonewton extends Force {
   factory Kilonewton.fromJson(Map<String, dynamic> json) =>
       Kilonewton.from(Force.fromJson(json));
 
-  /// More ways to creating [Kilonewton]
+  /// Construct [Kilonewton] from other [Force]
   factory Kilonewton.from(Force unit) => Kilonewton(unit.toKilonewton.value);
 
   static const minorName = 'kilonewton';
@@ -221,7 +221,7 @@ final class Newton extends Force {
   factory Newton.fromJson(Map<String, dynamic> json) =>
       Newton.from(Force.fromJson(json));
 
-  /// More ways to creating [Newton]
+  /// Construct [Newton] from other [Force]
   factory Newton.from(Force unit) => Newton(unit.toNewton.value);
 
   static const minorName = 'newton';
@@ -258,7 +258,7 @@ final class OunceForce extends Force {
   factory OunceForce.fromJson(Map<String, dynamic> json) =>
       OunceForce.from(Force.fromJson(json));
 
-  /// More ways to creating [OunceForce]
+  /// Construct [OunceForce] from other [Force]
   factory OunceForce.from(Force unit) => OunceForce(unit.toOunceForce.value);
 
   static const minorName = 'ounceForce';
@@ -295,7 +295,7 @@ final class PoundForce extends Force {
   factory PoundForce.fromJson(Map<String, dynamic> json) =>
       PoundForce.from(Force.fromJson(json));
 
-  /// More ways to creating [PoundForce]
+  /// Construct [PoundForce] from other [Force]
   factory PoundForce.from(Force unit) => PoundForce(unit.toPoundForce.value);
 
   static const minorName = 'poundForce';
@@ -332,7 +332,7 @@ final class Poundal extends Force {
   factory Poundal.fromJson(Map<String, dynamic> json) =>
       Poundal.from(Force.fromJson(json));
 
-  /// More ways to creating [Poundal]
+  /// Construct [Poundal] from other [Force]
   factory Poundal.from(Force unit) => Poundal(unit.toPoundal.value);
 
   static const minorName = 'poundal';

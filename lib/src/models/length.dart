@@ -79,7 +79,7 @@ final class Centimeters extends Length {
   factory Centimeters.fromJson(Map<String, dynamic> json) =>
       Centimeters.from(Length.fromJson(json));
 
-  /// More ways to creating [Centimeters]
+  /// Construct [Centimeters] from other [Length]
   factory Centimeters.from(Length unit) =>
       Centimeters(unit.toCentimeters.value);
 
@@ -117,7 +117,7 @@ final class Feet extends Length {
   factory Feet.fromJson(Map<String, dynamic> json) =>
       Feet.from(Length.fromJson(json));
 
-  /// More ways to creating [Feet]
+  /// Construct [Feet] from other [Length]
   factory Feet.from(Length unit) => Feet(unit.toFeet.value);
 
   static const minorName = 'feet';
@@ -154,7 +154,7 @@ final class Furlongs extends Length {
   factory Furlongs.fromJson(Map<String, dynamic> json) =>
       Furlongs.from(Length.fromJson(json));
 
-  /// More ways to creating [Furlongs]
+  /// Construct [Furlongs] from other [Length]
   factory Furlongs.from(Length unit) => Furlongs(unit.toFurlongs.value);
 
   static const minorName = 'furlongs';
@@ -191,7 +191,7 @@ final class Inches extends Length {
   factory Inches.fromJson(Map<String, dynamic> json) =>
       Inches.from(Length.fromJson(json));
 
-  /// More ways to creating [Inches]
+  /// Construct [Inches] from other [Length]
   factory Inches.from(Length unit) => Inches(unit.toInches.value);
 
   static const minorName = 'inches';
@@ -228,7 +228,7 @@ final class Kilometers extends Length {
   factory Kilometers.fromJson(Map<String, dynamic> json) =>
       Kilometers.from(Length.fromJson(json));
 
-  /// More ways to creating [Kilometers]
+  /// Construct [Kilometers] from other [Length]
   factory Kilometers.from(Length unit) => Kilometers(unit.toKilometers.value);
 
   static const minorName = 'kilometers';
@@ -265,7 +265,7 @@ final class Meters extends Length {
   factory Meters.fromJson(Map<String, dynamic> json) =>
       Meters.from(Length.fromJson(json));
 
-  /// More ways to creating [Meters]
+  /// Construct [Meters] from other [Length]
   factory Meters.from(Length unit) => Meters(unit.toMeters.value);
 
   static const minorName = 'meters';
@@ -302,7 +302,7 @@ final class Miles extends Length {
   factory Miles.fromJson(Map<String, dynamic> json) =>
       Miles.from(Length.fromJson(json));
 
-  /// More ways to creating [Miles]
+  /// Construct [Miles] from other [Length]
   factory Miles.from(Length unit) => Miles(unit.toMiles.value);
 
   static const minorName = 'miles';
@@ -339,7 +339,7 @@ final class Millimeters extends Length {
   factory Millimeters.fromJson(Map<String, dynamic> json) =>
       Millimeters.from(Length.fromJson(json));
 
-  /// More ways to creating [Millimeters]
+  /// Construct [Millimeters] from other [Length]
   factory Millimeters.from(Length unit) =>
       Millimeters(unit.toMillimeters.value);
 
@@ -377,7 +377,7 @@ final class NauticalMiles extends Length {
   factory NauticalMiles.fromJson(Map<String, dynamic> json) =>
       NauticalMiles.from(Length.fromJson(json));
 
-  /// More ways to creating [NauticalMiles]
+  /// Construct [NauticalMiles] from other [Length]
   factory NauticalMiles.from(Length unit) =>
       NauticalMiles(unit.toNauticalMiles.value);
 
@@ -415,7 +415,7 @@ final class Yards extends Length {
   factory Yards.fromJson(Map<String, dynamic> json) =>
       Yards.from(Length.fromJson(json));
 
-  /// More ways to creating [Yards]
+  /// Construct [Yards] from other [Length]
   factory Yards.from(Length unit) => Yards(unit.toYards.value);
 
   static const minorName = 'yards';

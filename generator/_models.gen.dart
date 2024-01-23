@@ -101,7 +101,7 @@ void generateModels() {
 
       typeBuff.writeln();
       typeBuff.writeln(
-        '/// More ways to creating [$unitType]',
+        '/// Construct [$unitType] from other [$name]',
       );
       typeBuff.writeln(
         '  factory $unitType.from($name unit) =>',
@@ -134,7 +134,12 @@ void generateModels() {
       );
       typeBuff.writeln();
       typeBuff.writeln('  @override');
-      typeBuff.writeln("  String get symbol => '${unitProps['symbol']}';");
+      final symb = unitProps['symbol'];
+      final isSingleQuote = symb == "'";
+      final writeSymbol = isSingleQuote ? "'" : symb;
+      typeBuff.writeln(
+        "  String get symbol => ${isSingleQuote ? '"' : "'"}$writeSymbol${isSingleQuote ? '"' : "'"};",
+      );
 
       typeBuff.writeln();
 

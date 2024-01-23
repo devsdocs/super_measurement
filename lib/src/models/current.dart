@@ -62,7 +62,7 @@ final class Abampere extends Current {
   factory Abampere.fromJson(Map<String, dynamic> json) =>
       Abampere.from(Current.fromJson(json));
 
-  /// More ways to creating [Abampere]
+  /// Construct [Abampere] from other [Current]
   factory Abampere.from(Current unit) => Abampere(unit.toAbampere.value);
 
   static const minorName = 'abampere';
@@ -99,7 +99,7 @@ final class Ampere extends Current {
   factory Ampere.fromJson(Map<String, dynamic> json) =>
       Ampere.from(Current.fromJson(json));
 
-  /// More ways to creating [Ampere]
+  /// Construct [Ampere] from other [Current]
   factory Ampere.from(Current unit) => Ampere(unit.toAmpere.value);
 
   static const minorName = 'ampere';
@@ -136,7 +136,7 @@ final class Biot extends Current {
   factory Biot.fromJson(Map<String, dynamic> json) =>
       Biot.from(Current.fromJson(json));
 
-  /// More ways to creating [Biot]
+  /// Construct [Biot] from other [Current]
   factory Biot.from(Current unit) => Biot(unit.toBiot.value);
 
   static const minorName = 'biot';
@@ -173,7 +173,7 @@ final class KiloAmpere extends Current {
   factory KiloAmpere.fromJson(Map<String, dynamic> json) =>
       KiloAmpere.from(Current.fromJson(json));
 
-  /// More ways to creating [KiloAmpere]
+  /// Construct [KiloAmpere] from other [Current]
   factory KiloAmpere.from(Current unit) => KiloAmpere(unit.toKiloAmpere.value);
 
   static const minorName = 'kiloAmpere';
@@ -210,7 +210,7 @@ final class MilliAmpere extends Current {
   factory MilliAmpere.fromJson(Map<String, dynamic> json) =>
       MilliAmpere.from(Current.fromJson(json));
 
-  /// More ways to creating [MilliAmpere]
+  /// Construct [MilliAmpere] from other [Current]
   factory MilliAmpere.from(Current unit) =>
       MilliAmpere(unit.toMilliAmpere.value);
 
@@ -248,7 +248,7 @@ final class StatAmpere extends Current {
   factory StatAmpere.fromJson(Map<String, dynamic> json) =>
       StatAmpere.from(Current.fromJson(json));
 
-  /// More ways to creating [StatAmpere]
+  /// Construct [StatAmpere] from other [Current]
   factory StatAmpere.from(Current unit) => StatAmpere(unit.toStatAmpere.value);
 
   static const minorName = 'statAmpere';

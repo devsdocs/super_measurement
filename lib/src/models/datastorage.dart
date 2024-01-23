@@ -2,8 +2,9 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [DataStorage]
 ///
-/// [Bit], [Byte], [Gigabit], [Gigabyte], [Kilobit], [Kilobyte], [Megabit],
-/// [Megabyte], [Terabit], [Terabyte]
+/// [Bit], [Block], [BluRay], [Byte], [Exabit], [Exabyte], [Gigabit],
+/// [Gigabyte], [Kilobit], [Kilobyte], [Megabit], [Megabyte], [Nibble],
+/// [Petabit], [Petabyte], [Terabit], [Terabyte]
 abstract final class DataStorage extends Unit<DataStorage> {
   const DataStorage([super.value]);
 
@@ -21,12 +22,19 @@ abstract final class DataStorage extends Unit<DataStorage> {
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<DataStorage>({
           Bit: Bit._ratio,
+          Block: Block._ratio,
+          BluRay: BluRay._ratio,
           Byte: Byte._ratio,
+          Exabit: Exabit._ratio,
+          Exabyte: Exabyte._ratio,
           Gigabit: Gigabit._ratio,
           Kilobit: Kilobit._ratio,
           Kilobyte: Kilobyte._ratio,
           Megabit: Megabit._ratio,
           Megabyte: Megabyte._ratio,
+          Nibble: Nibble._ratio,
+          Petabit: Petabit._ratio,
+          Petabyte: Petabyte._ratio,
           Terabit: Terabit._ratio,
           Terabyte: Terabyte._ratio,
         })
@@ -38,8 +46,20 @@ abstract final class DataStorage extends Unit<DataStorage> {
   /// Convert to [Bit]
   DataStorage get toBit => convertTo(const Bit());
 
+  /// Convert to [Block]
+  DataStorage get toBlock => convertTo(const Block());
+
+  /// Convert to [BluRay]
+  DataStorage get toBluRay => convertTo(const BluRay());
+
   /// Convert to [Byte]
   DataStorage get toByte => convertTo(const Byte());
+
+  /// Convert to [Exabit]
+  DataStorage get toExabit => convertTo(const Exabit());
+
+  /// Convert to [Exabyte]
+  DataStorage get toExabyte => convertTo(const Exabyte());
 
   /// Convert to [Gigabit]
   DataStorage get toGigabit => convertTo(const Gigabit());
@@ -58,6 +78,15 @@ abstract final class DataStorage extends Unit<DataStorage> {
 
   /// Convert to [Megabyte]
   DataStorage get toMegabyte => convertTo(const Megabyte());
+
+  /// Convert to [Nibble]
+  DataStorage get toNibble => convertTo(const Nibble());
+
+  /// Convert to [Petabit]
+  DataStorage get toPetabit => convertTo(const Petabit());
+
+  /// Convert to [Petabyte]
+  DataStorage get toPetabyte => convertTo(const Petabyte());
 
   /// Convert to [Terabit]
   DataStorage get toTerabit => convertTo(const Terabit());
@@ -79,7 +108,7 @@ final class Bit extends DataStorage {
   factory Bit.fromJson(Map<String, dynamic> json) =>
       Bit.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Bit]
+  /// Construct [Bit] from other [DataStorage]
   factory Bit.from(DataStorage unit) => Bit(unit.toBit.value);
 
   static const minorName = 'bit';
@@ -109,6 +138,80 @@ final class Bit extends DataStorage {
 }
 
 /// Unit of [DataStorage]
+final class Block extends DataStorage {
+  const Block([super.value]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Block.fromJson(Map<String, dynamic> json) =>
+      Block.from(DataStorage.fromJson(json));
+
+  /// Construct [Block] from other [DataStorage]
+  factory Block.from(DataStorage unit) => Block(unit.toBlock.value);
+
+  static const minorName = 'block';
+
+  static const _ratio = 2097152;
+
+  /// 1 [Gigabyte] = 2097152 [Block]
+  @override
+  num get ratio => _ratio;
+
+  @override
+  Block get _clone => Block(value);
+
+  @override
+  Block withValue([num? val]) => Block(val ?? value);
+
+  @override
+  String get symbol => 'block';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [DataStorage]
+final class BluRay extends DataStorage {
+  const BluRay([super.value]);
+
+  /// If there is no matched key, returning with 0 value
+  factory BluRay.fromJson(Map<String, dynamic> json) =>
+      BluRay.from(DataStorage.fromJson(json));
+
+  /// Construct [BluRay] from other [DataStorage]
+  factory BluRay.from(DataStorage unit) => BluRay(unit.toBluRay.value);
+
+  static const minorName = 'bluRay';
+
+  static const _ratio = 0.04290622643;
+
+  /// 1 [Gigabyte] ≈ 0.04290622643 [BluRay]
+  @override
+  num get ratio => _ratio;
+
+  @override
+  BluRay get _clone => BluRay(value);
+
+  @override
+  BluRay withValue([num? val]) => BluRay(val ?? value);
+
+  @override
+  String get symbol => 'BR';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [DataStorage]
 final class Byte extends DataStorage {
   const Byte([super.value]);
 
@@ -116,7 +219,7 @@ final class Byte extends DataStorage {
   factory Byte.fromJson(Map<String, dynamic> json) =>
       Byte.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Byte]
+  /// Construct [Byte] from other [DataStorage]
   factory Byte.from(DataStorage unit) => Byte(unit.toByte.value);
 
   static const minorName = 'byte';
@@ -146,6 +249,80 @@ final class Byte extends DataStorage {
 }
 
 /// Unit of [DataStorage]
+final class Exabit extends DataStorage {
+  const Exabit([super.value]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Exabit.fromJson(Map<String, dynamic> json) =>
+      Exabit.from(DataStorage.fromJson(json));
+
+  /// Construct [Exabit] from other [DataStorage]
+  factory Exabit.from(DataStorage unit) => Exabit(unit.toExabit.value);
+
+  static const minorName = 'exabit';
+
+  static const _ratio = 7.450580597e-9;
+
+  /// 1 [Gigabyte] ≈ 7.450580597e-9 [Exabit]
+  @override
+  num get ratio => _ratio;
+
+  @override
+  Exabit get _clone => Exabit(value);
+
+  @override
+  Exabit withValue([num? val]) => Exabit(val ?? value);
+
+  @override
+  String get symbol => 'Eb';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [DataStorage]
+final class Exabyte extends DataStorage {
+  const Exabyte([super.value]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Exabyte.fromJson(Map<String, dynamic> json) =>
+      Exabyte.from(DataStorage.fromJson(json));
+
+  /// Construct [Exabyte] from other [DataStorage]
+  factory Exabyte.from(DataStorage unit) => Exabyte(unit.toExabyte.value);
+
+  static const minorName = 'exabyte';
+
+  static const _ratio = 9.313225746e-10;
+
+  /// 1 [Gigabyte] ≈ 9.313225746e-10 [Exabyte]
+  @override
+  num get ratio => _ratio;
+
+  @override
+  Exabyte get _clone => Exabyte(value);
+
+  @override
+  Exabyte withValue([num? val]) => Exabyte(val ?? value);
+
+  @override
+  String get symbol => 'EB';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [DataStorage]
 final class Gigabit extends DataStorage {
   const Gigabit([super.value]);
 
@@ -153,7 +330,7 @@ final class Gigabit extends DataStorage {
   factory Gigabit.fromJson(Map<String, dynamic> json) =>
       Gigabit.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Gigabit]
+  /// Construct [Gigabit] from other [DataStorage]
   factory Gigabit.from(DataStorage unit) => Gigabit(unit.toGigabit.value);
 
   static const minorName = 'gigabit';
@@ -190,7 +367,7 @@ final class Gigabyte extends DataStorage {
   factory Gigabyte.fromJson(Map<String, dynamic> json) =>
       Gigabyte.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Gigabyte]
+  /// Construct [Gigabyte] from other [DataStorage]
   factory Gigabyte.from(DataStorage unit) => Gigabyte(unit.toGigabyte.value);
 
   static const minorName = 'gigabyte';
@@ -227,7 +404,7 @@ final class Kilobit extends DataStorage {
   factory Kilobit.fromJson(Map<String, dynamic> json) =>
       Kilobit.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Kilobit]
+  /// Construct [Kilobit] from other [DataStorage]
   factory Kilobit.from(DataStorage unit) => Kilobit(unit.toKilobit.value);
 
   static const minorName = 'kilobit';
@@ -264,7 +441,7 @@ final class Kilobyte extends DataStorage {
   factory Kilobyte.fromJson(Map<String, dynamic> json) =>
       Kilobyte.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Kilobyte]
+  /// Construct [Kilobyte] from other [DataStorage]
   factory Kilobyte.from(DataStorage unit) => Kilobyte(unit.toKilobyte.value);
 
   static const minorName = 'kilobyte';
@@ -301,7 +478,7 @@ final class Megabit extends DataStorage {
   factory Megabit.fromJson(Map<String, dynamic> json) =>
       Megabit.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Megabit]
+  /// Construct [Megabit] from other [DataStorage]
   factory Megabit.from(DataStorage unit) => Megabit(unit.toMegabit.value);
 
   static const minorName = 'megabit';
@@ -338,7 +515,7 @@ final class Megabyte extends DataStorage {
   factory Megabyte.fromJson(Map<String, dynamic> json) =>
       Megabyte.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Megabyte]
+  /// Construct [Megabyte] from other [DataStorage]
   factory Megabyte.from(DataStorage unit) => Megabyte(unit.toMegabyte.value);
 
   static const minorName = 'megabyte';
@@ -368,6 +545,117 @@ final class Megabyte extends DataStorage {
 }
 
 /// Unit of [DataStorage]
+final class Nibble extends DataStorage {
+  const Nibble([super.value]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Nibble.fromJson(Map<String, dynamic> json) =>
+      Nibble.from(DataStorage.fromJson(json));
+
+  /// Construct [Nibble] from other [DataStorage]
+  factory Nibble.from(DataStorage unit) => Nibble(unit.toNibble.value);
+
+  static const minorName = 'nibble';
+
+  static const _ratio = 2147483648;
+
+  /// 1 [Gigabyte] = 2147483648 [Nibble]
+  @override
+  num get ratio => _ratio;
+
+  @override
+  Nibble get _clone => Nibble(value);
+
+  @override
+  Nibble withValue([num? val]) => Nibble(val ?? value);
+
+  @override
+  String get symbol => 'nibble';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [DataStorage]
+final class Petabit extends DataStorage {
+  const Petabit([super.value]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Petabit.fromJson(Map<String, dynamic> json) =>
+      Petabit.from(DataStorage.fromJson(json));
+
+  /// Construct [Petabit] from other [DataStorage]
+  factory Petabit.from(DataStorage unit) => Petabit(unit.toPetabit.value);
+
+  static const minorName = 'petabit';
+
+  static const _ratio = 0.000007629394531;
+
+  /// 1 [Gigabyte] ≈ 0.000007629394531 [Petabit]
+  @override
+  num get ratio => _ratio;
+
+  @override
+  Petabit get _clone => Petabit(value);
+
+  @override
+  Petabit withValue([num? val]) => Petabit(val ?? value);
+
+  @override
+  String get symbol => 'Pb';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [DataStorage]
+final class Petabyte extends DataStorage {
+  const Petabyte([super.value]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Petabyte.fromJson(Map<String, dynamic> json) =>
+      Petabyte.from(DataStorage.fromJson(json));
+
+  /// Construct [Petabyte] from other [DataStorage]
+  factory Petabyte.from(DataStorage unit) => Petabyte(unit.toPetabyte.value);
+
+  static const minorName = 'petabyte';
+
+  static const _ratio = 9.536743164e-7;
+
+  /// 1 [Gigabyte] ≈ 9.536743164e-7 [Petabyte]
+  @override
+  num get ratio => _ratio;
+
+  @override
+  Petabyte get _clone => Petabyte(value);
+
+  @override
+  Petabyte withValue([num? val]) => Petabyte(val ?? value);
+
+  @override
+  String get symbol => 'PB';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [DataStorage]
 final class Terabit extends DataStorage {
   const Terabit([super.value]);
 
@@ -375,7 +663,7 @@ final class Terabit extends DataStorage {
   factory Terabit.fromJson(Map<String, dynamic> json) =>
       Terabit.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Terabit]
+  /// Construct [Terabit] from other [DataStorage]
   factory Terabit.from(DataStorage unit) => Terabit(unit.toTerabit.value);
 
   static const minorName = 'terabit';
@@ -412,7 +700,7 @@ final class Terabyte extends DataStorage {
   factory Terabyte.fromJson(Map<String, dynamic> json) =>
       Terabyte.from(DataStorage.fromJson(json));
 
-  /// More ways to creating [Terabyte]
+  /// Construct [Terabyte] from other [DataStorage]
   factory Terabyte.from(DataStorage unit) => Terabyte(unit.toTerabyte.value);
 
   static const minorName = 'terabyte';
@@ -443,13 +731,20 @@ final class Terabyte extends DataStorage {
 
 enum DataStorageUnit {
   bit._(Bit()),
+  block._(Block()),
+  bluRay._(BluRay()),
   byte._(Byte()),
+  exabit._(Exabit()),
+  exabyte._(Exabyte()),
   gigabit._(Gigabit()),
   gigabyte._(Gigabyte()),
   kilobit._(Kilobit()),
   kilobyte._(Kilobyte()),
   megabit._(Megabit()),
   megabyte._(Megabyte()),
+  nibble._(Nibble()),
+  petabit._(Petabit()),
+  petabyte._(Petabyte()),
   terabit._(Terabit()),
   terabyte._(Terabyte()),
   ;
@@ -461,13 +756,20 @@ enum DataStorageUnit {
 
 const dataStorageUnitValues = _EnumValues({
   Bit.minorName: DataStorageUnit.bit,
+  Block.minorName: DataStorageUnit.block,
+  BluRay.minorName: DataStorageUnit.bluRay,
   Byte.minorName: DataStorageUnit.byte,
+  Exabit.minorName: DataStorageUnit.exabit,
+  Exabyte.minorName: DataStorageUnit.exabyte,
   Gigabit.minorName: DataStorageUnit.gigabit,
   Gigabyte.minorName: DataStorageUnit.gigabyte,
   Kilobit.minorName: DataStorageUnit.kilobit,
   Kilobyte.minorName: DataStorageUnit.kilobyte,
   Megabit.minorName: DataStorageUnit.megabit,
   Megabyte.minorName: DataStorageUnit.megabyte,
+  Nibble.minorName: DataStorageUnit.nibble,
+  Petabit.minorName: DataStorageUnit.petabit,
+  Petabyte.minorName: DataStorageUnit.petabyte,
   Terabit.minorName: DataStorageUnit.terabit,
   Terabyte.minorName: DataStorageUnit.terabyte,
 });

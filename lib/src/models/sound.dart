@@ -50,7 +50,7 @@ final class Bel extends Sound {
   factory Bel.fromJson(Map<String, dynamic> json) =>
       Bel.from(Sound.fromJson(json));
 
-  /// More ways to creating [Bel]
+  /// Construct [Bel] from other [Sound]
   factory Bel.from(Sound unit) => Bel(unit.toBel.value);
 
   static const minorName = 'bel';
@@ -87,7 +87,7 @@ final class Decibel extends Sound {
   factory Decibel.fromJson(Map<String, dynamic> json) =>
       Decibel.from(Sound.fromJson(json));
 
-  /// More ways to creating [Decibel]
+  /// Construct [Decibel] from other [Sound]
   factory Decibel.from(Sound unit) => Decibel(unit.toDecibel.value);
 
   static const minorName = 'decibel';
@@ -124,7 +124,7 @@ final class Neper extends Sound {
   factory Neper.fromJson(Map<String, dynamic> json) =>
       Neper.from(Sound.fromJson(json));
 
-  /// More ways to creating [Neper]
+  /// Construct [Neper] from other [Sound]
   factory Neper.from(Sound unit) => Neper(unit.toNeper.value);
 
   static const minorName = 'neper';

@@ -66,7 +66,7 @@ final class Day extends Time {
   factory Day.fromJson(Map<String, dynamic> json) =>
       Day.from(Time.fromJson(json));
 
-  /// More ways to creating [Day]
+  /// Construct [Day] from other [Time]
   factory Day.from(Time unit) => Day(unit.toDay.value);
 
   static const minorName = 'day';
@@ -103,7 +103,7 @@ final class Hour extends Time {
   factory Hour.fromJson(Map<String, dynamic> json) =>
       Hour.from(Time.fromJson(json));
 
-  /// More ways to creating [Hour]
+  /// Construct [Hour] from other [Time]
   factory Hour.from(Time unit) => Hour(unit.toHour.value);
 
   static const minorName = 'hour';
@@ -140,7 +140,7 @@ final class Millisecond extends Time {
   factory Millisecond.fromJson(Map<String, dynamic> json) =>
       Millisecond.from(Time.fromJson(json));
 
-  /// More ways to creating [Millisecond]
+  /// Construct [Millisecond] from other [Time]
   factory Millisecond.from(Time unit) => Millisecond(unit.toMillisecond.value);
 
   static const minorName = 'millisecond';
@@ -177,7 +177,7 @@ final class Minute extends Time {
   factory Minute.fromJson(Map<String, dynamic> json) =>
       Minute.from(Time.fromJson(json));
 
-  /// More ways to creating [Minute]
+  /// Construct [Minute] from other [Time]
   factory Minute.from(Time unit) => Minute(unit.toMinute.value);
 
   static const minorName = 'minute';
@@ -214,7 +214,7 @@ final class Second extends Time {
   factory Second.fromJson(Map<String, dynamic> json) =>
       Second.from(Time.fromJson(json));
 
-  /// More ways to creating [Second]
+  /// Construct [Second] from other [Time]
   factory Second.from(Time unit) => Second(unit.toSecond.value);
 
   static const minorName = 'second';
@@ -251,7 +251,7 @@ final class Week extends Time {
   factory Week.fromJson(Map<String, dynamic> json) =>
       Week.from(Time.fromJson(json));
 
-  /// More ways to creating [Week]
+  /// Construct [Week] from other [Time]
   factory Week.from(Time unit) => Week(unit.toWeek.value);
 
   static const minorName = 'week';
@@ -288,7 +288,7 @@ final class Year extends Time {
   factory Year.fromJson(Map<String, dynamic> json) =>
       Year.from(Time.fromJson(json));
 
-  /// More ways to creating [Year]
+  /// Construct [Year] from other [Time]
   factory Year.from(Time unit) => Year(unit.toYear.value);
 
   static const minorName = 'year';

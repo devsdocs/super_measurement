@@ -67,7 +67,7 @@ final class ErgPerCentimeterSquare extends SurfaceTension {
   factory ErgPerCentimeterSquare.fromJson(Map<String, dynamic> json) =>
       ErgPerCentimeterSquare.from(SurfaceTension.fromJson(json));
 
-  /// More ways to creating [ErgPerCentimeterSquare]
+  /// Construct [ErgPerCentimeterSquare] from other [SurfaceTension]
   factory ErgPerCentimeterSquare.from(SurfaceTension unit) =>
       ErgPerCentimeterSquare(unit.toErgPerCentimeterSquare.value);
 
@@ -106,7 +106,7 @@ final class GramForcePerCentimeter extends SurfaceTension {
   factory GramForcePerCentimeter.fromJson(Map<String, dynamic> json) =>
       GramForcePerCentimeter.from(SurfaceTension.fromJson(json));
 
-  /// More ways to creating [GramForcePerCentimeter]
+  /// Construct [GramForcePerCentimeter] from other [SurfaceTension]
   factory GramForcePerCentimeter.from(SurfaceTension unit) =>
       GramForcePerCentimeter(unit.toGramForcePerCentimeter.value);
 
@@ -145,7 +145,7 @@ final class MillinewtonPerMeter extends SurfaceTension {
   factory MillinewtonPerMeter.fromJson(Map<String, dynamic> json) =>
       MillinewtonPerMeter.from(SurfaceTension.fromJson(json));
 
-  /// More ways to creating [MillinewtonPerMeter]
+  /// Construct [MillinewtonPerMeter] from other [SurfaceTension]
   factory MillinewtonPerMeter.from(SurfaceTension unit) =>
       MillinewtonPerMeter(unit.toMillinewtonPerMeter.value);
 
@@ -184,7 +184,7 @@ final class NewtonPerMeter extends SurfaceTension {
   factory NewtonPerMeter.fromJson(Map<String, dynamic> json) =>
       NewtonPerMeter.from(SurfaceTension.fromJson(json));
 
-  /// More ways to creating [NewtonPerMeter]
+  /// Construct [NewtonPerMeter] from other [SurfaceTension]
   factory NewtonPerMeter.from(SurfaceTension unit) =>
       NewtonPerMeter(unit.toNewtonPerMeter.value);
 
@@ -222,7 +222,7 @@ final class PoundForcePerInch extends SurfaceTension {
   factory PoundForcePerInch.fromJson(Map<String, dynamic> json) =>
       PoundForcePerInch.from(SurfaceTension.fromJson(json));
 
-  /// More ways to creating [PoundForcePerInch]
+  /// Construct [PoundForcePerInch] from other [SurfaceTension]
   factory PoundForcePerInch.from(SurfaceTension unit) =>
       PoundForcePerInch(unit.toPoundForcePerInch.value);
 
@@ -260,7 +260,7 @@ final class PoundalPerInch extends SurfaceTension {
   factory PoundalPerInch.fromJson(Map<String, dynamic> json) =>
       PoundalPerInch.from(SurfaceTension.fromJson(json));
 
-  /// More ways to creating [PoundalPerInch]
+  /// Construct [PoundalPerInch] from other [SurfaceTension]
   factory PoundalPerInch.from(SurfaceTension unit) =>
       PoundalPerInch(unit.toPoundalPerInch.value);
 

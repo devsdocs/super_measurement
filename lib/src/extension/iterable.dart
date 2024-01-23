@@ -1,5 +1,43 @@
 part of '../../super_measurement.dart';
 
+extension IterableOfAngle on Iterable<Angle> {
+  /// Combine all [Angle] in [Iterable] to [Degree]
+  Angle get toDegree => combineTo(const Degree());
+
+  /// Combine all [Angle] in [Iterable] to [Grad]
+  Angle get toGrad => combineTo(const Grad());
+
+  /// Combine all [Angle] in [Iterable] to [Mil]
+  Angle get toMil => combineTo(const Mil());
+
+  /// Combine all [Angle] in [Iterable] to [MinuteAngle]
+  Angle get toMinuteAngle => combineTo(const MinuteAngle());
+
+  /// Combine all [Angle] in [Iterable] to [Octant]
+  Angle get toOctant => combineTo(const Octant());
+
+  /// Combine all [Angle] in [Iterable] to [PercentOfFullCircle]
+  Angle get toPercentOfFullCircle => combineTo(const PercentOfFullCircle());
+
+  /// Combine all [Angle] in [Iterable] to [Quadrant]
+  Angle get toQuadrant => combineTo(const Quadrant());
+
+  /// Combine all [Angle] in [Iterable] to [Radian]
+  Angle get toRadian => combineTo(const Radian());
+
+  /// Combine all [Angle] in [Iterable] to [Revolution]
+  Angle get toRevolution => combineTo(const Revolution());
+
+  /// Combine all [Angle] in [Iterable] to [SecondAngle]
+  Angle get toSecondAngle => combineTo(const SecondAngle());
+
+  /// Combine all [Angle] in [Iterable] to [Sextant]
+  Angle get toSextant => combineTo(const Sextant());
+
+  /// Combine all [Angle] in [Iterable] to [SignAngle]
+  Angle get toSignAngle => combineTo(const SignAngle());
+}
+
 extension IterableOfAngularSpeed on Iterable<AngularSpeed> {
   /// Combine all [AngularSpeed] in [Iterable] to [DegreePerDay]
   AngularSpeed get toDegreePerDay => combineTo(const DegreePerDay());
@@ -93,8 +131,20 @@ extension IterableOfDataStorage on Iterable<DataStorage> {
   /// Combine all [DataStorage] in [Iterable] to [Bit]
   DataStorage get toBit => combineTo(const Bit());
 
+  /// Combine all [DataStorage] in [Iterable] to [Block]
+  DataStorage get toBlock => combineTo(const Block());
+
+  /// Combine all [DataStorage] in [Iterable] to [BluRay]
+  DataStorage get toBluRay => combineTo(const BluRay());
+
   /// Combine all [DataStorage] in [Iterable] to [Byte]
   DataStorage get toByte => combineTo(const Byte());
+
+  /// Combine all [DataStorage] in [Iterable] to [Exabit]
+  DataStorage get toExabit => combineTo(const Exabit());
+
+  /// Combine all [DataStorage] in [Iterable] to [Exabyte]
+  DataStorage get toExabyte => combineTo(const Exabyte());
 
   /// Combine all [DataStorage] in [Iterable] to [Gigabit]
   DataStorage get toGigabit => combineTo(const Gigabit());
@@ -113,6 +163,15 @@ extension IterableOfDataStorage on Iterable<DataStorage> {
 
   /// Combine all [DataStorage] in [Iterable] to [Megabyte]
   DataStorage get toMegabyte => combineTo(const Megabyte());
+
+  /// Combine all [DataStorage] in [Iterable] to [Nibble]
+  DataStorage get toNibble => combineTo(const Nibble());
+
+  /// Combine all [DataStorage] in [Iterable] to [Petabit]
+  DataStorage get toPetabit => combineTo(const Petabit());
+
+  /// Combine all [DataStorage] in [Iterable] to [Petabyte]
+  DataStorage get toPetabyte => combineTo(const Petabyte());
 
   /// Combine all [DataStorage] in [Iterable] to [Terabit]
   DataStorage get toTerabit => combineTo(const Terabit());

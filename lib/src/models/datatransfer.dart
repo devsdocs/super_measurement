@@ -63,7 +63,7 @@ final class GigabitPerSecond extends DataTransfer {
   factory GigabitPerSecond.fromJson(Map<String, dynamic> json) =>
       GigabitPerSecond.from(DataTransfer.fromJson(json));
 
-  /// More ways to creating [GigabitPerSecond]
+  /// Construct [GigabitPerSecond] from other [DataTransfer]
   factory GigabitPerSecond.from(DataTransfer unit) =>
       GigabitPerSecond(unit.toGigabitPerSecond.value);
 
@@ -101,7 +101,7 @@ final class GigabytePerSecond extends DataTransfer {
   factory GigabytePerSecond.fromJson(Map<String, dynamic> json) =>
       GigabytePerSecond.from(DataTransfer.fromJson(json));
 
-  /// More ways to creating [GigabytePerSecond]
+  /// Construct [GigabytePerSecond] from other [DataTransfer]
   factory GigabytePerSecond.from(DataTransfer unit) =>
       GigabytePerSecond(unit.toGigabytePerSecond.value);
 
@@ -139,7 +139,7 @@ final class KilobitPerSecond extends DataTransfer {
   factory KilobitPerSecond.fromJson(Map<String, dynamic> json) =>
       KilobitPerSecond.from(DataTransfer.fromJson(json));
 
-  /// More ways to creating [KilobitPerSecond]
+  /// Construct [KilobitPerSecond] from other [DataTransfer]
   factory KilobitPerSecond.from(DataTransfer unit) =>
       KilobitPerSecond(unit.toKilobitPerSecond.value);
 
@@ -177,7 +177,7 @@ final class KilobytePerSecond extends DataTransfer {
   factory KilobytePerSecond.fromJson(Map<String, dynamic> json) =>
       KilobytePerSecond.from(DataTransfer.fromJson(json));
 
-  /// More ways to creating [KilobytePerSecond]
+  /// Construct [KilobytePerSecond] from other [DataTransfer]
   factory KilobytePerSecond.from(DataTransfer unit) =>
       KilobytePerSecond(unit.toKilobytePerSecond.value);
 
@@ -215,7 +215,7 @@ final class MegabitPerSecond extends DataTransfer {
   factory MegabitPerSecond.fromJson(Map<String, dynamic> json) =>
       MegabitPerSecond.from(DataTransfer.fromJson(json));
 
-  /// More ways to creating [MegabitPerSecond]
+  /// Construct [MegabitPerSecond] from other [DataTransfer]
   factory MegabitPerSecond.from(DataTransfer unit) =>
       MegabitPerSecond(unit.toMegabitPerSecond.value);
 
@@ -253,7 +253,7 @@ final class MegabytePerSecond extends DataTransfer {
   factory MegabytePerSecond.fromJson(Map<String, dynamic> json) =>
       MegabytePerSecond.from(DataTransfer.fromJson(json));
 
-  /// More ways to creating [MegabytePerSecond]
+  /// Construct [MegabytePerSecond] from other [DataTransfer]
   factory MegabytePerSecond.from(DataTransfer unit) =>
       MegabytePerSecond(unit.toMegabytePerSecond.value);
 

@@ -67,7 +67,7 @@ final class Bar extends Pressure {
   factory Bar.fromJson(Map<String, dynamic> json) =>
       Bar.from(Pressure.fromJson(json));
 
-  /// More ways to creating [Bar]
+  /// Construct [Bar] from other [Pressure]
   factory Bar.from(Pressure unit) => Bar(unit.toBar.value);
 
   static const minorName = 'bar';
@@ -104,7 +104,7 @@ final class InchesOfMercury extends Pressure {
   factory InchesOfMercury.fromJson(Map<String, dynamic> json) =>
       InchesOfMercury.from(Pressure.fromJson(json));
 
-  /// More ways to creating [InchesOfMercury]
+  /// Construct [InchesOfMercury] from other [Pressure]
   factory InchesOfMercury.from(Pressure unit) =>
       InchesOfMercury(unit.toInchesOfMercury.value);
 
@@ -142,7 +142,7 @@ final class MillimeterOfMercury extends Pressure {
   factory MillimeterOfMercury.fromJson(Map<String, dynamic> json) =>
       MillimeterOfMercury.from(Pressure.fromJson(json));
 
-  /// More ways to creating [MillimeterOfMercury]
+  /// Construct [MillimeterOfMercury] from other [Pressure]
   factory MillimeterOfMercury.from(Pressure unit) =>
       MillimeterOfMercury(unit.toMillimeterOfMercury.value);
 
@@ -181,7 +181,7 @@ final class Pascal extends Pressure {
   factory Pascal.fromJson(Map<String, dynamic> json) =>
       Pascal.from(Pressure.fromJson(json));
 
-  /// More ways to creating [Pascal]
+  /// Construct [Pascal] from other [Pressure]
   factory Pascal.from(Pressure unit) => Pascal(unit.toPascal.value);
 
   static const minorName = 'pascal';
@@ -218,7 +218,7 @@ final class PoundsPerSquareInch extends Pressure {
   factory PoundsPerSquareInch.fromJson(Map<String, dynamic> json) =>
       PoundsPerSquareInch.from(Pressure.fromJson(json));
 
-  /// More ways to creating [PoundsPerSquareInch]
+  /// Construct [PoundsPerSquareInch] from other [Pressure]
   factory PoundsPerSquareInch.from(Pressure unit) =>
       PoundsPerSquareInch(unit.toPoundsPerSquareInch.value);
 
@@ -257,7 +257,7 @@ final class StandardAtmosphere extends Pressure {
   factory StandardAtmosphere.fromJson(Map<String, dynamic> json) =>
       StandardAtmosphere.from(Pressure.fromJson(json));
 
-  /// More ways to creating [StandardAtmosphere]
+  /// Construct [StandardAtmosphere] from other [Pressure]
   factory StandardAtmosphere.from(Pressure unit) =>
       StandardAtmosphere(unit.toStandardAtmosphere.value);
 
@@ -295,7 +295,7 @@ final class Torr extends Pressure {
   factory Torr.fromJson(Map<String, dynamic> json) =>
       Torr.from(Pressure.fromJson(json));
 
-  /// More ways to creating [Torr]
+  /// Construct [Torr] from other [Pressure]
   factory Torr.from(Pressure unit) => Torr(unit.toTorr.value);
 
   static const minorName = 'torr';

@@ -75,7 +75,7 @@ final class Acres extends Area {
   factory Acres.fromJson(Map<String, dynamic> json) =>
       Acres.from(Area.fromJson(json));
 
-  /// More ways to creating [Acres]
+  /// Construct [Acres] from other [Area]
   factory Acres.from(Area unit) => Acres(unit.toAcres.value);
 
   static const minorName = 'acres';
@@ -112,7 +112,7 @@ final class Hectares extends Area {
   factory Hectares.fromJson(Map<String, dynamic> json) =>
       Hectares.from(Area.fromJson(json));
 
-  /// More ways to creating [Hectares]
+  /// Construct [Hectares] from other [Area]
   factory Hectares.from(Area unit) => Hectares(unit.toHectares.value);
 
   static const minorName = 'hectares';
@@ -149,7 +149,7 @@ final class SquareCentimeters extends Area {
   factory SquareCentimeters.fromJson(Map<String, dynamic> json) =>
       SquareCentimeters.from(Area.fromJson(json));
 
-  /// More ways to creating [SquareCentimeters]
+  /// Construct [SquareCentimeters] from other [Area]
   factory SquareCentimeters.from(Area unit) =>
       SquareCentimeters(unit.toSquareCentimeters.value);
 
@@ -187,7 +187,7 @@ final class SquareFoot extends Area {
   factory SquareFoot.fromJson(Map<String, dynamic> json) =>
       SquareFoot.from(Area.fromJson(json));
 
-  /// More ways to creating [SquareFoot]
+  /// Construct [SquareFoot] from other [Area]
   factory SquareFoot.from(Area unit) => SquareFoot(unit.toSquareFoot.value);
 
   static const minorName = 'squareFoot';
@@ -224,7 +224,7 @@ final class SquareInches extends Area {
   factory SquareInches.fromJson(Map<String, dynamic> json) =>
       SquareInches.from(Area.fromJson(json));
 
-  /// More ways to creating [SquareInches]
+  /// Construct [SquareInches] from other [Area]
   factory SquareInches.from(Area unit) =>
       SquareInches(unit.toSquareInches.value);
 
@@ -262,7 +262,7 @@ final class SquareKilometers extends Area {
   factory SquareKilometers.fromJson(Map<String, dynamic> json) =>
       SquareKilometers.from(Area.fromJson(json));
 
-  /// More ways to creating [SquareKilometers]
+  /// Construct [SquareKilometers] from other [Area]
   factory SquareKilometers.from(Area unit) =>
       SquareKilometers(unit.toSquareKilometers.value);
 
@@ -300,7 +300,7 @@ final class SquareMeters extends Area {
   factory SquareMeters.fromJson(Map<String, dynamic> json) =>
       SquareMeters.from(Area.fromJson(json));
 
-  /// More ways to creating [SquareMeters]
+  /// Construct [SquareMeters] from other [Area]
   factory SquareMeters.from(Area unit) =>
       SquareMeters(unit.toSquareMeters.value);
 
@@ -338,7 +338,7 @@ final class SquareMiles extends Area {
   factory SquareMiles.fromJson(Map<String, dynamic> json) =>
       SquareMiles.from(Area.fromJson(json));
 
-  /// More ways to creating [SquareMiles]
+  /// Construct [SquareMiles] from other [Area]
   factory SquareMiles.from(Area unit) => SquareMiles(unit.toSquareMiles.value);
 
   static const minorName = 'squareMiles';
@@ -375,7 +375,7 @@ final class SquareYards extends Area {
   factory SquareYards.fromJson(Map<String, dynamic> json) =>
       SquareYards.from(Area.fromJson(json));
 
-  /// More ways to creating [SquareYards]
+  /// Construct [SquareYards] from other [Area]
   factory SquareYards.from(Area unit) => SquareYards(unit.toSquareYards.value);
 
   static const minorName = 'squareYards';

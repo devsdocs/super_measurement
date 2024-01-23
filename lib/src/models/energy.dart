@@ -85,7 +85,7 @@ final class CalorieInternational extends Energy {
   factory CalorieInternational.fromJson(Map<String, dynamic> json) =>
       CalorieInternational.from(Energy.fromJson(json));
 
-  /// More ways to creating [CalorieInternational]
+  /// Construct [CalorieInternational] from other [Energy]
   factory CalorieInternational.from(Energy unit) =>
       CalorieInternational(unit.toCalorieInternational.value);
 
@@ -124,7 +124,7 @@ final class CalorieNutritional extends Energy {
   factory CalorieNutritional.fromJson(Map<String, dynamic> json) =>
       CalorieNutritional.from(Energy.fromJson(json));
 
-  /// More ways to creating [CalorieNutritional]
+  /// Construct [CalorieNutritional] from other [Energy]
   factory CalorieNutritional.from(Energy unit) =>
       CalorieNutritional(unit.toCalorieNutritional.value);
 
@@ -162,7 +162,7 @@ final class CalorieThermochemical extends Energy {
   factory CalorieThermochemical.fromJson(Map<String, dynamic> json) =>
       CalorieThermochemical.from(Energy.fromJson(json));
 
-  /// More ways to creating [CalorieThermochemical]
+  /// Construct [CalorieThermochemical] from other [Energy]
   factory CalorieThermochemical.from(Energy unit) =>
       CalorieThermochemical(unit.toCalorieThermochemical.value);
 
@@ -201,7 +201,7 @@ final class ElectronVolt extends Energy {
   factory ElectronVolt.fromJson(Map<String, dynamic> json) =>
       ElectronVolt.from(Energy.fromJson(json));
 
-  /// More ways to creating [ElectronVolt]
+  /// Construct [ElectronVolt] from other [Energy]
   factory ElectronVolt.from(Energy unit) =>
       ElectronVolt(unit.toElectronVolt.value);
 
@@ -239,7 +239,7 @@ final class GigaJoule extends Energy {
   factory GigaJoule.fromJson(Map<String, dynamic> json) =>
       GigaJoule.from(Energy.fromJson(json));
 
-  /// More ways to creating [GigaJoule]
+  /// Construct [GigaJoule] from other [Energy]
   factory GigaJoule.from(Energy unit) => GigaJoule(unit.toGigaJoule.value);
 
   static const minorName = 'gigaJoule';
@@ -276,7 +276,7 @@ final class Joule extends Energy {
   factory Joule.fromJson(Map<String, dynamic> json) =>
       Joule.from(Energy.fromJson(json));
 
-  /// More ways to creating [Joule]
+  /// Construct [Joule] from other [Energy]
   factory Joule.from(Energy unit) => Joule(unit.toJoule.value);
 
   static const minorName = 'joule';
@@ -313,7 +313,7 @@ final class KiloJoule extends Energy {
   factory KiloJoule.fromJson(Map<String, dynamic> json) =>
       KiloJoule.from(Energy.fromJson(json));
 
-  /// More ways to creating [KiloJoule]
+  /// Construct [KiloJoule] from other [Energy]
   factory KiloJoule.from(Energy unit) => KiloJoule(unit.toKiloJoule.value);
 
   static const minorName = 'kiloJoule';
@@ -350,7 +350,7 @@ final class KilowattHour extends Energy {
   factory KilowattHour.fromJson(Map<String, dynamic> json) =>
       KilowattHour.from(Energy.fromJson(json));
 
-  /// More ways to creating [KilowattHour]
+  /// Construct [KilowattHour] from other [Energy]
   factory KilowattHour.from(Energy unit) =>
       KilowattHour(unit.toKilowattHour.value);
 
@@ -388,7 +388,7 @@ final class MegaJoule extends Energy {
   factory MegaJoule.fromJson(Map<String, dynamic> json) =>
       MegaJoule.from(Energy.fromJson(json));
 
-  /// More ways to creating [MegaJoule]
+  /// Construct [MegaJoule] from other [Energy]
   factory MegaJoule.from(Energy unit) => MegaJoule(unit.toMegaJoule.value);
 
   static const minorName = 'megaJoule';
@@ -425,7 +425,7 @@ final class MegawattHour extends Energy {
   factory MegawattHour.fromJson(Map<String, dynamic> json) =>
       MegawattHour.from(Energy.fromJson(json));
 
-  /// More ways to creating [MegawattHour]
+  /// Construct [MegawattHour] from other [Energy]
   factory MegawattHour.from(Energy unit) =>
       MegawattHour(unit.toMegawattHour.value);
 
@@ -463,7 +463,7 @@ final class WattHour extends Energy {
   factory WattHour.fromJson(Map<String, dynamic> json) =>
       WattHour.from(Energy.fromJson(json));
 
-  /// More ways to creating [WattHour]
+  /// Construct [WattHour] from other [Energy]
   factory WattHour.from(Energy unit) => WattHour(unit.toWattHour.value);
 
   static const minorName = 'wattHour';

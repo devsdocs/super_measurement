@@ -32,5 +32,26 @@ final dataStorageUnit = {
     {
       'Terabyte': {'ratio': 0.0009765625, 'symbol': 'TB'},
     },
+    {
+      'Petabit': {'ratio': 7.629394531e-6, 'symbol': 'Pb'},
+    },
+    {
+      'Petabyte': {'ratio': 9.536743164e-7, 'symbol': 'PB'},
+    },
+    {
+      'Exabit': {'ratio': 7.450580597e-9, 'symbol': 'Eb'},
+    },
+    {
+      'Exabyte': {'ratio': 9.313225746e-10, 'symbol': 'EB'},
+    },
+    {
+      'BluRay': {'ratio': 0.04290622643, 'symbol': 'BR'},
+    },
+    {
+      'Block': {'ratio': 2097152, 'symbol': 'block'},
+    },
+    {
+      'Nibble': {'ratio': 2147483648, 'symbol': 'nibble'},
+    },
   ],
 };

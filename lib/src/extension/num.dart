@@ -1,5 +1,43 @@
 part of '../../super_measurement.dart';
 
+extension NumOfAngle on num {
+  /// Get [Degree] using [num]
+  Degree get degree => Degree(this);
+
+  /// Get [Grad] using [num]
+  Grad get grad => Grad(this);
+
+  /// Get [Mil] using [num]
+  Mil get mil => Mil(this);
+
+  /// Get [MinuteAngle] using [num]
+  MinuteAngle get minuteAngle => MinuteAngle(this);
+
+  /// Get [Octant] using [num]
+  Octant get octant => Octant(this);
+
+  /// Get [PercentOfFullCircle] using [num]
+  PercentOfFullCircle get percentOfFullCircle => PercentOfFullCircle(this);
+
+  /// Get [Quadrant] using [num]
+  Quadrant get quadrant => Quadrant(this);
+
+  /// Get [Radian] using [num]
+  Radian get radian => Radian(this);
+
+  /// Get [Revolution] using [num]
+  Revolution get revolution => Revolution(this);
+
+  /// Get [SecondAngle] using [num]
+  SecondAngle get secondAngle => SecondAngle(this);
+
+  /// Get [Sextant] using [num]
+  Sextant get sextant => Sextant(this);
+
+  /// Get [SignAngle] using [num]
+  SignAngle get signAngle => SignAngle(this);
+}
+
 extension NumOfAngularSpeed on num {
   /// Get [DegreePerDay] using [num]
   DegreePerDay get degreePerDay => DegreePerDay(this);
@@ -91,8 +129,20 @@ extension NumOfDataStorage on num {
   /// Get [Bit] using [num]
   Bit get bit => Bit(this);
 
+  /// Get [Block] using [num]
+  Block get block => Block(this);
+
+  /// Get [BluRay] using [num]
+  BluRay get bluRay => BluRay(this);
+
   /// Get [Byte] using [num]
   Byte get byte => Byte(this);
+
+  /// Get [Exabit] using [num]
+  Exabit get exabit => Exabit(this);
+
+  /// Get [Exabyte] using [num]
+  Exabyte get exabyte => Exabyte(this);
 
   /// Get [Gigabit] using [num]
   Gigabit get gigabit => Gigabit(this);
@@ -111,6 +161,15 @@ extension NumOfDataStorage on num {
 
   /// Get [Megabyte] using [num]
   Megabyte get megabyte => Megabyte(this);
+
+  /// Get [Nibble] using [num]
+  Nibble get nibble => Nibble(this);
+
+  /// Get [Petabit] using [num]
+  Petabit get petabit => Petabit(this);
+
+  /// Get [Petabyte] using [num]
+  Petabyte get petabyte => Petabyte(this);
 
   /// Get [Terabit] using [num]
   Terabit get terabit => Terabit(this);

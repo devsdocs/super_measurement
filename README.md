@@ -2,6 +2,7 @@
 ## Available Unit
 ### Can be accessed using enum
 
+  + [Angle](#angle)
   + [AngularSpeed](#angularspeed)
   + [Area](#area)
   + [Current](#current)
@@ -23,6 +24,20 @@
   + [SurfaceTension](#surfacetension)
   + [Time](#time)
   + [Volume](#volume)
+
+### Angle
+   - `Degree` => AngleUnit.degree
+   - `Grad` => AngleUnit.grad
+   - `Mil` => AngleUnit.mil
+   - `MinuteAngle` => AngleUnit.minuteAngle
+   - `Octant` => AngleUnit.octant
+   - `PercentOfFullCircle` => AngleUnit.percentOfFullCircle
+   - `Quadrant` => AngleUnit.quadrant
+   - `Radian` => AngleUnit.radian
+   - `Revolution` => AngleUnit.revolution
+   - `SecondAngle` => AngleUnit.secondAngle
+   - `Sextant` => AngleUnit.sextant
+   - `SignAngle` => AngleUnit.signAngle
 
 ### AngularSpeed
    - `DegreePerDay` => AngularSpeedUnit.degreePerDay
@@ -59,13 +74,20 @@
 
 ### DataStorage
    - `Bit` => DataStorageUnit.bit
+   - `Block` => DataStorageUnit.block
+   - `BluRay` => DataStorageUnit.bluRay
    - `Byte` => DataStorageUnit.byte
+   - `Exabit` => DataStorageUnit.exabit
+   - `Exabyte` => DataStorageUnit.exabyte
    - `Gigabit` => DataStorageUnit.gigabit
    - `Gigabyte` => DataStorageUnit.gigabyte
    - `Kilobit` => DataStorageUnit.kilobit
    - `Kilobyte` => DataStorageUnit.kilobyte
    - `Megabit` => DataStorageUnit.megabit
    - `Megabyte` => DataStorageUnit.megabyte
+   - `Nibble` => DataStorageUnit.nibble
+   - `Petabit` => DataStorageUnit.petabit
+   - `Petabyte` => DataStorageUnit.petabyte
    - `Terabit` => DataStorageUnit.terabit
    - `Terabyte` => DataStorageUnit.terabyte
 

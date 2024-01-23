@@ -83,7 +83,7 @@ final class Carats extends Mass {
   factory Carats.fromJson(Map<String, dynamic> json) =>
       Carats.from(Mass.fromJson(json));
 
-  /// More ways to creating [Carats]
+  /// Construct [Carats] from other [Mass]
   factory Carats.from(Mass unit) => Carats(unit.toCarats.value);
 
   static const minorName = 'carats';
@@ -120,7 +120,7 @@ final class Grams extends Mass {
   factory Grams.fromJson(Map<String, dynamic> json) =>
       Grams.from(Mass.fromJson(json));
 
-  /// More ways to creating [Grams]
+  /// Construct [Grams] from other [Mass]
   factory Grams.from(Mass unit) => Grams(unit.toGrams.value);
 
   static const minorName = 'grams';
@@ -157,7 +157,7 @@ final class Kilograms extends Mass {
   factory Kilograms.fromJson(Map<String, dynamic> json) =>
       Kilograms.from(Mass.fromJson(json));
 
-  /// More ways to creating [Kilograms]
+  /// Construct [Kilograms] from other [Mass]
   factory Kilograms.from(Mass unit) => Kilograms(unit.toKilograms.value);
 
   static const minorName = 'kilograms';
@@ -194,7 +194,7 @@ final class Milligrams extends Mass {
   factory Milligrams.fromJson(Map<String, dynamic> json) =>
       Milligrams.from(Mass.fromJson(json));
 
-  /// More ways to creating [Milligrams]
+  /// Construct [Milligrams] from other [Mass]
   factory Milligrams.from(Mass unit) => Milligrams(unit.toMilligrams.value);
 
   static const minorName = 'milligrams';
@@ -231,7 +231,7 @@ final class Ounces extends Mass {
   factory Ounces.fromJson(Map<String, dynamic> json) =>
       Ounces.from(Mass.fromJson(json));
 
-  /// More ways to creating [Ounces]
+  /// Construct [Ounces] from other [Mass]
   factory Ounces.from(Mass unit) => Ounces(unit.toOunces.value);
 
   static const minorName = 'ounces';
@@ -268,7 +268,7 @@ final class Pounds extends Mass {
   factory Pounds.fromJson(Map<String, dynamic> json) =>
       Pounds.from(Mass.fromJson(json));
 
-  /// More ways to creating [Pounds]
+  /// Construct [Pounds] from other [Mass]
   factory Pounds.from(Mass unit) => Pounds(unit.toPounds.value);
 
   static const minorName = 'pounds';
@@ -305,7 +305,7 @@ final class Quintal extends Mass {
   factory Quintal.fromJson(Map<String, dynamic> json) =>
       Quintal.from(Mass.fromJson(json));
 
-  /// More ways to creating [Quintal]
+  /// Construct [Quintal] from other [Mass]
   factory Quintal.from(Mass unit) => Quintal(unit.toQuintal.value);
 
   static const minorName = 'quintal';
@@ -342,7 +342,7 @@ final class StoneUK extends Mass {
   factory StoneUK.fromJson(Map<String, dynamic> json) =>
       StoneUK.from(Mass.fromJson(json));
 
-  /// More ways to creating [StoneUK]
+  /// Construct [StoneUK] from other [Mass]
   factory StoneUK.from(Mass unit) => StoneUK(unit.toStoneUK.value);
 
   static const minorName = 'stoneUK';
@@ -379,7 +379,7 @@ final class TonUK extends Mass {
   factory TonUK.fromJson(Map<String, dynamic> json) =>
       TonUK.from(Mass.fromJson(json));
 
-  /// More ways to creating [TonUK]
+  /// Construct [TonUK] from other [Mass]
   factory TonUK.from(Mass unit) => TonUK(unit.toTonUK.value);
 
   static const minorName = 'tonUK';
@@ -416,7 +416,7 @@ final class TonUS extends Mass {
   factory TonUS.fromJson(Map<String, dynamic> json) =>
       TonUS.from(Mass.fromJson(json));
 
-  /// More ways to creating [TonUS]
+  /// Construct [TonUS] from other [Mass]
   factory TonUS.from(Mass unit) => TonUS(unit.toTonUS.value);
 
   static const minorName = 'tonUS';
@@ -453,7 +453,7 @@ final class Tonne extends Mass {
   factory Tonne.fromJson(Map<String, dynamic> json) =>
       Tonne.from(Mass.fromJson(json));
 
-  /// More ways to creating [Tonne]
+  /// Construct [Tonne] from other [Mass]
   factory Tonne.from(Mass unit) => Tonne(unit.toTonne.value);
 
   static const minorName = 'tonne';

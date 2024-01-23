@@ -58,7 +58,7 @@ final class Horsepower extends Power {
   factory Horsepower.fromJson(Map<String, dynamic> json) =>
       Horsepower.from(Power.fromJson(json));
 
-  /// More ways to creating [Horsepower]
+  /// Construct [Horsepower] from other [Power]
   factory Horsepower.from(Power unit) => Horsepower(unit.toHorsepower.value);
 
   static const minorName = 'horsepower';
@@ -95,7 +95,7 @@ final class Kilowatt extends Power {
   factory Kilowatt.fromJson(Map<String, dynamic> json) =>
       Kilowatt.from(Power.fromJson(json));
 
-  /// More ways to creating [Kilowatt]
+  /// Construct [Kilowatt] from other [Power]
   factory Kilowatt.from(Power unit) => Kilowatt(unit.toKilowatt.value);
 
   static const minorName = 'kilowatt';
@@ -132,7 +132,7 @@ final class Megawatt extends Power {
   factory Megawatt.fromJson(Map<String, dynamic> json) =>
       Megawatt.from(Power.fromJson(json));
 
-  /// More ways to creating [Megawatt]
+  /// Construct [Megawatt] from other [Power]
   factory Megawatt.from(Power unit) => Megawatt(unit.toMegawatt.value);
 
   static const minorName = 'megawatt';
@@ -169,7 +169,7 @@ final class Milliwatt extends Power {
   factory Milliwatt.fromJson(Map<String, dynamic> json) =>
       Milliwatt.from(Power.fromJson(json));
 
-  /// More ways to creating [Milliwatt]
+  /// Construct [Milliwatt] from other [Power]
   factory Milliwatt.from(Power unit) => Milliwatt(unit.toMilliwatt.value);
 
   static const minorName = 'milliwatt';
@@ -206,7 +206,7 @@ final class Watt extends Power {
   factory Watt.fromJson(Map<String, dynamic> json) =>
       Watt.from(Power.fromJson(json));
 
-  /// More ways to creating [Watt]
+  /// Construct [Watt] from other [Power]
   factory Watt.from(Power unit) => Watt(unit.toWatt.value);
 
   static const minorName = 'watt';

@@ -124,7 +124,7 @@ final class Atto extends MetricPrefix {
   factory Atto.fromJson(Map<String, dynamic> json) =>
       Atto.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Atto]
+  /// Construct [Atto] from other [MetricPrefix]
   factory Atto.from(MetricPrefix unit) => Atto(unit.toAtto.value);
 
   static const minorName = 'atto';
@@ -161,7 +161,7 @@ final class Centi extends MetricPrefix {
   factory Centi.fromJson(Map<String, dynamic> json) =>
       Centi.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Centi]
+  /// Construct [Centi] from other [MetricPrefix]
   factory Centi.from(MetricPrefix unit) => Centi(unit.toCenti.value);
 
   static const minorName = 'centi';
@@ -198,7 +198,7 @@ final class Deci extends MetricPrefix {
   factory Deci.fromJson(Map<String, dynamic> json) =>
       Deci.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Deci]
+  /// Construct [Deci] from other [MetricPrefix]
   factory Deci.from(MetricPrefix unit) => Deci(unit.toDeci.value);
 
   static const minorName = 'deci';
@@ -235,7 +235,7 @@ final class Deka extends MetricPrefix {
   factory Deka.fromJson(Map<String, dynamic> json) =>
       Deka.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Deka]
+  /// Construct [Deka] from other [MetricPrefix]
   factory Deka.from(MetricPrefix unit) => Deka(unit.toDeka.value);
 
   static const minorName = 'deka';
@@ -272,7 +272,7 @@ final class Exa extends MetricPrefix {
   factory Exa.fromJson(Map<String, dynamic> json) =>
       Exa.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Exa]
+  /// Construct [Exa] from other [MetricPrefix]
   factory Exa.from(MetricPrefix unit) => Exa(unit.toExa.value);
 
   static const minorName = 'exa';
@@ -309,7 +309,7 @@ final class Femto extends MetricPrefix {
   factory Femto.fromJson(Map<String, dynamic> json) =>
       Femto.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Femto]
+  /// Construct [Femto] from other [MetricPrefix]
   factory Femto.from(MetricPrefix unit) => Femto(unit.toFemto.value);
 
   static const minorName = 'femto';
@@ -346,7 +346,7 @@ final class Giga extends MetricPrefix {
   factory Giga.fromJson(Map<String, dynamic> json) =>
       Giga.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Giga]
+  /// Construct [Giga] from other [MetricPrefix]
   factory Giga.from(MetricPrefix unit) => Giga(unit.toGiga.value);
 
   static const minorName = 'giga';
@@ -383,7 +383,7 @@ final class Hecto extends MetricPrefix {
   factory Hecto.fromJson(Map<String, dynamic> json) =>
       Hecto.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Hecto]
+  /// Construct [Hecto] from other [MetricPrefix]
   factory Hecto.from(MetricPrefix unit) => Hecto(unit.toHecto.value);
 
   static const minorName = 'hecto';
@@ -420,7 +420,7 @@ final class Kilo extends MetricPrefix {
   factory Kilo.fromJson(Map<String, dynamic> json) =>
       Kilo.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Kilo]
+  /// Construct [Kilo] from other [MetricPrefix]
   factory Kilo.from(MetricPrefix unit) => Kilo(unit.toKilo.value);
 
   static const minorName = 'kilo';
@@ -457,7 +457,7 @@ final class Mega extends MetricPrefix {
   factory Mega.fromJson(Map<String, dynamic> json) =>
       Mega.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Mega]
+  /// Construct [Mega] from other [MetricPrefix]
   factory Mega.from(MetricPrefix unit) => Mega(unit.toMega.value);
 
   static const minorName = 'mega';
@@ -494,7 +494,7 @@ final class MetricUnit extends MetricPrefix {
   factory MetricUnit.fromJson(Map<String, dynamic> json) =>
       MetricUnit.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [MetricUnit]
+  /// Construct [MetricUnit] from other [MetricPrefix]
   factory MetricUnit.from(MetricPrefix unit) =>
       MetricUnit(unit.toMetricUnit.value);
 
@@ -532,7 +532,7 @@ final class Micro extends MetricPrefix {
   factory Micro.fromJson(Map<String, dynamic> json) =>
       Micro.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Micro]
+  /// Construct [Micro] from other [MetricPrefix]
   factory Micro.from(MetricPrefix unit) => Micro(unit.toMicro.value);
 
   static const minorName = 'micro';
@@ -569,7 +569,7 @@ final class Milli extends MetricPrefix {
   factory Milli.fromJson(Map<String, dynamic> json) =>
       Milli.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Milli]
+  /// Construct [Milli] from other [MetricPrefix]
   factory Milli.from(MetricPrefix unit) => Milli(unit.toMilli.value);
 
   static const minorName = 'milli';
@@ -606,7 +606,7 @@ final class Nano extends MetricPrefix {
   factory Nano.fromJson(Map<String, dynamic> json) =>
       Nano.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Nano]
+  /// Construct [Nano] from other [MetricPrefix]
   factory Nano.from(MetricPrefix unit) => Nano(unit.toNano.value);
 
   static const minorName = 'nano';
@@ -643,7 +643,7 @@ final class Peta extends MetricPrefix {
   factory Peta.fromJson(Map<String, dynamic> json) =>
       Peta.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Peta]
+  /// Construct [Peta] from other [MetricPrefix]
   factory Peta.from(MetricPrefix unit) => Peta(unit.toPeta.value);
 
   static const minorName = 'peta';
@@ -680,7 +680,7 @@ final class Pico extends MetricPrefix {
   factory Pico.fromJson(Map<String, dynamic> json) =>
       Pico.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Pico]
+  /// Construct [Pico] from other [MetricPrefix]
   factory Pico.from(MetricPrefix unit) => Pico(unit.toPico.value);
 
   static const minorName = 'pico';
@@ -717,7 +717,7 @@ final class Tera extends MetricPrefix {
   factory Tera.fromJson(Map<String, dynamic> json) =>
       Tera.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Tera]
+  /// Construct [Tera] from other [MetricPrefix]
   factory Tera.from(MetricPrefix unit) => Tera(unit.toTera.value);
 
   static const minorName = 'tera';
@@ -754,7 +754,7 @@ final class Yocto extends MetricPrefix {
   factory Yocto.fromJson(Map<String, dynamic> json) =>
       Yocto.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Yocto]
+  /// Construct [Yocto] from other [MetricPrefix]
   factory Yocto.from(MetricPrefix unit) => Yocto(unit.toYocto.value);
 
   static const minorName = 'yocto';
@@ -791,7 +791,7 @@ final class Yotta extends MetricPrefix {
   factory Yotta.fromJson(Map<String, dynamic> json) =>
       Yotta.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Yotta]
+  /// Construct [Yotta] from other [MetricPrefix]
   factory Yotta.from(MetricPrefix unit) => Yotta(unit.toYotta.value);
 
   static const minorName = 'yotta';
@@ -828,7 +828,7 @@ final class Zepto extends MetricPrefix {
   factory Zepto.fromJson(Map<String, dynamic> json) =>
       Zepto.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Zepto]
+  /// Construct [Zepto] from other [MetricPrefix]
   factory Zepto.from(MetricPrefix unit) => Zepto(unit.toZepto.value);
 
   static const minorName = 'zepto';
@@ -865,7 +865,7 @@ final class Zetta extends MetricPrefix {
   factory Zetta.fromJson(Map<String, dynamic> json) =>
       Zetta.from(MetricPrefix.fromJson(json));
 
-  /// More ways to creating [Zetta]
+  /// Construct [Zetta] from other [MetricPrefix]
   factory Zetta.from(MetricPrefix unit) => Zetta(unit.toZetta.value);
 
   static const minorName = 'zetta';

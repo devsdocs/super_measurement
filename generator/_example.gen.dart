@@ -53,11 +53,11 @@ void generateExample() {
         } else {
           if (Random().nextBool()) {
             exampleBuff.writeln(
-              "print('1 ${e.keys.first} + 1 ${x.keys.first} = \${const ${e.keys.first}(1) + ${x.keys.first}(1)}');",
+              "print('1 ${e.keys.first} + 1 ${x.keys.first} = \${const ${e.keys.first}(1) + const ${x.keys.first}(1)}');",
             );
           } else {
             exampleBuff.writeln(
-              "print('1 ${e.keys.first} + 1 ${x.keys.first} with Precision = \${(const ${e.keys.first}(1) + ${x.keys.first}(1)).withPrecision()}');",
+              "print('1 ${e.keys.first} + 1 ${x.keys.first} with Precision = \${(const ${e.keys.first}(1) + const ${x.keys.first}(1)).withPrecision()}');",
             );
           }
         }

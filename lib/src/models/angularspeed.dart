@@ -91,7 +91,7 @@ final class DegreePerDay extends AngularSpeed {
   factory DegreePerDay.fromJson(Map<String, dynamic> json) =>
       DegreePerDay.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [DegreePerDay]
+  /// Construct [DegreePerDay] from other [AngularSpeed]
   factory DegreePerDay.from(AngularSpeed unit) =>
       DegreePerDay(unit.toDegreePerDay.value);
 
@@ -129,7 +129,7 @@ final class DegreePerHour extends AngularSpeed {
   factory DegreePerHour.fromJson(Map<String, dynamic> json) =>
       DegreePerHour.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [DegreePerHour]
+  /// Construct [DegreePerHour] from other [AngularSpeed]
   factory DegreePerHour.from(AngularSpeed unit) =>
       DegreePerHour(unit.toDegreePerHour.value);
 
@@ -167,7 +167,7 @@ final class DegreePerMinute extends AngularSpeed {
   factory DegreePerMinute.fromJson(Map<String, dynamic> json) =>
       DegreePerMinute.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [DegreePerMinute]
+  /// Construct [DegreePerMinute] from other [AngularSpeed]
   factory DegreePerMinute.from(AngularSpeed unit) =>
       DegreePerMinute(unit.toDegreePerMinute.value);
 
@@ -205,7 +205,7 @@ final class DegreePerSecond extends AngularSpeed {
   factory DegreePerSecond.fromJson(Map<String, dynamic> json) =>
       DegreePerSecond.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [DegreePerSecond]
+  /// Construct [DegreePerSecond] from other [AngularSpeed]
   factory DegreePerSecond.from(AngularSpeed unit) =>
       DegreePerSecond(unit.toDegreePerSecond.value);
 
@@ -243,7 +243,7 @@ final class RadianPerDay extends AngularSpeed {
   factory RadianPerDay.fromJson(Map<String, dynamic> json) =>
       RadianPerDay.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [RadianPerDay]
+  /// Construct [RadianPerDay] from other [AngularSpeed]
   factory RadianPerDay.from(AngularSpeed unit) =>
       RadianPerDay(unit.toRadianPerDay.value);
 
@@ -281,7 +281,7 @@ final class RadianPerHour extends AngularSpeed {
   factory RadianPerHour.fromJson(Map<String, dynamic> json) =>
       RadianPerHour.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [RadianPerHour]
+  /// Construct [RadianPerHour] from other [AngularSpeed]
   factory RadianPerHour.from(AngularSpeed unit) =>
       RadianPerHour(unit.toRadianPerHour.value);
 
@@ -319,7 +319,7 @@ final class RadianPerMinute extends AngularSpeed {
   factory RadianPerMinute.fromJson(Map<String, dynamic> json) =>
       RadianPerMinute.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [RadianPerMinute]
+  /// Construct [RadianPerMinute] from other [AngularSpeed]
   factory RadianPerMinute.from(AngularSpeed unit) =>
       RadianPerMinute(unit.toRadianPerMinute.value);
 
@@ -357,7 +357,7 @@ final class RadianPerSecond extends AngularSpeed {
   factory RadianPerSecond.fromJson(Map<String, dynamic> json) =>
       RadianPerSecond.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [RadianPerSecond]
+  /// Construct [RadianPerSecond] from other [AngularSpeed]
   factory RadianPerSecond.from(AngularSpeed unit) =>
       RadianPerSecond(unit.toRadianPerSecond.value);
 
@@ -395,7 +395,7 @@ final class RevolutionPerDay extends AngularSpeed {
   factory RevolutionPerDay.fromJson(Map<String, dynamic> json) =>
       RevolutionPerDay.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [RevolutionPerDay]
+  /// Construct [RevolutionPerDay] from other [AngularSpeed]
   factory RevolutionPerDay.from(AngularSpeed unit) =>
       RevolutionPerDay(unit.toRevolutionPerDay.value);
 
@@ -433,7 +433,7 @@ final class RevolutionPerHour extends AngularSpeed {
   factory RevolutionPerHour.fromJson(Map<String, dynamic> json) =>
       RevolutionPerHour.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [RevolutionPerHour]
+  /// Construct [RevolutionPerHour] from other [AngularSpeed]
   factory RevolutionPerHour.from(AngularSpeed unit) =>
       RevolutionPerHour(unit.toRevolutionPerHour.value);
 
@@ -471,7 +471,7 @@ final class RevolutionPerMinute extends AngularSpeed {
   factory RevolutionPerMinute.fromJson(Map<String, dynamic> json) =>
       RevolutionPerMinute.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [RevolutionPerMinute]
+  /// Construct [RevolutionPerMinute] from other [AngularSpeed]
   factory RevolutionPerMinute.from(AngularSpeed unit) =>
       RevolutionPerMinute(unit.toRevolutionPerMinute.value);
 
@@ -510,7 +510,7 @@ final class RevolutionPerSecond extends AngularSpeed {
   factory RevolutionPerSecond.fromJson(Map<String, dynamic> json) =>
       RevolutionPerSecond.from(AngularSpeed.fromJson(json));
 
-  /// More ways to creating [RevolutionPerSecond]
+  /// Construct [RevolutionPerSecond] from other [AngularSpeed]
   factory RevolutionPerSecond.from(AngularSpeed unit) =>
       RevolutionPerSecond(unit.toRevolutionPerSecond.value);
 

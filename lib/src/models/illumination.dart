@@ -56,7 +56,7 @@ final class Flame extends Illumination {
   factory Flame.fromJson(Map<String, dynamic> json) =>
       Flame.from(Illumination.fromJson(json));
 
-  /// More ways to creating [Flame]
+  /// Construct [Flame] from other [Illumination]
   factory Flame.from(Illumination unit) => Flame(unit.toFlame.value);
 
   static const minorName = 'flame';
@@ -93,7 +93,7 @@ final class LumenPerFootSquare extends Illumination {
   factory LumenPerFootSquare.fromJson(Map<String, dynamic> json) =>
       LumenPerFootSquare.from(Illumination.fromJson(json));
 
-  /// More ways to creating [LumenPerFootSquare]
+  /// Construct [LumenPerFootSquare] from other [Illumination]
   factory LumenPerFootSquare.from(Illumination unit) =>
       LumenPerFootSquare(unit.toLumenPerFootSquare.value);
 
@@ -131,7 +131,7 @@ final class LumenPerMeterSquare extends Illumination {
   factory LumenPerMeterSquare.fromJson(Map<String, dynamic> json) =>
       LumenPerMeterSquare.from(Illumination.fromJson(json));
 
-  /// More ways to creating [LumenPerMeterSquare]
+  /// Construct [LumenPerMeterSquare] from other [Illumination]
   factory LumenPerMeterSquare.from(Illumination unit) =>
       LumenPerMeterSquare(unit.toLumenPerMeterSquare.value);
 
@@ -170,7 +170,7 @@ final class Phot extends Illumination {
   factory Phot.fromJson(Map<String, dynamic> json) =>
       Phot.from(Illumination.fromJson(json));
 
-  /// More ways to creating [Phot]
+  /// Construct [Phot] from other [Illumination]
   factory Phot.from(Illumination unit) => Phot(unit.toPhot.value);
 
   static const minorName = 'phot';

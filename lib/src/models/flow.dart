@@ -80,7 +80,7 @@ final class FootCubicPerHour extends Flow {
   factory FootCubicPerHour.fromJson(Map<String, dynamic> json) =>
       FootCubicPerHour.from(Flow.fromJson(json));
 
-  /// More ways to creating [FootCubicPerHour]
+  /// Construct [FootCubicPerHour] from other [Flow]
   factory FootCubicPerHour.from(Flow unit) =>
       FootCubicPerHour(unit.toFootCubicPerHour.value);
 
@@ -118,7 +118,7 @@ final class FootCubicPerMinute extends Flow {
   factory FootCubicPerMinute.fromJson(Map<String, dynamic> json) =>
       FootCubicPerMinute.from(Flow.fromJson(json));
 
-  /// More ways to creating [FootCubicPerMinute]
+  /// Construct [FootCubicPerMinute] from other [Flow]
   factory FootCubicPerMinute.from(Flow unit) =>
       FootCubicPerMinute(unit.toFootCubicPerMinute.value);
 
@@ -156,7 +156,7 @@ final class InchCubicPerHour extends Flow {
   factory InchCubicPerHour.fromJson(Map<String, dynamic> json) =>
       InchCubicPerHour.from(Flow.fromJson(json));
 
-  /// More ways to creating [InchCubicPerHour]
+  /// Construct [InchCubicPerHour] from other [Flow]
   factory InchCubicPerHour.from(Flow unit) =>
       InchCubicPerHour(unit.toInchCubicPerHour.value);
 
@@ -194,7 +194,7 @@ final class InchCubicPerMinute extends Flow {
   factory InchCubicPerMinute.fromJson(Map<String, dynamic> json) =>
       InchCubicPerMinute.from(Flow.fromJson(json));
 
-  /// More ways to creating [InchCubicPerMinute]
+  /// Construct [InchCubicPerMinute] from other [Flow]
   factory InchCubicPerMinute.from(Flow unit) =>
       InchCubicPerMinute(unit.toInchCubicPerMinute.value);
 
@@ -232,7 +232,7 @@ final class LiterPerDay extends Flow {
   factory LiterPerDay.fromJson(Map<String, dynamic> json) =>
       LiterPerDay.from(Flow.fromJson(json));
 
-  /// More ways to creating [LiterPerDay]
+  /// Construct [LiterPerDay] from other [Flow]
   factory LiterPerDay.from(Flow unit) => LiterPerDay(unit.toLiterPerDay.value);
 
   static const minorName = 'literPerDay';
@@ -269,7 +269,7 @@ final class LiterPerHour extends Flow {
   factory LiterPerHour.fromJson(Map<String, dynamic> json) =>
       LiterPerHour.from(Flow.fromJson(json));
 
-  /// More ways to creating [LiterPerHour]
+  /// Construct [LiterPerHour] from other [Flow]
   factory LiterPerHour.from(Flow unit) =>
       LiterPerHour(unit.toLiterPerHour.value);
 
@@ -307,7 +307,7 @@ final class LiterPerMinute extends Flow {
   factory LiterPerMinute.fromJson(Map<String, dynamic> json) =>
       LiterPerMinute.from(Flow.fromJson(json));
 
-  /// More ways to creating [LiterPerMinute]
+  /// Construct [LiterPerMinute] from other [Flow]
   factory LiterPerMinute.from(Flow unit) =>
       LiterPerMinute(unit.toLiterPerMinute.value);
 
@@ -345,7 +345,7 @@ final class MeterCubicPerDay extends Flow {
   factory MeterCubicPerDay.fromJson(Map<String, dynamic> json) =>
       MeterCubicPerDay.from(Flow.fromJson(json));
 
-  /// More ways to creating [MeterCubicPerDay]
+  /// Construct [MeterCubicPerDay] from other [Flow]
   factory MeterCubicPerDay.from(Flow unit) =>
       MeterCubicPerDay(unit.toMeterCubicPerDay.value);
 
@@ -383,7 +383,7 @@ final class MeterCubicPerHour extends Flow {
   factory MeterCubicPerHour.fromJson(Map<String, dynamic> json) =>
       MeterCubicPerHour.from(Flow.fromJson(json));
 
-  /// More ways to creating [MeterCubicPerHour]
+  /// Construct [MeterCubicPerHour] from other [Flow]
   factory MeterCubicPerHour.from(Flow unit) =>
       MeterCubicPerHour(unit.toMeterCubicPerHour.value);
 
@@ -421,7 +421,7 @@ final class MeterCubicPerMinute extends Flow {
   factory MeterCubicPerMinute.fromJson(Map<String, dynamic> json) =>
       MeterCubicPerMinute.from(Flow.fromJson(json));
 
-  /// More ways to creating [MeterCubicPerMinute]
+  /// Construct [MeterCubicPerMinute] from other [Flow]
   factory MeterCubicPerMinute.from(Flow unit) =>
       MeterCubicPerMinute(unit.toMeterCubicPerMinute.value);
 

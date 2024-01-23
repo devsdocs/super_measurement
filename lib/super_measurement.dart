@@ -32,3 +32,4 @@ part 'src/models/force.dart';
 part 'src/models/flow.dart';
 part 'src/models/metricprefix.dart';
 part 'src/models/surfacetension.dart';
+part 'src/models/angle.dart';

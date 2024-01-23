@@ -97,7 +97,7 @@ final class FootPerHour extends Speed {
   factory FootPerHour.fromJson(Map<String, dynamic> json) =>
       FootPerHour.from(Speed.fromJson(json));
 
-  /// More ways to creating [FootPerHour]
+  /// Construct [FootPerHour] from other [Speed]
   factory FootPerHour.from(Speed unit) => FootPerHour(unit.toFootPerHour.value);
 
   static const minorName = 'footPerHour';
@@ -134,7 +134,7 @@ final class FootPerMinute extends Speed {
   factory FootPerMinute.fromJson(Map<String, dynamic> json) =>
       FootPerMinute.from(Speed.fromJson(json));
 
-  /// More ways to creating [FootPerMinute]
+  /// Construct [FootPerMinute] from other [Speed]
   factory FootPerMinute.from(Speed unit) =>
       FootPerMinute(unit.toFootPerMinute.value);
 
@@ -172,7 +172,7 @@ final class FootPerSecond extends Speed {
   factory FootPerSecond.fromJson(Map<String, dynamic> json) =>
       FootPerSecond.from(Speed.fromJson(json));
 
-  /// More ways to creating [FootPerSecond]
+  /// Construct [FootPerSecond] from other [Speed]
   factory FootPerSecond.from(Speed unit) =>
       FootPerSecond(unit.toFootPerSecond.value);
 
@@ -210,7 +210,7 @@ final class KilometerPerHour extends Speed {
   factory KilometerPerHour.fromJson(Map<String, dynamic> json) =>
       KilometerPerHour.from(Speed.fromJson(json));
 
-  /// More ways to creating [KilometerPerHour]
+  /// Construct [KilometerPerHour] from other [Speed]
   factory KilometerPerHour.from(Speed unit) =>
       KilometerPerHour(unit.toKilometerPerHour.value);
 
@@ -248,7 +248,7 @@ final class Knot extends Speed {
   factory Knot.fromJson(Map<String, dynamic> json) =>
       Knot.from(Speed.fromJson(json));
 
-  /// More ways to creating [Knot]
+  /// Construct [Knot] from other [Speed]
   factory Knot.from(Speed unit) => Knot(unit.toKnot.value);
 
   static const minorName = 'knot';
@@ -285,7 +285,7 @@ final class Light extends Speed {
   factory Light.fromJson(Map<String, dynamic> json) =>
       Light.from(Speed.fromJson(json));
 
-  /// More ways to creating [Light]
+  /// Construct [Light] from other [Speed]
   factory Light.from(Speed unit) => Light(unit.toLight.value);
 
   static const minorName = 'light';
@@ -322,7 +322,7 @@ final class MachAtSeaLevel extends Speed {
   factory MachAtSeaLevel.fromJson(Map<String, dynamic> json) =>
       MachAtSeaLevel.from(Speed.fromJson(json));
 
-  /// More ways to creating [MachAtSeaLevel]
+  /// Construct [MachAtSeaLevel] from other [Speed]
   factory MachAtSeaLevel.from(Speed unit) =>
       MachAtSeaLevel(unit.toMachAtSeaLevel.value);
 
@@ -360,7 +360,7 @@ final class MachInternational extends Speed {
   factory MachInternational.fromJson(Map<String, dynamic> json) =>
       MachInternational.from(Speed.fromJson(json));
 
-  /// More ways to creating [MachInternational]
+  /// Construct [MachInternational] from other [Speed]
   factory MachInternational.from(Speed unit) =>
       MachInternational(unit.toMachInternational.value);
 
@@ -398,7 +398,7 @@ final class MeterPerHour extends Speed {
   factory MeterPerHour.fromJson(Map<String, dynamic> json) =>
       MeterPerHour.from(Speed.fromJson(json));
 
-  /// More ways to creating [MeterPerHour]
+  /// Construct [MeterPerHour] from other [Speed]
   factory MeterPerHour.from(Speed unit) =>
       MeterPerHour(unit.toMeterPerHour.value);
 
@@ -436,7 +436,7 @@ final class MeterPerMinute extends Speed {
   factory MeterPerMinute.fromJson(Map<String, dynamic> json) =>
       MeterPerMinute.from(Speed.fromJson(json));
 
-  /// More ways to creating [MeterPerMinute]
+  /// Construct [MeterPerMinute] from other [Speed]
   factory MeterPerMinute.from(Speed unit) =>
       MeterPerMinute(unit.toMeterPerMinute.value);
 
@@ -474,7 +474,7 @@ final class MeterPerSecond extends Speed {
   factory MeterPerSecond.fromJson(Map<String, dynamic> json) =>
       MeterPerSecond.from(Speed.fromJson(json));
 
-  /// More ways to creating [MeterPerSecond]
+  /// Construct [MeterPerSecond] from other [Speed]
   factory MeterPerSecond.from(Speed unit) =>
       MeterPerSecond(unit.toMeterPerSecond.value);
 
@@ -512,7 +512,7 @@ final class MilesPerHour extends Speed {
   factory MilesPerHour.fromJson(Map<String, dynamic> json) =>
       MilesPerHour.from(Speed.fromJson(json));
 
-  /// More ways to creating [MilesPerHour]
+  /// Construct [MilesPerHour] from other [Speed]
   factory MilesPerHour.from(Speed unit) =>
       MilesPerHour(unit.toMilesPerHour.value);
 
@@ -550,7 +550,7 @@ final class MilesPerMinute extends Speed {
   factory MilesPerMinute.fromJson(Map<String, dynamic> json) =>
       MilesPerMinute.from(Speed.fromJson(json));
 
-  /// More ways to creating [MilesPerMinute]
+  /// Construct [MilesPerMinute] from other [Speed]
   factory MilesPerMinute.from(Speed unit) =>
       MilesPerMinute(unit.toMilesPerMinute.value);
 
@@ -588,7 +588,7 @@ final class YardPerMinute extends Speed {
   factory YardPerMinute.fromJson(Map<String, dynamic> json) =>
       YardPerMinute.from(Speed.fromJson(json));
 
-  /// More ways to creating [YardPerMinute]
+  /// Construct [YardPerMinute] from other [Speed]
   factory YardPerMinute.from(Speed unit) =>
       YardPerMinute(unit.toYardPerMinute.value);
 

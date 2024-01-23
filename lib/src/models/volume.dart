@@ -84,7 +84,7 @@ final class BarrelsImperial extends Volume {
   factory BarrelsImperial.fromJson(Map<String, dynamic> json) =>
       BarrelsImperial.from(Volume.fromJson(json));
 
-  /// More ways to creating [BarrelsImperial]
+  /// Construct [BarrelsImperial] from other [Volume]
   factory BarrelsImperial.from(Volume unit) =>
       BarrelsImperial(unit.toBarrelsImperial.value);
 
@@ -122,7 +122,7 @@ final class BarrelsUS extends Volume {
   factory BarrelsUS.fromJson(Map<String, dynamic> json) =>
       BarrelsUS.from(Volume.fromJson(json));
 
-  /// More ways to creating [BarrelsUS]
+  /// Construct [BarrelsUS] from other [Volume]
   factory BarrelsUS.from(Volume unit) => BarrelsUS(unit.toBarrelsUS.value);
 
   static const minorName = 'barrelsUS';
@@ -159,7 +159,7 @@ final class CubicCentimeters extends Volume {
   factory CubicCentimeters.fromJson(Map<String, dynamic> json) =>
       CubicCentimeters.from(Volume.fromJson(json));
 
-  /// More ways to creating [CubicCentimeters]
+  /// Construct [CubicCentimeters] from other [Volume]
   factory CubicCentimeters.from(Volume unit) =>
       CubicCentimeters(unit.toCubicCentimeters.value);
 
@@ -197,7 +197,7 @@ final class CubicFoot extends Volume {
   factory CubicFoot.fromJson(Map<String, dynamic> json) =>
       CubicFoot.from(Volume.fromJson(json));
 
-  /// More ways to creating [CubicFoot]
+  /// Construct [CubicFoot] from other [Volume]
   factory CubicFoot.from(Volume unit) => CubicFoot(unit.toCubicFoot.value);
 
   static const minorName = 'cubicFoot';
@@ -234,7 +234,7 @@ final class CubicInches extends Volume {
   factory CubicInches.fromJson(Map<String, dynamic> json) =>
       CubicInches.from(Volume.fromJson(json));
 
-  /// More ways to creating [CubicInches]
+  /// Construct [CubicInches] from other [Volume]
   factory CubicInches.from(Volume unit) =>
       CubicInches(unit.toCubicInches.value);
 
@@ -272,7 +272,7 @@ final class CubicMeters extends Volume {
   factory CubicMeters.fromJson(Map<String, dynamic> json) =>
       CubicMeters.from(Volume.fromJson(json));
 
-  /// More ways to creating [CubicMeters]
+  /// Construct [CubicMeters] from other [Volume]
   factory CubicMeters.from(Volume unit) =>
       CubicMeters(unit.toCubicMeters.value);
 
@@ -310,7 +310,7 @@ final class CubicYards extends Volume {
   factory CubicYards.fromJson(Map<String, dynamic> json) =>
       CubicYards.from(Volume.fromJson(json));
 
-  /// More ways to creating [CubicYards]
+  /// Construct [CubicYards] from other [Volume]
   factory CubicYards.from(Volume unit) => CubicYards(unit.toCubicYards.value);
 
   static const minorName = 'cubicYards';
@@ -347,7 +347,7 @@ final class GallonsImperial extends Volume {
   factory GallonsImperial.fromJson(Map<String, dynamic> json) =>
       GallonsImperial.from(Volume.fromJson(json));
 
-  /// More ways to creating [GallonsImperial]
+  /// Construct [GallonsImperial] from other [Volume]
   factory GallonsImperial.from(Volume unit) =>
       GallonsImperial(unit.toGallonsImperial.value);
 
@@ -385,7 +385,7 @@ final class GallonsUS extends Volume {
   factory GallonsUS.fromJson(Map<String, dynamic> json) =>
       GallonsUS.from(Volume.fromJson(json));
 
-  /// More ways to creating [GallonsUS]
+  /// Construct [GallonsUS] from other [Volume]
   factory GallonsUS.from(Volume unit) => GallonsUS(unit.toGallonsUS.value);
 
   static const minorName = 'gallonsUS';
@@ -422,7 +422,7 @@ final class Liters extends Volume {
   factory Liters.fromJson(Map<String, dynamic> json) =>
       Liters.from(Volume.fromJson(json));
 
-  /// More ways to creating [Liters]
+  /// Construct [Liters] from other [Volume]
   factory Liters.from(Volume unit) => Liters(unit.toLiters.value);
 
   static const minorName = 'liters';
@@ -459,7 +459,7 @@ final class Milliliters extends Volume {
   factory Milliliters.fromJson(Map<String, dynamic> json) =>
       Milliliters.from(Volume.fromJson(json));
 
-  /// More ways to creating [Milliliters]
+  /// Construct [Milliliters] from other [Volume]
   factory Milliliters.from(Volume unit) =>
       Milliliters(unit.toMilliliters.value);
 
