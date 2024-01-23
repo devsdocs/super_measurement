@@ -8,6 +8,7 @@ part of '../../super_measurement.dart';
 abstract final class Energy extends Unit<Energy> {
   const Energy([super.value]);
 
+  /// If there is no matched key, returning [Joule] with 0 value
   factory Energy.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, energyUnitValues)
@@ -20,43 +21,54 @@ abstract final class Energy extends Unit<Energy> {
   AnchorRatio<Energy> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Energy>({
-          CalorieInternational: 0.2388458966,
-          CalorieNutritional: 0.0002388458966,
-          CalorieThermochemical: 0.2390057361,
-          ElectronVolt: 6241807627000000000.0,
-          GigaJoule: 1e-9,
-          KiloJoule: 0.001,
-          KilowattHour: 2.777777778e-7,
-          MegaJoule: 0.000001,
-          MegawattHour: 2.777777778e-10,
-          WattHour: 0.0002777777778,
+          CalorieInternational: CalorieInternational._ratio,
+          CalorieNutritional: CalorieNutritional._ratio,
+          CalorieThermochemical: CalorieThermochemical._ratio,
+          ElectronVolt: ElectronVolt._ratio,
+          GigaJoule: GigaJoule._ratio,
+          KiloJoule: KiloJoule._ratio,
+          KilowattHour: KilowattHour._ratio,
+          MegaJoule: MegaJoule._ratio,
+          MegawattHour: MegawattHour._ratio,
+          WattHour: WattHour._ratio,
         })
       );
 
   @override
   Energy get _anchor => const Joule();
 
+  /// Convert to [CalorieInternational]
   Energy get toCalorieInternational => convertTo(const CalorieInternational());
 
+  /// Convert to [CalorieNutritional]
   Energy get toCalorieNutritional => convertTo(const CalorieNutritional());
 
+  /// Convert to [CalorieThermochemical]
   Energy get toCalorieThermochemical =>
       convertTo(const CalorieThermochemical());
 
+  /// Convert to [ElectronVolt]
   Energy get toElectronVolt => convertTo(const ElectronVolt());
 
+  /// Convert to [GigaJoule]
   Energy get toGigaJoule => convertTo(const GigaJoule());
 
+  /// Convert to [Joule]
   Energy get toJoule => convertTo(const Joule());
 
+  /// Convert to [KiloJoule]
   Energy get toKiloJoule => convertTo(const KiloJoule());
 
+  /// Convert to [KilowattHour]
   Energy get toKilowattHour => convertTo(const KilowattHour());
 
+  /// Convert to [MegaJoule]
   Energy get toMegaJoule => convertTo(const MegaJoule());
 
+  /// Convert to [MegawattHour]
   Energy get toMegawattHour => convertTo(const MegawattHour());
 
+  /// Convert to [WattHour]
   Energy get toWattHour => convertTo(const WattHour());
 
   @override
@@ -65,15 +77,25 @@ abstract final class Energy extends Unit<Energy> {
   static const _majorName = 'energy';
 }
 
+/// Unit of [Energy]
 final class CalorieInternational extends Energy {
   const CalorieInternational([super.value]);
 
-  factory CalorieInternational.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toCalorieInternational.value;
-    return CalorieInternational(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory CalorieInternational.fromJson(Map<String, dynamic> json) =>
+      CalorieInternational.from(Energy.fromJson(json));
+
+  /// More ways to creating [CalorieInternational]
+  factory CalorieInternational.from(Energy unit) =>
+      CalorieInternational(unit.toCalorieInternational.value);
 
   static const minorName = 'calorieInternational';
+
+  static const _ratio = 0.2388458966;
+
+  /// 1 [Joule] ≈ 0.2388458966 [CalorieInternational]
+  @override
+  num get ratio => _ratio;
 
   @override
   CalorieInternational get _clone => CalorieInternational(value);
@@ -94,15 +116,25 @@ final class CalorieInternational extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class CalorieNutritional extends Energy {
   const CalorieNutritional([super.value]);
 
-  factory CalorieNutritional.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toCalorieNutritional.value;
-    return CalorieNutritional(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory CalorieNutritional.fromJson(Map<String, dynamic> json) =>
+      CalorieNutritional.from(Energy.fromJson(json));
+
+  /// More ways to creating [CalorieNutritional]
+  factory CalorieNutritional.from(Energy unit) =>
+      CalorieNutritional(unit.toCalorieNutritional.value);
 
   static const minorName = 'calorieNutritional';
+
+  static const _ratio = 0.0002388458966;
+
+  /// 1 [Joule] ≈ 0.0002388458966 [CalorieNutritional]
+  @override
+  num get ratio => _ratio;
 
   @override
   CalorieNutritional get _clone => CalorieNutritional(value);
@@ -122,15 +154,25 @@ final class CalorieNutritional extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class CalorieThermochemical extends Energy {
   const CalorieThermochemical([super.value]);
 
-  factory CalorieThermochemical.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toCalorieThermochemical.value;
-    return CalorieThermochemical(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory CalorieThermochemical.fromJson(Map<String, dynamic> json) =>
+      CalorieThermochemical.from(Energy.fromJson(json));
+
+  /// More ways to creating [CalorieThermochemical]
+  factory CalorieThermochemical.from(Energy unit) =>
+      CalorieThermochemical(unit.toCalorieThermochemical.value);
 
   static const minorName = 'calorieThermochemical';
+
+  static const _ratio = 0.2390057361;
+
+  /// 1 [Joule] ≈ 0.2390057361 [CalorieThermochemical]
+  @override
+  num get ratio => _ratio;
 
   @override
   CalorieThermochemical get _clone => CalorieThermochemical(value);
@@ -151,15 +193,25 @@ final class CalorieThermochemical extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class ElectronVolt extends Energy {
   const ElectronVolt([super.value]);
 
-  factory ElectronVolt.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toElectronVolt.value;
-    return ElectronVolt(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory ElectronVolt.fromJson(Map<String, dynamic> json) =>
+      ElectronVolt.from(Energy.fromJson(json));
+
+  /// More ways to creating [ElectronVolt]
+  factory ElectronVolt.from(Energy unit) =>
+      ElectronVolt(unit.toElectronVolt.value);
 
   static const minorName = 'electronVolt';
+
+  static const _ratio = 6241807627000000000.0;
+
+  /// 1 [Joule] = 6241807627000000000.0 [ElectronVolt]
+  @override
+  num get ratio => _ratio;
 
   @override
   ElectronVolt get _clone => ElectronVolt(value);
@@ -179,15 +231,24 @@ final class ElectronVolt extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class GigaJoule extends Energy {
   const GigaJoule([super.value]);
 
-  factory GigaJoule.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toGigaJoule.value;
-    return GigaJoule(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory GigaJoule.fromJson(Map<String, dynamic> json) =>
+      GigaJoule.from(Energy.fromJson(json));
+
+  /// More ways to creating [GigaJoule]
+  factory GigaJoule.from(Energy unit) => GigaJoule(unit.toGigaJoule.value);
 
   static const minorName = 'gigaJoule';
+
+  static const _ratio = 1e-9;
+
+  /// 1 [Joule] ≈ 1e-9 [GigaJoule]
+  @override
+  num get ratio => _ratio;
 
   @override
   GigaJoule get _clone => GigaJoule(value);
@@ -207,15 +268,24 @@ final class GigaJoule extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class Joule extends Energy {
   const Joule([super.value]);
 
-  factory Joule.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toJoule.value;
-    return Joule(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Joule.fromJson(Map<String, dynamic> json) =>
+      Joule.from(Energy.fromJson(json));
+
+  /// More ways to creating [Joule]
+  factory Joule.from(Energy unit) => Joule(unit.toJoule.value);
 
   static const minorName = 'joule';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [Energy]
+  @override
+  num get ratio => _ratio;
 
   @override
   Joule get _clone => Joule(value);
@@ -235,15 +305,24 @@ final class Joule extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class KiloJoule extends Energy {
   const KiloJoule([super.value]);
 
-  factory KiloJoule.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toKiloJoule.value;
-    return KiloJoule(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory KiloJoule.fromJson(Map<String, dynamic> json) =>
+      KiloJoule.from(Energy.fromJson(json));
+
+  /// More ways to creating [KiloJoule]
+  factory KiloJoule.from(Energy unit) => KiloJoule(unit.toKiloJoule.value);
 
   static const minorName = 'kiloJoule';
+
+  static const _ratio = 0.001;
+
+  /// 1 [Joule] ≈ 0.001 [KiloJoule]
+  @override
+  num get ratio => _ratio;
 
   @override
   KiloJoule get _clone => KiloJoule(value);
@@ -263,15 +342,25 @@ final class KiloJoule extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class KilowattHour extends Energy {
   const KilowattHour([super.value]);
 
-  factory KilowattHour.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toKilowattHour.value;
-    return KilowattHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory KilowattHour.fromJson(Map<String, dynamic> json) =>
+      KilowattHour.from(Energy.fromJson(json));
+
+  /// More ways to creating [KilowattHour]
+  factory KilowattHour.from(Energy unit) =>
+      KilowattHour(unit.toKilowattHour.value);
 
   static const minorName = 'kilowattHour';
+
+  static const _ratio = 2.777777778e-7;
+
+  /// 1 [Joule] ≈ 2.777777778e-7 [KilowattHour]
+  @override
+  num get ratio => _ratio;
 
   @override
   KilowattHour get _clone => KilowattHour(value);
@@ -291,15 +380,24 @@ final class KilowattHour extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class MegaJoule extends Energy {
   const MegaJoule([super.value]);
 
-  factory MegaJoule.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toMegaJoule.value;
-    return MegaJoule(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory MegaJoule.fromJson(Map<String, dynamic> json) =>
+      MegaJoule.from(Energy.fromJson(json));
+
+  /// More ways to creating [MegaJoule]
+  factory MegaJoule.from(Energy unit) => MegaJoule(unit.toMegaJoule.value);
 
   static const minorName = 'megaJoule';
+
+  static const _ratio = 0.000001;
+
+  /// 1 [Joule] ≈ 0.000001 [MegaJoule]
+  @override
+  num get ratio => _ratio;
 
   @override
   MegaJoule get _clone => MegaJoule(value);
@@ -319,15 +417,25 @@ final class MegaJoule extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class MegawattHour extends Energy {
   const MegawattHour([super.value]);
 
-  factory MegawattHour.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toMegawattHour.value;
-    return MegawattHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory MegawattHour.fromJson(Map<String, dynamic> json) =>
+      MegawattHour.from(Energy.fromJson(json));
+
+  /// More ways to creating [MegawattHour]
+  factory MegawattHour.from(Energy unit) =>
+      MegawattHour(unit.toMegawattHour.value);
 
   static const minorName = 'megawattHour';
+
+  static const _ratio = 2.777777778e-10;
+
+  /// 1 [Joule] ≈ 2.777777778e-10 [MegawattHour]
+  @override
+  num get ratio => _ratio;
 
   @override
   MegawattHour get _clone => MegawattHour(value);
@@ -347,15 +455,24 @@ final class MegawattHour extends Energy {
       };
 }
 
+/// Unit of [Energy]
 final class WattHour extends Energy {
   const WattHour([super.value]);
 
-  factory WattHour.fromJson(Map<String, dynamic> json) {
-    final val = Energy.fromJson(json).toWattHour.value;
-    return WattHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory WattHour.fromJson(Map<String, dynamic> json) =>
+      WattHour.from(Energy.fromJson(json));
+
+  /// More ways to creating [WattHour]
+  factory WattHour.from(Energy unit) => WattHour(unit.toWattHour.value);
 
   static const minorName = 'wattHour';
+
+  static const _ratio = 0.0002777777778;
+
+  /// 1 [Joule] ≈ 0.0002777777778 [WattHour]
+  @override
+  num get ratio => _ratio;
 
   @override
   WattHour get _clone => WattHour(value);

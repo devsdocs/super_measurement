@@ -7,6 +7,7 @@ part of '../../super_measurement.dart';
 abstract final class DataTransfer extends Unit<DataTransfer> {
   const DataTransfer([super.value]);
 
+  /// If there is no matched key, returning [MegabytePerSecond] with 0 value
   factory DataTransfer.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, dataTransferUnitValues)
@@ -19,27 +20,33 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
   AnchorRatio<DataTransfer> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<DataTransfer>({
-          GigabitPerSecond: 0.0008,
-          GigabytePerSecond: 0.001,
-          KilobitPerSecond: 8000,
-          KilobytePerSecond: 1000,
-          MegabitPerSecond: 8,
+          GigabitPerSecond: GigabitPerSecond._ratio,
+          GigabytePerSecond: GigabytePerSecond._ratio,
+          KilobitPerSecond: KilobitPerSecond._ratio,
+          KilobytePerSecond: KilobytePerSecond._ratio,
+          MegabitPerSecond: MegabitPerSecond._ratio,
         })
       );
 
   @override
   DataTransfer get _anchor => const MegabytePerSecond();
 
+  /// Convert to [GigabitPerSecond]
   DataTransfer get toGigabitPerSecond => convertTo(const GigabitPerSecond());
 
+  /// Convert to [GigabytePerSecond]
   DataTransfer get toGigabytePerSecond => convertTo(const GigabytePerSecond());
 
+  /// Convert to [KilobitPerSecond]
   DataTransfer get toKilobitPerSecond => convertTo(const KilobitPerSecond());
 
+  /// Convert to [KilobytePerSecond]
   DataTransfer get toKilobytePerSecond => convertTo(const KilobytePerSecond());
 
+  /// Convert to [MegabitPerSecond]
   DataTransfer get toMegabitPerSecond => convertTo(const MegabitPerSecond());
 
+  /// Convert to [MegabytePerSecond]
   DataTransfer get toMegabytePerSecond => convertTo(const MegabytePerSecond());
 
   @override
@@ -48,15 +55,25 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
   static const _majorName = 'dataTransfer';
 }
 
+/// Unit of [DataTransfer]
 final class GigabitPerSecond extends DataTransfer {
   const GigabitPerSecond([super.value]);
 
-  factory GigabitPerSecond.fromJson(Map<String, dynamic> json) {
-    final val = DataTransfer.fromJson(json).toGigabitPerSecond.value;
-    return GigabitPerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory GigabitPerSecond.fromJson(Map<String, dynamic> json) =>
+      GigabitPerSecond.from(DataTransfer.fromJson(json));
+
+  /// More ways to creating [GigabitPerSecond]
+  factory GigabitPerSecond.from(DataTransfer unit) =>
+      GigabitPerSecond(unit.toGigabitPerSecond.value);
 
   static const minorName = 'gigabitPerSecond';
+
+  static const _ratio = 0.0008;
+
+  /// 1 [MegabytePerSecond] ≈ 0.0008 [GigabitPerSecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   GigabitPerSecond get _clone => GigabitPerSecond(value);
@@ -76,15 +93,25 @@ final class GigabitPerSecond extends DataTransfer {
       };
 }
 
+/// Unit of [DataTransfer]
 final class GigabytePerSecond extends DataTransfer {
   const GigabytePerSecond([super.value]);
 
-  factory GigabytePerSecond.fromJson(Map<String, dynamic> json) {
-    final val = DataTransfer.fromJson(json).toGigabytePerSecond.value;
-    return GigabytePerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory GigabytePerSecond.fromJson(Map<String, dynamic> json) =>
+      GigabytePerSecond.from(DataTransfer.fromJson(json));
+
+  /// More ways to creating [GigabytePerSecond]
+  factory GigabytePerSecond.from(DataTransfer unit) =>
+      GigabytePerSecond(unit.toGigabytePerSecond.value);
 
   static const minorName = 'gigabytePerSecond';
+
+  static const _ratio = 0.001;
+
+  /// 1 [MegabytePerSecond] ≈ 0.001 [GigabytePerSecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   GigabytePerSecond get _clone => GigabytePerSecond(value);
@@ -104,15 +131,25 @@ final class GigabytePerSecond extends DataTransfer {
       };
 }
 
+/// Unit of [DataTransfer]
 final class KilobitPerSecond extends DataTransfer {
   const KilobitPerSecond([super.value]);
 
-  factory KilobitPerSecond.fromJson(Map<String, dynamic> json) {
-    final val = DataTransfer.fromJson(json).toKilobitPerSecond.value;
-    return KilobitPerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory KilobitPerSecond.fromJson(Map<String, dynamic> json) =>
+      KilobitPerSecond.from(DataTransfer.fromJson(json));
+
+  /// More ways to creating [KilobitPerSecond]
+  factory KilobitPerSecond.from(DataTransfer unit) =>
+      KilobitPerSecond(unit.toKilobitPerSecond.value);
 
   static const minorName = 'kilobitPerSecond';
+
+  static const _ratio = 8000;
+
+  /// 1 [MegabytePerSecond] = 8000 [KilobitPerSecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   KilobitPerSecond get _clone => KilobitPerSecond(value);
@@ -132,15 +169,25 @@ final class KilobitPerSecond extends DataTransfer {
       };
 }
 
+/// Unit of [DataTransfer]
 final class KilobytePerSecond extends DataTransfer {
   const KilobytePerSecond([super.value]);
 
-  factory KilobytePerSecond.fromJson(Map<String, dynamic> json) {
-    final val = DataTransfer.fromJson(json).toKilobytePerSecond.value;
-    return KilobytePerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory KilobytePerSecond.fromJson(Map<String, dynamic> json) =>
+      KilobytePerSecond.from(DataTransfer.fromJson(json));
+
+  /// More ways to creating [KilobytePerSecond]
+  factory KilobytePerSecond.from(DataTransfer unit) =>
+      KilobytePerSecond(unit.toKilobytePerSecond.value);
 
   static const minorName = 'kilobytePerSecond';
+
+  static const _ratio = 1000;
+
+  /// 1 [MegabytePerSecond] = 1000 [KilobytePerSecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   KilobytePerSecond get _clone => KilobytePerSecond(value);
@@ -160,15 +207,25 @@ final class KilobytePerSecond extends DataTransfer {
       };
 }
 
+/// Unit of [DataTransfer]
 final class MegabitPerSecond extends DataTransfer {
   const MegabitPerSecond([super.value]);
 
-  factory MegabitPerSecond.fromJson(Map<String, dynamic> json) {
-    final val = DataTransfer.fromJson(json).toMegabitPerSecond.value;
-    return MegabitPerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory MegabitPerSecond.fromJson(Map<String, dynamic> json) =>
+      MegabitPerSecond.from(DataTransfer.fromJson(json));
+
+  /// More ways to creating [MegabitPerSecond]
+  factory MegabitPerSecond.from(DataTransfer unit) =>
+      MegabitPerSecond(unit.toMegabitPerSecond.value);
 
   static const minorName = 'megabitPerSecond';
+
+  static const _ratio = 8;
+
+  /// 1 [MegabytePerSecond] = 8 [MegabitPerSecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   MegabitPerSecond get _clone => MegabitPerSecond(value);
@@ -188,15 +245,25 @@ final class MegabitPerSecond extends DataTransfer {
       };
 }
 
+/// Unit of [DataTransfer]
 final class MegabytePerSecond extends DataTransfer {
   const MegabytePerSecond([super.value]);
 
-  factory MegabytePerSecond.fromJson(Map<String, dynamic> json) {
-    final val = DataTransfer.fromJson(json).toMegabytePerSecond.value;
-    return MegabytePerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory MegabytePerSecond.fromJson(Map<String, dynamic> json) =>
+      MegabytePerSecond.from(DataTransfer.fromJson(json));
+
+  /// More ways to creating [MegabytePerSecond]
+  factory MegabytePerSecond.from(DataTransfer unit) =>
+      MegabytePerSecond(unit.toMegabytePerSecond.value);
 
   static const minorName = 'megabytePerSecond';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [DataTransfer]
+  @override
+  num get ratio => _ratio;
 
   @override
   MegabytePerSecond get _clone => MegabytePerSecond(value);

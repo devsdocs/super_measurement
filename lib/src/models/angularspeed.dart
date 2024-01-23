@@ -9,6 +9,7 @@ part of '../../super_measurement.dart';
 abstract final class AngularSpeed extends Unit<AngularSpeed> {
   const AngularSpeed([super.value]);
 
+  /// If there is no matched key, returning [RadianPerHour] with 0 value
   factory AngularSpeed.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, angularSpeedUnitValues)
@@ -21,46 +22,58 @@ abstract final class AngularSpeed extends Unit<AngularSpeed> {
   AnchorRatio<AngularSpeed> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<AngularSpeed>({
-          DegreePerDay: 1375.098708,
-          DegreePerHour: 57.29577951,
-          DegreePerMinute: 0.9549296586,
-          DegreePerSecond: 0.01591549431,
-          RadianPerDay: 24,
-          RadianPerMinute: 0.01666666667,
-          RadianPerSecond: 0.0002777777778,
-          RevolutionPerDay: 3.819718634,
-          RevolutionPerHour: 0.1591549431,
-          RevolutionPerMinute: 0.002652582385,
-          RevolutionPerSecond: 0.00004420970641,
+          DegreePerDay: DegreePerDay._ratio,
+          DegreePerHour: DegreePerHour._ratio,
+          DegreePerMinute: DegreePerMinute._ratio,
+          DegreePerSecond: DegreePerSecond._ratio,
+          RadianPerDay: RadianPerDay._ratio,
+          RadianPerMinute: RadianPerMinute._ratio,
+          RadianPerSecond: RadianPerSecond._ratio,
+          RevolutionPerDay: RevolutionPerDay._ratio,
+          RevolutionPerHour: RevolutionPerHour._ratio,
+          RevolutionPerMinute: RevolutionPerMinute._ratio,
+          RevolutionPerSecond: RevolutionPerSecond._ratio,
         })
       );
 
   @override
   AngularSpeed get _anchor => const RadianPerHour();
 
+  /// Convert to [DegreePerDay]
   AngularSpeed get toDegreePerDay => convertTo(const DegreePerDay());
 
+  /// Convert to [DegreePerHour]
   AngularSpeed get toDegreePerHour => convertTo(const DegreePerHour());
 
+  /// Convert to [DegreePerMinute]
   AngularSpeed get toDegreePerMinute => convertTo(const DegreePerMinute());
 
+  /// Convert to [DegreePerSecond]
   AngularSpeed get toDegreePerSecond => convertTo(const DegreePerSecond());
 
+  /// Convert to [RadianPerDay]
   AngularSpeed get toRadianPerDay => convertTo(const RadianPerDay());
 
+  /// Convert to [RadianPerHour]
   AngularSpeed get toRadianPerHour => convertTo(const RadianPerHour());
 
+  /// Convert to [RadianPerMinute]
   AngularSpeed get toRadianPerMinute => convertTo(const RadianPerMinute());
 
+  /// Convert to [RadianPerSecond]
   AngularSpeed get toRadianPerSecond => convertTo(const RadianPerSecond());
 
+  /// Convert to [RevolutionPerDay]
   AngularSpeed get toRevolutionPerDay => convertTo(const RevolutionPerDay());
 
+  /// Convert to [RevolutionPerHour]
   AngularSpeed get toRevolutionPerHour => convertTo(const RevolutionPerHour());
 
+  /// Convert to [RevolutionPerMinute]
   AngularSpeed get toRevolutionPerMinute =>
       convertTo(const RevolutionPerMinute());
 
+  /// Convert to [RevolutionPerSecond]
   AngularSpeed get toRevolutionPerSecond =>
       convertTo(const RevolutionPerSecond());
 
@@ -70,15 +83,25 @@ abstract final class AngularSpeed extends Unit<AngularSpeed> {
   static const _majorName = 'angularSpeed';
 }
 
+/// Unit of [AngularSpeed]
 final class DegreePerDay extends AngularSpeed {
   const DegreePerDay([super.value]);
 
-  factory DegreePerDay.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toDegreePerDay.value;
-    return DegreePerDay(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory DegreePerDay.fromJson(Map<String, dynamic> json) =>
+      DegreePerDay.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [DegreePerDay]
+  factory DegreePerDay.from(AngularSpeed unit) =>
+      DegreePerDay(unit.toDegreePerDay.value);
 
   static const minorName = 'degreePerDay';
+
+  static const _ratio = 1375.098708;
+
+  /// 1 [RadianPerHour] ≈ 1375.098708 [DegreePerDay]
+  @override
+  num get ratio => _ratio;
 
   @override
   DegreePerDay get _clone => DegreePerDay(value);
@@ -98,15 +121,25 @@ final class DegreePerDay extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class DegreePerHour extends AngularSpeed {
   const DegreePerHour([super.value]);
 
-  factory DegreePerHour.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toDegreePerHour.value;
-    return DegreePerHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory DegreePerHour.fromJson(Map<String, dynamic> json) =>
+      DegreePerHour.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [DegreePerHour]
+  factory DegreePerHour.from(AngularSpeed unit) =>
+      DegreePerHour(unit.toDegreePerHour.value);
 
   static const minorName = 'degreePerHour';
+
+  static const _ratio = 57.29577951;
+
+  /// 1 [RadianPerHour] ≈ 57.29577951 [DegreePerHour]
+  @override
+  num get ratio => _ratio;
 
   @override
   DegreePerHour get _clone => DegreePerHour(value);
@@ -126,15 +159,25 @@ final class DegreePerHour extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class DegreePerMinute extends AngularSpeed {
   const DegreePerMinute([super.value]);
 
-  factory DegreePerMinute.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toDegreePerMinute.value;
-    return DegreePerMinute(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory DegreePerMinute.fromJson(Map<String, dynamic> json) =>
+      DegreePerMinute.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [DegreePerMinute]
+  factory DegreePerMinute.from(AngularSpeed unit) =>
+      DegreePerMinute(unit.toDegreePerMinute.value);
 
   static const minorName = 'degreePerMinute';
+
+  static const _ratio = 0.9549296586;
+
+  /// 1 [RadianPerHour] ≈ 0.9549296586 [DegreePerMinute]
+  @override
+  num get ratio => _ratio;
 
   @override
   DegreePerMinute get _clone => DegreePerMinute(value);
@@ -154,15 +197,25 @@ final class DegreePerMinute extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class DegreePerSecond extends AngularSpeed {
   const DegreePerSecond([super.value]);
 
-  factory DegreePerSecond.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toDegreePerSecond.value;
-    return DegreePerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory DegreePerSecond.fromJson(Map<String, dynamic> json) =>
+      DegreePerSecond.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [DegreePerSecond]
+  factory DegreePerSecond.from(AngularSpeed unit) =>
+      DegreePerSecond(unit.toDegreePerSecond.value);
 
   static const minorName = 'degreePerSecond';
+
+  static const _ratio = 0.01591549431;
+
+  /// 1 [RadianPerHour] ≈ 0.01591549431 [DegreePerSecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   DegreePerSecond get _clone => DegreePerSecond(value);
@@ -182,15 +235,25 @@ final class DegreePerSecond extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class RadianPerDay extends AngularSpeed {
   const RadianPerDay([super.value]);
 
-  factory RadianPerDay.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toRadianPerDay.value;
-    return RadianPerDay(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory RadianPerDay.fromJson(Map<String, dynamic> json) =>
+      RadianPerDay.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [RadianPerDay]
+  factory RadianPerDay.from(AngularSpeed unit) =>
+      RadianPerDay(unit.toRadianPerDay.value);
 
   static const minorName = 'radianPerDay';
+
+  static const _ratio = 24;
+
+  /// 1 [RadianPerHour] = 24 [RadianPerDay]
+  @override
+  num get ratio => _ratio;
 
   @override
   RadianPerDay get _clone => RadianPerDay(value);
@@ -210,15 +273,25 @@ final class RadianPerDay extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class RadianPerHour extends AngularSpeed {
   const RadianPerHour([super.value]);
 
-  factory RadianPerHour.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toRadianPerHour.value;
-    return RadianPerHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory RadianPerHour.fromJson(Map<String, dynamic> json) =>
+      RadianPerHour.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [RadianPerHour]
+  factory RadianPerHour.from(AngularSpeed unit) =>
+      RadianPerHour(unit.toRadianPerHour.value);
 
   static const minorName = 'radianPerHour';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [AngularSpeed]
+  @override
+  num get ratio => _ratio;
 
   @override
   RadianPerHour get _clone => RadianPerHour(value);
@@ -238,15 +311,25 @@ final class RadianPerHour extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class RadianPerMinute extends AngularSpeed {
   const RadianPerMinute([super.value]);
 
-  factory RadianPerMinute.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toRadianPerMinute.value;
-    return RadianPerMinute(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory RadianPerMinute.fromJson(Map<String, dynamic> json) =>
+      RadianPerMinute.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [RadianPerMinute]
+  factory RadianPerMinute.from(AngularSpeed unit) =>
+      RadianPerMinute(unit.toRadianPerMinute.value);
 
   static const minorName = 'radianPerMinute';
+
+  static const _ratio = 0.01666666667;
+
+  /// 1 [RadianPerHour] ≈ 0.01666666667 [RadianPerMinute]
+  @override
+  num get ratio => _ratio;
 
   @override
   RadianPerMinute get _clone => RadianPerMinute(value);
@@ -266,15 +349,25 @@ final class RadianPerMinute extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class RadianPerSecond extends AngularSpeed {
   const RadianPerSecond([super.value]);
 
-  factory RadianPerSecond.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toRadianPerSecond.value;
-    return RadianPerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory RadianPerSecond.fromJson(Map<String, dynamic> json) =>
+      RadianPerSecond.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [RadianPerSecond]
+  factory RadianPerSecond.from(AngularSpeed unit) =>
+      RadianPerSecond(unit.toRadianPerSecond.value);
 
   static const minorName = 'radianPerSecond';
+
+  static const _ratio = 0.0002777777778;
+
+  /// 1 [RadianPerHour] ≈ 0.0002777777778 [RadianPerSecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   RadianPerSecond get _clone => RadianPerSecond(value);
@@ -294,15 +387,25 @@ final class RadianPerSecond extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class RevolutionPerDay extends AngularSpeed {
   const RevolutionPerDay([super.value]);
 
-  factory RevolutionPerDay.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toRevolutionPerDay.value;
-    return RevolutionPerDay(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory RevolutionPerDay.fromJson(Map<String, dynamic> json) =>
+      RevolutionPerDay.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [RevolutionPerDay]
+  factory RevolutionPerDay.from(AngularSpeed unit) =>
+      RevolutionPerDay(unit.toRevolutionPerDay.value);
 
   static const minorName = 'revolutionPerDay';
+
+  static const _ratio = 3.819718634;
+
+  /// 1 [RadianPerHour] ≈ 3.819718634 [RevolutionPerDay]
+  @override
+  num get ratio => _ratio;
 
   @override
   RevolutionPerDay get _clone => RevolutionPerDay(value);
@@ -322,15 +425,25 @@ final class RevolutionPerDay extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class RevolutionPerHour extends AngularSpeed {
   const RevolutionPerHour([super.value]);
 
-  factory RevolutionPerHour.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toRevolutionPerHour.value;
-    return RevolutionPerHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory RevolutionPerHour.fromJson(Map<String, dynamic> json) =>
+      RevolutionPerHour.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [RevolutionPerHour]
+  factory RevolutionPerHour.from(AngularSpeed unit) =>
+      RevolutionPerHour(unit.toRevolutionPerHour.value);
 
   static const minorName = 'revolutionPerHour';
+
+  static const _ratio = 0.1591549431;
+
+  /// 1 [RadianPerHour] ≈ 0.1591549431 [RevolutionPerHour]
+  @override
+  num get ratio => _ratio;
 
   @override
   RevolutionPerHour get _clone => RevolutionPerHour(value);
@@ -350,15 +463,25 @@ final class RevolutionPerHour extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class RevolutionPerMinute extends AngularSpeed {
   const RevolutionPerMinute([super.value]);
 
-  factory RevolutionPerMinute.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toRevolutionPerMinute.value;
-    return RevolutionPerMinute(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory RevolutionPerMinute.fromJson(Map<String, dynamic> json) =>
+      RevolutionPerMinute.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [RevolutionPerMinute]
+  factory RevolutionPerMinute.from(AngularSpeed unit) =>
+      RevolutionPerMinute(unit.toRevolutionPerMinute.value);
 
   static const minorName = 'revolutionPerMinute';
+
+  static const _ratio = 0.002652582385;
+
+  /// 1 [RadianPerHour] ≈ 0.002652582385 [RevolutionPerMinute]
+  @override
+  num get ratio => _ratio;
 
   @override
   RevolutionPerMinute get _clone => RevolutionPerMinute(value);
@@ -379,15 +502,25 @@ final class RevolutionPerMinute extends AngularSpeed {
       };
 }
 
+/// Unit of [AngularSpeed]
 final class RevolutionPerSecond extends AngularSpeed {
   const RevolutionPerSecond([super.value]);
 
-  factory RevolutionPerSecond.fromJson(Map<String, dynamic> json) {
-    final val = AngularSpeed.fromJson(json).toRevolutionPerSecond.value;
-    return RevolutionPerSecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory RevolutionPerSecond.fromJson(Map<String, dynamic> json) =>
+      RevolutionPerSecond.from(AngularSpeed.fromJson(json));
+
+  /// More ways to creating [RevolutionPerSecond]
+  factory RevolutionPerSecond.from(AngularSpeed unit) =>
+      RevolutionPerSecond(unit.toRevolutionPerSecond.value);
 
   static const minorName = 'revolutionPerSecond';
+
+  static const _ratio = 0.00004420970641;
+
+  /// 1 [RadianPerHour] ≈ 0.00004420970641 [RevolutionPerSecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   RevolutionPerSecond get _clone => RevolutionPerSecond(value);

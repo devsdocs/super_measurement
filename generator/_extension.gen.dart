@@ -16,9 +16,14 @@ void generateExtension() {
 
     for (final e in unit.values.first) {
       iterableExtensionBuff.writeln(
+        '/// Combine all [$name] in [Iterable] to [${e.keys.first}]',
+      );
+      iterableExtensionBuff.writeln(
         '$name get to${e.keys.first} => combineTo(const ${e.keys.first}());',
       );
-
+      numExtensionBuff.writeln(
+        '/// Get [${e.keys.first}] using [num]',
+      );
       numExtensionBuff.writeln(
         '${e.keys.first} get ${e.keys.first[0].toLowerCase() + e.keys.first.substring(1)} => ${e.keys.first}(this);',
       );

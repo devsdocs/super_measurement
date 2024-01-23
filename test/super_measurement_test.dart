@@ -25,8 +25,8 @@ void main() {
         MassUnit.kilograms.construct.withValue(2),
         equals(const Grams(2000)),
       );
-      expect(TimeUnit.day.construct.withValue(1), const Hour(24));
-      expect(const Centimeters(200).convertTo(const Meters()).value, 2);
+      expect(TimeUnit.day.construct.withValue(1), equals(const Hour(24)));
+      expect(const Centimeters(200).convertTo(const Meters()).value, equals(2));
       final list = [
         const Centimeters(200),
         const Centimeters(300),
@@ -35,7 +35,7 @@ void main() {
       ];
       expect(
         list.combineTo(const Meters()).value,
-        10,
+        equals(10),
       );
       expect(list.lowest, const Meters(1));
       expect(list.highest, const Centimeters(400));

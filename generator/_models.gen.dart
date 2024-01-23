@@ -40,6 +40,9 @@ void generateModels() {
     typeBuff.writeln('  const $name([super.value]);');
     typeBuff.writeln();
     typeBuff.writeln(
+      '/// If there is no matched key, returning [${anchor.keys.first}] with 0 value',
+    );
+    typeBuff.writeln(
       '  factory $name.fromJson(Map<String,dynamic> json) {',
     );
     typeBuff.writeln('  final obj = json[_majorName] as Map<String, dynamic>;');
@@ -54,9 +57,8 @@ void generateModels() {
     typeBuff.writeln('        ratio: const _ConversionRatio<$name>({');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
-      final unitProps = e.values.first;
       if (unitType == anchor.keys.first) continue;
-      typeBuff.writeln('$unitType: ${unitProps['ratio']},');
+      typeBuff.writeln('$unitType: $unitType._ratio,');
     }
     typeBuff.writeln('        })');
     typeBuff.writeln('      );');
@@ -66,6 +68,7 @@ void generateModels() {
     typeBuff.writeln();
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
+      typeBuff.writeln('/// Convert to [$unitType]');
       typeBuff.writeln(
         '$name get to$unitType => convertTo(const $unitType());',
       );
@@ -82,19 +85,45 @@ void generateModels() {
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       final unitProps = e.values.first;
+      typeBuff.writeln('/// Unit of [$name]');
       typeBuff.writeln('final class $unitType extends $name {');
       typeBuff.writeln('  const $unitType([super.value]);');
       typeBuff.writeln();
       typeBuff.writeln(
-        '  factory $unitType.fromJson(Map<String,dynamic> json) {',
+        '/// If there is no matched key, returning with 0 value',
       );
-      typeBuff.writeln('  final val = $name.fromJson(json).to$unitType.value;');
       typeBuff.writeln(
-        'return $unitType(val);',
+        '  factory $unitType.fromJson(Map<String,dynamic> json) =>',
       );
-      typeBuff.writeln('}');
+      typeBuff.writeln(
+        '$unitType.from($name.fromJson(json));',
+      );
+
+      typeBuff.writeln();
+      typeBuff.writeln(
+        '/// More ways to creating [$unitType]',
+      );
+      typeBuff.writeln(
+        '  factory $unitType.from($name unit) =>',
+      );
+      typeBuff.writeln(
+        ' $unitType(unit.to$unitType.value);',
+      );
+
       typeBuff.writeln();
       typeBuff.writeln("  static const minorName = '${unitType.snakeCase}';");
+      typeBuff.writeln();
+      typeBuff.writeln("  static const _ratio = ${unitProps['ratio']};");
+      typeBuff.writeln();
+      if (unitType == anchor.keys.first) {
+        typeBuff.writeln('/// Default (anchor) unit of [$name]');
+      } else {
+        typeBuff.writeln(
+          "/// 1 [${anchor.keys.first}] ${(unitProps['ratio']! as num) % 1 == 0 ? '=' : '≈'} ${unitProps['ratio']} [$unitType]",
+        );
+      }
+      typeBuff.writeln('  @override');
+      typeBuff.writeln('  num get ratio => _ratio;');
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       typeBuff.writeln('  $unitType get _clone => $unitType(value);');

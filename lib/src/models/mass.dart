@@ -7,6 +7,7 @@ part of '../../super_measurement.dart';
 abstract final class Mass extends Unit<Mass> {
   const Mass([super.value]);
 
+  /// If there is no matched key, returning [Kilograms] with 0 value
   factory Mass.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, massUnitValues)
@@ -19,42 +20,53 @@ abstract final class Mass extends Unit<Mass> {
   AnchorRatio<Mass> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Mass>({
-          Carats: 5000,
-          Grams: 1000,
-          Milligrams: 1000000,
-          Ounces: 35.2739619496,
-          Pounds: 2.2046226218,
-          Quintal: 0.01,
-          StoneUK: 0.1574730444,
-          TonUK: 0.0009842065,
-          TonUS: 0.0011023113,
-          Tonne: 0.001,
+          Carats: Carats._ratio,
+          Grams: Grams._ratio,
+          Milligrams: Milligrams._ratio,
+          Ounces: Ounces._ratio,
+          Pounds: Pounds._ratio,
+          Quintal: Quintal._ratio,
+          StoneUK: StoneUK._ratio,
+          TonUK: TonUK._ratio,
+          TonUS: TonUS._ratio,
+          Tonne: Tonne._ratio,
         })
       );
 
   @override
   Mass get _anchor => const Kilograms();
 
+  /// Convert to [Carats]
   Mass get toCarats => convertTo(const Carats());
 
+  /// Convert to [Grams]
   Mass get toGrams => convertTo(const Grams());
 
+  /// Convert to [Kilograms]
   Mass get toKilograms => convertTo(const Kilograms());
 
+  /// Convert to [Milligrams]
   Mass get toMilligrams => convertTo(const Milligrams());
 
+  /// Convert to [Ounces]
   Mass get toOunces => convertTo(const Ounces());
 
+  /// Convert to [Pounds]
   Mass get toPounds => convertTo(const Pounds());
 
+  /// Convert to [Quintal]
   Mass get toQuintal => convertTo(const Quintal());
 
+  /// Convert to [StoneUK]
   Mass get toStoneUK => convertTo(const StoneUK());
 
+  /// Convert to [TonUK]
   Mass get toTonUK => convertTo(const TonUK());
 
+  /// Convert to [TonUS]
   Mass get toTonUS => convertTo(const TonUS());
 
+  /// Convert to [Tonne]
   Mass get toTonne => convertTo(const Tonne());
 
   @override
@@ -63,15 +75,24 @@ abstract final class Mass extends Unit<Mass> {
   static const _majorName = 'mass';
 }
 
+/// Unit of [Mass]
 final class Carats extends Mass {
   const Carats([super.value]);
 
-  factory Carats.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toCarats.value;
-    return Carats(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Carats.fromJson(Map<String, dynamic> json) =>
+      Carats.from(Mass.fromJson(json));
+
+  /// More ways to creating [Carats]
+  factory Carats.from(Mass unit) => Carats(unit.toCarats.value);
 
   static const minorName = 'carats';
+
+  static const _ratio = 5000;
+
+  /// 1 [Kilograms] = 5000 [Carats]
+  @override
+  num get ratio => _ratio;
 
   @override
   Carats get _clone => Carats(value);
@@ -91,15 +112,24 @@ final class Carats extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class Grams extends Mass {
   const Grams([super.value]);
 
-  factory Grams.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toGrams.value;
-    return Grams(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Grams.fromJson(Map<String, dynamic> json) =>
+      Grams.from(Mass.fromJson(json));
+
+  /// More ways to creating [Grams]
+  factory Grams.from(Mass unit) => Grams(unit.toGrams.value);
 
   static const minorName = 'grams';
+
+  static const _ratio = 1000;
+
+  /// 1 [Kilograms] = 1000 [Grams]
+  @override
+  num get ratio => _ratio;
 
   @override
   Grams get _clone => Grams(value);
@@ -119,15 +149,24 @@ final class Grams extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class Kilograms extends Mass {
   const Kilograms([super.value]);
 
-  factory Kilograms.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toKilograms.value;
-    return Kilograms(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Kilograms.fromJson(Map<String, dynamic> json) =>
+      Kilograms.from(Mass.fromJson(json));
+
+  /// More ways to creating [Kilograms]
+  factory Kilograms.from(Mass unit) => Kilograms(unit.toKilograms.value);
 
   static const minorName = 'kilograms';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [Mass]
+  @override
+  num get ratio => _ratio;
 
   @override
   Kilograms get _clone => Kilograms(value);
@@ -147,15 +186,24 @@ final class Kilograms extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class Milligrams extends Mass {
   const Milligrams([super.value]);
 
-  factory Milligrams.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toMilligrams.value;
-    return Milligrams(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Milligrams.fromJson(Map<String, dynamic> json) =>
+      Milligrams.from(Mass.fromJson(json));
+
+  /// More ways to creating [Milligrams]
+  factory Milligrams.from(Mass unit) => Milligrams(unit.toMilligrams.value);
 
   static const minorName = 'milligrams';
+
+  static const _ratio = 1000000;
+
+  /// 1 [Kilograms] = 1000000 [Milligrams]
+  @override
+  num get ratio => _ratio;
 
   @override
   Milligrams get _clone => Milligrams(value);
@@ -175,15 +223,24 @@ final class Milligrams extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class Ounces extends Mass {
   const Ounces([super.value]);
 
-  factory Ounces.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toOunces.value;
-    return Ounces(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Ounces.fromJson(Map<String, dynamic> json) =>
+      Ounces.from(Mass.fromJson(json));
+
+  /// More ways to creating [Ounces]
+  factory Ounces.from(Mass unit) => Ounces(unit.toOunces.value);
 
   static const minorName = 'ounces';
+
+  static const _ratio = 35.2739619496;
+
+  /// 1 [Kilograms] ≈ 35.2739619496 [Ounces]
+  @override
+  num get ratio => _ratio;
 
   @override
   Ounces get _clone => Ounces(value);
@@ -203,15 +260,24 @@ final class Ounces extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class Pounds extends Mass {
   const Pounds([super.value]);
 
-  factory Pounds.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toPounds.value;
-    return Pounds(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Pounds.fromJson(Map<String, dynamic> json) =>
+      Pounds.from(Mass.fromJson(json));
+
+  /// More ways to creating [Pounds]
+  factory Pounds.from(Mass unit) => Pounds(unit.toPounds.value);
 
   static const minorName = 'pounds';
+
+  static const _ratio = 2.2046226218;
+
+  /// 1 [Kilograms] ≈ 2.2046226218 [Pounds]
+  @override
+  num get ratio => _ratio;
 
   @override
   Pounds get _clone => Pounds(value);
@@ -231,15 +297,24 @@ final class Pounds extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class Quintal extends Mass {
   const Quintal([super.value]);
 
-  factory Quintal.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toQuintal.value;
-    return Quintal(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Quintal.fromJson(Map<String, dynamic> json) =>
+      Quintal.from(Mass.fromJson(json));
+
+  /// More ways to creating [Quintal]
+  factory Quintal.from(Mass unit) => Quintal(unit.toQuintal.value);
 
   static const minorName = 'quintal';
+
+  static const _ratio = 0.01;
+
+  /// 1 [Kilograms] ≈ 0.01 [Quintal]
+  @override
+  num get ratio => _ratio;
 
   @override
   Quintal get _clone => Quintal(value);
@@ -259,15 +334,24 @@ final class Quintal extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class StoneUK extends Mass {
   const StoneUK([super.value]);
 
-  factory StoneUK.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toStoneUK.value;
-    return StoneUK(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory StoneUK.fromJson(Map<String, dynamic> json) =>
+      StoneUK.from(Mass.fromJson(json));
+
+  /// More ways to creating [StoneUK]
+  factory StoneUK.from(Mass unit) => StoneUK(unit.toStoneUK.value);
 
   static const minorName = 'stoneUK';
+
+  static const _ratio = 0.1574730444;
+
+  /// 1 [Kilograms] ≈ 0.1574730444 [StoneUK]
+  @override
+  num get ratio => _ratio;
 
   @override
   StoneUK get _clone => StoneUK(value);
@@ -287,15 +371,24 @@ final class StoneUK extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class TonUK extends Mass {
   const TonUK([super.value]);
 
-  factory TonUK.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toTonUK.value;
-    return TonUK(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory TonUK.fromJson(Map<String, dynamic> json) =>
+      TonUK.from(Mass.fromJson(json));
+
+  /// More ways to creating [TonUK]
+  factory TonUK.from(Mass unit) => TonUK(unit.toTonUK.value);
 
   static const minorName = 'tonUK';
+
+  static const _ratio = 0.0009842065;
+
+  /// 1 [Kilograms] ≈ 0.0009842065 [TonUK]
+  @override
+  num get ratio => _ratio;
 
   @override
   TonUK get _clone => TonUK(value);
@@ -315,15 +408,24 @@ final class TonUK extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class TonUS extends Mass {
   const TonUS([super.value]);
 
-  factory TonUS.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toTonUS.value;
-    return TonUS(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory TonUS.fromJson(Map<String, dynamic> json) =>
+      TonUS.from(Mass.fromJson(json));
+
+  /// More ways to creating [TonUS]
+  factory TonUS.from(Mass unit) => TonUS(unit.toTonUS.value);
 
   static const minorName = 'tonUS';
+
+  static const _ratio = 0.0011023113;
+
+  /// 1 [Kilograms] ≈ 0.0011023113 [TonUS]
+  @override
+  num get ratio => _ratio;
 
   @override
   TonUS get _clone => TonUS(value);
@@ -343,15 +445,24 @@ final class TonUS extends Mass {
       };
 }
 
+/// Unit of [Mass]
 final class Tonne extends Mass {
   const Tonne([super.value]);
 
-  factory Tonne.fromJson(Map<String, dynamic> json) {
-    final val = Mass.fromJson(json).toTonne.value;
-    return Tonne(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Tonne.fromJson(Map<String, dynamic> json) =>
+      Tonne.from(Mass.fromJson(json));
+
+  /// More ways to creating [Tonne]
+  factory Tonne.from(Mass unit) => Tonne(unit.toTonne.value);
 
   static const minorName = 'tonne';
+
+  static const _ratio = 0.001;
+
+  /// 1 [Kilograms] ≈ 0.001 [Tonne]
+  @override
+  num get ratio => _ratio;
 
   @override
   Tonne get _clone => Tonne(value);

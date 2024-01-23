@@ -28,6 +28,7 @@ part 'force.gen.dart';
 part 'electricfield.gen.dart';
 part 'flow.gen.dart';
 part 'metricprefix.gen.dart';
+part 'surfacetension.gen.dart';
 
 void main() async {
   generateModels();
@@ -39,6 +40,7 @@ void main() async {
 }
 
 final allData = [
+  surfaceTensionUnit,
   metricPrefixUnit,
   flowUnit,
   electricFieldUnit,

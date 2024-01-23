@@ -6,6 +6,7 @@ part of '../../super_measurement.dart';
 abstract final class Time extends Unit<Time> {
   const Time([super.value]);
 
+  /// If there is no matched key, returning [Year] with 0 value
   factory Time.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, timeUnitValues)
@@ -18,30 +19,37 @@ abstract final class Time extends Unit<Time> {
   AnchorRatio<Time> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Time>({
-          Day: 365.2425,
-          Hour: 8765.82,
-          Millisecond: 31556952000,
-          Minute: 525949.2,
-          Second: 31556952,
-          Week: 52.1775,
+          Day: Day._ratio,
+          Hour: Hour._ratio,
+          Millisecond: Millisecond._ratio,
+          Minute: Minute._ratio,
+          Second: Second._ratio,
+          Week: Week._ratio,
         })
       );
 
   @override
   Time get _anchor => const Year();
 
+  /// Convert to [Day]
   Time get toDay => convertTo(const Day());
 
+  /// Convert to [Hour]
   Time get toHour => convertTo(const Hour());
 
+  /// Convert to [Millisecond]
   Time get toMillisecond => convertTo(const Millisecond());
 
+  /// Convert to [Minute]
   Time get toMinute => convertTo(const Minute());
 
+  /// Convert to [Second]
   Time get toSecond => convertTo(const Second());
 
+  /// Convert to [Week]
   Time get toWeek => convertTo(const Week());
 
+  /// Convert to [Year]
   Time get toYear => convertTo(const Year());
 
   @override
@@ -50,15 +58,24 @@ abstract final class Time extends Unit<Time> {
   static const _majorName = 'time';
 }
 
+/// Unit of [Time]
 final class Day extends Time {
   const Day([super.value]);
 
-  factory Day.fromJson(Map<String, dynamic> json) {
-    final val = Time.fromJson(json).toDay.value;
-    return Day(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Day.fromJson(Map<String, dynamic> json) =>
+      Day.from(Time.fromJson(json));
+
+  /// More ways to creating [Day]
+  factory Day.from(Time unit) => Day(unit.toDay.value);
 
   static const minorName = 'day';
+
+  static const _ratio = 365.2425;
+
+  /// 1 [Year] ≈ 365.2425 [Day]
+  @override
+  num get ratio => _ratio;
 
   @override
   Day get _clone => Day(value);
@@ -78,15 +95,24 @@ final class Day extends Time {
       };
 }
 
+/// Unit of [Time]
 final class Hour extends Time {
   const Hour([super.value]);
 
-  factory Hour.fromJson(Map<String, dynamic> json) {
-    final val = Time.fromJson(json).toHour.value;
-    return Hour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Hour.fromJson(Map<String, dynamic> json) =>
+      Hour.from(Time.fromJson(json));
+
+  /// More ways to creating [Hour]
+  factory Hour.from(Time unit) => Hour(unit.toHour.value);
 
   static const minorName = 'hour';
+
+  static const _ratio = 8765.82;
+
+  /// 1 [Year] ≈ 8765.82 [Hour]
+  @override
+  num get ratio => _ratio;
 
   @override
   Hour get _clone => Hour(value);
@@ -106,15 +132,24 @@ final class Hour extends Time {
       };
 }
 
+/// Unit of [Time]
 final class Millisecond extends Time {
   const Millisecond([super.value]);
 
-  factory Millisecond.fromJson(Map<String, dynamic> json) {
-    final val = Time.fromJson(json).toMillisecond.value;
-    return Millisecond(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Millisecond.fromJson(Map<String, dynamic> json) =>
+      Millisecond.from(Time.fromJson(json));
+
+  /// More ways to creating [Millisecond]
+  factory Millisecond.from(Time unit) => Millisecond(unit.toMillisecond.value);
 
   static const minorName = 'millisecond';
+
+  static const _ratio = 31556952000;
+
+  /// 1 [Year] = 31556952000 [Millisecond]
+  @override
+  num get ratio => _ratio;
 
   @override
   Millisecond get _clone => Millisecond(value);
@@ -134,15 +169,24 @@ final class Millisecond extends Time {
       };
 }
 
+/// Unit of [Time]
 final class Minute extends Time {
   const Minute([super.value]);
 
-  factory Minute.fromJson(Map<String, dynamic> json) {
-    final val = Time.fromJson(json).toMinute.value;
-    return Minute(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Minute.fromJson(Map<String, dynamic> json) =>
+      Minute.from(Time.fromJson(json));
+
+  /// More ways to creating [Minute]
+  factory Minute.from(Time unit) => Minute(unit.toMinute.value);
 
   static const minorName = 'minute';
+
+  static const _ratio = 525949.2;
+
+  /// 1 [Year] ≈ 525949.2 [Minute]
+  @override
+  num get ratio => _ratio;
 
   @override
   Minute get _clone => Minute(value);
@@ -162,15 +206,24 @@ final class Minute extends Time {
       };
 }
 
+/// Unit of [Time]
 final class Second extends Time {
   const Second([super.value]);
 
-  factory Second.fromJson(Map<String, dynamic> json) {
-    final val = Time.fromJson(json).toSecond.value;
-    return Second(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Second.fromJson(Map<String, dynamic> json) =>
+      Second.from(Time.fromJson(json));
+
+  /// More ways to creating [Second]
+  factory Second.from(Time unit) => Second(unit.toSecond.value);
 
   static const minorName = 'second';
+
+  static const _ratio = 31556952;
+
+  /// 1 [Year] = 31556952 [Second]
+  @override
+  num get ratio => _ratio;
 
   @override
   Second get _clone => Second(value);
@@ -190,15 +243,24 @@ final class Second extends Time {
       };
 }
 
+/// Unit of [Time]
 final class Week extends Time {
   const Week([super.value]);
 
-  factory Week.fromJson(Map<String, dynamic> json) {
-    final val = Time.fromJson(json).toWeek.value;
-    return Week(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Week.fromJson(Map<String, dynamic> json) =>
+      Week.from(Time.fromJson(json));
+
+  /// More ways to creating [Week]
+  factory Week.from(Time unit) => Week(unit.toWeek.value);
 
   static const minorName = 'week';
+
+  static const _ratio = 52.1775;
+
+  /// 1 [Year] ≈ 52.1775 [Week]
+  @override
+  num get ratio => _ratio;
 
   @override
   Week get _clone => Week(value);
@@ -218,15 +280,24 @@ final class Week extends Time {
       };
 }
 
+/// Unit of [Time]
 final class Year extends Time {
   const Year([super.value]);
 
-  factory Year.fromJson(Map<String, dynamic> json) {
-    final val = Time.fromJson(json).toYear.value;
-    return Year(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Year.fromJson(Map<String, dynamic> json) =>
+      Year.from(Time.fromJson(json));
+
+  /// More ways to creating [Year]
+  factory Year.from(Time unit) => Year(unit.toYear.value);
 
   static const minorName = 'year';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [Time]
+  @override
+  num get ratio => _ratio;
 
   @override
   Year get _clone => Year(value);

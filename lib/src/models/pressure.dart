@@ -7,6 +7,7 @@ part of '../../super_measurement.dart';
 abstract final class Pressure extends Unit<Pressure> {
   const Pressure([super.value]);
 
+  /// If there is no matched key, returning [StandardAtmosphere] with 0 value
   factory Pressure.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, pressureUnitValues)
@@ -19,30 +20,37 @@ abstract final class Pressure extends Unit<Pressure> {
   AnchorRatio<Pressure> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Pressure>({
-          Bar: 1.01325,
-          InchesOfMercury: 29.9212555797,
-          MillimeterOfMercury: 759.9998917256,
-          Pascal: 101325,
-          PoundsPerSquareInch: 14.6959487755,
-          Torr: 760,
+          Bar: Bar._ratio,
+          InchesOfMercury: InchesOfMercury._ratio,
+          MillimeterOfMercury: MillimeterOfMercury._ratio,
+          Pascal: Pascal._ratio,
+          PoundsPerSquareInch: PoundsPerSquareInch._ratio,
+          Torr: Torr._ratio,
         })
       );
 
   @override
   Pressure get _anchor => const StandardAtmosphere();
 
+  /// Convert to [Bar]
   Pressure get toBar => convertTo(const Bar());
 
+  /// Convert to [InchesOfMercury]
   Pressure get toInchesOfMercury => convertTo(const InchesOfMercury());
 
+  /// Convert to [MillimeterOfMercury]
   Pressure get toMillimeterOfMercury => convertTo(const MillimeterOfMercury());
 
+  /// Convert to [Pascal]
   Pressure get toPascal => convertTo(const Pascal());
 
+  /// Convert to [PoundsPerSquareInch]
   Pressure get toPoundsPerSquareInch => convertTo(const PoundsPerSquareInch());
 
+  /// Convert to [StandardAtmosphere]
   Pressure get toStandardAtmosphere => convertTo(const StandardAtmosphere());
 
+  /// Convert to [Torr]
   Pressure get toTorr => convertTo(const Torr());
 
   @override
@@ -51,15 +59,24 @@ abstract final class Pressure extends Unit<Pressure> {
   static const _majorName = 'pressure';
 }
 
+/// Unit of [Pressure]
 final class Bar extends Pressure {
   const Bar([super.value]);
 
-  factory Bar.fromJson(Map<String, dynamic> json) {
-    final val = Pressure.fromJson(json).toBar.value;
-    return Bar(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Bar.fromJson(Map<String, dynamic> json) =>
+      Bar.from(Pressure.fromJson(json));
+
+  /// More ways to creating [Bar]
+  factory Bar.from(Pressure unit) => Bar(unit.toBar.value);
 
   static const minorName = 'bar';
+
+  static const _ratio = 1.01325;
+
+  /// 1 [StandardAtmosphere] ≈ 1.01325 [Bar]
+  @override
+  num get ratio => _ratio;
 
   @override
   Bar get _clone => Bar(value);
@@ -79,15 +96,25 @@ final class Bar extends Pressure {
       };
 }
 
+/// Unit of [Pressure]
 final class InchesOfMercury extends Pressure {
   const InchesOfMercury([super.value]);
 
-  factory InchesOfMercury.fromJson(Map<String, dynamic> json) {
-    final val = Pressure.fromJson(json).toInchesOfMercury.value;
-    return InchesOfMercury(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory InchesOfMercury.fromJson(Map<String, dynamic> json) =>
+      InchesOfMercury.from(Pressure.fromJson(json));
+
+  /// More ways to creating [InchesOfMercury]
+  factory InchesOfMercury.from(Pressure unit) =>
+      InchesOfMercury(unit.toInchesOfMercury.value);
 
   static const minorName = 'inchesOfMercury';
+
+  static const _ratio = 29.9212555797;
+
+  /// 1 [StandardAtmosphere] ≈ 29.9212555797 [InchesOfMercury]
+  @override
+  num get ratio => _ratio;
 
   @override
   InchesOfMercury get _clone => InchesOfMercury(value);
@@ -107,15 +134,25 @@ final class InchesOfMercury extends Pressure {
       };
 }
 
+/// Unit of [Pressure]
 final class MillimeterOfMercury extends Pressure {
   const MillimeterOfMercury([super.value]);
 
-  factory MillimeterOfMercury.fromJson(Map<String, dynamic> json) {
-    final val = Pressure.fromJson(json).toMillimeterOfMercury.value;
-    return MillimeterOfMercury(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory MillimeterOfMercury.fromJson(Map<String, dynamic> json) =>
+      MillimeterOfMercury.from(Pressure.fromJson(json));
+
+  /// More ways to creating [MillimeterOfMercury]
+  factory MillimeterOfMercury.from(Pressure unit) =>
+      MillimeterOfMercury(unit.toMillimeterOfMercury.value);
 
   static const minorName = 'millimeterOfMercury';
+
+  static const _ratio = 759.9998917256;
+
+  /// 1 [StandardAtmosphere] ≈ 759.9998917256 [MillimeterOfMercury]
+  @override
+  num get ratio => _ratio;
 
   @override
   MillimeterOfMercury get _clone => MillimeterOfMercury(value);
@@ -136,15 +173,24 @@ final class MillimeterOfMercury extends Pressure {
       };
 }
 
+/// Unit of [Pressure]
 final class Pascal extends Pressure {
   const Pascal([super.value]);
 
-  factory Pascal.fromJson(Map<String, dynamic> json) {
-    final val = Pressure.fromJson(json).toPascal.value;
-    return Pascal(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Pascal.fromJson(Map<String, dynamic> json) =>
+      Pascal.from(Pressure.fromJson(json));
+
+  /// More ways to creating [Pascal]
+  factory Pascal.from(Pressure unit) => Pascal(unit.toPascal.value);
 
   static const minorName = 'pascal';
+
+  static const _ratio = 101325;
+
+  /// 1 [StandardAtmosphere] = 101325 [Pascal]
+  @override
+  num get ratio => _ratio;
 
   @override
   Pascal get _clone => Pascal(value);
@@ -164,15 +210,25 @@ final class Pascal extends Pressure {
       };
 }
 
+/// Unit of [Pressure]
 final class PoundsPerSquareInch extends Pressure {
   const PoundsPerSquareInch([super.value]);
 
-  factory PoundsPerSquareInch.fromJson(Map<String, dynamic> json) {
-    final val = Pressure.fromJson(json).toPoundsPerSquareInch.value;
-    return PoundsPerSquareInch(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory PoundsPerSquareInch.fromJson(Map<String, dynamic> json) =>
+      PoundsPerSquareInch.from(Pressure.fromJson(json));
+
+  /// More ways to creating [PoundsPerSquareInch]
+  factory PoundsPerSquareInch.from(Pressure unit) =>
+      PoundsPerSquareInch(unit.toPoundsPerSquareInch.value);
 
   static const minorName = 'poundsPerSquareInch';
+
+  static const _ratio = 14.6959487755;
+
+  /// 1 [StandardAtmosphere] ≈ 14.6959487755 [PoundsPerSquareInch]
+  @override
+  num get ratio => _ratio;
 
   @override
   PoundsPerSquareInch get _clone => PoundsPerSquareInch(value);
@@ -193,15 +249,25 @@ final class PoundsPerSquareInch extends Pressure {
       };
 }
 
+/// Unit of [Pressure]
 final class StandardAtmosphere extends Pressure {
   const StandardAtmosphere([super.value]);
 
-  factory StandardAtmosphere.fromJson(Map<String, dynamic> json) {
-    final val = Pressure.fromJson(json).toStandardAtmosphere.value;
-    return StandardAtmosphere(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory StandardAtmosphere.fromJson(Map<String, dynamic> json) =>
+      StandardAtmosphere.from(Pressure.fromJson(json));
+
+  /// More ways to creating [StandardAtmosphere]
+  factory StandardAtmosphere.from(Pressure unit) =>
+      StandardAtmosphere(unit.toStandardAtmosphere.value);
 
   static const minorName = 'standardAtmosphere';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [Pressure]
+  @override
+  num get ratio => _ratio;
 
   @override
   StandardAtmosphere get _clone => StandardAtmosphere(value);
@@ -221,15 +287,24 @@ final class StandardAtmosphere extends Pressure {
       };
 }
 
+/// Unit of [Pressure]
 final class Torr extends Pressure {
   const Torr([super.value]);
 
-  factory Torr.fromJson(Map<String, dynamic> json) {
-    final val = Pressure.fromJson(json).toTorr.value;
-    return Torr(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Torr.fromJson(Map<String, dynamic> json) =>
+      Torr.from(Pressure.fromJson(json));
+
+  /// More ways to creating [Torr]
+  factory Torr.from(Pressure unit) => Torr(unit.toTorr.value);
 
   static const minorName = 'torr';
+
+  static const _ratio = 760;
+
+  /// 1 [StandardAtmosphere] = 760 [Torr]
+  @override
+  num get ratio => _ratio;
 
   @override
   Torr get _clone => Torr(value);

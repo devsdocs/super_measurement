@@ -9,6 +9,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T get _anchor;
 
+  num get ratio;
+
   String get symbol;
 
   String get majorName;
@@ -21,9 +23,9 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   bool _convertAndCompare(String operator, T other) {
     final otherValue =
-        other._clone.convertTo(_anchor).withPrecision(Precision.nine).value;
+        other._clone.convertTo(_anchor).withPrecision(Precision.ten).value;
     final currentValue =
-        _clone.convertTo(_anchor).withPrecision(Precision.nine).value;
+        _clone.convertTo(_anchor).withPrecision(Precision.ten).value;
 
     if (operator == '==') {
       return currentValue == otherValue;
@@ -50,22 +52,19 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   }
 
   T convertTo<E extends Unit<T>>(E to) {
-    num conversionRatio;
+    if (runtimeType == to.runtimeType) {
+      return (to as T).withValue(value);
+    }
     if (value == 0) {
       return (to as T).withValue(0);
-    } else {
-      if (runtimeType == to.runtimeType) {
-        conversionRatio = 1;
-      } else {
-        if (runtimeType == _anchorRatio.anchor) {
-          conversionRatio = _anchorRatio.ratio.getRatio(to.runtimeType);
-        } else {
-          final baseValue = value! / _anchorRatio.ratio.getRatio(runtimeType);
-          return _anchor.withValue(baseValue).convertTo(to);
-        }
-      }
-      return (to as T).withValue(value! * conversionRatio);
     }
+    if (runtimeType == _anchorRatio.anchor) {
+      return (to as T)
+          .withValue(value! * _anchorRatio.ratio.getRatio(to.runtimeType));
+    }
+    return _anchor
+        .withValue(value! / _anchorRatio.ratio.getRatio(runtimeType))
+        .convertTo(to);
   }
 
   T operator +(T other) {
@@ -129,9 +128,9 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
 class _ConversionRatio<T extends Unit<T>> {
   const _ConversionRatio(this.ratios);
-  final Map<Type, double> ratios;
+  final Map<Type, num> ratios;
 
-  double getRatio(Type to) {
+  num getRatio(Type to) {
     final ratio = ratios[to];
     if (ratio == null) throw ArgumentError('Unsupported conversion');
     return ratio;

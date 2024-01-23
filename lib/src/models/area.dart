@@ -7,6 +7,7 @@ part of '../../super_measurement.dart';
 abstract final class Area extends Unit<Area> {
   const Area([super.value]);
 
+  /// If there is no matched key, returning [SquareMeters] with 0 value
   factory Area.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, areaUnitValues)
@@ -19,36 +20,45 @@ abstract final class Area extends Unit<Area> {
   AnchorRatio<Area> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Area>({
-          Acres: 0.0002471054,
-          Hectares: 0.0001,
-          SquareCentimeters: 10000,
-          SquareFoot: 10.7639104167,
-          SquareInches: 1550.0031000062,
-          SquareKilometers: 0.000001,
-          SquareMiles: 3.86102159e-7,
-          SquareYards: 1.1959900463,
+          Acres: Acres._ratio,
+          Hectares: Hectares._ratio,
+          SquareCentimeters: SquareCentimeters._ratio,
+          SquareFoot: SquareFoot._ratio,
+          SquareInches: SquareInches._ratio,
+          SquareKilometers: SquareKilometers._ratio,
+          SquareMiles: SquareMiles._ratio,
+          SquareYards: SquareYards._ratio,
         })
       );
 
   @override
   Area get _anchor => const SquareMeters();
 
+  /// Convert to [Acres]
   Area get toAcres => convertTo(const Acres());
 
+  /// Convert to [Hectares]
   Area get toHectares => convertTo(const Hectares());
 
+  /// Convert to [SquareCentimeters]
   Area get toSquareCentimeters => convertTo(const SquareCentimeters());
 
+  /// Convert to [SquareFoot]
   Area get toSquareFoot => convertTo(const SquareFoot());
 
+  /// Convert to [SquareInches]
   Area get toSquareInches => convertTo(const SquareInches());
 
+  /// Convert to [SquareKilometers]
   Area get toSquareKilometers => convertTo(const SquareKilometers());
 
+  /// Convert to [SquareMeters]
   Area get toSquareMeters => convertTo(const SquareMeters());
 
+  /// Convert to [SquareMiles]
   Area get toSquareMiles => convertTo(const SquareMiles());
 
+  /// Convert to [SquareYards]
   Area get toSquareYards => convertTo(const SquareYards());
 
   @override
@@ -57,15 +67,24 @@ abstract final class Area extends Unit<Area> {
   static const _majorName = 'area';
 }
 
+/// Unit of [Area]
 final class Acres extends Area {
   const Acres([super.value]);
 
-  factory Acres.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toAcres.value;
-    return Acres(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Acres.fromJson(Map<String, dynamic> json) =>
+      Acres.from(Area.fromJson(json));
+
+  /// More ways to creating [Acres]
+  factory Acres.from(Area unit) => Acres(unit.toAcres.value);
 
   static const minorName = 'acres';
+
+  static const _ratio = 0.0002471054;
+
+  /// 1 [SquareMeters] ≈ 0.0002471054 [Acres]
+  @override
+  num get ratio => _ratio;
 
   @override
   Acres get _clone => Acres(value);
@@ -85,15 +104,24 @@ final class Acres extends Area {
       };
 }
 
+/// Unit of [Area]
 final class Hectares extends Area {
   const Hectares([super.value]);
 
-  factory Hectares.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toHectares.value;
-    return Hectares(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Hectares.fromJson(Map<String, dynamic> json) =>
+      Hectares.from(Area.fromJson(json));
+
+  /// More ways to creating [Hectares]
+  factory Hectares.from(Area unit) => Hectares(unit.toHectares.value);
 
   static const minorName = 'hectares';
+
+  static const _ratio = 0.0001;
+
+  /// 1 [SquareMeters] ≈ 0.0001 [Hectares]
+  @override
+  num get ratio => _ratio;
 
   @override
   Hectares get _clone => Hectares(value);
@@ -113,15 +141,25 @@ final class Hectares extends Area {
       };
 }
 
+/// Unit of [Area]
 final class SquareCentimeters extends Area {
   const SquareCentimeters([super.value]);
 
-  factory SquareCentimeters.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toSquareCentimeters.value;
-    return SquareCentimeters(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory SquareCentimeters.fromJson(Map<String, dynamic> json) =>
+      SquareCentimeters.from(Area.fromJson(json));
+
+  /// More ways to creating [SquareCentimeters]
+  factory SquareCentimeters.from(Area unit) =>
+      SquareCentimeters(unit.toSquareCentimeters.value);
 
   static const minorName = 'squareCentimeters';
+
+  static const _ratio = 10000;
+
+  /// 1 [SquareMeters] = 10000 [SquareCentimeters]
+  @override
+  num get ratio => _ratio;
 
   @override
   SquareCentimeters get _clone => SquareCentimeters(value);
@@ -141,15 +179,24 @@ final class SquareCentimeters extends Area {
       };
 }
 
+/// Unit of [Area]
 final class SquareFoot extends Area {
   const SquareFoot([super.value]);
 
-  factory SquareFoot.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toSquareFoot.value;
-    return SquareFoot(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory SquareFoot.fromJson(Map<String, dynamic> json) =>
+      SquareFoot.from(Area.fromJson(json));
+
+  /// More ways to creating [SquareFoot]
+  factory SquareFoot.from(Area unit) => SquareFoot(unit.toSquareFoot.value);
 
   static const minorName = 'squareFoot';
+
+  static const _ratio = 10.7639104167;
+
+  /// 1 [SquareMeters] ≈ 10.7639104167 [SquareFoot]
+  @override
+  num get ratio => _ratio;
 
   @override
   SquareFoot get _clone => SquareFoot(value);
@@ -169,15 +216,25 @@ final class SquareFoot extends Area {
       };
 }
 
+/// Unit of [Area]
 final class SquareInches extends Area {
   const SquareInches([super.value]);
 
-  factory SquareInches.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toSquareInches.value;
-    return SquareInches(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory SquareInches.fromJson(Map<String, dynamic> json) =>
+      SquareInches.from(Area.fromJson(json));
+
+  /// More ways to creating [SquareInches]
+  factory SquareInches.from(Area unit) =>
+      SquareInches(unit.toSquareInches.value);
 
   static const minorName = 'squareInches';
+
+  static const _ratio = 1550.0031000062;
+
+  /// 1 [SquareMeters] ≈ 1550.0031000062 [SquareInches]
+  @override
+  num get ratio => _ratio;
 
   @override
   SquareInches get _clone => SquareInches(value);
@@ -197,15 +254,25 @@ final class SquareInches extends Area {
       };
 }
 
+/// Unit of [Area]
 final class SquareKilometers extends Area {
   const SquareKilometers([super.value]);
 
-  factory SquareKilometers.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toSquareKilometers.value;
-    return SquareKilometers(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory SquareKilometers.fromJson(Map<String, dynamic> json) =>
+      SquareKilometers.from(Area.fromJson(json));
+
+  /// More ways to creating [SquareKilometers]
+  factory SquareKilometers.from(Area unit) =>
+      SquareKilometers(unit.toSquareKilometers.value);
 
   static const minorName = 'squareKilometers';
+
+  static const _ratio = 0.000001;
+
+  /// 1 [SquareMeters] ≈ 0.000001 [SquareKilometers]
+  @override
+  num get ratio => _ratio;
 
   @override
   SquareKilometers get _clone => SquareKilometers(value);
@@ -225,15 +292,25 @@ final class SquareKilometers extends Area {
       };
 }
 
+/// Unit of [Area]
 final class SquareMeters extends Area {
   const SquareMeters([super.value]);
 
-  factory SquareMeters.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toSquareMeters.value;
-    return SquareMeters(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory SquareMeters.fromJson(Map<String, dynamic> json) =>
+      SquareMeters.from(Area.fromJson(json));
+
+  /// More ways to creating [SquareMeters]
+  factory SquareMeters.from(Area unit) =>
+      SquareMeters(unit.toSquareMeters.value);
 
   static const minorName = 'squareMeters';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [Area]
+  @override
+  num get ratio => _ratio;
 
   @override
   SquareMeters get _clone => SquareMeters(value);
@@ -253,15 +330,24 @@ final class SquareMeters extends Area {
       };
 }
 
+/// Unit of [Area]
 final class SquareMiles extends Area {
   const SquareMiles([super.value]);
 
-  factory SquareMiles.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toSquareMiles.value;
-    return SquareMiles(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory SquareMiles.fromJson(Map<String, dynamic> json) =>
+      SquareMiles.from(Area.fromJson(json));
+
+  /// More ways to creating [SquareMiles]
+  factory SquareMiles.from(Area unit) => SquareMiles(unit.toSquareMiles.value);
 
   static const minorName = 'squareMiles';
+
+  static const _ratio = 3.86102159e-7;
+
+  /// 1 [SquareMeters] ≈ 3.86102159e-7 [SquareMiles]
+  @override
+  num get ratio => _ratio;
 
   @override
   SquareMiles get _clone => SquareMiles(value);
@@ -281,15 +367,24 @@ final class SquareMiles extends Area {
       };
 }
 
+/// Unit of [Area]
 final class SquareYards extends Area {
   const SquareYards([super.value]);
 
-  factory SquareYards.fromJson(Map<String, dynamic> json) {
-    final val = Area.fromJson(json).toSquareYards.value;
-    return SquareYards(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory SquareYards.fromJson(Map<String, dynamic> json) =>
+      SquareYards.from(Area.fromJson(json));
+
+  /// More ways to creating [SquareYards]
+  factory SquareYards.from(Area unit) => SquareYards(unit.toSquareYards.value);
 
   static const minorName = 'squareYards';
+
+  static const _ratio = 1.1959900463;
+
+  /// 1 [SquareMeters] ≈ 1.1959900463 [SquareYards]
+  @override
+  num get ratio => _ratio;
 
   @override
   SquareYards get _clone => SquareYards(value);

@@ -8,6 +8,7 @@ part of '../../super_measurement.dart';
 abstract final class Flow extends Unit<Flow> {
   const Flow([super.value]);
 
+  /// If there is no matched key, returning [LiterPerHour] with 0 value
   factory Flow.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, flowUnitValues)
@@ -20,39 +21,49 @@ abstract final class Flow extends Unit<Flow> {
   AnchorRatio<Flow> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Flow>({
-          FootCubicPerHour: 0.03531466672,
-          FootCubicPerMinute: 0.0005885777787,
-          InchCubicPerHour: 61.02374409,
-          InchCubicPerMinute: 1.017062402,
-          LiterPerDay: 24,
-          LiterPerMinute: 0.01666666667,
-          MeterCubicPerDay: 0.024,
-          MeterCubicPerHour: 0.001,
-          MeterCubicPerMinute: 0.00001666666667,
+          FootCubicPerHour: FootCubicPerHour._ratio,
+          FootCubicPerMinute: FootCubicPerMinute._ratio,
+          InchCubicPerHour: InchCubicPerHour._ratio,
+          InchCubicPerMinute: InchCubicPerMinute._ratio,
+          LiterPerDay: LiterPerDay._ratio,
+          LiterPerMinute: LiterPerMinute._ratio,
+          MeterCubicPerDay: MeterCubicPerDay._ratio,
+          MeterCubicPerHour: MeterCubicPerHour._ratio,
+          MeterCubicPerMinute: MeterCubicPerMinute._ratio,
         })
       );
 
   @override
   Flow get _anchor => const LiterPerHour();
 
+  /// Convert to [FootCubicPerHour]
   Flow get toFootCubicPerHour => convertTo(const FootCubicPerHour());
 
+  /// Convert to [FootCubicPerMinute]
   Flow get toFootCubicPerMinute => convertTo(const FootCubicPerMinute());
 
+  /// Convert to [InchCubicPerHour]
   Flow get toInchCubicPerHour => convertTo(const InchCubicPerHour());
 
+  /// Convert to [InchCubicPerMinute]
   Flow get toInchCubicPerMinute => convertTo(const InchCubicPerMinute());
 
+  /// Convert to [LiterPerDay]
   Flow get toLiterPerDay => convertTo(const LiterPerDay());
 
+  /// Convert to [LiterPerHour]
   Flow get toLiterPerHour => convertTo(const LiterPerHour());
 
+  /// Convert to [LiterPerMinute]
   Flow get toLiterPerMinute => convertTo(const LiterPerMinute());
 
+  /// Convert to [MeterCubicPerDay]
   Flow get toMeterCubicPerDay => convertTo(const MeterCubicPerDay());
 
+  /// Convert to [MeterCubicPerHour]
   Flow get toMeterCubicPerHour => convertTo(const MeterCubicPerHour());
 
+  /// Convert to [MeterCubicPerMinute]
   Flow get toMeterCubicPerMinute => convertTo(const MeterCubicPerMinute());
 
   @override
@@ -61,15 +72,25 @@ abstract final class Flow extends Unit<Flow> {
   static const _majorName = 'flow';
 }
 
+/// Unit of [Flow]
 final class FootCubicPerHour extends Flow {
   const FootCubicPerHour([super.value]);
 
-  factory FootCubicPerHour.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toFootCubicPerHour.value;
-    return FootCubicPerHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory FootCubicPerHour.fromJson(Map<String, dynamic> json) =>
+      FootCubicPerHour.from(Flow.fromJson(json));
+
+  /// More ways to creating [FootCubicPerHour]
+  factory FootCubicPerHour.from(Flow unit) =>
+      FootCubicPerHour(unit.toFootCubicPerHour.value);
 
   static const minorName = 'footCubicPerHour';
+
+  static const _ratio = 0.03531466672;
+
+  /// 1 [LiterPerHour] ≈ 0.03531466672 [FootCubicPerHour]
+  @override
+  num get ratio => _ratio;
 
   @override
   FootCubicPerHour get _clone => FootCubicPerHour(value);
@@ -89,15 +110,25 @@ final class FootCubicPerHour extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class FootCubicPerMinute extends Flow {
   const FootCubicPerMinute([super.value]);
 
-  factory FootCubicPerMinute.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toFootCubicPerMinute.value;
-    return FootCubicPerMinute(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory FootCubicPerMinute.fromJson(Map<String, dynamic> json) =>
+      FootCubicPerMinute.from(Flow.fromJson(json));
+
+  /// More ways to creating [FootCubicPerMinute]
+  factory FootCubicPerMinute.from(Flow unit) =>
+      FootCubicPerMinute(unit.toFootCubicPerMinute.value);
 
   static const minorName = 'footCubicPerMinute';
+
+  static const _ratio = 0.0005885777787;
+
+  /// 1 [LiterPerHour] ≈ 0.0005885777787 [FootCubicPerMinute]
+  @override
+  num get ratio => _ratio;
 
   @override
   FootCubicPerMinute get _clone => FootCubicPerMinute(value);
@@ -117,15 +148,25 @@ final class FootCubicPerMinute extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class InchCubicPerHour extends Flow {
   const InchCubicPerHour([super.value]);
 
-  factory InchCubicPerHour.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toInchCubicPerHour.value;
-    return InchCubicPerHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory InchCubicPerHour.fromJson(Map<String, dynamic> json) =>
+      InchCubicPerHour.from(Flow.fromJson(json));
+
+  /// More ways to creating [InchCubicPerHour]
+  factory InchCubicPerHour.from(Flow unit) =>
+      InchCubicPerHour(unit.toInchCubicPerHour.value);
 
   static const minorName = 'inchCubicPerHour';
+
+  static const _ratio = 61.02374409;
+
+  /// 1 [LiterPerHour] ≈ 61.02374409 [InchCubicPerHour]
+  @override
+  num get ratio => _ratio;
 
   @override
   InchCubicPerHour get _clone => InchCubicPerHour(value);
@@ -145,15 +186,25 @@ final class InchCubicPerHour extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class InchCubicPerMinute extends Flow {
   const InchCubicPerMinute([super.value]);
 
-  factory InchCubicPerMinute.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toInchCubicPerMinute.value;
-    return InchCubicPerMinute(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory InchCubicPerMinute.fromJson(Map<String, dynamic> json) =>
+      InchCubicPerMinute.from(Flow.fromJson(json));
+
+  /// More ways to creating [InchCubicPerMinute]
+  factory InchCubicPerMinute.from(Flow unit) =>
+      InchCubicPerMinute(unit.toInchCubicPerMinute.value);
 
   static const minorName = 'inchCubicPerMinute';
+
+  static const _ratio = 1.017062402;
+
+  /// 1 [LiterPerHour] ≈ 1.017062402 [InchCubicPerMinute]
+  @override
+  num get ratio => _ratio;
 
   @override
   InchCubicPerMinute get _clone => InchCubicPerMinute(value);
@@ -173,15 +224,24 @@ final class InchCubicPerMinute extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class LiterPerDay extends Flow {
   const LiterPerDay([super.value]);
 
-  factory LiterPerDay.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toLiterPerDay.value;
-    return LiterPerDay(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory LiterPerDay.fromJson(Map<String, dynamic> json) =>
+      LiterPerDay.from(Flow.fromJson(json));
+
+  /// More ways to creating [LiterPerDay]
+  factory LiterPerDay.from(Flow unit) => LiterPerDay(unit.toLiterPerDay.value);
 
   static const minorName = 'literPerDay';
+
+  static const _ratio = 24;
+
+  /// 1 [LiterPerHour] = 24 [LiterPerDay]
+  @override
+  num get ratio => _ratio;
 
   @override
   LiterPerDay get _clone => LiterPerDay(value);
@@ -201,15 +261,25 @@ final class LiterPerDay extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class LiterPerHour extends Flow {
   const LiterPerHour([super.value]);
 
-  factory LiterPerHour.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toLiterPerHour.value;
-    return LiterPerHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory LiterPerHour.fromJson(Map<String, dynamic> json) =>
+      LiterPerHour.from(Flow.fromJson(json));
+
+  /// More ways to creating [LiterPerHour]
+  factory LiterPerHour.from(Flow unit) =>
+      LiterPerHour(unit.toLiterPerHour.value);
 
   static const minorName = 'literPerHour';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [Flow]
+  @override
+  num get ratio => _ratio;
 
   @override
   LiterPerHour get _clone => LiterPerHour(value);
@@ -229,15 +299,25 @@ final class LiterPerHour extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class LiterPerMinute extends Flow {
   const LiterPerMinute([super.value]);
 
-  factory LiterPerMinute.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toLiterPerMinute.value;
-    return LiterPerMinute(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory LiterPerMinute.fromJson(Map<String, dynamic> json) =>
+      LiterPerMinute.from(Flow.fromJson(json));
+
+  /// More ways to creating [LiterPerMinute]
+  factory LiterPerMinute.from(Flow unit) =>
+      LiterPerMinute(unit.toLiterPerMinute.value);
 
   static const minorName = 'literPerMinute';
+
+  static const _ratio = 0.01666666667;
+
+  /// 1 [LiterPerHour] ≈ 0.01666666667 [LiterPerMinute]
+  @override
+  num get ratio => _ratio;
 
   @override
   LiterPerMinute get _clone => LiterPerMinute(value);
@@ -257,15 +337,25 @@ final class LiterPerMinute extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class MeterCubicPerDay extends Flow {
   const MeterCubicPerDay([super.value]);
 
-  factory MeterCubicPerDay.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toMeterCubicPerDay.value;
-    return MeterCubicPerDay(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory MeterCubicPerDay.fromJson(Map<String, dynamic> json) =>
+      MeterCubicPerDay.from(Flow.fromJson(json));
+
+  /// More ways to creating [MeterCubicPerDay]
+  factory MeterCubicPerDay.from(Flow unit) =>
+      MeterCubicPerDay(unit.toMeterCubicPerDay.value);
 
   static const minorName = 'meterCubicPerDay';
+
+  static const _ratio = 0.024;
+
+  /// 1 [LiterPerHour] ≈ 0.024 [MeterCubicPerDay]
+  @override
+  num get ratio => _ratio;
 
   @override
   MeterCubicPerDay get _clone => MeterCubicPerDay(value);
@@ -285,15 +375,25 @@ final class MeterCubicPerDay extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class MeterCubicPerHour extends Flow {
   const MeterCubicPerHour([super.value]);
 
-  factory MeterCubicPerHour.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toMeterCubicPerHour.value;
-    return MeterCubicPerHour(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory MeterCubicPerHour.fromJson(Map<String, dynamic> json) =>
+      MeterCubicPerHour.from(Flow.fromJson(json));
+
+  /// More ways to creating [MeterCubicPerHour]
+  factory MeterCubicPerHour.from(Flow unit) =>
+      MeterCubicPerHour(unit.toMeterCubicPerHour.value);
 
   static const minorName = 'meterCubicPerHour';
+
+  static const _ratio = 0.001;
+
+  /// 1 [LiterPerHour] ≈ 0.001 [MeterCubicPerHour]
+  @override
+  num get ratio => _ratio;
 
   @override
   MeterCubicPerHour get _clone => MeterCubicPerHour(value);
@@ -313,15 +413,25 @@ final class MeterCubicPerHour extends Flow {
       };
 }
 
+/// Unit of [Flow]
 final class MeterCubicPerMinute extends Flow {
   const MeterCubicPerMinute([super.value]);
 
-  factory MeterCubicPerMinute.fromJson(Map<String, dynamic> json) {
-    final val = Flow.fromJson(json).toMeterCubicPerMinute.value;
-    return MeterCubicPerMinute(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory MeterCubicPerMinute.fromJson(Map<String, dynamic> json) =>
+      MeterCubicPerMinute.from(Flow.fromJson(json));
+
+  /// More ways to creating [MeterCubicPerMinute]
+  factory MeterCubicPerMinute.from(Flow unit) =>
+      MeterCubicPerMinute(unit.toMeterCubicPerMinute.value);
 
   static const minorName = 'meterCubicPerMinute';
+
+  static const _ratio = 0.00001666666667;
+
+  /// 1 [LiterPerHour] ≈ 0.00001666666667 [MeterCubicPerMinute]
+  @override
+  num get ratio => _ratio;
 
   @override
   MeterCubicPerMinute get _clone => MeterCubicPerMinute(value);

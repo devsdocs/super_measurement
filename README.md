@@ -20,6 +20,7 @@
   + [Pressure](#pressure)
   + [Sound](#sound)
   + [Speed](#speed)
+  + [SurfaceTension](#surfacetension)
   + [Time](#time)
   + [Volume](#volume)
 
@@ -215,6 +216,14 @@
    - `MilesPerHour` => SpeedUnit.milesPerHour
    - `MilesPerMinute` => SpeedUnit.milesPerMinute
    - `YardPerMinute` => SpeedUnit.yardPerMinute
+
+### SurfaceTension
+   - `ErgPerCentimeterSquare` => SurfaceTensionUnit.ergPerCentimeterSquare
+   - `GramForcePerCentimeter` => SurfaceTensionUnit.gramForcePerCentimeter
+   - `MillinewtonPerMeter` => SurfaceTensionUnit.millinewtonPerMeter
+   - `NewtonPerMeter` => SurfaceTensionUnit.newtonPerMeter
+   - `PoundForcePerInch` => SurfaceTensionUnit.poundForcePerInch
+   - `PoundalPerInch` => SurfaceTensionUnit.poundalPerInch
 
 ### Time
    - `Day` => TimeUnit.day

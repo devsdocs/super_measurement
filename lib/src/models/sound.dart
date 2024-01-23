@@ -6,6 +6,7 @@ part of '../../super_measurement.dart';
 abstract final class Sound extends Unit<Sound> {
   const Sound([super.value]);
 
+  /// If there is no matched key, returning [Decibel] with 0 value
   factory Sound.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, soundUnitValues)
@@ -18,18 +19,21 @@ abstract final class Sound extends Unit<Sound> {
   AnchorRatio<Sound> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Sound>({
-          Bel: 0.1,
-          Neper: 0.1151277918,
+          Bel: Bel._ratio,
+          Neper: Neper._ratio,
         })
       );
 
   @override
   Sound get _anchor => const Decibel();
 
+  /// Convert to [Bel]
   Sound get toBel => convertTo(const Bel());
 
+  /// Convert to [Decibel]
   Sound get toDecibel => convertTo(const Decibel());
 
+  /// Convert to [Neper]
   Sound get toNeper => convertTo(const Neper());
 
   @override
@@ -38,15 +42,24 @@ abstract final class Sound extends Unit<Sound> {
   static const _majorName = 'sound';
 }
 
+/// Unit of [Sound]
 final class Bel extends Sound {
   const Bel([super.value]);
 
-  factory Bel.fromJson(Map<String, dynamic> json) {
-    final val = Sound.fromJson(json).toBel.value;
-    return Bel(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Bel.fromJson(Map<String, dynamic> json) =>
+      Bel.from(Sound.fromJson(json));
+
+  /// More ways to creating [Bel]
+  factory Bel.from(Sound unit) => Bel(unit.toBel.value);
 
   static const minorName = 'bel';
+
+  static const _ratio = 0.1;
+
+  /// 1 [Decibel] ≈ 0.1 [Bel]
+  @override
+  num get ratio => _ratio;
 
   @override
   Bel get _clone => Bel(value);
@@ -66,15 +79,24 @@ final class Bel extends Sound {
       };
 }
 
+/// Unit of [Sound]
 final class Decibel extends Sound {
   const Decibel([super.value]);
 
-  factory Decibel.fromJson(Map<String, dynamic> json) {
-    final val = Sound.fromJson(json).toDecibel.value;
-    return Decibel(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Decibel.fromJson(Map<String, dynamic> json) =>
+      Decibel.from(Sound.fromJson(json));
+
+  /// More ways to creating [Decibel]
+  factory Decibel.from(Sound unit) => Decibel(unit.toDecibel.value);
 
   static const minorName = 'decibel';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [Sound]
+  @override
+  num get ratio => _ratio;
 
   @override
   Decibel get _clone => Decibel(value);
@@ -94,15 +116,24 @@ final class Decibel extends Sound {
       };
 }
 
+/// Unit of [Sound]
 final class Neper extends Sound {
   const Neper([super.value]);
 
-  factory Neper.fromJson(Map<String, dynamic> json) {
-    final val = Sound.fromJson(json).toNeper.value;
-    return Neper(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Neper.fromJson(Map<String, dynamic> json) =>
+      Neper.from(Sound.fromJson(json));
+
+  /// More ways to creating [Neper]
+  factory Neper.from(Sound unit) => Neper(unit.toNeper.value);
 
   static const minorName = 'neper';
+
+  static const _ratio = 0.1151277918;
+
+  /// 1 [Decibel] ≈ 0.1151277918 [Neper]
+  @override
+  num get ratio => _ratio;
 
   @override
   Neper get _clone => Neper(value);

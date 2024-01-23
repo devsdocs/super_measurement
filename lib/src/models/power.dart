@@ -6,6 +6,7 @@ part of '../../super_measurement.dart';
 abstract final class Power extends Unit<Power> {
   const Power([super.value]);
 
+  /// If there is no matched key, returning [Kilowatt] with 0 value
   factory Power.fromJson(Map<String, dynamic> json) {
     final obj = json[_majorName] as Map<String, dynamic>;
     return _checkJson(_majorName, json, powerUnitValues)
@@ -18,24 +19,29 @@ abstract final class Power extends Unit<Power> {
   AnchorRatio<Power> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Power>({
-          Horsepower: 1.3410220896,
-          Megawatt: 0.001,
-          Milliwatt: 1000000,
-          Watt: 1000,
+          Horsepower: Horsepower._ratio,
+          Megawatt: Megawatt._ratio,
+          Milliwatt: Milliwatt._ratio,
+          Watt: Watt._ratio,
         })
       );
 
   @override
   Power get _anchor => const Kilowatt();
 
+  /// Convert to [Horsepower]
   Power get toHorsepower => convertTo(const Horsepower());
 
+  /// Convert to [Kilowatt]
   Power get toKilowatt => convertTo(const Kilowatt());
 
+  /// Convert to [Megawatt]
   Power get toMegawatt => convertTo(const Megawatt());
 
+  /// Convert to [Milliwatt]
   Power get toMilliwatt => convertTo(const Milliwatt());
 
+  /// Convert to [Watt]
   Power get toWatt => convertTo(const Watt());
 
   @override
@@ -44,15 +50,24 @@ abstract final class Power extends Unit<Power> {
   static const _majorName = 'power';
 }
 
+/// Unit of [Power]
 final class Horsepower extends Power {
   const Horsepower([super.value]);
 
-  factory Horsepower.fromJson(Map<String, dynamic> json) {
-    final val = Power.fromJson(json).toHorsepower.value;
-    return Horsepower(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Horsepower.fromJson(Map<String, dynamic> json) =>
+      Horsepower.from(Power.fromJson(json));
+
+  /// More ways to creating [Horsepower]
+  factory Horsepower.from(Power unit) => Horsepower(unit.toHorsepower.value);
 
   static const minorName = 'horsepower';
+
+  static const _ratio = 1.3410220896;
+
+  /// 1 [Kilowatt] ≈ 1.3410220896 [Horsepower]
+  @override
+  num get ratio => _ratio;
 
   @override
   Horsepower get _clone => Horsepower(value);
@@ -72,15 +87,24 @@ final class Horsepower extends Power {
       };
 }
 
+/// Unit of [Power]
 final class Kilowatt extends Power {
   const Kilowatt([super.value]);
 
-  factory Kilowatt.fromJson(Map<String, dynamic> json) {
-    final val = Power.fromJson(json).toKilowatt.value;
-    return Kilowatt(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Kilowatt.fromJson(Map<String, dynamic> json) =>
+      Kilowatt.from(Power.fromJson(json));
+
+  /// More ways to creating [Kilowatt]
+  factory Kilowatt.from(Power unit) => Kilowatt(unit.toKilowatt.value);
 
   static const minorName = 'kilowatt';
+
+  static const _ratio = 1;
+
+  /// Default (anchor) unit of [Power]
+  @override
+  num get ratio => _ratio;
 
   @override
   Kilowatt get _clone => Kilowatt(value);
@@ -100,15 +124,24 @@ final class Kilowatt extends Power {
       };
 }
 
+/// Unit of [Power]
 final class Megawatt extends Power {
   const Megawatt([super.value]);
 
-  factory Megawatt.fromJson(Map<String, dynamic> json) {
-    final val = Power.fromJson(json).toMegawatt.value;
-    return Megawatt(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Megawatt.fromJson(Map<String, dynamic> json) =>
+      Megawatt.from(Power.fromJson(json));
+
+  /// More ways to creating [Megawatt]
+  factory Megawatt.from(Power unit) => Megawatt(unit.toMegawatt.value);
 
   static const minorName = 'megawatt';
+
+  static const _ratio = 0.001;
+
+  /// 1 [Kilowatt] ≈ 0.001 [Megawatt]
+  @override
+  num get ratio => _ratio;
 
   @override
   Megawatt get _clone => Megawatt(value);
@@ -128,15 +161,24 @@ final class Megawatt extends Power {
       };
 }
 
+/// Unit of [Power]
 final class Milliwatt extends Power {
   const Milliwatt([super.value]);
 
-  factory Milliwatt.fromJson(Map<String, dynamic> json) {
-    final val = Power.fromJson(json).toMilliwatt.value;
-    return Milliwatt(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Milliwatt.fromJson(Map<String, dynamic> json) =>
+      Milliwatt.from(Power.fromJson(json));
+
+  /// More ways to creating [Milliwatt]
+  factory Milliwatt.from(Power unit) => Milliwatt(unit.toMilliwatt.value);
 
   static const minorName = 'milliwatt';
+
+  static const _ratio = 1000000;
+
+  /// 1 [Kilowatt] = 1000000 [Milliwatt]
+  @override
+  num get ratio => _ratio;
 
   @override
   Milliwatt get _clone => Milliwatt(value);
@@ -156,15 +198,24 @@ final class Milliwatt extends Power {
       };
 }
 
+/// Unit of [Power]
 final class Watt extends Power {
   const Watt([super.value]);
 
-  factory Watt.fromJson(Map<String, dynamic> json) {
-    final val = Power.fromJson(json).toWatt.value;
-    return Watt(val);
-  }
+  /// If there is no matched key, returning with 0 value
+  factory Watt.fromJson(Map<String, dynamic> json) =>
+      Watt.from(Power.fromJson(json));
+
+  /// More ways to creating [Watt]
+  factory Watt.from(Power unit) => Watt(unit.toWatt.value);
 
   static const minorName = 'watt';
+
+  static const _ratio = 1000;
+
+  /// 1 [Kilowatt] = 1000 [Watt]
+  @override
+  num get ratio => _ratio;
 
   @override
   Watt get _clone => Watt(value);
