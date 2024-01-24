@@ -52,14 +52,15 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   }
 
   T convertTo<E extends Unit<T>>(E to) {
+    final result = to as T;
     if (runtimeType == to.runtimeType) {
-      return (to as T).withValue(value);
+      return result.withValue(value);
     }
     if (value == 0) {
-      return (to as T).withValue(0);
+      return result.withValue(0);
     }
     if (runtimeType == _anchorRatio.anchor) {
-      return (to as T)
+      return result
           .withValue(value! * _anchorRatio.ratio.getRatio(to.runtimeType));
     }
     return _anchor

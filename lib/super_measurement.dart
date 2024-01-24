@@ -33,3 +33,4 @@ part 'src/models/flow.dart';
 part 'src/models/metricprefix.dart';
 part 'src/models/surfacetension.dart';
 part 'src/models/angle.dart';
+part 'src/models/torque.dart';

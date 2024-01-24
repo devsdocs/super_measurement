@@ -1,3 +1,7 @@
+## 1.0.19
+- Add `Torque`
+- Minor refractor
+
 ## 1.0.18
 - Add `Angle`
 - Add `SurfaceTension`

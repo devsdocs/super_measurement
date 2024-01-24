@@ -23,6 +23,7 @@
   + [Speed](#speed)
   + [SurfaceTension](#surfacetension)
   + [Time](#time)
+  + [Torque](#torque)
   + [Volume](#volume)
 
 ### Angle
@@ -255,6 +256,25 @@
    - `Second` => TimeUnit.second
    - `Week` => TimeUnit.week
    - `Year` => TimeUnit.year
+
+### Torque
+   - `DyneCentimeter` => TorqueUnit.dyneCentimeter
+   - `DyneMeter` => TorqueUnit.dyneMeter
+   - `DyneMillimeter` => TorqueUnit.dyneMillimeter
+   - `GramForceCentimeter` => TorqueUnit.gramForceCentimeter
+   - `GramForceMeter` => TorqueUnit.gramForceMeter
+   - `GramForceMillimeter` => TorqueUnit.gramForceMillimeter
+   - `KilogramForceCentimeter` => TorqueUnit.kilogramForceCentimeter
+   - `KilogramForceMeter` => TorqueUnit.kilogramForceMeter
+   - `KilogramForceMillimeter` => TorqueUnit.kilogramForceMillimeter
+   - `KilonewtonMeter` => TorqueUnit.kilonewtonMeter
+   - `NewtonCentimeter` => TorqueUnit.newtonCentimeter
+   - `NewtonMeter` => TorqueUnit.newtonMeter
+   - `NewtonMillimeter` => TorqueUnit.newtonMillimeter
+   - `OunceForceFoot` => TorqueUnit.ounceForceFoot
+   - `OunceForceInch` => TorqueUnit.ounceForceInch
+   - `PoundForceFoot` => TorqueUnit.poundForceFoot
+   - `PoundForceInch` => TorqueUnit.poundForceInch
 
 ### Volume
    - `BarrelsImperial` => VolumeUnit.barrelsImperial

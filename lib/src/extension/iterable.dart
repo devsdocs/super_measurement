@@ -622,6 +622,61 @@ extension IterableOfTime on Iterable<Time> {
   Time get toYear => combineTo(const Year());
 }
 
+extension IterableOfTorque on Iterable<Torque> {
+  /// Combine all [Torque] in [Iterable] to [DyneCentimeter]
+  Torque get toDyneCentimeter => combineTo(const DyneCentimeter());
+
+  /// Combine all [Torque] in [Iterable] to [DyneMeter]
+  Torque get toDyneMeter => combineTo(const DyneMeter());
+
+  /// Combine all [Torque] in [Iterable] to [DyneMillimeter]
+  Torque get toDyneMillimeter => combineTo(const DyneMillimeter());
+
+  /// Combine all [Torque] in [Iterable] to [GramForceCentimeter]
+  Torque get toGramForceCentimeter => combineTo(const GramForceCentimeter());
+
+  /// Combine all [Torque] in [Iterable] to [GramForceMeter]
+  Torque get toGramForceMeter => combineTo(const GramForceMeter());
+
+  /// Combine all [Torque] in [Iterable] to [GramForceMillimeter]
+  Torque get toGramForceMillimeter => combineTo(const GramForceMillimeter());
+
+  /// Combine all [Torque] in [Iterable] to [KilogramForceCentimeter]
+  Torque get toKilogramForceCentimeter =>
+      combineTo(const KilogramForceCentimeter());
+
+  /// Combine all [Torque] in [Iterable] to [KilogramForceMeter]
+  Torque get toKilogramForceMeter => combineTo(const KilogramForceMeter());
+
+  /// Combine all [Torque] in [Iterable] to [KilogramForceMillimeter]
+  Torque get toKilogramForceMillimeter =>
+      combineTo(const KilogramForceMillimeter());
+
+  /// Combine all [Torque] in [Iterable] to [KilonewtonMeter]
+  Torque get toKilonewtonMeter => combineTo(const KilonewtonMeter());
+
+  /// Combine all [Torque] in [Iterable] to [NewtonCentimeter]
+  Torque get toNewtonCentimeter => combineTo(const NewtonCentimeter());
+
+  /// Combine all [Torque] in [Iterable] to [NewtonMeter]
+  Torque get toNewtonMeter => combineTo(const NewtonMeter());
+
+  /// Combine all [Torque] in [Iterable] to [NewtonMillimeter]
+  Torque get toNewtonMillimeter => combineTo(const NewtonMillimeter());
+
+  /// Combine all [Torque] in [Iterable] to [OunceForceFoot]
+  Torque get toOunceForceFoot => combineTo(const OunceForceFoot());
+
+  /// Combine all [Torque] in [Iterable] to [OunceForceInch]
+  Torque get toOunceForceInch => combineTo(const OunceForceInch());
+
+  /// Combine all [Torque] in [Iterable] to [PoundForceFoot]
+  Torque get toPoundForceFoot => combineTo(const PoundForceFoot());
+
+  /// Combine all [Torque] in [Iterable] to [PoundForceInch]
+  Torque get toPoundForceInch => combineTo(const PoundForceInch());
+}
+
 extension IterableOfVolume on Iterable<Volume> {
   /// Combine all [Volume] in [Iterable] to [BarrelsImperial]
   Volume get toBarrelsImperial => combineTo(const BarrelsImperial());

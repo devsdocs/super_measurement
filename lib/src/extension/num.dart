@@ -616,6 +616,61 @@ extension NumOfTime on num {
   Year get year => Year(this);
 }
 
+extension NumOfTorque on num {
+  /// Get [DyneCentimeter] using [num]
+  DyneCentimeter get dyneCentimeter => DyneCentimeter(this);
+
+  /// Get [DyneMeter] using [num]
+  DyneMeter get dyneMeter => DyneMeter(this);
+
+  /// Get [DyneMillimeter] using [num]
+  DyneMillimeter get dyneMillimeter => DyneMillimeter(this);
+
+  /// Get [GramForceCentimeter] using [num]
+  GramForceCentimeter get gramForceCentimeter => GramForceCentimeter(this);
+
+  /// Get [GramForceMeter] using [num]
+  GramForceMeter get gramForceMeter => GramForceMeter(this);
+
+  /// Get [GramForceMillimeter] using [num]
+  GramForceMillimeter get gramForceMillimeter => GramForceMillimeter(this);
+
+  /// Get [KilogramForceCentimeter] using [num]
+  KilogramForceCentimeter get kilogramForceCentimeter =>
+      KilogramForceCentimeter(this);
+
+  /// Get [KilogramForceMeter] using [num]
+  KilogramForceMeter get kilogramForceMeter => KilogramForceMeter(this);
+
+  /// Get [KilogramForceMillimeter] using [num]
+  KilogramForceMillimeter get kilogramForceMillimeter =>
+      KilogramForceMillimeter(this);
+
+  /// Get [KilonewtonMeter] using [num]
+  KilonewtonMeter get kilonewtonMeter => KilonewtonMeter(this);
+
+  /// Get [NewtonCentimeter] using [num]
+  NewtonCentimeter get newtonCentimeter => NewtonCentimeter(this);
+
+  /// Get [NewtonMeter] using [num]
+  NewtonMeter get newtonMeter => NewtonMeter(this);
+
+  /// Get [NewtonMillimeter] using [num]
+  NewtonMillimeter get newtonMillimeter => NewtonMillimeter(this);
+
+  /// Get [OunceForceFoot] using [num]
+  OunceForceFoot get ounceForceFoot => OunceForceFoot(this);
+
+  /// Get [OunceForceInch] using [num]
+  OunceForceInch get ounceForceInch => OunceForceInch(this);
+
+  /// Get [PoundForceFoot] using [num]
+  PoundForceFoot get poundForceFoot => PoundForceFoot(this);
+
+  /// Get [PoundForceInch] using [num]
+  PoundForceInch get poundForceInch => PoundForceInch(this);
+}
+
 extension NumOfVolume on num {
   /// Get [BarrelsImperial] using [num]
   BarrelsImperial get barrelsImperial => BarrelsImperial(this);

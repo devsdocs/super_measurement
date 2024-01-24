@@ -30,6 +30,7 @@ part 'flow.gen.dart';
 part 'metricprefix.gen.dart';
 part 'surfacetension.gen.dart';
 part 'angle.gen.dart';
+part 'torque.gen.dart';
 
 void main() async {
   generateModels();
@@ -41,6 +42,7 @@ void main() async {
 }
 
 final allData = [
+  torqueUnit,
   angleUnit,
   surfaceTensionUnit,
   metricPrefixUnit,
