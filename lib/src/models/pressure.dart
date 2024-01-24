@@ -70,7 +70,7 @@ final class Bar extends Pressure {
   /// Construct [Bar] from other [Pressure]
   factory Bar.from(Pressure unit) => Bar(unit.toBar.value);
 
-  static const minorName = 'bar';
+  static const _minorName = 'bar';
 
   static const _ratio = 1.01325;
 
@@ -78,19 +78,22 @@ final class Bar extends Pressure {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Bar get _clone => Bar(value);
 
+  /// Creating [Bar] with new value
   @override
   Bar withValue([num? val]) => Bar(val ?? value);
 
+  /// Symbol for [Bar]
   @override
   String get symbol => 'bar';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -108,7 +111,7 @@ final class InchesOfMercury extends Pressure {
   factory InchesOfMercury.from(Pressure unit) =>
       InchesOfMercury(unit.toInchesOfMercury.value);
 
-  static const minorName = 'inchesOfMercury';
+  static const _minorName = 'inchesOfMercury';
 
   static const _ratio = 29.9212555797;
 
@@ -116,19 +119,22 @@ final class InchesOfMercury extends Pressure {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   InchesOfMercury get _clone => InchesOfMercury(value);
 
+  /// Creating [InchesOfMercury] with new value
   @override
   InchesOfMercury withValue([num? val]) => InchesOfMercury(val ?? value);
 
+  /// Symbol for [InchesOfMercury]
   @override
   String get symbol => 'inHg';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -146,7 +152,7 @@ final class MillimeterOfMercury extends Pressure {
   factory MillimeterOfMercury.from(Pressure unit) =>
       MillimeterOfMercury(unit.toMillimeterOfMercury.value);
 
-  static const minorName = 'millimeterOfMercury';
+  static const _minorName = 'millimeterOfMercury';
 
   static const _ratio = 759.9998917256;
 
@@ -154,20 +160,23 @@ final class MillimeterOfMercury extends Pressure {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MillimeterOfMercury get _clone => MillimeterOfMercury(value);
 
+  /// Creating [MillimeterOfMercury] with new value
   @override
   MillimeterOfMercury withValue([num? val]) =>
       MillimeterOfMercury(val ?? value);
 
+  /// Symbol for [MillimeterOfMercury]
   @override
   String get symbol => 'mmHg';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -184,7 +193,7 @@ final class Pascal extends Pressure {
   /// Construct [Pascal] from other [Pressure]
   factory Pascal.from(Pressure unit) => Pascal(unit.toPascal.value);
 
-  static const minorName = 'pascal';
+  static const _minorName = 'pascal';
 
   static const _ratio = 101325;
 
@@ -192,19 +201,22 @@ final class Pascal extends Pressure {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Pascal get _clone => Pascal(value);
 
+  /// Creating [Pascal] with new value
   @override
   Pascal withValue([num? val]) => Pascal(val ?? value);
 
+  /// Symbol for [Pascal]
   @override
   String get symbol => 'Pa';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -222,7 +234,7 @@ final class PoundsPerSquareInch extends Pressure {
   factory PoundsPerSquareInch.from(Pressure unit) =>
       PoundsPerSquareInch(unit.toPoundsPerSquareInch.value);
 
-  static const minorName = 'poundsPerSquareInch';
+  static const _minorName = 'poundsPerSquareInch';
 
   static const _ratio = 14.6959487755;
 
@@ -230,20 +242,23 @@ final class PoundsPerSquareInch extends Pressure {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   PoundsPerSquareInch get _clone => PoundsPerSquareInch(value);
 
+  /// Creating [PoundsPerSquareInch] with new value
   @override
   PoundsPerSquareInch withValue([num? val]) =>
       PoundsPerSquareInch(val ?? value);
 
+  /// Symbol for [PoundsPerSquareInch]
   @override
   String get symbol => 'psi';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -261,7 +276,7 @@ final class StandardAtmosphere extends Pressure {
   factory StandardAtmosphere.from(Pressure unit) =>
       StandardAtmosphere(unit.toStandardAtmosphere.value);
 
-  static const minorName = 'standardAtmosphere';
+  static const _minorName = 'standardAtmosphere';
 
   static const _ratio = 1;
 
@@ -269,19 +284,22 @@ final class StandardAtmosphere extends Pressure {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   StandardAtmosphere get _clone => StandardAtmosphere(value);
 
+  /// Creating [StandardAtmosphere] with new value
   @override
   StandardAtmosphere withValue([num? val]) => StandardAtmosphere(val ?? value);
 
+  /// Symbol for [StandardAtmosphere]
   @override
   String get symbol => 'atm';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -298,7 +316,7 @@ final class Torr extends Pressure {
   /// Construct [Torr] from other [Pressure]
   factory Torr.from(Pressure unit) => Torr(unit.toTorr.value);
 
-  static const minorName = 'torr';
+  static const _minorName = 'torr';
 
   static const _ratio = 760;
 
@@ -306,19 +324,22 @@ final class Torr extends Pressure {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Torr get _clone => Torr(value);
 
+  /// Creating [Torr] with new value
   @override
   Torr withValue([num? val]) => Torr(val ?? value);
 
+  /// Symbol for [Torr]
   @override
   String get symbol => 'Torr';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -340,11 +361,11 @@ enum PressureUnit {
 }
 
 const pressureUnitValues = _EnumValues({
-  Bar.minorName: PressureUnit.bar,
-  InchesOfMercury.minorName: PressureUnit.inchesOfMercury,
-  MillimeterOfMercury.minorName: PressureUnit.millimeterOfMercury,
-  Pascal.minorName: PressureUnit.pascal,
-  PoundsPerSquareInch.minorName: PressureUnit.poundsPerSquareInch,
-  StandardAtmosphere.minorName: PressureUnit.standardAtmosphere,
-  Torr.minorName: PressureUnit.torr,
+  Bar._minorName: PressureUnit.bar,
+  InchesOfMercury._minorName: PressureUnit.inchesOfMercury,
+  MillimeterOfMercury._minorName: PressureUnit.millimeterOfMercury,
+  Pascal._minorName: PressureUnit.pascal,
+  PoundsPerSquareInch._minorName: PressureUnit.poundsPerSquareInch,
+  StandardAtmosphere._minorName: PressureUnit.standardAtmosphere,
+  Torr._minorName: PressureUnit.torr,
 });

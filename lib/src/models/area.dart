@@ -78,7 +78,7 @@ final class Acres extends Area {
   /// Construct [Acres] from other [Area]
   factory Acres.from(Area unit) => Acres(unit.toAcres.value);
 
-  static const minorName = 'acres';
+  static const _minorName = 'acres';
 
   static const _ratio = 0.0002471054;
 
@@ -86,19 +86,22 @@ final class Acres extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Acres get _clone => Acres(value);
 
+  /// Creating [Acres] with new value
   @override
   Acres withValue([num? val]) => Acres(val ?? value);
 
+  /// Symbol for [Acres]
   @override
   String get symbol => 'ac';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -115,7 +118,7 @@ final class Hectares extends Area {
   /// Construct [Hectares] from other [Area]
   factory Hectares.from(Area unit) => Hectares(unit.toHectares.value);
 
-  static const minorName = 'hectares';
+  static const _minorName = 'hectares';
 
   static const _ratio = 0.0001;
 
@@ -123,19 +126,22 @@ final class Hectares extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Hectares get _clone => Hectares(value);
 
+  /// Creating [Hectares] with new value
   @override
   Hectares withValue([num? val]) => Hectares(val ?? value);
 
+  /// Symbol for [Hectares]
   @override
   String get symbol => 'ha';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -153,7 +159,7 @@ final class SquareCentimeters extends Area {
   factory SquareCentimeters.from(Area unit) =>
       SquareCentimeters(unit.toSquareCentimeters.value);
 
-  static const minorName = 'squareCentimeters';
+  static const _minorName = 'squareCentimeters';
 
   static const _ratio = 10000;
 
@@ -161,19 +167,22 @@ final class SquareCentimeters extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SquareCentimeters get _clone => SquareCentimeters(value);
 
+  /// Creating [SquareCentimeters] with new value
   @override
   SquareCentimeters withValue([num? val]) => SquareCentimeters(val ?? value);
 
+  /// Symbol for [SquareCentimeters]
   @override
   String get symbol => 'cm²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -190,7 +199,7 @@ final class SquareFoot extends Area {
   /// Construct [SquareFoot] from other [Area]
   factory SquareFoot.from(Area unit) => SquareFoot(unit.toSquareFoot.value);
 
-  static const minorName = 'squareFoot';
+  static const _minorName = 'squareFoot';
 
   static const _ratio = 10.7639104167;
 
@@ -198,19 +207,22 @@ final class SquareFoot extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SquareFoot get _clone => SquareFoot(value);
 
+  /// Creating [SquareFoot] with new value
   @override
   SquareFoot withValue([num? val]) => SquareFoot(val ?? value);
 
+  /// Symbol for [SquareFoot]
   @override
   String get symbol => 'ft²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -228,7 +240,7 @@ final class SquareInches extends Area {
   factory SquareInches.from(Area unit) =>
       SquareInches(unit.toSquareInches.value);
 
-  static const minorName = 'squareInches';
+  static const _minorName = 'squareInches';
 
   static const _ratio = 1550.0031000062;
 
@@ -236,19 +248,22 @@ final class SquareInches extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SquareInches get _clone => SquareInches(value);
 
+  /// Creating [SquareInches] with new value
   @override
   SquareInches withValue([num? val]) => SquareInches(val ?? value);
 
+  /// Symbol for [SquareInches]
   @override
   String get symbol => 'in²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -266,7 +281,7 @@ final class SquareKilometers extends Area {
   factory SquareKilometers.from(Area unit) =>
       SquareKilometers(unit.toSquareKilometers.value);
 
-  static const minorName = 'squareKilometers';
+  static const _minorName = 'squareKilometers';
 
   static const _ratio = 0.000001;
 
@@ -274,19 +289,22 @@ final class SquareKilometers extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SquareKilometers get _clone => SquareKilometers(value);
 
+  /// Creating [SquareKilometers] with new value
   @override
   SquareKilometers withValue([num? val]) => SquareKilometers(val ?? value);
 
+  /// Symbol for [SquareKilometers]
   @override
   String get symbol => 'km²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -304,7 +322,7 @@ final class SquareMeters extends Area {
   factory SquareMeters.from(Area unit) =>
       SquareMeters(unit.toSquareMeters.value);
 
-  static const minorName = 'squareMeters';
+  static const _minorName = 'squareMeters';
 
   static const _ratio = 1;
 
@@ -312,19 +330,22 @@ final class SquareMeters extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SquareMeters get _clone => SquareMeters(value);
 
+  /// Creating [SquareMeters] with new value
   @override
   SquareMeters withValue([num? val]) => SquareMeters(val ?? value);
 
+  /// Symbol for [SquareMeters]
   @override
   String get symbol => 'm²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -341,7 +362,7 @@ final class SquareMiles extends Area {
   /// Construct [SquareMiles] from other [Area]
   factory SquareMiles.from(Area unit) => SquareMiles(unit.toSquareMiles.value);
 
-  static const minorName = 'squareMiles';
+  static const _minorName = 'squareMiles';
 
   static const _ratio = 3.86102159e-7;
 
@@ -349,19 +370,22 @@ final class SquareMiles extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SquareMiles get _clone => SquareMiles(value);
 
+  /// Creating [SquareMiles] with new value
   @override
   SquareMiles withValue([num? val]) => SquareMiles(val ?? value);
 
+  /// Symbol for [SquareMiles]
   @override
   String get symbol => 'mi²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -378,7 +402,7 @@ final class SquareYards extends Area {
   /// Construct [SquareYards] from other [Area]
   factory SquareYards.from(Area unit) => SquareYards(unit.toSquareYards.value);
 
-  static const minorName = 'squareYards';
+  static const _minorName = 'squareYards';
 
   static const _ratio = 1.1959900463;
 
@@ -386,19 +410,22 @@ final class SquareYards extends Area {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SquareYards get _clone => SquareYards(value);
 
+  /// Creating [SquareYards] with new value
   @override
   SquareYards withValue([num? val]) => SquareYards(val ?? value);
 
+  /// Symbol for [SquareYards]
   @override
   String get symbol => 'yd²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -422,13 +449,13 @@ enum AreaUnit {
 }
 
 const areaUnitValues = _EnumValues({
-  Acres.minorName: AreaUnit.acres,
-  Hectares.minorName: AreaUnit.hectares,
-  SquareCentimeters.minorName: AreaUnit.squareCentimeters,
-  SquareFoot.minorName: AreaUnit.squareFoot,
-  SquareInches.minorName: AreaUnit.squareInches,
-  SquareKilometers.minorName: AreaUnit.squareKilometers,
-  SquareMeters.minorName: AreaUnit.squareMeters,
-  SquareMiles.minorName: AreaUnit.squareMiles,
-  SquareYards.minorName: AreaUnit.squareYards,
+  Acres._minorName: AreaUnit.acres,
+  Hectares._minorName: AreaUnit.hectares,
+  SquareCentimeters._minorName: AreaUnit.squareCentimeters,
+  SquareFoot._minorName: AreaUnit.squareFoot,
+  SquareInches._minorName: AreaUnit.squareInches,
+  SquareKilometers._minorName: AreaUnit.squareKilometers,
+  SquareMeters._minorName: AreaUnit.squareMeters,
+  SquareMiles._minorName: AreaUnit.squareMiles,
+  SquareYards._minorName: AreaUnit.squareYards,
 });

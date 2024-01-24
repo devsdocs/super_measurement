@@ -88,7 +88,7 @@ final class BarrelsImperial extends Volume {
   factory BarrelsImperial.from(Volume unit) =>
       BarrelsImperial(unit.toBarrelsImperial.value);
 
-  static const minorName = 'barrelsImperial';
+  static const _minorName = 'barrelsImperial';
 
   static const _ratio = 6.1102568972;
 
@@ -96,19 +96,22 @@ final class BarrelsImperial extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   BarrelsImperial get _clone => BarrelsImperial(value);
 
+  /// Creating [BarrelsImperial] with new value
   @override
   BarrelsImperial withValue([num? val]) => BarrelsImperial(val ?? value);
 
+  /// Symbol for [BarrelsImperial]
   @override
   String get symbol => 'bl';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -125,7 +128,7 @@ final class BarrelsUS extends Volume {
   /// Construct [BarrelsUS] from other [Volume]
   factory BarrelsUS.from(Volume unit) => BarrelsUS(unit.toBarrelsUS.value);
 
-  static const minorName = 'barrelsUS';
+  static const _minorName = 'barrelsUS';
 
   static const _ratio = 8.3864143606;
 
@@ -133,19 +136,22 @@ final class BarrelsUS extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   BarrelsUS get _clone => BarrelsUS(value);
 
+  /// Creating [BarrelsUS] with new value
   @override
   BarrelsUS withValue([num? val]) => BarrelsUS(val ?? value);
 
+  /// Symbol for [BarrelsUS]
   @override
   String get symbol => 'bl';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -163,7 +169,7 @@ final class CubicCentimeters extends Volume {
   factory CubicCentimeters.from(Volume unit) =>
       CubicCentimeters(unit.toCubicCentimeters.value);
 
-  static const minorName = 'cubicCentimeters';
+  static const _minorName = 'cubicCentimeters';
 
   static const _ratio = 1000000;
 
@@ -171,19 +177,22 @@ final class CubicCentimeters extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   CubicCentimeters get _clone => CubicCentimeters(value);
 
+  /// Creating [CubicCentimeters] with new value
   @override
   CubicCentimeters withValue([num? val]) => CubicCentimeters(val ?? value);
 
+  /// Symbol for [CubicCentimeters]
   @override
   String get symbol => 'cm³';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -200,7 +209,7 @@ final class CubicFoot extends Volume {
   /// Construct [CubicFoot] from other [Volume]
   factory CubicFoot.from(Volume unit) => CubicFoot(unit.toCubicFoot.value);
 
-  static const minorName = 'cubicFoot';
+  static const _minorName = 'cubicFoot';
 
   static const _ratio = 35.3146667215;
 
@@ -208,19 +217,22 @@ final class CubicFoot extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   CubicFoot get _clone => CubicFoot(value);
 
+  /// Creating [CubicFoot] with new value
   @override
   CubicFoot withValue([num? val]) => CubicFoot(val ?? value);
 
+  /// Symbol for [CubicFoot]
   @override
   String get symbol => 'ft³';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -238,7 +250,7 @@ final class CubicInches extends Volume {
   factory CubicInches.from(Volume unit) =>
       CubicInches(unit.toCubicInches.value);
 
-  static const minorName = 'cubicInches';
+  static const _minorName = 'cubicInches';
 
   static const _ratio = 61023.7440947323;
 
@@ -246,19 +258,22 @@ final class CubicInches extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   CubicInches get _clone => CubicInches(value);
 
+  /// Creating [CubicInches] with new value
   @override
   CubicInches withValue([num? val]) => CubicInches(val ?? value);
 
+  /// Symbol for [CubicInches]
   @override
   String get symbol => 'in³';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -276,7 +291,7 @@ final class CubicMeters extends Volume {
   factory CubicMeters.from(Volume unit) =>
       CubicMeters(unit.toCubicMeters.value);
 
-  static const minorName = 'cubicMeters';
+  static const _minorName = 'cubicMeters';
 
   static const _ratio = 1;
 
@@ -284,19 +299,22 @@ final class CubicMeters extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   CubicMeters get _clone => CubicMeters(value);
 
+  /// Creating [CubicMeters] with new value
   @override
   CubicMeters withValue([num? val]) => CubicMeters(val ?? value);
 
+  /// Symbol for [CubicMeters]
   @override
   String get symbol => 'm³';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -313,7 +331,7 @@ final class CubicYards extends Volume {
   /// Construct [CubicYards] from other [Volume]
   factory CubicYards.from(Volume unit) => CubicYards(unit.toCubicYards.value);
 
-  static const minorName = 'cubicYards';
+  static const _minorName = 'cubicYards';
 
   static const _ratio = 1.3079506;
 
@@ -321,19 +339,22 @@ final class CubicYards extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   CubicYards get _clone => CubicYards(value);
 
+  /// Creating [CubicYards] with new value
   @override
   CubicYards withValue([num? val]) => CubicYards(val ?? value);
 
+  /// Symbol for [CubicYards]
   @override
   String get symbol => 'yd³';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -351,7 +372,7 @@ final class GallonsImperial extends Volume {
   factory GallonsImperial.from(Volume unit) =>
       GallonsImperial(unit.toGallonsImperial.value);
 
-  static const minorName = 'gallonsImperial';
+  static const _minorName = 'gallonsImperial';
 
   static const _ratio = 219.9692482991;
 
@@ -359,19 +380,22 @@ final class GallonsImperial extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   GallonsImperial get _clone => GallonsImperial(value);
 
+  /// Creating [GallonsImperial] with new value
   @override
   GallonsImperial withValue([num? val]) => GallonsImperial(val ?? value);
 
+  /// Symbol for [GallonsImperial]
   @override
   String get symbol => 'gal';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -388,7 +412,7 @@ final class GallonsUS extends Volume {
   /// Construct [GallonsUS] from other [Volume]
   factory GallonsUS.from(Volume unit) => GallonsUS(unit.toGallonsUS.value);
 
-  static const minorName = 'gallonsUS';
+  static const _minorName = 'gallonsUS';
 
   static const _ratio = 264.1720523581;
 
@@ -396,19 +420,22 @@ final class GallonsUS extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   GallonsUS get _clone => GallonsUS(value);
 
+  /// Creating [GallonsUS] with new value
   @override
   GallonsUS withValue([num? val]) => GallonsUS(val ?? value);
 
+  /// Symbol for [GallonsUS]
   @override
   String get symbol => 'gal';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -425,7 +452,7 @@ final class Liters extends Volume {
   /// Construct [Liters] from other [Volume]
   factory Liters.from(Volume unit) => Liters(unit.toLiters.value);
 
-  static const minorName = 'liters';
+  static const _minorName = 'liters';
 
   static const _ratio = 1000;
 
@@ -433,19 +460,22 @@ final class Liters extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Liters get _clone => Liters(value);
 
+  /// Creating [Liters] with new value
   @override
   Liters withValue([num? val]) => Liters(val ?? value);
 
+  /// Symbol for [Liters]
   @override
   String get symbol => 'L';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -463,7 +493,7 @@ final class Milliliters extends Volume {
   factory Milliliters.from(Volume unit) =>
       Milliliters(unit.toMilliliters.value);
 
-  static const minorName = 'milliliters';
+  static const _minorName = 'milliliters';
 
   static const _ratio = 1000000;
 
@@ -471,19 +501,22 @@ final class Milliliters extends Volume {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Milliliters get _clone => Milliliters(value);
 
+  /// Creating [Milliliters] with new value
   @override
   Milliliters withValue([num? val]) => Milliliters(val ?? value);
 
+  /// Symbol for [Milliliters]
   @override
   String get symbol => 'mL';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -509,15 +542,15 @@ enum VolumeUnit {
 }
 
 const volumeUnitValues = _EnumValues({
-  BarrelsImperial.minorName: VolumeUnit.barrelsImperial,
-  BarrelsUS.minorName: VolumeUnit.barrelsUS,
-  CubicCentimeters.minorName: VolumeUnit.cubicCentimeters,
-  CubicFoot.minorName: VolumeUnit.cubicFoot,
-  CubicInches.minorName: VolumeUnit.cubicInches,
-  CubicMeters.minorName: VolumeUnit.cubicMeters,
-  CubicYards.minorName: VolumeUnit.cubicYards,
-  GallonsImperial.minorName: VolumeUnit.gallonsImperial,
-  GallonsUS.minorName: VolumeUnit.gallonsUS,
-  Liters.minorName: VolumeUnit.liters,
-  Milliliters.minorName: VolumeUnit.milliliters,
+  BarrelsImperial._minorName: VolumeUnit.barrelsImperial,
+  BarrelsUS._minorName: VolumeUnit.barrelsUS,
+  CubicCentimeters._minorName: VolumeUnit.cubicCentimeters,
+  CubicFoot._minorName: VolumeUnit.cubicFoot,
+  CubicInches._minorName: VolumeUnit.cubicInches,
+  CubicMeters._minorName: VolumeUnit.cubicMeters,
+  CubicYards._minorName: VolumeUnit.cubicYards,
+  GallonsImperial._minorName: VolumeUnit.gallonsImperial,
+  GallonsUS._minorName: VolumeUnit.gallonsUS,
+  Liters._minorName: VolumeUnit.liters,
+  Milliliters._minorName: VolumeUnit.milliliters,
 });

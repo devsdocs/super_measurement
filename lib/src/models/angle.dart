@@ -90,7 +90,7 @@ final class Degree extends Angle {
   /// Construct [Degree] from other [Angle]
   factory Degree.from(Angle unit) => Degree(unit.toDegree.value);
 
-  static const minorName = 'degree';
+  static const _minorName = 'degree';
 
   static const _ratio = 360;
 
@@ -98,19 +98,22 @@ final class Degree extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Degree get _clone => Degree(value);
 
+  /// Creating [Degree] with new value
   @override
   Degree withValue([num? val]) => Degree(val ?? value);
 
+  /// Symbol for [Degree]
   @override
   String get symbol => '°';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -127,7 +130,7 @@ final class Grad extends Angle {
   /// Construct [Grad] from other [Angle]
   factory Grad.from(Angle unit) => Grad(unit.toGrad.value);
 
-  static const minorName = 'grad';
+  static const _minorName = 'grad';
 
   static const _ratio = 400;
 
@@ -135,19 +138,22 @@ final class Grad extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Grad get _clone => Grad(value);
 
+  /// Creating [Grad] with new value
   @override
   Grad withValue([num? val]) => Grad(val ?? value);
 
+  /// Symbol for [Grad]
   @override
   String get symbol => 'gr';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -164,7 +170,7 @@ final class Mil extends Angle {
   /// Construct [Mil] from other [Angle]
   factory Mil.from(Angle unit) => Mil(unit.toMil.value);
 
-  static const minorName = 'mil';
+  static const _minorName = 'mil';
 
   static const _ratio = 6400;
 
@@ -172,19 +178,22 @@ final class Mil extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Mil get _clone => Mil(value);
 
+  /// Creating [Mil] with new value
   @override
   Mil withValue([num? val]) => Mil(val ?? value);
 
+  /// Symbol for [Mil]
   @override
   String get symbol => 'mil';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -201,7 +210,7 @@ final class MinuteAngle extends Angle {
   /// Construct [MinuteAngle] from other [Angle]
   factory MinuteAngle.from(Angle unit) => MinuteAngle(unit.toMinuteAngle.value);
 
-  static const minorName = 'minuteAngle';
+  static const _minorName = 'minuteAngle';
 
   static const _ratio = 21600;
 
@@ -209,19 +218,22 @@ final class MinuteAngle extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MinuteAngle get _clone => MinuteAngle(value);
 
+  /// Creating [MinuteAngle] with new value
   @override
   MinuteAngle withValue([num? val]) => MinuteAngle(val ?? value);
 
+  /// Symbol for [MinuteAngle]
   @override
   String get symbol => "'";
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -238,7 +250,7 @@ final class Octant extends Angle {
   /// Construct [Octant] from other [Angle]
   factory Octant.from(Angle unit) => Octant(unit.toOctant.value);
 
-  static const minorName = 'octant';
+  static const _minorName = 'octant';
 
   static const _ratio = 8;
 
@@ -246,19 +258,22 @@ final class Octant extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Octant get _clone => Octant(value);
 
+  /// Creating [Octant] with new value
   @override
   Octant withValue([num? val]) => Octant(val ?? value);
 
+  /// Symbol for [Octant]
   @override
   String get symbol => 'octant';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -276,7 +291,7 @@ final class PercentOfFullCircle extends Angle {
   factory PercentOfFullCircle.from(Angle unit) =>
       PercentOfFullCircle(unit.toPercentOfFullCircle.value);
 
-  static const minorName = 'percentOfFullCircle';
+  static const _minorName = 'percentOfFullCircle';
 
   static const _ratio = 100;
 
@@ -284,20 +299,23 @@ final class PercentOfFullCircle extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   PercentOfFullCircle get _clone => PercentOfFullCircle(value);
 
+  /// Creating [PercentOfFullCircle] with new value
   @override
   PercentOfFullCircle withValue([num? val]) =>
       PercentOfFullCircle(val ?? value);
 
+  /// Symbol for [PercentOfFullCircle]
   @override
   String get symbol => '% of ○';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -314,7 +332,7 @@ final class Quadrant extends Angle {
   /// Construct [Quadrant] from other [Angle]
   factory Quadrant.from(Angle unit) => Quadrant(unit.toQuadrant.value);
 
-  static const minorName = 'quadrant';
+  static const _minorName = 'quadrant';
 
   static const _ratio = 4;
 
@@ -322,19 +340,22 @@ final class Quadrant extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Quadrant get _clone => Quadrant(value);
 
+  /// Creating [Quadrant] with new value
   @override
   Quadrant withValue([num? val]) => Quadrant(val ?? value);
 
+  /// Symbol for [Quadrant]
   @override
   String get symbol => 'quad';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -351,7 +372,7 @@ final class Radian extends Angle {
   /// Construct [Radian] from other [Angle]
   factory Radian.from(Angle unit) => Radian(unit.toRadian.value);
 
-  static const minorName = 'radian';
+  static const _minorName = 'radian';
 
   static const _ratio = 6.283185307;
 
@@ -359,19 +380,22 @@ final class Radian extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Radian get _clone => Radian(value);
 
+  /// Creating [Radian] with new value
   @override
   Radian withValue([num? val]) => Radian(val ?? value);
 
+  /// Symbol for [Radian]
   @override
   String get symbol => 'rad';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -388,7 +412,7 @@ final class Revolution extends Angle {
   /// Construct [Revolution] from other [Angle]
   factory Revolution.from(Angle unit) => Revolution(unit.toRevolution.value);
 
-  static const minorName = 'revolution';
+  static const _minorName = 'revolution';
 
   static const _ratio = 1;
 
@@ -396,19 +420,22 @@ final class Revolution extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Revolution get _clone => Revolution(value);
 
+  /// Creating [Revolution] with new value
   @override
   Revolution withValue([num? val]) => Revolution(val ?? value);
 
+  /// Symbol for [Revolution]
   @override
   String get symbol => 'rev';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -425,7 +452,7 @@ final class SecondAngle extends Angle {
   /// Construct [SecondAngle] from other [Angle]
   factory SecondAngle.from(Angle unit) => SecondAngle(unit.toSecondAngle.value);
 
-  static const minorName = 'secondAngle';
+  static const _minorName = 'secondAngle';
 
   static const _ratio = 1296000;
 
@@ -433,19 +460,22 @@ final class SecondAngle extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SecondAngle get _clone => SecondAngle(value);
 
+  /// Creating [SecondAngle] with new value
   @override
   SecondAngle withValue([num? val]) => SecondAngle(val ?? value);
 
+  /// Symbol for [SecondAngle]
   @override
   String get symbol => '"';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -462,7 +492,7 @@ final class Sextant extends Angle {
   /// Construct [Sextant] from other [Angle]
   factory Sextant.from(Angle unit) => Sextant(unit.toSextant.value);
 
-  static const minorName = 'sextant';
+  static const _minorName = 'sextant';
 
   static const _ratio = 6;
 
@@ -470,19 +500,22 @@ final class Sextant extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Sextant get _clone => Sextant(value);
 
+  /// Creating [Sextant] with new value
   @override
   Sextant withValue([num? val]) => Sextant(val ?? value);
 
+  /// Symbol for [Sextant]
   @override
   String get symbol => 'sextant';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -499,7 +532,7 @@ final class SignAngle extends Angle {
   /// Construct [SignAngle] from other [Angle]
   factory SignAngle.from(Angle unit) => SignAngle(unit.toSignAngle.value);
 
-  static const minorName = 'signAngle';
+  static const _minorName = 'signAngle';
 
   static const _ratio = 12;
 
@@ -507,19 +540,22 @@ final class SignAngle extends Angle {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   SignAngle get _clone => SignAngle(value);
 
+  /// Creating [SignAngle] with new value
   @override
   SignAngle withValue([num? val]) => SignAngle(val ?? value);
 
+  /// Symbol for [SignAngle]
   @override
   String get symbol => 'sign';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -546,16 +582,16 @@ enum AngleUnit {
 }
 
 const angleUnitValues = _EnumValues({
-  Degree.minorName: AngleUnit.degree,
-  Grad.minorName: AngleUnit.grad,
-  Mil.minorName: AngleUnit.mil,
-  MinuteAngle.minorName: AngleUnit.minuteAngle,
-  Octant.minorName: AngleUnit.octant,
-  PercentOfFullCircle.minorName: AngleUnit.percentOfFullCircle,
-  Quadrant.minorName: AngleUnit.quadrant,
-  Radian.minorName: AngleUnit.radian,
-  Revolution.minorName: AngleUnit.revolution,
-  SecondAngle.minorName: AngleUnit.secondAngle,
-  Sextant.minorName: AngleUnit.sextant,
-  SignAngle.minorName: AngleUnit.signAngle,
+  Degree._minorName: AngleUnit.degree,
+  Grad._minorName: AngleUnit.grad,
+  Mil._minorName: AngleUnit.mil,
+  MinuteAngle._minorName: AngleUnit.minuteAngle,
+  Octant._minorName: AngleUnit.octant,
+  PercentOfFullCircle._minorName: AngleUnit.percentOfFullCircle,
+  Quadrant._minorName: AngleUnit.quadrant,
+  Radian._minorName: AngleUnit.radian,
+  Revolution._minorName: AngleUnit.revolution,
+  SecondAngle._minorName: AngleUnit.secondAngle,
+  Sextant._minorName: AngleUnit.sextant,
+  SignAngle._minorName: AngleUnit.signAngle,
 });

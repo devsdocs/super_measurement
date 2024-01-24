@@ -83,7 +83,7 @@ final class Centimeters extends Length {
   factory Centimeters.from(Length unit) =>
       Centimeters(unit.toCentimeters.value);
 
-  static const minorName = 'centimeters';
+  static const _minorName = 'centimeters';
 
   static const _ratio = 100;
 
@@ -91,19 +91,22 @@ final class Centimeters extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Centimeters get _clone => Centimeters(value);
 
+  /// Creating [Centimeters] with new value
   @override
   Centimeters withValue([num? val]) => Centimeters(val ?? value);
 
+  /// Symbol for [Centimeters]
   @override
   String get symbol => 'cm';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -120,7 +123,7 @@ final class Feet extends Length {
   /// Construct [Feet] from other [Length]
   factory Feet.from(Length unit) => Feet(unit.toFeet.value);
 
-  static const minorName = 'feet';
+  static const _minorName = 'feet';
 
   static const _ratio = 3.280839895;
 
@@ -128,19 +131,22 @@ final class Feet extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Feet get _clone => Feet(value);
 
+  /// Creating [Feet] with new value
   @override
   Feet withValue([num? val]) => Feet(val ?? value);
 
+  /// Symbol for [Feet]
   @override
   String get symbol => 'ft';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -157,7 +163,7 @@ final class Furlongs extends Length {
   /// Construct [Furlongs] from other [Length]
   factory Furlongs.from(Length unit) => Furlongs(unit.toFurlongs.value);
 
-  static const minorName = 'furlongs';
+  static const _minorName = 'furlongs';
 
   static const _ratio = 0.004970969538;
 
@@ -165,19 +171,22 @@ final class Furlongs extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Furlongs get _clone => Furlongs(value);
 
+  /// Creating [Furlongs] with new value
   @override
   Furlongs withValue([num? val]) => Furlongs(val ?? value);
 
+  /// Symbol for [Furlongs]
   @override
   String get symbol => 'fur';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -194,7 +203,7 @@ final class Inches extends Length {
   /// Construct [Inches] from other [Length]
   factory Inches.from(Length unit) => Inches(unit.toInches.value);
 
-  static const minorName = 'inches';
+  static const _minorName = 'inches';
 
   static const _ratio = 39.3700787402;
 
@@ -202,19 +211,22 @@ final class Inches extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Inches get _clone => Inches(value);
 
+  /// Creating [Inches] with new value
   @override
   Inches withValue([num? val]) => Inches(val ?? value);
 
+  /// Symbol for [Inches]
   @override
   String get symbol => 'in';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -231,7 +243,7 @@ final class Kilometers extends Length {
   /// Construct [Kilometers] from other [Length]
   factory Kilometers.from(Length unit) => Kilometers(unit.toKilometers.value);
 
-  static const minorName = 'kilometers';
+  static const _minorName = 'kilometers';
 
   static const _ratio = 0.001;
 
@@ -239,19 +251,22 @@ final class Kilometers extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Kilometers get _clone => Kilometers(value);
 
+  /// Creating [Kilometers] with new value
   @override
   Kilometers withValue([num? val]) => Kilometers(val ?? value);
 
+  /// Symbol for [Kilometers]
   @override
   String get symbol => 'km';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -268,7 +283,7 @@ final class Meters extends Length {
   /// Construct [Meters] from other [Length]
   factory Meters.from(Length unit) => Meters(unit.toMeters.value);
 
-  static const minorName = 'meters';
+  static const _minorName = 'meters';
 
   static const _ratio = 1;
 
@@ -276,19 +291,22 @@ final class Meters extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Meters get _clone => Meters(value);
 
+  /// Creating [Meters] with new value
   @override
   Meters withValue([num? val]) => Meters(val ?? value);
 
+  /// Symbol for [Meters]
   @override
   String get symbol => 'm';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -305,7 +323,7 @@ final class Miles extends Length {
   /// Construct [Miles] from other [Length]
   factory Miles.from(Length unit) => Miles(unit.toMiles.value);
 
-  static const minorName = 'miles';
+  static const _minorName = 'miles';
 
   static const _ratio = 0.0006213711922;
 
@@ -313,19 +331,22 @@ final class Miles extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Miles get _clone => Miles(value);
 
+  /// Creating [Miles] with new value
   @override
   Miles withValue([num? val]) => Miles(val ?? value);
 
+  /// Symbol for [Miles]
   @override
   String get symbol => 'mi';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -343,7 +364,7 @@ final class Millimeters extends Length {
   factory Millimeters.from(Length unit) =>
       Millimeters(unit.toMillimeters.value);
 
-  static const minorName = 'millimeters';
+  static const _minorName = 'millimeters';
 
   static const _ratio = 10000;
 
@@ -351,19 +372,22 @@ final class Millimeters extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Millimeters get _clone => Millimeters(value);
 
+  /// Creating [Millimeters] with new value
   @override
   Millimeters withValue([num? val]) => Millimeters(val ?? value);
 
+  /// Symbol for [Millimeters]
   @override
   String get symbol => 'mm';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -381,7 +405,7 @@ final class NauticalMiles extends Length {
   factory NauticalMiles.from(Length unit) =>
       NauticalMiles(unit.toNauticalMiles.value);
 
-  static const minorName = 'nauticalMiles';
+  static const _minorName = 'nauticalMiles';
 
   static const _ratio = 0.000539956803;
 
@@ -389,19 +413,22 @@ final class NauticalMiles extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   NauticalMiles get _clone => NauticalMiles(value);
 
+  /// Creating [NauticalMiles] with new value
   @override
   NauticalMiles withValue([num? val]) => NauticalMiles(val ?? value);
 
+  /// Symbol for [NauticalMiles]
   @override
   String get symbol => 'NM';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -418,7 +445,7 @@ final class Yards extends Length {
   /// Construct [Yards] from other [Length]
   factory Yards.from(Length unit) => Yards(unit.toYards.value);
 
-  static const minorName = 'yards';
+  static const _minorName = 'yards';
 
   static const _ratio = 1.0936132983;
 
@@ -426,19 +453,22 @@ final class Yards extends Length {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Yards get _clone => Yards(value);
 
+  /// Creating [Yards] with new value
   @override
   Yards withValue([num? val]) => Yards(val ?? value);
 
+  /// Symbol for [Yards]
   @override
   String get symbol => 'yd';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -463,14 +493,14 @@ enum LengthUnit {
 }
 
 const lengthUnitValues = _EnumValues({
-  Centimeters.minorName: LengthUnit.centimeters,
-  Feet.minorName: LengthUnit.feet,
-  Furlongs.minorName: LengthUnit.furlongs,
-  Inches.minorName: LengthUnit.inches,
-  Kilometers.minorName: LengthUnit.kilometers,
-  Meters.minorName: LengthUnit.meters,
-  Miles.minorName: LengthUnit.miles,
-  Millimeters.minorName: LengthUnit.millimeters,
-  NauticalMiles.minorName: LengthUnit.nauticalMiles,
-  Yards.minorName: LengthUnit.yards,
+  Centimeters._minorName: LengthUnit.centimeters,
+  Feet._minorName: LengthUnit.feet,
+  Furlongs._minorName: LengthUnit.furlongs,
+  Inches._minorName: LengthUnit.inches,
+  Kilometers._minorName: LengthUnit.kilometers,
+  Meters._minorName: LengthUnit.meters,
+  Miles._minorName: LengthUnit.miles,
+  Millimeters._minorName: LengthUnit.millimeters,
+  NauticalMiles._minorName: LengthUnit.nauticalMiles,
+  Yards._minorName: LengthUnit.yards,
 });

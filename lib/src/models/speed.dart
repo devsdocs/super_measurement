@@ -100,7 +100,7 @@ final class FootPerHour extends Speed {
   /// Construct [FootPerHour] from other [Speed]
   factory FootPerHour.from(Speed unit) => FootPerHour(unit.toFootPerHour.value);
 
-  static const minorName = 'footPerHour';
+  static const _minorName = 'footPerHour';
 
   static const _ratio = 3280.8398950131;
 
@@ -108,19 +108,22 @@ final class FootPerHour extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   FootPerHour get _clone => FootPerHour(value);
 
+  /// Creating [FootPerHour] with new value
   @override
   FootPerHour withValue([num? val]) => FootPerHour(val ?? value);
 
+  /// Symbol for [FootPerHour]
   @override
   String get symbol => 'ft/h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -138,7 +141,7 @@ final class FootPerMinute extends Speed {
   factory FootPerMinute.from(Speed unit) =>
       FootPerMinute(unit.toFootPerMinute.value);
 
-  static const minorName = 'footPerMinute';
+  static const _minorName = 'footPerMinute';
 
   static const _ratio = 54.6806649169;
 
@@ -146,19 +149,22 @@ final class FootPerMinute extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   FootPerMinute get _clone => FootPerMinute(value);
 
+  /// Creating [FootPerMinute] with new value
   @override
   FootPerMinute withValue([num? val]) => FootPerMinute(val ?? value);
 
+  /// Symbol for [FootPerMinute]
   @override
   String get symbol => 'ft/min';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -176,7 +182,7 @@ final class FootPerSecond extends Speed {
   factory FootPerSecond.from(Speed unit) =>
       FootPerSecond(unit.toFootPerSecond.value);
 
-  static const minorName = 'footPerSecond';
+  static const _minorName = 'footPerSecond';
 
   static const _ratio = 0.9113444153;
 
@@ -184,19 +190,22 @@ final class FootPerSecond extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   FootPerSecond get _clone => FootPerSecond(value);
 
+  /// Creating [FootPerSecond] with new value
   @override
   FootPerSecond withValue([num? val]) => FootPerSecond(val ?? value);
 
+  /// Symbol for [FootPerSecond]
   @override
   String get symbol => 'ft/s';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -214,7 +223,7 @@ final class KilometerPerHour extends Speed {
   factory KilometerPerHour.from(Speed unit) =>
       KilometerPerHour(unit.toKilometerPerHour.value);
 
-  static const minorName = 'kilometerPerHour';
+  static const _minorName = 'kilometerPerHour';
 
   static const _ratio = 1;
 
@@ -222,19 +231,22 @@ final class KilometerPerHour extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   KilometerPerHour get _clone => KilometerPerHour(value);
 
+  /// Creating [KilometerPerHour] with new value
   @override
   KilometerPerHour withValue([num? val]) => KilometerPerHour(val ?? value);
 
+  /// Symbol for [KilometerPerHour]
   @override
   String get symbol => 'km/h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -251,7 +263,7 @@ final class Knot extends Speed {
   /// Construct [Knot] from other [Speed]
   factory Knot.from(Speed unit) => Knot(unit.toKnot.value);
 
-  static const minorName = 'knot';
+  static const _minorName = 'knot';
 
   static const _ratio = 0.5399568035;
 
@@ -259,19 +271,22 @@ final class Knot extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Knot get _clone => Knot(value);
 
+  /// Creating [Knot] with new value
   @override
   Knot withValue([num? val]) => Knot(val ?? value);
 
+  /// Symbol for [Knot]
   @override
   String get symbol => 'kn';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -288,7 +303,7 @@ final class Light extends Speed {
   /// Construct [Light] from other [Speed]
   factory Light.from(Speed unit) => Light(unit.toLight.value);
 
-  static const minorName = 'light';
+  static const _minorName = 'light';
 
   static const _ratio = 9.265669311e-10;
 
@@ -296,19 +311,22 @@ final class Light extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Light get _clone => Light(value);
 
+  /// Creating [Light] with new value
   @override
   Light withValue([num? val]) => Light(val ?? value);
 
+  /// Symbol for [Light]
   @override
   String get symbol => 'c';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -326,7 +344,7 @@ final class MachAtSeaLevel extends Speed {
   factory MachAtSeaLevel.from(Speed unit) =>
       MachAtSeaLevel(unit.toMachAtSeaLevel.value);
 
-  static const minorName = 'machAtSeaLevel';
+  static const _minorName = 'machAtSeaLevel';
 
   static const _ratio = 0.0008380431358;
 
@@ -334,19 +352,22 @@ final class MachAtSeaLevel extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MachAtSeaLevel get _clone => MachAtSeaLevel(value);
 
+  /// Creating [MachAtSeaLevel] with new value
   @override
   MachAtSeaLevel withValue([num? val]) => MachAtSeaLevel(val ?? value);
 
+  /// Symbol for [MachAtSeaLevel]
   @override
   String get symbol => 'mach';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -364,7 +385,7 @@ final class MachInternational extends Speed {
   factory MachInternational.from(Speed unit) =>
       MachInternational(unit.toMachInternational.value);
 
-  static const minorName = 'machInternational';
+  static const _minorName = 'machInternational';
 
   static const _ratio = 0.0009414715034;
 
@@ -372,19 +393,22 @@ final class MachInternational extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MachInternational get _clone => MachInternational(value);
 
+  /// Creating [MachInternational] with new value
   @override
   MachInternational withValue([num? val]) => MachInternational(val ?? value);
 
+  /// Symbol for [MachInternational]
   @override
   String get symbol => 'mach';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -402,7 +426,7 @@ final class MeterPerHour extends Speed {
   factory MeterPerHour.from(Speed unit) =>
       MeterPerHour(unit.toMeterPerHour.value);
 
-  static const minorName = 'meterPerHour';
+  static const _minorName = 'meterPerHour';
 
   static const _ratio = 1000;
 
@@ -410,19 +434,22 @@ final class MeterPerHour extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MeterPerHour get _clone => MeterPerHour(value);
 
+  /// Creating [MeterPerHour] with new value
   @override
   MeterPerHour withValue([num? val]) => MeterPerHour(val ?? value);
 
+  /// Symbol for [MeterPerHour]
   @override
   String get symbol => 'm/h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -440,7 +467,7 @@ final class MeterPerMinute extends Speed {
   factory MeterPerMinute.from(Speed unit) =>
       MeterPerMinute(unit.toMeterPerMinute.value);
 
-  static const minorName = 'meterPerMinute';
+  static const _minorName = 'meterPerMinute';
 
   static const _ratio = 16.66666667;
 
@@ -448,19 +475,22 @@ final class MeterPerMinute extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MeterPerMinute get _clone => MeterPerMinute(value);
 
+  /// Creating [MeterPerMinute] with new value
   @override
   MeterPerMinute withValue([num? val]) => MeterPerMinute(val ?? value);
 
+  /// Symbol for [MeterPerMinute]
   @override
   String get symbol => 'm/min';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -478,7 +508,7 @@ final class MeterPerSecond extends Speed {
   factory MeterPerSecond.from(Speed unit) =>
       MeterPerSecond(unit.toMeterPerSecond.value);
 
-  static const minorName = 'meterPerSecond';
+  static const _minorName = 'meterPerSecond';
 
   static const _ratio = 0.2777777778;
 
@@ -486,19 +516,22 @@ final class MeterPerSecond extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MeterPerSecond get _clone => MeterPerSecond(value);
 
+  /// Creating [MeterPerSecond] with new value
   @override
   MeterPerSecond withValue([num? val]) => MeterPerSecond(val ?? value);
 
+  /// Symbol for [MeterPerSecond]
   @override
   String get symbol => 'm/s';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -516,7 +549,7 @@ final class MilesPerHour extends Speed {
   factory MilesPerHour.from(Speed unit) =>
       MilesPerHour(unit.toMilesPerHour.value);
 
-  static const minorName = 'milesPerHour';
+  static const _minorName = 'milesPerHour';
 
   static const _ratio = 0.6213711922;
 
@@ -524,19 +557,22 @@ final class MilesPerHour extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MilesPerHour get _clone => MilesPerHour(value);
 
+  /// Creating [MilesPerHour] with new value
   @override
   MilesPerHour withValue([num? val]) => MilesPerHour(val ?? value);
 
+  /// Symbol for [MilesPerHour]
   @override
   String get symbol => 'mi/h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -554,7 +590,7 @@ final class MilesPerMinute extends Speed {
   factory MilesPerMinute.from(Speed unit) =>
       MilesPerMinute(unit.toMilesPerMinute.value);
 
-  static const minorName = 'milesPerMinute';
+  static const _minorName = 'milesPerMinute';
 
   static const _ratio = 0.0103561865;
 
@@ -562,19 +598,22 @@ final class MilesPerMinute extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MilesPerMinute get _clone => MilesPerMinute(value);
 
+  /// Creating [MilesPerMinute] with new value
   @override
   MilesPerMinute withValue([num? val]) => MilesPerMinute(val ?? value);
 
+  /// Symbol for [MilesPerMinute]
   @override
   String get symbol => 'mi/min';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -592,7 +631,7 @@ final class YardPerMinute extends Speed {
   factory YardPerMinute.from(Speed unit) =>
       YardPerMinute(unit.toYardPerMinute.value);
 
-  static const minorName = 'yardPerMinute';
+  static const _minorName = 'yardPerMinute';
 
   static const _ratio = 18.22688831;
 
@@ -600,19 +639,22 @@ final class YardPerMinute extends Speed {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   YardPerMinute get _clone => YardPerMinute(value);
 
+  /// Creating [YardPerMinute] with new value
   @override
   YardPerMinute withValue([num? val]) => YardPerMinute(val ?? value);
 
+  /// Symbol for [YardPerMinute]
   @override
   String get symbol => 'yd/min';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -641,18 +683,18 @@ enum SpeedUnit {
 }
 
 const speedUnitValues = _EnumValues({
-  FootPerHour.minorName: SpeedUnit.footPerHour,
-  FootPerMinute.minorName: SpeedUnit.footPerMinute,
-  FootPerSecond.minorName: SpeedUnit.footPerSecond,
-  KilometerPerHour.minorName: SpeedUnit.kilometerPerHour,
-  Knot.minorName: SpeedUnit.knot,
-  Light.minorName: SpeedUnit.light,
-  MachAtSeaLevel.minorName: SpeedUnit.machAtSeaLevel,
-  MachInternational.minorName: SpeedUnit.machInternational,
-  MeterPerHour.minorName: SpeedUnit.meterPerHour,
-  MeterPerMinute.minorName: SpeedUnit.meterPerMinute,
-  MeterPerSecond.minorName: SpeedUnit.meterPerSecond,
-  MilesPerHour.minorName: SpeedUnit.milesPerHour,
-  MilesPerMinute.minorName: SpeedUnit.milesPerMinute,
-  YardPerMinute.minorName: SpeedUnit.yardPerMinute,
+  FootPerHour._minorName: SpeedUnit.footPerHour,
+  FootPerMinute._minorName: SpeedUnit.footPerMinute,
+  FootPerSecond._minorName: SpeedUnit.footPerSecond,
+  KilometerPerHour._minorName: SpeedUnit.kilometerPerHour,
+  Knot._minorName: SpeedUnit.knot,
+  Light._minorName: SpeedUnit.light,
+  MachAtSeaLevel._minorName: SpeedUnit.machAtSeaLevel,
+  MachInternational._minorName: SpeedUnit.machInternational,
+  MeterPerHour._minorName: SpeedUnit.meterPerHour,
+  MeterPerMinute._minorName: SpeedUnit.meterPerMinute,
+  MeterPerSecond._minorName: SpeedUnit.meterPerSecond,
+  MilesPerHour._minorName: SpeedUnit.milesPerHour,
+  MilesPerMinute._minorName: SpeedUnit.milesPerMinute,
+  YardPerMinute._minorName: SpeedUnit.yardPerMinute,
 });

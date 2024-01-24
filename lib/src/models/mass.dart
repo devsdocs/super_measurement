@@ -86,7 +86,7 @@ final class Carats extends Mass {
   /// Construct [Carats] from other [Mass]
   factory Carats.from(Mass unit) => Carats(unit.toCarats.value);
 
-  static const minorName = 'carats';
+  static const _minorName = 'carats';
 
   static const _ratio = 5000;
 
@@ -94,19 +94,22 @@ final class Carats extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Carats get _clone => Carats(value);
 
+  /// Creating [Carats] with new value
   @override
   Carats withValue([num? val]) => Carats(val ?? value);
 
+  /// Symbol for [Carats]
   @override
   String get symbol => 'CD';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -123,7 +126,7 @@ final class Grams extends Mass {
   /// Construct [Grams] from other [Mass]
   factory Grams.from(Mass unit) => Grams(unit.toGrams.value);
 
-  static const minorName = 'grams';
+  static const _minorName = 'grams';
 
   static const _ratio = 1000;
 
@@ -131,19 +134,22 @@ final class Grams extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Grams get _clone => Grams(value);
 
+  /// Creating [Grams] with new value
   @override
   Grams withValue([num? val]) => Grams(val ?? value);
 
+  /// Symbol for [Grams]
   @override
   String get symbol => 'g';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -160,7 +166,7 @@ final class Kilograms extends Mass {
   /// Construct [Kilograms] from other [Mass]
   factory Kilograms.from(Mass unit) => Kilograms(unit.toKilograms.value);
 
-  static const minorName = 'kilograms';
+  static const _minorName = 'kilograms';
 
   static const _ratio = 1;
 
@@ -168,19 +174,22 @@ final class Kilograms extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Kilograms get _clone => Kilograms(value);
 
+  /// Creating [Kilograms] with new value
   @override
   Kilograms withValue([num? val]) => Kilograms(val ?? value);
 
+  /// Symbol for [Kilograms]
   @override
   String get symbol => 'kg';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -197,7 +206,7 @@ final class Milligrams extends Mass {
   /// Construct [Milligrams] from other [Mass]
   factory Milligrams.from(Mass unit) => Milligrams(unit.toMilligrams.value);
 
-  static const minorName = 'milligrams';
+  static const _minorName = 'milligrams';
 
   static const _ratio = 1000000;
 
@@ -205,19 +214,22 @@ final class Milligrams extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Milligrams get _clone => Milligrams(value);
 
+  /// Creating [Milligrams] with new value
   @override
   Milligrams withValue([num? val]) => Milligrams(val ?? value);
 
+  /// Symbol for [Milligrams]
   @override
   String get symbol => 'mg';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -234,7 +246,7 @@ final class Ounces extends Mass {
   /// Construct [Ounces] from other [Mass]
   factory Ounces.from(Mass unit) => Ounces(unit.toOunces.value);
 
-  static const minorName = 'ounces';
+  static const _minorName = 'ounces';
 
   static const _ratio = 35.2739619496;
 
@@ -242,19 +254,22 @@ final class Ounces extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Ounces get _clone => Ounces(value);
 
+  /// Creating [Ounces] with new value
   @override
   Ounces withValue([num? val]) => Ounces(val ?? value);
 
+  /// Symbol for [Ounces]
   @override
   String get symbol => 'oz';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -271,7 +286,7 @@ final class Pounds extends Mass {
   /// Construct [Pounds] from other [Mass]
   factory Pounds.from(Mass unit) => Pounds(unit.toPounds.value);
 
-  static const minorName = 'pounds';
+  static const _minorName = 'pounds';
 
   static const _ratio = 2.2046226218;
 
@@ -279,19 +294,22 @@ final class Pounds extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Pounds get _clone => Pounds(value);
 
+  /// Creating [Pounds] with new value
   @override
   Pounds withValue([num? val]) => Pounds(val ?? value);
 
+  /// Symbol for [Pounds]
   @override
   String get symbol => 'lb';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -308,7 +326,7 @@ final class Quintal extends Mass {
   /// Construct [Quintal] from other [Mass]
   factory Quintal.from(Mass unit) => Quintal(unit.toQuintal.value);
 
-  static const minorName = 'quintal';
+  static const _minorName = 'quintal';
 
   static const _ratio = 0.01;
 
@@ -316,19 +334,22 @@ final class Quintal extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Quintal get _clone => Quintal(value);
 
+  /// Creating [Quintal] with new value
   @override
   Quintal withValue([num? val]) => Quintal(val ?? value);
 
+  /// Symbol for [Quintal]
   @override
   String get symbol => 'q';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -345,7 +366,7 @@ final class StoneUK extends Mass {
   /// Construct [StoneUK] from other [Mass]
   factory StoneUK.from(Mass unit) => StoneUK(unit.toStoneUK.value);
 
-  static const minorName = 'stoneUK';
+  static const _minorName = 'stoneUK';
 
   static const _ratio = 0.1574730444;
 
@@ -353,19 +374,22 @@ final class StoneUK extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   StoneUK get _clone => StoneUK(value);
 
+  /// Creating [StoneUK] with new value
   @override
   StoneUK withValue([num? val]) => StoneUK(val ?? value);
 
+  /// Symbol for [StoneUK]
   @override
   String get symbol => 'st';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -382,7 +406,7 @@ final class TonUK extends Mass {
   /// Construct [TonUK] from other [Mass]
   factory TonUK.from(Mass unit) => TonUK(unit.toTonUK.value);
 
-  static const minorName = 'tonUK';
+  static const _minorName = 'tonUK';
 
   static const _ratio = 0.0009842065;
 
@@ -390,19 +414,22 @@ final class TonUK extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   TonUK get _clone => TonUK(value);
 
+  /// Creating [TonUK] with new value
   @override
   TonUK withValue([num? val]) => TonUK(val ?? value);
 
+  /// Symbol for [TonUK]
   @override
   String get symbol => 'ton';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -419,7 +446,7 @@ final class TonUS extends Mass {
   /// Construct [TonUS] from other [Mass]
   factory TonUS.from(Mass unit) => TonUS(unit.toTonUS.value);
 
-  static const minorName = 'tonUS';
+  static const _minorName = 'tonUS';
 
   static const _ratio = 0.0011023113;
 
@@ -427,19 +454,22 @@ final class TonUS extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   TonUS get _clone => TonUS(value);
 
+  /// Creating [TonUS] with new value
   @override
   TonUS withValue([num? val]) => TonUS(val ?? value);
 
+  /// Symbol for [TonUS]
   @override
   String get symbol => 'ton';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -456,7 +486,7 @@ final class Tonne extends Mass {
   /// Construct [Tonne] from other [Mass]
   factory Tonne.from(Mass unit) => Tonne(unit.toTonne.value);
 
-  static const minorName = 'tonne';
+  static const _minorName = 'tonne';
 
   static const _ratio = 0.001;
 
@@ -464,19 +494,22 @@ final class Tonne extends Mass {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Tonne get _clone => Tonne(value);
 
+  /// Creating [Tonne] with new value
   @override
   Tonne withValue([num? val]) => Tonne(val ?? value);
 
+  /// Symbol for [Tonne]
   @override
   String get symbol => 'ton';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -502,15 +535,15 @@ enum MassUnit {
 }
 
 const massUnitValues = _EnumValues({
-  Carats.minorName: MassUnit.carats,
-  Grams.minorName: MassUnit.grams,
-  Kilograms.minorName: MassUnit.kilograms,
-  Milligrams.minorName: MassUnit.milligrams,
-  Ounces.minorName: MassUnit.ounces,
-  Pounds.minorName: MassUnit.pounds,
-  Quintal.minorName: MassUnit.quintal,
-  StoneUK.minorName: MassUnit.stoneUK,
-  TonUK.minorName: MassUnit.tonUK,
-  TonUS.minorName: MassUnit.tonUS,
-  Tonne.minorName: MassUnit.tonne,
+  Carats._minorName: MassUnit.carats,
+  Grams._minorName: MassUnit.grams,
+  Kilograms._minorName: MassUnit.kilograms,
+  Milligrams._minorName: MassUnit.milligrams,
+  Ounces._minorName: MassUnit.ounces,
+  Pounds._minorName: MassUnit.pounds,
+  Quintal._minorName: MassUnit.quintal,
+  StoneUK._minorName: MassUnit.stoneUK,
+  TonUK._minorName: MassUnit.tonUK,
+  TonUS._minorName: MassUnit.tonUS,
+  Tonne._minorName: MassUnit.tonne,
 });

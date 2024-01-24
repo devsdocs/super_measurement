@@ -58,7 +58,7 @@ final class JoulePerKilogramCelcius extends Entropy {
   factory JoulePerKilogramCelcius.from(Entropy unit) =>
       JoulePerKilogramCelcius(unit.toJoulePerKilogramCelcius.value);
 
-  static const minorName = 'joulePerKilogramCelcius';
+  static const _minorName = 'joulePerKilogramCelcius';
 
   static const _ratio = 4186.8;
 
@@ -66,20 +66,23 @@ final class JoulePerKilogramCelcius extends Entropy {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   JoulePerKilogramCelcius get _clone => JoulePerKilogramCelcius(value);
 
+  /// Creating [JoulePerKilogramCelcius] with new value
   @override
   JoulePerKilogramCelcius withValue([num? val]) =>
       JoulePerKilogramCelcius(val ?? value);
 
+  /// Symbol for [JoulePerKilogramCelcius]
   @override
   String get symbol => 'J/kg °C';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -97,7 +100,7 @@ final class KilocaloriePerKilogramCelcius extends Entropy {
   factory KilocaloriePerKilogramCelcius.from(Entropy unit) =>
       KilocaloriePerKilogramCelcius(unit.toKilocaloriePerKilogramCelcius.value);
 
-  static const minorName = 'kilocaloriePerKilogramCelcius';
+  static const _minorName = 'kilocaloriePerKilogramCelcius';
 
   static const _ratio = 1;
 
@@ -105,21 +108,24 @@ final class KilocaloriePerKilogramCelcius extends Entropy {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   KilocaloriePerKilogramCelcius get _clone =>
       KilocaloriePerKilogramCelcius(value);
 
+  /// Creating [KilocaloriePerKilogramCelcius] with new value
   @override
   KilocaloriePerKilogramCelcius withValue([num? val]) =>
       KilocaloriePerKilogramCelcius(val ?? value);
 
+  /// Symbol for [KilocaloriePerKilogramCelcius]
   @override
   String get symbol => 'kcal/kg °C';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -137,7 +143,7 @@ final class KilojoulePerKilogramCelcius extends Entropy {
   factory KilojoulePerKilogramCelcius.from(Entropy unit) =>
       KilojoulePerKilogramCelcius(unit.toKilojoulePerKilogramCelcius.value);
 
-  static const minorName = 'kilojoulePerKilogramCelcius';
+  static const _minorName = 'kilojoulePerKilogramCelcius';
 
   static const _ratio = 4.1868;
 
@@ -145,20 +151,23 @@ final class KilojoulePerKilogramCelcius extends Entropy {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   KilojoulePerKilogramCelcius get _clone => KilojoulePerKilogramCelcius(value);
 
+  /// Creating [KilojoulePerKilogramCelcius] with new value
   @override
   KilojoulePerKilogramCelcius withValue([num? val]) =>
       KilojoulePerKilogramCelcius(val ?? value);
 
+  /// Symbol for [KilojoulePerKilogramCelcius]
   @override
   String get symbol => 'kJ/kg °C';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -176,9 +185,9 @@ enum EntropyUnit {
 }
 
 const entropyUnitValues = _EnumValues({
-  JoulePerKilogramCelcius.minorName: EntropyUnit.joulePerKilogramCelcius,
-  KilocaloriePerKilogramCelcius.minorName:
+  JoulePerKilogramCelcius._minorName: EntropyUnit.joulePerKilogramCelcius,
+  KilocaloriePerKilogramCelcius._minorName:
       EntropyUnit.kilocaloriePerKilogramCelcius,
-  KilojoulePerKilogramCelcius.minorName:
+  KilojoulePerKilogramCelcius._minorName:
       EntropyUnit.kilojoulePerKilogramCelcius,
 });

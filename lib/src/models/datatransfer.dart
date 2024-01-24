@@ -67,7 +67,7 @@ final class GigabitPerSecond extends DataTransfer {
   factory GigabitPerSecond.from(DataTransfer unit) =>
       GigabitPerSecond(unit.toGigabitPerSecond.value);
 
-  static const minorName = 'gigabitPerSecond';
+  static const _minorName = 'gigabitPerSecond';
 
   static const _ratio = 0.0008;
 
@@ -75,19 +75,22 @@ final class GigabitPerSecond extends DataTransfer {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   GigabitPerSecond get _clone => GigabitPerSecond(value);
 
+  /// Creating [GigabitPerSecond] with new value
   @override
   GigabitPerSecond withValue([num? val]) => GigabitPerSecond(val ?? value);
 
+  /// Symbol for [GigabitPerSecond]
   @override
   String get symbol => 'Gb/S';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -105,7 +108,7 @@ final class GigabytePerSecond extends DataTransfer {
   factory GigabytePerSecond.from(DataTransfer unit) =>
       GigabytePerSecond(unit.toGigabytePerSecond.value);
 
-  static const minorName = 'gigabytePerSecond';
+  static const _minorName = 'gigabytePerSecond';
 
   static const _ratio = 0.001;
 
@@ -113,19 +116,22 @@ final class GigabytePerSecond extends DataTransfer {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   GigabytePerSecond get _clone => GigabytePerSecond(value);
 
+  /// Creating [GigabytePerSecond] with new value
   @override
   GigabytePerSecond withValue([num? val]) => GigabytePerSecond(val ?? value);
 
+  /// Symbol for [GigabytePerSecond]
   @override
   String get symbol => 'GB/S';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -143,7 +149,7 @@ final class KilobitPerSecond extends DataTransfer {
   factory KilobitPerSecond.from(DataTransfer unit) =>
       KilobitPerSecond(unit.toKilobitPerSecond.value);
 
-  static const minorName = 'kilobitPerSecond';
+  static const _minorName = 'kilobitPerSecond';
 
   static const _ratio = 8000;
 
@@ -151,19 +157,22 @@ final class KilobitPerSecond extends DataTransfer {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   KilobitPerSecond get _clone => KilobitPerSecond(value);
 
+  /// Creating [KilobitPerSecond] with new value
   @override
   KilobitPerSecond withValue([num? val]) => KilobitPerSecond(val ?? value);
 
+  /// Symbol for [KilobitPerSecond]
   @override
   String get symbol => 'kb/S';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -181,7 +190,7 @@ final class KilobytePerSecond extends DataTransfer {
   factory KilobytePerSecond.from(DataTransfer unit) =>
       KilobytePerSecond(unit.toKilobytePerSecond.value);
 
-  static const minorName = 'kilobytePerSecond';
+  static const _minorName = 'kilobytePerSecond';
 
   static const _ratio = 1000;
 
@@ -189,19 +198,22 @@ final class KilobytePerSecond extends DataTransfer {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   KilobytePerSecond get _clone => KilobytePerSecond(value);
 
+  /// Creating [KilobytePerSecond] with new value
   @override
   KilobytePerSecond withValue([num? val]) => KilobytePerSecond(val ?? value);
 
+  /// Symbol for [KilobytePerSecond]
   @override
   String get symbol => 'kB/S';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -219,7 +231,7 @@ final class MegabitPerSecond extends DataTransfer {
   factory MegabitPerSecond.from(DataTransfer unit) =>
       MegabitPerSecond(unit.toMegabitPerSecond.value);
 
-  static const minorName = 'megabitPerSecond';
+  static const _minorName = 'megabitPerSecond';
 
   static const _ratio = 8;
 
@@ -227,19 +239,22 @@ final class MegabitPerSecond extends DataTransfer {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MegabitPerSecond get _clone => MegabitPerSecond(value);
 
+  /// Creating [MegabitPerSecond] with new value
   @override
   MegabitPerSecond withValue([num? val]) => MegabitPerSecond(val ?? value);
 
+  /// Symbol for [MegabitPerSecond]
   @override
   String get symbol => 'Mb/S';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -257,7 +272,7 @@ final class MegabytePerSecond extends DataTransfer {
   factory MegabytePerSecond.from(DataTransfer unit) =>
       MegabytePerSecond(unit.toMegabytePerSecond.value);
 
-  static const minorName = 'megabytePerSecond';
+  static const _minorName = 'megabytePerSecond';
 
   static const _ratio = 1;
 
@@ -265,19 +280,22 @@ final class MegabytePerSecond extends DataTransfer {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MegabytePerSecond get _clone => MegabytePerSecond(value);
 
+  /// Creating [MegabytePerSecond] with new value
   @override
   MegabytePerSecond withValue([num? val]) => MegabytePerSecond(val ?? value);
 
+  /// Symbol for [MegabytePerSecond]
   @override
   String get symbol => 'MB/S';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -298,10 +316,10 @@ enum DataTransferUnit {
 }
 
 const dataTransferUnitValues = _EnumValues({
-  GigabitPerSecond.minorName: DataTransferUnit.gigabitPerSecond,
-  GigabytePerSecond.minorName: DataTransferUnit.gigabytePerSecond,
-  KilobitPerSecond.minorName: DataTransferUnit.kilobitPerSecond,
-  KilobytePerSecond.minorName: DataTransferUnit.kilobytePerSecond,
-  MegabitPerSecond.minorName: DataTransferUnit.megabitPerSecond,
-  MegabytePerSecond.minorName: DataTransferUnit.megabytePerSecond,
+  GigabitPerSecond._minorName: DataTransferUnit.gigabitPerSecond,
+  GigabytePerSecond._minorName: DataTransferUnit.gigabytePerSecond,
+  KilobitPerSecond._minorName: DataTransferUnit.kilobitPerSecond,
+  KilobytePerSecond._minorName: DataTransferUnit.kilobytePerSecond,
+  MegabitPerSecond._minorName: DataTransferUnit.megabitPerSecond,
+  MegabytePerSecond._minorName: DataTransferUnit.megabytePerSecond,
 });

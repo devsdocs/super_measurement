@@ -111,7 +111,7 @@ void generateModels() {
       );
 
       typeBuff.writeln();
-      typeBuff.writeln("  static const minorName = '${unitType.snakeCase}';");
+      typeBuff.writeln("  static const _minorName = '${unitType.snakeCase}';");
       typeBuff.writeln();
       typeBuff.writeln("  static const _ratio = ${unitProps['ratio']};");
       typeBuff.writeln();
@@ -125,14 +125,23 @@ void generateModels() {
       typeBuff.writeln('  @override');
       typeBuff.writeln('  num get ratio => _ratio;');
       typeBuff.writeln();
+      typeBuff.writeln(
+        '/// Clone this with same value',
+      );
       typeBuff.writeln('  @override');
       typeBuff.writeln('  $unitType get _clone => $unitType(value);');
       typeBuff.writeln();
+      typeBuff.writeln(
+        '/// Creating [$unitType] with new value',
+      );
       typeBuff.writeln('  @override');
       typeBuff.writeln(
         '  $unitType withValue([num? val]) => $unitType(val ?? value);',
       );
       typeBuff.writeln();
+      typeBuff.writeln(
+        '/// Symbol for [$unitType]',
+      );
       typeBuff.writeln('  @override');
       final symb = unitProps['symbol'];
       final isSingleQuote = symb == "'";
@@ -145,7 +154,7 @@ void generateModels() {
 
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        '  Map<String, dynamic> toJson() => {majorName :{_unit: minorName,_value: value,},};',
+        '  Map<String, dynamic> toJson() => {majorName :{_unit: _minorName,_value: value,},};',
       );
       typeBuff.writeln('}');
       typeBuff.writeln();
@@ -168,7 +177,7 @@ void generateModels() {
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(
-        '$unitType.minorName: $enumSymbol.${unitType.snakeCase},',
+        '$unitType._minorName: $enumSymbol.${unitType.snakeCase},',
       );
     }
     typeBuff.writeln('});');

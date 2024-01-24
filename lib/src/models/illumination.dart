@@ -59,7 +59,7 @@ final class Flame extends Illumination {
   /// Construct [Flame] from other [Illumination]
   factory Flame.from(Illumination unit) => Flame(unit.toFlame.value);
 
-  static const minorName = 'flame';
+  static const _minorName = 'flame';
 
   static const _ratio = 0.02322576;
 
@@ -67,19 +67,22 @@ final class Flame extends Illumination {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Flame get _clone => Flame(value);
 
+  /// Creating [Flame] with new value
   @override
   Flame withValue([num? val]) => Flame(val ?? value);
 
+  /// Symbol for [Flame]
   @override
   String get symbol => 'flame';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -97,7 +100,7 @@ final class LumenPerFootSquare extends Illumination {
   factory LumenPerFootSquare.from(Illumination unit) =>
       LumenPerFootSquare(unit.toLumenPerFootSquare.value);
 
-  static const minorName = 'lumenPerFootSquare';
+  static const _minorName = 'lumenPerFootSquare';
 
   static const _ratio = 0.09290304;
 
@@ -105,19 +108,22 @@ final class LumenPerFootSquare extends Illumination {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   LumenPerFootSquare get _clone => LumenPerFootSquare(value);
 
+  /// Creating [LumenPerFootSquare] with new value
   @override
   LumenPerFootSquare withValue([num? val]) => LumenPerFootSquare(val ?? value);
 
+  /// Symbol for [LumenPerFootSquare]
   @override
   String get symbol => 'lumen/ft²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -135,7 +141,7 @@ final class LumenPerMeterSquare extends Illumination {
   factory LumenPerMeterSquare.from(Illumination unit) =>
       LumenPerMeterSquare(unit.toLumenPerMeterSquare.value);
 
-  static const minorName = 'lumenPerMeterSquare';
+  static const _minorName = 'lumenPerMeterSquare';
 
   static const _ratio = 1;
 
@@ -143,20 +149,23 @@ final class LumenPerMeterSquare extends Illumination {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   LumenPerMeterSquare get _clone => LumenPerMeterSquare(value);
 
+  /// Creating [LumenPerMeterSquare] with new value
   @override
   LumenPerMeterSquare withValue([num? val]) =>
       LumenPerMeterSquare(val ?? value);
 
+  /// Symbol for [LumenPerMeterSquare]
   @override
   String get symbol => 'lumen/m²';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -173,7 +182,7 @@ final class Phot extends Illumination {
   /// Construct [Phot] from other [Illumination]
   factory Phot.from(Illumination unit) => Phot(unit.toPhot.value);
 
-  static const minorName = 'phot';
+  static const _minorName = 'phot';
 
   static const _ratio = 0.0001;
 
@@ -181,19 +190,22 @@ final class Phot extends Illumination {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Phot get _clone => Phot(value);
 
+  /// Creating [Phot] with new value
   @override
   Phot withValue([num? val]) => Phot(val ?? value);
 
+  /// Symbol for [Phot]
   @override
   String get symbol => 'ph';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -212,8 +224,8 @@ enum IlluminationUnit {
 }
 
 const illuminationUnitValues = _EnumValues({
-  Flame.minorName: IlluminationUnit.flame,
-  LumenPerFootSquare.minorName: IlluminationUnit.lumenPerFootSquare,
-  LumenPerMeterSquare.minorName: IlluminationUnit.lumenPerMeterSquare,
-  Phot.minorName: IlluminationUnit.phot,
+  Flame._minorName: IlluminationUnit.flame,
+  LumenPerFootSquare._minorName: IlluminationUnit.lumenPerFootSquare,
+  LumenPerMeterSquare._minorName: IlluminationUnit.lumenPerMeterSquare,
+  Phot._minorName: IlluminationUnit.phot,
 });

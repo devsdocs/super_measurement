@@ -84,7 +84,7 @@ final class FootCubicPerHour extends Flow {
   factory FootCubicPerHour.from(Flow unit) =>
       FootCubicPerHour(unit.toFootCubicPerHour.value);
 
-  static const minorName = 'footCubicPerHour';
+  static const _minorName = 'footCubicPerHour';
 
   static const _ratio = 0.03531466672;
 
@@ -92,19 +92,22 @@ final class FootCubicPerHour extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   FootCubicPerHour get _clone => FootCubicPerHour(value);
 
+  /// Creating [FootCubicPerHour] with new value
   @override
   FootCubicPerHour withValue([num? val]) => FootCubicPerHour(val ?? value);
 
+  /// Symbol for [FootCubicPerHour]
   @override
   String get symbol => 'ft³/h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -122,7 +125,7 @@ final class FootCubicPerMinute extends Flow {
   factory FootCubicPerMinute.from(Flow unit) =>
       FootCubicPerMinute(unit.toFootCubicPerMinute.value);
 
-  static const minorName = 'footCubicPerMinute';
+  static const _minorName = 'footCubicPerMinute';
 
   static const _ratio = 0.0005885777787;
 
@@ -130,19 +133,22 @@ final class FootCubicPerMinute extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   FootCubicPerMinute get _clone => FootCubicPerMinute(value);
 
+  /// Creating [FootCubicPerMinute] with new value
   @override
   FootCubicPerMinute withValue([num? val]) => FootCubicPerMinute(val ?? value);
 
+  /// Symbol for [FootCubicPerMinute]
   @override
   String get symbol => 'ft³/min';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -160,7 +166,7 @@ final class InchCubicPerHour extends Flow {
   factory InchCubicPerHour.from(Flow unit) =>
       InchCubicPerHour(unit.toInchCubicPerHour.value);
 
-  static const minorName = 'inchCubicPerHour';
+  static const _minorName = 'inchCubicPerHour';
 
   static const _ratio = 61.02374409;
 
@@ -168,19 +174,22 @@ final class InchCubicPerHour extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   InchCubicPerHour get _clone => InchCubicPerHour(value);
 
+  /// Creating [InchCubicPerHour] with new value
   @override
   InchCubicPerHour withValue([num? val]) => InchCubicPerHour(val ?? value);
 
+  /// Symbol for [InchCubicPerHour]
   @override
   String get symbol => 'in³/h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -198,7 +207,7 @@ final class InchCubicPerMinute extends Flow {
   factory InchCubicPerMinute.from(Flow unit) =>
       InchCubicPerMinute(unit.toInchCubicPerMinute.value);
 
-  static const minorName = 'inchCubicPerMinute';
+  static const _minorName = 'inchCubicPerMinute';
 
   static const _ratio = 1.017062402;
 
@@ -206,19 +215,22 @@ final class InchCubicPerMinute extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   InchCubicPerMinute get _clone => InchCubicPerMinute(value);
 
+  /// Creating [InchCubicPerMinute] with new value
   @override
   InchCubicPerMinute withValue([num? val]) => InchCubicPerMinute(val ?? value);
 
+  /// Symbol for [InchCubicPerMinute]
   @override
   String get symbol => 'in³/min';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -235,7 +247,7 @@ final class LiterPerDay extends Flow {
   /// Construct [LiterPerDay] from other [Flow]
   factory LiterPerDay.from(Flow unit) => LiterPerDay(unit.toLiterPerDay.value);
 
-  static const minorName = 'literPerDay';
+  static const _minorName = 'literPerDay';
 
   static const _ratio = 24;
 
@@ -243,19 +255,22 @@ final class LiterPerDay extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   LiterPerDay get _clone => LiterPerDay(value);
 
+  /// Creating [LiterPerDay] with new value
   @override
   LiterPerDay withValue([num? val]) => LiterPerDay(val ?? value);
 
+  /// Symbol for [LiterPerDay]
   @override
   String get symbol => 'l/d';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -273,7 +288,7 @@ final class LiterPerHour extends Flow {
   factory LiterPerHour.from(Flow unit) =>
       LiterPerHour(unit.toLiterPerHour.value);
 
-  static const minorName = 'literPerHour';
+  static const _minorName = 'literPerHour';
 
   static const _ratio = 1;
 
@@ -281,19 +296,22 @@ final class LiterPerHour extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   LiterPerHour get _clone => LiterPerHour(value);
 
+  /// Creating [LiterPerHour] with new value
   @override
   LiterPerHour withValue([num? val]) => LiterPerHour(val ?? value);
 
+  /// Symbol for [LiterPerHour]
   @override
   String get symbol => 'l/h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -311,7 +329,7 @@ final class LiterPerMinute extends Flow {
   factory LiterPerMinute.from(Flow unit) =>
       LiterPerMinute(unit.toLiterPerMinute.value);
 
-  static const minorName = 'literPerMinute';
+  static const _minorName = 'literPerMinute';
 
   static const _ratio = 0.01666666667;
 
@@ -319,19 +337,22 @@ final class LiterPerMinute extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   LiterPerMinute get _clone => LiterPerMinute(value);
 
+  /// Creating [LiterPerMinute] with new value
   @override
   LiterPerMinute withValue([num? val]) => LiterPerMinute(val ?? value);
 
+  /// Symbol for [LiterPerMinute]
   @override
   String get symbol => 'l/min';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -349,7 +370,7 @@ final class MeterCubicPerDay extends Flow {
   factory MeterCubicPerDay.from(Flow unit) =>
       MeterCubicPerDay(unit.toMeterCubicPerDay.value);
 
-  static const minorName = 'meterCubicPerDay';
+  static const _minorName = 'meterCubicPerDay';
 
   static const _ratio = 0.024;
 
@@ -357,19 +378,22 @@ final class MeterCubicPerDay extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MeterCubicPerDay get _clone => MeterCubicPerDay(value);
 
+  /// Creating [MeterCubicPerDay] with new value
   @override
   MeterCubicPerDay withValue([num? val]) => MeterCubicPerDay(val ?? value);
 
+  /// Symbol for [MeterCubicPerDay]
   @override
   String get symbol => 'm³/d';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -387,7 +411,7 @@ final class MeterCubicPerHour extends Flow {
   factory MeterCubicPerHour.from(Flow unit) =>
       MeterCubicPerHour(unit.toMeterCubicPerHour.value);
 
-  static const minorName = 'meterCubicPerHour';
+  static const _minorName = 'meterCubicPerHour';
 
   static const _ratio = 0.001;
 
@@ -395,19 +419,22 @@ final class MeterCubicPerHour extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MeterCubicPerHour get _clone => MeterCubicPerHour(value);
 
+  /// Creating [MeterCubicPerHour] with new value
   @override
   MeterCubicPerHour withValue([num? val]) => MeterCubicPerHour(val ?? value);
 
+  /// Symbol for [MeterCubicPerHour]
   @override
   String get symbol => 'm³/h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -425,7 +452,7 @@ final class MeterCubicPerMinute extends Flow {
   factory MeterCubicPerMinute.from(Flow unit) =>
       MeterCubicPerMinute(unit.toMeterCubicPerMinute.value);
 
-  static const minorName = 'meterCubicPerMinute';
+  static const _minorName = 'meterCubicPerMinute';
 
   static const _ratio = 0.00001666666667;
 
@@ -433,20 +460,23 @@ final class MeterCubicPerMinute extends Flow {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MeterCubicPerMinute get _clone => MeterCubicPerMinute(value);
 
+  /// Creating [MeterCubicPerMinute] with new value
   @override
   MeterCubicPerMinute withValue([num? val]) =>
       MeterCubicPerMinute(val ?? value);
 
+  /// Symbol for [MeterCubicPerMinute]
   @override
   String get symbol => 'm³/min';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -471,14 +501,14 @@ enum FlowUnit {
 }
 
 const flowUnitValues = _EnumValues({
-  FootCubicPerHour.minorName: FlowUnit.footCubicPerHour,
-  FootCubicPerMinute.minorName: FlowUnit.footCubicPerMinute,
-  InchCubicPerHour.minorName: FlowUnit.inchCubicPerHour,
-  InchCubicPerMinute.minorName: FlowUnit.inchCubicPerMinute,
-  LiterPerDay.minorName: FlowUnit.literPerDay,
-  LiterPerHour.minorName: FlowUnit.literPerHour,
-  LiterPerMinute.minorName: FlowUnit.literPerMinute,
-  MeterCubicPerDay.minorName: FlowUnit.meterCubicPerDay,
-  MeterCubicPerHour.minorName: FlowUnit.meterCubicPerHour,
-  MeterCubicPerMinute.minorName: FlowUnit.meterCubicPerMinute,
+  FootCubicPerHour._minorName: FlowUnit.footCubicPerHour,
+  FootCubicPerMinute._minorName: FlowUnit.footCubicPerMinute,
+  InchCubicPerHour._minorName: FlowUnit.inchCubicPerHour,
+  InchCubicPerMinute._minorName: FlowUnit.inchCubicPerMinute,
+  LiterPerDay._minorName: FlowUnit.literPerDay,
+  LiterPerHour._minorName: FlowUnit.literPerHour,
+  LiterPerMinute._minorName: FlowUnit.literPerMinute,
+  MeterCubicPerDay._minorName: FlowUnit.meterCubicPerDay,
+  MeterCubicPerHour._minorName: FlowUnit.meterCubicPerHour,
+  MeterCubicPerMinute._minorName: FlowUnit.meterCubicPerMinute,
 });

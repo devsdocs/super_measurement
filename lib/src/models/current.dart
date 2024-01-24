@@ -65,7 +65,7 @@ final class Abampere extends Current {
   /// Construct [Abampere] from other [Current]
   factory Abampere.from(Current unit) => Abampere(unit.toAbampere.value);
 
-  static const minorName = 'abampere';
+  static const _minorName = 'abampere';
 
   static const _ratio = 0.1;
 
@@ -73,19 +73,22 @@ final class Abampere extends Current {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Abampere get _clone => Abampere(value);
 
+  /// Creating [Abampere] with new value
   @override
   Abampere withValue([num? val]) => Abampere(val ?? value);
 
+  /// Symbol for [Abampere]
   @override
   String get symbol => 'abA';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -102,7 +105,7 @@ final class Ampere extends Current {
   /// Construct [Ampere] from other [Current]
   factory Ampere.from(Current unit) => Ampere(unit.toAmpere.value);
 
-  static const minorName = 'ampere';
+  static const _minorName = 'ampere';
 
   static const _ratio = 1;
 
@@ -110,19 +113,22 @@ final class Ampere extends Current {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Ampere get _clone => Ampere(value);
 
+  /// Creating [Ampere] with new value
   @override
   Ampere withValue([num? val]) => Ampere(val ?? value);
 
+  /// Symbol for [Ampere]
   @override
   String get symbol => 'A';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -139,7 +145,7 @@ final class Biot extends Current {
   /// Construct [Biot] from other [Current]
   factory Biot.from(Current unit) => Biot(unit.toBiot.value);
 
-  static const minorName = 'biot';
+  static const _minorName = 'biot';
 
   static const _ratio = 0.1;
 
@@ -147,19 +153,22 @@ final class Biot extends Current {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Biot get _clone => Biot(value);
 
+  /// Creating [Biot] with new value
   @override
   Biot withValue([num? val]) => Biot(val ?? value);
 
+  /// Symbol for [Biot]
   @override
   String get symbol => 'Bi';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -176,7 +185,7 @@ final class KiloAmpere extends Current {
   /// Construct [KiloAmpere] from other [Current]
   factory KiloAmpere.from(Current unit) => KiloAmpere(unit.toKiloAmpere.value);
 
-  static const minorName = 'kiloAmpere';
+  static const _minorName = 'kiloAmpere';
 
   static const _ratio = 0.001;
 
@@ -184,19 +193,22 @@ final class KiloAmpere extends Current {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   KiloAmpere get _clone => KiloAmpere(value);
 
+  /// Creating [KiloAmpere] with new value
   @override
   KiloAmpere withValue([num? val]) => KiloAmpere(val ?? value);
 
+  /// Symbol for [KiloAmpere]
   @override
   String get symbol => 'kA';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -214,7 +226,7 @@ final class MilliAmpere extends Current {
   factory MilliAmpere.from(Current unit) =>
       MilliAmpere(unit.toMilliAmpere.value);
 
-  static const minorName = 'milliAmpere';
+  static const _minorName = 'milliAmpere';
 
   static const _ratio = 1000;
 
@@ -222,19 +234,22 @@ final class MilliAmpere extends Current {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MilliAmpere get _clone => MilliAmpere(value);
 
+  /// Creating [MilliAmpere] with new value
   @override
   MilliAmpere withValue([num? val]) => MilliAmpere(val ?? value);
 
+  /// Symbol for [MilliAmpere]
   @override
   String get symbol => 'mA';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -251,7 +266,7 @@ final class StatAmpere extends Current {
   /// Construct [StatAmpere] from other [Current]
   factory StatAmpere.from(Current unit) => StatAmpere(unit.toStatAmpere.value);
 
-  static const minorName = 'statAmpere';
+  static const _minorName = 'statAmpere';
 
   static const _ratio = 2997924537;
 
@@ -259,19 +274,22 @@ final class StatAmpere extends Current {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   StatAmpere get _clone => StatAmpere(value);
 
+  /// Creating [StatAmpere] with new value
   @override
   StatAmpere withValue([num? val]) => StatAmpere(val ?? value);
 
+  /// Symbol for [StatAmpere]
   @override
   String get symbol => 'statA';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -292,10 +310,10 @@ enum CurrentUnit {
 }
 
 const currentUnitValues = _EnumValues({
-  Abampere.minorName: CurrentUnit.abampere,
-  Ampere.minorName: CurrentUnit.ampere,
-  Biot.minorName: CurrentUnit.biot,
-  KiloAmpere.minorName: CurrentUnit.kiloAmpere,
-  MilliAmpere.minorName: CurrentUnit.milliAmpere,
-  StatAmpere.minorName: CurrentUnit.statAmpere,
+  Abampere._minorName: CurrentUnit.abampere,
+  Ampere._minorName: CurrentUnit.ampere,
+  Biot._minorName: CurrentUnit.biot,
+  KiloAmpere._minorName: CurrentUnit.kiloAmpere,
+  MilliAmpere._minorName: CurrentUnit.milliAmpere,
+  StatAmpere._minorName: CurrentUnit.statAmpere,
 });

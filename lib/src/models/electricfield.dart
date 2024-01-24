@@ -72,7 +72,7 @@ final class MicrovoltPerMeter extends ElectricField {
   factory MicrovoltPerMeter.from(ElectricField unit) =>
       MicrovoltPerMeter(unit.toMicrovoltPerMeter.value);
 
-  static const minorName = 'microvoltPerMeter';
+  static const _minorName = 'microvoltPerMeter';
 
   static const _ratio = 1000000;
 
@@ -80,19 +80,22 @@ final class MicrovoltPerMeter extends ElectricField {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MicrovoltPerMeter get _clone => MicrovoltPerMeter(value);
 
+  /// Creating [MicrovoltPerMeter] with new value
   @override
   MicrovoltPerMeter withValue([num? val]) => MicrovoltPerMeter(val ?? value);
 
+  /// Symbol for [MicrovoltPerMeter]
   @override
   String get symbol => 'µV/m';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -110,7 +113,7 @@ final class MilivoltPerMeter extends ElectricField {
   factory MilivoltPerMeter.from(ElectricField unit) =>
       MilivoltPerMeter(unit.toMilivoltPerMeter.value);
 
-  static const minorName = 'milivoltPerMeter';
+  static const _minorName = 'milivoltPerMeter';
 
   static const _ratio = 1000;
 
@@ -118,19 +121,22 @@ final class MilivoltPerMeter extends ElectricField {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MilivoltPerMeter get _clone => MilivoltPerMeter(value);
 
+  /// Creating [MilivoltPerMeter] with new value
   @override
   MilivoltPerMeter withValue([num? val]) => MilivoltPerMeter(val ?? value);
 
+  /// Symbol for [MilivoltPerMeter]
   @override
   String get symbol => 'mV/m';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -148,7 +154,7 @@ final class StatvoltPerCentimeter extends ElectricField {
   factory StatvoltPerCentimeter.from(ElectricField unit) =>
       StatvoltPerCentimeter(unit.toStatvoltPerCentimeter.value);
 
-  static const minorName = 'statvoltPerCentimeter';
+  static const _minorName = 'statvoltPerCentimeter';
 
   static const _ratio = 0.00003335646048;
 
@@ -156,20 +162,23 @@ final class StatvoltPerCentimeter extends ElectricField {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   StatvoltPerCentimeter get _clone => StatvoltPerCentimeter(value);
 
+  /// Creating [StatvoltPerCentimeter] with new value
   @override
   StatvoltPerCentimeter withValue([num? val]) =>
       StatvoltPerCentimeter(val ?? value);
 
+  /// Symbol for [StatvoltPerCentimeter]
   @override
   String get symbol => 'statV/cm';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -187,7 +196,7 @@ final class StatvoltPerInch extends ElectricField {
   factory StatvoltPerInch.from(ElectricField unit) =>
       StatvoltPerInch(unit.toStatvoltPerInch.value);
 
-  static const minorName = 'statvoltPerInch';
+  static const _minorName = 'statvoltPerInch';
 
   static const _ratio = 0.00008472540962;
 
@@ -195,19 +204,22 @@ final class StatvoltPerInch extends ElectricField {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   StatvoltPerInch get _clone => StatvoltPerInch(value);
 
+  /// Creating [StatvoltPerInch] with new value
   @override
   StatvoltPerInch withValue([num? val]) => StatvoltPerInch(val ?? value);
 
+  /// Symbol for [StatvoltPerInch]
   @override
   String get symbol => 'statV/in';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -225,7 +237,7 @@ final class VoltPerCentimeter extends ElectricField {
   factory VoltPerCentimeter.from(ElectricField unit) =>
       VoltPerCentimeter(unit.toVoltPerCentimeter.value);
 
-  static const minorName = 'voltPerCentimeter';
+  static const _minorName = 'voltPerCentimeter';
 
   static const _ratio = 0.01;
 
@@ -233,19 +245,22 @@ final class VoltPerCentimeter extends ElectricField {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   VoltPerCentimeter get _clone => VoltPerCentimeter(value);
 
+  /// Creating [VoltPerCentimeter] with new value
   @override
   VoltPerCentimeter withValue([num? val]) => VoltPerCentimeter(val ?? value);
 
+  /// Symbol for [VoltPerCentimeter]
   @override
   String get symbol => 'V/cm';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -263,7 +278,7 @@ final class VoltPerInch extends ElectricField {
   factory VoltPerInch.from(ElectricField unit) =>
       VoltPerInch(unit.toVoltPerInch.value);
 
-  static const minorName = 'voltPerInch';
+  static const _minorName = 'voltPerInch';
 
   static const _ratio = 0.0254;
 
@@ -271,19 +286,22 @@ final class VoltPerInch extends ElectricField {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   VoltPerInch get _clone => VoltPerInch(value);
 
+  /// Creating [VoltPerInch] with new value
   @override
   VoltPerInch withValue([num? val]) => VoltPerInch(val ?? value);
 
+  /// Symbol for [VoltPerInch]
   @override
   String get symbol => 'V/in';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -301,7 +319,7 @@ final class VoltPerMeter extends ElectricField {
   factory VoltPerMeter.from(ElectricField unit) =>
       VoltPerMeter(unit.toVoltPerMeter.value);
 
-  static const minorName = 'voltPerMeter';
+  static const _minorName = 'voltPerMeter';
 
   static const _ratio = 1;
 
@@ -309,19 +327,22 @@ final class VoltPerMeter extends ElectricField {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   VoltPerMeter get _clone => VoltPerMeter(value);
 
+  /// Creating [VoltPerMeter] with new value
   @override
   VoltPerMeter withValue([num? val]) => VoltPerMeter(val ?? value);
 
+  /// Symbol for [VoltPerMeter]
   @override
   String get symbol => 'V/m';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -343,11 +364,11 @@ enum ElectricFieldUnit {
 }
 
 const electricFieldUnitValues = _EnumValues({
-  MicrovoltPerMeter.minorName: ElectricFieldUnit.microvoltPerMeter,
-  MilivoltPerMeter.minorName: ElectricFieldUnit.milivoltPerMeter,
-  StatvoltPerCentimeter.minorName: ElectricFieldUnit.statvoltPerCentimeter,
-  StatvoltPerInch.minorName: ElectricFieldUnit.statvoltPerInch,
-  VoltPerCentimeter.minorName: ElectricFieldUnit.voltPerCentimeter,
-  VoltPerInch.minorName: ElectricFieldUnit.voltPerInch,
-  VoltPerMeter.minorName: ElectricFieldUnit.voltPerMeter,
+  MicrovoltPerMeter._minorName: ElectricFieldUnit.microvoltPerMeter,
+  MilivoltPerMeter._minorName: ElectricFieldUnit.milivoltPerMeter,
+  StatvoltPerCentimeter._minorName: ElectricFieldUnit.statvoltPerCentimeter,
+  StatvoltPerInch._minorName: ElectricFieldUnit.statvoltPerInch,
+  VoltPerCentimeter._minorName: ElectricFieldUnit.voltPerCentimeter,
+  VoltPerInch._minorName: ElectricFieldUnit.voltPerInch,
+  VoltPerMeter._minorName: ElectricFieldUnit.voltPerMeter,
 });

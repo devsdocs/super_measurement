@@ -69,7 +69,7 @@ final class Day extends Time {
   /// Construct [Day] from other [Time]
   factory Day.from(Time unit) => Day(unit.toDay.value);
 
-  static const minorName = 'day';
+  static const _minorName = 'day';
 
   static const _ratio = 365.2425;
 
@@ -77,19 +77,22 @@ final class Day extends Time {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Day get _clone => Day(value);
 
+  /// Creating [Day] with new value
   @override
   Day withValue([num? val]) => Day(val ?? value);
 
+  /// Symbol for [Day]
   @override
   String get symbol => 'd';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -106,7 +109,7 @@ final class Hour extends Time {
   /// Construct [Hour] from other [Time]
   factory Hour.from(Time unit) => Hour(unit.toHour.value);
 
-  static const minorName = 'hour';
+  static const _minorName = 'hour';
 
   static const _ratio = 8765.82;
 
@@ -114,19 +117,22 @@ final class Hour extends Time {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Hour get _clone => Hour(value);
 
+  /// Creating [Hour] with new value
   @override
   Hour withValue([num? val]) => Hour(val ?? value);
 
+  /// Symbol for [Hour]
   @override
   String get symbol => 'h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -143,7 +149,7 @@ final class Millisecond extends Time {
   /// Construct [Millisecond] from other [Time]
   factory Millisecond.from(Time unit) => Millisecond(unit.toMillisecond.value);
 
-  static const minorName = 'millisecond';
+  static const _minorName = 'millisecond';
 
   static const _ratio = 31556952000;
 
@@ -151,19 +157,22 @@ final class Millisecond extends Time {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Millisecond get _clone => Millisecond(value);
 
+  /// Creating [Millisecond] with new value
   @override
   Millisecond withValue([num? val]) => Millisecond(val ?? value);
 
+  /// Symbol for [Millisecond]
   @override
   String get symbol => 'ms';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -180,7 +189,7 @@ final class Minute extends Time {
   /// Construct [Minute] from other [Time]
   factory Minute.from(Time unit) => Minute(unit.toMinute.value);
 
-  static const minorName = 'minute';
+  static const _minorName = 'minute';
 
   static const _ratio = 525949.2;
 
@@ -188,19 +197,22 @@ final class Minute extends Time {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Minute get _clone => Minute(value);
 
+  /// Creating [Minute] with new value
   @override
   Minute withValue([num? val]) => Minute(val ?? value);
 
+  /// Symbol for [Minute]
   @override
   String get symbol => 'm';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -217,7 +229,7 @@ final class Second extends Time {
   /// Construct [Second] from other [Time]
   factory Second.from(Time unit) => Second(unit.toSecond.value);
 
-  static const minorName = 'second';
+  static const _minorName = 'second';
 
   static const _ratio = 31556952;
 
@@ -225,19 +237,22 @@ final class Second extends Time {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Second get _clone => Second(value);
 
+  /// Creating [Second] with new value
   @override
   Second withValue([num? val]) => Second(val ?? value);
 
+  /// Symbol for [Second]
   @override
   String get symbol => 's';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -254,7 +269,7 @@ final class Week extends Time {
   /// Construct [Week] from other [Time]
   factory Week.from(Time unit) => Week(unit.toWeek.value);
 
-  static const minorName = 'week';
+  static const _minorName = 'week';
 
   static const _ratio = 52.1775;
 
@@ -262,19 +277,22 @@ final class Week extends Time {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Week get _clone => Week(value);
 
+  /// Creating [Week] with new value
   @override
   Week withValue([num? val]) => Week(val ?? value);
 
+  /// Symbol for [Week]
   @override
   String get symbol => 'wk';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -291,7 +309,7 @@ final class Year extends Time {
   /// Construct [Year] from other [Time]
   factory Year.from(Time unit) => Year(unit.toYear.value);
 
-  static const minorName = 'year';
+  static const _minorName = 'year';
 
   static const _ratio = 1;
 
@@ -299,19 +317,22 @@ final class Year extends Time {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Year get _clone => Year(value);
 
+  /// Creating [Year] with new value
   @override
   Year withValue([num? val]) => Year(val ?? value);
 
+  /// Symbol for [Year]
   @override
   String get symbol => 'y';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -333,11 +354,11 @@ enum TimeUnit {
 }
 
 const timeUnitValues = _EnumValues({
-  Day.minorName: TimeUnit.day,
-  Hour.minorName: TimeUnit.hour,
-  Millisecond.minorName: TimeUnit.millisecond,
-  Minute.minorName: TimeUnit.minute,
-  Second.minorName: TimeUnit.second,
-  Week.minorName: TimeUnit.week,
-  Year.minorName: TimeUnit.year,
+  Day._minorName: TimeUnit.day,
+  Hour._minorName: TimeUnit.hour,
+  Millisecond._minorName: TimeUnit.millisecond,
+  Minute._minorName: TimeUnit.minute,
+  Second._minorName: TimeUnit.second,
+  Week._minorName: TimeUnit.week,
+  Year._minorName: TimeUnit.year,
 });

@@ -53,7 +53,7 @@ final class Bel extends Sound {
   /// Construct [Bel] from other [Sound]
   factory Bel.from(Sound unit) => Bel(unit.toBel.value);
 
-  static const minorName = 'bel';
+  static const _minorName = 'bel';
 
   static const _ratio = 0.1;
 
@@ -61,19 +61,22 @@ final class Bel extends Sound {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Bel get _clone => Bel(value);
 
+  /// Creating [Bel] with new value
   @override
   Bel withValue([num? val]) => Bel(val ?? value);
 
+  /// Symbol for [Bel]
   @override
   String get symbol => 'B';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -90,7 +93,7 @@ final class Decibel extends Sound {
   /// Construct [Decibel] from other [Sound]
   factory Decibel.from(Sound unit) => Decibel(unit.toDecibel.value);
 
-  static const minorName = 'decibel';
+  static const _minorName = 'decibel';
 
   static const _ratio = 1;
 
@@ -98,19 +101,22 @@ final class Decibel extends Sound {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Decibel get _clone => Decibel(value);
 
+  /// Creating [Decibel] with new value
   @override
   Decibel withValue([num? val]) => Decibel(val ?? value);
 
+  /// Symbol for [Decibel]
   @override
   String get symbol => 'dB';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -127,7 +133,7 @@ final class Neper extends Sound {
   /// Construct [Neper] from other [Sound]
   factory Neper.from(Sound unit) => Neper(unit.toNeper.value);
 
-  static const minorName = 'neper';
+  static const _minorName = 'neper';
 
   static const _ratio = 0.1151277918;
 
@@ -135,19 +141,22 @@ final class Neper extends Sound {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Neper get _clone => Neper(value);
 
+  /// Creating [Neper] with new value
   @override
   Neper withValue([num? val]) => Neper(val ?? value);
 
+  /// Symbol for [Neper]
   @override
   String get symbol => 'Np';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -165,7 +174,7 @@ enum SoundUnit {
 }
 
 const soundUnitValues = _EnumValues({
-  Bel.minorName: SoundUnit.bel,
-  Decibel.minorName: SoundUnit.decibel,
-  Neper.minorName: SoundUnit.neper,
+  Bel._minorName: SoundUnit.bel,
+  Decibel._minorName: SoundUnit.decibel,
+  Neper._minorName: SoundUnit.neper,
 });

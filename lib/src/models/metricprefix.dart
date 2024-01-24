@@ -127,7 +127,7 @@ final class Atto extends MetricPrefix {
   /// Construct [Atto] from other [MetricPrefix]
   factory Atto.from(MetricPrefix unit) => Atto(unit.toAtto.value);
 
-  static const minorName = 'atto';
+  static const _minorName = 'atto';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -135,19 +135,22 @@ final class Atto extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Atto get _clone => Atto(value);
 
+  /// Creating [Atto] with new value
   @override
   Atto withValue([num? val]) => Atto(val ?? value);
 
+  /// Symbol for [Atto]
   @override
   String get symbol => 'a';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -164,7 +167,7 @@ final class Centi extends MetricPrefix {
   /// Construct [Centi] from other [MetricPrefix]
   factory Centi.from(MetricPrefix unit) => Centi(unit.toCenti.value);
 
-  static const minorName = 'centi';
+  static const _minorName = 'centi';
 
   static const _ratio = 100;
 
@@ -172,19 +175,22 @@ final class Centi extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Centi get _clone => Centi(value);
 
+  /// Creating [Centi] with new value
   @override
   Centi withValue([num? val]) => Centi(val ?? value);
 
+  /// Symbol for [Centi]
   @override
   String get symbol => 'c';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -201,7 +207,7 @@ final class Deci extends MetricPrefix {
   /// Construct [Deci] from other [MetricPrefix]
   factory Deci.from(MetricPrefix unit) => Deci(unit.toDeci.value);
 
-  static const minorName = 'deci';
+  static const _minorName = 'deci';
 
   static const _ratio = 10;
 
@@ -209,19 +215,22 @@ final class Deci extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Deci get _clone => Deci(value);
 
+  /// Creating [Deci] with new value
   @override
   Deci withValue([num? val]) => Deci(val ?? value);
 
+  /// Symbol for [Deci]
   @override
   String get symbol => 'd';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -238,7 +247,7 @@ final class Deka extends MetricPrefix {
   /// Construct [Deka] from other [MetricPrefix]
   factory Deka.from(MetricPrefix unit) => Deka(unit.toDeka.value);
 
-  static const minorName = 'deka';
+  static const _minorName = 'deka';
 
   static const _ratio = 0.1;
 
@@ -246,19 +255,22 @@ final class Deka extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Deka get _clone => Deka(value);
 
+  /// Creating [Deka] with new value
   @override
   Deka withValue([num? val]) => Deka(val ?? value);
 
+  /// Symbol for [Deka]
   @override
   String get symbol => 'da';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -275,7 +287,7 @@ final class Exa extends MetricPrefix {
   /// Construct [Exa] from other [MetricPrefix]
   factory Exa.from(MetricPrefix unit) => Exa(unit.toExa.value);
 
-  static const minorName = 'exa';
+  static const _minorName = 'exa';
 
   static const _ratio = 1e-18;
 
@@ -283,19 +295,22 @@ final class Exa extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Exa get _clone => Exa(value);
 
+  /// Creating [Exa] with new value
   @override
   Exa withValue([num? val]) => Exa(val ?? value);
 
+  /// Symbol for [Exa]
   @override
   String get symbol => 'E';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -312,7 +327,7 @@ final class Femto extends MetricPrefix {
   /// Construct [Femto] from other [MetricPrefix]
   factory Femto.from(MetricPrefix unit) => Femto(unit.toFemto.value);
 
-  static const minorName = 'femto';
+  static const _minorName = 'femto';
 
   static const _ratio = 1000000000000000.0;
 
@@ -320,19 +335,22 @@ final class Femto extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Femto get _clone => Femto(value);
 
+  /// Creating [Femto] with new value
   @override
   Femto withValue([num? val]) => Femto(val ?? value);
 
+  /// Symbol for [Femto]
   @override
   String get symbol => 'f';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -349,7 +367,7 @@ final class Giga extends MetricPrefix {
   /// Construct [Giga] from other [MetricPrefix]
   factory Giga.from(MetricPrefix unit) => Giga(unit.toGiga.value);
 
-  static const minorName = 'giga';
+  static const _minorName = 'giga';
 
   static const _ratio = 1e-9;
 
@@ -357,19 +375,22 @@ final class Giga extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Giga get _clone => Giga(value);
 
+  /// Creating [Giga] with new value
   @override
   Giga withValue([num? val]) => Giga(val ?? value);
 
+  /// Symbol for [Giga]
   @override
   String get symbol => 'G';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -386,7 +407,7 @@ final class Hecto extends MetricPrefix {
   /// Construct [Hecto] from other [MetricPrefix]
   factory Hecto.from(MetricPrefix unit) => Hecto(unit.toHecto.value);
 
-  static const minorName = 'hecto';
+  static const _minorName = 'hecto';
 
   static const _ratio = 0.01;
 
@@ -394,19 +415,22 @@ final class Hecto extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Hecto get _clone => Hecto(value);
 
+  /// Creating [Hecto] with new value
   @override
   Hecto withValue([num? val]) => Hecto(val ?? value);
 
+  /// Symbol for [Hecto]
   @override
   String get symbol => 'h';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -423,7 +447,7 @@ final class Kilo extends MetricPrefix {
   /// Construct [Kilo] from other [MetricPrefix]
   factory Kilo.from(MetricPrefix unit) => Kilo(unit.toKilo.value);
 
-  static const minorName = 'kilo';
+  static const _minorName = 'kilo';
 
   static const _ratio = 0.001;
 
@@ -431,19 +455,22 @@ final class Kilo extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Kilo get _clone => Kilo(value);
 
+  /// Creating [Kilo] with new value
   @override
   Kilo withValue([num? val]) => Kilo(val ?? value);
 
+  /// Symbol for [Kilo]
   @override
   String get symbol => 'k';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -460,7 +487,7 @@ final class Mega extends MetricPrefix {
   /// Construct [Mega] from other [MetricPrefix]
   factory Mega.from(MetricPrefix unit) => Mega(unit.toMega.value);
 
-  static const minorName = 'mega';
+  static const _minorName = 'mega';
 
   static const _ratio = 0.000001;
 
@@ -468,19 +495,22 @@ final class Mega extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Mega get _clone => Mega(value);
 
+  /// Creating [Mega] with new value
   @override
   Mega withValue([num? val]) => Mega(val ?? value);
 
+  /// Symbol for [Mega]
   @override
   String get symbol => 'M';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -498,7 +528,7 @@ final class MetricUnit extends MetricPrefix {
   factory MetricUnit.from(MetricPrefix unit) =>
       MetricUnit(unit.toMetricUnit.value);
 
-  static const minorName = 'metricUnit';
+  static const _minorName = 'metricUnit';
 
   static const _ratio = 1;
 
@@ -506,19 +536,22 @@ final class MetricUnit extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   MetricUnit get _clone => MetricUnit(value);
 
+  /// Creating [MetricUnit] with new value
   @override
   MetricUnit withValue([num? val]) => MetricUnit(val ?? value);
 
+  /// Symbol for [MetricUnit]
   @override
   String get symbol => '-';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -535,7 +568,7 @@ final class Micro extends MetricPrefix {
   /// Construct [Micro] from other [MetricPrefix]
   factory Micro.from(MetricPrefix unit) => Micro(unit.toMicro.value);
 
-  static const minorName = 'micro';
+  static const _minorName = 'micro';
 
   static const _ratio = 1000000;
 
@@ -543,19 +576,22 @@ final class Micro extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Micro get _clone => Micro(value);
 
+  /// Creating [Micro] with new value
   @override
   Micro withValue([num? val]) => Micro(val ?? value);
 
+  /// Symbol for [Micro]
   @override
   String get symbol => 'µ';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -572,7 +608,7 @@ final class Milli extends MetricPrefix {
   /// Construct [Milli] from other [MetricPrefix]
   factory Milli.from(MetricPrefix unit) => Milli(unit.toMilli.value);
 
-  static const minorName = 'milli';
+  static const _minorName = 'milli';
 
   static const _ratio = 1000;
 
@@ -580,19 +616,22 @@ final class Milli extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Milli get _clone => Milli(value);
 
+  /// Creating [Milli] with new value
   @override
   Milli withValue([num? val]) => Milli(val ?? value);
 
+  /// Symbol for [Milli]
   @override
   String get symbol => 'm';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -609,7 +648,7 @@ final class Nano extends MetricPrefix {
   /// Construct [Nano] from other [MetricPrefix]
   factory Nano.from(MetricPrefix unit) => Nano(unit.toNano.value);
 
-  static const minorName = 'nano';
+  static const _minorName = 'nano';
 
   static const _ratio = 1000000000;
 
@@ -617,19 +656,22 @@ final class Nano extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Nano get _clone => Nano(value);
 
+  /// Creating [Nano] with new value
   @override
   Nano withValue([num? val]) => Nano(val ?? value);
 
+  /// Symbol for [Nano]
   @override
   String get symbol => 'n';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -646,7 +688,7 @@ final class Peta extends MetricPrefix {
   /// Construct [Peta] from other [MetricPrefix]
   factory Peta.from(MetricPrefix unit) => Peta(unit.toPeta.value);
 
-  static const minorName = 'peta';
+  static const _minorName = 'peta';
 
   static const _ratio = 1e-15;
 
@@ -654,19 +696,22 @@ final class Peta extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Peta get _clone => Peta(value);
 
+  /// Creating [Peta] with new value
   @override
   Peta withValue([num? val]) => Peta(val ?? value);
 
+  /// Symbol for [Peta]
   @override
   String get symbol => 'P';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -683,7 +728,7 @@ final class Pico extends MetricPrefix {
   /// Construct [Pico] from other [MetricPrefix]
   factory Pico.from(MetricPrefix unit) => Pico(unit.toPico.value);
 
-  static const minorName = 'pico';
+  static const _minorName = 'pico';
 
   static const _ratio = 1000000000000.0;
 
@@ -691,19 +736,22 @@ final class Pico extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Pico get _clone => Pico(value);
 
+  /// Creating [Pico] with new value
   @override
   Pico withValue([num? val]) => Pico(val ?? value);
 
+  /// Symbol for [Pico]
   @override
   String get symbol => 'p';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -720,7 +768,7 @@ final class Tera extends MetricPrefix {
   /// Construct [Tera] from other [MetricPrefix]
   factory Tera.from(MetricPrefix unit) => Tera(unit.toTera.value);
 
-  static const minorName = 'tera';
+  static const _minorName = 'tera';
 
   static const _ratio = 1e-12;
 
@@ -728,19 +776,22 @@ final class Tera extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Tera get _clone => Tera(value);
 
+  /// Creating [Tera] with new value
   @override
   Tera withValue([num? val]) => Tera(val ?? value);
 
+  /// Symbol for [Tera]
   @override
   String get symbol => 'T';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -757,7 +808,7 @@ final class Yocto extends MetricPrefix {
   /// Construct [Yocto] from other [MetricPrefix]
   factory Yocto.from(MetricPrefix unit) => Yocto(unit.toYocto.value);
 
-  static const minorName = 'yocto';
+  static const _minorName = 'yocto';
 
   static const _ratio = 1e+24;
 
@@ -765,19 +816,22 @@ final class Yocto extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Yocto get _clone => Yocto(value);
 
+  /// Creating [Yocto] with new value
   @override
   Yocto withValue([num? val]) => Yocto(val ?? value);
 
+  /// Symbol for [Yocto]
   @override
   String get symbol => 'y';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -794,7 +848,7 @@ final class Yotta extends MetricPrefix {
   /// Construct [Yotta] from other [MetricPrefix]
   factory Yotta.from(MetricPrefix unit) => Yotta(unit.toYotta.value);
 
-  static const minorName = 'yotta';
+  static const _minorName = 'yotta';
 
   static const _ratio = 1e-24;
 
@@ -802,19 +856,22 @@ final class Yotta extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Yotta get _clone => Yotta(value);
 
+  /// Creating [Yotta] with new value
   @override
   Yotta withValue([num? val]) => Yotta(val ?? value);
 
+  /// Symbol for [Yotta]
   @override
   String get symbol => 'Y';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -831,7 +888,7 @@ final class Zepto extends MetricPrefix {
   /// Construct [Zepto] from other [MetricPrefix]
   factory Zepto.from(MetricPrefix unit) => Zepto(unit.toZepto.value);
 
-  static const minorName = 'zepto';
+  static const _minorName = 'zepto';
 
   static const _ratio = 1e+21;
 
@@ -839,19 +896,22 @@ final class Zepto extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Zepto get _clone => Zepto(value);
 
+  /// Creating [Zepto] with new value
   @override
   Zepto withValue([num? val]) => Zepto(val ?? value);
 
+  /// Symbol for [Zepto]
   @override
   String get symbol => 'z';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -868,7 +928,7 @@ final class Zetta extends MetricPrefix {
   /// Construct [Zetta] from other [MetricPrefix]
   factory Zetta.from(MetricPrefix unit) => Zetta(unit.toZetta.value);
 
-  static const minorName = 'zetta';
+  static const _minorName = 'zetta';
 
   static const _ratio = 1e-21;
 
@@ -876,19 +936,22 @@ final class Zetta extends MetricPrefix {
   @override
   num get ratio => _ratio;
 
+  /// Clone this with same value
   @override
   Zetta get _clone => Zetta(value);
 
+  /// Creating [Zetta] with new value
   @override
   Zetta withValue([num? val]) => Zetta(val ?? value);
 
+  /// Symbol for [Zetta]
   @override
   String get symbol => 'Z';
 
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
-          _unit: minorName,
+          _unit: _minorName,
           _value: value,
         },
       };
@@ -924,25 +987,25 @@ enum MetricPrefixUnit {
 }
 
 const metricPrefixUnitValues = _EnumValues({
-  Atto.minorName: MetricPrefixUnit.atto,
-  Centi.minorName: MetricPrefixUnit.centi,
-  Deci.minorName: MetricPrefixUnit.deci,
-  Deka.minorName: MetricPrefixUnit.deka,
-  Exa.minorName: MetricPrefixUnit.exa,
-  Femto.minorName: MetricPrefixUnit.femto,
-  Giga.minorName: MetricPrefixUnit.giga,
-  Hecto.minorName: MetricPrefixUnit.hecto,
-  Kilo.minorName: MetricPrefixUnit.kilo,
-  Mega.minorName: MetricPrefixUnit.mega,
-  MetricUnit.minorName: MetricPrefixUnit.metricUnit,
-  Micro.minorName: MetricPrefixUnit.micro,
-  Milli.minorName: MetricPrefixUnit.milli,
-  Nano.minorName: MetricPrefixUnit.nano,
-  Peta.minorName: MetricPrefixUnit.peta,
-  Pico.minorName: MetricPrefixUnit.pico,
-  Tera.minorName: MetricPrefixUnit.tera,
-  Yocto.minorName: MetricPrefixUnit.yocto,
-  Yotta.minorName: MetricPrefixUnit.yotta,
-  Zepto.minorName: MetricPrefixUnit.zepto,
-  Zetta.minorName: MetricPrefixUnit.zetta,
+  Atto._minorName: MetricPrefixUnit.atto,
+  Centi._minorName: MetricPrefixUnit.centi,
+  Deci._minorName: MetricPrefixUnit.deci,
+  Deka._minorName: MetricPrefixUnit.deka,
+  Exa._minorName: MetricPrefixUnit.exa,
+  Femto._minorName: MetricPrefixUnit.femto,
+  Giga._minorName: MetricPrefixUnit.giga,
+  Hecto._minorName: MetricPrefixUnit.hecto,
+  Kilo._minorName: MetricPrefixUnit.kilo,
+  Mega._minorName: MetricPrefixUnit.mega,
+  MetricUnit._minorName: MetricPrefixUnit.metricUnit,
+  Micro._minorName: MetricPrefixUnit.micro,
+  Milli._minorName: MetricPrefixUnit.milli,
+  Nano._minorName: MetricPrefixUnit.nano,
+  Peta._minorName: MetricPrefixUnit.peta,
+  Pico._minorName: MetricPrefixUnit.pico,
+  Tera._minorName: MetricPrefixUnit.tera,
+  Yocto._minorName: MetricPrefixUnit.yocto,
+  Yotta._minorName: MetricPrefixUnit.yotta,
+  Zepto._minorName: MetricPrefixUnit.zepto,
+  Zetta._minorName: MetricPrefixUnit.zetta,
 });
