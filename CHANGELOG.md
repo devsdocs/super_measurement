@@ -1,3 +1,10 @@
+## 1.0.20
+- Bug fix
+- Value of unit now non-null
+- `withValue` now have required positional argument
+- Some refractoring
+- Add more docs
+
 ## 1.0.19
 - Add `Torque`
 - Minor refractor
