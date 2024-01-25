@@ -136,7 +136,7 @@ void generateModels() {
       );
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        '  $unitType withValue([num? val]) => $unitType(val ?? value);',
+        '  $unitType withValue(num val) => $unitType(val);',
       );
       typeBuff.writeln();
       typeBuff.writeln(

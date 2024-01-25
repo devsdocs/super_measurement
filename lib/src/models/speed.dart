@@ -114,7 +114,7 @@ final class FootPerHour extends Speed {
 
   /// Creating [FootPerHour] with new value
   @override
-  FootPerHour withValue([num? val]) => FootPerHour(val ?? value);
+  FootPerHour withValue(num val) => FootPerHour(val);
 
   /// Symbol for [FootPerHour]
   @override
@@ -155,7 +155,7 @@ final class FootPerMinute extends Speed {
 
   /// Creating [FootPerMinute] with new value
   @override
-  FootPerMinute withValue([num? val]) => FootPerMinute(val ?? value);
+  FootPerMinute withValue(num val) => FootPerMinute(val);
 
   /// Symbol for [FootPerMinute]
   @override
@@ -196,7 +196,7 @@ final class FootPerSecond extends Speed {
 
   /// Creating [FootPerSecond] with new value
   @override
-  FootPerSecond withValue([num? val]) => FootPerSecond(val ?? value);
+  FootPerSecond withValue(num val) => FootPerSecond(val);
 
   /// Symbol for [FootPerSecond]
   @override
@@ -237,7 +237,7 @@ final class KilometerPerHour extends Speed {
 
   /// Creating [KilometerPerHour] with new value
   @override
-  KilometerPerHour withValue([num? val]) => KilometerPerHour(val ?? value);
+  KilometerPerHour withValue(num val) => KilometerPerHour(val);
 
   /// Symbol for [KilometerPerHour]
   @override
@@ -277,7 +277,7 @@ final class Knot extends Speed {
 
   /// Creating [Knot] with new value
   @override
-  Knot withValue([num? val]) => Knot(val ?? value);
+  Knot withValue(num val) => Knot(val);
 
   /// Symbol for [Knot]
   @override
@@ -317,7 +317,7 @@ final class Light extends Speed {
 
   /// Creating [Light] with new value
   @override
-  Light withValue([num? val]) => Light(val ?? value);
+  Light withValue(num val) => Light(val);
 
   /// Symbol for [Light]
   @override
@@ -358,7 +358,7 @@ final class MachAtSeaLevel extends Speed {
 
   /// Creating [MachAtSeaLevel] with new value
   @override
-  MachAtSeaLevel withValue([num? val]) => MachAtSeaLevel(val ?? value);
+  MachAtSeaLevel withValue(num val) => MachAtSeaLevel(val);
 
   /// Symbol for [MachAtSeaLevel]
   @override
@@ -399,7 +399,7 @@ final class MachInternational extends Speed {
 
   /// Creating [MachInternational] with new value
   @override
-  MachInternational withValue([num? val]) => MachInternational(val ?? value);
+  MachInternational withValue(num val) => MachInternational(val);
 
   /// Symbol for [MachInternational]
   @override
@@ -440,7 +440,7 @@ final class MeterPerHour extends Speed {
 
   /// Creating [MeterPerHour] with new value
   @override
-  MeterPerHour withValue([num? val]) => MeterPerHour(val ?? value);
+  MeterPerHour withValue(num val) => MeterPerHour(val);
 
   /// Symbol for [MeterPerHour]
   @override
@@ -481,7 +481,7 @@ final class MeterPerMinute extends Speed {
 
   /// Creating [MeterPerMinute] with new value
   @override
-  MeterPerMinute withValue([num? val]) => MeterPerMinute(val ?? value);
+  MeterPerMinute withValue(num val) => MeterPerMinute(val);
 
   /// Symbol for [MeterPerMinute]
   @override
@@ -522,7 +522,7 @@ final class MeterPerSecond extends Speed {
 
   /// Creating [MeterPerSecond] with new value
   @override
-  MeterPerSecond withValue([num? val]) => MeterPerSecond(val ?? value);
+  MeterPerSecond withValue(num val) => MeterPerSecond(val);
 
   /// Symbol for [MeterPerSecond]
   @override
@@ -563,7 +563,7 @@ final class MilesPerHour extends Speed {
 
   /// Creating [MilesPerHour] with new value
   @override
-  MilesPerHour withValue([num? val]) => MilesPerHour(val ?? value);
+  MilesPerHour withValue(num val) => MilesPerHour(val);
 
   /// Symbol for [MilesPerHour]
   @override
@@ -604,7 +604,7 @@ final class MilesPerMinute extends Speed {
 
   /// Creating [MilesPerMinute] with new value
   @override
-  MilesPerMinute withValue([num? val]) => MilesPerMinute(val ?? value);
+  MilesPerMinute withValue(num val) => MilesPerMinute(val);
 
   /// Symbol for [MilesPerMinute]
   @override
@@ -645,7 +645,7 @@ final class YardPerMinute extends Speed {
 
   /// Creating [YardPerMinute] with new value
   @override
-  YardPerMinute withValue([num? val]) => YardPerMinute(val ?? value);
+  YardPerMinute withValue(num val) => YardPerMinute(val);
 
   /// Symbol for [YardPerMinute]
   @override

@@ -15,7 +15,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   String get majorName;
 
-  T withValue([num? val]);
+  T withValue(num val);
 
   Map<String, dynamic> toJson();
 
@@ -51,6 +51,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     return combine.convertTo(this);
   }
 
+  /// Convert this unit to another unit under same category, the value
+  /// of [to] is ignored
   T convertTo<E extends Unit<T>>(E to) {
     final result = to as T;
     if (runtimeType == to.runtimeType) {

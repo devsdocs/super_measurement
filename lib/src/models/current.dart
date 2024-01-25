@@ -79,7 +79,7 @@ final class Abampere extends Current {
 
   /// Creating [Abampere] with new value
   @override
-  Abampere withValue([num? val]) => Abampere(val ?? value);
+  Abampere withValue(num val) => Abampere(val);
 
   /// Symbol for [Abampere]
   @override
@@ -119,7 +119,7 @@ final class Ampere extends Current {
 
   /// Creating [Ampere] with new value
   @override
-  Ampere withValue([num? val]) => Ampere(val ?? value);
+  Ampere withValue(num val) => Ampere(val);
 
   /// Symbol for [Ampere]
   @override
@@ -159,7 +159,7 @@ final class Biot extends Current {
 
   /// Creating [Biot] with new value
   @override
-  Biot withValue([num? val]) => Biot(val ?? value);
+  Biot withValue(num val) => Biot(val);
 
   /// Symbol for [Biot]
   @override
@@ -199,7 +199,7 @@ final class KiloAmpere extends Current {
 
   /// Creating [KiloAmpere] with new value
   @override
-  KiloAmpere withValue([num? val]) => KiloAmpere(val ?? value);
+  KiloAmpere withValue(num val) => KiloAmpere(val);
 
   /// Symbol for [KiloAmpere]
   @override
@@ -240,7 +240,7 @@ final class MilliAmpere extends Current {
 
   /// Creating [MilliAmpere] with new value
   @override
-  MilliAmpere withValue([num? val]) => MilliAmpere(val ?? value);
+  MilliAmpere withValue(num val) => MilliAmpere(val);
 
   /// Symbol for [MilliAmpere]
   @override
@@ -280,7 +280,7 @@ final class StatAmpere extends Current {
 
   /// Creating [StatAmpere] with new value
   @override
-  StatAmpere withValue([num? val]) => StatAmpere(val ?? value);
+  StatAmpere withValue(num val) => StatAmpere(val);
 
   /// Symbol for [StatAmpere]
   @override

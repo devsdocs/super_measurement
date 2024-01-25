@@ -109,7 +109,7 @@ final class DegreePerDay extends AngularSpeed {
 
   /// Creating [DegreePerDay] with new value
   @override
-  DegreePerDay withValue([num? val]) => DegreePerDay(val ?? value);
+  DegreePerDay withValue(num val) => DegreePerDay(val);
 
   /// Symbol for [DegreePerDay]
   @override
@@ -150,7 +150,7 @@ final class DegreePerHour extends AngularSpeed {
 
   /// Creating [DegreePerHour] with new value
   @override
-  DegreePerHour withValue([num? val]) => DegreePerHour(val ?? value);
+  DegreePerHour withValue(num val) => DegreePerHour(val);
 
   /// Symbol for [DegreePerHour]
   @override
@@ -191,7 +191,7 @@ final class DegreePerMinute extends AngularSpeed {
 
   /// Creating [DegreePerMinute] with new value
   @override
-  DegreePerMinute withValue([num? val]) => DegreePerMinute(val ?? value);
+  DegreePerMinute withValue(num val) => DegreePerMinute(val);
 
   /// Symbol for [DegreePerMinute]
   @override
@@ -232,7 +232,7 @@ final class DegreePerSecond extends AngularSpeed {
 
   /// Creating [DegreePerSecond] with new value
   @override
-  DegreePerSecond withValue([num? val]) => DegreePerSecond(val ?? value);
+  DegreePerSecond withValue(num val) => DegreePerSecond(val);
 
   /// Symbol for [DegreePerSecond]
   @override
@@ -273,7 +273,7 @@ final class RadianPerDay extends AngularSpeed {
 
   /// Creating [RadianPerDay] with new value
   @override
-  RadianPerDay withValue([num? val]) => RadianPerDay(val ?? value);
+  RadianPerDay withValue(num val) => RadianPerDay(val);
 
   /// Symbol for [RadianPerDay]
   @override
@@ -314,7 +314,7 @@ final class RadianPerHour extends AngularSpeed {
 
   /// Creating [RadianPerHour] with new value
   @override
-  RadianPerHour withValue([num? val]) => RadianPerHour(val ?? value);
+  RadianPerHour withValue(num val) => RadianPerHour(val);
 
   /// Symbol for [RadianPerHour]
   @override
@@ -355,7 +355,7 @@ final class RadianPerMinute extends AngularSpeed {
 
   /// Creating [RadianPerMinute] with new value
   @override
-  RadianPerMinute withValue([num? val]) => RadianPerMinute(val ?? value);
+  RadianPerMinute withValue(num val) => RadianPerMinute(val);
 
   /// Symbol for [RadianPerMinute]
   @override
@@ -396,7 +396,7 @@ final class RadianPerSecond extends AngularSpeed {
 
   /// Creating [RadianPerSecond] with new value
   @override
-  RadianPerSecond withValue([num? val]) => RadianPerSecond(val ?? value);
+  RadianPerSecond withValue(num val) => RadianPerSecond(val);
 
   /// Symbol for [RadianPerSecond]
   @override
@@ -437,7 +437,7 @@ final class RevolutionPerDay extends AngularSpeed {
 
   /// Creating [RevolutionPerDay] with new value
   @override
-  RevolutionPerDay withValue([num? val]) => RevolutionPerDay(val ?? value);
+  RevolutionPerDay withValue(num val) => RevolutionPerDay(val);
 
   /// Symbol for [RevolutionPerDay]
   @override
@@ -478,7 +478,7 @@ final class RevolutionPerHour extends AngularSpeed {
 
   /// Creating [RevolutionPerHour] with new value
   @override
-  RevolutionPerHour withValue([num? val]) => RevolutionPerHour(val ?? value);
+  RevolutionPerHour withValue(num val) => RevolutionPerHour(val);
 
   /// Symbol for [RevolutionPerHour]
   @override
@@ -519,8 +519,7 @@ final class RevolutionPerMinute extends AngularSpeed {
 
   /// Creating [RevolutionPerMinute] with new value
   @override
-  RevolutionPerMinute withValue([num? val]) =>
-      RevolutionPerMinute(val ?? value);
+  RevolutionPerMinute withValue(num val) => RevolutionPerMinute(val);
 
   /// Symbol for [RevolutionPerMinute]
   @override
@@ -561,8 +560,7 @@ final class RevolutionPerSecond extends AngularSpeed {
 
   /// Creating [RevolutionPerSecond] with new value
   @override
-  RevolutionPerSecond withValue([num? val]) =>
-      RevolutionPerSecond(val ?? value);
+  RevolutionPerSecond withValue(num val) => RevolutionPerSecond(val);
 
   /// Symbol for [RevolutionPerSecond]
   @override

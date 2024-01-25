@@ -97,7 +97,7 @@ final class Centimeters extends Length {
 
   /// Creating [Centimeters] with new value
   @override
-  Centimeters withValue([num? val]) => Centimeters(val ?? value);
+  Centimeters withValue(num val) => Centimeters(val);
 
   /// Symbol for [Centimeters]
   @override
@@ -137,7 +137,7 @@ final class Feet extends Length {
 
   /// Creating [Feet] with new value
   @override
-  Feet withValue([num? val]) => Feet(val ?? value);
+  Feet withValue(num val) => Feet(val);
 
   /// Symbol for [Feet]
   @override
@@ -177,7 +177,7 @@ final class Furlongs extends Length {
 
   /// Creating [Furlongs] with new value
   @override
-  Furlongs withValue([num? val]) => Furlongs(val ?? value);
+  Furlongs withValue(num val) => Furlongs(val);
 
   /// Symbol for [Furlongs]
   @override
@@ -217,7 +217,7 @@ final class Inches extends Length {
 
   /// Creating [Inches] with new value
   @override
-  Inches withValue([num? val]) => Inches(val ?? value);
+  Inches withValue(num val) => Inches(val);
 
   /// Symbol for [Inches]
   @override
@@ -257,7 +257,7 @@ final class Kilometers extends Length {
 
   /// Creating [Kilometers] with new value
   @override
-  Kilometers withValue([num? val]) => Kilometers(val ?? value);
+  Kilometers withValue(num val) => Kilometers(val);
 
   /// Symbol for [Kilometers]
   @override
@@ -297,7 +297,7 @@ final class Meters extends Length {
 
   /// Creating [Meters] with new value
   @override
-  Meters withValue([num? val]) => Meters(val ?? value);
+  Meters withValue(num val) => Meters(val);
 
   /// Symbol for [Meters]
   @override
@@ -337,7 +337,7 @@ final class Miles extends Length {
 
   /// Creating [Miles] with new value
   @override
-  Miles withValue([num? val]) => Miles(val ?? value);
+  Miles withValue(num val) => Miles(val);
 
   /// Symbol for [Miles]
   @override
@@ -378,7 +378,7 @@ final class Millimeters extends Length {
 
   /// Creating [Millimeters] with new value
   @override
-  Millimeters withValue([num? val]) => Millimeters(val ?? value);
+  Millimeters withValue(num val) => Millimeters(val);
 
   /// Symbol for [Millimeters]
   @override
@@ -419,7 +419,7 @@ final class NauticalMiles extends Length {
 
   /// Creating [NauticalMiles] with new value
   @override
-  NauticalMiles withValue([num? val]) => NauticalMiles(val ?? value);
+  NauticalMiles withValue(num val) => NauticalMiles(val);
 
   /// Symbol for [NauticalMiles]
   @override
@@ -459,7 +459,7 @@ final class Yards extends Length {
 
   /// Creating [Yards] with new value
   @override
-  Yards withValue([num? val]) => Yards(val ?? value);
+  Yards withValue(num val) => Yards(val);
 
   /// Symbol for [Yards]
   @override

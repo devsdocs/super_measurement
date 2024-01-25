@@ -73,7 +73,7 @@ final class Flame extends Illumination {
 
   /// Creating [Flame] with new value
   @override
-  Flame withValue([num? val]) => Flame(val ?? value);
+  Flame withValue(num val) => Flame(val);
 
   /// Symbol for [Flame]
   @override
@@ -114,7 +114,7 @@ final class LumenPerFootSquare extends Illumination {
 
   /// Creating [LumenPerFootSquare] with new value
   @override
-  LumenPerFootSquare withValue([num? val]) => LumenPerFootSquare(val ?? value);
+  LumenPerFootSquare withValue(num val) => LumenPerFootSquare(val);
 
   /// Symbol for [LumenPerFootSquare]
   @override
@@ -155,8 +155,7 @@ final class LumenPerMeterSquare extends Illumination {
 
   /// Creating [LumenPerMeterSquare] with new value
   @override
-  LumenPerMeterSquare withValue([num? val]) =>
-      LumenPerMeterSquare(val ?? value);
+  LumenPerMeterSquare withValue(num val) => LumenPerMeterSquare(val);
 
   /// Symbol for [LumenPerMeterSquare]
   @override
@@ -196,7 +195,7 @@ final class Phot extends Illumination {
 
   /// Creating [Phot] with new value
   @override
-  Phot withValue([num? val]) => Phot(val ?? value);
+  Phot withValue(num val) => Phot(val);
 
   /// Symbol for [Phot]
   @override

@@ -103,8 +103,7 @@ final class CalorieInternational extends Energy {
 
   /// Creating [CalorieInternational] with new value
   @override
-  CalorieInternational withValue([num? val]) =>
-      CalorieInternational(val ?? value);
+  CalorieInternational withValue(num val) => CalorieInternational(val);
 
   /// Symbol for [CalorieInternational]
   @override
@@ -145,7 +144,7 @@ final class CalorieNutritional extends Energy {
 
   /// Creating [CalorieNutritional] with new value
   @override
-  CalorieNutritional withValue([num? val]) => CalorieNutritional(val ?? value);
+  CalorieNutritional withValue(num val) => CalorieNutritional(val);
 
   /// Symbol for [CalorieNutritional]
   @override
@@ -186,8 +185,7 @@ final class CalorieThermochemical extends Energy {
 
   /// Creating [CalorieThermochemical] with new value
   @override
-  CalorieThermochemical withValue([num? val]) =>
-      CalorieThermochemical(val ?? value);
+  CalorieThermochemical withValue(num val) => CalorieThermochemical(val);
 
   /// Symbol for [CalorieThermochemical]
   @override
@@ -228,7 +226,7 @@ final class ElectronVolt extends Energy {
 
   /// Creating [ElectronVolt] with new value
   @override
-  ElectronVolt withValue([num? val]) => ElectronVolt(val ?? value);
+  ElectronVolt withValue(num val) => ElectronVolt(val);
 
   /// Symbol for [ElectronVolt]
   @override
@@ -268,7 +266,7 @@ final class GigaJoule extends Energy {
 
   /// Creating [GigaJoule] with new value
   @override
-  GigaJoule withValue([num? val]) => GigaJoule(val ?? value);
+  GigaJoule withValue(num val) => GigaJoule(val);
 
   /// Symbol for [GigaJoule]
   @override
@@ -308,7 +306,7 @@ final class Joule extends Energy {
 
   /// Creating [Joule] with new value
   @override
-  Joule withValue([num? val]) => Joule(val ?? value);
+  Joule withValue(num val) => Joule(val);
 
   /// Symbol for [Joule]
   @override
@@ -348,7 +346,7 @@ final class KiloJoule extends Energy {
 
   /// Creating [KiloJoule] with new value
   @override
-  KiloJoule withValue([num? val]) => KiloJoule(val ?? value);
+  KiloJoule withValue(num val) => KiloJoule(val);
 
   /// Symbol for [KiloJoule]
   @override
@@ -389,7 +387,7 @@ final class KilowattHour extends Energy {
 
   /// Creating [KilowattHour] with new value
   @override
-  KilowattHour withValue([num? val]) => KilowattHour(val ?? value);
+  KilowattHour withValue(num val) => KilowattHour(val);
 
   /// Symbol for [KilowattHour]
   @override
@@ -429,7 +427,7 @@ final class MegaJoule extends Energy {
 
   /// Creating [MegaJoule] with new value
   @override
-  MegaJoule withValue([num? val]) => MegaJoule(val ?? value);
+  MegaJoule withValue(num val) => MegaJoule(val);
 
   /// Symbol for [MegaJoule]
   @override
@@ -470,7 +468,7 @@ final class MegawattHour extends Energy {
 
   /// Creating [MegawattHour] with new value
   @override
-  MegawattHour withValue([num? val]) => MegawattHour(val ?? value);
+  MegawattHour withValue(num val) => MegawattHour(val);
 
   /// Symbol for [MegawattHour]
   @override
@@ -510,7 +508,7 @@ final class WattHour extends Energy {
 
   /// Creating [WattHour] with new value
   @override
-  WattHour withValue([num? val]) => WattHour(val ?? value);
+  WattHour withValue(num val) => WattHour(val);
 
   /// Symbol for [WattHour]
   @override

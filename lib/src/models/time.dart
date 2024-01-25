@@ -83,7 +83,7 @@ final class Day extends Time {
 
   /// Creating [Day] with new value
   @override
-  Day withValue([num? val]) => Day(val ?? value);
+  Day withValue(num val) => Day(val);
 
   /// Symbol for [Day]
   @override
@@ -123,7 +123,7 @@ final class Hour extends Time {
 
   /// Creating [Hour] with new value
   @override
-  Hour withValue([num? val]) => Hour(val ?? value);
+  Hour withValue(num val) => Hour(val);
 
   /// Symbol for [Hour]
   @override
@@ -163,7 +163,7 @@ final class Millisecond extends Time {
 
   /// Creating [Millisecond] with new value
   @override
-  Millisecond withValue([num? val]) => Millisecond(val ?? value);
+  Millisecond withValue(num val) => Millisecond(val);
 
   /// Symbol for [Millisecond]
   @override
@@ -203,7 +203,7 @@ final class Minute extends Time {
 
   /// Creating [Minute] with new value
   @override
-  Minute withValue([num? val]) => Minute(val ?? value);
+  Minute withValue(num val) => Minute(val);
 
   /// Symbol for [Minute]
   @override
@@ -243,7 +243,7 @@ final class Second extends Time {
 
   /// Creating [Second] with new value
   @override
-  Second withValue([num? val]) => Second(val ?? value);
+  Second withValue(num val) => Second(val);
 
   /// Symbol for [Second]
   @override
@@ -283,7 +283,7 @@ final class Week extends Time {
 
   /// Creating [Week] with new value
   @override
-  Week withValue([num? val]) => Week(val ?? value);
+  Week withValue(num val) => Week(val);
 
   /// Symbol for [Week]
   @override
@@ -323,7 +323,7 @@ final class Year extends Time {
 
   /// Creating [Year] with new value
   @override
-  Year withValue([num? val]) => Year(val ?? value);
+  Year withValue(num val) => Year(val);
 
   /// Symbol for [Year]
   @override

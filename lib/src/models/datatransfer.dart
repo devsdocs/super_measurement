@@ -81,7 +81,7 @@ final class GigabitPerSecond extends DataTransfer {
 
   /// Creating [GigabitPerSecond] with new value
   @override
-  GigabitPerSecond withValue([num? val]) => GigabitPerSecond(val ?? value);
+  GigabitPerSecond withValue(num val) => GigabitPerSecond(val);
 
   /// Symbol for [GigabitPerSecond]
   @override
@@ -122,7 +122,7 @@ final class GigabytePerSecond extends DataTransfer {
 
   /// Creating [GigabytePerSecond] with new value
   @override
-  GigabytePerSecond withValue([num? val]) => GigabytePerSecond(val ?? value);
+  GigabytePerSecond withValue(num val) => GigabytePerSecond(val);
 
   /// Symbol for [GigabytePerSecond]
   @override
@@ -163,7 +163,7 @@ final class KilobitPerSecond extends DataTransfer {
 
   /// Creating [KilobitPerSecond] with new value
   @override
-  KilobitPerSecond withValue([num? val]) => KilobitPerSecond(val ?? value);
+  KilobitPerSecond withValue(num val) => KilobitPerSecond(val);
 
   /// Symbol for [KilobitPerSecond]
   @override
@@ -204,7 +204,7 @@ final class KilobytePerSecond extends DataTransfer {
 
   /// Creating [KilobytePerSecond] with new value
   @override
-  KilobytePerSecond withValue([num? val]) => KilobytePerSecond(val ?? value);
+  KilobytePerSecond withValue(num val) => KilobytePerSecond(val);
 
   /// Symbol for [KilobytePerSecond]
   @override
@@ -245,7 +245,7 @@ final class MegabitPerSecond extends DataTransfer {
 
   /// Creating [MegabitPerSecond] with new value
   @override
-  MegabitPerSecond withValue([num? val]) => MegabitPerSecond(val ?? value);
+  MegabitPerSecond withValue(num val) => MegabitPerSecond(val);
 
   /// Symbol for [MegabitPerSecond]
   @override
@@ -286,7 +286,7 @@ final class MegabytePerSecond extends DataTransfer {
 
   /// Creating [MegabytePerSecond] with new value
   @override
-  MegabytePerSecond withValue([num? val]) => MegabytePerSecond(val ?? value);
+  MegabytePerSecond withValue(num val) => MegabytePerSecond(val);
 
   /// Symbol for [MegabytePerSecond]
   @override

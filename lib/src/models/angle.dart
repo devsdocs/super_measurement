@@ -104,7 +104,7 @@ final class Degree extends Angle {
 
   /// Creating [Degree] with new value
   @override
-  Degree withValue([num? val]) => Degree(val ?? value);
+  Degree withValue(num val) => Degree(val);
 
   /// Symbol for [Degree]
   @override
@@ -144,7 +144,7 @@ final class Grad extends Angle {
 
   /// Creating [Grad] with new value
   @override
-  Grad withValue([num? val]) => Grad(val ?? value);
+  Grad withValue(num val) => Grad(val);
 
   /// Symbol for [Grad]
   @override
@@ -184,7 +184,7 @@ final class Mil extends Angle {
 
   /// Creating [Mil] with new value
   @override
-  Mil withValue([num? val]) => Mil(val ?? value);
+  Mil withValue(num val) => Mil(val);
 
   /// Symbol for [Mil]
   @override
@@ -224,7 +224,7 @@ final class MinuteAngle extends Angle {
 
   /// Creating [MinuteAngle] with new value
   @override
-  MinuteAngle withValue([num? val]) => MinuteAngle(val ?? value);
+  MinuteAngle withValue(num val) => MinuteAngle(val);
 
   /// Symbol for [MinuteAngle]
   @override
@@ -264,7 +264,7 @@ final class Octant extends Angle {
 
   /// Creating [Octant] with new value
   @override
-  Octant withValue([num? val]) => Octant(val ?? value);
+  Octant withValue(num val) => Octant(val);
 
   /// Symbol for [Octant]
   @override
@@ -305,8 +305,7 @@ final class PercentOfFullCircle extends Angle {
 
   /// Creating [PercentOfFullCircle] with new value
   @override
-  PercentOfFullCircle withValue([num? val]) =>
-      PercentOfFullCircle(val ?? value);
+  PercentOfFullCircle withValue(num val) => PercentOfFullCircle(val);
 
   /// Symbol for [PercentOfFullCircle]
   @override
@@ -346,7 +345,7 @@ final class Quadrant extends Angle {
 
   /// Creating [Quadrant] with new value
   @override
-  Quadrant withValue([num? val]) => Quadrant(val ?? value);
+  Quadrant withValue(num val) => Quadrant(val);
 
   /// Symbol for [Quadrant]
   @override
@@ -386,7 +385,7 @@ final class Radian extends Angle {
 
   /// Creating [Radian] with new value
   @override
-  Radian withValue([num? val]) => Radian(val ?? value);
+  Radian withValue(num val) => Radian(val);
 
   /// Symbol for [Radian]
   @override
@@ -426,7 +425,7 @@ final class Revolution extends Angle {
 
   /// Creating [Revolution] with new value
   @override
-  Revolution withValue([num? val]) => Revolution(val ?? value);
+  Revolution withValue(num val) => Revolution(val);
 
   /// Symbol for [Revolution]
   @override
@@ -466,7 +465,7 @@ final class SecondAngle extends Angle {
 
   /// Creating [SecondAngle] with new value
   @override
-  SecondAngle withValue([num? val]) => SecondAngle(val ?? value);
+  SecondAngle withValue(num val) => SecondAngle(val);
 
   /// Symbol for [SecondAngle]
   @override
@@ -506,7 +505,7 @@ final class Sextant extends Angle {
 
   /// Creating [Sextant] with new value
   @override
-  Sextant withValue([num? val]) => Sextant(val ?? value);
+  Sextant withValue(num val) => Sextant(val);
 
   /// Symbol for [Sextant]
   @override
@@ -546,7 +545,7 @@ final class SignAngle extends Angle {
 
   /// Creating [SignAngle] with new value
   @override
-  SignAngle withValue([num? val]) => SignAngle(val ?? value);
+  SignAngle withValue(num val) => SignAngle(val);
 
   /// Symbol for [SignAngle]
   @override

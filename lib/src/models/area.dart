@@ -92,7 +92,7 @@ final class Acres extends Area {
 
   /// Creating [Acres] with new value
   @override
-  Acres withValue([num? val]) => Acres(val ?? value);
+  Acres withValue(num val) => Acres(val);
 
   /// Symbol for [Acres]
   @override
@@ -132,7 +132,7 @@ final class Hectares extends Area {
 
   /// Creating [Hectares] with new value
   @override
-  Hectares withValue([num? val]) => Hectares(val ?? value);
+  Hectares withValue(num val) => Hectares(val);
 
   /// Symbol for [Hectares]
   @override
@@ -173,7 +173,7 @@ final class SquareCentimeters extends Area {
 
   /// Creating [SquareCentimeters] with new value
   @override
-  SquareCentimeters withValue([num? val]) => SquareCentimeters(val ?? value);
+  SquareCentimeters withValue(num val) => SquareCentimeters(val);
 
   /// Symbol for [SquareCentimeters]
   @override
@@ -213,7 +213,7 @@ final class SquareFoot extends Area {
 
   /// Creating [SquareFoot] with new value
   @override
-  SquareFoot withValue([num? val]) => SquareFoot(val ?? value);
+  SquareFoot withValue(num val) => SquareFoot(val);
 
   /// Symbol for [SquareFoot]
   @override
@@ -254,7 +254,7 @@ final class SquareInches extends Area {
 
   /// Creating [SquareInches] with new value
   @override
-  SquareInches withValue([num? val]) => SquareInches(val ?? value);
+  SquareInches withValue(num val) => SquareInches(val);
 
   /// Symbol for [SquareInches]
   @override
@@ -295,7 +295,7 @@ final class SquareKilometers extends Area {
 
   /// Creating [SquareKilometers] with new value
   @override
-  SquareKilometers withValue([num? val]) => SquareKilometers(val ?? value);
+  SquareKilometers withValue(num val) => SquareKilometers(val);
 
   /// Symbol for [SquareKilometers]
   @override
@@ -336,7 +336,7 @@ final class SquareMeters extends Area {
 
   /// Creating [SquareMeters] with new value
   @override
-  SquareMeters withValue([num? val]) => SquareMeters(val ?? value);
+  SquareMeters withValue(num val) => SquareMeters(val);
 
   /// Symbol for [SquareMeters]
   @override
@@ -376,7 +376,7 @@ final class SquareMiles extends Area {
 
   /// Creating [SquareMiles] with new value
   @override
-  SquareMiles withValue([num? val]) => SquareMiles(val ?? value);
+  SquareMiles withValue(num val) => SquareMiles(val);
 
   /// Symbol for [SquareMiles]
   @override
@@ -416,7 +416,7 @@ final class SquareYards extends Area {
 
   /// Creating [SquareYards] with new value
   @override
-  SquareYards withValue([num? val]) => SquareYards(val ?? value);
+  SquareYards withValue(num val) => SquareYards(val);
 
   /// Symbol for [SquareYards]
   @override

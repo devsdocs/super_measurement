@@ -84,7 +84,7 @@ final class Bar extends Pressure {
 
   /// Creating [Bar] with new value
   @override
-  Bar withValue([num? val]) => Bar(val ?? value);
+  Bar withValue(num val) => Bar(val);
 
   /// Symbol for [Bar]
   @override
@@ -125,7 +125,7 @@ final class InchesOfMercury extends Pressure {
 
   /// Creating [InchesOfMercury] with new value
   @override
-  InchesOfMercury withValue([num? val]) => InchesOfMercury(val ?? value);
+  InchesOfMercury withValue(num val) => InchesOfMercury(val);
 
   /// Symbol for [InchesOfMercury]
   @override
@@ -166,8 +166,7 @@ final class MillimeterOfMercury extends Pressure {
 
   /// Creating [MillimeterOfMercury] with new value
   @override
-  MillimeterOfMercury withValue([num? val]) =>
-      MillimeterOfMercury(val ?? value);
+  MillimeterOfMercury withValue(num val) => MillimeterOfMercury(val);
 
   /// Symbol for [MillimeterOfMercury]
   @override
@@ -207,7 +206,7 @@ final class Pascal extends Pressure {
 
   /// Creating [Pascal] with new value
   @override
-  Pascal withValue([num? val]) => Pascal(val ?? value);
+  Pascal withValue(num val) => Pascal(val);
 
   /// Symbol for [Pascal]
   @override
@@ -248,8 +247,7 @@ final class PoundsPerSquareInch extends Pressure {
 
   /// Creating [PoundsPerSquareInch] with new value
   @override
-  PoundsPerSquareInch withValue([num? val]) =>
-      PoundsPerSquareInch(val ?? value);
+  PoundsPerSquareInch withValue(num val) => PoundsPerSquareInch(val);
 
   /// Symbol for [PoundsPerSquareInch]
   @override
@@ -290,7 +288,7 @@ final class StandardAtmosphere extends Pressure {
 
   /// Creating [StandardAtmosphere] with new value
   @override
-  StandardAtmosphere withValue([num? val]) => StandardAtmosphere(val ?? value);
+  StandardAtmosphere withValue(num val) => StandardAtmosphere(val);
 
   /// Symbol for [StandardAtmosphere]
   @override
@@ -330,7 +328,7 @@ final class Torr extends Pressure {
 
   /// Creating [Torr] with new value
   @override
-  Torr withValue([num? val]) => Torr(val ?? value);
+  Torr withValue(num val) => Torr(val);
 
   /// Symbol for [Torr]
   @override

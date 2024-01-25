@@ -86,7 +86,7 @@ final class MicrovoltPerMeter extends ElectricField {
 
   /// Creating [MicrovoltPerMeter] with new value
   @override
-  MicrovoltPerMeter withValue([num? val]) => MicrovoltPerMeter(val ?? value);
+  MicrovoltPerMeter withValue(num val) => MicrovoltPerMeter(val);
 
   /// Symbol for [MicrovoltPerMeter]
   @override
@@ -127,7 +127,7 @@ final class MilivoltPerMeter extends ElectricField {
 
   /// Creating [MilivoltPerMeter] with new value
   @override
-  MilivoltPerMeter withValue([num? val]) => MilivoltPerMeter(val ?? value);
+  MilivoltPerMeter withValue(num val) => MilivoltPerMeter(val);
 
   /// Symbol for [MilivoltPerMeter]
   @override
@@ -168,8 +168,7 @@ final class StatvoltPerCentimeter extends ElectricField {
 
   /// Creating [StatvoltPerCentimeter] with new value
   @override
-  StatvoltPerCentimeter withValue([num? val]) =>
-      StatvoltPerCentimeter(val ?? value);
+  StatvoltPerCentimeter withValue(num val) => StatvoltPerCentimeter(val);
 
   /// Symbol for [StatvoltPerCentimeter]
   @override
@@ -210,7 +209,7 @@ final class StatvoltPerInch extends ElectricField {
 
   /// Creating [StatvoltPerInch] with new value
   @override
-  StatvoltPerInch withValue([num? val]) => StatvoltPerInch(val ?? value);
+  StatvoltPerInch withValue(num val) => StatvoltPerInch(val);
 
   /// Symbol for [StatvoltPerInch]
   @override
@@ -251,7 +250,7 @@ final class VoltPerCentimeter extends ElectricField {
 
   /// Creating [VoltPerCentimeter] with new value
   @override
-  VoltPerCentimeter withValue([num? val]) => VoltPerCentimeter(val ?? value);
+  VoltPerCentimeter withValue(num val) => VoltPerCentimeter(val);
 
   /// Symbol for [VoltPerCentimeter]
   @override
@@ -292,7 +291,7 @@ final class VoltPerInch extends ElectricField {
 
   /// Creating [VoltPerInch] with new value
   @override
-  VoltPerInch withValue([num? val]) => VoltPerInch(val ?? value);
+  VoltPerInch withValue(num val) => VoltPerInch(val);
 
   /// Symbol for [VoltPerInch]
   @override
@@ -333,7 +332,7 @@ final class VoltPerMeter extends ElectricField {
 
   /// Creating [VoltPerMeter] with new value
   @override
-  VoltPerMeter withValue([num? val]) => VoltPerMeter(val ?? value);
+  VoltPerMeter withValue(num val) => VoltPerMeter(val);
 
   /// Symbol for [VoltPerMeter]
   @override

@@ -102,7 +102,7 @@ final class BarrelsImperial extends Volume {
 
   /// Creating [BarrelsImperial] with new value
   @override
-  BarrelsImperial withValue([num? val]) => BarrelsImperial(val ?? value);
+  BarrelsImperial withValue(num val) => BarrelsImperial(val);
 
   /// Symbol for [BarrelsImperial]
   @override
@@ -142,7 +142,7 @@ final class BarrelsUS extends Volume {
 
   /// Creating [BarrelsUS] with new value
   @override
-  BarrelsUS withValue([num? val]) => BarrelsUS(val ?? value);
+  BarrelsUS withValue(num val) => BarrelsUS(val);
 
   /// Symbol for [BarrelsUS]
   @override
@@ -183,7 +183,7 @@ final class CubicCentimeters extends Volume {
 
   /// Creating [CubicCentimeters] with new value
   @override
-  CubicCentimeters withValue([num? val]) => CubicCentimeters(val ?? value);
+  CubicCentimeters withValue(num val) => CubicCentimeters(val);
 
   /// Symbol for [CubicCentimeters]
   @override
@@ -223,7 +223,7 @@ final class CubicFoot extends Volume {
 
   /// Creating [CubicFoot] with new value
   @override
-  CubicFoot withValue([num? val]) => CubicFoot(val ?? value);
+  CubicFoot withValue(num val) => CubicFoot(val);
 
   /// Symbol for [CubicFoot]
   @override
@@ -264,7 +264,7 @@ final class CubicInches extends Volume {
 
   /// Creating [CubicInches] with new value
   @override
-  CubicInches withValue([num? val]) => CubicInches(val ?? value);
+  CubicInches withValue(num val) => CubicInches(val);
 
   /// Symbol for [CubicInches]
   @override
@@ -305,7 +305,7 @@ final class CubicMeters extends Volume {
 
   /// Creating [CubicMeters] with new value
   @override
-  CubicMeters withValue([num? val]) => CubicMeters(val ?? value);
+  CubicMeters withValue(num val) => CubicMeters(val);
 
   /// Symbol for [CubicMeters]
   @override
@@ -345,7 +345,7 @@ final class CubicYards extends Volume {
 
   /// Creating [CubicYards] with new value
   @override
-  CubicYards withValue([num? val]) => CubicYards(val ?? value);
+  CubicYards withValue(num val) => CubicYards(val);
 
   /// Symbol for [CubicYards]
   @override
@@ -386,7 +386,7 @@ final class GallonsImperial extends Volume {
 
   /// Creating [GallonsImperial] with new value
   @override
-  GallonsImperial withValue([num? val]) => GallonsImperial(val ?? value);
+  GallonsImperial withValue(num val) => GallonsImperial(val);
 
   /// Symbol for [GallonsImperial]
   @override
@@ -426,7 +426,7 @@ final class GallonsUS extends Volume {
 
   /// Creating [GallonsUS] with new value
   @override
-  GallonsUS withValue([num? val]) => GallonsUS(val ?? value);
+  GallonsUS withValue(num val) => GallonsUS(val);
 
   /// Symbol for [GallonsUS]
   @override
@@ -466,7 +466,7 @@ final class Liters extends Volume {
 
   /// Creating [Liters] with new value
   @override
-  Liters withValue([num? val]) => Liters(val ?? value);
+  Liters withValue(num val) => Liters(val);
 
   /// Symbol for [Liters]
   @override
@@ -507,7 +507,7 @@ final class Milliliters extends Volume {
 
   /// Creating [Milliliters] with new value
   @override
-  Milliliters withValue([num? val]) => Milliliters(val ?? value);
+  Milliliters withValue(num val) => Milliliters(val);
 
   /// Symbol for [Milliliters]
   @override

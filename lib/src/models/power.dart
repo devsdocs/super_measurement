@@ -75,7 +75,7 @@ final class Horsepower extends Power {
 
   /// Creating [Horsepower] with new value
   @override
-  Horsepower withValue([num? val]) => Horsepower(val ?? value);
+  Horsepower withValue(num val) => Horsepower(val);
 
   /// Symbol for [Horsepower]
   @override
@@ -115,7 +115,7 @@ final class Kilowatt extends Power {
 
   /// Creating [Kilowatt] with new value
   @override
-  Kilowatt withValue([num? val]) => Kilowatt(val ?? value);
+  Kilowatt withValue(num val) => Kilowatt(val);
 
   /// Symbol for [Kilowatt]
   @override
@@ -155,7 +155,7 @@ final class Megawatt extends Power {
 
   /// Creating [Megawatt] with new value
   @override
-  Megawatt withValue([num? val]) => Megawatt(val ?? value);
+  Megawatt withValue(num val) => Megawatt(val);
 
   /// Symbol for [Megawatt]
   @override
@@ -195,7 +195,7 @@ final class Milliwatt extends Power {
 
   /// Creating [Milliwatt] with new value
   @override
-  Milliwatt withValue([num? val]) => Milliwatt(val ?? value);
+  Milliwatt withValue(num val) => Milliwatt(val);
 
   /// Symbol for [Milliwatt]
   @override
@@ -235,7 +235,7 @@ final class Watt extends Power {
 
   /// Creating [Watt] with new value
   @override
-  Watt withValue([num? val]) => Watt(val ?? value);
+  Watt withValue(num val) => Watt(val);
 
   /// Symbol for [Watt]
   @override

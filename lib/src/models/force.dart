@@ -88,7 +88,7 @@ final class GramForce extends Force {
 
   /// Creating [GramForce] with new value
   @override
-  GramForce withValue([num? val]) => GramForce(val ?? value);
+  GramForce withValue(num val) => GramForce(val);
 
   /// Symbol for [GramForce]
   @override
@@ -129,7 +129,7 @@ final class JoulePerCentimeter extends Force {
 
   /// Creating [JoulePerCentimeter] with new value
   @override
-  JoulePerCentimeter withValue([num? val]) => JoulePerCentimeter(val ?? value);
+  JoulePerCentimeter withValue(num val) => JoulePerCentimeter(val);
 
   /// Symbol for [JoulePerCentimeter]
   @override
@@ -170,7 +170,7 @@ final class KilogramForce extends Force {
 
   /// Creating [KilogramForce] with new value
   @override
-  KilogramForce withValue([num? val]) => KilogramForce(val ?? value);
+  KilogramForce withValue(num val) => KilogramForce(val);
 
   /// Symbol for [KilogramForce]
   @override
@@ -210,7 +210,7 @@ final class Kilonewton extends Force {
 
   /// Creating [Kilonewton] with new value
   @override
-  Kilonewton withValue([num? val]) => Kilonewton(val ?? value);
+  Kilonewton withValue(num val) => Kilonewton(val);
 
   /// Symbol for [Kilonewton]
   @override
@@ -250,7 +250,7 @@ final class Newton extends Force {
 
   /// Creating [Newton] with new value
   @override
-  Newton withValue([num? val]) => Newton(val ?? value);
+  Newton withValue(num val) => Newton(val);
 
   /// Symbol for [Newton]
   @override
@@ -290,7 +290,7 @@ final class OunceForce extends Force {
 
   /// Creating [OunceForce] with new value
   @override
-  OunceForce withValue([num? val]) => OunceForce(val ?? value);
+  OunceForce withValue(num val) => OunceForce(val);
 
   /// Symbol for [OunceForce]
   @override
@@ -330,7 +330,7 @@ final class PoundForce extends Force {
 
   /// Creating [PoundForce] with new value
   @override
-  PoundForce withValue([num? val]) => PoundForce(val ?? value);
+  PoundForce withValue(num val) => PoundForce(val);
 
   /// Symbol for [PoundForce]
   @override
@@ -370,7 +370,7 @@ final class Poundal extends Force {
 
   /// Creating [Poundal] with new value
   @override
-  Poundal withValue([num? val]) => Poundal(val ?? value);
+  Poundal withValue(num val) => Poundal(val);
 
   /// Symbol for [Poundal]
   @override

@@ -72,8 +72,7 @@ final class JoulePerKilogramCelcius extends Entropy {
 
   /// Creating [JoulePerKilogramCelcius] with new value
   @override
-  JoulePerKilogramCelcius withValue([num? val]) =>
-      JoulePerKilogramCelcius(val ?? value);
+  JoulePerKilogramCelcius withValue(num val) => JoulePerKilogramCelcius(val);
 
   /// Symbol for [JoulePerKilogramCelcius]
   @override
@@ -115,8 +114,8 @@ final class KilocaloriePerKilogramCelcius extends Entropy {
 
   /// Creating [KilocaloriePerKilogramCelcius] with new value
   @override
-  KilocaloriePerKilogramCelcius withValue([num? val]) =>
-      KilocaloriePerKilogramCelcius(val ?? value);
+  KilocaloriePerKilogramCelcius withValue(num val) =>
+      KilocaloriePerKilogramCelcius(val);
 
   /// Symbol for [KilocaloriePerKilogramCelcius]
   @override
@@ -157,8 +156,8 @@ final class KilojoulePerKilogramCelcius extends Entropy {
 
   /// Creating [KilojoulePerKilogramCelcius] with new value
   @override
-  KilojoulePerKilogramCelcius withValue([num? val]) =>
-      KilojoulePerKilogramCelcius(val ?? value);
+  KilojoulePerKilogramCelcius withValue(num val) =>
+      KilojoulePerKilogramCelcius(val);
 
   /// Symbol for [KilojoulePerKilogramCelcius]
   @override

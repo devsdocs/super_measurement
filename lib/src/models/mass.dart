@@ -100,7 +100,7 @@ final class Carats extends Mass {
 
   /// Creating [Carats] with new value
   @override
-  Carats withValue([num? val]) => Carats(val ?? value);
+  Carats withValue(num val) => Carats(val);
 
   /// Symbol for [Carats]
   @override
@@ -140,7 +140,7 @@ final class Grams extends Mass {
 
   /// Creating [Grams] with new value
   @override
-  Grams withValue([num? val]) => Grams(val ?? value);
+  Grams withValue(num val) => Grams(val);
 
   /// Symbol for [Grams]
   @override
@@ -180,7 +180,7 @@ final class Kilograms extends Mass {
 
   /// Creating [Kilograms] with new value
   @override
-  Kilograms withValue([num? val]) => Kilograms(val ?? value);
+  Kilograms withValue(num val) => Kilograms(val);
 
   /// Symbol for [Kilograms]
   @override
@@ -220,7 +220,7 @@ final class Milligrams extends Mass {
 
   /// Creating [Milligrams] with new value
   @override
-  Milligrams withValue([num? val]) => Milligrams(val ?? value);
+  Milligrams withValue(num val) => Milligrams(val);
 
   /// Symbol for [Milligrams]
   @override
@@ -260,7 +260,7 @@ final class Ounces extends Mass {
 
   /// Creating [Ounces] with new value
   @override
-  Ounces withValue([num? val]) => Ounces(val ?? value);
+  Ounces withValue(num val) => Ounces(val);
 
   /// Symbol for [Ounces]
   @override
@@ -300,7 +300,7 @@ final class Pounds extends Mass {
 
   /// Creating [Pounds] with new value
   @override
-  Pounds withValue([num? val]) => Pounds(val ?? value);
+  Pounds withValue(num val) => Pounds(val);
 
   /// Symbol for [Pounds]
   @override
@@ -340,7 +340,7 @@ final class Quintal extends Mass {
 
   /// Creating [Quintal] with new value
   @override
-  Quintal withValue([num? val]) => Quintal(val ?? value);
+  Quintal withValue(num val) => Quintal(val);
 
   /// Symbol for [Quintal]
   @override
@@ -380,7 +380,7 @@ final class StoneUK extends Mass {
 
   /// Creating [StoneUK] with new value
   @override
-  StoneUK withValue([num? val]) => StoneUK(val ?? value);
+  StoneUK withValue(num val) => StoneUK(val);
 
   /// Symbol for [StoneUK]
   @override
@@ -420,7 +420,7 @@ final class TonUK extends Mass {
 
   /// Creating [TonUK] with new value
   @override
-  TonUK withValue([num? val]) => TonUK(val ?? value);
+  TonUK withValue(num val) => TonUK(val);
 
   /// Symbol for [TonUK]
   @override
@@ -460,7 +460,7 @@ final class TonUS extends Mass {
 
   /// Creating [TonUS] with new value
   @override
-  TonUS withValue([num? val]) => TonUS(val ?? value);
+  TonUS withValue(num val) => TonUS(val);
 
   /// Symbol for [TonUS]
   @override
@@ -500,7 +500,7 @@ final class Tonne extends Mass {
 
   /// Creating [Tonne] with new value
   @override
-  Tonne withValue([num? val]) => Tonne(val ?? value);
+  Tonne withValue(num val) => Tonne(val);
 
   /// Symbol for [Tonne]
   @override

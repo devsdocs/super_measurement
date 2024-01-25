@@ -85,8 +85,7 @@ final class ErgPerCentimeterSquare extends SurfaceTension {
 
   /// Creating [ErgPerCentimeterSquare] with new value
   @override
-  ErgPerCentimeterSquare withValue([num? val]) =>
-      ErgPerCentimeterSquare(val ?? value);
+  ErgPerCentimeterSquare withValue(num val) => ErgPerCentimeterSquare(val);
 
   /// Symbol for [ErgPerCentimeterSquare]
   @override
@@ -127,8 +126,7 @@ final class GramForcePerCentimeter extends SurfaceTension {
 
   /// Creating [GramForcePerCentimeter] with new value
   @override
-  GramForcePerCentimeter withValue([num? val]) =>
-      GramForcePerCentimeter(val ?? value);
+  GramForcePerCentimeter withValue(num val) => GramForcePerCentimeter(val);
 
   /// Symbol for [GramForcePerCentimeter]
   @override
@@ -169,8 +167,7 @@ final class MillinewtonPerMeter extends SurfaceTension {
 
   /// Creating [MillinewtonPerMeter] with new value
   @override
-  MillinewtonPerMeter withValue([num? val]) =>
-      MillinewtonPerMeter(val ?? value);
+  MillinewtonPerMeter withValue(num val) => MillinewtonPerMeter(val);
 
   /// Symbol for [MillinewtonPerMeter]
   @override
@@ -211,7 +208,7 @@ final class NewtonPerMeter extends SurfaceTension {
 
   /// Creating [NewtonPerMeter] with new value
   @override
-  NewtonPerMeter withValue([num? val]) => NewtonPerMeter(val ?? value);
+  NewtonPerMeter withValue(num val) => NewtonPerMeter(val);
 
   /// Symbol for [NewtonPerMeter]
   @override
@@ -252,7 +249,7 @@ final class PoundForcePerInch extends SurfaceTension {
 
   /// Creating [PoundForcePerInch] with new value
   @override
-  PoundForcePerInch withValue([num? val]) => PoundForcePerInch(val ?? value);
+  PoundForcePerInch withValue(num val) => PoundForcePerInch(val);
 
   /// Symbol for [PoundForcePerInch]
   @override
@@ -293,7 +290,7 @@ final class PoundalPerInch extends SurfaceTension {
 
   /// Creating [PoundalPerInch] with new value
   @override
-  PoundalPerInch withValue([num? val]) => PoundalPerInch(val ?? value);
+  PoundalPerInch withValue(num val) => PoundalPerInch(val);
 
   /// Symbol for [PoundalPerInch]
   @override

@@ -125,7 +125,7 @@ final class Bit extends DataStorage {
 
   /// Creating [Bit] with new value
   @override
-  Bit withValue([num? val]) => Bit(val ?? value);
+  Bit withValue(num val) => Bit(val);
 
   /// Symbol for [Bit]
   @override
@@ -165,7 +165,7 @@ final class Block extends DataStorage {
 
   /// Creating [Block] with new value
   @override
-  Block withValue([num? val]) => Block(val ?? value);
+  Block withValue(num val) => Block(val);
 
   /// Symbol for [Block]
   @override
@@ -205,7 +205,7 @@ final class BluRay extends DataStorage {
 
   /// Creating [BluRay] with new value
   @override
-  BluRay withValue([num? val]) => BluRay(val ?? value);
+  BluRay withValue(num val) => BluRay(val);
 
   /// Symbol for [BluRay]
   @override
@@ -245,7 +245,7 @@ final class Byte extends DataStorage {
 
   /// Creating [Byte] with new value
   @override
-  Byte withValue([num? val]) => Byte(val ?? value);
+  Byte withValue(num val) => Byte(val);
 
   /// Symbol for [Byte]
   @override
@@ -285,7 +285,7 @@ final class Exabit extends DataStorage {
 
   /// Creating [Exabit] with new value
   @override
-  Exabit withValue([num? val]) => Exabit(val ?? value);
+  Exabit withValue(num val) => Exabit(val);
 
   /// Symbol for [Exabit]
   @override
@@ -325,7 +325,7 @@ final class Exabyte extends DataStorage {
 
   /// Creating [Exabyte] with new value
   @override
-  Exabyte withValue([num? val]) => Exabyte(val ?? value);
+  Exabyte withValue(num val) => Exabyte(val);
 
   /// Symbol for [Exabyte]
   @override
@@ -365,7 +365,7 @@ final class Gigabit extends DataStorage {
 
   /// Creating [Gigabit] with new value
   @override
-  Gigabit withValue([num? val]) => Gigabit(val ?? value);
+  Gigabit withValue(num val) => Gigabit(val);
 
   /// Symbol for [Gigabit]
   @override
@@ -405,7 +405,7 @@ final class Gigabyte extends DataStorage {
 
   /// Creating [Gigabyte] with new value
   @override
-  Gigabyte withValue([num? val]) => Gigabyte(val ?? value);
+  Gigabyte withValue(num val) => Gigabyte(val);
 
   /// Symbol for [Gigabyte]
   @override
@@ -445,7 +445,7 @@ final class Kilobit extends DataStorage {
 
   /// Creating [Kilobit] with new value
   @override
-  Kilobit withValue([num? val]) => Kilobit(val ?? value);
+  Kilobit withValue(num val) => Kilobit(val);
 
   /// Symbol for [Kilobit]
   @override
@@ -485,7 +485,7 @@ final class Kilobyte extends DataStorage {
 
   /// Creating [Kilobyte] with new value
   @override
-  Kilobyte withValue([num? val]) => Kilobyte(val ?? value);
+  Kilobyte withValue(num val) => Kilobyte(val);
 
   /// Symbol for [Kilobyte]
   @override
@@ -525,7 +525,7 @@ final class Megabit extends DataStorage {
 
   /// Creating [Megabit] with new value
   @override
-  Megabit withValue([num? val]) => Megabit(val ?? value);
+  Megabit withValue(num val) => Megabit(val);
 
   /// Symbol for [Megabit]
   @override
@@ -565,7 +565,7 @@ final class Megabyte extends DataStorage {
 
   /// Creating [Megabyte] with new value
   @override
-  Megabyte withValue([num? val]) => Megabyte(val ?? value);
+  Megabyte withValue(num val) => Megabyte(val);
 
   /// Symbol for [Megabyte]
   @override
@@ -605,7 +605,7 @@ final class Nibble extends DataStorage {
 
   /// Creating [Nibble] with new value
   @override
-  Nibble withValue([num? val]) => Nibble(val ?? value);
+  Nibble withValue(num val) => Nibble(val);
 
   /// Symbol for [Nibble]
   @override
@@ -645,7 +645,7 @@ final class Petabit extends DataStorage {
 
   /// Creating [Petabit] with new value
   @override
-  Petabit withValue([num? val]) => Petabit(val ?? value);
+  Petabit withValue(num val) => Petabit(val);
 
   /// Symbol for [Petabit]
   @override
@@ -685,7 +685,7 @@ final class Petabyte extends DataStorage {
 
   /// Creating [Petabyte] with new value
   @override
-  Petabyte withValue([num? val]) => Petabyte(val ?? value);
+  Petabyte withValue(num val) => Petabyte(val);
 
   /// Symbol for [Petabyte]
   @override
@@ -725,7 +725,7 @@ final class Terabit extends DataStorage {
 
   /// Creating [Terabit] with new value
   @override
-  Terabit withValue([num? val]) => Terabit(val ?? value);
+  Terabit withValue(num val) => Terabit(val);
 
   /// Symbol for [Terabit]
   @override
@@ -765,7 +765,7 @@ final class Terabyte extends DataStorage {
 
   /// Creating [Terabyte] with new value
   @override
-  Terabyte withValue([num? val]) => Terabyte(val ?? value);
+  Terabyte withValue(num val) => Terabyte(val);
 
   /// Symbol for [Terabyte]
   @override

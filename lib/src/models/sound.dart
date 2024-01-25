@@ -67,7 +67,7 @@ final class Bel extends Sound {
 
   /// Creating [Bel] with new value
   @override
-  Bel withValue([num? val]) => Bel(val ?? value);
+  Bel withValue(num val) => Bel(val);
 
   /// Symbol for [Bel]
   @override
@@ -107,7 +107,7 @@ final class Decibel extends Sound {
 
   /// Creating [Decibel] with new value
   @override
-  Decibel withValue([num? val]) => Decibel(val ?? value);
+  Decibel withValue(num val) => Decibel(val);
 
   /// Symbol for [Decibel]
   @override
@@ -147,7 +147,7 @@ final class Neper extends Sound {
 
   /// Creating [Neper] with new value
   @override
-  Neper withValue([num? val]) => Neper(val ?? value);
+  Neper withValue(num val) => Neper(val);
 
   /// Symbol for [Neper]
   @override

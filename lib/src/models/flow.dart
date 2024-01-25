@@ -98,7 +98,7 @@ final class FootCubicPerHour extends Flow {
 
   /// Creating [FootCubicPerHour] with new value
   @override
-  FootCubicPerHour withValue([num? val]) => FootCubicPerHour(val ?? value);
+  FootCubicPerHour withValue(num val) => FootCubicPerHour(val);
 
   /// Symbol for [FootCubicPerHour]
   @override
@@ -139,7 +139,7 @@ final class FootCubicPerMinute extends Flow {
 
   /// Creating [FootCubicPerMinute] with new value
   @override
-  FootCubicPerMinute withValue([num? val]) => FootCubicPerMinute(val ?? value);
+  FootCubicPerMinute withValue(num val) => FootCubicPerMinute(val);
 
   /// Symbol for [FootCubicPerMinute]
   @override
@@ -180,7 +180,7 @@ final class InchCubicPerHour extends Flow {
 
   /// Creating [InchCubicPerHour] with new value
   @override
-  InchCubicPerHour withValue([num? val]) => InchCubicPerHour(val ?? value);
+  InchCubicPerHour withValue(num val) => InchCubicPerHour(val);
 
   /// Symbol for [InchCubicPerHour]
   @override
@@ -221,7 +221,7 @@ final class InchCubicPerMinute extends Flow {
 
   /// Creating [InchCubicPerMinute] with new value
   @override
-  InchCubicPerMinute withValue([num? val]) => InchCubicPerMinute(val ?? value);
+  InchCubicPerMinute withValue(num val) => InchCubicPerMinute(val);
 
   /// Symbol for [InchCubicPerMinute]
   @override
@@ -261,7 +261,7 @@ final class LiterPerDay extends Flow {
 
   /// Creating [LiterPerDay] with new value
   @override
-  LiterPerDay withValue([num? val]) => LiterPerDay(val ?? value);
+  LiterPerDay withValue(num val) => LiterPerDay(val);
 
   /// Symbol for [LiterPerDay]
   @override
@@ -302,7 +302,7 @@ final class LiterPerHour extends Flow {
 
   /// Creating [LiterPerHour] with new value
   @override
-  LiterPerHour withValue([num? val]) => LiterPerHour(val ?? value);
+  LiterPerHour withValue(num val) => LiterPerHour(val);
 
   /// Symbol for [LiterPerHour]
   @override
@@ -343,7 +343,7 @@ final class LiterPerMinute extends Flow {
 
   /// Creating [LiterPerMinute] with new value
   @override
-  LiterPerMinute withValue([num? val]) => LiterPerMinute(val ?? value);
+  LiterPerMinute withValue(num val) => LiterPerMinute(val);
 
   /// Symbol for [LiterPerMinute]
   @override
@@ -384,7 +384,7 @@ final class MeterCubicPerDay extends Flow {
 
   /// Creating [MeterCubicPerDay] with new value
   @override
-  MeterCubicPerDay withValue([num? val]) => MeterCubicPerDay(val ?? value);
+  MeterCubicPerDay withValue(num val) => MeterCubicPerDay(val);
 
   /// Symbol for [MeterCubicPerDay]
   @override
@@ -425,7 +425,7 @@ final class MeterCubicPerHour extends Flow {
 
   /// Creating [MeterCubicPerHour] with new value
   @override
-  MeterCubicPerHour withValue([num? val]) => MeterCubicPerHour(val ?? value);
+  MeterCubicPerHour withValue(num val) => MeterCubicPerHour(val);
 
   /// Symbol for [MeterCubicPerHour]
   @override
@@ -466,8 +466,7 @@ final class MeterCubicPerMinute extends Flow {
 
   /// Creating [MeterCubicPerMinute] with new value
   @override
-  MeterCubicPerMinute withValue([num? val]) =>
-      MeterCubicPerMinute(val ?? value);
+  MeterCubicPerMinute withValue(num val) => MeterCubicPerMinute(val);
 
   /// Symbol for [MeterCubicPerMinute]
   @override

@@ -130,7 +130,7 @@ final class DyneCentimeter extends Torque {
 
   /// Creating [DyneCentimeter] with new value
   @override
-  DyneCentimeter withValue([num? val]) => DyneCentimeter(val ?? value);
+  DyneCentimeter withValue(num val) => DyneCentimeter(val);
 
   /// Symbol for [DyneCentimeter]
   @override
@@ -170,7 +170,7 @@ final class DyneMeter extends Torque {
 
   /// Creating [DyneMeter] with new value
   @override
-  DyneMeter withValue([num? val]) => DyneMeter(val ?? value);
+  DyneMeter withValue(num val) => DyneMeter(val);
 
   /// Symbol for [DyneMeter]
   @override
@@ -211,7 +211,7 @@ final class DyneMillimeter extends Torque {
 
   /// Creating [DyneMillimeter] with new value
   @override
-  DyneMillimeter withValue([num? val]) => DyneMillimeter(val ?? value);
+  DyneMillimeter withValue(num val) => DyneMillimeter(val);
 
   /// Symbol for [DyneMillimeter]
   @override
@@ -252,8 +252,7 @@ final class GramForceCentimeter extends Torque {
 
   /// Creating [GramForceCentimeter] with new value
   @override
-  GramForceCentimeter withValue([num? val]) =>
-      GramForceCentimeter(val ?? value);
+  GramForceCentimeter withValue(num val) => GramForceCentimeter(val);
 
   /// Symbol for [GramForceCentimeter]
   @override
@@ -294,7 +293,7 @@ final class GramForceMeter extends Torque {
 
   /// Creating [GramForceMeter] with new value
   @override
-  GramForceMeter withValue([num? val]) => GramForceMeter(val ?? value);
+  GramForceMeter withValue(num val) => GramForceMeter(val);
 
   /// Symbol for [GramForceMeter]
   @override
@@ -335,8 +334,7 @@ final class GramForceMillimeter extends Torque {
 
   /// Creating [GramForceMillimeter] with new value
   @override
-  GramForceMillimeter withValue([num? val]) =>
-      GramForceMillimeter(val ?? value);
+  GramForceMillimeter withValue(num val) => GramForceMillimeter(val);
 
   /// Symbol for [GramForceMillimeter]
   @override
@@ -377,8 +375,7 @@ final class KilogramForceCentimeter extends Torque {
 
   /// Creating [KilogramForceCentimeter] with new value
   @override
-  KilogramForceCentimeter withValue([num? val]) =>
-      KilogramForceCentimeter(val ?? value);
+  KilogramForceCentimeter withValue(num val) => KilogramForceCentimeter(val);
 
   /// Symbol for [KilogramForceCentimeter]
   @override
@@ -419,7 +416,7 @@ final class KilogramForceMeter extends Torque {
 
   /// Creating [KilogramForceMeter] with new value
   @override
-  KilogramForceMeter withValue([num? val]) => KilogramForceMeter(val ?? value);
+  KilogramForceMeter withValue(num val) => KilogramForceMeter(val);
 
   /// Symbol for [KilogramForceMeter]
   @override
@@ -460,8 +457,7 @@ final class KilogramForceMillimeter extends Torque {
 
   /// Creating [KilogramForceMillimeter] with new value
   @override
-  KilogramForceMillimeter withValue([num? val]) =>
-      KilogramForceMillimeter(val ?? value);
+  KilogramForceMillimeter withValue(num val) => KilogramForceMillimeter(val);
 
   /// Symbol for [KilogramForceMillimeter]
   @override
@@ -502,7 +498,7 @@ final class KilonewtonMeter extends Torque {
 
   /// Creating [KilonewtonMeter] with new value
   @override
-  KilonewtonMeter withValue([num? val]) => KilonewtonMeter(val ?? value);
+  KilonewtonMeter withValue(num val) => KilonewtonMeter(val);
 
   /// Symbol for [KilonewtonMeter]
   @override
@@ -543,7 +539,7 @@ final class NewtonCentimeter extends Torque {
 
   /// Creating [NewtonCentimeter] with new value
   @override
-  NewtonCentimeter withValue([num? val]) => NewtonCentimeter(val ?? value);
+  NewtonCentimeter withValue(num val) => NewtonCentimeter(val);
 
   /// Symbol for [NewtonCentimeter]
   @override
@@ -584,7 +580,7 @@ final class NewtonMeter extends Torque {
 
   /// Creating [NewtonMeter] with new value
   @override
-  NewtonMeter withValue([num? val]) => NewtonMeter(val ?? value);
+  NewtonMeter withValue(num val) => NewtonMeter(val);
 
   /// Symbol for [NewtonMeter]
   @override
@@ -625,7 +621,7 @@ final class NewtonMillimeter extends Torque {
 
   /// Creating [NewtonMillimeter] with new value
   @override
-  NewtonMillimeter withValue([num? val]) => NewtonMillimeter(val ?? value);
+  NewtonMillimeter withValue(num val) => NewtonMillimeter(val);
 
   /// Symbol for [NewtonMillimeter]
   @override
@@ -666,7 +662,7 @@ final class OunceForceFoot extends Torque {
 
   /// Creating [OunceForceFoot] with new value
   @override
-  OunceForceFoot withValue([num? val]) => OunceForceFoot(val ?? value);
+  OunceForceFoot withValue(num val) => OunceForceFoot(val);
 
   /// Symbol for [OunceForceFoot]
   @override
@@ -707,7 +703,7 @@ final class OunceForceInch extends Torque {
 
   /// Creating [OunceForceInch] with new value
   @override
-  OunceForceInch withValue([num? val]) => OunceForceInch(val ?? value);
+  OunceForceInch withValue(num val) => OunceForceInch(val);
 
   /// Symbol for [OunceForceInch]
   @override
@@ -748,7 +744,7 @@ final class PoundForceFoot extends Torque {
 
   /// Creating [PoundForceFoot] with new value
   @override
-  PoundForceFoot withValue([num? val]) => PoundForceFoot(val ?? value);
+  PoundForceFoot withValue(num val) => PoundForceFoot(val);
 
   /// Symbol for [PoundForceFoot]
   @override
@@ -789,7 +785,7 @@ final class PoundForceInch extends Torque {
 
   /// Creating [PoundForceInch] with new value
   @override
-  PoundForceInch withValue([num? val]) => PoundForceInch(val ?? value);
+  PoundForceInch withValue(num val) => PoundForceInch(val);
 
   /// Symbol for [PoundForceInch]
   @override

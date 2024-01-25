@@ -141,7 +141,7 @@ final class Atto extends MetricPrefix {
 
   /// Creating [Atto] with new value
   @override
-  Atto withValue([num? val]) => Atto(val ?? value);
+  Atto withValue(num val) => Atto(val);
 
   /// Symbol for [Atto]
   @override
@@ -181,7 +181,7 @@ final class Centi extends MetricPrefix {
 
   /// Creating [Centi] with new value
   @override
-  Centi withValue([num? val]) => Centi(val ?? value);
+  Centi withValue(num val) => Centi(val);
 
   /// Symbol for [Centi]
   @override
@@ -221,7 +221,7 @@ final class Deci extends MetricPrefix {
 
   /// Creating [Deci] with new value
   @override
-  Deci withValue([num? val]) => Deci(val ?? value);
+  Deci withValue(num val) => Deci(val);
 
   /// Symbol for [Deci]
   @override
@@ -261,7 +261,7 @@ final class Deka extends MetricPrefix {
 
   /// Creating [Deka] with new value
   @override
-  Deka withValue([num? val]) => Deka(val ?? value);
+  Deka withValue(num val) => Deka(val);
 
   /// Symbol for [Deka]
   @override
@@ -301,7 +301,7 @@ final class Exa extends MetricPrefix {
 
   /// Creating [Exa] with new value
   @override
-  Exa withValue([num? val]) => Exa(val ?? value);
+  Exa withValue(num val) => Exa(val);
 
   /// Symbol for [Exa]
   @override
@@ -341,7 +341,7 @@ final class Femto extends MetricPrefix {
 
   /// Creating [Femto] with new value
   @override
-  Femto withValue([num? val]) => Femto(val ?? value);
+  Femto withValue(num val) => Femto(val);
 
   /// Symbol for [Femto]
   @override
@@ -381,7 +381,7 @@ final class Giga extends MetricPrefix {
 
   /// Creating [Giga] with new value
   @override
-  Giga withValue([num? val]) => Giga(val ?? value);
+  Giga withValue(num val) => Giga(val);
 
   /// Symbol for [Giga]
   @override
@@ -421,7 +421,7 @@ final class Hecto extends MetricPrefix {
 
   /// Creating [Hecto] with new value
   @override
-  Hecto withValue([num? val]) => Hecto(val ?? value);
+  Hecto withValue(num val) => Hecto(val);
 
   /// Symbol for [Hecto]
   @override
@@ -461,7 +461,7 @@ final class Kilo extends MetricPrefix {
 
   /// Creating [Kilo] with new value
   @override
-  Kilo withValue([num? val]) => Kilo(val ?? value);
+  Kilo withValue(num val) => Kilo(val);
 
   /// Symbol for [Kilo]
   @override
@@ -501,7 +501,7 @@ final class Mega extends MetricPrefix {
 
   /// Creating [Mega] with new value
   @override
-  Mega withValue([num? val]) => Mega(val ?? value);
+  Mega withValue(num val) => Mega(val);
 
   /// Symbol for [Mega]
   @override
@@ -542,7 +542,7 @@ final class MetricUnit extends MetricPrefix {
 
   /// Creating [MetricUnit] with new value
   @override
-  MetricUnit withValue([num? val]) => MetricUnit(val ?? value);
+  MetricUnit withValue(num val) => MetricUnit(val);
 
   /// Symbol for [MetricUnit]
   @override
@@ -582,7 +582,7 @@ final class Micro extends MetricPrefix {
 
   /// Creating [Micro] with new value
   @override
-  Micro withValue([num? val]) => Micro(val ?? value);
+  Micro withValue(num val) => Micro(val);
 
   /// Symbol for [Micro]
   @override
@@ -622,7 +622,7 @@ final class Milli extends MetricPrefix {
 
   /// Creating [Milli] with new value
   @override
-  Milli withValue([num? val]) => Milli(val ?? value);
+  Milli withValue(num val) => Milli(val);
 
   /// Symbol for [Milli]
   @override
@@ -662,7 +662,7 @@ final class Nano extends MetricPrefix {
 
   /// Creating [Nano] with new value
   @override
-  Nano withValue([num? val]) => Nano(val ?? value);
+  Nano withValue(num val) => Nano(val);
 
   /// Symbol for [Nano]
   @override
@@ -702,7 +702,7 @@ final class Peta extends MetricPrefix {
 
   /// Creating [Peta] with new value
   @override
-  Peta withValue([num? val]) => Peta(val ?? value);
+  Peta withValue(num val) => Peta(val);
 
   /// Symbol for [Peta]
   @override
@@ -742,7 +742,7 @@ final class Pico extends MetricPrefix {
 
   /// Creating [Pico] with new value
   @override
-  Pico withValue([num? val]) => Pico(val ?? value);
+  Pico withValue(num val) => Pico(val);
 
   /// Symbol for [Pico]
   @override
@@ -782,7 +782,7 @@ final class Tera extends MetricPrefix {
 
   /// Creating [Tera] with new value
   @override
-  Tera withValue([num? val]) => Tera(val ?? value);
+  Tera withValue(num val) => Tera(val);
 
   /// Symbol for [Tera]
   @override
@@ -822,7 +822,7 @@ final class Yocto extends MetricPrefix {
 
   /// Creating [Yocto] with new value
   @override
-  Yocto withValue([num? val]) => Yocto(val ?? value);
+  Yocto withValue(num val) => Yocto(val);
 
   /// Symbol for [Yocto]
   @override
@@ -862,7 +862,7 @@ final class Yotta extends MetricPrefix {
 
   /// Creating [Yotta] with new value
   @override
-  Yotta withValue([num? val]) => Yotta(val ?? value);
+  Yotta withValue(num val) => Yotta(val);
 
   /// Symbol for [Yotta]
   @override
@@ -902,7 +902,7 @@ final class Zepto extends MetricPrefix {
 
   /// Creating [Zepto] with new value
   @override
-  Zepto withValue([num? val]) => Zepto(val ?? value);
+  Zepto withValue(num val) => Zepto(val);
 
   /// Symbol for [Zepto]
   @override
@@ -942,7 +942,7 @@ final class Zetta extends MetricPrefix {
 
   /// Creating [Zetta] with new value
   @override
-  Zetta withValue([num? val]) => Zetta(val ?? value);
+  Zetta withValue(num val) => Zetta(val);
 
   /// Symbol for [Zetta]
   @override
