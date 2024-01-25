@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 extension IterableOfTExtendsUnit<T extends Unit<T>> on Iterable<T> {
   /// Combine all element in this to [unit],
   /// value of [unit] is ignored
-  T combineTo(T unit) => fold(unit, (a, e) => a + e);
+  T combineTo(T unit) => fold(unit.withValue(0), (a, e) => a + e);
 
   /// Unit with the relatively lowest value
   T get lowest => _sort.first;
