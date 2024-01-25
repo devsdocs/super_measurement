@@ -22,7 +22,7 @@ void generateExtension() {
         '$name get to${e.keys.first} => combineTo(const ${e.keys.first}());',
       );
       numExtensionBuff.writeln(
-        '/// Get [${e.keys.first}] using [num]',
+        '/// Get [${e.keys.first}], unit of [$name] using [num]',
       );
       numExtensionBuff.writeln(
         '${e.keys.first} get ${e.keys.first[0].toLowerCase() + e.keys.first.substring(1)} => ${e.keys.first}(this);',
