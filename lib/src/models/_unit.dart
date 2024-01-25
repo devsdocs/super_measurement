@@ -127,6 +127,11 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     final value = this.value.toDouble().toIntIfTrue;
     return '$value $runtimeType ($symbol)';
   }
+
+  /// Get the exact presicion on value calculation
+  T withPrecision([Precision precision = Precision.two]) => withValue(
+        value == 0 ? 0 : value.toDouble().toPrecision(precision.value),
+      );
 }
 
 class _ConversionRatio<T extends Unit<T>> {
