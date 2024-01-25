@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   const Unit([this.value = 0]);
 
-  final num? value;
+  final num value;
 
   T get _clone;
 
@@ -31,15 +31,15 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
       return currentValue == otherValue;
     }
     if (operator == '>') {
-      return currentValue! > otherValue!;
+      return currentValue > otherValue;
     }
     if (operator == '>=') {
-      return currentValue! >= otherValue!;
+      return currentValue >= otherValue;
     }
     if (operator == '<') {
-      return currentValue! < otherValue!;
+      return currentValue < otherValue;
     }
-    return currentValue! <= otherValue!;
+    return currentValue <= otherValue;
   }
 
   T _convertAndCombine(String operator, T other) {
@@ -61,16 +61,16 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     }
     if (runtimeType == _anchorRatio.anchor) {
       return result
-          .withValue(value! * _anchorRatio.ratio.getRatio(to.runtimeType));
+          .withValue(value * _anchorRatio.ratio.getRatio(to.runtimeType));
     }
     return _anchor
-        .withValue(value! / _anchorRatio.ratio.getRatio(runtimeType))
+        .withValue(value / _anchorRatio.ratio.getRatio(runtimeType))
         .convertTo(to);
   }
 
   T operator +(T other) {
     if (other.runtimeType == runtimeType) {
-      return _clone.withValue(this.value! + other.value!);
+      return _clone.withValue(this.value + other.value);
     } else {
       return _convertAndCombine('+', other);
     }
@@ -78,26 +78,26 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T operator -(T other) {
     if (other.runtimeType == runtimeType) {
-      return _clone.withValue(this.value! - other.value!);
+      return _clone.withValue(this.value - other.value);
     } else {
       return _convertAndCombine('-', other);
     }
   }
 
   bool operator >=(T other) => runtimeType == other.runtimeType
-      ? this.value! >= other.value!
+      ? this.value >= other.value
       : _convertAndCompare('>=', other);
 
   bool operator >(T other) => runtimeType == other.runtimeType
-      ? this.value! > other.value!
+      ? this.value > other.value
       : _convertAndCompare('>', other);
 
   bool operator <=(T other) => runtimeType == other.runtimeType
-      ? this.value! <= other.value!
+      ? this.value <= other.value
       : _convertAndCompare('<=', other);
 
   bool operator <(T other) => runtimeType == other.runtimeType
-      ? this.value! < other.value!
+      ? this.value < other.value
       : _convertAndCompare('<', other);
 
   @override
@@ -112,17 +112,17 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   @override
   int compareTo(T other) {
     if (runtimeType == other.runtimeType) {
-      return value!.compareTo(other.value!);
+      return value.compareTo(other.value);
     }
 
     final otherConvertTo = other._clone.convertTo(_anchor);
     final currentConvertTo = _clone.convertTo(_anchor);
-    return currentConvertTo.value!.compareTo(otherConvertTo.value!);
+    return currentConvertTo.value.compareTo(otherConvertTo.value);
   }
 
   @override
   String toString() {
-    final value = this.value!.toDouble().toIntIfTrue;
+    final value = this.value.toDouble().toIntIfTrue;
     return '$value $runtimeType ($symbol)';
   }
 }

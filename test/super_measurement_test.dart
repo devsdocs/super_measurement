@@ -4,6 +4,8 @@ import 'package:test/test.dart';
 void main() {
   group('A group of tests', () {
     test('Equality test', () {
+      expect(const Centimeters(), const Meters());
+      expect(const Centimeters(), isNot(equals(const Meters(1))));
       expect(
         const Centimeters(200),
         equals(LengthUnit.meters.construct.withValue(2)),

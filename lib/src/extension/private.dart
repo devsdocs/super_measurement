@@ -21,7 +21,7 @@ extension IterableOfTExtendsUnit<T extends Unit<T>> on Iterable<T> {
   List<T> convertAllTo(T unit) => map((e) => e.convertTo(unit)).toList();
 
   /// Combine all element in this to [unit] and returning the value
-  num totalValueIn(T unit) => combineTo(unit).value!;
+  num totalValueIn(T unit) => combineTo(unit).value;
 
   /// Combine all element in this to [unit] and returning the average value
   num averageValueIn(T unit) => totalValueIn(unit) / length;
