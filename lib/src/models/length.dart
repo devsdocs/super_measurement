@@ -370,9 +370,9 @@ final class Millimeters extends Length {
 
   static const _minorName = 'millimeters';
 
-  static const _ratio = 10000;
+  static const _ratio = 1000;
 
-  /// 1 [Meters] = 10000 [Millimeters]
+  /// 1 [Meters] = 1000 [Millimeters]
   @override
   num get ratio => _ratio;
 

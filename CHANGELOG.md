@@ -1,3 +1,7 @@
+## 1.1.0
+- Bug fix `fromJson`
+- Bug fix at `Length`
+
 ## 1.0.20
 - Bug fix
 - Value of unit now non-null
