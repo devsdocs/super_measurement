@@ -8,13 +8,17 @@ abstract final class Length extends Unit<Length> {
   const Length([super.value]);
 
   /// If there is no matched key, returning [Meters] with 0 value
-  factory Length.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, lengthUnitValues)
-        ? lengthUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Meters();
-  }
+  factory Length.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        lengthUnitValues,
+      )
+          ? lengthUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Meters();
 
   @override
   AnchorRatio<Length> get _anchorRatio => (

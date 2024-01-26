@@ -8,13 +8,17 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
   const DataTransfer([super.value]);
 
   /// If there is no matched key, returning [MegabytePerSecond] with 0 value
-  factory DataTransfer.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, dataTransferUnitValues)
-        ? dataTransferUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const MegabytePerSecond();
-  }
+  factory DataTransfer.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        dataTransferUnitValues,
+      )
+          ? dataTransferUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const MegabytePerSecond();
 
   @override
   AnchorRatio<DataTransfer> get _anchorRatio => (

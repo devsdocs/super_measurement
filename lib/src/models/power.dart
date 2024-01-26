@@ -7,13 +7,17 @@ abstract final class Power extends Unit<Power> {
   const Power([super.value]);
 
   /// If there is no matched key, returning [Kilowatt] with 0 value
-  factory Power.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, powerUnitValues)
-        ? powerUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Kilowatt();
-  }
+  factory Power.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        powerUnitValues,
+      )
+          ? powerUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Kilowatt();
 
   @override
   AnchorRatio<Power> get _anchorRatio => (

@@ -11,13 +11,17 @@ abstract final class Torque extends Unit<Torque> {
   const Torque([super.value]);
 
   /// If there is no matched key, returning [KilonewtonMeter] with 0 value
-  factory Torque.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, torqueUnitValues)
-        ? torqueUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const KilonewtonMeter();
-  }
+  factory Torque.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        torqueUnitValues,
+      )
+          ? torqueUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const KilonewtonMeter();
 
   @override
   AnchorRatio<Torque> get _anchorRatio => (

@@ -10,13 +10,17 @@ abstract final class AngularSpeed extends Unit<AngularSpeed> {
   const AngularSpeed([super.value]);
 
   /// If there is no matched key, returning [RadianPerHour] with 0 value
-  factory AngularSpeed.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, angularSpeedUnitValues)
-        ? angularSpeedUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const RadianPerHour();
-  }
+  factory AngularSpeed.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        angularSpeedUnitValues,
+      )
+          ? angularSpeedUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const RadianPerHour();
 
   @override
   AnchorRatio<AngularSpeed> get _anchorRatio => (

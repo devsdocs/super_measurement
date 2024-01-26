@@ -7,13 +7,17 @@ abstract final class Sound extends Unit<Sound> {
   const Sound([super.value]);
 
   /// If there is no matched key, returning [Decibel] with 0 value
-  factory Sound.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, soundUnitValues)
-        ? soundUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Decibel();
-  }
+  factory Sound.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        soundUnitValues,
+      )
+          ? soundUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Decibel();
 
   @override
   AnchorRatio<Sound> get _anchorRatio => (

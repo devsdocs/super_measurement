@@ -7,13 +7,17 @@ abstract final class Current extends Unit<Current> {
   const Current([super.value]);
 
   /// If there is no matched key, returning [Ampere] with 0 value
-  factory Current.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, currentUnitValues)
-        ? currentUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Ampere();
-  }
+  factory Current.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        currentUnitValues,
+      )
+          ? currentUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Ampere();
 
   @override
   AnchorRatio<Current> get _anchorRatio => (

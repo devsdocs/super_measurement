@@ -8,13 +8,17 @@ abstract final class Area extends Unit<Area> {
   const Area([super.value]);
 
   /// If there is no matched key, returning [SquareMeters] with 0 value
-  factory Area.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, areaUnitValues)
-        ? areaUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const SquareMeters();
-  }
+  factory Area.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        areaUnitValues,
+      )
+          ? areaUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const SquareMeters();
 
   @override
   AnchorRatio<Area> get _anchorRatio => (

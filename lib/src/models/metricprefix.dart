@@ -9,13 +9,17 @@ abstract final class MetricPrefix extends Unit<MetricPrefix> {
   const MetricPrefix([super.value]);
 
   /// If there is no matched key, returning [MetricUnit] with 0 value
-  factory MetricPrefix.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, metricPrefixUnitValues)
-        ? metricPrefixUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const MetricUnit();
-  }
+  factory MetricPrefix.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        metricPrefixUnitValues,
+      )
+          ? metricPrefixUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const MetricUnit();
 
   @override
   AnchorRatio<MetricPrefix> get _anchorRatio => (

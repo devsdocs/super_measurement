@@ -8,13 +8,17 @@ abstract final class Angle extends Unit<Angle> {
   const Angle([super.value]);
 
   /// If there is no matched key, returning [Revolution] with 0 value
-  factory Angle.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, angleUnitValues)
-        ? angleUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Revolution();
-  }
+  factory Angle.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        angleUnitValues,
+      )
+          ? angleUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Revolution();
 
   @override
   AnchorRatio<Angle> get _anchorRatio => (

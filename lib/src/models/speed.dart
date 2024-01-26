@@ -10,13 +10,17 @@ abstract final class Speed extends Unit<Speed> {
   const Speed([super.value]);
 
   /// If there is no matched key, returning [KilometerPerHour] with 0 value
-  factory Speed.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, speedUnitValues)
-        ? speedUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const KilometerPerHour();
-  }
+  factory Speed.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        speedUnitValues,
+      )
+          ? speedUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const KilometerPerHour();
 
   @override
   AnchorRatio<Speed> get _anchorRatio => (

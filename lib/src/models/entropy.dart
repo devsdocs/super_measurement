@@ -8,13 +8,17 @@ abstract final class Entropy extends Unit<Entropy> {
   const Entropy([super.value]);
 
   /// If there is no matched key, returning [KilocaloriePerKilogramCelcius] with 0 value
-  factory Entropy.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, entropyUnitValues)
-        ? entropyUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const KilocaloriePerKilogramCelcius();
-  }
+  factory Entropy.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        entropyUnitValues,
+      )
+          ? entropyUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const KilocaloriePerKilogramCelcius();
 
   @override
   AnchorRatio<Entropy> get _anchorRatio => (

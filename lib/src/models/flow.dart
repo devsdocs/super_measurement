@@ -9,13 +9,17 @@ abstract final class Flow extends Unit<Flow> {
   const Flow([super.value]);
 
   /// If there is no matched key, returning [LiterPerHour] with 0 value
-  factory Flow.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, flowUnitValues)
-        ? flowUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const LiterPerHour();
-  }
+  factory Flow.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        flowUnitValues,
+      )
+          ? flowUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const LiterPerHour();
 
   @override
   AnchorRatio<Flow> get _anchorRatio => (

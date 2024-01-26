@@ -8,13 +8,17 @@ abstract final class Force extends Unit<Force> {
   const Force([super.value]);
 
   /// If there is no matched key, returning [Newton] with 0 value
-  factory Force.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, forceUnitValues)
-        ? forceUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Newton();
-  }
+  factory Force.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        forceUnitValues,
+      )
+          ? forceUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Newton();
 
   @override
   AnchorRatio<Force> get _anchorRatio => (

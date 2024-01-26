@@ -9,13 +9,17 @@ abstract final class Energy extends Unit<Energy> {
   const Energy([super.value]);
 
   /// If there is no matched key, returning [Joule] with 0 value
-  factory Energy.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, energyUnitValues)
-        ? energyUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Joule();
-  }
+  factory Energy.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        energyUnitValues,
+      )
+          ? energyUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Joule();
 
   @override
   AnchorRatio<Energy> get _anchorRatio => (

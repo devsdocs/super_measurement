@@ -9,13 +9,17 @@ abstract final class Volume extends Unit<Volume> {
   const Volume([super.value]);
 
   /// If there is no matched key, returning [CubicMeters] with 0 value
-  factory Volume.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, volumeUnitValues)
-        ? volumeUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const CubicMeters();
-  }
+  factory Volume.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        volumeUnitValues,
+      )
+          ? volumeUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const CubicMeters();
 
   @override
   AnchorRatio<Volume> get _anchorRatio => (

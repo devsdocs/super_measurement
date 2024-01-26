@@ -8,13 +8,17 @@ abstract final class SurfaceTension extends Unit<SurfaceTension> {
   const SurfaceTension([super.value]);
 
   /// If there is no matched key, returning [NewtonPerMeter] with 0 value
-  factory SurfaceTension.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, surfaceTensionUnitValues)
-        ? surfaceTensionUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const NewtonPerMeter();
-  }
+  factory SurfaceTension.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        surfaceTensionUnitValues,
+      )
+          ? surfaceTensionUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const NewtonPerMeter();
 
   @override
   AnchorRatio<SurfaceTension> get _anchorRatio => (

@@ -3,6 +3,9 @@ import 'package:test/test.dart';
 
 void main() {
   group('A group of tests', () {
+    final a = Length.fromJson({});
+    print(a.withValue(2));
+
     test('Equality test', () {
       expect(const Centimeters(), const Meters());
       expect(const Centimeters(), isNot(equals(const Meters(1))));

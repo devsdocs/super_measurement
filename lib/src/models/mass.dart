@@ -8,13 +8,17 @@ abstract final class Mass extends Unit<Mass> {
   const Mass([super.value]);
 
   /// If there is no matched key, returning [Kilograms] with 0 value
-  factory Mass.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, massUnitValues)
-        ? massUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Kilograms();
-  }
+  factory Mass.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        massUnitValues,
+      )
+          ? massUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Kilograms();
 
   @override
   AnchorRatio<Mass> get _anchorRatio => (

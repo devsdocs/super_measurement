@@ -43,13 +43,11 @@ void generateModels() {
       '/// If there is no matched key, returning [${anchor.keys.first}] with 0 value',
     );
     typeBuff.writeln(
-      '  factory $name.fromJson(Map<String,dynamic> json) {',
+      '  factory $name.fromJson(Map<String,dynamic> json) =>',
     );
-    typeBuff.writeln('  final obj = json[_majorName] as Map<String, dynamic>;');
     typeBuff.writeln(
-      'return _checkJson(_majorName,json, $enumValuesSymbol) ? $enumValuesSymbol.map[obj[_unit]]!.construct.withValue(obj[_value] as num) : const ${anchor.keys.first}();',
+      '_checkJson(_majorName,json, $enumValuesSymbol,) ? $enumValuesSymbol.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct.withValue((json[_majorName] as Map<String, dynamic>)[_value] as num,) : const ${anchor.keys.first}();',
     );
-    typeBuff.writeln('}');
     typeBuff.writeln();
     typeBuff.writeln('  @override');
     typeBuff.writeln('  AnchorRatio<$name> get _anchorRatio => (');

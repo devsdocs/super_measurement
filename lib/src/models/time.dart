@@ -7,13 +7,17 @@ abstract final class Time extends Unit<Time> {
   const Time([super.value]);
 
   /// If there is no matched key, returning [Year] with 0 value
-  factory Time.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, timeUnitValues)
-        ? timeUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Year();
-  }
+  factory Time.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        timeUnitValues,
+      )
+          ? timeUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Year();
 
   @override
   AnchorRatio<Time> get _anchorRatio => (

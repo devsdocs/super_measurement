@@ -8,13 +8,17 @@ abstract final class Pressure extends Unit<Pressure> {
   const Pressure([super.value]);
 
   /// If there is no matched key, returning [StandardAtmosphere] with 0 value
-  factory Pressure.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, pressureUnitValues)
-        ? pressureUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const StandardAtmosphere();
-  }
+  factory Pressure.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        pressureUnitValues,
+      )
+          ? pressureUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const StandardAtmosphere();
 
   @override
   AnchorRatio<Pressure> get _anchorRatio => (

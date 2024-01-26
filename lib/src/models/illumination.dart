@@ -7,13 +7,17 @@ abstract final class Illumination extends Unit<Illumination> {
   const Illumination([super.value]);
 
   /// If there is no matched key, returning [LumenPerMeterSquare] with 0 value
-  factory Illumination.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, illuminationUnitValues)
-        ? illuminationUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const LumenPerMeterSquare();
-  }
+  factory Illumination.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        illuminationUnitValues,
+      )
+          ? illuminationUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const LumenPerMeterSquare();
 
   @override
   AnchorRatio<Illumination> get _anchorRatio => (

@@ -9,13 +9,17 @@ abstract final class DataStorage extends Unit<DataStorage> {
   const DataStorage([super.value]);
 
   /// If there is no matched key, returning [Gigabyte] with 0 value
-  factory DataStorage.fromJson(Map<String, dynamic> json) {
-    final obj = json[_majorName] as Map<String, dynamic>;
-    return _checkJson(_majorName, json, dataStorageUnitValues)
-        ? dataStorageUnitValues.map[obj[_unit]]!.construct
-            .withValue(obj[_value] as num)
-        : const Gigabyte();
-  }
+  factory DataStorage.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        dataStorageUnitValues,
+      )
+          ? dataStorageUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const Gigabyte();
 
   @override
   AnchorRatio<DataStorage> get _anchorRatio => (
