@@ -42,10 +42,6 @@ Future<void> main() async {
     final readAsStringSync = file.readAsStringSync();
     if (readAsStringSync == 'null') continue;
     final read = readAsStringSync.toJsonObjectAsList;
-    final allNameList = read.map((e) {
-      e as Map<String, dynamic>;
-      return e['Name'].toString();
-    }).toList();
     final list = read.map(
       (e) {
         e as Map<String, dynamic>;
@@ -68,7 +64,7 @@ Future<void> main() async {
           ..remove('esname');
 
         return {
-          '$formatMajorName\$${formatName(e['Name'], allNameList..remove(e['Name']))}':
+          '$formatMajorName\$${formatName(e['Name'])}':
               NewRes.fromMap(newMap),
         };
       },
@@ -121,7 +117,7 @@ const charMap = {
   "'": '',
 };
 
-String formatName(String s, List<String> othersName) {
+String formatName(String s) {
   if (!s.contains('(') && s.contains(')')) {
     throw Exception();
   }
