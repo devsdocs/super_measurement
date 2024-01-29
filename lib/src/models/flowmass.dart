@@ -226,7 +226,7 @@ final class FlowMass$GramPerSecond extends FlowMass {
         unit.toGramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$GramPerSecond';
+  static const _minorName = 'gramPerSecond';
 
   static const _ratio = 86.4;
 
@@ -238,8 +238,9 @@ final class FlowMass$GramPerSecond extends FlowMass {
   @override
   FlowMass$GramPerSecond get _clone => FlowMass$GramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$GramPerSecond] with new value
   @override
@@ -252,6 +253,7 @@ final class FlowMass$GramPerSecond extends FlowMass {
   @override
   String get symbol => 'g/s';
 
+  /// [FlowMass$GramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -283,7 +285,7 @@ final class FlowMass$GramPerMinute extends FlowMass {
         unit.toGramPerMinute.value,
       );
 
-  static const _minorName = r'flowMass$GramPerMinute';
+  static const _minorName = 'gramPerMinute';
 
   static const _ratio = 1.44;
 
@@ -295,8 +297,9 @@ final class FlowMass$GramPerMinute extends FlowMass {
   @override
   FlowMass$GramPerMinute get _clone => FlowMass$GramPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$GramPerMinute] with new value
   @override
@@ -309,6 +312,7 @@ final class FlowMass$GramPerMinute extends FlowMass {
   @override
   String get symbol => 'g/min';
 
+  /// [FlowMass$GramPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -340,7 +344,7 @@ final class FlowMass$GramPerHour extends FlowMass {
         unit.toGramPerHour.value,
       );
 
-  static const _minorName = r'flowMass$GramPerHour';
+  static const _minorName = 'gramPerHour';
 
   static const _ratio = 0.024;
 
@@ -352,8 +356,9 @@ final class FlowMass$GramPerHour extends FlowMass {
   @override
   FlowMass$GramPerHour get _clone => FlowMass$GramPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$GramPerHour] with new value
   @override
@@ -366,6 +371,7 @@ final class FlowMass$GramPerHour extends FlowMass {
   @override
   String get symbol => 'g/h';
 
+  /// [FlowMass$GramPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -397,7 +403,7 @@ final class FlowMass$GramPerDay extends FlowMass {
         unit.toGramPerDay.value,
       );
 
-  static const _minorName = r'flowMass$GramPerDay';
+  static const _minorName = 'gramPerDay';
 
   static const _ratio = 0.001;
 
@@ -409,8 +415,9 @@ final class FlowMass$GramPerDay extends FlowMass {
   @override
   FlowMass$GramPerDay get _clone => FlowMass$GramPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$GramPerDay] with new value
   @override
@@ -423,6 +430,7 @@ final class FlowMass$GramPerDay extends FlowMass {
   @override
   String get symbol => 'g/d';
 
+  /// [FlowMass$GramPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -454,7 +462,7 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
         unit.toMilligramPerMinute.value,
       );
 
-  static const _minorName = r'flowMass$MilligramPerMinute';
+  static const _minorName = 'milligramPerMinute';
 
   static const _ratio = 0.00144;
 
@@ -466,8 +474,9 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
   @override
   FlowMass$MilligramPerMinute get _clone => FlowMass$MilligramPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$MilligramPerMinute] with new value
   @override
@@ -480,6 +489,7 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
   @override
   String get symbol => 'mg/min';
 
+  /// [FlowMass$MilligramPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -511,7 +521,7 @@ final class FlowMass$MilligramPerHour extends FlowMass {
         unit.toMilligramPerHour.value,
       );
 
-  static const _minorName = r'flowMass$MilligramPerHour';
+  static const _minorName = 'milligramPerHour';
 
   static const _ratio = 0.000024;
 
@@ -523,8 +533,9 @@ final class FlowMass$MilligramPerHour extends FlowMass {
   @override
   FlowMass$MilligramPerHour get _clone => FlowMass$MilligramPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$MilligramPerHour] with new value
   @override
@@ -537,6 +548,7 @@ final class FlowMass$MilligramPerHour extends FlowMass {
   @override
   String get symbol => 'mg/h';
 
+  /// [FlowMass$MilligramPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -568,7 +580,7 @@ final class FlowMass$MilligramPerDay extends FlowMass {
         unit.toMilligramPerDay.value,
       );
 
-  static const _minorName = r'flowMass$MilligramPerDay';
+  static const _minorName = 'milligramPerDay';
 
   static const _ratio = 0.000001;
 
@@ -580,8 +592,9 @@ final class FlowMass$MilligramPerDay extends FlowMass {
   @override
   FlowMass$MilligramPerDay get _clone => FlowMass$MilligramPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$MilligramPerDay] with new value
   @override
@@ -594,6 +607,7 @@ final class FlowMass$MilligramPerDay extends FlowMass {
   @override
   String get symbol => 'mg/d';
 
+  /// [FlowMass$MilligramPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -625,7 +639,7 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
         unit.toKilogramPerMinute.value,
       );
 
-  static const _minorName = r'flowMass$KilogramPerMinute';
+  static const _minorName = 'kilogramPerMinute';
 
   static const _ratio = 1440.0;
 
@@ -637,8 +651,9 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
   @override
   FlowMass$KilogramPerMinute get _clone => FlowMass$KilogramPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$KilogramPerMinute] with new value
   @override
@@ -651,6 +666,7 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
   @override
   String get symbol => 'kg/min';
 
+  /// [FlowMass$KilogramPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -682,7 +698,7 @@ final class FlowMass$KilogramPerHour extends FlowMass {
         unit.toKilogramPerHour.value,
       );
 
-  static const _minorName = r'flowMass$KilogramPerHour';
+  static const _minorName = 'kilogramPerHour';
 
   static const _ratio = 24.0;
 
@@ -694,8 +710,9 @@ final class FlowMass$KilogramPerHour extends FlowMass {
   @override
   FlowMass$KilogramPerHour get _clone => FlowMass$KilogramPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$KilogramPerHour] with new value
   @override
@@ -708,6 +725,7 @@ final class FlowMass$KilogramPerHour extends FlowMass {
   @override
   String get symbol => 'kg/h';
 
+  /// [FlowMass$KilogramPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -739,7 +757,7 @@ final class FlowMass$KilogramPerDay extends FlowMass {
         unit.toKilogramPerDay.value,
       );
 
-  static const _minorName = r'flowMass$KilogramPerDay';
+  static const _minorName = 'kilogramPerDay';
 
   static const _ratio = 1.0;
 
@@ -751,8 +769,9 @@ final class FlowMass$KilogramPerDay extends FlowMass {
   @override
   FlowMass$KilogramPerDay get _clone => FlowMass$KilogramPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$KilogramPerDay] with new value
   @override
@@ -765,6 +784,7 @@ final class FlowMass$KilogramPerDay extends FlowMass {
   @override
   String get symbol => 'kg/d';
 
+  /// [FlowMass$KilogramPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -796,7 +816,7 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
         unit.toExagramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$ExagramPerSecond';
+  static const _minorName = 'exagramPerSecond';
 
   static const _ratio = 86400000000000000000.0;
 
@@ -808,8 +828,9 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
   @override
   FlowMass$ExagramPerSecond get _clone => FlowMass$ExagramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$ExagramPerSecond] with new value
   @override
@@ -822,6 +843,7 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
   @override
   String get symbol => 'Eg/s';
 
+  /// [FlowMass$ExagramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -853,7 +875,7 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
         unit.toPetagramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$PetagramPerSecond';
+  static const _minorName = 'petagramPerSecond';
 
   static const _ratio = 86400000000000000.0;
 
@@ -865,8 +887,9 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
   @override
   FlowMass$PetagramPerSecond get _clone => FlowMass$PetagramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$PetagramPerSecond] with new value
   @override
@@ -879,6 +902,7 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
   @override
   String get symbol => 'Pg/s';
 
+  /// [FlowMass$PetagramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -910,7 +934,7 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
         unit.toTeragramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$TeragramPerSecond';
+  static const _minorName = 'teragramPerSecond';
 
   static const _ratio = 86400000000000.0;
 
@@ -922,8 +946,9 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
   @override
   FlowMass$TeragramPerSecond get _clone => FlowMass$TeragramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$TeragramPerSecond] with new value
   @override
@@ -936,6 +961,7 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
   @override
   String get symbol => 'Tg/s';
 
+  /// [FlowMass$TeragramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -967,7 +993,7 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
         unit.toGigagramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$GigagramPerSecond';
+  static const _minorName = 'gigagramPerSecond';
 
   static const _ratio = 86400000000.0;
 
@@ -979,8 +1005,9 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
   @override
   FlowMass$GigagramPerSecond get _clone => FlowMass$GigagramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$GigagramPerSecond] with new value
   @override
@@ -993,6 +1020,7 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
   @override
   String get symbol => 'Gg/s';
 
+  /// [FlowMass$GigagramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1024,7 +1052,7 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
         unit.toMegagramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$MegagramPerSecond';
+  static const _minorName = 'megagramPerSecond';
 
   static const _ratio = 86400000.0;
 
@@ -1036,8 +1064,9 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
   @override
   FlowMass$MegagramPerSecond get _clone => FlowMass$MegagramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$MegagramPerSecond] with new value
   @override
@@ -1050,6 +1079,7 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
   @override
   String get symbol => 'Mg/s';
 
+  /// [FlowMass$MegagramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1081,7 +1111,7 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
         unit.toKilogramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$KilogramPerSecond';
+  static const _minorName = 'kilogramPerSecond';
 
   static const _ratio = 86400.0;
 
@@ -1093,8 +1123,9 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
   @override
   FlowMass$KilogramPerSecond get _clone => FlowMass$KilogramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$KilogramPerSecond] with new value
   @override
@@ -1107,6 +1138,7 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
   @override
   String get symbol => 'kg/s';
 
+  /// [FlowMass$KilogramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1138,7 +1170,7 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
         unit.toHectogramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$HectogramPerSecond';
+  static const _minorName = 'hectogramPerSecond';
 
   static const _ratio = 8640.0;
 
@@ -1150,8 +1182,9 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
   @override
   FlowMass$HectogramPerSecond get _clone => FlowMass$HectogramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$HectogramPerSecond] with new value
   @override
@@ -1164,6 +1197,7 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
   @override
   String get symbol => 'hg/s';
 
+  /// [FlowMass$HectogramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1195,7 +1229,7 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
         unit.toDekagramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$DekagramPerSecond';
+  static const _minorName = 'dekagramPerSecond';
 
   static const _ratio = 864.0;
 
@@ -1207,8 +1241,9 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
   @override
   FlowMass$DekagramPerSecond get _clone => FlowMass$DekagramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$DekagramPerSecond] with new value
   @override
@@ -1221,6 +1256,7 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
   @override
   String get symbol => 'dag/s';
 
+  /// [FlowMass$DekagramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1252,7 +1288,7 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
         unit.toDecigramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$DecigramPerSecond';
+  static const _minorName = 'decigramPerSecond';
 
   static const _ratio = 8.64;
 
@@ -1264,8 +1300,9 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
   @override
   FlowMass$DecigramPerSecond get _clone => FlowMass$DecigramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$DecigramPerSecond] with new value
   @override
@@ -1278,6 +1315,7 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
   @override
   String get symbol => 'dg/s';
 
+  /// [FlowMass$DecigramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1309,7 +1347,7 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
         unit.toCentigramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$CentigramPerSecond';
+  static const _minorName = 'centigramPerSecond';
 
   static const _ratio = 0.864;
 
@@ -1321,8 +1359,9 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
   @override
   FlowMass$CentigramPerSecond get _clone => FlowMass$CentigramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$CentigramPerSecond] with new value
   @override
@@ -1335,6 +1374,7 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
   @override
   String get symbol => 'cg/s';
 
+  /// [FlowMass$CentigramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1366,7 +1406,7 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
         unit.toMilligramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$MilligramPerSecond';
+  static const _minorName = 'milligramPerSecond';
 
   static const _ratio = 0.0864;
 
@@ -1378,8 +1418,9 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
   @override
   FlowMass$MilligramPerSecond get _clone => FlowMass$MilligramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$MilligramPerSecond] with new value
   @override
@@ -1392,6 +1433,7 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
   @override
   String get symbol => 'mg/s';
 
+  /// [FlowMass$MilligramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1423,7 +1465,7 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
         unit.toMicrogramPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$MicrogramPerSecond';
+  static const _minorName = 'microgramPerSecond';
 
   static const _ratio = 0.0000864;
 
@@ -1435,8 +1477,9 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
   @override
   FlowMass$MicrogramPerSecond get _clone => FlowMass$MicrogramPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$MicrogramPerSecond] with new value
   @override
@@ -1449,6 +1492,7 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
   @override
   String get symbol => 'µg/s';
 
+  /// [FlowMass$MicrogramPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1480,7 +1524,7 @@ final class FlowMass$PoundPerSecond extends FlowMass {
         unit.toPoundPerSecond.value,
       );
 
-  static const _minorName = r'flowMass$PoundPerSecond';
+  static const _minorName = 'poundPerSecond';
 
   static const _ratio = 39190.38077;
 
@@ -1492,8 +1536,9 @@ final class FlowMass$PoundPerSecond extends FlowMass {
   @override
   FlowMass$PoundPerSecond get _clone => FlowMass$PoundPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$PoundPerSecond] with new value
   @override
@@ -1506,6 +1551,7 @@ final class FlowMass$PoundPerSecond extends FlowMass {
   @override
   String get symbol => 'lb/s';
 
+  /// [FlowMass$PoundPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1537,7 +1583,7 @@ final class FlowMass$PoundPerMinute extends FlowMass {
         unit.toPoundPerMinute.value,
       );
 
-  static const _minorName = r'flowMass$PoundPerMinute';
+  static const _minorName = 'poundPerMinute';
 
   static const _ratio = 653.1730128;
 
@@ -1549,8 +1595,9 @@ final class FlowMass$PoundPerMinute extends FlowMass {
   @override
   FlowMass$PoundPerMinute get _clone => FlowMass$PoundPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$PoundPerMinute] with new value
   @override
@@ -1563,6 +1610,7 @@ final class FlowMass$PoundPerMinute extends FlowMass {
   @override
   String get symbol => 'lb/min';
 
+  /// [FlowMass$PoundPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1594,7 +1642,7 @@ final class FlowMass$PoundPerHour extends FlowMass {
         unit.toPoundPerHour.value,
       );
 
-  static const _minorName = r'flowMass$PoundPerHour';
+  static const _minorName = 'poundPerHour';
 
   static const _ratio = 10.88621688;
 
@@ -1606,8 +1654,9 @@ final class FlowMass$PoundPerHour extends FlowMass {
   @override
   FlowMass$PoundPerHour get _clone => FlowMass$PoundPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$PoundPerHour] with new value
   @override
@@ -1620,6 +1669,7 @@ final class FlowMass$PoundPerHour extends FlowMass {
   @override
   String get symbol => 'lb/h';
 
+  /// [FlowMass$PoundPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1651,7 +1701,7 @@ final class FlowMass$PoundPerDay extends FlowMass {
         unit.toPoundPerDay.value,
       );
 
-  static const _minorName = r'flowMass$PoundPerDay';
+  static const _minorName = 'poundPerDay';
 
   static const _ratio = 0.45359237;
 
@@ -1663,8 +1713,9 @@ final class FlowMass$PoundPerDay extends FlowMass {
   @override
   FlowMass$PoundPerDay get _clone => FlowMass$PoundPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMass$PoundPerDay] with new value
   @override
@@ -1677,6 +1728,7 @@ final class FlowMass$PoundPerDay extends FlowMass {
   @override
   String get symbol => 'lb/d';
 
+  /// [FlowMass$PoundPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

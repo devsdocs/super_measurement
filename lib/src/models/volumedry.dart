@@ -140,7 +140,7 @@ final class VolumeDry$Barrel extends VolumeDry {
         unit.toBarrel.value,
       );
 
-  static const _minorName = r'volumeDry$Barrel';
+  static const _minorName = 'barrel';
 
   static const _ratio = 378.41605930454045;
 
@@ -152,8 +152,9 @@ final class VolumeDry$Barrel extends VolumeDry {
   @override
   VolumeDry$Barrel get _clone => VolumeDry$Barrel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$Barrel] with new value
   @override
@@ -166,6 +167,7 @@ final class VolumeDry$Barrel extends VolumeDry {
   @override
   String get symbol => 'bbl';
 
+  /// [VolumeDry$Barrel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -197,7 +199,7 @@ final class VolumeDry$Liter extends VolumeDry {
         unit.toLiter.value,
       );
 
-  static const _minorName = r'volumeDry$Liter';
+  static const _minorName = 'liter';
 
   static const _ratio = 3.27272743202319;
 
@@ -209,8 +211,9 @@ final class VolumeDry$Liter extends VolumeDry {
   @override
   VolumeDry$Liter get _clone => VolumeDry$Liter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$Liter] with new value
   @override
@@ -223,6 +226,7 @@ final class VolumeDry$Liter extends VolumeDry {
   @override
   String get symbol => 'l';
 
+  /// [VolumeDry$Liter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -254,7 +258,7 @@ final class VolumeDry$Pint extends VolumeDry {
         unit.toPint.value,
       );
 
-  static const _minorName = r'volumeDry$Pint';
+  static const _minorName = 'pint';
 
   static const _ratio = 1.80199799411;
 
@@ -266,8 +270,9 @@ final class VolumeDry$Pint extends VolumeDry {
   @override
   VolumeDry$Pint get _clone => VolumeDry$Pint(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$Pint] with new value
   @override
@@ -280,6 +285,7 @@ final class VolumeDry$Pint extends VolumeDry {
   @override
   String get symbol => 'pt';
 
+  /// [VolumeDry$Pint] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -311,7 +317,7 @@ final class VolumeDry$Quart extends VolumeDry {
         unit.toQuart.value,
       );
 
-  static const _minorName = r'volumeDry$Quart';
+  static const _minorName = 'quart';
 
   static const _ratio = 3.60399598822;
 
@@ -323,8 +329,9 @@ final class VolumeDry$Quart extends VolumeDry {
   @override
   VolumeDry$Quart get _clone => VolumeDry$Quart(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$Quart] with new value
   @override
@@ -337,6 +344,7 @@ final class VolumeDry$Quart extends VolumeDry {
   @override
   String get symbol => 'qt';
 
+  /// [VolumeDry$Quart] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -368,7 +376,7 @@ final class VolumeDry$Peck extends VolumeDry {
         unit.toPeck.value,
       );
 
-  static const _minorName = r'volumeDry$Peck';
+  static const _minorName = 'peck';
 
   static const _ratio = 28.83196790576;
 
@@ -380,8 +388,9 @@ final class VolumeDry$Peck extends VolumeDry {
   @override
   VolumeDry$Peck get _clone => VolumeDry$Peck(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$Peck] with new value
   @override
@@ -394,6 +403,7 @@ final class VolumeDry$Peck extends VolumeDry {
   @override
   String get symbol => 'pk';
 
+  /// [VolumeDry$Peck] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -425,7 +435,7 @@ final class VolumeDry$Bushel extends VolumeDry {
         unit.toBushel.value,
       );
 
-  static const _minorName = r'volumeDry$Bushel';
+  static const _minorName = 'bushel';
 
   static const _ratio = 115.32787162304;
 
@@ -437,8 +447,9 @@ final class VolumeDry$Bushel extends VolumeDry {
   @override
   VolumeDry$Bushel get _clone => VolumeDry$Bushel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$Bushel] with new value
   @override
@@ -451,6 +462,7 @@ final class VolumeDry$Bushel extends VolumeDry {
   @override
   String get symbol => 'bu';
 
+  /// [VolumeDry$Bushel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -482,7 +494,7 @@ final class VolumeDry$CorBiblical extends VolumeDry {
         unit.toCorBiblical.value,
       );
 
-  static const _minorName = r'volumeDry$CorBiblical';
+  static const _minorName = 'corBiblical';
 
   static const _ratio = 720.0;
 
@@ -494,8 +506,9 @@ final class VolumeDry$CorBiblical extends VolumeDry {
   @override
   VolumeDry$CorBiblical get _clone => VolumeDry$CorBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$CorBiblical] with new value
   @override
@@ -506,8 +519,9 @@ final class VolumeDry$CorBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$CorBiblical]
   @override
-  String get symbol => 'CorBiblical';
+  String get symbol => 'cor (Biblical)';
 
+  /// [VolumeDry$CorBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -539,7 +553,7 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
         unit.toHomerBiblical.value,
       );
 
-  static const _minorName = r'volumeDry$HomerBiblical';
+  static const _minorName = 'homerBiblical';
 
   static const _ratio = 720.0;
 
@@ -551,8 +565,9 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
   @override
   VolumeDry$HomerBiblical get _clone => VolumeDry$HomerBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$HomerBiblical] with new value
   @override
@@ -563,8 +578,9 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$HomerBiblical]
   @override
-  String get symbol => 'HomerBiblical';
+  String get symbol => 'homer (Biblical)';
 
+  /// [VolumeDry$HomerBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -596,7 +612,7 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
         unit.toEphahBiblical.value,
       );
 
-  static const _minorName = r'volumeDry$EphahBiblical';
+  static const _minorName = 'ephahBiblical';
 
   static const _ratio = 72.0;
 
@@ -608,8 +624,9 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
   @override
   VolumeDry$EphahBiblical get _clone => VolumeDry$EphahBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$EphahBiblical] with new value
   @override
@@ -620,8 +637,9 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$EphahBiblical]
   @override
-  String get symbol => 'EphahBiblical';
+  String get symbol => 'ephah (Biblical)';
 
+  /// [VolumeDry$EphahBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -653,7 +671,7 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
         unit.toSeahBiblical.value,
       );
 
-  static const _minorName = r'volumeDry$SeahBiblical';
+  static const _minorName = 'seahBiblical';
 
   static const _ratio = 24.0;
 
@@ -665,8 +683,9 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
   @override
   VolumeDry$SeahBiblical get _clone => VolumeDry$SeahBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$SeahBiblical] with new value
   @override
@@ -677,8 +696,9 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$SeahBiblical]
   @override
-  String get symbol => 'SeahBiblical';
+  String get symbol => 'seah (Biblical)';
 
+  /// [VolumeDry$SeahBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -710,7 +730,7 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
         unit.toOmerBiblical.value,
       );
 
-  static const _minorName = r'volumeDry$OmerBiblical';
+  static const _minorName = 'omerBiblical';
 
   static const _ratio = 7.2;
 
@@ -722,8 +742,9 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
   @override
   VolumeDry$OmerBiblical get _clone => VolumeDry$OmerBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$OmerBiblical] with new value
   @override
@@ -734,8 +755,9 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$OmerBiblical]
   @override
-  String get symbol => 'OmerBiblical';
+  String get symbol => 'omer (Biblical)';
 
+  /// [VolumeDry$OmerBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -767,7 +789,7 @@ final class VolumeDry$CabBiblical extends VolumeDry {
         unit.toCabBiblical.value,
       );
 
-  static const _minorName = r'volumeDry$CabBiblical';
+  static const _minorName = 'cabBiblical';
 
   static const _ratio = 4.0;
 
@@ -779,8 +801,9 @@ final class VolumeDry$CabBiblical extends VolumeDry {
   @override
   VolumeDry$CabBiblical get _clone => VolumeDry$CabBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$CabBiblical] with new value
   @override
@@ -791,8 +814,9 @@ final class VolumeDry$CabBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$CabBiblical]
   @override
-  String get symbol => 'CabBiblical';
+  String get symbol => 'cab (Biblical)';
 
+  /// [VolumeDry$CabBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -824,7 +848,7 @@ final class VolumeDry$LogBiblical extends VolumeDry {
         unit.toLogBiblical.value,
       );
 
-  static const _minorName = r'volumeDry$LogBiblical';
+  static const _minorName = 'logBiblical';
 
   static const _ratio = 1.0;
 
@@ -836,8 +860,9 @@ final class VolumeDry$LogBiblical extends VolumeDry {
   @override
   VolumeDry$LogBiblical get _clone => VolumeDry$LogBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeDry$LogBiblical] with new value
   @override
@@ -848,8 +873,9 @@ final class VolumeDry$LogBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$LogBiblical]
   @override
-  String get symbol => 'LogBiblical';
+  String get symbol => 'log (Biblical)';
 
+  /// [VolumeDry$LogBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

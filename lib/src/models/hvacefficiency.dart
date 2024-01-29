@@ -80,7 +80,7 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
         unit.toEEREnergyEfficiencyRatio.value,
       );
 
-  static const _minorName = r'hVACEfficiency$EEREnergyEfficiencyRatio';
+  static const _minorName = 'eEREnergyEfficiencyRatio';
 
   static const _ratio = 0.2928;
 
@@ -93,8 +93,9 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
   HVACEfficiency$EEREnergyEfficiencyRatio get _clone =>
       HVACEfficiency$EEREnergyEfficiencyRatio(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HVACEfficiency$EEREnergyEfficiencyRatio] with new value
   @override
@@ -105,8 +106,9 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
 
   /// Symbol for [HVACEfficiency$EEREnergyEfficiencyRatio]
   @override
-  String get symbol => 'EEREnergyEfficiencyRatio';
+  String get symbol => 'EER (energy efficiency ratio)';
 
+  /// [HVACEfficiency$EEREnergyEfficiencyRatio] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -138,7 +140,7 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
         unit.toCOPCoefficientOfPerformace.value,
       );
 
-  static const _minorName = r'hVACEfficiency$COPCoefficientOfPerformace';
+  static const _minorName = 'cOPCoefficientOfPerformace';
 
   static const _ratio = 1.0;
 
@@ -151,8 +153,9 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
   HVACEfficiency$COPCoefficientOfPerformace get _clone =>
       HVACEfficiency$COPCoefficientOfPerformace(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HVACEfficiency$COPCoefficientOfPerformace] with new value
   @override
@@ -163,8 +166,9 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
 
   /// Symbol for [HVACEfficiency$COPCoefficientOfPerformace]
   @override
-  String get symbol => 'COPCoefficientOfPerformace';
+  String get symbol => 'COP (coefficient of performace)';
 
+  /// [HVACEfficiency$COPCoefficientOfPerformace] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -196,7 +200,7 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
         unit.toKilowattPerTon.value,
       );
 
-  static const _minorName = r'hVACEfficiency$KilowattPerTon';
+  static const _minorName = 'kilowattPerTon';
 
   static const _ratio = 0.284608378870674;
 
@@ -209,8 +213,9 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
   HVACEfficiency$KilowattPerTon get _clone =>
       HVACEfficiency$KilowattPerTon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HVACEfficiency$KilowattPerTon] with new value
   @override
@@ -221,8 +226,9 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
 
   /// Symbol for [HVACEfficiency$KilowattPerTon]
   @override
-  String get symbol => 'KilowattPerTon';
+  String get symbol => 'kilowatt/ton';
 
+  /// [HVACEfficiency$KilowattPerTon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

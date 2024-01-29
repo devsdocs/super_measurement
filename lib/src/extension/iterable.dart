@@ -933,9 +933,9 @@ extension IterableOfDataStorage on Iterable<DataStorage> {
         const DataStorage$Kilobyte(),
       );
 
-  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Kilobyte10Power3Bytes]
-  DataStorage get toKilobyte10Power3Bytes => combineTo(
-        const DataStorage$Kilobyte10Power3Bytes(),
+  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Kilobyte10PowerOf3Bytes]
+  DataStorage get toKilobyte10PowerOf3Bytes => combineTo(
+        const DataStorage$Kilobyte10PowerOf3Bytes(),
       );
 
   /// Combine all [DataStorage] in [Iterable] to [DataStorage$Megabit]
@@ -948,9 +948,9 @@ extension IterableOfDataStorage on Iterable<DataStorage> {
         const DataStorage$Megabyte(),
       );
 
-  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Megabyte10Power6Bytes]
-  DataStorage get toMegabyte10Power6Bytes => combineTo(
-        const DataStorage$Megabyte10Power6Bytes(),
+  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Megabyte10PowerOf6Bytes]
+  DataStorage get toMegabyte10PowerOf6Bytes => combineTo(
+        const DataStorage$Megabyte10PowerOf6Bytes(),
       );
 
   /// Combine all [DataStorage] in [Iterable] to [DataStorage$Gigabit]
@@ -963,9 +963,9 @@ extension IterableOfDataStorage on Iterable<DataStorage> {
         const DataStorage$Gigabyte(),
       );
 
-  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Gigabyte10Power9Bytes]
-  DataStorage get toGigabyte10Power9Bytes => combineTo(
-        const DataStorage$Gigabyte10Power9Bytes(),
+  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Gigabyte10PowerOf9Bytes]
+  DataStorage get toGigabyte10PowerOf9Bytes => combineTo(
+        const DataStorage$Gigabyte10PowerOf9Bytes(),
       );
 
   /// Combine all [DataStorage] in [Iterable] to [DataStorage$Terabit]
@@ -978,9 +978,9 @@ extension IterableOfDataStorage on Iterable<DataStorage> {
         const DataStorage$Terabyte(),
       );
 
-  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Terabyte10Power12Bytes]
-  DataStorage get toTerabyte10Power12Bytes => combineTo(
-        const DataStorage$Terabyte10Power12Bytes(),
+  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Terabyte10PowerOf12Bytes]
+  DataStorage get toTerabyte10PowerOf12Bytes => combineTo(
+        const DataStorage$Terabyte10PowerOf12Bytes(),
       );
 
   /// Combine all [DataStorage] in [Iterable] to [DataStorage$Petabit]
@@ -993,9 +993,9 @@ extension IterableOfDataStorage on Iterable<DataStorage> {
         const DataStorage$Petabyte(),
       );
 
-  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Petabyte10Power15Bytes]
-  DataStorage get toPetabyte10Power15Bytes => combineTo(
-        const DataStorage$Petabyte10Power15Bytes(),
+  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Petabyte10PowerOf15Bytes]
+  DataStorage get toPetabyte10PowerOf15Bytes => combineTo(
+        const DataStorage$Petabyte10PowerOf15Bytes(),
       );
 
   /// Combine all [DataStorage] in [Iterable] to [DataStorage$Exabit]
@@ -1008,9 +1008,9 @@ extension IterableOfDataStorage on Iterable<DataStorage> {
         const DataStorage$Exabyte(),
       );
 
-  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Exabyte10Power18Bytes]
-  DataStorage get toExabyte10Power18Bytes => combineTo(
-        const DataStorage$Exabyte10Power18Bytes(),
+  /// Combine all [DataStorage] in [Iterable] to [DataStorage$Exabyte10PowerOf18Bytes]
+  DataStorage get toExabyte10PowerOf18Bytes => combineTo(
+        const DataStorage$Exabyte10PowerOf18Bytes(),
       );
 
   /// Combine all [DataStorage] in [Iterable] to [DataStorage$FloppyDisk35DD]
@@ -5191,208 +5191,6 @@ extension IterableOfMomentofInertia on Iterable<MomentofInertia> {
   /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$SlugFootSquare]
   MomentofInertia get toSlugFootSquare => combineTo(
         const MomentofInertia$SlugFootSquare(),
-      );
-}
-
-extension IterableOfNumbers on Iterable<Numbers> {
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Binary]
-  Numbers get toBinary => combineTo(
-        const Numbers$Binary(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Octal]
-  Numbers get toOctal => combineTo(
-        const Numbers$Octal(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Decimal]
-  Numbers get toDecimal => combineTo(
-        const Numbers$Decimal(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Hexadecimal]
-  Numbers get toHexadecimal => combineTo(
-        const Numbers$Hexadecimal(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$RomanNumeral]
-  Numbers get toRomanNumeral => combineTo(
-        const Numbers$RomanNumeral(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base2]
-  Numbers get toBase2 => combineTo(
-        const Numbers$Base2(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base3]
-  Numbers get toBase3 => combineTo(
-        const Numbers$Base3(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base4]
-  Numbers get toBase4 => combineTo(
-        const Numbers$Base4(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base5]
-  Numbers get toBase5 => combineTo(
-        const Numbers$Base5(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base6]
-  Numbers get toBase6 => combineTo(
-        const Numbers$Base6(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base7]
-  Numbers get toBase7 => combineTo(
-        const Numbers$Base7(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base8]
-  Numbers get toBase8 => combineTo(
-        const Numbers$Base8(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base9]
-  Numbers get toBase9 => combineTo(
-        const Numbers$Base9(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base10]
-  Numbers get toBase10 => combineTo(
-        const Numbers$Base10(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base11]
-  Numbers get toBase11 => combineTo(
-        const Numbers$Base11(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base12]
-  Numbers get toBase12 => combineTo(
-        const Numbers$Base12(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base13]
-  Numbers get toBase13 => combineTo(
-        const Numbers$Base13(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base14]
-  Numbers get toBase14 => combineTo(
-        const Numbers$Base14(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base15]
-  Numbers get toBase15 => combineTo(
-        const Numbers$Base15(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base16]
-  Numbers get toBase16 => combineTo(
-        const Numbers$Base16(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base17]
-  Numbers get toBase17 => combineTo(
-        const Numbers$Base17(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base18]
-  Numbers get toBase18 => combineTo(
-        const Numbers$Base18(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base19]
-  Numbers get toBase19 => combineTo(
-        const Numbers$Base19(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base20]
-  Numbers get toBase20 => combineTo(
-        const Numbers$Base20(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base21]
-  Numbers get toBase21 => combineTo(
-        const Numbers$Base21(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base22]
-  Numbers get toBase22 => combineTo(
-        const Numbers$Base22(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base23]
-  Numbers get toBase23 => combineTo(
-        const Numbers$Base23(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base24]
-  Numbers get toBase24 => combineTo(
-        const Numbers$Base24(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base25]
-  Numbers get toBase25 => combineTo(
-        const Numbers$Base25(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base26]
-  Numbers get toBase26 => combineTo(
-        const Numbers$Base26(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base27]
-  Numbers get toBase27 => combineTo(
-        const Numbers$Base27(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base28]
-  Numbers get toBase28 => combineTo(
-        const Numbers$Base28(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base29]
-  Numbers get toBase29 => combineTo(
-        const Numbers$Base29(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base30]
-  Numbers get toBase30 => combineTo(
-        const Numbers$Base30(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base31]
-  Numbers get toBase31 => combineTo(
-        const Numbers$Base31(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base32]
-  Numbers get toBase32 => combineTo(
-        const Numbers$Base32(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base33]
-  Numbers get toBase33 => combineTo(
-        const Numbers$Base33(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base34]
-  Numbers get toBase34 => combineTo(
-        const Numbers$Base34(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base35]
-  Numbers get toBase35 => combineTo(
-        const Numbers$Base35(),
-      );
-
-  /// Combine all [Numbers] in [Iterable] to [Numbers$Base36]
-  Numbers get toBase36 => combineTo(
-        const Numbers$Base36(),
       );
 }
 

@@ -128,7 +128,7 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
         unit.toAmperePerMeter.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$AmperePerMeter';
+  static const _minorName = 'amperePerMeter';
 
   static const _ratio = 1.0;
 
@@ -141,8 +141,9 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
   LinearCurrentDensity$AmperePerMeter get _clone =>
       LinearCurrentDensity$AmperePerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AmperePerMeter] with new value
   @override
@@ -155,6 +156,7 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
   @override
   String get symbol => 'A/m';
 
+  /// [LinearCurrentDensity$AmperePerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -187,7 +189,7 @@ final class LinearCurrentDensity$AmperePerCentimeter
         unit.toAmperePerCentimeter.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$AmperePerCentimeter';
+  static const _minorName = 'amperePerCentimeter';
 
   static const _ratio = 100.0;
 
@@ -200,8 +202,9 @@ final class LinearCurrentDensity$AmperePerCentimeter
   LinearCurrentDensity$AmperePerCentimeter get _clone =>
       LinearCurrentDensity$AmperePerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AmperePerCentimeter] with new value
   @override
@@ -214,6 +217,7 @@ final class LinearCurrentDensity$AmperePerCentimeter
   @override
   String get symbol => 'A/cm';
 
+  /// [LinearCurrentDensity$AmperePerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -245,7 +249,7 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
         unit.toAmperePerInch.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$AmperePerInch';
+  static const _minorName = 'amperePerInch';
 
   static const _ratio = 39.37007874;
 
@@ -258,8 +262,9 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
   LinearCurrentDensity$AmperePerInch get _clone =>
       LinearCurrentDensity$AmperePerInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AmperePerInch] with new value
   @override
@@ -272,6 +277,7 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
   @override
   String get symbol => 'A/in';
 
+  /// [LinearCurrentDensity$AmperePerInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -303,7 +309,7 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
         unit.toAbamperePerMeter.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$AbamperePerMeter';
+  static const _minorName = 'abamperePerMeter';
 
   static const _ratio = 10.0;
 
@@ -316,8 +322,9 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
   LinearCurrentDensity$AbamperePerMeter get _clone =>
       LinearCurrentDensity$AbamperePerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerMeter] with new value
   @override
@@ -330,6 +337,7 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
   @override
   String get symbol => 'abA/m';
 
+  /// [LinearCurrentDensity$AbamperePerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -362,7 +370,7 @@ final class LinearCurrentDensity$AbamperePerCentimeter
         unit.toAbamperePerCentimeter.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$AbamperePerCentimeter';
+  static const _minorName = 'abamperePerCentimeter';
 
   static const _ratio = 1000.0;
 
@@ -375,8 +383,9 @@ final class LinearCurrentDensity$AbamperePerCentimeter
   LinearCurrentDensity$AbamperePerCentimeter get _clone =>
       LinearCurrentDensity$AbamperePerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerCentimeter] with new value
   @override
@@ -389,6 +398,7 @@ final class LinearCurrentDensity$AbamperePerCentimeter
   @override
   String get symbol => 'abA/cm';
 
+  /// [LinearCurrentDensity$AbamperePerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -420,7 +430,7 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
         unit.toAbamperePerInch.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$AbamperePerInch';
+  static const _minorName = 'abamperePerInch';
 
   static const _ratio = 393.7007874;
 
@@ -433,8 +443,9 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
   LinearCurrentDensity$AbamperePerInch get _clone =>
       LinearCurrentDensity$AbamperePerInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerInch] with new value
   @override
@@ -447,6 +458,7 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
   @override
   String get symbol => 'abA/in';
 
+  /// [LinearCurrentDensity$AbamperePerInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -478,7 +490,7 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
         unit.toOersted.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$Oersted';
+  static const _minorName = 'oersted';
 
   static const _ratio = 79.57747151;
 
@@ -491,8 +503,9 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
   LinearCurrentDensity$Oersted get _clone =>
       LinearCurrentDensity$Oersted(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$Oersted] with new value
   @override
@@ -505,6 +518,7 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
   @override
   String get symbol => 'Oe';
 
+  /// [LinearCurrentDensity$Oersted] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -537,7 +551,7 @@ final class LinearCurrentDensity$OerstedInternational
         unit.toOerstedInternational.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$OerstedInternational';
+  static const _minorName = 'oerstedInternational';
 
   static const _ratio = 79.56434337579257;
 
@@ -550,8 +564,9 @@ final class LinearCurrentDensity$OerstedInternational
   LinearCurrentDensity$OerstedInternational get _clone =>
       LinearCurrentDensity$OerstedInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$OerstedInternational] with new value
   @override
@@ -564,6 +579,7 @@ final class LinearCurrentDensity$OerstedInternational
   @override
   String get symbol => 'Oe';
 
+  /// [LinearCurrentDensity$OerstedInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -596,7 +612,7 @@ final class LinearCurrentDensity$GilbertPerCentimeter
         unit.toGilbertPerCentimeter.value,
       );
 
-  static const _minorName = r'linearCurrentDensity$GilbertPerCentimeter';
+  static const _minorName = 'gilbertPerCentimeter';
 
   static const _ratio = 79.57747151;
 
@@ -609,8 +625,9 @@ final class LinearCurrentDensity$GilbertPerCentimeter
   LinearCurrentDensity$GilbertPerCentimeter get _clone =>
       LinearCurrentDensity$GilbertPerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$GilbertPerCentimeter] with new value
   @override
@@ -623,6 +640,7 @@ final class LinearCurrentDensity$GilbertPerCentimeter
   @override
   String get symbol => 'Gi/cm';
 
+  /// [LinearCurrentDensity$GilbertPerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

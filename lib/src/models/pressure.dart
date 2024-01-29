@@ -338,7 +338,7 @@ final class Pressure$Exapascal extends Pressure {
         unit.toExapascal.value,
       );
 
-  static const _minorName = r'pressure$Exapascal';
+  static const _minorName = 'exapascal';
 
   static const _ratio = 10000000000000000000.0;
 
@@ -350,8 +350,9 @@ final class Pressure$Exapascal extends Pressure {
   @override
   Pressure$Exapascal get _clone => Pressure$Exapascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Exapascal] with new value
   @override
@@ -364,6 +365,7 @@ final class Pressure$Exapascal extends Pressure {
   @override
   String get symbol => 'EPa';
 
+  /// [Pressure$Exapascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -395,7 +397,7 @@ final class Pressure$Petapascal extends Pressure {
         unit.toPetapascal.value,
       );
 
-  static const _minorName = r'pressure$Petapascal';
+  static const _minorName = 'petapascal';
 
   static const _ratio = 10000000000000000.0;
 
@@ -407,8 +409,9 @@ final class Pressure$Petapascal extends Pressure {
   @override
   Pressure$Petapascal get _clone => Pressure$Petapascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Petapascal] with new value
   @override
@@ -421,6 +424,7 @@ final class Pressure$Petapascal extends Pressure {
   @override
   String get symbol => 'PPa';
 
+  /// [Pressure$Petapascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -452,7 +456,7 @@ final class Pressure$Terapascal extends Pressure {
         unit.toTerapascal.value,
       );
 
-  static const _minorName = r'pressure$Terapascal';
+  static const _minorName = 'terapascal';
 
   static const _ratio = 10000000000000.0;
 
@@ -464,8 +468,9 @@ final class Pressure$Terapascal extends Pressure {
   @override
   Pressure$Terapascal get _clone => Pressure$Terapascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Terapascal] with new value
   @override
@@ -478,6 +483,7 @@ final class Pressure$Terapascal extends Pressure {
   @override
   String get symbol => 'TPa';
 
+  /// [Pressure$Terapascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -509,7 +515,7 @@ final class Pressure$Gigapascal extends Pressure {
         unit.toGigapascal.value,
       );
 
-  static const _minorName = r'pressure$Gigapascal';
+  static const _minorName = 'gigapascal';
 
   static const _ratio = 10000000000.0;
 
@@ -521,8 +527,9 @@ final class Pressure$Gigapascal extends Pressure {
   @override
   Pressure$Gigapascal get _clone => Pressure$Gigapascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Gigapascal] with new value
   @override
@@ -535,6 +542,7 @@ final class Pressure$Gigapascal extends Pressure {
   @override
   String get symbol => 'GPa';
 
+  /// [Pressure$Gigapascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -566,7 +574,7 @@ final class Pressure$Megapascal extends Pressure {
         unit.toMegapascal.value,
       );
 
-  static const _minorName = r'pressure$Megapascal';
+  static const _minorName = 'megapascal';
 
   static const _ratio = 10000000.0;
 
@@ -578,8 +586,9 @@ final class Pressure$Megapascal extends Pressure {
   @override
   Pressure$Megapascal get _clone => Pressure$Megapascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Megapascal] with new value
   @override
@@ -592,6 +601,7 @@ final class Pressure$Megapascal extends Pressure {
   @override
   String get symbol => 'MPa';
 
+  /// [Pressure$Megapascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -623,7 +633,7 @@ final class Pressure$Kilopascal extends Pressure {
         unit.toKilopascal.value,
       );
 
-  static const _minorName = r'pressure$Kilopascal';
+  static const _minorName = 'kilopascal';
 
   static const _ratio = 10000.0;
 
@@ -635,8 +645,9 @@ final class Pressure$Kilopascal extends Pressure {
   @override
   Pressure$Kilopascal get _clone => Pressure$Kilopascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Kilopascal] with new value
   @override
@@ -649,6 +660,7 @@ final class Pressure$Kilopascal extends Pressure {
   @override
   String get symbol => 'kPa';
 
+  /// [Pressure$Kilopascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -680,7 +692,7 @@ final class Pressure$Hectopascal extends Pressure {
         unit.toHectopascal.value,
       );
 
-  static const _minorName = r'pressure$Hectopascal';
+  static const _minorName = 'hectopascal';
 
   static const _ratio = 1000.0;
 
@@ -692,8 +704,9 @@ final class Pressure$Hectopascal extends Pressure {
   @override
   Pressure$Hectopascal get _clone => Pressure$Hectopascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Hectopascal] with new value
   @override
@@ -706,6 +719,7 @@ final class Pressure$Hectopascal extends Pressure {
   @override
   String get symbol => 'hPa';
 
+  /// [Pressure$Hectopascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -737,7 +751,7 @@ final class Pressure$Dekapascal extends Pressure {
         unit.toDekapascal.value,
       );
 
-  static const _minorName = r'pressure$Dekapascal';
+  static const _minorName = 'dekapascal';
 
   static const _ratio = 100.0;
 
@@ -749,8 +763,9 @@ final class Pressure$Dekapascal extends Pressure {
   @override
   Pressure$Dekapascal get _clone => Pressure$Dekapascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Dekapascal] with new value
   @override
@@ -763,6 +778,7 @@ final class Pressure$Dekapascal extends Pressure {
   @override
   String get symbol => 'daPa';
 
+  /// [Pressure$Dekapascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -794,7 +810,7 @@ final class Pressure$Pascal extends Pressure {
         unit.toPascal.value,
       );
 
-  static const _minorName = r'pressure$Pascal';
+  static const _minorName = 'pascal';
 
   static const _ratio = 10.0;
 
@@ -806,8 +822,9 @@ final class Pressure$Pascal extends Pressure {
   @override
   Pressure$Pascal get _clone => Pressure$Pascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Pascal] with new value
   @override
@@ -820,6 +837,7 @@ final class Pressure$Pascal extends Pressure {
   @override
   String get symbol => 'Pa';
 
+  /// [Pressure$Pascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -851,7 +869,7 @@ final class Pressure$Decipascal extends Pressure {
         unit.toDecipascal.value,
       );
 
-  static const _minorName = r'pressure$Decipascal';
+  static const _minorName = 'decipascal';
 
   static const _ratio = 1.0;
 
@@ -863,8 +881,9 @@ final class Pressure$Decipascal extends Pressure {
   @override
   Pressure$Decipascal get _clone => Pressure$Decipascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Decipascal] with new value
   @override
@@ -877,6 +896,7 @@ final class Pressure$Decipascal extends Pressure {
   @override
   String get symbol => 'dPa';
 
+  /// [Pressure$Decipascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -908,7 +928,7 @@ final class Pressure$Centipascal extends Pressure {
         unit.toCentipascal.value,
       );
 
-  static const _minorName = r'pressure$Centipascal';
+  static const _minorName = 'centipascal';
 
   static const _ratio = 0.1;
 
@@ -920,8 +940,9 @@ final class Pressure$Centipascal extends Pressure {
   @override
   Pressure$Centipascal get _clone => Pressure$Centipascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Centipascal] with new value
   @override
@@ -934,6 +955,7 @@ final class Pressure$Centipascal extends Pressure {
   @override
   String get symbol => 'cPa';
 
+  /// [Pressure$Centipascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -965,7 +987,7 @@ final class Pressure$Millipascal extends Pressure {
         unit.toMillipascal.value,
       );
 
-  static const _minorName = r'pressure$Millipascal';
+  static const _minorName = 'millipascal';
 
   static const _ratio = 0.01;
 
@@ -977,8 +999,9 @@ final class Pressure$Millipascal extends Pressure {
   @override
   Pressure$Millipascal get _clone => Pressure$Millipascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Millipascal] with new value
   @override
@@ -991,6 +1014,7 @@ final class Pressure$Millipascal extends Pressure {
   @override
   String get symbol => 'mPa';
 
+  /// [Pressure$Millipascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1022,7 +1046,7 @@ final class Pressure$Micropascal extends Pressure {
         unit.toMicropascal.value,
       );
 
-  static const _minorName = r'pressure$Micropascal';
+  static const _minorName = 'micropascal';
 
   static const _ratio = 0.00001;
 
@@ -1034,8 +1058,9 @@ final class Pressure$Micropascal extends Pressure {
   @override
   Pressure$Micropascal get _clone => Pressure$Micropascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Micropascal] with new value
   @override
@@ -1048,6 +1073,7 @@ final class Pressure$Micropascal extends Pressure {
   @override
   String get symbol => 'µPa';
 
+  /// [Pressure$Micropascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1079,7 +1105,7 @@ final class Pressure$Nanopascal extends Pressure {
         unit.toNanopascal.value,
       );
 
-  static const _minorName = r'pressure$Nanopascal';
+  static const _minorName = 'nanopascal';
 
   static const _ratio = 1e-8;
 
@@ -1091,8 +1117,9 @@ final class Pressure$Nanopascal extends Pressure {
   @override
   Pressure$Nanopascal get _clone => Pressure$Nanopascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Nanopascal] with new value
   @override
@@ -1105,6 +1132,7 @@ final class Pressure$Nanopascal extends Pressure {
   @override
   String get symbol => 'nPa';
 
+  /// [Pressure$Nanopascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1136,7 +1164,7 @@ final class Pressure$Picopascal extends Pressure {
         unit.toPicopascal.value,
       );
 
-  static const _minorName = r'pressure$Picopascal';
+  static const _minorName = 'picopascal';
 
   static const _ratio = 1e-11;
 
@@ -1148,8 +1176,9 @@ final class Pressure$Picopascal extends Pressure {
   @override
   Pressure$Picopascal get _clone => Pressure$Picopascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Picopascal] with new value
   @override
@@ -1162,6 +1191,7 @@ final class Pressure$Picopascal extends Pressure {
   @override
   String get symbol => 'pPa';
 
+  /// [Pressure$Picopascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1193,7 +1223,7 @@ final class Pressure$Femtopascal extends Pressure {
         unit.toFemtopascal.value,
       );
 
-  static const _minorName = r'pressure$Femtopascal';
+  static const _minorName = 'femtopascal';
 
   static const _ratio = 1e-14;
 
@@ -1205,8 +1235,9 @@ final class Pressure$Femtopascal extends Pressure {
   @override
   Pressure$Femtopascal get _clone => Pressure$Femtopascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Femtopascal] with new value
   @override
@@ -1219,6 +1250,7 @@ final class Pressure$Femtopascal extends Pressure {
   @override
   String get symbol => 'fPa';
 
+  /// [Pressure$Femtopascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1250,7 +1282,7 @@ final class Pressure$Attopascal extends Pressure {
         unit.toAttopascal.value,
       );
 
-  static const _minorName = r'pressure$Attopascal';
+  static const _minorName = 'attopascal';
 
   static const _ratio = 1e-17;
 
@@ -1262,8 +1294,9 @@ final class Pressure$Attopascal extends Pressure {
   @override
   Pressure$Attopascal get _clone => Pressure$Attopascal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Attopascal] with new value
   @override
@@ -1276,6 +1309,7 @@ final class Pressure$Attopascal extends Pressure {
   @override
   String get symbol => 'aPa';
 
+  /// [Pressure$Attopascal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1307,7 +1341,7 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
         unit.toKilonewtonPerMeterSquare.value,
       );
 
-  static const _minorName = r'pressure$KilonewtonPerMeterSquare';
+  static const _minorName = 'kilonewtonPerMeterSquare';
 
   static const _ratio = 10000.0;
 
@@ -1320,8 +1354,9 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
   Pressure$KilonewtonPerMeterSquare get _clone =>
       Pressure$KilonewtonPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$KilonewtonPerMeterSquare] with new value
   @override
@@ -1334,6 +1369,7 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
   @override
   String get symbol => 'kN/m²';
 
+  /// [Pressure$KilonewtonPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1365,7 +1401,7 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
         unit.toNewtonPerMeterSquare.value,
       );
 
-  static const _minorName = r'pressure$NewtonPerMeterSquare';
+  static const _minorName = 'newtonPerMeterSquare';
 
   static const _ratio = 10.0;
 
@@ -1378,8 +1414,9 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
   Pressure$NewtonPerMeterSquare get _clone =>
       Pressure$NewtonPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$NewtonPerMeterSquare] with new value
   @override
@@ -1392,6 +1429,7 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
   @override
   String get symbol => 'N/m²';
 
+  /// [Pressure$NewtonPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1423,7 +1461,7 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
         unit.toNewtonPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'pressure$NewtonPerCentimeterSquare';
+  static const _minorName = 'newtonPerCentimeterSquare';
 
   static const _ratio = 100000.0;
 
@@ -1436,8 +1474,9 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
   Pressure$NewtonPerCentimeterSquare get _clone =>
       Pressure$NewtonPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$NewtonPerCentimeterSquare] with new value
   @override
@@ -1450,6 +1489,7 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
   @override
   String get symbol => 'N/cm²';
 
+  /// [Pressure$NewtonPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1481,7 +1521,7 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
         unit.toNewtonPerMillimeterSquare.value,
       );
 
-  static const _minorName = r'pressure$NewtonPerMillimeterSquare';
+  static const _minorName = 'newtonPerMillimeterSquare';
 
   static const _ratio = 10000000.0;
 
@@ -1494,8 +1534,9 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
   Pressure$NewtonPerMillimeterSquare get _clone =>
       Pressure$NewtonPerMillimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$NewtonPerMillimeterSquare] with new value
   @override
@@ -1508,6 +1549,7 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
   @override
   String get symbol => 'N/mm²';
 
+  /// [Pressure$NewtonPerMillimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1539,7 +1581,7 @@ final class Pressure$Bar extends Pressure {
         unit.toBar.value,
       );
 
-  static const _minorName = r'pressure$Bar';
+  static const _minorName = 'bar';
 
   static const _ratio = 1000000.0;
 
@@ -1551,8 +1593,9 @@ final class Pressure$Bar extends Pressure {
   @override
   Pressure$Bar get _clone => Pressure$Bar(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Bar] with new value
   @override
@@ -1563,8 +1606,9 @@ final class Pressure$Bar extends Pressure {
 
   /// Symbol for [Pressure$Bar]
   @override
-  String get symbol => 'Bar';
+  String get symbol => 'bar';
 
+  /// [Pressure$Bar] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1596,7 +1640,7 @@ final class Pressure$Millibar extends Pressure {
         unit.toMillibar.value,
       );
 
-  static const _minorName = r'pressure$Millibar';
+  static const _minorName = 'millibar';
 
   static const _ratio = 1000.0;
 
@@ -1608,8 +1652,9 @@ final class Pressure$Millibar extends Pressure {
   @override
   Pressure$Millibar get _clone => Pressure$Millibar(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Millibar] with new value
   @override
@@ -1622,6 +1667,7 @@ final class Pressure$Millibar extends Pressure {
   @override
   String get symbol => 'mbar';
 
+  /// [Pressure$Millibar] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1653,7 +1699,7 @@ final class Pressure$Microbar extends Pressure {
         unit.toMicrobar.value,
       );
 
-  static const _minorName = r'pressure$Microbar';
+  static const _minorName = 'microbar';
 
   static const _ratio = 1.0;
 
@@ -1665,8 +1711,9 @@ final class Pressure$Microbar extends Pressure {
   @override
   Pressure$Microbar get _clone => Pressure$Microbar(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Microbar] with new value
   @override
@@ -1679,6 +1726,7 @@ final class Pressure$Microbar extends Pressure {
   @override
   String get symbol => 'µbar';
 
+  /// [Pressure$Microbar] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1710,7 +1758,7 @@ final class Pressure$Atmosphere extends Pressure {
         unit.toAtmosphere.value,
       );
 
-  static const _minorName = r'pressure$Atmosphere';
+  static const _minorName = 'atmosphere';
 
   static const _ratio = 1013250.0;
 
@@ -1722,8 +1770,9 @@ final class Pressure$Atmosphere extends Pressure {
   @override
   Pressure$Atmosphere get _clone => Pressure$Atmosphere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Atmosphere] with new value
   @override
@@ -1736,6 +1785,7 @@ final class Pressure$Atmosphere extends Pressure {
   @override
   String get symbol => 'atm';
 
+  /// [Pressure$Atmosphere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1767,7 +1817,7 @@ final class Pressure$Psi extends Pressure {
         unit.toPsi.value,
       );
 
-  static const _minorName = r'pressure$Psi';
+  static const _minorName = 'psi';
 
   static const _ratio = 68947.57293178307;
 
@@ -1779,8 +1829,9 @@ final class Pressure$Psi extends Pressure {
   @override
   Pressure$Psi get _clone => Pressure$Psi(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Psi] with new value
   @override
@@ -1791,8 +1842,9 @@ final class Pressure$Psi extends Pressure {
 
   /// Symbol for [Pressure$Psi]
   @override
-  String get symbol => 'Psi';
+  String get symbol => 'psi';
 
+  /// [Pressure$Psi] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1824,7 +1876,7 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
         unit.toDynePerCentimeterSquare.value,
       );
 
-  static const _minorName = r'pressure$DynePerCentimeterSquare';
+  static const _minorName = 'dynePerCentimeterSquare';
 
   static const _ratio = 1.0;
 
@@ -1837,8 +1889,9 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
   Pressure$DynePerCentimeterSquare get _clone =>
       Pressure$DynePerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$DynePerCentimeterSquare] with new value
   @override
@@ -1851,6 +1904,7 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
   @override
   String get symbol => 'dyn/cm²';
 
+  /// [Pressure$DynePerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1882,7 +1936,7 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
         unit.toKilogramPerMeterSquare.value,
       );
 
-  static const _minorName = r'pressure$KilogramPerMeterSquare';
+  static const _minorName = 'kilogramPerMeterSquare';
 
   static const _ratio = 98.0665;
 
@@ -1895,8 +1949,9 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
   Pressure$KilogramPerMeterSquare get _clone =>
       Pressure$KilogramPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$KilogramPerMeterSquare] with new value
   @override
@@ -1909,6 +1964,7 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
   @override
   String get symbol => 'kgf/m²';
 
+  /// [Pressure$KilogramPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1940,7 +1996,7 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
         unit.toKilogramPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'pressure$KilogramPerCentimeterSquare';
+  static const _minorName = 'kilogramPerCentimeterSquare';
 
   static const _ratio = 980665.0;
 
@@ -1953,8 +2009,9 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
   Pressure$KilogramPerCentimeterSquare get _clone =>
       Pressure$KilogramPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$KilogramPerCentimeterSquare] with new value
   @override
@@ -1967,6 +2024,7 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
   @override
   String get symbol => 'kgf/cm²';
 
+  /// [Pressure$KilogramPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1998,7 +2056,7 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
         unit.toKilogramPerMillimeterSquare.value,
       );
 
-  static const _minorName = r'pressure$KilogramPerMillimeterSquare';
+  static const _minorName = 'kilogramPerMillimeterSquare';
 
   static const _ratio = 98066500.0;
 
@@ -2011,8 +2069,9 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
   Pressure$KilogramPerMillimeterSquare get _clone =>
       Pressure$KilogramPerMillimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$KilogramPerMillimeterSquare] with new value
   @override
@@ -2025,6 +2084,7 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
   @override
   String get symbol => 'kgf/mm²';
 
+  /// [Pressure$KilogramPerMillimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2056,7 +2116,7 @@ final class Pressure$TonPerFootSquare extends Pressure {
         unit.toTonPerFootSquare.value,
       );
 
-  static const _minorName = r'pressure$TonPerFootSquare';
+  static const _minorName = 'tonPerFootSquare';
 
   static const _ratio = 957605.1796080982;
 
@@ -2068,8 +2128,9 @@ final class Pressure$TonPerFootSquare extends Pressure {
   @override
   Pressure$TonPerFootSquare get _clone => Pressure$TonPerFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$TonPerFootSquare] with new value
   @override
@@ -2080,8 +2141,9 @@ final class Pressure$TonPerFootSquare extends Pressure {
 
   /// Symbol for [Pressure$TonPerFootSquare]
   @override
-  String get symbol => 'TonPerFootSquare';
+  String get symbol => 'ton/foot²';
 
+  /// [Pressure$TonPerFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2113,7 +2175,7 @@ final class Pressure$TonPerInchSquare extends Pressure {
         unit.toTonPerInchSquare.value,
       );
 
-  static const _minorName = r'pressure$TonPerInchSquare';
+  static const _minorName = 'tonPerInchSquare';
 
   static const _ratio = 137895145.86356613;
 
@@ -2125,8 +2187,9 @@ final class Pressure$TonPerInchSquare extends Pressure {
   @override
   Pressure$TonPerInchSquare get _clone => Pressure$TonPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$TonPerInchSquare] with new value
   @override
@@ -2137,8 +2200,9 @@ final class Pressure$TonPerInchSquare extends Pressure {
 
   /// Symbol for [Pressure$TonPerInchSquare]
   @override
-  String get symbol => 'TonPerInchSquare';
+  String get symbol => 'ton/inch²';
 
+  /// [Pressure$TonPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2170,7 +2234,7 @@ final class Pressure$PoundPerFootSquare extends Pressure {
         unit.toPoundPerFootSquare.value,
       );
 
-  static const _minorName = r'pressure$PoundPerFootSquare';
+  static const _minorName = 'poundPerFootSquare';
 
   static const _ratio = 478.8025898040491;
 
@@ -2182,8 +2246,9 @@ final class Pressure$PoundPerFootSquare extends Pressure {
   @override
   Pressure$PoundPerFootSquare get _clone => Pressure$PoundPerFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$PoundPerFootSquare] with new value
   @override
@@ -2196,6 +2261,7 @@ final class Pressure$PoundPerFootSquare extends Pressure {
   @override
   String get symbol => 'lbf/ft²';
 
+  /// [Pressure$PoundPerFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2227,7 +2293,7 @@ final class Pressure$PoundPerInchSquare extends Pressure {
         unit.toPoundPerInchSquare.value,
       );
 
-  static const _minorName = r'pressure$PoundPerInchSquare';
+  static const _minorName = 'poundPerInchSquare';
 
   static const _ratio = 68947.57293178307;
 
@@ -2239,8 +2305,9 @@ final class Pressure$PoundPerInchSquare extends Pressure {
   @override
   Pressure$PoundPerInchSquare get _clone => Pressure$PoundPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$PoundPerInchSquare] with new value
   @override
@@ -2253,6 +2320,7 @@ final class Pressure$PoundPerInchSquare extends Pressure {
   @override
   String get symbol => 'lbf/in²';
 
+  /// [Pressure$PoundPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2284,7 +2352,7 @@ final class Pressure$KipPerInchSquare extends Pressure {
         unit.toKipPerInchSquare.value,
       );
 
-  static const _minorName = r'pressure$KipPerInchSquare';
+  static const _minorName = 'kipPerInchSquare';
 
   static const _ratio = 68947572.93178307;
 
@@ -2296,8 +2364,9 @@ final class Pressure$KipPerInchSquare extends Pressure {
   @override
   Pressure$KipPerInchSquare get _clone => Pressure$KipPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$KipPerInchSquare] with new value
   @override
@@ -2308,8 +2377,9 @@ final class Pressure$KipPerInchSquare extends Pressure {
 
   /// Symbol for [Pressure$KipPerInchSquare]
   @override
-  String get symbol => 'KipPerInchSquare';
+  String get symbol => 'kip/inch²';
 
+  /// [Pressure$KipPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2341,7 +2411,7 @@ final class Pressure$Torr extends Pressure {
         unit.toTorr.value,
       );
 
-  static const _minorName = r'pressure$Torr';
+  static const _minorName = 'torr';
 
   static const _ratio = 1333.223684210828;
 
@@ -2353,8 +2423,9 @@ final class Pressure$Torr extends Pressure {
   @override
   Pressure$Torr get _clone => Pressure$Torr(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$Torr] with new value
   @override
@@ -2367,6 +2438,7 @@ final class Pressure$Torr extends Pressure {
   @override
   String get symbol => 'Torr';
 
+  /// [Pressure$Torr] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2398,7 +2470,7 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
         unit.toCentimeterMercury0DegreeC.value,
       );
 
-  static const _minorName = r'pressure$CentimeterMercury0DegreeC';
+  static const _minorName = 'centimeterMercury0DegreeC';
 
   static const _ratio = 13332.2368421083;
 
@@ -2411,8 +2483,9 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
   Pressure$CentimeterMercury0DegreeC get _clone =>
       Pressure$CentimeterMercury0DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$CentimeterMercury0DegreeC] with new value
   @override
@@ -2425,6 +2498,7 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
   @override
   String get symbol => 'cmHg';
 
+  /// [Pressure$CentimeterMercury0DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2456,7 +2530,7 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
         unit.toMillimeterMercury0DegreeC.value,
       );
 
-  static const _minorName = r'pressure$MillimeterMercury0DegreeC';
+  static const _minorName = 'millimeterMercury0DegreeC';
 
   static const _ratio = 1333.223684210828;
 
@@ -2469,8 +2543,9 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
   Pressure$MillimeterMercury0DegreeC get _clone =>
       Pressure$MillimeterMercury0DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$MillimeterMercury0DegreeC] with new value
   @override
@@ -2483,6 +2558,7 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
   @override
   String get symbol => 'mmHg';
 
+  /// [Pressure$MillimeterMercury0DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2514,7 +2590,7 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
         unit.toInchMercury32DegreeF.value,
       );
 
-  static const _minorName = r'pressure$InchMercury32DegreeF';
+  static const _minorName = 'inchMercury32DegreeF';
 
   static const _ratio = 33863.88157899115;
 
@@ -2527,8 +2603,9 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
   Pressure$InchMercury32DegreeF get _clone =>
       Pressure$InchMercury32DegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$InchMercury32DegreeF] with new value
   @override
@@ -2541,6 +2618,7 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
   @override
   String get symbol => 'inHg';
 
+  /// [Pressure$InchMercury32DegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2572,7 +2650,7 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
         unit.toCentimeterWater4DegreeC.value,
       );
 
-  static const _minorName = r'pressure$CentimeterWater4DegreeC';
+  static const _minorName = 'centimeterWater4DegreeC';
 
   static const _ratio = 980.638;
 
@@ -2585,8 +2663,9 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
   Pressure$CentimeterWater4DegreeC get _clone =>
       Pressure$CentimeterWater4DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$CentimeterWater4DegreeC] with new value
   @override
@@ -2599,6 +2678,7 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
   @override
   String get symbol => 'cmH2O';
 
+  /// [Pressure$CentimeterWater4DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2630,7 +2710,7 @@ final class Pressure$InchWater60DegreeF extends Pressure {
         unit.toInchWater60DegreeF.value,
       );
 
-  static const _minorName = r'pressure$InchWater60DegreeF';
+  static const _minorName = 'inchWater60DegreeF';
 
   static const _ratio = 2488.4;
 
@@ -2642,8 +2722,9 @@ final class Pressure$InchWater60DegreeF extends Pressure {
   @override
   Pressure$InchWater60DegreeF get _clone => Pressure$InchWater60DegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$InchWater60DegreeF] with new value
   @override
@@ -2656,6 +2737,7 @@ final class Pressure$InchWater60DegreeF extends Pressure {
   @override
   String get symbol => 'inH2O';
 
+  /// [Pressure$InchWater60DegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2687,7 +2769,7 @@ final class Pressure$FootWater60DegreeF extends Pressure {
         unit.toFootWater60DegreeF.value,
       );
 
-  static const _minorName = r'pressure$FootWater60DegreeF';
+  static const _minorName = 'footWater60DegreeF';
 
   static const _ratio = 29860.8;
 
@@ -2699,8 +2781,9 @@ final class Pressure$FootWater60DegreeF extends Pressure {
   @override
   Pressure$FootWater60DegreeF get _clone => Pressure$FootWater60DegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Pressure$FootWater60DegreeF] with new value
   @override
@@ -2713,6 +2796,7 @@ final class Pressure$FootWater60DegreeF extends Pressure {
   @override
   String get symbol => 'ftH2O';
 
+  /// [Pressure$FootWater60DegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

@@ -493,7 +493,7 @@ final class Length$Exameter extends Length {
         unit.toExameter.value,
       );
 
-  static const _minorName = r'length$Exameter';
+  static const _minorName = 'exameter';
 
   static const _ratio = 6.25e+52;
 
@@ -505,8 +505,9 @@ final class Length$Exameter extends Length {
   @override
   Length$Exameter get _clone => Length$Exameter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Exameter] with new value
   @override
@@ -519,6 +520,7 @@ final class Length$Exameter extends Length {
   @override
   String get symbol => 'Em';
 
+  /// [Length$Exameter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -550,7 +552,7 @@ final class Length$Petameter extends Length {
         unit.toPetameter.value,
       );
 
-  static const _minorName = r'length$Petameter';
+  static const _minorName = 'petameter';
 
   static const _ratio = 6.25e+49;
 
@@ -562,8 +564,9 @@ final class Length$Petameter extends Length {
   @override
   Length$Petameter get _clone => Length$Petameter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Petameter] with new value
   @override
@@ -576,6 +579,7 @@ final class Length$Petameter extends Length {
   @override
   String get symbol => 'Pm';
 
+  /// [Length$Petameter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -607,7 +611,7 @@ final class Length$Terameter extends Length {
         unit.toTerameter.value,
       );
 
-  static const _minorName = r'length$Terameter';
+  static const _minorName = 'terameter';
 
   static const _ratio = 6.25e+46;
 
@@ -619,8 +623,9 @@ final class Length$Terameter extends Length {
   @override
   Length$Terameter get _clone => Length$Terameter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Terameter] with new value
   @override
@@ -633,6 +638,7 @@ final class Length$Terameter extends Length {
   @override
   String get symbol => 'Tm';
 
+  /// [Length$Terameter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -664,7 +670,7 @@ final class Length$Gigameter extends Length {
         unit.toGigameter.value,
       );
 
-  static const _minorName = r'length$Gigameter';
+  static const _minorName = 'gigameter';
 
   static const _ratio = 6.25e+43;
 
@@ -676,8 +682,9 @@ final class Length$Gigameter extends Length {
   @override
   Length$Gigameter get _clone => Length$Gigameter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Gigameter] with new value
   @override
@@ -690,6 +697,7 @@ final class Length$Gigameter extends Length {
   @override
   String get symbol => 'Gm';
 
+  /// [Length$Gigameter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -721,7 +729,7 @@ final class Length$Megameter extends Length {
         unit.toMegameter.value,
       );
 
-  static const _minorName = r'length$Megameter';
+  static const _minorName = 'megameter';
 
   static const _ratio = 6.25e+40;
 
@@ -733,8 +741,9 @@ final class Length$Megameter extends Length {
   @override
   Length$Megameter get _clone => Length$Megameter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Megameter] with new value
   @override
@@ -747,6 +756,7 @@ final class Length$Megameter extends Length {
   @override
   String get symbol => 'Mm';
 
+  /// [Length$Megameter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -778,7 +788,7 @@ final class Length$Kilometer extends Length {
         unit.toKilometer.value,
       );
 
-  static const _minorName = r'length$Kilometer';
+  static const _minorName = 'kilometer';
 
   static const _ratio = 6.25e+37;
 
@@ -790,8 +800,9 @@ final class Length$Kilometer extends Length {
   @override
   Length$Kilometer get _clone => Length$Kilometer(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Kilometer] with new value
   @override
@@ -804,6 +815,7 @@ final class Length$Kilometer extends Length {
   @override
   String get symbol => 'km';
 
+  /// [Length$Kilometer] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -835,7 +847,7 @@ final class Length$Hectometer extends Length {
         unit.toHectometer.value,
       );
 
-  static const _minorName = r'length$Hectometer';
+  static const _minorName = 'hectometer';
 
   static const _ratio = 6.25e+36;
 
@@ -847,8 +859,9 @@ final class Length$Hectometer extends Length {
   @override
   Length$Hectometer get _clone => Length$Hectometer(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Hectometer] with new value
   @override
@@ -861,6 +874,7 @@ final class Length$Hectometer extends Length {
   @override
   String get symbol => 'hm';
 
+  /// [Length$Hectometer] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -892,7 +906,7 @@ final class Length$Dekameter extends Length {
         unit.toDekameter.value,
       );
 
-  static const _minorName = r'length$Dekameter';
+  static const _minorName = 'dekameter';
 
   static const _ratio = 6.25e+35;
 
@@ -904,8 +918,9 @@ final class Length$Dekameter extends Length {
   @override
   Length$Dekameter get _clone => Length$Dekameter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Dekameter] with new value
   @override
@@ -918,6 +933,7 @@ final class Length$Dekameter extends Length {
   @override
   String get symbol => 'dam';
 
+  /// [Length$Dekameter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -949,7 +965,7 @@ final class Length$Meter extends Length {
         unit.toMeter.value,
       );
 
-  static const _minorName = r'length$Meter';
+  static const _minorName = 'meter';
 
   static const _ratio = 6.25e+34;
 
@@ -961,8 +977,9 @@ final class Length$Meter extends Length {
   @override
   Length$Meter get _clone => Length$Meter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Meter] with new value
   @override
@@ -975,6 +992,7 @@ final class Length$Meter extends Length {
   @override
   String get symbol => 'm';
 
+  /// [Length$Meter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1006,7 +1024,7 @@ final class Length$Decimeter extends Length {
         unit.toDecimeter.value,
       );
 
-  static const _minorName = r'length$Decimeter';
+  static const _minorName = 'decimeter';
 
   static const _ratio = 6.25e+33;
 
@@ -1018,8 +1036,9 @@ final class Length$Decimeter extends Length {
   @override
   Length$Decimeter get _clone => Length$Decimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Decimeter] with new value
   @override
@@ -1032,6 +1051,7 @@ final class Length$Decimeter extends Length {
   @override
   String get symbol => 'dm';
 
+  /// [Length$Decimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1063,7 +1083,7 @@ final class Length$Centimeter extends Length {
         unit.toCentimeter.value,
       );
 
-  static const _minorName = r'length$Centimeter';
+  static const _minorName = 'centimeter';
 
   static const _ratio = 6.25e+32;
 
@@ -1075,8 +1095,9 @@ final class Length$Centimeter extends Length {
   @override
   Length$Centimeter get _clone => Length$Centimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Centimeter] with new value
   @override
@@ -1089,6 +1110,7 @@ final class Length$Centimeter extends Length {
   @override
   String get symbol => 'cm';
 
+  /// [Length$Centimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1120,7 +1142,7 @@ final class Length$Millimeter extends Length {
         unit.toMillimeter.value,
       );
 
-  static const _minorName = r'length$Millimeter';
+  static const _minorName = 'millimeter';
 
   static const _ratio = 6.25e+31;
 
@@ -1132,8 +1154,9 @@ final class Length$Millimeter extends Length {
   @override
   Length$Millimeter get _clone => Length$Millimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Millimeter] with new value
   @override
@@ -1146,6 +1169,7 @@ final class Length$Millimeter extends Length {
   @override
   String get symbol => 'mm';
 
+  /// [Length$Millimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1177,7 +1201,7 @@ final class Length$Micrometer extends Length {
         unit.toMicrometer.value,
       );
 
-  static const _minorName = r'length$Micrometer';
+  static const _minorName = 'micrometer';
 
   static const _ratio = 6.25e+28;
 
@@ -1189,8 +1213,9 @@ final class Length$Micrometer extends Length {
   @override
   Length$Micrometer get _clone => Length$Micrometer(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Micrometer] with new value
   @override
@@ -1203,6 +1228,7 @@ final class Length$Micrometer extends Length {
   @override
   String get symbol => 'µm';
 
+  /// [Length$Micrometer] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1234,7 +1260,7 @@ final class Length$Nanometer extends Length {
         unit.toNanometer.value,
       );
 
-  static const _minorName = r'length$Nanometer';
+  static const _minorName = 'nanometer';
 
   static const _ratio = 6.25e+25;
 
@@ -1246,8 +1272,9 @@ final class Length$Nanometer extends Length {
   @override
   Length$Nanometer get _clone => Length$Nanometer(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Nanometer] with new value
   @override
@@ -1260,6 +1287,7 @@ final class Length$Nanometer extends Length {
   @override
   String get symbol => 'nm';
 
+  /// [Length$Nanometer] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1291,7 +1319,7 @@ final class Length$Picometer extends Length {
         unit.toPicometer.value,
       );
 
-  static const _minorName = r'length$Picometer';
+  static const _minorName = 'picometer';
 
   static const _ratio = 6.25e+22;
 
@@ -1303,8 +1331,9 @@ final class Length$Picometer extends Length {
   @override
   Length$Picometer get _clone => Length$Picometer(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Picometer] with new value
   @override
@@ -1317,6 +1346,7 @@ final class Length$Picometer extends Length {
   @override
   String get symbol => 'pm';
 
+  /// [Length$Picometer] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1348,7 +1378,7 @@ final class Length$Femtometer extends Length {
         unit.toFemtometer.value,
       );
 
-  static const _minorName = r'length$Femtometer';
+  static const _minorName = 'femtometer';
 
   static const _ratio = 62500000000000000000.0;
 
@@ -1360,8 +1390,9 @@ final class Length$Femtometer extends Length {
   @override
   Length$Femtometer get _clone => Length$Femtometer(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Femtometer] with new value
   @override
@@ -1374,6 +1405,7 @@ final class Length$Femtometer extends Length {
   @override
   String get symbol => 'fm';
 
+  /// [Length$Femtometer] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1405,7 +1437,7 @@ final class Length$Attometer extends Length {
         unit.toAttometer.value,
       );
 
-  static const _minorName = r'length$Attometer';
+  static const _minorName = 'attometer';
 
   static const _ratio = 62500000000000000.0;
 
@@ -1417,8 +1449,9 @@ final class Length$Attometer extends Length {
   @override
   Length$Attometer get _clone => Length$Attometer(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Attometer] with new value
   @override
@@ -1431,6 +1464,7 @@ final class Length$Attometer extends Length {
   @override
   String get symbol => 'am';
 
+  /// [Length$Attometer] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1462,7 +1496,7 @@ final class Length$Angstrom extends Length {
         unit.toAngstrom.value,
       );
 
-  static const _minorName = r'length$Angstrom';
+  static const _minorName = 'angstrom';
 
   static const _ratio = 6.25e+24;
 
@@ -1474,8 +1508,9 @@ final class Length$Angstrom extends Length {
   @override
   Length$Angstrom get _clone => Length$Angstrom(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Angstrom] with new value
   @override
@@ -1488,6 +1523,7 @@ final class Length$Angstrom extends Length {
   @override
   String get symbol => 'Å';
 
+  /// [Length$Angstrom] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1519,7 +1555,7 @@ final class Length$Fermi extends Length {
         unit.toFermi.value,
       );
 
-  static const _minorName = r'length$Fermi';
+  static const _minorName = 'fermi';
 
   static const _ratio = 62500000000000000000.0;
 
@@ -1531,8 +1567,9 @@ final class Length$Fermi extends Length {
   @override
   Length$Fermi get _clone => Length$Fermi(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Fermi] with new value
   @override
@@ -1545,6 +1582,7 @@ final class Length$Fermi extends Length {
   @override
   String get symbol => 'fm';
 
+  /// [Length$Fermi] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1576,7 +1614,7 @@ final class Length$Planck extends Length {
         unit.toPlanck.value,
       );
 
-  static const _minorName = r'length$Planck';
+  static const _minorName = 'planck';
 
   static const _ratio = 1.0;
 
@@ -1588,8 +1626,9 @@ final class Length$Planck extends Length {
   @override
   Length$Planck get _clone => Length$Planck(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Planck] with new value
   @override
@@ -1600,8 +1639,9 @@ final class Length$Planck extends Length {
 
   /// Symbol for [Length$Planck]
   @override
-  String get symbol => 'Planck';
+  String get symbol => 'planck';
 
+  /// [Length$Planck] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1633,7 +1673,7 @@ final class Length$MileUS extends Length {
         unit.toMileUS.value,
       );
 
-  static const _minorName = r'length$MileUS';
+  static const _minorName = 'mileUS';
 
   static const _ratio = 1.00584e+38;
 
@@ -1645,8 +1685,9 @@ final class Length$MileUS extends Length {
   @override
   Length$MileUS get _clone => Length$MileUS(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$MileUS] with new value
   @override
@@ -1659,6 +1700,7 @@ final class Length$MileUS extends Length {
   @override
   String get symbol => 'mi';
 
+  /// [Length$MileUS] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1690,7 +1732,7 @@ final class Length$MileUSSurveyFoot extends Length {
         unit.toMileUSSurveyFoot.value,
       );
 
-  static const _minorName = r'length$MileUSSurveyFoot';
+  static const _minorName = 'mileUSSurveyFoot';
 
   static const _ratio = 1.0058420116840233e+38;
 
@@ -1702,8 +1744,9 @@ final class Length$MileUSSurveyFoot extends Length {
   @override
   Length$MileUSSurveyFoot get _clone => Length$MileUSSurveyFoot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$MileUSSurveyFoot] with new value
   @override
@@ -1714,8 +1757,9 @@ final class Length$MileUSSurveyFoot extends Length {
 
   /// Symbol for [Length$MileUSSurveyFoot]
   @override
-  String get symbol => 'MileUSSurveyFoot';
+  String get symbol => 'mile (US survey foot)';
 
+  /// [Length$MileUSSurveyFoot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1747,7 +1791,7 @@ final class Length$MileRoman extends Length {
         unit.toMileRoman.value,
       );
 
-  static const _minorName = r'length$MileRoman';
+  static const _minorName = 'mileRoman';
 
   static const _ratio = 9.248775e+37;
 
@@ -1759,8 +1803,9 @@ final class Length$MileRoman extends Length {
   @override
   Length$MileRoman get _clone => Length$MileRoman(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$MileRoman] with new value
   @override
@@ -1771,8 +1816,9 @@ final class Length$MileRoman extends Length {
 
   /// Symbol for [Length$MileRoman]
   @override
-  String get symbol => 'MileRoman';
+  String get symbol => 'mile (Roman)';
 
+  /// [Length$MileRoman] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1804,7 +1850,7 @@ final class Length$Furlong extends Length {
         unit.toFurlong.value,
       );
 
-  static const _minorName = r'length$Furlong';
+  static const _minorName = 'furlong';
 
   static const _ratio = 1.2573e+37;
 
@@ -1816,8 +1862,9 @@ final class Length$Furlong extends Length {
   @override
   Length$Furlong get _clone => Length$Furlong(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Furlong] with new value
   @override
@@ -1830,6 +1877,7 @@ final class Length$Furlong extends Length {
   @override
   String get symbol => 'fur';
 
+  /// [Length$Furlong] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1861,7 +1909,7 @@ final class Length$Chain extends Length {
         unit.toChain.value,
       );
 
-  static const _minorName = r'length$Chain';
+  static const _minorName = 'chain';
 
   static const _ratio = 1.2573e+36;
 
@@ -1873,8 +1921,9 @@ final class Length$Chain extends Length {
   @override
   Length$Chain get _clone => Length$Chain(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Chain] with new value
   @override
@@ -1887,6 +1936,7 @@ final class Length$Chain extends Length {
   @override
   String get symbol => 'ch';
 
+  /// [Length$Chain] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1918,7 +1968,7 @@ final class Length$Rod extends Length {
         unit.toRod.value,
       );
 
-  static const _minorName = r'length$Rod';
+  static const _minorName = 'rod';
 
   static const _ratio = 3.14325e+35;
 
@@ -1930,8 +1980,9 @@ final class Length$Rod extends Length {
   @override
   Length$Rod get _clone => Length$Rod(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Rod] with new value
   @override
@@ -1944,6 +1995,7 @@ final class Length$Rod extends Length {
   @override
   String get symbol => 'rd';
 
+  /// [Length$Rod] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1975,7 +2027,7 @@ final class Length$Perch extends Length {
         unit.toPerch.value,
       );
 
-  static const _minorName = r'length$Perch';
+  static const _minorName = 'perch';
 
   static const _ratio = 3.14325e+35;
 
@@ -1987,8 +2039,9 @@ final class Length$Perch extends Length {
   @override
   Length$Perch get _clone => Length$Perch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Perch] with new value
   @override
@@ -1999,8 +2052,9 @@ final class Length$Perch extends Length {
 
   /// Symbol for [Length$Perch]
   @override
-  String get symbol => 'Perch';
+  String get symbol => 'perch';
 
+  /// [Length$Perch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2032,7 +2086,7 @@ final class Length$Pole extends Length {
         unit.toPole.value,
       );
 
-  static const _minorName = r'length$Pole';
+  static const _minorName = 'pole';
 
   static const _ratio = 3.14325e+35;
 
@@ -2044,8 +2098,9 @@ final class Length$Pole extends Length {
   @override
   Length$Pole get _clone => Length$Pole(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Pole] with new value
   @override
@@ -2056,8 +2111,9 @@ final class Length$Pole extends Length {
 
   /// Symbol for [Length$Pole]
   @override
-  String get symbol => 'Pole';
+  String get symbol => 'pole';
 
+  /// [Length$Pole] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2089,7 +2145,7 @@ final class Length$Fathom extends Length {
         unit.toFathom.value,
       );
 
-  static const _minorName = r'length$Fathom';
+  static const _minorName = 'fathom';
 
   static const _ratio = 1.143e+35;
 
@@ -2101,8 +2157,9 @@ final class Length$Fathom extends Length {
   @override
   Length$Fathom get _clone => Length$Fathom(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Fathom] with new value
   @override
@@ -2115,6 +2172,7 @@ final class Length$Fathom extends Length {
   @override
   String get symbol => 'fth';
 
+  /// [Length$Fathom] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2146,7 +2204,7 @@ final class Length$Yard extends Length {
         unit.toYard.value,
       );
 
-  static const _minorName = r'length$Yard';
+  static const _minorName = 'yard';
 
   static const _ratio = 5.715e+34;
 
@@ -2158,8 +2216,9 @@ final class Length$Yard extends Length {
   @override
   Length$Yard get _clone => Length$Yard(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Yard] with new value
   @override
@@ -2172,6 +2231,7 @@ final class Length$Yard extends Length {
   @override
   String get symbol => 'yd';
 
+  /// [Length$Yard] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2203,7 +2263,7 @@ final class Length$Foot extends Length {
         unit.toFoot.value,
       );
 
-  static const _minorName = r'length$Foot';
+  static const _minorName = 'foot';
 
   static const _ratio = 1.905e+34;
 
@@ -2215,8 +2275,9 @@ final class Length$Foot extends Length {
   @override
   Length$Foot get _clone => Length$Foot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Foot] with new value
   @override
@@ -2229,6 +2290,7 @@ final class Length$Foot extends Length {
   @override
   String get symbol => 'ft';
 
+  /// [Length$Foot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2260,7 +2322,7 @@ final class Length$FootUSSurvey extends Length {
         unit.toFootUSSurvey.value,
       );
 
-  static const _minorName = r'length$FootUSSurvey';
+  static const _minorName = 'footUSSurvey';
 
   static const _ratio = 1.90500381000762e+34;
 
@@ -2272,8 +2334,9 @@ final class Length$FootUSSurvey extends Length {
   @override
   Length$FootUSSurvey get _clone => Length$FootUSSurvey(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$FootUSSurvey] with new value
   @override
@@ -2284,8 +2347,9 @@ final class Length$FootUSSurvey extends Length {
 
   /// Symbol for [Length$FootUSSurvey]
   @override
-  String get symbol => 'FootUSSurvey';
+  String get symbol => 'foot (US survey)';
 
+  /// [Length$FootUSSurvey] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2317,7 +2381,7 @@ final class Length$Link extends Length {
         unit.toLink.value,
       );
 
-  static const _minorName = r'length$Link';
+  static const _minorName = 'link';
 
   static const _ratio = 1.2573e+34;
 
@@ -2329,8 +2393,9 @@ final class Length$Link extends Length {
   @override
   Length$Link get _clone => Length$Link(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Link] with new value
   @override
@@ -2341,8 +2406,9 @@ final class Length$Link extends Length {
 
   /// Symbol for [Length$Link]
   @override
-  String get symbol => 'Link';
+  String get symbol => 'link';
 
+  /// [Length$Link] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2374,7 +2440,7 @@ final class Length$Inch extends Length {
         unit.toInch.value,
       );
 
-  static const _minorName = r'length$Inch';
+  static const _minorName = 'inch';
 
   static const _ratio = 1.5875e+33;
 
@@ -2386,8 +2452,9 @@ final class Length$Inch extends Length {
   @override
   Length$Inch get _clone => Length$Inch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Inch] with new value
   @override
@@ -2400,6 +2467,7 @@ final class Length$Inch extends Length {
   @override
   String get symbol => 'in';
 
+  /// [Length$Inch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2431,7 +2499,7 @@ final class Length$Hand extends Length {
         unit.toHand.value,
       );
 
-  static const _minorName = r'length$Hand';
+  static const _minorName = 'hand';
 
   static const _ratio = 6.35e+33;
 
@@ -2443,8 +2511,9 @@ final class Length$Hand extends Length {
   @override
   Length$Hand get _clone => Length$Hand(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Hand] with new value
   @override
@@ -2455,8 +2524,9 @@ final class Length$Hand extends Length {
 
   /// Symbol for [Length$Hand]
   @override
-  String get symbol => 'Hand';
+  String get symbol => 'hand';
 
+  /// [Length$Hand] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2488,7 +2558,7 @@ final class Length$Mil extends Length {
         unit.toMil.value,
       );
 
-  static const _minorName = r'length$Mil';
+  static const _minorName = 'mil';
 
   static const _ratio = 1.5875e+30;
 
@@ -2500,8 +2570,9 @@ final class Length$Mil extends Length {
   @override
   Length$Mil get _clone => Length$Mil(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Mil] with new value
   @override
@@ -2512,8 +2583,9 @@ final class Length$Mil extends Length {
 
   /// Symbol for [Length$Mil]
   @override
-  String get symbol => 'Mil';
+  String get symbol => 'mil';
 
+  /// [Length$Mil] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2545,7 +2617,7 @@ final class Length$MilSweden extends Length {
         unit.toMilSweden.value,
       );
 
-  static const _minorName = r'length$MilSweden';
+  static const _minorName = 'milSweden';
 
   static const _ratio = 6.25e+38;
 
@@ -2557,8 +2629,9 @@ final class Length$MilSweden extends Length {
   @override
   Length$MilSweden get _clone => Length$MilSweden(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$MilSweden] with new value
   @override
@@ -2569,8 +2642,9 @@ final class Length$MilSweden extends Length {
 
   /// Symbol for [Length$MilSweden]
   @override
-  String get symbol => 'MilSweden';
+  String get symbol => 'mil (Sweden)';
 
+  /// [Length$MilSweden] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2602,7 +2676,7 @@ final class Length$Microinch extends Length {
         unit.toMicroinch.value,
       );
 
-  static const _minorName = r'length$Microinch';
+  static const _minorName = 'microinch';
 
   static const _ratio = 1.5875e+27;
 
@@ -2614,8 +2688,9 @@ final class Length$Microinch extends Length {
   @override
   Length$Microinch get _clone => Length$Microinch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Microinch] with new value
   @override
@@ -2628,6 +2703,7 @@ final class Length$Microinch extends Length {
   @override
   String get symbol => 'µin';
 
+  /// [Length$Microinch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2659,7 +2735,7 @@ final class Length$Megaparsec extends Length {
         unit.toMegaparsec.value,
       );
 
-  static const _minorName = r'length$Megaparsec';
+  static const _minorName = 'megaparsec';
 
   static const _ratio = 1.9285807902221097e+57;
 
@@ -2671,8 +2747,9 @@ final class Length$Megaparsec extends Length {
   @override
   Length$Megaparsec get _clone => Length$Megaparsec(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Megaparsec] with new value
   @override
@@ -2685,6 +2762,7 @@ final class Length$Megaparsec extends Length {
   @override
   String get symbol => 'Mpc';
 
+  /// [Length$Megaparsec] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2716,7 +2794,7 @@ final class Length$Kiloparsec extends Length {
         unit.toKiloparsec.value,
       );
 
-  static const _minorName = r'length$Kiloparsec';
+  static const _minorName = 'kiloparsec';
 
   static const _ratio = 1.9285807902221098e+54;
 
@@ -2728,8 +2806,9 @@ final class Length$Kiloparsec extends Length {
   @override
   Length$Kiloparsec get _clone => Length$Kiloparsec(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Kiloparsec] with new value
   @override
@@ -2742,6 +2821,7 @@ final class Length$Kiloparsec extends Length {
   @override
   String get symbol => 'kpc';
 
+  /// [Length$Kiloparsec] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2773,7 +2853,7 @@ final class Length$Parsec extends Length {
         unit.toParsec.value,
       );
 
-  static const _minorName = r'length$Parsec';
+  static const _minorName = 'parsec';
 
   static const _ratio = 1.9285807902221097e+51;
 
@@ -2785,8 +2865,9 @@ final class Length$Parsec extends Length {
   @override
   Length$Parsec get _clone => Length$Parsec(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Parsec] with new value
   @override
@@ -2799,6 +2880,7 @@ final class Length$Parsec extends Length {
   @override
   String get symbol => 'pc';
 
+  /// [Length$Parsec] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2830,7 +2912,7 @@ final class Length$LightYear extends Length {
         unit.toLightYear.value,
       );
 
-  static const _minorName = r'length$LightYear';
+  static const _minorName = 'lightYear';
 
   static const _ratio = 5.91283025305e+50;
 
@@ -2842,8 +2924,9 @@ final class Length$LightYear extends Length {
   @override
   Length$LightYear get _clone => Length$LightYear(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$LightYear] with new value
   @override
@@ -2856,6 +2939,7 @@ final class Length$LightYear extends Length {
   @override
   String get symbol => 'ly';
 
+  /// [Length$LightYear] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2887,7 +2971,7 @@ final class Length$AstronomicalUnit extends Length {
         unit.toAstronomicalUnit.value,
       );
 
-  static const _minorName = r'length$AstronomicalUnit';
+  static const _minorName = 'astronomicalUnit';
 
   static const _ratio = 9.35e+45;
 
@@ -2899,8 +2983,9 @@ final class Length$AstronomicalUnit extends Length {
   @override
   Length$AstronomicalUnit get _clone => Length$AstronomicalUnit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$AstronomicalUnit] with new value
   @override
@@ -2913,6 +2998,7 @@ final class Length$AstronomicalUnit extends Length {
   @override
   String get symbol => 'AU';
 
+  /// [Length$AstronomicalUnit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2944,7 +3030,7 @@ final class Length$League extends Length {
         unit.toLeague.value,
       );
 
-  static const _minorName = r'length$League';
+  static const _minorName = 'league';
 
   static const _ratio = 3.01752e+38;
 
@@ -2956,8 +3042,9 @@ final class Length$League extends Length {
   @override
   Length$League get _clone => Length$League(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$League] with new value
   @override
@@ -2968,8 +3055,9 @@ final class Length$League extends Length {
 
   /// Symbol for [Length$League]
   @override
-  String get symbol => 'League';
+  String get symbol => 'league';
 
+  /// [Length$League] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3001,7 +3089,7 @@ final class Length$NauticalMile extends Length {
         unit.toNauticalMile.value,
       );
 
-  static const _minorName = r'length$NauticalMile';
+  static const _minorName = 'nauticalMile';
 
   static const _ratio = 1.1575e+38;
 
@@ -3013,8 +3101,9 @@ final class Length$NauticalMile extends Length {
   @override
   Length$NauticalMile get _clone => Length$NauticalMile(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$NauticalMile] with new value
   @override
@@ -3027,6 +3116,7 @@ final class Length$NauticalMile extends Length {
   @override
   String get symbol => 'nmi';
 
+  /// [Length$NauticalMile] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3058,7 +3148,7 @@ final class Length$Arpent extends Length {
         unit.toArpent.value,
       );
 
-  static const _minorName = r'length$Arpent';
+  static const _minorName = 'arpent';
 
   static const _ratio = 3.6576e+36;
 
@@ -3070,8 +3160,9 @@ final class Length$Arpent extends Length {
   @override
   Length$Arpent get _clone => Length$Arpent(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Arpent] with new value
   @override
@@ -3082,8 +3173,9 @@ final class Length$Arpent extends Length {
 
   /// Symbol for [Length$Arpent]
   @override
-  String get symbol => 'Arpent';
+  String get symbol => 'arpent';
 
+  /// [Length$Arpent] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3115,7 +3207,7 @@ final class Length$Pica extends Length {
         unit.toPica.value,
       );
 
-  static const _minorName = r'length$Pica';
+  static const _minorName = 'pica';
 
   static const _ratio = 2.6458333333333332e+32;
 
@@ -3127,8 +3219,9 @@ final class Length$Pica extends Length {
   @override
   Length$Pica get _clone => Length$Pica(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Pica] with new value
   @override
@@ -3141,6 +3234,7 @@ final class Length$Pica extends Length {
   @override
   String get symbol => 'pi, pc';
 
+  /// [Length$Pica] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3172,7 +3266,7 @@ final class Length$Point extends Length {
         unit.toPoint.value,
       );
 
-  static const _minorName = r'length$Point';
+  static const _minorName = 'point';
 
   static const _ratio = 2.204861111111111e+31;
 
@@ -3184,8 +3278,9 @@ final class Length$Point extends Length {
   @override
   Length$Point get _clone => Length$Point(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Point] with new value
   @override
@@ -3198,6 +3293,7 @@ final class Length$Point extends Length {
   @override
   String get symbol => 'pt';
 
+  /// [Length$Point] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3229,7 +3325,7 @@ final class Length$Twip extends Length {
         unit.toTwip.value,
       );
 
-  static const _minorName = r'length$Twip';
+  static const _minorName = 'twip';
 
   static const _ratio = 1.1024305555555556e+30;
 
@@ -3241,8 +3337,9 @@ final class Length$Twip extends Length {
   @override
   Length$Twip get _clone => Length$Twip(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Twip] with new value
   @override
@@ -3253,8 +3350,9 @@ final class Length$Twip extends Length {
 
   /// Symbol for [Length$Twip]
   @override
-  String get symbol => 'Twip';
+  String get symbol => 'twip';
 
+  /// [Length$Twip] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3286,7 +3384,7 @@ final class Length$Aln extends Length {
         unit.toAln.value,
       );
 
-  static const _minorName = r'length$Aln';
+  static const _minorName = 'aln';
 
   static const _ratio = 3.711111111111111e+34;
 
@@ -3298,8 +3396,9 @@ final class Length$Aln extends Length {
   @override
   Length$Aln get _clone => Length$Aln(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Aln] with new value
   @override
@@ -3310,8 +3409,9 @@ final class Length$Aln extends Length {
 
   /// Symbol for [Length$Aln]
   @override
-  String get symbol => 'Aln';
+  String get symbol => 'aln';
 
+  /// [Length$Aln] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3343,7 +3443,7 @@ final class Length$Famn extends Length {
         unit.toFamn.value,
       );
 
-  static const _minorName = r'length$Famn';
+  static const _minorName = 'famn';
 
   static const _ratio = 1.1133333333333333e+35;
 
@@ -3355,8 +3455,9 @@ final class Length$Famn extends Length {
   @override
   Length$Famn get _clone => Length$Famn(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Famn] with new value
   @override
@@ -3367,8 +3468,9 @@ final class Length$Famn extends Length {
 
   /// Symbol for [Length$Famn]
   @override
-  String get symbol => 'Famn';
+  String get symbol => 'famn';
 
+  /// [Length$Famn] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3400,7 +3502,7 @@ final class Length$Caliber extends Length {
         unit.toCaliber.value,
       );
 
-  static const _minorName = r'length$Caliber';
+  static const _minorName = 'caliber';
 
   static const _ratio = 1.5875e+31;
 
@@ -3412,8 +3514,9 @@ final class Length$Caliber extends Length {
   @override
   Length$Caliber get _clone => Length$Caliber(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Caliber] with new value
   @override
@@ -3426,6 +3529,7 @@ final class Length$Caliber extends Length {
   @override
   String get symbol => 'cal';
 
+  /// [Length$Caliber] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3457,7 +3561,7 @@ final class Length$Ken extends Length {
         unit.toKen.value,
       );
 
-  static const _minorName = r'length$Ken';
+  static const _minorName = 'ken';
 
   static const _ratio = 1.323975e+35;
 
@@ -3469,8 +3573,9 @@ final class Length$Ken extends Length {
   @override
   Length$Ken get _clone => Length$Ken(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Ken] with new value
   @override
@@ -3481,8 +3586,9 @@ final class Length$Ken extends Length {
 
   /// Symbol for [Length$Ken]
   @override
-  String get symbol => 'Ken';
+  String get symbol => 'ken';
 
+  /// [Length$Ken] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3514,7 +3620,7 @@ final class Length$Barleycorn extends Length {
         unit.toBarleycorn.value,
       );
 
-  static const _minorName = r'length$Barleycorn';
+  static const _minorName = 'barleycorn';
 
   static const _ratio = 5.2916666666666664e+32;
 
@@ -3526,8 +3632,9 @@ final class Length$Barleycorn extends Length {
   @override
   Length$Barleycorn get _clone => Length$Barleycorn(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$Barleycorn] with new value
   @override
@@ -3538,8 +3645,9 @@ final class Length$Barleycorn extends Length {
 
   /// Symbol for [Length$Barleycorn]
   @override
-  String get symbol => 'Barleycorn';
+  String get symbol => 'barleycorn';
 
+  /// [Length$Barleycorn] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3571,7 +3679,7 @@ final class Length$RussianArchin extends Length {
         unit.toRussianArchin.value,
       );
 
-  static const _minorName = r'length$RussianArchin';
+  static const _minorName = 'russianArchin';
 
   static const _ratio = 4.445e+34;
 
@@ -3583,8 +3691,9 @@ final class Length$RussianArchin extends Length {
   @override
   Length$RussianArchin get _clone => Length$RussianArchin(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$RussianArchin] with new value
   @override
@@ -3595,8 +3704,9 @@ final class Length$RussianArchin extends Length {
 
   /// Symbol for [Length$RussianArchin]
   @override
-  String get symbol => 'RussianArchin';
+  String get symbol => 'Russian archin';
 
+  /// [Length$RussianArchin] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3628,7 +3738,7 @@ final class Length$RomanActus extends Length {
         unit.toRomanActus.value,
       );
 
-  static const _minorName = r'length$RomanActus';
+  static const _minorName = 'romanActus';
 
   static const _ratio = 2.21742e+36;
 
@@ -3640,8 +3750,9 @@ final class Length$RomanActus extends Length {
   @override
   Length$RomanActus get _clone => Length$RomanActus(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$RomanActus] with new value
   @override
@@ -3652,8 +3763,9 @@ final class Length$RomanActus extends Length {
 
   /// Symbol for [Length$RomanActus]
   @override
-  String get symbol => 'RomanActus';
+  String get symbol => 'Roman actus';
 
+  /// [Length$RomanActus] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3685,7 +3797,7 @@ final class Length$ClothNail extends Length {
         unit.toClothNail.value,
       );
 
-  static const _minorName = r'length$ClothNail';
+  static const _minorName = 'clothNail';
 
   static const _ratio = 3.571875e+33;
 
@@ -3697,8 +3809,9 @@ final class Length$ClothNail extends Length {
   @override
   Length$ClothNail get _clone => Length$ClothNail(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$ClothNail] with new value
   @override
@@ -3709,8 +3822,9 @@ final class Length$ClothNail extends Length {
 
   /// Symbol for [Length$ClothNail]
   @override
-  String get symbol => 'ClothNail';
+  String get symbol => 'cloth nail';
 
+  /// [Length$ClothNail] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3742,7 +3856,7 @@ final class Length$ClothSpan extends Length {
         unit.toClothSpan.value,
       );
 
-  static const _minorName = r'length$ClothSpan';
+  static const _minorName = 'clothSpan';
 
   static const _ratio = 1.42875e+34;
 
@@ -3754,8 +3868,9 @@ final class Length$ClothSpan extends Length {
   @override
   Length$ClothSpan get _clone => Length$ClothSpan(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$ClothSpan] with new value
   @override
@@ -3766,8 +3881,9 @@ final class Length$ClothSpan extends Length {
 
   /// Symbol for [Length$ClothSpan]
   @override
-  String get symbol => 'ClothSpan';
+  String get symbol => 'cloth span';
 
+  /// [Length$ClothSpan] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3799,7 +3915,7 @@ final class Length$VaraDeTarea extends Length {
         unit.toVaraDeTarea.value,
       );
 
-  static const _minorName = r'length$VaraDeTarea';
+  static const _minorName = 'varaDeTarea';
 
   static const _ratio = 1.56591e+35;
 
@@ -3811,8 +3927,9 @@ final class Length$VaraDeTarea extends Length {
   @override
   Length$VaraDeTarea get _clone => Length$VaraDeTarea(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$VaraDeTarea] with new value
   @override
@@ -3823,8 +3940,9 @@ final class Length$VaraDeTarea extends Length {
 
   /// Symbol for [Length$VaraDeTarea]
   @override
-  String get symbol => 'VaraDeTarea';
+  String get symbol => 'vara de tarea';
 
+  /// [Length$VaraDeTarea] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3856,7 +3974,7 @@ final class Length$VaraConuquera extends Length {
         unit.toVaraConuquera.value,
       );
 
-  static const _minorName = r'length$VaraConuquera';
+  static const _minorName = 'varaConuquera';
 
   static const _ratio = 1.56591e+35;
 
@@ -3868,8 +3986,9 @@ final class Length$VaraConuquera extends Length {
   @override
   Length$VaraConuquera get _clone => Length$VaraConuquera(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$VaraConuquera] with new value
   @override
@@ -3880,8 +3999,9 @@ final class Length$VaraConuquera extends Length {
 
   /// Symbol for [Length$VaraConuquera]
   @override
-  String get symbol => 'VaraConuquera';
+  String get symbol => 'vara conuquera';
 
+  /// [Length$VaraConuquera] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3913,7 +4033,7 @@ final class Length$VaraCastellana extends Length {
         unit.toVaraCastellana.value,
       );
 
-  static const _minorName = r'length$VaraCastellana';
+  static const _minorName = 'varaCastellana';
 
   static const _ratio = 5.2197e+34;
 
@@ -3925,8 +4045,9 @@ final class Length$VaraCastellana extends Length {
   @override
   Length$VaraCastellana get _clone => Length$VaraCastellana(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$VaraCastellana] with new value
   @override
@@ -3937,8 +4058,9 @@ final class Length$VaraCastellana extends Length {
 
   /// Symbol for [Length$VaraCastellana]
   @override
-  String get symbol => 'VaraCastellana';
+  String get symbol => 'vara castellana';
 
+  /// [Length$VaraCastellana] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3970,7 +4092,7 @@ final class Length$CubitGreek extends Length {
         unit.toCubitGreek.value,
       );
 
-  static const _minorName = r'length$CubitGreek';
+  static const _minorName = 'cubitGreek';
 
   static const _ratio = 2.892425e+34;
 
@@ -3982,8 +4104,9 @@ final class Length$CubitGreek extends Length {
   @override
   Length$CubitGreek get _clone => Length$CubitGreek(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$CubitGreek] with new value
   @override
@@ -3994,8 +4117,9 @@ final class Length$CubitGreek extends Length {
 
   /// Symbol for [Length$CubitGreek]
   @override
-  String get symbol => 'CubitGreek';
+  String get symbol => 'cubit (Greek)';
 
+  /// [Length$CubitGreek] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4027,7 +4151,7 @@ final class Length$LongReedBiblical extends Length {
         unit.toLongReedBiblical.value,
       );
 
-  static const _minorName = r'length$LongReedBiblical';
+  static const _minorName = 'longReedBiblical';
 
   static const _ratio = 2.00025e+35;
 
@@ -4039,8 +4163,9 @@ final class Length$LongReedBiblical extends Length {
   @override
   Length$LongReedBiblical get _clone => Length$LongReedBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$LongReedBiblical] with new value
   @override
@@ -4051,8 +4176,9 @@ final class Length$LongReedBiblical extends Length {
 
   /// Symbol for [Length$LongReedBiblical]
   @override
-  String get symbol => 'LongReedBiblical';
+  String get symbol => 'long reed (Biblical)';
 
+  /// [Length$LongReedBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4084,7 +4210,7 @@ final class Length$ReedBiblical extends Length {
         unit.toReedBiblical.value,
       );
 
-  static const _minorName = r'length$ReedBiblical';
+  static const _minorName = 'reedBiblical';
 
   static const _ratio = 1.7145e+35;
 
@@ -4096,8 +4222,9 @@ final class Length$ReedBiblical extends Length {
   @override
   Length$ReedBiblical get _clone => Length$ReedBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$ReedBiblical] with new value
   @override
@@ -4108,8 +4235,9 @@ final class Length$ReedBiblical extends Length {
 
   /// Symbol for [Length$ReedBiblical]
   @override
-  String get symbol => 'ReedBiblical';
+  String get symbol => 'reed (Biblical)';
 
+  /// [Length$ReedBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4141,7 +4269,7 @@ final class Length$CubitBiblical extends Length {
         unit.toCubitBiblical.value,
       );
 
-  static const _minorName = r'length$CubitBiblical';
+  static const _minorName = 'cubitBiblical';
 
   static const _ratio = 2.8575e+34;
 
@@ -4153,8 +4281,9 @@ final class Length$CubitBiblical extends Length {
   @override
   Length$CubitBiblical get _clone => Length$CubitBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$CubitBiblical] with new value
   @override
@@ -4165,8 +4294,9 @@ final class Length$CubitBiblical extends Length {
 
   /// Symbol for [Length$CubitBiblical]
   @override
-  String get symbol => 'CubitBiblical';
+  String get symbol => 'cubit (Biblical)';
 
+  /// [Length$CubitBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4198,7 +4328,7 @@ final class Length$LongCubitBiblical extends Length {
         unit.toLongCubitBiblical.value,
       );
 
-  static const _minorName = r'length$LongCubitBiblical';
+  static const _minorName = 'longCubitBiblical';
 
   static const _ratio = 3.33375e+34;
 
@@ -4210,8 +4340,9 @@ final class Length$LongCubitBiblical extends Length {
   @override
   Length$LongCubitBiblical get _clone => Length$LongCubitBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$LongCubitBiblical] with new value
   @override
@@ -4222,8 +4353,9 @@ final class Length$LongCubitBiblical extends Length {
 
   /// Symbol for [Length$LongCubitBiblical]
   @override
-  String get symbol => 'LongCubitBiblical';
+  String get symbol => 'long cubit (Biblical)';
 
+  /// [Length$LongCubitBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4255,7 +4387,7 @@ final class Length$SpanBiblical extends Length {
         unit.toSpanBiblical.value,
       );
 
-  static const _minorName = r'length$SpanBiblical';
+  static const _minorName = 'spanBiblical';
 
   static const _ratio = 1.42875e+34;
 
@@ -4267,8 +4399,9 @@ final class Length$SpanBiblical extends Length {
   @override
   Length$SpanBiblical get _clone => Length$SpanBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$SpanBiblical] with new value
   @override
@@ -4279,8 +4412,9 @@ final class Length$SpanBiblical extends Length {
 
   /// Symbol for [Length$SpanBiblical]
   @override
-  String get symbol => 'SpanBiblical';
+  String get symbol => 'span (Biblical)';
 
+  /// [Length$SpanBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4312,7 +4446,7 @@ final class Length$HandbreadthBiblical extends Length {
         unit.toHandbreadthBiblical.value,
       );
 
-  static const _minorName = r'length$HandbreadthBiblical';
+  static const _minorName = 'handbreadthBiblical';
 
   static const _ratio = 4.7625e+33;
 
@@ -4324,8 +4458,9 @@ final class Length$HandbreadthBiblical extends Length {
   @override
   Length$HandbreadthBiblical get _clone => Length$HandbreadthBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$HandbreadthBiblical] with new value
   @override
@@ -4336,8 +4471,9 @@ final class Length$HandbreadthBiblical extends Length {
 
   /// Symbol for [Length$HandbreadthBiblical]
   @override
-  String get symbol => 'HandbreadthBiblical';
+  String get symbol => 'handbreadth (Biblical)';
 
+  /// [Length$HandbreadthBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4369,7 +4505,7 @@ final class Length$FingerbreadthBiblical extends Length {
         unit.toFingerbreadthBiblical.value,
       );
 
-  static const _minorName = r'length$FingerbreadthBiblical';
+  static const _minorName = 'fingerbreadthBiblical';
 
   static const _ratio = 1.190625e+33;
 
@@ -4382,8 +4518,9 @@ final class Length$FingerbreadthBiblical extends Length {
   Length$FingerbreadthBiblical get _clone =>
       Length$FingerbreadthBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Length$FingerbreadthBiblical] with new value
   @override
@@ -4394,8 +4531,9 @@ final class Length$FingerbreadthBiblical extends Length {
 
   /// Symbol for [Length$FingerbreadthBiblical]
   @override
-  String get symbol => 'FingerbreadthBiblical';
+  String get symbol => 'fingerbreadth (Biblical)';
 
+  /// [Length$FingerbreadthBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

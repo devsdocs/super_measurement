@@ -528,7 +528,7 @@ final class Power$Exawatt extends Power {
         unit.toExawatt.value,
       );
 
-  static const _minorName = r'power$Exawatt';
+  static const _minorName = 'exawatt';
 
   static const _ratio = 1e+21;
 
@@ -540,8 +540,9 @@ final class Power$Exawatt extends Power {
   @override
   Power$Exawatt get _clone => Power$Exawatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Exawatt] with new value
   @override
@@ -554,6 +555,7 @@ final class Power$Exawatt extends Power {
   @override
   String get symbol => 'EW';
 
+  /// [Power$Exawatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -585,7 +587,7 @@ final class Power$Petawatt extends Power {
         unit.toPetawatt.value,
       );
 
-  static const _minorName = r'power$Petawatt';
+  static const _minorName = 'petawatt';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -597,8 +599,9 @@ final class Power$Petawatt extends Power {
   @override
   Power$Petawatt get _clone => Power$Petawatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Petawatt] with new value
   @override
@@ -611,6 +614,7 @@ final class Power$Petawatt extends Power {
   @override
   String get symbol => 'PW';
 
+  /// [Power$Petawatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -642,7 +646,7 @@ final class Power$Terawatt extends Power {
         unit.toTerawatt.value,
       );
 
-  static const _minorName = r'power$Terawatt';
+  static const _minorName = 'terawatt';
 
   static const _ratio = 1000000000000000.0;
 
@@ -654,8 +658,9 @@ final class Power$Terawatt extends Power {
   @override
   Power$Terawatt get _clone => Power$Terawatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Terawatt] with new value
   @override
@@ -668,6 +673,7 @@ final class Power$Terawatt extends Power {
   @override
   String get symbol => 'TW';
 
+  /// [Power$Terawatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -699,7 +705,7 @@ final class Power$Gigawatt extends Power {
         unit.toGigawatt.value,
       );
 
-  static const _minorName = r'power$Gigawatt';
+  static const _minorName = 'gigawatt';
 
   static const _ratio = 1000000000000.0;
 
@@ -711,8 +717,9 @@ final class Power$Gigawatt extends Power {
   @override
   Power$Gigawatt get _clone => Power$Gigawatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Gigawatt] with new value
   @override
@@ -725,6 +732,7 @@ final class Power$Gigawatt extends Power {
   @override
   String get symbol => 'GW';
 
+  /// [Power$Gigawatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -756,7 +764,7 @@ final class Power$Megawatt extends Power {
         unit.toMegawatt.value,
       );
 
-  static const _minorName = r'power$Megawatt';
+  static const _minorName = 'megawatt';
 
   static const _ratio = 1000000000.0;
 
@@ -768,8 +776,9 @@ final class Power$Megawatt extends Power {
   @override
   Power$Megawatt get _clone => Power$Megawatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Megawatt] with new value
   @override
@@ -782,6 +791,7 @@ final class Power$Megawatt extends Power {
   @override
   String get symbol => 'MW';
 
+  /// [Power$Megawatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -813,7 +823,7 @@ final class Power$Kilowatt extends Power {
         unit.toKilowatt.value,
       );
 
-  static const _minorName = r'power$Kilowatt';
+  static const _minorName = 'kilowatt';
 
   static const _ratio = 1000000.0;
 
@@ -825,8 +835,9 @@ final class Power$Kilowatt extends Power {
   @override
   Power$Kilowatt get _clone => Power$Kilowatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Kilowatt] with new value
   @override
@@ -839,6 +850,7 @@ final class Power$Kilowatt extends Power {
   @override
   String get symbol => 'kW';
 
+  /// [Power$Kilowatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -870,7 +882,7 @@ final class Power$Hectowatt extends Power {
         unit.toHectowatt.value,
       );
 
-  static const _minorName = r'power$Hectowatt';
+  static const _minorName = 'hectowatt';
 
   static const _ratio = 100000.0;
 
@@ -882,8 +894,9 @@ final class Power$Hectowatt extends Power {
   @override
   Power$Hectowatt get _clone => Power$Hectowatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Hectowatt] with new value
   @override
@@ -896,6 +909,7 @@ final class Power$Hectowatt extends Power {
   @override
   String get symbol => 'hW';
 
+  /// [Power$Hectowatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -927,7 +941,7 @@ final class Power$Dekawatt extends Power {
         unit.toDekawatt.value,
       );
 
-  static const _minorName = r'power$Dekawatt';
+  static const _minorName = 'dekawatt';
 
   static const _ratio = 10000.0;
 
@@ -939,8 +953,9 @@ final class Power$Dekawatt extends Power {
   @override
   Power$Dekawatt get _clone => Power$Dekawatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Dekawatt] with new value
   @override
@@ -953,6 +968,7 @@ final class Power$Dekawatt extends Power {
   @override
   String get symbol => 'daW';
 
+  /// [Power$Dekawatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -984,7 +1000,7 @@ final class Power$Watt extends Power {
         unit.toWatt.value,
       );
 
-  static const _minorName = r'power$Watt';
+  static const _minorName = 'watt';
 
   static const _ratio = 1000.0;
 
@@ -996,8 +1012,9 @@ final class Power$Watt extends Power {
   @override
   Power$Watt get _clone => Power$Watt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Watt] with new value
   @override
@@ -1010,6 +1027,7 @@ final class Power$Watt extends Power {
   @override
   String get symbol => 'W';
 
+  /// [Power$Watt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1041,7 +1059,7 @@ final class Power$Deciwatt extends Power {
         unit.toDeciwatt.value,
       );
 
-  static const _minorName = r'power$Deciwatt';
+  static const _minorName = 'deciwatt';
 
   static const _ratio = 100.0;
 
@@ -1053,8 +1071,9 @@ final class Power$Deciwatt extends Power {
   @override
   Power$Deciwatt get _clone => Power$Deciwatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Deciwatt] with new value
   @override
@@ -1067,6 +1086,7 @@ final class Power$Deciwatt extends Power {
   @override
   String get symbol => 'dW';
 
+  /// [Power$Deciwatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1098,7 +1118,7 @@ final class Power$Centiwatt extends Power {
         unit.toCentiwatt.value,
       );
 
-  static const _minorName = r'power$Centiwatt';
+  static const _minorName = 'centiwatt';
 
   static const _ratio = 10.0;
 
@@ -1110,8 +1130,9 @@ final class Power$Centiwatt extends Power {
   @override
   Power$Centiwatt get _clone => Power$Centiwatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Centiwatt] with new value
   @override
@@ -1124,6 +1145,7 @@ final class Power$Centiwatt extends Power {
   @override
   String get symbol => 'cW';
 
+  /// [Power$Centiwatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1155,7 +1177,7 @@ final class Power$Milliwatt extends Power {
         unit.toMilliwatt.value,
       );
 
-  static const _minorName = r'power$Milliwatt';
+  static const _minorName = 'milliwatt';
 
   static const _ratio = 1.0;
 
@@ -1167,8 +1189,9 @@ final class Power$Milliwatt extends Power {
   @override
   Power$Milliwatt get _clone => Power$Milliwatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Milliwatt] with new value
   @override
@@ -1181,6 +1204,7 @@ final class Power$Milliwatt extends Power {
   @override
   String get symbol => 'mW';
 
+  /// [Power$Milliwatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1212,7 +1236,7 @@ final class Power$Microwatt extends Power {
         unit.toMicrowatt.value,
       );
 
-  static const _minorName = r'power$Microwatt';
+  static const _minorName = 'microwatt';
 
   static const _ratio = 0.001;
 
@@ -1224,8 +1248,9 @@ final class Power$Microwatt extends Power {
   @override
   Power$Microwatt get _clone => Power$Microwatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Microwatt] with new value
   @override
@@ -1238,6 +1263,7 @@ final class Power$Microwatt extends Power {
   @override
   String get symbol => 'µW';
 
+  /// [Power$Microwatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1269,7 +1295,7 @@ final class Power$Nanowatt extends Power {
         unit.toNanowatt.value,
       );
 
-  static const _minorName = r'power$Nanowatt';
+  static const _minorName = 'nanowatt';
 
   static const _ratio = 0.000001;
 
@@ -1281,8 +1307,9 @@ final class Power$Nanowatt extends Power {
   @override
   Power$Nanowatt get _clone => Power$Nanowatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Nanowatt] with new value
   @override
@@ -1295,6 +1322,7 @@ final class Power$Nanowatt extends Power {
   @override
   String get symbol => 'nW';
 
+  /// [Power$Nanowatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1326,7 +1354,7 @@ final class Power$Picowatt extends Power {
         unit.toPicowatt.value,
       );
 
-  static const _minorName = r'power$Picowatt';
+  static const _minorName = 'picowatt';
 
   static const _ratio = 1e-9;
 
@@ -1338,8 +1366,9 @@ final class Power$Picowatt extends Power {
   @override
   Power$Picowatt get _clone => Power$Picowatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Picowatt] with new value
   @override
@@ -1352,6 +1381,7 @@ final class Power$Picowatt extends Power {
   @override
   String get symbol => 'pW';
 
+  /// [Power$Picowatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1383,7 +1413,7 @@ final class Power$Femtowatt extends Power {
         unit.toFemtowatt.value,
       );
 
-  static const _minorName = r'power$Femtowatt';
+  static const _minorName = 'femtowatt';
 
   static const _ratio = 1e-12;
 
@@ -1395,8 +1425,9 @@ final class Power$Femtowatt extends Power {
   @override
   Power$Femtowatt get _clone => Power$Femtowatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Femtowatt] with new value
   @override
@@ -1409,6 +1440,7 @@ final class Power$Femtowatt extends Power {
   @override
   String get symbol => 'fW';
 
+  /// [Power$Femtowatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1440,7 +1472,7 @@ final class Power$Attowatt extends Power {
         unit.toAttowatt.value,
       );
 
-  static const _minorName = r'power$Attowatt';
+  static const _minorName = 'attowatt';
 
   static const _ratio = 1e-15;
 
@@ -1452,8 +1484,9 @@ final class Power$Attowatt extends Power {
   @override
   Power$Attowatt get _clone => Power$Attowatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Attowatt] with new value
   @override
@@ -1466,6 +1499,7 @@ final class Power$Attowatt extends Power {
   @override
   String get symbol => 'aW';
 
+  /// [Power$Attowatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1497,7 +1531,7 @@ final class Power$Horsepower extends Power {
         unit.toHorsepower.value,
       );
 
-  static const _minorName = r'power$Horsepower';
+  static const _minorName = 'horsepower';
 
   static const _ratio = 745699.8715795054;
 
@@ -1509,8 +1543,9 @@ final class Power$Horsepower extends Power {
   @override
   Power$Horsepower get _clone => Power$Horsepower(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$Horsepower] with new value
   @override
@@ -1523,6 +1558,7 @@ final class Power$Horsepower extends Power {
   @override
   String get symbol => 'hp';
 
+  /// [Power$Horsepower] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1554,7 +1590,7 @@ final class Power$HorsepowerBoiler extends Power {
         unit.toHorsepowerBoiler.value,
       );
 
-  static const _minorName = r'power$HorsepowerBoiler';
+  static const _minorName = 'horsepowerBoiler';
 
   static const _ratio = 9809709.99;
 
@@ -1566,8 +1602,9 @@ final class Power$HorsepowerBoiler extends Power {
   @override
   Power$HorsepowerBoiler get _clone => Power$HorsepowerBoiler(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$HorsepowerBoiler] with new value
   @override
@@ -1578,8 +1615,9 @@ final class Power$HorsepowerBoiler extends Power {
 
   /// Symbol for [Power$HorsepowerBoiler]
   @override
-  String get symbol => 'HorsepowerBoiler';
+  String get symbol => 'horsepower (boiler)';
 
+  /// [Power$HorsepowerBoiler] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1611,7 +1649,7 @@ final class Power$HorsepowerMetric extends Power {
         unit.toHorsepowerMetric.value,
       );
 
-  static const _minorName = r'power$HorsepowerMetric';
+  static const _minorName = 'horsepowerMetric';
 
   static const _ratio = 735498.8;
 
@@ -1623,8 +1661,9 @@ final class Power$HorsepowerMetric extends Power {
   @override
   Power$HorsepowerMetric get _clone => Power$HorsepowerMetric(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$HorsepowerMetric] with new value
   @override
@@ -1635,8 +1674,9 @@ final class Power$HorsepowerMetric extends Power {
 
   /// Symbol for [Power$HorsepowerMetric]
   @override
-  String get symbol => 'HorsepowerMetric';
+  String get symbol => 'horsepower (metric)';
 
+  /// [Power$HorsepowerMetric] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1668,7 +1708,7 @@ final class Power$HorsepowerElectric extends Power {
         unit.toHorsepowerElectric.value,
       );
 
-  static const _minorName = r'power$HorsepowerElectric';
+  static const _minorName = 'horsepowerElectric';
 
   static const _ratio = 746000.0;
 
@@ -1680,8 +1720,9 @@ final class Power$HorsepowerElectric extends Power {
   @override
   Power$HorsepowerElectric get _clone => Power$HorsepowerElectric(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$HorsepowerElectric] with new value
   @override
@@ -1692,8 +1733,9 @@ final class Power$HorsepowerElectric extends Power {
 
   /// Symbol for [Power$HorsepowerElectric]
   @override
-  String get symbol => 'HorsepowerElectric';
+  String get symbol => 'horsepower (electric)';
 
+  /// [Power$HorsepowerElectric] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1725,7 +1767,7 @@ final class Power$HorsepowerUK extends Power {
         unit.toHorsepowerUK.value,
       );
 
-  static const _minorName = r'power$HorsepowerUK';
+  static const _minorName = 'horsepowerUK';
 
   static const _ratio = 745700.0;
 
@@ -1737,8 +1779,9 @@ final class Power$HorsepowerUK extends Power {
   @override
   Power$HorsepowerUK get _clone => Power$HorsepowerUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$HorsepowerUK] with new value
   @override
@@ -1751,6 +1794,7 @@ final class Power$HorsepowerUK extends Power {
   @override
   String get symbol => 'hp';
 
+  /// [Power$HorsepowerUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1782,7 +1826,7 @@ final class Power$HorsepowerWater extends Power {
         unit.toHorsepowerWater.value,
       );
 
-  static const _minorName = r'power$HorsepowerWater';
+  static const _minorName = 'horsepowerWater';
 
   static const _ratio = 746043.0;
 
@@ -1794,8 +1838,9 @@ final class Power$HorsepowerWater extends Power {
   @override
   Power$HorsepowerWater get _clone => Power$HorsepowerWater(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$HorsepowerWater] with new value
   @override
@@ -1806,8 +1851,9 @@ final class Power$HorsepowerWater extends Power {
 
   /// Symbol for [Power$HorsepowerWater]
   @override
-  String get symbol => 'HorsepowerWater';
+  String get symbol => 'horsepower (water)';
 
+  /// [Power$HorsepowerWater] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1839,7 +1885,7 @@ final class Power$PferdestarkePs extends Power {
         unit.toPferdestarkePs.value,
       );
 
-  static const _minorName = r'power$PferdestarkePs';
+  static const _minorName = 'pferdestarkePs';
 
   static const _ratio = 735498.75;
 
@@ -1851,8 +1897,9 @@ final class Power$PferdestarkePs extends Power {
   @override
   Power$PferdestarkePs get _clone => Power$PferdestarkePs(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$PferdestarkePs] with new value
   @override
@@ -1865,6 +1912,7 @@ final class Power$PferdestarkePs extends Power {
   @override
   String get symbol => 'PS';
 
+  /// [Power$PferdestarkePs] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1896,7 +1944,7 @@ final class Power$BTUPerHourInternational extends Power {
         unit.toBTUPerHourInternational.value,
       );
 
-  static const _minorName = r'power$BTUPerHourInternational';
+  static const _minorName = 'bTUPerHourInternational';
 
   static const _ratio = 293.071070172222;
 
@@ -1909,8 +1957,9 @@ final class Power$BTUPerHourInternational extends Power {
   Power$BTUPerHourInternational get _clone =>
       Power$BTUPerHourInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$BTUPerHourInternational] with new value
   @override
@@ -1921,8 +1970,9 @@ final class Power$BTUPerHourInternational extends Power {
 
   /// Symbol for [Power$BTUPerHourInternational]
   @override
-  String get symbol => 'BTUPerHourInternational';
+  String get symbol => 'BTU/hour (international)';
 
+  /// [Power$BTUPerHourInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1954,7 +2004,7 @@ final class Power$BTUPerMinuteInternational extends Power {
         unit.toBTUPerMinuteInternational.value,
       );
 
-  static const _minorName = r'power$BTUPerMinuteInternational';
+  static const _minorName = 'bTUPerMinuteInternational';
 
   static const _ratio = 17584.2642103333;
 
@@ -1967,8 +2017,9 @@ final class Power$BTUPerMinuteInternational extends Power {
   Power$BTUPerMinuteInternational get _clone =>
       Power$BTUPerMinuteInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$BTUPerMinuteInternational] with new value
   @override
@@ -1979,8 +2030,9 @@ final class Power$BTUPerMinuteInternational extends Power {
 
   /// Symbol for [Power$BTUPerMinuteInternational]
   @override
-  String get symbol => 'BTUPerMinuteInternational';
+  String get symbol => 'BTU/minute (international)';
 
+  /// [Power$BTUPerMinuteInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2012,7 +2064,7 @@ final class Power$BTUPerSecondInternational extends Power {
         unit.toBTUPerSecondInternational.value,
       );
 
-  static const _minorName = r'power$BTUPerSecondInternational';
+  static const _minorName = 'bTUPerSecondInternational';
 
   static const _ratio = 1055055.85262;
 
@@ -2025,8 +2077,9 @@ final class Power$BTUPerSecondInternational extends Power {
   Power$BTUPerSecondInternational get _clone =>
       Power$BTUPerSecondInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$BTUPerSecondInternational] with new value
   @override
@@ -2037,8 +2090,9 @@ final class Power$BTUPerSecondInternational extends Power {
 
   /// Symbol for [Power$BTUPerSecondInternational]
   @override
-  String get symbol => 'BTUPerSecondInternational';
+  String get symbol => 'BTU/second (international)';
 
+  /// [Power$BTUPerSecondInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2070,7 +2124,7 @@ final class Power$BTUPerHourThermochemical extends Power {
         unit.toBTUPerHourThermochemical.value,
       );
 
-  static const _minorName = r'power$BTUPerHourThermochemical';
+  static const _minorName = 'bTUPerHourThermochemical';
 
   static const _ratio = 292.87499999289923;
 
@@ -2083,8 +2137,9 @@ final class Power$BTUPerHourThermochemical extends Power {
   Power$BTUPerHourThermochemical get _clone =>
       Power$BTUPerHourThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$BTUPerHourThermochemical] with new value
   @override
@@ -2095,8 +2150,9 @@ final class Power$BTUPerHourThermochemical extends Power {
 
   /// Symbol for [Power$BTUPerHourThermochemical]
   @override
-  String get symbol => 'BTUPerHourThermochemical';
+  String get symbol => 'BTU/hour (thermochemical)';
 
+  /// [Power$BTUPerHourThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2128,7 +2184,7 @@ final class Power$BTUPerMinuteThermochemical extends Power {
         unit.toBTUPerMinuteThermochemical.value,
       );
 
-  static const _minorName = r'power$BTUPerMinuteThermochemical';
+  static const _minorName = 'bTUPerMinuteThermochemical';
 
   static const _ratio = 17572.499999573956;
 
@@ -2141,8 +2197,9 @@ final class Power$BTUPerMinuteThermochemical extends Power {
   Power$BTUPerMinuteThermochemical get _clone =>
       Power$BTUPerMinuteThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$BTUPerMinuteThermochemical] with new value
   @override
@@ -2153,8 +2210,9 @@ final class Power$BTUPerMinuteThermochemical extends Power {
 
   /// Symbol for [Power$BTUPerMinuteThermochemical]
   @override
-  String get symbol => 'BTUPerMinuteThermochemical';
+  String get symbol => 'BTU/minute (thermochemical)';
 
+  /// [Power$BTUPerMinuteThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2186,7 +2244,7 @@ final class Power$BTUPerSecondThermochemical extends Power {
         unit.toBTUPerSecondThermochemical.value,
       );
 
-  static const _minorName = r'power$BTUPerSecondThermochemical';
+  static const _minorName = 'bTUPerSecondThermochemical';
 
   static const _ratio = 1054349.9999744373;
 
@@ -2199,8 +2257,9 @@ final class Power$BTUPerSecondThermochemical extends Power {
   Power$BTUPerSecondThermochemical get _clone =>
       Power$BTUPerSecondThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$BTUPerSecondThermochemical] with new value
   @override
@@ -2211,8 +2270,9 @@ final class Power$BTUPerSecondThermochemical extends Power {
 
   /// Symbol for [Power$BTUPerSecondThermochemical]
   @override
-  String get symbol => 'BTUPerSecondThermochemical';
+  String get symbol => 'BTU/second (thermochemical)';
 
+  /// [Power$BTUPerSecondThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2244,7 +2304,7 @@ final class Power$MBTUPerHour extends Power {
         unit.toMBTUPerHour.value,
       );
 
-  static const _minorName = r'power$MBTUPerHour';
+  static const _minorName = 'mBTUPerHour';
 
   static const _ratio = 293071.0701722223;
 
@@ -2256,8 +2316,9 @@ final class Power$MBTUPerHour extends Power {
   @override
   Power$MBTUPerHour get _clone => Power$MBTUPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$MBTUPerHour] with new value
   @override
@@ -2268,8 +2329,9 @@ final class Power$MBTUPerHour extends Power {
 
   /// Symbol for [Power$MBTUPerHour]
   @override
-  String get symbol => 'MBTUPerHour';
+  String get symbol => 'MBTU/hour';
 
+  /// [Power$MBTUPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2301,7 +2363,7 @@ final class Power$MBH extends Power {
         unit.toMBH.value,
       );
 
-  static const _minorName = r'power$MBH';
+  static const _minorName = 'mBH';
 
   static const _ratio = 293071.0701722223;
 
@@ -2313,8 +2375,9 @@ final class Power$MBH extends Power {
   @override
   Power$MBH get _clone => Power$MBH(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$MBH] with new value
   @override
@@ -2327,6 +2390,7 @@ final class Power$MBH extends Power {
   @override
   String get symbol => 'MBH';
 
+  /// [Power$MBH] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2358,7 +2422,7 @@ final class Power$TonRefrigeration extends Power {
         unit.toTonRefrigeration.value,
       );
 
-  static const _minorName = r'power$TonRefrigeration';
+  static const _minorName = 'tonRefrigeration';
 
   static const _ratio = 3516852.8420666675;
 
@@ -2370,8 +2434,9 @@ final class Power$TonRefrigeration extends Power {
   @override
   Power$TonRefrigeration get _clone => Power$TonRefrigeration(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$TonRefrigeration] with new value
   @override
@@ -2384,6 +2449,7 @@ final class Power$TonRefrigeration extends Power {
   @override
   String get symbol => 'RT';
 
+  /// [Power$TonRefrigeration] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2415,7 +2481,7 @@ final class Power$KilocaloriePerHourInternational extends Power {
         unit.toKilocaloriePerHourInternational.value,
       );
 
-  static const _minorName = r'power$KilocaloriePerHourInternational';
+  static const _minorName = 'kilocaloriePerHourInternational';
 
   static const _ratio = 1163.0;
 
@@ -2428,8 +2494,9 @@ final class Power$KilocaloriePerHourInternational extends Power {
   Power$KilocaloriePerHourInternational get _clone =>
       Power$KilocaloriePerHourInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerHourInternational] with new value
   @override
@@ -2442,6 +2509,7 @@ final class Power$KilocaloriePerHourInternational extends Power {
   @override
   String get symbol => 'kcal/h';
 
+  /// [Power$KilocaloriePerHourInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2473,7 +2541,7 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
         unit.toKilocaloriePerMinuteInternational.value,
       );
 
-  static const _minorName = r'power$KilocaloriePerMinuteInternational';
+  static const _minorName = 'kilocaloriePerMinuteInternational';
 
   static const _ratio = 69780.0;
 
@@ -2486,8 +2554,9 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
   Power$KilocaloriePerMinuteInternational get _clone =>
       Power$KilocaloriePerMinuteInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerMinuteInternational] with new value
   @override
@@ -2500,6 +2569,7 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
   @override
   String get symbol => 'kcal/min';
 
+  /// [Power$KilocaloriePerMinuteInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2531,7 +2601,7 @@ final class Power$KilocaloriePerSecondInternational extends Power {
         unit.toKilocaloriePerSecondInternational.value,
       );
 
-  static const _minorName = r'power$KilocaloriePerSecondInternational';
+  static const _minorName = 'kilocaloriePerSecondInternational';
 
   static const _ratio = 4186800.0;
 
@@ -2544,8 +2614,9 @@ final class Power$KilocaloriePerSecondInternational extends Power {
   Power$KilocaloriePerSecondInternational get _clone =>
       Power$KilocaloriePerSecondInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerSecondInternational] with new value
   @override
@@ -2558,6 +2629,7 @@ final class Power$KilocaloriePerSecondInternational extends Power {
   @override
   String get symbol => 'kcal/s';
 
+  /// [Power$KilocaloriePerSecondInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2589,7 +2661,7 @@ final class Power$CaloriePerHourInternational extends Power {
         unit.toCaloriePerHourInternational.value,
       );
 
-  static const _minorName = r'power$CaloriePerHourInternational';
+  static const _minorName = 'caloriePerHourInternational';
 
   static const _ratio = 1.163;
 
@@ -2602,8 +2674,9 @@ final class Power$CaloriePerHourInternational extends Power {
   Power$CaloriePerHourInternational get _clone =>
       Power$CaloriePerHourInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$CaloriePerHourInternational] with new value
   @override
@@ -2616,6 +2689,7 @@ final class Power$CaloriePerHourInternational extends Power {
   @override
   String get symbol => 'cal/h';
 
+  /// [Power$CaloriePerHourInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2647,7 +2721,7 @@ final class Power$CaloriePerMinuteInternational extends Power {
         unit.toCaloriePerMinuteInternational.value,
       );
 
-  static const _minorName = r'power$CaloriePerMinuteInternational';
+  static const _minorName = 'caloriePerMinuteInternational';
 
   static const _ratio = 69.78;
 
@@ -2660,8 +2734,9 @@ final class Power$CaloriePerMinuteInternational extends Power {
   Power$CaloriePerMinuteInternational get _clone =>
       Power$CaloriePerMinuteInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$CaloriePerMinuteInternational] with new value
   @override
@@ -2674,6 +2749,7 @@ final class Power$CaloriePerMinuteInternational extends Power {
   @override
   String get symbol => 'cal/min';
 
+  /// [Power$CaloriePerMinuteInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2705,7 +2781,7 @@ final class Power$CaloriePerSecondInternational extends Power {
         unit.toCaloriePerSecondInternational.value,
       );
 
-  static const _minorName = r'power$CaloriePerSecondInternational';
+  static const _minorName = 'caloriePerSecondInternational';
 
   static const _ratio = 4186.8;
 
@@ -2718,8 +2794,9 @@ final class Power$CaloriePerSecondInternational extends Power {
   Power$CaloriePerSecondInternational get _clone =>
       Power$CaloriePerSecondInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$CaloriePerSecondInternational] with new value
   @override
@@ -2732,6 +2809,7 @@ final class Power$CaloriePerSecondInternational extends Power {
   @override
   String get symbol => 'cal/s';
 
+  /// [Power$CaloriePerSecondInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2763,7 +2841,7 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
         unit.toKilocaloriePerHourThermochemical.value,
       );
 
-  static const _minorName = r'power$KilocaloriePerHourThermochemical';
+  static const _minorName = 'kilocaloriePerHourThermochemical';
 
   static const _ratio = 1162.2222222222222;
 
@@ -2776,8 +2854,9 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
   Power$KilocaloriePerHourThermochemical get _clone =>
       Power$KilocaloriePerHourThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerHourThermochemical] with new value
   @override
@@ -2790,6 +2869,7 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
   @override
   String get symbol => 'kcal/h';
 
+  /// [Power$KilocaloriePerHourThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2821,7 +2901,7 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
         unit.toKilocaloriePerMinuteThermochemical.value,
       );
 
-  static const _minorName = r'power$KilocaloriePerMinuteThermochemical';
+  static const _minorName = 'kilocaloriePerMinuteThermochemical';
 
   static const _ratio = 69733.33333333333;
 
@@ -2834,8 +2914,9 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
   Power$KilocaloriePerMinuteThermochemical get _clone =>
       Power$KilocaloriePerMinuteThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerMinuteThermochemical] with new value
   @override
@@ -2848,6 +2929,7 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
   @override
   String get symbol => 'kcal/min';
 
+  /// [Power$KilocaloriePerMinuteThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2879,7 +2961,7 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
         unit.toKilocaloriePerSecondThermochemical.value,
       );
 
-  static const _minorName = r'power$KilocaloriePerSecondThermochemical';
+  static const _minorName = 'kilocaloriePerSecondThermochemical';
 
   static const _ratio = 4184000.0;
 
@@ -2892,8 +2974,9 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
   Power$KilocaloriePerSecondThermochemical get _clone =>
       Power$KilocaloriePerSecondThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerSecondThermochemical] with new value
   @override
@@ -2906,6 +2989,7 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
   @override
   String get symbol => 'kcal/s';
 
+  /// [Power$KilocaloriePerSecondThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2937,7 +3021,7 @@ final class Power$CaloriePerHourThermochemical extends Power {
         unit.toCaloriePerHourThermochemical.value,
       );
 
-  static const _minorName = r'power$CaloriePerHourThermochemical';
+  static const _minorName = 'caloriePerHourThermochemical';
 
   static const _ratio = 1.1622222222222223;
 
@@ -2950,8 +3034,9 @@ final class Power$CaloriePerHourThermochemical extends Power {
   Power$CaloriePerHourThermochemical get _clone =>
       Power$CaloriePerHourThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$CaloriePerHourThermochemical] with new value
   @override
@@ -2964,6 +3049,7 @@ final class Power$CaloriePerHourThermochemical extends Power {
   @override
   String get symbol => 'cal/h';
 
+  /// [Power$CaloriePerHourThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2995,7 +3081,7 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
         unit.toCaloriePerMinuteThermochemical.value,
       );
 
-  static const _minorName = r'power$CaloriePerMinuteThermochemical';
+  static const _minorName = 'caloriePerMinuteThermochemical';
 
   static const _ratio = 69.73333333333333;
 
@@ -3008,8 +3094,9 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
   Power$CaloriePerMinuteThermochemical get _clone =>
       Power$CaloriePerMinuteThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$CaloriePerMinuteThermochemical] with new value
   @override
@@ -3022,6 +3109,7 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
   @override
   String get symbol => 'cal/min';
 
+  /// [Power$CaloriePerMinuteThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3053,7 +3141,7 @@ final class Power$CaloriePerSecondThermochemical extends Power {
         unit.toCaloriePerSecondThermochemical.value,
       );
 
-  static const _minorName = r'power$CaloriePerSecondThermochemical';
+  static const _minorName = 'caloriePerSecondThermochemical';
 
   static const _ratio = 4184.0;
 
@@ -3066,8 +3154,9 @@ final class Power$CaloriePerSecondThermochemical extends Power {
   Power$CaloriePerSecondThermochemical get _clone =>
       Power$CaloriePerSecondThermochemical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$CaloriePerSecondThermochemical] with new value
   @override
@@ -3080,6 +3169,7 @@ final class Power$CaloriePerSecondThermochemical extends Power {
   @override
   String get symbol => 'cal/s';
 
+  /// [Power$CaloriePerSecondThermochemical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3111,7 +3201,7 @@ final class Power$PoundFootPerHour extends Power {
         unit.toPoundFootPerHour.value,
       );
 
-  static const _minorName = r'power$PoundFootPerHour';
+  static const _minorName = 'poundFootPerHour';
 
   static const _ratio = 0.376616096758177;
 
@@ -3123,8 +3213,9 @@ final class Power$PoundFootPerHour extends Power {
   @override
   Power$PoundFootPerHour get _clone => Power$PoundFootPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$PoundFootPerHour] with new value
   @override
@@ -3137,6 +3228,7 @@ final class Power$PoundFootPerHour extends Power {
   @override
   String get symbol => 'ft lbf/h';
 
+  /// [Power$PoundFootPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3168,7 +3260,7 @@ final class Power$PoundFootPerMinute extends Power {
         unit.toPoundFootPerMinute.value,
       );
 
-  static const _minorName = r'power$PoundFootPerMinute';
+  static const _minorName = 'poundFootPerMinute';
 
   static const _ratio = 22.59696580549062;
 
@@ -3180,8 +3272,9 @@ final class Power$PoundFootPerMinute extends Power {
   @override
   Power$PoundFootPerMinute get _clone => Power$PoundFootPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$PoundFootPerMinute] with new value
   @override
@@ -3194,6 +3287,7 @@ final class Power$PoundFootPerMinute extends Power {
   @override
   String get symbol => 'ft lbf/min';
 
+  /// [Power$PoundFootPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3225,7 +3319,7 @@ final class Power$PoundFootPerSecond extends Power {
         unit.toPoundFootPerSecond.value,
       );
 
-  static const _minorName = r'power$PoundFootPerSecond';
+  static const _minorName = 'poundFootPerSecond';
 
   static const _ratio = 1355.8179483294373;
 
@@ -3237,8 +3331,9 @@ final class Power$PoundFootPerSecond extends Power {
   @override
   Power$PoundFootPerSecond get _clone => Power$PoundFootPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$PoundFootPerSecond] with new value
   @override
@@ -3251,6 +3346,7 @@ final class Power$PoundFootPerSecond extends Power {
   @override
   String get symbol => 'ft lbf/s';
 
+  /// [Power$PoundFootPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3282,7 +3378,7 @@ final class Power$ErgPerSecond extends Power {
         unit.toErgPerSecond.value,
       );
 
-  static const _minorName = r'power$ErgPerSecond';
+  static const _minorName = 'ergPerSecond';
 
   static const _ratio = 0.0001;
 
@@ -3294,8 +3390,9 @@ final class Power$ErgPerSecond extends Power {
   @override
   Power$ErgPerSecond get _clone => Power$ErgPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$ErgPerSecond] with new value
   @override
@@ -3306,8 +3403,9 @@ final class Power$ErgPerSecond extends Power {
 
   /// Symbol for [Power$ErgPerSecond]
   @override
-  String get symbol => 'ErgPerSecond';
+  String get symbol => 'erg/second';
 
+  /// [Power$ErgPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3339,7 +3437,7 @@ final class Power$ExajoulePerSecond extends Power {
         unit.toExajoulePerSecond.value,
       );
 
-  static const _minorName = r'power$ExajoulePerSecond';
+  static const _minorName = 'exajoulePerSecond';
 
   static const _ratio = 1e+21;
 
@@ -3351,8 +3449,9 @@ final class Power$ExajoulePerSecond extends Power {
   @override
   Power$ExajoulePerSecond get _clone => Power$ExajoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$ExajoulePerSecond] with new value
   @override
@@ -3365,6 +3464,7 @@ final class Power$ExajoulePerSecond extends Power {
   @override
   String get symbol => 'EJ/s';
 
+  /// [Power$ExajoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3396,7 +3496,7 @@ final class Power$PetajoulePerSecond extends Power {
         unit.toPetajoulePerSecond.value,
       );
 
-  static const _minorName = r'power$PetajoulePerSecond';
+  static const _minorName = 'petajoulePerSecond';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -3408,8 +3508,9 @@ final class Power$PetajoulePerSecond extends Power {
   @override
   Power$PetajoulePerSecond get _clone => Power$PetajoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$PetajoulePerSecond] with new value
   @override
@@ -3422,6 +3523,7 @@ final class Power$PetajoulePerSecond extends Power {
   @override
   String get symbol => 'PJ/s';
 
+  /// [Power$PetajoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3453,7 +3555,7 @@ final class Power$TerajoulePerSecond extends Power {
         unit.toTerajoulePerSecond.value,
       );
 
-  static const _minorName = r'power$TerajoulePerSecond';
+  static const _minorName = 'terajoulePerSecond';
 
   static const _ratio = 1000000000000000.0;
 
@@ -3465,8 +3567,9 @@ final class Power$TerajoulePerSecond extends Power {
   @override
   Power$TerajoulePerSecond get _clone => Power$TerajoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$TerajoulePerSecond] with new value
   @override
@@ -3479,6 +3582,7 @@ final class Power$TerajoulePerSecond extends Power {
   @override
   String get symbol => 'TJ/s';
 
+  /// [Power$TerajoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3510,7 +3614,7 @@ final class Power$GigajoulePerSecond extends Power {
         unit.toGigajoulePerSecond.value,
       );
 
-  static const _minorName = r'power$GigajoulePerSecond';
+  static const _minorName = 'gigajoulePerSecond';
 
   static const _ratio = 1000000000000.0;
 
@@ -3522,8 +3626,9 @@ final class Power$GigajoulePerSecond extends Power {
   @override
   Power$GigajoulePerSecond get _clone => Power$GigajoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$GigajoulePerSecond] with new value
   @override
@@ -3536,6 +3641,7 @@ final class Power$GigajoulePerSecond extends Power {
   @override
   String get symbol => 'GJ/s';
 
+  /// [Power$GigajoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3567,7 +3673,7 @@ final class Power$MegajoulePerSecond extends Power {
         unit.toMegajoulePerSecond.value,
       );
 
-  static const _minorName = r'power$MegajoulePerSecond';
+  static const _minorName = 'megajoulePerSecond';
 
   static const _ratio = 1000000000.0;
 
@@ -3579,8 +3685,9 @@ final class Power$MegajoulePerSecond extends Power {
   @override
   Power$MegajoulePerSecond get _clone => Power$MegajoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$MegajoulePerSecond] with new value
   @override
@@ -3593,6 +3700,7 @@ final class Power$MegajoulePerSecond extends Power {
   @override
   String get symbol => 'MJ/s';
 
+  /// [Power$MegajoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3624,7 +3732,7 @@ final class Power$KilojoulePerSecond extends Power {
         unit.toKilojoulePerSecond.value,
       );
 
-  static const _minorName = r'power$KilojoulePerSecond';
+  static const _minorName = 'kilojoulePerSecond';
 
   static const _ratio = 1000000.0;
 
@@ -3636,8 +3744,9 @@ final class Power$KilojoulePerSecond extends Power {
   @override
   Power$KilojoulePerSecond get _clone => Power$KilojoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilojoulePerSecond] with new value
   @override
@@ -3650,6 +3759,7 @@ final class Power$KilojoulePerSecond extends Power {
   @override
   String get symbol => 'kJ/s';
 
+  /// [Power$KilojoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3681,7 +3791,7 @@ final class Power$HectojoulePerSecond extends Power {
         unit.toHectojoulePerSecond.value,
       );
 
-  static const _minorName = r'power$HectojoulePerSecond';
+  static const _minorName = 'hectojoulePerSecond';
 
   static const _ratio = 100000.0;
 
@@ -3693,8 +3803,9 @@ final class Power$HectojoulePerSecond extends Power {
   @override
   Power$HectojoulePerSecond get _clone => Power$HectojoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$HectojoulePerSecond] with new value
   @override
@@ -3707,6 +3818,7 @@ final class Power$HectojoulePerSecond extends Power {
   @override
   String get symbol => 'hJ/s';
 
+  /// [Power$HectojoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3738,7 +3850,7 @@ final class Power$DekajoulePerSecond extends Power {
         unit.toDekajoulePerSecond.value,
       );
 
-  static const _minorName = r'power$DekajoulePerSecond';
+  static const _minorName = 'dekajoulePerSecond';
 
   static const _ratio = 10000.0;
 
@@ -3750,8 +3862,9 @@ final class Power$DekajoulePerSecond extends Power {
   @override
   Power$DekajoulePerSecond get _clone => Power$DekajoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$DekajoulePerSecond] with new value
   @override
@@ -3764,6 +3877,7 @@ final class Power$DekajoulePerSecond extends Power {
   @override
   String get symbol => 'daJ/s';
 
+  /// [Power$DekajoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3795,7 +3909,7 @@ final class Power$JoulePerSecond extends Power {
         unit.toJoulePerSecond.value,
       );
 
-  static const _minorName = r'power$JoulePerSecond';
+  static const _minorName = 'joulePerSecond';
 
   static const _ratio = 1000.0;
 
@@ -3807,8 +3921,9 @@ final class Power$JoulePerSecond extends Power {
   @override
   Power$JoulePerSecond get _clone => Power$JoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$JoulePerSecond] with new value
   @override
@@ -3821,6 +3936,7 @@ final class Power$JoulePerSecond extends Power {
   @override
   String get symbol => 'J/s';
 
+  /// [Power$JoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3852,7 +3968,7 @@ final class Power$DecijoulePerSecond extends Power {
         unit.toDecijoulePerSecond.value,
       );
 
-  static const _minorName = r'power$DecijoulePerSecond';
+  static const _minorName = 'decijoulePerSecond';
 
   static const _ratio = 100.0;
 
@@ -3864,8 +3980,9 @@ final class Power$DecijoulePerSecond extends Power {
   @override
   Power$DecijoulePerSecond get _clone => Power$DecijoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$DecijoulePerSecond] with new value
   @override
@@ -3878,6 +3995,7 @@ final class Power$DecijoulePerSecond extends Power {
   @override
   String get symbol => 'dJ/s';
 
+  /// [Power$DecijoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3909,7 +4027,7 @@ final class Power$CentijoulePerSecond extends Power {
         unit.toCentijoulePerSecond.value,
       );
 
-  static const _minorName = r'power$CentijoulePerSecond';
+  static const _minorName = 'centijoulePerSecond';
 
   static const _ratio = 10.0;
 
@@ -3921,8 +4039,9 @@ final class Power$CentijoulePerSecond extends Power {
   @override
   Power$CentijoulePerSecond get _clone => Power$CentijoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$CentijoulePerSecond] with new value
   @override
@@ -3935,6 +4054,7 @@ final class Power$CentijoulePerSecond extends Power {
   @override
   String get symbol => 'cJ/s';
 
+  /// [Power$CentijoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3966,7 +4086,7 @@ final class Power$MillijoulePerSecond extends Power {
         unit.toMillijoulePerSecond.value,
       );
 
-  static const _minorName = r'power$MillijoulePerSecond';
+  static const _minorName = 'millijoulePerSecond';
 
   static const _ratio = 1.0;
 
@@ -3978,8 +4098,9 @@ final class Power$MillijoulePerSecond extends Power {
   @override
   Power$MillijoulePerSecond get _clone => Power$MillijoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$MillijoulePerSecond] with new value
   @override
@@ -3992,6 +4113,7 @@ final class Power$MillijoulePerSecond extends Power {
   @override
   String get symbol => 'mJ/s';
 
+  /// [Power$MillijoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4023,7 +4145,7 @@ final class Power$MicrojoulePerSecond extends Power {
         unit.toMicrojoulePerSecond.value,
       );
 
-  static const _minorName = r'power$MicrojoulePerSecond';
+  static const _minorName = 'microjoulePerSecond';
 
   static const _ratio = 0.001;
 
@@ -4035,8 +4157,9 @@ final class Power$MicrojoulePerSecond extends Power {
   @override
   Power$MicrojoulePerSecond get _clone => Power$MicrojoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$MicrojoulePerSecond] with new value
   @override
@@ -4049,6 +4172,7 @@ final class Power$MicrojoulePerSecond extends Power {
   @override
   String get symbol => 'µJ/s';
 
+  /// [Power$MicrojoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4080,7 +4204,7 @@ final class Power$NanojoulePerSecond extends Power {
         unit.toNanojoulePerSecond.value,
       );
 
-  static const _minorName = r'power$NanojoulePerSecond';
+  static const _minorName = 'nanojoulePerSecond';
 
   static const _ratio = 0.000001;
 
@@ -4092,8 +4216,9 @@ final class Power$NanojoulePerSecond extends Power {
   @override
   Power$NanojoulePerSecond get _clone => Power$NanojoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$NanojoulePerSecond] with new value
   @override
@@ -4106,6 +4231,7 @@ final class Power$NanojoulePerSecond extends Power {
   @override
   String get symbol => 'nJ/s';
 
+  /// [Power$NanojoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4137,7 +4263,7 @@ final class Power$PicojoulePerSecond extends Power {
         unit.toPicojoulePerSecond.value,
       );
 
-  static const _minorName = r'power$PicojoulePerSecond';
+  static const _minorName = 'picojoulePerSecond';
 
   static const _ratio = 1e-9;
 
@@ -4149,8 +4275,9 @@ final class Power$PicojoulePerSecond extends Power {
   @override
   Power$PicojoulePerSecond get _clone => Power$PicojoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$PicojoulePerSecond] with new value
   @override
@@ -4163,6 +4290,7 @@ final class Power$PicojoulePerSecond extends Power {
   @override
   String get symbol => 'pJ/s';
 
+  /// [Power$PicojoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4194,7 +4322,7 @@ final class Power$FemtojoulePerSecond extends Power {
         unit.toFemtojoulePerSecond.value,
       );
 
-  static const _minorName = r'power$FemtojoulePerSecond';
+  static const _minorName = 'femtojoulePerSecond';
 
   static const _ratio = 1e-12;
 
@@ -4206,8 +4334,9 @@ final class Power$FemtojoulePerSecond extends Power {
   @override
   Power$FemtojoulePerSecond get _clone => Power$FemtojoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$FemtojoulePerSecond] with new value
   @override
@@ -4220,6 +4349,7 @@ final class Power$FemtojoulePerSecond extends Power {
   @override
   String get symbol => 'fJ/s';
 
+  /// [Power$FemtojoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4251,7 +4381,7 @@ final class Power$AttojoulePerSecond extends Power {
         unit.toAttojoulePerSecond.value,
       );
 
-  static const _minorName = r'power$AttojoulePerSecond';
+  static const _minorName = 'attojoulePerSecond';
 
   static const _ratio = 1e-15;
 
@@ -4263,8 +4393,9 @@ final class Power$AttojoulePerSecond extends Power {
   @override
   Power$AttojoulePerSecond get _clone => Power$AttojoulePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$AttojoulePerSecond] with new value
   @override
@@ -4277,6 +4408,7 @@ final class Power$AttojoulePerSecond extends Power {
   @override
   String get symbol => 'aJ/s';
 
+  /// [Power$AttojoulePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4308,7 +4440,7 @@ final class Power$JoulePerHour extends Power {
         unit.toJoulePerHour.value,
       );
 
-  static const _minorName = r'power$JoulePerHour';
+  static const _minorName = 'joulePerHour';
 
   static const _ratio = 0.2777777777777778;
 
@@ -4320,8 +4452,9 @@ final class Power$JoulePerHour extends Power {
   @override
   Power$JoulePerHour get _clone => Power$JoulePerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$JoulePerHour] with new value
   @override
@@ -4334,6 +4467,7 @@ final class Power$JoulePerHour extends Power {
   @override
   String get symbol => 'J/h';
 
+  /// [Power$JoulePerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4365,7 +4499,7 @@ final class Power$JoulePerMinute extends Power {
         unit.toJoulePerMinute.value,
       );
 
-  static const _minorName = r'power$JoulePerMinute';
+  static const _minorName = 'joulePerMinute';
 
   static const _ratio = 16.666666666666668;
 
@@ -4377,8 +4511,9 @@ final class Power$JoulePerMinute extends Power {
   @override
   Power$JoulePerMinute get _clone => Power$JoulePerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$JoulePerMinute] with new value
   @override
@@ -4391,6 +4526,7 @@ final class Power$JoulePerMinute extends Power {
   @override
   String get symbol => 'J/min';
 
+  /// [Power$JoulePerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4422,7 +4558,7 @@ final class Power$KilojoulePerHour extends Power {
         unit.toKilojoulePerHour.value,
       );
 
-  static const _minorName = r'power$KilojoulePerHour';
+  static const _minorName = 'kilojoulePerHour';
 
   static const _ratio = 277.77777777777777;
 
@@ -4434,8 +4570,9 @@ final class Power$KilojoulePerHour extends Power {
   @override
   Power$KilojoulePerHour get _clone => Power$KilojoulePerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilojoulePerHour] with new value
   @override
@@ -4448,6 +4585,7 @@ final class Power$KilojoulePerHour extends Power {
   @override
   String get symbol => 'kJ/h';
 
+  /// [Power$KilojoulePerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4479,7 +4617,7 @@ final class Power$KilojoulePerMinute extends Power {
         unit.toKilojoulePerMinute.value,
       );
 
-  static const _minorName = r'power$KilojoulePerMinute';
+  static const _minorName = 'kilojoulePerMinute';
 
   static const _ratio = 16666.666666666668;
 
@@ -4491,8 +4629,9 @@ final class Power$KilojoulePerMinute extends Power {
   @override
   Power$KilojoulePerMinute get _clone => Power$KilojoulePerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Power$KilojoulePerMinute] with new value
   @override
@@ -4505,6 +4644,7 @@ final class Power$KilojoulePerMinute extends Power {
   @override
   String get symbol => 'kJ/min';
 
+  /// [Power$KilojoulePerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

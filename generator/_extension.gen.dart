@@ -1,4 +1,5 @@
-part of '__generate.gen.dart';
+// ignore_for_file: unreachable_from_main
+part of '__gen_new.dart';
 
 void generateExtension() {
   final iterableExtensionBuff = StringBuffer();

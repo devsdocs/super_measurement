@@ -166,7 +166,7 @@ final class Torque$KilonewtonMeter extends Torque {
         unit.toKilonewtonMeter.value,
       );
 
-  static const _minorName = r'torque$KilonewtonMeter';
+  static const _minorName = 'kilonewtonMeter';
 
   static const _ratio = 1000.0;
 
@@ -178,8 +178,9 @@ final class Torque$KilonewtonMeter extends Torque {
   @override
   Torque$KilonewtonMeter get _clone => Torque$KilonewtonMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$KilonewtonMeter] with new value
   @override
@@ -192,6 +193,7 @@ final class Torque$KilonewtonMeter extends Torque {
   @override
   String get symbol => 'kN m';
 
+  /// [Torque$KilonewtonMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -223,7 +225,7 @@ final class Torque$NewtonMeter extends Torque {
         unit.toNewtonMeter.value,
       );
 
-  static const _minorName = r'torque$NewtonMeter';
+  static const _minorName = 'newtonMeter';
 
   static const _ratio = 1.0;
 
@@ -235,8 +237,9 @@ final class Torque$NewtonMeter extends Torque {
   @override
   Torque$NewtonMeter get _clone => Torque$NewtonMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$NewtonMeter] with new value
   @override
@@ -249,6 +252,7 @@ final class Torque$NewtonMeter extends Torque {
   @override
   String get symbol => 'N m';
 
+  /// [Torque$NewtonMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -280,7 +284,7 @@ final class Torque$NewtonCentimeter extends Torque {
         unit.toNewtonCentimeter.value,
       );
 
-  static const _minorName = r'torque$NewtonCentimeter';
+  static const _minorName = 'newtonCentimeter';
 
   static const _ratio = 0.01;
 
@@ -292,8 +296,9 @@ final class Torque$NewtonCentimeter extends Torque {
   @override
   Torque$NewtonCentimeter get _clone => Torque$NewtonCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$NewtonCentimeter] with new value
   @override
@@ -306,6 +311,7 @@ final class Torque$NewtonCentimeter extends Torque {
   @override
   String get symbol => 'N cm';
 
+  /// [Torque$NewtonCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -337,7 +343,7 @@ final class Torque$NewtonMillimeter extends Torque {
         unit.toNewtonMillimeter.value,
       );
 
-  static const _minorName = r'torque$NewtonMillimeter';
+  static const _minorName = 'newtonMillimeter';
 
   static const _ratio = 0.001;
 
@@ -349,8 +355,9 @@ final class Torque$NewtonMillimeter extends Torque {
   @override
   Torque$NewtonMillimeter get _clone => Torque$NewtonMillimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$NewtonMillimeter] with new value
   @override
@@ -363,6 +370,7 @@ final class Torque$NewtonMillimeter extends Torque {
   @override
   String get symbol => 'N mm';
 
+  /// [Torque$NewtonMillimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -394,7 +402,7 @@ final class Torque$DyneMeter extends Torque {
         unit.toDyneMeter.value,
       );
 
-  static const _minorName = r'torque$DyneMeter';
+  static const _minorName = 'dyneMeter';
 
   static const _ratio = 0.00001;
 
@@ -406,8 +414,9 @@ final class Torque$DyneMeter extends Torque {
   @override
   Torque$DyneMeter get _clone => Torque$DyneMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$DyneMeter] with new value
   @override
@@ -420,6 +429,7 @@ final class Torque$DyneMeter extends Torque {
   @override
   String get symbol => 'dyn m';
 
+  /// [Torque$DyneMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -451,7 +461,7 @@ final class Torque$DyneCentimeter extends Torque {
         unit.toDyneCentimeter.value,
       );
 
-  static const _minorName = r'torque$DyneCentimeter';
+  static const _minorName = 'dyneCentimeter';
 
   static const _ratio = 1e-7;
 
@@ -463,8 +473,9 @@ final class Torque$DyneCentimeter extends Torque {
   @override
   Torque$DyneCentimeter get _clone => Torque$DyneCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$DyneCentimeter] with new value
   @override
@@ -477,6 +488,7 @@ final class Torque$DyneCentimeter extends Torque {
   @override
   String get symbol => 'dyn cm';
 
+  /// [Torque$DyneCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -508,7 +520,7 @@ final class Torque$DyneMillimeter extends Torque {
         unit.toDyneMillimeter.value,
       );
 
-  static const _minorName = r'torque$DyneMillimeter';
+  static const _minorName = 'dyneMillimeter';
 
   static const _ratio = 1e-8;
 
@@ -520,8 +532,9 @@ final class Torque$DyneMillimeter extends Torque {
   @override
   Torque$DyneMillimeter get _clone => Torque$DyneMillimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$DyneMillimeter] with new value
   @override
@@ -534,6 +547,7 @@ final class Torque$DyneMillimeter extends Torque {
   @override
   String get symbol => 'dyn mm';
 
+  /// [Torque$DyneMillimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -565,7 +579,7 @@ final class Torque$KilogramForceMeter extends Torque {
         unit.toKilogramForceMeter.value,
       );
 
-  static const _minorName = r'torque$KilogramForceMeter';
+  static const _minorName = 'kilogramForceMeter';
 
   static const _ratio = 9.80665;
 
@@ -577,8 +591,9 @@ final class Torque$KilogramForceMeter extends Torque {
   @override
   Torque$KilogramForceMeter get _clone => Torque$KilogramForceMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$KilogramForceMeter] with new value
   @override
@@ -591,6 +606,7 @@ final class Torque$KilogramForceMeter extends Torque {
   @override
   String get symbol => 'kgf m';
 
+  /// [Torque$KilogramForceMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -622,7 +638,7 @@ final class Torque$KilogramForceCentimeter extends Torque {
         unit.toKilogramForceCentimeter.value,
       );
 
-  static const _minorName = r'torque$KilogramForceCentimeter';
+  static const _minorName = 'kilogramForceCentimeter';
 
   static const _ratio = 0.0980665;
 
@@ -635,8 +651,9 @@ final class Torque$KilogramForceCentimeter extends Torque {
   Torque$KilogramForceCentimeter get _clone =>
       Torque$KilogramForceCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$KilogramForceCentimeter] with new value
   @override
@@ -649,6 +666,7 @@ final class Torque$KilogramForceCentimeter extends Torque {
   @override
   String get symbol => 'kgf cm';
 
+  /// [Torque$KilogramForceCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -680,7 +698,7 @@ final class Torque$KilogramForceMillimeter extends Torque {
         unit.toKilogramForceMillimeter.value,
       );
 
-  static const _minorName = r'torque$KilogramForceMillimeter';
+  static const _minorName = 'kilogramForceMillimeter';
 
   static const _ratio = 0.00980665;
 
@@ -693,8 +711,9 @@ final class Torque$KilogramForceMillimeter extends Torque {
   Torque$KilogramForceMillimeter get _clone =>
       Torque$KilogramForceMillimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$KilogramForceMillimeter] with new value
   @override
@@ -707,6 +726,7 @@ final class Torque$KilogramForceMillimeter extends Torque {
   @override
   String get symbol => 'kgf mm';
 
+  /// [Torque$KilogramForceMillimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -738,7 +758,7 @@ final class Torque$GramForceMeter extends Torque {
         unit.toGramForceMeter.value,
       );
 
-  static const _minorName = r'torque$GramForceMeter';
+  static const _minorName = 'gramForceMeter';
 
   static const _ratio = 0.00980665;
 
@@ -750,8 +770,9 @@ final class Torque$GramForceMeter extends Torque {
   @override
   Torque$GramForceMeter get _clone => Torque$GramForceMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$GramForceMeter] with new value
   @override
@@ -764,6 +785,7 @@ final class Torque$GramForceMeter extends Torque {
   @override
   String get symbol => 'gf m';
 
+  /// [Torque$GramForceMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -795,7 +817,7 @@ final class Torque$GramForceCentimeter extends Torque {
         unit.toGramForceCentimeter.value,
       );
 
-  static const _minorName = r'torque$GramForceCentimeter';
+  static const _minorName = 'gramForceCentimeter';
 
   static const _ratio = 0.0000980665;
 
@@ -807,8 +829,9 @@ final class Torque$GramForceCentimeter extends Torque {
   @override
   Torque$GramForceCentimeter get _clone => Torque$GramForceCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$GramForceCentimeter] with new value
   @override
@@ -821,6 +844,7 @@ final class Torque$GramForceCentimeter extends Torque {
   @override
   String get symbol => 'gf cm';
 
+  /// [Torque$GramForceCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -852,7 +876,7 @@ final class Torque$GramForceMillimeter extends Torque {
         unit.toGramForceMillimeter.value,
       );
 
-  static const _minorName = r'torque$GramForceMillimeter';
+  static const _minorName = 'gramForceMillimeter';
 
   static const _ratio = 0.00000980665;
 
@@ -864,8 +888,9 @@ final class Torque$GramForceMillimeter extends Torque {
   @override
   Torque$GramForceMillimeter get _clone => Torque$GramForceMillimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$GramForceMillimeter] with new value
   @override
@@ -878,6 +903,7 @@ final class Torque$GramForceMillimeter extends Torque {
   @override
   String get symbol => 'gf mm';
 
+  /// [Torque$GramForceMillimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -909,7 +935,7 @@ final class Torque$OunceForceFoot extends Torque {
         unit.toOunceForceFoot.value,
       );
 
-  static const _minorName = r'torque$OunceForceFoot';
+  static const _minorName = 'ounceForceFoot';
 
   static const _ratio = 0.084738624;
 
@@ -921,8 +947,9 @@ final class Torque$OunceForceFoot extends Torque {
   @override
   Torque$OunceForceFoot get _clone => Torque$OunceForceFoot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$OunceForceFoot] with new value
   @override
@@ -935,6 +962,7 @@ final class Torque$OunceForceFoot extends Torque {
   @override
   String get symbol => 'ozf ft';
 
+  /// [Torque$OunceForceFoot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -966,7 +994,7 @@ final class Torque$OunceForceInch extends Torque {
         unit.toOunceForceInch.value,
       );
 
-  static const _minorName = r'torque$OunceForceInch';
+  static const _minorName = 'ounceForceInch';
 
   static const _ratio = 0.007061552;
 
@@ -978,8 +1006,9 @@ final class Torque$OunceForceInch extends Torque {
   @override
   Torque$OunceForceInch get _clone => Torque$OunceForceInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$OunceForceInch] with new value
   @override
@@ -992,6 +1021,7 @@ final class Torque$OunceForceInch extends Torque {
   @override
   String get symbol => 'ozf in';
 
+  /// [Torque$OunceForceInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1023,7 +1053,7 @@ final class Torque$PoundForceFoot extends Torque {
         unit.toPoundForceFoot.value,
       );
 
-  static const _minorName = r'torque$PoundForceFoot';
+  static const _minorName = 'poundForceFoot';
 
   static const _ratio = 1.355818;
 
@@ -1035,8 +1065,9 @@ final class Torque$PoundForceFoot extends Torque {
   @override
   Torque$PoundForceFoot get _clone => Torque$PoundForceFoot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$PoundForceFoot] with new value
   @override
@@ -1049,6 +1080,7 @@ final class Torque$PoundForceFoot extends Torque {
   @override
   String get symbol => 'lbf ft';
 
+  /// [Torque$PoundForceFoot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1080,7 +1112,7 @@ final class Torque$PoundForceInch extends Torque {
         unit.toPoundForceInch.value,
       );
 
-  static const _minorName = r'torque$PoundForceInch';
+  static const _minorName = 'poundForceInch';
 
   static const _ratio = 0.11298483333333334;
 
@@ -1092,8 +1124,9 @@ final class Torque$PoundForceInch extends Torque {
   @override
   Torque$PoundForceInch get _clone => Torque$PoundForceInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Torque$PoundForceInch] with new value
   @override
@@ -1106,6 +1139,7 @@ final class Torque$PoundForceInch extends Torque {
   @override
   String get symbol => 'lbf in';
 
+  /// [Torque$PoundForceInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

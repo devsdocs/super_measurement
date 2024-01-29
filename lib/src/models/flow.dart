@@ -436,7 +436,7 @@ final class Flow$GallonPerDay extends Flow {
         unit.toGallonPerDay.value,
       );
 
-  static const _minorName = r'flow$GallonPerDay';
+  static const _minorName = 'gallonPerDay';
 
   static const _ratio = 3785.411784;
 
@@ -448,8 +448,9 @@ final class Flow$GallonPerDay extends Flow {
   @override
   Flow$GallonPerDay get _clone => Flow$GallonPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$GallonPerDay] with new value
   @override
@@ -462,6 +463,7 @@ final class Flow$GallonPerDay extends Flow {
   @override
   String get symbol => 'gal/d';
 
+  /// [Flow$GallonPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -493,7 +495,7 @@ final class Flow$GallonPerHour extends Flow {
         unit.toGallonPerHour.value,
       );
 
-  static const _minorName = r'flow$GallonPerHour';
+  static const _minorName = 'gallonPerHour';
 
   static const _ratio = 90849.882816;
 
@@ -505,8 +507,9 @@ final class Flow$GallonPerHour extends Flow {
   @override
   Flow$GallonPerHour get _clone => Flow$GallonPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$GallonPerHour] with new value
   @override
@@ -519,6 +522,7 @@ final class Flow$GallonPerHour extends Flow {
   @override
   String get symbol => 'gal/h';
 
+  /// [Flow$GallonPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -550,7 +554,7 @@ final class Flow$GallonPerMinute extends Flow {
         unit.toGallonPerMinute.value,
       );
 
-  static const _minorName = r'flow$GallonPerMinute';
+  static const _minorName = 'gallonPerMinute';
 
   static const _ratio = 5450992.96896;
 
@@ -562,8 +566,9 @@ final class Flow$GallonPerMinute extends Flow {
   @override
   Flow$GallonPerMinute get _clone => Flow$GallonPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$GallonPerMinute] with new value
   @override
@@ -576,6 +581,7 @@ final class Flow$GallonPerMinute extends Flow {
   @override
   String get symbol => 'gal/min';
 
+  /// [Flow$GallonPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -607,7 +613,7 @@ final class Flow$GallonPerSecond extends Flow {
         unit.toGallonPerSecond.value,
       );
 
-  static const _minorName = r'flow$GallonPerSecond';
+  static const _minorName = 'gallonPerSecond';
 
   static const _ratio = 327059578.1376;
 
@@ -619,8 +625,9 @@ final class Flow$GallonPerSecond extends Flow {
   @override
   Flow$GallonPerSecond get _clone => Flow$GallonPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$GallonPerSecond] with new value
   @override
@@ -633,6 +640,7 @@ final class Flow$GallonPerSecond extends Flow {
   @override
   String get symbol => 'gal/s';
 
+  /// [Flow$GallonPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -664,7 +672,7 @@ final class Flow$GallonUKPerDay extends Flow {
         unit.toGallonUKPerDay.value,
       );
 
-  static const _minorName = r'flow$GallonUKPerDay';
+  static const _minorName = 'gallonUKPerDay';
 
   static const _ratio = 4546.09028187501;
 
@@ -676,8 +684,9 @@ final class Flow$GallonUKPerDay extends Flow {
   @override
   Flow$GallonUKPerDay get _clone => Flow$GallonUKPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$GallonUKPerDay] with new value
   @override
@@ -690,6 +699,7 @@ final class Flow$GallonUKPerDay extends Flow {
   @override
   String get symbol => 'gal/d';
 
+  /// [Flow$GallonUKPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -721,7 +731,7 @@ final class Flow$GallonUKPerHour extends Flow {
         unit.toGallonUKPerHour.value,
       );
 
-  static const _minorName = r'flow$GallonUKPerHour';
+  static const _minorName = 'gallonUKPerHour';
 
   static const _ratio = 109106.16676500025;
 
@@ -733,8 +743,9 @@ final class Flow$GallonUKPerHour extends Flow {
   @override
   Flow$GallonUKPerHour get _clone => Flow$GallonUKPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$GallonUKPerHour] with new value
   @override
@@ -747,6 +758,7 @@ final class Flow$GallonUKPerHour extends Flow {
   @override
   String get symbol => 'gal/h';
 
+  /// [Flow$GallonUKPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -778,7 +790,7 @@ final class Flow$GallonUKPerMinute extends Flow {
         unit.toGallonUKPerMinute.value,
       );
 
-  static const _minorName = r'flow$GallonUKPerMinute';
+  static const _minorName = 'gallonUKPerMinute';
 
   static const _ratio = 6546370.005900015;
 
@@ -790,8 +802,9 @@ final class Flow$GallonUKPerMinute extends Flow {
   @override
   Flow$GallonUKPerMinute get _clone => Flow$GallonUKPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$GallonUKPerMinute] with new value
   @override
@@ -804,6 +817,7 @@ final class Flow$GallonUKPerMinute extends Flow {
   @override
   String get symbol => 'gal/min';
 
+  /// [Flow$GallonUKPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -835,7 +849,7 @@ final class Flow$GallonUKPerSecond extends Flow {
         unit.toGallonUKPerSecond.value,
       );
 
-  static const _minorName = r'flow$GallonUKPerSecond';
+  static const _minorName = 'gallonUKPerSecond';
 
   static const _ratio = 392782200.3540009;
 
@@ -847,8 +861,9 @@ final class Flow$GallonUKPerSecond extends Flow {
   @override
   Flow$GallonUKPerSecond get _clone => Flow$GallonUKPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$GallonUKPerSecond] with new value
   @override
@@ -861,6 +876,7 @@ final class Flow$GallonUKPerSecond extends Flow {
   @override
   String get symbol => 'gal/s';
 
+  /// [Flow$GallonUKPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -892,7 +908,7 @@ final class Flow$BarrelOilPerDay extends Flow {
         unit.toBarrelOilPerDay.value,
       );
 
-  static const _minorName = r'flow$BarrelOilPerDay';
+  static const _minorName = 'barrelOilPerDay';
 
   static const _ratio = 158987.294928;
 
@@ -904,8 +920,9 @@ final class Flow$BarrelOilPerDay extends Flow {
   @override
   Flow$BarrelOilPerDay get _clone => Flow$BarrelOilPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$BarrelOilPerDay] with new value
   @override
@@ -918,6 +935,7 @@ final class Flow$BarrelOilPerDay extends Flow {
   @override
   String get symbol => 'bo/d';
 
+  /// [Flow$BarrelOilPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -949,7 +967,7 @@ final class Flow$BarrelOilPerHour extends Flow {
         unit.toBarrelOilPerHour.value,
       );
 
-  static const _minorName = r'flow$BarrelOilPerHour';
+  static const _minorName = 'barrelOilPerHour';
 
   static const _ratio = 3815695.078272;
 
@@ -961,8 +979,9 @@ final class Flow$BarrelOilPerHour extends Flow {
   @override
   Flow$BarrelOilPerHour get _clone => Flow$BarrelOilPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$BarrelOilPerHour] with new value
   @override
@@ -975,6 +994,7 @@ final class Flow$BarrelOilPerHour extends Flow {
   @override
   String get symbol => 'bo/h';
 
+  /// [Flow$BarrelOilPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1006,7 +1026,7 @@ final class Flow$BarrelOilPerMinute extends Flow {
         unit.toBarrelOilPerMinute.value,
       );
 
-  static const _minorName = r'flow$BarrelOilPerMinute';
+  static const _minorName = 'barrelOilPerMinute';
 
   static const _ratio = 228941704.69632;
 
@@ -1018,8 +1038,9 @@ final class Flow$BarrelOilPerMinute extends Flow {
   @override
   Flow$BarrelOilPerMinute get _clone => Flow$BarrelOilPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$BarrelOilPerMinute] with new value
   @override
@@ -1032,6 +1053,7 @@ final class Flow$BarrelOilPerMinute extends Flow {
   @override
   String get symbol => 'bo/min';
 
+  /// [Flow$BarrelOilPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1063,7 +1085,7 @@ final class Flow$BarrelOilPerSecond extends Flow {
         unit.toBarrelOilPerSecond.value,
       );
 
-  static const _minorName = r'flow$BarrelOilPerSecond';
+  static const _minorName = 'barrelOilPerSecond';
 
   static const _ratio = 13736502281.7792;
 
@@ -1075,8 +1097,9 @@ final class Flow$BarrelOilPerSecond extends Flow {
   @override
   Flow$BarrelOilPerSecond get _clone => Flow$BarrelOilPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$BarrelOilPerSecond] with new value
   @override
@@ -1089,6 +1112,7 @@ final class Flow$BarrelOilPerSecond extends Flow {
   @override
   String get symbol => 'bo/s';
 
+  /// [Flow$BarrelOilPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1120,7 +1144,7 @@ final class Flow$AcreFootPerYear extends Flow {
         unit.toAcreFootPerYear.value,
       );
 
-  static const _minorName = r'flow$AcreFootPerYear';
+  static const _minorName = 'acreFootPerYear';
 
   static const _ratio = 3379415.812314174;
 
@@ -1132,8 +1156,9 @@ final class Flow$AcreFootPerYear extends Flow {
   @override
   Flow$AcreFootPerYear get _clone => Flow$AcreFootPerYear(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$AcreFootPerYear] with new value
   @override
@@ -1146,6 +1171,7 @@ final class Flow$AcreFootPerYear extends Flow {
   @override
   String get symbol => 'ac ft/y';
 
+  /// [Flow$AcreFootPerYear] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1177,7 +1203,7 @@ final class Flow$AcreFootPerDay extends Flow {
         unit.toAcreFootPerDay.value,
       );
 
-  static const _minorName = r'flow$AcreFootPerDay';
+  static const _minorName = 'acreFootPerDay';
 
   static const _ratio = 1233486771.4946737;
 
@@ -1189,8 +1215,9 @@ final class Flow$AcreFootPerDay extends Flow {
   @override
   Flow$AcreFootPerDay get _clone => Flow$AcreFootPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$AcreFootPerDay] with new value
   @override
@@ -1203,6 +1230,7 @@ final class Flow$AcreFootPerDay extends Flow {
   @override
   String get symbol => 'ac ft/d';
 
+  /// [Flow$AcreFootPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1234,7 +1262,7 @@ final class Flow$AcreFootPerHour extends Flow {
         unit.toAcreFootPerHour.value,
       );
 
-  static const _minorName = r'flow$AcreFootPerHour';
+  static const _minorName = 'acreFootPerHour';
 
   static const _ratio = 29603682515.872166;
 
@@ -1246,8 +1274,9 @@ final class Flow$AcreFootPerHour extends Flow {
   @override
   Flow$AcreFootPerHour get _clone => Flow$AcreFootPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$AcreFootPerHour] with new value
   @override
@@ -1260,6 +1289,7 @@ final class Flow$AcreFootPerHour extends Flow {
   @override
   String get symbol => 'ac ft/h';
 
+  /// [Flow$AcreFootPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1291,7 +1321,7 @@ final class Flow$HundredFootCubicPerDay extends Flow {
         unit.toHundredFootCubicPerDay.value,
       );
 
-  static const _minorName = r'flow$HundredFootCubicPerDay';
+  static const _minorName = 'hundredFootCubicPerDay';
 
   static const _ratio = 2831684.659211768;
 
@@ -1303,8 +1333,9 @@ final class Flow$HundredFootCubicPerDay extends Flow {
   @override
   Flow$HundredFootCubicPerDay get _clone => Flow$HundredFootCubicPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerDay] with new value
   @override
@@ -1317,6 +1348,7 @@ final class Flow$HundredFootCubicPerDay extends Flow {
   @override
   String get symbol => '100ft³/d';
 
+  /// [Flow$HundredFootCubicPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1348,7 +1380,7 @@ final class Flow$HundredFootCubicPerHour extends Flow {
         unit.toHundredFootCubicPerHour.value,
       );
 
-  static const _minorName = r'flow$HundredFootCubicPerHour';
+  static const _minorName = 'hundredFootCubicPerHour';
 
   static const _ratio = 67960431.82108243;
 
@@ -1361,8 +1393,9 @@ final class Flow$HundredFootCubicPerHour extends Flow {
   Flow$HundredFootCubicPerHour get _clone =>
       Flow$HundredFootCubicPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerHour] with new value
   @override
@@ -1375,6 +1408,7 @@ final class Flow$HundredFootCubicPerHour extends Flow {
   @override
   String get symbol => '100ft³/h';
 
+  /// [Flow$HundredFootCubicPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1406,7 +1440,7 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
         unit.toHundredFootCubicPerMinute.value,
       );
 
-  static const _minorName = r'flow$HundredFootCubicPerMinute';
+  static const _minorName = 'hundredFootCubicPerMinute';
 
   static const _ratio = 4077625909.264946;
 
@@ -1419,8 +1453,9 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
   Flow$HundredFootCubicPerMinute get _clone =>
       Flow$HundredFootCubicPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerMinute] with new value
   @override
@@ -1433,6 +1468,7 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
   @override
   String get symbol => '100ft³/min';
 
+  /// [Flow$HundredFootCubicPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1464,7 +1500,7 @@ final class Flow$OuncePerHour extends Flow {
         unit.toOuncePerHour.value,
       );
 
-  static const _minorName = r'flow$OuncePerHour';
+  static const _minorName = 'ouncePerHour';
 
   static const _ratio = 709.7647095;
 
@@ -1476,8 +1512,9 @@ final class Flow$OuncePerHour extends Flow {
   @override
   Flow$OuncePerHour get _clone => Flow$OuncePerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$OuncePerHour] with new value
   @override
@@ -1490,6 +1527,7 @@ final class Flow$OuncePerHour extends Flow {
   @override
   String get symbol => 'oz/h';
 
+  /// [Flow$OuncePerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1521,7 +1559,7 @@ final class Flow$OuncePerMinute extends Flow {
         unit.toOuncePerMinute.value,
       );
 
-  static const _minorName = r'flow$OuncePerMinute';
+  static const _minorName = 'ouncePerMinute';
 
   static const _ratio = 42585.88257;
 
@@ -1533,8 +1571,9 @@ final class Flow$OuncePerMinute extends Flow {
   @override
   Flow$OuncePerMinute get _clone => Flow$OuncePerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$OuncePerMinute] with new value
   @override
@@ -1547,6 +1586,7 @@ final class Flow$OuncePerMinute extends Flow {
   @override
   String get symbol => 'oz/min';
 
+  /// [Flow$OuncePerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1578,7 +1618,7 @@ final class Flow$OuncePerSecond extends Flow {
         unit.toOuncePerSecond.value,
       );
 
-  static const _minorName = r'flow$OuncePerSecond';
+  static const _minorName = 'ouncePerSecond';
 
   static const _ratio = 2555152.9542;
 
@@ -1590,8 +1630,9 @@ final class Flow$OuncePerSecond extends Flow {
   @override
   Flow$OuncePerSecond get _clone => Flow$OuncePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$OuncePerSecond] with new value
   @override
@@ -1604,6 +1645,7 @@ final class Flow$OuncePerSecond extends Flow {
   @override
   String get symbol => 'oz/s';
 
+  /// [Flow$OuncePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1635,7 +1677,7 @@ final class Flow$OunceUKPerHour extends Flow {
         unit.toOunceUKPerHour.value,
       );
 
-  static const _minorName = r'flow$OunceUKPerHour';
+  static const _minorName = 'ounceUKPerHour';
 
   static const _ratio = 681.9135422812516;
 
@@ -1647,8 +1689,9 @@ final class Flow$OunceUKPerHour extends Flow {
   @override
   Flow$OunceUKPerHour get _clone => Flow$OunceUKPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$OunceUKPerHour] with new value
   @override
@@ -1661,6 +1704,7 @@ final class Flow$OunceUKPerHour extends Flow {
   @override
   String get symbol => 'oz/h';
 
+  /// [Flow$OunceUKPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1692,7 +1736,7 @@ final class Flow$OunceUKPerMinute extends Flow {
         unit.toOunceUKPerMinute.value,
       );
 
-  static const _minorName = r'flow$OunceUKPerMinute';
+  static const _minorName = 'ounceUKPerMinute';
 
   static const _ratio = 40914.81253687509;
 
@@ -1704,8 +1748,9 @@ final class Flow$OunceUKPerMinute extends Flow {
   @override
   Flow$OunceUKPerMinute get _clone => Flow$OunceUKPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$OunceUKPerMinute] with new value
   @override
@@ -1718,6 +1763,7 @@ final class Flow$OunceUKPerMinute extends Flow {
   @override
   String get symbol => 'oz/min';
 
+  /// [Flow$OunceUKPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1749,7 +1795,7 @@ final class Flow$OunceUKPerSecond extends Flow {
         unit.toOunceUKPerSecond.value,
       );
 
-  static const _minorName = r'flow$OunceUKPerSecond';
+  static const _minorName = 'ounceUKPerSecond';
 
   static const _ratio = 2454888.752212506;
 
@@ -1761,8 +1807,9 @@ final class Flow$OunceUKPerSecond extends Flow {
   @override
   Flow$OunceUKPerSecond get _clone => Flow$OunceUKPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$OunceUKPerSecond] with new value
   @override
@@ -1775,6 +1822,7 @@ final class Flow$OunceUKPerSecond extends Flow {
   @override
   String get symbol => 'oz/s';
 
+  /// [Flow$OunceUKPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1806,7 +1854,7 @@ final class Flow$LiterPerDay extends Flow {
         unit.toLiterPerDay.value,
       );
 
-  static const _minorName = r'flow$LiterPerDay';
+  static const _minorName = 'literPerDay';
 
   static const _ratio = 1000.0;
 
@@ -1818,8 +1866,9 @@ final class Flow$LiterPerDay extends Flow {
   @override
   Flow$LiterPerDay get _clone => Flow$LiterPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$LiterPerDay] with new value
   @override
@@ -1832,6 +1881,7 @@ final class Flow$LiterPerDay extends Flow {
   @override
   String get symbol => 'l/d';
 
+  /// [Flow$LiterPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1863,7 +1913,7 @@ final class Flow$LiterPerHour extends Flow {
         unit.toLiterPerHour.value,
       );
 
-  static const _minorName = r'flow$LiterPerHour';
+  static const _minorName = 'literPerHour';
 
   static const _ratio = 24000.0;
 
@@ -1875,8 +1925,9 @@ final class Flow$LiterPerHour extends Flow {
   @override
   Flow$LiterPerHour get _clone => Flow$LiterPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$LiterPerHour] with new value
   @override
@@ -1889,6 +1940,7 @@ final class Flow$LiterPerHour extends Flow {
   @override
   String get symbol => 'l/h';
 
+  /// [Flow$LiterPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1920,7 +1972,7 @@ final class Flow$LiterPerMinute extends Flow {
         unit.toLiterPerMinute.value,
       );
 
-  static const _minorName = r'flow$LiterPerMinute';
+  static const _minorName = 'literPerMinute';
 
   static const _ratio = 1440000.0;
 
@@ -1932,8 +1984,9 @@ final class Flow$LiterPerMinute extends Flow {
   @override
   Flow$LiterPerMinute get _clone => Flow$LiterPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$LiterPerMinute] with new value
   @override
@@ -1946,6 +1999,7 @@ final class Flow$LiterPerMinute extends Flow {
   @override
   String get symbol => 'l/min';
 
+  /// [Flow$LiterPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1977,7 +2031,7 @@ final class Flow$LiterPerSecond extends Flow {
         unit.toLiterPerSecond.value,
       );
 
-  static const _minorName = r'flow$LiterPerSecond';
+  static const _minorName = 'literPerSecond';
 
   static const _ratio = 86400000.0;
 
@@ -1989,8 +2043,9 @@ final class Flow$LiterPerSecond extends Flow {
   @override
   Flow$LiterPerSecond get _clone => Flow$LiterPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$LiterPerSecond] with new value
   @override
@@ -2003,6 +2058,7 @@ final class Flow$LiterPerSecond extends Flow {
   @override
   String get symbol => 'l/s';
 
+  /// [Flow$LiterPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2034,7 +2090,7 @@ final class Flow$MilliliterPerDay extends Flow {
         unit.toMilliliterPerDay.value,
       );
 
-  static const _minorName = r'flow$MilliliterPerDay';
+  static const _minorName = 'milliliterPerDay';
 
   static const _ratio = 1.0;
 
@@ -2046,8 +2102,9 @@ final class Flow$MilliliterPerDay extends Flow {
   @override
   Flow$MilliliterPerDay get _clone => Flow$MilliliterPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$MilliliterPerDay] with new value
   @override
@@ -2060,6 +2117,7 @@ final class Flow$MilliliterPerDay extends Flow {
   @override
   String get symbol => 'ml/d';
 
+  /// [Flow$MilliliterPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2091,7 +2149,7 @@ final class Flow$MilliliterPerHour extends Flow {
         unit.toMilliliterPerHour.value,
       );
 
-  static const _minorName = r'flow$MilliliterPerHour';
+  static const _minorName = 'milliliterPerHour';
 
   static const _ratio = 24.0;
 
@@ -2103,8 +2161,9 @@ final class Flow$MilliliterPerHour extends Flow {
   @override
   Flow$MilliliterPerHour get _clone => Flow$MilliliterPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$MilliliterPerHour] with new value
   @override
@@ -2117,6 +2176,7 @@ final class Flow$MilliliterPerHour extends Flow {
   @override
   String get symbol => 'ml/h';
 
+  /// [Flow$MilliliterPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2148,7 +2208,7 @@ final class Flow$MilliliterPerMinute extends Flow {
         unit.toMilliliterPerMinute.value,
       );
 
-  static const _minorName = r'flow$MilliliterPerMinute';
+  static const _minorName = 'milliliterPerMinute';
 
   static const _ratio = 1440.0;
 
@@ -2160,8 +2220,9 @@ final class Flow$MilliliterPerMinute extends Flow {
   @override
   Flow$MilliliterPerMinute get _clone => Flow$MilliliterPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$MilliliterPerMinute] with new value
   @override
@@ -2174,6 +2235,7 @@ final class Flow$MilliliterPerMinute extends Flow {
   @override
   String get symbol => 'ml/min';
 
+  /// [Flow$MilliliterPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2205,7 +2267,7 @@ final class Flow$MilliliterPerSecond extends Flow {
         unit.toMilliliterPerSecond.value,
       );
 
-  static const _minorName = r'flow$MilliliterPerSecond';
+  static const _minorName = 'milliliterPerSecond';
 
   static const _ratio = 86400.0;
 
@@ -2217,8 +2279,9 @@ final class Flow$MilliliterPerSecond extends Flow {
   @override
   Flow$MilliliterPerSecond get _clone => Flow$MilliliterPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$MilliliterPerSecond] with new value
   @override
@@ -2231,6 +2294,7 @@ final class Flow$MilliliterPerSecond extends Flow {
   @override
   String get symbol => 'ml/sec';
 
+  /// [Flow$MilliliterPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2262,7 +2326,7 @@ final class Flow$MeterCubicPerDay extends Flow {
         unit.toMeterCubicPerDay.value,
       );
 
-  static const _minorName = r'flow$MeterCubicPerDay';
+  static const _minorName = 'meterCubicPerDay';
 
   static const _ratio = 1000000.0;
 
@@ -2274,8 +2338,9 @@ final class Flow$MeterCubicPerDay extends Flow {
   @override
   Flow$MeterCubicPerDay get _clone => Flow$MeterCubicPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$MeterCubicPerDay] with new value
   @override
@@ -2288,6 +2353,7 @@ final class Flow$MeterCubicPerDay extends Flow {
   @override
   String get symbol => 'm³/d';
 
+  /// [Flow$MeterCubicPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2319,7 +2385,7 @@ final class Flow$MeterCubicPerHour extends Flow {
         unit.toMeterCubicPerHour.value,
       );
 
-  static const _minorName = r'flow$MeterCubicPerHour';
+  static const _minorName = 'meterCubicPerHour';
 
   static const _ratio = 24000000.0;
 
@@ -2331,8 +2397,9 @@ final class Flow$MeterCubicPerHour extends Flow {
   @override
   Flow$MeterCubicPerHour get _clone => Flow$MeterCubicPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$MeterCubicPerHour] with new value
   @override
@@ -2345,6 +2412,7 @@ final class Flow$MeterCubicPerHour extends Flow {
   @override
   String get symbol => 'm³/h';
 
+  /// [Flow$MeterCubicPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2376,7 +2444,7 @@ final class Flow$MeterCubicPerMinute extends Flow {
         unit.toMeterCubicPerMinute.value,
       );
 
-  static const _minorName = r'flow$MeterCubicPerMinute';
+  static const _minorName = 'meterCubicPerMinute';
 
   static const _ratio = 1440000000.0;
 
@@ -2388,8 +2456,9 @@ final class Flow$MeterCubicPerMinute extends Flow {
   @override
   Flow$MeterCubicPerMinute get _clone => Flow$MeterCubicPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$MeterCubicPerMinute] with new value
   @override
@@ -2402,6 +2471,7 @@ final class Flow$MeterCubicPerMinute extends Flow {
   @override
   String get symbol => 'm³/min';
 
+  /// [Flow$MeterCubicPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2433,7 +2503,7 @@ final class Flow$MeterCubicPerSecond extends Flow {
         unit.toMeterCubicPerSecond.value,
       );
 
-  static const _minorName = r'flow$MeterCubicPerSecond';
+  static const _minorName = 'meterCubicPerSecond';
 
   static const _ratio = 86400000000.0;
 
@@ -2445,8 +2515,9 @@ final class Flow$MeterCubicPerSecond extends Flow {
   @override
   Flow$MeterCubicPerSecond get _clone => Flow$MeterCubicPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$MeterCubicPerSecond] with new value
   @override
@@ -2459,6 +2530,7 @@ final class Flow$MeterCubicPerSecond extends Flow {
   @override
   String get symbol => 'm³/s';
 
+  /// [Flow$MeterCubicPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2490,7 +2562,7 @@ final class Flow$CentimeterCubicPerDay extends Flow {
         unit.toCentimeterCubicPerDay.value,
       );
 
-  static const _minorName = r'flow$CentimeterCubicPerDay';
+  static const _minorName = 'centimeterCubicPerDay';
 
   static const _ratio = 1.0;
 
@@ -2502,8 +2574,9 @@ final class Flow$CentimeterCubicPerDay extends Flow {
   @override
   Flow$CentimeterCubicPerDay get _clone => Flow$CentimeterCubicPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerDay] with new value
   @override
@@ -2516,6 +2589,7 @@ final class Flow$CentimeterCubicPerDay extends Flow {
   @override
   String get symbol => 'cm³/d';
 
+  /// [Flow$CentimeterCubicPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2547,7 +2621,7 @@ final class Flow$CentimeterCubicPerHour extends Flow {
         unit.toCentimeterCubicPerHour.value,
       );
 
-  static const _minorName = r'flow$CentimeterCubicPerHour';
+  static const _minorName = 'centimeterCubicPerHour';
 
   static const _ratio = 24.0;
 
@@ -2559,8 +2633,9 @@ final class Flow$CentimeterCubicPerHour extends Flow {
   @override
   Flow$CentimeterCubicPerHour get _clone => Flow$CentimeterCubicPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerHour] with new value
   @override
@@ -2573,6 +2648,7 @@ final class Flow$CentimeterCubicPerHour extends Flow {
   @override
   String get symbol => 'cm³/h';
 
+  /// [Flow$CentimeterCubicPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2604,7 +2680,7 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
         unit.toCentimeterCubicPerMinute.value,
       );
 
-  static const _minorName = r'flow$CentimeterCubicPerMinute';
+  static const _minorName = 'centimeterCubicPerMinute';
 
   static const _ratio = 1440.0;
 
@@ -2617,8 +2693,9 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
   Flow$CentimeterCubicPerMinute get _clone =>
       Flow$CentimeterCubicPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerMinute] with new value
   @override
@@ -2631,6 +2708,7 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
   @override
   String get symbol => 'cm³/min';
 
+  /// [Flow$CentimeterCubicPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2662,7 +2740,7 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
         unit.toCentimeterCubicPerSecond.value,
       );
 
-  static const _minorName = r'flow$CentimeterCubicPerSecond';
+  static const _minorName = 'centimeterCubicPerSecond';
 
   static const _ratio = 86400.0;
 
@@ -2675,8 +2753,9 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
   Flow$CentimeterCubicPerSecond get _clone =>
       Flow$CentimeterCubicPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerSecond] with new value
   @override
@@ -2689,6 +2768,7 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
   @override
   String get symbol => 'cm³/s';
 
+  /// [Flow$CentimeterCubicPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2720,7 +2800,7 @@ final class Flow$YardCubicPerHour extends Flow {
         unit.toYardCubicPerHour.value,
       );
 
-  static const _minorName = r'flow$YardCubicPerHour';
+  static const _minorName = 'yardCubicPerHour';
 
   static const _ratio = 18349316.59251583;
 
@@ -2732,8 +2812,9 @@ final class Flow$YardCubicPerHour extends Flow {
   @override
   Flow$YardCubicPerHour get _clone => Flow$YardCubicPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$YardCubicPerHour] with new value
   @override
@@ -2746,6 +2827,7 @@ final class Flow$YardCubicPerHour extends Flow {
   @override
   String get symbol => 'yd³/h';
 
+  /// [Flow$YardCubicPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2777,7 +2859,7 @@ final class Flow$YardCubicPerMinute extends Flow {
         unit.toYardCubicPerMinute.value,
       );
 
-  static const _minorName = r'flow$YardCubicPerMinute';
+  static const _minorName = 'yardCubicPerMinute';
 
   static const _ratio = 1100958995.5509498;
 
@@ -2789,8 +2871,9 @@ final class Flow$YardCubicPerMinute extends Flow {
   @override
   Flow$YardCubicPerMinute get _clone => Flow$YardCubicPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$YardCubicPerMinute] with new value
   @override
@@ -2803,6 +2886,7 @@ final class Flow$YardCubicPerMinute extends Flow {
   @override
   String get symbol => 'yd³/min';
 
+  /// [Flow$YardCubicPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2834,7 +2918,7 @@ final class Flow$YardCubicPerSecond extends Flow {
         unit.toYardCubicPerSecond.value,
       );
 
-  static const _minorName = r'flow$YardCubicPerSecond';
+  static const _minorName = 'yardCubicPerSecond';
 
   static const _ratio = 66057539733.05699;
 
@@ -2846,8 +2930,9 @@ final class Flow$YardCubicPerSecond extends Flow {
   @override
   Flow$YardCubicPerSecond get _clone => Flow$YardCubicPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$YardCubicPerSecond] with new value
   @override
@@ -2860,6 +2945,7 @@ final class Flow$YardCubicPerSecond extends Flow {
   @override
   String get symbol => 'yd³/s';
 
+  /// [Flow$YardCubicPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2891,7 +2977,7 @@ final class Flow$FootCubicPerHour extends Flow {
         unit.toFootCubicPerHour.value,
       );
 
-  static const _minorName = r'flow$FootCubicPerHour';
+  static const _minorName = 'footCubicPerHour';
 
   static const _ratio = 679604.3182413271;
 
@@ -2903,8 +2989,9 @@ final class Flow$FootCubicPerHour extends Flow {
   @override
   Flow$FootCubicPerHour get _clone => Flow$FootCubicPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$FootCubicPerHour] with new value
   @override
@@ -2917,6 +3004,7 @@ final class Flow$FootCubicPerHour extends Flow {
   @override
   String get symbol => 'ft³/h';
 
+  /// [Flow$FootCubicPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2948,7 +3036,7 @@ final class Flow$FootCubicPerMinute extends Flow {
         unit.toFootCubicPerMinute.value,
       );
 
-  static const _minorName = r'flow$FootCubicPerMinute';
+  static const _minorName = 'footCubicPerMinute';
 
   static const _ratio = 40776259.09447963;
 
@@ -2960,8 +3048,9 @@ final class Flow$FootCubicPerMinute extends Flow {
   @override
   Flow$FootCubicPerMinute get _clone => Flow$FootCubicPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$FootCubicPerMinute] with new value
   @override
@@ -2974,6 +3063,7 @@ final class Flow$FootCubicPerMinute extends Flow {
   @override
   String get symbol => 'ft³/min';
 
+  /// [Flow$FootCubicPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3005,7 +3095,7 @@ final class Flow$FootCubicPerSecond extends Flow {
         unit.toFootCubicPerSecond.value,
       );
 
-  static const _minorName = r'flow$FootCubicPerSecond';
+  static const _minorName = 'footCubicPerSecond';
 
   static const _ratio = 2446575545.6687775;
 
@@ -3017,8 +3107,9 @@ final class Flow$FootCubicPerSecond extends Flow {
   @override
   Flow$FootCubicPerSecond get _clone => Flow$FootCubicPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$FootCubicPerSecond] with new value
   @override
@@ -3031,6 +3122,7 @@ final class Flow$FootCubicPerSecond extends Flow {
   @override
   String get symbol => 'ft³/s';
 
+  /// [Flow$FootCubicPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3062,7 +3154,7 @@ final class Flow$InchCubicPerHour extends Flow {
         unit.toInchCubicPerHour.value,
       );
 
-  static const _minorName = r'flow$InchCubicPerHour';
+  static const _minorName = 'inchCubicPerHour';
 
   static const _ratio = 393.2895360192865;
 
@@ -3074,8 +3166,9 @@ final class Flow$InchCubicPerHour extends Flow {
   @override
   Flow$InchCubicPerHour get _clone => Flow$InchCubicPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$InchCubicPerHour] with new value
   @override
@@ -3088,6 +3181,7 @@ final class Flow$InchCubicPerHour extends Flow {
   @override
   String get symbol => 'in³/h';
 
+  /// [Flow$InchCubicPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3119,7 +3213,7 @@ final class Flow$InchCubicPerMinute extends Flow {
         unit.toInchCubicPerMinute.value,
       );
 
-  static const _minorName = r'flow$InchCubicPerMinute';
+  static const _minorName = 'inchCubicPerMinute';
 
   static const _ratio = 23597.37216115719;
 
@@ -3131,8 +3225,9 @@ final class Flow$InchCubicPerMinute extends Flow {
   @override
   Flow$InchCubicPerMinute get _clone => Flow$InchCubicPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$InchCubicPerMinute] with new value
   @override
@@ -3145,6 +3240,7 @@ final class Flow$InchCubicPerMinute extends Flow {
   @override
   String get symbol => 'in³/min';
 
+  /// [Flow$InchCubicPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3176,7 +3272,7 @@ final class Flow$InchCubicPerSecond extends Flow {
         unit.toInchCubicPerSecond.value,
       );
 
-  static const _minorName = r'flow$InchCubicPerSecond';
+  static const _minorName = 'inchCubicPerSecond';
 
   static const _ratio = 1415842.3296694316;
 
@@ -3188,8 +3284,9 @@ final class Flow$InchCubicPerSecond extends Flow {
   @override
   Flow$InchCubicPerSecond get _clone => Flow$InchCubicPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$InchCubicPerSecond] with new value
   @override
@@ -3202,6 +3299,7 @@ final class Flow$InchCubicPerSecond extends Flow {
   @override
   String get symbol => 'in³/s';
 
+  /// [Flow$InchCubicPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3233,7 +3331,7 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
         unit.toPoundPerSecondGasolineAt155DegreeC.value,
       );
 
-  static const _minorName = r'flow$PoundPerSecondGasolineAt155DegreeC';
+  static const _minorName = 'poundPerSecondGasolineAt155DegreeC';
 
   static const _ratio = 53008035.35;
 
@@ -3246,8 +3344,9 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
   Flow$PoundPerSecondGasolineAt155DegreeC get _clone =>
       Flow$PoundPerSecondGasolineAt155DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$PoundPerSecondGasolineAt155DegreeC] with new value
   @override
@@ -3258,8 +3357,9 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$PoundPerSecondGasolineAt155DegreeC]
   @override
-  String get symbol => 'PoundPerSecondGasolineAt155DegreeC';
+  String get symbol => 'pound/second (Gasoline at 15.5°C)';
 
+  /// [Flow$PoundPerSecondGasolineAt155DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3291,7 +3391,7 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
         unit.toPoundPerMinuteGasolineAt155DegreeC.value,
       );
 
-  static const _minorName = r'flow$PoundPerMinuteGasolineAt155DegreeC';
+  static const _minorName = 'poundPerMinuteGasolineAt155DegreeC';
 
   static const _ratio = 883467.2559;
 
@@ -3304,8 +3404,9 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
   Flow$PoundPerMinuteGasolineAt155DegreeC get _clone =>
       Flow$PoundPerMinuteGasolineAt155DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$PoundPerMinuteGasolineAt155DegreeC] with new value
   @override
@@ -3316,8 +3417,9 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$PoundPerMinuteGasolineAt155DegreeC]
   @override
-  String get symbol => 'PoundPerMinuteGasolineAt155DegreeC';
+  String get symbol => 'pound/minute (Gasoline at 15.5°C)';
 
+  /// [Flow$PoundPerMinuteGasolineAt155DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3349,7 +3451,7 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
         unit.toPoundPerHourGasolineAt155DegreeC.value,
       );
 
-  static const _minorName = r'flow$PoundPerHourGasolineAt155DegreeC';
+  static const _minorName = 'poundPerHourGasolineAt155DegreeC';
 
   static const _ratio = 14724.45427;
 
@@ -3362,8 +3464,9 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
   Flow$PoundPerHourGasolineAt155DegreeC get _clone =>
       Flow$PoundPerHourGasolineAt155DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$PoundPerHourGasolineAt155DegreeC] with new value
   @override
@@ -3374,8 +3477,9 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$PoundPerHourGasolineAt155DegreeC]
   @override
-  String get symbol => 'PoundPerHourGasolineAt155DegreeC';
+  String get symbol => 'pound/hour (Gasoline at 15.5°C)';
 
+  /// [Flow$PoundPerHourGasolineAt155DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3407,7 +3511,7 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
         unit.toPoundPerDayGasolineAt155DegreeC.value,
       );
 
-  static const _minorName = r'flow$PoundPerDayGasolineAt155DegreeC';
+  static const _minorName = 'poundPerDayGasolineAt155DegreeC';
 
   static const _ratio = 613.5189277;
 
@@ -3420,8 +3524,9 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
   Flow$PoundPerDayGasolineAt155DegreeC get _clone =>
       Flow$PoundPerDayGasolineAt155DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$PoundPerDayGasolineAt155DegreeC] with new value
   @override
@@ -3432,8 +3537,9 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$PoundPerDayGasolineAt155DegreeC]
   @override
-  String get symbol => 'PoundPerDayGasolineAt155DegreeC';
+  String get symbol => 'pound/day (Gasoline at 15.5°C)';
 
+  /// [Flow$PoundPerDayGasolineAt155DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3465,7 +3571,7 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
         unit.toKilogramPerSecondGasolineAt155DegreeC.value,
       );
 
-  static const _minorName = r'flow$KilogramPerSecondGasolineAt155DegreeC';
+  static const _minorName = 'kilogramPerSecondGasolineAt155DegreeC';
 
   static const _ratio = 116862713.9;
 
@@ -3478,8 +3584,9 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
   Flow$KilogramPerSecondGasolineAt155DegreeC get _clone =>
       Flow$KilogramPerSecondGasolineAt155DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$KilogramPerSecondGasolineAt155DegreeC] with new value
   @override
@@ -3490,8 +3597,9 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$KilogramPerSecondGasolineAt155DegreeC]
   @override
-  String get symbol => 'KilogramPerSecondGasolineAt155DegreeC';
+  String get symbol => 'kilogram/second (Gasoline at 15.5°C)';
 
+  /// [Flow$KilogramPerSecondGasolineAt155DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3523,7 +3631,7 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
         unit.toKilogramPerMinuteGasolineAt155DegreeC.value,
       );
 
-  static const _minorName = r'flow$KilogramPerMinuteGasolineAt155DegreeC';
+  static const _minorName = 'kilogramPerMinuteGasolineAt155DegreeC';
 
   static const _ratio = 1947711.898;
 
@@ -3536,8 +3644,9 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
   Flow$KilogramPerMinuteGasolineAt155DegreeC get _clone =>
       Flow$KilogramPerMinuteGasolineAt155DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$KilogramPerMinuteGasolineAt155DegreeC] with new value
   @override
@@ -3548,8 +3657,9 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$KilogramPerMinuteGasolineAt155DegreeC]
   @override
-  String get symbol => 'KilogramPerMinuteGasolineAt155DegreeC';
+  String get symbol => 'kilogram/minute (Gasoline at 15.5°C)';
 
+  /// [Flow$KilogramPerMinuteGasolineAt155DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3581,7 +3691,7 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
         unit.toKilogramPerHourGasolineAt155DegreeC.value,
       );
 
-  static const _minorName = r'flow$KilogramPerHourGasolineAt155DegreeC';
+  static const _minorName = 'kilogramPerHourGasolineAt155DegreeC';
 
   static const _ratio = 32461.86497;
 
@@ -3594,8 +3704,9 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
   Flow$KilogramPerHourGasolineAt155DegreeC get _clone =>
       Flow$KilogramPerHourGasolineAt155DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$KilogramPerHourGasolineAt155DegreeC] with new value
   @override
@@ -3606,8 +3717,9 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$KilogramPerHourGasolineAt155DegreeC]
   @override
-  String get symbol => 'KilogramPerHourGasolineAt155DegreeC';
+  String get symbol => 'kilogram/hour (Gasoline at 15.5°C)';
 
+  /// [Flow$KilogramPerHourGasolineAt155DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3639,7 +3751,7 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
         unit.toKilogramPerDayGasolineAt155DegreeC.value,
       );
 
-  static const _minorName = r'flow$KilogramPerDayGasolineAt155DegreeC';
+  static const _minorName = 'kilogramPerDayGasolineAt155DegreeC';
 
   static const _ratio = 1352.577707;
 
@@ -3652,8 +3764,9 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
   Flow$KilogramPerDayGasolineAt155DegreeC get _clone =>
       Flow$KilogramPerDayGasolineAt155DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Flow$KilogramPerDayGasolineAt155DegreeC] with new value
   @override
@@ -3664,8 +3777,9 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$KilogramPerDayGasolineAt155DegreeC]
   @override
-  String get symbol => 'KilogramPerDayGasolineAt155DegreeC';
+  String get symbol => 'kilogram/day (Gasoline at 15.5°C)';
 
+  /// [Flow$KilogramPerDayGasolineAt155DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

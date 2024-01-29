@@ -1,12 +1,13 @@
-part of '__generate.gen.dart';
+// ignore_for_file: unreachable_from_main
+
+part of '__gen_new.dart';
 
 void generateModels() {
   for (final unit in allData) {
     final name = unit.keys.first;
     final enumSymbol = '${name}Unit';
     final enumValuesSymbol = '${enumSymbol}Values'.snakeCase;
-    // final isShiftedValue =
-    //     unit.values.first.single['valueshift']! as double != 0.0;
+
     final anchor = unit.values.first
         .where(
           (e) =>
@@ -119,16 +120,23 @@ void generateModels() {
       );
 
       typeBuff.writeln();
-      typeBuff.writeln("  static const _minorName = r'${unitType.snakeCase}';");
+      typeBuff.writeln(
+        "  static const _minorName = '${unitType.split(r'$').last.snakeCase}';",
+      );
       typeBuff.writeln();
       typeBuff.writeln("  static const _ratio = ${unitProps['ratio']};");
       typeBuff.writeln();
+      final isShiftedValue = unitProps['valueshift']! as double != 0.0;
       if (unitType == anchor.keys.first) {
         typeBuff.writeln('/// Default (anchor) unit of [$name]');
       } else {
         typeBuff.writeln(
           "/// 1 [$unitType] ${(unitProps['ratio']! as num) % 1 == 0 ? '=' : '≈'} ${unitProps['ratio']} [${anchor.keys.first}]",
         );
+        if (isShiftedValue) {
+          typeBuff.writeln('///');
+          typeBuff.writeln('/// See [_valueShift]');
+        }
       }
       typeBuff.writeln('  @override');
       typeBuff.writeln('  num get ratio => _ratio;');
@@ -139,8 +147,18 @@ void generateModels() {
       typeBuff.writeln('  @override');
       typeBuff.writeln('  $unitType get _clone => $unitType(value);');
       typeBuff.writeln();
+
+      if (isShiftedValue) {
+        typeBuff.writeln(
+          '/// 1 [$unitType] = ((1 * [ratio]) + ${unitProps['valueshift']}) [${anchor.keys.first}]',
+        );
+      } else {
+        typeBuff.writeln(
+          '/// Ignore this',
+        );
+      }
       typeBuff.writeln('  @override');
-      typeBuff.writeln('  num get _shiftValue => ${unitProps['valueshift']};');
+      typeBuff.writeln('  num get _valueShift => ${unitProps['valueshift']};');
       typeBuff.writeln(
         '/// Creating [$unitType] with new value',
       );
@@ -154,7 +172,7 @@ void generateModels() {
       );
       typeBuff.writeln('  @override');
       final symb = unitProps['symbol'].toString().isEmpty
-          ? formatName(unitProps['name'].toString())
+          ? unitProps['name'].toString().replaceAll("'", '"')
           : unitProps['symbol'];
       final isSingleQuote = symb == "'";
       final writeSymbol = isSingleQuote ? "'" : symb;
@@ -163,7 +181,9 @@ void generateModels() {
       );
 
       typeBuff.writeln();
-
+      typeBuff.writeln(
+        '/// [$unitType] in JSON [Map] for advance use-case',
+      );
       typeBuff.writeln('  @override');
       typeBuff.writeln(
         '  Map<String, dynamic> toJson() => {majorName :{_unit: _minorName,_value: value,},};',

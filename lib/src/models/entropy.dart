@@ -119,7 +119,7 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
         unit.toKilojoulePerKilogramK.value,
       );
 
-  static const _minorName = r'entropy$KilojoulePerKilogramK';
+  static const _minorName = 'kilojoulePerKilogramK';
 
   static const _ratio = 1000.0;
 
@@ -132,8 +132,9 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
   Entropy$KilojoulePerKilogramK get _clone =>
       Entropy$KilojoulePerKilogramK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$KilojoulePerKilogramK] with new value
   @override
@@ -146,6 +147,7 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
   @override
   String get symbol => 'kJ/kg K';
 
+  /// [Entropy$KilojoulePerKilogramK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -177,7 +179,7 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
         unit.toKilojoulePerKilogramDegreeC.value,
       );
 
-  static const _minorName = r'entropy$KilojoulePerKilogramDegreeC';
+  static const _minorName = 'kilojoulePerKilogramDegreeC';
 
   static const _ratio = 1000.0;
 
@@ -190,8 +192,9 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
   Entropy$KilojoulePerKilogramDegreeC get _clone =>
       Entropy$KilojoulePerKilogramDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$KilojoulePerKilogramDegreeC] with new value
   @override
@@ -204,6 +207,7 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
   @override
   String get symbol => 'kJ/kg °C';
 
+  /// [Entropy$KilojoulePerKilogramDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -235,7 +239,7 @@ final class Entropy$JoulePerKilogramK extends Entropy {
         unit.toJoulePerKilogramK.value,
       );
 
-  static const _minorName = r'entropy$JoulePerKilogramK';
+  static const _minorName = 'joulePerKilogramK';
 
   static const _ratio = 1.0;
 
@@ -247,8 +251,9 @@ final class Entropy$JoulePerKilogramK extends Entropy {
   @override
   Entropy$JoulePerKilogramK get _clone => Entropy$JoulePerKilogramK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$JoulePerKilogramK] with new value
   @override
@@ -261,6 +266,7 @@ final class Entropy$JoulePerKilogramK extends Entropy {
   @override
   String get symbol => 'J/kg K';
 
+  /// [Entropy$JoulePerKilogramK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -292,7 +298,7 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
         unit.toJoulePerKilogramDegreeC.value,
       );
 
-  static const _minorName = r'entropy$JoulePerKilogramDegreeC';
+  static const _minorName = 'joulePerKilogramDegreeC';
 
   static const _ratio = 1.0;
 
@@ -305,8 +311,9 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
   Entropy$JoulePerKilogramDegreeC get _clone =>
       Entropy$JoulePerKilogramDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$JoulePerKilogramDegreeC] with new value
   @override
@@ -319,6 +326,7 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
   @override
   String get symbol => 'J/kg °C';
 
+  /// [Entropy$JoulePerKilogramDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -350,7 +358,7 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
         unit.toKilocaloriePerKilogramDegreeC.value,
       );
 
-  static const _minorName = r'entropy$KilocaloriePerKilogramDegreeC';
+  static const _minorName = 'kilocaloriePerKilogramDegreeC';
 
   static const _ratio = 4186.8;
 
@@ -363,8 +371,9 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
   Entropy$KilocaloriePerKilogramDegreeC get _clone =>
       Entropy$KilocaloriePerKilogramDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$KilocaloriePerKilogramDegreeC] with new value
   @override
@@ -377,6 +386,7 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
   @override
   String get symbol => 'kcal/kg °C';
 
+  /// [Entropy$KilocaloriePerKilogramDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -408,7 +418,7 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
         unit.toCaloriePerGramDegreeC.value,
       );
 
-  static const _minorName = r'entropy$CaloriePerGramDegreeC';
+  static const _minorName = 'caloriePerGramDegreeC';
 
   static const _ratio = 4186.8;
 
@@ -421,8 +431,9 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
   Entropy$CaloriePerGramDegreeC get _clone =>
       Entropy$CaloriePerGramDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$CaloriePerGramDegreeC] with new value
   @override
@@ -435,6 +446,7 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
   @override
   String get symbol => 'cal/g °C';
 
+  /// [Entropy$CaloriePerGramDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -466,7 +478,7 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
         unit.toBTUPerPoundDegreeF.value,
       );
 
-  static const _minorName = r'entropy$BTUPerPoundDegreeF';
+  static const _minorName = 'bTUPerPoundDegreeF';
 
   static const _ratio = 4186.8;
 
@@ -478,8 +490,9 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
   @override
   Entropy$BTUPerPoundDegreeF get _clone => Entropy$BTUPerPoundDegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$BTUPerPoundDegreeF] with new value
   @override
@@ -490,8 +503,9 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
 
   /// Symbol for [Entropy$BTUPerPoundDegreeF]
   @override
-  String get symbol => 'BTUPerPoundDegreeF';
+  String get symbol => 'BTU/pound °F';
 
+  /// [Entropy$BTUPerPoundDegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -523,7 +537,7 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
         unit.toBTUPerPoundDegreeR.value,
       );
 
-  static const _minorName = r'entropy$BTUPerPoundDegreeR';
+  static const _minorName = 'bTUPerPoundDegreeR';
 
   static const _ratio = 4186.8;
 
@@ -535,8 +549,9 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
   @override
   Entropy$BTUPerPoundDegreeR get _clone => Entropy$BTUPerPoundDegreeR(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$BTUPerPoundDegreeR] with new value
   @override
@@ -547,8 +562,9 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
 
   /// Symbol for [Entropy$BTUPerPoundDegreeR]
   @override
-  String get symbol => 'BTUPerPoundDegreeR';
+  String get symbol => 'BTU/pound °R';
 
+  /// [Entropy$BTUPerPoundDegreeR] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -580,7 +596,7 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
         unit.toCHUPerPoundDegreeC.value,
       );
 
-  static const _minorName = r'entropy$CHUPerPoundDegreeC';
+  static const _minorName = 'cHUPerPoundDegreeC';
 
   static const _ratio = 4186.8;
 
@@ -592,8 +608,9 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
   @override
   Entropy$CHUPerPoundDegreeC get _clone => Entropy$CHUPerPoundDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Entropy$CHUPerPoundDegreeC] with new value
   @override
@@ -604,8 +621,9 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
 
   /// Symbol for [Entropy$CHUPerPoundDegreeC]
   @override
-  String get symbol => 'CHUPerPoundDegreeC';
+  String get symbol => 'CHU/pound °C';
 
+  /// [Entropy$CHUPerPoundDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

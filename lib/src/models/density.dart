@@ -275,7 +275,7 @@ final class Density$KilogramPerMeterCubic extends Density {
         unit.toKilogramPerMeterCubic.value,
       );
 
-  static const _minorName = r'density$KilogramPerMeterCubic';
+  static const _minorName = 'kilogramPerMeterCubic';
 
   static const _ratio = 1000000000.0;
 
@@ -288,8 +288,9 @@ final class Density$KilogramPerMeterCubic extends Density {
   Density$KilogramPerMeterCubic get _clone =>
       Density$KilogramPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$KilogramPerMeterCubic] with new value
   @override
@@ -302,6 +303,7 @@ final class Density$KilogramPerMeterCubic extends Density {
   @override
   String get symbol => 'kg/m³';
 
+  /// [Density$KilogramPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -333,7 +335,7 @@ final class Density$KilogramPerCentimeterCubic extends Density {
         unit.toKilogramPerCentimeterCubic.value,
       );
 
-  static const _minorName = r'density$KilogramPerCentimeterCubic';
+  static const _minorName = 'kilogramPerCentimeterCubic';
 
   static const _ratio = 1000000000000000.0;
 
@@ -346,8 +348,9 @@ final class Density$KilogramPerCentimeterCubic extends Density {
   Density$KilogramPerCentimeterCubic get _clone =>
       Density$KilogramPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$KilogramPerCentimeterCubic] with new value
   @override
@@ -360,6 +363,7 @@ final class Density$KilogramPerCentimeterCubic extends Density {
   @override
   String get symbol => 'kg/cm³';
 
+  /// [Density$KilogramPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -391,7 +395,7 @@ final class Density$GramPerMeterCubic extends Density {
         unit.toGramPerMeterCubic.value,
       );
 
-  static const _minorName = r'density$GramPerMeterCubic';
+  static const _minorName = 'gramPerMeterCubic';
 
   static const _ratio = 1000000.0;
 
@@ -403,8 +407,9 @@ final class Density$GramPerMeterCubic extends Density {
   @override
   Density$GramPerMeterCubic get _clone => Density$GramPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$GramPerMeterCubic] with new value
   @override
@@ -417,6 +422,7 @@ final class Density$GramPerMeterCubic extends Density {
   @override
   String get symbol => 'g/m³';
 
+  /// [Density$GramPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -448,7 +454,7 @@ final class Density$GramPerCentimeterCubic extends Density {
         unit.toGramPerCentimeterCubic.value,
       );
 
-  static const _minorName = r'density$GramPerCentimeterCubic';
+  static const _minorName = 'gramPerCentimeterCubic';
 
   static const _ratio = 1000000000000.0;
 
@@ -461,8 +467,9 @@ final class Density$GramPerCentimeterCubic extends Density {
   Density$GramPerCentimeterCubic get _clone =>
       Density$GramPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$GramPerCentimeterCubic] with new value
   @override
@@ -475,6 +482,7 @@ final class Density$GramPerCentimeterCubic extends Density {
   @override
   String get symbol => 'g/cm³';
 
+  /// [Density$GramPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -506,7 +514,7 @@ final class Density$GramPerMillimeterCubic extends Density {
         unit.toGramPerMillimeterCubic.value,
       );
 
-  static const _minorName = r'density$GramPerMillimeterCubic';
+  static const _minorName = 'gramPerMillimeterCubic';
 
   static const _ratio = 1000000000000000.0;
 
@@ -519,8 +527,9 @@ final class Density$GramPerMillimeterCubic extends Density {
   Density$GramPerMillimeterCubic get _clone =>
       Density$GramPerMillimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$GramPerMillimeterCubic] with new value
   @override
@@ -533,6 +542,7 @@ final class Density$GramPerMillimeterCubic extends Density {
   @override
   String get symbol => 'g/mm³';
 
+  /// [Density$GramPerMillimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -564,7 +574,7 @@ final class Density$MilligramPerMeterCubic extends Density {
         unit.toMilligramPerMeterCubic.value,
       );
 
-  static const _minorName = r'density$MilligramPerMeterCubic';
+  static const _minorName = 'milligramPerMeterCubic';
 
   static const _ratio = 1000.0;
 
@@ -577,8 +587,9 @@ final class Density$MilligramPerMeterCubic extends Density {
   Density$MilligramPerMeterCubic get _clone =>
       Density$MilligramPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$MilligramPerMeterCubic] with new value
   @override
@@ -591,6 +602,7 @@ final class Density$MilligramPerMeterCubic extends Density {
   @override
   String get symbol => 'mg/m³';
 
+  /// [Density$MilligramPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -622,7 +634,7 @@ final class Density$MilligramPerCentimeterCubic extends Density {
         unit.toMilligramPerCentimeterCubic.value,
       );
 
-  static const _minorName = r'density$MilligramPerCentimeterCubic';
+  static const _minorName = 'milligramPerCentimeterCubic';
 
   static const _ratio = 1000000000.0;
 
@@ -635,8 +647,9 @@ final class Density$MilligramPerCentimeterCubic extends Density {
   Density$MilligramPerCentimeterCubic get _clone =>
       Density$MilligramPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$MilligramPerCentimeterCubic] with new value
   @override
@@ -649,6 +662,7 @@ final class Density$MilligramPerCentimeterCubic extends Density {
   @override
   String get symbol => 'mg/cm³';
 
+  /// [Density$MilligramPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -680,7 +694,7 @@ final class Density$MilligramPerMillimeterCubic extends Density {
         unit.toMilligramPerMillimeterCubic.value,
       );
 
-  static const _minorName = r'density$MilligramPerMillimeterCubic';
+  static const _minorName = 'milligramPerMillimeterCubic';
 
   static const _ratio = 1000000000000.0;
 
@@ -693,8 +707,9 @@ final class Density$MilligramPerMillimeterCubic extends Density {
   Density$MilligramPerMillimeterCubic get _clone =>
       Density$MilligramPerMillimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$MilligramPerMillimeterCubic] with new value
   @override
@@ -707,6 +722,7 @@ final class Density$MilligramPerMillimeterCubic extends Density {
   @override
   String get symbol => 'mg/mm³';
 
+  /// [Density$MilligramPerMillimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -738,7 +754,7 @@ final class Density$ExagramPerLiter extends Density {
         unit.toExagramPerLiter.value,
       );
 
-  static const _minorName = r'density$ExagramPerLiter';
+  static const _minorName = 'exagramPerLiter';
 
   static const _ratio = 1e+27;
 
@@ -750,8 +766,9 @@ final class Density$ExagramPerLiter extends Density {
   @override
   Density$ExagramPerLiter get _clone => Density$ExagramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$ExagramPerLiter] with new value
   @override
@@ -764,6 +781,7 @@ final class Density$ExagramPerLiter extends Density {
   @override
   String get symbol => 'Eg/l';
 
+  /// [Density$ExagramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -795,7 +813,7 @@ final class Density$PetagramPerLiter extends Density {
         unit.toPetagramPerLiter.value,
       );
 
-  static const _minorName = r'density$PetagramPerLiter';
+  static const _minorName = 'petagramPerLiter';
 
   static const _ratio = 1e+24;
 
@@ -807,8 +825,9 @@ final class Density$PetagramPerLiter extends Density {
   @override
   Density$PetagramPerLiter get _clone => Density$PetagramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$PetagramPerLiter] with new value
   @override
@@ -821,6 +840,7 @@ final class Density$PetagramPerLiter extends Density {
   @override
   String get symbol => 'Pg/l';
 
+  /// [Density$PetagramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -852,7 +872,7 @@ final class Density$TeragramPerLiter extends Density {
         unit.toTeragramPerLiter.value,
       );
 
-  static const _minorName = r'density$TeragramPerLiter';
+  static const _minorName = 'teragramPerLiter';
 
   static const _ratio = 1e+21;
 
@@ -864,8 +884,9 @@ final class Density$TeragramPerLiter extends Density {
   @override
   Density$TeragramPerLiter get _clone => Density$TeragramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$TeragramPerLiter] with new value
   @override
@@ -878,6 +899,7 @@ final class Density$TeragramPerLiter extends Density {
   @override
   String get symbol => 'Tg/l';
 
+  /// [Density$TeragramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -909,7 +931,7 @@ final class Density$GigagramPerLiter extends Density {
         unit.toGigagramPerLiter.value,
       );
 
-  static const _minorName = r'density$GigagramPerLiter';
+  static const _minorName = 'gigagramPerLiter';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -921,8 +943,9 @@ final class Density$GigagramPerLiter extends Density {
   @override
   Density$GigagramPerLiter get _clone => Density$GigagramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$GigagramPerLiter] with new value
   @override
@@ -935,6 +958,7 @@ final class Density$GigagramPerLiter extends Density {
   @override
   String get symbol => 'Gg/l';
 
+  /// [Density$GigagramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -966,7 +990,7 @@ final class Density$MegagramPerLiter extends Density {
         unit.toMegagramPerLiter.value,
       );
 
-  static const _minorName = r'density$MegagramPerLiter';
+  static const _minorName = 'megagramPerLiter';
 
   static const _ratio = 1000000000000000.0;
 
@@ -978,8 +1002,9 @@ final class Density$MegagramPerLiter extends Density {
   @override
   Density$MegagramPerLiter get _clone => Density$MegagramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$MegagramPerLiter] with new value
   @override
@@ -992,6 +1017,7 @@ final class Density$MegagramPerLiter extends Density {
   @override
   String get symbol => 'Mg/l';
 
+  /// [Density$MegagramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1023,7 +1049,7 @@ final class Density$KilogramPerLiter extends Density {
         unit.toKilogramPerLiter.value,
       );
 
-  static const _minorName = r'density$KilogramPerLiter';
+  static const _minorName = 'kilogramPerLiter';
 
   static const _ratio = 1000000000000.0;
 
@@ -1035,8 +1061,9 @@ final class Density$KilogramPerLiter extends Density {
   @override
   Density$KilogramPerLiter get _clone => Density$KilogramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$KilogramPerLiter] with new value
   @override
@@ -1049,6 +1076,7 @@ final class Density$KilogramPerLiter extends Density {
   @override
   String get symbol => 'kg/l';
 
+  /// [Density$KilogramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1080,7 +1108,7 @@ final class Density$HectogramPerLiter extends Density {
         unit.toHectogramPerLiter.value,
       );
 
-  static const _minorName = r'density$HectogramPerLiter';
+  static const _minorName = 'hectogramPerLiter';
 
   static const _ratio = 100000000000.0;
 
@@ -1092,8 +1120,9 @@ final class Density$HectogramPerLiter extends Density {
   @override
   Density$HectogramPerLiter get _clone => Density$HectogramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$HectogramPerLiter] with new value
   @override
@@ -1106,6 +1135,7 @@ final class Density$HectogramPerLiter extends Density {
   @override
   String get symbol => 'hg/l';
 
+  /// [Density$HectogramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1137,7 +1167,7 @@ final class Density$DekagramPerLiter extends Density {
         unit.toDekagramPerLiter.value,
       );
 
-  static const _minorName = r'density$DekagramPerLiter';
+  static const _minorName = 'dekagramPerLiter';
 
   static const _ratio = 10000000000.0;
 
@@ -1149,8 +1179,9 @@ final class Density$DekagramPerLiter extends Density {
   @override
   Density$DekagramPerLiter get _clone => Density$DekagramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$DekagramPerLiter] with new value
   @override
@@ -1163,6 +1194,7 @@ final class Density$DekagramPerLiter extends Density {
   @override
   String get symbol => 'da/l';
 
+  /// [Density$DekagramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1194,7 +1226,7 @@ final class Density$GramPerLiter extends Density {
         unit.toGramPerLiter.value,
       );
 
-  static const _minorName = r'density$GramPerLiter';
+  static const _minorName = 'gramPerLiter';
 
   static const _ratio = 1000000000.0;
 
@@ -1206,8 +1238,9 @@ final class Density$GramPerLiter extends Density {
   @override
   Density$GramPerLiter get _clone => Density$GramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$GramPerLiter] with new value
   @override
@@ -1220,6 +1253,7 @@ final class Density$GramPerLiter extends Density {
   @override
   String get symbol => 'g/l';
 
+  /// [Density$GramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1251,7 +1285,7 @@ final class Density$DecigramPerLiter extends Density {
         unit.toDecigramPerLiter.value,
       );
 
-  static const _minorName = r'density$DecigramPerLiter';
+  static const _minorName = 'decigramPerLiter';
 
   static const _ratio = 100000000.0;
 
@@ -1263,8 +1297,9 @@ final class Density$DecigramPerLiter extends Density {
   @override
   Density$DecigramPerLiter get _clone => Density$DecigramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$DecigramPerLiter] with new value
   @override
@@ -1277,6 +1312,7 @@ final class Density$DecigramPerLiter extends Density {
   @override
   String get symbol => 'dg/l';
 
+  /// [Density$DecigramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1308,7 +1344,7 @@ final class Density$CentigramPerLiter extends Density {
         unit.toCentigramPerLiter.value,
       );
 
-  static const _minorName = r'density$CentigramPerLiter';
+  static const _minorName = 'centigramPerLiter';
 
   static const _ratio = 10000000.0;
 
@@ -1320,8 +1356,9 @@ final class Density$CentigramPerLiter extends Density {
   @override
   Density$CentigramPerLiter get _clone => Density$CentigramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$CentigramPerLiter] with new value
   @override
@@ -1334,6 +1371,7 @@ final class Density$CentigramPerLiter extends Density {
   @override
   String get symbol => 'cg/l';
 
+  /// [Density$CentigramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1365,7 +1403,7 @@ final class Density$MilligramPerLiter extends Density {
         unit.toMilligramPerLiter.value,
       );
 
-  static const _minorName = r'density$MilligramPerLiter';
+  static const _minorName = 'milligramPerLiter';
 
   static const _ratio = 1000000.0;
 
@@ -1377,8 +1415,9 @@ final class Density$MilligramPerLiter extends Density {
   @override
   Density$MilligramPerLiter get _clone => Density$MilligramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$MilligramPerLiter] with new value
   @override
@@ -1391,6 +1430,7 @@ final class Density$MilligramPerLiter extends Density {
   @override
   String get symbol => 'mg/l';
 
+  /// [Density$MilligramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1422,7 +1462,7 @@ final class Density$MicrogramPerLiter extends Density {
         unit.toMicrogramPerLiter.value,
       );
 
-  static const _minorName = r'density$MicrogramPerLiter';
+  static const _minorName = 'microgramPerLiter';
 
   static const _ratio = 1000.0;
 
@@ -1434,8 +1474,9 @@ final class Density$MicrogramPerLiter extends Density {
   @override
   Density$MicrogramPerLiter get _clone => Density$MicrogramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$MicrogramPerLiter] with new value
   @override
@@ -1448,6 +1489,7 @@ final class Density$MicrogramPerLiter extends Density {
   @override
   String get symbol => 'µg/l';
 
+  /// [Density$MicrogramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1479,7 +1521,7 @@ final class Density$NanogramPerLiter extends Density {
         unit.toNanogramPerLiter.value,
       );
 
-  static const _minorName = r'density$NanogramPerLiter';
+  static const _minorName = 'nanogramPerLiter';
 
   static const _ratio = 1.0;
 
@@ -1491,8 +1533,9 @@ final class Density$NanogramPerLiter extends Density {
   @override
   Density$NanogramPerLiter get _clone => Density$NanogramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$NanogramPerLiter] with new value
   @override
@@ -1505,6 +1548,7 @@ final class Density$NanogramPerLiter extends Density {
   @override
   String get symbol => 'ng/l';
 
+  /// [Density$NanogramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1536,7 +1580,7 @@ final class Density$PicogramPerLiter extends Density {
         unit.toPicogramPerLiter.value,
       );
 
-  static const _minorName = r'density$PicogramPerLiter';
+  static const _minorName = 'picogramPerLiter';
 
   static const _ratio = 0.001;
 
@@ -1548,8 +1592,9 @@ final class Density$PicogramPerLiter extends Density {
   @override
   Density$PicogramPerLiter get _clone => Density$PicogramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$PicogramPerLiter] with new value
   @override
@@ -1562,6 +1607,7 @@ final class Density$PicogramPerLiter extends Density {
   @override
   String get symbol => 'pg/l';
 
+  /// [Density$PicogramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1593,7 +1639,7 @@ final class Density$FemtogramPerLiter extends Density {
         unit.toFemtogramPerLiter.value,
       );
 
-  static const _minorName = r'density$FemtogramPerLiter';
+  static const _minorName = 'femtogramPerLiter';
 
   static const _ratio = 0.000001;
 
@@ -1605,8 +1651,9 @@ final class Density$FemtogramPerLiter extends Density {
   @override
   Density$FemtogramPerLiter get _clone => Density$FemtogramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$FemtogramPerLiter] with new value
   @override
@@ -1619,6 +1666,7 @@ final class Density$FemtogramPerLiter extends Density {
   @override
   String get symbol => 'fg/l';
 
+  /// [Density$FemtogramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1650,7 +1698,7 @@ final class Density$AttogramPerLiter extends Density {
         unit.toAttogramPerLiter.value,
       );
 
-  static const _minorName = r'density$AttogramPerLiter';
+  static const _minorName = 'attogramPerLiter';
 
   static const _ratio = 1e-9;
 
@@ -1662,8 +1710,9 @@ final class Density$AttogramPerLiter extends Density {
   @override
   Density$AttogramPerLiter get _clone => Density$AttogramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$AttogramPerLiter] with new value
   @override
@@ -1676,6 +1725,7 @@ final class Density$AttogramPerLiter extends Density {
   @override
   String get symbol => 'ag/l';
 
+  /// [Density$AttogramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1707,7 +1757,7 @@ final class Density$PoundPerInchCubic extends Density {
         unit.toPoundPerInchCubic.value,
       );
 
-  static const _minorName = r'density$PoundPerInchCubic';
+  static const _minorName = 'poundPerInchCubic';
 
   static const _ratio = 27679904710190.62;
 
@@ -1719,8 +1769,9 @@ final class Density$PoundPerInchCubic extends Density {
   @override
   Density$PoundPerInchCubic get _clone => Density$PoundPerInchCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$PoundPerInchCubic] with new value
   @override
@@ -1733,6 +1784,7 @@ final class Density$PoundPerInchCubic extends Density {
   @override
   String get symbol => 'lb/in³';
 
+  /// [Density$PoundPerInchCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1764,7 +1816,7 @@ final class Density$PoundPerFootCubic extends Density {
         unit.toPoundPerFootCubic.value,
       );
 
-  static const _minorName = r'density$PoundPerFootCubic';
+  static const _minorName = 'poundPerFootCubic';
 
   static const _ratio = 16018463373.952908;
 
@@ -1776,8 +1828,9 @@ final class Density$PoundPerFootCubic extends Density {
   @override
   Density$PoundPerFootCubic get _clone => Density$PoundPerFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$PoundPerFootCubic] with new value
   @override
@@ -1790,6 +1843,7 @@ final class Density$PoundPerFootCubic extends Density {
   @override
   String get symbol => 'lb/ft³';
 
+  /// [Density$PoundPerFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1821,7 +1875,7 @@ final class Density$PoundPerGallon extends Density {
         unit.toPoundPerGallon.value,
       );
 
-  static const _minorName = r'density$PoundPerGallon';
+  static const _minorName = 'poundPerGallon';
 
   static const _ratio = 119826427316.7227;
 
@@ -1833,8 +1887,9 @@ final class Density$PoundPerGallon extends Density {
   @override
   Density$PoundPerGallon get _clone => Density$PoundPerGallon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$PoundPerGallon] with new value
   @override
@@ -1847,6 +1902,7 @@ final class Density$PoundPerGallon extends Density {
   @override
   String get symbol => 'lb/gal';
 
+  /// [Density$PoundPerGallon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1878,7 +1934,7 @@ final class Density$OuncePerInchCubic extends Density {
         unit.toOuncePerInchCubic.value,
       );
 
-  static const _minorName = r'density$OuncePerInchCubic';
+  static const _minorName = 'ouncePerInchCubic';
 
   static const _ratio = 1729994044386.9138;
 
@@ -1890,8 +1946,9 @@ final class Density$OuncePerInchCubic extends Density {
   @override
   Density$OuncePerInchCubic get _clone => Density$OuncePerInchCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$OuncePerInchCubic] with new value
   @override
@@ -1904,6 +1961,7 @@ final class Density$OuncePerInchCubic extends Density {
   @override
   String get symbol => 'oz/in³';
 
+  /// [Density$OuncePerInchCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1935,7 +1993,7 @@ final class Density$OuncePerFootCubic extends Density {
         unit.toOuncePerFootCubic.value,
       );
 
-  static const _minorName = r'density$OuncePerFootCubic';
+  static const _minorName = 'ouncePerFootCubic';
 
   static const _ratio = 1001153960.8720567;
 
@@ -1947,8 +2005,9 @@ final class Density$OuncePerFootCubic extends Density {
   @override
   Density$OuncePerFootCubic get _clone => Density$OuncePerFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$OuncePerFootCubic] with new value
   @override
@@ -1961,6 +2020,7 @@ final class Density$OuncePerFootCubic extends Density {
   @override
   String get symbol => 'oz/ft³';
 
+  /// [Density$OuncePerFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1992,7 +2052,7 @@ final class Density$OuncePerGallon extends Density {
         unit.toOuncePerGallon.value,
       );
 
-  static const _minorName = r'density$OuncePerGallon';
+  static const _minorName = 'ouncePerGallon';
 
   static const _ratio = 7489151707.295169;
 
@@ -2004,8 +2064,9 @@ final class Density$OuncePerGallon extends Density {
   @override
   Density$OuncePerGallon get _clone => Density$OuncePerGallon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$OuncePerGallon] with new value
   @override
@@ -2018,6 +2079,7 @@ final class Density$OuncePerGallon extends Density {
   @override
   String get symbol => 'oz/gal';
 
+  /// [Density$OuncePerGallon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2049,7 +2111,7 @@ final class Density$TonPerYardCubic extends Density {
         unit.toTonPerYardCubic.value,
       );
 
-  static const _minorName = r'density$TonPerYardCubic';
+  static const _minorName = 'tonPerYardCubic';
 
   static const _ratio = 1186552842515.03;
 
@@ -2061,8 +2123,9 @@ final class Density$TonPerYardCubic extends Density {
   @override
   Density$TonPerYardCubic get _clone => Density$TonPerYardCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$TonPerYardCubic] with new value
   @override
@@ -2075,6 +2138,7 @@ final class Density$TonPerYardCubic extends Density {
   @override
   String get symbol => 'tn/yd³';
 
+  /// [Density$TonPerYardCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2106,7 +2170,7 @@ final class Density$PsiPer1000Feet extends Density {
         unit.toPsiPer1000Feet.value,
       );
 
-  static const _minorName = r'density$PsiPer1000Feet';
+  static const _minorName = 'psiPer1000Feet';
 
   static const _ratio = 2306658725.8492184;
 
@@ -2118,8 +2182,9 @@ final class Density$PsiPer1000Feet extends Density {
   @override
   Density$PsiPer1000Feet get _clone => Density$PsiPer1000Feet(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Density$PsiPer1000Feet] with new value
   @override
@@ -2130,8 +2195,9 @@ final class Density$PsiPer1000Feet extends Density {
 
   /// Symbol for [Density$PsiPer1000Feet]
   @override
-  String get symbol => 'PsiPer1000Feet';
+  String get symbol => 'psi/1000 feet';
 
+  /// [Density$PsiPer1000Feet] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

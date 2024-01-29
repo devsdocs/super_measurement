@@ -90,7 +90,7 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
         unit.toKelvin.value,
       );
 
-  static const _minorName = r'temperatureInterval$Kelvin';
+  static const _minorName = 'kelvin';
 
   static const _ratio = 1.8;
 
@@ -102,8 +102,9 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
   @override
   TemperatureInterval$Kelvin get _clone => TemperatureInterval$Kelvin(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Kelvin] with new value
   @override
@@ -116,6 +117,7 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
   @override
   String get symbol => 'K';
 
+  /// [TemperatureInterval$Kelvin] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -147,7 +149,7 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
         unit.toCelsius.value,
       );
 
-  static const _minorName = r'temperatureInterval$Celsius';
+  static const _minorName = 'celsius';
 
   static const _ratio = 1.8;
 
@@ -159,8 +161,9 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
   @override
   TemperatureInterval$Celsius get _clone => TemperatureInterval$Celsius(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Celsius] with new value
   @override
@@ -173,6 +176,7 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
   @override
   String get symbol => '°C';
 
+  /// [TemperatureInterval$Celsius] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -204,7 +208,7 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
         unit.toFahrenheit.value,
       );
 
-  static const _minorName = r'temperatureInterval$Fahrenheit';
+  static const _minorName = 'fahrenheit';
 
   static const _ratio = 1.0;
 
@@ -217,8 +221,9 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
   TemperatureInterval$Fahrenheit get _clone =>
       TemperatureInterval$Fahrenheit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Fahrenheit] with new value
   @override
@@ -231,6 +236,7 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
   @override
   String get symbol => '°F';
 
+  /// [TemperatureInterval$Fahrenheit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -262,7 +268,7 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
         unit.toRankine.value,
       );
 
-  static const _minorName = r'temperatureInterval$Rankine';
+  static const _minorName = 'rankine';
 
   static const _ratio = 1.0;
 
@@ -274,8 +280,9 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
   @override
   TemperatureInterval$Rankine get _clone => TemperatureInterval$Rankine(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Rankine] with new value
   @override
@@ -288,6 +295,7 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
   @override
   String get symbol => '°R, °Ra';
 
+  /// [TemperatureInterval$Rankine] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -319,7 +327,7 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
         unit.toReaumur.value,
       );
 
-  static const _minorName = r'temperatureInterval$Reaumur';
+  static const _minorName = 'reaumur';
 
   static const _ratio = 2.25;
 
@@ -331,8 +339,9 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
   @override
   TemperatureInterval$Reaumur get _clone => TemperatureInterval$Reaumur(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Reaumur] with new value
   @override
@@ -345,6 +354,7 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
   @override
   String get symbol => '°Ré';
 
+  /// [TemperatureInterval$Reaumur] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

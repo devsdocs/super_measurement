@@ -76,7 +76,7 @@ final class Sound$Bel extends Sound {
         unit.toBel.value,
       );
 
-  static const _minorName = r'sound$Bel';
+  static const _minorName = 'bel';
 
   static const _ratio = 10.0;
 
@@ -88,8 +88,9 @@ final class Sound$Bel extends Sound {
   @override
   Sound$Bel get _clone => Sound$Bel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Sound$Bel] with new value
   @override
@@ -102,6 +103,7 @@ final class Sound$Bel extends Sound {
   @override
   String get symbol => 'B';
 
+  /// [Sound$Bel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -133,7 +135,7 @@ final class Sound$Decibel extends Sound {
         unit.toDecibel.value,
       );
 
-  static const _minorName = r'sound$Decibel';
+  static const _minorName = 'decibel';
 
   static const _ratio = 1.0;
 
@@ -145,8 +147,9 @@ final class Sound$Decibel extends Sound {
   @override
   Sound$Decibel get _clone => Sound$Decibel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Sound$Decibel] with new value
   @override
@@ -159,6 +162,7 @@ final class Sound$Decibel extends Sound {
   @override
   String get symbol => 'dB';
 
+  /// [Sound$Decibel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -190,7 +194,7 @@ final class Sound$Neper extends Sound {
         unit.toNeper.value,
       );
 
-  static const _minorName = r'sound$Neper';
+  static const _minorName = 'neper';
 
   static const _ratio = 8.686;
 
@@ -202,8 +206,9 @@ final class Sound$Neper extends Sound {
   @override
   Sound$Neper get _clone => Sound$Neper(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Sound$Neper] with new value
   @override
@@ -216,6 +221,7 @@ final class Sound$Neper extends Sound {
   @override
   String get symbol => 'Np';
 
+  /// [Sound$Neper] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

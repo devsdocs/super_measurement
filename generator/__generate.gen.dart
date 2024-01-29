@@ -1,23 +1,6 @@
-import 'dart:io';
-import 'dart:math';
+// ignore_for_file: unreachable_from_main
 
-import 'package:reusable_tools/reusable_tools.dart';
-
-import '__gen_new.dart';
-
-part '_example.gen.dart';
-part '_extension.gen.dart';
-part '_models.gen.dart';
-part '_readme.gen.dart';
-
-Future<void> gogo() async {
-  generateModels();
-  generateExtension();
-  generateExample();
-  generateReadme();
-  await Process.run('dart', ['format', '.']);
-  await Process.run('dart', ['fix', '--apply']);
-}
+part of '__gen_new.dart';
 
 const exampleDir = 'example/super_measurement_example.dart';
 final exampleFile = File(exampleDir);

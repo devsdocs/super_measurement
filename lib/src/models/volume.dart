@@ -517,7 +517,7 @@ final class Volume$MeterCubic extends Volume {
         unit.toMeterCubic.value,
       );
 
-  static const _minorName = r'volume$MeterCubic';
+  static const _minorName = 'meterCubic';
 
   static const _ratio = 1.0;
 
@@ -529,8 +529,9 @@ final class Volume$MeterCubic extends Volume {
   @override
   Volume$MeterCubic get _clone => Volume$MeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$MeterCubic] with new value
   @override
@@ -543,6 +544,7 @@ final class Volume$MeterCubic extends Volume {
   @override
   String get symbol => 'm³';
 
+  /// [Volume$MeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -574,7 +576,7 @@ final class Volume$CentimeterCubic extends Volume {
         unit.toCentimeterCubic.value,
       );
 
-  static const _minorName = r'volume$CentimeterCubic';
+  static const _minorName = 'centimeterCubic';
 
   static const _ratio = 0.000001;
 
@@ -586,8 +588,9 @@ final class Volume$CentimeterCubic extends Volume {
   @override
   Volume$CentimeterCubic get _clone => Volume$CentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$CentimeterCubic] with new value
   @override
@@ -600,6 +603,7 @@ final class Volume$CentimeterCubic extends Volume {
   @override
   String get symbol => 'cm³';
 
+  /// [Volume$CentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -631,7 +635,7 @@ final class Volume$MillimeterCubic extends Volume {
         unit.toMillimeterCubic.value,
       );
 
-  static const _minorName = r'volume$MillimeterCubic';
+  static const _minorName = 'millimeterCubic';
 
   static const _ratio = 1e-9;
 
@@ -643,8 +647,9 @@ final class Volume$MillimeterCubic extends Volume {
   @override
   Volume$MillimeterCubic get _clone => Volume$MillimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$MillimeterCubic] with new value
   @override
@@ -657,6 +662,7 @@ final class Volume$MillimeterCubic extends Volume {
   @override
   String get symbol => 'mm³';
 
+  /// [Volume$MillimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -688,7 +694,7 @@ final class Volume$Exaliter extends Volume {
         unit.toExaliter.value,
       );
 
-  static const _minorName = r'volume$Exaliter';
+  static const _minorName = 'exaliter';
 
   static const _ratio = 1000000000000000.0;
 
@@ -700,8 +706,9 @@ final class Volume$Exaliter extends Volume {
   @override
   Volume$Exaliter get _clone => Volume$Exaliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Exaliter] with new value
   @override
@@ -714,6 +721,7 @@ final class Volume$Exaliter extends Volume {
   @override
   String get symbol => 'El';
 
+  /// [Volume$Exaliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -745,7 +753,7 @@ final class Volume$Petaliter extends Volume {
         unit.toPetaliter.value,
       );
 
-  static const _minorName = r'volume$Petaliter';
+  static const _minorName = 'petaliter';
 
   static const _ratio = 1000000000000.0;
 
@@ -757,8 +765,9 @@ final class Volume$Petaliter extends Volume {
   @override
   Volume$Petaliter get _clone => Volume$Petaliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Petaliter] with new value
   @override
@@ -771,6 +780,7 @@ final class Volume$Petaliter extends Volume {
   @override
   String get symbol => 'Pl';
 
+  /// [Volume$Petaliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -802,7 +812,7 @@ final class Volume$Teraliter extends Volume {
         unit.toTeraliter.value,
       );
 
-  static const _minorName = r'volume$Teraliter';
+  static const _minorName = 'teraliter';
 
   static const _ratio = 1000000000.0;
 
@@ -814,8 +824,9 @@ final class Volume$Teraliter extends Volume {
   @override
   Volume$Teraliter get _clone => Volume$Teraliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Teraliter] with new value
   @override
@@ -828,6 +839,7 @@ final class Volume$Teraliter extends Volume {
   @override
   String get symbol => 'Tl';
 
+  /// [Volume$Teraliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -859,7 +871,7 @@ final class Volume$Gigaliter extends Volume {
         unit.toGigaliter.value,
       );
 
-  static const _minorName = r'volume$Gigaliter';
+  static const _minorName = 'gigaliter';
 
   static const _ratio = 1000000.0;
 
@@ -871,8 +883,9 @@ final class Volume$Gigaliter extends Volume {
   @override
   Volume$Gigaliter get _clone => Volume$Gigaliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Gigaliter] with new value
   @override
@@ -885,6 +898,7 @@ final class Volume$Gigaliter extends Volume {
   @override
   String get symbol => 'Gl';
 
+  /// [Volume$Gigaliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -916,7 +930,7 @@ final class Volume$Megaliter extends Volume {
         unit.toMegaliter.value,
       );
 
-  static const _minorName = r'volume$Megaliter';
+  static const _minorName = 'megaliter';
 
   static const _ratio = 1000.0;
 
@@ -928,8 +942,9 @@ final class Volume$Megaliter extends Volume {
   @override
   Volume$Megaliter get _clone => Volume$Megaliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Megaliter] with new value
   @override
@@ -942,6 +957,7 @@ final class Volume$Megaliter extends Volume {
   @override
   String get symbol => 'Ml';
 
+  /// [Volume$Megaliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -973,7 +989,7 @@ final class Volume$Kiloliter extends Volume {
         unit.toKiloliter.value,
       );
 
-  static const _minorName = r'volume$Kiloliter';
+  static const _minorName = 'kiloliter';
 
   static const _ratio = 1.0;
 
@@ -985,8 +1001,9 @@ final class Volume$Kiloliter extends Volume {
   @override
   Volume$Kiloliter get _clone => Volume$Kiloliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Kiloliter] with new value
   @override
@@ -999,6 +1016,7 @@ final class Volume$Kiloliter extends Volume {
   @override
   String get symbol => 'kl';
 
+  /// [Volume$Kiloliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1030,7 +1048,7 @@ final class Volume$Hectoliter extends Volume {
         unit.toHectoliter.value,
       );
 
-  static const _minorName = r'volume$Hectoliter';
+  static const _minorName = 'hectoliter';
 
   static const _ratio = 0.1;
 
@@ -1042,8 +1060,9 @@ final class Volume$Hectoliter extends Volume {
   @override
   Volume$Hectoliter get _clone => Volume$Hectoliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Hectoliter] with new value
   @override
@@ -1056,6 +1075,7 @@ final class Volume$Hectoliter extends Volume {
   @override
   String get symbol => 'hl';
 
+  /// [Volume$Hectoliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1087,7 +1107,7 @@ final class Volume$Dekaliter extends Volume {
         unit.toDekaliter.value,
       );
 
-  static const _minorName = r'volume$Dekaliter';
+  static const _minorName = 'dekaliter';
 
   static const _ratio = 0.01;
 
@@ -1099,8 +1119,9 @@ final class Volume$Dekaliter extends Volume {
   @override
   Volume$Dekaliter get _clone => Volume$Dekaliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Dekaliter] with new value
   @override
@@ -1113,6 +1134,7 @@ final class Volume$Dekaliter extends Volume {
   @override
   String get symbol => 'dal';
 
+  /// [Volume$Dekaliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1144,7 +1166,7 @@ final class Volume$Liter extends Volume {
         unit.toLiter.value,
       );
 
-  static const _minorName = r'volume$Liter';
+  static const _minorName = 'liter';
 
   static const _ratio = 0.001;
 
@@ -1156,8 +1178,9 @@ final class Volume$Liter extends Volume {
   @override
   Volume$Liter get _clone => Volume$Liter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Liter] with new value
   @override
@@ -1170,6 +1193,7 @@ final class Volume$Liter extends Volume {
   @override
   String get symbol => 'l';
 
+  /// [Volume$Liter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1201,7 +1225,7 @@ final class Volume$Deciliter extends Volume {
         unit.toDeciliter.value,
       );
 
-  static const _minorName = r'volume$Deciliter';
+  static const _minorName = 'deciliter';
 
   static const _ratio = 0.0001;
 
@@ -1213,8 +1237,9 @@ final class Volume$Deciliter extends Volume {
   @override
   Volume$Deciliter get _clone => Volume$Deciliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Deciliter] with new value
   @override
@@ -1227,6 +1252,7 @@ final class Volume$Deciliter extends Volume {
   @override
   String get symbol => 'dl';
 
+  /// [Volume$Deciliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1258,7 +1284,7 @@ final class Volume$Centiliter extends Volume {
         unit.toCentiliter.value,
       );
 
-  static const _minorName = r'volume$Centiliter';
+  static const _minorName = 'centiliter';
 
   static const _ratio = 0.00001;
 
@@ -1270,8 +1296,9 @@ final class Volume$Centiliter extends Volume {
   @override
   Volume$Centiliter get _clone => Volume$Centiliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Centiliter] with new value
   @override
@@ -1284,6 +1311,7 @@ final class Volume$Centiliter extends Volume {
   @override
   String get symbol => 'cl';
 
+  /// [Volume$Centiliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1315,7 +1343,7 @@ final class Volume$Milliliter extends Volume {
         unit.toMilliliter.value,
       );
 
-  static const _minorName = r'volume$Milliliter';
+  static const _minorName = 'milliliter';
 
   static const _ratio = 0.000001;
 
@@ -1327,8 +1355,9 @@ final class Volume$Milliliter extends Volume {
   @override
   Volume$Milliliter get _clone => Volume$Milliliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Milliliter] with new value
   @override
@@ -1341,6 +1370,7 @@ final class Volume$Milliliter extends Volume {
   @override
   String get symbol => 'ml';
 
+  /// [Volume$Milliliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1372,7 +1402,7 @@ final class Volume$Microliter extends Volume {
         unit.toMicroliter.value,
       );
 
-  static const _minorName = r'volume$Microliter';
+  static const _minorName = 'microliter';
 
   static const _ratio = 1e-9;
 
@@ -1384,8 +1414,9 @@ final class Volume$Microliter extends Volume {
   @override
   Volume$Microliter get _clone => Volume$Microliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Microliter] with new value
   @override
@@ -1398,6 +1429,7 @@ final class Volume$Microliter extends Volume {
   @override
   String get symbol => 'µl';
 
+  /// [Volume$Microliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1429,7 +1461,7 @@ final class Volume$Nanoliter extends Volume {
         unit.toNanoliter.value,
       );
 
-  static const _minorName = r'volume$Nanoliter';
+  static const _minorName = 'nanoliter';
 
   static const _ratio = 1e-12;
 
@@ -1441,8 +1473,9 @@ final class Volume$Nanoliter extends Volume {
   @override
   Volume$Nanoliter get _clone => Volume$Nanoliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Nanoliter] with new value
   @override
@@ -1455,6 +1488,7 @@ final class Volume$Nanoliter extends Volume {
   @override
   String get symbol => 'nl';
 
+  /// [Volume$Nanoliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1486,7 +1520,7 @@ final class Volume$Picoliter extends Volume {
         unit.toPicoliter.value,
       );
 
-  static const _minorName = r'volume$Picoliter';
+  static const _minorName = 'picoliter';
 
   static const _ratio = 1e-15;
 
@@ -1498,8 +1532,9 @@ final class Volume$Picoliter extends Volume {
   @override
   Volume$Picoliter get _clone => Volume$Picoliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Picoliter] with new value
   @override
@@ -1512,6 +1547,7 @@ final class Volume$Picoliter extends Volume {
   @override
   String get symbol => 'pl';
 
+  /// [Volume$Picoliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1543,7 +1579,7 @@ final class Volume$Femtoliter extends Volume {
         unit.toFemtoliter.value,
       );
 
-  static const _minorName = r'volume$Femtoliter';
+  static const _minorName = 'femtoliter';
 
   static const _ratio = 1e-18;
 
@@ -1555,8 +1591,9 @@ final class Volume$Femtoliter extends Volume {
   @override
   Volume$Femtoliter get _clone => Volume$Femtoliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Femtoliter] with new value
   @override
@@ -1569,6 +1606,7 @@ final class Volume$Femtoliter extends Volume {
   @override
   String get symbol => 'fl';
 
+  /// [Volume$Femtoliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1600,7 +1638,7 @@ final class Volume$Attoliter extends Volume {
         unit.toAttoliter.value,
       );
 
-  static const _minorName = r'volume$Attoliter';
+  static const _minorName = 'attoliter';
 
   static const _ratio = 1e-21;
 
@@ -1612,8 +1650,9 @@ final class Volume$Attoliter extends Volume {
   @override
   Volume$Attoliter get _clone => Volume$Attoliter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Attoliter] with new value
   @override
@@ -1626,6 +1665,7 @@ final class Volume$Attoliter extends Volume {
   @override
   String get symbol => 'al';
 
+  /// [Volume$Attoliter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1657,7 +1697,7 @@ final class Volume$Cc extends Volume {
         unit.toCc.value,
       );
 
-  static const _minorName = r'volume$Cc';
+  static const _minorName = 'cc';
 
   static const _ratio = 0.000001;
 
@@ -1669,8 +1709,9 @@ final class Volume$Cc extends Volume {
   @override
   Volume$Cc get _clone => Volume$Cc(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Cc] with new value
   @override
@@ -1681,8 +1722,9 @@ final class Volume$Cc extends Volume {
 
   /// Symbol for [Volume$Cc]
   @override
-  String get symbol => 'Cc';
+  String get symbol => 'cc';
 
+  /// [Volume$Cc] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1714,7 +1756,7 @@ final class Volume$Drop extends Volume {
         unit.toDrop.value,
       );
 
-  static const _minorName = r'volume$Drop';
+  static const _minorName = 'drop';
 
   static const _ratio = 5e-8;
 
@@ -1726,8 +1768,9 @@ final class Volume$Drop extends Volume {
   @override
   Volume$Drop get _clone => Volume$Drop(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Drop] with new value
   @override
@@ -1738,8 +1781,9 @@ final class Volume$Drop extends Volume {
 
   /// Symbol for [Volume$Drop]
   @override
-  String get symbol => 'Drop';
+  String get symbol => 'drop';
 
+  /// [Volume$Drop] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1771,7 +1815,7 @@ final class Volume$Barrel extends Volume {
         unit.toBarrel.value,
       );
 
-  static const _minorName = r'volume$Barrel';
+  static const _minorName = 'barrel';
 
   static const _ratio = 0.119240471196;
 
@@ -1783,8 +1827,9 @@ final class Volume$Barrel extends Volume {
   @override
   Volume$Barrel get _clone => Volume$Barrel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Barrel] with new value
   @override
@@ -1797,6 +1842,7 @@ final class Volume$Barrel extends Volume {
   @override
   String get symbol => 'bbl';
 
+  /// [Volume$Barrel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1828,7 +1874,7 @@ final class Volume$BarrelOil extends Volume {
         unit.toBarrelOil.value,
       );
 
-  static const _minorName = r'volume$BarrelOil';
+  static const _minorName = 'barrelOil';
 
   static const _ratio = 0.158987294928;
 
@@ -1840,8 +1886,9 @@ final class Volume$BarrelOil extends Volume {
   @override
   Volume$BarrelOil get _clone => Volume$BarrelOil(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$BarrelOil] with new value
   @override
@@ -1854,6 +1901,7 @@ final class Volume$BarrelOil extends Volume {
   @override
   String get symbol => 'bo';
 
+  /// [Volume$BarrelOil] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1885,7 +1933,7 @@ final class Volume$BushelUK extends Volume {
         unit.toBushelUK.value,
       );
 
-  static const _minorName = r'volume$BushelUK';
+  static const _minorName = 'bushelUK';
 
   static const _ratio = 0.03636872;
 
@@ -1897,8 +1945,9 @@ final class Volume$BushelUK extends Volume {
   @override
   Volume$BushelUK get _clone => Volume$BushelUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$BushelUK] with new value
   @override
@@ -1911,6 +1960,7 @@ final class Volume$BushelUK extends Volume {
   @override
   String get symbol => 'bu';
 
+  /// [Volume$BushelUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1942,7 +1992,7 @@ final class Volume$PeckUK extends Volume {
         unit.toPeckUK.value,
       );
 
-  static const _minorName = r'volume$PeckUK';
+  static const _minorName = 'peckUK';
 
   static const _ratio = 0.00909218;
 
@@ -1954,8 +2004,9 @@ final class Volume$PeckUK extends Volume {
   @override
   Volume$PeckUK get _clone => Volume$PeckUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$PeckUK] with new value
   @override
@@ -1968,6 +2019,7 @@ final class Volume$PeckUK extends Volume {
   @override
   String get symbol => 'pk';
 
+  /// [Volume$PeckUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1999,7 +2051,7 @@ final class Volume$Gallon extends Volume {
         unit.toGallon.value,
       );
 
-  static const _minorName = r'volume$Gallon';
+  static const _minorName = 'gallon';
 
   static const _ratio = 0.003785411784;
 
@@ -2011,8 +2063,9 @@ final class Volume$Gallon extends Volume {
   @override
   Volume$Gallon get _clone => Volume$Gallon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Gallon] with new value
   @override
@@ -2025,6 +2078,7 @@ final class Volume$Gallon extends Volume {
   @override
   String get symbol => 'gal';
 
+  /// [Volume$Gallon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2056,7 +2110,7 @@ final class Volume$GallonUK extends Volume {
         unit.toGallonUK.value,
       );
 
-  static const _minorName = r'volume$GallonUK';
+  static const _minorName = 'gallonUK';
 
   static const _ratio = 0.00454609;
 
@@ -2068,8 +2122,9 @@ final class Volume$GallonUK extends Volume {
   @override
   Volume$GallonUK get _clone => Volume$GallonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$GallonUK] with new value
   @override
@@ -2082,6 +2137,7 @@ final class Volume$GallonUK extends Volume {
   @override
   String get symbol => 'gal';
 
+  /// [Volume$GallonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2113,7 +2169,7 @@ final class Volume$Quart extends Volume {
         unit.toQuart.value,
       );
 
-  static const _minorName = r'volume$Quart';
+  static const _minorName = 'quart';
 
   static const _ratio = 0.000946352946;
 
@@ -2125,8 +2181,9 @@ final class Volume$Quart extends Volume {
   @override
   Volume$Quart get _clone => Volume$Quart(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Quart] with new value
   @override
@@ -2139,6 +2196,7 @@ final class Volume$Quart extends Volume {
   @override
   String get symbol => 'qt';
 
+  /// [Volume$Quart] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2170,7 +2228,7 @@ final class Volume$QuartUK extends Volume {
         unit.toQuartUK.value,
       );
 
-  static const _minorName = r'volume$QuartUK';
+  static const _minorName = 'quartUK';
 
   static const _ratio = 0.0011365225;
 
@@ -2182,8 +2240,9 @@ final class Volume$QuartUK extends Volume {
   @override
   Volume$QuartUK get _clone => Volume$QuartUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$QuartUK] with new value
   @override
@@ -2196,6 +2255,7 @@ final class Volume$QuartUK extends Volume {
   @override
   String get symbol => 'qt';
 
+  /// [Volume$QuartUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2227,7 +2287,7 @@ final class Volume$Pint extends Volume {
         unit.toPint.value,
       );
 
-  static const _minorName = r'volume$Pint';
+  static const _minorName = 'pint';
 
   static const _ratio = 0.000473176473;
 
@@ -2239,8 +2299,9 @@ final class Volume$Pint extends Volume {
   @override
   Volume$Pint get _clone => Volume$Pint(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Pint] with new value
   @override
@@ -2253,6 +2314,7 @@ final class Volume$Pint extends Volume {
   @override
   String get symbol => 'pt';
 
+  /// [Volume$Pint] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2284,7 +2346,7 @@ final class Volume$PintUK extends Volume {
         unit.toPintUK.value,
       );
 
-  static const _minorName = r'volume$PintUK';
+  static const _minorName = 'pintUK';
 
   static const _ratio = 0.00056826125;
 
@@ -2296,8 +2358,9 @@ final class Volume$PintUK extends Volume {
   @override
   Volume$PintUK get _clone => Volume$PintUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$PintUK] with new value
   @override
@@ -2310,6 +2373,7 @@ final class Volume$PintUK extends Volume {
   @override
   String get symbol => 'pt';
 
+  /// [Volume$PintUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2341,7 +2405,7 @@ final class Volume$Cup extends Volume {
         unit.toCup.value,
       );
 
-  static const _minorName = r'volume$Cup';
+  static const _minorName = 'cup';
 
   static const _ratio = 0.0002365882365;
 
@@ -2353,8 +2417,9 @@ final class Volume$Cup extends Volume {
   @override
   Volume$Cup get _clone => Volume$Cup(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Cup] with new value
   @override
@@ -2367,6 +2432,7 @@ final class Volume$Cup extends Volume {
   @override
   String get symbol => 'c';
 
+  /// [Volume$Cup] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2398,7 +2464,7 @@ final class Volume$CupUK extends Volume {
         unit.toCupUK.value,
       );
 
-  static const _minorName = r'volume$CupUK';
+  static const _minorName = 'cupUK';
 
   static const _ratio = 0.000284130625;
 
@@ -2410,8 +2476,9 @@ final class Volume$CupUK extends Volume {
   @override
   Volume$CupUK get _clone => Volume$CupUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$CupUK] with new value
   @override
@@ -2424,6 +2491,7 @@ final class Volume$CupUK extends Volume {
   @override
   String get symbol => 'c';
 
+  /// [Volume$CupUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2455,7 +2523,7 @@ final class Volume$Gill extends Volume {
         unit.toGill.value,
       );
 
-  static const _minorName = r'volume$Gill';
+  static const _minorName = 'gill';
 
   static const _ratio = 0.00011829411825;
 
@@ -2467,8 +2535,9 @@ final class Volume$Gill extends Volume {
   @override
   Volume$Gill get _clone => Volume$Gill(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Gill] with new value
   @override
@@ -2481,6 +2550,7 @@ final class Volume$Gill extends Volume {
   @override
   String get symbol => 'gi';
 
+  /// [Volume$Gill] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2512,7 +2582,7 @@ final class Volume$GillUK extends Volume {
         unit.toGillUK.value,
       );
 
-  static const _minorName = r'volume$GillUK';
+  static const _minorName = 'gillUK';
 
   static const _ratio = 0.0001420653125;
 
@@ -2524,8 +2594,9 @@ final class Volume$GillUK extends Volume {
   @override
   Volume$GillUK get _clone => Volume$GillUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$GillUK] with new value
   @override
@@ -2538,6 +2609,7 @@ final class Volume$GillUK extends Volume {
   @override
   String get symbol => 'gi';
 
+  /// [Volume$GillUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2569,7 +2641,7 @@ final class Volume$Ounce extends Volume {
         unit.toOunce.value,
       );
 
-  static const _minorName = r'volume$Ounce';
+  static const _minorName = 'ounce';
 
   static const _ratio = 0.0000295735295625;
 
@@ -2581,8 +2653,9 @@ final class Volume$Ounce extends Volume {
   @override
   Volume$Ounce get _clone => Volume$Ounce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Ounce] with new value
   @override
@@ -2595,6 +2668,7 @@ final class Volume$Ounce extends Volume {
   @override
   String get symbol => 'fl oz';
 
+  /// [Volume$Ounce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2626,7 +2700,7 @@ final class Volume$OunceUK extends Volume {
         unit.toOunceUK.value,
       );
 
-  static const _minorName = r'volume$OunceUK';
+  static const _minorName = 'ounceUK';
 
   static const _ratio = 0.0000284130625;
 
@@ -2638,8 +2712,9 @@ final class Volume$OunceUK extends Volume {
   @override
   Volume$OunceUK get _clone => Volume$OunceUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$OunceUK] with new value
   @override
@@ -2652,6 +2727,7 @@ final class Volume$OunceUK extends Volume {
   @override
   String get symbol => 'fl oz';
 
+  /// [Volume$OunceUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2683,7 +2759,7 @@ final class Volume$Dram extends Volume {
         unit.toDram.value,
       );
 
-  static const _minorName = r'volume$Dram';
+  static const _minorName = 'dram';
 
   static const _ratio = 0.0000036966911953125;
 
@@ -2695,8 +2771,9 @@ final class Volume$Dram extends Volume {
   @override
   Volume$Dram get _clone => Volume$Dram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Dram] with new value
   @override
@@ -2709,6 +2786,7 @@ final class Volume$Dram extends Volume {
   @override
   String get symbol => 'fl dr';
 
+  /// [Volume$Dram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2740,7 +2818,7 @@ final class Volume$DramUK extends Volume {
         unit.toDramUK.value,
       );
 
-  static const _minorName = r'volume$DramUK';
+  static const _minorName = 'dramUK';
 
   static const _ratio = 0.0000035516328125;
 
@@ -2752,8 +2830,9 @@ final class Volume$DramUK extends Volume {
   @override
   Volume$DramUK get _clone => Volume$DramUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$DramUK] with new value
   @override
@@ -2766,6 +2845,7 @@ final class Volume$DramUK extends Volume {
   @override
   String get symbol => 'fl dr';
 
+  /// [Volume$DramUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2797,7 +2877,7 @@ final class Volume$Minim extends Volume {
         unit.toMinim.value,
       );
 
-  static const _minorName = r'volume$Minim';
+  static const _minorName = 'minim';
 
   static const _ratio = 6.1611519921875e-8;
 
@@ -2809,8 +2889,9 @@ final class Volume$Minim extends Volume {
   @override
   Volume$Minim get _clone => Volume$Minim(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Minim] with new value
   @override
@@ -2823,6 +2904,7 @@ final class Volume$Minim extends Volume {
   @override
   String get symbol => 'min, m';
 
+  /// [Volume$Minim] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2854,7 +2936,7 @@ final class Volume$MinimUK extends Volume {
         unit.toMinimUK.value,
       );
 
-  static const _minorName = r'volume$MinimUK';
+  static const _minorName = 'minimUK';
 
   static const _ratio = 5.9193880208333334e-8;
 
@@ -2866,8 +2948,9 @@ final class Volume$MinimUK extends Volume {
   @override
   Volume$MinimUK get _clone => Volume$MinimUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$MinimUK] with new value
   @override
@@ -2880,6 +2963,7 @@ final class Volume$MinimUK extends Volume {
   @override
   String get symbol => 'min, m';
 
+  /// [Volume$MinimUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2911,7 +2995,7 @@ final class Volume$Tablespoon extends Volume {
         unit.toTablespoon.value,
       );
 
-  static const _minorName = r'volume$Tablespoon';
+  static const _minorName = 'tablespoon';
 
   static const _ratio = 0.00001478676478125;
 
@@ -2923,8 +3007,9 @@ final class Volume$Tablespoon extends Volume {
   @override
   Volume$Tablespoon get _clone => Volume$Tablespoon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Tablespoon] with new value
   @override
@@ -2937,6 +3022,7 @@ final class Volume$Tablespoon extends Volume {
   @override
   String get symbol => 'tbsp';
 
+  /// [Volume$Tablespoon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2968,7 +3054,7 @@ final class Volume$TablespoonUK extends Volume {
         unit.toTablespoonUK.value,
       );
 
-  static const _minorName = r'volume$TablespoonUK';
+  static const _minorName = 'tablespoonUK';
 
   static const _ratio = 0.0000177581640625;
 
@@ -2980,8 +3066,9 @@ final class Volume$TablespoonUK extends Volume {
   @override
   Volume$TablespoonUK get _clone => Volume$TablespoonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$TablespoonUK] with new value
   @override
@@ -2994,6 +3081,7 @@ final class Volume$TablespoonUK extends Volume {
   @override
   String get symbol => 'tbsp';
 
+  /// [Volume$TablespoonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3025,7 +3113,7 @@ final class Volume$Dessertspoon extends Volume {
         unit.toDessertspoon.value,
       );
 
-  static const _minorName = r'volume$Dessertspoon';
+  static const _minorName = 'dessertspoon';
 
   static const _ratio = 0.0000098578431875;
 
@@ -3037,8 +3125,9 @@ final class Volume$Dessertspoon extends Volume {
   @override
   Volume$Dessertspoon get _clone => Volume$Dessertspoon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Dessertspoon] with new value
   @override
@@ -3051,6 +3140,7 @@ final class Volume$Dessertspoon extends Volume {
   @override
   String get symbol => 'dsp';
 
+  /// [Volume$Dessertspoon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3082,7 +3172,7 @@ final class Volume$DessertspoonUK extends Volume {
         unit.toDessertspoonUK.value,
       );
 
-  static const _minorName = r'volume$DessertspoonUK';
+  static const _minorName = 'dessertspoonUK';
 
   static const _ratio = 0.000011838776041666667;
 
@@ -3094,8 +3184,9 @@ final class Volume$DessertspoonUK extends Volume {
   @override
   Volume$DessertspoonUK get _clone => Volume$DessertspoonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$DessertspoonUK] with new value
   @override
@@ -3108,6 +3199,7 @@ final class Volume$DessertspoonUK extends Volume {
   @override
   String get symbol => 'dsp';
 
+  /// [Volume$DessertspoonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3139,7 +3231,7 @@ final class Volume$Teaspoon extends Volume {
         unit.toTeaspoon.value,
       );
 
-  static const _minorName = r'volume$Teaspoon';
+  static const _minorName = 'teaspoon';
 
   static const _ratio = 0.00000492892159375;
 
@@ -3151,8 +3243,9 @@ final class Volume$Teaspoon extends Volume {
   @override
   Volume$Teaspoon get _clone => Volume$Teaspoon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Teaspoon] with new value
   @override
@@ -3165,6 +3258,7 @@ final class Volume$Teaspoon extends Volume {
   @override
   String get symbol => 'tsp';
 
+  /// [Volume$Teaspoon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3196,7 +3290,7 @@ final class Volume$TeaspoonUK extends Volume {
         unit.toTeaspoonUK.value,
       );
 
-  static const _minorName = r'volume$TeaspoonUK';
+  static const _minorName = 'teaspoonUK';
 
   static const _ratio = 0.000005919388020833334;
 
@@ -3208,8 +3302,9 @@ final class Volume$TeaspoonUK extends Volume {
   @override
   Volume$TeaspoonUK get _clone => Volume$TeaspoonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$TeaspoonUK] with new value
   @override
@@ -3222,6 +3317,7 @@ final class Volume$TeaspoonUK extends Volume {
   @override
   String get symbol => 'tsp';
 
+  /// [Volume$TeaspoonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3253,7 +3349,7 @@ final class Volume$Hogshead extends Volume {
         unit.toHogshead.value,
       );
 
-  static const _minorName = r'volume$Hogshead';
+  static const _minorName = 'hogshead';
 
   static const _ratio = 0.238480942392;
 
@@ -3265,8 +3361,9 @@ final class Volume$Hogshead extends Volume {
   @override
   Volume$Hogshead get _clone => Volume$Hogshead(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Hogshead] with new value
   @override
@@ -3279,6 +3376,7 @@ final class Volume$Hogshead extends Volume {
   @override
   String get symbol => 'hhd';
 
+  /// [Volume$Hogshead] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3310,7 +3408,7 @@ final class Volume$YardCubic extends Volume {
         unit.toYardCubic.value,
       );
 
-  static const _minorName = r'volume$YardCubic';
+  static const _minorName = 'yardCubic';
 
   static const _ratio = 0.764554857984;
 
@@ -3322,8 +3420,9 @@ final class Volume$YardCubic extends Volume {
   @override
   Volume$YardCubic get _clone => Volume$YardCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$YardCubic] with new value
   @override
@@ -3336,6 +3435,7 @@ final class Volume$YardCubic extends Volume {
   @override
   String get symbol => 'yd³';
 
+  /// [Volume$YardCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3367,7 +3467,7 @@ final class Volume$FootCubic extends Volume {
         unit.toFootCubic.value,
       );
 
-  static const _minorName = r'volume$FootCubic';
+  static const _minorName = 'footCubic';
 
   static const _ratio = 0.028316846592;
 
@@ -3379,8 +3479,9 @@ final class Volume$FootCubic extends Volume {
   @override
   Volume$FootCubic get _clone => Volume$FootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$FootCubic] with new value
   @override
@@ -3393,6 +3494,7 @@ final class Volume$FootCubic extends Volume {
   @override
   String get symbol => 'ft³';
 
+  /// [Volume$FootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3424,7 +3526,7 @@ final class Volume$InchCubic extends Volume {
         unit.toInchCubic.value,
       );
 
-  static const _minorName = r'volume$InchCubic';
+  static const _minorName = 'inchCubic';
 
   static const _ratio = 0.000016387064;
 
@@ -3436,8 +3538,9 @@ final class Volume$InchCubic extends Volume {
   @override
   Volume$InchCubic get _clone => Volume$InchCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$InchCubic] with new value
   @override
@@ -3450,6 +3553,7 @@ final class Volume$InchCubic extends Volume {
   @override
   String get symbol => 'in³';
 
+  /// [Volume$InchCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3481,7 +3585,7 @@ final class Volume$Ccf extends Volume {
         unit.toCcf.value,
       );
 
-  static const _minorName = r'volume$Ccf';
+  static const _minorName = 'ccf';
 
   static const _ratio = 2.8316846592;
 
@@ -3493,8 +3597,9 @@ final class Volume$Ccf extends Volume {
   @override
   Volume$Ccf get _clone => Volume$Ccf(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Ccf] with new value
   @override
@@ -3505,8 +3610,9 @@ final class Volume$Ccf extends Volume {
 
   /// Symbol for [Volume$Ccf]
   @override
-  String get symbol => 'Ccf';
+  String get symbol => 'ccf';
 
+  /// [Volume$Ccf] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3538,7 +3644,7 @@ final class Volume$HundredFootCubic extends Volume {
         unit.toHundredFootCubic.value,
       );
 
-  static const _minorName = r'volume$HundredFootCubic';
+  static const _minorName = 'hundredFootCubic';
 
   static const _ratio = 2.8316846592;
 
@@ -3550,8 +3656,9 @@ final class Volume$HundredFootCubic extends Volume {
   @override
   Volume$HundredFootCubic get _clone => Volume$HundredFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$HundredFootCubic] with new value
   @override
@@ -3562,8 +3669,9 @@ final class Volume$HundredFootCubic extends Volume {
 
   /// Symbol for [Volume$HundredFootCubic]
   @override
-  String get symbol => 'HundredFootCubic';
+  String get symbol => 'hundred-foot³';
 
+  /// [Volume$HundredFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3595,7 +3703,7 @@ final class Volume$AcreFoot extends Volume {
         unit.toAcreFoot.value,
       );
 
-  static const _minorName = r'volume$AcreFoot';
+  static const _minorName = 'acreFoot';
 
   static const _ratio = 1233.48183754752;
 
@@ -3607,8 +3715,9 @@ final class Volume$AcreFoot extends Volume {
   @override
   Volume$AcreFoot get _clone => Volume$AcreFoot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$AcreFoot] with new value
   @override
@@ -3621,6 +3730,7 @@ final class Volume$AcreFoot extends Volume {
   @override
   String get symbol => 'ac ft';
 
+  /// [Volume$AcreFoot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3652,7 +3762,7 @@ final class Volume$AcreInch extends Volume {
         unit.toAcreInch.value,
       );
 
-  static const _minorName = r'volume$AcreInch';
+  static const _minorName = 'acreInch';
 
   static const _ratio = 102.79015312896;
 
@@ -3664,8 +3774,9 @@ final class Volume$AcreInch extends Volume {
   @override
   Volume$AcreInch get _clone => Volume$AcreInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$AcreInch] with new value
   @override
@@ -3678,6 +3789,7 @@ final class Volume$AcreInch extends Volume {
   @override
   String get symbol => 'ac in';
 
+  /// [Volume$AcreInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3709,7 +3821,7 @@ final class Volume$Dekastere extends Volume {
         unit.toDekastere.value,
       );
 
-  static const _minorName = r'volume$Dekastere';
+  static const _minorName = 'dekastere';
 
   static const _ratio = 10.0;
 
@@ -3721,8 +3833,9 @@ final class Volume$Dekastere extends Volume {
   @override
   Volume$Dekastere get _clone => Volume$Dekastere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Dekastere] with new value
   @override
@@ -3735,6 +3848,7 @@ final class Volume$Dekastere extends Volume {
   @override
   String get symbol => 'dast';
 
+  /// [Volume$Dekastere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3766,7 +3880,7 @@ final class Volume$Stere extends Volume {
         unit.toStere.value,
       );
 
-  static const _minorName = r'volume$Stere';
+  static const _minorName = 'stere';
 
   static const _ratio = 1.0;
 
@@ -3778,8 +3892,9 @@ final class Volume$Stere extends Volume {
   @override
   Volume$Stere get _clone => Volume$Stere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Stere] with new value
   @override
@@ -3792,6 +3907,7 @@ final class Volume$Stere extends Volume {
   @override
   String get symbol => 'st';
 
+  /// [Volume$Stere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3823,7 +3939,7 @@ final class Volume$Decistere extends Volume {
         unit.toDecistere.value,
       );
 
-  static const _minorName = r'volume$Decistere';
+  static const _minorName = 'decistere';
 
   static const _ratio = 0.1;
 
@@ -3835,8 +3951,9 @@ final class Volume$Decistere extends Volume {
   @override
   Volume$Decistere get _clone => Volume$Decistere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Decistere] with new value
   @override
@@ -3849,6 +3966,7 @@ final class Volume$Decistere extends Volume {
   @override
   String get symbol => 'dst';
 
+  /// [Volume$Decistere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3880,7 +3998,7 @@ final class Volume$Cord extends Volume {
         unit.toCord.value,
       );
 
-  static const _minorName = r'volume$Cord';
+  static const _minorName = 'cord';
 
   static const _ratio = 3.624556363776;
 
@@ -3892,8 +4010,9 @@ final class Volume$Cord extends Volume {
   @override
   Volume$Cord get _clone => Volume$Cord(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Cord] with new value
   @override
@@ -3906,6 +4025,7 @@ final class Volume$Cord extends Volume {
   @override
   String get symbol => 'cd';
 
+  /// [Volume$Cord] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3937,7 +4057,7 @@ final class Volume$BoardFoot extends Volume {
         unit.toBoardFoot.value,
       );
 
-  static const _minorName = r'volume$BoardFoot';
+  static const _minorName = 'boardFoot';
 
   static const _ratio = 0.002359737216;
 
@@ -3949,8 +4069,9 @@ final class Volume$BoardFoot extends Volume {
   @override
   Volume$BoardFoot get _clone => Volume$BoardFoot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$BoardFoot] with new value
   @override
@@ -3963,6 +4084,7 @@ final class Volume$BoardFoot extends Volume {
   @override
   String get symbol => 'bd ft, BD';
 
+  /// [Volume$BoardFoot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3994,7 +4116,7 @@ final class Volume$Tun extends Volume {
         unit.toTun.value,
       );
 
-  static const _minorName = r'volume$Tun';
+  static const _minorName = 'tun';
 
   static const _ratio = 0.953923769568;
 
@@ -4006,8 +4128,9 @@ final class Volume$Tun extends Volume {
   @override
   Volume$Tun get _clone => Volume$Tun(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Tun] with new value
   @override
@@ -4018,8 +4141,9 @@ final class Volume$Tun extends Volume {
 
   /// Symbol for [Volume$Tun]
   @override
-  String get symbol => 'Tun';
+  String get symbol => 'tun';
 
+  /// [Volume$Tun] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4051,7 +4175,7 @@ final class Volume$CorBiblical extends Volume {
         unit.toCorBiblical.value,
       );
 
-  static const _minorName = r'volume$CorBiblical';
+  static const _minorName = 'corBiblical';
 
   static const _ratio = 0.22;
 
@@ -4063,8 +4187,9 @@ final class Volume$CorBiblical extends Volume {
   @override
   Volume$CorBiblical get _clone => Volume$CorBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$CorBiblical] with new value
   @override
@@ -4075,8 +4200,9 @@ final class Volume$CorBiblical extends Volume {
 
   /// Symbol for [Volume$CorBiblical]
   @override
-  String get symbol => 'CorBiblical';
+  String get symbol => 'cor (Biblical)';
 
+  /// [Volume$CorBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4108,7 +4234,7 @@ final class Volume$HomerBiblical extends Volume {
         unit.toHomerBiblical.value,
       );
 
-  static const _minorName = r'volume$HomerBiblical';
+  static const _minorName = 'homerBiblical';
 
   static const _ratio = 0.22;
 
@@ -4120,8 +4246,9 @@ final class Volume$HomerBiblical extends Volume {
   @override
   Volume$HomerBiblical get _clone => Volume$HomerBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$HomerBiblical] with new value
   @override
@@ -4132,8 +4259,9 @@ final class Volume$HomerBiblical extends Volume {
 
   /// Symbol for [Volume$HomerBiblical]
   @override
-  String get symbol => 'HomerBiblical';
+  String get symbol => 'homer (Biblical)';
 
+  /// [Volume$HomerBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4165,7 +4293,7 @@ final class Volume$BathBiblical extends Volume {
         unit.toBathBiblical.value,
       );
 
-  static const _minorName = r'volume$BathBiblical';
+  static const _minorName = 'bathBiblical';
 
   static const _ratio = 0.022;
 
@@ -4177,8 +4305,9 @@ final class Volume$BathBiblical extends Volume {
   @override
   Volume$BathBiblical get _clone => Volume$BathBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$BathBiblical] with new value
   @override
@@ -4189,8 +4318,9 @@ final class Volume$BathBiblical extends Volume {
 
   /// Symbol for [Volume$BathBiblical]
   @override
-  String get symbol => 'BathBiblical';
+  String get symbol => 'bath (Biblical)';
 
+  /// [Volume$BathBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4222,7 +4352,7 @@ final class Volume$HinBiblical extends Volume {
         unit.toHinBiblical.value,
       );
 
-  static const _minorName = r'volume$HinBiblical';
+  static const _minorName = 'hinBiblical';
 
   static const _ratio = 0.0036666666666666666;
 
@@ -4234,8 +4364,9 @@ final class Volume$HinBiblical extends Volume {
   @override
   Volume$HinBiblical get _clone => Volume$HinBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$HinBiblical] with new value
   @override
@@ -4246,8 +4377,9 @@ final class Volume$HinBiblical extends Volume {
 
   /// Symbol for [Volume$HinBiblical]
   @override
-  String get symbol => 'HinBiblical';
+  String get symbol => 'hin (Biblical)';
 
+  /// [Volume$HinBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4279,7 +4411,7 @@ final class Volume$CabBiblical extends Volume {
         unit.toCabBiblical.value,
       );
 
-  static const _minorName = r'volume$CabBiblical';
+  static const _minorName = 'cabBiblical';
 
   static const _ratio = 0.0012222222222222222;
 
@@ -4291,8 +4423,9 @@ final class Volume$CabBiblical extends Volume {
   @override
   Volume$CabBiblical get _clone => Volume$CabBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$CabBiblical] with new value
   @override
@@ -4303,8 +4436,9 @@ final class Volume$CabBiblical extends Volume {
 
   /// Symbol for [Volume$CabBiblical]
   @override
-  String get symbol => 'CabBiblical';
+  String get symbol => 'cab (Biblical)';
 
+  /// [Volume$CabBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4336,7 +4470,7 @@ final class Volume$LogBiblical extends Volume {
         unit.toLogBiblical.value,
       );
 
-  static const _minorName = r'volume$LogBiblical';
+  static const _minorName = 'logBiblical';
 
   static const _ratio = 0.00030555555555555555;
 
@@ -4348,8 +4482,9 @@ final class Volume$LogBiblical extends Volume {
   @override
   Volume$LogBiblical get _clone => Volume$LogBiblical(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$LogBiblical] with new value
   @override
@@ -4360,8 +4495,9 @@ final class Volume$LogBiblical extends Volume {
 
   /// Symbol for [Volume$LogBiblical]
   @override
-  String get symbol => 'LogBiblical';
+  String get symbol => 'log (Biblical)';
 
+  /// [Volume$LogBiblical] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4393,7 +4529,7 @@ final class Volume$TazaSpanish extends Volume {
         unit.toTazaSpanish.value,
       );
 
-  static const _minorName = r'volume$TazaSpanish';
+  static const _minorName = 'tazaSpanish';
 
   static const _ratio = 0.0002365882365;
 
@@ -4405,8 +4541,9 @@ final class Volume$TazaSpanish extends Volume {
   @override
   Volume$TazaSpanish get _clone => Volume$TazaSpanish(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$TazaSpanish] with new value
   @override
@@ -4417,8 +4554,9 @@ final class Volume$TazaSpanish extends Volume {
 
   /// Symbol for [Volume$TazaSpanish]
   @override
-  String get symbol => 'TazaSpanish';
+  String get symbol => 'Taza (Spanish)';
 
+  /// [Volume$TazaSpanish] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4450,7 +4588,7 @@ final class Volume$Bushel extends Volume {
         unit.toBushel.value,
       );
 
-  static const _minorName = r'volume$Bushel';
+  static const _minorName = 'bushel';
 
   static const _ratio = 0.03523907016688;
 
@@ -4462,8 +4600,9 @@ final class Volume$Bushel extends Volume {
   @override
   Volume$Bushel get _clone => Volume$Bushel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Bushel] with new value
   @override
@@ -4476,6 +4615,7 @@ final class Volume$Bushel extends Volume {
   @override
   String get symbol => 'bu';
 
+  /// [Volume$Bushel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4507,7 +4647,7 @@ final class Volume$Peck extends Volume {
         unit.toPeck.value,
       );
 
-  static const _minorName = r'volume$Peck';
+  static const _minorName = 'peck';
 
   static const _ratio = 0.00880976754172;
 
@@ -4519,8 +4659,9 @@ final class Volume$Peck extends Volume {
   @override
   Volume$Peck get _clone => Volume$Peck(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$Peck] with new value
   @override
@@ -4533,6 +4674,7 @@ final class Volume$Peck extends Volume {
   @override
   String get symbol => 'pk';
 
+  /// [Volume$Peck] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4564,7 +4706,7 @@ final class Volume$DryPint extends Volume {
         unit.toDryPint.value,
       );
 
-  static const _minorName = r'volume$DryPint';
+  static const _minorName = 'dryPint';
 
   static const _ratio = 0.0005506104713575;
 
@@ -4576,8 +4718,9 @@ final class Volume$DryPint extends Volume {
   @override
   Volume$DryPint get _clone => Volume$DryPint(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$DryPint] with new value
   @override
@@ -4588,8 +4731,9 @@ final class Volume$DryPint extends Volume {
 
   /// Symbol for [Volume$DryPint]
   @override
-  String get symbol => 'DryPint';
+  String get symbol => 'dry pint';
 
+  /// [Volume$DryPint] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4621,7 +4765,7 @@ final class Volume$DryQuart extends Volume {
         unit.toDryQuart.value,
       );
 
-  static const _minorName = r'volume$DryQuart';
+  static const _minorName = 'dryQuart';
 
   static const _ratio = 0.001101220942715;
 
@@ -4633,8 +4777,9 @@ final class Volume$DryQuart extends Volume {
   @override
   Volume$DryQuart get _clone => Volume$DryQuart(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Volume$DryQuart] with new value
   @override
@@ -4645,8 +4790,9 @@ final class Volume$DryQuart extends Volume {
 
   /// Symbol for [Volume$DryQuart]
   @override
-  String get symbol => 'DryQuart';
+  String get symbol => 'dry quart';
 
+  /// [Volume$DryQuart] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

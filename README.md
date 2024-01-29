@@ -48,7 +48,6 @@
   + [MassFluxDensity](#massfluxdensity)
   + [MetricPrefixes](#metricprefixes)
   + [MomentofInertia](#momentofinertia)
-  + [Numbers](#numbers)
   + [Permeability](#permeability)
   + [Power](#power)
   + [Pressure](#pressure)
@@ -290,22 +289,22 @@
    - `DataStorage$Block` => DataStorageUnit.block
    - `DataStorage$Kilobit` => DataStorageUnit.kilobit
    - `DataStorage$Kilobyte` => DataStorageUnit.kilobyte
-   - `DataStorage$Kilobyte10Power3Bytes` => DataStorageUnit.kilobyte10Power3Bytes
+   - `DataStorage$Kilobyte10PowerOf3Bytes` => DataStorageUnit.kilobyte10PowerOf3Bytes
    - `DataStorage$Megabit` => DataStorageUnit.megabit
    - `DataStorage$Megabyte` => DataStorageUnit.megabyte
-   - `DataStorage$Megabyte10Power6Bytes` => DataStorageUnit.megabyte10Power6Bytes
+   - `DataStorage$Megabyte10PowerOf6Bytes` => DataStorageUnit.megabyte10PowerOf6Bytes
    - `DataStorage$Gigabit` => DataStorageUnit.gigabit
    - `DataStorage$Gigabyte` => DataStorageUnit.gigabyte
-   - `DataStorage$Gigabyte10Power9Bytes` => DataStorageUnit.gigabyte10Power9Bytes
+   - `DataStorage$Gigabyte10PowerOf9Bytes` => DataStorageUnit.gigabyte10PowerOf9Bytes
    - `DataStorage$Terabit` => DataStorageUnit.terabit
    - `DataStorage$Terabyte` => DataStorageUnit.terabyte
-   - `DataStorage$Terabyte10Power12Bytes` => DataStorageUnit.terabyte10Power12Bytes
+   - `DataStorage$Terabyte10PowerOf12Bytes` => DataStorageUnit.terabyte10PowerOf12Bytes
    - `DataStorage$Petabit` => DataStorageUnit.petabit
    - `DataStorage$Petabyte` => DataStorageUnit.petabyte
-   - `DataStorage$Petabyte10Power15Bytes` => DataStorageUnit.petabyte10Power15Bytes
+   - `DataStorage$Petabyte10PowerOf15Bytes` => DataStorageUnit.petabyte10PowerOf15Bytes
    - `DataStorage$Exabit` => DataStorageUnit.exabit
    - `DataStorage$Exabyte` => DataStorageUnit.exabyte
-   - `DataStorage$Exabyte10Power18Bytes` => DataStorageUnit.exabyte10Power18Bytes
+   - `DataStorage$Exabyte10PowerOf18Bytes` => DataStorageUnit.exabyte10PowerOf18Bytes
    - `DataStorage$FloppyDisk35DD` => DataStorageUnit.floppyDisk35DD
    - `DataStorage$FloppyDisk35HD` => DataStorageUnit.floppyDisk35HD
    - `DataStorage$FloppyDisk35ED` => DataStorageUnit.floppyDisk35ED
@@ -1192,48 +1191,6 @@
    - `MomentofInertia$PoundInchSquare` => MomentofInertiaUnit.poundInchSquare
    - `MomentofInertia$PoundInchSecondSquare` => MomentofInertiaUnit.poundInchSecondSquare
    - `MomentofInertia$SlugFootSquare` => MomentofInertiaUnit.slugFootSquare
-
-### Numbers
-   - `Numbers$Binary` => NumbersUnit.binary
-   - `Numbers$Octal` => NumbersUnit.octal
-   - `Numbers$Decimal` => NumbersUnit.decimal
-   - `Numbers$Hexadecimal` => NumbersUnit.hexadecimal
-   - `Numbers$RomanNumeral` => NumbersUnit.romanNumeral
-   - `Numbers$Base2` => NumbersUnit.base2
-   - `Numbers$Base3` => NumbersUnit.base3
-   - `Numbers$Base4` => NumbersUnit.base4
-   - `Numbers$Base5` => NumbersUnit.base5
-   - `Numbers$Base6` => NumbersUnit.base6
-   - `Numbers$Base7` => NumbersUnit.base7
-   - `Numbers$Base8` => NumbersUnit.base8
-   - `Numbers$Base9` => NumbersUnit.base9
-   - `Numbers$Base10` => NumbersUnit.base10
-   - `Numbers$Base11` => NumbersUnit.base11
-   - `Numbers$Base12` => NumbersUnit.base12
-   - `Numbers$Base13` => NumbersUnit.base13
-   - `Numbers$Base14` => NumbersUnit.base14
-   - `Numbers$Base15` => NumbersUnit.base15
-   - `Numbers$Base16` => NumbersUnit.base16
-   - `Numbers$Base17` => NumbersUnit.base17
-   - `Numbers$Base18` => NumbersUnit.base18
-   - `Numbers$Base19` => NumbersUnit.base19
-   - `Numbers$Base20` => NumbersUnit.base20
-   - `Numbers$Base21` => NumbersUnit.base21
-   - `Numbers$Base22` => NumbersUnit.base22
-   - `Numbers$Base23` => NumbersUnit.base23
-   - `Numbers$Base24` => NumbersUnit.base24
-   - `Numbers$Base25` => NumbersUnit.base25
-   - `Numbers$Base26` => NumbersUnit.base26
-   - `Numbers$Base27` => NumbersUnit.base27
-   - `Numbers$Base28` => NumbersUnit.base28
-   - `Numbers$Base29` => NumbersUnit.base29
-   - `Numbers$Base30` => NumbersUnit.base30
-   - `Numbers$Base31` => NumbersUnit.base31
-   - `Numbers$Base32` => NumbersUnit.base32
-   - `Numbers$Base33` => NumbersUnit.base33
-   - `Numbers$Base34` => NumbersUnit.base34
-   - `Numbers$Base35` => NumbersUnit.base35
-   - `Numbers$Base36` => NumbersUnit.base36
 
 ### Permeability
    - `Permeability$KilogramPerPascalSecondMeterSquare` => PermeabilityUnit.kilogramPerPascalSecondMeterSquare

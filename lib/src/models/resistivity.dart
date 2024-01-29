@@ -110,7 +110,7 @@ final class Resistivity$OhmMeter extends Resistivity {
         unit.toOhmMeter.value,
       );
 
-  static const _minorName = r'resistivity$OhmMeter';
+  static const _minorName = 'ohmMeter';
 
   static const _ratio = 1.0;
 
@@ -122,8 +122,9 @@ final class Resistivity$OhmMeter extends Resistivity {
   @override
   Resistivity$OhmMeter get _clone => Resistivity$OhmMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Resistivity$OhmMeter] with new value
   @override
@@ -136,6 +137,7 @@ final class Resistivity$OhmMeter extends Resistivity {
   @override
   String get symbol => 'Ω m';
 
+  /// [Resistivity$OhmMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -167,7 +169,7 @@ final class Resistivity$OhmCentimeter extends Resistivity {
         unit.toOhmCentimeter.value,
       );
 
-  static const _minorName = r'resistivity$OhmCentimeter';
+  static const _minorName = 'ohmCentimeter';
 
   static const _ratio = 0.01;
 
@@ -179,8 +181,9 @@ final class Resistivity$OhmCentimeter extends Resistivity {
   @override
   Resistivity$OhmCentimeter get _clone => Resistivity$OhmCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Resistivity$OhmCentimeter] with new value
   @override
@@ -193,6 +196,7 @@ final class Resistivity$OhmCentimeter extends Resistivity {
   @override
   String get symbol => 'Ω cm';
 
+  /// [Resistivity$OhmCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -224,7 +228,7 @@ final class Resistivity$OhmInch extends Resistivity {
         unit.toOhmInch.value,
       );
 
-  static const _minorName = r'resistivity$OhmInch';
+  static const _minorName = 'ohmInch';
 
   static const _ratio = 0.0254;
 
@@ -236,8 +240,9 @@ final class Resistivity$OhmInch extends Resistivity {
   @override
   Resistivity$OhmInch get _clone => Resistivity$OhmInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Resistivity$OhmInch] with new value
   @override
@@ -250,6 +255,7 @@ final class Resistivity$OhmInch extends Resistivity {
   @override
   String get symbol => 'Ω in';
 
+  /// [Resistivity$OhmInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -281,7 +287,7 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
         unit.toMicrohmCentimeter.value,
       );
 
-  static const _minorName = r'resistivity$MicrohmCentimeter';
+  static const _minorName = 'microhmCentimeter';
 
   static const _ratio = 1e-8;
 
@@ -294,8 +300,9 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
   Resistivity$MicrohmCentimeter get _clone =>
       Resistivity$MicrohmCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Resistivity$MicrohmCentimeter] with new value
   @override
@@ -308,6 +315,7 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
   @override
   String get symbol => 'µΩ cm';
 
+  /// [Resistivity$MicrohmCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -339,7 +347,7 @@ final class Resistivity$MicrohmInch extends Resistivity {
         unit.toMicrohmInch.value,
       );
 
-  static const _minorName = r'resistivity$MicrohmInch';
+  static const _minorName = 'microhmInch';
 
   static const _ratio = 2.54e-8;
 
@@ -351,8 +359,9 @@ final class Resistivity$MicrohmInch extends Resistivity {
   @override
   Resistivity$MicrohmInch get _clone => Resistivity$MicrohmInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Resistivity$MicrohmInch] with new value
   @override
@@ -365,6 +374,7 @@ final class Resistivity$MicrohmInch extends Resistivity {
   @override
   String get symbol => 'µΩ in';
 
+  /// [Resistivity$MicrohmInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -396,7 +406,7 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
         unit.toAbohmCentimeter.value,
       );
 
-  static const _minorName = r'resistivity$AbohmCentimeter';
+  static const _minorName = 'abohmCentimeter';
 
   static const _ratio = 1e-11;
 
@@ -408,8 +418,9 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
   @override
   Resistivity$AbohmCentimeter get _clone => Resistivity$AbohmCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Resistivity$AbohmCentimeter] with new value
   @override
@@ -422,6 +433,7 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
   @override
   String get symbol => 'abΩ cm';
 
+  /// [Resistivity$AbohmCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -453,7 +465,7 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
         unit.toStatohmCentimeter.value,
       );
 
-  static const _minorName = r'resistivity$StatohmCentimeter';
+  static const _minorName = 'statohmCentimeter';
 
   static const _ratio = 8987524324.0;
 
@@ -466,8 +478,9 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
   Resistivity$StatohmCentimeter get _clone =>
       Resistivity$StatohmCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Resistivity$StatohmCentimeter] with new value
   @override
@@ -480,6 +493,7 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
   @override
   String get symbol => 'statΩ cm';
 
+  /// [Resistivity$StatohmCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -511,7 +525,7 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
         unit.toCircularMilOhmPerFoot.value,
       );
 
-  static const _minorName = r'resistivity$CircularMilOhmPerFoot';
+  static const _minorName = 'circularMilOhmPerFoot';
 
   static const _ratio = 1.662426113e-9;
 
@@ -524,8 +538,9 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
   Resistivity$CircularMilOhmPerFoot get _clone =>
       Resistivity$CircularMilOhmPerFoot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Resistivity$CircularMilOhmPerFoot] with new value
   @override
@@ -538,6 +553,7 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
   @override
   String get symbol => 'cmil Ω/ft';
 
+  /// [Resistivity$CircularMilOhmPerFoot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

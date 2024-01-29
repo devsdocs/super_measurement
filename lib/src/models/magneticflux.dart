@@ -124,7 +124,7 @@ final class MagneticFlux$Weber extends MagneticFlux {
         unit.toWeber.value,
       );
 
-  static const _minorName = r'magneticFlux$Weber';
+  static const _minorName = 'weber';
 
   static const _ratio = 1.0;
 
@@ -136,8 +136,9 @@ final class MagneticFlux$Weber extends MagneticFlux {
   @override
   MagneticFlux$Weber get _clone => MagneticFlux$Weber(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$Weber] with new value
   @override
@@ -150,6 +151,7 @@ final class MagneticFlux$Weber extends MagneticFlux {
   @override
   String get symbol => 'Wb';
 
+  /// [MagneticFlux$Weber] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -181,7 +183,7 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
         unit.toVoltSecond.value,
       );
 
-  static const _minorName = r'magneticFlux$VoltSecond';
+  static const _minorName = 'voltSecond';
 
   static const _ratio = 1.0;
 
@@ -193,8 +195,9 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
   @override
   MagneticFlux$VoltSecond get _clone => MagneticFlux$VoltSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$VoltSecond] with new value
   @override
@@ -207,6 +210,7 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
   @override
   String get symbol => 'V s';
 
+  /// [MagneticFlux$VoltSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -238,7 +242,7 @@ final class MagneticFlux$Megaline extends MagneticFlux {
         unit.toMegaline.value,
       );
 
-  static const _minorName = r'magneticFlux$Megaline';
+  static const _minorName = 'megaline';
 
   static const _ratio = 0.01;
 
@@ -250,8 +254,9 @@ final class MagneticFlux$Megaline extends MagneticFlux {
   @override
   MagneticFlux$Megaline get _clone => MagneticFlux$Megaline(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$Megaline] with new value
   @override
@@ -264,6 +269,7 @@ final class MagneticFlux$Megaline extends MagneticFlux {
   @override
   String get symbol => 'Mli';
 
+  /// [MagneticFlux$Megaline] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -295,7 +301,7 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
         unit.toKiloline.value,
       );
 
-  static const _minorName = r'magneticFlux$Kiloline';
+  static const _minorName = 'kiloline';
 
   static const _ratio = 0.00001;
 
@@ -307,8 +313,9 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
   @override
   MagneticFlux$Kiloline get _clone => MagneticFlux$Kiloline(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$Kiloline] with new value
   @override
@@ -321,6 +328,7 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
   @override
   String get symbol => 'kli';
 
+  /// [MagneticFlux$Kiloline] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -352,7 +360,7 @@ final class MagneticFlux$Line extends MagneticFlux {
         unit.toLine.value,
       );
 
-  static const _minorName = r'magneticFlux$Line';
+  static const _minorName = 'line';
 
   static const _ratio = 1e-8;
 
@@ -364,8 +372,9 @@ final class MagneticFlux$Line extends MagneticFlux {
   @override
   MagneticFlux$Line get _clone => MagneticFlux$Line(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$Line] with new value
   @override
@@ -378,6 +387,7 @@ final class MagneticFlux$Line extends MagneticFlux {
   @override
   String get symbol => 'li';
 
+  /// [MagneticFlux$Line] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -409,7 +419,7 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
         unit.toMaxwell.value,
       );
 
-  static const _minorName = r'magneticFlux$Maxwell';
+  static const _minorName = 'maxwell';
 
   static const _ratio = 1e-8;
 
@@ -421,8 +431,9 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
   @override
   MagneticFlux$Maxwell get _clone => MagneticFlux$Maxwell(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$Maxwell] with new value
   @override
@@ -435,6 +446,7 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
   @override
   String get symbol => 'Mx';
 
+  /// [MagneticFlux$Maxwell] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -466,7 +478,7 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
         unit.toMaxwellInternational.value,
       );
 
-  static const _minorName = r'magneticFlux$MaxwellInternational';
+  static const _minorName = 'maxwellInternational';
 
   static const _ratio = 1.000331e-8;
 
@@ -479,8 +491,9 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
   MagneticFlux$MaxwellInternational get _clone =>
       MagneticFlux$MaxwellInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$MaxwellInternational] with new value
   @override
@@ -493,6 +506,7 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
   @override
   String get symbol => 'Mx';
 
+  /// [MagneticFlux$MaxwellInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -524,7 +538,7 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
         unit.toTeslaMeterSquare.value,
       );
 
-  static const _minorName = r'magneticFlux$TeslaMeterSquare';
+  static const _minorName = 'teslaMeterSquare';
 
   static const _ratio = 1.0;
 
@@ -537,8 +551,9 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
   MagneticFlux$TeslaMeterSquare get _clone =>
       MagneticFlux$TeslaMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$TeslaMeterSquare] with new value
   @override
@@ -551,6 +566,7 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
   @override
   String get symbol => 'T m²';
 
+  /// [MagneticFlux$TeslaMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -582,7 +598,7 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
         unit.toTeslaCentimeterSquare.value,
       );
 
-  static const _minorName = r'magneticFlux$TeslaCentimeterSquare';
+  static const _minorName = 'teslaCentimeterSquare';
 
   static const _ratio = 0.0001;
 
@@ -595,8 +611,9 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
   MagneticFlux$TeslaCentimeterSquare get _clone =>
       MagneticFlux$TeslaCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$TeslaCentimeterSquare] with new value
   @override
@@ -609,6 +626,7 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
   @override
   String get symbol => 'T cm²';
 
+  /// [MagneticFlux$TeslaCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -640,7 +658,7 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
         unit.toGaussCentimeterSquare.value,
       );
 
-  static const _minorName = r'magneticFlux$GaussCentimeterSquare';
+  static const _minorName = 'gaussCentimeterSquare';
 
   static const _ratio = 1e-8;
 
@@ -653,8 +671,9 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
   MagneticFlux$GaussCentimeterSquare get _clone =>
       MagneticFlux$GaussCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFlux$GaussCentimeterSquare] with new value
   @override
@@ -667,6 +686,7 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
   @override
   String get symbol => 'G cm²';
 
+  /// [MagneticFlux$GaussCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

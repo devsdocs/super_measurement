@@ -125,7 +125,7 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
         unit.toMegajoulePerMeterCubic.value,
       );
 
-  static const _minorName = r'calorificValue$MegajoulePerMeterCubic';
+  static const _minorName = 'megajoulePerMeterCubic';
 
   static const _ratio = 26.839191732297994;
 
@@ -138,8 +138,9 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
   CalorificValue$MegajoulePerMeterCubic get _clone =>
       CalorificValue$MegajoulePerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$MegajoulePerMeterCubic] with new value
   @override
@@ -152,6 +153,7 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
   @override
   String get symbol => 'MJ/m³';
 
+  /// [CalorificValue$MegajoulePerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -183,7 +185,7 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
         unit.toKilojoulePerMeterCubic.value,
       );
 
-  static const _minorName = r'calorificValue$KilojoulePerMeterCubic';
+  static const _minorName = 'kilojoulePerMeterCubic';
 
   static const _ratio = 0.026839191732297995;
 
@@ -196,8 +198,9 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
   CalorificValue$KilojoulePerMeterCubic get _clone =>
       CalorificValue$KilojoulePerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$KilojoulePerMeterCubic] with new value
   @override
@@ -210,6 +213,7 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
   @override
   String get symbol => 'kJ/m³';
 
+  /// [CalorificValue$KilojoulePerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -241,7 +245,7 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
         unit.toJoulePerMeterCubic.value,
       );
 
-  static const _minorName = r'calorificValue$JoulePerMeterCubic';
+  static const _minorName = 'joulePerMeterCubic';
 
   static const _ratio = 0.000026839191732297995;
 
@@ -254,8 +258,9 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
   CalorificValue$JoulePerMeterCubic get _clone =>
       CalorificValue$JoulePerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$JoulePerMeterCubic] with new value
   @override
@@ -268,6 +273,7 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
   @override
   String get symbol => 'J/m³';
 
+  /// [CalorificValue$JoulePerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -299,7 +305,7 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
         unit.toKilocaloriePerMeterCubic.value,
       );
 
-  static const _minorName = r'calorificValue$KilocaloriePerMeterCubic';
+  static const _minorName = 'kilocaloriePerMeterCubic';
 
   static const _ratio = 0.11237032794478524;
 
@@ -312,8 +318,9 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
   CalorificValue$KilocaloriePerMeterCubic get _clone =>
       CalorificValue$KilocaloriePerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$KilocaloriePerMeterCubic] with new value
   @override
@@ -326,6 +333,7 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
   @override
   String get symbol => 'kcal/m³';
 
+  /// [CalorificValue$KilocaloriePerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -357,7 +365,7 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
         unit.toCaloriePerCentimeterCubic.value,
       );
 
-  static const _minorName = r'calorificValue$CaloriePerCentimeterCubic';
+  static const _minorName = 'caloriePerCentimeterCubic';
 
   static const _ratio = 112.37032794478525;
 
@@ -370,8 +378,9 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
   CalorificValue$CaloriePerCentimeterCubic get _clone =>
       CalorificValue$CaloriePerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$CaloriePerCentimeterCubic] with new value
   @override
@@ -384,6 +393,7 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
   @override
   String get symbol => 'cal/cm³';
 
+  /// [CalorificValue$CaloriePerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -415,7 +425,7 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
         unit.toThermPerFootCubic.value,
       );
 
-  static const _minorName = r'calorificValue$ThermPerFootCubic';
+  static const _minorName = 'thermPerFootCubic';
 
   static const _ratio = 100000.0;
 
@@ -428,8 +438,9 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
   CalorificValue$ThermPerFootCubic get _clone =>
       CalorificValue$ThermPerFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$ThermPerFootCubic] with new value
   @override
@@ -442,6 +453,7 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
   @override
   String get symbol => 'thm/ft³';
 
+  /// [CalorificValue$ThermPerFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -473,7 +485,7 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
         unit.toThermPerGallonUK.value,
       );
 
-  static const _minorName = r'calorificValue$ThermPerGallonUK';
+  static const _minorName = 'thermPerGallonUK';
 
   static const _ratio = 622883.5459840919;
 
@@ -486,8 +498,9 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
   CalorificValue$ThermPerGallonUK get _clone =>
       CalorificValue$ThermPerGallonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$ThermPerGallonUK] with new value
   @override
@@ -500,6 +513,7 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
   @override
   String get symbol => 'thm/gal';
 
+  /// [CalorificValue$ThermPerGallonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -531,7 +545,7 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
         unit.toBTUPerFootCubic.value,
       );
 
-  static const _minorName = r'calorificValue$BTUPerFootCubic';
+  static const _minorName = 'bTUPerFootCubic';
 
   static const _ratio = 1.0;
 
@@ -544,8 +558,9 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
   CalorificValue$BTUPerFootCubic get _clone =>
       CalorificValue$BTUPerFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$BTUPerFootCubic] with new value
   @override
@@ -558,6 +573,7 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
   @override
   String get symbol => 'BTU/ft³';
 
+  /// [CalorificValue$BTUPerFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -589,7 +605,7 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
         unit.toCHUPerFootCubic.value,
       );
 
-  static const _minorName = r'calorificValue$CHUPerFootCubic';
+  static const _minorName = 'cHUPerFootCubic';
 
   static const _ratio = 1.7999999998389649;
 
@@ -602,8 +618,9 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
   CalorificValue$CHUPerFootCubic get _clone =>
       CalorificValue$CHUPerFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [CalorificValue$CHUPerFootCubic] with new value
   @override
@@ -616,6 +633,7 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
   @override
   String get symbol => 'CHU/ft³';
 
+  /// [CalorificValue$CHUPerFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

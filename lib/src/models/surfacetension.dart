@@ -116,7 +116,7 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
         unit.toNewtonPerMeter.value,
       );
 
-  static const _minorName = r'surfaceTension$NewtonPerMeter';
+  static const _minorName = 'newtonPerMeter';
 
   static const _ratio = 1000.0;
 
@@ -129,8 +129,9 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
   SurfaceTension$NewtonPerMeter get _clone =>
       SurfaceTension$NewtonPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceTension$NewtonPerMeter] with new value
   @override
@@ -143,6 +144,7 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
   @override
   String get symbol => 'N/m';
 
+  /// [SurfaceTension$NewtonPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -174,7 +176,7 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
         unit.toMillinewtonPerMeter.value,
       );
 
-  static const _minorName = r'surfaceTension$MillinewtonPerMeter';
+  static const _minorName = 'millinewtonPerMeter';
 
   static const _ratio = 1.0;
 
@@ -187,8 +189,9 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
   SurfaceTension$MillinewtonPerMeter get _clone =>
       SurfaceTension$MillinewtonPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceTension$MillinewtonPerMeter] with new value
   @override
@@ -201,6 +204,7 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
   @override
   String get symbol => 'mN/m';
 
+  /// [SurfaceTension$MillinewtonPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -232,7 +236,7 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
         unit.toGramForcePerCentimeter.value,
       );
 
-  static const _minorName = r'surfaceTension$GramForcePerCentimeter';
+  static const _minorName = 'gramForcePerCentimeter';
 
   static const _ratio = 980.6649999787735;
 
@@ -245,8 +249,9 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
   SurfaceTension$GramForcePerCentimeter get _clone =>
       SurfaceTension$GramForcePerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceTension$GramForcePerCentimeter] with new value
   @override
@@ -259,6 +264,7 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
   @override
   String get symbol => 'gf/cm';
 
+  /// [SurfaceTension$GramForcePerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -290,7 +296,7 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
         unit.toDynePerCentimeter.value,
       );
 
-  static const _minorName = r'surfaceTension$DynePerCentimeter';
+  static const _minorName = 'dynePerCentimeter';
 
   static const _ratio = 1.0;
 
@@ -303,8 +309,9 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
   SurfaceTension$DynePerCentimeter get _clone =>
       SurfaceTension$DynePerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceTension$DynePerCentimeter] with new value
   @override
@@ -317,6 +324,7 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
   @override
   String get symbol => 'dyn/cm';
 
+  /// [SurfaceTension$DynePerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -348,7 +356,7 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
         unit.toErgPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'surfaceTension$ErgPerCentimeterSquare';
+  static const _minorName = 'ergPerCentimeterSquare';
 
   static const _ratio = 1.0;
 
@@ -361,8 +369,9 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
   SurfaceTension$ErgPerCentimeterSquare get _clone =>
       SurfaceTension$ErgPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceTension$ErgPerCentimeterSquare] with new value
   @override
@@ -373,8 +382,9 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
 
   /// Symbol for [SurfaceTension$ErgPerCentimeterSquare]
   @override
-  String get symbol => 'ErgPerCentimeterSquare';
+  String get symbol => 'erg/centimeter²';
 
+  /// [SurfaceTension$ErgPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -406,7 +416,7 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
         unit.toErgPerMillimeterSquare.value,
       );
 
-  static const _minorName = r'surfaceTension$ErgPerMillimeterSquare';
+  static const _minorName = 'ergPerMillimeterSquare';
 
   static const _ratio = 100.0;
 
@@ -419,8 +429,9 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
   SurfaceTension$ErgPerMillimeterSquare get _clone =>
       SurfaceTension$ErgPerMillimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceTension$ErgPerMillimeterSquare] with new value
   @override
@@ -431,8 +442,9 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
 
   /// Symbol for [SurfaceTension$ErgPerMillimeterSquare]
   @override
-  String get symbol => 'ErgPerMillimeterSquare';
+  String get symbol => 'erg/millimeter²';
 
+  /// [SurfaceTension$ErgPerMillimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -464,7 +476,7 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
         unit.toPoundalPerInch.value,
       );
 
-  static const _minorName = r'surfaceTension$PoundalPerInch';
+  static const _minorName = 'poundalPerInch';
 
   static const _ratio = 5443.108492;
 
@@ -477,8 +489,9 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
   SurfaceTension$PoundalPerInch get _clone =>
       SurfaceTension$PoundalPerInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceTension$PoundalPerInch] with new value
   @override
@@ -491,6 +504,7 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
   @override
   String get symbol => 'pdl/in';
 
+  /// [SurfaceTension$PoundalPerInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -522,7 +536,7 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
         unit.toPoundForcePerInch.value,
       );
 
-  static const _minorName = r'surfaceTension$PoundForcePerInch';
+  static const _minorName = 'poundForcePerInch';
 
   static const _ratio = 175126.837;
 
@@ -535,8 +549,9 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
   SurfaceTension$PoundForcePerInch get _clone =>
       SurfaceTension$PoundForcePerInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceTension$PoundForcePerInch] with new value
   @override
@@ -549,6 +564,7 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
   @override
   String get symbol => 'lbf/in';
 
+  /// [SurfaceTension$PoundForcePerInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

@@ -143,7 +143,7 @@ final class EUCurrency$EuroEUR extends EUCurrency {
         unit.toEuroEUR.value,
       );
 
-  static const _minorName = r'eUCurrency$EuroEUR';
+  static const _minorName = 'euroEUR';
 
   static const _ratio = 1.0;
 
@@ -155,8 +155,9 @@ final class EUCurrency$EuroEUR extends EUCurrency {
   @override
   EUCurrency$EuroEUR get _clone => EUCurrency$EuroEUR(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$EuroEUR] with new value
   @override
@@ -169,6 +170,7 @@ final class EUCurrency$EuroEUR extends EUCurrency {
   @override
   String get symbol => 'EUR';
 
+  /// [EUCurrency$EuroEUR] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -200,7 +202,7 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
         unit.toIrishPoundIEP.value,
       );
 
-  static const _minorName = r'eUCurrency$IrishPoundIEP';
+  static const _minorName = 'irishPoundIEP';
 
   static const _ratio = 1.269738078;
 
@@ -212,8 +214,9 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
   @override
   EUCurrency$IrishPoundIEP get _clone => EUCurrency$IrishPoundIEP(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$IrishPoundIEP] with new value
   @override
@@ -226,6 +229,7 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
   @override
   String get symbol => 'IEP';
 
+  /// [EUCurrency$IrishPoundIEP] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -257,7 +261,7 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
         unit.toDeutschMarkDEM.value,
       );
 
-  static const _minorName = r'eUCurrency$DeutschMarkDEM';
+  static const _minorName = 'deutschMarkDEM';
 
   static const _ratio = 0.5112918812;
 
@@ -269,8 +273,9 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
   @override
   EUCurrency$DeutschMarkDEM get _clone => EUCurrency$DeutschMarkDEM(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$DeutschMarkDEM] with new value
   @override
@@ -283,6 +288,7 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
   @override
   String get symbol => 'DEM';
 
+  /// [EUCurrency$DeutschMarkDEM] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -314,7 +320,7 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
         unit.toDutchGuildenNLG.value,
       );
 
-  static const _minorName = r'eUCurrency$DutchGuildenNLG';
+  static const _minorName = 'dutchGuildenNLG';
 
   static const _ratio = 0.4537802161;
 
@@ -326,8 +332,9 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
   @override
   EUCurrency$DutchGuildenNLG get _clone => EUCurrency$DutchGuildenNLG(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$DutchGuildenNLG] with new value
   @override
@@ -340,6 +347,7 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
   @override
   String get symbol => 'NLG';
 
+  /// [EUCurrency$DutchGuildenNLG] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -371,7 +379,7 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
         unit.toFinnishMarkFIM.value,
       );
 
-  static const _minorName = r'eUCurrency$FinnishMarkFIM';
+  static const _minorName = 'finnishMarkFIM';
 
   static const _ratio = 0.1681879265;
 
@@ -383,8 +391,9 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
   @override
   EUCurrency$FinnishMarkFIM get _clone => EUCurrency$FinnishMarkFIM(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$FinnishMarkFIM] with new value
   @override
@@ -397,6 +406,7 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
   @override
   String get symbol => 'FIM';
 
+  /// [EUCurrency$FinnishMarkFIM] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -428,7 +438,7 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
         unit.toFrenchFrancFRF.value,
       );
 
-  static const _minorName = r'eUCurrency$FrenchFrancFRF';
+  static const _minorName = 'frenchFrancFRF';
 
   static const _ratio = 0.1524490172;
 
@@ -440,8 +450,9 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
   @override
   EUCurrency$FrenchFrancFRF get _clone => EUCurrency$FrenchFrancFRF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$FrenchFrancFRF] with new value
   @override
@@ -454,6 +465,7 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
   @override
   String get symbol => 'FRF';
 
+  /// [EUCurrency$FrenchFrancFRF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -485,7 +497,7 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
         unit.toAustrianSchillingATS.value,
       );
 
-  static const _minorName = r'eUCurrency$AustrianSchillingATS';
+  static const _minorName = 'austrianSchillingATS';
 
   static const _ratio = 0.07267283417;
 
@@ -498,8 +510,9 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
   EUCurrency$AustrianSchillingATS get _clone =>
       EUCurrency$AustrianSchillingATS(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$AustrianSchillingATS] with new value
   @override
@@ -512,6 +525,7 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
   @override
   String get symbol => 'ATS';
 
+  /// [EUCurrency$AustrianSchillingATS] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -543,7 +557,7 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
         unit.toBelgianFrancBEF.value,
       );
 
-  static const _minorName = r'eUCurrency$BelgianFrancBEF';
+  static const _minorName = 'belgianFrancBEF';
 
   static const _ratio = 0.02478935248;
 
@@ -555,8 +569,9 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
   @override
   EUCurrency$BelgianFrancBEF get _clone => EUCurrency$BelgianFrancBEF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$BelgianFrancBEF] with new value
   @override
@@ -569,6 +584,7 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
   @override
   String get symbol => 'BEF';
 
+  /// [EUCurrency$BelgianFrancBEF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -600,7 +616,7 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
         unit.toLuxembourgFrancLUF.value,
       );
 
-  static const _minorName = r'eUCurrency$LuxembourgFrancLUF';
+  static const _minorName = 'luxembourgFrancLUF';
 
   static const _ratio = 0.02478935248;
 
@@ -613,8 +629,9 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
   EUCurrency$LuxembourgFrancLUF get _clone =>
       EUCurrency$LuxembourgFrancLUF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$LuxembourgFrancLUF] with new value
   @override
@@ -627,6 +644,7 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
   @override
   String get symbol => 'LUF';
 
+  /// [EUCurrency$LuxembourgFrancLUF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -658,7 +676,7 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
         unit.toSpanishPesetaESP.value,
       );
 
-  static const _minorName = r'eUCurrency$SpanishPesetaESP';
+  static const _minorName = 'spanishPesetaESP';
 
   static const _ratio = 0.006010121044;
 
@@ -670,8 +688,9 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
   @override
   EUCurrency$SpanishPesetaESP get _clone => EUCurrency$SpanishPesetaESP(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$SpanishPesetaESP] with new value
   @override
@@ -684,6 +703,7 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
   @override
   String get symbol => 'ESP';
 
+  /// [EUCurrency$SpanishPesetaESP] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -715,7 +735,7 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
         unit.toPortugueseEscudoPTE.value,
       );
 
-  static const _minorName = r'eUCurrency$PortugueseEscudoPTE';
+  static const _minorName = 'portugueseEscudoPTE';
 
   static const _ratio = 0.004987978971;
 
@@ -728,8 +748,9 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
   EUCurrency$PortugueseEscudoPTE get _clone =>
       EUCurrency$PortugueseEscudoPTE(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$PortugueseEscudoPTE] with new value
   @override
@@ -742,6 +763,7 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
   @override
   String get symbol => 'PTE';
 
+  /// [EUCurrency$PortugueseEscudoPTE] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -773,7 +795,7 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
         unit.toItalianLireITL.value,
       );
 
-  static const _minorName = r'eUCurrency$ItalianLireITL';
+  static const _minorName = 'italianLireITL';
 
   static const _ratio = 0.0005164568991;
 
@@ -785,8 +807,9 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
   @override
   EUCurrency$ItalianLireITL get _clone => EUCurrency$ItalianLireITL(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$ItalianLireITL] with new value
   @override
@@ -799,6 +822,7 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
   @override
   String get symbol => 'ITL';
 
+  /// [EUCurrency$ItalianLireITL] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -830,7 +854,7 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
         unit.toGreekDrachmaGRD.value,
       );
 
-  static const _minorName = r'eUCurrency$GreekDrachmaGRD';
+  static const _minorName = 'greekDrachmaGRD';
 
   static const _ratio = 0.00293470286133529;
 
@@ -842,8 +866,9 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
   @override
   EUCurrency$GreekDrachmaGRD get _clone => EUCurrency$GreekDrachmaGRD(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [EUCurrency$GreekDrachmaGRD] with new value
   @override
@@ -856,6 +881,7 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
   @override
   String get symbol => 'GRD';
 
+  /// [EUCurrency$GreekDrachmaGRD] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

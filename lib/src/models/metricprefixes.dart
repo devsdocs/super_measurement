@@ -190,7 +190,7 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
         unit.toYotta.value,
       );
 
-  static const _minorName = r'metricPrefixes$Yotta';
+  static const _minorName = 'yotta';
 
   static const _ratio = 1e+24;
 
@@ -202,8 +202,9 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
   @override
   MetricPrefixes$Yotta get _clone => MetricPrefixes$Yotta(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Yotta] with new value
   @override
@@ -216,6 +217,7 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
   @override
   String get symbol => 'Y';
 
+  /// [MetricPrefixes$Yotta] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -247,7 +249,7 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
         unit.toZetta.value,
       );
 
-  static const _minorName = r'metricPrefixes$Zetta';
+  static const _minorName = 'zetta';
 
   static const _ratio = 1e+21;
 
@@ -259,8 +261,9 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
   @override
   MetricPrefixes$Zetta get _clone => MetricPrefixes$Zetta(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Zetta] with new value
   @override
@@ -273,6 +276,7 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
   @override
   String get symbol => 'Z';
 
+  /// [MetricPrefixes$Zetta] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -304,7 +308,7 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
         unit.toExa.value,
       );
 
-  static const _minorName = r'metricPrefixes$Exa';
+  static const _minorName = 'exa';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -316,8 +320,9 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
   @override
   MetricPrefixes$Exa get _clone => MetricPrefixes$Exa(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Exa] with new value
   @override
@@ -330,6 +335,7 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
   @override
   String get symbol => 'E';
 
+  /// [MetricPrefixes$Exa] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -361,7 +367,7 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
         unit.toPeta.value,
       );
 
-  static const _minorName = r'metricPrefixes$Peta';
+  static const _minorName = 'peta';
 
   static const _ratio = 1000000000000000.0;
 
@@ -373,8 +379,9 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
   @override
   MetricPrefixes$Peta get _clone => MetricPrefixes$Peta(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Peta] with new value
   @override
@@ -387,6 +394,7 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
   @override
   String get symbol => 'P';
 
+  /// [MetricPrefixes$Peta] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -418,7 +426,7 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
         unit.toTera.value,
       );
 
-  static const _minorName = r'metricPrefixes$Tera';
+  static const _minorName = 'tera';
 
   static const _ratio = 1000000000000.0;
 
@@ -430,8 +438,9 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
   @override
   MetricPrefixes$Tera get _clone => MetricPrefixes$Tera(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Tera] with new value
   @override
@@ -444,6 +453,7 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
   @override
   String get symbol => 'T';
 
+  /// [MetricPrefixes$Tera] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -475,7 +485,7 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
         unit.toGiga.value,
       );
 
-  static const _minorName = r'metricPrefixes$Giga';
+  static const _minorName = 'giga';
 
   static const _ratio = 1000000000.0;
 
@@ -487,8 +497,9 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
   @override
   MetricPrefixes$Giga get _clone => MetricPrefixes$Giga(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Giga] with new value
   @override
@@ -501,6 +512,7 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
   @override
   String get symbol => 'G';
 
+  /// [MetricPrefixes$Giga] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -532,7 +544,7 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
         unit.toMega.value,
       );
 
-  static const _minorName = r'metricPrefixes$Mega';
+  static const _minorName = 'mega';
 
   static const _ratio = 1000000.0;
 
@@ -544,8 +556,9 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
   @override
   MetricPrefixes$Mega get _clone => MetricPrefixes$Mega(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Mega] with new value
   @override
@@ -558,6 +571,7 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
   @override
   String get symbol => 'M';
 
+  /// [MetricPrefixes$Mega] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -589,7 +603,7 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
         unit.toKilo.value,
       );
 
-  static const _minorName = r'metricPrefixes$Kilo';
+  static const _minorName = 'kilo';
 
   static const _ratio = 1000.0;
 
@@ -601,8 +615,9 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
   @override
   MetricPrefixes$Kilo get _clone => MetricPrefixes$Kilo(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Kilo] with new value
   @override
@@ -615,6 +630,7 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
   @override
   String get symbol => 'k';
 
+  /// [MetricPrefixes$Kilo] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -646,7 +662,7 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
         unit.toHecto.value,
       );
 
-  static const _minorName = r'metricPrefixes$Hecto';
+  static const _minorName = 'hecto';
 
   static const _ratio = 100.0;
 
@@ -658,8 +674,9 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
   @override
   MetricPrefixes$Hecto get _clone => MetricPrefixes$Hecto(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Hecto] with new value
   @override
@@ -672,6 +689,7 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
   @override
   String get symbol => 'h';
 
+  /// [MetricPrefixes$Hecto] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -703,7 +721,7 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
         unit.toDeka.value,
       );
 
-  static const _minorName = r'metricPrefixes$Deka';
+  static const _minorName = 'deka';
 
   static const _ratio = 10.0;
 
@@ -715,8 +733,9 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
   @override
   MetricPrefixes$Deka get _clone => MetricPrefixes$Deka(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Deka] with new value
   @override
@@ -729,6 +748,7 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
   @override
   String get symbol => 'da';
 
+  /// [MetricPrefixes$Deka] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -760,7 +780,7 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
         unit.toMetricUnit.value,
       );
 
-  static const _minorName = r'metricPrefixes$MetricUnit';
+  static const _minorName = 'metricUnit';
 
   static const _ratio = 1.0;
 
@@ -772,8 +792,9 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
   @override
   MetricPrefixes$MetricUnit get _clone => MetricPrefixes$MetricUnit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$MetricUnit] with new value
   @override
@@ -784,8 +805,9 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
 
   /// Symbol for [MetricPrefixes$MetricUnit]
   @override
-  String get symbol => 'MetricUnit';
+  String get symbol => '-';
 
+  /// [MetricPrefixes$MetricUnit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -817,7 +839,7 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
         unit.toDeci.value,
       );
 
-  static const _minorName = r'metricPrefixes$Deci';
+  static const _minorName = 'deci';
 
   static const _ratio = 0.1;
 
@@ -829,8 +851,9 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
   @override
   MetricPrefixes$Deci get _clone => MetricPrefixes$Deci(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Deci] with new value
   @override
@@ -843,6 +866,7 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
   @override
   String get symbol => 'd';
 
+  /// [MetricPrefixes$Deci] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -874,7 +898,7 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
         unit.toCenti.value,
       );
 
-  static const _minorName = r'metricPrefixes$Centi';
+  static const _minorName = 'centi';
 
   static const _ratio = 0.01;
 
@@ -886,8 +910,9 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
   @override
   MetricPrefixes$Centi get _clone => MetricPrefixes$Centi(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Centi] with new value
   @override
@@ -900,6 +925,7 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
   @override
   String get symbol => 'c';
 
+  /// [MetricPrefixes$Centi] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -931,7 +957,7 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
         unit.toMilli.value,
       );
 
-  static const _minorName = r'metricPrefixes$Milli';
+  static const _minorName = 'milli';
 
   static const _ratio = 0.001;
 
@@ -943,8 +969,9 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
   @override
   MetricPrefixes$Milli get _clone => MetricPrefixes$Milli(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Milli] with new value
   @override
@@ -957,6 +984,7 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
   @override
   String get symbol => 'm';
 
+  /// [MetricPrefixes$Milli] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -988,7 +1016,7 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
         unit.toMicro.value,
       );
 
-  static const _minorName = r'metricPrefixes$Micro';
+  static const _minorName = 'micro';
 
   static const _ratio = 0.000001;
 
@@ -1000,8 +1028,9 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
   @override
   MetricPrefixes$Micro get _clone => MetricPrefixes$Micro(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Micro] with new value
   @override
@@ -1014,6 +1043,7 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
   @override
   String get symbol => 'µ';
 
+  /// [MetricPrefixes$Micro] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1045,7 +1075,7 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
         unit.toNano.value,
       );
 
-  static const _minorName = r'metricPrefixes$Nano';
+  static const _minorName = 'nano';
 
   static const _ratio = 1e-9;
 
@@ -1057,8 +1087,9 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
   @override
   MetricPrefixes$Nano get _clone => MetricPrefixes$Nano(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Nano] with new value
   @override
@@ -1071,6 +1102,7 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
   @override
   String get symbol => 'n';
 
+  /// [MetricPrefixes$Nano] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1102,7 +1134,7 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
         unit.toPico.value,
       );
 
-  static const _minorName = r'metricPrefixes$Pico';
+  static const _minorName = 'pico';
 
   static const _ratio = 1e-12;
 
@@ -1114,8 +1146,9 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
   @override
   MetricPrefixes$Pico get _clone => MetricPrefixes$Pico(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Pico] with new value
   @override
@@ -1128,6 +1161,7 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
   @override
   String get symbol => 'p';
 
+  /// [MetricPrefixes$Pico] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1159,7 +1193,7 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
         unit.toFemto.value,
       );
 
-  static const _minorName = r'metricPrefixes$Femto';
+  static const _minorName = 'femto';
 
   static const _ratio = 1e-15;
 
@@ -1171,8 +1205,9 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
   @override
   MetricPrefixes$Femto get _clone => MetricPrefixes$Femto(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Femto] with new value
   @override
@@ -1185,6 +1220,7 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
   @override
   String get symbol => 'f';
 
+  /// [MetricPrefixes$Femto] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1216,7 +1252,7 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
         unit.toAtto.value,
       );
 
-  static const _minorName = r'metricPrefixes$Atto';
+  static const _minorName = 'atto';
 
   static const _ratio = 1e-18;
 
@@ -1228,8 +1264,9 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
   @override
   MetricPrefixes$Atto get _clone => MetricPrefixes$Atto(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Atto] with new value
   @override
@@ -1242,6 +1279,7 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
   @override
   String get symbol => 'a';
 
+  /// [MetricPrefixes$Atto] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1273,7 +1311,7 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
         unit.toZepto.value,
       );
 
-  static const _minorName = r'metricPrefixes$Zepto';
+  static const _minorName = 'zepto';
 
   static const _ratio = 1e-21;
 
@@ -1285,8 +1323,9 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
   @override
   MetricPrefixes$Zepto get _clone => MetricPrefixes$Zepto(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Zepto] with new value
   @override
@@ -1299,6 +1338,7 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
   @override
   String get symbol => 'z';
 
+  /// [MetricPrefixes$Zepto] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1330,7 +1370,7 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
         unit.toYocto.value,
       );
 
-  static const _minorName = r'metricPrefixes$Yocto';
+  static const _minorName = 'yocto';
 
   static const _ratio = 1e-24;
 
@@ -1342,8 +1382,9 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
   @override
   MetricPrefixes$Yocto get _clone => MetricPrefixes$Yocto(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Yocto] with new value
   @override
@@ -1356,6 +1397,7 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
   @override
   String get symbol => 'y';
 
+  /// [MetricPrefixes$Yocto] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

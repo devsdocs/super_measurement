@@ -89,7 +89,7 @@ final class Temperature$Kelvin extends Temperature {
         unit.toKelvin.value,
       );
 
-  static const _minorName = r'temperature$Kelvin';
+  static const _minorName = 'kelvin';
 
   static const _ratio = 1.8;
 
@@ -101,8 +101,9 @@ final class Temperature$Kelvin extends Temperature {
   @override
   Temperature$Kelvin get _clone => Temperature$Kelvin(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Temperature$Kelvin] with new value
   @override
@@ -115,6 +116,7 @@ final class Temperature$Kelvin extends Temperature {
   @override
   String get symbol => 'K';
 
+  /// [Temperature$Kelvin] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -146,11 +148,13 @@ final class Temperature$Celsius extends Temperature {
         unit.toCelsius.value,
       );
 
-  static const _minorName = r'temperature$Celsius';
+  static const _minorName = 'celsius';
 
   static const _ratio = 1.8;
 
   /// 1 [Temperature$Celsius] ≈ 1.8 [Temperature$Rankine]
+  ///
+  /// See [_valueShift]
   @override
   num get ratio => _ratio;
 
@@ -158,8 +162,9 @@ final class Temperature$Celsius extends Temperature {
   @override
   Temperature$Celsius get _clone => Temperature$Celsius(value);
 
+  /// 1 [Temperature$Celsius] = ((1 * [ratio]) + 491.67) [Temperature$Rankine]
   @override
-  num get _shiftValue => 491.67;
+  num get _valueShift => 491.67;
 
   /// Creating [Temperature$Celsius] with new value
   @override
@@ -172,6 +177,7 @@ final class Temperature$Celsius extends Temperature {
   @override
   String get symbol => '°C';
 
+  /// [Temperature$Celsius] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -203,11 +209,13 @@ final class Temperature$Fahrenheit extends Temperature {
         unit.toFahrenheit.value,
       );
 
-  static const _minorName = r'temperature$Fahrenheit';
+  static const _minorName = 'fahrenheit';
 
   static const _ratio = 1.0;
 
   /// 1 [Temperature$Fahrenheit] = 1.0 [Temperature$Rankine]
+  ///
+  /// See [_valueShift]
   @override
   num get ratio => _ratio;
 
@@ -215,8 +223,9 @@ final class Temperature$Fahrenheit extends Temperature {
   @override
   Temperature$Fahrenheit get _clone => Temperature$Fahrenheit(value);
 
+  /// 1 [Temperature$Fahrenheit] = ((1 * [ratio]) + 459.67) [Temperature$Rankine]
   @override
-  num get _shiftValue => 459.67;
+  num get _valueShift => 459.67;
 
   /// Creating [Temperature$Fahrenheit] with new value
   @override
@@ -229,6 +238,7 @@ final class Temperature$Fahrenheit extends Temperature {
   @override
   String get symbol => '°F';
 
+  /// [Temperature$Fahrenheit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -260,7 +270,7 @@ final class Temperature$Rankine extends Temperature {
         unit.toRankine.value,
       );
 
-  static const _minorName = r'temperature$Rankine';
+  static const _minorName = 'rankine';
 
   static const _ratio = 1.0;
 
@@ -272,8 +282,9 @@ final class Temperature$Rankine extends Temperature {
   @override
   Temperature$Rankine get _clone => Temperature$Rankine(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Temperature$Rankine] with new value
   @override
@@ -286,6 +297,7 @@ final class Temperature$Rankine extends Temperature {
   @override
   String get symbol => '°R, °Ra';
 
+  /// [Temperature$Rankine] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -317,11 +329,13 @@ final class Temperature$Reaumur extends Temperature {
         unit.toReaumur.value,
       );
 
-  static const _minorName = r'temperature$Reaumur';
+  static const _minorName = 'reaumur';
 
   static const _ratio = 2.25;
 
   /// 1 [Temperature$Reaumur] ≈ 2.25 [Temperature$Rankine]
+  ///
+  /// See [_valueShift]
   @override
   num get ratio => _ratio;
 
@@ -329,8 +343,9 @@ final class Temperature$Reaumur extends Temperature {
   @override
   Temperature$Reaumur get _clone => Temperature$Reaumur(value);
 
+  /// 1 [Temperature$Reaumur] = ((1 * [ratio]) + 491.67) [Temperature$Rankine]
   @override
-  num get _shiftValue => 491.67;
+  num get _valueShift => 491.67;
 
   /// Creating [Temperature$Reaumur] with new value
   @override
@@ -343,6 +358,7 @@ final class Temperature$Reaumur extends Temperature {
   @override
   String get symbol => '°Ré';
 
+  /// [Temperature$Reaumur] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

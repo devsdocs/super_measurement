@@ -199,7 +199,7 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
         unit.toExastoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Exastoke';
+  static const _minorName = 'exastoke';
 
   static const _ratio = 100000000000000000000.0;
 
@@ -211,8 +211,9 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Exastoke get _clone => ViscosityKinematic$Exastoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Exastoke] with new value
   @override
@@ -225,6 +226,7 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
   @override
   String get symbol => 'ESt';
 
+  /// [ViscosityKinematic$Exastoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -256,7 +258,7 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
         unit.toPetastoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Petastoke';
+  static const _minorName = 'petastoke';
 
   static const _ratio = 100000000000000000.0;
 
@@ -269,8 +271,9 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
   ViscosityKinematic$Petastoke get _clone =>
       ViscosityKinematic$Petastoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Petastoke] with new value
   @override
@@ -283,6 +286,7 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
   @override
   String get symbol => 'PSt';
 
+  /// [ViscosityKinematic$Petastoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -314,7 +318,7 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
         unit.toTerastoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Terastoke';
+  static const _minorName = 'terastoke';
 
   static const _ratio = 100000000000000.0;
 
@@ -327,8 +331,9 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
   ViscosityKinematic$Terastoke get _clone =>
       ViscosityKinematic$Terastoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Terastoke] with new value
   @override
@@ -341,6 +346,7 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
   @override
   String get symbol => 'TSt';
 
+  /// [ViscosityKinematic$Terastoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -372,7 +378,7 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
         unit.toGigastoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Gigastoke';
+  static const _minorName = 'gigastoke';
 
   static const _ratio = 100000000000.0;
 
@@ -385,8 +391,9 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
   ViscosityKinematic$Gigastoke get _clone =>
       ViscosityKinematic$Gigastoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Gigastoke] with new value
   @override
@@ -399,6 +406,7 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
   @override
   String get symbol => 'GSt';
 
+  /// [ViscosityKinematic$Gigastoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -430,7 +438,7 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
         unit.toMegastoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Megastoke';
+  static const _minorName = 'megastoke';
 
   static const _ratio = 100000000.0;
 
@@ -443,8 +451,9 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
   ViscosityKinematic$Megastoke get _clone =>
       ViscosityKinematic$Megastoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Megastoke] with new value
   @override
@@ -457,6 +466,7 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
   @override
   String get symbol => 'MSt';
 
+  /// [ViscosityKinematic$Megastoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -488,7 +498,7 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
         unit.toKilostoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Kilostoke';
+  static const _minorName = 'kilostoke';
 
   static const _ratio = 100000.0;
 
@@ -501,8 +511,9 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
   ViscosityKinematic$Kilostoke get _clone =>
       ViscosityKinematic$Kilostoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Kilostoke] with new value
   @override
@@ -515,6 +526,7 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
   @override
   String get symbol => 'kSt';
 
+  /// [ViscosityKinematic$Kilostoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -546,7 +558,7 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
         unit.toHectostoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Hectostoke';
+  static const _minorName = 'hectostoke';
 
   static const _ratio = 10000.0;
 
@@ -559,8 +571,9 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
   ViscosityKinematic$Hectostoke get _clone =>
       ViscosityKinematic$Hectostoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Hectostoke] with new value
   @override
@@ -573,6 +586,7 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
   @override
   String get symbol => 'hSt';
 
+  /// [ViscosityKinematic$Hectostoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -604,7 +618,7 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
         unit.toDekastoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Dekastoke';
+  static const _minorName = 'dekastoke';
 
   static const _ratio = 1000.0;
 
@@ -617,8 +631,9 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
   ViscosityKinematic$Dekastoke get _clone =>
       ViscosityKinematic$Dekastoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Dekastoke] with new value
   @override
@@ -631,6 +646,7 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
   @override
   String get symbol => 'daSt';
 
+  /// [ViscosityKinematic$Dekastoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -662,7 +678,7 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
         unit.toStoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Stoke';
+  static const _minorName = 'stoke';
 
   static const _ratio = 100.0;
 
@@ -674,8 +690,9 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Stoke get _clone => ViscosityKinematic$Stoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Stoke] with new value
   @override
@@ -688,6 +705,7 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
   @override
   String get symbol => 'St';
 
+  /// [ViscosityKinematic$Stoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -719,7 +737,7 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
         unit.toDecistoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Decistoke';
+  static const _minorName = 'decistoke';
 
   static const _ratio = 10.0;
 
@@ -732,8 +750,9 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
   ViscosityKinematic$Decistoke get _clone =>
       ViscosityKinematic$Decistoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Decistoke] with new value
   @override
@@ -746,6 +765,7 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
   @override
   String get symbol => 'dSt';
 
+  /// [ViscosityKinematic$Decistoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -777,7 +797,7 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
         unit.toCentistoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Centistoke';
+  static const _minorName = 'centistoke';
 
   static const _ratio = 1.0;
 
@@ -790,8 +810,9 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
   ViscosityKinematic$Centistoke get _clone =>
       ViscosityKinematic$Centistoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Centistoke] with new value
   @override
@@ -804,6 +825,7 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
   @override
   String get symbol => 'cSt';
 
+  /// [ViscosityKinematic$Centistoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -835,7 +857,7 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
         unit.toMillistoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Millistoke';
+  static const _minorName = 'millistoke';
 
   static const _ratio = 0.1;
 
@@ -848,8 +870,9 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
   ViscosityKinematic$Millistoke get _clone =>
       ViscosityKinematic$Millistoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Millistoke] with new value
   @override
@@ -862,6 +885,7 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
   @override
   String get symbol => 'mSt';
 
+  /// [ViscosityKinematic$Millistoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -893,7 +917,7 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
         unit.toMicrostoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Microstoke';
+  static const _minorName = 'microstoke';
 
   static const _ratio = 0.0001;
 
@@ -906,8 +930,9 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
   ViscosityKinematic$Microstoke get _clone =>
       ViscosityKinematic$Microstoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Microstoke] with new value
   @override
@@ -920,6 +945,7 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
   @override
   String get symbol => 'µSt';
 
+  /// [ViscosityKinematic$Microstoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -951,7 +977,7 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
         unit.toNanostoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Nanostoke';
+  static const _minorName = 'nanostoke';
 
   static const _ratio = 1e-7;
 
@@ -964,8 +990,9 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
   ViscosityKinematic$Nanostoke get _clone =>
       ViscosityKinematic$Nanostoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Nanostoke] with new value
   @override
@@ -978,6 +1005,7 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
   @override
   String get symbol => 'nSt';
 
+  /// [ViscosityKinematic$Nanostoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1009,7 +1037,7 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
         unit.toPicostoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Picostoke';
+  static const _minorName = 'picostoke';
 
   static const _ratio = 1e-10;
 
@@ -1022,8 +1050,9 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
   ViscosityKinematic$Picostoke get _clone =>
       ViscosityKinematic$Picostoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Picostoke] with new value
   @override
@@ -1036,6 +1065,7 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
   @override
   String get symbol => 'pSt';
 
+  /// [ViscosityKinematic$Picostoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1067,7 +1097,7 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
         unit.toFemtostoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Femtostoke';
+  static const _minorName = 'femtostoke';
 
   static const _ratio = 1e-13;
 
@@ -1080,8 +1110,9 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
   ViscosityKinematic$Femtostoke get _clone =>
       ViscosityKinematic$Femtostoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Femtostoke] with new value
   @override
@@ -1094,6 +1125,7 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
   @override
   String get symbol => 'fSt';
 
+  /// [ViscosityKinematic$Femtostoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1125,7 +1157,7 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
         unit.toAttostoke.value,
       );
 
-  static const _minorName = r'viscosityKinematic$Attostoke';
+  static const _minorName = 'attostoke';
 
   static const _ratio = 1e-16;
 
@@ -1138,8 +1170,9 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
   ViscosityKinematic$Attostoke get _clone =>
       ViscosityKinematic$Attostoke(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Attostoke] with new value
   @override
@@ -1152,6 +1185,7 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
   @override
   String get symbol => 'aSt';
 
+  /// [ViscosityKinematic$Attostoke] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1183,7 +1217,7 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
         unit.toMeterSquarePerSecond.value,
       );
 
-  static const _minorName = r'viscosityKinematic$MeterSquarePerSecond';
+  static const _minorName = 'meterSquarePerSecond';
 
   static const _ratio = 1000000.0;
 
@@ -1196,8 +1230,9 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
   ViscosityKinematic$MeterSquarePerSecond get _clone =>
       ViscosityKinematic$MeterSquarePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$MeterSquarePerSecond] with new value
   @override
@@ -1210,6 +1245,7 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
   @override
   String get symbol => 'm²/s';
 
+  /// [ViscosityKinematic$MeterSquarePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1242,7 +1278,7 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
         unit.toCentimeterSquarePerSecond.value,
       );
 
-  static const _minorName = r'viscosityKinematic$CentimeterSquarePerSecond';
+  static const _minorName = 'centimeterSquarePerSecond';
 
   static const _ratio = 100.0;
 
@@ -1255,8 +1291,9 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
   ViscosityKinematic$CentimeterSquarePerSecond get _clone =>
       ViscosityKinematic$CentimeterSquarePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$CentimeterSquarePerSecond] with new value
   @override
@@ -1269,6 +1306,7 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
   @override
   String get symbol => 'cm²/s';
 
+  /// [ViscosityKinematic$CentimeterSquarePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1301,7 +1339,7 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
         unit.toMillimeterSquarePerSecond.value,
       );
 
-  static const _minorName = r'viscosityKinematic$MillimeterSquarePerSecond';
+  static const _minorName = 'millimeterSquarePerSecond';
 
   static const _ratio = 1.0;
 
@@ -1314,8 +1352,9 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
   ViscosityKinematic$MillimeterSquarePerSecond get _clone =>
       ViscosityKinematic$MillimeterSquarePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$MillimeterSquarePerSecond] with new value
   @override
@@ -1328,6 +1367,7 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
   @override
   String get symbol => 'mm²/s';
 
+  /// [ViscosityKinematic$MillimeterSquarePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1359,7 +1399,7 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
         unit.toFootSquarePerSecond.value,
       );
 
-  static const _minorName = r'viscosityKinematic$FootSquarePerSecond';
+  static const _minorName = 'footSquarePerSecond';
 
   static const _ratio = 92903.04000008391;
 
@@ -1372,8 +1412,9 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
   ViscosityKinematic$FootSquarePerSecond get _clone =>
       ViscosityKinematic$FootSquarePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$FootSquarePerSecond] with new value
   @override
@@ -1386,6 +1427,7 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
   @override
   String get symbol => 'ft²/s';
 
+  /// [ViscosityKinematic$FootSquarePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

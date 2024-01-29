@@ -93,7 +93,7 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
         unit.toKiloampereTurn.value,
       );
 
-  static const _minorName = r'magnetomotiveForce$KiloampereTurn';
+  static const _minorName = 'kiloampereTurn';
 
   static const _ratio = 1000.0;
 
@@ -106,8 +106,9 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
   MagnetomotiveForce$KiloampereTurn get _clone =>
       MagnetomotiveForce$KiloampereTurn(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$KiloampereTurn] with new value
   @override
@@ -120,6 +121,7 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
   @override
   String get symbol => 'kAt';
 
+  /// [MagnetomotiveForce$KiloampereTurn] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -151,7 +153,7 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
         unit.toAmpereTurn.value,
       );
 
-  static const _minorName = r'magnetomotiveForce$AmpereTurn';
+  static const _minorName = 'ampereTurn';
 
   static const _ratio = 1.0;
 
@@ -164,8 +166,9 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
   MagnetomotiveForce$AmpereTurn get _clone =>
       MagnetomotiveForce$AmpereTurn(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$AmpereTurn] with new value
   @override
@@ -178,6 +181,7 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
   @override
   String get symbol => 'At';
 
+  /// [MagnetomotiveForce$AmpereTurn] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -209,7 +213,7 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
         unit.toMilliampereTurn.value,
       );
 
-  static const _minorName = r'magnetomotiveForce$MilliampereTurn';
+  static const _minorName = 'milliampereTurn';
 
   static const _ratio = 0.001;
 
@@ -222,8 +226,9 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
   MagnetomotiveForce$MilliampereTurn get _clone =>
       MagnetomotiveForce$MilliampereTurn(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$MilliampereTurn] with new value
   @override
@@ -236,6 +241,7 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
   @override
   String get symbol => 'mAt';
 
+  /// [MagnetomotiveForce$MilliampereTurn] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -267,7 +273,7 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
         unit.toAbampereTurn.value,
       );
 
-  static const _minorName = r'magnetomotiveForce$AbampereTurn';
+  static const _minorName = 'abampereTurn';
 
   static const _ratio = 10.0;
 
@@ -280,8 +286,9 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
   MagnetomotiveForce$AbampereTurn get _clone =>
       MagnetomotiveForce$AbampereTurn(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$AbampereTurn] with new value
   @override
@@ -294,6 +301,7 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
   @override
   String get symbol => 'abAt';
 
+  /// [MagnetomotiveForce$AbampereTurn] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -325,7 +333,7 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
         unit.toGilbert.value,
       );
 
-  static const _minorName = r'magnetomotiveForce$Gilbert';
+  static const _minorName = 'gilbert';
 
   static const _ratio = 0.7957747151;
 
@@ -337,8 +345,9 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
   @override
   MagnetomotiveForce$Gilbert get _clone => MagnetomotiveForce$Gilbert(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$Gilbert] with new value
   @override
@@ -351,6 +360,7 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
   @override
   String get symbol => 'Gi';
 
+  /// [MagnetomotiveForce$Gilbert] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

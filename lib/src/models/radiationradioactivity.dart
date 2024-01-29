@@ -176,7 +176,7 @@ final class RadiationRadioactivity$Terabecquerel
         unit.toTerabecquerel.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Terabecquerel';
+  static const _minorName = 'terabecquerel';
 
   static const _ratio = 1000000000000000.0;
 
@@ -189,8 +189,9 @@ final class RadiationRadioactivity$Terabecquerel
   RadiationRadioactivity$Terabecquerel get _clone =>
       RadiationRadioactivity$Terabecquerel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Terabecquerel] with new value
   @override
@@ -203,6 +204,7 @@ final class RadiationRadioactivity$Terabecquerel
   @override
   String get symbol => 'TBq';
 
+  /// [RadiationRadioactivity$Terabecquerel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -235,7 +237,7 @@ final class RadiationRadioactivity$Gigabecquerel
         unit.toGigabecquerel.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Gigabecquerel';
+  static const _minorName = 'gigabecquerel';
 
   static const _ratio = 1000000000000.0;
 
@@ -248,8 +250,9 @@ final class RadiationRadioactivity$Gigabecquerel
   RadiationRadioactivity$Gigabecquerel get _clone =>
       RadiationRadioactivity$Gigabecquerel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Gigabecquerel] with new value
   @override
@@ -262,6 +265,7 @@ final class RadiationRadioactivity$Gigabecquerel
   @override
   String get symbol => 'GBq';
 
+  /// [RadiationRadioactivity$Gigabecquerel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -294,7 +298,7 @@ final class RadiationRadioactivity$Megabecquerel
         unit.toMegabecquerel.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Megabecquerel';
+  static const _minorName = 'megabecquerel';
 
   static const _ratio = 1000000000.0;
 
@@ -307,8 +311,9 @@ final class RadiationRadioactivity$Megabecquerel
   RadiationRadioactivity$Megabecquerel get _clone =>
       RadiationRadioactivity$Megabecquerel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Megabecquerel] with new value
   @override
@@ -321,6 +326,7 @@ final class RadiationRadioactivity$Megabecquerel
   @override
   String get symbol => 'MBq';
 
+  /// [RadiationRadioactivity$Megabecquerel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -353,7 +359,7 @@ final class RadiationRadioactivity$Kilobecquerel
         unit.toKilobecquerel.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Kilobecquerel';
+  static const _minorName = 'kilobecquerel';
 
   static const _ratio = 1000000.0;
 
@@ -366,8 +372,9 @@ final class RadiationRadioactivity$Kilobecquerel
   RadiationRadioactivity$Kilobecquerel get _clone =>
       RadiationRadioactivity$Kilobecquerel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Kilobecquerel] with new value
   @override
@@ -380,6 +387,7 @@ final class RadiationRadioactivity$Kilobecquerel
   @override
   String get symbol => 'kBq';
 
+  /// [RadiationRadioactivity$Kilobecquerel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -411,7 +419,7 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
         unit.toBecquerel.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Becquerel';
+  static const _minorName = 'becquerel';
 
   static const _ratio = 1000.0;
 
@@ -424,8 +432,9 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
   RadiationRadioactivity$Becquerel get _clone =>
       RadiationRadioactivity$Becquerel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Becquerel] with new value
   @override
@@ -438,6 +447,7 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
   @override
   String get symbol => 'Bq';
 
+  /// [RadiationRadioactivity$Becquerel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -470,7 +480,7 @@ final class RadiationRadioactivity$Millibecquerel
         unit.toMillibecquerel.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Millibecquerel';
+  static const _minorName = 'millibecquerel';
 
   static const _ratio = 1.0;
 
@@ -483,8 +493,9 @@ final class RadiationRadioactivity$Millibecquerel
   RadiationRadioactivity$Millibecquerel get _clone =>
       RadiationRadioactivity$Millibecquerel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Millibecquerel] with new value
   @override
@@ -497,6 +508,7 @@ final class RadiationRadioactivity$Millibecquerel
   @override
   String get symbol => 'mBq';
 
+  /// [RadiationRadioactivity$Millibecquerel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -528,7 +540,7 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
         unit.toKilocurie.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Kilocurie';
+  static const _minorName = 'kilocurie';
 
   static const _ratio = 37000000000000000.0;
 
@@ -541,8 +553,9 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
   RadiationRadioactivity$Kilocurie get _clone =>
       RadiationRadioactivity$Kilocurie(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Kilocurie] with new value
   @override
@@ -555,6 +568,7 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
   @override
   String get symbol => 'kCi';
 
+  /// [RadiationRadioactivity$Kilocurie] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -586,7 +600,7 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
         unit.toCurie.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Curie';
+  static const _minorName = 'curie';
 
   static const _ratio = 37000000000000.0;
 
@@ -599,8 +613,9 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
   RadiationRadioactivity$Curie get _clone =>
       RadiationRadioactivity$Curie(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Curie] with new value
   @override
@@ -613,6 +628,7 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
   @override
   String get symbol => 'Ci';
 
+  /// [RadiationRadioactivity$Curie] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -644,7 +660,7 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
         unit.toMillicurie.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Millicurie';
+  static const _minorName = 'millicurie';
 
   static const _ratio = 37000000000.0;
 
@@ -657,8 +673,9 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
   RadiationRadioactivity$Millicurie get _clone =>
       RadiationRadioactivity$Millicurie(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Millicurie] with new value
   @override
@@ -671,6 +688,7 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
   @override
   String get symbol => 'mCi';
 
+  /// [RadiationRadioactivity$Millicurie] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -702,7 +720,7 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
         unit.toMicrocurie.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Microcurie';
+  static const _minorName = 'microcurie';
 
   static const _ratio = 37000000.0;
 
@@ -715,8 +733,9 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
   RadiationRadioactivity$Microcurie get _clone =>
       RadiationRadioactivity$Microcurie(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Microcurie] with new value
   @override
@@ -729,6 +748,7 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
   @override
   String get symbol => 'µCi';
 
+  /// [RadiationRadioactivity$Microcurie] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -760,7 +780,7 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
         unit.toNanocurie.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Nanocurie';
+  static const _minorName = 'nanocurie';
 
   static const _ratio = 37000.0;
 
@@ -773,8 +793,9 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
   RadiationRadioactivity$Nanocurie get _clone =>
       RadiationRadioactivity$Nanocurie(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Nanocurie] with new value
   @override
@@ -787,6 +808,7 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
   @override
   String get symbol => 'nCi';
 
+  /// [RadiationRadioactivity$Nanocurie] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -818,7 +840,7 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
         unit.toPicocurie.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Picocurie';
+  static const _minorName = 'picocurie';
 
   static const _ratio = 37.0;
 
@@ -831,8 +853,9 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
   RadiationRadioactivity$Picocurie get _clone =>
       RadiationRadioactivity$Picocurie(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Picocurie] with new value
   @override
@@ -845,6 +868,7 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
   @override
   String get symbol => 'pCi';
 
+  /// [RadiationRadioactivity$Picocurie] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -876,7 +900,7 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
         unit.toRutherford.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$Rutherford';
+  static const _minorName = 'rutherford';
 
   static const _ratio = 1000000000.0;
 
@@ -889,8 +913,9 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
   RadiationRadioactivity$Rutherford get _clone =>
       RadiationRadioactivity$Rutherford(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Rutherford] with new value
   @override
@@ -903,6 +928,7 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
   @override
   String get symbol => 'Rd';
 
+  /// [RadiationRadioactivity$Rutherford] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -935,7 +961,7 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
         unit.toDisintegrationsPerSecond.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$DisintegrationsPerSecond';
+  static const _minorName = 'disintegrationsPerSecond';
 
   static const _ratio = 1000.0;
 
@@ -948,8 +974,9 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
   RadiationRadioactivity$DisintegrationsPerSecond get _clone =>
       RadiationRadioactivity$DisintegrationsPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$DisintegrationsPerSecond] with new value
   @override
@@ -960,8 +987,9 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
 
   /// Symbol for [RadiationRadioactivity$DisintegrationsPerSecond]
   @override
-  String get symbol => 'DisintegrationsPerSecond';
+  String get symbol => 'disintegrations/second';
 
+  /// [RadiationRadioactivity$DisintegrationsPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -994,7 +1022,7 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
         unit.toDisintegrationsPerMinute.value,
       );
 
-  static const _minorName = r'radiationRadioactivity$DisintegrationsPerMinute';
+  static const _minorName = 'disintegrationsPerMinute';
 
   static const _ratio = 16.666666666666668;
 
@@ -1007,8 +1035,9 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
   RadiationRadioactivity$DisintegrationsPerMinute get _clone =>
       RadiationRadioactivity$DisintegrationsPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$DisintegrationsPerMinute] with new value
   @override
@@ -1019,8 +1048,9 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
 
   /// Symbol for [RadiationRadioactivity$DisintegrationsPerMinute]
   @override
-  String get symbol => 'DisintegrationsPerMinute';
+  String get symbol => 'disintegrations/minute';
 
+  /// [RadiationRadioactivity$DisintegrationsPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

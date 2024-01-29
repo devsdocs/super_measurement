@@ -174,7 +174,7 @@ final class Luminance$Stilb extends Luminance {
         unit.toStilb.value,
       );
 
-  static const _minorName = r'luminance$Stilb';
+  static const _minorName = 'stilb';
 
   static const _ratio = 314159265358.9793;
 
@@ -186,8 +186,9 @@ final class Luminance$Stilb extends Luminance {
   @override
   Luminance$Stilb get _clone => Luminance$Stilb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Stilb] with new value
   @override
@@ -200,6 +201,7 @@ final class Luminance$Stilb extends Luminance {
   @override
   String get symbol => 'sb';
 
+  /// [Luminance$Stilb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -231,7 +233,7 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
         unit.toCandelaPerMeterSquare.value,
       );
 
-  static const _minorName = r'luminance$CandelaPerMeterSquare';
+  static const _minorName = 'candelaPerMeterSquare';
 
   static const _ratio = 31415926.535897933;
 
@@ -244,8 +246,9 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
   Luminance$CandelaPerMeterSquare get _clone =>
       Luminance$CandelaPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$CandelaPerMeterSquare] with new value
   @override
@@ -258,6 +261,7 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
   @override
   String get symbol => 'cd/m²';
 
+  /// [Luminance$CandelaPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -289,7 +293,7 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
         unit.toCandelaPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'luminance$CandelaPerCentimeterSquare';
+  static const _minorName = 'candelaPerCentimeterSquare';
 
   static const _ratio = 314159265358.9793;
 
@@ -302,8 +306,9 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
   Luminance$CandelaPerCentimeterSquare get _clone =>
       Luminance$CandelaPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$CandelaPerCentimeterSquare] with new value
   @override
@@ -316,6 +321,7 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
   @override
   String get symbol => 'cd/cm²';
 
+  /// [Luminance$CandelaPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -347,7 +353,7 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
         unit.toCandelaPerFootSquare.value,
       );
 
-  static const _minorName = r'luminance$CandelaPerFootSquare';
+  static const _minorName = 'candelaPerFootSquare';
 
   static const _ratio = 338158218.8900337;
 
@@ -360,8 +366,9 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
   Luminance$CandelaPerFootSquare get _clone =>
       Luminance$CandelaPerFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$CandelaPerFootSquare] with new value
   @override
@@ -374,6 +381,7 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
   @override
   String get symbol => 'cd/ft²';
 
+  /// [Luminance$CandelaPerFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -405,7 +413,7 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
         unit.toLumenPerMeterSquarePerSteradian.value,
       );
 
-  static const _minorName = r'luminance$LumenPerMeterSquarePerSteradian';
+  static const _minorName = 'lumenPerMeterSquarePerSteradian';
 
   static const _ratio = 31415926.535897933;
 
@@ -418,8 +426,9 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
   Luminance$LumenPerMeterSquarePerSteradian get _clone =>
       Luminance$LumenPerMeterSquarePerSteradian(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$LumenPerMeterSquarePerSteradian] with new value
   @override
@@ -432,6 +441,7 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
   @override
   String get symbol => 'lm/m²/sr';
 
+  /// [Luminance$LumenPerMeterSquarePerSteradian] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -463,7 +473,7 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
         unit.toLumenPerCentimeterSquarePerSteradian.value,
       );
 
-  static const _minorName = r'luminance$LumenPerCentimeterSquarePerSteradian';
+  static const _minorName = 'lumenPerCentimeterSquarePerSteradian';
 
   static const _ratio = 314159265358.9793;
 
@@ -476,8 +486,9 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
   Luminance$LumenPerCentimeterSquarePerSteradian get _clone =>
       Luminance$LumenPerCentimeterSquarePerSteradian(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$LumenPerCentimeterSquarePerSteradian] with new value
   @override
@@ -490,6 +501,7 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
   @override
   String get symbol => 'lm/cm²/sr';
 
+  /// [Luminance$LumenPerCentimeterSquarePerSteradian] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -521,7 +533,7 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
         unit.toLumenPerFootSquarePerSteradian.value,
       );
 
-  static const _minorName = r'luminance$LumenPerFootSquarePerSteradian';
+  static const _minorName = 'lumenPerFootSquarePerSteradian';
 
   static const _ratio = 338158218.8900337;
 
@@ -534,8 +546,9 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
   Luminance$LumenPerFootSquarePerSteradian get _clone =>
       Luminance$LumenPerFootSquarePerSteradian(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$LumenPerFootSquarePerSteradian] with new value
   @override
@@ -548,6 +561,7 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
   @override
   String get symbol => 'lm/ft²/sr';
 
+  /// [Luminance$LumenPerFootSquarePerSteradian] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -580,8 +594,7 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
         unit.toWattPerCentimeterSquarePerSteradianAt555nm.value,
       );
 
-  static const _minorName =
-      r'luminance$WattPerCentimeterSquarePerSteradianAt555nm';
+  static const _minorName = 'wattPerCentimeterSquarePerSteradianAt555nm';
 
   static const _ratio = 214570778240182.88;
 
@@ -594,8 +607,9 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
   Luminance$WattPerCentimeterSquarePerSteradianAt555nm get _clone =>
       Luminance$WattPerCentimeterSquarePerSteradianAt555nm(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$WattPerCentimeterSquarePerSteradianAt555nm] with new value
   @override
@@ -606,8 +620,9 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
 
   /// Symbol for [Luminance$WattPerCentimeterSquarePerSteradianAt555nm]
   @override
-  String get symbol => 'WattPerCentimeterSquarePerSteradianAt555nm';
+  String get symbol => 'watt/centimeter²/steradian (at 555nm)';
 
+  /// [Luminance$WattPerCentimeterSquarePerSteradianAt555nm] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -639,7 +654,7 @@ final class Luminance$Nit extends Luminance {
         unit.toNit.value,
       );
 
-  static const _minorName = r'luminance$Nit';
+  static const _minorName = 'nit';
 
   static const _ratio = 31415926.535897933;
 
@@ -651,8 +666,9 @@ final class Luminance$Nit extends Luminance {
   @override
   Luminance$Nit get _clone => Luminance$Nit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Nit] with new value
   @override
@@ -665,6 +681,7 @@ final class Luminance$Nit extends Luminance {
   @override
   String get symbol => 'nt';
 
+  /// [Luminance$Nit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -696,7 +713,7 @@ final class Luminance$Millinit extends Luminance {
         unit.toMillinit.value,
       );
 
-  static const _minorName = r'luminance$Millinit';
+  static const _minorName = 'millinit';
 
   static const _ratio = 31415.926535897932;
 
@@ -708,8 +725,9 @@ final class Luminance$Millinit extends Luminance {
   @override
   Luminance$Millinit get _clone => Luminance$Millinit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Millinit] with new value
   @override
@@ -722,6 +740,7 @@ final class Luminance$Millinit extends Luminance {
   @override
   String get symbol => 'mnt';
 
+  /// [Luminance$Millinit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -753,7 +772,7 @@ final class Luminance$FootLambert extends Luminance {
         unit.toFootLambert.value,
       );
 
-  static const _minorName = r'luminance$FootLambert';
+  static const _minorName = 'footLambert';
 
   static const _ratio = 107639104.167;
 
@@ -765,8 +784,9 @@ final class Luminance$FootLambert extends Luminance {
   @override
   Luminance$FootLambert get _clone => Luminance$FootLambert(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$FootLambert] with new value
   @override
@@ -779,6 +799,7 @@ final class Luminance$FootLambert extends Luminance {
   @override
   String get symbol => 'fL, ft-L';
 
+  /// [Luminance$FootLambert] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -810,7 +831,7 @@ final class Luminance$Lambert extends Luminance {
         unit.toLambert.value,
       );
 
-  static const _minorName = r'luminance$Lambert';
+  static const _minorName = 'lambert';
 
   static const _ratio = 100000000000.0;
 
@@ -822,8 +843,9 @@ final class Luminance$Lambert extends Luminance {
   @override
   Luminance$Lambert get _clone => Luminance$Lambert(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Lambert] with new value
   @override
@@ -836,6 +858,7 @@ final class Luminance$Lambert extends Luminance {
   @override
   String get symbol => 'L';
 
+  /// [Luminance$Lambert] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -867,7 +890,7 @@ final class Luminance$Millilambert extends Luminance {
         unit.toMillilambert.value,
       );
 
-  static const _minorName = r'luminance$Millilambert';
+  static const _minorName = 'millilambert';
 
   static const _ratio = 100000000.0;
 
@@ -879,8 +902,9 @@ final class Luminance$Millilambert extends Luminance {
   @override
   Luminance$Millilambert get _clone => Luminance$Millilambert(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Millilambert] with new value
   @override
@@ -893,6 +917,7 @@ final class Luminance$Millilambert extends Luminance {
   @override
   String get symbol => 'mL';
 
+  /// [Luminance$Millilambert] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -924,7 +949,7 @@ final class Luminance$Apostilb extends Luminance {
         unit.toApostilb.value,
       );
 
-  static const _minorName = r'luminance$Apostilb';
+  static const _minorName = 'apostilb';
 
   static const _ratio = 10000000.0;
 
@@ -936,8 +961,9 @@ final class Luminance$Apostilb extends Luminance {
   @override
   Luminance$Apostilb get _clone => Luminance$Apostilb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Apostilb] with new value
   @override
@@ -950,6 +976,7 @@ final class Luminance$Apostilb extends Luminance {
   @override
   String get symbol => 'asb';
 
+  /// [Luminance$Apostilb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -981,7 +1008,7 @@ final class Luminance$Blondel extends Luminance {
         unit.toBlondel.value,
       );
 
-  static const _minorName = r'luminance$Blondel';
+  static const _minorName = 'blondel';
 
   static const _ratio = 10000000.0;
 
@@ -993,8 +1020,9 @@ final class Luminance$Blondel extends Luminance {
   @override
   Luminance$Blondel get _clone => Luminance$Blondel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Blondel] with new value
   @override
@@ -1005,8 +1033,9 @@ final class Luminance$Blondel extends Luminance {
 
   /// Symbol for [Luminance$Blondel]
   @override
-  String get symbol => 'Blondel';
+  String get symbol => 'blondel';
 
+  /// [Luminance$Blondel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1038,7 +1067,7 @@ final class Luminance$Bril extends Luminance {
         unit.toBril.value,
       );
 
-  static const _minorName = r'luminance$Bril';
+  static const _minorName = 'bril';
 
   static const _ratio = 1.0;
 
@@ -1050,8 +1079,9 @@ final class Luminance$Bril extends Luminance {
   @override
   Luminance$Bril get _clone => Luminance$Bril(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Bril] with new value
   @override
@@ -1062,8 +1092,9 @@ final class Luminance$Bril extends Luminance {
 
   /// Symbol for [Luminance$Bril]
   @override
-  String get symbol => 'Bril';
+  String get symbol => 'bril';
 
+  /// [Luminance$Bril] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1095,7 +1126,7 @@ final class Luminance$Skot extends Luminance {
         unit.toSkot.value,
       );
 
-  static const _minorName = r'luminance$Skot';
+  static const _minorName = 'skot';
 
   static const _ratio = 10000.0;
 
@@ -1107,8 +1138,9 @@ final class Luminance$Skot extends Luminance {
   @override
   Luminance$Skot get _clone => Luminance$Skot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Luminance$Skot] with new value
   @override
@@ -1119,8 +1151,9 @@ final class Luminance$Skot extends Luminance {
 
   /// Symbol for [Luminance$Skot]
   @override
-  String get symbol => 'Skot';
+  String get symbol => 'skot';
 
+  /// [Luminance$Skot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

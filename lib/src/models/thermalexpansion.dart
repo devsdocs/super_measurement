@@ -97,7 +97,7 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
         unit.toLengthPerLengthPerKelvin.value,
       );
 
-  static const _minorName = r'thermalExpansion$LengthPerLengthPerKelvin';
+  static const _minorName = 'lengthPerLengthPerKelvin';
 
   static const _ratio = 1.0;
 
@@ -110,8 +110,9 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
   ThermalExpansion$LengthPerLengthPerKelvin get _clone =>
       ThermalExpansion$LengthPerLengthPerKelvin(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerKelvin] with new value
   @override
@@ -122,8 +123,9 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
-  String get symbol => 'LengthPerLengthPerKelvin';
+  String get symbol => 'length/length/Kelvin';
 
+  /// [ThermalExpansion$LengthPerLengthPerKelvin] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -156,7 +158,7 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
         unit.toLengthPerLengthPerCelsius.value,
       );
 
-  static const _minorName = r'thermalExpansion$LengthPerLengthPerCelsius';
+  static const _minorName = 'lengthPerLengthPerCelsius';
 
   static const _ratio = 1.0;
 
@@ -169,8 +171,9 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
   ThermalExpansion$LengthPerLengthPerCelsius get _clone =>
       ThermalExpansion$LengthPerLengthPerCelsius(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerCelsius] with new value
   @override
@@ -181,8 +184,9 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerCelsius]
   @override
-  String get symbol => 'LengthPerLengthPerCelsius';
+  String get symbol => 'length/length/Celsius';
 
+  /// [ThermalExpansion$LengthPerLengthPerCelsius] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -215,7 +219,7 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
         unit.toLengthPerLengthPerFahrenheit.value,
       );
 
-  static const _minorName = r'thermalExpansion$LengthPerLengthPerFahrenheit';
+  static const _minorName = 'lengthPerLengthPerFahrenheit';
 
   static const _ratio = 1.8;
 
@@ -228,8 +232,9 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
   ThermalExpansion$LengthPerLengthPerFahrenheit get _clone =>
       ThermalExpansion$LengthPerLengthPerFahrenheit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerFahrenheit] with new value
   @override
@@ -240,8 +245,9 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerFahrenheit]
   @override
-  String get symbol => 'LengthPerLengthPerFahrenheit';
+  String get symbol => 'length/length/Fahrenheit';
 
+  /// [ThermalExpansion$LengthPerLengthPerFahrenheit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -274,7 +280,7 @@ final class ThermalExpansion$LengthPerLengthPerRankine
         unit.toLengthPerLengthPerRankine.value,
       );
 
-  static const _minorName = r'thermalExpansion$LengthPerLengthPerRankine';
+  static const _minorName = 'lengthPerLengthPerRankine';
 
   static const _ratio = 1.8;
 
@@ -287,8 +293,9 @@ final class ThermalExpansion$LengthPerLengthPerRankine
   ThermalExpansion$LengthPerLengthPerRankine get _clone =>
       ThermalExpansion$LengthPerLengthPerRankine(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerRankine] with new value
   @override
@@ -299,8 +306,9 @@ final class ThermalExpansion$LengthPerLengthPerRankine
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerRankine]
   @override
-  String get symbol => 'LengthPerLengthPerRankine';
+  String get symbol => 'length/length/Rankine';
 
+  /// [ThermalExpansion$LengthPerLengthPerRankine] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -333,7 +341,7 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
         unit.toLengthPerLengthPerReaumur.value,
       );
 
-  static const _minorName = r'thermalExpansion$LengthPerLengthPerReaumur';
+  static const _minorName = 'lengthPerLengthPerReaumur';
 
   static const _ratio = 0.8;
 
@@ -346,8 +354,9 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
   ThermalExpansion$LengthPerLengthPerReaumur get _clone =>
       ThermalExpansion$LengthPerLengthPerReaumur(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerReaumur] with new value
   @override
@@ -358,8 +367,9 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerReaumur]
   @override
-  String get symbol => 'LengthPerLengthPerReaumur';
+  String get symbol => 'length/length/Réaumur';
 
+  /// [ThermalExpansion$LengthPerLengthPerReaumur] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

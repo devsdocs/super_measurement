@@ -130,7 +130,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
         unit.toWattPerMeterSquareK.value,
       );
 
-  static const _minorName = r'heatTransferCoefficient$WattPerMeterSquareK';
+  static const _minorName = 'wattPerMeterSquareK';
 
   static const _ratio = 1.0;
 
@@ -143,8 +143,9 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
   HeatTransferCoefficient$WattPerMeterSquareK get _clone =>
       HeatTransferCoefficient$WattPerMeterSquareK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$WattPerMeterSquareK] with new value
   @override
@@ -157,6 +158,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
   @override
   String get symbol => 'W/m² K';
 
+  /// [HeatTransferCoefficient$WattPerMeterSquareK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -189,8 +191,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
         unit.toWattPerMeterSquareDegreeC.value,
       );
 
-  static const _minorName =
-      r'heatTransferCoefficient$WattPerMeterSquareDegreeC';
+  static const _minorName = 'wattPerMeterSquareDegreeC';
 
   static const _ratio = 1.0;
 
@@ -203,8 +204,9 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
   HeatTransferCoefficient$WattPerMeterSquareDegreeC get _clone =>
       HeatTransferCoefficient$WattPerMeterSquareDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$WattPerMeterSquareDegreeC] with new value
   @override
@@ -217,6 +219,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
   @override
   String get symbol => 'W/m² °C';
 
+  /// [HeatTransferCoefficient$WattPerMeterSquareDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -249,8 +252,7 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
         unit.toJoulePerSecondMeterSquareK.value,
       );
 
-  static const _minorName =
-      r'heatTransferCoefficient$JoulePerSecondMeterSquareK';
+  static const _minorName = 'joulePerSecondMeterSquareK';
 
   static const _ratio = 1.0;
 
@@ -263,8 +265,9 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
   HeatTransferCoefficient$JoulePerSecondMeterSquareK get _clone =>
       HeatTransferCoefficient$JoulePerSecondMeterSquareK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$JoulePerSecondMeterSquareK] with new value
   @override
@@ -277,6 +280,7 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
   @override
   String get symbol => 'J/s m² K';
 
+  /// [HeatTransferCoefficient$JoulePerSecondMeterSquareK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -309,8 +313,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
         unit.toKilocaloriePerHourMeterSquareDegreeC.value,
       );
 
-  static const _minorName =
-      r'heatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC';
+  static const _minorName = 'kilocaloriePerHourMeterSquareDegreeC';
 
   static const _ratio = 1.163;
 
@@ -323,8 +326,9 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
   HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC get _clone =>
       HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] with new value
   @override
@@ -337,6 +341,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
   @override
   String get symbol => 'kcal/h m² °C';
 
+  /// [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -369,8 +374,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
         unit.toKilocaloriePerHourFootSquareDegreeC.value,
       );
 
-  static const _minorName =
-      r'heatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC';
+  static const _minorName = 'kilocaloriePerHourFootSquareDegreeC';
 
   static const _ratio = 12.51842782;
 
@@ -383,8 +387,9 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
   HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC get _clone =>
       HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] with new value
   @override
@@ -397,6 +402,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
   @override
   String get symbol => 'kcal/h ft² °C';
 
+  /// [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -429,8 +435,7 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
         unit.toCaloriePerSecondCentimeterSquareDegreeC.value,
       );
 
-  static const _minorName =
-      r'heatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC';
+  static const _minorName = 'caloriePerSecondCentimeterSquareDegreeC';
 
   static const _ratio = 41868.0;
 
@@ -443,8 +448,9 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
   HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC get _clone =>
       HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] with new value
   @override
@@ -457,6 +463,7 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
   @override
   String get symbol => 'cal/s cm² °C';
 
+  /// [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -489,8 +496,7 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
         unit.toBTUPerHourFootSquareDegreeF.value,
       );
 
-  static const _minorName =
-      r'heatTransferCoefficient$BTUPerHourFootSquareDegreeF';
+  static const _minorName = 'bTUPerHourFootSquareDegreeF';
 
   static const _ratio = 5.678263398;
 
@@ -503,8 +509,9 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
   HeatTransferCoefficient$BTUPerHourFootSquareDegreeF get _clone =>
       HeatTransferCoefficient$BTUPerHourFootSquareDegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] with new value
   @override
@@ -515,8 +522,9 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
 
   /// Symbol for [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF]
   @override
-  String get symbol => 'BTUPerHourFootSquareDegreeF';
+  String get symbol => 'BTU/hour foot² °F';
 
+  /// [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -549,8 +557,7 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
         unit.toCHUPerHourFootSquareDegreeC.value,
       );
 
-  static const _minorName =
-      r'heatTransferCoefficient$CHUPerHourFootSquareDegreeC';
+  static const _minorName = 'cHUPerHourFootSquareDegreeC';
 
   static const _ratio = 5.678263398;
 
@@ -563,8 +570,9 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
   HeatTransferCoefficient$CHUPerHourFootSquareDegreeC get _clone =>
       HeatTransferCoefficient$CHUPerHourFootSquareDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] with new value
   @override
@@ -575,8 +583,9 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
 
   /// Symbol for [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC]
   @override
-  String get symbol => 'CHUPerHourFootSquareDegreeC';
+  String get symbol => 'CHU/hour foot² °C';
 
+  /// [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

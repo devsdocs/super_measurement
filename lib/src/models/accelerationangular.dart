@@ -98,7 +98,7 @@ final class AccelerationAngular$RadianPerSecondSquare
         unit.toRadianPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationAngular$RadianPerSecondSquare';
+  static const _minorName = 'radianPerSecondSquare';
 
   static const _ratio = 9.549296587;
 
@@ -111,8 +111,9 @@ final class AccelerationAngular$RadianPerSecondSquare
   AccelerationAngular$RadianPerSecondSquare get _clone =>
       AccelerationAngular$RadianPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RadianPerSecondSquare] with new value
   @override
@@ -125,6 +126,7 @@ final class AccelerationAngular$RadianPerSecondSquare
   @override
   String get symbol => 'rad/s²';
 
+  /// [AccelerationAngular$RadianPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -157,7 +159,7 @@ final class AccelerationAngular$RadianPerMinuteSquare
         unit.toRadianPerMinuteSquare.value,
       );
 
-  static const _minorName = r'accelerationAngular$RadianPerMinuteSquare';
+  static const _minorName = 'radianPerMinuteSquare';
 
   static const _ratio = 0.0026525823852777777;
 
@@ -170,8 +172,9 @@ final class AccelerationAngular$RadianPerMinuteSquare
   AccelerationAngular$RadianPerMinuteSquare get _clone =>
       AccelerationAngular$RadianPerMinuteSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RadianPerMinuteSquare] with new value
   @override
@@ -184,6 +187,7 @@ final class AccelerationAngular$RadianPerMinuteSquare
   @override
   String get symbol => 'rad/min²';
 
+  /// [AccelerationAngular$RadianPerMinuteSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -216,7 +220,7 @@ final class AccelerationAngular$RevolutionPerSecondSquare
         unit.toRevolutionPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationAngular$RevolutionPerSecondSquare';
+  static const _minorName = 'revolutionPerSecondSquare';
 
   static const _ratio = 60.0;
 
@@ -229,8 +233,9 @@ final class AccelerationAngular$RevolutionPerSecondSquare
   AccelerationAngular$RevolutionPerSecondSquare get _clone =>
       AccelerationAngular$RevolutionPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RevolutionPerSecondSquare] with new value
   @override
@@ -243,6 +248,7 @@ final class AccelerationAngular$RevolutionPerSecondSquare
   @override
   String get symbol => 'rev/s²';
 
+  /// [AccelerationAngular$RevolutionPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -275,7 +281,7 @@ final class AccelerationAngular$RevolutionPerMinuteSecond
         unit.toRevolutionPerMinuteSecond.value,
       );
 
-  static const _minorName = r'accelerationAngular$RevolutionPerMinuteSecond';
+  static const _minorName = 'revolutionPerMinuteSecond';
 
   static const _ratio = 1.000000000074009;
 
@@ -288,8 +294,9 @@ final class AccelerationAngular$RevolutionPerMinuteSecond
   AccelerationAngular$RevolutionPerMinuteSecond get _clone =>
       AccelerationAngular$RevolutionPerMinuteSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RevolutionPerMinuteSecond] with new value
   @override
@@ -302,6 +309,7 @@ final class AccelerationAngular$RevolutionPerMinuteSecond
   @override
   String get symbol => 'rev/min s';
 
+  /// [AccelerationAngular$RevolutionPerMinuteSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -334,7 +342,7 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
         unit.toRevolutionPerMinuteSquare.value,
       );
 
-  static const _minorName = r'accelerationAngular$RevolutionPerMinuteSquare';
+  static const _minorName = 'revolutionPerMinuteSquare';
 
   static const _ratio = 0.016666666666666666;
 
@@ -347,8 +355,9 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
   AccelerationAngular$RevolutionPerMinuteSquare get _clone =>
       AccelerationAngular$RevolutionPerMinuteSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RevolutionPerMinuteSquare] with new value
   @override
@@ -361,6 +370,7 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
   @override
   String get symbol => 'rev/min²';
 
+  /// [AccelerationAngular$RevolutionPerMinuteSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

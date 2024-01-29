@@ -1,21 +1,25 @@
-// ignore_for_file: argument_type_not_assignable,, unreachable_from_main
+// ignore_for_file: argument_type_not_assignable, unreachable_from_main
 
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:reusable_tools/reusable_tools.dart';
 
-import '__generate.gen.dart';
+part '__generate.gen.dart';
+part '_example.gen.dart';
+part '_extension.gen.dart';
+part '_models.gen.dart';
+part '_readme.gen.dart';
 
 Future<void> main() async {
   const generatornewres = 'generator/new_res';
   final dirList = Directory(generatornewres).listSync().where(
-        (element) =>
-            element is File && element.uri.pathSegments.last.endsWith('json'),
+        (e) => e is File && e.uri.pathSegments.last.endsWith('json'),
       );
 
   final cat = (dirList.singleWhere(
-    (element) => element.uri.pathSegments.last.splitDot.first == 'Categories',
+    (e) => e.uri.pathSegments.last.splitDot.first == 'Categories',
   ) as File)
       .readAsStringSync()
       .toJsonObjectAsList;
@@ -26,6 +30,7 @@ Future<void> main() async {
     final allItem = <String, List<Map<String, NewRes>>>{};
     aa as Map<String, dynamic>;
     final name = aa['Engname'] as String;
+    if (name == 'Numbers') continue;
     final formatMajorName = name.clean
         .replaceAll(' ', '')
         .replaceAll('.', '')
@@ -37,6 +42,10 @@ Future<void> main() async {
     final readAsStringSync = file.readAsStringSync();
     if (readAsStringSync == 'null') continue;
     final read = readAsStringSync.toJsonObjectAsList;
+    final allNameList = read.map((e) {
+      e as Map<String, dynamic>;
+      return e['Name'].toString();
+    }).toList();
     final list = read.map(
       (e) {
         e as Map<String, dynamic>;
@@ -59,7 +68,8 @@ Future<void> main() async {
           ..remove('esname');
 
         return {
-          '$formatMajorName\$${formatName(e['Name'])}': NewRes.fromMap(newMap),
+          '$formatMajorName\$${formatName(e['Name'], allNameList..remove(e['Name']))}':
+              NewRes.fromMap(newMap),
         };
       },
     ).toList();
@@ -86,7 +96,13 @@ Future<void> main() async {
 
   allData = mapNew;
 
-  await gogo();
+  generateModels();
+  generateExtension();
+  // generateExample();
+  generateReadme();
+
+  await Process.run('dart', ['format', '.']);
+  await Process.run('dart', ['fix', '--apply']);
 }
 
 List<Map<String, List<Map<String, Map<String, dynamic>>>>> allData = [];
@@ -99,13 +115,13 @@ const charMap = {
   'é': 'e',
   'ä': 'a',
   '"': '',
-  '^': 'Power',
+  '^': 'PowerOf',
   '=': '',
   ',': '',
   "'": '',
 };
 
-String formatName(String s) {
+String formatName(String s, List<String> othersName) {
   if (!s.contains('(') && s.contains(')')) {
     throw Exception();
   }
@@ -170,12 +186,12 @@ String formatName(String s) {
         ..removeWhere((element) => element == '.')
         ..removeWhere((element) => element == '-'))
       .join();
-  return join.isEmpty
-      ? 'MetricUnit'
-      : join[0].toUpperCase() + join.substring(1);
+  final finalName = join[0].toUpperCase() + join.substring(1);
+
+  return join.isEmpty ? 'MetricUnit' : finalName;
 }
 
-List<int> indexOfs(List<String> s, String t) {
+List<int> indexOfs<T>(List<T> s, T t) {
   int l = 0;
   final res = <int>[];
   for (final element in s) {
@@ -199,8 +215,6 @@ class NewRes {
     this.valueShift,
   });
 
-  factory NewRes.fromJson(String str) => NewRes.fromMap(json.decode(str));
-
   factory NewRes.fromMap(Map<String, dynamic> json) => NewRes(
         symbol: json['symbol'],
         inverse: json['inverse'],
@@ -221,29 +235,6 @@ class NewRes {
   final String? shortName;
   final double? ratio;
   final double? valueShift;
-
-  NewRes copyWith({
-    String? symbol,
-    int? inverse,
-    String? name,
-    String? origin,
-    String? plainName,
-    String? shortName,
-    double? ratio,
-    double? valueShift,
-  }) =>
-      NewRes(
-        symbol: symbol ?? this.symbol,
-        inverse: inverse ?? this.inverse,
-        name: name ?? this.name,
-        origin: origin ?? this.origin,
-        plainName: plainName ?? this.plainName,
-        shortName: shortName ?? this.shortName,
-        ratio: ratio ?? this.ratio,
-        valueShift: valueShift ?? this.valueShift,
-      );
-
-  String toJson() => json.encode(toMap());
 
   Map<String, dynamic> toMap() => {
         'symbol': symbol,

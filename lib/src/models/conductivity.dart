@@ -112,7 +112,7 @@ final class Conductivity$MhoPerMeter extends Conductivity {
         unit.toMhoPerMeter.value,
       );
 
-  static const _minorName = r'conductivity$MhoPerMeter';
+  static const _minorName = 'mhoPerMeter';
 
   static const _ratio = 1.0;
 
@@ -124,8 +124,9 @@ final class Conductivity$MhoPerMeter extends Conductivity {
   @override
   Conductivity$MhoPerMeter get _clone => Conductivity$MhoPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Conductivity$MhoPerMeter] with new value
   @override
@@ -136,8 +137,9 @@ final class Conductivity$MhoPerMeter extends Conductivity {
 
   /// Symbol for [Conductivity$MhoPerMeter]
   @override
-  String get symbol => 'MhoPerMeter';
+  String get symbol => 'mho/meter';
 
+  /// [Conductivity$MhoPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -169,7 +171,7 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
         unit.toMhoPerCentimeter.value,
       );
 
-  static const _minorName = r'conductivity$MhoPerCentimeter';
+  static const _minorName = 'mhoPerCentimeter';
 
   static const _ratio = 100.0;
 
@@ -182,8 +184,9 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
   Conductivity$MhoPerCentimeter get _clone =>
       Conductivity$MhoPerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Conductivity$MhoPerCentimeter] with new value
   @override
@@ -194,8 +197,9 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
 
   /// Symbol for [Conductivity$MhoPerCentimeter]
   @override
-  String get symbol => 'MhoPerCentimeter';
+  String get symbol => 'mho/centimeter';
 
+  /// [Conductivity$MhoPerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -227,7 +231,7 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
         unit.toAbmhoPerMeter.value,
       );
 
-  static const _minorName = r'conductivity$AbmhoPerMeter';
+  static const _minorName = 'abmhoPerMeter';
 
   static const _ratio = 1000000000.0;
 
@@ -239,8 +243,9 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
   @override
   Conductivity$AbmhoPerMeter get _clone => Conductivity$AbmhoPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Conductivity$AbmhoPerMeter] with new value
   @override
@@ -251,8 +256,9 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
 
   /// Symbol for [Conductivity$AbmhoPerMeter]
   @override
-  String get symbol => 'AbmhoPerMeter';
+  String get symbol => 'Abmho/meter';
 
+  /// [Conductivity$AbmhoPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -284,7 +290,7 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
         unit.toAbmhoPerCentimeter.value,
       );
 
-  static const _minorName = r'conductivity$AbmhoPerCentimeter';
+  static const _minorName = 'abmhoPerCentimeter';
 
   static const _ratio = 100000000000.0;
 
@@ -297,8 +303,9 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
   Conductivity$AbmhoPerCentimeter get _clone =>
       Conductivity$AbmhoPerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Conductivity$AbmhoPerCentimeter] with new value
   @override
@@ -309,8 +316,9 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
 
   /// Symbol for [Conductivity$AbmhoPerCentimeter]
   @override
-  String get symbol => 'AbmhoPerCentimeter';
+  String get symbol => 'Abmho/centimeter';
 
+  /// [Conductivity$AbmhoPerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -342,7 +350,7 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
         unit.toStatmhoPerMeter.value,
       );
 
-  static const _minorName = r'conductivity$StatmhoPerMeter';
+  static const _minorName = 'statmhoPerMeter';
 
   static const _ratio = 1.112653456e-12;
 
@@ -355,8 +363,9 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
   Conductivity$StatmhoPerMeter get _clone =>
       Conductivity$StatmhoPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Conductivity$StatmhoPerMeter] with new value
   @override
@@ -367,8 +376,9 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
 
   /// Symbol for [Conductivity$StatmhoPerMeter]
   @override
-  String get symbol => 'StatmhoPerMeter';
+  String get symbol => 'Statmho/meter';
 
+  /// [Conductivity$StatmhoPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -400,7 +410,7 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
         unit.toStatmhoPerCentimeter.value,
       );
 
-  static const _minorName = r'conductivity$StatmhoPerCentimeter';
+  static const _minorName = 'statmhoPerCentimeter';
 
   static const _ratio = 1.112653456e-10;
 
@@ -413,8 +423,9 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
   Conductivity$StatmhoPerCentimeter get _clone =>
       Conductivity$StatmhoPerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Conductivity$StatmhoPerCentimeter] with new value
   @override
@@ -425,8 +436,9 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
 
   /// Symbol for [Conductivity$StatmhoPerCentimeter]
   @override
-  String get symbol => 'StatmhoPerCentimeter';
+  String get symbol => 'Statmho/centimeter';
 
+  /// [Conductivity$StatmhoPerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -458,7 +470,7 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
         unit.toSiemensPerMeter.value,
       );
 
-  static const _minorName = r'conductivity$SiemensPerMeter';
+  static const _minorName = 'siemensPerMeter';
 
   static const _ratio = 1.0;
 
@@ -471,8 +483,9 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
   Conductivity$SiemensPerMeter get _clone =>
       Conductivity$SiemensPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Conductivity$SiemensPerMeter] with new value
   @override
@@ -485,6 +498,7 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
   @override
   String get symbol => 'S/m';
 
+  /// [Conductivity$SiemensPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -516,7 +530,7 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
         unit.toPicosiemensPerMeter.value,
       );
 
-  static const _minorName = r'conductivity$PicosiemensPerMeter';
+  static const _minorName = 'picosiemensPerMeter';
 
   static const _ratio = 1e-12;
 
@@ -529,8 +543,9 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
   Conductivity$PicosiemensPerMeter get _clone =>
       Conductivity$PicosiemensPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Conductivity$PicosiemensPerMeter] with new value
   @override
@@ -543,6 +558,7 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
   @override
   String get symbol => 'pS/m';
 
+  /// [Conductivity$PicosiemensPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

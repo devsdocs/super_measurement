@@ -226,7 +226,7 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
         unit.toExamolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$ExamolPerSecond';
+  static const _minorName = 'examolPerSecond';
 
   static const _ratio = 8.64e+22;
 
@@ -238,8 +238,9 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
   @override
   FlowMolar$ExamolPerSecond get _clone => FlowMolar$ExamolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$ExamolPerSecond] with new value
   @override
@@ -252,6 +253,7 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
   @override
   String get symbol => 'Emol/s';
 
+  /// [FlowMolar$ExamolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -283,7 +285,7 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
         unit.toPetamolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$PetamolPerSecond';
+  static const _minorName = 'petamolPerSecond';
 
   static const _ratio = 86400000000000000000.0;
 
@@ -295,8 +297,9 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
   @override
   FlowMolar$PetamolPerSecond get _clone => FlowMolar$PetamolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$PetamolPerSecond] with new value
   @override
@@ -309,6 +312,7 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
   @override
   String get symbol => 'Pmol/s';
 
+  /// [FlowMolar$PetamolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -340,7 +344,7 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
         unit.toTeramolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$TeramolPerSecond';
+  static const _minorName = 'teramolPerSecond';
 
   static const _ratio = 86400000000000000.0;
 
@@ -352,8 +356,9 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
   @override
   FlowMolar$TeramolPerSecond get _clone => FlowMolar$TeramolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$TeramolPerSecond] with new value
   @override
@@ -366,6 +371,7 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
   @override
   String get symbol => 'Tmol/s';
 
+  /// [FlowMolar$TeramolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -397,7 +403,7 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
         unit.toGigamolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$GigamolPerSecond';
+  static const _minorName = 'gigamolPerSecond';
 
   static const _ratio = 86400000000000.0;
 
@@ -409,8 +415,9 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
   @override
   FlowMolar$GigamolPerSecond get _clone => FlowMolar$GigamolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$GigamolPerSecond] with new value
   @override
@@ -423,6 +430,7 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
   @override
   String get symbol => 'Gmol/s';
 
+  /// [FlowMolar$GigamolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -454,7 +462,7 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
         unit.toMegamolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$MegamolPerSecond';
+  static const _minorName = 'megamolPerSecond';
 
   static const _ratio = 86400000000.0;
 
@@ -466,8 +474,9 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
   @override
   FlowMolar$MegamolPerSecond get _clone => FlowMolar$MegamolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MegamolPerSecond] with new value
   @override
@@ -480,6 +489,7 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
   @override
   String get symbol => 'Mmol/s';
 
+  /// [FlowMolar$MegamolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -511,7 +521,7 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
         unit.toKilomolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$KilomolPerSecond';
+  static const _minorName = 'kilomolPerSecond';
 
   static const _ratio = 86400000.0;
 
@@ -523,8 +533,9 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
   @override
   FlowMolar$KilomolPerSecond get _clone => FlowMolar$KilomolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$KilomolPerSecond] with new value
   @override
@@ -537,6 +548,7 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
   @override
   String get symbol => 'kmol/s';
 
+  /// [FlowMolar$KilomolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -568,7 +580,7 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
         unit.toHectomolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$HectomolPerSecond';
+  static const _minorName = 'hectomolPerSecond';
 
   static const _ratio = 8640000.0;
 
@@ -580,8 +592,9 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
   @override
   FlowMolar$HectomolPerSecond get _clone => FlowMolar$HectomolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$HectomolPerSecond] with new value
   @override
@@ -594,6 +607,7 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
   @override
   String get symbol => 'hmol/s';
 
+  /// [FlowMolar$HectomolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -625,7 +639,7 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
         unit.toDekamolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$DekamolPerSecond';
+  static const _minorName = 'dekamolPerSecond';
 
   static const _ratio = 864000.0;
 
@@ -637,8 +651,9 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
   @override
   FlowMolar$DekamolPerSecond get _clone => FlowMolar$DekamolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$DekamolPerSecond] with new value
   @override
@@ -651,6 +666,7 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
   @override
   String get symbol => 'damol/s';
 
+  /// [FlowMolar$DekamolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -682,7 +698,7 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
         unit.toMolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$MolPerSecond';
+  static const _minorName = 'molPerSecond';
 
   static const _ratio = 86400.0;
 
@@ -694,8 +710,9 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
   @override
   FlowMolar$MolPerSecond get _clone => FlowMolar$MolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MolPerSecond] with new value
   @override
@@ -708,6 +725,7 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
   @override
   String get symbol => 'mol/s';
 
+  /// [FlowMolar$MolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -739,7 +757,7 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
         unit.toDecimolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$DecimolPerSecond';
+  static const _minorName = 'decimolPerSecond';
 
   static const _ratio = 8640.0;
 
@@ -751,8 +769,9 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
   @override
   FlowMolar$DecimolPerSecond get _clone => FlowMolar$DecimolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$DecimolPerSecond] with new value
   @override
@@ -765,6 +784,7 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
   @override
   String get symbol => 'dmol/s';
 
+  /// [FlowMolar$DecimolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -796,7 +816,7 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
         unit.toCentimolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$CentimolPerSecond';
+  static const _minorName = 'centimolPerSecond';
 
   static const _ratio = 864.0;
 
@@ -808,8 +828,9 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
   @override
   FlowMolar$CentimolPerSecond get _clone => FlowMolar$CentimolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$CentimolPerSecond] with new value
   @override
@@ -822,6 +843,7 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
   @override
   String get symbol => 'cmol/s';
 
+  /// [FlowMolar$CentimolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -853,7 +875,7 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
         unit.toMillimolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$MillimolPerSecond';
+  static const _minorName = 'millimolPerSecond';
 
   static const _ratio = 86.4;
 
@@ -865,8 +887,9 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
   @override
   FlowMolar$MillimolPerSecond get _clone => FlowMolar$MillimolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MillimolPerSecond] with new value
   @override
@@ -879,6 +902,7 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
   @override
   String get symbol => 'mmol/s';
 
+  /// [FlowMolar$MillimolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -910,7 +934,7 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
         unit.toMicromolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$MicromolPerSecond';
+  static const _minorName = 'micromolPerSecond';
 
   static const _ratio = 0.0864;
 
@@ -922,8 +946,9 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
   @override
   FlowMolar$MicromolPerSecond get _clone => FlowMolar$MicromolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MicromolPerSecond] with new value
   @override
@@ -936,6 +961,7 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
   @override
   String get symbol => 'µmol/s';
 
+  /// [FlowMolar$MicromolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -967,7 +993,7 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
         unit.toNanomolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$NanomolPerSecond';
+  static const _minorName = 'nanomolPerSecond';
 
   static const _ratio = 0.0000864;
 
@@ -979,8 +1005,9 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
   @override
   FlowMolar$NanomolPerSecond get _clone => FlowMolar$NanomolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$NanomolPerSecond] with new value
   @override
@@ -993,6 +1020,7 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
   @override
   String get symbol => 'nmol/s';
 
+  /// [FlowMolar$NanomolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1024,7 +1052,7 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
         unit.toPicomolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$PicomolPerSecond';
+  static const _minorName = 'picomolPerSecond';
 
   static const _ratio = 8.64e-8;
 
@@ -1036,8 +1064,9 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
   @override
   FlowMolar$PicomolPerSecond get _clone => FlowMolar$PicomolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$PicomolPerSecond] with new value
   @override
@@ -1050,6 +1079,7 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
   @override
   String get symbol => 'pmol/s';
 
+  /// [FlowMolar$PicomolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1081,7 +1111,7 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
         unit.toFemtomolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$FemtomolPerSecond';
+  static const _minorName = 'femtomolPerSecond';
 
   static const _ratio = 8.64e-11;
 
@@ -1093,8 +1123,9 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
   @override
   FlowMolar$FemtomolPerSecond get _clone => FlowMolar$FemtomolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$FemtomolPerSecond] with new value
   @override
@@ -1107,6 +1138,7 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
   @override
   String get symbol => 'fmol/s';
 
+  /// [FlowMolar$FemtomolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1138,7 +1170,7 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
         unit.toAttomolPerSecond.value,
       );
 
-  static const _minorName = r'flowMolar$AttomolPerSecond';
+  static const _minorName = 'attomolPerSecond';
 
   static const _ratio = 8.64e-14;
 
@@ -1150,8 +1182,9 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
   @override
   FlowMolar$AttomolPerSecond get _clone => FlowMolar$AttomolPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$AttomolPerSecond] with new value
   @override
@@ -1164,6 +1197,7 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
   @override
   String get symbol => 'amol/s';
 
+  /// [FlowMolar$AttomolPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1195,7 +1229,7 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
         unit.toMolPerMinute.value,
       );
 
-  static const _minorName = r'flowMolar$MolPerMinute';
+  static const _minorName = 'molPerMinute';
 
   static const _ratio = 1440.0;
 
@@ -1207,8 +1241,9 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
   @override
   FlowMolar$MolPerMinute get _clone => FlowMolar$MolPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MolPerMinute] with new value
   @override
@@ -1221,6 +1256,7 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
   @override
   String get symbol => 'mol/min';
 
+  /// [FlowMolar$MolPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1252,7 +1288,7 @@ final class FlowMolar$MolPerHour extends FlowMolar {
         unit.toMolPerHour.value,
       );
 
-  static const _minorName = r'flowMolar$MolPerHour';
+  static const _minorName = 'molPerHour';
 
   static const _ratio = 24.0;
 
@@ -1264,8 +1300,9 @@ final class FlowMolar$MolPerHour extends FlowMolar {
   @override
   FlowMolar$MolPerHour get _clone => FlowMolar$MolPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MolPerHour] with new value
   @override
@@ -1278,6 +1315,7 @@ final class FlowMolar$MolPerHour extends FlowMolar {
   @override
   String get symbol => 'mol/h';
 
+  /// [FlowMolar$MolPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1309,7 +1347,7 @@ final class FlowMolar$MolPerDay extends FlowMolar {
         unit.toMolPerDay.value,
       );
 
-  static const _minorName = r'flowMolar$MolPerDay';
+  static const _minorName = 'molPerDay';
 
   static const _ratio = 1.0;
 
@@ -1321,8 +1359,9 @@ final class FlowMolar$MolPerDay extends FlowMolar {
   @override
   FlowMolar$MolPerDay get _clone => FlowMolar$MolPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MolPerDay] with new value
   @override
@@ -1335,6 +1374,7 @@ final class FlowMolar$MolPerDay extends FlowMolar {
   @override
   String get symbol => 'mol/d';
 
+  /// [FlowMolar$MolPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1366,7 +1406,7 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
         unit.toMillimolPerMinute.value,
       );
 
-  static const _minorName = r'flowMolar$MillimolPerMinute';
+  static const _minorName = 'millimolPerMinute';
 
   static const _ratio = 1.44;
 
@@ -1378,8 +1418,9 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
   @override
   FlowMolar$MillimolPerMinute get _clone => FlowMolar$MillimolPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MillimolPerMinute] with new value
   @override
@@ -1392,6 +1433,7 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
   @override
   String get symbol => 'mmol/min';
 
+  /// [FlowMolar$MillimolPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1423,7 +1465,7 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
         unit.toMillimolPerHour.value,
       );
 
-  static const _minorName = r'flowMolar$MillimolPerHour';
+  static const _minorName = 'millimolPerHour';
 
   static const _ratio = 0.024;
 
@@ -1435,8 +1477,9 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
   @override
   FlowMolar$MillimolPerHour get _clone => FlowMolar$MillimolPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MillimolPerHour] with new value
   @override
@@ -1449,6 +1492,7 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
   @override
   String get symbol => 'mmol/h';
 
+  /// [FlowMolar$MillimolPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1480,7 +1524,7 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
         unit.toMillimolPerDay.value,
       );
 
-  static const _minorName = r'flowMolar$MillimolPerDay';
+  static const _minorName = 'millimolPerDay';
 
   static const _ratio = 0.001;
 
@@ -1492,8 +1536,9 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
   @override
   FlowMolar$MillimolPerDay get _clone => FlowMolar$MillimolPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$MillimolPerDay] with new value
   @override
@@ -1506,6 +1551,7 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
   @override
   String get symbol => 'mmol/d';
 
+  /// [FlowMolar$MillimolPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1537,7 +1583,7 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
         unit.toKilomolPerMinute.value,
       );
 
-  static const _minorName = r'flowMolar$KilomolPerMinute';
+  static const _minorName = 'kilomolPerMinute';
 
   static const _ratio = 1440000.0;
 
@@ -1549,8 +1595,9 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
   @override
   FlowMolar$KilomolPerMinute get _clone => FlowMolar$KilomolPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$KilomolPerMinute] with new value
   @override
@@ -1563,6 +1610,7 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
   @override
   String get symbol => 'kmol/min';
 
+  /// [FlowMolar$KilomolPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1594,7 +1642,7 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
         unit.toKilomolPerHour.value,
       );
 
-  static const _minorName = r'flowMolar$KilomolPerHour';
+  static const _minorName = 'kilomolPerHour';
 
   static const _ratio = 24000.0;
 
@@ -1606,8 +1654,9 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
   @override
   FlowMolar$KilomolPerHour get _clone => FlowMolar$KilomolPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$KilomolPerHour] with new value
   @override
@@ -1620,6 +1669,7 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
   @override
   String get symbol => 'kmol/h';
 
+  /// [FlowMolar$KilomolPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1651,7 +1701,7 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
         unit.toKilomolPerDay.value,
       );
 
-  static const _minorName = r'flowMolar$KilomolPerDay';
+  static const _minorName = 'kilomolPerDay';
 
   static const _ratio = 1000.0;
 
@@ -1663,8 +1713,9 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
   @override
   FlowMolar$KilomolPerDay get _clone => FlowMolar$KilomolPerDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FlowMolar$KilomolPerDay] with new value
   @override
@@ -1677,6 +1728,7 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
   @override
   String get symbol => 'kmol/d';
 
+  /// [FlowMolar$KilomolPerDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

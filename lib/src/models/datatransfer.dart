@@ -1211,7 +1211,7 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
         unit.toBitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$BitPerSecond';
+  static const _minorName = 'bitPerSecond';
 
   static const _ratio = 1.0;
 
@@ -1223,8 +1223,9 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
   @override
   DataTransfer$BitPerSecond get _clone => DataTransfer$BitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BitPerSecond] with new value
   @override
@@ -1237,6 +1238,7 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
   @override
   String get symbol => 'b/s, bps';
 
+  /// [DataTransfer$BitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1268,7 +1270,7 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
         unit.toBytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$BytePerSecond';
+  static const _minorName = 'bytePerSecond';
 
   static const _ratio = 8.0;
 
@@ -1280,8 +1282,9 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
   @override
   DataTransfer$BytePerSecond get _clone => DataTransfer$BytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BytePerSecond] with new value
   @override
@@ -1294,6 +1297,7 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
   @override
   String get symbol => 'B/s';
 
+  /// [DataTransfer$BytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1325,7 +1329,7 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
         unit.toKilobitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$KilobitPerSecond';
+  static const _minorName = 'kilobitPerSecond';
 
   static const _ratio = 1000.0;
 
@@ -1338,8 +1342,9 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
   DataTransfer$KilobitPerSecond get _clone =>
       DataTransfer$KilobitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$KilobitPerSecond] with new value
   @override
@@ -1352,6 +1357,7 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
   @override
   String get symbol => 'kb/s';
 
+  /// [DataTransfer$KilobitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1383,7 +1389,7 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
         unit.toKilobytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$KilobytePerSecond';
+  static const _minorName = 'kilobytePerSecond';
 
   static const _ratio = 8000.0;
 
@@ -1396,8 +1402,9 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
   DataTransfer$KilobytePerSecond get _clone =>
       DataTransfer$KilobytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$KilobytePerSecond] with new value
   @override
@@ -1410,6 +1417,7 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
   @override
   String get symbol => 'kB/s';
 
+  /// [DataTransfer$KilobytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1441,7 +1449,7 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
         unit.toMegabitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$MegabitPerSecond';
+  static const _minorName = 'megabitPerSecond';
 
   static const _ratio = 1000000.0;
 
@@ -1454,8 +1462,9 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
   DataTransfer$MegabitPerSecond get _clone =>
       DataTransfer$MegabitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$MegabitPerSecond] with new value
   @override
@@ -1468,6 +1477,7 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
   @override
   String get symbol => 'Mb/s';
 
+  /// [DataTransfer$MegabitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1499,7 +1509,7 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
         unit.toMegabytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$MegabytePerSecond';
+  static const _minorName = 'megabytePerSecond';
 
   static const _ratio = 8000000.0;
 
@@ -1512,8 +1522,9 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
   DataTransfer$MegabytePerSecond get _clone =>
       DataTransfer$MegabytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$MegabytePerSecond] with new value
   @override
@@ -1526,6 +1537,7 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
   @override
   String get symbol => 'MB/s';
 
+  /// [DataTransfer$MegabytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1557,7 +1569,7 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
         unit.toGigabitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$GigabitPerSecond';
+  static const _minorName = 'gigabitPerSecond';
 
   static const _ratio = 1000000000.0;
 
@@ -1570,8 +1582,9 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
   DataTransfer$GigabitPerSecond get _clone =>
       DataTransfer$GigabitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$GigabitPerSecond] with new value
   @override
@@ -1584,6 +1597,7 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
   @override
   String get symbol => 'Gb/s';
 
+  /// [DataTransfer$GigabitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1615,7 +1629,7 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
         unit.toGigabytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$GigabytePerSecond';
+  static const _minorName = 'gigabytePerSecond';
 
   static const _ratio = 8000000000.0;
 
@@ -1628,8 +1642,9 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
   DataTransfer$GigabytePerSecond get _clone =>
       DataTransfer$GigabytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$GigabytePerSecond] with new value
   @override
@@ -1642,6 +1657,7 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
   @override
   String get symbol => 'GB/s';
 
+  /// [DataTransfer$GigabytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1673,7 +1689,7 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
         unit.toTerabitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$TerabitPerSecond';
+  static const _minorName = 'terabitPerSecond';
 
   static const _ratio = 1000000000000.0;
 
@@ -1686,8 +1702,9 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
   DataTransfer$TerabitPerSecond get _clone =>
       DataTransfer$TerabitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$TerabitPerSecond] with new value
   @override
@@ -1700,6 +1717,7 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
   @override
   String get symbol => 'Tb/s';
 
+  /// [DataTransfer$TerabitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1731,7 +1749,7 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
         unit.toTerabytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$TerabytePerSecond';
+  static const _minorName = 'terabytePerSecond';
 
   static const _ratio = 8000000000000.0;
 
@@ -1744,8 +1762,9 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
   DataTransfer$TerabytePerSecond get _clone =>
       DataTransfer$TerabytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$TerabytePerSecond] with new value
   @override
@@ -1758,6 +1777,7 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
   @override
   String get symbol => 'TB/s';
 
+  /// [DataTransfer$TerabytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1789,7 +1809,7 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
         unit.toKibibitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$KibibitPerSecond';
+  static const _minorName = 'kibibitPerSecond';
 
   static const _ratio = 1024.0;
 
@@ -1802,8 +1822,9 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
   DataTransfer$KibibitPerSecond get _clone =>
       DataTransfer$KibibitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$KibibitPerSecond] with new value
   @override
@@ -1816,6 +1837,7 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
   @override
   String get symbol => 'Kib/s';
 
+  /// [DataTransfer$KibibitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1847,7 +1869,7 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
         unit.toKibibytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$KibibytePerSecond';
+  static const _minorName = 'kibibytePerSecond';
 
   static const _ratio = 8192.0;
 
@@ -1860,8 +1882,9 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
   DataTransfer$KibibytePerSecond get _clone =>
       DataTransfer$KibibytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$KibibytePerSecond] with new value
   @override
@@ -1874,6 +1897,7 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
   @override
   String get symbol => 'KiB/s';
 
+  /// [DataTransfer$KibibytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1905,7 +1929,7 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
         unit.toMebibitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$MebibitPerSecond';
+  static const _minorName = 'mebibitPerSecond';
 
   static const _ratio = 1048576.0;
 
@@ -1918,8 +1942,9 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
   DataTransfer$MebibitPerSecond get _clone =>
       DataTransfer$MebibitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$MebibitPerSecond] with new value
   @override
@@ -1932,6 +1957,7 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
   @override
   String get symbol => 'Mib/s';
 
+  /// [DataTransfer$MebibitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1963,7 +1989,7 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
         unit.toMebibytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$MebibytePerSecond';
+  static const _minorName = 'mebibytePerSecond';
 
   static const _ratio = 8388608.0;
 
@@ -1976,8 +2002,9 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
   DataTransfer$MebibytePerSecond get _clone =>
       DataTransfer$MebibytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$MebibytePerSecond] with new value
   @override
@@ -1990,6 +2017,7 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
   @override
   String get symbol => 'MiB/s';
 
+  /// [DataTransfer$MebibytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2021,7 +2049,7 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
         unit.toGibibitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$GibibitPerSecond';
+  static const _minorName = 'gibibitPerSecond';
 
   static const _ratio = 1073741824.0;
 
@@ -2034,8 +2062,9 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
   DataTransfer$GibibitPerSecond get _clone =>
       DataTransfer$GibibitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$GibibitPerSecond] with new value
   @override
@@ -2048,6 +2077,7 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
   @override
   String get symbol => 'Gib/s';
 
+  /// [DataTransfer$GibibitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2079,7 +2109,7 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
         unit.toGibibytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$GibibytePerSecond';
+  static const _minorName = 'gibibytePerSecond';
 
   static const _ratio = 8589934592.0;
 
@@ -2092,8 +2122,9 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
   DataTransfer$GibibytePerSecond get _clone =>
       DataTransfer$GibibytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$GibibytePerSecond] with new value
   @override
@@ -2106,6 +2137,7 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
   @override
   String get symbol => 'GiB/s';
 
+  /// [DataTransfer$GibibytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2137,7 +2169,7 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
         unit.toTebibitPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$TebibitPerSecond';
+  static const _minorName = 'tebibitPerSecond';
 
   static const _ratio = 1099511627776.0;
 
@@ -2150,8 +2182,9 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
   DataTransfer$TebibitPerSecond get _clone =>
       DataTransfer$TebibitPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$TebibitPerSecond] with new value
   @override
@@ -2164,6 +2197,7 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
   @override
   String get symbol => 'Tib/s';
 
+  /// [DataTransfer$TebibitPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2195,7 +2229,7 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
         unit.toTebibytePerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$TebibytePerSecond';
+  static const _minorName = 'tebibytePerSecond';
 
   static const _ratio = 8796093022208.0;
 
@@ -2208,8 +2242,9 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
   DataTransfer$TebibytePerSecond get _clone =>
       DataTransfer$TebibytePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$TebibytePerSecond] with new value
   @override
@@ -2222,6 +2257,7 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
   @override
   String get symbol => 'TiB/s';
 
+  /// [DataTransfer$TebibytePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2253,7 +2289,7 @@ final class DataTransfer$Ethernet extends DataTransfer {
         unit.toEthernet.value,
       );
 
-  static const _minorName = r'dataTransfer$Ethernet';
+  static const _minorName = 'ethernet';
 
   static const _ratio = 10000000.0;
 
@@ -2265,8 +2301,9 @@ final class DataTransfer$Ethernet extends DataTransfer {
   @override
   DataTransfer$Ethernet get _clone => DataTransfer$Ethernet(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Ethernet] with new value
   @override
@@ -2277,8 +2314,9 @@ final class DataTransfer$Ethernet extends DataTransfer {
 
   /// Symbol for [DataTransfer$Ethernet]
   @override
-  String get symbol => 'Ethernet';
+  String get symbol => 'ethernet';
 
+  /// [DataTransfer$Ethernet] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2310,7 +2348,7 @@ final class DataTransfer$EthernetFast extends DataTransfer {
         unit.toEthernetFast.value,
       );
 
-  static const _minorName = r'dataTransfer$EthernetFast';
+  static const _minorName = 'ethernetFast';
 
   static const _ratio = 100000000.0;
 
@@ -2322,8 +2360,9 @@ final class DataTransfer$EthernetFast extends DataTransfer {
   @override
   DataTransfer$EthernetFast get _clone => DataTransfer$EthernetFast(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$EthernetFast] with new value
   @override
@@ -2334,8 +2373,9 @@ final class DataTransfer$EthernetFast extends DataTransfer {
 
   /// Symbol for [DataTransfer$EthernetFast]
   @override
-  String get symbol => 'EthernetFast';
+  String get symbol => 'ethernet (fast)';
 
+  /// [DataTransfer$EthernetFast] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2367,7 +2407,7 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
         unit.toEthernetGigabit.value,
       );
 
-  static const _minorName = r'dataTransfer$EthernetGigabit';
+  static const _minorName = 'ethernetGigabit';
 
   static const _ratio = 1000000000.0;
 
@@ -2380,8 +2420,9 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
   DataTransfer$EthernetGigabit get _clone =>
       DataTransfer$EthernetGigabit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$EthernetGigabit] with new value
   @override
@@ -2392,8 +2433,9 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
 
   /// Symbol for [DataTransfer$EthernetGigabit]
   @override
-  String get symbol => 'EthernetGigabit';
+  String get symbol => 'ethernet (gigabit)';
 
+  /// [DataTransfer$EthernetGigabit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2425,7 +2467,7 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
         unit.toEthernet10Gigabit.value,
       );
 
-  static const _minorName = r'dataTransfer$Ethernet10Gigabit';
+  static const _minorName = 'ethernet10Gigabit';
 
   static const _ratio = 10000000000.0;
 
@@ -2438,8 +2480,9 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
   DataTransfer$Ethernet10Gigabit get _clone =>
       DataTransfer$Ethernet10Gigabit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Ethernet10Gigabit] with new value
   @override
@@ -2450,8 +2493,9 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
 
   /// Symbol for [DataTransfer$Ethernet10Gigabit]
   @override
-  String get symbol => 'Ethernet10Gigabit';
+  String get symbol => 'ethernet (10 gigabit)';
 
+  /// [DataTransfer$Ethernet10Gigabit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2483,7 +2527,7 @@ final class DataTransfer$OC1 extends DataTransfer {
         unit.toOC1.value,
       );
 
-  static const _minorName = r'dataTransfer$OC1';
+  static const _minorName = 'oC1';
 
   static const _ratio = 51840000.0;
 
@@ -2495,8 +2539,9 @@ final class DataTransfer$OC1 extends DataTransfer {
   @override
   DataTransfer$OC1 get _clone => DataTransfer$OC1(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$OC1] with new value
   @override
@@ -2509,6 +2554,7 @@ final class DataTransfer$OC1 extends DataTransfer {
   @override
   String get symbol => 'OC1';
 
+  /// [DataTransfer$OC1] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2540,7 +2586,7 @@ final class DataTransfer$OC3 extends DataTransfer {
         unit.toOC3.value,
       );
 
-  static const _minorName = r'dataTransfer$OC3';
+  static const _minorName = 'oC3';
 
   static const _ratio = 155520000.0;
 
@@ -2552,8 +2598,9 @@ final class DataTransfer$OC3 extends DataTransfer {
   @override
   DataTransfer$OC3 get _clone => DataTransfer$OC3(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$OC3] with new value
   @override
@@ -2566,6 +2613,7 @@ final class DataTransfer$OC3 extends DataTransfer {
   @override
   String get symbol => 'OC3';
 
+  /// [DataTransfer$OC3] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2597,7 +2645,7 @@ final class DataTransfer$OC12 extends DataTransfer {
         unit.toOC12.value,
       );
 
-  static const _minorName = r'dataTransfer$OC12';
+  static const _minorName = 'oC12';
 
   static const _ratio = 622080000.0;
 
@@ -2609,8 +2657,9 @@ final class DataTransfer$OC12 extends DataTransfer {
   @override
   DataTransfer$OC12 get _clone => DataTransfer$OC12(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$OC12] with new value
   @override
@@ -2623,6 +2672,7 @@ final class DataTransfer$OC12 extends DataTransfer {
   @override
   String get symbol => 'OC12';
 
+  /// [DataTransfer$OC12] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2654,7 +2704,7 @@ final class DataTransfer$OC24 extends DataTransfer {
         unit.toOC24.value,
       );
 
-  static const _minorName = r'dataTransfer$OC24';
+  static const _minorName = 'oC24';
 
   static const _ratio = 1244160000.0;
 
@@ -2666,8 +2716,9 @@ final class DataTransfer$OC24 extends DataTransfer {
   @override
   DataTransfer$OC24 get _clone => DataTransfer$OC24(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$OC24] with new value
   @override
@@ -2680,6 +2731,7 @@ final class DataTransfer$OC24 extends DataTransfer {
   @override
   String get symbol => 'OC24';
 
+  /// [DataTransfer$OC24] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2711,7 +2763,7 @@ final class DataTransfer$OC48 extends DataTransfer {
         unit.toOC48.value,
       );
 
-  static const _minorName = r'dataTransfer$OC48';
+  static const _minorName = 'oC48';
 
   static const _ratio = 2488320000.0;
 
@@ -2723,8 +2775,9 @@ final class DataTransfer$OC48 extends DataTransfer {
   @override
   DataTransfer$OC48 get _clone => DataTransfer$OC48(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$OC48] with new value
   @override
@@ -2737,6 +2790,7 @@ final class DataTransfer$OC48 extends DataTransfer {
   @override
   String get symbol => 'OC48';
 
+  /// [DataTransfer$OC48] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2768,7 +2822,7 @@ final class DataTransfer$OC192 extends DataTransfer {
         unit.toOC192.value,
       );
 
-  static const _minorName = r'dataTransfer$OC192';
+  static const _minorName = 'oC192';
 
   static const _ratio = 9953280000.0;
 
@@ -2780,8 +2834,9 @@ final class DataTransfer$OC192 extends DataTransfer {
   @override
   DataTransfer$OC192 get _clone => DataTransfer$OC192(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$OC192] with new value
   @override
@@ -2794,6 +2849,7 @@ final class DataTransfer$OC192 extends DataTransfer {
   @override
   String get symbol => 'OC192';
 
+  /// [DataTransfer$OC192] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2825,7 +2881,7 @@ final class DataTransfer$OC768 extends DataTransfer {
         unit.toOC768.value,
       );
 
-  static const _minorName = r'dataTransfer$OC768';
+  static const _minorName = 'oC768';
 
   static const _ratio = 39813120000.0;
 
@@ -2837,8 +2893,9 @@ final class DataTransfer$OC768 extends DataTransfer {
   @override
   DataTransfer$OC768 get _clone => DataTransfer$OC768(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$OC768] with new value
   @override
@@ -2851,6 +2908,7 @@ final class DataTransfer$OC768 extends DataTransfer {
   @override
   String get symbol => 'OC768';
 
+  /// [DataTransfer$OC768] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2882,7 +2940,7 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
         unit.toISDNSingleChannel.value,
       );
 
-  static const _minorName = r'dataTransfer$ISDNSingleChannel';
+  static const _minorName = 'iSDNSingleChannel';
 
   static const _ratio = 64000.0;
 
@@ -2895,8 +2953,9 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
   DataTransfer$ISDNSingleChannel get _clone =>
       DataTransfer$ISDNSingleChannel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$ISDNSingleChannel] with new value
   @override
@@ -2907,8 +2966,9 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
 
   /// Symbol for [DataTransfer$ISDNSingleChannel]
   @override
-  String get symbol => 'ISDNSingleChannel';
+  String get symbol => 'ISDN (single channel)';
 
+  /// [DataTransfer$ISDNSingleChannel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2940,7 +3000,7 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
         unit.toISDNDualChannel.value,
       );
 
-  static const _minorName = r'dataTransfer$ISDNDualChannel';
+  static const _minorName = 'iSDNDualChannel';
 
   static const _ratio = 128000.0;
 
@@ -2953,8 +3013,9 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
   DataTransfer$ISDNDualChannel get _clone =>
       DataTransfer$ISDNDualChannel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$ISDNDualChannel] with new value
   @override
@@ -2965,8 +3026,9 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
 
   /// Symbol for [DataTransfer$ISDNDualChannel]
   @override
-  String get symbol => 'ISDNDualChannel';
+  String get symbol => 'ISDN (dual channel)';
 
+  /// [DataTransfer$ISDNDualChannel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2998,7 +3060,7 @@ final class DataTransfer$Modem110 extends DataTransfer {
         unit.toModem110.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem110';
+  static const _minorName = 'modem110';
 
   static const _ratio = 110.0;
 
@@ -3010,8 +3072,9 @@ final class DataTransfer$Modem110 extends DataTransfer {
   @override
   DataTransfer$Modem110 get _clone => DataTransfer$Modem110(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem110] with new value
   @override
@@ -3022,8 +3085,9 @@ final class DataTransfer$Modem110 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem110]
   @override
-  String get symbol => 'Modem110';
+  String get symbol => 'modem (110)';
 
+  /// [DataTransfer$Modem110] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3055,7 +3119,7 @@ final class DataTransfer$Modem300 extends DataTransfer {
         unit.toModem300.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem300';
+  static const _minorName = 'modem300';
 
   static const _ratio = 300.0;
 
@@ -3067,8 +3131,9 @@ final class DataTransfer$Modem300 extends DataTransfer {
   @override
   DataTransfer$Modem300 get _clone => DataTransfer$Modem300(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem300] with new value
   @override
@@ -3079,8 +3144,9 @@ final class DataTransfer$Modem300 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem300]
   @override
-  String get symbol => 'Modem300';
+  String get symbol => 'modem (300)';
 
+  /// [DataTransfer$Modem300] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3112,7 +3178,7 @@ final class DataTransfer$Modem1200 extends DataTransfer {
         unit.toModem1200.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem1200';
+  static const _minorName = 'modem1200';
 
   static const _ratio = 1200.0;
 
@@ -3124,8 +3190,9 @@ final class DataTransfer$Modem1200 extends DataTransfer {
   @override
   DataTransfer$Modem1200 get _clone => DataTransfer$Modem1200(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem1200] with new value
   @override
@@ -3136,8 +3203,9 @@ final class DataTransfer$Modem1200 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem1200]
   @override
-  String get symbol => 'Modem1200';
+  String get symbol => 'modem (1200)';
 
+  /// [DataTransfer$Modem1200] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3169,7 +3237,7 @@ final class DataTransfer$Modem2400 extends DataTransfer {
         unit.toModem2400.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem2400';
+  static const _minorName = 'modem2400';
 
   static const _ratio = 2400.0;
 
@@ -3181,8 +3249,9 @@ final class DataTransfer$Modem2400 extends DataTransfer {
   @override
   DataTransfer$Modem2400 get _clone => DataTransfer$Modem2400(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem2400] with new value
   @override
@@ -3193,8 +3262,9 @@ final class DataTransfer$Modem2400 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem2400]
   @override
-  String get symbol => 'Modem2400';
+  String get symbol => 'modem (2400)';
 
+  /// [DataTransfer$Modem2400] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3226,7 +3296,7 @@ final class DataTransfer$Modem9600 extends DataTransfer {
         unit.toModem9600.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem9600';
+  static const _minorName = 'modem9600';
 
   static const _ratio = 9600.0;
 
@@ -3238,8 +3308,9 @@ final class DataTransfer$Modem9600 extends DataTransfer {
   @override
   DataTransfer$Modem9600 get _clone => DataTransfer$Modem9600(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem9600] with new value
   @override
@@ -3250,8 +3321,9 @@ final class DataTransfer$Modem9600 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem9600]
   @override
-  String get symbol => 'Modem9600';
+  String get symbol => 'modem (9600)';
 
+  /// [DataTransfer$Modem9600] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3283,7 +3355,7 @@ final class DataTransfer$Modem144k extends DataTransfer {
         unit.toModem144k.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem144k';
+  static const _minorName = 'modem144k';
 
   static const _ratio = 14400.0;
 
@@ -3295,8 +3367,9 @@ final class DataTransfer$Modem144k extends DataTransfer {
   @override
   DataTransfer$Modem144k get _clone => DataTransfer$Modem144k(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem144k] with new value
   @override
@@ -3307,8 +3380,9 @@ final class DataTransfer$Modem144k extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem144k]
   @override
-  String get symbol => 'Modem144k';
+  String get symbol => 'modem (14.4k)';
 
+  /// [DataTransfer$Modem144k] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3340,7 +3414,7 @@ final class DataTransfer$Modem288k extends DataTransfer {
         unit.toModem288k.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem288k';
+  static const _minorName = 'modem288k';
 
   static const _ratio = 28800.0;
 
@@ -3352,8 +3426,9 @@ final class DataTransfer$Modem288k extends DataTransfer {
   @override
   DataTransfer$Modem288k get _clone => DataTransfer$Modem288k(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem288k] with new value
   @override
@@ -3364,8 +3439,9 @@ final class DataTransfer$Modem288k extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem288k]
   @override
-  String get symbol => 'Modem288k';
+  String get symbol => 'modem (28.8k)';
 
+  /// [DataTransfer$Modem288k] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3397,7 +3473,7 @@ final class DataTransfer$Modem336k extends DataTransfer {
         unit.toModem336k.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem336k';
+  static const _minorName = 'modem336k';
 
   static const _ratio = 33600.0;
 
@@ -3409,8 +3485,9 @@ final class DataTransfer$Modem336k extends DataTransfer {
   @override
   DataTransfer$Modem336k get _clone => DataTransfer$Modem336k(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem336k] with new value
   @override
@@ -3421,8 +3498,9 @@ final class DataTransfer$Modem336k extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem336k]
   @override
-  String get symbol => 'Modem336k';
+  String get symbol => 'modem (33.6k)';
 
+  /// [DataTransfer$Modem336k] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3454,7 +3532,7 @@ final class DataTransfer$Modem56k extends DataTransfer {
         unit.toModem56k.value,
       );
 
-  static const _minorName = r'dataTransfer$Modem56k';
+  static const _minorName = 'modem56k';
 
   static const _ratio = 56000.0;
 
@@ -3466,8 +3544,9 @@ final class DataTransfer$Modem56k extends DataTransfer {
   @override
   DataTransfer$Modem56k get _clone => DataTransfer$Modem56k(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem56k] with new value
   @override
@@ -3478,8 +3557,9 @@ final class DataTransfer$Modem56k extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem56k]
   @override
-  String get symbol => 'Modem56k';
+  String get symbol => 'modem (56k)';
 
+  /// [DataTransfer$Modem56k] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3511,7 +3591,7 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
         unit.toSCSIAsync.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSIAsync';
+  static const _minorName = 'sCSIAsync';
 
   static const _ratio = 12000000.0;
 
@@ -3523,8 +3603,9 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
   @override
   DataTransfer$SCSIAsync get _clone => DataTransfer$SCSIAsync(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIAsync] with new value
   @override
@@ -3535,8 +3616,9 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIAsync]
   @override
-  String get symbol => 'SCSIAsync';
+  String get symbol => 'SCSI (Async)';
 
+  /// [DataTransfer$SCSIAsync] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3568,7 +3650,7 @@ final class DataTransfer$SCSISync extends DataTransfer {
         unit.toSCSISync.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSISync';
+  static const _minorName = 'sCSISync';
 
   static const _ratio = 40000000.0;
 
@@ -3580,8 +3662,9 @@ final class DataTransfer$SCSISync extends DataTransfer {
   @override
   DataTransfer$SCSISync get _clone => DataTransfer$SCSISync(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSISync] with new value
   @override
@@ -3592,8 +3675,9 @@ final class DataTransfer$SCSISync extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSISync]
   @override
-  String get symbol => 'SCSISync';
+  String get symbol => 'SCSI (Sync)';
 
+  /// [DataTransfer$SCSISync] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3625,7 +3709,7 @@ final class DataTransfer$SCSIFast extends DataTransfer {
         unit.toSCSIFast.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSIFast';
+  static const _minorName = 'sCSIFast';
 
   static const _ratio = 80000000.0;
 
@@ -3637,8 +3721,9 @@ final class DataTransfer$SCSIFast extends DataTransfer {
   @override
   DataTransfer$SCSIFast get _clone => DataTransfer$SCSIFast(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIFast] with new value
   @override
@@ -3649,8 +3734,9 @@ final class DataTransfer$SCSIFast extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIFast]
   @override
-  String get symbol => 'SCSIFast';
+  String get symbol => 'SCSI (Fast)';
 
+  /// [DataTransfer$SCSIFast] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3682,7 +3768,7 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
         unit.toSCSIFastUltra.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSIFastUltra';
+  static const _minorName = 'sCSIFastUltra';
 
   static const _ratio = 160000000.0;
 
@@ -3694,8 +3780,9 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
   @override
   DataTransfer$SCSIFastUltra get _clone => DataTransfer$SCSIFastUltra(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIFastUltra] with new value
   @override
@@ -3706,8 +3793,9 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIFastUltra]
   @override
-  String get symbol => 'SCSIFastUltra';
+  String get symbol => 'SCSI (Fast Ultra)';
 
+  /// [DataTransfer$SCSIFastUltra] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3739,7 +3827,7 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
         unit.toSCSIFastWide.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSIFastWide';
+  static const _minorName = 'sCSIFastWide';
 
   static const _ratio = 160000000.0;
 
@@ -3751,8 +3839,9 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
   @override
   DataTransfer$SCSIFastWide get _clone => DataTransfer$SCSIFastWide(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIFastWide] with new value
   @override
@@ -3763,8 +3852,9 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIFastWide]
   @override
-  String get symbol => 'SCSIFastWide';
+  String get symbol => 'SCSI (Fast Wide)';
 
+  /// [DataTransfer$SCSIFastWide] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3796,7 +3886,7 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
         unit.toSCSIFastUltraWide.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSIFastUltraWide';
+  static const _minorName = 'sCSIFastUltraWide';
 
   static const _ratio = 320000000.0;
 
@@ -3809,8 +3899,9 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
   DataTransfer$SCSIFastUltraWide get _clone =>
       DataTransfer$SCSIFastUltraWide(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIFastUltraWide] with new value
   @override
@@ -3821,8 +3912,9 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIFastUltraWide]
   @override
-  String get symbol => 'SCSIFastUltraWide';
+  String get symbol => 'SCSI (Fast Ultra Wide)';
 
+  /// [DataTransfer$SCSIFastUltraWide] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3854,7 +3946,7 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
         unit.toSCSIUltra2.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSIUltra2';
+  static const _minorName = 'sCSIUltra2';
 
   static const _ratio = 640000000.0;
 
@@ -3866,8 +3958,9 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
   @override
   DataTransfer$SCSIUltra2 get _clone => DataTransfer$SCSIUltra2(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIUltra2] with new value
   @override
@@ -3878,8 +3971,9 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIUltra2]
   @override
-  String get symbol => 'SCSIUltra2';
+  String get symbol => 'SCSI (Ultra-2)';
 
+  /// [DataTransfer$SCSIUltra2] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3911,7 +4005,7 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
         unit.toSCSIUltra3.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSIUltra3';
+  static const _minorName = 'sCSIUltra3';
 
   static const _ratio = 1280000000.0;
 
@@ -3923,8 +4017,9 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
   @override
   DataTransfer$SCSIUltra3 get _clone => DataTransfer$SCSIUltra3(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIUltra3] with new value
   @override
@@ -3935,8 +4030,9 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIUltra3]
   @override
-  String get symbol => 'SCSIUltra3';
+  String get symbol => 'SCSI (Ultra-3)';
 
+  /// [DataTransfer$SCSIUltra3] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3968,7 +4064,7 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
         unit.toSCSILVDUltra80.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSILVDUltra80';
+  static const _minorName = 'sCSILVDUltra80';
 
   static const _ratio = 640000000.0;
 
@@ -3980,8 +4076,9 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
   @override
   DataTransfer$SCSILVDUltra80 get _clone => DataTransfer$SCSILVDUltra80(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra80] with new value
   @override
@@ -3992,8 +4089,9 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSILVDUltra80]
   @override
-  String get symbol => 'SCSILVDUltra80';
+  String get symbol => 'SCSI (LVD Ultra80)';
 
+  /// [DataTransfer$SCSILVDUltra80] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4025,7 +4123,7 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
         unit.toSCSILVDUltra160.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSILVDUltra160';
+  static const _minorName = 'sCSILVDUltra160';
 
   static const _ratio = 1280000000.0;
 
@@ -4038,8 +4136,9 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
   DataTransfer$SCSILVDUltra160 get _clone =>
       DataTransfer$SCSILVDUltra160(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra160] with new value
   @override
@@ -4050,8 +4149,9 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSILVDUltra160]
   @override
-  String get symbol => 'SCSILVDUltra160';
+  String get symbol => 'SCSI (LVD Ultra160)';
 
+  /// [DataTransfer$SCSILVDUltra160] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4083,7 +4183,7 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
         unit.toSCSILVDUltra320.value,
       );
 
-  static const _minorName = r'dataTransfer$SCSILVDUltra320';
+  static const _minorName = 'sCSILVDUltra320';
 
   static const _ratio = 2560000000.0;
 
@@ -4096,8 +4196,9 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
   DataTransfer$SCSILVDUltra320 get _clone =>
       DataTransfer$SCSILVDUltra320(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra320] with new value
   @override
@@ -4108,8 +4209,9 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSILVDUltra320]
   @override
-  String get symbol => 'SCSILVDUltra320';
+  String get symbol => 'SCSI (LVD Ultra320)';
 
+  /// [DataTransfer$SCSILVDUltra320] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4141,7 +4243,7 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
         unit.toIDEPIOMode0.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEPIOMode0';
+  static const _minorName = 'iDEPIOMode0';
 
   static const _ratio = 26400000.0;
 
@@ -4153,8 +4255,9 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
   @override
   DataTransfer$IDEPIOMode0 get _clone => DataTransfer$IDEPIOMode0(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode0] with new value
   @override
@@ -4165,8 +4268,9 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode0]
   @override
-  String get symbol => 'IDEPIOMode0';
+  String get symbol => 'IDE (PIO mode 0)';
 
+  /// [DataTransfer$IDEPIOMode0] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4198,7 +4302,7 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
         unit.toIDEPIOMode1.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEPIOMode1';
+  static const _minorName = 'iDEPIOMode1';
 
   static const _ratio = 41600000.0;
 
@@ -4210,8 +4314,9 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
   @override
   DataTransfer$IDEPIOMode1 get _clone => DataTransfer$IDEPIOMode1(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode1] with new value
   @override
@@ -4222,8 +4327,9 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode1]
   @override
-  String get symbol => 'IDEPIOMode1';
+  String get symbol => 'IDE (PIO mode 1)';
 
+  /// [DataTransfer$IDEPIOMode1] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4255,7 +4361,7 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
         unit.toIDEPIOMode2.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEPIOMode2';
+  static const _minorName = 'iDEPIOMode2';
 
   static const _ratio = 66400000.0;
 
@@ -4267,8 +4373,9 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
   @override
   DataTransfer$IDEPIOMode2 get _clone => DataTransfer$IDEPIOMode2(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode2] with new value
   @override
@@ -4279,8 +4386,9 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode2]
   @override
-  String get symbol => 'IDEPIOMode2';
+  String get symbol => 'IDE (PIO mode 2)';
 
+  /// [DataTransfer$IDEPIOMode2] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4312,7 +4420,7 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
         unit.toIDEPIOMode3.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEPIOMode3';
+  static const _minorName = 'iDEPIOMode3';
 
   static const _ratio = 88800000.0;
 
@@ -4324,8 +4432,9 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
   @override
   DataTransfer$IDEPIOMode3 get _clone => DataTransfer$IDEPIOMode3(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode3] with new value
   @override
@@ -4336,8 +4445,9 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode3]
   @override
-  String get symbol => 'IDEPIOMode3';
+  String get symbol => 'IDE (PIO mode 3)';
 
+  /// [DataTransfer$IDEPIOMode3] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4369,7 +4479,7 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
         unit.toIDEPIOMode4.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEPIOMode4';
+  static const _minorName = 'iDEPIOMode4';
 
   static const _ratio = 132800000.0;
 
@@ -4381,8 +4491,9 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
   @override
   DataTransfer$IDEPIOMode4 get _clone => DataTransfer$IDEPIOMode4(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode4] with new value
   @override
@@ -4393,8 +4504,9 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode4]
   @override
-  String get symbol => 'IDEPIOMode4';
+  String get symbol => 'IDE (PIO mode 4)';
 
+  /// [DataTransfer$IDEPIOMode4] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4426,7 +4538,7 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
         unit.toIDEDMAMode0.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEDMAMode0';
+  static const _minorName = 'iDEDMAMode0';
 
   static const _ratio = 33600000.0;
 
@@ -4438,8 +4550,9 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
   @override
   DataTransfer$IDEDMAMode0 get _clone => DataTransfer$IDEDMAMode0(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode0] with new value
   @override
@@ -4450,8 +4563,9 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEDMAMode0]
   @override
-  String get symbol => 'IDEDMAMode0';
+  String get symbol => 'IDE (DMA mode 0)';
 
+  /// [DataTransfer$IDEDMAMode0] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4483,7 +4597,7 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
         unit.toIDEDMAMode1.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEDMAMode1';
+  static const _minorName = 'iDEDMAMode1';
 
   static const _ratio = 106400000.0;
 
@@ -4495,8 +4609,9 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
   @override
   DataTransfer$IDEDMAMode1 get _clone => DataTransfer$IDEDMAMode1(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode1] with new value
   @override
@@ -4507,8 +4622,9 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEDMAMode1]
   @override
-  String get symbol => 'IDEDMAMode1';
+  String get symbol => 'IDE (DMA mode 1)';
 
+  /// [DataTransfer$IDEDMAMode1] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4540,7 +4656,7 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
         unit.toIDEDMAMode2.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEDMAMode2';
+  static const _minorName = 'iDEDMAMode2';
 
   static const _ratio = 132800000.0;
 
@@ -4552,8 +4668,9 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
   @override
   DataTransfer$IDEDMAMode2 get _clone => DataTransfer$IDEDMAMode2(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode2] with new value
   @override
@@ -4564,8 +4681,9 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEDMAMode2]
   @override
-  String get symbol => 'IDEDMAMode2';
+  String get symbol => 'IDE (DMA mode 2)';
 
+  /// [DataTransfer$IDEDMAMode2] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4597,7 +4715,7 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
         unit.toIDEUDMAMode0.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMAMode0';
+  static const _minorName = 'iDEUDMAMode0';
 
   static const _ratio = 132800000.0;
 
@@ -4609,8 +4727,9 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
   @override
   DataTransfer$IDEUDMAMode0 get _clone => DataTransfer$IDEUDMAMode0(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode0] with new value
   @override
@@ -4621,8 +4740,9 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode0]
   @override
-  String get symbol => 'IDEUDMAMode0';
+  String get symbol => 'IDE (UDMA mode 0)';
 
+  /// [DataTransfer$IDEUDMAMode0] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4654,7 +4774,7 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
         unit.toIDEUDMAMode1.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMAMode1';
+  static const _minorName = 'iDEUDMAMode1';
 
   static const _ratio = 200000000.0;
 
@@ -4666,8 +4786,9 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
   @override
   DataTransfer$IDEUDMAMode1 get _clone => DataTransfer$IDEUDMAMode1(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode1] with new value
   @override
@@ -4678,8 +4799,9 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode1]
   @override
-  String get symbol => 'IDEUDMAMode1';
+  String get symbol => 'IDE (UDMA mode 1)';
 
+  /// [DataTransfer$IDEUDMAMode1] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4711,7 +4833,7 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
         unit.toIDEUDMAMode2.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMAMode2';
+  static const _minorName = 'iDEUDMAMode2';
 
   static const _ratio = 264000000.0;
 
@@ -4723,8 +4845,9 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
   @override
   DataTransfer$IDEUDMAMode2 get _clone => DataTransfer$IDEUDMAMode2(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode2] with new value
   @override
@@ -4735,8 +4858,9 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode2]
   @override
-  String get symbol => 'IDEUDMAMode2';
+  String get symbol => 'IDE (UDMA mode 2)';
 
+  /// [DataTransfer$IDEUDMAMode2] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4768,7 +4892,7 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
         unit.toIDEUDMAMode3.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMAMode3';
+  static const _minorName = 'iDEUDMAMode3';
 
   static const _ratio = 400000000.0;
 
@@ -4780,8 +4904,9 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
   @override
   DataTransfer$IDEUDMAMode3 get _clone => DataTransfer$IDEUDMAMode3(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode3] with new value
   @override
@@ -4792,8 +4917,9 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode3]
   @override
-  String get symbol => 'IDEUDMAMode3';
+  String get symbol => 'IDE (UDMA mode 3)';
 
+  /// [DataTransfer$IDEUDMAMode3] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4825,7 +4951,7 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
         unit.toIDEUDMAMode4.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMAMode4';
+  static const _minorName = 'iDEUDMAMode4';
 
   static const _ratio = 528000000.0;
 
@@ -4837,8 +4963,9 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
   @override
   DataTransfer$IDEUDMAMode4 get _clone => DataTransfer$IDEUDMAMode4(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode4] with new value
   @override
@@ -4849,8 +4976,9 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode4]
   @override
-  String get symbol => 'IDEUDMAMode4';
+  String get symbol => 'IDE (UDMA mode 4)';
 
+  /// [DataTransfer$IDEUDMAMode4] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4882,7 +5010,7 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
         unit.toIDEUDMAMode5.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMAMode5';
+  static const _minorName = 'iDEUDMAMode5';
 
   static const _ratio = 800000000.0;
 
@@ -4894,8 +5022,9 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
   @override
   DataTransfer$IDEUDMAMode5 get _clone => DataTransfer$IDEUDMAMode5(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode5] with new value
   @override
@@ -4906,8 +5035,9 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode5]
   @override
-  String get symbol => 'IDEUDMAMode5';
+  String get symbol => 'IDE (UDMA mode 5)';
 
+  /// [DataTransfer$IDEUDMAMode5] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4939,7 +5069,7 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
         unit.toIDEUDMAMode6.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMAMode6';
+  static const _minorName = 'iDEUDMAMode6';
 
   static const _ratio = 1066666666.6666666;
 
@@ -4951,8 +5081,9 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
   @override
   DataTransfer$IDEUDMAMode6 get _clone => DataTransfer$IDEUDMAMode6(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode6] with new value
   @override
@@ -4963,8 +5094,9 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode6]
   @override
-  String get symbol => 'IDEUDMAMode6';
+  String get symbol => 'IDE (UDMA mode 6)';
 
+  /// [DataTransfer$IDEUDMAMode6] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -4996,7 +5128,7 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
         unit.toIDEUDMA33.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMA33';
+  static const _minorName = 'iDEUDMA33';
 
   static const _ratio = 264000000.0;
 
@@ -5008,8 +5140,9 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
   @override
   DataTransfer$IDEUDMA33 get _clone => DataTransfer$IDEUDMA33(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA33] with new value
   @override
@@ -5020,8 +5153,9 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMA33]
   @override
-  String get symbol => 'IDEUDMA33';
+  String get symbol => 'IDE (UDMA-33)';
 
+  /// [DataTransfer$IDEUDMA33] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5053,7 +5187,7 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
         unit.toIDEUDMA66.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMA66';
+  static const _minorName = 'iDEUDMA66';
 
   static const _ratio = 528000000.0;
 
@@ -5065,8 +5199,9 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
   @override
   DataTransfer$IDEUDMA66 get _clone => DataTransfer$IDEUDMA66(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA66] with new value
   @override
@@ -5077,8 +5212,9 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMA66]
   @override
-  String get symbol => 'IDEUDMA66';
+  String get symbol => 'IDE (UDMA-66)';
 
+  /// [DataTransfer$IDEUDMA66] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5110,7 +5246,7 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
         unit.toIDEUDMA100.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMA100';
+  static const _minorName = 'iDEUDMA100';
 
   static const _ratio = 800000000.0;
 
@@ -5122,8 +5258,9 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
   @override
   DataTransfer$IDEUDMA100 get _clone => DataTransfer$IDEUDMA100(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA100] with new value
   @override
@@ -5134,8 +5271,9 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMA100]
   @override
-  String get symbol => 'IDEUDMA100';
+  String get symbol => 'IDE (UDMA-100)';
 
+  /// [DataTransfer$IDEUDMA100] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5167,7 +5305,7 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
         unit.toIDEUDMA133.value,
       );
 
-  static const _minorName = r'dataTransfer$IDEUDMA133';
+  static const _minorName = 'iDEUDMA133';
 
   static const _ratio = 1066666666.6666666;
 
@@ -5179,8 +5317,9 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
   @override
   DataTransfer$IDEUDMA133 get _clone => DataTransfer$IDEUDMA133(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA133] with new value
   @override
@@ -5191,8 +5330,9 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMA133]
   @override
-  String get symbol => 'IDEUDMA133';
+  String get symbol => 'IDE (UDMA-133)';
 
+  /// [DataTransfer$IDEUDMA133] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5224,7 +5364,7 @@ final class DataTransfer$SATA10 extends DataTransfer {
         unit.toSATA10.value,
       );
 
-  static const _minorName = r'dataTransfer$SATA10';
+  static const _minorName = 'sATA10';
 
   static const _ratio = 1500000000.0;
 
@@ -5236,8 +5376,9 @@ final class DataTransfer$SATA10 extends DataTransfer {
   @override
   DataTransfer$SATA10 get _clone => DataTransfer$SATA10(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SATA10] with new value
   @override
@@ -5248,8 +5389,9 @@ final class DataTransfer$SATA10 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SATA10]
   @override
-  String get symbol => 'SATA10';
+  String get symbol => 'SATA 1.0';
 
+  /// [DataTransfer$SATA10] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5281,7 +5423,7 @@ final class DataTransfer$SATA20 extends DataTransfer {
         unit.toSATA20.value,
       );
 
-  static const _minorName = r'dataTransfer$SATA20';
+  static const _minorName = 'sATA20';
 
   static const _ratio = 3000000000.0;
 
@@ -5293,8 +5435,9 @@ final class DataTransfer$SATA20 extends DataTransfer {
   @override
   DataTransfer$SATA20 get _clone => DataTransfer$SATA20(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SATA20] with new value
   @override
@@ -5305,8 +5448,9 @@ final class DataTransfer$SATA20 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SATA20]
   @override
-  String get symbol => 'SATA20';
+  String get symbol => 'SATA 2.0';
 
+  /// [DataTransfer$SATA20] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5338,7 +5482,7 @@ final class DataTransfer$SATA30 extends DataTransfer {
         unit.toSATA30.value,
       );
 
-  static const _minorName = r'dataTransfer$SATA30';
+  static const _minorName = 'sATA30';
 
   static const _ratio = 6000000000.0;
 
@@ -5350,8 +5494,9 @@ final class DataTransfer$SATA30 extends DataTransfer {
   @override
   DataTransfer$SATA30 get _clone => DataTransfer$SATA30(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$SATA30] with new value
   @override
@@ -5362,8 +5507,9 @@ final class DataTransfer$SATA30 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SATA30]
   @override
-  String get symbol => 'SATA30';
+  String get symbol => 'SATA 3.0';
 
+  /// [DataTransfer$SATA30] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5395,7 +5541,7 @@ final class DataTransfer$USB extends DataTransfer {
         unit.toUSB.value,
       );
 
-  static const _minorName = r'dataTransfer$USB';
+  static const _minorName = 'uSB';
 
   static const _ratio = 12000000.0;
 
@@ -5407,8 +5553,9 @@ final class DataTransfer$USB extends DataTransfer {
   @override
   DataTransfer$USB get _clone => DataTransfer$USB(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$USB] with new value
   @override
@@ -5421,6 +5568,7 @@ final class DataTransfer$USB extends DataTransfer {
   @override
   String get symbol => 'USB';
 
+  /// [DataTransfer$USB] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5452,7 +5600,7 @@ final class DataTransfer$USB20 extends DataTransfer {
         unit.toUSB20.value,
       );
 
-  static const _minorName = r'dataTransfer$USB20';
+  static const _minorName = 'uSB20';
 
   static const _ratio = 480000000.0;
 
@@ -5464,8 +5612,9 @@ final class DataTransfer$USB20 extends DataTransfer {
   @override
   DataTransfer$USB20 get _clone => DataTransfer$USB20(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$USB20] with new value
   @override
@@ -5476,8 +5625,9 @@ final class DataTransfer$USB20 extends DataTransfer {
 
   /// Symbol for [DataTransfer$USB20]
   @override
-  String get symbol => 'USB20';
+  String get symbol => 'USB 2.0';
 
+  /// [DataTransfer$USB20] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5509,7 +5659,7 @@ final class DataTransfer$USB30 extends DataTransfer {
         unit.toUSB30.value,
       );
 
-  static const _minorName = r'dataTransfer$USB30';
+  static const _minorName = 'uSB30';
 
   static const _ratio = 5000000000.0;
 
@@ -5521,8 +5671,9 @@ final class DataTransfer$USB30 extends DataTransfer {
   @override
   DataTransfer$USB30 get _clone => DataTransfer$USB30(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$USB30] with new value
   @override
@@ -5533,8 +5684,9 @@ final class DataTransfer$USB30 extends DataTransfer {
 
   /// Symbol for [DataTransfer$USB30]
   @override
-  String get symbol => 'USB30';
+  String get symbol => 'USB 3.0';
 
+  /// [DataTransfer$USB30] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5566,7 +5718,7 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
         unit.toFireWire400IEEE1394.value,
       );
 
-  static const _minorName = r'dataTransfer$FireWire400IEEE1394';
+  static const _minorName = 'fireWire400IEEE1394';
 
   static const _ratio = 400000000.0;
 
@@ -5579,8 +5731,9 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
   DataTransfer$FireWire400IEEE1394 get _clone =>
       DataTransfer$FireWire400IEEE1394(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$FireWire400IEEE1394] with new value
   @override
@@ -5591,8 +5744,9 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
 
   /// Symbol for [DataTransfer$FireWire400IEEE1394]
   @override
-  String get symbol => 'FireWire400IEEE1394';
+  String get symbol => 'FireWire 400 (IEEE-1394)';
 
+  /// [DataTransfer$FireWire400IEEE1394] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5624,7 +5778,7 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
         unit.toFireWire800IEEE1394b.value,
       );
 
-  static const _minorName = r'dataTransfer$FireWire800IEEE1394b';
+  static const _minorName = 'fireWire800IEEE1394b';
 
   static const _ratio = 800000000.0;
 
@@ -5637,8 +5791,9 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
   DataTransfer$FireWire800IEEE1394b get _clone =>
       DataTransfer$FireWire800IEEE1394b(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$FireWire800IEEE1394b] with new value
   @override
@@ -5649,8 +5804,9 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
 
   /// Symbol for [DataTransfer$FireWire800IEEE1394b]
   @override
-  String get symbol => 'FireWire800IEEE1394b';
+  String get symbol => 'FireWire 800 (IEEE-1394b)';
 
+  /// [DataTransfer$FireWire800IEEE1394b] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5682,7 +5838,7 @@ final class DataTransfer$IrDA extends DataTransfer {
         unit.toIrDA.value,
       );
 
-  static const _minorName = r'dataTransfer$IrDA';
+  static const _minorName = 'irDA';
 
   static const _ratio = 115200.0;
 
@@ -5694,8 +5850,9 @@ final class DataTransfer$IrDA extends DataTransfer {
   @override
   DataTransfer$IrDA get _clone => DataTransfer$IrDA(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IrDA] with new value
   @override
@@ -5708,6 +5865,7 @@ final class DataTransfer$IrDA extends DataTransfer {
   @override
   String get symbol => 'IrDA';
 
+  /// [DataTransfer$IrDA] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5739,7 +5897,7 @@ final class DataTransfer$IrDA2 extends DataTransfer {
         unit.toIrDA2.value,
       );
 
-  static const _minorName = r'dataTransfer$IrDA2';
+  static const _minorName = 'irDA2';
 
   static const _ratio = 4000000.0;
 
@@ -5751,8 +5909,9 @@ final class DataTransfer$IrDA2 extends DataTransfer {
   @override
   DataTransfer$IrDA2 get _clone => DataTransfer$IrDA2(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$IrDA2] with new value
   @override
@@ -5763,8 +5922,9 @@ final class DataTransfer$IrDA2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IrDA2]
   @override
-  String get symbol => 'IrDA2';
+  String get symbol => 'IrDA-2';
 
+  /// [DataTransfer$IrDA2] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5796,7 +5956,7 @@ final class DataTransfer$ATM extends DataTransfer {
         unit.toATM.value,
       );
 
-  static const _minorName = r'dataTransfer$ATM';
+  static const _minorName = 'aTM';
 
   static const _ratio = 155000000.0;
 
@@ -5808,8 +5968,9 @@ final class DataTransfer$ATM extends DataTransfer {
   @override
   DataTransfer$ATM get _clone => DataTransfer$ATM(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$ATM] with new value
   @override
@@ -5822,6 +5983,7 @@ final class DataTransfer$ATM extends DataTransfer {
   @override
   String get symbol => 'ATM';
 
+  /// [DataTransfer$ATM] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5853,7 +6015,7 @@ final class DataTransfer$T0Payload extends DataTransfer {
         unit.toT0Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$T0Payload';
+  static const _minorName = 't0Payload';
 
   static const _ratio = 56000.0;
 
@@ -5865,8 +6027,9 @@ final class DataTransfer$T0Payload extends DataTransfer {
   @override
   DataTransfer$T0Payload get _clone => DataTransfer$T0Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T0Payload] with new value
   @override
@@ -5877,8 +6040,9 @@ final class DataTransfer$T0Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T0Payload]
   @override
-  String get symbol => 'T0Payload';
+  String get symbol => 'T0 (payload)';
 
+  /// [DataTransfer$T0Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5910,7 +6074,7 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
         unit.toT0B8ZSPayload.value,
       );
 
-  static const _minorName = r'dataTransfer$T0B8ZSPayload';
+  static const _minorName = 't0B8ZSPayload';
 
   static const _ratio = 64000.0;
 
@@ -5922,8 +6086,9 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
   @override
   DataTransfer$T0B8ZSPayload get _clone => DataTransfer$T0B8ZSPayload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T0B8ZSPayload] with new value
   @override
@@ -5934,8 +6099,9 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T0B8ZSPayload]
   @override
-  String get symbol => 'T0B8ZSPayload';
+  String get symbol => 'T0 (B8ZS payload)';
 
+  /// [DataTransfer$T0B8ZSPayload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -5967,7 +6133,7 @@ final class DataTransfer$T1Signal extends DataTransfer {
         unit.toT1Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$T1Signal';
+  static const _minorName = 't1Signal';
 
   static const _ratio = 1544000.0;
 
@@ -5979,8 +6145,9 @@ final class DataTransfer$T1Signal extends DataTransfer {
   @override
   DataTransfer$T1Signal get _clone => DataTransfer$T1Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T1Signal] with new value
   @override
@@ -5991,8 +6158,9 @@ final class DataTransfer$T1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1Signal]
   @override
-  String get symbol => 'T1Signal';
+  String get symbol => 'T1 (signal)';
 
+  /// [DataTransfer$T1Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6024,7 +6192,7 @@ final class DataTransfer$T1Payload extends DataTransfer {
         unit.toT1Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$T1Payload';
+  static const _minorName = 't1Payload';
 
   static const _ratio = 1344000.0;
 
@@ -6036,8 +6204,9 @@ final class DataTransfer$T1Payload extends DataTransfer {
   @override
   DataTransfer$T1Payload get _clone => DataTransfer$T1Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T1Payload] with new value
   @override
@@ -6048,8 +6217,9 @@ final class DataTransfer$T1Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1Payload]
   @override
-  String get symbol => 'T1Payload';
+  String get symbol => 'T1 (payload)';
 
+  /// [DataTransfer$T1Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6081,7 +6251,7 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
         unit.toT1ZPayload.value,
       );
 
-  static const _minorName = r'dataTransfer$T1ZPayload';
+  static const _minorName = 't1ZPayload';
 
   static const _ratio = 1544000.0;
 
@@ -6093,8 +6263,9 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
   @override
   DataTransfer$T1ZPayload get _clone => DataTransfer$T1ZPayload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T1ZPayload] with new value
   @override
@@ -6105,8 +6276,9 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1ZPayload]
   @override
-  String get symbol => 'T1ZPayload';
+  String get symbol => 'T1Z (payload)';
 
+  /// [DataTransfer$T1ZPayload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6138,7 +6310,7 @@ final class DataTransfer$T1CSignal extends DataTransfer {
         unit.toT1CSignal.value,
       );
 
-  static const _minorName = r'dataTransfer$T1CSignal';
+  static const _minorName = 't1CSignal';
 
   static const _ratio = 3152000.0;
 
@@ -6150,8 +6322,9 @@ final class DataTransfer$T1CSignal extends DataTransfer {
   @override
   DataTransfer$T1CSignal get _clone => DataTransfer$T1CSignal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T1CSignal] with new value
   @override
@@ -6162,8 +6335,9 @@ final class DataTransfer$T1CSignal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1CSignal]
   @override
-  String get symbol => 'T1CSignal';
+  String get symbol => 'T1C (signal)';
 
+  /// [DataTransfer$T1CSignal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6195,7 +6369,7 @@ final class DataTransfer$T1CPayload extends DataTransfer {
         unit.toT1CPayload.value,
       );
 
-  static const _minorName = r'dataTransfer$T1CPayload';
+  static const _minorName = 't1CPayload';
 
   static const _ratio = 2688000.0;
 
@@ -6207,8 +6381,9 @@ final class DataTransfer$T1CPayload extends DataTransfer {
   @override
   DataTransfer$T1CPayload get _clone => DataTransfer$T1CPayload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T1CPayload] with new value
   @override
@@ -6219,8 +6394,9 @@ final class DataTransfer$T1CPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1CPayload]
   @override
-  String get symbol => 'T1CPayload';
+  String get symbol => 'T1C (payload)';
 
+  /// [DataTransfer$T1CPayload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6252,7 +6428,7 @@ final class DataTransfer$T2Signal extends DataTransfer {
         unit.toT2Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$T2Signal';
+  static const _minorName = 't2Signal';
 
   static const _ratio = 6312000.0;
 
@@ -6264,8 +6440,9 @@ final class DataTransfer$T2Signal extends DataTransfer {
   @override
   DataTransfer$T2Signal get _clone => DataTransfer$T2Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T2Signal] with new value
   @override
@@ -6276,8 +6453,9 @@ final class DataTransfer$T2Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T2Signal]
   @override
-  String get symbol => 'T2Signal';
+  String get symbol => 'T2 (signal)';
 
+  /// [DataTransfer$T2Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6309,7 +6487,7 @@ final class DataTransfer$T3Signal extends DataTransfer {
         unit.toT3Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$T3Signal';
+  static const _minorName = 't3Signal';
 
   static const _ratio = 44736000.0;
 
@@ -6321,8 +6499,9 @@ final class DataTransfer$T3Signal extends DataTransfer {
   @override
   DataTransfer$T3Signal get _clone => DataTransfer$T3Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T3Signal] with new value
   @override
@@ -6333,8 +6512,9 @@ final class DataTransfer$T3Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T3Signal]
   @override
-  String get symbol => 'T3Signal';
+  String get symbol => 'T3 (signal)';
 
+  /// [DataTransfer$T3Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6366,7 +6546,7 @@ final class DataTransfer$T3Payload extends DataTransfer {
         unit.toT3Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$T3Payload';
+  static const _minorName = 't3Payload';
 
   static const _ratio = 37632000.0;
 
@@ -6378,8 +6558,9 @@ final class DataTransfer$T3Payload extends DataTransfer {
   @override
   DataTransfer$T3Payload get _clone => DataTransfer$T3Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T3Payload] with new value
   @override
@@ -6390,8 +6571,9 @@ final class DataTransfer$T3Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T3Payload]
   @override
-  String get symbol => 'T3Payload';
+  String get symbol => 'T3 (payload)';
 
+  /// [DataTransfer$T3Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6423,7 +6605,7 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
         unit.toT3ZPayload.value,
       );
 
-  static const _minorName = r'dataTransfer$T3ZPayload';
+  static const _minorName = 't3ZPayload';
 
   static const _ratio = 43008000.0;
 
@@ -6435,8 +6617,9 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
   @override
   DataTransfer$T3ZPayload get _clone => DataTransfer$T3ZPayload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T3ZPayload] with new value
   @override
@@ -6447,8 +6630,9 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T3ZPayload]
   @override
-  String get symbol => 'T3ZPayload';
+  String get symbol => 'T3Z (payload)';
 
+  /// [DataTransfer$T3ZPayload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6480,7 +6664,7 @@ final class DataTransfer$T4Signal extends DataTransfer {
         unit.toT4Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$T4Signal';
+  static const _minorName = 't4Signal';
 
   static const _ratio = 274176000.0;
 
@@ -6492,8 +6676,9 @@ final class DataTransfer$T4Signal extends DataTransfer {
   @override
   DataTransfer$T4Signal get _clone => DataTransfer$T4Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$T4Signal] with new value
   @override
@@ -6504,8 +6689,9 @@ final class DataTransfer$T4Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T4Signal]
   @override
-  String get symbol => 'T4Signal';
+  String get symbol => 'T4 (signal)';
 
+  /// [DataTransfer$T4Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6537,7 +6723,7 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
         unit.toEPTA1Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$EPTA1Signal';
+  static const _minorName = 'ePTA1Signal';
 
   static const _ratio = 2048000.0;
 
@@ -6549,8 +6735,9 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
   @override
   DataTransfer$EPTA1Signal get _clone => DataTransfer$EPTA1Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA1Signal] with new value
   @override
@@ -6561,8 +6748,9 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA1Signal]
   @override
-  String get symbol => 'EPTA1Signal';
+  String get symbol => 'E.P.T.A. 1 (signal)';
 
+  /// [DataTransfer$EPTA1Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6594,7 +6782,7 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
         unit.toEPTA1Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$EPTA1Payload';
+  static const _minorName = 'ePTA1Payload';
 
   static const _ratio = 1920000.0;
 
@@ -6606,8 +6794,9 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
   @override
   DataTransfer$EPTA1Payload get _clone => DataTransfer$EPTA1Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA1Payload] with new value
   @override
@@ -6618,8 +6807,9 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA1Payload]
   @override
-  String get symbol => 'EPTA1Payload';
+  String get symbol => 'E.P.T.A. 1 (payload)';
 
+  /// [DataTransfer$EPTA1Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6651,7 +6841,7 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
         unit.toEPTA2Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$EPTA2Signal';
+  static const _minorName = 'ePTA2Signal';
 
   static const _ratio = 8448000.0;
 
@@ -6663,8 +6853,9 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
   @override
   DataTransfer$EPTA2Signal get _clone => DataTransfer$EPTA2Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA2Signal] with new value
   @override
@@ -6675,8 +6866,9 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA2Signal]
   @override
-  String get symbol => 'EPTA2Signal';
+  String get symbol => 'E.P.T.A. 2 (signal)';
 
+  /// [DataTransfer$EPTA2Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6708,7 +6900,7 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
         unit.toEPTA2Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$EPTA2Payload';
+  static const _minorName = 'ePTA2Payload';
 
   static const _ratio = 7680000.0;
 
@@ -6720,8 +6912,9 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
   @override
   DataTransfer$EPTA2Payload get _clone => DataTransfer$EPTA2Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA2Payload] with new value
   @override
@@ -6732,8 +6925,9 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA2Payload]
   @override
-  String get symbol => 'EPTA2Payload';
+  String get symbol => 'E.P.T.A. 2 (payload)';
 
+  /// [DataTransfer$EPTA2Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6765,7 +6959,7 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
         unit.toEPTA3Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$EPTA3Signal';
+  static const _minorName = 'ePTA3Signal';
 
   static const _ratio = 34368000.0;
 
@@ -6777,8 +6971,9 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
   @override
   DataTransfer$EPTA3Signal get _clone => DataTransfer$EPTA3Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA3Signal] with new value
   @override
@@ -6789,8 +6984,9 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA3Signal]
   @override
-  String get symbol => 'EPTA3Signal';
+  String get symbol => 'E.P.T.A. 3 (signal)';
 
+  /// [DataTransfer$EPTA3Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6822,7 +7018,7 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
         unit.toEPTA3Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$EPTA3Payload';
+  static const _minorName = 'ePTA3Payload';
 
   static const _ratio = 30720000.0;
 
@@ -6834,8 +7030,9 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
   @override
   DataTransfer$EPTA3Payload get _clone => DataTransfer$EPTA3Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA3Payload] with new value
   @override
@@ -6846,8 +7043,9 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA3Payload]
   @override
-  String get symbol => 'EPTA3Payload';
+  String get symbol => 'E.P.T.A. 3 (payload)';
 
+  /// [DataTransfer$EPTA3Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6879,7 +7077,7 @@ final class DataTransfer$H0 extends DataTransfer {
         unit.toH0.value,
       );
 
-  static const _minorName = r'dataTransfer$H0';
+  static const _minorName = 'h0';
 
   static const _ratio = 384000.0;
 
@@ -6891,8 +7089,9 @@ final class DataTransfer$H0 extends DataTransfer {
   @override
   DataTransfer$H0 get _clone => DataTransfer$H0(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$H0] with new value
   @override
@@ -6905,6 +7104,7 @@ final class DataTransfer$H0 extends DataTransfer {
   @override
   String get symbol => 'H0';
 
+  /// [DataTransfer$H0] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6936,7 +7136,7 @@ final class DataTransfer$H11 extends DataTransfer {
         unit.toH11.value,
       );
 
-  static const _minorName = r'dataTransfer$H11';
+  static const _minorName = 'h11';
 
   static const _ratio = 1536000.0;
 
@@ -6948,8 +7148,9 @@ final class DataTransfer$H11 extends DataTransfer {
   @override
   DataTransfer$H11 get _clone => DataTransfer$H11(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$H11] with new value
   @override
@@ -6962,6 +7163,7 @@ final class DataTransfer$H11 extends DataTransfer {
   @override
   String get symbol => 'H11';
 
+  /// [DataTransfer$H11] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -6993,7 +7195,7 @@ final class DataTransfer$H12 extends DataTransfer {
         unit.toH12.value,
       );
 
-  static const _minorName = r'dataTransfer$H12';
+  static const _minorName = 'h12';
 
   static const _ratio = 1920000.0;
 
@@ -7005,8 +7207,9 @@ final class DataTransfer$H12 extends DataTransfer {
   @override
   DataTransfer$H12 get _clone => DataTransfer$H12(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$H12] with new value
   @override
@@ -7019,6 +7222,7 @@ final class DataTransfer$H12 extends DataTransfer {
   @override
   String get symbol => 'H12';
 
+  /// [DataTransfer$H12] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7050,7 +7254,7 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
         unit.toVirtualTributary1Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$VirtualTributary1Signal';
+  static const _minorName = 'virtualTributary1Signal';
 
   static const _ratio = 1728000.0;
 
@@ -7063,8 +7267,9 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
   DataTransfer$VirtualTributary1Signal get _clone =>
       DataTransfer$VirtualTributary1Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary1Signal] with new value
   @override
@@ -7075,8 +7280,9 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary1Signal]
   @override
-  String get symbol => 'VirtualTributary1Signal';
+  String get symbol => 'Virtual Tributary 1 (signal)';
 
+  /// [DataTransfer$VirtualTributary1Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7108,7 +7314,7 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
         unit.toVirtualTributary1Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$VirtualTributary1Payload';
+  static const _minorName = 'virtualTributary1Payload';
 
   static const _ratio = 1544000.0;
 
@@ -7121,8 +7327,9 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
   DataTransfer$VirtualTributary1Payload get _clone =>
       DataTransfer$VirtualTributary1Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary1Payload] with new value
   @override
@@ -7133,8 +7340,9 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary1Payload]
   @override
-  String get symbol => 'VirtualTributary1Payload';
+  String get symbol => 'Virtual Tributary 1 (payload)';
 
+  /// [DataTransfer$VirtualTributary1Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7166,7 +7374,7 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
         unit.toVirtualTributary2Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$VirtualTributary2Signal';
+  static const _minorName = 'virtualTributary2Signal';
 
   static const _ratio = 2304000.0;
 
@@ -7179,8 +7387,9 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
   DataTransfer$VirtualTributary2Signal get _clone =>
       DataTransfer$VirtualTributary2Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary2Signal] with new value
   @override
@@ -7191,8 +7400,9 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary2Signal]
   @override
-  String get symbol => 'VirtualTributary2Signal';
+  String get symbol => 'Virtual Tributary 2 (signal)';
 
+  /// [DataTransfer$VirtualTributary2Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7224,7 +7434,7 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
         unit.toVirtualTributary2Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$VirtualTributary2Payload';
+  static const _minorName = 'virtualTributary2Payload';
 
   static const _ratio = 2048000.0;
 
@@ -7237,8 +7447,9 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
   DataTransfer$VirtualTributary2Payload get _clone =>
       DataTransfer$VirtualTributary2Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary2Payload] with new value
   @override
@@ -7249,8 +7460,9 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary2Payload]
   @override
-  String get symbol => 'VirtualTributary2Payload';
+  String get symbol => 'Virtual Tributary 2 (payload)';
 
+  /// [DataTransfer$VirtualTributary2Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7282,7 +7494,7 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
         unit.toVirtualTributary6Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$VirtualTributary6Signal';
+  static const _minorName = 'virtualTributary6Signal';
 
   static const _ratio = 6312000.0;
 
@@ -7295,8 +7507,9 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
   DataTransfer$VirtualTributary6Signal get _clone =>
       DataTransfer$VirtualTributary6Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary6Signal] with new value
   @override
@@ -7307,8 +7520,9 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary6Signal]
   @override
-  String get symbol => 'VirtualTributary6Signal';
+  String get symbol => 'Virtual Tributary 6 (signal)';
 
+  /// [DataTransfer$VirtualTributary6Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7340,7 +7554,7 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
         unit.toVirtualTributary6Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$VirtualTributary6Payload';
+  static const _minorName = 'virtualTributary6Payload';
 
   static const _ratio = 6000000.0;
 
@@ -7353,8 +7567,9 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
   DataTransfer$VirtualTributary6Payload get _clone =>
       DataTransfer$VirtualTributary6Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary6Payload] with new value
   @override
@@ -7365,8 +7580,9 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary6Payload]
   @override
-  String get symbol => 'VirtualTributary6Payload';
+  String get symbol => 'Virtual Tributary 6 (payload)';
 
+  /// [DataTransfer$VirtualTributary6Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7398,7 +7614,7 @@ final class DataTransfer$STS1Signal extends DataTransfer {
         unit.toSTS1Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STS1Signal';
+  static const _minorName = 'sTS1Signal';
 
   static const _ratio = 51840000.0;
 
@@ -7410,8 +7626,9 @@ final class DataTransfer$STS1Signal extends DataTransfer {
   @override
   DataTransfer$STS1Signal get _clone => DataTransfer$STS1Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS1Signal] with new value
   @override
@@ -7422,8 +7639,9 @@ final class DataTransfer$STS1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS1Signal]
   @override
-  String get symbol => 'STS1Signal';
+  String get symbol => 'STS1 (signal)';
 
+  /// [DataTransfer$STS1Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7455,7 +7673,7 @@ final class DataTransfer$STS1Payload extends DataTransfer {
         unit.toSTS1Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$STS1Payload';
+  static const _minorName = 'sTS1Payload';
 
   static const _ratio = 49500000.0;
 
@@ -7467,8 +7685,9 @@ final class DataTransfer$STS1Payload extends DataTransfer {
   @override
   DataTransfer$STS1Payload get _clone => DataTransfer$STS1Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS1Payload] with new value
   @override
@@ -7479,8 +7698,9 @@ final class DataTransfer$STS1Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS1Payload]
   @override
-  String get symbol => 'STS1Payload';
+  String get symbol => 'STS1 (payload)';
 
+  /// [DataTransfer$STS1Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7512,7 +7732,7 @@ final class DataTransfer$STS3Signal extends DataTransfer {
         unit.toSTS3Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STS3Signal';
+  static const _minorName = 'sTS3Signal';
 
   static const _ratio = 155520000.0;
 
@@ -7524,8 +7744,9 @@ final class DataTransfer$STS3Signal extends DataTransfer {
   @override
   DataTransfer$STS3Signal get _clone => DataTransfer$STS3Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS3Signal] with new value
   @override
@@ -7536,8 +7757,9 @@ final class DataTransfer$STS3Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS3Signal]
   @override
-  String get symbol => 'STS3Signal';
+  String get symbol => 'STS3 (signal)';
 
+  /// [DataTransfer$STS3Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7569,7 +7791,7 @@ final class DataTransfer$STS3Payload extends DataTransfer {
         unit.toSTS3Payload.value,
       );
 
-  static const _minorName = r'dataTransfer$STS3Payload';
+  static const _minorName = 'sTS3Payload';
 
   static const _ratio = 150336000.0;
 
@@ -7581,8 +7803,9 @@ final class DataTransfer$STS3Payload extends DataTransfer {
   @override
   DataTransfer$STS3Payload get _clone => DataTransfer$STS3Payload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS3Payload] with new value
   @override
@@ -7593,8 +7816,9 @@ final class DataTransfer$STS3Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS3Payload]
   @override
-  String get symbol => 'STS3Payload';
+  String get symbol => 'STS3 (payload)';
 
+  /// [DataTransfer$STS3Payload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7626,7 +7850,7 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
         unit.toSTS3cSignal.value,
       );
 
-  static const _minorName = r'dataTransfer$STS3cSignal';
+  static const _minorName = 'sTS3cSignal';
 
   static const _ratio = 155520000.0;
 
@@ -7638,8 +7862,9 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
   @override
   DataTransfer$STS3cSignal get _clone => DataTransfer$STS3cSignal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS3cSignal] with new value
   @override
@@ -7650,8 +7875,9 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS3cSignal]
   @override
-  String get symbol => 'STS3cSignal';
+  String get symbol => 'STS3c (signal)';
 
+  /// [DataTransfer$STS3cSignal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7683,7 +7909,7 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
         unit.toSTS3cPayload.value,
       );
 
-  static const _minorName = r'dataTransfer$STS3cPayload';
+  static const _minorName = 'sTS3cPayload';
 
   static const _ratio = 150336000.0;
 
@@ -7695,8 +7921,9 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
   @override
   DataTransfer$STS3cPayload get _clone => DataTransfer$STS3cPayload(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS3cPayload] with new value
   @override
@@ -7707,8 +7934,9 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS3cPayload]
   @override
-  String get symbol => 'STS3cPayload';
+  String get symbol => 'STS3c (payload)';
 
+  /// [DataTransfer$STS3cPayload] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7740,7 +7968,7 @@ final class DataTransfer$STS12Signal extends DataTransfer {
         unit.toSTS12Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STS12Signal';
+  static const _minorName = 'sTS12Signal';
 
   static const _ratio = 622080000.0;
 
@@ -7752,8 +7980,9 @@ final class DataTransfer$STS12Signal extends DataTransfer {
   @override
   DataTransfer$STS12Signal get _clone => DataTransfer$STS12Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS12Signal] with new value
   @override
@@ -7764,8 +7993,9 @@ final class DataTransfer$STS12Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS12Signal]
   @override
-  String get symbol => 'STS12Signal';
+  String get symbol => 'STS12 (signal)';
 
+  /// [DataTransfer$STS12Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7797,7 +8027,7 @@ final class DataTransfer$STS24Signal extends DataTransfer {
         unit.toSTS24Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STS24Signal';
+  static const _minorName = 'sTS24Signal';
 
   static const _ratio = 1244160000.0;
 
@@ -7809,8 +8039,9 @@ final class DataTransfer$STS24Signal extends DataTransfer {
   @override
   DataTransfer$STS24Signal get _clone => DataTransfer$STS24Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS24Signal] with new value
   @override
@@ -7821,8 +8052,9 @@ final class DataTransfer$STS24Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS24Signal]
   @override
-  String get symbol => 'STS24Signal';
+  String get symbol => 'STS24 (signal)';
 
+  /// [DataTransfer$STS24Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7854,7 +8086,7 @@ final class DataTransfer$STS48Signal extends DataTransfer {
         unit.toSTS48Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STS48Signal';
+  static const _minorName = 'sTS48Signal';
 
   static const _ratio = 2488320000.0;
 
@@ -7866,8 +8098,9 @@ final class DataTransfer$STS48Signal extends DataTransfer {
   @override
   DataTransfer$STS48Signal get _clone => DataTransfer$STS48Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS48Signal] with new value
   @override
@@ -7878,8 +8111,9 @@ final class DataTransfer$STS48Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS48Signal]
   @override
-  String get symbol => 'STS48Signal';
+  String get symbol => 'STS48 (signal)';
 
+  /// [DataTransfer$STS48Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7911,7 +8145,7 @@ final class DataTransfer$STS192Signal extends DataTransfer {
         unit.toSTS192Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STS192Signal';
+  static const _minorName = 'sTS192Signal';
 
   static const _ratio = 9953280000.0;
 
@@ -7923,8 +8157,9 @@ final class DataTransfer$STS192Signal extends DataTransfer {
   @override
   DataTransfer$STS192Signal get _clone => DataTransfer$STS192Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STS192Signal] with new value
   @override
@@ -7935,8 +8170,9 @@ final class DataTransfer$STS192Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS192Signal]
   @override
-  String get symbol => 'STS192Signal';
+  String get symbol => 'STS192 (signal)';
 
+  /// [DataTransfer$STS192Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -7968,7 +8204,7 @@ final class DataTransfer$STM1Signal extends DataTransfer {
         unit.toSTM1Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STM1Signal';
+  static const _minorName = 'sTM1Signal';
 
   static const _ratio = 155520000.0;
 
@@ -7980,8 +8216,9 @@ final class DataTransfer$STM1Signal extends DataTransfer {
   @override
   DataTransfer$STM1Signal get _clone => DataTransfer$STM1Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STM1Signal] with new value
   @override
@@ -7992,8 +8229,9 @@ final class DataTransfer$STM1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STM1Signal]
   @override
-  String get symbol => 'STM1Signal';
+  String get symbol => 'STM-1 (signal)';
 
+  /// [DataTransfer$STM1Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8025,7 +8263,7 @@ final class DataTransfer$STM4Signal extends DataTransfer {
         unit.toSTM4Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STM4Signal';
+  static const _minorName = 'sTM4Signal';
 
   static const _ratio = 622080000.0;
 
@@ -8037,8 +8275,9 @@ final class DataTransfer$STM4Signal extends DataTransfer {
   @override
   DataTransfer$STM4Signal get _clone => DataTransfer$STM4Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STM4Signal] with new value
   @override
@@ -8049,8 +8288,9 @@ final class DataTransfer$STM4Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STM4Signal]
   @override
-  String get symbol => 'STM4Signal';
+  String get symbol => 'STM-4 (signal)';
 
+  /// [DataTransfer$STM4Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8082,7 +8322,7 @@ final class DataTransfer$STM16Signal extends DataTransfer {
         unit.toSTM16Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STM16Signal';
+  static const _minorName = 'sTM16Signal';
 
   static const _ratio = 2488320000.0;
 
@@ -8094,8 +8334,9 @@ final class DataTransfer$STM16Signal extends DataTransfer {
   @override
   DataTransfer$STM16Signal get _clone => DataTransfer$STM16Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STM16Signal] with new value
   @override
@@ -8106,8 +8347,9 @@ final class DataTransfer$STM16Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STM16Signal]
   @override
-  String get symbol => 'STM16Signal';
+  String get symbol => 'STM-16 (signal)';
 
+  /// [DataTransfer$STM16Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8139,7 +8381,7 @@ final class DataTransfer$STM64Signal extends DataTransfer {
         unit.toSTM64Signal.value,
       );
 
-  static const _minorName = r'dataTransfer$STM64Signal';
+  static const _minorName = 'sTM64Signal';
 
   static const _ratio = 9953280000.0;
 
@@ -8151,8 +8393,9 @@ final class DataTransfer$STM64Signal extends DataTransfer {
   @override
   DataTransfer$STM64Signal get _clone => DataTransfer$STM64Signal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$STM64Signal] with new value
   @override
@@ -8163,8 +8406,9 @@ final class DataTransfer$STM64Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STM64Signal]
   @override
-  String get symbol => 'STM64Signal';
+  String get symbol => 'STM-64 (signal)';
 
+  /// [DataTransfer$STM64Signal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8196,7 +8440,7 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
         unit.toCharacterPerSecond.value,
       );
 
-  static const _minorName = r'dataTransfer$CharacterPerSecond';
+  static const _minorName = 'characterPerSecond';
 
   static const _ratio = 8.0;
 
@@ -8209,8 +8453,9 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
   DataTransfer$CharacterPerSecond get _clone =>
       DataTransfer$CharacterPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CharacterPerSecond] with new value
   @override
@@ -8221,8 +8466,9 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
 
   /// Symbol for [DataTransfer$CharacterPerSecond]
   @override
-  String get symbol => 'CharacterPerSecond';
+  String get symbol => 'character/second';
 
+  /// [DataTransfer$CharacterPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8254,7 +8500,7 @@ final class DataTransfer$TokenRing extends DataTransfer {
         unit.toTokenRing.value,
       );
 
-  static const _minorName = r'dataTransfer$TokenRing';
+  static const _minorName = 'tokenRing';
 
   static const _ratio = 4000000.0;
 
@@ -8266,8 +8512,9 @@ final class DataTransfer$TokenRing extends DataTransfer {
   @override
   DataTransfer$TokenRing get _clone => DataTransfer$TokenRing(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$TokenRing] with new value
   @override
@@ -8278,8 +8525,9 @@ final class DataTransfer$TokenRing extends DataTransfer {
 
   /// Symbol for [DataTransfer$TokenRing]
   @override
-  String get symbol => 'TokenRing';
+  String get symbol => 'token ring';
 
+  /// [DataTransfer$TokenRing] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8311,7 +8559,7 @@ final class DataTransfer$FiberChannel extends DataTransfer {
         unit.toFiberChannel.value,
       );
 
-  static const _minorName = r'dataTransfer$FiberChannel';
+  static const _minorName = 'fiberChannel';
 
   static const _ratio = 3200000000.0;
 
@@ -8323,8 +8571,9 @@ final class DataTransfer$FiberChannel extends DataTransfer {
   @override
   DataTransfer$FiberChannel get _clone => DataTransfer$FiberChannel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$FiberChannel] with new value
   @override
@@ -8335,8 +8584,9 @@ final class DataTransfer$FiberChannel extends DataTransfer {
 
   /// Symbol for [DataTransfer$FiberChannel]
   @override
-  String get symbol => 'FiberChannel';
+  String get symbol => 'fiber channel';
 
+  /// [DataTransfer$FiberChannel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8368,7 +8618,7 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
         unit.toISA8Bit.value,
       );
 
-  static const _minorName = r'dataTransfer$ISA8Bit';
+  static const _minorName = 'iSA8Bit';
 
   static const _ratio = 66666666.666666664;
 
@@ -8380,8 +8630,9 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
   @override
   DataTransfer$ISA8Bit get _clone => DataTransfer$ISA8Bit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$ISA8Bit] with new value
   @override
@@ -8392,8 +8643,9 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
 
   /// Symbol for [DataTransfer$ISA8Bit]
   @override
-  String get symbol => 'ISA8Bit';
+  String get symbol => 'ISA (8-bit)';
 
+  /// [DataTransfer$ISA8Bit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8425,7 +8677,7 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
         unit.toISA16Bit.value,
       );
 
-  static const _minorName = r'dataTransfer$ISA16Bit';
+  static const _minorName = 'iSA16Bit';
 
   static const _ratio = 133333333.33333333;
 
@@ -8437,8 +8689,9 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
   @override
   DataTransfer$ISA16Bit get _clone => DataTransfer$ISA16Bit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$ISA16Bit] with new value
   @override
@@ -8449,8 +8702,9 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
 
   /// Symbol for [DataTransfer$ISA16Bit]
   @override
-  String get symbol => 'ISA16Bit';
+  String get symbol => 'ISA (16-bit)';
 
+  /// [DataTransfer$ISA16Bit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8482,7 +8736,7 @@ final class DataTransfer$VLB extends DataTransfer {
         unit.toVLB.value,
       );
 
-  static const _minorName = r'dataTransfer$VLB';
+  static const _minorName = 'vLB';
 
   static const _ratio = 533333333.3333333;
 
@@ -8494,8 +8748,9 @@ final class DataTransfer$VLB extends DataTransfer {
   @override
   DataTransfer$VLB get _clone => DataTransfer$VLB(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$VLB] with new value
   @override
@@ -8508,6 +8763,7 @@ final class DataTransfer$VLB extends DataTransfer {
   @override
   String get symbol => 'VLB';
 
+  /// [DataTransfer$VLB] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8539,7 +8795,7 @@ final class DataTransfer$PCI extends DataTransfer {
         unit.toPCI.value,
       );
 
-  static const _minorName = r'dataTransfer$PCI';
+  static const _minorName = 'pCI';
 
   static const _ratio = 1066666666.6666666;
 
@@ -8551,8 +8807,9 @@ final class DataTransfer$PCI extends DataTransfer {
   @override
   DataTransfer$PCI get _clone => DataTransfer$PCI(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCI] with new value
   @override
@@ -8565,6 +8822,7 @@ final class DataTransfer$PCI extends DataTransfer {
   @override
   String get symbol => 'PCI';
 
+  /// [DataTransfer$PCI] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8596,7 +8854,7 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
         unit.toPCI64Bit.value,
       );
 
-  static const _minorName = r'dataTransfer$PCI64Bit';
+  static const _minorName = 'pCI64Bit';
 
   static const _ratio = 2133333333.3333333;
 
@@ -8608,8 +8866,9 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
   @override
   DataTransfer$PCI64Bit get _clone => DataTransfer$PCI64Bit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCI64Bit] with new value
   @override
@@ -8620,8 +8879,9 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCI64Bit]
   @override
-  String get symbol => 'PCI64Bit';
+  String get symbol => 'PCI (64-bit)';
 
+  /// [DataTransfer$PCI64Bit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8653,7 +8913,7 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
         unit.toPCI64Bit66MHz.value,
       );
 
-  static const _minorName = r'dataTransfer$PCI64Bit66MHz';
+  static const _minorName = 'pCI64Bit66MHz';
 
   static const _ratio = 4266666666.6666665;
 
@@ -8665,8 +8925,9 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
   @override
   DataTransfer$PCI64Bit66MHz get _clone => DataTransfer$PCI64Bit66MHz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCI64Bit66MHz] with new value
   @override
@@ -8677,8 +8938,9 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCI64Bit66MHz]
   @override
-  String get symbol => 'PCI64Bit66MHz';
+  String get symbol => 'PCI (64-bit 66MHz)';
 
+  /// [DataTransfer$PCI64Bit66MHz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8710,7 +8972,7 @@ final class DataTransfer$PCIX extends DataTransfer {
         unit.toPCIX.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIX';
+  static const _minorName = 'pCIX';
 
   static const _ratio = 8533333333.333333;
 
@@ -8722,8 +8984,9 @@ final class DataTransfer$PCIX extends DataTransfer {
   @override
   DataTransfer$PCIX get _clone => DataTransfer$PCIX(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIX] with new value
   @override
@@ -8734,8 +8997,9 @@ final class DataTransfer$PCIX extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIX]
   @override
-  String get symbol => 'PCIX';
+  String get symbol => 'PCI-X';
 
+  /// [DataTransfer$PCIX] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8767,7 +9031,7 @@ final class DataTransfer$AGP extends DataTransfer {
         unit.toAGP.value,
       );
 
-  static const _minorName = r'dataTransfer$AGP';
+  static const _minorName = 'aGP';
 
   static const _ratio = 2133333333.3333333;
 
@@ -8779,8 +9043,9 @@ final class DataTransfer$AGP extends DataTransfer {
   @override
   DataTransfer$AGP get _clone => DataTransfer$AGP(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$AGP] with new value
   @override
@@ -8793,6 +9058,7 @@ final class DataTransfer$AGP extends DataTransfer {
   @override
   String get symbol => 'AGP';
 
+  /// [DataTransfer$AGP] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8824,7 +9090,7 @@ final class DataTransfer$AGP2X extends DataTransfer {
         unit.toAGP2X.value,
       );
 
-  static const _minorName = r'dataTransfer$AGP2X';
+  static const _minorName = 'aGP2X';
 
   static const _ratio = 4266666666.6666665;
 
@@ -8836,8 +9102,9 @@ final class DataTransfer$AGP2X extends DataTransfer {
   @override
   DataTransfer$AGP2X get _clone => DataTransfer$AGP2X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$AGP2X] with new value
   @override
@@ -8848,8 +9115,9 @@ final class DataTransfer$AGP2X extends DataTransfer {
 
   /// Symbol for [DataTransfer$AGP2X]
   @override
-  String get symbol => 'AGP2X';
+  String get symbol => 'AGP 2X';
 
+  /// [DataTransfer$AGP2X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8881,7 +9149,7 @@ final class DataTransfer$AGP4X extends DataTransfer {
         unit.toAGP4X.value,
       );
 
-  static const _minorName = r'dataTransfer$AGP4X';
+  static const _minorName = 'aGP4X';
 
   static const _ratio = 8533333333.333333;
 
@@ -8893,8 +9161,9 @@ final class DataTransfer$AGP4X extends DataTransfer {
   @override
   DataTransfer$AGP4X get _clone => DataTransfer$AGP4X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$AGP4X] with new value
   @override
@@ -8905,8 +9174,9 @@ final class DataTransfer$AGP4X extends DataTransfer {
 
   /// Symbol for [DataTransfer$AGP4X]
   @override
-  String get symbol => 'AGP4X';
+  String get symbol => 'AGP 4X';
 
+  /// [DataTransfer$AGP4X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8938,7 +9208,7 @@ final class DataTransfer$AGP8X extends DataTransfer {
         unit.toAGP8X.value,
       );
 
-  static const _minorName = r'dataTransfer$AGP8X';
+  static const _minorName = 'aGP8X';
 
   static const _ratio = 17066666666.666666;
 
@@ -8950,8 +9220,9 @@ final class DataTransfer$AGP8X extends DataTransfer {
   @override
   DataTransfer$AGP8X get _clone => DataTransfer$AGP8X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$AGP8X] with new value
   @override
@@ -8962,8 +9233,9 @@ final class DataTransfer$AGP8X extends DataTransfer {
 
   /// Symbol for [DataTransfer$AGP8X]
   @override
-  String get symbol => 'AGP8X';
+  String get symbol => 'AGP 8X';
 
+  /// [DataTransfer$AGP8X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -8995,7 +9267,7 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
         unit.toPCIExpress10X1.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress10X1';
+  static const _minorName = 'pCIExpress10X1';
 
   static const _ratio = 2000000000.0;
 
@@ -9007,8 +9279,9 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
   @override
   DataTransfer$PCIExpress10X1 get _clone => DataTransfer$PCIExpress10X1(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X1] with new value
   @override
@@ -9019,8 +9292,9 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress10X1]
   @override
-  String get symbol => 'PCIExpress10X1';
+  String get symbol => 'PCI Express 1.0 (x1)';
 
+  /// [DataTransfer$PCIExpress10X1] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9052,7 +9326,7 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
         unit.toPCIExpress10X4.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress10X4';
+  static const _minorName = 'pCIExpress10X4';
 
   static const _ratio = 8000000000.0;
 
@@ -9064,8 +9338,9 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
   @override
   DataTransfer$PCIExpress10X4 get _clone => DataTransfer$PCIExpress10X4(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X4] with new value
   @override
@@ -9076,8 +9351,9 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress10X4]
   @override
-  String get symbol => 'PCIExpress10X4';
+  String get symbol => 'PCI Express 1.0 (x4)';
 
+  /// [DataTransfer$PCIExpress10X4] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9109,7 +9385,7 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
         unit.toPCIExpress10X8.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress10X8';
+  static const _minorName = 'pCIExpress10X8';
 
   static const _ratio = 16000000000.0;
 
@@ -9121,8 +9397,9 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
   @override
   DataTransfer$PCIExpress10X8 get _clone => DataTransfer$PCIExpress10X8(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X8] with new value
   @override
@@ -9133,8 +9410,9 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress10X8]
   @override
-  String get symbol => 'PCIExpress10X8';
+  String get symbol => 'PCI Express 1.0 (x8)';
 
+  /// [DataTransfer$PCIExpress10X8] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9166,7 +9444,7 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
         unit.toPCIExpress10X16.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress10X16';
+  static const _minorName = 'pCIExpress10X16';
 
   static const _ratio = 32000000000.0;
 
@@ -9179,8 +9457,9 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
   DataTransfer$PCIExpress10X16 get _clone =>
       DataTransfer$PCIExpress10X16(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X16] with new value
   @override
@@ -9191,8 +9470,9 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress10X16]
   @override
-  String get symbol => 'PCIExpress10X16';
+  String get symbol => 'PCI Express 1.0 (x16)';
 
+  /// [DataTransfer$PCIExpress10X16] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9224,7 +9504,7 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
         unit.toPCIExpress20X1.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress20X1';
+  static const _minorName = 'pCIExpress20X1';
 
   static const _ratio = 4000000000.0;
 
@@ -9236,8 +9516,9 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
   @override
   DataTransfer$PCIExpress20X1 get _clone => DataTransfer$PCIExpress20X1(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X1] with new value
   @override
@@ -9248,8 +9529,9 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress20X1]
   @override
-  String get symbol => 'PCIExpress20X1';
+  String get symbol => 'PCI Express 2.0 (x1)';
 
+  /// [DataTransfer$PCIExpress20X1] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9281,7 +9563,7 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
         unit.toPCIExpress20X4.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress20X4';
+  static const _minorName = 'pCIExpress20X4';
 
   static const _ratio = 16000000000.0;
 
@@ -9293,8 +9575,9 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
   @override
   DataTransfer$PCIExpress20X4 get _clone => DataTransfer$PCIExpress20X4(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X4] with new value
   @override
@@ -9305,8 +9588,9 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress20X4]
   @override
-  String get symbol => 'PCIExpress20X4';
+  String get symbol => 'PCI Express 2.0 (x4)';
 
+  /// [DataTransfer$PCIExpress20X4] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9338,7 +9622,7 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
         unit.toPCIExpress20X8.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress20X8';
+  static const _minorName = 'pCIExpress20X8';
 
   static const _ratio = 32000000000.0;
 
@@ -9350,8 +9634,9 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
   @override
   DataTransfer$PCIExpress20X8 get _clone => DataTransfer$PCIExpress20X8(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X8] with new value
   @override
@@ -9362,8 +9647,9 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress20X8]
   @override
-  String get symbol => 'PCIExpress20X8';
+  String get symbol => 'PCI Express 2.0 (x8)';
 
+  /// [DataTransfer$PCIExpress20X8] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9395,7 +9681,7 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
         unit.toPCIExpress20X16.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress20X16';
+  static const _minorName = 'pCIExpress20X16';
 
   static const _ratio = 64000000000.0;
 
@@ -9408,8 +9694,9 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
   DataTransfer$PCIExpress20X16 get _clone =>
       DataTransfer$PCIExpress20X16(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X16] with new value
   @override
@@ -9420,8 +9707,9 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress20X16]
   @override
-  String get symbol => 'PCIExpress20X16';
+  String get symbol => 'PCI Express 2.0 (x16)';
 
+  /// [DataTransfer$PCIExpress20X16] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9453,7 +9741,7 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
         unit.toPCIExpress30X1.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress30X1';
+  static const _minorName = 'pCIExpress30X1';
 
   static const _ratio = 8000000000.0;
 
@@ -9465,8 +9753,9 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
   @override
   DataTransfer$PCIExpress30X1 get _clone => DataTransfer$PCIExpress30X1(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X1] with new value
   @override
@@ -9477,8 +9766,9 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress30X1]
   @override
-  String get symbol => 'PCIExpress30X1';
+  String get symbol => 'PCI Express 3.0 (x1)';
 
+  /// [DataTransfer$PCIExpress30X1] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9510,7 +9800,7 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
         unit.toPCIExpress30X4.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress30X4';
+  static const _minorName = 'pCIExpress30X4';
 
   static const _ratio = 32000000000.0;
 
@@ -9522,8 +9812,9 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
   @override
   DataTransfer$PCIExpress30X4 get _clone => DataTransfer$PCIExpress30X4(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X4] with new value
   @override
@@ -9534,8 +9825,9 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress30X4]
   @override
-  String get symbol => 'PCIExpress30X4';
+  String get symbol => 'PCI Express 3.0 (x4)';
 
+  /// [DataTransfer$PCIExpress30X4] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9567,7 +9859,7 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
         unit.toPCIExpress30X8.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress30X8';
+  static const _minorName = 'pCIExpress30X8';
 
   static const _ratio = 64000000000.0;
 
@@ -9579,8 +9871,9 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
   @override
   DataTransfer$PCIExpress30X8 get _clone => DataTransfer$PCIExpress30X8(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X8] with new value
   @override
@@ -9591,8 +9884,9 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress30X8]
   @override
-  String get symbol => 'PCIExpress30X8';
+  String get symbol => 'PCI Express 3.0 (x8)';
 
+  /// [DataTransfer$PCIExpress30X8] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9624,7 +9918,7 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
         unit.toPCIExpress30X16.value,
       );
 
-  static const _minorName = r'dataTransfer$PCIExpress30X16';
+  static const _minorName = 'pCIExpress30X16';
 
   static const _ratio = 128000000000.0;
 
@@ -9637,8 +9931,9 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
   DataTransfer$PCIExpress30X16 get _clone =>
       DataTransfer$PCIExpress30X16(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X16] with new value
   @override
@@ -9649,8 +9944,9 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress30X16]
   @override
-  String get symbol => 'PCIExpress30X16';
+  String get symbol => 'PCI Express 3.0 (x16)';
 
+  /// [DataTransfer$PCIExpress30X16] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9682,7 +9978,7 @@ final class DataTransfer$CDROM1X extends DataTransfer {
         unit.toCDROM1X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM1X';
+  static const _minorName = 'cDROM1X';
 
   static const _ratio = 1228800.0;
 
@@ -9694,8 +9990,9 @@ final class DataTransfer$CDROM1X extends DataTransfer {
   @override
   DataTransfer$CDROM1X get _clone => DataTransfer$CDROM1X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM1X] with new value
   @override
@@ -9706,8 +10003,9 @@ final class DataTransfer$CDROM1X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM1X]
   @override
-  String get symbol => 'CDROM1X';
+  String get symbol => 'CD-ROM 1X';
 
+  /// [DataTransfer$CDROM1X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9739,7 +10037,7 @@ final class DataTransfer$CDROM2X extends DataTransfer {
         unit.toCDROM2X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM2X';
+  static const _minorName = 'cDROM2X';
 
   static const _ratio = 2457600.0;
 
@@ -9751,8 +10049,9 @@ final class DataTransfer$CDROM2X extends DataTransfer {
   @override
   DataTransfer$CDROM2X get _clone => DataTransfer$CDROM2X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM2X] with new value
   @override
@@ -9763,8 +10062,9 @@ final class DataTransfer$CDROM2X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM2X]
   @override
-  String get symbol => 'CDROM2X';
+  String get symbol => 'CD-ROM 2X';
 
+  /// [DataTransfer$CDROM2X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9796,7 +10096,7 @@ final class DataTransfer$CDROM3X extends DataTransfer {
         unit.toCDROM3X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM3X';
+  static const _minorName = 'cDROM3X';
 
   static const _ratio = 3686400.0;
 
@@ -9808,8 +10108,9 @@ final class DataTransfer$CDROM3X extends DataTransfer {
   @override
   DataTransfer$CDROM3X get _clone => DataTransfer$CDROM3X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM3X] with new value
   @override
@@ -9820,8 +10121,9 @@ final class DataTransfer$CDROM3X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM3X]
   @override
-  String get symbol => 'CDROM3X';
+  String get symbol => 'CD-ROM 3X';
 
+  /// [DataTransfer$CDROM3X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9853,7 +10155,7 @@ final class DataTransfer$CDROM4X extends DataTransfer {
         unit.toCDROM4X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM4X';
+  static const _minorName = 'cDROM4X';
 
   static const _ratio = 4915200.0;
 
@@ -9865,8 +10167,9 @@ final class DataTransfer$CDROM4X extends DataTransfer {
   @override
   DataTransfer$CDROM4X get _clone => DataTransfer$CDROM4X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM4X] with new value
   @override
@@ -9877,8 +10180,9 @@ final class DataTransfer$CDROM4X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM4X]
   @override
-  String get symbol => 'CDROM4X';
+  String get symbol => 'CD-ROM 4X';
 
+  /// [DataTransfer$CDROM4X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9910,7 +10214,7 @@ final class DataTransfer$CDROM6X extends DataTransfer {
         unit.toCDROM6X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM6X';
+  static const _minorName = 'cDROM6X';
 
   static const _ratio = 7372800.0;
 
@@ -9922,8 +10226,9 @@ final class DataTransfer$CDROM6X extends DataTransfer {
   @override
   DataTransfer$CDROM6X get _clone => DataTransfer$CDROM6X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM6X] with new value
   @override
@@ -9934,8 +10239,9 @@ final class DataTransfer$CDROM6X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM6X]
   @override
-  String get symbol => 'CDROM6X';
+  String get symbol => 'CD-ROM 6X';
 
+  /// [DataTransfer$CDROM6X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -9967,7 +10273,7 @@ final class DataTransfer$CDROM8X extends DataTransfer {
         unit.toCDROM8X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM8X';
+  static const _minorName = 'cDROM8X';
 
   static const _ratio = 9830400.0;
 
@@ -9979,8 +10285,9 @@ final class DataTransfer$CDROM8X extends DataTransfer {
   @override
   DataTransfer$CDROM8X get _clone => DataTransfer$CDROM8X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM8X] with new value
   @override
@@ -9991,8 +10298,9 @@ final class DataTransfer$CDROM8X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM8X]
   @override
-  String get symbol => 'CDROM8X';
+  String get symbol => 'CD-ROM 8X';
 
+  /// [DataTransfer$CDROM8X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10024,7 +10332,7 @@ final class DataTransfer$CDROM12X extends DataTransfer {
         unit.toCDROM12X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM12X';
+  static const _minorName = 'cDROM12X';
 
   static const _ratio = 14745600.0;
 
@@ -10036,8 +10344,9 @@ final class DataTransfer$CDROM12X extends DataTransfer {
   @override
   DataTransfer$CDROM12X get _clone => DataTransfer$CDROM12X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM12X] with new value
   @override
@@ -10048,8 +10357,9 @@ final class DataTransfer$CDROM12X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM12X]
   @override
-  String get symbol => 'CDROM12X';
+  String get symbol => 'CD-ROM 12X';
 
+  /// [DataTransfer$CDROM12X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10081,7 +10391,7 @@ final class DataTransfer$CDROM16X extends DataTransfer {
         unit.toCDROM16X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM16X';
+  static const _minorName = 'cDROM16X';
 
   static const _ratio = 19660800.0;
 
@@ -10093,8 +10403,9 @@ final class DataTransfer$CDROM16X extends DataTransfer {
   @override
   DataTransfer$CDROM16X get _clone => DataTransfer$CDROM16X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM16X] with new value
   @override
@@ -10105,8 +10416,9 @@ final class DataTransfer$CDROM16X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM16X]
   @override
-  String get symbol => 'CDROM16X';
+  String get symbol => 'CD-ROM 16X';
 
+  /// [DataTransfer$CDROM16X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10138,7 +10450,7 @@ final class DataTransfer$CDROM24X extends DataTransfer {
         unit.toCDROM24X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM24X';
+  static const _minorName = 'cDROM24X';
 
   static const _ratio = 29491200.0;
 
@@ -10150,8 +10462,9 @@ final class DataTransfer$CDROM24X extends DataTransfer {
   @override
   DataTransfer$CDROM24X get _clone => DataTransfer$CDROM24X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM24X] with new value
   @override
@@ -10162,8 +10475,9 @@ final class DataTransfer$CDROM24X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM24X]
   @override
-  String get symbol => 'CDROM24X';
+  String get symbol => 'CD-ROM 24X';
 
+  /// [DataTransfer$CDROM24X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10195,7 +10509,7 @@ final class DataTransfer$CDROM32X extends DataTransfer {
         unit.toCDROM32X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM32X';
+  static const _minorName = 'cDROM32X';
 
   static const _ratio = 39321600.0;
 
@@ -10207,8 +10521,9 @@ final class DataTransfer$CDROM32X extends DataTransfer {
   @override
   DataTransfer$CDROM32X get _clone => DataTransfer$CDROM32X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM32X] with new value
   @override
@@ -10219,8 +10534,9 @@ final class DataTransfer$CDROM32X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM32X]
   @override
-  String get symbol => 'CDROM32X';
+  String get symbol => 'CD-ROM 32X';
 
+  /// [DataTransfer$CDROM32X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10252,7 +10568,7 @@ final class DataTransfer$CDROM40X extends DataTransfer {
         unit.toCDROM40X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM40X';
+  static const _minorName = 'cDROM40X';
 
   static const _ratio = 49152000.0;
 
@@ -10264,8 +10580,9 @@ final class DataTransfer$CDROM40X extends DataTransfer {
   @override
   DataTransfer$CDROM40X get _clone => DataTransfer$CDROM40X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM40X] with new value
   @override
@@ -10276,8 +10593,9 @@ final class DataTransfer$CDROM40X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM40X]
   @override
-  String get symbol => 'CDROM40X';
+  String get symbol => 'CD-ROM 40X';
 
+  /// [DataTransfer$CDROM40X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10309,7 +10627,7 @@ final class DataTransfer$CDROM48X extends DataTransfer {
         unit.toCDROM48X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM48X';
+  static const _minorName = 'cDROM48X';
 
   static const _ratio = 58982400.0;
 
@@ -10321,8 +10639,9 @@ final class DataTransfer$CDROM48X extends DataTransfer {
   @override
   DataTransfer$CDROM48X get _clone => DataTransfer$CDROM48X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM48X] with new value
   @override
@@ -10333,8 +10652,9 @@ final class DataTransfer$CDROM48X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM48X]
   @override
-  String get symbol => 'CDROM48X';
+  String get symbol => 'CD-ROM 48X';
 
+  /// [DataTransfer$CDROM48X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10366,7 +10686,7 @@ final class DataTransfer$CDROM52X extends DataTransfer {
         unit.toCDROM52X.value,
       );
 
-  static const _minorName = r'dataTransfer$CDROM52X';
+  static const _minorName = 'cDROM52X';
 
   static const _ratio = 63897600.0;
 
@@ -10378,8 +10698,9 @@ final class DataTransfer$CDROM52X extends DataTransfer {
   @override
   DataTransfer$CDROM52X get _clone => DataTransfer$CDROM52X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM52X] with new value
   @override
@@ -10390,8 +10711,9 @@ final class DataTransfer$CDROM52X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM52X]
   @override
-  String get symbol => 'CDROM52X';
+  String get symbol => 'CD-ROM 52X';
 
+  /// [DataTransfer$CDROM52X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10423,7 +10745,7 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
         unit.toDVDROM1X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM1X';
+  static const _minorName = 'dVDROM1X';
 
   static const _ratio = 11080000.0;
 
@@ -10435,8 +10757,9 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
   @override
   DataTransfer$DVDROM1X get _clone => DataTransfer$DVDROM1X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM1X] with new value
   @override
@@ -10447,8 +10770,9 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM1X]
   @override
-  String get symbol => 'DVDROM1X';
+  String get symbol => 'DVD-ROM 1X';
 
+  /// [DataTransfer$DVDROM1X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10480,7 +10804,7 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
         unit.toDVDROM2X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM2X';
+  static const _minorName = 'dVDROM2X';
 
   static const _ratio = 22160000.0;
 
@@ -10492,8 +10816,9 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
   @override
   DataTransfer$DVDROM2X get _clone => DataTransfer$DVDROM2X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM2X] with new value
   @override
@@ -10504,8 +10829,9 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM2X]
   @override
-  String get symbol => 'DVDROM2X';
+  String get symbol => 'DVD-ROM 2X';
 
+  /// [DataTransfer$DVDROM2X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10537,7 +10863,7 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
         unit.toDVDROM3X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM3X';
+  static const _minorName = 'dVDROM3X';
 
   static const _ratio = 33240000.0;
 
@@ -10549,8 +10875,9 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
   @override
   DataTransfer$DVDROM3X get _clone => DataTransfer$DVDROM3X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM3X] with new value
   @override
@@ -10561,8 +10888,9 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM3X]
   @override
-  String get symbol => 'DVDROM3X';
+  String get symbol => 'DVD-ROM 3X';
 
+  /// [DataTransfer$DVDROM3X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10594,7 +10922,7 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
         unit.toDVDROM4X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM4X';
+  static const _minorName = 'dVDROM4X';
 
   static const _ratio = 44320000.0;
 
@@ -10606,8 +10934,9 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
   @override
   DataTransfer$DVDROM4X get _clone => DataTransfer$DVDROM4X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM4X] with new value
   @override
@@ -10618,8 +10947,9 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM4X]
   @override
-  String get symbol => 'DVDROM4X';
+  String get symbol => 'DVD-ROM 4X';
 
+  /// [DataTransfer$DVDROM4X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10651,7 +10981,7 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
         unit.toDVDROM6X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM6X';
+  static const _minorName = 'dVDROM6X';
 
   static const _ratio = 66480000.0;
 
@@ -10663,8 +10993,9 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
   @override
   DataTransfer$DVDROM6X get _clone => DataTransfer$DVDROM6X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM6X] with new value
   @override
@@ -10675,8 +11006,9 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM6X]
   @override
-  String get symbol => 'DVDROM6X';
+  String get symbol => 'DVD-ROM 6X';
 
+  /// [DataTransfer$DVDROM6X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10708,7 +11040,7 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
         unit.toDVDROM8X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM8X';
+  static const _minorName = 'dVDROM8X';
 
   static const _ratio = 88640000.0;
 
@@ -10720,8 +11052,9 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
   @override
   DataTransfer$DVDROM8X get _clone => DataTransfer$DVDROM8X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM8X] with new value
   @override
@@ -10732,8 +11065,9 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM8X]
   @override
-  String get symbol => 'DVDROM8X';
+  String get symbol => 'DVD-ROM 8X';
 
+  /// [DataTransfer$DVDROM8X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10765,7 +11099,7 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
         unit.toDVDROM10X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM10X';
+  static const _minorName = 'dVDROM10X';
 
   static const _ratio = 110800000.0;
 
@@ -10777,8 +11111,9 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
   @override
   DataTransfer$DVDROM10X get _clone => DataTransfer$DVDROM10X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM10X] with new value
   @override
@@ -10789,8 +11124,9 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM10X]
   @override
-  String get symbol => 'DVDROM10X';
+  String get symbol => 'DVD-ROM 10X';
 
+  /// [DataTransfer$DVDROM10X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10822,7 +11158,7 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
         unit.toDVDROM12X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM12X';
+  static const _minorName = 'dVDROM12X';
 
   static const _ratio = 132960000.0;
 
@@ -10834,8 +11170,9 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
   @override
   DataTransfer$DVDROM12X get _clone => DataTransfer$DVDROM12X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM12X] with new value
   @override
@@ -10846,8 +11183,9 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM12X]
   @override
-  String get symbol => 'DVDROM12X';
+  String get symbol => 'DVD-ROM 12X';
 
+  /// [DataTransfer$DVDROM12X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10879,7 +11217,7 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
         unit.toDVDROM16X.value,
       );
 
-  static const _minorName = r'dataTransfer$DVDROM16X';
+  static const _minorName = 'dVDROM16X';
 
   static const _ratio = 177280000.0;
 
@@ -10891,8 +11229,9 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
   @override
   DataTransfer$DVDROM16X get _clone => DataTransfer$DVDROM16X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM16X] with new value
   @override
@@ -10903,8 +11242,9 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM16X]
   @override
-  String get symbol => 'DVDROM16X';
+  String get symbol => 'DVD-ROM 16X';
 
+  /// [DataTransfer$DVDROM16X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10936,7 +11276,7 @@ final class DataTransfer$BluRay1X extends DataTransfer {
         unit.toBluRay1X.value,
       );
 
-  static const _minorName = r'dataTransfer$BluRay1X';
+  static const _minorName = 'bluRay1X';
 
   static const _ratio = 36000000.0;
 
@@ -10948,8 +11288,9 @@ final class DataTransfer$BluRay1X extends DataTransfer {
   @override
   DataTransfer$BluRay1X get _clone => DataTransfer$BluRay1X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay1X] with new value
   @override
@@ -10960,8 +11301,9 @@ final class DataTransfer$BluRay1X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay1X]
   @override
-  String get symbol => 'BluRay1X';
+  String get symbol => 'Blu-ray 1X';
 
+  /// [DataTransfer$BluRay1X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -10993,7 +11335,7 @@ final class DataTransfer$BluRay2X extends DataTransfer {
         unit.toBluRay2X.value,
       );
 
-  static const _minorName = r'dataTransfer$BluRay2X';
+  static const _minorName = 'bluRay2X';
 
   static const _ratio = 72000000.0;
 
@@ -11005,8 +11347,9 @@ final class DataTransfer$BluRay2X extends DataTransfer {
   @override
   DataTransfer$BluRay2X get _clone => DataTransfer$BluRay2X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay2X] with new value
   @override
@@ -11017,8 +11360,9 @@ final class DataTransfer$BluRay2X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay2X]
   @override
-  String get symbol => 'BluRay2X';
+  String get symbol => 'Blu-ray 2X';
 
+  /// [DataTransfer$BluRay2X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -11050,7 +11394,7 @@ final class DataTransfer$BluRay4X extends DataTransfer {
         unit.toBluRay4X.value,
       );
 
-  static const _minorName = r'dataTransfer$BluRay4X';
+  static const _minorName = 'bluRay4X';
 
   static const _ratio = 144000000.0;
 
@@ -11062,8 +11406,9 @@ final class DataTransfer$BluRay4X extends DataTransfer {
   @override
   DataTransfer$BluRay4X get _clone => DataTransfer$BluRay4X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay4X] with new value
   @override
@@ -11074,8 +11419,9 @@ final class DataTransfer$BluRay4X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay4X]
   @override
-  String get symbol => 'BluRay4X';
+  String get symbol => 'Blu-ray 4X';
 
+  /// [DataTransfer$BluRay4X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -11107,7 +11453,7 @@ final class DataTransfer$BluRay6X extends DataTransfer {
         unit.toBluRay6X.value,
       );
 
-  static const _minorName = r'dataTransfer$BluRay6X';
+  static const _minorName = 'bluRay6X';
 
   static const _ratio = 216000000.0;
 
@@ -11119,8 +11465,9 @@ final class DataTransfer$BluRay6X extends DataTransfer {
   @override
   DataTransfer$BluRay6X get _clone => DataTransfer$BluRay6X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay6X] with new value
   @override
@@ -11131,8 +11478,9 @@ final class DataTransfer$BluRay6X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay6X]
   @override
-  String get symbol => 'BluRay6X';
+  String get symbol => 'Blu-ray 6X';
 
+  /// [DataTransfer$BluRay6X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -11164,7 +11512,7 @@ final class DataTransfer$BluRay8X extends DataTransfer {
         unit.toBluRay8X.value,
       );
 
-  static const _minorName = r'dataTransfer$BluRay8X';
+  static const _minorName = 'bluRay8X';
 
   static const _ratio = 288000000.0;
 
@@ -11176,8 +11524,9 @@ final class DataTransfer$BluRay8X extends DataTransfer {
   @override
   DataTransfer$BluRay8X get _clone => DataTransfer$BluRay8X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay8X] with new value
   @override
@@ -11188,8 +11537,9 @@ final class DataTransfer$BluRay8X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay8X]
   @override
-  String get symbol => 'BluRay8X';
+  String get symbol => 'Blu-ray 8X';
 
+  /// [DataTransfer$BluRay8X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -11221,7 +11571,7 @@ final class DataTransfer$BluRay10X extends DataTransfer {
         unit.toBluRay10X.value,
       );
 
-  static const _minorName = r'dataTransfer$BluRay10X';
+  static const _minorName = 'bluRay10X';
 
   static const _ratio = 360000000.0;
 
@@ -11233,8 +11583,9 @@ final class DataTransfer$BluRay10X extends DataTransfer {
   @override
   DataTransfer$BluRay10X get _clone => DataTransfer$BluRay10X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay10X] with new value
   @override
@@ -11245,8 +11596,9 @@ final class DataTransfer$BluRay10X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay10X]
   @override
-  String get symbol => 'BluRay10X';
+  String get symbol => 'Blu-ray 10X';
 
+  /// [DataTransfer$BluRay10X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -11278,7 +11630,7 @@ final class DataTransfer$BluRay12X extends DataTransfer {
         unit.toBluRay12X.value,
       );
 
-  static const _minorName = r'dataTransfer$BluRay12X';
+  static const _minorName = 'bluRay12X';
 
   static const _ratio = 432000000.0;
 
@@ -11290,8 +11642,9 @@ final class DataTransfer$BluRay12X extends DataTransfer {
   @override
   DataTransfer$BluRay12X get _clone => DataTransfer$BluRay12X(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay12X] with new value
   @override
@@ -11302,8 +11655,9 @@ final class DataTransfer$BluRay12X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay12X]
   @override
-  String get symbol => 'BluRay12X';
+  String get symbol => 'Blu-ray 12X';
 
+  /// [DataTransfer$BluRay12X] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

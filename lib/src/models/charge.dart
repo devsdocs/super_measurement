@@ -159,7 +159,7 @@ final class Charge$Megacoulomb extends Charge {
         unit.toMegacoulomb.value,
       );
 
-  static const _minorName = r'charge$Megacoulomb';
+  static const _minorName = 'megacoulomb';
 
   static const _ratio = 1000000.0;
 
@@ -171,8 +171,9 @@ final class Charge$Megacoulomb extends Charge {
   @override
   Charge$Megacoulomb get _clone => Charge$Megacoulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Megacoulomb] with new value
   @override
@@ -185,6 +186,7 @@ final class Charge$Megacoulomb extends Charge {
   @override
   String get symbol => 'MC';
 
+  /// [Charge$Megacoulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -216,7 +218,7 @@ final class Charge$Kilocoulomb extends Charge {
         unit.toKilocoulomb.value,
       );
 
-  static const _minorName = r'charge$Kilocoulomb';
+  static const _minorName = 'kilocoulomb';
 
   static const _ratio = 1000.0;
 
@@ -228,8 +230,9 @@ final class Charge$Kilocoulomb extends Charge {
   @override
   Charge$Kilocoulomb get _clone => Charge$Kilocoulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Kilocoulomb] with new value
   @override
@@ -242,6 +245,7 @@ final class Charge$Kilocoulomb extends Charge {
   @override
   String get symbol => 'kC';
 
+  /// [Charge$Kilocoulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -273,7 +277,7 @@ final class Charge$Coulomb extends Charge {
         unit.toCoulomb.value,
       );
 
-  static const _minorName = r'charge$Coulomb';
+  static const _minorName = 'coulomb';
 
   static const _ratio = 1.0;
 
@@ -285,8 +289,9 @@ final class Charge$Coulomb extends Charge {
   @override
   Charge$Coulomb get _clone => Charge$Coulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Coulomb] with new value
   @override
@@ -299,6 +304,7 @@ final class Charge$Coulomb extends Charge {
   @override
   String get symbol => 'C';
 
+  /// [Charge$Coulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -330,7 +336,7 @@ final class Charge$CoulombInternational extends Charge {
         unit.toCoulombInternational.value,
       );
 
-  static const _minorName = r'charge$CoulombInternational';
+  static const _minorName = 'coulombInternational';
 
   static const _ratio = 0.999835027;
 
@@ -342,8 +348,9 @@ final class Charge$CoulombInternational extends Charge {
   @override
   Charge$CoulombInternational get _clone => Charge$CoulombInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$CoulombInternational] with new value
   @override
@@ -356,6 +363,7 @@ final class Charge$CoulombInternational extends Charge {
   @override
   String get symbol => 'C';
 
+  /// [Charge$CoulombInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -387,7 +395,7 @@ final class Charge$Millicoulomb extends Charge {
         unit.toMillicoulomb.value,
       );
 
-  static const _minorName = r'charge$Millicoulomb';
+  static const _minorName = 'millicoulomb';
 
   static const _ratio = 0.001;
 
@@ -399,8 +407,9 @@ final class Charge$Millicoulomb extends Charge {
   @override
   Charge$Millicoulomb get _clone => Charge$Millicoulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Millicoulomb] with new value
   @override
@@ -413,6 +422,7 @@ final class Charge$Millicoulomb extends Charge {
   @override
   String get symbol => 'mC';
 
+  /// [Charge$Millicoulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -444,7 +454,7 @@ final class Charge$Microcoulomb extends Charge {
         unit.toMicrocoulomb.value,
       );
 
-  static const _minorName = r'charge$Microcoulomb';
+  static const _minorName = 'microcoulomb';
 
   static const _ratio = 0.000001;
 
@@ -456,8 +466,9 @@ final class Charge$Microcoulomb extends Charge {
   @override
   Charge$Microcoulomb get _clone => Charge$Microcoulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Microcoulomb] with new value
   @override
@@ -470,6 +481,7 @@ final class Charge$Microcoulomb extends Charge {
   @override
   String get symbol => 'µC';
 
+  /// [Charge$Microcoulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -501,7 +513,7 @@ final class Charge$Nanocoulomb extends Charge {
         unit.toNanocoulomb.value,
       );
 
-  static const _minorName = r'charge$Nanocoulomb';
+  static const _minorName = 'nanocoulomb';
 
   static const _ratio = 1e-9;
 
@@ -513,8 +525,9 @@ final class Charge$Nanocoulomb extends Charge {
   @override
   Charge$Nanocoulomb get _clone => Charge$Nanocoulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Nanocoulomb] with new value
   @override
@@ -527,6 +540,7 @@ final class Charge$Nanocoulomb extends Charge {
   @override
   String get symbol => 'nC';
 
+  /// [Charge$Nanocoulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -558,7 +572,7 @@ final class Charge$Picocoulomb extends Charge {
         unit.toPicocoulomb.value,
       );
 
-  static const _minorName = r'charge$Picocoulomb';
+  static const _minorName = 'picocoulomb';
 
   static const _ratio = 1e-12;
 
@@ -570,8 +584,9 @@ final class Charge$Picocoulomb extends Charge {
   @override
   Charge$Picocoulomb get _clone => Charge$Picocoulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Picocoulomb] with new value
   @override
@@ -584,6 +599,7 @@ final class Charge$Picocoulomb extends Charge {
   @override
   String get symbol => 'pC';
 
+  /// [Charge$Picocoulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -615,7 +631,7 @@ final class Charge$Abcoulomb extends Charge {
         unit.toAbcoulomb.value,
       );
 
-  static const _minorName = r'charge$Abcoulomb';
+  static const _minorName = 'abcoulomb';
 
   static const _ratio = 10.0;
 
@@ -627,8 +643,9 @@ final class Charge$Abcoulomb extends Charge {
   @override
   Charge$Abcoulomb get _clone => Charge$Abcoulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Abcoulomb] with new value
   @override
@@ -641,6 +658,7 @@ final class Charge$Abcoulomb extends Charge {
   @override
   String get symbol => 'abC';
 
+  /// [Charge$Abcoulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -672,7 +690,7 @@ final class Charge$Statcoulomb extends Charge {
         unit.toStatcoulomb.value,
       );
 
-  static const _minorName = r'charge$Statcoulomb';
+  static const _minorName = 'statcoulomb';
 
   static const _ratio = 3.335646048e-10;
 
@@ -684,8 +702,9 @@ final class Charge$Statcoulomb extends Charge {
   @override
   Charge$Statcoulomb get _clone => Charge$Statcoulomb(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Statcoulomb] with new value
   @override
@@ -698,6 +717,7 @@ final class Charge$Statcoulomb extends Charge {
   @override
   String get symbol => 'statC';
 
+  /// [Charge$Statcoulomb] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -729,7 +749,7 @@ final class Charge$Franklin extends Charge {
         unit.toFranklin.value,
       );
 
-  static const _minorName = r'charge$Franklin';
+  static const _minorName = 'franklin';
 
   static const _ratio = 3.335646048e-10;
 
@@ -741,8 +761,9 @@ final class Charge$Franklin extends Charge {
   @override
   Charge$Franklin get _clone => Charge$Franklin(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Franklin] with new value
   @override
@@ -755,6 +776,7 @@ final class Charge$Franklin extends Charge {
   @override
   String get symbol => 'Fr';
 
+  /// [Charge$Franklin] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -786,7 +808,7 @@ final class Charge$AmpereHour extends Charge {
         unit.toAmpereHour.value,
       );
 
-  static const _minorName = r'charge$AmpereHour';
+  static const _minorName = 'ampereHour';
 
   static const _ratio = 3600.0;
 
@@ -798,8 +820,9 @@ final class Charge$AmpereHour extends Charge {
   @override
   Charge$AmpereHour get _clone => Charge$AmpereHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$AmpereHour] with new value
   @override
@@ -812,6 +835,7 @@ final class Charge$AmpereHour extends Charge {
   @override
   String get symbol => 'A h';
 
+  /// [Charge$AmpereHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -843,7 +867,7 @@ final class Charge$AmpereMinute extends Charge {
         unit.toAmpereMinute.value,
       );
 
-  static const _minorName = r'charge$AmpereMinute';
+  static const _minorName = 'ampereMinute';
 
   static const _ratio = 60.0;
 
@@ -855,8 +879,9 @@ final class Charge$AmpereMinute extends Charge {
   @override
   Charge$AmpereMinute get _clone => Charge$AmpereMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$AmpereMinute] with new value
   @override
@@ -869,6 +894,7 @@ final class Charge$AmpereMinute extends Charge {
   @override
   String get symbol => 'A min';
 
+  /// [Charge$AmpereMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -900,7 +926,7 @@ final class Charge$AmpereSecond extends Charge {
         unit.toAmpereSecond.value,
       );
 
-  static const _minorName = r'charge$AmpereSecond';
+  static const _minorName = 'ampereSecond';
 
   static const _ratio = 1.0;
 
@@ -912,8 +938,9 @@ final class Charge$AmpereSecond extends Charge {
   @override
   Charge$AmpereSecond get _clone => Charge$AmpereSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$AmpereSecond] with new value
   @override
@@ -926,6 +953,7 @@ final class Charge$AmpereSecond extends Charge {
   @override
   String get symbol => 'A s';
 
+  /// [Charge$AmpereSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -957,7 +985,7 @@ final class Charge$Faraday extends Charge {
         unit.toFaraday.value,
       );
 
-  static const _minorName = r'charge$Faraday';
+  static const _minorName = 'faraday';
 
   static const _ratio = 96485.3365;
 
@@ -969,8 +997,9 @@ final class Charge$Faraday extends Charge {
   @override
   Charge$Faraday get _clone => Charge$Faraday(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$Faraday] with new value
   @override
@@ -981,8 +1010,9 @@ final class Charge$Faraday extends Charge {
 
   /// Symbol for [Charge$Faraday]
   @override
-  String get symbol => 'Faraday';
+  String get symbol => 'faraday';
 
+  /// [Charge$Faraday] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1014,7 +1044,7 @@ final class Charge$ElectronicCharge extends Charge {
         unit.toElectronicCharge.value,
       );
 
-  static const _minorName = r'charge$ElectronicCharge';
+  static const _minorName = 'electronicCharge';
 
   static const _ratio = 1.6022e-19;
 
@@ -1026,8 +1056,9 @@ final class Charge$ElectronicCharge extends Charge {
   @override
   Charge$ElectronicCharge get _clone => Charge$ElectronicCharge(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Charge$ElectronicCharge] with new value
   @override
@@ -1040,6 +1071,7 @@ final class Charge$ElectronicCharge extends Charge {
   @override
   String get symbol => 'e';
 
+  /// [Charge$ElectronicCharge] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

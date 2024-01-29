@@ -121,7 +121,7 @@ final class Current$Kiloampere extends Current {
         unit.toKiloampere.value,
       );
 
-  static const _minorName = r'current$Kiloampere';
+  static const _minorName = 'kiloampere';
 
   static const _ratio = 1000000.0;
 
@@ -133,8 +133,9 @@ final class Current$Kiloampere extends Current {
   @override
   Current$Kiloampere get _clone => Current$Kiloampere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$Kiloampere] with new value
   @override
@@ -147,6 +148,7 @@ final class Current$Kiloampere extends Current {
   @override
   String get symbol => 'kA';
 
+  /// [Current$Kiloampere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -178,7 +180,7 @@ final class Current$Ampere extends Current {
         unit.toAmpere.value,
       );
 
-  static const _minorName = r'current$Ampere';
+  static const _minorName = 'ampere';
 
   static const _ratio = 1000.0;
 
@@ -190,8 +192,9 @@ final class Current$Ampere extends Current {
   @override
   Current$Ampere get _clone => Current$Ampere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$Ampere] with new value
   @override
@@ -204,6 +207,7 @@ final class Current$Ampere extends Current {
   @override
   String get symbol => 'A';
 
+  /// [Current$Ampere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -235,7 +239,7 @@ final class Current$Milliampere extends Current {
         unit.toMilliampere.value,
       );
 
-  static const _minorName = r'current$Milliampere';
+  static const _minorName = 'milliampere';
 
   static const _ratio = 1.0;
 
@@ -247,8 +251,9 @@ final class Current$Milliampere extends Current {
   @override
   Current$Milliampere get _clone => Current$Milliampere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$Milliampere] with new value
   @override
@@ -261,6 +266,7 @@ final class Current$Milliampere extends Current {
   @override
   String get symbol => 'mA';
 
+  /// [Current$Milliampere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -292,7 +298,7 @@ final class Current$Biot extends Current {
         unit.toBiot.value,
       );
 
-  static const _minorName = r'current$Biot';
+  static const _minorName = 'biot';
 
   static const _ratio = 10000.0;
 
@@ -304,8 +310,9 @@ final class Current$Biot extends Current {
   @override
   Current$Biot get _clone => Current$Biot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$Biot] with new value
   @override
@@ -318,6 +325,7 @@ final class Current$Biot extends Current {
   @override
   String get symbol => 'Bi';
 
+  /// [Current$Biot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -349,7 +357,7 @@ final class Current$Abampere extends Current {
         unit.toAbampere.value,
       );
 
-  static const _minorName = r'current$Abampere';
+  static const _minorName = 'abampere';
 
   static const _ratio = 10000.0;
 
@@ -361,8 +369,9 @@ final class Current$Abampere extends Current {
   @override
   Current$Abampere get _clone => Current$Abampere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$Abampere] with new value
   @override
@@ -375,6 +384,7 @@ final class Current$Abampere extends Current {
   @override
   String get symbol => 'abA';
 
+  /// [Current$Abampere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -406,7 +416,7 @@ final class Current$Statampere extends Current {
         unit.toStatampere.value,
       );
 
-  static const _minorName = r'current$Statampere';
+  static const _minorName = 'statampere';
 
   static const _ratio = 3.335641e-7;
 
@@ -418,8 +428,9 @@ final class Current$Statampere extends Current {
   @override
   Current$Statampere get _clone => Current$Statampere(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$Statampere] with new value
   @override
@@ -432,6 +443,7 @@ final class Current$Statampere extends Current {
   @override
   String get symbol => 'statA';
 
+  /// [Current$Statampere] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -463,7 +475,7 @@ final class Current$EMUOfCurrent extends Current {
         unit.toEMUOfCurrent.value,
       );
 
-  static const _minorName = r'current$EMUOfCurrent';
+  static const _minorName = 'eMUOfCurrent';
 
   static const _ratio = 10000.0;
 
@@ -475,8 +487,9 @@ final class Current$EMUOfCurrent extends Current {
   @override
   Current$EMUOfCurrent get _clone => Current$EMUOfCurrent(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$EMUOfCurrent] with new value
   @override
@@ -487,8 +500,9 @@ final class Current$EMUOfCurrent extends Current {
 
   /// Symbol for [Current$EMUOfCurrent]
   @override
-  String get symbol => 'EMUOfCurrent';
+  String get symbol => 'EMU of current';
 
+  /// [Current$EMUOfCurrent] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -520,7 +534,7 @@ final class Current$ESUOfCurrent extends Current {
         unit.toESUOfCurrent.value,
       );
 
-  static const _minorName = r'current$ESUOfCurrent';
+  static const _minorName = 'eSUOfCurrent';
 
   static const _ratio = 3.335641e-7;
 
@@ -532,8 +546,9 @@ final class Current$ESUOfCurrent extends Current {
   @override
   Current$ESUOfCurrent get _clone => Current$ESUOfCurrent(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$ESUOfCurrent] with new value
   @override
@@ -544,8 +559,9 @@ final class Current$ESUOfCurrent extends Current {
 
   /// Symbol for [Current$ESUOfCurrent]
   @override
-  String get symbol => 'ESUOfCurrent';
+  String get symbol => 'ESU of current';
 
+  /// [Current$ESUOfCurrent] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -577,7 +593,7 @@ final class Current$CGSEMUnit extends Current {
         unit.toCGSEMUnit.value,
       );
 
-  static const _minorName = r'current$CGSEMUnit';
+  static const _minorName = 'cGSEMUnit';
 
   static const _ratio = 10000.0;
 
@@ -589,8 +605,9 @@ final class Current$CGSEMUnit extends Current {
   @override
   Current$CGSEMUnit get _clone => Current$CGSEMUnit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$CGSEMUnit] with new value
   @override
@@ -601,8 +618,9 @@ final class Current$CGSEMUnit extends Current {
 
   /// Symbol for [Current$CGSEMUnit]
   @override
-  String get symbol => 'CGSEMUnit';
+  String get symbol => 'CGS e.m. unit';
 
+  /// [Current$CGSEMUnit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -634,7 +652,7 @@ final class Current$CGSESUnit extends Current {
         unit.toCGSESUnit.value,
       );
 
-  static const _minorName = r'current$CGSESUnit';
+  static const _minorName = 'cGSESUnit';
 
   static const _ratio = 3.335641e-7;
 
@@ -646,8 +664,9 @@ final class Current$CGSESUnit extends Current {
   @override
   Current$CGSESUnit get _clone => Current$CGSESUnit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Current$CGSESUnit] with new value
   @override
@@ -658,8 +677,9 @@ final class Current$CGSESUnit extends Current {
 
   /// Symbol for [Current$CGSESUnit]
   @override
-  String get symbol => 'CGSESUnit';
+  String get symbol => 'CGS e.s. unit';
 
+  /// [Current$CGSESUnit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

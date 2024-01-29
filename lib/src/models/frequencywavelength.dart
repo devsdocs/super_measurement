@@ -279,7 +279,7 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
         unit.toExahertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Exahertz';
+  static const _minorName = 'exahertz';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -292,8 +292,9 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
   FrequencyWavelength$Exahertz get _clone =>
       FrequencyWavelength$Exahertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Exahertz] with new value
   @override
@@ -306,6 +307,7 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
   @override
   String get symbol => 'EHz';
 
+  /// [FrequencyWavelength$Exahertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -337,7 +339,7 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
         unit.toPetahertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Petahertz';
+  static const _minorName = 'petahertz';
 
   static const _ratio = 1000000000000000.0;
 
@@ -350,8 +352,9 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
   FrequencyWavelength$Petahertz get _clone =>
       FrequencyWavelength$Petahertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Petahertz] with new value
   @override
@@ -364,6 +367,7 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
   @override
   String get symbol => 'PHz';
 
+  /// [FrequencyWavelength$Petahertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -395,7 +399,7 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
         unit.toTerahertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Terahertz';
+  static const _minorName = 'terahertz';
 
   static const _ratio = 1000000000000.0;
 
@@ -408,8 +412,9 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
   FrequencyWavelength$Terahertz get _clone =>
       FrequencyWavelength$Terahertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Terahertz] with new value
   @override
@@ -422,6 +427,7 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
   @override
   String get symbol => 'THz';
 
+  /// [FrequencyWavelength$Terahertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -453,7 +459,7 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
         unit.toGigahertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Gigahertz';
+  static const _minorName = 'gigahertz';
 
   static const _ratio = 1000000000.0;
 
@@ -466,8 +472,9 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
   FrequencyWavelength$Gigahertz get _clone =>
       FrequencyWavelength$Gigahertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Gigahertz] with new value
   @override
@@ -480,6 +487,7 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
   @override
   String get symbol => 'GHz';
 
+  /// [FrequencyWavelength$Gigahertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -511,7 +519,7 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
         unit.toMegahertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Megahertz';
+  static const _minorName = 'megahertz';
 
   static const _ratio = 1000000.0;
 
@@ -524,8 +532,9 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
   FrequencyWavelength$Megahertz get _clone =>
       FrequencyWavelength$Megahertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Megahertz] with new value
   @override
@@ -538,6 +547,7 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
   @override
   String get symbol => 'MHz';
 
+  /// [FrequencyWavelength$Megahertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -569,7 +579,7 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
         unit.toKilohertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Kilohertz';
+  static const _minorName = 'kilohertz';
 
   static const _ratio = 1000.0;
 
@@ -582,8 +592,9 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
   FrequencyWavelength$Kilohertz get _clone =>
       FrequencyWavelength$Kilohertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Kilohertz] with new value
   @override
@@ -596,6 +607,7 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
   @override
   String get symbol => 'kHz';
 
+  /// [FrequencyWavelength$Kilohertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -627,7 +639,7 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
         unit.toHectohertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Hectohertz';
+  static const _minorName = 'hectohertz';
 
   static const _ratio = 100.0;
 
@@ -640,8 +652,9 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
   FrequencyWavelength$Hectohertz get _clone =>
       FrequencyWavelength$Hectohertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Hectohertz] with new value
   @override
@@ -654,6 +667,7 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
   @override
   String get symbol => 'hHz';
 
+  /// [FrequencyWavelength$Hectohertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -685,7 +699,7 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
         unit.toDekahertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Dekahertz';
+  static const _minorName = 'dekahertz';
 
   static const _ratio = 10.0;
 
@@ -698,8 +712,9 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
   FrequencyWavelength$Dekahertz get _clone =>
       FrequencyWavelength$Dekahertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Dekahertz] with new value
   @override
@@ -712,6 +727,7 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
   @override
   String get symbol => 'daHz';
 
+  /// [FrequencyWavelength$Dekahertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -743,7 +759,7 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
         unit.toHertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Hertz';
+  static const _minorName = 'hertz';
 
   static const _ratio = 1.0;
 
@@ -755,8 +771,9 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Hertz get _clone => FrequencyWavelength$Hertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Hertz] with new value
   @override
@@ -769,6 +786,7 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
   @override
   String get symbol => 'Hz';
 
+  /// [FrequencyWavelength$Hertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -800,7 +818,7 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
         unit.toDecihertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Decihertz';
+  static const _minorName = 'decihertz';
 
   static const _ratio = 0.1;
 
@@ -813,8 +831,9 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
   FrequencyWavelength$Decihertz get _clone =>
       FrequencyWavelength$Decihertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Decihertz] with new value
   @override
@@ -827,6 +846,7 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
   @override
   String get symbol => 'dHz';
 
+  /// [FrequencyWavelength$Decihertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -858,7 +878,7 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
         unit.toCentihertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Centihertz';
+  static const _minorName = 'centihertz';
 
   static const _ratio = 0.01;
 
@@ -871,8 +891,9 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
   FrequencyWavelength$Centihertz get _clone =>
       FrequencyWavelength$Centihertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Centihertz] with new value
   @override
@@ -885,6 +906,7 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
   @override
   String get symbol => 'cHz';
 
+  /// [FrequencyWavelength$Centihertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -916,7 +938,7 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
         unit.toMillihertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Millihertz';
+  static const _minorName = 'millihertz';
 
   static const _ratio = 0.001;
 
@@ -929,8 +951,9 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
   FrequencyWavelength$Millihertz get _clone =>
       FrequencyWavelength$Millihertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Millihertz] with new value
   @override
@@ -943,6 +966,7 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
   @override
   String get symbol => 'mHz';
 
+  /// [FrequencyWavelength$Millihertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -974,7 +998,7 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
         unit.toMicrohertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Microhertz';
+  static const _minorName = 'microhertz';
 
   static const _ratio = 0.000001;
 
@@ -987,8 +1011,9 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
   FrequencyWavelength$Microhertz get _clone =>
       FrequencyWavelength$Microhertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Microhertz] with new value
   @override
@@ -1001,6 +1026,7 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
   @override
   String get symbol => 'µHz';
 
+  /// [FrequencyWavelength$Microhertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1032,7 +1058,7 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
         unit.toNanohertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Nanohertz';
+  static const _minorName = 'nanohertz';
 
   static const _ratio = 1e-9;
 
@@ -1045,8 +1071,9 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
   FrequencyWavelength$Nanohertz get _clone =>
       FrequencyWavelength$Nanohertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Nanohertz] with new value
   @override
@@ -1059,6 +1086,7 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
   @override
   String get symbol => 'nHz';
 
+  /// [FrequencyWavelength$Nanohertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1090,7 +1118,7 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
         unit.toPicohertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Picohertz';
+  static const _minorName = 'picohertz';
 
   static const _ratio = 1e-12;
 
@@ -1103,8 +1131,9 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
   FrequencyWavelength$Picohertz get _clone =>
       FrequencyWavelength$Picohertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Picohertz] with new value
   @override
@@ -1117,6 +1146,7 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
   @override
   String get symbol => 'pHz';
 
+  /// [FrequencyWavelength$Picohertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1148,7 +1178,7 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
         unit.toFemtohertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Femtohertz';
+  static const _minorName = 'femtohertz';
 
   static const _ratio = 1e-15;
 
@@ -1161,8 +1191,9 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
   FrequencyWavelength$Femtohertz get _clone =>
       FrequencyWavelength$Femtohertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Femtohertz] with new value
   @override
@@ -1175,6 +1206,7 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
   @override
   String get symbol => 'fHz';
 
+  /// [FrequencyWavelength$Femtohertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1206,7 +1238,7 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
         unit.toAttohertz.value,
       );
 
-  static const _minorName = r'frequencyWavelength$Attohertz';
+  static const _minorName = 'attohertz';
 
   static const _ratio = 1e-18;
 
@@ -1219,8 +1251,9 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
   FrequencyWavelength$Attohertz get _clone =>
       FrequencyWavelength$Attohertz(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Attohertz] with new value
   @override
@@ -1233,6 +1266,7 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
   @override
   String get symbol => 'aHz';
 
+  /// [FrequencyWavelength$Attohertz] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1264,7 +1298,7 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
         unit.toCyclePerSecond.value,
       );
 
-  static const _minorName = r'frequencyWavelength$CyclePerSecond';
+  static const _minorName = 'cyclePerSecond';
 
   static const _ratio = 1.0;
 
@@ -1277,8 +1311,9 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
   FrequencyWavelength$CyclePerSecond get _clone =>
       FrequencyWavelength$CyclePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$CyclePerSecond] with new value
   @override
@@ -1289,8 +1324,9 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
 
   /// Symbol for [FrequencyWavelength$CyclePerSecond]
   @override
-  String get symbol => 'CyclePerSecond';
+  String get symbol => 'cycle/second';
 
+  /// [FrequencyWavelength$CyclePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1323,7 +1359,7 @@ final class FrequencyWavelength$WavelengthInExametres
         unit.toWavelengthInExametres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInExametres';
+  static const _minorName = 'wavelengthInExametres';
 
   static const _ratio = 3335640951.9815207;
 
@@ -1336,8 +1372,9 @@ final class FrequencyWavelength$WavelengthInExametres
   FrequencyWavelength$WavelengthInExametres get _clone =>
       FrequencyWavelength$WavelengthInExametres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInExametres] with new value
   @override
@@ -1350,6 +1387,7 @@ final class FrequencyWavelength$WavelengthInExametres
   @override
   String get symbol => 'Em';
 
+  /// [FrequencyWavelength$WavelengthInExametres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1382,7 +1420,7 @@ final class FrequencyWavelength$WavelengthInPetametres
         unit.toWavelengthInPetametres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInPetametres';
+  static const _minorName = 'wavelengthInPetametres';
 
   static const _ratio = 3335640.9519815203;
 
@@ -1395,8 +1433,9 @@ final class FrequencyWavelength$WavelengthInPetametres
   FrequencyWavelength$WavelengthInPetametres get _clone =>
       FrequencyWavelength$WavelengthInPetametres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInPetametres] with new value
   @override
@@ -1409,6 +1448,7 @@ final class FrequencyWavelength$WavelengthInPetametres
   @override
   String get symbol => 'Pm';
 
+  /// [FrequencyWavelength$WavelengthInPetametres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1441,7 +1481,7 @@ final class FrequencyWavelength$WavelengthInTerametres
         unit.toWavelengthInTerametres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInTerametres';
+  static const _minorName = 'wavelengthInTerametres';
 
   static const _ratio = 3335.6409519815206;
 
@@ -1454,8 +1494,9 @@ final class FrequencyWavelength$WavelengthInTerametres
   FrequencyWavelength$WavelengthInTerametres get _clone =>
       FrequencyWavelength$WavelengthInTerametres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInTerametres] with new value
   @override
@@ -1468,6 +1509,7 @@ final class FrequencyWavelength$WavelengthInTerametres
   @override
   String get symbol => 'Tm';
 
+  /// [FrequencyWavelength$WavelengthInTerametres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1500,7 +1542,7 @@ final class FrequencyWavelength$WavelengthInGigametres
         unit.toWavelengthInGigametres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInGigametres';
+  static const _minorName = 'wavelengthInGigametres';
 
   static const _ratio = 3.3356409519815204;
 
@@ -1513,8 +1555,9 @@ final class FrequencyWavelength$WavelengthInGigametres
   FrequencyWavelength$WavelengthInGigametres get _clone =>
       FrequencyWavelength$WavelengthInGigametres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInGigametres] with new value
   @override
@@ -1527,6 +1570,7 @@ final class FrequencyWavelength$WavelengthInGigametres
   @override
   String get symbol => 'Gm';
 
+  /// [FrequencyWavelength$WavelengthInGigametres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1559,7 +1603,7 @@ final class FrequencyWavelength$WavelengthInMegametres
         unit.toWavelengthInMegametres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInMegametres';
+  static const _minorName = 'wavelengthInMegametres';
 
   static const _ratio = 0.0033356409519815205;
 
@@ -1572,8 +1616,9 @@ final class FrequencyWavelength$WavelengthInMegametres
   FrequencyWavelength$WavelengthInMegametres get _clone =>
       FrequencyWavelength$WavelengthInMegametres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMegametres] with new value
   @override
@@ -1586,6 +1631,7 @@ final class FrequencyWavelength$WavelengthInMegametres
   @override
   String get symbol => 'Mm';
 
+  /// [FrequencyWavelength$WavelengthInMegametres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1618,7 +1664,7 @@ final class FrequencyWavelength$WavelengthInKilometres
         unit.toWavelengthInKilometres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInKilometres';
+  static const _minorName = 'wavelengthInKilometres';
 
   static const _ratio = 0.0000033356409519815205;
 
@@ -1631,8 +1677,9 @@ final class FrequencyWavelength$WavelengthInKilometres
   FrequencyWavelength$WavelengthInKilometres get _clone =>
       FrequencyWavelength$WavelengthInKilometres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInKilometres] with new value
   @override
@@ -1645,6 +1692,7 @@ final class FrequencyWavelength$WavelengthInKilometres
   @override
   String get symbol => 'km';
 
+  /// [FrequencyWavelength$WavelengthInKilometres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1677,7 +1725,7 @@ final class FrequencyWavelength$WavelengthInHectometres
         unit.toWavelengthInHectometres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInHectometres';
+  static const _minorName = 'wavelengthInHectometres';
 
   static const _ratio = 3.3356409519815204e-7;
 
@@ -1690,8 +1738,9 @@ final class FrequencyWavelength$WavelengthInHectometres
   FrequencyWavelength$WavelengthInHectometres get _clone =>
       FrequencyWavelength$WavelengthInHectometres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInHectometres] with new value
   @override
@@ -1704,6 +1753,7 @@ final class FrequencyWavelength$WavelengthInHectometres
   @override
   String get symbol => 'hm';
 
+  /// [FrequencyWavelength$WavelengthInHectometres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1736,7 +1786,7 @@ final class FrequencyWavelength$WavelengthInDecametres
         unit.toWavelengthInDecametres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInDecametres';
+  static const _minorName = 'wavelengthInDecametres';
 
   static const _ratio = 3.3356409519815205e-8;
 
@@ -1749,8 +1799,9 @@ final class FrequencyWavelength$WavelengthInDecametres
   FrequencyWavelength$WavelengthInDecametres get _clone =>
       FrequencyWavelength$WavelengthInDecametres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInDecametres] with new value
   @override
@@ -1763,6 +1814,7 @@ final class FrequencyWavelength$WavelengthInDecametres
   @override
   String get symbol => 'dam';
 
+  /// [FrequencyWavelength$WavelengthInDecametres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1794,7 +1846,7 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
         unit.toWavelengthInMetres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInMetres';
+  static const _minorName = 'wavelengthInMetres';
 
   static const _ratio = 3.3356409519815204e-9;
 
@@ -1807,8 +1859,9 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
   FrequencyWavelength$WavelengthInMetres get _clone =>
       FrequencyWavelength$WavelengthInMetres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMetres] with new value
   @override
@@ -1821,6 +1874,7 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
   @override
   String get symbol => 'm';
 
+  /// [FrequencyWavelength$WavelengthInMetres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1853,7 +1907,7 @@ final class FrequencyWavelength$WavelengthInDecimetres
         unit.toWavelengthInDecimetres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInDecimetres';
+  static const _minorName = 'wavelengthInDecimetres';
 
   static const _ratio = 3.3356409519815207e-10;
 
@@ -1866,8 +1920,9 @@ final class FrequencyWavelength$WavelengthInDecimetres
   FrequencyWavelength$WavelengthInDecimetres get _clone =>
       FrequencyWavelength$WavelengthInDecimetres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInDecimetres] with new value
   @override
@@ -1880,6 +1935,7 @@ final class FrequencyWavelength$WavelengthInDecimetres
   @override
   String get symbol => 'dm';
 
+  /// [FrequencyWavelength$WavelengthInDecimetres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1912,7 +1968,7 @@ final class FrequencyWavelength$WavelengthInCentimetres
         unit.toWavelengthInCentimetres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInCentimetres';
+  static const _minorName = 'wavelengthInCentimetres';
 
   static const _ratio = 3.33564095198152e-11;
 
@@ -1925,8 +1981,9 @@ final class FrequencyWavelength$WavelengthInCentimetres
   FrequencyWavelength$WavelengthInCentimetres get _clone =>
       FrequencyWavelength$WavelengthInCentimetres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInCentimetres] with new value
   @override
@@ -1939,6 +1996,7 @@ final class FrequencyWavelength$WavelengthInCentimetres
   @override
   String get symbol => 'cm';
 
+  /// [FrequencyWavelength$WavelengthInCentimetres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1971,7 +2029,7 @@ final class FrequencyWavelength$WavelengthInMillimetres
         unit.toWavelengthInMillimetres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInMillimetres';
+  static const _minorName = 'wavelengthInMillimetres';
 
   static const _ratio = 3.3356409519815203e-12;
 
@@ -1984,8 +2042,9 @@ final class FrequencyWavelength$WavelengthInMillimetres
   FrequencyWavelength$WavelengthInMillimetres get _clone =>
       FrequencyWavelength$WavelengthInMillimetres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMillimetres] with new value
   @override
@@ -1998,6 +2057,7 @@ final class FrequencyWavelength$WavelengthInMillimetres
   @override
   String get symbol => 'mm';
 
+  /// [FrequencyWavelength$WavelengthInMillimetres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2030,7 +2090,7 @@ final class FrequencyWavelength$WavelengthInMicrometres
         unit.toWavelengthInMicrometres.value,
       );
 
-  static const _minorName = r'frequencyWavelength$WavelengthInMicrometres';
+  static const _minorName = 'wavelengthInMicrometres';
 
   static const _ratio = 3.3356409519815205e-15;
 
@@ -2043,8 +2103,9 @@ final class FrequencyWavelength$WavelengthInMicrometres
   FrequencyWavelength$WavelengthInMicrometres get _clone =>
       FrequencyWavelength$WavelengthInMicrometres(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMicrometres] with new value
   @override
@@ -2057,6 +2118,7 @@ final class FrequencyWavelength$WavelengthInMicrometres
   @override
   String get symbol => 'µm';
 
+  /// [FrequencyWavelength$WavelengthInMicrometres] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

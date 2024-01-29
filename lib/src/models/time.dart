@@ -246,7 +246,7 @@ final class Time$Millennium extends Time {
         unit.toMillennium.value,
       );
 
-  static const _minorName = r'time$Millennium';
+  static const _minorName = 'millennium';
 
   static const _ratio = 3.1536e+28;
 
@@ -258,8 +258,9 @@ final class Time$Millennium extends Time {
   @override
   Time$Millennium get _clone => Time$Millennium(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Millennium] with new value
   @override
@@ -270,8 +271,9 @@ final class Time$Millennium extends Time {
 
   /// Symbol for [Time$Millennium]
   @override
-  String get symbol => 'Millennium';
+  String get symbol => 'millennium';
 
+  /// [Time$Millennium] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -303,7 +305,7 @@ final class Time$Century extends Time {
         unit.toCentury.value,
       );
 
-  static const _minorName = r'time$Century';
+  static const _minorName = 'century';
 
   static const _ratio = 3.1536e+27;
 
@@ -315,8 +317,9 @@ final class Time$Century extends Time {
   @override
   Time$Century get _clone => Time$Century(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Century] with new value
   @override
@@ -329,6 +332,7 @@ final class Time$Century extends Time {
   @override
   String get symbol => 'cy';
 
+  /// [Time$Century] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -360,7 +364,7 @@ final class Time$Decade extends Time {
         unit.toDecade.value,
       );
 
-  static const _minorName = r'time$Decade';
+  static const _minorName = 'decade';
 
   static const _ratio = 3.1536e+26;
 
@@ -372,8 +376,9 @@ final class Time$Decade extends Time {
   @override
   Time$Decade get _clone => Time$Decade(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Decade] with new value
   @override
@@ -384,8 +389,9 @@ final class Time$Decade extends Time {
 
   /// Symbol for [Time$Decade]
   @override
-  String get symbol => 'Decade';
+  String get symbol => 'decade';
 
+  /// [Time$Decade] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -417,7 +423,7 @@ final class Time$Year extends Time {
         unit.toYear.value,
       );
 
-  static const _minorName = r'time$Year';
+  static const _minorName = 'year';
 
   static const _ratio = 3.1536e+25;
 
@@ -429,8 +435,9 @@ final class Time$Year extends Time {
   @override
   Time$Year get _clone => Time$Year(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Year] with new value
   @override
@@ -443,6 +450,7 @@ final class Time$Year extends Time {
   @override
   String get symbol => 'y';
 
+  /// [Time$Year] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -474,7 +482,7 @@ final class Time$LeapYear extends Time {
         unit.toLeapYear.value,
       );
 
-  static const _minorName = r'time$LeapYear';
+  static const _minorName = 'leapYear';
 
   static const _ratio = 3.16224e+25;
 
@@ -486,8 +494,9 @@ final class Time$LeapYear extends Time {
   @override
   Time$LeapYear get _clone => Time$LeapYear(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$LeapYear] with new value
   @override
@@ -498,8 +507,9 @@ final class Time$LeapYear extends Time {
 
   /// Symbol for [Time$LeapYear]
   @override
-  String get symbol => 'LeapYear';
+  String get symbol => 'leap year';
 
+  /// [Time$LeapYear] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -531,7 +541,7 @@ final class Time$MeanYear extends Time {
         unit.toMeanYear.value,
       );
 
-  static const _minorName = r'time$MeanYear';
+  static const _minorName = 'meanYear';
 
   static const _ratio = 3.15576e+25;
 
@@ -543,8 +553,9 @@ final class Time$MeanYear extends Time {
   @override
   Time$MeanYear get _clone => Time$MeanYear(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$MeanYear] with new value
   @override
@@ -555,8 +566,9 @@ final class Time$MeanYear extends Time {
 
   /// Symbol for [Time$MeanYear]
   @override
-  String get symbol => 'MeanYear';
+  String get symbol => 'mean year';
 
+  /// [Time$MeanYear] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -588,7 +600,7 @@ final class Time$SiderealYear extends Time {
         unit.toSiderealYear.value,
       );
 
-  static const _minorName = r'time$SiderealYear';
+  static const _minorName = 'siderealYear';
 
   static const _ratio = 3.1558149504e+25;
 
@@ -600,8 +612,9 @@ final class Time$SiderealYear extends Time {
   @override
   Time$SiderealYear get _clone => Time$SiderealYear(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$SiderealYear] with new value
   @override
@@ -612,8 +625,9 @@ final class Time$SiderealYear extends Time {
 
   /// Symbol for [Time$SiderealYear]
   @override
-  String get symbol => 'SiderealYear';
+  String get symbol => 'sidereal year';
 
+  /// [Time$SiderealYear] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -645,7 +659,7 @@ final class Time$TropicalYear extends Time {
         unit.toTropicalYear.value,
       );
 
-  static const _minorName = r'time$TropicalYear';
+  static const _minorName = 'tropicalYear';
 
   static const _ratio = 3.155692608e+25;
 
@@ -657,8 +671,9 @@ final class Time$TropicalYear extends Time {
   @override
   Time$TropicalYear get _clone => Time$TropicalYear(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$TropicalYear] with new value
   @override
@@ -669,8 +684,9 @@ final class Time$TropicalYear extends Time {
 
   /// Symbol for [Time$TropicalYear]
   @override
-  String get symbol => 'TropicalYear';
+  String get symbol => 'tropical year';
 
+  /// [Time$TropicalYear] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -702,7 +718,7 @@ final class Time$Month extends Time {
         unit.toMonth.value,
       );
 
-  static const _minorName = r'time$Month';
+  static const _minorName = 'month';
 
   static const _ratio = 2.592e+24;
 
@@ -714,8 +730,9 @@ final class Time$Month extends Time {
   @override
   Time$Month get _clone => Time$Month(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Month] with new value
   @override
@@ -728,6 +745,7 @@ final class Time$Month extends Time {
   @override
   String get symbol => 'mo, mon';
 
+  /// [Time$Month] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -759,7 +777,7 @@ final class Time$SynodicMonth extends Time {
         unit.toSynodicMonth.value,
       );
 
-  static const _minorName = r'time$SynodicMonth';
+  static const _minorName = 'synodicMonth';
 
   static const _ratio = 2.55144384e+24;
 
@@ -771,8 +789,9 @@ final class Time$SynodicMonth extends Time {
   @override
   Time$SynodicMonth get _clone => Time$SynodicMonth(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$SynodicMonth] with new value
   @override
@@ -783,8 +802,9 @@ final class Time$SynodicMonth extends Time {
 
   /// Symbol for [Time$SynodicMonth]
   @override
-  String get symbol => 'SynodicMonth';
+  String get symbol => 'synodic month';
 
+  /// [Time$SynodicMonth] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -816,7 +836,7 @@ final class Time$Fortnight extends Time {
         unit.toFortnight.value,
       );
 
-  static const _minorName = r'time$Fortnight';
+  static const _minorName = 'fortnight';
 
   static const _ratio = 1.2096e+24;
 
@@ -828,8 +848,9 @@ final class Time$Fortnight extends Time {
   @override
   Time$Fortnight get _clone => Time$Fortnight(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Fortnight] with new value
   @override
@@ -840,8 +861,9 @@ final class Time$Fortnight extends Time {
 
   /// Symbol for [Time$Fortnight]
   @override
-  String get symbol => 'Fortnight';
+  String get symbol => 'fortnight';
 
+  /// [Time$Fortnight] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -873,7 +895,7 @@ final class Time$Week extends Time {
         unit.toWeek.value,
       );
 
-  static const _minorName = r'time$Week';
+  static const _minorName = 'week';
 
   static const _ratio = 6.048e+23;
 
@@ -885,8 +907,9 @@ final class Time$Week extends Time {
   @override
   Time$Week get _clone => Time$Week(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Week] with new value
   @override
@@ -899,6 +922,7 @@ final class Time$Week extends Time {
   @override
   String get symbol => 'wk';
 
+  /// [Time$Week] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -930,7 +954,7 @@ final class Time$Day extends Time {
         unit.toDay.value,
       );
 
-  static const _minorName = r'time$Day';
+  static const _minorName = 'day';
 
   static const _ratio = 8.64e+22;
 
@@ -942,8 +966,9 @@ final class Time$Day extends Time {
   @override
   Time$Day get _clone => Time$Day(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Day] with new value
   @override
@@ -956,6 +981,7 @@ final class Time$Day extends Time {
   @override
   String get symbol => 'd';
 
+  /// [Time$Day] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -987,7 +1013,7 @@ final class Time$SiderealDay extends Time {
         unit.toSiderealDay.value,
       );
 
-  static const _minorName = r'time$SiderealDay';
+  static const _minorName = 'siderealDay';
 
   static const _ratio = 8.6164091e+22;
 
@@ -999,8 +1025,9 @@ final class Time$SiderealDay extends Time {
   @override
   Time$SiderealDay get _clone => Time$SiderealDay(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$SiderealDay] with new value
   @override
@@ -1011,8 +1038,9 @@ final class Time$SiderealDay extends Time {
 
   /// Symbol for [Time$SiderealDay]
   @override
-  String get symbol => 'SiderealDay';
+  String get symbol => 'sidereal day';
 
+  /// [Time$SiderealDay] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1044,7 +1072,7 @@ final class Time$Hour extends Time {
         unit.toHour.value,
       );
 
-  static const _minorName = r'time$Hour';
+  static const _minorName = 'hour';
 
   static const _ratio = 3.6e+21;
 
@@ -1056,8 +1084,9 @@ final class Time$Hour extends Time {
   @override
   Time$Hour get _clone => Time$Hour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Hour] with new value
   @override
@@ -1070,6 +1099,7 @@ final class Time$Hour extends Time {
   @override
   String get symbol => 'h';
 
+  /// [Time$Hour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1101,7 +1131,7 @@ final class Time$SiderealHour extends Time {
         unit.toSiderealHour.value,
       );
 
-  static const _minorName = r'time$SiderealHour';
+  static const _minorName = 'siderealHour';
 
   static const _ratio = 3.59017e+21;
 
@@ -1113,8 +1143,9 @@ final class Time$SiderealHour extends Time {
   @override
   Time$SiderealHour get _clone => Time$SiderealHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$SiderealHour] with new value
   @override
@@ -1125,8 +1156,9 @@ final class Time$SiderealHour extends Time {
 
   /// Symbol for [Time$SiderealHour]
   @override
-  String get symbol => 'SiderealHour';
+  String get symbol => 'sidereal hour';
 
+  /// [Time$SiderealHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1158,7 +1190,7 @@ final class Time$Minute extends Time {
         unit.toMinute.value,
       );
 
-  static const _minorName = r'time$Minute';
+  static const _minorName = 'minute';
 
   static const _ratio = 60000000000000000000.0;
 
@@ -1170,8 +1202,9 @@ final class Time$Minute extends Time {
   @override
   Time$Minute get _clone => Time$Minute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Minute] with new value
   @override
@@ -1184,6 +1217,7 @@ final class Time$Minute extends Time {
   @override
   String get symbol => 'min';
 
+  /// [Time$Minute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1215,7 +1249,7 @@ final class Time$Second extends Time {
         unit.toSecond.value,
       );
 
-  static const _minorName = r'time$Second';
+  static const _minorName = 'second';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -1227,8 +1261,9 @@ final class Time$Second extends Time {
   @override
   Time$Second get _clone => Time$Second(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Second] with new value
   @override
@@ -1241,6 +1276,7 @@ final class Time$Second extends Time {
   @override
   String get symbol => 's';
 
+  /// [Time$Second] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1272,7 +1308,7 @@ final class Time$Millisecond extends Time {
         unit.toMillisecond.value,
       );
 
-  static const _minorName = r'time$Millisecond';
+  static const _minorName = 'millisecond';
 
   static const _ratio = 1000000000000000.0;
 
@@ -1284,8 +1320,9 @@ final class Time$Millisecond extends Time {
   @override
   Time$Millisecond get _clone => Time$Millisecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Millisecond] with new value
   @override
@@ -1298,6 +1335,7 @@ final class Time$Millisecond extends Time {
   @override
   String get symbol => 'ms';
 
+  /// [Time$Millisecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1329,7 +1367,7 @@ final class Time$Microsecond extends Time {
         unit.toMicrosecond.value,
       );
 
-  static const _minorName = r'time$Microsecond';
+  static const _minorName = 'microsecond';
 
   static const _ratio = 1000000000000.0;
 
@@ -1341,8 +1379,9 @@ final class Time$Microsecond extends Time {
   @override
   Time$Microsecond get _clone => Time$Microsecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Microsecond] with new value
   @override
@@ -1355,6 +1394,7 @@ final class Time$Microsecond extends Time {
   @override
   String get symbol => 'µs';
 
+  /// [Time$Microsecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1386,7 +1426,7 @@ final class Time$Nanosecond extends Time {
         unit.toNanosecond.value,
       );
 
-  static const _minorName = r'time$Nanosecond';
+  static const _minorName = 'nanosecond';
 
   static const _ratio = 1000000000.0;
 
@@ -1398,8 +1438,9 @@ final class Time$Nanosecond extends Time {
   @override
   Time$Nanosecond get _clone => Time$Nanosecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Nanosecond] with new value
   @override
@@ -1412,6 +1453,7 @@ final class Time$Nanosecond extends Time {
   @override
   String get symbol => 'ns';
 
+  /// [Time$Nanosecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1443,7 +1485,7 @@ final class Time$Picosecond extends Time {
         unit.toPicosecond.value,
       );
 
-  static const _minorName = r'time$Picosecond';
+  static const _minorName = 'picosecond';
 
   static const _ratio = 1000000.0;
 
@@ -1455,8 +1497,9 @@ final class Time$Picosecond extends Time {
   @override
   Time$Picosecond get _clone => Time$Picosecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Picosecond] with new value
   @override
@@ -1469,6 +1512,7 @@ final class Time$Picosecond extends Time {
   @override
   String get symbol => 'ps';
 
+  /// [Time$Picosecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1500,7 +1544,7 @@ final class Time$Femtosecond extends Time {
         unit.toFemtosecond.value,
       );
 
-  static const _minorName = r'time$Femtosecond';
+  static const _minorName = 'femtosecond';
 
   static const _ratio = 1000.0;
 
@@ -1512,8 +1556,9 @@ final class Time$Femtosecond extends Time {
   @override
   Time$Femtosecond get _clone => Time$Femtosecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Femtosecond] with new value
   @override
@@ -1526,6 +1571,7 @@ final class Time$Femtosecond extends Time {
   @override
   String get symbol => 'fs';
 
+  /// [Time$Femtosecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1557,7 +1603,7 @@ final class Time$Attosecond extends Time {
         unit.toAttosecond.value,
       );
 
-  static const _minorName = r'time$Attosecond';
+  static const _minorName = 'attosecond';
 
   static const _ratio = 1.0;
 
@@ -1569,8 +1615,9 @@ final class Time$Attosecond extends Time {
   @override
   Time$Attosecond get _clone => Time$Attosecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Attosecond] with new value
   @override
@@ -1583,6 +1630,7 @@ final class Time$Attosecond extends Time {
   @override
   String get symbol => 'as';
 
+  /// [Time$Attosecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1614,7 +1662,7 @@ final class Time$Shake extends Time {
         unit.toShake.value,
       );
 
-  static const _minorName = r'time$Shake';
+  static const _minorName = 'shake';
 
   static const _ratio = 10000000000.0;
 
@@ -1626,8 +1674,9 @@ final class Time$Shake extends Time {
   @override
   Time$Shake get _clone => Time$Shake(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Shake] with new value
   @override
@@ -1638,8 +1687,9 @@ final class Time$Shake extends Time {
 
   /// Symbol for [Time$Shake]
   @override
-  String get symbol => 'Shake';
+  String get symbol => 'shake';
 
+  /// [Time$Shake] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1671,7 +1721,7 @@ final class Time$Septennial extends Time {
         unit.toSeptennial.value,
       );
 
-  static const _minorName = r'time$Septennial';
+  static const _minorName = 'septennial';
 
   static const _ratio = 2.20752e+26;
 
@@ -1683,8 +1733,9 @@ final class Time$Septennial extends Time {
   @override
   Time$Septennial get _clone => Time$Septennial(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Septennial] with new value
   @override
@@ -1695,8 +1746,9 @@ final class Time$Septennial extends Time {
 
   /// Symbol for [Time$Septennial]
   @override
-  String get symbol => 'Septennial';
+  String get symbol => 'septennial';
 
+  /// [Time$Septennial] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1728,7 +1780,7 @@ final class Time$Octennial extends Time {
         unit.toOctennial.value,
       );
 
-  static const _minorName = r'time$Octennial';
+  static const _minorName = 'octennial';
 
   static const _ratio = 2.52288e+26;
 
@@ -1740,8 +1792,9 @@ final class Time$Octennial extends Time {
   @override
   Time$Octennial get _clone => Time$Octennial(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Octennial] with new value
   @override
@@ -1752,8 +1805,9 @@ final class Time$Octennial extends Time {
 
   /// Symbol for [Time$Octennial]
   @override
-  String get symbol => 'Octennial';
+  String get symbol => 'octennial';
 
+  /// [Time$Octennial] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1785,7 +1839,7 @@ final class Time$Novennial extends Time {
         unit.toNovennial.value,
       );
 
-  static const _minorName = r'time$Novennial';
+  static const _minorName = 'novennial';
 
   static const _ratio = 2.83824e+26;
 
@@ -1797,8 +1851,9 @@ final class Time$Novennial extends Time {
   @override
   Time$Novennial get _clone => Time$Novennial(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Novennial] with new value
   @override
@@ -1809,8 +1864,9 @@ final class Time$Novennial extends Time {
 
   /// Symbol for [Time$Novennial]
   @override
-  String get symbol => 'Novennial';
+  String get symbol => 'novennial';
 
+  /// [Time$Novennial] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1842,7 +1898,7 @@ final class Time$Quindecennial extends Time {
         unit.toQuindecennial.value,
       );
 
-  static const _minorName = r'time$Quindecennial';
+  static const _minorName = 'quindecennial';
 
   static const _ratio = 4.7304e+26;
 
@@ -1854,8 +1910,9 @@ final class Time$Quindecennial extends Time {
   @override
   Time$Quindecennial get _clone => Time$Quindecennial(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Quindecennial] with new value
   @override
@@ -1866,8 +1923,9 @@ final class Time$Quindecennial extends Time {
 
   /// Symbol for [Time$Quindecennial]
   @override
-  String get symbol => 'Quindecennial';
+  String get symbol => 'quindecennial';
 
+  /// [Time$Quindecennial] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1899,7 +1957,7 @@ final class Time$Quinquennial extends Time {
         unit.toQuinquennial.value,
       );
 
-  static const _minorName = r'time$Quinquennial';
+  static const _minorName = 'quinquennial';
 
   static const _ratio = 1.5768e+26;
 
@@ -1911,8 +1969,9 @@ final class Time$Quinquennial extends Time {
   @override
   Time$Quinquennial get _clone => Time$Quinquennial(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Time$Quinquennial] with new value
   @override
@@ -1923,8 +1982,9 @@ final class Time$Quinquennial extends Time {
 
   /// Symbol for [Time$Quinquennial]
   @override
-  String get symbol => 'Quinquennial';
+  String get symbol => 'quinquennial';
 
+  /// [Time$Quinquennial] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

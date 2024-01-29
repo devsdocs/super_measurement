@@ -113,7 +113,7 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
         unit.toKilogramPerHourMeterSquare.value,
       );
 
-  static const _minorName = r'massFluxDensity$KilogramPerHourMeterSquare';
+  static const _minorName = 'kilogramPerHourMeterSquare';
 
   static const _ratio = 0.0002777777777777778;
 
@@ -126,8 +126,9 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
   MassFluxDensity$KilogramPerHourMeterSquare get _clone =>
       MassFluxDensity$KilogramPerHourMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MassFluxDensity$KilogramPerHourMeterSquare] with new value
   @override
@@ -140,6 +141,7 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
   @override
   String get symbol => 'kg/h m²';
 
+  /// [MassFluxDensity$KilogramPerHourMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -171,7 +173,7 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
         unit.toKilogramPerHourFootSquare.value,
       );
 
-  static const _minorName = r'massFluxDensity$KilogramPerHourFootSquare';
+  static const _minorName = 'kilogramPerHourFootSquare';
 
   static const _ratio = 0.002989975117;
 
@@ -184,8 +186,9 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
   MassFluxDensity$KilogramPerHourFootSquare get _clone =>
       MassFluxDensity$KilogramPerHourFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MassFluxDensity$KilogramPerHourFootSquare] with new value
   @override
@@ -198,6 +201,7 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
   @override
   String get symbol => 'kg/h ft²';
 
+  /// [MassFluxDensity$KilogramPerHourFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -230,7 +234,7 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
         unit.toKilogramPerSecondMeterSquare.value,
       );
 
-  static const _minorName = r'massFluxDensity$KilogramPerSecondMeterSquare';
+  static const _minorName = 'kilogramPerSecondMeterSquare';
 
   static const _ratio = 1.0;
 
@@ -243,8 +247,9 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
   MassFluxDensity$KilogramPerSecondMeterSquare get _clone =>
       MassFluxDensity$KilogramPerSecondMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MassFluxDensity$KilogramPerSecondMeterSquare] with new value
   @override
@@ -257,6 +262,7 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
   @override
   String get symbol => 'kg/s m²';
 
+  /// [MassFluxDensity$KilogramPerSecondMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -288,7 +294,7 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
         unit.toGramPerSecondMeterSquare.value,
       );
 
-  static const _minorName = r'massFluxDensity$GramPerSecondMeterSquare';
+  static const _minorName = 'gramPerSecondMeterSquare';
 
   static const _ratio = 0.001;
 
@@ -301,8 +307,9 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
   MassFluxDensity$GramPerSecondMeterSquare get _clone =>
       MassFluxDensity$GramPerSecondMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MassFluxDensity$GramPerSecondMeterSquare] with new value
   @override
@@ -315,6 +322,7 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
   @override
   String get symbol => 'g/s m²';
 
+  /// [MassFluxDensity$GramPerSecondMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -347,7 +355,7 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
         unit.toGramPerSecondCentimeterSquare.value,
       );
 
-  static const _minorName = r'massFluxDensity$GramPerSecondCentimeterSquare';
+  static const _minorName = 'gramPerSecondCentimeterSquare';
 
   static const _ratio = 10.0;
 
@@ -360,8 +368,9 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
   MassFluxDensity$GramPerSecondCentimeterSquare get _clone =>
       MassFluxDensity$GramPerSecondCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MassFluxDensity$GramPerSecondCentimeterSquare] with new value
   @override
@@ -374,6 +383,7 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
   @override
   String get symbol => 'g/s cm²';
 
+  /// [MassFluxDensity$GramPerSecondCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -405,7 +415,7 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
         unit.toPoundPerHourFootSquare.value,
       );
 
-  static const _minorName = r'massFluxDensity$PoundPerHourFootSquare';
+  static const _minorName = 'poundPerHourFootSquare';
 
   static const _ratio = 0.001356229913;
 
@@ -418,8 +428,9 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
   MassFluxDensity$PoundPerHourFootSquare get _clone =>
       MassFluxDensity$PoundPerHourFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MassFluxDensity$PoundPerHourFootSquare] with new value
   @override
@@ -432,6 +443,7 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
   @override
   String get symbol => 'lb/h ft²';
 
+  /// [MassFluxDensity$PoundPerHourFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -463,7 +475,7 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
         unit.toPoundPerSecondFootSquare.value,
       );
 
-  static const _minorName = r'massFluxDensity$PoundPerSecondFootSquare';
+  static const _minorName = 'poundPerSecondFootSquare';
 
   static const _ratio = 4.882427687;
 
@@ -476,8 +488,9 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
   MassFluxDensity$PoundPerSecondFootSquare get _clone =>
       MassFluxDensity$PoundPerSecondFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MassFluxDensity$PoundPerSecondFootSquare] with new value
   @override
@@ -490,6 +503,7 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
   @override
   String get symbol => 'lb/s ft²';
 
+  /// [MassFluxDensity$PoundPerSecondFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

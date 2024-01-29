@@ -179,7 +179,7 @@ final class Capacitance$Exafarad extends Capacitance {
         unit.toExafarad.value,
       );
 
-  static const _minorName = r'capacitance$Exafarad';
+  static const _minorName = 'exafarad';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -191,8 +191,9 @@ final class Capacitance$Exafarad extends Capacitance {
   @override
   Capacitance$Exafarad get _clone => Capacitance$Exafarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Exafarad] with new value
   @override
@@ -205,6 +206,7 @@ final class Capacitance$Exafarad extends Capacitance {
   @override
   String get symbol => 'EF';
 
+  /// [Capacitance$Exafarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -236,7 +238,7 @@ final class Capacitance$Petafarad extends Capacitance {
         unit.toPetafarad.value,
       );
 
-  static const _minorName = r'capacitance$Petafarad';
+  static const _minorName = 'petafarad';
 
   static const _ratio = 1000000000000000.0;
 
@@ -248,8 +250,9 @@ final class Capacitance$Petafarad extends Capacitance {
   @override
   Capacitance$Petafarad get _clone => Capacitance$Petafarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Petafarad] with new value
   @override
@@ -262,6 +265,7 @@ final class Capacitance$Petafarad extends Capacitance {
   @override
   String get symbol => 'PF';
 
+  /// [Capacitance$Petafarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -293,7 +297,7 @@ final class Capacitance$Terafarad extends Capacitance {
         unit.toTerafarad.value,
       );
 
-  static const _minorName = r'capacitance$Terafarad';
+  static const _minorName = 'terafarad';
 
   static const _ratio = 1000000000000.0;
 
@@ -305,8 +309,9 @@ final class Capacitance$Terafarad extends Capacitance {
   @override
   Capacitance$Terafarad get _clone => Capacitance$Terafarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Terafarad] with new value
   @override
@@ -319,6 +324,7 @@ final class Capacitance$Terafarad extends Capacitance {
   @override
   String get symbol => 'TF';
 
+  /// [Capacitance$Terafarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -350,7 +356,7 @@ final class Capacitance$Gigafarad extends Capacitance {
         unit.toGigafarad.value,
       );
 
-  static const _minorName = r'capacitance$Gigafarad';
+  static const _minorName = 'gigafarad';
 
   static const _ratio = 1000000000.0;
 
@@ -362,8 +368,9 @@ final class Capacitance$Gigafarad extends Capacitance {
   @override
   Capacitance$Gigafarad get _clone => Capacitance$Gigafarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Gigafarad] with new value
   @override
@@ -376,6 +383,7 @@ final class Capacitance$Gigafarad extends Capacitance {
   @override
   String get symbol => 'GF';
 
+  /// [Capacitance$Gigafarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -407,7 +415,7 @@ final class Capacitance$Megafarad extends Capacitance {
         unit.toMegafarad.value,
       );
 
-  static const _minorName = r'capacitance$Megafarad';
+  static const _minorName = 'megafarad';
 
   static const _ratio = 1000000.0;
 
@@ -419,8 +427,9 @@ final class Capacitance$Megafarad extends Capacitance {
   @override
   Capacitance$Megafarad get _clone => Capacitance$Megafarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Megafarad] with new value
   @override
@@ -433,6 +442,7 @@ final class Capacitance$Megafarad extends Capacitance {
   @override
   String get symbol => 'MF';
 
+  /// [Capacitance$Megafarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -464,7 +474,7 @@ final class Capacitance$Kilofarad extends Capacitance {
         unit.toKilofarad.value,
       );
 
-  static const _minorName = r'capacitance$Kilofarad';
+  static const _minorName = 'kilofarad';
 
   static const _ratio = 1000.0;
 
@@ -476,8 +486,9 @@ final class Capacitance$Kilofarad extends Capacitance {
   @override
   Capacitance$Kilofarad get _clone => Capacitance$Kilofarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Kilofarad] with new value
   @override
@@ -490,6 +501,7 @@ final class Capacitance$Kilofarad extends Capacitance {
   @override
   String get symbol => 'kF';
 
+  /// [Capacitance$Kilofarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -521,7 +533,7 @@ final class Capacitance$Hectofarad extends Capacitance {
         unit.toHectofarad.value,
       );
 
-  static const _minorName = r'capacitance$Hectofarad';
+  static const _minorName = 'hectofarad';
 
   static const _ratio = 100.0;
 
@@ -533,8 +545,9 @@ final class Capacitance$Hectofarad extends Capacitance {
   @override
   Capacitance$Hectofarad get _clone => Capacitance$Hectofarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Hectofarad] with new value
   @override
@@ -547,6 +560,7 @@ final class Capacitance$Hectofarad extends Capacitance {
   @override
   String get symbol => 'hF';
 
+  /// [Capacitance$Hectofarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -578,7 +592,7 @@ final class Capacitance$Dekafarad extends Capacitance {
         unit.toDekafarad.value,
       );
 
-  static const _minorName = r'capacitance$Dekafarad';
+  static const _minorName = 'dekafarad';
 
   static const _ratio = 10.0;
 
@@ -590,8 +604,9 @@ final class Capacitance$Dekafarad extends Capacitance {
   @override
   Capacitance$Dekafarad get _clone => Capacitance$Dekafarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Dekafarad] with new value
   @override
@@ -604,6 +619,7 @@ final class Capacitance$Dekafarad extends Capacitance {
   @override
   String get symbol => 'daF';
 
+  /// [Capacitance$Dekafarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -635,7 +651,7 @@ final class Capacitance$Farad extends Capacitance {
         unit.toFarad.value,
       );
 
-  static const _minorName = r'capacitance$Farad';
+  static const _minorName = 'farad';
 
   static const _ratio = 1.0;
 
@@ -647,8 +663,9 @@ final class Capacitance$Farad extends Capacitance {
   @override
   Capacitance$Farad get _clone => Capacitance$Farad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Farad] with new value
   @override
@@ -661,6 +678,7 @@ final class Capacitance$Farad extends Capacitance {
   @override
   String get symbol => 'F';
 
+  /// [Capacitance$Farad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -692,7 +710,7 @@ final class Capacitance$Decifarad extends Capacitance {
         unit.toDecifarad.value,
       );
 
-  static const _minorName = r'capacitance$Decifarad';
+  static const _minorName = 'decifarad';
 
   static const _ratio = 0.1;
 
@@ -704,8 +722,9 @@ final class Capacitance$Decifarad extends Capacitance {
   @override
   Capacitance$Decifarad get _clone => Capacitance$Decifarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Decifarad] with new value
   @override
@@ -718,6 +737,7 @@ final class Capacitance$Decifarad extends Capacitance {
   @override
   String get symbol => 'dF';
 
+  /// [Capacitance$Decifarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -749,7 +769,7 @@ final class Capacitance$Centifarad extends Capacitance {
         unit.toCentifarad.value,
       );
 
-  static const _minorName = r'capacitance$Centifarad';
+  static const _minorName = 'centifarad';
 
   static const _ratio = 0.01;
 
@@ -761,8 +781,9 @@ final class Capacitance$Centifarad extends Capacitance {
   @override
   Capacitance$Centifarad get _clone => Capacitance$Centifarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Centifarad] with new value
   @override
@@ -775,6 +796,7 @@ final class Capacitance$Centifarad extends Capacitance {
   @override
   String get symbol => 'cF';
 
+  /// [Capacitance$Centifarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -806,7 +828,7 @@ final class Capacitance$Millifarad extends Capacitance {
         unit.toMillifarad.value,
       );
 
-  static const _minorName = r'capacitance$Millifarad';
+  static const _minorName = 'millifarad';
 
   static const _ratio = 0.001;
 
@@ -818,8 +840,9 @@ final class Capacitance$Millifarad extends Capacitance {
   @override
   Capacitance$Millifarad get _clone => Capacitance$Millifarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Millifarad] with new value
   @override
@@ -832,6 +855,7 @@ final class Capacitance$Millifarad extends Capacitance {
   @override
   String get symbol => 'mF';
 
+  /// [Capacitance$Millifarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -863,7 +887,7 @@ final class Capacitance$Microfarad extends Capacitance {
         unit.toMicrofarad.value,
       );
 
-  static const _minorName = r'capacitance$Microfarad';
+  static const _minorName = 'microfarad';
 
   static const _ratio = 0.000001;
 
@@ -875,8 +899,9 @@ final class Capacitance$Microfarad extends Capacitance {
   @override
   Capacitance$Microfarad get _clone => Capacitance$Microfarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Microfarad] with new value
   @override
@@ -889,6 +914,7 @@ final class Capacitance$Microfarad extends Capacitance {
   @override
   String get symbol => 'µF';
 
+  /// [Capacitance$Microfarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -920,7 +946,7 @@ final class Capacitance$Nanofarad extends Capacitance {
         unit.toNanofarad.value,
       );
 
-  static const _minorName = r'capacitance$Nanofarad';
+  static const _minorName = 'nanofarad';
 
   static const _ratio = 1e-9;
 
@@ -932,8 +958,9 @@ final class Capacitance$Nanofarad extends Capacitance {
   @override
   Capacitance$Nanofarad get _clone => Capacitance$Nanofarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Nanofarad] with new value
   @override
@@ -946,6 +973,7 @@ final class Capacitance$Nanofarad extends Capacitance {
   @override
   String get symbol => 'nF';
 
+  /// [Capacitance$Nanofarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -977,7 +1005,7 @@ final class Capacitance$Picofarad extends Capacitance {
         unit.toPicofarad.value,
       );
 
-  static const _minorName = r'capacitance$Picofarad';
+  static const _minorName = 'picofarad';
 
   static const _ratio = 1e-12;
 
@@ -989,8 +1017,9 @@ final class Capacitance$Picofarad extends Capacitance {
   @override
   Capacitance$Picofarad get _clone => Capacitance$Picofarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Picofarad] with new value
   @override
@@ -1003,6 +1032,7 @@ final class Capacitance$Picofarad extends Capacitance {
   @override
   String get symbol => 'pF';
 
+  /// [Capacitance$Picofarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1034,7 +1064,7 @@ final class Capacitance$Femtofarad extends Capacitance {
         unit.toFemtofarad.value,
       );
 
-  static const _minorName = r'capacitance$Femtofarad';
+  static const _minorName = 'femtofarad';
 
   static const _ratio = 1e-15;
 
@@ -1046,8 +1076,9 @@ final class Capacitance$Femtofarad extends Capacitance {
   @override
   Capacitance$Femtofarad get _clone => Capacitance$Femtofarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Femtofarad] with new value
   @override
@@ -1060,6 +1091,7 @@ final class Capacitance$Femtofarad extends Capacitance {
   @override
   String get symbol => 'fF';
 
+  /// [Capacitance$Femtofarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1091,7 +1123,7 @@ final class Capacitance$Attofarad extends Capacitance {
         unit.toAttofarad.value,
       );
 
-  static const _minorName = r'capacitance$Attofarad';
+  static const _minorName = 'attofarad';
 
   static const _ratio = 1e-18;
 
@@ -1103,8 +1135,9 @@ final class Capacitance$Attofarad extends Capacitance {
   @override
   Capacitance$Attofarad get _clone => Capacitance$Attofarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Attofarad] with new value
   @override
@@ -1117,6 +1150,7 @@ final class Capacitance$Attofarad extends Capacitance {
   @override
   String get symbol => 'aF';
 
+  /// [Capacitance$Attofarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1148,7 +1182,7 @@ final class Capacitance$Abfarad extends Capacitance {
         unit.toAbfarad.value,
       );
 
-  static const _minorName = r'capacitance$Abfarad';
+  static const _minorName = 'abfarad';
 
   static const _ratio = 1000000000.0;
 
@@ -1160,8 +1194,9 @@ final class Capacitance$Abfarad extends Capacitance {
   @override
   Capacitance$Abfarad get _clone => Capacitance$Abfarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Abfarad] with new value
   @override
@@ -1174,6 +1209,7 @@ final class Capacitance$Abfarad extends Capacitance {
   @override
   String get symbol => 'abF';
 
+  /// [Capacitance$Abfarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1205,7 +1241,7 @@ final class Capacitance$Statfarad extends Capacitance {
         unit.toStatfarad.value,
       );
 
-  static const _minorName = r'capacitance$Statfarad';
+  static const _minorName = 'statfarad';
 
   static const _ratio = 1.11265e-12;
 
@@ -1217,8 +1253,9 @@ final class Capacitance$Statfarad extends Capacitance {
   @override
   Capacitance$Statfarad get _clone => Capacitance$Statfarad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Capacitance$Statfarad] with new value
   @override
@@ -1231,6 +1268,7 @@ final class Capacitance$Statfarad extends Capacitance {
   @override
   String get symbol => 'statF';
 
+  /// [Capacitance$Statfarad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

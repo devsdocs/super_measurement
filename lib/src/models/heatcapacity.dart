@@ -124,7 +124,7 @@ final class HeatCapacity$KilojoulePerK extends HeatCapacity {
         unit.toKilojoulePerK.value,
       );
 
-  static const _minorName = r'heatCapacity$KilojoulePerK';
+  static const _minorName = 'kilojoulePerK';
 
   static const _ratio = 1.0;
 
@@ -136,8 +136,9 @@ final class HeatCapacity$KilojoulePerK extends HeatCapacity {
   @override
   HeatCapacity$KilojoulePerK get _clone => HeatCapacity$KilojoulePerK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$KilojoulePerK] with new value
   @override
@@ -150,6 +151,7 @@ final class HeatCapacity$KilojoulePerK extends HeatCapacity {
   @override
   String get symbol => 'kJ/K';
 
+  /// [HeatCapacity$KilojoulePerK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -181,7 +183,7 @@ final class HeatCapacity$KilojoulePerDegreeC extends HeatCapacity {
         unit.toKilojoulePerDegreeC.value,
       );
 
-  static const _minorName = r'heatCapacity$KilojoulePerDegreeC';
+  static const _minorName = 'kilojoulePerDegreeC';
 
   static const _ratio = 1.0;
 
@@ -194,8 +196,9 @@ final class HeatCapacity$KilojoulePerDegreeC extends HeatCapacity {
   HeatCapacity$KilojoulePerDegreeC get _clone =>
       HeatCapacity$KilojoulePerDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$KilojoulePerDegreeC] with new value
   @override
@@ -208,6 +211,7 @@ final class HeatCapacity$KilojoulePerDegreeC extends HeatCapacity {
   @override
   String get symbol => 'kJ/°C';
 
+  /// [HeatCapacity$KilojoulePerDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -239,7 +243,7 @@ final class HeatCapacity$JoulePerK extends HeatCapacity {
         unit.toJoulePerK.value,
       );
 
-  static const _minorName = r'heatCapacity$JoulePerK';
+  static const _minorName = 'joulePerK';
 
   static const _ratio = 0.001;
 
@@ -251,8 +255,9 @@ final class HeatCapacity$JoulePerK extends HeatCapacity {
   @override
   HeatCapacity$JoulePerK get _clone => HeatCapacity$JoulePerK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$JoulePerK] with new value
   @override
@@ -265,6 +270,7 @@ final class HeatCapacity$JoulePerK extends HeatCapacity {
   @override
   String get symbol => 'J/K';
 
+  /// [HeatCapacity$JoulePerK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -296,7 +302,7 @@ final class HeatCapacity$JoulePerDegreeC extends HeatCapacity {
         unit.toJoulePerDegreeC.value,
       );
 
-  static const _minorName = r'heatCapacity$JoulePerDegreeC';
+  static const _minorName = 'joulePerDegreeC';
 
   static const _ratio = 0.001;
 
@@ -309,8 +315,9 @@ final class HeatCapacity$JoulePerDegreeC extends HeatCapacity {
   HeatCapacity$JoulePerDegreeC get _clone =>
       HeatCapacity$JoulePerDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$JoulePerDegreeC] with new value
   @override
@@ -323,6 +330,7 @@ final class HeatCapacity$JoulePerDegreeC extends HeatCapacity {
   @override
   String get symbol => 'J/°C';
 
+  /// [HeatCapacity$JoulePerDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -354,7 +362,7 @@ final class HeatCapacity$KilocaloriePerDegreeC extends HeatCapacity {
         unit.toKilocaloriePerDegreeC.value,
       );
 
-  static const _minorName = r'heatCapacity$KilocaloriePerDegreeC';
+  static const _minorName = 'kilocaloriePerDegreeC';
 
   static const _ratio = 4.1868;
 
@@ -367,8 +375,9 @@ final class HeatCapacity$KilocaloriePerDegreeC extends HeatCapacity {
   HeatCapacity$KilocaloriePerDegreeC get _clone =>
       HeatCapacity$KilocaloriePerDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$KilocaloriePerDegreeC] with new value
   @override
@@ -381,6 +390,7 @@ final class HeatCapacity$KilocaloriePerDegreeC extends HeatCapacity {
   @override
   String get symbol => 'kcal/°C';
 
+  /// [HeatCapacity$KilocaloriePerDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -412,7 +422,7 @@ final class HeatCapacity$CaloriePerDegreeC extends HeatCapacity {
         unit.toCaloriePerDegreeC.value,
       );
 
-  static const _minorName = r'heatCapacity$CaloriePerDegreeC';
+  static const _minorName = 'caloriePerDegreeC';
 
   static const _ratio = 0.0041868;
 
@@ -425,8 +435,9 @@ final class HeatCapacity$CaloriePerDegreeC extends HeatCapacity {
   HeatCapacity$CaloriePerDegreeC get _clone =>
       HeatCapacity$CaloriePerDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$CaloriePerDegreeC] with new value
   @override
@@ -439,6 +450,7 @@ final class HeatCapacity$CaloriePerDegreeC extends HeatCapacity {
   @override
   String get symbol => 'cal/°C';
 
+  /// [HeatCapacity$CaloriePerDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -470,7 +482,7 @@ final class HeatCapacity$BTUPerDegreeC extends HeatCapacity {
         unit.toBTUPerDegreeC.value,
       );
 
-  static const _minorName = r'heatCapacity$BTUPerDegreeC';
+  static const _minorName = 'bTUPerDegreeC';
 
   static const _ratio = 1.05505585262;
 
@@ -482,8 +494,9 @@ final class HeatCapacity$BTUPerDegreeC extends HeatCapacity {
   @override
   HeatCapacity$BTUPerDegreeC get _clone => HeatCapacity$BTUPerDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeC] with new value
   @override
@@ -494,8 +507,9 @@ final class HeatCapacity$BTUPerDegreeC extends HeatCapacity {
 
   /// Symbol for [HeatCapacity$BTUPerDegreeC]
   @override
-  String get symbol => 'BTUPerDegreeC';
+  String get symbol => 'BTU/°C';
 
+  /// [HeatCapacity$BTUPerDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -527,7 +541,7 @@ final class HeatCapacity$BTUPerDegreeF extends HeatCapacity {
         unit.toBTUPerDegreeF.value,
       );
 
-  static const _minorName = r'heatCapacity$BTUPerDegreeF';
+  static const _minorName = 'bTUPerDegreeF';
 
   static const _ratio = 1.899100534716;
 
@@ -539,8 +553,9 @@ final class HeatCapacity$BTUPerDegreeF extends HeatCapacity {
   @override
   HeatCapacity$BTUPerDegreeF get _clone => HeatCapacity$BTUPerDegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeF] with new value
   @override
@@ -551,8 +566,9 @@ final class HeatCapacity$BTUPerDegreeF extends HeatCapacity {
 
   /// Symbol for [HeatCapacity$BTUPerDegreeF]
   @override
-  String get symbol => 'BTUPerDegreeF';
+  String get symbol => 'BTU/°F';
 
+  /// [HeatCapacity$BTUPerDegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -584,7 +600,7 @@ final class HeatCapacity$BTUPerDegreeR extends HeatCapacity {
         unit.toBTUPerDegreeR.value,
       );
 
-  static const _minorName = r'heatCapacity$BTUPerDegreeR';
+  static const _minorName = 'bTUPerDegreeR';
 
   static const _ratio = 1.899100534716;
 
@@ -596,8 +612,9 @@ final class HeatCapacity$BTUPerDegreeR extends HeatCapacity {
   @override
   HeatCapacity$BTUPerDegreeR get _clone => HeatCapacity$BTUPerDegreeR(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeR] with new value
   @override
@@ -608,8 +625,9 @@ final class HeatCapacity$BTUPerDegreeR extends HeatCapacity {
 
   /// Symbol for [HeatCapacity$BTUPerDegreeR]
   @override
-  String get symbol => 'BTUPerDegreeR';
+  String get symbol => 'BTU/°R';
 
+  /// [HeatCapacity$BTUPerDegreeR] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -641,7 +659,7 @@ final class HeatCapacity$CHUPerDegreeC extends HeatCapacity {
         unit.toCHUPerDegreeC.value,
       );
 
-  static const _minorName = r'heatCapacity$CHUPerDegreeC';
+  static const _minorName = 'cHUPerDegreeC';
 
   static const _ratio = 1.899100534716;
 
@@ -653,8 +671,9 @@ final class HeatCapacity$CHUPerDegreeC extends HeatCapacity {
   @override
   HeatCapacity$CHUPerDegreeC get _clone => HeatCapacity$CHUPerDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatCapacity$CHUPerDegreeC] with new value
   @override
@@ -665,8 +684,9 @@ final class HeatCapacity$CHUPerDegreeC extends HeatCapacity {
 
   /// Symbol for [HeatCapacity$CHUPerDegreeC]
   @override
-  String get symbol => 'CHUPerDegreeC';
+  String get symbol => 'CHU/°C';
 
+  /// [HeatCapacity$CHUPerDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

@@ -77,7 +77,7 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
         unit.toCaloriePerGram.value,
       );
 
-  static const _minorName = r'latentHeat$CaloriePerGram';
+  static const _minorName = 'caloriePerGram';
 
   static const _ratio = 4.1868;
 
@@ -89,8 +89,9 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
   @override
   LatentHeat$CaloriePerGram get _clone => LatentHeat$CaloriePerGram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LatentHeat$CaloriePerGram] with new value
   @override
@@ -103,6 +104,7 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
   @override
   String get symbol => 'cal/g';
 
+  /// [LatentHeat$CaloriePerGram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -134,7 +136,7 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
         unit.toKilojoulePerKilogram.value,
       );
 
-  static const _minorName = r'latentHeat$KilojoulePerKilogram';
+  static const _minorName = 'kilojoulePerKilogram';
 
   static const _ratio = 1.0;
 
@@ -147,8 +149,9 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
   LatentHeat$KilojoulePerKilogram get _clone =>
       LatentHeat$KilojoulePerKilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LatentHeat$KilojoulePerKilogram] with new value
   @override
@@ -161,6 +164,7 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
   @override
   String get symbol => 'kJ/kg';
 
+  /// [LatentHeat$KilojoulePerKilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -192,7 +196,7 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
         unit.toBTUPerPound.value,
       );
 
-  static const _minorName = r'latentHeat$BTUPerPound';
+  static const _minorName = 'bTUPerPound';
 
   static const _ratio = 2.326;
 
@@ -204,8 +208,9 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
   @override
   LatentHeat$BTUPerPound get _clone => LatentHeat$BTUPerPound(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [LatentHeat$BTUPerPound] with new value
   @override
@@ -216,8 +221,9 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
 
   /// Symbol for [LatentHeat$BTUPerPound]
   @override
-  String get symbol => 'BTUPerPound';
+  String get symbol => 'BTU/pound';
 
+  /// [LatentHeat$BTUPerPound] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

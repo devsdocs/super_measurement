@@ -105,7 +105,7 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
         unit.toNewtonMeterPerKilogram.value,
       );
 
-  static const _minorName = r'chemicalHenrysLaw$NewtonMeterPerKilogram';
+  static const _minorName = 'newtonMeterPerKilogram';
 
   static const _ratio = 0.00001;
 
@@ -118,8 +118,9 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
   ChemicalHenrysLaw$NewtonMeterPerKilogram get _clone =>
       ChemicalHenrysLaw$NewtonMeterPerKilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$NewtonMeterPerKilogram] with new value
   @override
@@ -132,6 +133,7 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
   @override
   String get symbol => 'N m/kg';
 
+  /// [ChemicalHenrysLaw$NewtonMeterPerKilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -164,7 +166,7 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
         unit.toBarPerKilogramPerMeterCubic.value,
       );
 
-  static const _minorName = r'chemicalHenrysLaw$BarPerKilogramPerMeterCubic';
+  static const _minorName = 'barPerKilogramPerMeterCubic';
 
   static const _ratio = 1.0;
 
@@ -177,8 +179,9 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
   ChemicalHenrysLaw$BarPerKilogramPerMeterCubic get _clone =>
       ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic] with new value
   @override
@@ -189,8 +192,9 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
 
   /// Symbol for [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
-  String get symbol => 'BarPerKilogramPerMeterCubic';
+  String get symbol => 'bar/(kilogram/meter³)';
 
+  /// [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -223,8 +227,7 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
         unit.toAtmospherePerKilogramPerMeterCubic.value,
       );
 
-  static const _minorName =
-      r'chemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic';
+  static const _minorName = 'atmospherePerKilogramPerMeterCubic';
 
   static const _ratio = 1.01325;
 
@@ -237,8 +240,9 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
   ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic get _clone =>
       ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic] with new value
   @override
@@ -249,8 +253,9 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
 
   /// Symbol for [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic]
   @override
-  String get symbol => 'AtmospherePerKilogramPerMeterCubic';
+  String get symbol => 'atmosphere/(kilogram/meter³)';
 
+  /// [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -283,8 +288,7 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
         unit.toAtmospherePerKilogramPerFootCubic.value,
       );
 
-  static const _minorName =
-      r'chemicalHenrysLaw$AtmospherePerKilogramPerFootCubic';
+  static const _minorName = 'atmospherePerKilogramPerFootCubic';
 
   static const _ratio = 0.02869204481;
 
@@ -297,8 +301,9 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
   ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic get _clone =>
       ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic] with new value
   @override
@@ -309,8 +314,9 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
 
   /// Symbol for [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic]
   @override
-  String get symbol => 'AtmospherePerKilogramPerFootCubic';
+  String get symbol => 'atmosphere/(kilogram/foot³)';
 
+  /// [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -343,8 +349,7 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
         unit.toAtmospherePerGramPerCentimeterCubic.value,
       );
 
-  static const _minorName =
-      r'chemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic';
+  static const _minorName = 'atmospherePerGramPerCentimeterCubic';
 
   static const _ratio = 0.00101325;
 
@@ -357,8 +362,9 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
   ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic get _clone =>
       ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic] with new value
   @override
@@ -369,8 +375,9 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
 
   /// Symbol for [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic]
   @override
-  String get symbol => 'AtmospherePerGramPerCentimeterCubic';
+  String get symbol => 'atmosphere/(gram/centimeter³)';
 
+  /// [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -403,7 +410,7 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
         unit.toAtmospherePerPoundPerFootCubic.value,
       );
 
-  static const _minorName = r'chemicalHenrysLaw$AtmospherePerPoundPerFootCubic';
+  static const _minorName = 'atmospherePerPoundPerFootCubic';
 
   static const _ratio = 0.06325513043;
 
@@ -416,8 +423,9 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
   ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic get _clone =>
       ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic] with new value
   @override
@@ -428,8 +436,9 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
 
   /// Symbol for [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic]
   @override
-  String get symbol => 'AtmospherePerPoundPerFootCubic';
+  String get symbol => 'atmosphere/(pound/foot³)';
 
+  /// [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

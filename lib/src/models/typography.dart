@@ -117,7 +117,7 @@ final class Typography$PostScriptPointDTP extends Typography {
         unit.toPostScriptPointDTP.value,
       );
 
-  static const _minorName = r'typography$PostScriptPointDTP';
+  static const _minorName = 'postScriptPointDTP';
 
   static const _ratio = 0.013888888888888888;
 
@@ -130,8 +130,9 @@ final class Typography$PostScriptPointDTP extends Typography {
   Typography$PostScriptPointDTP get _clone =>
       Typography$PostScriptPointDTP(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$PostScriptPointDTP] with new value
   @override
@@ -142,8 +143,9 @@ final class Typography$PostScriptPointDTP extends Typography {
 
   /// Symbol for [Typography$PostScriptPointDTP]
   @override
-  String get symbol => 'PostScriptPointDTP';
+  String get symbol => 'PostScript point (DTP)';
 
+  /// [Typography$PostScriptPointDTP] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -175,7 +177,7 @@ final class Typography$PrintersPointAmerican extends Typography {
         unit.toPrintersPointAmerican.value,
       );
 
-  static const _minorName = r'typography$PrintersPointAmerican';
+  static const _minorName = 'printersPointAmerican';
 
   static const _ratio = 0.013837000138370002;
 
@@ -188,8 +190,9 @@ final class Typography$PrintersPointAmerican extends Typography {
   Typography$PrintersPointAmerican get _clone =>
       Typography$PrintersPointAmerican(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$PrintersPointAmerican] with new value
   @override
@@ -200,8 +203,9 @@ final class Typography$PrintersPointAmerican extends Typography {
 
   /// Symbol for [Typography$PrintersPointAmerican]
   @override
-  String get symbol => 'PrintersPointAmerican';
+  String get symbol => 'printer"s point (American)';
 
+  /// [Typography$PrintersPointAmerican] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -233,7 +237,7 @@ final class Typography$DidotsPoint extends Typography {
         unit.toDidotsPoint.value,
       );
 
-  static const _minorName = r'typography$DidotsPoint';
+  static const _minorName = 'didotsPoint';
 
   static const _ratio = 0.014803149606299212;
 
@@ -245,8 +249,9 @@ final class Typography$DidotsPoint extends Typography {
   @override
   Typography$DidotsPoint get _clone => Typography$DidotsPoint(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$DidotsPoint] with new value
   @override
@@ -257,8 +262,9 @@ final class Typography$DidotsPoint extends Typography {
 
   /// Symbol for [Typography$DidotsPoint]
   @override
-  String get symbol => 'DidotsPoint';
+  String get symbol => 'Didot"s point';
 
+  /// [Typography$DidotsPoint] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -290,7 +296,7 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
         unit.toPicaPostScriptDTPComputer.value,
       );
 
-  static const _minorName = r'typography$PicaPostScriptDTPComputer';
+  static const _minorName = 'picaPostScriptDTPComputer';
 
   static const _ratio = 0.16666666666666666;
 
@@ -303,8 +309,9 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
   Typography$PicaPostScriptDTPComputer get _clone =>
       Typography$PicaPostScriptDTPComputer(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$PicaPostScriptDTPComputer] with new value
   @override
@@ -315,8 +322,9 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
 
   /// Symbol for [Typography$PicaPostScriptDTPComputer]
   @override
-  String get symbol => 'PicaPostScriptDTPComputer';
+  String get symbol => 'pica (PostScript, DTP, computer)';
 
+  /// [Typography$PicaPostScriptDTPComputer] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -348,7 +356,7 @@ final class Typography$PicaPrinters extends Typography {
         unit.toPicaPrinters.value,
       );
 
-  static const _minorName = r'typography$PicaPrinters';
+  static const _minorName = 'picaPrinters';
 
   static const _ratio = 0.16604400166044;
 
@@ -360,8 +368,9 @@ final class Typography$PicaPrinters extends Typography {
   @override
   Typography$PicaPrinters get _clone => Typography$PicaPrinters(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$PicaPrinters] with new value
   @override
@@ -374,6 +383,7 @@ final class Typography$PicaPrinters extends Typography {
   @override
   String get symbol => 'pi, pc';
 
+  /// [Typography$PicaPrinters] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -405,7 +415,7 @@ final class Typography$Ciceros extends Typography {
         unit.toCiceros.value,
       );
 
-  static const _minorName = r'typography$Ciceros';
+  static const _minorName = 'ciceros';
 
   static const _ratio = 0.17763779527559054;
 
@@ -417,8 +427,9 @@ final class Typography$Ciceros extends Typography {
   @override
   Typography$Ciceros get _clone => Typography$Ciceros(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$Ciceros] with new value
   @override
@@ -431,6 +442,7 @@ final class Typography$Ciceros extends Typography {
   @override
   String get symbol => 'Ciceros';
 
+  /// [Typography$Ciceros] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -462,7 +474,7 @@ final class Typography$Inch extends Typography {
         unit.toInch.value,
       );
 
-  static const _minorName = r'typography$Inch';
+  static const _minorName = 'inch';
 
   static const _ratio = 1.0;
 
@@ -474,8 +486,9 @@ final class Typography$Inch extends Typography {
   @override
   Typography$Inch get _clone => Typography$Inch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$Inch] with new value
   @override
@@ -488,6 +501,7 @@ final class Typography$Inch extends Typography {
   @override
   String get symbol => 'in';
 
+  /// [Typography$Inch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -519,7 +533,7 @@ final class Typography$Millimeter extends Typography {
         unit.toMillimeter.value,
       );
 
-  static const _minorName = r'typography$Millimeter';
+  static const _minorName = 'millimeter';
 
   static const _ratio = 0.03937007874015748;
 
@@ -531,8 +545,9 @@ final class Typography$Millimeter extends Typography {
   @override
   Typography$Millimeter get _clone => Typography$Millimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$Millimeter] with new value
   @override
@@ -545,6 +560,7 @@ final class Typography$Millimeter extends Typography {
   @override
   String get symbol => 'mm';
 
+  /// [Typography$Millimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -576,7 +592,7 @@ final class Typography$Centimeter extends Typography {
         unit.toCentimeter.value,
       );
 
-  static const _minorName = r'typography$Centimeter';
+  static const _minorName = 'centimeter';
 
   static const _ratio = 0.3937007874015748;
 
@@ -588,8 +604,9 @@ final class Typography$Centimeter extends Typography {
   @override
   Typography$Centimeter get _clone => Typography$Centimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Typography$Centimeter] with new value
   @override
@@ -602,6 +619,7 @@ final class Typography$Centimeter extends Typography {
   @override
   String get symbol => 'cm';
 
+  /// [Typography$Centimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

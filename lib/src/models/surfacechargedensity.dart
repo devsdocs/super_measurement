@@ -107,7 +107,7 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
         unit.toCoulombPerMeterSquare.value,
       );
 
-  static const _minorName = r'surfaceChargeDensity$CoulombPerMeterSquare';
+  static const _minorName = 'coulombPerMeterSquare';
 
   static const _ratio = 1.0;
 
@@ -120,8 +120,9 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
   SurfaceChargeDensity$CoulombPerMeterSquare get _clone =>
       SurfaceChargeDensity$CoulombPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$CoulombPerMeterSquare] with new value
   @override
@@ -134,6 +135,7 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
   @override
   String get symbol => 'C/m²';
 
+  /// [SurfaceChargeDensity$CoulombPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -166,7 +168,7 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
         unit.toCoulombPerInchSquare.value,
       );
 
-  static const _minorName = r'surfaceChargeDensity$CoulombPerInchSquare';
+  static const _minorName = 'coulombPerInchSquare';
 
   static const _ratio = 1550.0031;
 
@@ -179,8 +181,9 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
   SurfaceChargeDensity$CoulombPerInchSquare get _clone =>
       SurfaceChargeDensity$CoulombPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$CoulombPerInchSquare] with new value
   @override
@@ -193,6 +196,7 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
   @override
   String get symbol => 'C/in²';
 
+  /// [SurfaceChargeDensity$CoulombPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -225,7 +229,7 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
         unit.toCoulombPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'surfaceChargeDensity$CoulombPerCentimeterSquare';
+  static const _minorName = 'coulombPerCentimeterSquare';
 
   static const _ratio = 10000.0;
 
@@ -238,8 +242,9 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
   SurfaceChargeDensity$CoulombPerCentimeterSquare get _clone =>
       SurfaceChargeDensity$CoulombPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$CoulombPerCentimeterSquare] with new value
   @override
@@ -252,6 +257,7 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
   @override
   String get symbol => 'C/cm²';
 
+  /// [SurfaceChargeDensity$CoulombPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -284,7 +290,7 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
         unit.toAbcoulombPerMeterSquare.value,
       );
 
-  static const _minorName = r'surfaceChargeDensity$AbcoulombPerMeterSquare';
+  static const _minorName = 'abcoulombPerMeterSquare';
 
   static const _ratio = 10.0;
 
@@ -297,8 +303,9 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
   SurfaceChargeDensity$AbcoulombPerMeterSquare get _clone =>
       SurfaceChargeDensity$AbcoulombPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerMeterSquare] with new value
   @override
@@ -311,6 +318,7 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
   @override
   String get symbol => 'abC/m²';
 
+  /// [SurfaceChargeDensity$AbcoulombPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -343,8 +351,7 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
         unit.toAbcoulombPerCentimeterSquare.value,
       );
 
-  static const _minorName =
-      r'surfaceChargeDensity$AbcoulombPerCentimeterSquare';
+  static const _minorName = 'abcoulombPerCentimeterSquare';
 
   static const _ratio = 100000.0;
 
@@ -357,8 +364,9 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
   SurfaceChargeDensity$AbcoulombPerCentimeterSquare get _clone =>
       SurfaceChargeDensity$AbcoulombPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] with new value
   @override
@@ -371,6 +379,7 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
   @override
   String get symbol => 'abC/cm²';
 
+  /// [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -403,7 +412,7 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
         unit.toAbcoulombPerInchSquare.value,
       );
 
-  static const _minorName = r'surfaceChargeDensity$AbcoulombPerInchSquare';
+  static const _minorName = 'abcoulombPerInchSquare';
 
   static const _ratio = 15500.031;
 
@@ -416,8 +425,9 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
   SurfaceChargeDensity$AbcoulombPerInchSquare get _clone =>
       SurfaceChargeDensity$AbcoulombPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerInchSquare] with new value
   @override
@@ -430,6 +440,7 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
   @override
   String get symbol => 'abC/in²';
 
+  /// [SurfaceChargeDensity$AbcoulombPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

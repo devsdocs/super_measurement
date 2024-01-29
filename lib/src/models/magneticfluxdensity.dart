@@ -142,7 +142,7 @@ final class MagneticFluxDensity$Tesla extends MagneticFluxDensity {
         unit.toTesla.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$Tesla';
+  static const _minorName = 'tesla';
 
   static const _ratio = 1.0;
 
@@ -154,8 +154,9 @@ final class MagneticFluxDensity$Tesla extends MagneticFluxDensity {
   @override
   MagneticFluxDensity$Tesla get _clone => MagneticFluxDensity$Tesla(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$Tesla] with new value
   @override
@@ -168,6 +169,7 @@ final class MagneticFluxDensity$Tesla extends MagneticFluxDensity {
   @override
   String get symbol => 'T';
 
+  /// [MagneticFluxDensity$Tesla] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -199,7 +201,7 @@ final class MagneticFluxDensity$Gauss extends MagneticFluxDensity {
         unit.toGauss.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$Gauss';
+  static const _minorName = 'gauss';
 
   static const _ratio = 0.0001;
 
@@ -211,8 +213,9 @@ final class MagneticFluxDensity$Gauss extends MagneticFluxDensity {
   @override
   MagneticFluxDensity$Gauss get _clone => MagneticFluxDensity$Gauss(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$Gauss] with new value
   @override
@@ -225,6 +228,7 @@ final class MagneticFluxDensity$Gauss extends MagneticFluxDensity {
   @override
   String get symbol => 'G';
 
+  /// [MagneticFluxDensity$Gauss] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -256,7 +260,7 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
         unit.toGaussInternational.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$GaussInternational';
+  static const _minorName = 'gaussInternational';
 
   static const _ratio = 0.0001000331;
 
@@ -269,8 +273,9 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
   MagneticFluxDensity$GaussInternational get _clone =>
       MagneticFluxDensity$GaussInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$GaussInternational] with new value
   @override
@@ -283,6 +288,7 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
   @override
   String get symbol => 'G';
 
+  /// [MagneticFluxDensity$GaussInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -315,7 +321,7 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
         unit.toLinePerCentimeterSquare.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$LinePerCentimeterSquare';
+  static const _minorName = 'linePerCentimeterSquare';
 
   static const _ratio = 0.0001;
 
@@ -328,8 +334,9 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
   MagneticFluxDensity$LinePerCentimeterSquare get _clone =>
       MagneticFluxDensity$LinePerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$LinePerCentimeterSquare] with new value
   @override
@@ -342,6 +349,7 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
   @override
   String get symbol => 'li/cm²';
 
+  /// [MagneticFluxDensity$LinePerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -373,7 +381,7 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
         unit.toLinePerInchSquare.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$LinePerInchSquare';
+  static const _minorName = 'linePerInchSquare';
 
   static const _ratio = 0.000015500031;
 
@@ -386,8 +394,9 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
   MagneticFluxDensity$LinePerInchSquare get _clone =>
       MagneticFluxDensity$LinePerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$LinePerInchSquare] with new value
   @override
@@ -400,6 +409,7 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
   @override
   String get symbol => 'li/in²';
 
+  /// [MagneticFluxDensity$LinePerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -432,7 +442,7 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
         unit.toMaxwellPerMeterSquare.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$MaxwellPerMeterSquare';
+  static const _minorName = 'maxwellPerMeterSquare';
 
   static const _ratio = 1.0;
 
@@ -445,8 +455,9 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
   MagneticFluxDensity$MaxwellPerMeterSquare get _clone =>
       MagneticFluxDensity$MaxwellPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerMeterSquare] with new value
   @override
@@ -459,6 +470,7 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
   @override
   String get symbol => 'Mx/m²';
 
+  /// [MagneticFluxDensity$MaxwellPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -491,7 +503,7 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
         unit.toMaxwellPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$MaxwellPerCentimeterSquare';
+  static const _minorName = 'maxwellPerCentimeterSquare';
 
   static const _ratio = 0.0001;
 
@@ -504,8 +516,9 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
   MagneticFluxDensity$MaxwellPerCentimeterSquare get _clone =>
       MagneticFluxDensity$MaxwellPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerCentimeterSquare] with new value
   @override
@@ -518,6 +531,7 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
   @override
   String get symbol => 'Mx/cm²';
 
+  /// [MagneticFluxDensity$MaxwellPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -550,7 +564,7 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
         unit.toMaxwellPerInchSquare.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$MaxwellPerInchSquare';
+  static const _minorName = 'maxwellPerInchSquare';
 
   static const _ratio = 0.000015500031;
 
@@ -563,8 +577,9 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
   MagneticFluxDensity$MaxwellPerInchSquare get _clone =>
       MagneticFluxDensity$MaxwellPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerInchSquare] with new value
   @override
@@ -577,6 +592,7 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
   @override
   String get symbol => 'Mx/in²';
 
+  /// [MagneticFluxDensity$MaxwellPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -609,7 +625,7 @@ final class MagneticFluxDensity$WeberPerMeterSquare
         unit.toWeberPerMeterSquare.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$WeberPerMeterSquare';
+  static const _minorName = 'weberPerMeterSquare';
 
   static const _ratio = 1.0;
 
@@ -622,8 +638,9 @@ final class MagneticFluxDensity$WeberPerMeterSquare
   MagneticFluxDensity$WeberPerMeterSquare get _clone =>
       MagneticFluxDensity$WeberPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerMeterSquare] with new value
   @override
@@ -636,6 +653,7 @@ final class MagneticFluxDensity$WeberPerMeterSquare
   @override
   String get symbol => 'Wb/m²';
 
+  /// [MagneticFluxDensity$WeberPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -668,7 +686,7 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
         unit.toWeberPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$WeberPerCentimeterSquare';
+  static const _minorName = 'weberPerCentimeterSquare';
 
   static const _ratio = 10000.0;
 
@@ -681,8 +699,9 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
   MagneticFluxDensity$WeberPerCentimeterSquare get _clone =>
       MagneticFluxDensity$WeberPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerCentimeterSquare] with new value
   @override
@@ -695,6 +714,7 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
   @override
   String get symbol => 'Wb/cm²';
 
+  /// [MagneticFluxDensity$WeberPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -726,7 +746,7 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
         unit.toWeberPerInchSquare.value,
       );
 
-  static const _minorName = r'magneticFluxDensity$WeberPerInchSquare';
+  static const _minorName = 'weberPerInchSquare';
 
   static const _ratio = 1550.0031;
 
@@ -739,8 +759,9 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
   MagneticFluxDensity$WeberPerInchSquare get _clone =>
       MagneticFluxDensity$WeberPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerInchSquare] with new value
   @override
@@ -753,6 +774,7 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
   @override
   String get symbol => 'Wb/in²';
 
+  /// [MagneticFluxDensity$WeberPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

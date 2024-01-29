@@ -148,7 +148,7 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
         unit.toKilogramPerLiter.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$KilogramPerLiter';
+  static const _minorName = 'kilogramPerLiter';
 
   static const _ratio = 1.0;
 
@@ -161,8 +161,9 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
   ConcentrationLiquidSolution$KilogramPerLiter get _clone =>
       ConcentrationLiquidSolution$KilogramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$KilogramPerLiter] with new value
   @override
@@ -175,6 +176,7 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
   @override
   String get symbol => 'kg/l';
 
+  /// [ConcentrationLiquidSolution$KilogramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -207,7 +209,7 @@ final class ConcentrationLiquidSolution$GramPerLiter
         unit.toGramPerLiter.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$GramPerLiter';
+  static const _minorName = 'gramPerLiter';
 
   static const _ratio = 0.001;
 
@@ -220,8 +222,9 @@ final class ConcentrationLiquidSolution$GramPerLiter
   ConcentrationLiquidSolution$GramPerLiter get _clone =>
       ConcentrationLiquidSolution$GramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GramPerLiter] with new value
   @override
@@ -234,6 +237,7 @@ final class ConcentrationLiquidSolution$GramPerLiter
   @override
   String get symbol => 'g/l';
 
+  /// [ConcentrationLiquidSolution$GramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -266,7 +270,7 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
         unit.toMilligramPerLiter.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$MilligramPerLiter';
+  static const _minorName = 'milligramPerLiter';
 
   static const _ratio = 0.000001;
 
@@ -279,8 +283,9 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
   ConcentrationLiquidSolution$MilligramPerLiter get _clone =>
       ConcentrationLiquidSolution$MilligramPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$MilligramPerLiter] with new value
   @override
@@ -293,6 +298,7 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
   @override
   String get symbol => 'mg/l';
 
+  /// [ConcentrationLiquidSolution$MilligramPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -325,7 +331,7 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
         unit.toPartPerMillionPpm.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$PartPerMillionPpm';
+  static const _minorName = 'partPerMillionPpm';
 
   static const _ratio = 0.000001;
 
@@ -338,8 +344,9 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
   ConcentrationLiquidSolution$PartPerMillionPpm get _clone =>
       ConcentrationLiquidSolution$PartPerMillionPpm(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PartPerMillionPpm] with new value
   @override
@@ -352,6 +359,7 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
   @override
   String get symbol => 'ppm';
 
+  /// [ConcentrationLiquidSolution$PartPerMillionPpm] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -384,7 +392,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
         unit.toGrainPerGallonUK.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$GrainPerGallonUK';
+  static const _minorName = 'grainPerGallonUK';
 
   static const _ratio = 0.000014253767523300243;
 
@@ -397,8 +405,9 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
   ConcentrationLiquidSolution$GrainPerGallonUK get _clone =>
       ConcentrationLiquidSolution$GrainPerGallonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GrainPerGallonUK] with new value
   @override
@@ -411,6 +420,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
   @override
   String get symbol => 'gr/gal, gpg';
 
+  /// [ConcentrationLiquidSolution$GrainPerGallonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -443,7 +453,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
         unit.toGrainPerGallonUS.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$GrainPerGallonUS';
+  static const _minorName = 'grainPerGallonUS';
 
   static const _ratio = 0.000017118061045270948;
 
@@ -456,8 +466,9 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
   ConcentrationLiquidSolution$GrainPerGallonUS get _clone =>
       ConcentrationLiquidSolution$GrainPerGallonUS(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GrainPerGallonUS] with new value
   @override
@@ -470,6 +481,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
   @override
   String get symbol => 'gr/gal, gpg';
 
+  /// [ConcentrationLiquidSolution$GrainPerGallonUS] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -502,7 +514,7 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
         unit.toPoundPerFootCubic.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$PoundPerFootCubic';
+  static const _minorName = 'poundPerFootCubic';
 
   static const _ratio = 0.01601846337396014;
 
@@ -515,8 +527,9 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
   ConcentrationLiquidSolution$PoundPerFootCubic get _clone =>
       ConcentrationLiquidSolution$PoundPerFootCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerFootCubic] with new value
   @override
@@ -529,6 +542,7 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
   @override
   String get symbol => 'lb/ft³';
 
+  /// [ConcentrationLiquidSolution$PoundPerFootCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -561,7 +575,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
         unit.toPoundPerGallonUK.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$PoundPerGallonUK';
+  static const _minorName = 'poundPerGallonUK';
 
   static const _ratio = 0.0997763726631017;
 
@@ -574,8 +588,9 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
   ConcentrationLiquidSolution$PoundPerGallonUK get _clone =>
       ConcentrationLiquidSolution$PoundPerGallonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerGallonUK] with new value
   @override
@@ -588,6 +603,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
   @override
   String get symbol => 'lb/gal';
 
+  /// [ConcentrationLiquidSolution$PoundPerGallonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -620,7 +636,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
         unit.toPoundPerGallonUS.value,
       );
 
-  static const _minorName = r'concentrationLiquidSolution$PoundPerGallonUS';
+  static const _minorName = 'poundPerGallonUS';
 
   static const _ratio = 0.11982642731689663;
 
@@ -633,8 +649,9 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
   ConcentrationLiquidSolution$PoundPerGallonUS get _clone =>
       ConcentrationLiquidSolution$PoundPerGallonUS(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerGallonUS] with new value
   @override
@@ -647,6 +664,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
   @override
   String get symbol => 'lb/gal';
 
+  /// [ConcentrationLiquidSolution$PoundPerGallonUS] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -679,8 +697,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
         unit.toPoundPerMillionUKGallon.value,
       );
 
-  static const _minorName =
-      r'concentrationLiquidSolution$PoundPerMillionUKGallon';
+  static const _minorName = 'poundPerMillionUKGallon';
 
   static const _ratio = 9.97763726631017e-8;
 
@@ -693,8 +710,9 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
   ConcentrationLiquidSolution$PoundPerMillionUKGallon get _clone =>
       ConcentrationLiquidSolution$PoundPerMillionUKGallon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerMillionUKGallon] with new value
   @override
@@ -705,8 +723,9 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
 
   /// Symbol for [ConcentrationLiquidSolution$PoundPerMillionUKGallon]
   @override
-  String get symbol => 'PoundPerMillionUKGallon';
+  String get symbol => 'pound/million UK gallon';
 
+  /// [ConcentrationLiquidSolution$PoundPerMillionUKGallon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -739,8 +758,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
         unit.toPoundPerMillionUSGallon.value,
       );
 
-  static const _minorName =
-      r'concentrationLiquidSolution$PoundPerMillionUSGallon';
+  static const _minorName = 'poundPerMillionUSGallon';
 
   static const _ratio = 1.1982642731689662e-7;
 
@@ -753,8 +771,9 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
   ConcentrationLiquidSolution$PoundPerMillionUSGallon get _clone =>
       ConcentrationLiquidSolution$PoundPerMillionUSGallon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerMillionUSGallon] with new value
   @override
@@ -765,8 +784,9 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
 
   /// Symbol for [ConcentrationLiquidSolution$PoundPerMillionUSGallon]
   @override
-  String get symbol => 'PoundPerMillionUSGallon';
+  String get symbol => 'pound/million US gallon';
 
+  /// [ConcentrationLiquidSolution$PoundPerMillionUSGallon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

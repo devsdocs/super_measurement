@@ -209,8 +209,7 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch
         unit.toHourFootSquareDegreeFPerBTUThermochemInch.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch';
+  static const _minorName = 'hourFootSquareDegreeFPerBTUThermochemInch';
 
   static const _ratio = 1.0;
 
@@ -223,8 +222,9 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch
   ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch get _clone =>
       ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch] with new value
   @override
@@ -235,8 +235,9 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch
 
   /// Symbol for [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
-  String get symbol => 'HourFootSquareDegreeFPerBTUThermochemInch';
+  String get symbol => 'hour-foot²-°F/BTU (thermochem)-inch';
 
+  /// [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -269,8 +270,7 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch
         unit.toHourFootSquareDegreeFPerBTUIntInch.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$HourFootSquareDegreeFPerBTUIntInch';
+  static const _minorName = 'hourFootSquareDegreeFPerBTUIntInch';
 
   static const _ratio = 0.9993312314431053;
 
@@ -283,8 +283,9 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch
   ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch get _clone =>
       ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch] with new value
   @override
@@ -295,8 +296,9 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch
 
   /// Symbol for [ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch]
   @override
-  String get symbol => 'HourFootSquareDegreeFPerBTUIntInch';
+  String get symbol => 'hour-foot²-°F/BTU (int)-inch';
 
+  /// [ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -329,8 +331,7 @@ final class ThermalResistivity$HourFootDegreeFPerBTUThemochem
         unit.toHourFootDegreeFPerBTUThemochem.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$HourFootDegreeFPerBTUThemochem';
+  static const _minorName = 'hourFootDegreeFPerBTUThemochem';
 
   static const _ratio = 0.08333333333333333;
 
@@ -343,8 +344,9 @@ final class ThermalResistivity$HourFootDegreeFPerBTUThemochem
   ThermalResistivity$HourFootDegreeFPerBTUThemochem get _clone =>
       ThermalResistivity$HourFootDegreeFPerBTUThemochem(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$HourFootDegreeFPerBTUThemochem] with new value
   @override
@@ -355,8 +357,9 @@ final class ThermalResistivity$HourFootDegreeFPerBTUThemochem
 
   /// Symbol for [ThermalResistivity$HourFootDegreeFPerBTUThemochem]
   @override
-  String get symbol => 'HourFootDegreeFPerBTUThemochem';
+  String get symbol => 'hour-foot-°F/BTU (themochem)';
 
+  /// [ThermalResistivity$HourFootDegreeFPerBTUThemochem] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -389,7 +392,7 @@ final class ThermalResistivity$HourFootDegreeFPerBTUInt
         unit.toHourFootDegreeFPerBTUInt.value,
       );
 
-  static const _minorName = r'thermalResistivity$HourFootDegreeFPerBTUInt';
+  static const _minorName = 'hourFootDegreeFPerBTUInt';
 
   static const _ratio = 0.08327760262025877;
 
@@ -402,8 +405,9 @@ final class ThermalResistivity$HourFootDegreeFPerBTUInt
   ThermalResistivity$HourFootDegreeFPerBTUInt get _clone =>
       ThermalResistivity$HourFootDegreeFPerBTUInt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$HourFootDegreeFPerBTUInt] with new value
   @override
@@ -414,8 +418,9 @@ final class ThermalResistivity$HourFootDegreeFPerBTUInt
 
   /// Symbol for [ThermalResistivity$HourFootDegreeFPerBTUInt]
   @override
-  String get symbol => 'HourFootDegreeFPerBTUInt';
+  String get symbol => 'hour-foot-°F/BTU (int)';
 
+  /// [ThermalResistivity$HourFootDegreeFPerBTUInt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -448,8 +453,7 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem
         unit.toSecondCentimeterDegreeCPerCalorieThermochem.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem';
+  static const _minorName = 'secondCentimeterDegreeCPerCalorieThermochem';
 
   static const _ratio = 0.0003444823943288309;
 
@@ -462,8 +466,9 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem
   ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem get _clone =>
       ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem] with new value
   @override
@@ -476,6 +481,7 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem
   @override
   String get symbol => 's cm °C/cal';
 
+  /// [ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -508,8 +514,7 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt
         unit.toSecondCentimeterDegreeCPerCalorieInt.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$SecondCentimeterDegreeCPerCalorieInt';
+  static const _minorName = 'secondCentimeterDegreeCPerCalorieInt';
 
   static const _ratio = 0.0003442520153510625;
 
@@ -522,8 +527,9 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt
   ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt get _clone =>
       ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt] with new value
   @override
@@ -536,6 +542,7 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt
   @override
   String get symbol => 's cm °C/cal';
 
+  /// [ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -567,7 +574,7 @@ final class ThermalResistivity$MeterKPerKilowatt extends ThermalResistivity {
         unit.toMeterKPerKilowatt.value,
       );
 
-  static const _minorName = r'thermalResistivity$MeterKPerKilowatt';
+  static const _minorName = 'meterKPerKilowatt';
 
   static const _ratio = 0.00014413143378718286;
 
@@ -580,8 +587,9 @@ final class ThermalResistivity$MeterKPerKilowatt extends ThermalResistivity {
   ThermalResistivity$MeterKPerKilowatt get _clone =>
       ThermalResistivity$MeterKPerKilowatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$MeterKPerKilowatt] with new value
   @override
@@ -594,6 +602,7 @@ final class ThermalResistivity$MeterKPerKilowatt extends ThermalResistivity {
   @override
   String get symbol => 'm K/kW';
 
+  /// [ThermalResistivity$MeterKPerKilowatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -625,7 +634,7 @@ final class ThermalResistivity$MeterKPerWatt extends ThermalResistivity {
         unit.toMeterKPerWatt.value,
       );
 
-  static const _minorName = r'thermalResistivity$MeterKPerWatt';
+  static const _minorName = 'meterKPerWatt';
 
   static const _ratio = 0.14413143378718285;
 
@@ -638,8 +647,9 @@ final class ThermalResistivity$MeterKPerWatt extends ThermalResistivity {
   ThermalResistivity$MeterKPerWatt get _clone =>
       ThermalResistivity$MeterKPerWatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$MeterKPerWatt] with new value
   @override
@@ -652,6 +662,7 @@ final class ThermalResistivity$MeterKPerWatt extends ThermalResistivity {
   @override
   String get symbol => 'm K/W';
 
+  /// [ThermalResistivity$MeterKPerWatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -684,7 +695,7 @@ final class ThermalResistivity$CentimeterDegreeCPerWatt
         unit.toCentimeterDegreeCPerWatt.value,
       );
 
-  static const _minorName = r'thermalResistivity$CentimeterDegreeCPerWatt';
+  static const _minorName = 'centimeterDegreeCPerWatt';
 
   static const _ratio = 0.0014413143378718286;
 
@@ -697,8 +708,9 @@ final class ThermalResistivity$CentimeterDegreeCPerWatt
   ThermalResistivity$CentimeterDegreeCPerWatt get _clone =>
       ThermalResistivity$CentimeterDegreeCPerWatt(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$CentimeterDegreeCPerWatt] with new value
   @override
@@ -711,6 +723,7 @@ final class ThermalResistivity$CentimeterDegreeCPerWatt
   @override
   String get symbol => 'cm °C/W';
 
+  /// [ThermalResistivity$CentimeterDegreeCPerWatt] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -743,8 +756,7 @@ final class ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF
         unit.toBTUThermochemInchPerHourFootSquareDegreeF.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF';
+  static const _minorName = 'bTUThermochemInchPerHourFootSquareDegreeF';
 
   static const _ratio = 1.0;
 
@@ -757,8 +769,9 @@ final class ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF
   ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF get _clone =>
       ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF] with new value
   @override
@@ -769,8 +782,9 @@ final class ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF
 
   /// Symbol for [ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  String get symbol => 'BTUThermochemInchPerHourFootSquareDegreeF';
+  String get symbol => 'BTU (thermochem)-inch/hour-foot²-°F';
 
+  /// [ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -803,8 +817,7 @@ final class ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF
         unit.toBTUIntInchPerHourFootSquareDegreeF.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$BTUIntInchPerHourFootSquareDegreeF';
+  static const _minorName = 'bTUIntInchPerHourFootSquareDegreeF';
 
   static const _ratio = 1.0006692161075852;
 
@@ -817,8 +830,9 @@ final class ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF
   ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF get _clone =>
       ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF] with new value
   @override
@@ -829,8 +843,9 @@ final class ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF
 
   /// Symbol for [ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF]
   @override
-  String get symbol => 'BTUIntInchPerHourFootSquareDegreeF';
+  String get symbol => 'BTU (int)-inch/hour-foot²-°F';
 
+  /// [ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -863,8 +878,7 @@ final class ThermalResistivity$BTUThemochemPerHourFootDegreeF
         unit.toBTUThemochemPerHourFootDegreeF.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$BTUThemochemPerHourFootDegreeF';
+  static const _minorName = 'bTUThemochemPerHourFootDegreeF';
 
   static const _ratio = 12.0;
 
@@ -877,8 +891,9 @@ final class ThermalResistivity$BTUThemochemPerHourFootDegreeF
   ThermalResistivity$BTUThemochemPerHourFootDegreeF get _clone =>
       ThermalResistivity$BTUThemochemPerHourFootDegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$BTUThemochemPerHourFootDegreeF] with new value
   @override
@@ -889,8 +904,9 @@ final class ThermalResistivity$BTUThemochemPerHourFootDegreeF
 
   /// Symbol for [ThermalResistivity$BTUThemochemPerHourFootDegreeF]
   @override
-  String get symbol => 'BTUThemochemPerHourFootDegreeF';
+  String get symbol => 'BTU (themochem)/hour-foot-°F';
 
+  /// [ThermalResistivity$BTUThemochemPerHourFootDegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -923,7 +939,7 @@ final class ThermalResistivity$BTUIntPerHourFootDegreeF
         unit.toBTUIntPerHourFootDegreeF.value,
       );
 
-  static const _minorName = r'thermalResistivity$BTUIntPerHourFootDegreeF';
+  static const _minorName = 'bTUIntPerHourFootDegreeF';
 
   static const _ratio = 12.008030593291023;
 
@@ -936,8 +952,9 @@ final class ThermalResistivity$BTUIntPerHourFootDegreeF
   ThermalResistivity$BTUIntPerHourFootDegreeF get _clone =>
       ThermalResistivity$BTUIntPerHourFootDegreeF(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$BTUIntPerHourFootDegreeF] with new value
   @override
@@ -948,8 +965,9 @@ final class ThermalResistivity$BTUIntPerHourFootDegreeF
 
   /// Symbol for [ThermalResistivity$BTUIntPerHourFootDegreeF]
   @override
-  String get symbol => 'BTUIntPerHourFootDegreeF';
+  String get symbol => 'BTU (int)/hour-foot-°F';
 
+  /// [ThermalResistivity$BTUIntPerHourFootDegreeF] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -982,8 +1000,7 @@ final class ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC
         unit.toCalorieThermochPerSecondCentimeterDegreeC.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$CalorieThermochPerSecondCentimeterDegreeC';
+  static const _minorName = 'calorieThermochPerSecondCentimeterDegreeC';
 
   static const _ratio = 2902.9059727372737;
 
@@ -996,8 +1013,9 @@ final class ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC
   ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC get _clone =>
       ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC] with new value
   @override
@@ -1010,6 +1028,7 @@ final class ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC
   @override
   String get symbol => 'cal/s cm °C';
 
+  /// [ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1042,8 +1061,7 @@ final class ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC
         unit.toCalorieIntPerSecondCentimeterDegreeC.value,
       );
 
-  static const _minorName =
-      r'thermalResistivity$CalorieIntPerSecondCentimeterDegreeC';
+  static const _minorName = 'calorieIntPerSecondCentimeterDegreeC';
 
   static const _ratio = 2904.848644038341;
 
@@ -1056,8 +1074,9 @@ final class ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC
   ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC get _clone =>
       ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC] with new value
   @override
@@ -1070,6 +1089,7 @@ final class ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC
   @override
   String get symbol => 'cal/s cm °C';
 
+  /// [ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1101,7 +1121,7 @@ final class ThermalResistivity$KilowattPerMeterK extends ThermalResistivity {
         unit.toKilowattPerMeterK.value,
       );
 
-  static const _minorName = r'thermalResistivity$KilowattPerMeterK';
+  static const _minorName = 'kilowattPerMeterK';
 
   static const _ratio = 6938.111789525033;
 
@@ -1114,8 +1134,9 @@ final class ThermalResistivity$KilowattPerMeterK extends ThermalResistivity {
   ThermalResistivity$KilowattPerMeterK get _clone =>
       ThermalResistivity$KilowattPerMeterK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$KilowattPerMeterK] with new value
   @override
@@ -1128,6 +1149,7 @@ final class ThermalResistivity$KilowattPerMeterK extends ThermalResistivity {
   @override
   String get symbol => 'kW/m K';
 
+  /// [ThermalResistivity$KilowattPerMeterK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1159,7 +1181,7 @@ final class ThermalResistivity$WattPerMeterK extends ThermalResistivity {
         unit.toWattPerMeterK.value,
       );
 
-  static const _minorName = r'thermalResistivity$WattPerMeterK';
+  static const _minorName = 'wattPerMeterK';
 
   static const _ratio = 6.938111789525033;
 
@@ -1172,8 +1194,9 @@ final class ThermalResistivity$WattPerMeterK extends ThermalResistivity {
   ThermalResistivity$WattPerMeterK get _clone =>
       ThermalResistivity$WattPerMeterK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$WattPerMeterK] with new value
   @override
@@ -1186,6 +1209,7 @@ final class ThermalResistivity$WattPerMeterK extends ThermalResistivity {
   @override
   String get symbol => 'W/m K';
 
+  /// [ThermalResistivity$WattPerMeterK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1218,7 +1242,7 @@ final class ThermalResistivity$WattPerCentimeterDegreeC
         unit.toWattPerCentimeterDegreeC.value,
       );
 
-  static const _minorName = r'thermalResistivity$WattPerCentimeterDegreeC';
+  static const _minorName = 'wattPerCentimeterDegreeC';
 
   static const _ratio = 693.8111789525033;
 
@@ -1231,8 +1255,9 @@ final class ThermalResistivity$WattPerCentimeterDegreeC
   ThermalResistivity$WattPerCentimeterDegreeC get _clone =>
       ThermalResistivity$WattPerCentimeterDegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ThermalResistivity$WattPerCentimeterDegreeC] with new value
   @override
@@ -1245,6 +1270,7 @@ final class ThermalResistivity$WattPerCentimeterDegreeC
   @override
   String get symbol => 'W/cm °C';
 
+  /// [ThermalResistivity$WattPerCentimeterDegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

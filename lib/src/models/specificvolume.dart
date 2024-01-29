@@ -109,7 +109,7 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
         unit.toMeterCubicPerKilogram.value,
       );
 
-  static const _minorName = r'specificVolume$MeterCubicPerKilogram';
+  static const _minorName = 'meterCubicPerKilogram';
 
   static const _ratio = 1.0;
 
@@ -122,8 +122,9 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
   SpecificVolume$MeterCubicPerKilogram get _clone =>
       SpecificVolume$MeterCubicPerKilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SpecificVolume$MeterCubicPerKilogram] with new value
   @override
@@ -136,6 +137,7 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
   @override
   String get symbol => 'm³/kg';
 
+  /// [SpecificVolume$MeterCubicPerKilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -167,7 +169,7 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
         unit.toCentimeterCubicPerGram.value,
       );
 
-  static const _minorName = r'specificVolume$CentimeterCubicPerGram';
+  static const _minorName = 'centimeterCubicPerGram';
 
   static const _ratio = 0.001;
 
@@ -180,8 +182,9 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
   SpecificVolume$CentimeterCubicPerGram get _clone =>
       SpecificVolume$CentimeterCubicPerGram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SpecificVolume$CentimeterCubicPerGram] with new value
   @override
@@ -194,6 +197,7 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
   @override
   String get symbol => 'cm³/g';
 
+  /// [SpecificVolume$CentimeterCubicPerGram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -225,7 +229,7 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
         unit.toLiterPerKilogram.value,
       );
 
-  static const _minorName = r'specificVolume$LiterPerKilogram';
+  static const _minorName = 'literPerKilogram';
 
   static const _ratio = 0.001;
 
@@ -238,8 +242,9 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
   SpecificVolume$LiterPerKilogram get _clone =>
       SpecificVolume$LiterPerKilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SpecificVolume$LiterPerKilogram] with new value
   @override
@@ -252,6 +257,7 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
   @override
   String get symbol => 'l/kg';
 
+  /// [SpecificVolume$LiterPerKilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -283,7 +289,7 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
         unit.toLiterPerGram.value,
       );
 
-  static const _minorName = r'specificVolume$LiterPerGram';
+  static const _minorName = 'literPerGram';
 
   static const _ratio = 1.0;
 
@@ -295,8 +301,9 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
   @override
   SpecificVolume$LiterPerGram get _clone => SpecificVolume$LiterPerGram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SpecificVolume$LiterPerGram] with new value
   @override
@@ -309,6 +316,7 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
   @override
   String get symbol => 'l/g';
 
+  /// [SpecificVolume$LiterPerGram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -340,7 +348,7 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
         unit.toFeetCubicPerKilogram.value,
       );
 
-  static const _minorName = r'specificVolume$FeetCubicPerKilogram';
+  static const _minorName = 'feetCubicPerKilogram';
 
   static const _ratio = 0.028316846593193615;
 
@@ -353,8 +361,9 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
   SpecificVolume$FeetCubicPerKilogram get _clone =>
       SpecificVolume$FeetCubicPerKilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SpecificVolume$FeetCubicPerKilogram] with new value
   @override
@@ -367,6 +376,7 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
   @override
   String get symbol => 'ft³/kg';
 
+  /// [SpecificVolume$FeetCubicPerKilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -398,7 +408,7 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
         unit.toFeetCubicPerPound.value,
       );
 
-  static const _minorName = r'specificVolume$FeetCubicPerPound';
+  static const _minorName = 'feetCubicPerPound';
 
   static const _ratio = 0.06242795995;
 
@@ -411,8 +421,9 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
   SpecificVolume$FeetCubicPerPound get _clone =>
       SpecificVolume$FeetCubicPerPound(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SpecificVolume$FeetCubicPerPound] with new value
   @override
@@ -425,6 +436,7 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
   @override
   String get symbol => 'ft³/lb';
 
+  /// [SpecificVolume$FeetCubicPerPound] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -456,7 +468,7 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
         unit.toGallonUKPerPound.value,
       );
 
-  static const _minorName = r'specificVolume$GallonUKPerPound';
+  static const _minorName = 'gallonUKPerPound';
 
   static const _ratio = 0.010022412755827792;
 
@@ -469,8 +481,9 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
   SpecificVolume$GallonUKPerPound get _clone =>
       SpecificVolume$GallonUKPerPound(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [SpecificVolume$GallonUKPerPound] with new value
   @override
@@ -483,6 +496,7 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
   @override
   String get symbol => 'gal/lb';
 
+  /// [SpecificVolume$GallonUKPerPound] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

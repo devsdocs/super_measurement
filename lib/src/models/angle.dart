@@ -151,7 +151,7 @@ final class Angle$Degree extends Angle {
         unit.toDegree.value,
       );
 
-  static const _minorName = r'angle$Degree';
+  static const _minorName = 'degree';
 
   static const _ratio = 3600.0;
 
@@ -163,8 +163,9 @@ final class Angle$Degree extends Angle {
   @override
   Angle$Degree get _clone => Angle$Degree(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Degree] with new value
   @override
@@ -177,6 +178,7 @@ final class Angle$Degree extends Angle {
   @override
   String get symbol => '°';
 
+  /// [Angle$Degree] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -208,7 +210,7 @@ final class Angle$Radian extends Angle {
         unit.toRadian.value,
       );
 
-  static const _minorName = r'angle$Radian';
+  static const _minorName = 'radian';
 
   static const _ratio = 206264.80624709636;
 
@@ -220,8 +222,9 @@ final class Angle$Radian extends Angle {
   @override
   Angle$Radian get _clone => Angle$Radian(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Radian] with new value
   @override
@@ -234,6 +237,7 @@ final class Angle$Radian extends Angle {
   @override
   String get symbol => 'rad';
 
+  /// [Angle$Radian] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -265,7 +269,7 @@ final class Angle$Grad extends Angle {
         unit.toGrad.value,
       );
 
-  static const _minorName = r'angle$Grad';
+  static const _minorName = 'grad';
 
   static const _ratio = 3240.0;
 
@@ -277,8 +281,9 @@ final class Angle$Grad extends Angle {
   @override
   Angle$Grad get _clone => Angle$Grad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Grad] with new value
   @override
@@ -291,6 +296,7 @@ final class Angle$Grad extends Angle {
   @override
   String get symbol => 'gr, grd';
 
+  /// [Angle$Grad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -322,7 +328,7 @@ final class Angle$Minute extends Angle {
         unit.toMinute.value,
       );
 
-  static const _minorName = r'angle$Minute';
+  static const _minorName = 'minute';
 
   static const _ratio = 60.0;
 
@@ -334,8 +340,9 @@ final class Angle$Minute extends Angle {
   @override
   Angle$Minute get _clone => Angle$Minute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Minute] with new value
   @override
@@ -348,6 +355,7 @@ final class Angle$Minute extends Angle {
   @override
   String get symbol => '′';
 
+  /// [Angle$Minute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -379,7 +387,7 @@ final class Angle$Second extends Angle {
         unit.toSecond.value,
       );
 
-  static const _minorName = r'angle$Second';
+  static const _minorName = 'second';
 
   static const _ratio = 1.0;
 
@@ -391,8 +399,9 @@ final class Angle$Second extends Angle {
   @override
   Angle$Second get _clone => Angle$Second(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Second] with new value
   @override
@@ -405,6 +414,7 @@ final class Angle$Second extends Angle {
   @override
   String get symbol => '″';
 
+  /// [Angle$Second] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -436,7 +446,7 @@ final class Angle$Sign extends Angle {
         unit.toSign.value,
       );
 
-  static const _minorName = r'angle$Sign';
+  static const _minorName = 'sign';
 
   static const _ratio = 108000.0;
 
@@ -448,8 +458,9 @@ final class Angle$Sign extends Angle {
   @override
   Angle$Sign get _clone => Angle$Sign(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Sign] with new value
   @override
@@ -460,8 +471,9 @@ final class Angle$Sign extends Angle {
 
   /// Symbol for [Angle$Sign]
   @override
-  String get symbol => 'Sign';
+  String get symbol => 'sign';
 
+  /// [Angle$Sign] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -493,7 +505,7 @@ final class Angle$Mil extends Angle {
         unit.toMil.value,
       );
 
-  static const _minorName = r'angle$Mil';
+  static const _minorName = 'mil';
 
   static const _ratio = 202.5;
 
@@ -505,8 +517,9 @@ final class Angle$Mil extends Angle {
   @override
   Angle$Mil get _clone => Angle$Mil(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Mil] with new value
   @override
@@ -517,8 +530,9 @@ final class Angle$Mil extends Angle {
 
   /// Symbol for [Angle$Mil]
   @override
-  String get symbol => 'Mil';
+  String get symbol => 'mil';
 
+  /// [Angle$Mil] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -550,7 +564,7 @@ final class Angle$Revolution extends Angle {
         unit.toRevolution.value,
       );
 
-  static const _minorName = r'angle$Revolution';
+  static const _minorName = 'revolution';
 
   static const _ratio = 1296000.0;
 
@@ -562,8 +576,9 @@ final class Angle$Revolution extends Angle {
   @override
   Angle$Revolution get _clone => Angle$Revolution(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Revolution] with new value
   @override
@@ -576,6 +591,7 @@ final class Angle$Revolution extends Angle {
   @override
   String get symbol => 'rev';
 
+  /// [Angle$Revolution] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -607,7 +623,7 @@ final class Angle$Circle extends Angle {
         unit.toCircle.value,
       );
 
-  static const _minorName = r'angle$Circle';
+  static const _minorName = 'circle';
 
   static const _ratio = 1296000.0;
 
@@ -619,8 +635,9 @@ final class Angle$Circle extends Angle {
   @override
   Angle$Circle get _clone => Angle$Circle(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Circle] with new value
   @override
@@ -633,6 +650,7 @@ final class Angle$Circle extends Angle {
   @override
   String get symbol => 'cir';
 
+  /// [Angle$Circle] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -664,7 +682,7 @@ final class Angle$Turn extends Angle {
         unit.toTurn.value,
       );
 
-  static const _minorName = r'angle$Turn';
+  static const _minorName = 'turn';
 
   static const _ratio = 1296000.0;
 
@@ -676,8 +694,9 @@ final class Angle$Turn extends Angle {
   @override
   Angle$Turn get _clone => Angle$Turn(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Turn] with new value
   @override
@@ -688,8 +707,9 @@ final class Angle$Turn extends Angle {
 
   /// Symbol for [Angle$Turn]
   @override
-  String get symbol => 'Turn';
+  String get symbol => 'turn';
 
+  /// [Angle$Turn] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -721,7 +741,7 @@ final class Angle$Quadrant extends Angle {
         unit.toQuadrant.value,
       );
 
-  static const _minorName = r'angle$Quadrant';
+  static const _minorName = 'quadrant';
 
   static const _ratio = 324000.0;
 
@@ -733,8 +753,9 @@ final class Angle$Quadrant extends Angle {
   @override
   Angle$Quadrant get _clone => Angle$Quadrant(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Quadrant] with new value
   @override
@@ -747,6 +768,7 @@ final class Angle$Quadrant extends Angle {
   @override
   String get symbol => 'quad';
 
+  /// [Angle$Quadrant] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -778,7 +800,7 @@ final class Angle$RightAngle extends Angle {
         unit.toRightAngle.value,
       );
 
-  static const _minorName = r'angle$RightAngle';
+  static const _minorName = 'rightAngle';
 
   static const _ratio = 324000.0;
 
@@ -790,8 +812,9 @@ final class Angle$RightAngle extends Angle {
   @override
   Angle$RightAngle get _clone => Angle$RightAngle(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$RightAngle] with new value
   @override
@@ -802,8 +825,9 @@ final class Angle$RightAngle extends Angle {
 
   /// Symbol for [Angle$RightAngle]
   @override
-  String get symbol => 'RightAngle';
+  String get symbol => 'right angle';
 
+  /// [Angle$RightAngle] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -835,7 +859,7 @@ final class Angle$Sextant extends Angle {
         unit.toSextant.value,
       );
 
-  static const _minorName = r'angle$Sextant';
+  static const _minorName = 'sextant';
 
   static const _ratio = 216000.0;
 
@@ -847,8 +871,9 @@ final class Angle$Sextant extends Angle {
   @override
   Angle$Sextant get _clone => Angle$Sextant(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Sextant] with new value
   @override
@@ -859,8 +884,9 @@ final class Angle$Sextant extends Angle {
 
   /// Symbol for [Angle$Sextant]
   @override
-  String get symbol => 'Sextant';
+  String get symbol => 'sextant';
 
+  /// [Angle$Sextant] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -892,7 +918,7 @@ final class Angle$Octant extends Angle {
         unit.toOctant.value,
       );
 
-  static const _minorName = r'angle$Octant';
+  static const _minorName = 'octant';
 
   static const _ratio = 162000.0;
 
@@ -904,8 +930,9 @@ final class Angle$Octant extends Angle {
   @override
   Angle$Octant get _clone => Angle$Octant(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$Octant] with new value
   @override
@@ -916,8 +943,9 @@ final class Angle$Octant extends Angle {
 
   /// Symbol for [Angle$Octant]
   @override
-  String get symbol => 'Octant';
+  String get symbol => 'octant';
 
+  /// [Angle$Octant] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -949,7 +977,7 @@ final class Angle$PercentOfFullCircle extends Angle {
         unit.toPercentOfFullCircle.value,
       );
 
-  static const _minorName = r'angle$PercentOfFullCircle';
+  static const _minorName = 'percentOfFullCircle';
 
   static const _ratio = 12960.0;
 
@@ -961,8 +989,9 @@ final class Angle$PercentOfFullCircle extends Angle {
   @override
   Angle$PercentOfFullCircle get _clone => Angle$PercentOfFullCircle(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Angle$PercentOfFullCircle] with new value
   @override
@@ -973,8 +1002,9 @@ final class Angle$PercentOfFullCircle extends Angle {
 
   /// Symbol for [Angle$PercentOfFullCircle]
   @override
-  String get symbol => 'PercentOfFullCircle';
+  String get symbol => 'percent of full circle';
 
+  /// [Angle$PercentOfFullCircle] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

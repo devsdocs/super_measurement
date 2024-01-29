@@ -719,9 +719,9 @@ extension NumOfDataStorage on num {
   /// Get [DataStorage$Kilobyte] using [num]
   DataStorage$Kilobyte get dataStorage$Kilobyte => DataStorage$Kilobyte(this);
 
-  /// Get [DataStorage$Kilobyte10Power3Bytes] using [num]
-  DataStorage$Kilobyte10Power3Bytes get dataStorage$Kilobyte10Power3Bytes =>
-      DataStorage$Kilobyte10Power3Bytes(this);
+  /// Get [DataStorage$Kilobyte10PowerOf3Bytes] using [num]
+  DataStorage$Kilobyte10PowerOf3Bytes get dataStorage$Kilobyte10PowerOf3Bytes =>
+      DataStorage$Kilobyte10PowerOf3Bytes(this);
 
   /// Get [DataStorage$Megabit] using [num]
   DataStorage$Megabit get dataStorage$Megabit => DataStorage$Megabit(this);
@@ -729,9 +729,9 @@ extension NumOfDataStorage on num {
   /// Get [DataStorage$Megabyte] using [num]
   DataStorage$Megabyte get dataStorage$Megabyte => DataStorage$Megabyte(this);
 
-  /// Get [DataStorage$Megabyte10Power6Bytes] using [num]
-  DataStorage$Megabyte10Power6Bytes get dataStorage$Megabyte10Power6Bytes =>
-      DataStorage$Megabyte10Power6Bytes(this);
+  /// Get [DataStorage$Megabyte10PowerOf6Bytes] using [num]
+  DataStorage$Megabyte10PowerOf6Bytes get dataStorage$Megabyte10PowerOf6Bytes =>
+      DataStorage$Megabyte10PowerOf6Bytes(this);
 
   /// Get [DataStorage$Gigabit] using [num]
   DataStorage$Gigabit get dataStorage$Gigabit => DataStorage$Gigabit(this);
@@ -739,9 +739,9 @@ extension NumOfDataStorage on num {
   /// Get [DataStorage$Gigabyte] using [num]
   DataStorage$Gigabyte get dataStorage$Gigabyte => DataStorage$Gigabyte(this);
 
-  /// Get [DataStorage$Gigabyte10Power9Bytes] using [num]
-  DataStorage$Gigabyte10Power9Bytes get dataStorage$Gigabyte10Power9Bytes =>
-      DataStorage$Gigabyte10Power9Bytes(this);
+  /// Get [DataStorage$Gigabyte10PowerOf9Bytes] using [num]
+  DataStorage$Gigabyte10PowerOf9Bytes get dataStorage$Gigabyte10PowerOf9Bytes =>
+      DataStorage$Gigabyte10PowerOf9Bytes(this);
 
   /// Get [DataStorage$Terabit] using [num]
   DataStorage$Terabit get dataStorage$Terabit => DataStorage$Terabit(this);
@@ -749,9 +749,10 @@ extension NumOfDataStorage on num {
   /// Get [DataStorage$Terabyte] using [num]
   DataStorage$Terabyte get dataStorage$Terabyte => DataStorage$Terabyte(this);
 
-  /// Get [DataStorage$Terabyte10Power12Bytes] using [num]
-  DataStorage$Terabyte10Power12Bytes get dataStorage$Terabyte10Power12Bytes =>
-      DataStorage$Terabyte10Power12Bytes(this);
+  /// Get [DataStorage$Terabyte10PowerOf12Bytes] using [num]
+  DataStorage$Terabyte10PowerOf12Bytes
+      get dataStorage$Terabyte10PowerOf12Bytes =>
+          DataStorage$Terabyte10PowerOf12Bytes(this);
 
   /// Get [DataStorage$Petabit] using [num]
   DataStorage$Petabit get dataStorage$Petabit => DataStorage$Petabit(this);
@@ -759,9 +760,10 @@ extension NumOfDataStorage on num {
   /// Get [DataStorage$Petabyte] using [num]
   DataStorage$Petabyte get dataStorage$Petabyte => DataStorage$Petabyte(this);
 
-  /// Get [DataStorage$Petabyte10Power15Bytes] using [num]
-  DataStorage$Petabyte10Power15Bytes get dataStorage$Petabyte10Power15Bytes =>
-      DataStorage$Petabyte10Power15Bytes(this);
+  /// Get [DataStorage$Petabyte10PowerOf15Bytes] using [num]
+  DataStorage$Petabyte10PowerOf15Bytes
+      get dataStorage$Petabyte10PowerOf15Bytes =>
+          DataStorage$Petabyte10PowerOf15Bytes(this);
 
   /// Get [DataStorage$Exabit] using [num]
   DataStorage$Exabit get dataStorage$Exabit => DataStorage$Exabit(this);
@@ -769,9 +771,9 @@ extension NumOfDataStorage on num {
   /// Get [DataStorage$Exabyte] using [num]
   DataStorage$Exabyte get dataStorage$Exabyte => DataStorage$Exabyte(this);
 
-  /// Get [DataStorage$Exabyte10Power18Bytes] using [num]
-  DataStorage$Exabyte10Power18Bytes get dataStorage$Exabyte10Power18Bytes =>
-      DataStorage$Exabyte10Power18Bytes(this);
+  /// Get [DataStorage$Exabyte10PowerOf18Bytes] using [num]
+  DataStorage$Exabyte10PowerOf18Bytes get dataStorage$Exabyte10PowerOf18Bytes =>
+      DataStorage$Exabyte10PowerOf18Bytes(this);
 
   /// Get [DataStorage$FloppyDisk35DD] using [num]
   DataStorage$FloppyDisk35DD get dataStorage$FloppyDisk35DD =>
@@ -3960,128 +3962,6 @@ extension NumOfMomentofInertia on num {
   /// Get [MomentofInertia$SlugFootSquare] using [num]
   MomentofInertia$SlugFootSquare get momentofInertia$SlugFootSquare =>
       MomentofInertia$SlugFootSquare(this);
-}
-
-extension NumOfNumbers on num {
-  /// Get [Numbers$Binary] using [num]
-  Numbers$Binary get numbers$Binary => Numbers$Binary(this);
-
-  /// Get [Numbers$Octal] using [num]
-  Numbers$Octal get numbers$Octal => Numbers$Octal(this);
-
-  /// Get [Numbers$Decimal] using [num]
-  Numbers$Decimal get numbers$Decimal => Numbers$Decimal(this);
-
-  /// Get [Numbers$Hexadecimal] using [num]
-  Numbers$Hexadecimal get numbers$Hexadecimal => Numbers$Hexadecimal(this);
-
-  /// Get [Numbers$RomanNumeral] using [num]
-  Numbers$RomanNumeral get numbers$RomanNumeral => Numbers$RomanNumeral(this);
-
-  /// Get [Numbers$Base2] using [num]
-  Numbers$Base2 get numbers$Base2 => Numbers$Base2(this);
-
-  /// Get [Numbers$Base3] using [num]
-  Numbers$Base3 get numbers$Base3 => Numbers$Base3(this);
-
-  /// Get [Numbers$Base4] using [num]
-  Numbers$Base4 get numbers$Base4 => Numbers$Base4(this);
-
-  /// Get [Numbers$Base5] using [num]
-  Numbers$Base5 get numbers$Base5 => Numbers$Base5(this);
-
-  /// Get [Numbers$Base6] using [num]
-  Numbers$Base6 get numbers$Base6 => Numbers$Base6(this);
-
-  /// Get [Numbers$Base7] using [num]
-  Numbers$Base7 get numbers$Base7 => Numbers$Base7(this);
-
-  /// Get [Numbers$Base8] using [num]
-  Numbers$Base8 get numbers$Base8 => Numbers$Base8(this);
-
-  /// Get [Numbers$Base9] using [num]
-  Numbers$Base9 get numbers$Base9 => Numbers$Base9(this);
-
-  /// Get [Numbers$Base10] using [num]
-  Numbers$Base10 get numbers$Base10 => Numbers$Base10(this);
-
-  /// Get [Numbers$Base11] using [num]
-  Numbers$Base11 get numbers$Base11 => Numbers$Base11(this);
-
-  /// Get [Numbers$Base12] using [num]
-  Numbers$Base12 get numbers$Base12 => Numbers$Base12(this);
-
-  /// Get [Numbers$Base13] using [num]
-  Numbers$Base13 get numbers$Base13 => Numbers$Base13(this);
-
-  /// Get [Numbers$Base14] using [num]
-  Numbers$Base14 get numbers$Base14 => Numbers$Base14(this);
-
-  /// Get [Numbers$Base15] using [num]
-  Numbers$Base15 get numbers$Base15 => Numbers$Base15(this);
-
-  /// Get [Numbers$Base16] using [num]
-  Numbers$Base16 get numbers$Base16 => Numbers$Base16(this);
-
-  /// Get [Numbers$Base17] using [num]
-  Numbers$Base17 get numbers$Base17 => Numbers$Base17(this);
-
-  /// Get [Numbers$Base18] using [num]
-  Numbers$Base18 get numbers$Base18 => Numbers$Base18(this);
-
-  /// Get [Numbers$Base19] using [num]
-  Numbers$Base19 get numbers$Base19 => Numbers$Base19(this);
-
-  /// Get [Numbers$Base20] using [num]
-  Numbers$Base20 get numbers$Base20 => Numbers$Base20(this);
-
-  /// Get [Numbers$Base21] using [num]
-  Numbers$Base21 get numbers$Base21 => Numbers$Base21(this);
-
-  /// Get [Numbers$Base22] using [num]
-  Numbers$Base22 get numbers$Base22 => Numbers$Base22(this);
-
-  /// Get [Numbers$Base23] using [num]
-  Numbers$Base23 get numbers$Base23 => Numbers$Base23(this);
-
-  /// Get [Numbers$Base24] using [num]
-  Numbers$Base24 get numbers$Base24 => Numbers$Base24(this);
-
-  /// Get [Numbers$Base25] using [num]
-  Numbers$Base25 get numbers$Base25 => Numbers$Base25(this);
-
-  /// Get [Numbers$Base26] using [num]
-  Numbers$Base26 get numbers$Base26 => Numbers$Base26(this);
-
-  /// Get [Numbers$Base27] using [num]
-  Numbers$Base27 get numbers$Base27 => Numbers$Base27(this);
-
-  /// Get [Numbers$Base28] using [num]
-  Numbers$Base28 get numbers$Base28 => Numbers$Base28(this);
-
-  /// Get [Numbers$Base29] using [num]
-  Numbers$Base29 get numbers$Base29 => Numbers$Base29(this);
-
-  /// Get [Numbers$Base30] using [num]
-  Numbers$Base30 get numbers$Base30 => Numbers$Base30(this);
-
-  /// Get [Numbers$Base31] using [num]
-  Numbers$Base31 get numbers$Base31 => Numbers$Base31(this);
-
-  /// Get [Numbers$Base32] using [num]
-  Numbers$Base32 get numbers$Base32 => Numbers$Base32(this);
-
-  /// Get [Numbers$Base33] using [num]
-  Numbers$Base33 get numbers$Base33 => Numbers$Base33(this);
-
-  /// Get [Numbers$Base34] using [num]
-  Numbers$Base34 get numbers$Base34 => Numbers$Base34(this);
-
-  /// Get [Numbers$Base35] using [num]
-  Numbers$Base35 get numbers$Base35 => Numbers$Base35(this);
-
-  /// Get [Numbers$Base36] using [num]
-  Numbers$Base36 get numbers$Base36 => Numbers$Base36(this);
 }
 
 extension NumOfPermeability on num {

@@ -121,7 +121,7 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
         unit.toKilovoltPerCentimeter.value,
       );
 
-  static const _minorName = r'electricField$KilovoltPerCentimeter';
+  static const _minorName = 'kilovoltPerCentimeter';
 
   static const _ratio = 1.0;
 
@@ -134,8 +134,9 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
   ElectricField$KilovoltPerCentimeter get _clone =>
       ElectricField$KilovoltPerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$KilovoltPerCentimeter] with new value
   @override
@@ -148,6 +149,7 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
   @override
   String get symbol => 'kV/cm';
 
+  /// [ElectricField$KilovoltPerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -179,7 +181,7 @@ final class ElectricField$VoltPerMeter extends ElectricField {
         unit.toVoltPerMeter.value,
       );
 
-  static const _minorName = r'electricField$VoltPerMeter';
+  static const _minorName = 'voltPerMeter';
 
   static const _ratio = 0.00001;
 
@@ -191,8 +193,9 @@ final class ElectricField$VoltPerMeter extends ElectricField {
   @override
   ElectricField$VoltPerMeter get _clone => ElectricField$VoltPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$VoltPerMeter] with new value
   @override
@@ -205,6 +208,7 @@ final class ElectricField$VoltPerMeter extends ElectricField {
   @override
   String get symbol => 'V/m';
 
+  /// [ElectricField$VoltPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -236,7 +240,7 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
         unit.toVoltPerCentimeter.value,
       );
 
-  static const _minorName = r'electricField$VoltPerCentimeter';
+  static const _minorName = 'voltPerCentimeter';
 
   static const _ratio = 0.001;
 
@@ -249,8 +253,9 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
   ElectricField$VoltPerCentimeter get _clone =>
       ElectricField$VoltPerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$VoltPerCentimeter] with new value
   @override
@@ -263,6 +268,7 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
   @override
   String get symbol => 'V/cm';
 
+  /// [ElectricField$VoltPerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -294,7 +300,7 @@ final class ElectricField$VoltPerInch extends ElectricField {
         unit.toVoltPerInch.value,
       );
 
-  static const _minorName = r'electricField$VoltPerInch';
+  static const _minorName = 'voltPerInch';
 
   static const _ratio = 0.0003937007874015748;
 
@@ -306,8 +312,9 @@ final class ElectricField$VoltPerInch extends ElectricField {
   @override
   ElectricField$VoltPerInch get _clone => ElectricField$VoltPerInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$VoltPerInch] with new value
   @override
@@ -320,6 +327,7 @@ final class ElectricField$VoltPerInch extends ElectricField {
   @override
   String get symbol => 'V/in';
 
+  /// [ElectricField$VoltPerInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -351,7 +359,7 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
         unit.toMillivoltPerMeter.value,
       );
 
-  static const _minorName = r'electricField$MillivoltPerMeter';
+  static const _minorName = 'millivoltPerMeter';
 
   static const _ratio = 1e-8;
 
@@ -364,8 +372,9 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
   ElectricField$MillivoltPerMeter get _clone =>
       ElectricField$MillivoltPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$MillivoltPerMeter] with new value
   @override
@@ -378,6 +387,7 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
   @override
   String get symbol => 'mV/m';
 
+  /// [ElectricField$MillivoltPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -409,7 +419,7 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
         unit.toMicrovoltPerMeter.value,
       );
 
-  static const _minorName = r'electricField$MicrovoltPerMeter';
+  static const _minorName = 'microvoltPerMeter';
 
   static const _ratio = 1e-11;
 
@@ -422,8 +432,9 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
   ElectricField$MicrovoltPerMeter get _clone =>
       ElectricField$MicrovoltPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$MicrovoltPerMeter] with new value
   @override
@@ -436,6 +447,7 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
   @override
   String get symbol => 'µV/m';
 
+  /// [ElectricField$MicrovoltPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -467,7 +479,7 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
         unit.toAbvoltPerCentimeter.value,
       );
 
-  static const _minorName = r'electricField$AbvoltPerCentimeter';
+  static const _minorName = 'abvoltPerCentimeter';
 
   static const _ratio = 1e-11;
 
@@ -480,8 +492,9 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
   ElectricField$AbvoltPerCentimeter get _clone =>
       ElectricField$AbvoltPerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$AbvoltPerCentimeter] with new value
   @override
@@ -494,6 +507,7 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
   @override
   String get symbol => 'abV/cm';
 
+  /// [ElectricField$AbvoltPerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -525,7 +539,7 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
         unit.toStatvoltPerCentimeter.value,
       );
 
-  static const _minorName = r'electricField$StatvoltPerCentimeter';
+  static const _minorName = 'statvoltPerCentimeter';
 
   static const _ratio = 0.2997919999933998;
 
@@ -538,8 +552,9 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
   ElectricField$StatvoltPerCentimeter get _clone =>
       ElectricField$StatvoltPerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$StatvoltPerCentimeter] with new value
   @override
@@ -552,6 +567,7 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
   @override
   String get symbol => 'statV/cm';
 
+  /// [ElectricField$StatvoltPerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -583,7 +599,7 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
         unit.toStatvoltPerInch.value,
       );
 
-  static const _minorName = r'electricField$StatvoltPerInch';
+  static const _minorName = 'statvoltPerInch';
 
   static const _ratio = 0.11802834645669291;
 
@@ -596,8 +612,9 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
   ElectricField$StatvoltPerInch get _clone =>
       ElectricField$StatvoltPerInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ElectricField$StatvoltPerInch] with new value
   @override
@@ -610,6 +627,7 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
   @override
   String get symbol => 'statV/in';
 
+  /// [ElectricField$StatvoltPerInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

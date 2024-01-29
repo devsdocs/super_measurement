@@ -222,7 +222,7 @@ final class Force$Exanewton extends Force {
         unit.toExanewton.value,
       );
 
-  static const _minorName = r'force$Exanewton';
+  static const _minorName = 'exanewton';
 
   static const _ratio = 1e+23;
 
@@ -234,8 +234,9 @@ final class Force$Exanewton extends Force {
   @override
   Force$Exanewton get _clone => Force$Exanewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Exanewton] with new value
   @override
@@ -248,6 +249,7 @@ final class Force$Exanewton extends Force {
   @override
   String get symbol => 'EN';
 
+  /// [Force$Exanewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -279,7 +281,7 @@ final class Force$Petanewton extends Force {
         unit.toPetanewton.value,
       );
 
-  static const _minorName = r'force$Petanewton';
+  static const _minorName = 'petanewton';
 
   static const _ratio = 100000000000000000000.0;
 
@@ -291,8 +293,9 @@ final class Force$Petanewton extends Force {
   @override
   Force$Petanewton get _clone => Force$Petanewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Petanewton] with new value
   @override
@@ -305,6 +308,7 @@ final class Force$Petanewton extends Force {
   @override
   String get symbol => 'PN';
 
+  /// [Force$Petanewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -336,7 +340,7 @@ final class Force$Teranewton extends Force {
         unit.toTeranewton.value,
       );
 
-  static const _minorName = r'force$Teranewton';
+  static const _minorName = 'teranewton';
 
   static const _ratio = 100000000000000000.0;
 
@@ -348,8 +352,9 @@ final class Force$Teranewton extends Force {
   @override
   Force$Teranewton get _clone => Force$Teranewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Teranewton] with new value
   @override
@@ -362,6 +367,7 @@ final class Force$Teranewton extends Force {
   @override
   String get symbol => 'TN';
 
+  /// [Force$Teranewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -393,7 +399,7 @@ final class Force$Giganewton extends Force {
         unit.toGiganewton.value,
       );
 
-  static const _minorName = r'force$Giganewton';
+  static const _minorName = 'giganewton';
 
   static const _ratio = 100000000000000.0;
 
@@ -405,8 +411,9 @@ final class Force$Giganewton extends Force {
   @override
   Force$Giganewton get _clone => Force$Giganewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Giganewton] with new value
   @override
@@ -419,6 +426,7 @@ final class Force$Giganewton extends Force {
   @override
   String get symbol => 'GN';
 
+  /// [Force$Giganewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -450,7 +458,7 @@ final class Force$Meganewton extends Force {
         unit.toMeganewton.value,
       );
 
-  static const _minorName = r'force$Meganewton';
+  static const _minorName = 'meganewton';
 
   static const _ratio = 100000000000.0;
 
@@ -462,8 +470,9 @@ final class Force$Meganewton extends Force {
   @override
   Force$Meganewton get _clone => Force$Meganewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Meganewton] with new value
   @override
@@ -476,6 +485,7 @@ final class Force$Meganewton extends Force {
   @override
   String get symbol => 'MN';
 
+  /// [Force$Meganewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -507,7 +517,7 @@ final class Force$Kilonewton extends Force {
         unit.toKilonewton.value,
       );
 
-  static const _minorName = r'force$Kilonewton';
+  static const _minorName = 'kilonewton';
 
   static const _ratio = 100000000.0;
 
@@ -519,8 +529,9 @@ final class Force$Kilonewton extends Force {
   @override
   Force$Kilonewton get _clone => Force$Kilonewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Kilonewton] with new value
   @override
@@ -533,6 +544,7 @@ final class Force$Kilonewton extends Force {
   @override
   String get symbol => 'kN';
 
+  /// [Force$Kilonewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -564,7 +576,7 @@ final class Force$Hectonewton extends Force {
         unit.toHectonewton.value,
       );
 
-  static const _minorName = r'force$Hectonewton';
+  static const _minorName = 'hectonewton';
 
   static const _ratio = 10000000.0;
 
@@ -576,8 +588,9 @@ final class Force$Hectonewton extends Force {
   @override
   Force$Hectonewton get _clone => Force$Hectonewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Hectonewton] with new value
   @override
@@ -590,6 +603,7 @@ final class Force$Hectonewton extends Force {
   @override
   String get symbol => 'hN';
 
+  /// [Force$Hectonewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -621,7 +635,7 @@ final class Force$Dekanewton extends Force {
         unit.toDekanewton.value,
       );
 
-  static const _minorName = r'force$Dekanewton';
+  static const _minorName = 'dekanewton';
 
   static const _ratio = 1000000.0;
 
@@ -633,8 +647,9 @@ final class Force$Dekanewton extends Force {
   @override
   Force$Dekanewton get _clone => Force$Dekanewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Dekanewton] with new value
   @override
@@ -647,6 +662,7 @@ final class Force$Dekanewton extends Force {
   @override
   String get symbol => 'daN';
 
+  /// [Force$Dekanewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -678,7 +694,7 @@ final class Force$Newton extends Force {
         unit.toNewton.value,
       );
 
-  static const _minorName = r'force$Newton';
+  static const _minorName = 'newton';
 
   static const _ratio = 100000.0;
 
@@ -690,8 +706,9 @@ final class Force$Newton extends Force {
   @override
   Force$Newton get _clone => Force$Newton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Newton] with new value
   @override
@@ -704,6 +721,7 @@ final class Force$Newton extends Force {
   @override
   String get symbol => 'N';
 
+  /// [Force$Newton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -735,7 +753,7 @@ final class Force$Decinewton extends Force {
         unit.toDecinewton.value,
       );
 
-  static const _minorName = r'force$Decinewton';
+  static const _minorName = 'decinewton';
 
   static const _ratio = 10000.0;
 
@@ -747,8 +765,9 @@ final class Force$Decinewton extends Force {
   @override
   Force$Decinewton get _clone => Force$Decinewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Decinewton] with new value
   @override
@@ -761,6 +780,7 @@ final class Force$Decinewton extends Force {
   @override
   String get symbol => 'dN';
 
+  /// [Force$Decinewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -792,7 +812,7 @@ final class Force$Centinewton extends Force {
         unit.toCentinewton.value,
       );
 
-  static const _minorName = r'force$Centinewton';
+  static const _minorName = 'centinewton';
 
   static const _ratio = 1000.0;
 
@@ -804,8 +824,9 @@ final class Force$Centinewton extends Force {
   @override
   Force$Centinewton get _clone => Force$Centinewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Centinewton] with new value
   @override
@@ -818,6 +839,7 @@ final class Force$Centinewton extends Force {
   @override
   String get symbol => 'cN';
 
+  /// [Force$Centinewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -849,7 +871,7 @@ final class Force$Millinewton extends Force {
         unit.toMillinewton.value,
       );
 
-  static const _minorName = r'force$Millinewton';
+  static const _minorName = 'millinewton';
 
   static const _ratio = 100.0;
 
@@ -861,8 +883,9 @@ final class Force$Millinewton extends Force {
   @override
   Force$Millinewton get _clone => Force$Millinewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Millinewton] with new value
   @override
@@ -875,6 +898,7 @@ final class Force$Millinewton extends Force {
   @override
   String get symbol => 'mN';
 
+  /// [Force$Millinewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -906,7 +930,7 @@ final class Force$Micronewton extends Force {
         unit.toMicronewton.value,
       );
 
-  static const _minorName = r'force$Micronewton';
+  static const _minorName = 'micronewton';
 
   static const _ratio = 0.1;
 
@@ -918,8 +942,9 @@ final class Force$Micronewton extends Force {
   @override
   Force$Micronewton get _clone => Force$Micronewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Micronewton] with new value
   @override
@@ -932,6 +957,7 @@ final class Force$Micronewton extends Force {
   @override
   String get symbol => 'µN';
 
+  /// [Force$Micronewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -963,7 +989,7 @@ final class Force$Nanonewton extends Force {
         unit.toNanonewton.value,
       );
 
-  static const _minorName = r'force$Nanonewton';
+  static const _minorName = 'nanonewton';
 
   static const _ratio = 0.0001;
 
@@ -975,8 +1001,9 @@ final class Force$Nanonewton extends Force {
   @override
   Force$Nanonewton get _clone => Force$Nanonewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Nanonewton] with new value
   @override
@@ -989,6 +1016,7 @@ final class Force$Nanonewton extends Force {
   @override
   String get symbol => 'nN';
 
+  /// [Force$Nanonewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1020,7 +1048,7 @@ final class Force$Piconewton extends Force {
         unit.toPiconewton.value,
       );
 
-  static const _minorName = r'force$Piconewton';
+  static const _minorName = 'piconewton';
 
   static const _ratio = 1e-7;
 
@@ -1032,8 +1060,9 @@ final class Force$Piconewton extends Force {
   @override
   Force$Piconewton get _clone => Force$Piconewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Piconewton] with new value
   @override
@@ -1046,6 +1075,7 @@ final class Force$Piconewton extends Force {
   @override
   String get symbol => 'pN';
 
+  /// [Force$Piconewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1077,7 +1107,7 @@ final class Force$Femtonewton extends Force {
         unit.toFemtonewton.value,
       );
 
-  static const _minorName = r'force$Femtonewton';
+  static const _minorName = 'femtonewton';
 
   static const _ratio = 1e-10;
 
@@ -1089,8 +1119,9 @@ final class Force$Femtonewton extends Force {
   @override
   Force$Femtonewton get _clone => Force$Femtonewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Femtonewton] with new value
   @override
@@ -1103,6 +1134,7 @@ final class Force$Femtonewton extends Force {
   @override
   String get symbol => 'fN';
 
+  /// [Force$Femtonewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1134,7 +1166,7 @@ final class Force$Attonewton extends Force {
         unit.toAttonewton.value,
       );
 
-  static const _minorName = r'force$Attonewton';
+  static const _minorName = 'attonewton';
 
   static const _ratio = 1e-13;
 
@@ -1146,8 +1178,9 @@ final class Force$Attonewton extends Force {
   @override
   Force$Attonewton get _clone => Force$Attonewton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Attonewton] with new value
   @override
@@ -1160,6 +1193,7 @@ final class Force$Attonewton extends Force {
   @override
   String get symbol => 'aN';
 
+  /// [Force$Attonewton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1191,7 +1225,7 @@ final class Force$Dyne extends Force {
         unit.toDyne.value,
       );
 
-  static const _minorName = r'force$Dyne';
+  static const _minorName = 'dyne';
 
   static const _ratio = 1.0;
 
@@ -1203,8 +1237,9 @@ final class Force$Dyne extends Force {
   @override
   Force$Dyne get _clone => Force$Dyne(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Dyne] with new value
   @override
@@ -1217,6 +1252,7 @@ final class Force$Dyne extends Force {
   @override
   String get symbol => 'dyn';
 
+  /// [Force$Dyne] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1248,7 +1284,7 @@ final class Force$JoulePerMeter extends Force {
         unit.toJoulePerMeter.value,
       );
 
-  static const _minorName = r'force$JoulePerMeter';
+  static const _minorName = 'joulePerMeter';
 
   static const _ratio = 100000.0;
 
@@ -1260,8 +1296,9 @@ final class Force$JoulePerMeter extends Force {
   @override
   Force$JoulePerMeter get _clone => Force$JoulePerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$JoulePerMeter] with new value
   @override
@@ -1274,6 +1311,7 @@ final class Force$JoulePerMeter extends Force {
   @override
   String get symbol => 'J/m';
 
+  /// [Force$JoulePerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1305,7 +1343,7 @@ final class Force$JoulePerCentimeter extends Force {
         unit.toJoulePerCentimeter.value,
       );
 
-  static const _minorName = r'force$JoulePerCentimeter';
+  static const _minorName = 'joulePerCentimeter';
 
   static const _ratio = 1000.0;
 
@@ -1317,8 +1355,9 @@ final class Force$JoulePerCentimeter extends Force {
   @override
   Force$JoulePerCentimeter get _clone => Force$JoulePerCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$JoulePerCentimeter] with new value
   @override
@@ -1331,6 +1370,7 @@ final class Force$JoulePerCentimeter extends Force {
   @override
   String get symbol => 'J/cm';
 
+  /// [Force$JoulePerCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1362,7 +1402,7 @@ final class Force$KilogramForce extends Force {
         unit.toKilogramForce.value,
       );
 
-  static const _minorName = r'force$KilogramForce';
+  static const _minorName = 'kilogramForce';
 
   static const _ratio = 980664.9999980076;
 
@@ -1374,8 +1414,9 @@ final class Force$KilogramForce extends Force {
   @override
   Force$KilogramForce get _clone => Force$KilogramForce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$KilogramForce] with new value
   @override
@@ -1388,6 +1429,7 @@ final class Force$KilogramForce extends Force {
   @override
   String get symbol => 'kgf';
 
+  /// [Force$KilogramForce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1419,7 +1461,7 @@ final class Force$GramForce extends Force {
         unit.toGramForce.value,
       );
 
-  static const _minorName = r'force$GramForce';
+  static const _minorName = 'gramForce';
 
   static const _ratio = 980.6649999980076;
 
@@ -1431,8 +1473,9 @@ final class Force$GramForce extends Force {
   @override
   Force$GramForce get _clone => Force$GramForce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$GramForce] with new value
   @override
@@ -1445,6 +1488,7 @@ final class Force$GramForce extends Force {
   @override
   String get symbol => 'gf';
 
+  /// [Force$GramForce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1476,7 +1520,7 @@ final class Force$KipForce extends Force {
         unit.toKipForce.value,
       );
 
-  static const _minorName = r'force$KipForce';
+  static const _minorName = 'kipForce';
 
   static const _ratio = 444822161.5254772;
 
@@ -1488,8 +1532,9 @@ final class Force$KipForce extends Force {
   @override
   Force$KipForce get _clone => Force$KipForce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$KipForce] with new value
   @override
@@ -1500,8 +1545,9 @@ final class Force$KipForce extends Force {
 
   /// Symbol for [Force$KipForce]
   @override
-  String get symbol => 'KipForce';
+  String get symbol => 'kip force';
 
+  /// [Force$KipForce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1533,7 +1579,7 @@ final class Force$PoundForce extends Force {
         unit.toPoundForce.value,
       );
 
-  static const _minorName = r'force$PoundForce';
+  static const _minorName = 'poundForce';
 
   static const _ratio = 444822.16152547713;
 
@@ -1545,8 +1591,9 @@ final class Force$PoundForce extends Force {
   @override
   Force$PoundForce get _clone => Force$PoundForce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$PoundForce] with new value
   @override
@@ -1559,6 +1606,7 @@ final class Force$PoundForce extends Force {
   @override
   String get symbol => 'lbf';
 
+  /// [Force$PoundForce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1590,7 +1638,7 @@ final class Force$OunceForce extends Force {
         unit.toOunceForce.value,
       );
 
-  static const _minorName = r'force$OunceForce';
+  static const _minorName = 'ounceForce';
 
   static const _ratio = 27801.38509534232;
 
@@ -1602,8 +1650,9 @@ final class Force$OunceForce extends Force {
   @override
   Force$OunceForce get _clone => Force$OunceForce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$OunceForce] with new value
   @override
@@ -1616,6 +1665,7 @@ final class Force$OunceForce extends Force {
   @override
   String get symbol => 'ozf';
 
+  /// [Force$OunceForce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1647,7 +1697,7 @@ final class Force$Poundal extends Force {
         unit.toPoundal.value,
       );
 
-  static const _minorName = r'force$Poundal';
+  static const _minorName = 'poundal';
 
   static const _ratio = 13825.495437599799;
 
@@ -1659,8 +1709,9 @@ final class Force$Poundal extends Force {
   @override
   Force$Poundal get _clone => Force$Poundal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Force$Poundal] with new value
   @override
@@ -1673,6 +1724,7 @@ final class Force$Poundal extends Force {
   @override
   String get symbol => 'pdl';
 
+  /// [Force$Poundal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

@@ -198,7 +198,7 @@ final class AccelerationLinear$KilometerPerSecondSquare
         unit.toKilometerPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$KilometerPerSecondSquare';
+  static const _minorName = 'kilometerPerSecondSquare';
 
   static const _ratio = 1000.0;
 
@@ -211,8 +211,9 @@ final class AccelerationLinear$KilometerPerSecondSquare
   AccelerationLinear$KilometerPerSecondSquare get _clone =>
       AccelerationLinear$KilometerPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$KilometerPerSecondSquare] with new value
   @override
@@ -225,6 +226,7 @@ final class AccelerationLinear$KilometerPerSecondSquare
   @override
   String get symbol => 'km/s²';
 
+  /// [AccelerationLinear$KilometerPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -257,7 +259,7 @@ final class AccelerationLinear$HectometerPerSecondSquare
         unit.toHectometerPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$HectometerPerSecondSquare';
+  static const _minorName = 'hectometerPerSecondSquare';
 
   static const _ratio = 100.0;
 
@@ -270,8 +272,9 @@ final class AccelerationLinear$HectometerPerSecondSquare
   AccelerationLinear$HectometerPerSecondSquare get _clone =>
       AccelerationLinear$HectometerPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$HectometerPerSecondSquare] with new value
   @override
@@ -284,6 +287,7 @@ final class AccelerationLinear$HectometerPerSecondSquare
   @override
   String get symbol => 'hm/s²';
 
+  /// [AccelerationLinear$HectometerPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -316,7 +320,7 @@ final class AccelerationLinear$DekameterPerSecondSquare
         unit.toDekameterPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$DekameterPerSecondSquare';
+  static const _minorName = 'dekameterPerSecondSquare';
 
   static const _ratio = 10.0;
 
@@ -329,8 +333,9 @@ final class AccelerationLinear$DekameterPerSecondSquare
   AccelerationLinear$DekameterPerSecondSquare get _clone =>
       AccelerationLinear$DekameterPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$DekameterPerSecondSquare] with new value
   @override
@@ -343,6 +348,7 @@ final class AccelerationLinear$DekameterPerSecondSquare
   @override
   String get symbol => 'dam/s²';
 
+  /// [AccelerationLinear$DekameterPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -374,7 +380,7 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
         unit.toMeterPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$MeterPerSecondSquare';
+  static const _minorName = 'meterPerSecondSquare';
 
   static const _ratio = 1.0;
 
@@ -387,8 +393,9 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
   AccelerationLinear$MeterPerSecondSquare get _clone =>
       AccelerationLinear$MeterPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$MeterPerSecondSquare] with new value
   @override
@@ -401,6 +408,7 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
   @override
   String get symbol => 'm/s²';
 
+  /// [AccelerationLinear$MeterPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -433,7 +441,7 @@ final class AccelerationLinear$DecimeterPerSecondSquare
         unit.toDecimeterPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$DecimeterPerSecondSquare';
+  static const _minorName = 'decimeterPerSecondSquare';
 
   static const _ratio = 0.1;
 
@@ -446,8 +454,9 @@ final class AccelerationLinear$DecimeterPerSecondSquare
   AccelerationLinear$DecimeterPerSecondSquare get _clone =>
       AccelerationLinear$DecimeterPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$DecimeterPerSecondSquare] with new value
   @override
@@ -460,6 +469,7 @@ final class AccelerationLinear$DecimeterPerSecondSquare
   @override
   String get symbol => 'dm/s²';
 
+  /// [AccelerationLinear$DecimeterPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -492,7 +502,7 @@ final class AccelerationLinear$CentimeterPerSecondSquare
         unit.toCentimeterPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$CentimeterPerSecondSquare';
+  static const _minorName = 'centimeterPerSecondSquare';
 
   static const _ratio = 0.01;
 
@@ -505,8 +515,9 @@ final class AccelerationLinear$CentimeterPerSecondSquare
   AccelerationLinear$CentimeterPerSecondSquare get _clone =>
       AccelerationLinear$CentimeterPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$CentimeterPerSecondSquare] with new value
   @override
@@ -519,6 +530,7 @@ final class AccelerationLinear$CentimeterPerSecondSquare
   @override
   String get symbol => 'cm/s²';
 
+  /// [AccelerationLinear$CentimeterPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -551,7 +563,7 @@ final class AccelerationLinear$MillimeterPerSecondSquare
         unit.toMillimeterPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$MillimeterPerSecondSquare';
+  static const _minorName = 'millimeterPerSecondSquare';
 
   static const _ratio = 0.001;
 
@@ -564,8 +576,9 @@ final class AccelerationLinear$MillimeterPerSecondSquare
   AccelerationLinear$MillimeterPerSecondSquare get _clone =>
       AccelerationLinear$MillimeterPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$MillimeterPerSecondSquare] with new value
   @override
@@ -578,6 +591,7 @@ final class AccelerationLinear$MillimeterPerSecondSquare
   @override
   String get symbol => 'mm/s²';
 
+  /// [AccelerationLinear$MillimeterPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -610,7 +624,7 @@ final class AccelerationLinear$MicrometerPerSecondSquare
         unit.toMicrometerPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$MicrometerPerSecondSquare';
+  static const _minorName = 'micrometerPerSecondSquare';
 
   static const _ratio = 0.000001;
 
@@ -623,8 +637,9 @@ final class AccelerationLinear$MicrometerPerSecondSquare
   AccelerationLinear$MicrometerPerSecondSquare get _clone =>
       AccelerationLinear$MicrometerPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$MicrometerPerSecondSquare] with new value
   @override
@@ -637,6 +652,7 @@ final class AccelerationLinear$MicrometerPerSecondSquare
   @override
   String get symbol => 'µm/s²';
 
+  /// [AccelerationLinear$MicrometerPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -669,7 +685,7 @@ final class AccelerationLinear$NanometerPerSecondSquare
         unit.toNanometerPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$NanometerPerSecondSquare';
+  static const _minorName = 'nanometerPerSecondSquare';
 
   static const _ratio = 1e-9;
 
@@ -682,8 +698,9 @@ final class AccelerationLinear$NanometerPerSecondSquare
   AccelerationLinear$NanometerPerSecondSquare get _clone =>
       AccelerationLinear$NanometerPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$NanometerPerSecondSquare] with new value
   @override
@@ -696,6 +713,7 @@ final class AccelerationLinear$NanometerPerSecondSquare
   @override
   String get symbol => 'nm/s²';
 
+  /// [AccelerationLinear$NanometerPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -728,7 +746,7 @@ final class AccelerationLinear$PicometerPerSecondSquare
         unit.toPicometerPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$PicometerPerSecondSquare';
+  static const _minorName = 'picometerPerSecondSquare';
 
   static const _ratio = 1e-12;
 
@@ -741,8 +759,9 @@ final class AccelerationLinear$PicometerPerSecondSquare
   AccelerationLinear$PicometerPerSecondSquare get _clone =>
       AccelerationLinear$PicometerPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$PicometerPerSecondSquare] with new value
   @override
@@ -755,6 +774,7 @@ final class AccelerationLinear$PicometerPerSecondSquare
   @override
   String get symbol => 'pm/s²';
 
+  /// [AccelerationLinear$PicometerPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -787,7 +807,7 @@ final class AccelerationLinear$FemtometerPerSecondSquare
         unit.toFemtometerPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$FemtometerPerSecondSquare';
+  static const _minorName = 'femtometerPerSecondSquare';
 
   static const _ratio = 1e-15;
 
@@ -800,8 +820,9 @@ final class AccelerationLinear$FemtometerPerSecondSquare
   AccelerationLinear$FemtometerPerSecondSquare get _clone =>
       AccelerationLinear$FemtometerPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$FemtometerPerSecondSquare] with new value
   @override
@@ -814,6 +835,7 @@ final class AccelerationLinear$FemtometerPerSecondSquare
   @override
   String get symbol => 'fm/s²';
 
+  /// [AccelerationLinear$FemtometerPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -846,7 +868,7 @@ final class AccelerationLinear$AttometerPerSecondSquare
         unit.toAttometerPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$AttometerPerSecondSquare';
+  static const _minorName = 'attometerPerSecondSquare';
 
   static const _ratio = 1e-18;
 
@@ -859,8 +881,9 @@ final class AccelerationLinear$AttometerPerSecondSquare
   AccelerationLinear$AttometerPerSecondSquare get _clone =>
       AccelerationLinear$AttometerPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$AttometerPerSecondSquare] with new value
   @override
@@ -873,6 +896,7 @@ final class AccelerationLinear$AttometerPerSecondSquare
   @override
   String get symbol => 'am/s²';
 
+  /// [AccelerationLinear$AttometerPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -904,7 +928,7 @@ final class AccelerationLinear$G extends AccelerationLinear {
         unit.toG.value,
       );
 
-  static const _minorName = r'accelerationLinear$G';
+  static const _minorName = 'g';
 
   static const _ratio = 9.80665;
 
@@ -916,8 +940,9 @@ final class AccelerationLinear$G extends AccelerationLinear {
   @override
   AccelerationLinear$G get _clone => AccelerationLinear$G(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$G] with new value
   @override
@@ -928,8 +953,9 @@ final class AccelerationLinear$G extends AccelerationLinear {
 
   /// Symbol for [AccelerationLinear$G]
   @override
-  String get symbol => 'G';
+  String get symbol => 'g';
 
+  /// [AccelerationLinear$G] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -961,7 +987,7 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
         unit.toGal.value,
       );
 
-  static const _minorName = r'accelerationLinear$Gal';
+  static const _minorName = 'gal';
 
   static const _ratio = 0.01;
 
@@ -973,8 +999,9 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
   @override
   AccelerationLinear$Gal get _clone => AccelerationLinear$Gal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$Gal] with new value
   @override
@@ -987,6 +1014,7 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
   @override
   String get symbol => 'Gal';
 
+  /// [AccelerationLinear$Gal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1018,7 +1046,7 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
         unit.toMilePerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$MilePerSecondSquare';
+  static const _minorName = 'milePerSecondSquare';
 
   static const _ratio = 1609.344;
 
@@ -1031,8 +1059,9 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
   AccelerationLinear$MilePerSecondSquare get _clone =>
       AccelerationLinear$MilePerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$MilePerSecondSquare] with new value
   @override
@@ -1045,6 +1074,7 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
   @override
   String get symbol => 'mi/s²';
 
+  /// [AccelerationLinear$MilePerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1076,7 +1106,7 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
         unit.toYardPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$YardPerSecondSquare';
+  static const _minorName = 'yardPerSecondSquare';
 
   static const _ratio = 0.9144;
 
@@ -1089,8 +1119,9 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
   AccelerationLinear$YardPerSecondSquare get _clone =>
       AccelerationLinear$YardPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$YardPerSecondSquare] with new value
   @override
@@ -1103,6 +1134,7 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
   @override
   String get symbol => 'yd/s²';
 
+  /// [AccelerationLinear$YardPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1134,7 +1166,7 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
         unit.toFootPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$FootPerSecondSquare';
+  static const _minorName = 'footPerSecondSquare';
 
   static const _ratio = 0.3048;
 
@@ -1147,8 +1179,9 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
   AccelerationLinear$FootPerSecondSquare get _clone =>
       AccelerationLinear$FootPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$FootPerSecondSquare] with new value
   @override
@@ -1161,6 +1194,7 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
   @override
   String get symbol => 'ft/s²';
 
+  /// [AccelerationLinear$FootPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1192,7 +1226,7 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
         unit.toInchPerSecondSquare.value,
       );
 
-  static const _minorName = r'accelerationLinear$InchPerSecondSquare';
+  static const _minorName = 'inchPerSecondSquare';
 
   static const _ratio = 0.0254;
 
@@ -1205,8 +1239,9 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
   AccelerationLinear$InchPerSecondSquare get _clone =>
       AccelerationLinear$InchPerSecondSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [AccelerationLinear$InchPerSecondSquare] with new value
   @override
@@ -1219,6 +1254,7 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
   @override
   String get symbol => 'in/s²';
 
+  /// [AccelerationLinear$InchPerSecondSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

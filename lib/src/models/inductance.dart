@@ -191,7 +191,7 @@ final class Inductance$Exahenry extends Inductance {
         unit.toExahenry.value,
       );
 
-  static const _minorName = r'inductance$Exahenry';
+  static const _minorName = 'exahenry';
 
   static const _ratio = 1e+36;
 
@@ -203,8 +203,9 @@ final class Inductance$Exahenry extends Inductance {
   @override
   Inductance$Exahenry get _clone => Inductance$Exahenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Exahenry] with new value
   @override
@@ -217,6 +218,7 @@ final class Inductance$Exahenry extends Inductance {
   @override
   String get symbol => 'EH';
 
+  /// [Inductance$Exahenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -248,7 +250,7 @@ final class Inductance$Petahenry extends Inductance {
         unit.toPetahenry.value,
       );
 
-  static const _minorName = r'inductance$Petahenry';
+  static const _minorName = 'petahenry';
 
   static const _ratio = 1e+33;
 
@@ -260,8 +262,9 @@ final class Inductance$Petahenry extends Inductance {
   @override
   Inductance$Petahenry get _clone => Inductance$Petahenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Petahenry] with new value
   @override
@@ -274,6 +277,7 @@ final class Inductance$Petahenry extends Inductance {
   @override
   String get symbol => 'PH';
 
+  /// [Inductance$Petahenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -305,7 +309,7 @@ final class Inductance$Terahenry extends Inductance {
         unit.toTerahenry.value,
       );
 
-  static const _minorName = r'inductance$Terahenry';
+  static const _minorName = 'terahenry';
 
   static const _ratio = 1e+30;
 
@@ -317,8 +321,9 @@ final class Inductance$Terahenry extends Inductance {
   @override
   Inductance$Terahenry get _clone => Inductance$Terahenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Terahenry] with new value
   @override
@@ -331,6 +336,7 @@ final class Inductance$Terahenry extends Inductance {
   @override
   String get symbol => 'TH';
 
+  /// [Inductance$Terahenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -362,7 +368,7 @@ final class Inductance$Gigahenry extends Inductance {
         unit.toGigahenry.value,
       );
 
-  static const _minorName = r'inductance$Gigahenry';
+  static const _minorName = 'gigahenry';
 
   static const _ratio = 1e+27;
 
@@ -374,8 +380,9 @@ final class Inductance$Gigahenry extends Inductance {
   @override
   Inductance$Gigahenry get _clone => Inductance$Gigahenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Gigahenry] with new value
   @override
@@ -388,6 +395,7 @@ final class Inductance$Gigahenry extends Inductance {
   @override
   String get symbol => 'GH';
 
+  /// [Inductance$Gigahenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -419,7 +427,7 @@ final class Inductance$Megahenry extends Inductance {
         unit.toMegahenry.value,
       );
 
-  static const _minorName = r'inductance$Megahenry';
+  static const _minorName = 'megahenry';
 
   static const _ratio = 1e+24;
 
@@ -431,8 +439,9 @@ final class Inductance$Megahenry extends Inductance {
   @override
   Inductance$Megahenry get _clone => Inductance$Megahenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Megahenry] with new value
   @override
@@ -445,6 +454,7 @@ final class Inductance$Megahenry extends Inductance {
   @override
   String get symbol => 'MH';
 
+  /// [Inductance$Megahenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -476,7 +486,7 @@ final class Inductance$Kilohenry extends Inductance {
         unit.toKilohenry.value,
       );
 
-  static const _minorName = r'inductance$Kilohenry';
+  static const _minorName = 'kilohenry';
 
   static const _ratio = 1e+21;
 
@@ -488,8 +498,9 @@ final class Inductance$Kilohenry extends Inductance {
   @override
   Inductance$Kilohenry get _clone => Inductance$Kilohenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Kilohenry] with new value
   @override
@@ -502,6 +513,7 @@ final class Inductance$Kilohenry extends Inductance {
   @override
   String get symbol => 'kH';
 
+  /// [Inductance$Kilohenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -533,7 +545,7 @@ final class Inductance$Hectohenry extends Inductance {
         unit.toHectohenry.value,
       );
 
-  static const _minorName = r'inductance$Hectohenry';
+  static const _minorName = 'hectohenry';
 
   static const _ratio = 100000000000000000000.0;
 
@@ -545,8 +557,9 @@ final class Inductance$Hectohenry extends Inductance {
   @override
   Inductance$Hectohenry get _clone => Inductance$Hectohenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Hectohenry] with new value
   @override
@@ -559,6 +572,7 @@ final class Inductance$Hectohenry extends Inductance {
   @override
   String get symbol => 'hH';
 
+  /// [Inductance$Hectohenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -590,7 +604,7 @@ final class Inductance$Dekahenry extends Inductance {
         unit.toDekahenry.value,
       );
 
-  static const _minorName = r'inductance$Dekahenry';
+  static const _minorName = 'dekahenry';
 
   static const _ratio = 10000000000000000000.0;
 
@@ -602,8 +616,9 @@ final class Inductance$Dekahenry extends Inductance {
   @override
   Inductance$Dekahenry get _clone => Inductance$Dekahenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Dekahenry] with new value
   @override
@@ -616,6 +631,7 @@ final class Inductance$Dekahenry extends Inductance {
   @override
   String get symbol => 'daH';
 
+  /// [Inductance$Dekahenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -647,7 +663,7 @@ final class Inductance$Henry extends Inductance {
         unit.toHenry.value,
       );
 
-  static const _minorName = r'inductance$Henry';
+  static const _minorName = 'henry';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -659,8 +675,9 @@ final class Inductance$Henry extends Inductance {
   @override
   Inductance$Henry get _clone => Inductance$Henry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Henry] with new value
   @override
@@ -673,6 +690,7 @@ final class Inductance$Henry extends Inductance {
   @override
   String get symbol => 'H';
 
+  /// [Inductance$Henry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -704,7 +722,7 @@ final class Inductance$Decihenry extends Inductance {
         unit.toDecihenry.value,
       );
 
-  static const _minorName = r'inductance$Decihenry';
+  static const _minorName = 'decihenry';
 
   static const _ratio = 100000000000000000.0;
 
@@ -716,8 +734,9 @@ final class Inductance$Decihenry extends Inductance {
   @override
   Inductance$Decihenry get _clone => Inductance$Decihenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Decihenry] with new value
   @override
@@ -730,6 +749,7 @@ final class Inductance$Decihenry extends Inductance {
   @override
   String get symbol => 'dH';
 
+  /// [Inductance$Decihenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -761,7 +781,7 @@ final class Inductance$Centihenry extends Inductance {
         unit.toCentihenry.value,
       );
 
-  static const _minorName = r'inductance$Centihenry';
+  static const _minorName = 'centihenry';
 
   static const _ratio = 10000000000000000.0;
 
@@ -773,8 +793,9 @@ final class Inductance$Centihenry extends Inductance {
   @override
   Inductance$Centihenry get _clone => Inductance$Centihenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Centihenry] with new value
   @override
@@ -787,6 +808,7 @@ final class Inductance$Centihenry extends Inductance {
   @override
   String get symbol => 'cH';
 
+  /// [Inductance$Centihenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -818,7 +840,7 @@ final class Inductance$Millihenry extends Inductance {
         unit.toMillihenry.value,
       );
 
-  static const _minorName = r'inductance$Millihenry';
+  static const _minorName = 'millihenry';
 
   static const _ratio = 1000000000000000.0;
 
@@ -830,8 +852,9 @@ final class Inductance$Millihenry extends Inductance {
   @override
   Inductance$Millihenry get _clone => Inductance$Millihenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Millihenry] with new value
   @override
@@ -844,6 +867,7 @@ final class Inductance$Millihenry extends Inductance {
   @override
   String get symbol => 'mH';
 
+  /// [Inductance$Millihenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -875,7 +899,7 @@ final class Inductance$Microhenry extends Inductance {
         unit.toMicrohenry.value,
       );
 
-  static const _minorName = r'inductance$Microhenry';
+  static const _minorName = 'microhenry';
 
   static const _ratio = 1000000000000.0;
 
@@ -887,8 +911,9 @@ final class Inductance$Microhenry extends Inductance {
   @override
   Inductance$Microhenry get _clone => Inductance$Microhenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Microhenry] with new value
   @override
@@ -901,6 +926,7 @@ final class Inductance$Microhenry extends Inductance {
   @override
   String get symbol => 'µH';
 
+  /// [Inductance$Microhenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -932,7 +958,7 @@ final class Inductance$Nanohenry extends Inductance {
         unit.toNanohenry.value,
       );
 
-  static const _minorName = r'inductance$Nanohenry';
+  static const _minorName = 'nanohenry';
 
   static const _ratio = 1000000000.0;
 
@@ -944,8 +970,9 @@ final class Inductance$Nanohenry extends Inductance {
   @override
   Inductance$Nanohenry get _clone => Inductance$Nanohenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Nanohenry] with new value
   @override
@@ -958,6 +985,7 @@ final class Inductance$Nanohenry extends Inductance {
   @override
   String get symbol => 'nH';
 
+  /// [Inductance$Nanohenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -989,7 +1017,7 @@ final class Inductance$Picohenry extends Inductance {
         unit.toPicohenry.value,
       );
 
-  static const _minorName = r'inductance$Picohenry';
+  static const _minorName = 'picohenry';
 
   static const _ratio = 1000000.0;
 
@@ -1001,8 +1029,9 @@ final class Inductance$Picohenry extends Inductance {
   @override
   Inductance$Picohenry get _clone => Inductance$Picohenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Picohenry] with new value
   @override
@@ -1015,6 +1044,7 @@ final class Inductance$Picohenry extends Inductance {
   @override
   String get symbol => 'pH';
 
+  /// [Inductance$Picohenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1046,7 +1076,7 @@ final class Inductance$Femtohenry extends Inductance {
         unit.toFemtohenry.value,
       );
 
-  static const _minorName = r'inductance$Femtohenry';
+  static const _minorName = 'femtohenry';
 
   static const _ratio = 1000.0;
 
@@ -1058,8 +1088,9 @@ final class Inductance$Femtohenry extends Inductance {
   @override
   Inductance$Femtohenry get _clone => Inductance$Femtohenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Femtohenry] with new value
   @override
@@ -1072,6 +1103,7 @@ final class Inductance$Femtohenry extends Inductance {
   @override
   String get symbol => 'fH';
 
+  /// [Inductance$Femtohenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1103,7 +1135,7 @@ final class Inductance$Attohenry extends Inductance {
         unit.toAttohenry.value,
       );
 
-  static const _minorName = r'inductance$Attohenry';
+  static const _minorName = 'attohenry';
 
   static const _ratio = 1.0;
 
@@ -1115,8 +1147,9 @@ final class Inductance$Attohenry extends Inductance {
   @override
   Inductance$Attohenry get _clone => Inductance$Attohenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Attohenry] with new value
   @override
@@ -1129,6 +1162,7 @@ final class Inductance$Attohenry extends Inductance {
   @override
   String get symbol => 'aH';
 
+  /// [Inductance$Attohenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1160,7 +1194,7 @@ final class Inductance$Abhenry extends Inductance {
         unit.toAbhenry.value,
       );
 
-  static const _minorName = r'inductance$Abhenry';
+  static const _minorName = 'abhenry';
 
   static const _ratio = 1000000000.0;
 
@@ -1172,8 +1206,9 @@ final class Inductance$Abhenry extends Inductance {
   @override
   Inductance$Abhenry get _clone => Inductance$Abhenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Abhenry] with new value
   @override
@@ -1186,6 +1221,7 @@ final class Inductance$Abhenry extends Inductance {
   @override
   String get symbol => 'abH';
 
+  /// [Inductance$Abhenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1217,7 +1253,7 @@ final class Inductance$Stathenry extends Inductance {
         unit.toStathenry.value,
       );
 
-  static const _minorName = r'inductance$Stathenry';
+  static const _minorName = 'stathenry';
 
   static const _ratio = 8.987552e+29;
 
@@ -1229,8 +1265,9 @@ final class Inductance$Stathenry extends Inductance {
   @override
   Inductance$Stathenry get _clone => Inductance$Stathenry(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$Stathenry] with new value
   @override
@@ -1243,6 +1280,7 @@ final class Inductance$Stathenry extends Inductance {
   @override
   String get symbol => 'statH';
 
+  /// [Inductance$Stathenry] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1274,7 +1312,7 @@ final class Inductance$EMUOfInductance extends Inductance {
         unit.toEMUOfInductance.value,
       );
 
-  static const _minorName = r'inductance$EMUOfInductance';
+  static const _minorName = 'eMUOfInductance';
 
   static const _ratio = 1000000000.0;
 
@@ -1286,8 +1324,9 @@ final class Inductance$EMUOfInductance extends Inductance {
   @override
   Inductance$EMUOfInductance get _clone => Inductance$EMUOfInductance(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$EMUOfInductance] with new value
   @override
@@ -1298,8 +1337,9 @@ final class Inductance$EMUOfInductance extends Inductance {
 
   /// Symbol for [Inductance$EMUOfInductance]
   @override
-  String get symbol => 'EMUOfInductance';
+  String get symbol => 'EMU of inductance';
 
+  /// [Inductance$EMUOfInductance] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1331,7 +1371,7 @@ final class Inductance$ESUOfInductance extends Inductance {
         unit.toESUOfInductance.value,
       );
 
-  static const _minorName = r'inductance$ESUOfInductance';
+  static const _minorName = 'eSUOfInductance';
 
   static const _ratio = 8.987552e+29;
 
@@ -1343,8 +1383,9 @@ final class Inductance$ESUOfInductance extends Inductance {
   @override
   Inductance$ESUOfInductance get _clone => Inductance$ESUOfInductance(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Inductance$ESUOfInductance] with new value
   @override
@@ -1355,8 +1396,9 @@ final class Inductance$ESUOfInductance extends Inductance {
 
   /// Symbol for [Inductance$ESUOfInductance]
   @override
-  String get symbol => 'ESUOfInductance';
+  String get symbol => 'ESU of inductance';
 
+  /// [Inductance$ESUOfInductance] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

@@ -11,7 +11,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   num get ratio;
 
-  num get _shiftValue;
+  num get _valueShift;
 
   String get symbol;
 
@@ -23,7 +23,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   AnchorRatio<T> get _anchorRatio;
 
-  bool get _isShiftedValue => _shiftValue != 0;
+  bool get _isShiftedValue => _valueShift != 0;
 
   bool _convertAndCompare(String operator, T other) {
     num otherValue;
@@ -81,13 +81,13 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     if (_isShiftedValue || result._isShiftedValue) {
       if (runtimeType == _anchorRatio.anchor) {
         return result.withValue(
-          (value - result._shiftValue) /
+          (value - result._valueShift) /
               _anchorRatio.ratio.getRatio(result.runtimeType),
         );
       } else {
         return _anchor
             .withValue(
-              (value * _anchorRatio.ratio.getRatio(runtimeType)) + _shiftValue,
+              (value * _anchorRatio.ratio.getRatio(runtimeType)) + _valueShift,
             )
             .convertTo(result);
       }

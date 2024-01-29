@@ -87,7 +87,7 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
         unit.toRoentgen.value,
       );
 
-  static const _minorName = r'radiationExposure$Roentgen';
+  static const _minorName = 'roentgen';
 
   static const _ratio = 258.0;
 
@@ -99,8 +99,9 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
   @override
   RadiationExposure$Roentgen get _clone => RadiationExposure$Roentgen(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationExposure$Roentgen] with new value
   @override
@@ -113,6 +114,7 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
   @override
   String get symbol => 'R';
 
+  /// [RadiationExposure$Roentgen] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -144,7 +146,7 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
         unit.toCoulombPerKilogram.value,
       );
 
-  static const _minorName = r'radiationExposure$CoulombPerKilogram';
+  static const _minorName = 'coulombPerKilogram';
 
   static const _ratio = 1000000.0;
 
@@ -157,8 +159,9 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
   RadiationExposure$CoulombPerKilogram get _clone =>
       RadiationExposure$CoulombPerKilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationExposure$CoulombPerKilogram] with new value
   @override
@@ -171,6 +174,7 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
   @override
   String get symbol => 'C/kg';
 
+  /// [RadiationExposure$CoulombPerKilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -203,7 +207,7 @@ final class RadiationExposure$MillicoulombPerKilogram
         unit.toMillicoulombPerKilogram.value,
       );
 
-  static const _minorName = r'radiationExposure$MillicoulombPerKilogram';
+  static const _minorName = 'millicoulombPerKilogram';
 
   static const _ratio = 1000.0;
 
@@ -216,8 +220,9 @@ final class RadiationExposure$MillicoulombPerKilogram
   RadiationExposure$MillicoulombPerKilogram get _clone =>
       RadiationExposure$MillicoulombPerKilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationExposure$MillicoulombPerKilogram] with new value
   @override
@@ -230,6 +235,7 @@ final class RadiationExposure$MillicoulombPerKilogram
   @override
   String get symbol => 'mC/kg';
 
+  /// [RadiationExposure$MillicoulombPerKilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -262,7 +268,7 @@ final class RadiationExposure$MicrocoulombPerKilogram
         unit.toMicrocoulombPerKilogram.value,
       );
 
-  static const _minorName = r'radiationExposure$MicrocoulombPerKilogram';
+  static const _minorName = 'microcoulombPerKilogram';
 
   static const _ratio = 1.0;
 
@@ -275,8 +281,9 @@ final class RadiationExposure$MicrocoulombPerKilogram
   RadiationExposure$MicrocoulombPerKilogram get _clone =>
       RadiationExposure$MicrocoulombPerKilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [RadiationExposure$MicrocoulombPerKilogram] with new value
   @override
@@ -289,6 +296,7 @@ final class RadiationExposure$MicrocoulombPerKilogram
   @override
   String get symbol => 'µC/kg';
 
+  /// [RadiationExposure$MicrocoulombPerKilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

@@ -106,7 +106,7 @@ final class VolumeChargeDensity$CoulombPerMeterCubic
         unit.toCoulombPerMeterCubic.value,
       );
 
-  static const _minorName = r'volumeChargeDensity$CoulombPerMeterCubic';
+  static const _minorName = 'coulombPerMeterCubic';
 
   static const _ratio = 1.0;
 
@@ -119,8 +119,9 @@ final class VolumeChargeDensity$CoulombPerMeterCubic
   VolumeChargeDensity$CoulombPerMeterCubic get _clone =>
       VolumeChargeDensity$CoulombPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$CoulombPerMeterCubic] with new value
   @override
@@ -133,6 +134,7 @@ final class VolumeChargeDensity$CoulombPerMeterCubic
   @override
   String get symbol => 'C/m³';
 
+  /// [VolumeChargeDensity$CoulombPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -165,7 +167,7 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
         unit.toCoulombPerCentimeterCubic.value,
       );
 
-  static const _minorName = r'volumeChargeDensity$CoulombPerCentimeterCubic';
+  static const _minorName = 'coulombPerCentimeterCubic';
 
   static const _ratio = 1000000.0;
 
@@ -178,8 +180,9 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
   VolumeChargeDensity$CoulombPerCentimeterCubic get _clone =>
       VolumeChargeDensity$CoulombPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$CoulombPerCentimeterCubic] with new value
   @override
@@ -192,6 +195,7 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
   @override
   String get symbol => 'C/cm³';
 
+  /// [VolumeChargeDensity$CoulombPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -224,7 +228,7 @@ final class VolumeChargeDensity$CoulombPerInchCubic
         unit.toCoulombPerInchCubic.value,
       );
 
-  static const _minorName = r'volumeChargeDensity$CoulombPerInchCubic';
+  static const _minorName = 'coulombPerInchCubic';
 
   static const _ratio = 61023.74409;
 
@@ -237,8 +241,9 @@ final class VolumeChargeDensity$CoulombPerInchCubic
   VolumeChargeDensity$CoulombPerInchCubic get _clone =>
       VolumeChargeDensity$CoulombPerInchCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$CoulombPerInchCubic] with new value
   @override
@@ -251,6 +256,7 @@ final class VolumeChargeDensity$CoulombPerInchCubic
   @override
   String get symbol => 'C/in³';
 
+  /// [VolumeChargeDensity$CoulombPerInchCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -283,7 +289,7 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
         unit.toAbcoulombPerMeterCubic.value,
       );
 
-  static const _minorName = r'volumeChargeDensity$AbcoulombPerMeterCubic';
+  static const _minorName = 'abcoulombPerMeterCubic';
 
   static const _ratio = 10.0;
 
@@ -296,8 +302,9 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
   VolumeChargeDensity$AbcoulombPerMeterCubic get _clone =>
       VolumeChargeDensity$AbcoulombPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerMeterCubic] with new value
   @override
@@ -310,6 +317,7 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
   @override
   String get symbol => 'abC/m³';
 
+  /// [VolumeChargeDensity$AbcoulombPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -342,7 +350,7 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
         unit.toAbcoulombPerCentimeterCubic.value,
       );
 
-  static const _minorName = r'volumeChargeDensity$AbcoulombPerCentimeterCubic';
+  static const _minorName = 'abcoulombPerCentimeterCubic';
 
   static const _ratio = 10000000.0;
 
@@ -355,8 +363,9 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
   VolumeChargeDensity$AbcoulombPerCentimeterCubic get _clone =>
       VolumeChargeDensity$AbcoulombPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerCentimeterCubic] with new value
   @override
@@ -369,6 +378,7 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
   @override
   String get symbol => 'abC/cm³';
 
+  /// [VolumeChargeDensity$AbcoulombPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -401,7 +411,7 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
         unit.toAbcoulombPerInchCubic.value,
       );
 
-  static const _minorName = r'volumeChargeDensity$AbcoulombPerInchCubic';
+  static const _minorName = 'abcoulombPerInchCubic';
 
   static const _ratio = 610237.4409;
 
@@ -414,8 +424,9 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
   VolumeChargeDensity$AbcoulombPerInchCubic get _clone =>
       VolumeChargeDensity$AbcoulombPerInchCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerInchCubic] with new value
   @override
@@ -428,6 +439,7 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
   @override
   String get symbol => 'abC/in³';
 
+  /// [VolumeChargeDensity$AbcoulombPerInchCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

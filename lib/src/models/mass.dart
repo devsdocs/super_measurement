@@ -411,7 +411,7 @@ final class Mass$Exagram extends Mass {
         unit.toExagram.value,
       );
 
-  static const _minorName = r'mass$Exagram';
+  static const _minorName = 'exagram';
 
   static const _ratio = 6.02217364335e+41;
 
@@ -423,8 +423,9 @@ final class Mass$Exagram extends Mass {
   @override
   Mass$Exagram get _clone => Mass$Exagram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Exagram] with new value
   @override
@@ -437,6 +438,7 @@ final class Mass$Exagram extends Mass {
   @override
   String get symbol => 'Eg';
 
+  /// [Mass$Exagram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -468,7 +470,7 @@ final class Mass$Petagram extends Mass {
         unit.toPetagram.value,
       );
 
-  static const _minorName = r'mass$Petagram';
+  static const _minorName = 'petagram';
 
   static const _ratio = 6.02217364335e+38;
 
@@ -480,8 +482,9 @@ final class Mass$Petagram extends Mass {
   @override
   Mass$Petagram get _clone => Mass$Petagram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Petagram] with new value
   @override
@@ -494,6 +497,7 @@ final class Mass$Petagram extends Mass {
   @override
   String get symbol => 'Pg';
 
+  /// [Mass$Petagram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -525,7 +529,7 @@ final class Mass$Teragram extends Mass {
         unit.toTeragram.value,
       );
 
-  static const _minorName = r'mass$Teragram';
+  static const _minorName = 'teragram';
 
   static const _ratio = 6.02217364335e+35;
 
@@ -537,8 +541,9 @@ final class Mass$Teragram extends Mass {
   @override
   Mass$Teragram get _clone => Mass$Teragram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Teragram] with new value
   @override
@@ -551,6 +556,7 @@ final class Mass$Teragram extends Mass {
   @override
   String get symbol => 'Tg';
 
+  /// [Mass$Teragram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -582,7 +588,7 @@ final class Mass$Gigagram extends Mass {
         unit.toGigagram.value,
       );
 
-  static const _minorName = r'mass$Gigagram';
+  static const _minorName = 'gigagram';
 
   static const _ratio = 6.02217364335e+32;
 
@@ -594,8 +600,9 @@ final class Mass$Gigagram extends Mass {
   @override
   Mass$Gigagram get _clone => Mass$Gigagram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Gigagram] with new value
   @override
@@ -608,6 +615,7 @@ final class Mass$Gigagram extends Mass {
   @override
   String get symbol => 'Gg';
 
+  /// [Mass$Gigagram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -639,7 +647,7 @@ final class Mass$Megagram extends Mass {
         unit.toMegagram.value,
       );
 
-  static const _minorName = r'mass$Megagram';
+  static const _minorName = 'megagram';
 
   static const _ratio = 6.02217364335e+29;
 
@@ -651,8 +659,9 @@ final class Mass$Megagram extends Mass {
   @override
   Mass$Megagram get _clone => Mass$Megagram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Megagram] with new value
   @override
@@ -665,6 +674,7 @@ final class Mass$Megagram extends Mass {
   @override
   String get symbol => 'Mg';
 
+  /// [Mass$Megagram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -696,7 +706,7 @@ final class Mass$Kilogram extends Mass {
         unit.toKilogram.value,
       );
 
-  static const _minorName = r'mass$Kilogram';
+  static const _minorName = 'kilogram';
 
   static const _ratio = 6.02217364335e+26;
 
@@ -708,8 +718,9 @@ final class Mass$Kilogram extends Mass {
   @override
   Mass$Kilogram get _clone => Mass$Kilogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Kilogram] with new value
   @override
@@ -722,6 +733,7 @@ final class Mass$Kilogram extends Mass {
   @override
   String get symbol => 'kg';
 
+  /// [Mass$Kilogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -753,7 +765,7 @@ final class Mass$Hectogram extends Mass {
         unit.toHectogram.value,
       );
 
-  static const _minorName = r'mass$Hectogram';
+  static const _minorName = 'hectogram';
 
   static const _ratio = 6.02217364335e+25;
 
@@ -765,8 +777,9 @@ final class Mass$Hectogram extends Mass {
   @override
   Mass$Hectogram get _clone => Mass$Hectogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Hectogram] with new value
   @override
@@ -779,6 +792,7 @@ final class Mass$Hectogram extends Mass {
   @override
   String get symbol => 'hg';
 
+  /// [Mass$Hectogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -810,7 +824,7 @@ final class Mass$Dekagram extends Mass {
         unit.toDekagram.value,
       );
 
-  static const _minorName = r'mass$Dekagram';
+  static const _minorName = 'dekagram';
 
   static const _ratio = 6.02217364335e+24;
 
@@ -822,8 +836,9 @@ final class Mass$Dekagram extends Mass {
   @override
   Mass$Dekagram get _clone => Mass$Dekagram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Dekagram] with new value
   @override
@@ -836,6 +851,7 @@ final class Mass$Dekagram extends Mass {
   @override
   String get symbol => 'dag';
 
+  /// [Mass$Dekagram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -867,7 +883,7 @@ final class Mass$Gram extends Mass {
         unit.toGram.value,
       );
 
-  static const _minorName = r'mass$Gram';
+  static const _minorName = 'gram';
 
   static const _ratio = 6.02217364335e+23;
 
@@ -879,8 +895,9 @@ final class Mass$Gram extends Mass {
   @override
   Mass$Gram get _clone => Mass$Gram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Gram] with new value
   @override
@@ -893,6 +910,7 @@ final class Mass$Gram extends Mass {
   @override
   String get symbol => 'g';
 
+  /// [Mass$Gram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -924,7 +942,7 @@ final class Mass$Decigram extends Mass {
         unit.toDecigram.value,
       );
 
-  static const _minorName = r'mass$Decigram';
+  static const _minorName = 'decigram';
 
   static const _ratio = 6.02217364335e+22;
 
@@ -936,8 +954,9 @@ final class Mass$Decigram extends Mass {
   @override
   Mass$Decigram get _clone => Mass$Decigram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Decigram] with new value
   @override
@@ -950,6 +969,7 @@ final class Mass$Decigram extends Mass {
   @override
   String get symbol => 'dg';
 
+  /// [Mass$Decigram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -981,7 +1001,7 @@ final class Mass$Centigram extends Mass {
         unit.toCentigram.value,
       );
 
-  static const _minorName = r'mass$Centigram';
+  static const _minorName = 'centigram';
 
   static const _ratio = 6.02217364335e+21;
 
@@ -993,8 +1013,9 @@ final class Mass$Centigram extends Mass {
   @override
   Mass$Centigram get _clone => Mass$Centigram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Centigram] with new value
   @override
@@ -1007,6 +1028,7 @@ final class Mass$Centigram extends Mass {
   @override
   String get symbol => 'cg';
 
+  /// [Mass$Centigram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1038,7 +1060,7 @@ final class Mass$Milligram extends Mass {
         unit.toMilligram.value,
       );
 
-  static const _minorName = r'mass$Milligram';
+  static const _minorName = 'milligram';
 
   static const _ratio = 602217364335000000000.0;
 
@@ -1050,8 +1072,9 @@ final class Mass$Milligram extends Mass {
   @override
   Mass$Milligram get _clone => Mass$Milligram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Milligram] with new value
   @override
@@ -1064,6 +1087,7 @@ final class Mass$Milligram extends Mass {
   @override
   String get symbol => 'mg';
 
+  /// [Mass$Milligram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1095,7 +1119,7 @@ final class Mass$Microgram extends Mass {
         unit.toMicrogram.value,
       );
 
-  static const _minorName = r'mass$Microgram';
+  static const _minorName = 'microgram';
 
   static const _ratio = 602217364335000000.0;
 
@@ -1107,8 +1131,9 @@ final class Mass$Microgram extends Mass {
   @override
   Mass$Microgram get _clone => Mass$Microgram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Microgram] with new value
   @override
@@ -1121,6 +1146,7 @@ final class Mass$Microgram extends Mass {
   @override
   String get symbol => 'µg';
 
+  /// [Mass$Microgram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1152,7 +1178,7 @@ final class Mass$Nanogram extends Mass {
         unit.toNanogram.value,
       );
 
-  static const _minorName = r'mass$Nanogram';
+  static const _minorName = 'nanogram';
 
   static const _ratio = 602217364335000.0;
 
@@ -1164,8 +1190,9 @@ final class Mass$Nanogram extends Mass {
   @override
   Mass$Nanogram get _clone => Mass$Nanogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Nanogram] with new value
   @override
@@ -1178,6 +1205,7 @@ final class Mass$Nanogram extends Mass {
   @override
   String get symbol => 'ng';
 
+  /// [Mass$Nanogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1209,7 +1237,7 @@ final class Mass$Picogram extends Mass {
         unit.toPicogram.value,
       );
 
-  static const _minorName = r'mass$Picogram';
+  static const _minorName = 'picogram';
 
   static const _ratio = 602217364335.0;
 
@@ -1221,8 +1249,9 @@ final class Mass$Picogram extends Mass {
   @override
   Mass$Picogram get _clone => Mass$Picogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Picogram] with new value
   @override
@@ -1235,6 +1264,7 @@ final class Mass$Picogram extends Mass {
   @override
   String get symbol => 'pg';
 
+  /// [Mass$Picogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1266,7 +1296,7 @@ final class Mass$Femtogram extends Mass {
         unit.toFemtogram.value,
       );
 
-  static const _minorName = r'mass$Femtogram';
+  static const _minorName = 'femtogram';
 
   static const _ratio = 602217364.335;
 
@@ -1278,8 +1308,9 @@ final class Mass$Femtogram extends Mass {
   @override
   Mass$Femtogram get _clone => Mass$Femtogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Femtogram] with new value
   @override
@@ -1292,6 +1323,7 @@ final class Mass$Femtogram extends Mass {
   @override
   String get symbol => 'fg';
 
+  /// [Mass$Femtogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1323,7 +1355,7 @@ final class Mass$Attogram extends Mass {
         unit.toAttogram.value,
       );
 
-  static const _minorName = r'mass$Attogram';
+  static const _minorName = 'attogram';
 
   static const _ratio = 602217.364335;
 
@@ -1335,8 +1367,9 @@ final class Mass$Attogram extends Mass {
   @override
   Mass$Attogram get _clone => Mass$Attogram(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Attogram] with new value
   @override
@@ -1349,6 +1382,7 @@ final class Mass$Attogram extends Mass {
   @override
   String get symbol => 'ag';
 
+  /// [Mass$Attogram] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1380,7 +1414,7 @@ final class Mass$Quintal extends Mass {
         unit.toQuintal.value,
       );
 
-  static const _minorName = r'mass$Quintal';
+  static const _minorName = 'quintal';
 
   static const _ratio = 6.02217364335e+28;
 
@@ -1392,8 +1426,9 @@ final class Mass$Quintal extends Mass {
   @override
   Mass$Quintal get _clone => Mass$Quintal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Quintal] with new value
   @override
@@ -1406,6 +1441,7 @@ final class Mass$Quintal extends Mass {
   @override
   String get symbol => 'q';
 
+  /// [Mass$Quintal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1437,7 +1473,7 @@ final class Mass$Dyne extends Mass {
         unit.toDyne.value,
       );
 
-  static const _minorName = r'mass$Dyne';
+  static const _minorName = 'dyne';
 
   static const _ratio = 614090810149235500000.0;
 
@@ -1449,8 +1485,9 @@ final class Mass$Dyne extends Mass {
   @override
   Mass$Dyne get _clone => Mass$Dyne(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Dyne] with new value
   @override
@@ -1463,6 +1500,7 @@ final class Mass$Dyne extends Mass {
   @override
   String get symbol => 'dyn';
 
+  /// [Mass$Dyne] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1494,7 +1532,7 @@ final class Mass$Dalton extends Mass {
         unit.toDalton.value,
       );
 
-  static const _minorName = r'mass$Dalton';
+  static const _minorName = 'dalton';
 
   static const _ratio = 1.0000053356450456;
 
@@ -1506,8 +1544,9 @@ final class Mass$Dalton extends Mass {
   @override
   Mass$Dalton get _clone => Mass$Dalton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Dalton] with new value
   @override
@@ -1520,6 +1559,7 @@ final class Mass$Dalton extends Mass {
   @override
   String get symbol => 'Da';
 
+  /// [Mass$Dalton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1551,7 +1591,7 @@ final class Mass$Kip extends Mass {
         unit.toKip.value,
       );
 
-  static const _minorName = r'mass$Kip';
+  static const _minorName = 'kip';
 
   static const _ratio = 2.7316120154386614e+29;
 
@@ -1563,8 +1603,9 @@ final class Mass$Kip extends Mass {
   @override
   Mass$Kip get _clone => Mass$Kip(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Kip] with new value
   @override
@@ -1575,8 +1616,9 @@ final class Mass$Kip extends Mass {
 
   /// Symbol for [Mass$Kip]
   @override
-  String get symbol => 'Kip';
+  String get symbol => 'kip';
 
+  /// [Mass$Kip] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1608,7 +1650,7 @@ final class Mass$Pound extends Mass {
         unit.toPound.value,
       );
 
-  static const _minorName = r'mass$Pound';
+  static const _minorName = 'pound';
 
   static const _ratio = 2.731612015438661e+26;
 
@@ -1620,8 +1662,9 @@ final class Mass$Pound extends Mass {
   @override
   Mass$Pound get _clone => Mass$Pound(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Pound] with new value
   @override
@@ -1634,6 +1677,7 @@ final class Mass$Pound extends Mass {
   @override
   String get symbol => 'lb';
 
+  /// [Mass$Pound] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1665,7 +1709,7 @@ final class Mass$Ounce extends Mass {
         unit.toOunce.value,
       );
 
-  static const _minorName = r'mass$Ounce';
+  static const _minorName = 'ounce';
 
   static const _ratio = 1.7072575096491634e+25;
 
@@ -1677,8 +1721,9 @@ final class Mass$Ounce extends Mass {
   @override
   Mass$Ounce get _clone => Mass$Ounce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Ounce] with new value
   @override
@@ -1691,6 +1736,7 @@ final class Mass$Ounce extends Mass {
   @override
   String get symbol => 'oz';
 
+  /// [Mass$Ounce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1722,7 +1768,7 @@ final class Mass$Poundal extends Mass {
         unit.toPoundal.value,
       );
 
-  static const _minorName = r'mass$Poundal';
+  static const _minorName = 'poundal';
 
   static const _ratio = 8.483267128683199e+24;
 
@@ -1734,8 +1780,9 @@ final class Mass$Poundal extends Mass {
   @override
   Mass$Poundal get _clone => Mass$Poundal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Poundal] with new value
   @override
@@ -1748,6 +1795,7 @@ final class Mass$Poundal extends Mass {
   @override
   String get symbol => 'pdl';
 
+  /// [Mass$Poundal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1779,7 +1827,7 @@ final class Mass$Slug extends Mass {
         unit.toSlug.value,
       );
 
-  static const _minorName = r'mass$Slug';
+  static const _minorName = 'slug';
 
   static const _ratio = 8.788701762204175e+27;
 
@@ -1791,8 +1839,9 @@ final class Mass$Slug extends Mass {
   @override
   Mass$Slug get _clone => Mass$Slug(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Slug] with new value
   @override
@@ -1803,8 +1852,9 @@ final class Mass$Slug extends Mass {
 
   /// Symbol for [Mass$Slug]
   @override
-  String get symbol => 'Slug';
+  String get symbol => 'slug';
 
+  /// [Mass$Slug] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1836,7 +1886,7 @@ final class Mass$Ton extends Mass {
         unit.toTon.value,
       );
 
-  static const _minorName = r'mass$Ton';
+  static const _minorName = 'ton';
 
   static const _ratio = 5.463224030877323e+29;
 
@@ -1848,8 +1898,9 @@ final class Mass$Ton extends Mass {
   @override
   Mass$Ton get _clone => Mass$Ton(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Ton] with new value
   @override
@@ -1862,6 +1913,7 @@ final class Mass$Ton extends Mass {
   @override
   String get symbol => 'tn, st';
 
+  /// [Mass$Ton] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1893,7 +1945,7 @@ final class Mass$TonLong extends Mass {
         unit.toTonLong.value,
       );
 
-  static const _minorName = r'mass$TonLong';
+  static const _minorName = 'tonLong';
 
   static const _ratio = 6.118810914582601e+29;
 
@@ -1905,8 +1957,9 @@ final class Mass$TonLong extends Mass {
   @override
   Mass$TonLong get _clone => Mass$TonLong(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$TonLong] with new value
   @override
@@ -1919,6 +1972,7 @@ final class Mass$TonLong extends Mass {
   @override
   String get symbol => 'tn';
 
+  /// [Mass$TonLong] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1950,7 +2004,7 @@ final class Mass$TonMetric extends Mass {
         unit.toTonMetric.value,
       );
 
-  static const _minorName = r'mass$TonMetric';
+  static const _minorName = 'tonMetric';
 
   static const _ratio = 6.02217364335e+29;
 
@@ -1962,8 +2016,9 @@ final class Mass$TonMetric extends Mass {
   @override
   Mass$TonMetric get _clone => Mass$TonMetric(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$TonMetric] with new value
   @override
@@ -1976,6 +2031,7 @@ final class Mass$TonMetric extends Mass {
   @override
   String get symbol => 't';
 
+  /// [Mass$TonMetric] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2007,7 +2063,7 @@ final class Mass$Hundredweight extends Mass {
         unit.toHundredweight.value,
       );
 
-  static const _minorName = r'mass$Hundredweight';
+  static const _minorName = 'hundredweight';
 
   static const _ratio = 2.7316120154386614e+28;
 
@@ -2019,8 +2075,9 @@ final class Mass$Hundredweight extends Mass {
   @override
   Mass$Hundredweight get _clone => Mass$Hundredweight(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Hundredweight] with new value
   @override
@@ -2033,6 +2090,7 @@ final class Mass$Hundredweight extends Mass {
   @override
   String get symbol => 'Cwt';
 
+  /// [Mass$Hundredweight] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2064,7 +2122,7 @@ final class Mass$HundredweightUK extends Mass {
         unit.toHundredweightUK.value,
       );
 
-  static const _minorName = r'mass$HundredweightUK';
+  static const _minorName = 'hundredweightUK';
 
   static const _ratio = 3.0594054572913004e+28;
 
@@ -2076,8 +2134,9 @@ final class Mass$HundredweightUK extends Mass {
   @override
   Mass$HundredweightUK get _clone => Mass$HundredweightUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$HundredweightUK] with new value
   @override
@@ -2090,6 +2149,7 @@ final class Mass$HundredweightUK extends Mass {
   @override
   String get symbol => 'Cwt';
 
+  /// [Mass$HundredweightUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2121,7 +2181,7 @@ final class Mass$Quarter extends Mass {
         unit.toQuarter.value,
       );
 
-  static const _minorName = r'mass$Quarter';
+  static const _minorName = 'quarter';
 
   static const _ratio = 6.829030038596654e+27;
 
@@ -2133,8 +2193,9 @@ final class Mass$Quarter extends Mass {
   @override
   Mass$Quarter get _clone => Mass$Quarter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Quarter] with new value
   @override
@@ -2147,6 +2208,7 @@ final class Mass$Quarter extends Mass {
   @override
   String get symbol => 'qtr';
 
+  /// [Mass$Quarter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2178,7 +2240,7 @@ final class Mass$QuarterUK extends Mass {
         unit.toQuarterUK.value,
       );
 
-  static const _minorName = r'mass$QuarterUK';
+  static const _minorName = 'quarterUK';
 
   static const _ratio = 7.648513643228251e+27;
 
@@ -2190,8 +2252,9 @@ final class Mass$QuarterUK extends Mass {
   @override
   Mass$QuarterUK get _clone => Mass$QuarterUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$QuarterUK] with new value
   @override
@@ -2204,6 +2267,7 @@ final class Mass$QuarterUK extends Mass {
   @override
   String get symbol => 'qtr';
 
+  /// [Mass$QuarterUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2235,7 +2299,7 @@ final class Mass$Stone extends Mass {
         unit.toStone.value,
       );
 
-  static const _minorName = r'mass$Stone';
+  static const _minorName = 'stone';
 
   static const _ratio = 3.414515019298327e+27;
 
@@ -2247,8 +2311,9 @@ final class Mass$Stone extends Mass {
   @override
   Mass$Stone get _clone => Mass$Stone(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Stone] with new value
   @override
@@ -2261,6 +2326,7 @@ final class Mass$Stone extends Mass {
   @override
   String get symbol => 'st';
 
+  /// [Mass$Stone] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2292,7 +2358,7 @@ final class Mass$StoneUK extends Mass {
         unit.toStoneUK.value,
       );
 
-  static const _minorName = r'mass$StoneUK';
+  static const _minorName = 'stoneUK';
 
   static const _ratio = 3.8242568216141255e+27;
 
@@ -2304,8 +2370,9 @@ final class Mass$StoneUK extends Mass {
   @override
   Mass$StoneUK get _clone => Mass$StoneUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$StoneUK] with new value
   @override
@@ -2318,6 +2385,7 @@ final class Mass$StoneUK extends Mass {
   @override
   String get symbol => 'st';
 
+  /// [Mass$StoneUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2349,7 +2417,7 @@ final class Mass$Tonne extends Mass {
         unit.toTonne.value,
       );
 
-  static const _minorName = r'mass$Tonne';
+  static const _minorName = 'tonne';
 
   static const _ratio = 6.02217364335e+29;
 
@@ -2361,8 +2429,9 @@ final class Mass$Tonne extends Mass {
   @override
   Mass$Tonne get _clone => Mass$Tonne(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Tonne] with new value
   @override
@@ -2375,6 +2444,7 @@ final class Mass$Tonne extends Mass {
   @override
   String get symbol => 't';
 
+  /// [Mass$Tonne] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2406,7 +2476,7 @@ final class Mass$TroyPound extends Mass {
         unit.toTroyPound.value,
       );
 
-  static const _minorName = r'mass$TroyPound';
+  static const _minorName = 'troyPound';
 
   static const _ratio = 2.247726328338798e+26;
 
@@ -2418,8 +2488,9 @@ final class Mass$TroyPound extends Mass {
   @override
   Mass$TroyPound get _clone => Mass$TroyPound(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$TroyPound] with new value
   @override
@@ -2432,6 +2503,7 @@ final class Mass$TroyPound extends Mass {
   @override
   String get symbol => 'lbt';
 
+  /// [Mass$TroyPound] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2463,7 +2535,7 @@ final class Mass$TroyOunce extends Mass {
         unit.toTroyOunce.value,
       );
 
-  static const _minorName = r'mass$TroyOunce';
+  static const _minorName = 'troyOunce';
 
   static const _ratio = 1.873105273615665e+25;
 
@@ -2475,8 +2547,9 @@ final class Mass$TroyOunce extends Mass {
   @override
   Mass$TroyOunce get _clone => Mass$TroyOunce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$TroyOunce] with new value
   @override
@@ -2489,6 +2562,7 @@ final class Mass$TroyOunce extends Mass {
   @override
   String get symbol => 'ozt';
 
+  /// [Mass$TroyOunce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2520,7 +2594,7 @@ final class Mass$Carat extends Mass {
         unit.toCarat.value,
       );
 
-  static const _minorName = r'mass$Carat';
+  static const _minorName = 'carat';
 
   static const _ratio = 1.20443472867e+23;
 
@@ -2532,8 +2606,9 @@ final class Mass$Carat extends Mass {
   @override
   Mass$Carat get _clone => Mass$Carat(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Carat] with new value
   @override
@@ -2546,6 +2621,7 @@ final class Mass$Carat extends Mass {
   @override
   String get symbol => 'CD';
 
+  /// [Mass$Carat] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2577,7 +2653,7 @@ final class Mass$Grain extends Mass {
         unit.toGrain.value,
       );
 
-  static const _minorName = r'mass$Grain';
+  static const _minorName = 'grain';
 
   static const _ratio = 3.9023028792085635e+22;
 
@@ -2589,8 +2665,9 @@ final class Mass$Grain extends Mass {
   @override
   Mass$Grain get _clone => Mass$Grain(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Grain] with new value
   @override
@@ -2603,6 +2680,7 @@ final class Mass$Grain extends Mass {
   @override
   String get symbol => 'gr';
 
+  /// [Mass$Grain] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2634,7 +2712,7 @@ final class Mass$Pennyweight extends Mass {
         unit.toPennyweight.value,
       );
 
-  static const _minorName = r'mass$Pennyweight';
+  static const _minorName = 'pennyweight';
 
   static const _ratio = 9.365526910100554e+23;
 
@@ -2646,8 +2724,9 @@ final class Mass$Pennyweight extends Mass {
   @override
   Mass$Pennyweight get _clone => Mass$Pennyweight(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Pennyweight] with new value
   @override
@@ -2660,6 +2739,7 @@ final class Mass$Pennyweight extends Mass {
   @override
   String get symbol => 'dwt';
 
+  /// [Mass$Pennyweight] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2691,7 +2771,7 @@ final class Mass$Scruple extends Mass {
         unit.toScruple.value,
       );
 
-  static const _minorName = r'mass$Scruple';
+  static const _minorName = 'scruple';
 
   static const _ratio = 7.804605758417128e+23;
 
@@ -2703,8 +2783,9 @@ final class Mass$Scruple extends Mass {
   @override
   Mass$Scruple get _clone => Mass$Scruple(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$Scruple] with new value
   @override
@@ -2715,8 +2796,9 @@ final class Mass$Scruple extends Mass {
 
   /// Symbol for [Mass$Scruple]
   @override
-  String get symbol => 'Scruple';
+  String get symbol => 'scruple';
 
+  /// [Mass$Scruple] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2748,7 +2830,7 @@ final class Mass$TalentBiblicalHebrew extends Mass {
         unit.toTalentBiblicalHebrew.value,
       );
 
-  static const _minorName = r'mass$TalentBiblicalHebrew';
+  static const _minorName = 'talentBiblicalHebrew';
 
   static const _ratio = 2.0595833860257e+28;
 
@@ -2760,8 +2842,9 @@ final class Mass$TalentBiblicalHebrew extends Mass {
   @override
   Mass$TalentBiblicalHebrew get _clone => Mass$TalentBiblicalHebrew(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$TalentBiblicalHebrew] with new value
   @override
@@ -2772,8 +2855,9 @@ final class Mass$TalentBiblicalHebrew extends Mass {
 
   /// Symbol for [Mass$TalentBiblicalHebrew]
   @override
-  String get symbol => 'TalentBiblicalHebrew';
+  String get symbol => 'talent (Biblical Hebrew)';
 
+  /// [Mass$TalentBiblicalHebrew] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2805,7 +2889,7 @@ final class Mass$MinaBiblicalHebrew extends Mass {
         unit.toMinaBiblicalHebrew.value,
       );
 
-  static const _minorName = r'mass$MinaBiblicalHebrew';
+  static const _minorName = 'minaBiblicalHebrew';
 
   static const _ratio = 3.4326389767095e+26;
 
@@ -2817,8 +2901,9 @@ final class Mass$MinaBiblicalHebrew extends Mass {
   @override
   Mass$MinaBiblicalHebrew get _clone => Mass$MinaBiblicalHebrew(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$MinaBiblicalHebrew] with new value
   @override
@@ -2829,8 +2914,9 @@ final class Mass$MinaBiblicalHebrew extends Mass {
 
   /// Symbol for [Mass$MinaBiblicalHebrew]
   @override
-  String get symbol => 'MinaBiblicalHebrew';
+  String get symbol => 'mina (Biblical Hebrew)';
 
+  /// [Mass$MinaBiblicalHebrew] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2862,7 +2948,7 @@ final class Mass$ShekelBiblicalHebrew extends Mass {
         unit.toShekelBiblicalHebrew.value,
       );
 
-  static const _minorName = r'mass$ShekelBiblicalHebrew';
+  static const _minorName = 'shekelBiblicalHebrew';
 
   static const _ratio = 6.865277953419e+24;
 
@@ -2874,8 +2960,9 @@ final class Mass$ShekelBiblicalHebrew extends Mass {
   @override
   Mass$ShekelBiblicalHebrew get _clone => Mass$ShekelBiblicalHebrew(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$ShekelBiblicalHebrew] with new value
   @override
@@ -2886,8 +2973,9 @@ final class Mass$ShekelBiblicalHebrew extends Mass {
 
   /// Symbol for [Mass$ShekelBiblicalHebrew]
   @override
-  String get symbol => 'ShekelBiblicalHebrew';
+  String get symbol => 'shekel (Biblical Hebrew)';
 
+  /// [Mass$ShekelBiblicalHebrew] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2919,7 +3007,7 @@ final class Mass$BekahBiblicalHebrew extends Mass {
         unit.toBekahBiblicalHebrew.value,
       );
 
-  static const _minorName = r'mass$BekahBiblicalHebrew';
+  static const _minorName = 'bekahBiblicalHebrew';
 
   static const _ratio = 3.4326389767095e+24;
 
@@ -2931,8 +3019,9 @@ final class Mass$BekahBiblicalHebrew extends Mass {
   @override
   Mass$BekahBiblicalHebrew get _clone => Mass$BekahBiblicalHebrew(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$BekahBiblicalHebrew] with new value
   @override
@@ -2943,8 +3032,9 @@ final class Mass$BekahBiblicalHebrew extends Mass {
 
   /// Symbol for [Mass$BekahBiblicalHebrew]
   @override
-  String get symbol => 'BekahBiblicalHebrew';
+  String get symbol => 'bekah (Biblical Hebrew)';
 
+  /// [Mass$BekahBiblicalHebrew] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2976,7 +3066,7 @@ final class Mass$GerahBiblicalHebrew extends Mass {
         unit.toGerahBiblicalHebrew.value,
       );
 
-  static const _minorName = r'mass$GerahBiblicalHebrew';
+  static const _minorName = 'gerahBiblicalHebrew';
 
   static const _ratio = 3.4326389767095e+23;
 
@@ -2988,8 +3078,9 @@ final class Mass$GerahBiblicalHebrew extends Mass {
   @override
   Mass$GerahBiblicalHebrew get _clone => Mass$GerahBiblicalHebrew(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$GerahBiblicalHebrew] with new value
   @override
@@ -3000,8 +3091,9 @@ final class Mass$GerahBiblicalHebrew extends Mass {
 
   /// Symbol for [Mass$GerahBiblicalHebrew]
   @override
-  String get symbol => 'GerahBiblicalHebrew';
+  String get symbol => 'gerah (Biblical Hebrew)';
 
+  /// [Mass$GerahBiblicalHebrew] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3033,7 +3125,7 @@ final class Mass$TalentBiblicalGreek extends Mass {
         unit.toTalentBiblicalGreek.value,
       );
 
-  static const _minorName = r'mass$TalentBiblicalGreek';
+  static const _minorName = 'talentBiblicalGreek';
 
   static const _ratio = 1.2285234232434e+28;
 
@@ -3045,8 +3137,9 @@ final class Mass$TalentBiblicalGreek extends Mass {
   @override
   Mass$TalentBiblicalGreek get _clone => Mass$TalentBiblicalGreek(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$TalentBiblicalGreek] with new value
   @override
@@ -3057,8 +3150,9 @@ final class Mass$TalentBiblicalGreek extends Mass {
 
   /// Symbol for [Mass$TalentBiblicalGreek]
   @override
-  String get symbol => 'TalentBiblicalGreek';
+  String get symbol => 'talent (Biblical Greek)';
 
+  /// [Mass$TalentBiblicalGreek] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3090,7 +3184,7 @@ final class Mass$MinaBiblicalGreek extends Mass {
         unit.toMinaBiblicalGreek.value,
       );
 
-  static const _minorName = r'mass$MinaBiblicalGreek';
+  static const _minorName = 'minaBiblicalGreek';
 
   static const _ratio = 2.047539038739e+26;
 
@@ -3102,8 +3196,9 @@ final class Mass$MinaBiblicalGreek extends Mass {
   @override
   Mass$MinaBiblicalGreek get _clone => Mass$MinaBiblicalGreek(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$MinaBiblicalGreek] with new value
   @override
@@ -3114,8 +3209,9 @@ final class Mass$MinaBiblicalGreek extends Mass {
 
   /// Symbol for [Mass$MinaBiblicalGreek]
   @override
-  String get symbol => 'MinaBiblicalGreek';
+  String get symbol => 'mina (Biblical Greek)';
 
+  /// [Mass$MinaBiblicalGreek] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3147,7 +3243,7 @@ final class Mass$TetradrachmaBiblicalGreek extends Mass {
         unit.toTetradrachmaBiblicalGreek.value,
       );
 
-  static const _minorName = r'mass$TetradrachmaBiblicalGreek';
+  static const _minorName = 'tetradrachmaBiblicalGreek';
 
   static const _ratio = 8.190156154956e+24;
 
@@ -3160,8 +3256,9 @@ final class Mass$TetradrachmaBiblicalGreek extends Mass {
   Mass$TetradrachmaBiblicalGreek get _clone =>
       Mass$TetradrachmaBiblicalGreek(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$TetradrachmaBiblicalGreek] with new value
   @override
@@ -3172,8 +3269,9 @@ final class Mass$TetradrachmaBiblicalGreek extends Mass {
 
   /// Symbol for [Mass$TetradrachmaBiblicalGreek]
   @override
-  String get symbol => 'TetradrachmaBiblicalGreek';
+  String get symbol => 'tetradrachma (Biblical Greek)';
 
+  /// [Mass$TetradrachmaBiblicalGreek] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3205,7 +3303,7 @@ final class Mass$DidrachmaBiblicalGreek extends Mass {
         unit.toDidrachmaBiblicalGreek.value,
       );
 
-  static const _minorName = r'mass$DidrachmaBiblicalGreek';
+  static const _minorName = 'didrachmaBiblicalGreek';
 
   static const _ratio = 4.095078077478e+24;
 
@@ -3217,8 +3315,9 @@ final class Mass$DidrachmaBiblicalGreek extends Mass {
   @override
   Mass$DidrachmaBiblicalGreek get _clone => Mass$DidrachmaBiblicalGreek(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$DidrachmaBiblicalGreek] with new value
   @override
@@ -3229,8 +3328,9 @@ final class Mass$DidrachmaBiblicalGreek extends Mass {
 
   /// Symbol for [Mass$DidrachmaBiblicalGreek]
   @override
-  String get symbol => 'DidrachmaBiblicalGreek';
+  String get symbol => 'didrachma (Biblical Greek)';
 
+  /// [Mass$DidrachmaBiblicalGreek] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3262,7 +3362,7 @@ final class Mass$DrachmaBiblicalGreek extends Mass {
         unit.toDrachmaBiblicalGreek.value,
       );
 
-  static const _minorName = r'mass$DrachmaBiblicalGreek';
+  static const _minorName = 'drachmaBiblicalGreek';
 
   static const _ratio = 2.047539038739e+24;
 
@@ -3274,8 +3374,9 @@ final class Mass$DrachmaBiblicalGreek extends Mass {
   @override
   Mass$DrachmaBiblicalGreek get _clone => Mass$DrachmaBiblicalGreek(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$DrachmaBiblicalGreek] with new value
   @override
@@ -3286,8 +3387,9 @@ final class Mass$DrachmaBiblicalGreek extends Mass {
 
   /// Symbol for [Mass$DrachmaBiblicalGreek]
   @override
-  String get symbol => 'DrachmaBiblicalGreek';
+  String get symbol => 'drachma (Biblical Greek)';
 
+  /// [Mass$DrachmaBiblicalGreek] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3319,7 +3421,7 @@ final class Mass$DenariusBiblicalRoman extends Mass {
         unit.toDenariusBiblicalRoman.value,
       );
 
-  static const _minorName = r'mass$DenariusBiblicalRoman';
+  static const _minorName = 'denariusBiblicalRoman';
 
   static const _ratio = 2.31853685268975e+24;
 
@@ -3331,8 +3433,9 @@ final class Mass$DenariusBiblicalRoman extends Mass {
   @override
   Mass$DenariusBiblicalRoman get _clone => Mass$DenariusBiblicalRoman(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$DenariusBiblicalRoman] with new value
   @override
@@ -3343,8 +3446,9 @@ final class Mass$DenariusBiblicalRoman extends Mass {
 
   /// Symbol for [Mass$DenariusBiblicalRoman]
   @override
-  String get symbol => 'DenariusBiblicalRoman';
+  String get symbol => 'denarius (Biblical Roman)';
 
+  /// [Mass$DenariusBiblicalRoman] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3376,7 +3480,7 @@ final class Mass$AssarionBiblicalRoman extends Mass {
         unit.toAssarionBiblicalRoman.value,
       );
 
-  static const _minorName = r'mass$AssarionBiblicalRoman';
+  static const _minorName = 'assarionBiblicalRoman';
 
   static const _ratio = 1.4490855329310938e+23;
 
@@ -3388,8 +3492,9 @@ final class Mass$AssarionBiblicalRoman extends Mass {
   @override
   Mass$AssarionBiblicalRoman get _clone => Mass$AssarionBiblicalRoman(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$AssarionBiblicalRoman] with new value
   @override
@@ -3400,8 +3505,9 @@ final class Mass$AssarionBiblicalRoman extends Mass {
 
   /// Symbol for [Mass$AssarionBiblicalRoman]
   @override
-  String get symbol => 'AssarionBiblicalRoman';
+  String get symbol => 'assarion (Biblical Roman)';
 
+  /// [Mass$AssarionBiblicalRoman] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3433,7 +3539,7 @@ final class Mass$QuadransBiblicalRoman extends Mass {
         unit.toQuadransBiblicalRoman.value,
       );
 
-  static const _minorName = r'mass$QuadransBiblicalRoman';
+  static const _minorName = 'quadransBiblicalRoman';
 
   static const _ratio = 3.6227138323277345e+22;
 
@@ -3445,8 +3551,9 @@ final class Mass$QuadransBiblicalRoman extends Mass {
   @override
   Mass$QuadransBiblicalRoman get _clone => Mass$QuadransBiblicalRoman(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$QuadransBiblicalRoman] with new value
   @override
@@ -3457,8 +3564,9 @@ final class Mass$QuadransBiblicalRoman extends Mass {
 
   /// Symbol for [Mass$QuadransBiblicalRoman]
   @override
-  String get symbol => 'QuadransBiblicalRoman';
+  String get symbol => 'quadrans (Biblical Roman)';
 
+  /// [Mass$QuadransBiblicalRoman] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3490,7 +3598,7 @@ final class Mass$LeptonBiblicalRoman extends Mass {
         unit.toLeptonBiblicalRoman.value,
       );
 
-  static const _minorName = r'mass$LeptonBiblicalRoman';
+  static const _minorName = 'leptonBiblicalRoman';
 
   static const _ratio = 1.8113569161638673e+22;
 
@@ -3502,8 +3610,9 @@ final class Mass$LeptonBiblicalRoman extends Mass {
   @override
   Mass$LeptonBiblicalRoman get _clone => Mass$LeptonBiblicalRoman(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$LeptonBiblicalRoman] with new value
   @override
@@ -3514,8 +3623,9 @@ final class Mass$LeptonBiblicalRoman extends Mass {
 
   /// Symbol for [Mass$LeptonBiblicalRoman]
   @override
-  String get symbol => 'LeptonBiblicalRoman';
+  String get symbol => 'lepton (Biblical Roman)';
 
+  /// [Mass$LeptonBiblicalRoman] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -3547,7 +3657,7 @@ final class Mass$AtomicMassUnit extends Mass {
         unit.toAtomicMassUnit.value,
       );
 
-  static const _minorName = r'mass$AtomicMassUnit';
+  static const _minorName = 'atomicMassUnit';
 
   static const _ratio = 1.0000053356450456;
 
@@ -3559,8 +3669,9 @@ final class Mass$AtomicMassUnit extends Mass {
   @override
   Mass$AtomicMassUnit get _clone => Mass$AtomicMassUnit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Mass$AtomicMassUnit] with new value
   @override
@@ -3573,6 +3684,7 @@ final class Mass$AtomicMassUnit extends Mass {
   @override
   String get symbol => 'u';
 
+  /// [Mass$AtomicMassUnit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

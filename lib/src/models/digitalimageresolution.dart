@@ -90,7 +90,7 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
         unit.toDotPerInch.value,
       );
 
-  static const _minorName = r'digitalImageResolution$DotPerInch';
+  static const _minorName = 'dotPerInch';
 
   static const _ratio = 1.0;
 
@@ -103,8 +103,9 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
   DigitalImageResolution$DotPerInch get _clone =>
       DigitalImageResolution$DotPerInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DigitalImageResolution$DotPerInch] with new value
   @override
@@ -117,6 +118,7 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
   @override
   String get symbol => 'DPI';
 
+  /// [DigitalImageResolution$DotPerInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -148,7 +150,7 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
         unit.toDotPerMeter.value,
       );
 
-  static const _minorName = r'digitalImageResolution$DotPerMeter';
+  static const _minorName = 'dotPerMeter';
 
   static const _ratio = 0.0254;
 
@@ -161,8 +163,9 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
   DigitalImageResolution$DotPerMeter get _clone =>
       DigitalImageResolution$DotPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DigitalImageResolution$DotPerMeter] with new value
   @override
@@ -173,8 +176,9 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
 
   /// Symbol for [DigitalImageResolution$DotPerMeter]
   @override
-  String get symbol => 'DotPerMeter';
+  String get symbol => 'dot/meter';
 
+  /// [DigitalImageResolution$DotPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -207,7 +211,7 @@ final class DigitalImageResolution$DotPerMillimeter
         unit.toDotPerMillimeter.value,
       );
 
-  static const _minorName = r'digitalImageResolution$DotPerMillimeter';
+  static const _minorName = 'dotPerMillimeter';
 
   static const _ratio = 25.4;
 
@@ -220,8 +224,9 @@ final class DigitalImageResolution$DotPerMillimeter
   DigitalImageResolution$DotPerMillimeter get _clone =>
       DigitalImageResolution$DotPerMillimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DigitalImageResolution$DotPerMillimeter] with new value
   @override
@@ -232,8 +237,9 @@ final class DigitalImageResolution$DotPerMillimeter
 
   /// Symbol for [DigitalImageResolution$DotPerMillimeter]
   @override
-  String get symbol => 'DotPerMillimeter';
+  String get symbol => 'dot/millimeter';
 
+  /// [DigitalImageResolution$DotPerMillimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -265,7 +271,7 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
         unit.toPixelPerInch.value,
       );
 
-  static const _minorName = r'digitalImageResolution$PixelPerInch';
+  static const _minorName = 'pixelPerInch';
 
   static const _ratio = 1.0;
 
@@ -278,8 +284,9 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
   DigitalImageResolution$PixelPerInch get _clone =>
       DigitalImageResolution$PixelPerInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [DigitalImageResolution$PixelPerInch] with new value
   @override
@@ -292,6 +299,7 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
   @override
   String get symbol => 'PPI';
 
+  /// [DigitalImageResolution$PixelPerInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

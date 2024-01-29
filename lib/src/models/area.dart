@@ -265,7 +265,7 @@ final class Area$KilometerSquare extends Area {
         unit.toKilometerSquare.value,
       );
 
-  static const _minorName = r'area$KilometerSquare';
+  static const _minorName = 'kilometerSquare';
 
   static const _ratio = 1e+34;
 
@@ -277,8 +277,9 @@ final class Area$KilometerSquare extends Area {
   @override
   Area$KilometerSquare get _clone => Area$KilometerSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$KilometerSquare] with new value
   @override
@@ -291,6 +292,7 @@ final class Area$KilometerSquare extends Area {
   @override
   String get symbol => 'km²';
 
+  /// [Area$KilometerSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -322,7 +324,7 @@ final class Area$HectometerSquare extends Area {
         unit.toHectometerSquare.value,
       );
 
-  static const _minorName = r'area$HectometerSquare';
+  static const _minorName = 'hectometerSquare';
 
   static const _ratio = 1e+32;
 
@@ -334,8 +336,9 @@ final class Area$HectometerSquare extends Area {
   @override
   Area$HectometerSquare get _clone => Area$HectometerSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$HectometerSquare] with new value
   @override
@@ -348,6 +351,7 @@ final class Area$HectometerSquare extends Area {
   @override
   String get symbol => 'hm²';
 
+  /// [Area$HectometerSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -379,7 +383,7 @@ final class Area$DekameterSquare extends Area {
         unit.toDekameterSquare.value,
       );
 
-  static const _minorName = r'area$DekameterSquare';
+  static const _minorName = 'dekameterSquare';
 
   static const _ratio = 1e+30;
 
@@ -391,8 +395,9 @@ final class Area$DekameterSquare extends Area {
   @override
   Area$DekameterSquare get _clone => Area$DekameterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$DekameterSquare] with new value
   @override
@@ -405,6 +410,7 @@ final class Area$DekameterSquare extends Area {
   @override
   String get symbol => 'dam²';
 
+  /// [Area$DekameterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -436,7 +442,7 @@ final class Area$MeterSquare extends Area {
         unit.toMeterSquare.value,
       );
 
-  static const _minorName = r'area$MeterSquare';
+  static const _minorName = 'meterSquare';
 
   static const _ratio = 1e+28;
 
@@ -448,8 +454,9 @@ final class Area$MeterSquare extends Area {
   @override
   Area$MeterSquare get _clone => Area$MeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$MeterSquare] with new value
   @override
@@ -462,6 +469,7 @@ final class Area$MeterSquare extends Area {
   @override
   String get symbol => 'm²';
 
+  /// [Area$MeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -493,7 +501,7 @@ final class Area$DecimeterSquare extends Area {
         unit.toDecimeterSquare.value,
       );
 
-  static const _minorName = r'area$DecimeterSquare';
+  static const _minorName = 'decimeterSquare';
 
   static const _ratio = 1e+26;
 
@@ -505,8 +513,9 @@ final class Area$DecimeterSquare extends Area {
   @override
   Area$DecimeterSquare get _clone => Area$DecimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$DecimeterSquare] with new value
   @override
@@ -519,6 +528,7 @@ final class Area$DecimeterSquare extends Area {
   @override
   String get symbol => 'dm²';
 
+  /// [Area$DecimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -550,7 +560,7 @@ final class Area$CentimeterSquare extends Area {
         unit.toCentimeterSquare.value,
       );
 
-  static const _minorName = r'area$CentimeterSquare';
+  static const _minorName = 'centimeterSquare';
 
   static const _ratio = 1e+24;
 
@@ -562,8 +572,9 @@ final class Area$CentimeterSquare extends Area {
   @override
   Area$CentimeterSquare get _clone => Area$CentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$CentimeterSquare] with new value
   @override
@@ -576,6 +587,7 @@ final class Area$CentimeterSquare extends Area {
   @override
   String get symbol => 'cm²';
 
+  /// [Area$CentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -607,7 +619,7 @@ final class Area$MillimeterSquare extends Area {
         unit.toMillimeterSquare.value,
       );
 
-  static const _minorName = r'area$MillimeterSquare';
+  static const _minorName = 'millimeterSquare';
 
   static const _ratio = 1e+22;
 
@@ -619,8 +631,9 @@ final class Area$MillimeterSquare extends Area {
   @override
   Area$MillimeterSquare get _clone => Area$MillimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$MillimeterSquare] with new value
   @override
@@ -633,6 +646,7 @@ final class Area$MillimeterSquare extends Area {
   @override
   String get symbol => 'mm²';
 
+  /// [Area$MillimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -664,7 +678,7 @@ final class Area$MicrometerSquare extends Area {
         unit.toMicrometerSquare.value,
       );
 
-  static const _minorName = r'area$MicrometerSquare';
+  static const _minorName = 'micrometerSquare';
 
   static const _ratio = 10000000000000000.0;
 
@@ -676,8 +690,9 @@ final class Area$MicrometerSquare extends Area {
   @override
   Area$MicrometerSquare get _clone => Area$MicrometerSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$MicrometerSquare] with new value
   @override
@@ -690,6 +705,7 @@ final class Area$MicrometerSquare extends Area {
   @override
   String get symbol => 'µm²';
 
+  /// [Area$MicrometerSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -721,7 +737,7 @@ final class Area$NanometerSquare extends Area {
         unit.toNanometerSquare.value,
       );
 
-  static const _minorName = r'area$NanometerSquare';
+  static const _minorName = 'nanometerSquare';
 
   static const _ratio = 10000000000.0;
 
@@ -733,8 +749,9 @@ final class Area$NanometerSquare extends Area {
   @override
   Area$NanometerSquare get _clone => Area$NanometerSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$NanometerSquare] with new value
   @override
@@ -747,6 +764,7 @@ final class Area$NanometerSquare extends Area {
   @override
   String get symbol => 'nm²';
 
+  /// [Area$NanometerSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -778,7 +796,7 @@ final class Area$Hectare extends Area {
         unit.toHectare.value,
       );
 
-  static const _minorName = r'area$Hectare';
+  static const _minorName = 'hectare';
 
   static const _ratio = 1e+32;
 
@@ -790,8 +808,9 @@ final class Area$Hectare extends Area {
   @override
   Area$Hectare get _clone => Area$Hectare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Hectare] with new value
   @override
@@ -804,6 +823,7 @@ final class Area$Hectare extends Area {
   @override
   String get symbol => 'ha';
 
+  /// [Area$Hectare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -835,7 +855,7 @@ final class Area$Are extends Area {
         unit.toAre.value,
       );
 
-  static const _minorName = r'area$Are';
+  static const _minorName = 'are';
 
   static const _ratio = 1e+30;
 
@@ -847,8 +867,9 @@ final class Area$Are extends Area {
   @override
   Area$Are get _clone => Area$Are(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Are] with new value
   @override
@@ -861,6 +882,7 @@ final class Area$Are extends Area {
   @override
   String get symbol => 'a';
 
+  /// [Area$Are] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -892,7 +914,7 @@ final class Area$Barn extends Area {
         unit.toBarn.value,
       );
 
-  static const _minorName = r'area$Barn';
+  static const _minorName = 'barn';
 
   static const _ratio = 1.0;
 
@@ -904,8 +926,9 @@ final class Area$Barn extends Area {
   @override
   Area$Barn get _clone => Area$Barn(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Barn] with new value
   @override
@@ -918,6 +941,7 @@ final class Area$Barn extends Area {
   @override
   String get symbol => 'b';
 
+  /// [Area$Barn] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -949,7 +973,7 @@ final class Area$MileSquare extends Area {
         unit.toMileSquare.value,
       );
 
-  static const _minorName = r'area$MileSquare';
+  static const _minorName = 'mileSquare';
 
   static const _ratio = 2.5899881103389906e+34;
 
@@ -961,8 +985,9 @@ final class Area$MileSquare extends Area {
   @override
   Area$MileSquare get _clone => Area$MileSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$MileSquare] with new value
   @override
@@ -975,6 +1000,7 @@ final class Area$MileSquare extends Area {
   @override
   String get symbol => 'mi²';
 
+  /// [Area$MileSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1006,7 +1032,7 @@ final class Area$YardSquare extends Area {
         unit.toYardSquare.value,
       );
 
-  static const _minorName = r'area$YardSquare';
+  static const _minorName = 'yardSquare';
 
   static const _ratio = 8.361273600009655e+27;
 
@@ -1018,8 +1044,9 @@ final class Area$YardSquare extends Area {
   @override
   Area$YardSquare get _clone => Area$YardSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$YardSquare] with new value
   @override
@@ -1032,6 +1059,7 @@ final class Area$YardSquare extends Area {
   @override
   String get symbol => 'yd²';
 
+  /// [Area$YardSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1063,7 +1091,7 @@ final class Area$FootSquare extends Area {
         unit.toFootSquare.value,
       );
 
-  static const _minorName = r'area$FootSquare';
+  static const _minorName = 'footSquare';
 
   static const _ratio = 9.290304000010727e+26;
 
@@ -1075,8 +1103,9 @@ final class Area$FootSquare extends Area {
   @override
   Area$FootSquare get _clone => Area$FootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$FootSquare] with new value
   @override
@@ -1089,6 +1118,7 @@ final class Area$FootSquare extends Area {
   @override
   String get symbol => 'ft²';
 
+  /// [Area$FootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1120,7 +1150,7 @@ final class Area$InchSquare extends Area {
         unit.toInchSquare.value,
       );
 
-  static const _minorName = r'area$InchSquare';
+  static const _minorName = 'inchSquare';
 
   static const _ratio = 6.451600000007449e+24;
 
@@ -1132,8 +1162,9 @@ final class Area$InchSquare extends Area {
   @override
   Area$InchSquare get _clone => Area$InchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$InchSquare] with new value
   @override
@@ -1146,6 +1177,7 @@ final class Area$InchSquare extends Area {
   @override
   String get symbol => 'in²';
 
+  /// [Area$InchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1177,7 +1209,7 @@ final class Area$Township extends Area {
         unit.toTownship.value,
       );
 
-  static const _minorName = r'area$Township';
+  static const _minorName = 'township';
 
   static const _ratio = 9.323957197220366e+35;
 
@@ -1189,8 +1221,9 @@ final class Area$Township extends Area {
   @override
   Area$Township get _clone => Area$Township(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Township] with new value
   @override
@@ -1203,6 +1236,7 @@ final class Area$Township extends Area {
   @override
   String get symbol => 'twp';
 
+  /// [Area$Township] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1234,7 +1268,7 @@ final class Area$Section extends Area {
         unit.toSection.value,
       );
 
-  static const _minorName = r'area$Section';
+  static const _minorName = 'section';
 
   static const _ratio = 2.5899881103389906e+34;
 
@@ -1246,8 +1280,9 @@ final class Area$Section extends Area {
   @override
   Area$Section get _clone => Area$Section(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Section] with new value
   @override
@@ -1260,6 +1295,7 @@ final class Area$Section extends Area {
   @override
   String get symbol => 'sec';
 
+  /// [Area$Section] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1291,7 +1327,7 @@ final class Area$Acre extends Area {
         unit.toAcre.value,
       );
 
-  static const _minorName = r'area$Acre';
+  static const _minorName = 'acre';
 
   static const _ratio = 4.046856422404673e+31;
 
@@ -1303,8 +1339,9 @@ final class Area$Acre extends Area {
   @override
   Area$Acre get _clone => Area$Acre(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Acre] with new value
   @override
@@ -1317,6 +1354,7 @@ final class Area$Acre extends Area {
   @override
   String get symbol => 'ac, A';
 
+  /// [Area$Acre] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1348,7 +1386,7 @@ final class Area$Rood extends Area {
         unit.toRood.value,
       );
 
-  static const _minorName = r'area$Rood';
+  static const _minorName = 'rood';
 
   static const _ratio = 1.0117141056011683e+31;
 
@@ -1360,8 +1398,9 @@ final class Area$Rood extends Area {
   @override
   Area$Rood get _clone => Area$Rood(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Rood] with new value
   @override
@@ -1372,8 +1411,9 @@ final class Area$Rood extends Area {
 
   /// Symbol for [Area$Rood]
   @override
-  String get symbol => 'Rood';
+  String get symbol => 'rood';
 
+  /// [Area$Rood] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1405,7 +1445,7 @@ final class Area$ChainSquare extends Area {
         unit.toChainSquare.value,
       );
 
-  static const _minorName = r'area$ChainSquare';
+  static const _minorName = 'chainSquare';
 
   static const _ratio = 4.046856422404673e+30;
 
@@ -1417,8 +1457,9 @@ final class Area$ChainSquare extends Area {
   @override
   Area$ChainSquare get _clone => Area$ChainSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$ChainSquare] with new value
   @override
@@ -1431,6 +1472,7 @@ final class Area$ChainSquare extends Area {
   @override
   String get symbol => 'ch²';
 
+  /// [Area$ChainSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1462,7 +1504,7 @@ final class Area$RodSquare extends Area {
         unit.toRodSquare.value,
       );
 
-  static const _minorName = r'area$RodSquare';
+  static const _minorName = 'rodSquare';
 
   static const _ratio = 2.5292852640029207e+29;
 
@@ -1474,8 +1516,9 @@ final class Area$RodSquare extends Area {
   @override
   Area$RodSquare get _clone => Area$RodSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$RodSquare] with new value
   @override
@@ -1488,6 +1531,7 @@ final class Area$RodSquare extends Area {
   @override
   String get symbol => 'rd²';
 
+  /// [Area$RodSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1519,7 +1563,7 @@ final class Area$PerchSquare extends Area {
         unit.toPerchSquare.value,
       );
 
-  static const _minorName = r'area$PerchSquare';
+  static const _minorName = 'perchSquare';
 
   static const _ratio = 2.5292852640029207e+29;
 
@@ -1531,8 +1575,9 @@ final class Area$PerchSquare extends Area {
   @override
   Area$PerchSquare get _clone => Area$PerchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$PerchSquare] with new value
   @override
@@ -1543,8 +1588,9 @@ final class Area$PerchSquare extends Area {
 
   /// Symbol for [Area$PerchSquare]
   @override
-  String get symbol => 'PerchSquare';
+  String get symbol => 'perch²';
 
+  /// [Area$PerchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1576,7 +1622,7 @@ final class Area$PoleSquare extends Area {
         unit.toPoleSquare.value,
       );
 
-  static const _minorName = r'area$PoleSquare';
+  static const _minorName = 'poleSquare';
 
   static const _ratio = 2.5292852640029207e+29;
 
@@ -1588,8 +1634,9 @@ final class Area$PoleSquare extends Area {
   @override
   Area$PoleSquare get _clone => Area$PoleSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$PoleSquare] with new value
   @override
@@ -1600,8 +1647,9 @@ final class Area$PoleSquare extends Area {
 
   /// Symbol for [Area$PoleSquare]
   @override
-  String get symbol => 'PoleSquare';
+  String get symbol => 'pole²';
 
+  /// [Area$PoleSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1633,7 +1681,7 @@ final class Area$Arpent extends Area {
         unit.toArpent.value,
       );
 
-  static const _minorName = r'area$Arpent';
+  static const _minorName = 'arpent';
 
   static const _ratio = 4.041282240004667e+31;
 
@@ -1645,8 +1693,9 @@ final class Area$Arpent extends Area {
   @override
   Area$Arpent get _clone => Area$Arpent(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Arpent] with new value
   @override
@@ -1657,8 +1706,9 @@ final class Area$Arpent extends Area {
 
   /// Symbol for [Area$Arpent]
   @override
-  String get symbol => 'Arpent';
+  String get symbol => 'arpent';
 
+  /// [Area$Arpent] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1690,7 +1740,7 @@ final class Area$Cuerda extends Area {
         unit.toCuerda.value,
       );
 
-  static const _minorName = r'area$Cuerda';
+  static const _minorName = 'cuerda';
 
   static const _ratio = 3.930395625e+31;
 
@@ -1702,8 +1752,9 @@ final class Area$Cuerda extends Area {
   @override
   Area$Cuerda get _clone => Area$Cuerda(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Cuerda] with new value
   @override
@@ -1716,6 +1767,7 @@ final class Area$Cuerda extends Area {
   @override
   String get symbol => 'cda';
 
+  /// [Area$Cuerda] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1747,7 +1799,7 @@ final class Area$Plaza extends Area {
         unit.toPlaza.value,
       );
 
-  static const _minorName = r'area$Plaza';
+  static const _minorName = 'plaza';
 
   static const _ratio = 6.4e+31;
 
@@ -1759,8 +1811,9 @@ final class Area$Plaza extends Area {
   @override
   Area$Plaza get _clone => Area$Plaza(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Plaza] with new value
   @override
@@ -1771,8 +1824,9 @@ final class Area$Plaza extends Area {
 
   /// Symbol for [Area$Plaza]
   @override
-  String get symbol => 'Plaza';
+  String get symbol => 'plaza';
 
+  /// [Area$Plaza] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1804,7 +1858,7 @@ final class Area$VarasCastellanasCuad extends Area {
         unit.toVarasCastellanasCuad.value,
       );
 
-  static const _minorName = r'area$VarasCastellanasCuad';
+  static const _minorName = 'varasCastellanasCuad';
 
   static const _ratio = 6.98737e+27;
 
@@ -1816,8 +1870,9 @@ final class Area$VarasCastellanasCuad extends Area {
   @override
   Area$VarasCastellanasCuad get _clone => Area$VarasCastellanasCuad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$VarasCastellanasCuad] with new value
   @override
@@ -1828,8 +1883,9 @@ final class Area$VarasCastellanasCuad extends Area {
 
   /// Symbol for [Area$VarasCastellanasCuad]
   @override
-  String get symbol => 'VarasCastellanasCuad';
+  String get symbol => 'varas castellanas cuad';
 
+  /// [Area$VarasCastellanasCuad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1861,7 +1917,7 @@ final class Area$VarasConuquerasCuad extends Area {
         unit.toVarasConuquerasCuad.value,
       );
 
-  static const _minorName = r'area$VarasConuquerasCuad';
+  static const _minorName = 'varasConuquerasCuad';
 
   static const _ratio = 6.288633e+28;
 
@@ -1873,8 +1929,9 @@ final class Area$VarasConuquerasCuad extends Area {
   @override
   Area$VarasConuquerasCuad get _clone => Area$VarasConuquerasCuad(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$VarasConuquerasCuad] with new value
   @override
@@ -1885,8 +1942,9 @@ final class Area$VarasConuquerasCuad extends Area {
 
   /// Symbol for [Area$VarasConuquerasCuad]
   @override
-  String get symbol => 'VarasConuquerasCuad';
+  String get symbol => 'varas conuqueras cuad';
 
+  /// [Area$VarasConuquerasCuad] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1918,7 +1976,7 @@ final class Area$Strema extends Area {
         unit.toStrema.value,
       );
 
-  static const _minorName = r'area$Strema';
+  static const _minorName = 'strema';
 
   static const _ratio = 1e+31;
 
@@ -1930,8 +1988,9 @@ final class Area$Strema extends Area {
   @override
   Area$Strema get _clone => Area$Strema(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Strema] with new value
   @override
@@ -1942,8 +2001,9 @@ final class Area$Strema extends Area {
 
   /// Symbol for [Area$Strema]
   @override
-  String get symbol => 'Strema';
+  String get symbol => 'strema';
 
+  /// [Area$Strema] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1975,7 +2035,7 @@ final class Area$CircularInch extends Area {
         unit.toCircularInch.value,
       );
 
-  static const _minorName = r'area$CircularInch';
+  static const _minorName = 'circularInch';
 
   static const _ratio = 5.06707479098e+24;
 
@@ -1987,8 +2047,9 @@ final class Area$CircularInch extends Area {
   @override
   Area$CircularInch get _clone => Area$CircularInch(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$CircularInch] with new value
   @override
@@ -1999,8 +2060,9 @@ final class Area$CircularInch extends Area {
 
   /// Symbol for [Area$CircularInch]
   @override
-  String get symbol => 'CircularInch';
+  String get symbol => 'circular inch';
 
+  /// [Area$CircularInch] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2032,7 +2094,7 @@ final class Area$CircularMil extends Area {
         unit.toCircularMil.value,
       );
 
-  static const _minorName = r'area$CircularMil';
+  static const _minorName = 'circularMil';
 
   static const _ratio = 5067074790980000000.0;
 
@@ -2044,8 +2106,9 @@ final class Area$CircularMil extends Area {
   @override
   Area$CircularMil get _clone => Area$CircularMil(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$CircularMil] with new value
   @override
@@ -2058,6 +2121,7 @@ final class Area$CircularMil extends Area {
   @override
   String get symbol => 'cmil';
 
+  /// [Area$CircularMil] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2089,7 +2153,7 @@ final class Area$Tahulla extends Area {
         unit.toTahulla.value,
       );
 
-  static const _minorName = r'area$Tahulla';
+  static const _minorName = 'tahulla';
 
   static const _ratio = 1.118e+31;
 
@@ -2101,8 +2165,9 @@ final class Area$Tahulla extends Area {
   @override
   Area$Tahulla get _clone => Area$Tahulla(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Area$Tahulla] with new value
   @override
@@ -2113,8 +2178,9 @@ final class Area$Tahulla extends Area {
 
   /// Symbol for [Area$Tahulla]
   @override
-  String get symbol => 'Tahulla';
+  String get symbol => 'tahulla';
 
+  /// [Area$Tahulla] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

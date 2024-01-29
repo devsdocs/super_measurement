@@ -192,7 +192,7 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
         unit.toKilowattPerMeterSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$KilowattPerMeterSquare';
+  static const _minorName = 'kilowattPerMeterSquare';
 
   static const _ratio = 1000.0;
 
@@ -205,8 +205,9 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
   HeatFluxDensity$KilowattPerMeterSquare get _clone =>
       HeatFluxDensity$KilowattPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$KilowattPerMeterSquare] with new value
   @override
@@ -219,6 +220,7 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
   @override
   String get symbol => 'kW/m²';
 
+  /// [HeatFluxDensity$KilowattPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -250,7 +252,7 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
         unit.toWattPerMeterSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$WattPerMeterSquare';
+  static const _minorName = 'wattPerMeterSquare';
 
   static const _ratio = 1.0;
 
@@ -263,8 +265,9 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
   HeatFluxDensity$WattPerMeterSquare get _clone =>
       HeatFluxDensity$WattPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$WattPerMeterSquare] with new value
   @override
@@ -277,6 +280,7 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
   @override
   String get symbol => 'W/m²';
 
+  /// [HeatFluxDensity$WattPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -308,7 +312,7 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
         unit.toWattPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$WattPerCentimeterSquare';
+  static const _minorName = 'wattPerCentimeterSquare';
 
   static const _ratio = 10000.0;
 
@@ -321,8 +325,9 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
   HeatFluxDensity$WattPerCentimeterSquare get _clone =>
       HeatFluxDensity$WattPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$WattPerCentimeterSquare] with new value
   @override
@@ -335,6 +340,7 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
   @override
   String get symbol => 'W/cm²';
 
+  /// [HeatFluxDensity$WattPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -366,7 +372,7 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
         unit.toWattPerInchSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$WattPerInchSquare';
+  static const _minorName = 'wattPerInchSquare';
 
   static const _ratio = 1550.0031011409837;
 
@@ -379,8 +385,9 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
   HeatFluxDensity$WattPerInchSquare get _clone =>
       HeatFluxDensity$WattPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$WattPerInchSquare] with new value
   @override
@@ -393,6 +400,7 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
   @override
   String get symbol => 'W/in²';
 
+  /// [HeatFluxDensity$WattPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -424,7 +432,7 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
         unit.toJoulePerSecondMeterSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$JoulePerSecondMeterSquare';
+  static const _minorName = 'joulePerSecondMeterSquare';
 
   static const _ratio = 1.0;
 
@@ -437,8 +445,9 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
   HeatFluxDensity$JoulePerSecondMeterSquare get _clone =>
       HeatFluxDensity$JoulePerSecondMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$JoulePerSecondMeterSquare] with new value
   @override
@@ -451,6 +460,7 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
   @override
   String get symbol => 'J/s m²';
 
+  /// [HeatFluxDensity$JoulePerSecondMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -483,7 +493,7 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
         unit.toKilocaloriePerHourMeterSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$KilocaloriePerHourMeterSquare';
+  static const _minorName = 'kilocaloriePerHourMeterSquare';
 
   static const _ratio = 1.163;
 
@@ -496,8 +506,9 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
   HeatFluxDensity$KilocaloriePerHourMeterSquare get _clone =>
       HeatFluxDensity$KilocaloriePerHourMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$KilocaloriePerHourMeterSquare] with new value
   @override
@@ -510,6 +521,7 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
   @override
   String get symbol => 'kcal/h m²';
 
+  /// [HeatFluxDensity$KilocaloriePerHourMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -542,7 +554,7 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
         unit.toKilocaloriePerHourFootSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$KilocaloriePerHourFootSquare';
+  static const _minorName = 'kilocaloriePerHourFootSquare';
 
   static const _ratio = 12.51842782;
 
@@ -555,8 +567,9 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
   HeatFluxDensity$KilocaloriePerHourFootSquare get _clone =>
       HeatFluxDensity$KilocaloriePerHourFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$KilocaloriePerHourFootSquare] with new value
   @override
@@ -569,6 +582,7 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
   @override
   String get symbol => 'kcal/h ft²';
 
+  /// [HeatFluxDensity$KilocaloriePerHourFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -601,7 +615,7 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
         unit.toCaloriePerSecondCentimeterSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$CaloriePerSecondCentimeterSquare';
+  static const _minorName = 'caloriePerSecondCentimeterSquare';
 
   static const _ratio = 41868.0;
 
@@ -614,8 +628,9 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
   HeatFluxDensity$CaloriePerSecondCentimeterSquare get _clone =>
       HeatFluxDensity$CaloriePerSecondCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$CaloriePerSecondCentimeterSquare] with new value
   @override
@@ -628,6 +643,7 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
   @override
   String get symbol => 'cal/s cm²';
 
+  /// [HeatFluxDensity$CaloriePerSecondCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -660,8 +676,7 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
         unit.toGramCaloriePerHourCentimeterSquare.value,
       );
 
-  static const _minorName =
-      r'heatFluxDensity$GramCaloriePerHourCentimeterSquare';
+  static const _minorName = 'gramCaloriePerHourCentimeterSquare';
 
   static const _ratio = 11.630000000797818;
 
@@ -674,8 +689,9 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
   HeatFluxDensity$GramCaloriePerHourCentimeterSquare get _clone =>
       HeatFluxDensity$GramCaloriePerHourCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$GramCaloriePerHourCentimeterSquare] with new value
   @override
@@ -688,6 +704,7 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
   @override
   String get symbol => 'cal/h cm²';
 
+  /// [HeatFluxDensity$GramCaloriePerHourCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -719,7 +736,7 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
         unit.toDynePerHourCentimeter.value,
       );
 
-  static const _minorName = r'heatFluxDensity$DynePerHourCentimeter';
+  static const _minorName = 'dynePerHourCentimeter';
 
   static const _ratio = 2.7777777777777776e-7;
 
@@ -732,8 +749,9 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
   HeatFluxDensity$DynePerHourCentimeter get _clone =>
       HeatFluxDensity$DynePerHourCentimeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$DynePerHourCentimeter] with new value
   @override
@@ -746,6 +764,7 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
   @override
   String get symbol => 'dyn/h cm';
 
+  /// [HeatFluxDensity$DynePerHourCentimeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -777,7 +796,7 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
         unit.toErgPerHourMillimeterSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$ErgPerHourMillimeterSquare';
+  static const _minorName = 'ergPerHourMillimeterSquare';
 
   static const _ratio = 0.00002777777777777778;
 
@@ -790,8 +809,9 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
   HeatFluxDensity$ErgPerHourMillimeterSquare get _clone =>
       HeatFluxDensity$ErgPerHourMillimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$ErgPerHourMillimeterSquare] with new value
   @override
@@ -802,8 +822,9 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
 
   /// Symbol for [HeatFluxDensity$ErgPerHourMillimeterSquare]
   @override
-  String get symbol => 'ErgPerHourMillimeterSquare';
+  String get symbol => 'erg/hour millimeter²';
 
+  /// [HeatFluxDensity$ErgPerHourMillimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -836,7 +857,7 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
         unit.toFootPoundPerMinuteFootSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$FootPoundPerMinuteFootSquare';
+  static const _minorName = 'footPoundPerMinuteFootSquare';
 
   static const _ratio = 0.2432317155850531;
 
@@ -849,8 +870,9 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
   HeatFluxDensity$FootPoundPerMinuteFootSquare get _clone =>
       HeatFluxDensity$FootPoundPerMinuteFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$FootPoundPerMinuteFootSquare] with new value
   @override
@@ -863,6 +885,7 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
   @override
   String get symbol => 'ft lbf/min ft²';
 
+  /// [HeatFluxDensity$FootPoundPerMinuteFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -895,7 +918,7 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
         unit.toHorsepowerMetricPerFootSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$HorsepowerMetricPerFootSquare';
+  static const _minorName = 'horsepowerMetricPerFootSquare';
 
   static const _ratio = 7916.8426580213;
 
@@ -908,8 +931,9 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
   HeatFluxDensity$HorsepowerMetricPerFootSquare get _clone =>
       HeatFluxDensity$HorsepowerMetricPerFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$HorsepowerMetricPerFootSquare] with new value
   @override
@@ -922,6 +946,7 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
   @override
   String get symbol => 'hp/ft²';
 
+  /// [HeatFluxDensity$HorsepowerMetricPerFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -953,7 +978,7 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
         unit.toHorsepowerUKPerFootSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$HorsepowerUKPerFootSquare';
+  static const _minorName = 'horsepowerUKPerFootSquare';
 
   static const _ratio = 8026.646617253367;
 
@@ -966,8 +991,9 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
   HeatFluxDensity$HorsepowerUKPerFootSquare get _clone =>
       HeatFluxDensity$HorsepowerUKPerFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$HorsepowerUKPerFootSquare] with new value
   @override
@@ -980,6 +1006,7 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
   @override
   String get symbol => 'hp/ft²';
 
+  /// [HeatFluxDensity$HorsepowerUKPerFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1011,7 +1038,7 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
         unit.toBTUPerHourFootSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$BTUPerHourFootSquare';
+  static const _minorName = 'bTUPerHourFootSquare';
 
   static const _ratio = 3.154590778;
 
@@ -1024,8 +1051,9 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
   HeatFluxDensity$BTUPerHourFootSquare get _clone =>
       HeatFluxDensity$BTUPerHourFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$BTUPerHourFootSquare] with new value
   @override
@@ -1036,8 +1064,9 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
 
   /// Symbol for [HeatFluxDensity$BTUPerHourFootSquare]
   @override
-  String get symbol => 'BTUPerHourFootSquare';
+  String get symbol => 'BTU/hour foot²';
 
+  /// [HeatFluxDensity$BTUPerHourFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1069,7 +1098,7 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
         unit.toBTUPerMinuteFootSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$BTUPerMinuteFootSquare';
+  static const _minorName = 'bTUPerMinuteFootSquare';
 
   static const _ratio = 189.27544653946458;
 
@@ -1082,8 +1111,9 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
   HeatFluxDensity$BTUPerMinuteFootSquare get _clone =>
       HeatFluxDensity$BTUPerMinuteFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$BTUPerMinuteFootSquare] with new value
   @override
@@ -1094,8 +1124,9 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
 
   /// Symbol for [HeatFluxDensity$BTUPerMinuteFootSquare]
   @override
-  String get symbol => 'BTUPerMinuteFootSquare';
+  String get symbol => 'BTU/minute foot²';
 
+  /// [HeatFluxDensity$BTUPerMinuteFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1127,7 +1158,7 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
         unit.toCHUPerHourFootSquare.value,
       );
 
-  static const _minorName = r'heatFluxDensity$CHUPerHourFootSquare';
+  static const _minorName = 'cHUPerHourFootSquare';
 
   static const _ratio = 5.678263398;
 
@@ -1140,8 +1171,9 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
   HeatFluxDensity$CHUPerHourFootSquare get _clone =>
       HeatFluxDensity$CHUPerHourFootSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$CHUPerHourFootSquare] with new value
   @override
@@ -1152,8 +1184,9 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
 
   /// Symbol for [HeatFluxDensity$CHUPerHourFootSquare]
   @override
-  String get symbol => 'CHUPerHourFootSquare';
+  String get symbol => 'CHU/hour foot²';
 
+  /// [HeatFluxDensity$CHUPerHourFootSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

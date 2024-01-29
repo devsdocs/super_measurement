@@ -97,7 +97,7 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
         unit.toKilogramPerPascalSecondMeterSquare.value,
       );
 
-  static const _minorName = r'permeability$KilogramPerPascalSecondMeterSquare';
+  static const _minorName = 'kilogramPerPascalSecondMeterSquare';
 
   static const _ratio = 1.0;
 
@@ -110,8 +110,9 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
   Permeability$KilogramPerPascalSecondMeterSquare get _clone =>
       Permeability$KilogramPerPascalSecondMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Permeability$KilogramPerPascalSecondMeterSquare] with new value
   @override
@@ -124,6 +125,7 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
   @override
   String get symbol => 'kg/(Pa s m²)';
 
+  /// [Permeability$KilogramPerPascalSecondMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -155,7 +157,7 @@ final class Permeability$Permeability0DegreeC extends Permeability {
         unit.toPermeability0DegreeC.value,
       );
 
-  static const _minorName = r'permeability$Permeability0DegreeC';
+  static const _minorName = 'permeability0DegreeC';
 
   static const _ratio = 5.72135e-11;
 
@@ -168,8 +170,9 @@ final class Permeability$Permeability0DegreeC extends Permeability {
   Permeability$Permeability0DegreeC get _clone =>
       Permeability$Permeability0DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Permeability$Permeability0DegreeC] with new value
   @override
@@ -180,8 +183,9 @@ final class Permeability$Permeability0DegreeC extends Permeability {
 
   /// Symbol for [Permeability$Permeability0DegreeC]
   @override
-  String get symbol => 'Permeability0DegreeC';
+  String get symbol => 'permeability (0°C)';
 
+  /// [Permeability$Permeability0DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -213,7 +217,7 @@ final class Permeability$Permeability23DegreeC extends Permeability {
         unit.toPermeability23DegreeC.value,
       );
 
-  static const _minorName = r'permeability$Permeability23DegreeC';
+  static const _minorName = 'permeability23DegreeC';
 
   static const _ratio = 5.74525e-11;
 
@@ -226,8 +230,9 @@ final class Permeability$Permeability23DegreeC extends Permeability {
   Permeability$Permeability23DegreeC get _clone =>
       Permeability$Permeability23DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Permeability$Permeability23DegreeC] with new value
   @override
@@ -238,8 +243,9 @@ final class Permeability$Permeability23DegreeC extends Permeability {
 
   /// Symbol for [Permeability$Permeability23DegreeC]
   @override
-  String get symbol => 'Permeability23DegreeC';
+  String get symbol => 'permeability (23°C)';
 
+  /// [Permeability$Permeability23DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -271,7 +277,7 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
         unit.toPermeabilityInches0DegreeC.value,
       );
 
-  static const _minorName = r'permeability$PermeabilityInches0DegreeC';
+  static const _minorName = 'permeabilityInches0DegreeC';
 
   static const _ratio = 1.45322e-12;
 
@@ -284,8 +290,9 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
   Permeability$PermeabilityInches0DegreeC get _clone =>
       Permeability$PermeabilityInches0DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Permeability$PermeabilityInches0DegreeC] with new value
   @override
@@ -296,8 +303,9 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
 
   /// Symbol for [Permeability$PermeabilityInches0DegreeC]
   @override
-  String get symbol => 'PermeabilityInches0DegreeC';
+  String get symbol => 'permeability inches (0°C)';
 
+  /// [Permeability$PermeabilityInches0DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -329,7 +337,7 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
         unit.toPermeabilityInches23DegreeC.value,
       );
 
-  static const _minorName = r'permeability$PermeabilityInches23DegreeC';
+  static const _minorName = 'permeabilityInches23DegreeC';
 
   static const _ratio = 1.45929e-12;
 
@@ -342,8 +350,9 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
   Permeability$PermeabilityInches23DegreeC get _clone =>
       Permeability$PermeabilityInches23DegreeC(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Permeability$PermeabilityInches23DegreeC] with new value
   @override
@@ -354,8 +363,9 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
 
   /// Symbol for [Permeability$PermeabilityInches23DegreeC]
   @override
-  String get symbol => 'PermeabilityInches23DegreeC';
+  String get symbol => 'permeability inches (23°C)';
 
+  /// [Permeability$PermeabilityInches23DegreeC] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

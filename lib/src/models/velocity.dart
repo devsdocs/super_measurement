@@ -200,7 +200,7 @@ final class Velocity$KilometerPerHour extends Velocity {
         unit.toKilometerPerHour.value,
       );
 
-  static const _minorName = r'velocity$KilometerPerHour';
+  static const _minorName = 'kilometerPerHour';
 
   static const _ratio = 100000.0;
 
@@ -212,8 +212,9 @@ final class Velocity$KilometerPerHour extends Velocity {
   @override
   Velocity$KilometerPerHour get _clone => Velocity$KilometerPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$KilometerPerHour] with new value
   @override
@@ -226,6 +227,7 @@ final class Velocity$KilometerPerHour extends Velocity {
   @override
   String get symbol => 'km/h';
 
+  /// [Velocity$KilometerPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -257,7 +259,7 @@ final class Velocity$KilometerPerMinute extends Velocity {
         unit.toKilometerPerMinute.value,
       );
 
-  static const _minorName = r'velocity$KilometerPerMinute';
+  static const _minorName = 'kilometerPerMinute';
 
   static const _ratio = 6000000.0;
 
@@ -269,8 +271,9 @@ final class Velocity$KilometerPerMinute extends Velocity {
   @override
   Velocity$KilometerPerMinute get _clone => Velocity$KilometerPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$KilometerPerMinute] with new value
   @override
@@ -283,6 +286,7 @@ final class Velocity$KilometerPerMinute extends Velocity {
   @override
   String get symbol => 'km/min';
 
+  /// [Velocity$KilometerPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -314,7 +318,7 @@ final class Velocity$KilometerPerSecond extends Velocity {
         unit.toKilometerPerSecond.value,
       );
 
-  static const _minorName = r'velocity$KilometerPerSecond';
+  static const _minorName = 'kilometerPerSecond';
 
   static const _ratio = 360000000.0;
 
@@ -326,8 +330,9 @@ final class Velocity$KilometerPerSecond extends Velocity {
   @override
   Velocity$KilometerPerSecond get _clone => Velocity$KilometerPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$KilometerPerSecond] with new value
   @override
@@ -340,6 +345,7 @@ final class Velocity$KilometerPerSecond extends Velocity {
   @override
   String get symbol => 'km/s';
 
+  /// [Velocity$KilometerPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -371,7 +377,7 @@ final class Velocity$MeterPerHour extends Velocity {
         unit.toMeterPerHour.value,
       );
 
-  static const _minorName = r'velocity$MeterPerHour';
+  static const _minorName = 'meterPerHour';
 
   static const _ratio = 100.0;
 
@@ -383,8 +389,9 @@ final class Velocity$MeterPerHour extends Velocity {
   @override
   Velocity$MeterPerHour get _clone => Velocity$MeterPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$MeterPerHour] with new value
   @override
@@ -397,6 +404,7 @@ final class Velocity$MeterPerHour extends Velocity {
   @override
   String get symbol => 'm/h';
 
+  /// [Velocity$MeterPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -428,7 +436,7 @@ final class Velocity$MeterPerMinute extends Velocity {
         unit.toMeterPerMinute.value,
       );
 
-  static const _minorName = r'velocity$MeterPerMinute';
+  static const _minorName = 'meterPerMinute';
 
   static const _ratio = 6000.0;
 
@@ -440,8 +448,9 @@ final class Velocity$MeterPerMinute extends Velocity {
   @override
   Velocity$MeterPerMinute get _clone => Velocity$MeterPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$MeterPerMinute] with new value
   @override
@@ -454,6 +463,7 @@ final class Velocity$MeterPerMinute extends Velocity {
   @override
   String get symbol => 'm/min';
 
+  /// [Velocity$MeterPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -485,7 +495,7 @@ final class Velocity$MeterPerSecond extends Velocity {
         unit.toMeterPerSecond.value,
       );
 
-  static const _minorName = r'velocity$MeterPerSecond';
+  static const _minorName = 'meterPerSecond';
 
   static const _ratio = 360000.0;
 
@@ -497,8 +507,9 @@ final class Velocity$MeterPerSecond extends Velocity {
   @override
   Velocity$MeterPerSecond get _clone => Velocity$MeterPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$MeterPerSecond] with new value
   @override
@@ -511,6 +522,7 @@ final class Velocity$MeterPerSecond extends Velocity {
   @override
   String get symbol => 'm/s';
 
+  /// [Velocity$MeterPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -542,7 +554,7 @@ final class Velocity$CentimeterPerHour extends Velocity {
         unit.toCentimeterPerHour.value,
       );
 
-  static const _minorName = r'velocity$CentimeterPerHour';
+  static const _minorName = 'centimeterPerHour';
 
   static const _ratio = 1.0;
 
@@ -554,8 +566,9 @@ final class Velocity$CentimeterPerHour extends Velocity {
   @override
   Velocity$CentimeterPerHour get _clone => Velocity$CentimeterPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$CentimeterPerHour] with new value
   @override
@@ -568,6 +581,7 @@ final class Velocity$CentimeterPerHour extends Velocity {
   @override
   String get symbol => 'cm/h';
 
+  /// [Velocity$CentimeterPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -599,7 +613,7 @@ final class Velocity$CentimeterPerMinute extends Velocity {
         unit.toCentimeterPerMinute.value,
       );
 
-  static const _minorName = r'velocity$CentimeterPerMinute';
+  static const _minorName = 'centimeterPerMinute';
 
   static const _ratio = 60.0;
 
@@ -612,8 +626,9 @@ final class Velocity$CentimeterPerMinute extends Velocity {
   Velocity$CentimeterPerMinute get _clone =>
       Velocity$CentimeterPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$CentimeterPerMinute] with new value
   @override
@@ -626,6 +641,7 @@ final class Velocity$CentimeterPerMinute extends Velocity {
   @override
   String get symbol => 'cm/min';
 
+  /// [Velocity$CentimeterPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -657,7 +673,7 @@ final class Velocity$CentimeterPerSecond extends Velocity {
         unit.toCentimeterPerSecond.value,
       );
 
-  static const _minorName = r'velocity$CentimeterPerSecond';
+  static const _minorName = 'centimeterPerSecond';
 
   static const _ratio = 3600.0;
 
@@ -670,8 +686,9 @@ final class Velocity$CentimeterPerSecond extends Velocity {
   Velocity$CentimeterPerSecond get _clone =>
       Velocity$CentimeterPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$CentimeterPerSecond] with new value
   @override
@@ -684,6 +701,7 @@ final class Velocity$CentimeterPerSecond extends Velocity {
   @override
   String get symbol => 'cm/s';
 
+  /// [Velocity$CentimeterPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -715,7 +733,7 @@ final class Velocity$MilePerHour extends Velocity {
         unit.toMilePerHour.value,
       );
 
-  static const _minorName = r'velocity$MilePerHour';
+  static const _minorName = 'milePerHour';
 
   static const _ratio = 160934.4;
 
@@ -727,8 +745,9 @@ final class Velocity$MilePerHour extends Velocity {
   @override
   Velocity$MilePerHour get _clone => Velocity$MilePerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$MilePerHour] with new value
   @override
@@ -741,6 +760,7 @@ final class Velocity$MilePerHour extends Velocity {
   @override
   String get symbol => 'mi/h, mph';
 
+  /// [Velocity$MilePerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -772,7 +792,7 @@ final class Velocity$MilePerMinute extends Velocity {
         unit.toMilePerMinute.value,
       );
 
-  static const _minorName = r'velocity$MilePerMinute';
+  static const _minorName = 'milePerMinute';
 
   static const _ratio = 9656064.0;
 
@@ -784,8 +804,9 @@ final class Velocity$MilePerMinute extends Velocity {
   @override
   Velocity$MilePerMinute get _clone => Velocity$MilePerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$MilePerMinute] with new value
   @override
@@ -798,6 +819,7 @@ final class Velocity$MilePerMinute extends Velocity {
   @override
   String get symbol => 'mi/min';
 
+  /// [Velocity$MilePerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -829,7 +851,7 @@ final class Velocity$MilePerSecond extends Velocity {
         unit.toMilePerSecond.value,
       );
 
-  static const _minorName = r'velocity$MilePerSecond';
+  static const _minorName = 'milePerSecond';
 
   static const _ratio = 579363840.0;
 
@@ -841,8 +863,9 @@ final class Velocity$MilePerSecond extends Velocity {
   @override
   Velocity$MilePerSecond get _clone => Velocity$MilePerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$MilePerSecond] with new value
   @override
@@ -855,6 +878,7 @@ final class Velocity$MilePerSecond extends Velocity {
   @override
   String get symbol => 'mi/s';
 
+  /// [Velocity$MilePerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -886,7 +910,7 @@ final class Velocity$YardPerHour extends Velocity {
         unit.toYardPerHour.value,
       );
 
-  static const _minorName = r'velocity$YardPerHour';
+  static const _minorName = 'yardPerHour';
 
   static const _ratio = 91.44;
 
@@ -898,8 +922,9 @@ final class Velocity$YardPerHour extends Velocity {
   @override
   Velocity$YardPerHour get _clone => Velocity$YardPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$YardPerHour] with new value
   @override
@@ -912,6 +937,7 @@ final class Velocity$YardPerHour extends Velocity {
   @override
   String get symbol => 'yd/h';
 
+  /// [Velocity$YardPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -943,7 +969,7 @@ final class Velocity$YardPerMinute extends Velocity {
         unit.toYardPerMinute.value,
       );
 
-  static const _minorName = r'velocity$YardPerMinute';
+  static const _minorName = 'yardPerMinute';
 
   static const _ratio = 5486.4;
 
@@ -955,8 +981,9 @@ final class Velocity$YardPerMinute extends Velocity {
   @override
   Velocity$YardPerMinute get _clone => Velocity$YardPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$YardPerMinute] with new value
   @override
@@ -969,6 +996,7 @@ final class Velocity$YardPerMinute extends Velocity {
   @override
   String get symbol => 'yd/min';
 
+  /// [Velocity$YardPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1000,7 +1028,7 @@ final class Velocity$YardPerSecond extends Velocity {
         unit.toYardPerSecond.value,
       );
 
-  static const _minorName = r'velocity$YardPerSecond';
+  static const _minorName = 'yardPerSecond';
 
   static const _ratio = 329184.0;
 
@@ -1012,8 +1040,9 @@ final class Velocity$YardPerSecond extends Velocity {
   @override
   Velocity$YardPerSecond get _clone => Velocity$YardPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$YardPerSecond] with new value
   @override
@@ -1026,6 +1055,7 @@ final class Velocity$YardPerSecond extends Velocity {
   @override
   String get symbol => 'yd/s';
 
+  /// [Velocity$YardPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1057,7 +1087,7 @@ final class Velocity$FootPerHour extends Velocity {
         unit.toFootPerHour.value,
       );
 
-  static const _minorName = r'velocity$FootPerHour';
+  static const _minorName = 'footPerHour';
 
   static const _ratio = 30.48;
 
@@ -1069,8 +1099,9 @@ final class Velocity$FootPerHour extends Velocity {
   @override
   Velocity$FootPerHour get _clone => Velocity$FootPerHour(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$FootPerHour] with new value
   @override
@@ -1083,6 +1114,7 @@ final class Velocity$FootPerHour extends Velocity {
   @override
   String get symbol => 'ft/h';
 
+  /// [Velocity$FootPerHour] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1114,7 +1146,7 @@ final class Velocity$FootPerMinute extends Velocity {
         unit.toFootPerMinute.value,
       );
 
-  static const _minorName = r'velocity$FootPerMinute';
+  static const _minorName = 'footPerMinute';
 
   static const _ratio = 1828.8;
 
@@ -1126,8 +1158,9 @@ final class Velocity$FootPerMinute extends Velocity {
   @override
   Velocity$FootPerMinute get _clone => Velocity$FootPerMinute(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$FootPerMinute] with new value
   @override
@@ -1140,6 +1173,7 @@ final class Velocity$FootPerMinute extends Velocity {
   @override
   String get symbol => 'ft/min';
 
+  /// [Velocity$FootPerMinute] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1171,7 +1205,7 @@ final class Velocity$FootPerSecond extends Velocity {
         unit.toFootPerSecond.value,
       );
 
-  static const _minorName = r'velocity$FootPerSecond';
+  static const _minorName = 'footPerSecond';
 
   static const _ratio = 109728.0;
 
@@ -1183,8 +1217,9 @@ final class Velocity$FootPerSecond extends Velocity {
   @override
   Velocity$FootPerSecond get _clone => Velocity$FootPerSecond(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$FootPerSecond] with new value
   @override
@@ -1197,6 +1232,7 @@ final class Velocity$FootPerSecond extends Velocity {
   @override
   String get symbol => 'ft/s';
 
+  /// [Velocity$FootPerSecond] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1228,7 +1264,7 @@ final class Velocity$MachSIStandard extends Velocity {
         unit.toMachSIStandard.value,
       );
 
-  static const _minorName = r'velocity$MachSIStandard';
+  static const _minorName = 'machSIStandard';
 
   static const _ratio = 106216704.00010112;
 
@@ -1240,8 +1276,9 @@ final class Velocity$MachSIStandard extends Velocity {
   @override
   Velocity$MachSIStandard get _clone => Velocity$MachSIStandard(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$MachSIStandard] with new value
   @override
@@ -1252,8 +1289,9 @@ final class Velocity$MachSIStandard extends Velocity {
 
   /// Symbol for [Velocity$MachSIStandard]
   @override
-  String get symbol => 'MachSIStandard';
+  String get symbol => 'mach (SI standard)';
 
+  /// [Velocity$MachSIStandard] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1285,7 +1323,7 @@ final class Velocity$MachAtSeaLevel extends Velocity {
         unit.toMachAtSeaLevel.value,
       );
 
-  static const _minorName = r'velocity$MachAtSeaLevel';
+  static const _minorName = 'machAtSeaLevel';
 
   static const _ratio = 119325600.0;
 
@@ -1297,8 +1335,9 @@ final class Velocity$MachAtSeaLevel extends Velocity {
   @override
   Velocity$MachAtSeaLevel get _clone => Velocity$MachAtSeaLevel(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$MachAtSeaLevel] with new value
   @override
@@ -1309,8 +1348,9 @@ final class Velocity$MachAtSeaLevel extends Velocity {
 
   /// Symbol for [Velocity$MachAtSeaLevel]
   @override
-  String get symbol => 'MachAtSeaLevel';
+  String get symbol => 'mach (at sea level)';
 
+  /// [Velocity$MachAtSeaLevel] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1342,7 +1382,7 @@ final class Velocity$Light extends Velocity {
         unit.toLight.value,
       );
 
-  static const _minorName = r'velocity$Light';
+  static const _minorName = 'light';
 
   static const _ratio = 107925284880000.0;
 
@@ -1354,8 +1394,9 @@ final class Velocity$Light extends Velocity {
   @override
   Velocity$Light get _clone => Velocity$Light(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$Light] with new value
   @override
@@ -1368,6 +1409,7 @@ final class Velocity$Light extends Velocity {
   @override
   String get symbol => 'c';
 
+  /// [Velocity$Light] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1399,7 +1441,7 @@ final class Velocity$Knot extends Velocity {
         unit.toKnot.value,
       );
 
-  static const _minorName = r'velocity$Knot';
+  static const _minorName = 'knot';
 
   static const _ratio = 185200.0;
 
@@ -1411,8 +1453,9 @@ final class Velocity$Knot extends Velocity {
   @override
   Velocity$Knot get _clone => Velocity$Knot(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [Velocity$Knot] with new value
   @override
@@ -1425,6 +1468,7 @@ final class Velocity$Knot extends Velocity {
   @override
   String get symbol => 'kn, kt';
 
+  /// [Velocity$Knot] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

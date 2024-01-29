@@ -151,7 +151,7 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
         unit.toMolPerMeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$MolPerMeterCubic';
+  static const _minorName = 'molPerMeterCubic';
 
   static const _ratio = 0.001;
 
@@ -164,8 +164,9 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
   ConcentrationMolar$MolPerMeterCubic get _clone =>
       ConcentrationMolar$MolPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerMeterCubic] with new value
   @override
@@ -178,6 +179,7 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
   @override
   String get symbol => 'mol/m³';
 
+  /// [ConcentrationMolar$MolPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -209,7 +211,7 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
         unit.toMolPerLiter.value,
       );
 
-  static const _minorName = r'concentrationMolar$MolPerLiter';
+  static const _minorName = 'molPerLiter';
 
   static const _ratio = 1.0;
 
@@ -222,8 +224,9 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
   ConcentrationMolar$MolPerLiter get _clone =>
       ConcentrationMolar$MolPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerLiter] with new value
   @override
@@ -236,6 +239,7 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
   @override
   String get symbol => 'mol/l';
 
+  /// [ConcentrationMolar$MolPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -268,7 +272,7 @@ final class ConcentrationMolar$MolPerCentimeterCubic
         unit.toMolPerCentimeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$MolPerCentimeterCubic';
+  static const _minorName = 'molPerCentimeterCubic';
 
   static const _ratio = 1000.0;
 
@@ -281,8 +285,9 @@ final class ConcentrationMolar$MolPerCentimeterCubic
   ConcentrationMolar$MolPerCentimeterCubic get _clone =>
       ConcentrationMolar$MolPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerCentimeterCubic] with new value
   @override
@@ -295,6 +300,7 @@ final class ConcentrationMolar$MolPerCentimeterCubic
   @override
   String get symbol => 'mol/cm³';
 
+  /// [ConcentrationMolar$MolPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -327,7 +333,7 @@ final class ConcentrationMolar$MolPerMillimeterCubic
         unit.toMolPerMillimeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$MolPerMillimeterCubic';
+  static const _minorName = 'molPerMillimeterCubic';
 
   static const _ratio = 1000000.0;
 
@@ -340,8 +346,9 @@ final class ConcentrationMolar$MolPerMillimeterCubic
   ConcentrationMolar$MolPerMillimeterCubic get _clone =>
       ConcentrationMolar$MolPerMillimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerMillimeterCubic] with new value
   @override
@@ -354,6 +361,7 @@ final class ConcentrationMolar$MolPerMillimeterCubic
   @override
   String get symbol => 'mol/mm³';
 
+  /// [ConcentrationMolar$MolPerMillimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -385,7 +393,7 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
         unit.toKilomolPerMeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$KilomolPerMeterCubic';
+  static const _minorName = 'kilomolPerMeterCubic';
 
   static const _ratio = 1.0;
 
@@ -398,8 +406,9 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
   ConcentrationMolar$KilomolPerMeterCubic get _clone =>
       ConcentrationMolar$KilomolPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerMeterCubic] with new value
   @override
@@ -412,6 +421,7 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
   @override
   String get symbol => 'kmol/m³';
 
+  /// [ConcentrationMolar$KilomolPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -443,7 +453,7 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
         unit.toKilomolPerLiter.value,
       );
 
-  static const _minorName = r'concentrationMolar$KilomolPerLiter';
+  static const _minorName = 'kilomolPerLiter';
 
   static const _ratio = 1000.0;
 
@@ -456,8 +466,9 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
   ConcentrationMolar$KilomolPerLiter get _clone =>
       ConcentrationMolar$KilomolPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerLiter] with new value
   @override
@@ -470,6 +481,7 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
   @override
   String get symbol => 'kmol/l';
 
+  /// [ConcentrationMolar$KilomolPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -502,7 +514,7 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
         unit.toKilomolPerCentimeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$KilomolPerCentimeterCubic';
+  static const _minorName = 'kilomolPerCentimeterCubic';
 
   static const _ratio = 1000000.0;
 
@@ -515,8 +527,9 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
   ConcentrationMolar$KilomolPerCentimeterCubic get _clone =>
       ConcentrationMolar$KilomolPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerCentimeterCubic] with new value
   @override
@@ -529,6 +542,7 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
   @override
   String get symbol => 'kmol/cm³';
 
+  /// [ConcentrationMolar$KilomolPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -561,7 +575,7 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
         unit.toKilomolPerMillimeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$KilomolPerMillimeterCubic';
+  static const _minorName = 'kilomolPerMillimeterCubic';
 
   static const _ratio = 1000000000.0;
 
@@ -574,8 +588,9 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
   ConcentrationMolar$KilomolPerMillimeterCubic get _clone =>
       ConcentrationMolar$KilomolPerMillimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerMillimeterCubic] with new value
   @override
@@ -588,6 +603,7 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
   @override
   String get symbol => 'kmol/mm³';
 
+  /// [ConcentrationMolar$KilomolPerMillimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -620,7 +636,7 @@ final class ConcentrationMolar$MillimolPerMeterCubic
         unit.toMillimolPerMeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$MillimolPerMeterCubic';
+  static const _minorName = 'millimolPerMeterCubic';
 
   static const _ratio = 0.000001;
 
@@ -633,8 +649,9 @@ final class ConcentrationMolar$MillimolPerMeterCubic
   ConcentrationMolar$MillimolPerMeterCubic get _clone =>
       ConcentrationMolar$MillimolPerMeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerMeterCubic] with new value
   @override
@@ -647,6 +664,7 @@ final class ConcentrationMolar$MillimolPerMeterCubic
   @override
   String get symbol => 'mmol/m³';
 
+  /// [ConcentrationMolar$MillimolPerMeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -678,7 +696,7 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
         unit.toMillimolPerLiter.value,
       );
 
-  static const _minorName = r'concentrationMolar$MillimolPerLiter';
+  static const _minorName = 'millimolPerLiter';
 
   static const _ratio = 0.001;
 
@@ -691,8 +709,9 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
   ConcentrationMolar$MillimolPerLiter get _clone =>
       ConcentrationMolar$MillimolPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerLiter] with new value
   @override
@@ -705,6 +724,7 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
   @override
   String get symbol => 'mmol/l';
 
+  /// [ConcentrationMolar$MillimolPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -737,7 +757,7 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
         unit.toMillimolPerCentimeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$MillimolPerCentimeterCubic';
+  static const _minorName = 'millimolPerCentimeterCubic';
 
   static const _ratio = 1.0;
 
@@ -750,8 +770,9 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
   ConcentrationMolar$MillimolPerCentimeterCubic get _clone =>
       ConcentrationMolar$MillimolPerCentimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerCentimeterCubic] with new value
   @override
@@ -764,6 +785,7 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
   @override
   String get symbol => 'mmol/cm³';
 
+  /// [ConcentrationMolar$MillimolPerCentimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -796,7 +818,7 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
         unit.toMillimolPerMillimeterCubic.value,
       );
 
-  static const _minorName = r'concentrationMolar$MillimolPerMillimeterCubic';
+  static const _minorName = 'millimolPerMillimeterCubic';
 
   static const _ratio = 1000.0;
 
@@ -809,8 +831,9 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
   ConcentrationMolar$MillimolPerMillimeterCubic get _clone =>
       ConcentrationMolar$MillimolPerMillimeterCubic(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerMillimeterCubic] with new value
   @override
@@ -823,6 +846,7 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
   @override
   String get symbol => 'mmol/mm³';
 
+  /// [ConcentrationMolar$MillimolPerMillimeterCubic] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

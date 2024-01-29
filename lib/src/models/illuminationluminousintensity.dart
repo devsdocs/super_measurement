@@ -142,8 +142,7 @@ final class IlluminationLuminousIntensity$CandleInternational
         unit.toCandleInternational.value,
       );
 
-  static const _minorName =
-      r'illuminationLuminousIntensity$CandleInternational';
+  static const _minorName = 'candleInternational';
 
   static const _ratio = 1.0;
 
@@ -156,8 +155,9 @@ final class IlluminationLuminousIntensity$CandleInternational
   IlluminationLuminousIntensity$CandleInternational get _clone =>
       IlluminationLuminousIntensity$CandleInternational(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandleInternational] with new value
   @override
@@ -170,6 +170,7 @@ final class IlluminationLuminousIntensity$CandleInternational
   @override
   String get symbol => 'cd';
 
+  /// [IlluminationLuminousIntensity$CandleInternational] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -202,7 +203,7 @@ final class IlluminationLuminousIntensity$CandleGerman
         unit.toCandleGerman.value,
       );
 
-  static const _minorName = r'illuminationLuminousIntensity$CandleGerman';
+  static const _minorName = 'candleGerman';
 
   static const _ratio = 1.0526315789473684;
 
@@ -215,8 +216,9 @@ final class IlluminationLuminousIntensity$CandleGerman
   IlluminationLuminousIntensity$CandleGerman get _clone =>
       IlluminationLuminousIntensity$CandleGerman(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandleGerman] with new value
   @override
@@ -229,6 +231,7 @@ final class IlluminationLuminousIntensity$CandleGerman
   @override
   String get symbol => 'cd';
 
+  /// [IlluminationLuminousIntensity$CandleGerman] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -261,7 +264,7 @@ final class IlluminationLuminousIntensity$CandlePentane
         unit.toCandlePentane.value,
       );
 
-  static const _minorName = r'illuminationLuminousIntensity$CandlePentane';
+  static const _minorName = 'candlePentane';
 
   static const _ratio = 1.0;
 
@@ -274,8 +277,9 @@ final class IlluminationLuminousIntensity$CandlePentane
   IlluminationLuminousIntensity$CandlePentane get _clone =>
       IlluminationLuminousIntensity$CandlePentane(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandlePentane] with new value
   @override
@@ -288,6 +292,7 @@ final class IlluminationLuminousIntensity$CandlePentane
   @override
   String get symbol => 'cd';
 
+  /// [IlluminationLuminousIntensity$CandlePentane] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -320,7 +325,7 @@ final class IlluminationLuminousIntensity$CandleUK
         unit.toCandleUK.value,
       );
 
-  static const _minorName = r'illuminationLuminousIntensity$CandleUK';
+  static const _minorName = 'candleUK';
 
   static const _ratio = 1.0416666666666667;
 
@@ -333,8 +338,9 @@ final class IlluminationLuminousIntensity$CandleUK
   IlluminationLuminousIntensity$CandleUK get _clone =>
       IlluminationLuminousIntensity$CandleUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandleUK] with new value
   @override
@@ -347,6 +353,7 @@ final class IlluminationLuminousIntensity$CandleUK
   @override
   String get symbol => 'cd';
 
+  /// [IlluminationLuminousIntensity$CandleUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -379,7 +386,7 @@ final class IlluminationLuminousIntensity$DecimalCandle
         unit.toDecimalCandle.value,
       );
 
-  static const _minorName = r'illuminationLuminousIntensity$DecimalCandle';
+  static const _minorName = 'decimalCandle';
 
   static const _ratio = 1.0;
 
@@ -392,8 +399,9 @@ final class IlluminationLuminousIntensity$DecimalCandle
   IlluminationLuminousIntensity$DecimalCandle get _clone =>
       IlluminationLuminousIntensity$DecimalCandle(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$DecimalCandle] with new value
   @override
@@ -404,8 +412,9 @@ final class IlluminationLuminousIntensity$DecimalCandle
 
   /// Symbol for [IlluminationLuminousIntensity$DecimalCandle]
   @override
-  String get symbol => 'DecimalCandle';
+  String get symbol => 'decimal candle';
 
+  /// [IlluminationLuminousIntensity$DecimalCandle] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -438,7 +447,7 @@ final class IlluminationLuminousIntensity$HefnerCandle
         unit.toHefnerCandle.value,
       );
 
-  static const _minorName = r'illuminationLuminousIntensity$HefnerCandle';
+  static const _minorName = 'hefnerCandle';
 
   static const _ratio = 0.9;
 
@@ -451,8 +460,9 @@ final class IlluminationLuminousIntensity$HefnerCandle
   IlluminationLuminousIntensity$HefnerCandle get _clone =>
       IlluminationLuminousIntensity$HefnerCandle(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$HefnerCandle] with new value
   @override
@@ -465,6 +475,7 @@ final class IlluminationLuminousIntensity$HefnerCandle
   @override
   String get symbol => 'HC';
 
+  /// [IlluminationLuminousIntensity$HefnerCandle] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -497,7 +508,7 @@ final class IlluminationLuminousIntensity$CarcelUnit
         unit.toCarcelUnit.value,
       );
 
-  static const _minorName = r'illuminationLuminousIntensity$CarcelUnit';
+  static const _minorName = 'carcelUnit';
 
   static const _ratio = 9.61;
 
@@ -510,8 +521,9 @@ final class IlluminationLuminousIntensity$CarcelUnit
   IlluminationLuminousIntensity$CarcelUnit get _clone =>
       IlluminationLuminousIntensity$CarcelUnit(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CarcelUnit] with new value
   @override
@@ -522,8 +534,9 @@ final class IlluminationLuminousIntensity$CarcelUnit
 
   /// Symbol for [IlluminationLuminousIntensity$CarcelUnit]
   @override
-  String get symbol => 'CarcelUnit';
+  String get symbol => 'carcel unit';
 
+  /// [IlluminationLuminousIntensity$CarcelUnit] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -556,7 +569,7 @@ final class IlluminationLuminousIntensity$BougieDecimal
         unit.toBougieDecimal.value,
       );
 
-  static const _minorName = r'illuminationLuminousIntensity$BougieDecimal';
+  static const _minorName = 'bougieDecimal';
 
   static const _ratio = 1.0;
 
@@ -569,8 +582,9 @@ final class IlluminationLuminousIntensity$BougieDecimal
   IlluminationLuminousIntensity$BougieDecimal get _clone =>
       IlluminationLuminousIntensity$BougieDecimal(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$BougieDecimal] with new value
   @override
@@ -581,8 +595,9 @@ final class IlluminationLuminousIntensity$BougieDecimal
 
   /// Symbol for [IlluminationLuminousIntensity$BougieDecimal]
   @override
-  String get symbol => 'BougieDecimal';
+  String get symbol => 'bougie decimal';
 
+  /// [IlluminationLuminousIntensity$BougieDecimal] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -615,8 +630,7 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
         unit.toLumenInternationalPerSteradian.value,
       );
 
-  static const _minorName =
-      r'illuminationLuminousIntensity$LumenInternationalPerSteradian';
+  static const _minorName = 'lumenInternationalPerSteradian';
 
   static const _ratio = 1.0;
 
@@ -629,8 +643,9 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
   IlluminationLuminousIntensity$LumenInternationalPerSteradian get _clone =>
       IlluminationLuminousIntensity$LumenInternationalPerSteradian(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$LumenInternationalPerSteradian] with new value
   @override
@@ -643,6 +658,7 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
   @override
   String get symbol => 'lm/sr';
 
+  /// [IlluminationLuminousIntensity$LumenInternationalPerSteradian] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -675,8 +691,7 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
         unit.toPentaneCandle10CandlePower.value,
       );
 
-  static const _minorName =
-      r'illuminationLuminousIntensity$PentaneCandle10CandlePower';
+  static const _minorName = 'pentaneCandle10CandlePower';
 
   static const _ratio = 10.0;
 
@@ -689,8 +704,9 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
   IlluminationLuminousIntensity$PentaneCandle10CandlePower get _clone =>
       IlluminationLuminousIntensity$PentaneCandle10CandlePower(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$PentaneCandle10CandlePower] with new value
   @override
@@ -701,8 +717,9 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
 
   /// Symbol for [IlluminationLuminousIntensity$PentaneCandle10CandlePower]
   @override
-  String get symbol => 'PentaneCandle10CandlePower';
+  String get symbol => 'pentane candle (10 candle power)';
 
+  /// [IlluminationLuminousIntensity$PentaneCandle10CandlePower] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {

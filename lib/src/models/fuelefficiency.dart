@@ -330,7 +330,7 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
         unit.toExameterPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$ExameterPerLiter';
+  static const _minorName = 'exameterPerLiter';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -343,8 +343,9 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
   FuelEfficiency$ExameterPerLiter get _clone =>
       FuelEfficiency$ExameterPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$ExameterPerLiter] with new value
   @override
@@ -357,6 +358,7 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'Em/l';
 
+  /// [FuelEfficiency$ExameterPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -388,7 +390,7 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
         unit.toPetameterPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$PetameterPerLiter';
+  static const _minorName = 'petameterPerLiter';
 
   static const _ratio = 1000000000000000.0;
 
@@ -401,8 +403,9 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
   FuelEfficiency$PetameterPerLiter get _clone =>
       FuelEfficiency$PetameterPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$PetameterPerLiter] with new value
   @override
@@ -415,6 +418,7 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'Pm/l';
 
+  /// [FuelEfficiency$PetameterPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -446,7 +450,7 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
         unit.toTerameterPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$TerameterPerLiter';
+  static const _minorName = 'terameterPerLiter';
 
   static const _ratio = 1000000000000.0;
 
@@ -459,8 +463,9 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
   FuelEfficiency$TerameterPerLiter get _clone =>
       FuelEfficiency$TerameterPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$TerameterPerLiter] with new value
   @override
@@ -473,6 +478,7 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'Tm/l';
 
+  /// [FuelEfficiency$TerameterPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -504,7 +510,7 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
         unit.toGigameterPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$GigameterPerLiter';
+  static const _minorName = 'gigameterPerLiter';
 
   static const _ratio = 1000000000.0;
 
@@ -517,8 +523,9 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
   FuelEfficiency$GigameterPerLiter get _clone =>
       FuelEfficiency$GigameterPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GigameterPerLiter] with new value
   @override
@@ -531,6 +538,7 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'Gm/l';
 
+  /// [FuelEfficiency$GigameterPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -562,7 +570,7 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
         unit.toMegameterPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MegameterPerLiter';
+  static const _minorName = 'megameterPerLiter';
 
   static const _ratio = 1000000.0;
 
@@ -575,8 +583,9 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
   FuelEfficiency$MegameterPerLiter get _clone =>
       FuelEfficiency$MegameterPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MegameterPerLiter] with new value
   @override
@@ -589,6 +598,7 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'Mm/l';
 
+  /// [FuelEfficiency$MegameterPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -620,7 +630,7 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
         unit.toKilometerPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$KilometerPerLiter';
+  static const _minorName = 'kilometerPerLiter';
 
   static const _ratio = 1000.0;
 
@@ -633,8 +643,9 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
   FuelEfficiency$KilometerPerLiter get _clone =>
       FuelEfficiency$KilometerPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$KilometerPerLiter] with new value
   @override
@@ -647,6 +658,7 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'km/l';
 
+  /// [FuelEfficiency$KilometerPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -678,7 +690,7 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
         unit.toHectometerPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$HectometerPerLiter';
+  static const _minorName = 'hectometerPerLiter';
 
   static const _ratio = 100.0;
 
@@ -691,8 +703,9 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
   FuelEfficiency$HectometerPerLiter get _clone =>
       FuelEfficiency$HectometerPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$HectometerPerLiter] with new value
   @override
@@ -705,6 +718,7 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'hm/l';
 
+  /// [FuelEfficiency$HectometerPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -736,7 +750,7 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
         unit.toDekameterPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$DekameterPerLiter';
+  static const _minorName = 'dekameterPerLiter';
 
   static const _ratio = 10.0;
 
@@ -749,8 +763,9 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
   FuelEfficiency$DekameterPerLiter get _clone =>
       FuelEfficiency$DekameterPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$DekameterPerLiter] with new value
   @override
@@ -763,6 +778,7 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'dam/l';
 
+  /// [FuelEfficiency$DekameterPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -794,7 +810,7 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
         unit.toMeterPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerLiter';
+  static const _minorName = 'meterPerLiter';
 
   static const _ratio = 1.0;
 
@@ -807,8 +823,9 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
   FuelEfficiency$MeterPerLiter get _clone =>
       FuelEfficiency$MeterPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerLiter] with new value
   @override
@@ -821,6 +838,7 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'm/l';
 
+  /// [FuelEfficiency$MeterPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -852,7 +870,7 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
         unit.toCentimeterPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$CentimeterPerLiter';
+  static const _minorName = 'centimeterPerLiter';
 
   static const _ratio = 0.01;
 
@@ -865,8 +883,9 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
   FuelEfficiency$CentimeterPerLiter get _clone =>
       FuelEfficiency$CentimeterPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$CentimeterPerLiter] with new value
   @override
@@ -879,6 +898,7 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'cm/l';
 
+  /// [FuelEfficiency$CentimeterPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -910,7 +930,7 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
         unit.toMileUSPerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MileUSPerLiter';
+  static const _minorName = 'mileUSPerLiter';
 
   static const _ratio = 1609.344;
 
@@ -923,8 +943,9 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
   FuelEfficiency$MileUSPerLiter get _clone =>
       FuelEfficiency$MileUSPerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MileUSPerLiter] with new value
   @override
@@ -937,6 +958,7 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
   @override
   String get symbol => 'mi/l';
 
+  /// [FuelEfficiency$MileUSPerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -968,7 +990,7 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
         unit.toLiterPerMeter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$LiterPerMeter';
+  static const _minorName = 'literPerMeter';
 
   static const _ratio = 1.0;
 
@@ -981,8 +1003,9 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
   FuelEfficiency$LiterPerMeter get _clone =>
       FuelEfficiency$LiterPerMeter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$LiterPerMeter] with new value
   @override
@@ -995,6 +1018,7 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
   @override
   String get symbol => 'l/m';
 
+  /// [FuelEfficiency$LiterPerMeter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1026,7 +1050,7 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
         unit.toLiterPer100Km.value,
       );
 
-  static const _minorName = r'fuelEfficiency$LiterPer100Km';
+  static const _minorName = 'literPer100Km';
 
   static const _ratio = 0.00001;
 
@@ -1039,8 +1063,9 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
   FuelEfficiency$LiterPer100Km get _clone =>
       FuelEfficiency$LiterPer100Km(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$LiterPer100Km] with new value
   @override
@@ -1051,8 +1076,9 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
 
   /// Symbol for [FuelEfficiency$LiterPer100Km]
   @override
-  String get symbol => 'LiterPer100Km';
+  String get symbol => 'liter/100 km';
 
+  /// [FuelEfficiency$LiterPer100Km] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1084,7 +1110,7 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
         unit.toGallonsUSPerMile.value,
       );
 
-  static const _minorName = r'fuelEfficiency$GallonsUSPerMile';
+  static const _minorName = 'gallonsUSPerMile';
 
   static const _ratio = 0.0023521458329606934;
 
@@ -1097,8 +1123,9 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
   FuelEfficiency$GallonsUSPerMile get _clone =>
       FuelEfficiency$GallonsUSPerMile(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUSPerMile] with new value
   @override
@@ -1111,6 +1138,7 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
   @override
   String get symbol => 'gal/mi';
 
+  /// [FuelEfficiency$GallonsUSPerMile] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1142,7 +1170,7 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
         unit.toGallonsUSPer100mi.value,
       );
 
-  static const _minorName = r'fuelEfficiency$GallonsUSPer100mi';
+  static const _minorName = 'gallonsUSPer100mi';
 
   static const _ratio = 0.000023521458329606913;
 
@@ -1155,8 +1183,9 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
   FuelEfficiency$GallonsUSPer100mi get _clone =>
       FuelEfficiency$GallonsUSPer100mi(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUSPer100mi] with new value
   @override
@@ -1167,8 +1196,9 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
 
   /// Symbol for [FuelEfficiency$GallonsUSPer100mi]
   @override
-  String get symbol => 'GallonsUSPer100mi';
+  String get symbol => 'gallons (US)/100mi';
 
+  /// [FuelEfficiency$GallonsUSPer100mi] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1200,7 +1230,7 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
         unit.toGallonsUKPerMile.value,
       );
 
-  static const _minorName = r'fuelEfficiency$GallonsUKPerMile';
+  static const _minorName = 'gallonsUKPerMile';
 
   static const _ratio = 0.002824809363148498;
 
@@ -1213,8 +1243,9 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
   FuelEfficiency$GallonsUKPerMile get _clone =>
       FuelEfficiency$GallonsUKPerMile(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUKPerMile] with new value
   @override
@@ -1227,6 +1258,7 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
   @override
   String get symbol => 'gal/mi';
 
+  /// [FuelEfficiency$GallonsUKPerMile] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1258,7 +1290,7 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
         unit.toGallonsUKPer100mi.value,
       );
 
-  static const _minorName = r'fuelEfficiency$GallonsUKPer100mi';
+  static const _minorName = 'gallonsUKPer100mi';
 
   static const _ratio = 0.000028248093631484976;
 
@@ -1271,8 +1303,9 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
   FuelEfficiency$GallonsUKPer100mi get _clone =>
       FuelEfficiency$GallonsUKPer100mi(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUKPer100mi] with new value
   @override
@@ -1283,8 +1316,9 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
 
   /// Symbol for [FuelEfficiency$GallonsUKPer100mi]
   @override
-  String get symbol => 'GallonsUKPer100mi';
+  String get symbol => 'gallons (UK)/100mi';
 
+  /// [FuelEfficiency$GallonsUKPer100mi] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1316,7 +1350,7 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
         unit.toNauticalMilePerLiter.value,
       );
 
-  static const _minorName = r'fuelEfficiency$NauticalMilePerLiter';
+  static const _minorName = 'nauticalMilePerLiter';
 
   static const _ratio = 1853.24496;
 
@@ -1329,8 +1363,9 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
   FuelEfficiency$NauticalMilePerLiter get _clone =>
       FuelEfficiency$NauticalMilePerLiter(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$NauticalMilePerLiter] with new value
   @override
@@ -1343,6 +1378,7 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
   @override
   String get symbol => 'nmi/l';
 
+  /// [FuelEfficiency$NauticalMilePerLiter] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1374,7 +1410,7 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
         unit.toNauticalMilePerGallonUS.value,
       );
 
-  static const _minorName = r'fuelEfficiency$NauticalMilePerGallonUS';
+  static const _minorName = 'nauticalMilePerGallonUS';
 
   static const _ratio = 489.5755247;
 
@@ -1387,8 +1423,9 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
   FuelEfficiency$NauticalMilePerGallonUS get _clone =>
       FuelEfficiency$NauticalMilePerGallonUS(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$NauticalMilePerGallonUS] with new value
   @override
@@ -1401,6 +1438,7 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
   @override
   String get symbol => 'nmi/gal';
 
+  /// [FuelEfficiency$NauticalMilePerGallonUS] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1432,7 +1470,7 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
         unit.toKilometerPerGallonUS.value,
       );
 
-  static const _minorName = r'fuelEfficiency$KilometerPerGallonUS';
+  static const _minorName = 'kilometerPerGallonUS';
 
   static const _ratio = 264.1720524;
 
@@ -1445,8 +1483,9 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
   FuelEfficiency$KilometerPerGallonUS get _clone =>
       FuelEfficiency$KilometerPerGallonUS(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$KilometerPerGallonUS] with new value
   @override
@@ -1459,6 +1498,7 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
   @override
   String get symbol => 'km/gal';
 
+  /// [FuelEfficiency$KilometerPerGallonUS] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1490,7 +1530,7 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
         unit.toMeterPerGallonUS.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerGallonUS';
+  static const _minorName = 'meterPerGallonUS';
 
   static const _ratio = 0.2641720524;
 
@@ -1503,8 +1543,9 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
   FuelEfficiency$MeterPerGallonUS get _clone =>
       FuelEfficiency$MeterPerGallonUS(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallonUS] with new value
   @override
@@ -1517,6 +1558,7 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
   @override
   String get symbol => 'm/gal';
 
+  /// [FuelEfficiency$MeterPerGallonUS] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1548,7 +1590,7 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
         unit.toMeterPerGallonUK.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerGallonUK';
+  static const _minorName = 'meterPerGallonUK';
 
   static const _ratio = 0.2199687986;
 
@@ -1561,8 +1603,9 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
   FuelEfficiency$MeterPerGallonUK get _clone =>
       FuelEfficiency$MeterPerGallonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallonUK] with new value
   @override
@@ -1575,6 +1618,7 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
   @override
   String get symbol => 'm/gal';
 
+  /// [FuelEfficiency$MeterPerGallonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1606,7 +1650,7 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
         unit.toMilePerGallonUS.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MilePerGallonUS';
+  static const _minorName = 'milePerGallonUS';
 
   static const _ratio = 425.1437075;
 
@@ -1619,8 +1663,9 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
   FuelEfficiency$MilePerGallonUS get _clone =>
       FuelEfficiency$MilePerGallonUS(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MilePerGallonUS] with new value
   @override
@@ -1633,6 +1678,7 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
   @override
   String get symbol => 'mi/gal';
 
+  /// [FuelEfficiency$MilePerGallonUS] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1664,7 +1710,7 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
         unit.toMilePerGallonUK.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MilePerGallonUK';
+  static const _minorName = 'milePerGallonUK';
 
   static const _ratio = 354.00619;
 
@@ -1677,8 +1723,9 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
   FuelEfficiency$MilePerGallonUK get _clone =>
       FuelEfficiency$MilePerGallonUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MilePerGallonUK] with new value
   @override
@@ -1691,6 +1738,7 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
   @override
   String get symbol => 'mi/gal';
 
+  /// [FuelEfficiency$MilePerGallonUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1722,7 +1770,7 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
         unit.toMeterPerMeterSquare.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerMeterSquare';
+  static const _minorName = 'meterPerMeterSquare';
 
   static const _ratio = 0.001;
 
@@ -1735,8 +1783,9 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
   FuelEfficiency$MeterPerMeterSquare get _clone =>
       FuelEfficiency$MeterPerMeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerMeterSquare] with new value
   @override
@@ -1749,6 +1798,7 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
   @override
   String get symbol => 'm/m²';
 
+  /// [FuelEfficiency$MeterPerMeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1780,7 +1830,7 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
         unit.toMeterPerCentimeterSquare.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerCentimeterSquare';
+  static const _minorName = 'meterPerCentimeterSquare';
 
   static const _ratio = 1000.0;
 
@@ -1793,8 +1843,9 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
   FuelEfficiency$MeterPerCentimeterSquare get _clone =>
       FuelEfficiency$MeterPerCentimeterSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCentimeterSquare] with new value
   @override
@@ -1807,6 +1858,7 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
   @override
   String get symbol => 'm/cm²';
 
+  /// [FuelEfficiency$MeterPerCentimeterSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1838,7 +1890,7 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
         unit.toMeterPerYardSquare.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerYardSquare';
+  static const _minorName = 'meterPerYardSquare';
 
   static const _ratio = 0.001307950619;
 
@@ -1851,8 +1903,9 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
   FuelEfficiency$MeterPerYardSquare get _clone =>
       FuelEfficiency$MeterPerYardSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerYardSquare] with new value
   @override
@@ -1865,6 +1918,7 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
   @override
   String get symbol => 'm/yd²';
 
+  /// [FuelEfficiency$MeterPerYardSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1896,7 +1950,7 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
         unit.toMeterPerFeetSquare.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerFeetSquare';
+  static const _minorName = 'meterPerFeetSquare';
 
   static const _ratio = 0.03531466672;
 
@@ -1909,8 +1963,9 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
   FuelEfficiency$MeterPerFeetSquare get _clone =>
       FuelEfficiency$MeterPerFeetSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFeetSquare] with new value
   @override
@@ -1923,6 +1978,7 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
   @override
   String get symbol => 'm/ft²';
 
+  /// [FuelEfficiency$MeterPerFeetSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -1954,7 +2010,7 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
         unit.toMeterPerInchSquare.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerInchSquare';
+  static const _minorName = 'meterPerInchSquare';
 
   static const _ratio = 61.02374409;
 
@@ -1967,8 +2023,9 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
   FuelEfficiency$MeterPerInchSquare get _clone =>
       FuelEfficiency$MeterPerInchSquare(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerInchSquare] with new value
   @override
@@ -1981,6 +2038,7 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
   @override
   String get symbol => 'm/in²';
 
+  /// [FuelEfficiency$MeterPerInchSquare] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2012,7 +2070,7 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
         unit.toMeterPerGallon.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerGallon';
+  static const _minorName = 'meterPerGallon';
 
   static const _ratio = 0.2641720524;
 
@@ -2025,8 +2083,9 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
   FuelEfficiency$MeterPerGallon get _clone =>
       FuelEfficiency$MeterPerGallon(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallon] with new value
   @override
@@ -2039,6 +2098,7 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
   @override
   String get symbol => 'm/gal';
 
+  /// [FuelEfficiency$MeterPerGallon] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2070,7 +2130,7 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
         unit.toMeterPerQuart.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerQuart';
+  static const _minorName = 'meterPerQuart';
 
   static const _ratio = 1.056688209;
 
@@ -2083,8 +2143,9 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
   FuelEfficiency$MeterPerQuart get _clone =>
       FuelEfficiency$MeterPerQuart(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerQuart] with new value
   @override
@@ -2097,6 +2158,7 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
   @override
   String get symbol => 'm/qt';
 
+  /// [FuelEfficiency$MeterPerQuart] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2128,7 +2190,7 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
         unit.toMeterPerQuartUK.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerQuartUK';
+  static const _minorName = 'meterPerQuartUK';
 
   static const _ratio = 0.8798751948;
 
@@ -2141,8 +2203,9 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
   FuelEfficiency$MeterPerQuartUK get _clone =>
       FuelEfficiency$MeterPerQuartUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerQuartUK] with new value
   @override
@@ -2155,6 +2218,7 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
   @override
   String get symbol => 'm/qt';
 
+  /// [FuelEfficiency$MeterPerQuartUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2186,7 +2250,7 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
         unit.toMeterPerPint.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerPint';
+  static const _minorName = 'meterPerPint';
 
   static const _ratio = 2.113376419;
 
@@ -2198,8 +2262,9 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerPint get _clone => FuelEfficiency$MeterPerPint(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerPint] with new value
   @override
@@ -2212,6 +2277,7 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
   @override
   String get symbol => 'm/pt';
 
+  /// [FuelEfficiency$MeterPerPint] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2243,7 +2309,7 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
         unit.toMeterPerPintUK.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerPintUK';
+  static const _minorName = 'meterPerPintUK';
 
   static const _ratio = 1.759750389;
 
@@ -2256,8 +2322,9 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
   FuelEfficiency$MeterPerPintUK get _clone =>
       FuelEfficiency$MeterPerPintUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerPintUK] with new value
   @override
@@ -2270,6 +2337,7 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
   @override
   String get symbol => 'm/pt';
 
+  /// [FuelEfficiency$MeterPerPintUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2301,7 +2369,7 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
         unit.toMeterPerCup.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerCup';
+  static const _minorName = 'meterPerCup';
 
   static const _ratio = 4.226752838;
 
@@ -2313,8 +2381,9 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerCup get _clone => FuelEfficiency$MeterPerCup(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCup] with new value
   @override
@@ -2327,6 +2396,7 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
   @override
   String get symbol => 'm/c';
 
+  /// [FuelEfficiency$MeterPerCup] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2358,7 +2428,7 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
         unit.toMeterPerCupUK.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerCupUK';
+  static const _minorName = 'meterPerCupUK';
 
   static const _ratio = 3.519500777;
 
@@ -2371,8 +2441,9 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
   FuelEfficiency$MeterPerCupUK get _clone =>
       FuelEfficiency$MeterPerCupUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCupUK] with new value
   @override
@@ -2385,6 +2456,7 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
   @override
   String get symbol => 'm/c';
 
+  /// [FuelEfficiency$MeterPerCupUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2416,7 +2488,7 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
         unit.toMeterPerFluidOunce.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerFluidOunce';
+  static const _minorName = 'meterPerFluidOunce';
 
   static const _ratio = 33.8140227;
 
@@ -2429,8 +2501,9 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
   FuelEfficiency$MeterPerFluidOunce get _clone =>
       FuelEfficiency$MeterPerFluidOunce(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFluidOunce] with new value
   @override
@@ -2443,6 +2516,7 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
   @override
   String get symbol => 'm/fl oz';
 
+  /// [FuelEfficiency$MeterPerFluidOunce] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
@@ -2474,7 +2548,7 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
         unit.toMeterPerFluidOunceUK.value,
       );
 
-  static const _minorName = r'fuelEfficiency$MeterPerFluidOunceUK';
+  static const _minorName = 'meterPerFluidOunceUK';
 
   static const _ratio = 35.19500777;
 
@@ -2487,8 +2561,9 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
   FuelEfficiency$MeterPerFluidOunceUK get _clone =>
       FuelEfficiency$MeterPerFluidOunceUK(value);
 
+  /// Ignore this
   @override
-  num get _shiftValue => 0.0;
+  num get _valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFluidOunceUK] with new value
   @override
@@ -2501,6 +2576,7 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
   @override
   String get symbol => 'm/fl oz';
 
+  /// [FuelEfficiency$MeterPerFluidOunceUK] in JSON [Map] for advance use-case
   @override
   Map<String, dynamic> toJson() => {
         majorName: {
