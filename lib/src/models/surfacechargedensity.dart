@@ -120,6 +120,9 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
   SurfaceChargeDensity$CoulombPerMeterSquare get _clone =>
       SurfaceChargeDensity$CoulombPerMeterSquare(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [SurfaceChargeDensity$CoulombPerMeterSquare] with new value
   @override
   SurfaceChargeDensity$CoulombPerMeterSquare withValue(
@@ -167,7 +170,7 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
 
   static const _ratio = 1550.0031;
 
-  /// 1 [SurfaceChargeDensity$CoulombPerInchSquare]  ≈  1550.0031 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$CoulombPerInchSquare] ≈ 1550.0031 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -175,6 +178,9 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
   @override
   SurfaceChargeDensity$CoulombPerInchSquare get _clone =>
       SurfaceChargeDensity$CoulombPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceChargeDensity$CoulombPerInchSquare] with new value
   @override
@@ -223,7 +229,7 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
 
   static const _ratio = 10000.0;
 
-  /// 1 [SurfaceChargeDensity$CoulombPerCentimeterSquare]  =  10000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$CoulombPerCentimeterSquare] = 10000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -231,6 +237,9 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
   @override
   SurfaceChargeDensity$CoulombPerCentimeterSquare get _clone =>
       SurfaceChargeDensity$CoulombPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceChargeDensity$CoulombPerCentimeterSquare] with new value
   @override
@@ -279,7 +288,7 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
 
   static const _ratio = 10.0;
 
-  /// 1 [SurfaceChargeDensity$AbcoulombPerMeterSquare]  =  10.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$AbcoulombPerMeterSquare] = 10.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -287,6 +296,9 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
   @override
   SurfaceChargeDensity$AbcoulombPerMeterSquare get _clone =>
       SurfaceChargeDensity$AbcoulombPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerMeterSquare] with new value
   @override
@@ -336,7 +348,7 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
 
   static const _ratio = 100000.0;
 
-  /// 1 [SurfaceChargeDensity$AbcoulombPerCentimeterSquare]  =  100000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] = 100000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -344,6 +356,9 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
   @override
   SurfaceChargeDensity$AbcoulombPerCentimeterSquare get _clone =>
       SurfaceChargeDensity$AbcoulombPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] with new value
   @override
@@ -392,7 +407,7 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
 
   static const _ratio = 15500.031;
 
-  /// 1 [SurfaceChargeDensity$AbcoulombPerInchSquare]  ≈  15500.031 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$AbcoulombPerInchSquare] ≈ 15500.031 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -400,6 +415,9 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
   @override
   SurfaceChargeDensity$AbcoulombPerInchSquare get _clone =>
       SurfaceChargeDensity$AbcoulombPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerInchSquare] with new value
   @override

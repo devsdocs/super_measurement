@@ -9,7 +9,7 @@ abstract final class Temperature extends Unit<Temperature> {
     super.value,
   ]);
 
-  /// If there is no matched key, returning [Temperature$Fahrenheit] with 0 value
+  /// If there is no matched key, returning [Temperature$Rankine] with 0 value
   factory Temperature.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
@@ -20,7 +20,7 @@ abstract final class Temperature extends Unit<Temperature> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Temperature$Fahrenheit();
+          : const Temperature$Rankine();
 
   @override
   AnchorRatio<Temperature> get _anchorRatio => (
@@ -28,13 +28,13 @@ abstract final class Temperature extends Unit<Temperature> {
         ratio: const _ConversionRatio<Temperature>({
           Temperature$Kelvin: Temperature$Kelvin._ratio,
           Temperature$Celsius: Temperature$Celsius._ratio,
-          Temperature$Rankine: Temperature$Rankine._ratio,
+          Temperature$Fahrenheit: Temperature$Fahrenheit._ratio,
           Temperature$Reaumur: Temperature$Reaumur._ratio,
         })
       );
 
   @override
-  Temperature get _anchor => const Temperature$Fahrenheit();
+  Temperature get _anchor => const Temperature$Rankine();
 
   /// Convert to [Temperature$Kelvin]
   Temperature get toKelvin => convertTo(
@@ -93,13 +93,16 @@ final class Temperature$Kelvin extends Temperature {
 
   static const _ratio = 1.8;
 
-  /// 1 [Temperature$Kelvin]  ≈  1.8 [Temperature$Fahrenheit]
+  /// 1 [Temperature$Kelvin] ≈ 1.8 [Temperature$Rankine]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Temperature$Kelvin get _clone => Temperature$Kelvin(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Temperature$Kelvin] with new value
   @override
@@ -147,13 +150,16 @@ final class Temperature$Celsius extends Temperature {
 
   static const _ratio = 1.8;
 
-  /// 1 [Temperature$Celsius]  ≈  1.8 [Temperature$Fahrenheit]
+  /// 1 [Temperature$Celsius] ≈ 1.8 [Temperature$Rankine]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Temperature$Celsius get _clone => Temperature$Celsius(value);
+
+  @override
+  num get _shiftValue => 491.67;
 
   /// Creating [Temperature$Celsius] with new value
   @override
@@ -201,13 +207,16 @@ final class Temperature$Fahrenheit extends Temperature {
 
   static const _ratio = 1.0;
 
-  /// Default (anchor) unit of [Temperature]
+  /// 1 [Temperature$Fahrenheit] = 1.0 [Temperature$Rankine]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Temperature$Fahrenheit get _clone => Temperature$Fahrenheit(value);
+
+  @override
+  num get _shiftValue => 459.67;
 
   /// Creating [Temperature$Fahrenheit] with new value
   @override
@@ -255,13 +264,16 @@ final class Temperature$Rankine extends Temperature {
 
   static const _ratio = 1.0;
 
-  /// 1 [Temperature$Rankine]  =  1.0 [Temperature$Fahrenheit]
+  /// Default (anchor) unit of [Temperature]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Temperature$Rankine get _clone => Temperature$Rankine(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Temperature$Rankine] with new value
   @override
@@ -309,13 +321,16 @@ final class Temperature$Reaumur extends Temperature {
 
   static const _ratio = 2.25;
 
-  /// 1 [Temperature$Reaumur]  ≈  2.25 [Temperature$Fahrenheit]
+  /// 1 [Temperature$Reaumur] ≈ 2.25 [Temperature$Rankine]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Temperature$Reaumur get _clone => Temperature$Reaumur(value);
+
+  @override
+  num get _shiftValue => 491.67;
 
   /// Creating [Temperature$Reaumur] with new value
   @override

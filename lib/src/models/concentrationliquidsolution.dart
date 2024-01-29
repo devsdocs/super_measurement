@@ -161,6 +161,9 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
   ConcentrationLiquidSolution$KilogramPerLiter get _clone =>
       ConcentrationLiquidSolution$KilogramPerLiter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [ConcentrationLiquidSolution$KilogramPerLiter] with new value
   @override
   ConcentrationLiquidSolution$KilogramPerLiter withValue(
@@ -208,7 +211,7 @@ final class ConcentrationLiquidSolution$GramPerLiter
 
   static const _ratio = 0.001;
 
-  /// 1 [ConcentrationLiquidSolution$GramPerLiter]  ≈  0.001 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$GramPerLiter] ≈ 0.001 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -216,6 +219,9 @@ final class ConcentrationLiquidSolution$GramPerLiter
   @override
   ConcentrationLiquidSolution$GramPerLiter get _clone =>
       ConcentrationLiquidSolution$GramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GramPerLiter] with new value
   @override
@@ -264,7 +270,7 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
 
   static const _ratio = 0.000001;
 
-  /// 1 [ConcentrationLiquidSolution$MilligramPerLiter]  ≈  0.000001 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$MilligramPerLiter] ≈ 0.000001 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -272,6 +278,9 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
   @override
   ConcentrationLiquidSolution$MilligramPerLiter get _clone =>
       ConcentrationLiquidSolution$MilligramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$MilligramPerLiter] with new value
   @override
@@ -320,7 +329,7 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
 
   static const _ratio = 0.000001;
 
-  /// 1 [ConcentrationLiquidSolution$PartPerMillionPpm]  ≈  0.000001 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PartPerMillionPpm] ≈ 0.000001 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -328,6 +337,9 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
   @override
   ConcentrationLiquidSolution$PartPerMillionPpm get _clone =>
       ConcentrationLiquidSolution$PartPerMillionPpm(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PartPerMillionPpm] with new value
   @override
@@ -376,7 +388,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
 
   static const _ratio = 0.000014253767523300243;
 
-  /// 1 [ConcentrationLiquidSolution$GrainPerGallonUK]  ≈  0.000014253767523300243 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$GrainPerGallonUK] ≈ 0.000014253767523300243 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -384,6 +396,9 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
   @override
   ConcentrationLiquidSolution$GrainPerGallonUK get _clone =>
       ConcentrationLiquidSolution$GrainPerGallonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GrainPerGallonUK] with new value
   @override
@@ -432,7 +447,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
 
   static const _ratio = 0.000017118061045270948;
 
-  /// 1 [ConcentrationLiquidSolution$GrainPerGallonUS]  ≈  0.000017118061045270948 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$GrainPerGallonUS] ≈ 0.000017118061045270948 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -440,6 +455,9 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
   @override
   ConcentrationLiquidSolution$GrainPerGallonUS get _clone =>
       ConcentrationLiquidSolution$GrainPerGallonUS(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GrainPerGallonUS] with new value
   @override
@@ -488,7 +506,7 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
 
   static const _ratio = 0.01601846337396014;
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerFootCubic]  ≈  0.01601846337396014 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerFootCubic] ≈ 0.01601846337396014 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -496,6 +514,9 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
   @override
   ConcentrationLiquidSolution$PoundPerFootCubic get _clone =>
       ConcentrationLiquidSolution$PoundPerFootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerFootCubic] with new value
   @override
@@ -544,7 +565,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
 
   static const _ratio = 0.0997763726631017;
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerGallonUK]  ≈  0.0997763726631017 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerGallonUK] ≈ 0.0997763726631017 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -552,6 +573,9 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
   @override
   ConcentrationLiquidSolution$PoundPerGallonUK get _clone =>
       ConcentrationLiquidSolution$PoundPerGallonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerGallonUK] with new value
   @override
@@ -600,7 +624,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
 
   static const _ratio = 0.11982642731689663;
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerGallonUS]  ≈  0.11982642731689663 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerGallonUS] ≈ 0.11982642731689663 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -608,6 +632,9 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
   @override
   ConcentrationLiquidSolution$PoundPerGallonUS get _clone =>
       ConcentrationLiquidSolution$PoundPerGallonUS(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerGallonUS] with new value
   @override
@@ -657,7 +684,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
 
   static const _ratio = 9.97763726631017e-8;
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerMillionUKGallon]  ≈  9.97763726631017e-8 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerMillionUKGallon] ≈ 9.97763726631017e-8 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -665,6 +692,9 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
   @override
   ConcentrationLiquidSolution$PoundPerMillionUKGallon get _clone =>
       ConcentrationLiquidSolution$PoundPerMillionUKGallon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerMillionUKGallon] with new value
   @override
@@ -675,7 +705,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
 
   /// Symbol for [ConcentrationLiquidSolution$PoundPerMillionUKGallon]
   @override
-  String get symbol => '';
+  String get symbol => 'PoundPerMillionUKGallon';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -714,7 +744,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
 
   static const _ratio = 1.1982642731689662e-7;
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerMillionUSGallon]  ≈  1.1982642731689662e-7 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerMillionUSGallon] ≈ 1.1982642731689662e-7 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -722,6 +752,9 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
   @override
   ConcentrationLiquidSolution$PoundPerMillionUSGallon get _clone =>
       ConcentrationLiquidSolution$PoundPerMillionUSGallon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerMillionUSGallon] with new value
   @override
@@ -732,7 +765,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
 
   /// Symbol for [ConcentrationLiquidSolution$PoundPerMillionUSGallon]
   @override
-  String get symbol => '';
+  String get symbol => 'PoundPerMillionUSGallon';
 
   @override
   Map<String, dynamic> toJson() => {

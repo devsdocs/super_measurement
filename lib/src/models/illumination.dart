@@ -138,13 +138,16 @@ final class Illumination$MeterCandle extends Illumination {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Illumination$MeterCandle]  =  1000.0 [Illumination$Nox]
+  /// 1 [Illumination$MeterCandle] = 1000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Illumination$MeterCandle get _clone => Illumination$MeterCandle(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$MeterCandle] with new value
   @override
@@ -155,7 +158,7 @@ final class Illumination$MeterCandle extends Illumination {
 
   /// Symbol for [Illumination$MeterCandle]
   @override
-  String get symbol => '';
+  String get symbol => 'MeterCandle';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -192,7 +195,7 @@ final class Illumination$CentimeterCandle extends Illumination {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Illumination$CentimeterCandle]  =  10000000.0 [Illumination$Nox]
+  /// 1 [Illumination$CentimeterCandle] = 10000000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
@@ -200,6 +203,9 @@ final class Illumination$CentimeterCandle extends Illumination {
   @override
   Illumination$CentimeterCandle get _clone =>
       Illumination$CentimeterCandle(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$CentimeterCandle] with new value
   @override
@@ -210,7 +216,7 @@ final class Illumination$CentimeterCandle extends Illumination {
 
   /// Symbol for [Illumination$CentimeterCandle]
   @override
-  String get symbol => '';
+  String get symbol => 'CentimeterCandle';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -247,13 +253,16 @@ final class Illumination$FootCandle extends Illumination {
 
   static const _ratio = 10763.9104167;
 
-  /// 1 [Illumination$FootCandle]  ≈  10763.9104167 [Illumination$Nox]
+  /// 1 [Illumination$FootCandle] ≈ 10763.9104167 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Illumination$FootCandle get _clone => Illumination$FootCandle(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$FootCandle] with new value
   @override
@@ -264,7 +273,7 @@ final class Illumination$FootCandle extends Illumination {
 
   /// Symbol for [Illumination$FootCandle]
   @override
-  String get symbol => '';
+  String get symbol => 'FootCandle';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -301,13 +310,16 @@ final class Illumination$Flame extends Illumination {
 
   static const _ratio = 43055.6416668;
 
-  /// 1 [Illumination$Flame]  ≈  43055.6416668 [Illumination$Nox]
+  /// 1 [Illumination$Flame] ≈ 43055.6416668 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Illumination$Flame get _clone => Illumination$Flame(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$Flame] with new value
   @override
@@ -318,7 +330,7 @@ final class Illumination$Flame extends Illumination {
 
   /// Symbol for [Illumination$Flame]
   @override
-  String get symbol => '';
+  String get symbol => 'Flame';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -355,13 +367,16 @@ final class Illumination$Phot extends Illumination {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Illumination$Phot]  =  10000000.0 [Illumination$Nox]
+  /// 1 [Illumination$Phot] = 10000000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Illumination$Phot get _clone => Illumination$Phot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$Phot] with new value
   @override
@@ -417,6 +432,9 @@ final class Illumination$Nox extends Illumination {
   @override
   Illumination$Nox get _clone => Illumination$Nox(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Illumination$Nox] with new value
   @override
   Illumination$Nox withValue(
@@ -426,7 +444,7 @@ final class Illumination$Nox extends Illumination {
 
   /// Symbol for [Illumination$Nox]
   @override
-  String get symbol => '';
+  String get symbol => 'Nox';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -463,13 +481,16 @@ final class Illumination$Lux extends Illumination {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Illumination$Lux]  =  1000.0 [Illumination$Nox]
+  /// 1 [Illumination$Lux] = 1000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Illumination$Lux get _clone => Illumination$Lux(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$Lux] with new value
   @override
@@ -517,7 +538,7 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Illumination$LumenPerMeterSquare]  =  1000.0 [Illumination$Nox]
+  /// 1 [Illumination$LumenPerMeterSquare] = 1000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
@@ -525,6 +546,9 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
   @override
   Illumination$LumenPerMeterSquare get _clone =>
       Illumination$LumenPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$LumenPerMeterSquare] with new value
   @override
@@ -572,7 +596,7 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Illumination$LumenPerCentimeterSquare]  =  10000000.0 [Illumination$Nox]
+  /// 1 [Illumination$LumenPerCentimeterSquare] = 10000000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
@@ -580,6 +604,9 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
   @override
   Illumination$LumenPerCentimeterSquare get _clone =>
       Illumination$LumenPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$LumenPerCentimeterSquare] with new value
   @override
@@ -627,7 +654,7 @@ final class Illumination$LumenPerFootSquare extends Illumination {
 
   static const _ratio = 10763.9104167;
 
-  /// 1 [Illumination$LumenPerFootSquare]  ≈  10763.9104167 [Illumination$Nox]
+  /// 1 [Illumination$LumenPerFootSquare] ≈ 10763.9104167 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
@@ -635,6 +662,9 @@ final class Illumination$LumenPerFootSquare extends Illumination {
   @override
   Illumination$LumenPerFootSquare get _clone =>
       Illumination$LumenPerFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$LumenPerFootSquare] with new value
   @override
@@ -682,7 +712,7 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
 
   static const _ratio = 6830000000.0;
 
-  /// 1 [Illumination$WattPerCentimeterSquareAt555nm]  =  6830000000.0 [Illumination$Nox]
+  /// 1 [Illumination$WattPerCentimeterSquareAt555nm] = 6830000000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
@@ -690,6 +720,9 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
   @override
   Illumination$WattPerCentimeterSquareAt555nm get _clone =>
       Illumination$WattPerCentimeterSquareAt555nm(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Illumination$WattPerCentimeterSquareAt555nm] with new value
   @override
@@ -700,7 +733,7 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
 
   /// Symbol for [Illumination$WattPerCentimeterSquareAt555nm]
   @override
-  String get symbol => '';
+  String get symbol => 'WattPerCentimeterSquareAt555nm';
 
   @override
   Map<String, dynamic> toJson() => {

@@ -170,13 +170,16 @@ final class Torque$KilonewtonMeter extends Torque {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Torque$KilonewtonMeter]  =  1000.0 [Torque$NewtonMeter]
+  /// 1 [Torque$KilonewtonMeter] = 1000.0 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$KilonewtonMeter get _clone => Torque$KilonewtonMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$KilonewtonMeter] with new value
   @override
@@ -232,6 +235,9 @@ final class Torque$NewtonMeter extends Torque {
   @override
   Torque$NewtonMeter get _clone => Torque$NewtonMeter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Torque$NewtonMeter] with new value
   @override
   Torque$NewtonMeter withValue(
@@ -278,13 +284,16 @@ final class Torque$NewtonCentimeter extends Torque {
 
   static const _ratio = 0.01;
 
-  /// 1 [Torque$NewtonCentimeter]  ≈  0.01 [Torque$NewtonMeter]
+  /// 1 [Torque$NewtonCentimeter] ≈ 0.01 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$NewtonCentimeter get _clone => Torque$NewtonCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$NewtonCentimeter] with new value
   @override
@@ -332,13 +341,16 @@ final class Torque$NewtonMillimeter extends Torque {
 
   static const _ratio = 0.001;
 
-  /// 1 [Torque$NewtonMillimeter]  ≈  0.001 [Torque$NewtonMeter]
+  /// 1 [Torque$NewtonMillimeter] ≈ 0.001 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$NewtonMillimeter get _clone => Torque$NewtonMillimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$NewtonMillimeter] with new value
   @override
@@ -386,13 +398,16 @@ final class Torque$DyneMeter extends Torque {
 
   static const _ratio = 0.00001;
 
-  /// 1 [Torque$DyneMeter]  ≈  0.00001 [Torque$NewtonMeter]
+  /// 1 [Torque$DyneMeter] ≈ 0.00001 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$DyneMeter get _clone => Torque$DyneMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$DyneMeter] with new value
   @override
@@ -440,13 +455,16 @@ final class Torque$DyneCentimeter extends Torque {
 
   static const _ratio = 1e-7;
 
-  /// 1 [Torque$DyneCentimeter]  ≈  1e-7 [Torque$NewtonMeter]
+  /// 1 [Torque$DyneCentimeter] ≈ 1e-7 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$DyneCentimeter get _clone => Torque$DyneCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$DyneCentimeter] with new value
   @override
@@ -494,13 +512,16 @@ final class Torque$DyneMillimeter extends Torque {
 
   static const _ratio = 1e-8;
 
-  /// 1 [Torque$DyneMillimeter]  ≈  1e-8 [Torque$NewtonMeter]
+  /// 1 [Torque$DyneMillimeter] ≈ 1e-8 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$DyneMillimeter get _clone => Torque$DyneMillimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$DyneMillimeter] with new value
   @override
@@ -548,13 +569,16 @@ final class Torque$KilogramForceMeter extends Torque {
 
   static const _ratio = 9.80665;
 
-  /// 1 [Torque$KilogramForceMeter]  ≈  9.80665 [Torque$NewtonMeter]
+  /// 1 [Torque$KilogramForceMeter] ≈ 9.80665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$KilogramForceMeter get _clone => Torque$KilogramForceMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$KilogramForceMeter] with new value
   @override
@@ -602,7 +626,7 @@ final class Torque$KilogramForceCentimeter extends Torque {
 
   static const _ratio = 0.0980665;
 
-  /// 1 [Torque$KilogramForceCentimeter]  ≈  0.0980665 [Torque$NewtonMeter]
+  /// 1 [Torque$KilogramForceCentimeter] ≈ 0.0980665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
@@ -610,6 +634,9 @@ final class Torque$KilogramForceCentimeter extends Torque {
   @override
   Torque$KilogramForceCentimeter get _clone =>
       Torque$KilogramForceCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$KilogramForceCentimeter] with new value
   @override
@@ -657,7 +684,7 @@ final class Torque$KilogramForceMillimeter extends Torque {
 
   static const _ratio = 0.00980665;
 
-  /// 1 [Torque$KilogramForceMillimeter]  ≈  0.00980665 [Torque$NewtonMeter]
+  /// 1 [Torque$KilogramForceMillimeter] ≈ 0.00980665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
@@ -665,6 +692,9 @@ final class Torque$KilogramForceMillimeter extends Torque {
   @override
   Torque$KilogramForceMillimeter get _clone =>
       Torque$KilogramForceMillimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$KilogramForceMillimeter] with new value
   @override
@@ -712,13 +742,16 @@ final class Torque$GramForceMeter extends Torque {
 
   static const _ratio = 0.00980665;
 
-  /// 1 [Torque$GramForceMeter]  ≈  0.00980665 [Torque$NewtonMeter]
+  /// 1 [Torque$GramForceMeter] ≈ 0.00980665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$GramForceMeter get _clone => Torque$GramForceMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$GramForceMeter] with new value
   @override
@@ -766,13 +799,16 @@ final class Torque$GramForceCentimeter extends Torque {
 
   static const _ratio = 0.0000980665;
 
-  /// 1 [Torque$GramForceCentimeter]  ≈  0.0000980665 [Torque$NewtonMeter]
+  /// 1 [Torque$GramForceCentimeter] ≈ 0.0000980665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$GramForceCentimeter get _clone => Torque$GramForceCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$GramForceCentimeter] with new value
   @override
@@ -820,13 +856,16 @@ final class Torque$GramForceMillimeter extends Torque {
 
   static const _ratio = 0.00000980665;
 
-  /// 1 [Torque$GramForceMillimeter]  ≈  0.00000980665 [Torque$NewtonMeter]
+  /// 1 [Torque$GramForceMillimeter] ≈ 0.00000980665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$GramForceMillimeter get _clone => Torque$GramForceMillimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$GramForceMillimeter] with new value
   @override
@@ -874,13 +913,16 @@ final class Torque$OunceForceFoot extends Torque {
 
   static const _ratio = 0.084738624;
 
-  /// 1 [Torque$OunceForceFoot]  ≈  0.084738624 [Torque$NewtonMeter]
+  /// 1 [Torque$OunceForceFoot] ≈ 0.084738624 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$OunceForceFoot get _clone => Torque$OunceForceFoot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$OunceForceFoot] with new value
   @override
@@ -928,13 +970,16 @@ final class Torque$OunceForceInch extends Torque {
 
   static const _ratio = 0.007061552;
 
-  /// 1 [Torque$OunceForceInch]  ≈  0.007061552 [Torque$NewtonMeter]
+  /// 1 [Torque$OunceForceInch] ≈ 0.007061552 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$OunceForceInch get _clone => Torque$OunceForceInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$OunceForceInch] with new value
   @override
@@ -982,13 +1027,16 @@ final class Torque$PoundForceFoot extends Torque {
 
   static const _ratio = 1.355818;
 
-  /// 1 [Torque$PoundForceFoot]  ≈  1.355818 [Torque$NewtonMeter]
+  /// 1 [Torque$PoundForceFoot] ≈ 1.355818 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$PoundForceFoot get _clone => Torque$PoundForceFoot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$PoundForceFoot] with new value
   @override
@@ -1036,13 +1084,16 @@ final class Torque$PoundForceInch extends Torque {
 
   static const _ratio = 0.11298483333333334;
 
-  /// 1 [Torque$PoundForceInch]  ≈  0.11298483333333334 [Torque$NewtonMeter]
+  /// 1 [Torque$PoundForceInch] ≈ 0.11298483333333334 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Torque$PoundForceInch get _clone => Torque$PoundForceInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Torque$PoundForceInch] with new value
   @override

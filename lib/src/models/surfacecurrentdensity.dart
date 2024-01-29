@@ -120,6 +120,9 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
   SurfaceCurrentDensity$AmperePerMeterSquare get _clone =>
       SurfaceCurrentDensity$AmperePerMeterSquare(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [SurfaceCurrentDensity$AmperePerMeterSquare] with new value
   @override
   SurfaceCurrentDensity$AmperePerMeterSquare withValue(
@@ -167,7 +170,7 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
 
   static const _ratio = 10000.0;
 
-  /// 1 [SurfaceCurrentDensity$AmperePerCentimeterSquare]  =  10000.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AmperePerCentimeterSquare] = 10000.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -175,6 +178,9 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
   @override
   SurfaceCurrentDensity$AmperePerCentimeterSquare get _clone =>
       SurfaceCurrentDensity$AmperePerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerCentimeterSquare] with new value
   @override
@@ -223,7 +229,7 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
 
   static const _ratio = 1550.0031;
 
-  /// 1 [SurfaceCurrentDensity$AmperePerInchSquare]  ≈  1550.0031 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AmperePerInchSquare] ≈ 1550.0031 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -231,6 +237,9 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
   @override
   SurfaceCurrentDensity$AmperePerInchSquare get _clone =>
       SurfaceCurrentDensity$AmperePerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerInchSquare] with new value
   @override
@@ -279,7 +288,7 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
 
   static const _ratio = 1550003100.0;
 
-  /// 1 [SurfaceCurrentDensity$AmperePerMilSquare]  =  1550003100.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AmperePerMilSquare] = 1550003100.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -287,6 +296,9 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
   @override
   SurfaceCurrentDensity$AmperePerMilSquare get _clone =>
       SurfaceCurrentDensity$AmperePerMilSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerMilSquare] with new value
   @override
@@ -335,7 +347,7 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
 
   static const _ratio = 1973525240.990759;
 
-  /// 1 [SurfaceCurrentDensity$AmperePerCicularMil]  ≈  1973525240.990759 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AmperePerCicularMil] ≈ 1973525240.990759 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -343,6 +355,9 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
   @override
   SurfaceCurrentDensity$AmperePerCicularMil get _clone =>
       SurfaceCurrentDensity$AmperePerCicularMil(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerCicularMil] with new value
   @override
@@ -392,7 +407,7 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
 
   static const _ratio = 100000.0;
 
-  /// 1 [SurfaceCurrentDensity$AbamperePerCentimeterSquare]  =  100000.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AbamperePerCentimeterSquare] = 100000.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -400,6 +415,9 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
   @override
   SurfaceCurrentDensity$AbamperePerCentimeterSquare get _clone =>
       SurfaceCurrentDensity$AbamperePerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AbamperePerCentimeterSquare] with new value
   @override

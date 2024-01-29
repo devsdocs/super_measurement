@@ -117,7 +117,7 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
 
   static const _ratio = 0.0002777777777777778;
 
-  /// 1 [MassFluxDensity$KilogramPerHourMeterSquare]  ≈  0.0002777777777777778 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$KilogramPerHourMeterSquare] ≈ 0.0002777777777777778 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -125,6 +125,9 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
   @override
   MassFluxDensity$KilogramPerHourMeterSquare get _clone =>
       MassFluxDensity$KilogramPerHourMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MassFluxDensity$KilogramPerHourMeterSquare] with new value
   @override
@@ -172,7 +175,7 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
 
   static const _ratio = 0.002989975117;
 
-  /// 1 [MassFluxDensity$KilogramPerHourFootSquare]  ≈  0.002989975117 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$KilogramPerHourFootSquare] ≈ 0.002989975117 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -180,6 +183,9 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
   @override
   MassFluxDensity$KilogramPerHourFootSquare get _clone =>
       MassFluxDensity$KilogramPerHourFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MassFluxDensity$KilogramPerHourFootSquare] with new value
   @override
@@ -237,6 +243,9 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
   MassFluxDensity$KilogramPerSecondMeterSquare get _clone =>
       MassFluxDensity$KilogramPerSecondMeterSquare(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [MassFluxDensity$KilogramPerSecondMeterSquare] with new value
   @override
   MassFluxDensity$KilogramPerSecondMeterSquare withValue(
@@ -283,7 +292,7 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
 
   static const _ratio = 0.001;
 
-  /// 1 [MassFluxDensity$GramPerSecondMeterSquare]  ≈  0.001 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$GramPerSecondMeterSquare] ≈ 0.001 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -291,6 +300,9 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
   @override
   MassFluxDensity$GramPerSecondMeterSquare get _clone =>
       MassFluxDensity$GramPerSecondMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MassFluxDensity$GramPerSecondMeterSquare] with new value
   @override
@@ -339,7 +351,7 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
 
   static const _ratio = 10.0;
 
-  /// 1 [MassFluxDensity$GramPerSecondCentimeterSquare]  =  10.0 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$GramPerSecondCentimeterSquare] = 10.0 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -347,6 +359,9 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
   @override
   MassFluxDensity$GramPerSecondCentimeterSquare get _clone =>
       MassFluxDensity$GramPerSecondCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MassFluxDensity$GramPerSecondCentimeterSquare] with new value
   @override
@@ -394,7 +409,7 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
 
   static const _ratio = 0.001356229913;
 
-  /// 1 [MassFluxDensity$PoundPerHourFootSquare]  ≈  0.001356229913 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$PoundPerHourFootSquare] ≈ 0.001356229913 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -402,6 +417,9 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
   @override
   MassFluxDensity$PoundPerHourFootSquare get _clone =>
       MassFluxDensity$PoundPerHourFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MassFluxDensity$PoundPerHourFootSquare] with new value
   @override
@@ -449,7 +467,7 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
 
   static const _ratio = 4.882427687;
 
-  /// 1 [MassFluxDensity$PoundPerSecondFootSquare]  ≈  4.882427687 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$PoundPerSecondFootSquare] ≈ 4.882427687 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -457,6 +475,9 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
   @override
   MassFluxDensity$PoundPerSecondFootSquare get _clone =>
       MassFluxDensity$PoundPerSecondFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MassFluxDensity$PoundPerSecondFootSquare] with new value
   @override

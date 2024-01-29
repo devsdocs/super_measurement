@@ -143,6 +143,9 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
   HeatTransferCoefficient$WattPerMeterSquareK get _clone =>
       HeatTransferCoefficient$WattPerMeterSquareK(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [HeatTransferCoefficient$WattPerMeterSquareK] with new value
   @override
   HeatTransferCoefficient$WattPerMeterSquareK withValue(
@@ -191,7 +194,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
 
   static const _ratio = 1.0;
 
-  /// 1 [HeatTransferCoefficient$WattPerMeterSquareDegreeC]  =  1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$WattPerMeterSquareDegreeC] = 1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
 
@@ -199,6 +202,9 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
   @override
   HeatTransferCoefficient$WattPerMeterSquareDegreeC get _clone =>
       HeatTransferCoefficient$WattPerMeterSquareDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatTransferCoefficient$WattPerMeterSquareDegreeC] with new value
   @override
@@ -248,7 +254,7 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
 
   static const _ratio = 1.0;
 
-  /// 1 [HeatTransferCoefficient$JoulePerSecondMeterSquareK]  =  1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$JoulePerSecondMeterSquareK] = 1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
 
@@ -256,6 +262,9 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
   @override
   HeatTransferCoefficient$JoulePerSecondMeterSquareK get _clone =>
       HeatTransferCoefficient$JoulePerSecondMeterSquareK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatTransferCoefficient$JoulePerSecondMeterSquareK] with new value
   @override
@@ -305,7 +314,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
 
   static const _ratio = 1.163;
 
-  /// 1 [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC]  ≈  1.163 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] ≈ 1.163 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
 
@@ -313,6 +322,9 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
   @override
   HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC get _clone =>
       HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] with new value
   @override
@@ -362,7 +374,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
 
   static const _ratio = 12.51842782;
 
-  /// 1 [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC]  ≈  12.51842782 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] ≈ 12.51842782 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
 
@@ -370,6 +382,9 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
   @override
   HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC get _clone =>
       HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] with new value
   @override
@@ -419,7 +434,7 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
 
   static const _ratio = 41868.0;
 
-  /// 1 [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC]  =  41868.0 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] = 41868.0 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
 
@@ -427,6 +442,9 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
   @override
   HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC get _clone =>
       HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] with new value
   @override
@@ -476,7 +494,7 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
 
   static const _ratio = 5.678263398;
 
-  /// 1 [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF]  ≈  5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] ≈ 5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
 
@@ -484,6 +502,9 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
   @override
   HeatTransferCoefficient$BTUPerHourFootSquareDegreeF get _clone =>
       HeatTransferCoefficient$BTUPerHourFootSquareDegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] with new value
   @override
@@ -494,7 +515,7 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
 
   /// Symbol for [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerHourFootSquareDegreeF';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -533,7 +554,7 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
 
   static const _ratio = 5.678263398;
 
-  /// 1 [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC]  ≈  5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] ≈ 5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
 
@@ -541,6 +562,9 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
   @override
   HeatTransferCoefficient$CHUPerHourFootSquareDegreeC get _clone =>
       HeatTransferCoefficient$CHUPerHourFootSquareDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] with new value
   @override
@@ -551,7 +575,7 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
 
   /// Symbol for [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'CHUPerHourFootSquareDegreeC';
 
   @override
   Map<String, dynamic> toJson() => {

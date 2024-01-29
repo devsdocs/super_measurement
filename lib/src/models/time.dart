@@ -250,13 +250,16 @@ final class Time$Millennium extends Time {
 
   static const _ratio = 3.1536e+28;
 
-  /// 1 [Time$Millennium]  =  3.1536e+28 [Time$Attosecond]
+  /// 1 [Time$Millennium] = 3.1536e+28 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Millennium get _clone => Time$Millennium(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Millennium] with new value
   @override
@@ -267,7 +270,7 @@ final class Time$Millennium extends Time {
 
   /// Symbol for [Time$Millennium]
   @override
-  String get symbol => '';
+  String get symbol => 'Millennium';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -304,13 +307,16 @@ final class Time$Century extends Time {
 
   static const _ratio = 3.1536e+27;
 
-  /// 1 [Time$Century]  =  3.1536e+27 [Time$Attosecond]
+  /// 1 [Time$Century] = 3.1536e+27 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Century get _clone => Time$Century(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Century] with new value
   @override
@@ -358,13 +364,16 @@ final class Time$Decade extends Time {
 
   static const _ratio = 3.1536e+26;
 
-  /// 1 [Time$Decade]  =  3.1536e+26 [Time$Attosecond]
+  /// 1 [Time$Decade] = 3.1536e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Decade get _clone => Time$Decade(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Decade] with new value
   @override
@@ -375,7 +384,7 @@ final class Time$Decade extends Time {
 
   /// Symbol for [Time$Decade]
   @override
-  String get symbol => '';
+  String get symbol => 'Decade';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -412,13 +421,16 @@ final class Time$Year extends Time {
 
   static const _ratio = 3.1536e+25;
 
-  /// 1 [Time$Year]  =  3.1536e+25 [Time$Attosecond]
+  /// 1 [Time$Year] = 3.1536e+25 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Year get _clone => Time$Year(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Year] with new value
   @override
@@ -466,13 +478,16 @@ final class Time$LeapYear extends Time {
 
   static const _ratio = 3.16224e+25;
 
-  /// 1 [Time$LeapYear]  =  3.16224e+25 [Time$Attosecond]
+  /// 1 [Time$LeapYear] = 3.16224e+25 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$LeapYear get _clone => Time$LeapYear(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$LeapYear] with new value
   @override
@@ -483,7 +498,7 @@ final class Time$LeapYear extends Time {
 
   /// Symbol for [Time$LeapYear]
   @override
-  String get symbol => '';
+  String get symbol => 'LeapYear';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -520,13 +535,16 @@ final class Time$MeanYear extends Time {
 
   static const _ratio = 3.15576e+25;
 
-  /// 1 [Time$MeanYear]  =  3.15576e+25 [Time$Attosecond]
+  /// 1 [Time$MeanYear] = 3.15576e+25 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$MeanYear get _clone => Time$MeanYear(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$MeanYear] with new value
   @override
@@ -537,7 +555,7 @@ final class Time$MeanYear extends Time {
 
   /// Symbol for [Time$MeanYear]
   @override
-  String get symbol => '';
+  String get symbol => 'MeanYear';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -574,13 +592,16 @@ final class Time$SiderealYear extends Time {
 
   static const _ratio = 3.1558149504e+25;
 
-  /// 1 [Time$SiderealYear]  =  3.1558149504e+25 [Time$Attosecond]
+  /// 1 [Time$SiderealYear] = 3.1558149504e+25 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$SiderealYear get _clone => Time$SiderealYear(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$SiderealYear] with new value
   @override
@@ -591,7 +612,7 @@ final class Time$SiderealYear extends Time {
 
   /// Symbol for [Time$SiderealYear]
   @override
-  String get symbol => '';
+  String get symbol => 'SiderealYear';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -628,13 +649,16 @@ final class Time$TropicalYear extends Time {
 
   static const _ratio = 3.155692608e+25;
 
-  /// 1 [Time$TropicalYear]  =  3.155692608e+25 [Time$Attosecond]
+  /// 1 [Time$TropicalYear] = 3.155692608e+25 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$TropicalYear get _clone => Time$TropicalYear(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$TropicalYear] with new value
   @override
@@ -645,7 +669,7 @@ final class Time$TropicalYear extends Time {
 
   /// Symbol for [Time$TropicalYear]
   @override
-  String get symbol => '';
+  String get symbol => 'TropicalYear';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -682,13 +706,16 @@ final class Time$Month extends Time {
 
   static const _ratio = 2.592e+24;
 
-  /// 1 [Time$Month]  =  2.592e+24 [Time$Attosecond]
+  /// 1 [Time$Month] = 2.592e+24 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Month get _clone => Time$Month(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Month] with new value
   @override
@@ -736,13 +763,16 @@ final class Time$SynodicMonth extends Time {
 
   static const _ratio = 2.55144384e+24;
 
-  /// 1 [Time$SynodicMonth]  =  2.55144384e+24 [Time$Attosecond]
+  /// 1 [Time$SynodicMonth] = 2.55144384e+24 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$SynodicMonth get _clone => Time$SynodicMonth(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$SynodicMonth] with new value
   @override
@@ -753,7 +783,7 @@ final class Time$SynodicMonth extends Time {
 
   /// Symbol for [Time$SynodicMonth]
   @override
-  String get symbol => '';
+  String get symbol => 'SynodicMonth';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -790,13 +820,16 @@ final class Time$Fortnight extends Time {
 
   static const _ratio = 1.2096e+24;
 
-  /// 1 [Time$Fortnight]  =  1.2096e+24 [Time$Attosecond]
+  /// 1 [Time$Fortnight] = 1.2096e+24 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Fortnight get _clone => Time$Fortnight(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Fortnight] with new value
   @override
@@ -807,7 +840,7 @@ final class Time$Fortnight extends Time {
 
   /// Symbol for [Time$Fortnight]
   @override
-  String get symbol => '';
+  String get symbol => 'Fortnight';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -844,13 +877,16 @@ final class Time$Week extends Time {
 
   static const _ratio = 6.048e+23;
 
-  /// 1 [Time$Week]  =  6.048e+23 [Time$Attosecond]
+  /// 1 [Time$Week] = 6.048e+23 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Week get _clone => Time$Week(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Week] with new value
   @override
@@ -898,13 +934,16 @@ final class Time$Day extends Time {
 
   static const _ratio = 8.64e+22;
 
-  /// 1 [Time$Day]  =  8.64e+22 [Time$Attosecond]
+  /// 1 [Time$Day] = 8.64e+22 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Day get _clone => Time$Day(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Day] with new value
   @override
@@ -952,13 +991,16 @@ final class Time$SiderealDay extends Time {
 
   static const _ratio = 8.6164091e+22;
 
-  /// 1 [Time$SiderealDay]  =  8.6164091e+22 [Time$Attosecond]
+  /// 1 [Time$SiderealDay] = 8.6164091e+22 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$SiderealDay get _clone => Time$SiderealDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$SiderealDay] with new value
   @override
@@ -969,7 +1011,7 @@ final class Time$SiderealDay extends Time {
 
   /// Symbol for [Time$SiderealDay]
   @override
-  String get symbol => '';
+  String get symbol => 'SiderealDay';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1006,13 +1048,16 @@ final class Time$Hour extends Time {
 
   static const _ratio = 3.6e+21;
 
-  /// 1 [Time$Hour]  =  3.6e+21 [Time$Attosecond]
+  /// 1 [Time$Hour] = 3.6e+21 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Hour get _clone => Time$Hour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Hour] with new value
   @override
@@ -1060,13 +1105,16 @@ final class Time$SiderealHour extends Time {
 
   static const _ratio = 3.59017e+21;
 
-  /// 1 [Time$SiderealHour]  =  3.59017e+21 [Time$Attosecond]
+  /// 1 [Time$SiderealHour] = 3.59017e+21 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$SiderealHour get _clone => Time$SiderealHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$SiderealHour] with new value
   @override
@@ -1077,7 +1125,7 @@ final class Time$SiderealHour extends Time {
 
   /// Symbol for [Time$SiderealHour]
   @override
-  String get symbol => '';
+  String get symbol => 'SiderealHour';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1114,13 +1162,16 @@ final class Time$Minute extends Time {
 
   static const _ratio = 60000000000000000000.0;
 
-  /// 1 [Time$Minute]  =  60000000000000000000.0 [Time$Attosecond]
+  /// 1 [Time$Minute] = 60000000000000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Minute get _clone => Time$Minute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Minute] with new value
   @override
@@ -1168,13 +1219,16 @@ final class Time$Second extends Time {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [Time$Second]  =  1000000000000000000.0 [Time$Attosecond]
+  /// 1 [Time$Second] = 1000000000000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Second get _clone => Time$Second(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Second] with new value
   @override
@@ -1222,13 +1276,16 @@ final class Time$Millisecond extends Time {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Time$Millisecond]  =  1000000000000000.0 [Time$Attosecond]
+  /// 1 [Time$Millisecond] = 1000000000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Millisecond get _clone => Time$Millisecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Millisecond] with new value
   @override
@@ -1276,13 +1333,16 @@ final class Time$Microsecond extends Time {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Time$Microsecond]  =  1000000000000.0 [Time$Attosecond]
+  /// 1 [Time$Microsecond] = 1000000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Microsecond get _clone => Time$Microsecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Microsecond] with new value
   @override
@@ -1330,13 +1390,16 @@ final class Time$Nanosecond extends Time {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Time$Nanosecond]  =  1000000000.0 [Time$Attosecond]
+  /// 1 [Time$Nanosecond] = 1000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Nanosecond get _clone => Time$Nanosecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Nanosecond] with new value
   @override
@@ -1384,13 +1447,16 @@ final class Time$Picosecond extends Time {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Time$Picosecond]  =  1000000.0 [Time$Attosecond]
+  /// 1 [Time$Picosecond] = 1000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Picosecond get _clone => Time$Picosecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Picosecond] with new value
   @override
@@ -1438,13 +1504,16 @@ final class Time$Femtosecond extends Time {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Time$Femtosecond]  =  1000.0 [Time$Attosecond]
+  /// 1 [Time$Femtosecond] = 1000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Femtosecond get _clone => Time$Femtosecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Femtosecond] with new value
   @override
@@ -1500,6 +1569,9 @@ final class Time$Attosecond extends Time {
   @override
   Time$Attosecond get _clone => Time$Attosecond(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Time$Attosecond] with new value
   @override
   Time$Attosecond withValue(
@@ -1546,13 +1618,16 @@ final class Time$Shake extends Time {
 
   static const _ratio = 10000000000.0;
 
-  /// 1 [Time$Shake]  =  10000000000.0 [Time$Attosecond]
+  /// 1 [Time$Shake] = 10000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Shake get _clone => Time$Shake(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Shake] with new value
   @override
@@ -1563,7 +1638,7 @@ final class Time$Shake extends Time {
 
   /// Symbol for [Time$Shake]
   @override
-  String get symbol => '';
+  String get symbol => 'Shake';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1600,13 +1675,16 @@ final class Time$Septennial extends Time {
 
   static const _ratio = 2.20752e+26;
 
-  /// 1 [Time$Septennial]  =  2.20752e+26 [Time$Attosecond]
+  /// 1 [Time$Septennial] = 2.20752e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Septennial get _clone => Time$Septennial(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Septennial] with new value
   @override
@@ -1617,7 +1695,7 @@ final class Time$Septennial extends Time {
 
   /// Symbol for [Time$Septennial]
   @override
-  String get symbol => '';
+  String get symbol => 'Septennial';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1654,13 +1732,16 @@ final class Time$Octennial extends Time {
 
   static const _ratio = 2.52288e+26;
 
-  /// 1 [Time$Octennial]  =  2.52288e+26 [Time$Attosecond]
+  /// 1 [Time$Octennial] = 2.52288e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Octennial get _clone => Time$Octennial(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Octennial] with new value
   @override
@@ -1671,7 +1752,7 @@ final class Time$Octennial extends Time {
 
   /// Symbol for [Time$Octennial]
   @override
-  String get symbol => '';
+  String get symbol => 'Octennial';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1708,13 +1789,16 @@ final class Time$Novennial extends Time {
 
   static const _ratio = 2.83824e+26;
 
-  /// 1 [Time$Novennial]  =  2.83824e+26 [Time$Attosecond]
+  /// 1 [Time$Novennial] = 2.83824e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Novennial get _clone => Time$Novennial(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Novennial] with new value
   @override
@@ -1725,7 +1809,7 @@ final class Time$Novennial extends Time {
 
   /// Symbol for [Time$Novennial]
   @override
-  String get symbol => '';
+  String get symbol => 'Novennial';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1762,13 +1846,16 @@ final class Time$Quindecennial extends Time {
 
   static const _ratio = 4.7304e+26;
 
-  /// 1 [Time$Quindecennial]  =  4.7304e+26 [Time$Attosecond]
+  /// 1 [Time$Quindecennial] = 4.7304e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Quindecennial get _clone => Time$Quindecennial(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Quindecennial] with new value
   @override
@@ -1779,7 +1866,7 @@ final class Time$Quindecennial extends Time {
 
   /// Symbol for [Time$Quindecennial]
   @override
-  String get symbol => '';
+  String get symbol => 'Quindecennial';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1816,13 +1903,16 @@ final class Time$Quinquennial extends Time {
 
   static const _ratio = 1.5768e+26;
 
-  /// 1 [Time$Quinquennial]  =  1.5768e+26 [Time$Attosecond]
+  /// 1 [Time$Quinquennial] = 1.5768e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Time$Quinquennial get _clone => Time$Quinquennial(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Time$Quinquennial] with new value
   @override
@@ -1833,7 +1923,7 @@ final class Time$Quinquennial extends Time {
 
   /// Symbol for [Time$Quinquennial]
   @override
-  String get symbol => '';
+  String get symbol => 'Quinquennial';
 
   @override
   Map<String, dynamic> toJson() => {

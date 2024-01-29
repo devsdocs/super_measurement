@@ -155,6 +155,9 @@ final class EUCurrency$EuroEUR extends EUCurrency {
   @override
   EUCurrency$EuroEUR get _clone => EUCurrency$EuroEUR(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [EUCurrency$EuroEUR] with new value
   @override
   EUCurrency$EuroEUR withValue(
@@ -201,13 +204,16 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
 
   static const _ratio = 1.269738078;
 
-  /// 1 [EUCurrency$IrishPoundIEP]  ≈  1.269738078 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$IrishPoundIEP] ≈ 1.269738078 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$IrishPoundIEP get _clone => EUCurrency$IrishPoundIEP(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$IrishPoundIEP] with new value
   @override
@@ -255,13 +261,16 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
 
   static const _ratio = 0.5112918812;
 
-  /// 1 [EUCurrency$DeutschMarkDEM]  ≈  0.5112918812 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$DeutschMarkDEM] ≈ 0.5112918812 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$DeutschMarkDEM get _clone => EUCurrency$DeutschMarkDEM(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$DeutschMarkDEM] with new value
   @override
@@ -309,13 +318,16 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
 
   static const _ratio = 0.4537802161;
 
-  /// 1 [EUCurrency$DutchGuildenNLG]  ≈  0.4537802161 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$DutchGuildenNLG] ≈ 0.4537802161 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$DutchGuildenNLG get _clone => EUCurrency$DutchGuildenNLG(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$DutchGuildenNLG] with new value
   @override
@@ -363,13 +375,16 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
 
   static const _ratio = 0.1681879265;
 
-  /// 1 [EUCurrency$FinnishMarkFIM]  ≈  0.1681879265 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$FinnishMarkFIM] ≈ 0.1681879265 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$FinnishMarkFIM get _clone => EUCurrency$FinnishMarkFIM(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$FinnishMarkFIM] with new value
   @override
@@ -417,13 +432,16 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
 
   static const _ratio = 0.1524490172;
 
-  /// 1 [EUCurrency$FrenchFrancFRF]  ≈  0.1524490172 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$FrenchFrancFRF] ≈ 0.1524490172 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$FrenchFrancFRF get _clone => EUCurrency$FrenchFrancFRF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$FrenchFrancFRF] with new value
   @override
@@ -471,7 +489,7 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
 
   static const _ratio = 0.07267283417;
 
-  /// 1 [EUCurrency$AustrianSchillingATS]  ≈  0.07267283417 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$AustrianSchillingATS] ≈ 0.07267283417 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
@@ -479,6 +497,9 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
   @override
   EUCurrency$AustrianSchillingATS get _clone =>
       EUCurrency$AustrianSchillingATS(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$AustrianSchillingATS] with new value
   @override
@@ -526,13 +547,16 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
 
   static const _ratio = 0.02478935248;
 
-  /// 1 [EUCurrency$BelgianFrancBEF]  ≈  0.02478935248 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$BelgianFrancBEF] ≈ 0.02478935248 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$BelgianFrancBEF get _clone => EUCurrency$BelgianFrancBEF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$BelgianFrancBEF] with new value
   @override
@@ -580,7 +604,7 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
 
   static const _ratio = 0.02478935248;
 
-  /// 1 [EUCurrency$LuxembourgFrancLUF]  ≈  0.02478935248 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$LuxembourgFrancLUF] ≈ 0.02478935248 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
@@ -588,6 +612,9 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
   @override
   EUCurrency$LuxembourgFrancLUF get _clone =>
       EUCurrency$LuxembourgFrancLUF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$LuxembourgFrancLUF] with new value
   @override
@@ -635,13 +662,16 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
 
   static const _ratio = 0.006010121044;
 
-  /// 1 [EUCurrency$SpanishPesetaESP]  ≈  0.006010121044 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$SpanishPesetaESP] ≈ 0.006010121044 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$SpanishPesetaESP get _clone => EUCurrency$SpanishPesetaESP(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$SpanishPesetaESP] with new value
   @override
@@ -689,7 +719,7 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
 
   static const _ratio = 0.004987978971;
 
-  /// 1 [EUCurrency$PortugueseEscudoPTE]  ≈  0.004987978971 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$PortugueseEscudoPTE] ≈ 0.004987978971 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
@@ -697,6 +727,9 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
   @override
   EUCurrency$PortugueseEscudoPTE get _clone =>
       EUCurrency$PortugueseEscudoPTE(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$PortugueseEscudoPTE] with new value
   @override
@@ -744,13 +777,16 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
 
   static const _ratio = 0.0005164568991;
 
-  /// 1 [EUCurrency$ItalianLireITL]  ≈  0.0005164568991 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$ItalianLireITL] ≈ 0.0005164568991 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$ItalianLireITL get _clone => EUCurrency$ItalianLireITL(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$ItalianLireITL] with new value
   @override
@@ -798,13 +834,16 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
 
   static const _ratio = 0.00293470286133529;
 
-  /// 1 [EUCurrency$GreekDrachmaGRD]  ≈  0.00293470286133529 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$GreekDrachmaGRD] ≈ 0.00293470286133529 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   EUCurrency$GreekDrachmaGRD get _clone => EUCurrency$GreekDrachmaGRD(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [EUCurrency$GreekDrachmaGRD] with new value
   @override

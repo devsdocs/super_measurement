@@ -147,6 +147,9 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
   ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF get _clone =>
       ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF] with new value
   @override
   ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF withValue(
@@ -156,7 +159,7 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
 
   /// Symbol for [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUThermochemInchPerHourFootSquareDegreeF';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -195,7 +198,7 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
 
   static const _ratio = 1.0006692161075852;
 
-  /// 1 [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF]  ≈  1.0006692161075852 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF] ≈ 1.0006692161075852 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
 
@@ -203,6 +206,9 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
   @override
   ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF get _clone =>
       ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF] with new value
   @override
@@ -213,7 +219,7 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
 
   /// Symbol for [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUIntInchPerHourFootSquareDegreeF';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -252,7 +258,7 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
 
   static const _ratio = 12.0;
 
-  /// 1 [ThermalConductivity$BTUThermochemPerHourFootDegreeF]  =  12.0 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$BTUThermochemPerHourFootDegreeF] = 12.0 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
 
@@ -260,6 +266,9 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
   @override
   ThermalConductivity$BTUThermochemPerHourFootDegreeF get _clone =>
       ThermalConductivity$BTUThermochemPerHourFootDegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalConductivity$BTUThermochemPerHourFootDegreeF] with new value
   @override
@@ -270,7 +279,7 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
 
   /// Symbol for [ThermalConductivity$BTUThermochemPerHourFootDegreeF]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUThermochemPerHourFootDegreeF';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -308,7 +317,7 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
 
   static const _ratio = 12.008030593291023;
 
-  /// 1 [ThermalConductivity$BTUIntPerHourFootDegreeF]  ≈  12.008030593291023 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$BTUIntPerHourFootDegreeF] ≈ 12.008030593291023 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
 
@@ -316,6 +325,9 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
   @override
   ThermalConductivity$BTUIntPerHourFootDegreeF get _clone =>
       ThermalConductivity$BTUIntPerHourFootDegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalConductivity$BTUIntPerHourFootDegreeF] with new value
   @override
@@ -326,7 +338,7 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
 
   /// Symbol for [ThermalConductivity$BTUIntPerHourFootDegreeF]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUIntPerHourFootDegreeF';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -365,7 +377,7 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
 
   static const _ratio = 2902.9059727372737;
 
-  /// 1 [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC]  ≈  2902.9059727372737 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC] ≈ 2902.9059727372737 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
 
@@ -373,6 +385,9 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
   @override
   ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC get _clone =>
       ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC] with new value
   @override
@@ -422,7 +437,7 @@ final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
 
   static const _ratio = 2904.848644038341;
 
-  /// 1 [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC]  ≈  2904.848644038341 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC] ≈ 2904.848644038341 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
 
@@ -430,6 +445,9 @@ final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
   @override
   ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC get _clone =>
       ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC] with new value
   @override
@@ -477,7 +495,7 @@ final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
 
   static const _ratio = 6938.111789525033;
 
-  /// 1 [ThermalConductivity$KilowattPerMeterK]  ≈  6938.111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$KilowattPerMeterK] ≈ 6938.111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
 
@@ -485,6 +503,9 @@ final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
   @override
   ThermalConductivity$KilowattPerMeterK get _clone =>
       ThermalConductivity$KilowattPerMeterK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalConductivity$KilowattPerMeterK] with new value
   @override
@@ -532,7 +553,7 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
 
   static const _ratio = 6.938111789525033;
 
-  /// 1 [ThermalConductivity$WattPerMeterK]  ≈  6.938111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$WattPerMeterK] ≈ 6.938111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
 
@@ -540,6 +561,9 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
   @override
   ThermalConductivity$WattPerMeterK get _clone =>
       ThermalConductivity$WattPerMeterK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalConductivity$WattPerMeterK] with new value
   @override
@@ -588,7 +612,7 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
 
   static const _ratio = 693.8111789525033;
 
-  /// 1 [ThermalConductivity$WattPerCentimeterDegreeC]  ≈  693.8111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$WattPerCentimeterDegreeC] ≈ 693.8111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
 
@@ -596,6 +620,9 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
   @override
   ThermalConductivity$WattPerCentimeterDegreeC get _clone =>
       ThermalConductivity$WattPerCentimeterDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalConductivity$WattPerCentimeterDegreeC] with new value
   @override

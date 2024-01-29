@@ -183,13 +183,16 @@ final class Capacitance$Exafarad extends Capacitance {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [Capacitance$Exafarad]  =  1000000000000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Exafarad] = 1000000000000000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Exafarad get _clone => Capacitance$Exafarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Exafarad] with new value
   @override
@@ -237,13 +240,16 @@ final class Capacitance$Petafarad extends Capacitance {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Capacitance$Petafarad]  =  1000000000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Petafarad] = 1000000000000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Petafarad get _clone => Capacitance$Petafarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Petafarad] with new value
   @override
@@ -291,13 +297,16 @@ final class Capacitance$Terafarad extends Capacitance {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Capacitance$Terafarad]  =  1000000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Terafarad] = 1000000000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Terafarad get _clone => Capacitance$Terafarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Terafarad] with new value
   @override
@@ -345,13 +354,16 @@ final class Capacitance$Gigafarad extends Capacitance {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Capacitance$Gigafarad]  =  1000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Gigafarad] = 1000000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Gigafarad get _clone => Capacitance$Gigafarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Gigafarad] with new value
   @override
@@ -399,13 +411,16 @@ final class Capacitance$Megafarad extends Capacitance {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Capacitance$Megafarad]  =  1000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Megafarad] = 1000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Megafarad get _clone => Capacitance$Megafarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Megafarad] with new value
   @override
@@ -453,13 +468,16 @@ final class Capacitance$Kilofarad extends Capacitance {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Capacitance$Kilofarad]  =  1000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Kilofarad] = 1000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Kilofarad get _clone => Capacitance$Kilofarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Kilofarad] with new value
   @override
@@ -507,13 +525,16 @@ final class Capacitance$Hectofarad extends Capacitance {
 
   static const _ratio = 100.0;
 
-  /// 1 [Capacitance$Hectofarad]  =  100.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Hectofarad] = 100.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Hectofarad get _clone => Capacitance$Hectofarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Hectofarad] with new value
   @override
@@ -561,13 +582,16 @@ final class Capacitance$Dekafarad extends Capacitance {
 
   static const _ratio = 10.0;
 
-  /// 1 [Capacitance$Dekafarad]  =  10.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Dekafarad] = 10.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Dekafarad get _clone => Capacitance$Dekafarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Dekafarad] with new value
   @override
@@ -623,6 +647,9 @@ final class Capacitance$Farad extends Capacitance {
   @override
   Capacitance$Farad get _clone => Capacitance$Farad(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Capacitance$Farad] with new value
   @override
   Capacitance$Farad withValue(
@@ -669,13 +696,16 @@ final class Capacitance$Decifarad extends Capacitance {
 
   static const _ratio = 0.1;
 
-  /// 1 [Capacitance$Decifarad]  ≈  0.1 [Capacitance$Farad]
+  /// 1 [Capacitance$Decifarad] ≈ 0.1 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Decifarad get _clone => Capacitance$Decifarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Decifarad] with new value
   @override
@@ -723,13 +753,16 @@ final class Capacitance$Centifarad extends Capacitance {
 
   static const _ratio = 0.01;
 
-  /// 1 [Capacitance$Centifarad]  ≈  0.01 [Capacitance$Farad]
+  /// 1 [Capacitance$Centifarad] ≈ 0.01 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Centifarad get _clone => Capacitance$Centifarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Centifarad] with new value
   @override
@@ -777,13 +810,16 @@ final class Capacitance$Millifarad extends Capacitance {
 
   static const _ratio = 0.001;
 
-  /// 1 [Capacitance$Millifarad]  ≈  0.001 [Capacitance$Farad]
+  /// 1 [Capacitance$Millifarad] ≈ 0.001 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Millifarad get _clone => Capacitance$Millifarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Millifarad] with new value
   @override
@@ -831,13 +867,16 @@ final class Capacitance$Microfarad extends Capacitance {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Capacitance$Microfarad]  ≈  0.000001 [Capacitance$Farad]
+  /// 1 [Capacitance$Microfarad] ≈ 0.000001 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Microfarad get _clone => Capacitance$Microfarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Microfarad] with new value
   @override
@@ -885,13 +924,16 @@ final class Capacitance$Nanofarad extends Capacitance {
 
   static const _ratio = 1e-9;
 
-  /// 1 [Capacitance$Nanofarad]  ≈  1e-9 [Capacitance$Farad]
+  /// 1 [Capacitance$Nanofarad] ≈ 1e-9 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Nanofarad get _clone => Capacitance$Nanofarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Nanofarad] with new value
   @override
@@ -939,13 +981,16 @@ final class Capacitance$Picofarad extends Capacitance {
 
   static const _ratio = 1e-12;
 
-  /// 1 [Capacitance$Picofarad]  ≈  1e-12 [Capacitance$Farad]
+  /// 1 [Capacitance$Picofarad] ≈ 1e-12 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Picofarad get _clone => Capacitance$Picofarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Picofarad] with new value
   @override
@@ -993,13 +1038,16 @@ final class Capacitance$Femtofarad extends Capacitance {
 
   static const _ratio = 1e-15;
 
-  /// 1 [Capacitance$Femtofarad]  ≈  1e-15 [Capacitance$Farad]
+  /// 1 [Capacitance$Femtofarad] ≈ 1e-15 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Femtofarad get _clone => Capacitance$Femtofarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Femtofarad] with new value
   @override
@@ -1047,13 +1095,16 @@ final class Capacitance$Attofarad extends Capacitance {
 
   static const _ratio = 1e-18;
 
-  /// 1 [Capacitance$Attofarad]  ≈  1e-18 [Capacitance$Farad]
+  /// 1 [Capacitance$Attofarad] ≈ 1e-18 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Attofarad get _clone => Capacitance$Attofarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Attofarad] with new value
   @override
@@ -1101,13 +1152,16 @@ final class Capacitance$Abfarad extends Capacitance {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Capacitance$Abfarad]  =  1000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Abfarad] = 1000000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Abfarad get _clone => Capacitance$Abfarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Abfarad] with new value
   @override
@@ -1155,13 +1209,16 @@ final class Capacitance$Statfarad extends Capacitance {
 
   static const _ratio = 1.11265e-12;
 
-  /// 1 [Capacitance$Statfarad]  ≈  1.11265e-12 [Capacitance$Farad]
+  /// 1 [Capacitance$Statfarad] ≈ 1.11265e-12 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Capacitance$Statfarad get _clone => Capacitance$Statfarad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Capacitance$Statfarad] with new value
   @override

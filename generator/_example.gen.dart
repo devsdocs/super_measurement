@@ -13,6 +13,9 @@ void generateExample() {
   exampleBuff.writeln('}');
   exampleBuff.writeln();
   for (final unit in allData) {
+    if (Random().nextBool()) continue;
+    if (Random().nextBool()) continue;
+    if (Random().nextBool()) continue;
     final name = unit.keys.first;
     exampleBuff.writeln('/// [$name] example');
     exampleBuff.writeln('void exampleOf$name() {');
@@ -28,11 +31,11 @@ void generateExample() {
           if (Random().nextBool()) {
             if (Random().nextBool()) {
               exampleBuff.writeln(
-                "print('1 ${e.keys.first} to ${x.keys.first} \${const ${e.keys.first}(1).to${x.keys.first}}');",
+                "print('1 ${e.keys.first.split(r'$').last} to ${x.keys.first.split(r'$').last} \${const ${e.keys.first}(1).to${x.keys.first.split(r'$').last}}');",
               );
             } else {
               exampleBuff.writeln(
-                "print('1 ${e.keys.first} to ${x.keys.first} with Presision \${const ${e.keys.first}(1).to${x.keys.first}.withPrecision()}');",
+                "print('1 ${e.keys.first.split(r'$').last} to ${x.keys.first.split(r'$').last} with Presision \${const ${e.keys.first}(1).to${x.keys.first.split(r'$').last}.withPrecision()}');",
               );
             }
           } else {
@@ -42,22 +45,22 @@ void generateExample() {
             final t = x.keys.first[0].toLowerCase() + x.keys.first.substring(1);
             if (Random().nextBool()) {
               exampleBuff.writeln(
-                "print('$randomNumber ${e.keys.first} + $randomNumber2 ${x.keys.first} \${$randomNumber.$s + $randomNumber2.$t}');",
+                "print('$randomNumber ${e.keys.first.split(r'$').last} + $randomNumber2 ${x.keys.first.split(r'$').last} \${$randomNumber.$s + $randomNumber2.$t}');",
               );
             } else {
               exampleBuff.writeln(
-                "print('$randomNumber ${e.keys.first} + $randomNumber2 ${x.keys.first} with Precision \${($randomNumber.$s + $randomNumber2.$t).withPrecision()}');",
+                "print('$randomNumber ${e.keys.first.split(r'$').last} + $randomNumber2 ${x.keys.first.split(r'$').last} with Precision \${($randomNumber.$s + $randomNumber2.$t).withPrecision()}');",
               );
             }
           }
         } else {
           if (Random().nextBool()) {
             exampleBuff.writeln(
-              "print('1 ${e.keys.first} + 1 ${x.keys.first} = \${const ${e.keys.first}(1) + const ${x.keys.first}(1)}');",
+              "print('1 ${e.keys.first.split(r'$').last} + 1 ${x.keys.first.split(r'$').last} = \${const ${e.keys.first}(1) + const ${x.keys.first}(1)}');",
             );
           } else {
             exampleBuff.writeln(
-              "print('1 ${e.keys.first} + 1 ${x.keys.first} with Precision = \${(const ${e.keys.first}(1) + const ${x.keys.first}(1)).withPrecision()}');",
+              "print('1 ${e.keys.first.split(r'$').last} + 1 ${x.keys.first.split(r'$').last} with Precision = \${(const ${e.keys.first}(1) + const ${x.keys.first}(1)).withPrecision()}');",
             );
           }
         }
@@ -88,11 +91,11 @@ void generateExample() {
       if (Random().nextBool()) continue;
       if (Random().nextBool()) {
         exampleBuff.writeln(
-          "print('$name List to ${e.keys.first} => \${$listName.to${e.keys.first}}');",
+          "print('$name List to ${e.keys.first.split(r'$').last} => \${$listName.to${e.keys.first.split(r'$').last}}');",
         );
       } else {
         exampleBuff.writeln(
-          "print('$name List to ${e.keys.first} with Precision => \${$listName.to${e.keys.first}.withPrecision()}');",
+          "print('$name List to ${e.keys.first.split(r'$').last} with Precision => \${$listName.to${e.keys.first.split(r'$').last}.withPrecision()}');",
         );
       }
     }
@@ -117,6 +120,14 @@ void generateExample() {
   if (res.contains('[]') || res.contains('[ ]')) {
     generateExample();
   } else {
-    exampleFile.writeAsStringSync(exampleBuff.toString());
+    final string = exampleBuff.toString().split('\n');
+    for (final unit in allData) {
+      final name = unit.keys.first;
+      final caseStr = 'void exampleOf$name() {';
+      if (!string.contains(caseStr)) {
+        string.remove('exampleOf$name();');
+      }
+    }
+    exampleFile.writeAsStringSync(string.join('\n'));
   }
 }

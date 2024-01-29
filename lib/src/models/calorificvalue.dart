@@ -129,7 +129,7 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
 
   static const _ratio = 26.839191732297994;
 
-  /// 1 [CalorificValue$MegajoulePerMeterCubic]  ≈  26.839191732297994 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$MegajoulePerMeterCubic] ≈ 26.839191732297994 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
 
@@ -137,6 +137,9 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
   @override
   CalorificValue$MegajoulePerMeterCubic get _clone =>
       CalorificValue$MegajoulePerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [CalorificValue$MegajoulePerMeterCubic] with new value
   @override
@@ -184,7 +187,7 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
 
   static const _ratio = 0.026839191732297995;
 
-  /// 1 [CalorificValue$KilojoulePerMeterCubic]  ≈  0.026839191732297995 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$KilojoulePerMeterCubic] ≈ 0.026839191732297995 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
 
@@ -192,6 +195,9 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
   @override
   CalorificValue$KilojoulePerMeterCubic get _clone =>
       CalorificValue$KilojoulePerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [CalorificValue$KilojoulePerMeterCubic] with new value
   @override
@@ -239,7 +245,7 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
 
   static const _ratio = 0.000026839191732297995;
 
-  /// 1 [CalorificValue$JoulePerMeterCubic]  ≈  0.000026839191732297995 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$JoulePerMeterCubic] ≈ 0.000026839191732297995 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
 
@@ -247,6 +253,9 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
   @override
   CalorificValue$JoulePerMeterCubic get _clone =>
       CalorificValue$JoulePerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [CalorificValue$JoulePerMeterCubic] with new value
   @override
@@ -294,7 +303,7 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
 
   static const _ratio = 0.11237032794478524;
 
-  /// 1 [CalorificValue$KilocaloriePerMeterCubic]  ≈  0.11237032794478524 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$KilocaloriePerMeterCubic] ≈ 0.11237032794478524 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
 
@@ -302,6 +311,9 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
   @override
   CalorificValue$KilocaloriePerMeterCubic get _clone =>
       CalorificValue$KilocaloriePerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [CalorificValue$KilocaloriePerMeterCubic] with new value
   @override
@@ -349,7 +361,7 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
 
   static const _ratio = 112.37032794478525;
 
-  /// 1 [CalorificValue$CaloriePerCentimeterCubic]  ≈  112.37032794478525 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$CaloriePerCentimeterCubic] ≈ 112.37032794478525 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
 
@@ -357,6 +369,9 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
   @override
   CalorificValue$CaloriePerCentimeterCubic get _clone =>
       CalorificValue$CaloriePerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [CalorificValue$CaloriePerCentimeterCubic] with new value
   @override
@@ -404,7 +419,7 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
 
   static const _ratio = 100000.0;
 
-  /// 1 [CalorificValue$ThermPerFootCubic]  =  100000.0 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$ThermPerFootCubic] = 100000.0 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
 
@@ -412,6 +427,9 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
   @override
   CalorificValue$ThermPerFootCubic get _clone =>
       CalorificValue$ThermPerFootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [CalorificValue$ThermPerFootCubic] with new value
   @override
@@ -459,7 +477,7 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
 
   static const _ratio = 622883.5459840919;
 
-  /// 1 [CalorificValue$ThermPerGallonUK]  ≈  622883.5459840919 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$ThermPerGallonUK] ≈ 622883.5459840919 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
 
@@ -467,6 +485,9 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
   @override
   CalorificValue$ThermPerGallonUK get _clone =>
       CalorificValue$ThermPerGallonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [CalorificValue$ThermPerGallonUK] with new value
   @override
@@ -523,6 +544,9 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
   CalorificValue$BTUPerFootCubic get _clone =>
       CalorificValue$BTUPerFootCubic(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [CalorificValue$BTUPerFootCubic] with new value
   @override
   CalorificValue$BTUPerFootCubic withValue(
@@ -569,7 +593,7 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
 
   static const _ratio = 1.7999999998389649;
 
-  /// 1 [CalorificValue$CHUPerFootCubic]  ≈  1.7999999998389649 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$CHUPerFootCubic] ≈ 1.7999999998389649 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
 
@@ -577,6 +601,9 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
   @override
   CalorificValue$CHUPerFootCubic get _clone =>
       CalorificValue$CHUPerFootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [CalorificValue$CHUPerFootCubic] with new value
   @override

@@ -151,7 +151,7 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
 
   static const _ratio = 1000.0;
 
-  /// 1 [SpecificHeatCapacity$KilojoulePerKilogramK]  =  1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$KilojoulePerKilogramK] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -159,6 +159,9 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
   @override
   SpecificHeatCapacity$KilojoulePerKilogramK get _clone =>
       SpecificHeatCapacity$KilojoulePerKilogramK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$KilojoulePerKilogramK] with new value
   @override
@@ -207,7 +210,7 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
 
   static const _ratio = 1000.0;
 
-  /// 1 [SpecificHeatCapacity$KilojoulePerKilogramDegreeC]  =  1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$KilojoulePerKilogramDegreeC] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -215,6 +218,9 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
   @override
   SpecificHeatCapacity$KilojoulePerKilogramDegreeC get _clone =>
       SpecificHeatCapacity$KilojoulePerKilogramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$KilojoulePerKilogramDegreeC] with new value
   @override
@@ -272,6 +278,9 @@ final class SpecificHeatCapacity$JoulePerKilogramK
   SpecificHeatCapacity$JoulePerKilogramK get _clone =>
       SpecificHeatCapacity$JoulePerKilogramK(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [SpecificHeatCapacity$JoulePerKilogramK] with new value
   @override
   SpecificHeatCapacity$JoulePerKilogramK withValue(
@@ -319,7 +328,7 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
 
   static const _ratio = 1.0;
 
-  /// 1 [SpecificHeatCapacity$JoulePerKilogramDegreeC]  =  1.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$JoulePerKilogramDegreeC] = 1.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -327,6 +336,9 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
   @override
   SpecificHeatCapacity$JoulePerKilogramDegreeC get _clone =>
       SpecificHeatCapacity$JoulePerKilogramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$JoulePerKilogramDegreeC] with new value
   @override
@@ -375,7 +387,7 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
 
   static const _ratio = 1000.0;
 
-  /// 1 [SpecificHeatCapacity$JoulePerGramDegreeC]  =  1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$JoulePerGramDegreeC] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -383,6 +395,9 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
   @override
   SpecificHeatCapacity$JoulePerGramDegreeC get _clone =>
       SpecificHeatCapacity$JoulePerGramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$JoulePerGramDegreeC] with new value
   @override
@@ -432,7 +447,7 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
 
   static const _ratio = 4186.8;
 
-  /// 1 [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC]  ≈  4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -440,6 +455,9 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
   @override
   SpecificHeatCapacity$KilocaloriePerKilogramDegreeC get _clone =>
       SpecificHeatCapacity$KilocaloriePerKilogramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC] with new value
   @override
@@ -488,7 +506,7 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
 
   static const _ratio = 4186.8;
 
-  /// 1 [SpecificHeatCapacity$CaloriePerGramDegreeC]  ≈  4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$CaloriePerGramDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -496,6 +514,9 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
   @override
   SpecificHeatCapacity$CaloriePerGramDegreeC get _clone =>
       SpecificHeatCapacity$CaloriePerGramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$CaloriePerGramDegreeC] with new value
   @override
@@ -544,7 +565,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
 
   static const _ratio = 2326.0;
 
-  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeC]  =  2326.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeC] = 2326.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -552,6 +573,9 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
   @override
   SpecificHeatCapacity$BTUPerPoundDegreeC get _clone =>
       SpecificHeatCapacity$BTUPerPoundDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeC] with new value
   @override
@@ -600,7 +624,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
 
   static const _ratio = 4186.8;
 
-  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeF]  ≈  4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeF] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -608,6 +632,9 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
   @override
   SpecificHeatCapacity$BTUPerPoundDegreeF get _clone =>
       SpecificHeatCapacity$BTUPerPoundDegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeF] with new value
   @override
@@ -656,7 +683,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
 
   static const _ratio = 4186.8;
 
-  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeR]  ≈  4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeR] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -664,6 +691,9 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
   @override
   SpecificHeatCapacity$BTUPerPoundDegreeR get _clone =>
       SpecificHeatCapacity$BTUPerPoundDegreeR(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeR] with new value
   @override
@@ -712,7 +742,7 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
 
   static const _ratio = 4186.8;
 
-  /// 1 [SpecificHeatCapacity$CHUPerPoundDegreeC]  ≈  4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$CHUPerPoundDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -720,6 +750,9 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
   @override
   SpecificHeatCapacity$CHUPerPoundDegreeC get _clone =>
       SpecificHeatCapacity$CHUPerPoundDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificHeatCapacity$CHUPerPoundDegreeC] with new value
   @override

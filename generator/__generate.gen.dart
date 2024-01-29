@@ -13,7 +13,7 @@ part '_readme.gen.dart';
 Future<void> gogo() async {
   generateModels();
   generateExtension();
-  // generateExample();
+  generateExample();
   generateReadme();
   await Process.run('dart', ['format', '.']);
   await Process.run('dart', ['fix', '--apply']);

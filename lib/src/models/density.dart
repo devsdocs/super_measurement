@@ -279,7 +279,7 @@ final class Density$KilogramPerMeterCubic extends Density {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Density$KilogramPerMeterCubic]  =  1000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$KilogramPerMeterCubic] = 1000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -287,6 +287,9 @@ final class Density$KilogramPerMeterCubic extends Density {
   @override
   Density$KilogramPerMeterCubic get _clone =>
       Density$KilogramPerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$KilogramPerMeterCubic] with new value
   @override
@@ -334,7 +337,7 @@ final class Density$KilogramPerCentimeterCubic extends Density {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Density$KilogramPerCentimeterCubic]  =  1000000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$KilogramPerCentimeterCubic] = 1000000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -342,6 +345,9 @@ final class Density$KilogramPerCentimeterCubic extends Density {
   @override
   Density$KilogramPerCentimeterCubic get _clone =>
       Density$KilogramPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$KilogramPerCentimeterCubic] with new value
   @override
@@ -389,13 +395,16 @@ final class Density$GramPerMeterCubic extends Density {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Density$GramPerMeterCubic]  =  1000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GramPerMeterCubic] = 1000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$GramPerMeterCubic get _clone => Density$GramPerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$GramPerMeterCubic] with new value
   @override
@@ -443,7 +452,7 @@ final class Density$GramPerCentimeterCubic extends Density {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Density$GramPerCentimeterCubic]  =  1000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GramPerCentimeterCubic] = 1000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -451,6 +460,9 @@ final class Density$GramPerCentimeterCubic extends Density {
   @override
   Density$GramPerCentimeterCubic get _clone =>
       Density$GramPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$GramPerCentimeterCubic] with new value
   @override
@@ -498,7 +510,7 @@ final class Density$GramPerMillimeterCubic extends Density {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Density$GramPerMillimeterCubic]  =  1000000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GramPerMillimeterCubic] = 1000000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -506,6 +518,9 @@ final class Density$GramPerMillimeterCubic extends Density {
   @override
   Density$GramPerMillimeterCubic get _clone =>
       Density$GramPerMillimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$GramPerMillimeterCubic] with new value
   @override
@@ -553,7 +568,7 @@ final class Density$MilligramPerMeterCubic extends Density {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Density$MilligramPerMeterCubic]  =  1000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MilligramPerMeterCubic] = 1000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -561,6 +576,9 @@ final class Density$MilligramPerMeterCubic extends Density {
   @override
   Density$MilligramPerMeterCubic get _clone =>
       Density$MilligramPerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$MilligramPerMeterCubic] with new value
   @override
@@ -608,7 +626,7 @@ final class Density$MilligramPerCentimeterCubic extends Density {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Density$MilligramPerCentimeterCubic]  =  1000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MilligramPerCentimeterCubic] = 1000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -616,6 +634,9 @@ final class Density$MilligramPerCentimeterCubic extends Density {
   @override
   Density$MilligramPerCentimeterCubic get _clone =>
       Density$MilligramPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$MilligramPerCentimeterCubic] with new value
   @override
@@ -663,7 +684,7 @@ final class Density$MilligramPerMillimeterCubic extends Density {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Density$MilligramPerMillimeterCubic]  =  1000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MilligramPerMillimeterCubic] = 1000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -671,6 +692,9 @@ final class Density$MilligramPerMillimeterCubic extends Density {
   @override
   Density$MilligramPerMillimeterCubic get _clone =>
       Density$MilligramPerMillimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$MilligramPerMillimeterCubic] with new value
   @override
@@ -718,13 +742,16 @@ final class Density$ExagramPerLiter extends Density {
 
   static const _ratio = 1e+27;
 
-  /// 1 [Density$ExagramPerLiter]  =  1e+27 [Density$NanogramPerLiter]
+  /// 1 [Density$ExagramPerLiter] = 1e+27 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$ExagramPerLiter get _clone => Density$ExagramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$ExagramPerLiter] with new value
   @override
@@ -772,13 +799,16 @@ final class Density$PetagramPerLiter extends Density {
 
   static const _ratio = 1e+24;
 
-  /// 1 [Density$PetagramPerLiter]  =  1e+24 [Density$NanogramPerLiter]
+  /// 1 [Density$PetagramPerLiter] = 1e+24 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$PetagramPerLiter get _clone => Density$PetagramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$PetagramPerLiter] with new value
   @override
@@ -826,13 +856,16 @@ final class Density$TeragramPerLiter extends Density {
 
   static const _ratio = 1e+21;
 
-  /// 1 [Density$TeragramPerLiter]  =  1e+21 [Density$NanogramPerLiter]
+  /// 1 [Density$TeragramPerLiter] = 1e+21 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$TeragramPerLiter get _clone => Density$TeragramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$TeragramPerLiter] with new value
   @override
@@ -880,13 +913,16 @@ final class Density$GigagramPerLiter extends Density {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [Density$GigagramPerLiter]  =  1000000000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GigagramPerLiter] = 1000000000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$GigagramPerLiter get _clone => Density$GigagramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$GigagramPerLiter] with new value
   @override
@@ -934,13 +970,16 @@ final class Density$MegagramPerLiter extends Density {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Density$MegagramPerLiter]  =  1000000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MegagramPerLiter] = 1000000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$MegagramPerLiter get _clone => Density$MegagramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$MegagramPerLiter] with new value
   @override
@@ -988,13 +1027,16 @@ final class Density$KilogramPerLiter extends Density {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Density$KilogramPerLiter]  =  1000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$KilogramPerLiter] = 1000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$KilogramPerLiter get _clone => Density$KilogramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$KilogramPerLiter] with new value
   @override
@@ -1042,13 +1084,16 @@ final class Density$HectogramPerLiter extends Density {
 
   static const _ratio = 100000000000.0;
 
-  /// 1 [Density$HectogramPerLiter]  =  100000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$HectogramPerLiter] = 100000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$HectogramPerLiter get _clone => Density$HectogramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$HectogramPerLiter] with new value
   @override
@@ -1096,13 +1141,16 @@ final class Density$DekagramPerLiter extends Density {
 
   static const _ratio = 10000000000.0;
 
-  /// 1 [Density$DekagramPerLiter]  =  10000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$DekagramPerLiter] = 10000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$DekagramPerLiter get _clone => Density$DekagramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$DekagramPerLiter] with new value
   @override
@@ -1150,13 +1198,16 @@ final class Density$GramPerLiter extends Density {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Density$GramPerLiter]  =  1000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GramPerLiter] = 1000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$GramPerLiter get _clone => Density$GramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$GramPerLiter] with new value
   @override
@@ -1204,13 +1255,16 @@ final class Density$DecigramPerLiter extends Density {
 
   static const _ratio = 100000000.0;
 
-  /// 1 [Density$DecigramPerLiter]  =  100000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$DecigramPerLiter] = 100000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$DecigramPerLiter get _clone => Density$DecigramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$DecigramPerLiter] with new value
   @override
@@ -1258,13 +1312,16 @@ final class Density$CentigramPerLiter extends Density {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Density$CentigramPerLiter]  =  10000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$CentigramPerLiter] = 10000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$CentigramPerLiter get _clone => Density$CentigramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$CentigramPerLiter] with new value
   @override
@@ -1312,13 +1369,16 @@ final class Density$MilligramPerLiter extends Density {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Density$MilligramPerLiter]  =  1000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MilligramPerLiter] = 1000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$MilligramPerLiter get _clone => Density$MilligramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$MilligramPerLiter] with new value
   @override
@@ -1366,13 +1426,16 @@ final class Density$MicrogramPerLiter extends Density {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Density$MicrogramPerLiter]  =  1000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MicrogramPerLiter] = 1000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$MicrogramPerLiter get _clone => Density$MicrogramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$MicrogramPerLiter] with new value
   @override
@@ -1428,6 +1491,9 @@ final class Density$NanogramPerLiter extends Density {
   @override
   Density$NanogramPerLiter get _clone => Density$NanogramPerLiter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Density$NanogramPerLiter] with new value
   @override
   Density$NanogramPerLiter withValue(
@@ -1474,13 +1540,16 @@ final class Density$PicogramPerLiter extends Density {
 
   static const _ratio = 0.001;
 
-  /// 1 [Density$PicogramPerLiter]  ≈  0.001 [Density$NanogramPerLiter]
+  /// 1 [Density$PicogramPerLiter] ≈ 0.001 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$PicogramPerLiter get _clone => Density$PicogramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$PicogramPerLiter] with new value
   @override
@@ -1528,13 +1597,16 @@ final class Density$FemtogramPerLiter extends Density {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Density$FemtogramPerLiter]  ≈  0.000001 [Density$NanogramPerLiter]
+  /// 1 [Density$FemtogramPerLiter] ≈ 0.000001 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$FemtogramPerLiter get _clone => Density$FemtogramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$FemtogramPerLiter] with new value
   @override
@@ -1582,13 +1654,16 @@ final class Density$AttogramPerLiter extends Density {
 
   static const _ratio = 1e-9;
 
-  /// 1 [Density$AttogramPerLiter]  ≈  1e-9 [Density$NanogramPerLiter]
+  /// 1 [Density$AttogramPerLiter] ≈ 1e-9 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$AttogramPerLiter get _clone => Density$AttogramPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$AttogramPerLiter] with new value
   @override
@@ -1636,13 +1711,16 @@ final class Density$PoundPerInchCubic extends Density {
 
   static const _ratio = 27679904710190.62;
 
-  /// 1 [Density$PoundPerInchCubic]  ≈  27679904710190.62 [Density$NanogramPerLiter]
+  /// 1 [Density$PoundPerInchCubic] ≈ 27679904710190.62 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$PoundPerInchCubic get _clone => Density$PoundPerInchCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$PoundPerInchCubic] with new value
   @override
@@ -1690,13 +1768,16 @@ final class Density$PoundPerFootCubic extends Density {
 
   static const _ratio = 16018463373.952908;
 
-  /// 1 [Density$PoundPerFootCubic]  ≈  16018463373.952908 [Density$NanogramPerLiter]
+  /// 1 [Density$PoundPerFootCubic] ≈ 16018463373.952908 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$PoundPerFootCubic get _clone => Density$PoundPerFootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$PoundPerFootCubic] with new value
   @override
@@ -1744,13 +1825,16 @@ final class Density$PoundPerGallon extends Density {
 
   static const _ratio = 119826427316.7227;
 
-  /// 1 [Density$PoundPerGallon]  ≈  119826427316.7227 [Density$NanogramPerLiter]
+  /// 1 [Density$PoundPerGallon] ≈ 119826427316.7227 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$PoundPerGallon get _clone => Density$PoundPerGallon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$PoundPerGallon] with new value
   @override
@@ -1798,13 +1882,16 @@ final class Density$OuncePerInchCubic extends Density {
 
   static const _ratio = 1729994044386.9138;
 
-  /// 1 [Density$OuncePerInchCubic]  ≈  1729994044386.9138 [Density$NanogramPerLiter]
+  /// 1 [Density$OuncePerInchCubic] ≈ 1729994044386.9138 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$OuncePerInchCubic get _clone => Density$OuncePerInchCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$OuncePerInchCubic] with new value
   @override
@@ -1852,13 +1939,16 @@ final class Density$OuncePerFootCubic extends Density {
 
   static const _ratio = 1001153960.8720567;
 
-  /// 1 [Density$OuncePerFootCubic]  ≈  1001153960.8720567 [Density$NanogramPerLiter]
+  /// 1 [Density$OuncePerFootCubic] ≈ 1001153960.8720567 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$OuncePerFootCubic get _clone => Density$OuncePerFootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$OuncePerFootCubic] with new value
   @override
@@ -1906,13 +1996,16 @@ final class Density$OuncePerGallon extends Density {
 
   static const _ratio = 7489151707.295169;
 
-  /// 1 [Density$OuncePerGallon]  ≈  7489151707.295169 [Density$NanogramPerLiter]
+  /// 1 [Density$OuncePerGallon] ≈ 7489151707.295169 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$OuncePerGallon get _clone => Density$OuncePerGallon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$OuncePerGallon] with new value
   @override
@@ -1960,13 +2053,16 @@ final class Density$TonPerYardCubic extends Density {
 
   static const _ratio = 1186552842515.03;
 
-  /// 1 [Density$TonPerYardCubic]  ≈  1186552842515.03 [Density$NanogramPerLiter]
+  /// 1 [Density$TonPerYardCubic] ≈ 1186552842515.03 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$TonPerYardCubic get _clone => Density$TonPerYardCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$TonPerYardCubic] with new value
   @override
@@ -2014,13 +2110,16 @@ final class Density$PsiPer1000Feet extends Density {
 
   static const _ratio = 2306658725.8492184;
 
-  /// 1 [Density$PsiPer1000Feet]  ≈  2306658725.8492184 [Density$NanogramPerLiter]
+  /// 1 [Density$PsiPer1000Feet] ≈ 2306658725.8492184 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Density$PsiPer1000Feet get _clone => Density$PsiPer1000Feet(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Density$PsiPer1000Feet] with new value
   @override
@@ -2031,7 +2130,7 @@ final class Density$PsiPer1000Feet extends Density {
 
   /// Symbol for [Density$PsiPer1000Feet]
   @override
-  String get symbol => '';
+  String get symbol => 'PsiPer1000Feet';
 
   @override
   Map<String, dynamic> toJson() => {

@@ -80,13 +80,16 @@ final class Sound$Bel extends Sound {
 
   static const _ratio = 10.0;
 
-  /// 1 [Sound$Bel]  =  10.0 [Sound$Decibel]
+  /// 1 [Sound$Bel] = 10.0 [Sound$Decibel]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Sound$Bel get _clone => Sound$Bel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Sound$Bel] with new value
   @override
@@ -142,6 +145,9 @@ final class Sound$Decibel extends Sound {
   @override
   Sound$Decibel get _clone => Sound$Decibel(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Sound$Decibel] with new value
   @override
   Sound$Decibel withValue(
@@ -188,13 +194,16 @@ final class Sound$Neper extends Sound {
 
   static const _ratio = 8.686;
 
-  /// 1 [Sound$Neper]  ≈  8.686 [Sound$Decibel]
+  /// 1 [Sound$Neper] ≈ 8.686 [Sound$Decibel]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Sound$Neper get _clone => Sound$Neper(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Sound$Neper] with new value
   @override

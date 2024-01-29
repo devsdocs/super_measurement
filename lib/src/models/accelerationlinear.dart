@@ -202,7 +202,7 @@ final class AccelerationLinear$KilometerPerSecondSquare
 
   static const _ratio = 1000.0;
 
-  /// 1 [AccelerationLinear$KilometerPerSecondSquare]  =  1000.0 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$KilometerPerSecondSquare] = 1000.0 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -210,6 +210,9 @@ final class AccelerationLinear$KilometerPerSecondSquare
   @override
   AccelerationLinear$KilometerPerSecondSquare get _clone =>
       AccelerationLinear$KilometerPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$KilometerPerSecondSquare] with new value
   @override
@@ -258,7 +261,7 @@ final class AccelerationLinear$HectometerPerSecondSquare
 
   static const _ratio = 100.0;
 
-  /// 1 [AccelerationLinear$HectometerPerSecondSquare]  =  100.0 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$HectometerPerSecondSquare] = 100.0 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -266,6 +269,9 @@ final class AccelerationLinear$HectometerPerSecondSquare
   @override
   AccelerationLinear$HectometerPerSecondSquare get _clone =>
       AccelerationLinear$HectometerPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$HectometerPerSecondSquare] with new value
   @override
@@ -314,7 +320,7 @@ final class AccelerationLinear$DekameterPerSecondSquare
 
   static const _ratio = 10.0;
 
-  /// 1 [AccelerationLinear$DekameterPerSecondSquare]  =  10.0 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$DekameterPerSecondSquare] = 10.0 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -322,6 +328,9 @@ final class AccelerationLinear$DekameterPerSecondSquare
   @override
   AccelerationLinear$DekameterPerSecondSquare get _clone =>
       AccelerationLinear$DekameterPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$DekameterPerSecondSquare] with new value
   @override
@@ -378,6 +387,9 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
   AccelerationLinear$MeterPerSecondSquare get _clone =>
       AccelerationLinear$MeterPerSecondSquare(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [AccelerationLinear$MeterPerSecondSquare] with new value
   @override
   AccelerationLinear$MeterPerSecondSquare withValue(
@@ -425,7 +437,7 @@ final class AccelerationLinear$DecimeterPerSecondSquare
 
   static const _ratio = 0.1;
 
-  /// 1 [AccelerationLinear$DecimeterPerSecondSquare]  ≈  0.1 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$DecimeterPerSecondSquare] ≈ 0.1 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -433,6 +445,9 @@ final class AccelerationLinear$DecimeterPerSecondSquare
   @override
   AccelerationLinear$DecimeterPerSecondSquare get _clone =>
       AccelerationLinear$DecimeterPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$DecimeterPerSecondSquare] with new value
   @override
@@ -481,7 +496,7 @@ final class AccelerationLinear$CentimeterPerSecondSquare
 
   static const _ratio = 0.01;
 
-  /// 1 [AccelerationLinear$CentimeterPerSecondSquare]  ≈  0.01 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$CentimeterPerSecondSquare] ≈ 0.01 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -489,6 +504,9 @@ final class AccelerationLinear$CentimeterPerSecondSquare
   @override
   AccelerationLinear$CentimeterPerSecondSquare get _clone =>
       AccelerationLinear$CentimeterPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$CentimeterPerSecondSquare] with new value
   @override
@@ -537,7 +555,7 @@ final class AccelerationLinear$MillimeterPerSecondSquare
 
   static const _ratio = 0.001;
 
-  /// 1 [AccelerationLinear$MillimeterPerSecondSquare]  ≈  0.001 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$MillimeterPerSecondSquare] ≈ 0.001 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -545,6 +563,9 @@ final class AccelerationLinear$MillimeterPerSecondSquare
   @override
   AccelerationLinear$MillimeterPerSecondSquare get _clone =>
       AccelerationLinear$MillimeterPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$MillimeterPerSecondSquare] with new value
   @override
@@ -593,7 +614,7 @@ final class AccelerationLinear$MicrometerPerSecondSquare
 
   static const _ratio = 0.000001;
 
-  /// 1 [AccelerationLinear$MicrometerPerSecondSquare]  ≈  0.000001 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$MicrometerPerSecondSquare] ≈ 0.000001 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -601,6 +622,9 @@ final class AccelerationLinear$MicrometerPerSecondSquare
   @override
   AccelerationLinear$MicrometerPerSecondSquare get _clone =>
       AccelerationLinear$MicrometerPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$MicrometerPerSecondSquare] with new value
   @override
@@ -649,7 +673,7 @@ final class AccelerationLinear$NanometerPerSecondSquare
 
   static const _ratio = 1e-9;
 
-  /// 1 [AccelerationLinear$NanometerPerSecondSquare]  ≈  1e-9 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$NanometerPerSecondSquare] ≈ 1e-9 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -657,6 +681,9 @@ final class AccelerationLinear$NanometerPerSecondSquare
   @override
   AccelerationLinear$NanometerPerSecondSquare get _clone =>
       AccelerationLinear$NanometerPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$NanometerPerSecondSquare] with new value
   @override
@@ -705,7 +732,7 @@ final class AccelerationLinear$PicometerPerSecondSquare
 
   static const _ratio = 1e-12;
 
-  /// 1 [AccelerationLinear$PicometerPerSecondSquare]  ≈  1e-12 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$PicometerPerSecondSquare] ≈ 1e-12 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -713,6 +740,9 @@ final class AccelerationLinear$PicometerPerSecondSquare
   @override
   AccelerationLinear$PicometerPerSecondSquare get _clone =>
       AccelerationLinear$PicometerPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$PicometerPerSecondSquare] with new value
   @override
@@ -761,7 +791,7 @@ final class AccelerationLinear$FemtometerPerSecondSquare
 
   static const _ratio = 1e-15;
 
-  /// 1 [AccelerationLinear$FemtometerPerSecondSquare]  ≈  1e-15 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$FemtometerPerSecondSquare] ≈ 1e-15 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -769,6 +799,9 @@ final class AccelerationLinear$FemtometerPerSecondSquare
   @override
   AccelerationLinear$FemtometerPerSecondSquare get _clone =>
       AccelerationLinear$FemtometerPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$FemtometerPerSecondSquare] with new value
   @override
@@ -817,7 +850,7 @@ final class AccelerationLinear$AttometerPerSecondSquare
 
   static const _ratio = 1e-18;
 
-  /// 1 [AccelerationLinear$AttometerPerSecondSquare]  ≈  1e-18 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$AttometerPerSecondSquare] ≈ 1e-18 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -825,6 +858,9 @@ final class AccelerationLinear$AttometerPerSecondSquare
   @override
   AccelerationLinear$AttometerPerSecondSquare get _clone =>
       AccelerationLinear$AttometerPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$AttometerPerSecondSquare] with new value
   @override
@@ -872,13 +908,16 @@ final class AccelerationLinear$G extends AccelerationLinear {
 
   static const _ratio = 9.80665;
 
-  /// 1 [AccelerationLinear$G]  ≈  9.80665 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$G] ≈ 9.80665 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   AccelerationLinear$G get _clone => AccelerationLinear$G(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$G] with new value
   @override
@@ -889,7 +928,7 @@ final class AccelerationLinear$G extends AccelerationLinear {
 
   /// Symbol for [AccelerationLinear$G]
   @override
-  String get symbol => '';
+  String get symbol => 'G';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -926,13 +965,16 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
 
   static const _ratio = 0.01;
 
-  /// 1 [AccelerationLinear$Gal]  ≈  0.01 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$Gal] ≈ 0.01 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   AccelerationLinear$Gal get _clone => AccelerationLinear$Gal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$Gal] with new value
   @override
@@ -980,7 +1022,7 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
 
   static const _ratio = 1609.344;
 
-  /// 1 [AccelerationLinear$MilePerSecondSquare]  ≈  1609.344 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$MilePerSecondSquare] ≈ 1609.344 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -988,6 +1030,9 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
   @override
   AccelerationLinear$MilePerSecondSquare get _clone =>
       AccelerationLinear$MilePerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$MilePerSecondSquare] with new value
   @override
@@ -1035,7 +1080,7 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
 
   static const _ratio = 0.9144;
 
-  /// 1 [AccelerationLinear$YardPerSecondSquare]  ≈  0.9144 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$YardPerSecondSquare] ≈ 0.9144 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -1043,6 +1088,9 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
   @override
   AccelerationLinear$YardPerSecondSquare get _clone =>
       AccelerationLinear$YardPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$YardPerSecondSquare] with new value
   @override
@@ -1090,7 +1138,7 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
 
   static const _ratio = 0.3048;
 
-  /// 1 [AccelerationLinear$FootPerSecondSquare]  ≈  0.3048 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$FootPerSecondSquare] ≈ 0.3048 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -1098,6 +1146,9 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
   @override
   AccelerationLinear$FootPerSecondSquare get _clone =>
       AccelerationLinear$FootPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$FootPerSecondSquare] with new value
   @override
@@ -1145,7 +1196,7 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
 
   static const _ratio = 0.0254;
 
-  /// 1 [AccelerationLinear$InchPerSecondSquare]  ≈  0.0254 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$InchPerSecondSquare] ≈ 0.0254 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
 
@@ -1153,6 +1204,9 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
   @override
   AccelerationLinear$InchPerSecondSquare get _clone =>
       AccelerationLinear$InchPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationLinear$InchPerSecondSquare] with new value
   @override

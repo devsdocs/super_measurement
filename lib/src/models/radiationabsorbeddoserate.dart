@@ -216,7 +216,7 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
 
   static const _ratio = 10000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$RadPerSecond]  =  10000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$RadPerSecond] = 10000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -224,6 +224,9 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
   @override
   RadiationAbsorbedDoseRate$RadPerSecond get _clone =>
       RadiationAbsorbedDoseRate$RadPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$RadPerSecond] with new value
   @override
@@ -273,7 +276,7 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond]  =  1000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond] = 1000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -281,6 +284,9 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
   @override
   RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond get _clone =>
       RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond] with new value
   @override
@@ -329,7 +335,7 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
 
   static const _ratio = 1e+36;
 
-  /// 1 [RadiationAbsorbedDoseRate$ExagrayPerSecond]  =  1e+36 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$ExagrayPerSecond] = 1e+36 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -337,6 +343,9 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
   @override
   RadiationAbsorbedDoseRate$ExagrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$ExagrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$ExagrayPerSecond] with new value
   @override
@@ -385,7 +394,7 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
 
   static const _ratio = 1e+33;
 
-  /// 1 [RadiationAbsorbedDoseRate$PetagrayPerSecond]  =  1e+33 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$PetagrayPerSecond] = 1e+33 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -393,6 +402,9 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
   @override
   RadiationAbsorbedDoseRate$PetagrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$PetagrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$PetagrayPerSecond] with new value
   @override
@@ -441,7 +453,7 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
 
   static const _ratio = 1e+30;
 
-  /// 1 [RadiationAbsorbedDoseRate$TeragrayPerSecond]  =  1e+30 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$TeragrayPerSecond] = 1e+30 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -449,6 +461,9 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
   @override
   RadiationAbsorbedDoseRate$TeragrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$TeragrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$TeragrayPerSecond] with new value
   @override
@@ -497,7 +512,7 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
 
   static const _ratio = 1e+27;
 
-  /// 1 [RadiationAbsorbedDoseRate$GigagrayPerSecond]  =  1e+27 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$GigagrayPerSecond] = 1e+27 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -505,6 +520,9 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
   @override
   RadiationAbsorbedDoseRate$GigagrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$GigagrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$GigagrayPerSecond] with new value
   @override
@@ -553,7 +571,7 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
 
   static const _ratio = 1e+24;
 
-  /// 1 [RadiationAbsorbedDoseRate$MegagrayPerSecond]  =  1e+24 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$MegagrayPerSecond] = 1e+24 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -561,6 +579,9 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
   @override
   RadiationAbsorbedDoseRate$MegagrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$MegagrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$MegagrayPerSecond] with new value
   @override
@@ -609,7 +630,7 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
 
   static const _ratio = 1e+21;
 
-  /// 1 [RadiationAbsorbedDoseRate$KilograyPerSecond]  =  1e+21 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$KilograyPerSecond] = 1e+21 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -617,6 +638,9 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
   @override
   RadiationAbsorbedDoseRate$KilograyPerSecond get _clone =>
       RadiationAbsorbedDoseRate$KilograyPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$KilograyPerSecond] with new value
   @override
@@ -665,7 +689,7 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
 
   static const _ratio = 100000000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$HectograyPerSecond]  =  100000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$HectograyPerSecond] = 100000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -673,6 +697,9 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
   @override
   RadiationAbsorbedDoseRate$HectograyPerSecond get _clone =>
       RadiationAbsorbedDoseRate$HectograyPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$HectograyPerSecond] with new value
   @override
@@ -721,7 +748,7 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
 
   static const _ratio = 10000000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$DekagrayPerSecond]  =  10000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$DekagrayPerSecond] = 10000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -729,6 +756,9 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
   @override
   RadiationAbsorbedDoseRate$DekagrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$DekagrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$DekagrayPerSecond] with new value
   @override
@@ -777,7 +807,7 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$GrayPerSecond]  =  1000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$GrayPerSecond] = 1000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -785,6 +815,9 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
   @override
   RadiationAbsorbedDoseRate$GrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$GrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$GrayPerSecond] with new value
   @override
@@ -833,7 +866,7 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
 
   static const _ratio = 100000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$DecigrayPerSecond]  =  100000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$DecigrayPerSecond] = 100000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -841,6 +874,9 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
   @override
   RadiationAbsorbedDoseRate$DecigrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$DecigrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$DecigrayPerSecond] with new value
   @override
@@ -889,7 +925,7 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
 
   static const _ratio = 10000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$CentigrayPerSecond]  =  10000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$CentigrayPerSecond] = 10000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -897,6 +933,9 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
   @override
   RadiationAbsorbedDoseRate$CentigrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$CentigrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$CentigrayPerSecond] with new value
   @override
@@ -945,7 +984,7 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$MilligrayPerSecond]  =  1000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$MilligrayPerSecond] = 1000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -953,6 +992,9 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
   @override
   RadiationAbsorbedDoseRate$MilligrayPerSecond get _clone =>
       RadiationAbsorbedDoseRate$MilligrayPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$MilligrayPerSecond] with new value
   @override
@@ -1001,7 +1043,7 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$MicrograyPerSecond]  =  1000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$MicrograyPerSecond] = 1000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1009,6 +1051,9 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
   @override
   RadiationAbsorbedDoseRate$MicrograyPerSecond get _clone =>
       RadiationAbsorbedDoseRate$MicrograyPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$MicrograyPerSecond] with new value
   @override
@@ -1057,7 +1102,7 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$NanograyPerSecond]  =  1000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$NanograyPerSecond] = 1000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1065,6 +1110,9 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
   @override
   RadiationAbsorbedDoseRate$NanograyPerSecond get _clone =>
       RadiationAbsorbedDoseRate$NanograyPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$NanograyPerSecond] with new value
   @override
@@ -1113,7 +1161,7 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
 
   static const _ratio = 1000000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$PicograyPerSecond]  =  1000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$PicograyPerSecond] = 1000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1121,6 +1169,9 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
   @override
   RadiationAbsorbedDoseRate$PicograyPerSecond get _clone =>
       RadiationAbsorbedDoseRate$PicograyPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$PicograyPerSecond] with new value
   @override
@@ -1169,7 +1220,7 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
 
   static const _ratio = 1000.0;
 
-  /// 1 [RadiationAbsorbedDoseRate$FemtograyPerSecond]  =  1000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$FemtograyPerSecond] = 1000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1177,6 +1228,9 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
   @override
   RadiationAbsorbedDoseRate$FemtograyPerSecond get _clone =>
       RadiationAbsorbedDoseRate$FemtograyPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$FemtograyPerSecond] with new value
   @override
@@ -1233,6 +1287,9 @@ final class RadiationAbsorbedDoseRate$AttograyPerSecond
   @override
   RadiationAbsorbedDoseRate$AttograyPerSecond get _clone =>
       RadiationAbsorbedDoseRate$AttograyPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$AttograyPerSecond] with new value
   @override

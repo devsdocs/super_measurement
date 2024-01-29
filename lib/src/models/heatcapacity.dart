@@ -136,6 +136,9 @@ final class HeatCapacity$KilojoulePerK extends HeatCapacity {
   @override
   HeatCapacity$KilojoulePerK get _clone => HeatCapacity$KilojoulePerK(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [HeatCapacity$KilojoulePerK] with new value
   @override
   HeatCapacity$KilojoulePerK withValue(
@@ -182,7 +185,7 @@ final class HeatCapacity$KilojoulePerDegreeC extends HeatCapacity {
 
   static const _ratio = 1.0;
 
-  /// 1 [HeatCapacity$KilojoulePerDegreeC]  =  1.0 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$KilojoulePerDegreeC] = 1.0 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
@@ -190,6 +193,9 @@ final class HeatCapacity$KilojoulePerDegreeC extends HeatCapacity {
   @override
   HeatCapacity$KilojoulePerDegreeC get _clone =>
       HeatCapacity$KilojoulePerDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$KilojoulePerDegreeC] with new value
   @override
@@ -237,13 +243,16 @@ final class HeatCapacity$JoulePerK extends HeatCapacity {
 
   static const _ratio = 0.001;
 
-  /// 1 [HeatCapacity$JoulePerK]  ≈  0.001 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$JoulePerK] ≈ 0.001 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   HeatCapacity$JoulePerK get _clone => HeatCapacity$JoulePerK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$JoulePerK] with new value
   @override
@@ -291,7 +300,7 @@ final class HeatCapacity$JoulePerDegreeC extends HeatCapacity {
 
   static const _ratio = 0.001;
 
-  /// 1 [HeatCapacity$JoulePerDegreeC]  ≈  0.001 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$JoulePerDegreeC] ≈ 0.001 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
@@ -299,6 +308,9 @@ final class HeatCapacity$JoulePerDegreeC extends HeatCapacity {
   @override
   HeatCapacity$JoulePerDegreeC get _clone =>
       HeatCapacity$JoulePerDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$JoulePerDegreeC] with new value
   @override
@@ -346,7 +358,7 @@ final class HeatCapacity$KilocaloriePerDegreeC extends HeatCapacity {
 
   static const _ratio = 4.1868;
 
-  /// 1 [HeatCapacity$KilocaloriePerDegreeC]  ≈  4.1868 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$KilocaloriePerDegreeC] ≈ 4.1868 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
@@ -354,6 +366,9 @@ final class HeatCapacity$KilocaloriePerDegreeC extends HeatCapacity {
   @override
   HeatCapacity$KilocaloriePerDegreeC get _clone =>
       HeatCapacity$KilocaloriePerDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$KilocaloriePerDegreeC] with new value
   @override
@@ -401,7 +416,7 @@ final class HeatCapacity$CaloriePerDegreeC extends HeatCapacity {
 
   static const _ratio = 0.0041868;
 
-  /// 1 [HeatCapacity$CaloriePerDegreeC]  ≈  0.0041868 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$CaloriePerDegreeC] ≈ 0.0041868 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
@@ -409,6 +424,9 @@ final class HeatCapacity$CaloriePerDegreeC extends HeatCapacity {
   @override
   HeatCapacity$CaloriePerDegreeC get _clone =>
       HeatCapacity$CaloriePerDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$CaloriePerDegreeC] with new value
   @override
@@ -456,13 +474,16 @@ final class HeatCapacity$BTUPerDegreeC extends HeatCapacity {
 
   static const _ratio = 1.05505585262;
 
-  /// 1 [HeatCapacity$BTUPerDegreeC]  ≈  1.05505585262 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$BTUPerDegreeC] ≈ 1.05505585262 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   HeatCapacity$BTUPerDegreeC get _clone => HeatCapacity$BTUPerDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeC] with new value
   @override
@@ -473,7 +494,7 @@ final class HeatCapacity$BTUPerDegreeC extends HeatCapacity {
 
   /// Symbol for [HeatCapacity$BTUPerDegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerDegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -510,13 +531,16 @@ final class HeatCapacity$BTUPerDegreeF extends HeatCapacity {
 
   static const _ratio = 1.899100534716;
 
-  /// 1 [HeatCapacity$BTUPerDegreeF]  ≈  1.899100534716 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$BTUPerDegreeF] ≈ 1.899100534716 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   HeatCapacity$BTUPerDegreeF get _clone => HeatCapacity$BTUPerDegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeF] with new value
   @override
@@ -527,7 +551,7 @@ final class HeatCapacity$BTUPerDegreeF extends HeatCapacity {
 
   /// Symbol for [HeatCapacity$BTUPerDegreeF]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerDegreeF';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -564,13 +588,16 @@ final class HeatCapacity$BTUPerDegreeR extends HeatCapacity {
 
   static const _ratio = 1.899100534716;
 
-  /// 1 [HeatCapacity$BTUPerDegreeR]  ≈  1.899100534716 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$BTUPerDegreeR] ≈ 1.899100534716 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   HeatCapacity$BTUPerDegreeR get _clone => HeatCapacity$BTUPerDegreeR(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeR] with new value
   @override
@@ -581,7 +608,7 @@ final class HeatCapacity$BTUPerDegreeR extends HeatCapacity {
 
   /// Symbol for [HeatCapacity$BTUPerDegreeR]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerDegreeR';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -618,13 +645,16 @@ final class HeatCapacity$CHUPerDegreeC extends HeatCapacity {
 
   static const _ratio = 1.899100534716;
 
-  /// 1 [HeatCapacity$CHUPerDegreeC]  ≈  1.899100534716 [HeatCapacity$KilojoulePerK]
+  /// 1 [HeatCapacity$CHUPerDegreeC] ≈ 1.899100534716 [HeatCapacity$KilojoulePerK]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   HeatCapacity$CHUPerDegreeC get _clone => HeatCapacity$CHUPerDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatCapacity$CHUPerDegreeC] with new value
   @override
@@ -635,7 +665,7 @@ final class HeatCapacity$CHUPerDegreeC extends HeatCapacity {
 
   /// Symbol for [HeatCapacity$CHUPerDegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'CHUPerDegreeC';
 
   @override
   Map<String, dynamic> toJson() => {

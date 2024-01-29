@@ -440,13 +440,16 @@ final class Flow$GallonPerDay extends Flow {
 
   static const _ratio = 3785.411784;
 
-  /// 1 [Flow$GallonPerDay]  ≈  3785.411784 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonPerDay] ≈ 3785.411784 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$GallonPerDay get _clone => Flow$GallonPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$GallonPerDay] with new value
   @override
@@ -494,13 +497,16 @@ final class Flow$GallonPerHour extends Flow {
 
   static const _ratio = 90849.882816;
 
-  /// 1 [Flow$GallonPerHour]  ≈  90849.882816 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonPerHour] ≈ 90849.882816 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$GallonPerHour get _clone => Flow$GallonPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$GallonPerHour] with new value
   @override
@@ -548,13 +554,16 @@ final class Flow$GallonPerMinute extends Flow {
 
   static const _ratio = 5450992.96896;
 
-  /// 1 [Flow$GallonPerMinute]  ≈  5450992.96896 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonPerMinute] ≈ 5450992.96896 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$GallonPerMinute get _clone => Flow$GallonPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$GallonPerMinute] with new value
   @override
@@ -602,13 +611,16 @@ final class Flow$GallonPerSecond extends Flow {
 
   static const _ratio = 327059578.1376;
 
-  /// 1 [Flow$GallonPerSecond]  ≈  327059578.1376 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonPerSecond] ≈ 327059578.1376 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$GallonPerSecond get _clone => Flow$GallonPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$GallonPerSecond] with new value
   @override
@@ -656,13 +668,16 @@ final class Flow$GallonUKPerDay extends Flow {
 
   static const _ratio = 4546.09028187501;
 
-  /// 1 [Flow$GallonUKPerDay]  ≈  4546.09028187501 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonUKPerDay] ≈ 4546.09028187501 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$GallonUKPerDay get _clone => Flow$GallonUKPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$GallonUKPerDay] with new value
   @override
@@ -710,13 +725,16 @@ final class Flow$GallonUKPerHour extends Flow {
 
   static const _ratio = 109106.16676500025;
 
-  /// 1 [Flow$GallonUKPerHour]  ≈  109106.16676500025 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonUKPerHour] ≈ 109106.16676500025 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$GallonUKPerHour get _clone => Flow$GallonUKPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$GallonUKPerHour] with new value
   @override
@@ -764,13 +782,16 @@ final class Flow$GallonUKPerMinute extends Flow {
 
   static const _ratio = 6546370.005900015;
 
-  /// 1 [Flow$GallonUKPerMinute]  ≈  6546370.005900015 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonUKPerMinute] ≈ 6546370.005900015 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$GallonUKPerMinute get _clone => Flow$GallonUKPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$GallonUKPerMinute] with new value
   @override
@@ -818,13 +839,16 @@ final class Flow$GallonUKPerSecond extends Flow {
 
   static const _ratio = 392782200.3540009;
 
-  /// 1 [Flow$GallonUKPerSecond]  ≈  392782200.3540009 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonUKPerSecond] ≈ 392782200.3540009 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$GallonUKPerSecond get _clone => Flow$GallonUKPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$GallonUKPerSecond] with new value
   @override
@@ -872,13 +896,16 @@ final class Flow$BarrelOilPerDay extends Flow {
 
   static const _ratio = 158987.294928;
 
-  /// 1 [Flow$BarrelOilPerDay]  ≈  158987.294928 [Flow$MilliliterPerDay]
+  /// 1 [Flow$BarrelOilPerDay] ≈ 158987.294928 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$BarrelOilPerDay get _clone => Flow$BarrelOilPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$BarrelOilPerDay] with new value
   @override
@@ -926,13 +953,16 @@ final class Flow$BarrelOilPerHour extends Flow {
 
   static const _ratio = 3815695.078272;
 
-  /// 1 [Flow$BarrelOilPerHour]  ≈  3815695.078272 [Flow$MilliliterPerDay]
+  /// 1 [Flow$BarrelOilPerHour] ≈ 3815695.078272 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$BarrelOilPerHour get _clone => Flow$BarrelOilPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$BarrelOilPerHour] with new value
   @override
@@ -980,13 +1010,16 @@ final class Flow$BarrelOilPerMinute extends Flow {
 
   static const _ratio = 228941704.69632;
 
-  /// 1 [Flow$BarrelOilPerMinute]  ≈  228941704.69632 [Flow$MilliliterPerDay]
+  /// 1 [Flow$BarrelOilPerMinute] ≈ 228941704.69632 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$BarrelOilPerMinute get _clone => Flow$BarrelOilPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$BarrelOilPerMinute] with new value
   @override
@@ -1034,13 +1067,16 @@ final class Flow$BarrelOilPerSecond extends Flow {
 
   static const _ratio = 13736502281.7792;
 
-  /// 1 [Flow$BarrelOilPerSecond]  ≈  13736502281.7792 [Flow$MilliliterPerDay]
+  /// 1 [Flow$BarrelOilPerSecond] ≈ 13736502281.7792 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$BarrelOilPerSecond get _clone => Flow$BarrelOilPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$BarrelOilPerSecond] with new value
   @override
@@ -1088,13 +1124,16 @@ final class Flow$AcreFootPerYear extends Flow {
 
   static const _ratio = 3379415.812314174;
 
-  /// 1 [Flow$AcreFootPerYear]  ≈  3379415.812314174 [Flow$MilliliterPerDay]
+  /// 1 [Flow$AcreFootPerYear] ≈ 3379415.812314174 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$AcreFootPerYear get _clone => Flow$AcreFootPerYear(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$AcreFootPerYear] with new value
   @override
@@ -1142,13 +1181,16 @@ final class Flow$AcreFootPerDay extends Flow {
 
   static const _ratio = 1233486771.4946737;
 
-  /// 1 [Flow$AcreFootPerDay]  ≈  1233486771.4946737 [Flow$MilliliterPerDay]
+  /// 1 [Flow$AcreFootPerDay] ≈ 1233486771.4946737 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$AcreFootPerDay get _clone => Flow$AcreFootPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$AcreFootPerDay] with new value
   @override
@@ -1196,13 +1238,16 @@ final class Flow$AcreFootPerHour extends Flow {
 
   static const _ratio = 29603682515.872166;
 
-  /// 1 [Flow$AcreFootPerHour]  ≈  29603682515.872166 [Flow$MilliliterPerDay]
+  /// 1 [Flow$AcreFootPerHour] ≈ 29603682515.872166 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$AcreFootPerHour get _clone => Flow$AcreFootPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$AcreFootPerHour] with new value
   @override
@@ -1250,13 +1295,16 @@ final class Flow$HundredFootCubicPerDay extends Flow {
 
   static const _ratio = 2831684.659211768;
 
-  /// 1 [Flow$HundredFootCubicPerDay]  ≈  2831684.659211768 [Flow$MilliliterPerDay]
+  /// 1 [Flow$HundredFootCubicPerDay] ≈ 2831684.659211768 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$HundredFootCubicPerDay get _clone => Flow$HundredFootCubicPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerDay] with new value
   @override
@@ -1304,7 +1352,7 @@ final class Flow$HundredFootCubicPerHour extends Flow {
 
   static const _ratio = 67960431.82108243;
 
-  /// 1 [Flow$HundredFootCubicPerHour]  ≈  67960431.82108243 [Flow$MilliliterPerDay]
+  /// 1 [Flow$HundredFootCubicPerHour] ≈ 67960431.82108243 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -1312,6 +1360,9 @@ final class Flow$HundredFootCubicPerHour extends Flow {
   @override
   Flow$HundredFootCubicPerHour get _clone =>
       Flow$HundredFootCubicPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerHour] with new value
   @override
@@ -1359,7 +1410,7 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
 
   static const _ratio = 4077625909.264946;
 
-  /// 1 [Flow$HundredFootCubicPerMinute]  ≈  4077625909.264946 [Flow$MilliliterPerDay]
+  /// 1 [Flow$HundredFootCubicPerMinute] ≈ 4077625909.264946 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -1367,6 +1418,9 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
   @override
   Flow$HundredFootCubicPerMinute get _clone =>
       Flow$HundredFootCubicPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerMinute] with new value
   @override
@@ -1414,13 +1468,16 @@ final class Flow$OuncePerHour extends Flow {
 
   static const _ratio = 709.7647095;
 
-  /// 1 [Flow$OuncePerHour]  ≈  709.7647095 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OuncePerHour] ≈ 709.7647095 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$OuncePerHour get _clone => Flow$OuncePerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$OuncePerHour] with new value
   @override
@@ -1468,13 +1525,16 @@ final class Flow$OuncePerMinute extends Flow {
 
   static const _ratio = 42585.88257;
 
-  /// 1 [Flow$OuncePerMinute]  ≈  42585.88257 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OuncePerMinute] ≈ 42585.88257 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$OuncePerMinute get _clone => Flow$OuncePerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$OuncePerMinute] with new value
   @override
@@ -1522,13 +1582,16 @@ final class Flow$OuncePerSecond extends Flow {
 
   static const _ratio = 2555152.9542;
 
-  /// 1 [Flow$OuncePerSecond]  ≈  2555152.9542 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OuncePerSecond] ≈ 2555152.9542 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$OuncePerSecond get _clone => Flow$OuncePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$OuncePerSecond] with new value
   @override
@@ -1576,13 +1639,16 @@ final class Flow$OunceUKPerHour extends Flow {
 
   static const _ratio = 681.9135422812516;
 
-  /// 1 [Flow$OunceUKPerHour]  ≈  681.9135422812516 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OunceUKPerHour] ≈ 681.9135422812516 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$OunceUKPerHour get _clone => Flow$OunceUKPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$OunceUKPerHour] with new value
   @override
@@ -1630,13 +1696,16 @@ final class Flow$OunceUKPerMinute extends Flow {
 
   static const _ratio = 40914.81253687509;
 
-  /// 1 [Flow$OunceUKPerMinute]  ≈  40914.81253687509 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OunceUKPerMinute] ≈ 40914.81253687509 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$OunceUKPerMinute get _clone => Flow$OunceUKPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$OunceUKPerMinute] with new value
   @override
@@ -1684,13 +1753,16 @@ final class Flow$OunceUKPerSecond extends Flow {
 
   static const _ratio = 2454888.752212506;
 
-  /// 1 [Flow$OunceUKPerSecond]  ≈  2454888.752212506 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OunceUKPerSecond] ≈ 2454888.752212506 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$OunceUKPerSecond get _clone => Flow$OunceUKPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$OunceUKPerSecond] with new value
   @override
@@ -1738,13 +1810,16 @@ final class Flow$LiterPerDay extends Flow {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Flow$LiterPerDay]  =  1000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$LiterPerDay] = 1000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$LiterPerDay get _clone => Flow$LiterPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$LiterPerDay] with new value
   @override
@@ -1792,13 +1867,16 @@ final class Flow$LiterPerHour extends Flow {
 
   static const _ratio = 24000.0;
 
-  /// 1 [Flow$LiterPerHour]  =  24000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$LiterPerHour] = 24000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$LiterPerHour get _clone => Flow$LiterPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$LiterPerHour] with new value
   @override
@@ -1846,13 +1924,16 @@ final class Flow$LiterPerMinute extends Flow {
 
   static const _ratio = 1440000.0;
 
-  /// 1 [Flow$LiterPerMinute]  =  1440000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$LiterPerMinute] = 1440000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$LiterPerMinute get _clone => Flow$LiterPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$LiterPerMinute] with new value
   @override
@@ -1900,13 +1981,16 @@ final class Flow$LiterPerSecond extends Flow {
 
   static const _ratio = 86400000.0;
 
-  /// 1 [Flow$LiterPerSecond]  =  86400000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$LiterPerSecond] = 86400000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$LiterPerSecond get _clone => Flow$LiterPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$LiterPerSecond] with new value
   @override
@@ -1962,6 +2046,9 @@ final class Flow$MilliliterPerDay extends Flow {
   @override
   Flow$MilliliterPerDay get _clone => Flow$MilliliterPerDay(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Flow$MilliliterPerDay] with new value
   @override
   Flow$MilliliterPerDay withValue(
@@ -2008,13 +2095,16 @@ final class Flow$MilliliterPerHour extends Flow {
 
   static const _ratio = 24.0;
 
-  /// 1 [Flow$MilliliterPerHour]  =  24.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MilliliterPerHour] = 24.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$MilliliterPerHour get _clone => Flow$MilliliterPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$MilliliterPerHour] with new value
   @override
@@ -2062,13 +2152,16 @@ final class Flow$MilliliterPerMinute extends Flow {
 
   static const _ratio = 1440.0;
 
-  /// 1 [Flow$MilliliterPerMinute]  =  1440.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MilliliterPerMinute] = 1440.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$MilliliterPerMinute get _clone => Flow$MilliliterPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$MilliliterPerMinute] with new value
   @override
@@ -2116,13 +2209,16 @@ final class Flow$MilliliterPerSecond extends Flow {
 
   static const _ratio = 86400.0;
 
-  /// 1 [Flow$MilliliterPerSecond]  =  86400.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MilliliterPerSecond] = 86400.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$MilliliterPerSecond get _clone => Flow$MilliliterPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$MilliliterPerSecond] with new value
   @override
@@ -2170,13 +2266,16 @@ final class Flow$MeterCubicPerDay extends Flow {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Flow$MeterCubicPerDay]  =  1000000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MeterCubicPerDay] = 1000000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$MeterCubicPerDay get _clone => Flow$MeterCubicPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$MeterCubicPerDay] with new value
   @override
@@ -2224,13 +2323,16 @@ final class Flow$MeterCubicPerHour extends Flow {
 
   static const _ratio = 24000000.0;
 
-  /// 1 [Flow$MeterCubicPerHour]  =  24000000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MeterCubicPerHour] = 24000000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$MeterCubicPerHour get _clone => Flow$MeterCubicPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$MeterCubicPerHour] with new value
   @override
@@ -2278,13 +2380,16 @@ final class Flow$MeterCubicPerMinute extends Flow {
 
   static const _ratio = 1440000000.0;
 
-  /// 1 [Flow$MeterCubicPerMinute]  =  1440000000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MeterCubicPerMinute] = 1440000000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$MeterCubicPerMinute get _clone => Flow$MeterCubicPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$MeterCubicPerMinute] with new value
   @override
@@ -2332,13 +2437,16 @@ final class Flow$MeterCubicPerSecond extends Flow {
 
   static const _ratio = 86400000000.0;
 
-  /// 1 [Flow$MeterCubicPerSecond]  =  86400000000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MeterCubicPerSecond] = 86400000000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$MeterCubicPerSecond get _clone => Flow$MeterCubicPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$MeterCubicPerSecond] with new value
   @override
@@ -2386,13 +2494,16 @@ final class Flow$CentimeterCubicPerDay extends Flow {
 
   static const _ratio = 1.0;
 
-  /// 1 [Flow$CentimeterCubicPerDay]  =  1.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$CentimeterCubicPerDay] = 1.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$CentimeterCubicPerDay get _clone => Flow$CentimeterCubicPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerDay] with new value
   @override
@@ -2440,13 +2551,16 @@ final class Flow$CentimeterCubicPerHour extends Flow {
 
   static const _ratio = 24.0;
 
-  /// 1 [Flow$CentimeterCubicPerHour]  =  24.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$CentimeterCubicPerHour] = 24.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$CentimeterCubicPerHour get _clone => Flow$CentimeterCubicPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerHour] with new value
   @override
@@ -2494,7 +2608,7 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
 
   static const _ratio = 1440.0;
 
-  /// 1 [Flow$CentimeterCubicPerMinute]  =  1440.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$CentimeterCubicPerMinute] = 1440.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -2502,6 +2616,9 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
   @override
   Flow$CentimeterCubicPerMinute get _clone =>
       Flow$CentimeterCubicPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerMinute] with new value
   @override
@@ -2549,7 +2666,7 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
 
   static const _ratio = 86400.0;
 
-  /// 1 [Flow$CentimeterCubicPerSecond]  =  86400.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$CentimeterCubicPerSecond] = 86400.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -2557,6 +2674,9 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
   @override
   Flow$CentimeterCubicPerSecond get _clone =>
       Flow$CentimeterCubicPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerSecond] with new value
   @override
@@ -2604,13 +2724,16 @@ final class Flow$YardCubicPerHour extends Flow {
 
   static const _ratio = 18349316.59251583;
 
-  /// 1 [Flow$YardCubicPerHour]  ≈  18349316.59251583 [Flow$MilliliterPerDay]
+  /// 1 [Flow$YardCubicPerHour] ≈ 18349316.59251583 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$YardCubicPerHour get _clone => Flow$YardCubicPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$YardCubicPerHour] with new value
   @override
@@ -2658,13 +2781,16 @@ final class Flow$YardCubicPerMinute extends Flow {
 
   static const _ratio = 1100958995.5509498;
 
-  /// 1 [Flow$YardCubicPerMinute]  ≈  1100958995.5509498 [Flow$MilliliterPerDay]
+  /// 1 [Flow$YardCubicPerMinute] ≈ 1100958995.5509498 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$YardCubicPerMinute get _clone => Flow$YardCubicPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$YardCubicPerMinute] with new value
   @override
@@ -2712,13 +2838,16 @@ final class Flow$YardCubicPerSecond extends Flow {
 
   static const _ratio = 66057539733.05699;
 
-  /// 1 [Flow$YardCubicPerSecond]  ≈  66057539733.05699 [Flow$MilliliterPerDay]
+  /// 1 [Flow$YardCubicPerSecond] ≈ 66057539733.05699 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$YardCubicPerSecond get _clone => Flow$YardCubicPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$YardCubicPerSecond] with new value
   @override
@@ -2766,13 +2895,16 @@ final class Flow$FootCubicPerHour extends Flow {
 
   static const _ratio = 679604.3182413271;
 
-  /// 1 [Flow$FootCubicPerHour]  ≈  679604.3182413271 [Flow$MilliliterPerDay]
+  /// 1 [Flow$FootCubicPerHour] ≈ 679604.3182413271 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$FootCubicPerHour get _clone => Flow$FootCubicPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$FootCubicPerHour] with new value
   @override
@@ -2820,13 +2952,16 @@ final class Flow$FootCubicPerMinute extends Flow {
 
   static const _ratio = 40776259.09447963;
 
-  /// 1 [Flow$FootCubicPerMinute]  ≈  40776259.09447963 [Flow$MilliliterPerDay]
+  /// 1 [Flow$FootCubicPerMinute] ≈ 40776259.09447963 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$FootCubicPerMinute get _clone => Flow$FootCubicPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$FootCubicPerMinute] with new value
   @override
@@ -2874,13 +3009,16 @@ final class Flow$FootCubicPerSecond extends Flow {
 
   static const _ratio = 2446575545.6687775;
 
-  /// 1 [Flow$FootCubicPerSecond]  ≈  2446575545.6687775 [Flow$MilliliterPerDay]
+  /// 1 [Flow$FootCubicPerSecond] ≈ 2446575545.6687775 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$FootCubicPerSecond get _clone => Flow$FootCubicPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$FootCubicPerSecond] with new value
   @override
@@ -2928,13 +3066,16 @@ final class Flow$InchCubicPerHour extends Flow {
 
   static const _ratio = 393.2895360192865;
 
-  /// 1 [Flow$InchCubicPerHour]  ≈  393.2895360192865 [Flow$MilliliterPerDay]
+  /// 1 [Flow$InchCubicPerHour] ≈ 393.2895360192865 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$InchCubicPerHour get _clone => Flow$InchCubicPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$InchCubicPerHour] with new value
   @override
@@ -2982,13 +3123,16 @@ final class Flow$InchCubicPerMinute extends Flow {
 
   static const _ratio = 23597.37216115719;
 
-  /// 1 [Flow$InchCubicPerMinute]  ≈  23597.37216115719 [Flow$MilliliterPerDay]
+  /// 1 [Flow$InchCubicPerMinute] ≈ 23597.37216115719 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$InchCubicPerMinute get _clone => Flow$InchCubicPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$InchCubicPerMinute] with new value
   @override
@@ -3036,13 +3180,16 @@ final class Flow$InchCubicPerSecond extends Flow {
 
   static const _ratio = 1415842.3296694316;
 
-  /// 1 [Flow$InchCubicPerSecond]  ≈  1415842.3296694316 [Flow$MilliliterPerDay]
+  /// 1 [Flow$InchCubicPerSecond] ≈ 1415842.3296694316 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Flow$InchCubicPerSecond get _clone => Flow$InchCubicPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$InchCubicPerSecond] with new value
   @override
@@ -3090,7 +3237,7 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 53008035.35;
 
-  /// 1 [Flow$PoundPerSecondGasolineAt155DegreeC]  ≈  53008035.35 [Flow$MilliliterPerDay]
+  /// 1 [Flow$PoundPerSecondGasolineAt155DegreeC] ≈ 53008035.35 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -3098,6 +3245,9 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
   @override
   Flow$PoundPerSecondGasolineAt155DegreeC get _clone =>
       Flow$PoundPerSecondGasolineAt155DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$PoundPerSecondGasolineAt155DegreeC] with new value
   @override
@@ -3108,7 +3258,7 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$PoundPerSecondGasolineAt155DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'PoundPerSecondGasolineAt155DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3145,7 +3295,7 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 883467.2559;
 
-  /// 1 [Flow$PoundPerMinuteGasolineAt155DegreeC]  ≈  883467.2559 [Flow$MilliliterPerDay]
+  /// 1 [Flow$PoundPerMinuteGasolineAt155DegreeC] ≈ 883467.2559 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -3153,6 +3303,9 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
   @override
   Flow$PoundPerMinuteGasolineAt155DegreeC get _clone =>
       Flow$PoundPerMinuteGasolineAt155DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$PoundPerMinuteGasolineAt155DegreeC] with new value
   @override
@@ -3163,7 +3316,7 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$PoundPerMinuteGasolineAt155DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'PoundPerMinuteGasolineAt155DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3200,7 +3353,7 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 14724.45427;
 
-  /// 1 [Flow$PoundPerHourGasolineAt155DegreeC]  ≈  14724.45427 [Flow$MilliliterPerDay]
+  /// 1 [Flow$PoundPerHourGasolineAt155DegreeC] ≈ 14724.45427 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -3208,6 +3361,9 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
   @override
   Flow$PoundPerHourGasolineAt155DegreeC get _clone =>
       Flow$PoundPerHourGasolineAt155DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$PoundPerHourGasolineAt155DegreeC] with new value
   @override
@@ -3218,7 +3374,7 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$PoundPerHourGasolineAt155DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'PoundPerHourGasolineAt155DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3255,7 +3411,7 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 613.5189277;
 
-  /// 1 [Flow$PoundPerDayGasolineAt155DegreeC]  ≈  613.5189277 [Flow$MilliliterPerDay]
+  /// 1 [Flow$PoundPerDayGasolineAt155DegreeC] ≈ 613.5189277 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -3263,6 +3419,9 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
   @override
   Flow$PoundPerDayGasolineAt155DegreeC get _clone =>
       Flow$PoundPerDayGasolineAt155DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$PoundPerDayGasolineAt155DegreeC] with new value
   @override
@@ -3273,7 +3432,7 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$PoundPerDayGasolineAt155DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'PoundPerDayGasolineAt155DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3310,7 +3469,7 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 116862713.9;
 
-  /// 1 [Flow$KilogramPerSecondGasolineAt155DegreeC]  ≈  116862713.9 [Flow$MilliliterPerDay]
+  /// 1 [Flow$KilogramPerSecondGasolineAt155DegreeC] ≈ 116862713.9 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -3318,6 +3477,9 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
   @override
   Flow$KilogramPerSecondGasolineAt155DegreeC get _clone =>
       Flow$KilogramPerSecondGasolineAt155DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$KilogramPerSecondGasolineAt155DegreeC] with new value
   @override
@@ -3328,7 +3490,7 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$KilogramPerSecondGasolineAt155DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'KilogramPerSecondGasolineAt155DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3365,7 +3527,7 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 1947711.898;
 
-  /// 1 [Flow$KilogramPerMinuteGasolineAt155DegreeC]  ≈  1947711.898 [Flow$MilliliterPerDay]
+  /// 1 [Flow$KilogramPerMinuteGasolineAt155DegreeC] ≈ 1947711.898 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -3373,6 +3535,9 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
   @override
   Flow$KilogramPerMinuteGasolineAt155DegreeC get _clone =>
       Flow$KilogramPerMinuteGasolineAt155DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$KilogramPerMinuteGasolineAt155DegreeC] with new value
   @override
@@ -3383,7 +3548,7 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$KilogramPerMinuteGasolineAt155DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'KilogramPerMinuteGasolineAt155DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3420,7 +3585,7 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 32461.86497;
 
-  /// 1 [Flow$KilogramPerHourGasolineAt155DegreeC]  ≈  32461.86497 [Flow$MilliliterPerDay]
+  /// 1 [Flow$KilogramPerHourGasolineAt155DegreeC] ≈ 32461.86497 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -3428,6 +3593,9 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
   @override
   Flow$KilogramPerHourGasolineAt155DegreeC get _clone =>
       Flow$KilogramPerHourGasolineAt155DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$KilogramPerHourGasolineAt155DegreeC] with new value
   @override
@@ -3438,7 +3606,7 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$KilogramPerHourGasolineAt155DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'KilogramPerHourGasolineAt155DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3475,7 +3643,7 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 1352.577707;
 
-  /// 1 [Flow$KilogramPerDayGasolineAt155DegreeC]  ≈  1352.577707 [Flow$MilliliterPerDay]
+  /// 1 [Flow$KilogramPerDayGasolineAt155DegreeC] ≈ 1352.577707 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
 
@@ -3483,6 +3651,9 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
   @override
   Flow$KilogramPerDayGasolineAt155DegreeC get _clone =>
       Flow$KilogramPerDayGasolineAt155DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Flow$KilogramPerDayGasolineAt155DegreeC] with new value
   @override
@@ -3493,7 +3664,7 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
 
   /// Symbol for [Flow$KilogramPerDayGasolineAt155DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'KilogramPerDayGasolineAt155DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {

@@ -155,7 +155,7 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
 
   static const _ratio = 0.001;
 
-  /// 1 [ConcentrationMolar$MolPerMeterCubic]  ≈  0.001 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MolPerMeterCubic] ≈ 0.001 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -163,6 +163,9 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
   @override
   ConcentrationMolar$MolPerMeterCubic get _clone =>
       ConcentrationMolar$MolPerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerMeterCubic] with new value
   @override
@@ -219,6 +222,9 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
   ConcentrationMolar$MolPerLiter get _clone =>
       ConcentrationMolar$MolPerLiter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [ConcentrationMolar$MolPerLiter] with new value
   @override
   ConcentrationMolar$MolPerLiter withValue(
@@ -266,7 +272,7 @@ final class ConcentrationMolar$MolPerCentimeterCubic
 
   static const _ratio = 1000.0;
 
-  /// 1 [ConcentrationMolar$MolPerCentimeterCubic]  =  1000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MolPerCentimeterCubic] = 1000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -274,6 +280,9 @@ final class ConcentrationMolar$MolPerCentimeterCubic
   @override
   ConcentrationMolar$MolPerCentimeterCubic get _clone =>
       ConcentrationMolar$MolPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerCentimeterCubic] with new value
   @override
@@ -322,7 +331,7 @@ final class ConcentrationMolar$MolPerMillimeterCubic
 
   static const _ratio = 1000000.0;
 
-  /// 1 [ConcentrationMolar$MolPerMillimeterCubic]  =  1000000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MolPerMillimeterCubic] = 1000000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -330,6 +339,9 @@ final class ConcentrationMolar$MolPerMillimeterCubic
   @override
   ConcentrationMolar$MolPerMillimeterCubic get _clone =>
       ConcentrationMolar$MolPerMillimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerMillimeterCubic] with new value
   @override
@@ -377,7 +389,7 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
 
   static const _ratio = 1.0;
 
-  /// 1 [ConcentrationMolar$KilomolPerMeterCubic]  =  1.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$KilomolPerMeterCubic] = 1.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -385,6 +397,9 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
   @override
   ConcentrationMolar$KilomolPerMeterCubic get _clone =>
       ConcentrationMolar$KilomolPerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerMeterCubic] with new value
   @override
@@ -432,7 +447,7 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
 
   static const _ratio = 1000.0;
 
-  /// 1 [ConcentrationMolar$KilomolPerLiter]  =  1000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$KilomolPerLiter] = 1000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -440,6 +455,9 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
   @override
   ConcentrationMolar$KilomolPerLiter get _clone =>
       ConcentrationMolar$KilomolPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerLiter] with new value
   @override
@@ -488,7 +506,7 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
 
   static const _ratio = 1000000.0;
 
-  /// 1 [ConcentrationMolar$KilomolPerCentimeterCubic]  =  1000000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$KilomolPerCentimeterCubic] = 1000000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -496,6 +514,9 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
   @override
   ConcentrationMolar$KilomolPerCentimeterCubic get _clone =>
       ConcentrationMolar$KilomolPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerCentimeterCubic] with new value
   @override
@@ -544,7 +565,7 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [ConcentrationMolar$KilomolPerMillimeterCubic]  =  1000000000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$KilomolPerMillimeterCubic] = 1000000000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -552,6 +573,9 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
   @override
   ConcentrationMolar$KilomolPerMillimeterCubic get _clone =>
       ConcentrationMolar$KilomolPerMillimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerMillimeterCubic] with new value
   @override
@@ -600,7 +624,7 @@ final class ConcentrationMolar$MillimolPerMeterCubic
 
   static const _ratio = 0.000001;
 
-  /// 1 [ConcentrationMolar$MillimolPerMeterCubic]  ≈  0.000001 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MillimolPerMeterCubic] ≈ 0.000001 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -608,6 +632,9 @@ final class ConcentrationMolar$MillimolPerMeterCubic
   @override
   ConcentrationMolar$MillimolPerMeterCubic get _clone =>
       ConcentrationMolar$MillimolPerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerMeterCubic] with new value
   @override
@@ -655,7 +682,7 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
 
   static const _ratio = 0.001;
 
-  /// 1 [ConcentrationMolar$MillimolPerLiter]  ≈  0.001 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MillimolPerLiter] ≈ 0.001 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -663,6 +690,9 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
   @override
   ConcentrationMolar$MillimolPerLiter get _clone =>
       ConcentrationMolar$MillimolPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerLiter] with new value
   @override
@@ -711,7 +741,7 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
 
   static const _ratio = 1.0;
 
-  /// 1 [ConcentrationMolar$MillimolPerCentimeterCubic]  =  1.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MillimolPerCentimeterCubic] = 1.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -719,6 +749,9 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
   @override
   ConcentrationMolar$MillimolPerCentimeterCubic get _clone =>
       ConcentrationMolar$MillimolPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerCentimeterCubic] with new value
   @override
@@ -767,7 +800,7 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
 
   static const _ratio = 1000.0;
 
-  /// 1 [ConcentrationMolar$MillimolPerMillimeterCubic]  =  1000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MillimolPerMillimeterCubic] = 1000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -775,6 +808,9 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
   @override
   ConcentrationMolar$MillimolPerMillimeterCubic get _clone =>
       ConcentrationMolar$MillimolPerMillimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerMillimeterCubic] with new value
   @override

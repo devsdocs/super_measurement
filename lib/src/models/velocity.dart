@@ -204,13 +204,16 @@ final class Velocity$KilometerPerHour extends Velocity {
 
   static const _ratio = 100000.0;
 
-  /// 1 [Velocity$KilometerPerHour]  =  100000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$KilometerPerHour] = 100000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$KilometerPerHour get _clone => Velocity$KilometerPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$KilometerPerHour] with new value
   @override
@@ -258,13 +261,16 @@ final class Velocity$KilometerPerMinute extends Velocity {
 
   static const _ratio = 6000000.0;
 
-  /// 1 [Velocity$KilometerPerMinute]  =  6000000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$KilometerPerMinute] = 6000000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$KilometerPerMinute get _clone => Velocity$KilometerPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$KilometerPerMinute] with new value
   @override
@@ -312,13 +318,16 @@ final class Velocity$KilometerPerSecond extends Velocity {
 
   static const _ratio = 360000000.0;
 
-  /// 1 [Velocity$KilometerPerSecond]  =  360000000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$KilometerPerSecond] = 360000000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$KilometerPerSecond get _clone => Velocity$KilometerPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$KilometerPerSecond] with new value
   @override
@@ -366,13 +375,16 @@ final class Velocity$MeterPerHour extends Velocity {
 
   static const _ratio = 100.0;
 
-  /// 1 [Velocity$MeterPerHour]  =  100.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MeterPerHour] = 100.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$MeterPerHour get _clone => Velocity$MeterPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$MeterPerHour] with new value
   @override
@@ -420,13 +432,16 @@ final class Velocity$MeterPerMinute extends Velocity {
 
   static const _ratio = 6000.0;
 
-  /// 1 [Velocity$MeterPerMinute]  =  6000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MeterPerMinute] = 6000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$MeterPerMinute get _clone => Velocity$MeterPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$MeterPerMinute] with new value
   @override
@@ -474,13 +489,16 @@ final class Velocity$MeterPerSecond extends Velocity {
 
   static const _ratio = 360000.0;
 
-  /// 1 [Velocity$MeterPerSecond]  =  360000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MeterPerSecond] = 360000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$MeterPerSecond get _clone => Velocity$MeterPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$MeterPerSecond] with new value
   @override
@@ -536,6 +554,9 @@ final class Velocity$CentimeterPerHour extends Velocity {
   @override
   Velocity$CentimeterPerHour get _clone => Velocity$CentimeterPerHour(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Velocity$CentimeterPerHour] with new value
   @override
   Velocity$CentimeterPerHour withValue(
@@ -582,7 +603,7 @@ final class Velocity$CentimeterPerMinute extends Velocity {
 
   static const _ratio = 60.0;
 
-  /// 1 [Velocity$CentimeterPerMinute]  =  60.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$CentimeterPerMinute] = 60.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
@@ -590,6 +611,9 @@ final class Velocity$CentimeterPerMinute extends Velocity {
   @override
   Velocity$CentimeterPerMinute get _clone =>
       Velocity$CentimeterPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$CentimeterPerMinute] with new value
   @override
@@ -637,7 +661,7 @@ final class Velocity$CentimeterPerSecond extends Velocity {
 
   static const _ratio = 3600.0;
 
-  /// 1 [Velocity$CentimeterPerSecond]  =  3600.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$CentimeterPerSecond] = 3600.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
@@ -645,6 +669,9 @@ final class Velocity$CentimeterPerSecond extends Velocity {
   @override
   Velocity$CentimeterPerSecond get _clone =>
       Velocity$CentimeterPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$CentimeterPerSecond] with new value
   @override
@@ -692,13 +719,16 @@ final class Velocity$MilePerHour extends Velocity {
 
   static const _ratio = 160934.4;
 
-  /// 1 [Velocity$MilePerHour]  ≈  160934.4 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MilePerHour] ≈ 160934.4 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$MilePerHour get _clone => Velocity$MilePerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$MilePerHour] with new value
   @override
@@ -746,13 +776,16 @@ final class Velocity$MilePerMinute extends Velocity {
 
   static const _ratio = 9656064.0;
 
-  /// 1 [Velocity$MilePerMinute]  =  9656064.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MilePerMinute] = 9656064.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$MilePerMinute get _clone => Velocity$MilePerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$MilePerMinute] with new value
   @override
@@ -800,13 +833,16 @@ final class Velocity$MilePerSecond extends Velocity {
 
   static const _ratio = 579363840.0;
 
-  /// 1 [Velocity$MilePerSecond]  =  579363840.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MilePerSecond] = 579363840.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$MilePerSecond get _clone => Velocity$MilePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$MilePerSecond] with new value
   @override
@@ -854,13 +890,16 @@ final class Velocity$YardPerHour extends Velocity {
 
   static const _ratio = 91.44;
 
-  /// 1 [Velocity$YardPerHour]  ≈  91.44 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$YardPerHour] ≈ 91.44 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$YardPerHour get _clone => Velocity$YardPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$YardPerHour] with new value
   @override
@@ -908,13 +947,16 @@ final class Velocity$YardPerMinute extends Velocity {
 
   static const _ratio = 5486.4;
 
-  /// 1 [Velocity$YardPerMinute]  ≈  5486.4 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$YardPerMinute] ≈ 5486.4 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$YardPerMinute get _clone => Velocity$YardPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$YardPerMinute] with new value
   @override
@@ -962,13 +1004,16 @@ final class Velocity$YardPerSecond extends Velocity {
 
   static const _ratio = 329184.0;
 
-  /// 1 [Velocity$YardPerSecond]  =  329184.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$YardPerSecond] = 329184.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$YardPerSecond get _clone => Velocity$YardPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$YardPerSecond] with new value
   @override
@@ -1016,13 +1061,16 @@ final class Velocity$FootPerHour extends Velocity {
 
   static const _ratio = 30.48;
 
-  /// 1 [Velocity$FootPerHour]  ≈  30.48 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$FootPerHour] ≈ 30.48 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$FootPerHour get _clone => Velocity$FootPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$FootPerHour] with new value
   @override
@@ -1070,13 +1118,16 @@ final class Velocity$FootPerMinute extends Velocity {
 
   static const _ratio = 1828.8;
 
-  /// 1 [Velocity$FootPerMinute]  ≈  1828.8 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$FootPerMinute] ≈ 1828.8 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$FootPerMinute get _clone => Velocity$FootPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$FootPerMinute] with new value
   @override
@@ -1124,13 +1175,16 @@ final class Velocity$FootPerSecond extends Velocity {
 
   static const _ratio = 109728.0;
 
-  /// 1 [Velocity$FootPerSecond]  =  109728.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$FootPerSecond] = 109728.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$FootPerSecond get _clone => Velocity$FootPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$FootPerSecond] with new value
   @override
@@ -1178,13 +1232,16 @@ final class Velocity$MachSIStandard extends Velocity {
 
   static const _ratio = 106216704.00010112;
 
-  /// 1 [Velocity$MachSIStandard]  ≈  106216704.00010112 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MachSIStandard] ≈ 106216704.00010112 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$MachSIStandard get _clone => Velocity$MachSIStandard(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$MachSIStandard] with new value
   @override
@@ -1195,7 +1252,7 @@ final class Velocity$MachSIStandard extends Velocity {
 
   /// Symbol for [Velocity$MachSIStandard]
   @override
-  String get symbol => '';
+  String get symbol => 'MachSIStandard';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1232,13 +1289,16 @@ final class Velocity$MachAtSeaLevel extends Velocity {
 
   static const _ratio = 119325600.0;
 
-  /// 1 [Velocity$MachAtSeaLevel]  =  119325600.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MachAtSeaLevel] = 119325600.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$MachAtSeaLevel get _clone => Velocity$MachAtSeaLevel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$MachAtSeaLevel] with new value
   @override
@@ -1249,7 +1309,7 @@ final class Velocity$MachAtSeaLevel extends Velocity {
 
   /// Symbol for [Velocity$MachAtSeaLevel]
   @override
-  String get symbol => '';
+  String get symbol => 'MachAtSeaLevel';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1286,13 +1346,16 @@ final class Velocity$Light extends Velocity {
 
   static const _ratio = 107925284880000.0;
 
-  /// 1 [Velocity$Light]  =  107925284880000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$Light] = 107925284880000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$Light get _clone => Velocity$Light(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$Light] with new value
   @override
@@ -1340,13 +1403,16 @@ final class Velocity$Knot extends Velocity {
 
   static const _ratio = 185200.0;
 
-  /// 1 [Velocity$Knot]  =  185200.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$Knot] = 185200.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Velocity$Knot get _clone => Velocity$Knot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Velocity$Knot] with new value
   @override

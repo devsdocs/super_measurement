@@ -5,14 +5,16 @@ void generateModels() {
     final name = unit.keys.first;
     final enumSymbol = '${name}Unit';
     final enumValuesSymbol = '${enumSymbol}Values'.snakeCase;
-    print(name);
+    // final isShiftedValue =
+    //     unit.values.first.single['valueshift']! as double != 0.0;
     final anchor = unit.values.first
         .where(
           (e) =>
-              e.values.single['ratio'] == 1 ||
-              e.values.single['ratio'] == 1.0 ||
-              (e.values.single['ratio'] as double).toPrecision(1) == 1.0 ||
-              e.values.single['ratio'] == 0.0,
+              (e.values.single['ratio'] == 1 ||
+                  e.values.single['ratio'] == 1.0 ||
+                  (e.values.single['ratio'] as double).toPrecision(1) == 1.0 ||
+                  e.values.single['ratio'] == 0.0) &&
+              e.values.single['valueshift'] == 0.0,
         )
         .first;
     final fileName = '${name.toLowerCase()}.dart';
@@ -125,7 +127,7 @@ void generateModels() {
         typeBuff.writeln('/// Default (anchor) unit of [$name]');
       } else {
         typeBuff.writeln(
-          "/// 1 [$unitType]  ${(unitProps['ratio']! as num) % 1 == 0 ? '=' : '≈'}  ${unitProps['ratio']} [${anchor.keys.first}]",
+          "/// 1 [$unitType] ${(unitProps['ratio']! as num) % 1 == 0 ? '=' : '≈'} ${unitProps['ratio']} [${anchor.keys.first}]",
         );
       }
       typeBuff.writeln('  @override');
@@ -137,6 +139,8 @@ void generateModels() {
       typeBuff.writeln('  @override');
       typeBuff.writeln('  $unitType get _clone => $unitType(value);');
       typeBuff.writeln();
+      typeBuff.writeln('  @override');
+      typeBuff.writeln('  num get _shiftValue => ${unitProps['valueshift']};');
       typeBuff.writeln(
         '/// Creating [$unitType] with new value',
       );
@@ -149,7 +153,9 @@ void generateModels() {
         '/// Symbol for [$unitType]',
       );
       typeBuff.writeln('  @override');
-      final symb = unitProps['symbol'];
+      final symb = unitProps['symbol'].toString().isEmpty
+          ? formatName(unitProps['name'].toString())
+          : unitProps['symbol'];
       final isSingleQuote = symb == "'";
       final writeSymbol = isSingleQuote ? "'" : symb;
       typeBuff.writeln(

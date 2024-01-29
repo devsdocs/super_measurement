@@ -194,13 +194,16 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
 
   static const _ratio = 1e+24;
 
-  /// 1 [MetricPrefixes$Yotta]  =  1e+24 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Yotta] = 1e+24 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Yotta get _clone => MetricPrefixes$Yotta(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Yotta] with new value
   @override
@@ -248,13 +251,16 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
 
   static const _ratio = 1e+21;
 
-  /// 1 [MetricPrefixes$Zetta]  =  1e+21 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Zetta] = 1e+21 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Zetta get _clone => MetricPrefixes$Zetta(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Zetta] with new value
   @override
@@ -302,13 +308,16 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [MetricPrefixes$Exa]  =  1000000000000000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Exa] = 1000000000000000000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Exa get _clone => MetricPrefixes$Exa(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Exa] with new value
   @override
@@ -356,13 +365,16 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [MetricPrefixes$Peta]  =  1000000000000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Peta] = 1000000000000000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Peta get _clone => MetricPrefixes$Peta(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Peta] with new value
   @override
@@ -410,13 +422,16 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [MetricPrefixes$Tera]  =  1000000000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Tera] = 1000000000000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Tera get _clone => MetricPrefixes$Tera(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Tera] with new value
   @override
@@ -464,13 +479,16 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [MetricPrefixes$Giga]  =  1000000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Giga] = 1000000000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Giga get _clone => MetricPrefixes$Giga(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Giga] with new value
   @override
@@ -518,13 +536,16 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [MetricPrefixes$Mega]  =  1000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Mega] = 1000000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Mega get _clone => MetricPrefixes$Mega(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Mega] with new value
   @override
@@ -572,13 +593,16 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
 
   static const _ratio = 1000.0;
 
-  /// 1 [MetricPrefixes$Kilo]  =  1000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Kilo] = 1000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Kilo get _clone => MetricPrefixes$Kilo(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Kilo] with new value
   @override
@@ -626,13 +650,16 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
 
   static const _ratio = 100.0;
 
-  /// 1 [MetricPrefixes$Hecto]  =  100.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Hecto] = 100.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Hecto get _clone => MetricPrefixes$Hecto(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Hecto] with new value
   @override
@@ -680,13 +707,16 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
 
   static const _ratio = 10.0;
 
-  /// 1 [MetricPrefixes$Deka]  =  10.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Deka] = 10.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Deka get _clone => MetricPrefixes$Deka(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Deka] with new value
   @override
@@ -742,6 +772,9 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
   @override
   MetricPrefixes$MetricUnit get _clone => MetricPrefixes$MetricUnit(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [MetricPrefixes$MetricUnit] with new value
   @override
   MetricPrefixes$MetricUnit withValue(
@@ -751,7 +784,7 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
 
   /// Symbol for [MetricPrefixes$MetricUnit]
   @override
-  String get symbol => '';
+  String get symbol => 'MetricUnit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -788,13 +821,16 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
 
   static const _ratio = 0.1;
 
-  /// 1 [MetricPrefixes$Deci]  ≈  0.1 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Deci] ≈ 0.1 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Deci get _clone => MetricPrefixes$Deci(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Deci] with new value
   @override
@@ -842,13 +878,16 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
 
   static const _ratio = 0.01;
 
-  /// 1 [MetricPrefixes$Centi]  ≈  0.01 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Centi] ≈ 0.01 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Centi get _clone => MetricPrefixes$Centi(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Centi] with new value
   @override
@@ -896,13 +935,16 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
 
   static const _ratio = 0.001;
 
-  /// 1 [MetricPrefixes$Milli]  ≈  0.001 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Milli] ≈ 0.001 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Milli get _clone => MetricPrefixes$Milli(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Milli] with new value
   @override
@@ -950,13 +992,16 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
 
   static const _ratio = 0.000001;
 
-  /// 1 [MetricPrefixes$Micro]  ≈  0.000001 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Micro] ≈ 0.000001 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Micro get _clone => MetricPrefixes$Micro(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Micro] with new value
   @override
@@ -1004,13 +1049,16 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
 
   static const _ratio = 1e-9;
 
-  /// 1 [MetricPrefixes$Nano]  ≈  1e-9 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Nano] ≈ 1e-9 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Nano get _clone => MetricPrefixes$Nano(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Nano] with new value
   @override
@@ -1058,13 +1106,16 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
 
   static const _ratio = 1e-12;
 
-  /// 1 [MetricPrefixes$Pico]  ≈  1e-12 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Pico] ≈ 1e-12 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Pico get _clone => MetricPrefixes$Pico(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Pico] with new value
   @override
@@ -1112,13 +1163,16 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
 
   static const _ratio = 1e-15;
 
-  /// 1 [MetricPrefixes$Femto]  ≈  1e-15 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Femto] ≈ 1e-15 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Femto get _clone => MetricPrefixes$Femto(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Femto] with new value
   @override
@@ -1166,13 +1220,16 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
 
   static const _ratio = 1e-18;
 
-  /// 1 [MetricPrefixes$Atto]  ≈  1e-18 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Atto] ≈ 1e-18 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Atto get _clone => MetricPrefixes$Atto(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Atto] with new value
   @override
@@ -1220,13 +1277,16 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
 
   static const _ratio = 1e-21;
 
-  /// 1 [MetricPrefixes$Zepto]  ≈  1e-21 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Zepto] ≈ 1e-21 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Zepto get _clone => MetricPrefixes$Zepto(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Zepto] with new value
   @override
@@ -1274,13 +1334,16 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
 
   static const _ratio = 1e-24;
 
-  /// 1 [MetricPrefixes$Yocto]  ≈  1e-24 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Yocto] ≈ 1e-24 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MetricPrefixes$Yocto get _clone => MetricPrefixes$Yocto(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MetricPrefixes$Yocto] with new value
   @override

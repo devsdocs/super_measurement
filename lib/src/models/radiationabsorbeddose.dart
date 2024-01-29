@@ -244,13 +244,16 @@ final class RadiationAbsorbedDose$Rad extends RadiationAbsorbedDose {
 
   static const _ratio = 10000.0;
 
-  /// 1 [RadiationAbsorbedDose$Rad]  =  10000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Rad] = 10000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   RadiationAbsorbedDose$Rad get _clone => RadiationAbsorbedDose$Rad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Rad] with new value
   @override
@@ -298,7 +301,7 @@ final class RadiationAbsorbedDose$Millirad extends RadiationAbsorbedDose {
 
   static const _ratio = 10.0;
 
-  /// 1 [RadiationAbsorbedDose$Millirad]  =  10.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Millirad] = 10.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -306,6 +309,9 @@ final class RadiationAbsorbedDose$Millirad extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Millirad get _clone =>
       RadiationAbsorbedDose$Millirad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Millirad] with new value
   @override
@@ -354,7 +360,7 @@ final class RadiationAbsorbedDose$JoulePerKilogram
 
   static const _ratio = 1000000.0;
 
-  /// 1 [RadiationAbsorbedDose$JoulePerKilogram]  =  1000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$JoulePerKilogram] = 1000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -362,6 +368,9 @@ final class RadiationAbsorbedDose$JoulePerKilogram
   @override
   RadiationAbsorbedDose$JoulePerKilogram get _clone =>
       RadiationAbsorbedDose$JoulePerKilogram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$JoulePerKilogram] with new value
   @override
@@ -409,7 +418,7 @@ final class RadiationAbsorbedDose$JoulePerGram extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [RadiationAbsorbedDose$JoulePerGram]  =  1000000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$JoulePerGram] = 1000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -417,6 +426,9 @@ final class RadiationAbsorbedDose$JoulePerGram extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$JoulePerGram get _clone =>
       RadiationAbsorbedDose$JoulePerGram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$JoulePerGram] with new value
   @override
@@ -465,7 +477,7 @@ final class RadiationAbsorbedDose$JoulePerCentigram
 
   static const _ratio = 100000000000.0;
 
-  /// 1 [RadiationAbsorbedDose$JoulePerCentigram]  =  100000000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$JoulePerCentigram] = 100000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -473,6 +485,9 @@ final class RadiationAbsorbedDose$JoulePerCentigram
   @override
   RadiationAbsorbedDose$JoulePerCentigram get _clone =>
       RadiationAbsorbedDose$JoulePerCentigram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$JoulePerCentigram] with new value
   @override
@@ -521,7 +536,7 @@ final class RadiationAbsorbedDose$JoulePerMilligram
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [RadiationAbsorbedDose$JoulePerMilligram]  =  1000000000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$JoulePerMilligram] = 1000000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -529,6 +544,9 @@ final class RadiationAbsorbedDose$JoulePerMilligram
   @override
   RadiationAbsorbedDose$JoulePerMilligram get _clone =>
       RadiationAbsorbedDose$JoulePerMilligram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$JoulePerMilligram] with new value
   @override
@@ -576,7 +594,7 @@ final class RadiationAbsorbedDose$ErgPerGram extends RadiationAbsorbedDose {
 
   static const _ratio = 100.0;
 
-  /// 1 [RadiationAbsorbedDose$ErgPerGram]  =  100.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$ErgPerGram] = 100.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -584,6 +602,9 @@ final class RadiationAbsorbedDose$ErgPerGram extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$ErgPerGram get _clone =>
       RadiationAbsorbedDose$ErgPerGram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$ErgPerGram] with new value
   @override
@@ -594,7 +615,7 @@ final class RadiationAbsorbedDose$ErgPerGram extends RadiationAbsorbedDose {
 
   /// Symbol for [RadiationAbsorbedDose$ErgPerGram]
   @override
-  String get symbol => '';
+  String get symbol => 'ErgPerGram';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -632,7 +653,7 @@ final class RadiationAbsorbedDose$RepRoentgenEqPhysical
 
   static const _ratio = 9300.0;
 
-  /// 1 [RadiationAbsorbedDose$RepRoentgenEqPhysical]  =  9300.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$RepRoentgenEqPhysical] = 9300.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -640,6 +661,9 @@ final class RadiationAbsorbedDose$RepRoentgenEqPhysical
   @override
   RadiationAbsorbedDose$RepRoentgenEqPhysical get _clone =>
       RadiationAbsorbedDose$RepRoentgenEqPhysical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$RepRoentgenEqPhysical] with new value
   @override
@@ -650,7 +674,7 @@ final class RadiationAbsorbedDose$RepRoentgenEqPhysical
 
   /// Symbol for [RadiationAbsorbedDose$RepRoentgenEqPhysical]
   @override
-  String get symbol => '';
+  String get symbol => 'RepRoentgenEqPhysical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -687,7 +711,7 @@ final class RadiationAbsorbedDose$Parker extends RadiationAbsorbedDose {
 
   static const _ratio = 9300.0;
 
-  /// 1 [RadiationAbsorbedDose$Parker]  =  9300.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Parker] = 9300.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -695,6 +719,9 @@ final class RadiationAbsorbedDose$Parker extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Parker get _clone =>
       RadiationAbsorbedDose$Parker(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Parker] with new value
   @override
@@ -705,7 +732,7 @@ final class RadiationAbsorbedDose$Parker extends RadiationAbsorbedDose {
 
   /// Symbol for [RadiationAbsorbedDose$Parker]
   @override
-  String get symbol => '';
+  String get symbol => 'Parker';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -742,7 +769,7 @@ final class RadiationAbsorbedDose$Exagray extends RadiationAbsorbedDose {
 
   static const _ratio = 1e+24;
 
-  /// 1 [RadiationAbsorbedDose$Exagray]  =  1e+24 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Exagray] = 1e+24 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -750,6 +777,9 @@ final class RadiationAbsorbedDose$Exagray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Exagray get _clone =>
       RadiationAbsorbedDose$Exagray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Exagray] with new value
   @override
@@ -797,7 +827,7 @@ final class RadiationAbsorbedDose$Petagray extends RadiationAbsorbedDose {
 
   static const _ratio = 1e+21;
 
-  /// 1 [RadiationAbsorbedDose$Petagray]  =  1e+21 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Petagray] = 1e+21 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -805,6 +835,9 @@ final class RadiationAbsorbedDose$Petagray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Petagray get _clone =>
       RadiationAbsorbedDose$Petagray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Petagray] with new value
   @override
@@ -852,7 +885,7 @@ final class RadiationAbsorbedDose$Teragray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDose$Teragray]  =  1000000000000000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Teragray] = 1000000000000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -860,6 +893,9 @@ final class RadiationAbsorbedDose$Teragray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Teragray get _clone =>
       RadiationAbsorbedDose$Teragray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Teragray] with new value
   @override
@@ -907,7 +943,7 @@ final class RadiationAbsorbedDose$Gigagray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [RadiationAbsorbedDose$Gigagray]  =  1000000000000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Gigagray] = 1000000000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -915,6 +951,9 @@ final class RadiationAbsorbedDose$Gigagray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Gigagray get _clone =>
       RadiationAbsorbedDose$Gigagray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Gigagray] with new value
   @override
@@ -962,7 +1001,7 @@ final class RadiationAbsorbedDose$Megagray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [RadiationAbsorbedDose$Megagray]  =  1000000000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Megagray] = 1000000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -970,6 +1009,9 @@ final class RadiationAbsorbedDose$Megagray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Megagray get _clone =>
       RadiationAbsorbedDose$Megagray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Megagray] with new value
   @override
@@ -1017,7 +1059,7 @@ final class RadiationAbsorbedDose$Kilogray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [RadiationAbsorbedDose$Kilogray]  =  1000000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Kilogray] = 1000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1025,6 +1067,9 @@ final class RadiationAbsorbedDose$Kilogray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Kilogray get _clone =>
       RadiationAbsorbedDose$Kilogray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Kilogray] with new value
   @override
@@ -1072,7 +1117,7 @@ final class RadiationAbsorbedDose$Hectogray extends RadiationAbsorbedDose {
 
   static const _ratio = 100000000.0;
 
-  /// 1 [RadiationAbsorbedDose$Hectogray]  =  100000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Hectogray] = 100000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1080,6 +1125,9 @@ final class RadiationAbsorbedDose$Hectogray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Hectogray get _clone =>
       RadiationAbsorbedDose$Hectogray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Hectogray] with new value
   @override
@@ -1127,7 +1175,7 @@ final class RadiationAbsorbedDose$Dekagray extends RadiationAbsorbedDose {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [RadiationAbsorbedDose$Dekagray]  =  10000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Dekagray] = 10000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1135,6 +1183,9 @@ final class RadiationAbsorbedDose$Dekagray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Dekagray get _clone =>
       RadiationAbsorbedDose$Dekagray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Dekagray] with new value
   @override
@@ -1182,13 +1233,16 @@ final class RadiationAbsorbedDose$Gray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [RadiationAbsorbedDose$Gray]  =  1000000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Gray] = 1000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   RadiationAbsorbedDose$Gray get _clone => RadiationAbsorbedDose$Gray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Gray] with new value
   @override
@@ -1236,7 +1290,7 @@ final class RadiationAbsorbedDose$Decigray extends RadiationAbsorbedDose {
 
   static const _ratio = 100000.0;
 
-  /// 1 [RadiationAbsorbedDose$Decigray]  =  100000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Decigray] = 100000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1244,6 +1298,9 @@ final class RadiationAbsorbedDose$Decigray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Decigray get _clone =>
       RadiationAbsorbedDose$Decigray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Decigray] with new value
   @override
@@ -1291,7 +1348,7 @@ final class RadiationAbsorbedDose$Centigray extends RadiationAbsorbedDose {
 
   static const _ratio = 10000.0;
 
-  /// 1 [RadiationAbsorbedDose$Centigray]  =  10000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Centigray] = 10000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1299,6 +1356,9 @@ final class RadiationAbsorbedDose$Centigray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Centigray get _clone =>
       RadiationAbsorbedDose$Centigray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Centigray] with new value
   @override
@@ -1346,7 +1406,7 @@ final class RadiationAbsorbedDose$Milligray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000.0;
 
-  /// 1 [RadiationAbsorbedDose$Milligray]  =  1000.0 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Milligray] = 1000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1354,6 +1414,9 @@ final class RadiationAbsorbedDose$Milligray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Milligray get _clone =>
       RadiationAbsorbedDose$Milligray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Milligray] with new value
   @override
@@ -1410,6 +1473,9 @@ final class RadiationAbsorbedDose$Microgray extends RadiationAbsorbedDose {
   RadiationAbsorbedDose$Microgray get _clone =>
       RadiationAbsorbedDose$Microgray(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [RadiationAbsorbedDose$Microgray] with new value
   @override
   RadiationAbsorbedDose$Microgray withValue(
@@ -1456,7 +1522,7 @@ final class RadiationAbsorbedDose$Nanogray extends RadiationAbsorbedDose {
 
   static const _ratio = 0.001;
 
-  /// 1 [RadiationAbsorbedDose$Nanogray]  ≈  0.001 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Nanogray] ≈ 0.001 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1464,6 +1530,9 @@ final class RadiationAbsorbedDose$Nanogray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Nanogray get _clone =>
       RadiationAbsorbedDose$Nanogray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Nanogray] with new value
   @override
@@ -1511,7 +1580,7 @@ final class RadiationAbsorbedDose$Picogray extends RadiationAbsorbedDose {
 
   static const _ratio = 0.000001;
 
-  /// 1 [RadiationAbsorbedDose$Picogray]  ≈  0.000001 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Picogray] ≈ 0.000001 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1519,6 +1588,9 @@ final class RadiationAbsorbedDose$Picogray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Picogray get _clone =>
       RadiationAbsorbedDose$Picogray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Picogray] with new value
   @override
@@ -1566,7 +1638,7 @@ final class RadiationAbsorbedDose$Femtogray extends RadiationAbsorbedDose {
 
   static const _ratio = 1e-9;
 
-  /// 1 [RadiationAbsorbedDose$Femtogray]  ≈  1e-9 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Femtogray] ≈ 1e-9 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1574,6 +1646,9 @@ final class RadiationAbsorbedDose$Femtogray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Femtogray get _clone =>
       RadiationAbsorbedDose$Femtogray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Femtogray] with new value
   @override
@@ -1621,7 +1696,7 @@ final class RadiationAbsorbedDose$Attogray extends RadiationAbsorbedDose {
 
   static const _ratio = 1e-12;
 
-  /// 1 [RadiationAbsorbedDose$Attogray]  ≈  1e-12 [RadiationAbsorbedDose$Microgray]
+  /// 1 [RadiationAbsorbedDose$Attogray] ≈ 1e-12 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
 
@@ -1629,6 +1704,9 @@ final class RadiationAbsorbedDose$Attogray extends RadiationAbsorbedDose {
   @override
   RadiationAbsorbedDose$Attogray get _clone =>
       RadiationAbsorbedDose$Attogray(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationAbsorbedDose$Attogray] with new value
   @override

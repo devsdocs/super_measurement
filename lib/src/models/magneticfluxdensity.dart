@@ -154,6 +154,9 @@ final class MagneticFluxDensity$Tesla extends MagneticFluxDensity {
   @override
   MagneticFluxDensity$Tesla get _clone => MagneticFluxDensity$Tesla(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [MagneticFluxDensity$Tesla] with new value
   @override
   MagneticFluxDensity$Tesla withValue(
@@ -200,13 +203,16 @@ final class MagneticFluxDensity$Gauss extends MagneticFluxDensity {
 
   static const _ratio = 0.0001;
 
-  /// 1 [MagneticFluxDensity$Gauss]  ≈  0.0001 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$Gauss] ≈ 0.0001 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MagneticFluxDensity$Gauss get _clone => MagneticFluxDensity$Gauss(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$Gauss] with new value
   @override
@@ -254,7 +260,7 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
 
   static const _ratio = 0.0001000331;
 
-  /// 1 [MagneticFluxDensity$GaussInternational]  ≈  0.0001000331 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$GaussInternational] ≈ 0.0001000331 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -262,6 +268,9 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
   @override
   MagneticFluxDensity$GaussInternational get _clone =>
       MagneticFluxDensity$GaussInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$GaussInternational] with new value
   @override
@@ -310,7 +319,7 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
 
   static const _ratio = 0.0001;
 
-  /// 1 [MagneticFluxDensity$LinePerCentimeterSquare]  ≈  0.0001 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$LinePerCentimeterSquare] ≈ 0.0001 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -318,6 +327,9 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
   @override
   MagneticFluxDensity$LinePerCentimeterSquare get _clone =>
       MagneticFluxDensity$LinePerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$LinePerCentimeterSquare] with new value
   @override
@@ -365,7 +377,7 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
 
   static const _ratio = 0.000015500031;
 
-  /// 1 [MagneticFluxDensity$LinePerInchSquare]  ≈  0.000015500031 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$LinePerInchSquare] ≈ 0.000015500031 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -373,6 +385,9 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
   @override
   MagneticFluxDensity$LinePerInchSquare get _clone =>
       MagneticFluxDensity$LinePerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$LinePerInchSquare] with new value
   @override
@@ -421,7 +436,7 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
 
   static const _ratio = 1.0;
 
-  /// 1 [MagneticFluxDensity$MaxwellPerMeterSquare]  =  1.0 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$MaxwellPerMeterSquare] = 1.0 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -429,6 +444,9 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
   @override
   MagneticFluxDensity$MaxwellPerMeterSquare get _clone =>
       MagneticFluxDensity$MaxwellPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerMeterSquare] with new value
   @override
@@ -477,7 +495,7 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
 
   static const _ratio = 0.0001;
 
-  /// 1 [MagneticFluxDensity$MaxwellPerCentimeterSquare]  ≈  0.0001 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$MaxwellPerCentimeterSquare] ≈ 0.0001 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -485,6 +503,9 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
   @override
   MagneticFluxDensity$MaxwellPerCentimeterSquare get _clone =>
       MagneticFluxDensity$MaxwellPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerCentimeterSquare] with new value
   @override
@@ -533,7 +554,7 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
 
   static const _ratio = 0.000015500031;
 
-  /// 1 [MagneticFluxDensity$MaxwellPerInchSquare]  ≈  0.000015500031 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$MaxwellPerInchSquare] ≈ 0.000015500031 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -541,6 +562,9 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
   @override
   MagneticFluxDensity$MaxwellPerInchSquare get _clone =>
       MagneticFluxDensity$MaxwellPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerInchSquare] with new value
   @override
@@ -589,7 +613,7 @@ final class MagneticFluxDensity$WeberPerMeterSquare
 
   static const _ratio = 1.0;
 
-  /// 1 [MagneticFluxDensity$WeberPerMeterSquare]  =  1.0 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$WeberPerMeterSquare] = 1.0 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -597,6 +621,9 @@ final class MagneticFluxDensity$WeberPerMeterSquare
   @override
   MagneticFluxDensity$WeberPerMeterSquare get _clone =>
       MagneticFluxDensity$WeberPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerMeterSquare] with new value
   @override
@@ -645,7 +672,7 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
 
   static const _ratio = 10000.0;
 
-  /// 1 [MagneticFluxDensity$WeberPerCentimeterSquare]  =  10000.0 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$WeberPerCentimeterSquare] = 10000.0 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -653,6 +680,9 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
   @override
   MagneticFluxDensity$WeberPerCentimeterSquare get _clone =>
       MagneticFluxDensity$WeberPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerCentimeterSquare] with new value
   @override
@@ -700,7 +730,7 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
 
   static const _ratio = 1550.0031;
 
-  /// 1 [MagneticFluxDensity$WeberPerInchSquare]  ≈  1550.0031 [MagneticFluxDensity$Tesla]
+  /// 1 [MagneticFluxDensity$WeberPerInchSquare] ≈ 1550.0031 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
 
@@ -708,6 +738,9 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
   @override
   MagneticFluxDensity$WeberPerInchSquare get _clone =>
       MagneticFluxDensity$WeberPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerInchSquare] with new value
   @override

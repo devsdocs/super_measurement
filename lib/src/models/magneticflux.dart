@@ -136,6 +136,9 @@ final class MagneticFlux$Weber extends MagneticFlux {
   @override
   MagneticFlux$Weber get _clone => MagneticFlux$Weber(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [MagneticFlux$Weber] with new value
   @override
   MagneticFlux$Weber withValue(
@@ -182,13 +185,16 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
 
   static const _ratio = 1.0;
 
-  /// 1 [MagneticFlux$VoltSecond]  =  1.0 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$VoltSecond] = 1.0 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MagneticFlux$VoltSecond get _clone => MagneticFlux$VoltSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$VoltSecond] with new value
   @override
@@ -236,13 +242,16 @@ final class MagneticFlux$Megaline extends MagneticFlux {
 
   static const _ratio = 0.01;
 
-  /// 1 [MagneticFlux$Megaline]  ≈  0.01 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$Megaline] ≈ 0.01 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MagneticFlux$Megaline get _clone => MagneticFlux$Megaline(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$Megaline] with new value
   @override
@@ -290,13 +299,16 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
 
   static const _ratio = 0.00001;
 
-  /// 1 [MagneticFlux$Kiloline]  ≈  0.00001 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$Kiloline] ≈ 0.00001 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MagneticFlux$Kiloline get _clone => MagneticFlux$Kiloline(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$Kiloline] with new value
   @override
@@ -344,13 +356,16 @@ final class MagneticFlux$Line extends MagneticFlux {
 
   static const _ratio = 1e-8;
 
-  /// 1 [MagneticFlux$Line]  ≈  1e-8 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$Line] ≈ 1e-8 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MagneticFlux$Line get _clone => MagneticFlux$Line(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$Line] with new value
   @override
@@ -398,13 +413,16 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
 
   static const _ratio = 1e-8;
 
-  /// 1 [MagneticFlux$Maxwell]  ≈  1e-8 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$Maxwell] ≈ 1e-8 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MagneticFlux$Maxwell get _clone => MagneticFlux$Maxwell(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$Maxwell] with new value
   @override
@@ -452,7 +470,7 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
 
   static const _ratio = 1.000331e-8;
 
-  /// 1 [MagneticFlux$MaxwellInternational]  ≈  1.000331e-8 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$MaxwellInternational] ≈ 1.000331e-8 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
@@ -460,6 +478,9 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
   @override
   MagneticFlux$MaxwellInternational get _clone =>
       MagneticFlux$MaxwellInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$MaxwellInternational] with new value
   @override
@@ -507,7 +528,7 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
 
   static const _ratio = 1.0;
 
-  /// 1 [MagneticFlux$TeslaMeterSquare]  =  1.0 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$TeslaMeterSquare] = 1.0 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
@@ -515,6 +536,9 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
   @override
   MagneticFlux$TeslaMeterSquare get _clone =>
       MagneticFlux$TeslaMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$TeslaMeterSquare] with new value
   @override
@@ -562,7 +586,7 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
 
   static const _ratio = 0.0001;
 
-  /// 1 [MagneticFlux$TeslaCentimeterSquare]  ≈  0.0001 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$TeslaCentimeterSquare] ≈ 0.0001 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
@@ -570,6 +594,9 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
   @override
   MagneticFlux$TeslaCentimeterSquare get _clone =>
       MagneticFlux$TeslaCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$TeslaCentimeterSquare] with new value
   @override
@@ -617,7 +644,7 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
 
   static const _ratio = 1e-8;
 
-  /// 1 [MagneticFlux$GaussCentimeterSquare]  ≈  1e-8 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$GaussCentimeterSquare] ≈ 1e-8 [MagneticFlux$Weber]
   @override
   num get ratio => _ratio;
 
@@ -625,6 +652,9 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
   @override
   MagneticFlux$GaussCentimeterSquare get _clone =>
       MagneticFlux$GaussCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagneticFlux$GaussCentimeterSquare] with new value
   @override

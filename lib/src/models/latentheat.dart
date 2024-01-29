@@ -81,13 +81,16 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
 
   static const _ratio = 4.1868;
 
-  /// 1 [LatentHeat$CaloriePerGram]  ≈  4.1868 [LatentHeat$KilojoulePerKilogram]
+  /// 1 [LatentHeat$CaloriePerGram] ≈ 4.1868 [LatentHeat$KilojoulePerKilogram]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   LatentHeat$CaloriePerGram get _clone => LatentHeat$CaloriePerGram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LatentHeat$CaloriePerGram] with new value
   @override
@@ -144,6 +147,9 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
   LatentHeat$KilojoulePerKilogram get _clone =>
       LatentHeat$KilojoulePerKilogram(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [LatentHeat$KilojoulePerKilogram] with new value
   @override
   LatentHeat$KilojoulePerKilogram withValue(
@@ -190,13 +196,16 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
 
   static const _ratio = 2.326;
 
-  /// 1 [LatentHeat$BTUPerPound]  ≈  2.326 [LatentHeat$KilojoulePerKilogram]
+  /// 1 [LatentHeat$BTUPerPound] ≈ 2.326 [LatentHeat$KilojoulePerKilogram]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   LatentHeat$BTUPerPound get _clone => LatentHeat$BTUPerPound(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LatentHeat$BTUPerPound] with new value
   @override
@@ -207,7 +216,7 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
 
   /// Symbol for [LatentHeat$BTUPerPound]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerPound';
 
   @override
   Map<String, dynamic> toJson() => {

@@ -532,13 +532,16 @@ final class Power$Exawatt extends Power {
 
   static const _ratio = 1e+21;
 
-  /// 1 [Power$Exawatt]  =  1e+21 [Power$Milliwatt]
+  /// 1 [Power$Exawatt] = 1e+21 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Exawatt get _clone => Power$Exawatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Exawatt] with new value
   @override
@@ -586,13 +589,16 @@ final class Power$Petawatt extends Power {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [Power$Petawatt]  =  1000000000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$Petawatt] = 1000000000000000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Petawatt get _clone => Power$Petawatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Petawatt] with new value
   @override
@@ -640,13 +646,16 @@ final class Power$Terawatt extends Power {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Power$Terawatt]  =  1000000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$Terawatt] = 1000000000000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Terawatt get _clone => Power$Terawatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Terawatt] with new value
   @override
@@ -694,13 +703,16 @@ final class Power$Gigawatt extends Power {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Power$Gigawatt]  =  1000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$Gigawatt] = 1000000000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Gigawatt get _clone => Power$Gigawatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Gigawatt] with new value
   @override
@@ -748,13 +760,16 @@ final class Power$Megawatt extends Power {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Power$Megawatt]  =  1000000000.0 [Power$Milliwatt]
+  /// 1 [Power$Megawatt] = 1000000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Megawatt get _clone => Power$Megawatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Megawatt] with new value
   @override
@@ -802,13 +817,16 @@ final class Power$Kilowatt extends Power {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Power$Kilowatt]  =  1000000.0 [Power$Milliwatt]
+  /// 1 [Power$Kilowatt] = 1000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Kilowatt get _clone => Power$Kilowatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Kilowatt] with new value
   @override
@@ -856,13 +874,16 @@ final class Power$Hectowatt extends Power {
 
   static const _ratio = 100000.0;
 
-  /// 1 [Power$Hectowatt]  =  100000.0 [Power$Milliwatt]
+  /// 1 [Power$Hectowatt] = 100000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Hectowatt get _clone => Power$Hectowatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Hectowatt] with new value
   @override
@@ -910,13 +931,16 @@ final class Power$Dekawatt extends Power {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Power$Dekawatt]  =  10000.0 [Power$Milliwatt]
+  /// 1 [Power$Dekawatt] = 10000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Dekawatt get _clone => Power$Dekawatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Dekawatt] with new value
   @override
@@ -964,13 +988,16 @@ final class Power$Watt extends Power {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Power$Watt]  =  1000.0 [Power$Milliwatt]
+  /// 1 [Power$Watt] = 1000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Watt get _clone => Power$Watt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Watt] with new value
   @override
@@ -1018,13 +1045,16 @@ final class Power$Deciwatt extends Power {
 
   static const _ratio = 100.0;
 
-  /// 1 [Power$Deciwatt]  =  100.0 [Power$Milliwatt]
+  /// 1 [Power$Deciwatt] = 100.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Deciwatt get _clone => Power$Deciwatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Deciwatt] with new value
   @override
@@ -1072,13 +1102,16 @@ final class Power$Centiwatt extends Power {
 
   static const _ratio = 10.0;
 
-  /// 1 [Power$Centiwatt]  =  10.0 [Power$Milliwatt]
+  /// 1 [Power$Centiwatt] = 10.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Centiwatt get _clone => Power$Centiwatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Centiwatt] with new value
   @override
@@ -1134,6 +1167,9 @@ final class Power$Milliwatt extends Power {
   @override
   Power$Milliwatt get _clone => Power$Milliwatt(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Power$Milliwatt] with new value
   @override
   Power$Milliwatt withValue(
@@ -1180,13 +1216,16 @@ final class Power$Microwatt extends Power {
 
   static const _ratio = 0.001;
 
-  /// 1 [Power$Microwatt]  ≈  0.001 [Power$Milliwatt]
+  /// 1 [Power$Microwatt] ≈ 0.001 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Microwatt get _clone => Power$Microwatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Microwatt] with new value
   @override
@@ -1234,13 +1273,16 @@ final class Power$Nanowatt extends Power {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Power$Nanowatt]  ≈  0.000001 [Power$Milliwatt]
+  /// 1 [Power$Nanowatt] ≈ 0.000001 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Nanowatt get _clone => Power$Nanowatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Nanowatt] with new value
   @override
@@ -1288,13 +1330,16 @@ final class Power$Picowatt extends Power {
 
   static const _ratio = 1e-9;
 
-  /// 1 [Power$Picowatt]  ≈  1e-9 [Power$Milliwatt]
+  /// 1 [Power$Picowatt] ≈ 1e-9 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Picowatt get _clone => Power$Picowatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Picowatt] with new value
   @override
@@ -1342,13 +1387,16 @@ final class Power$Femtowatt extends Power {
 
   static const _ratio = 1e-12;
 
-  /// 1 [Power$Femtowatt]  ≈  1e-12 [Power$Milliwatt]
+  /// 1 [Power$Femtowatt] ≈ 1e-12 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Femtowatt get _clone => Power$Femtowatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Femtowatt] with new value
   @override
@@ -1396,13 +1444,16 @@ final class Power$Attowatt extends Power {
 
   static const _ratio = 1e-15;
 
-  /// 1 [Power$Attowatt]  ≈  1e-15 [Power$Milliwatt]
+  /// 1 [Power$Attowatt] ≈ 1e-15 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Attowatt get _clone => Power$Attowatt(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Attowatt] with new value
   @override
@@ -1450,13 +1501,16 @@ final class Power$Horsepower extends Power {
 
   static const _ratio = 745699.8715795054;
 
-  /// 1 [Power$Horsepower]  ≈  745699.8715795054 [Power$Milliwatt]
+  /// 1 [Power$Horsepower] ≈ 745699.8715795054 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$Horsepower get _clone => Power$Horsepower(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$Horsepower] with new value
   @override
@@ -1504,13 +1558,16 @@ final class Power$HorsepowerBoiler extends Power {
 
   static const _ratio = 9809709.99;
 
-  /// 1 [Power$HorsepowerBoiler]  ≈  9809709.99 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerBoiler] ≈ 9809709.99 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$HorsepowerBoiler get _clone => Power$HorsepowerBoiler(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$HorsepowerBoiler] with new value
   @override
@@ -1521,7 +1578,7 @@ final class Power$HorsepowerBoiler extends Power {
 
   /// Symbol for [Power$HorsepowerBoiler]
   @override
-  String get symbol => '';
+  String get symbol => 'HorsepowerBoiler';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1558,13 +1615,16 @@ final class Power$HorsepowerMetric extends Power {
 
   static const _ratio = 735498.8;
 
-  /// 1 [Power$HorsepowerMetric]  ≈  735498.8 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerMetric] ≈ 735498.8 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$HorsepowerMetric get _clone => Power$HorsepowerMetric(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$HorsepowerMetric] with new value
   @override
@@ -1575,7 +1635,7 @@ final class Power$HorsepowerMetric extends Power {
 
   /// Symbol for [Power$HorsepowerMetric]
   @override
-  String get symbol => '';
+  String get symbol => 'HorsepowerMetric';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1612,13 +1672,16 @@ final class Power$HorsepowerElectric extends Power {
 
   static const _ratio = 746000.0;
 
-  /// 1 [Power$HorsepowerElectric]  =  746000.0 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerElectric] = 746000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$HorsepowerElectric get _clone => Power$HorsepowerElectric(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$HorsepowerElectric] with new value
   @override
@@ -1629,7 +1692,7 @@ final class Power$HorsepowerElectric extends Power {
 
   /// Symbol for [Power$HorsepowerElectric]
   @override
-  String get symbol => '';
+  String get symbol => 'HorsepowerElectric';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1666,13 +1729,16 @@ final class Power$HorsepowerUK extends Power {
 
   static const _ratio = 745700.0;
 
-  /// 1 [Power$HorsepowerUK]  =  745700.0 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerUK] = 745700.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$HorsepowerUK get _clone => Power$HorsepowerUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$HorsepowerUK] with new value
   @override
@@ -1720,13 +1786,16 @@ final class Power$HorsepowerWater extends Power {
 
   static const _ratio = 746043.0;
 
-  /// 1 [Power$HorsepowerWater]  =  746043.0 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerWater] = 746043.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$HorsepowerWater get _clone => Power$HorsepowerWater(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$HorsepowerWater] with new value
   @override
@@ -1737,7 +1806,7 @@ final class Power$HorsepowerWater extends Power {
 
   /// Symbol for [Power$HorsepowerWater]
   @override
-  String get symbol => '';
+  String get symbol => 'HorsepowerWater';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1774,13 +1843,16 @@ final class Power$PferdestarkePs extends Power {
 
   static const _ratio = 735498.75;
 
-  /// 1 [Power$PferdestarkePs]  ≈  735498.75 [Power$Milliwatt]
+  /// 1 [Power$PferdestarkePs] ≈ 735498.75 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$PferdestarkePs get _clone => Power$PferdestarkePs(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$PferdestarkePs] with new value
   @override
@@ -1828,7 +1900,7 @@ final class Power$BTUPerHourInternational extends Power {
 
   static const _ratio = 293.071070172222;
 
-  /// 1 [Power$BTUPerHourInternational]  ≈  293.071070172222 [Power$Milliwatt]
+  /// 1 [Power$BTUPerHourInternational] ≈ 293.071070172222 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -1836,6 +1908,9 @@ final class Power$BTUPerHourInternational extends Power {
   @override
   Power$BTUPerHourInternational get _clone =>
       Power$BTUPerHourInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$BTUPerHourInternational] with new value
   @override
@@ -1846,7 +1921,7 @@ final class Power$BTUPerHourInternational extends Power {
 
   /// Symbol for [Power$BTUPerHourInternational]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerHourInternational';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1883,7 +1958,7 @@ final class Power$BTUPerMinuteInternational extends Power {
 
   static const _ratio = 17584.2642103333;
 
-  /// 1 [Power$BTUPerMinuteInternational]  ≈  17584.2642103333 [Power$Milliwatt]
+  /// 1 [Power$BTUPerMinuteInternational] ≈ 17584.2642103333 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -1891,6 +1966,9 @@ final class Power$BTUPerMinuteInternational extends Power {
   @override
   Power$BTUPerMinuteInternational get _clone =>
       Power$BTUPerMinuteInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$BTUPerMinuteInternational] with new value
   @override
@@ -1901,7 +1979,7 @@ final class Power$BTUPerMinuteInternational extends Power {
 
   /// Symbol for [Power$BTUPerMinuteInternational]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerMinuteInternational';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1938,7 +2016,7 @@ final class Power$BTUPerSecondInternational extends Power {
 
   static const _ratio = 1055055.85262;
 
-  /// 1 [Power$BTUPerSecondInternational]  ≈  1055055.85262 [Power$Milliwatt]
+  /// 1 [Power$BTUPerSecondInternational] ≈ 1055055.85262 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -1946,6 +2024,9 @@ final class Power$BTUPerSecondInternational extends Power {
   @override
   Power$BTUPerSecondInternational get _clone =>
       Power$BTUPerSecondInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$BTUPerSecondInternational] with new value
   @override
@@ -1956,7 +2037,7 @@ final class Power$BTUPerSecondInternational extends Power {
 
   /// Symbol for [Power$BTUPerSecondInternational]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerSecondInternational';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1993,7 +2074,7 @@ final class Power$BTUPerHourThermochemical extends Power {
 
   static const _ratio = 292.87499999289923;
 
-  /// 1 [Power$BTUPerHourThermochemical]  ≈  292.87499999289923 [Power$Milliwatt]
+  /// 1 [Power$BTUPerHourThermochemical] ≈ 292.87499999289923 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2001,6 +2082,9 @@ final class Power$BTUPerHourThermochemical extends Power {
   @override
   Power$BTUPerHourThermochemical get _clone =>
       Power$BTUPerHourThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$BTUPerHourThermochemical] with new value
   @override
@@ -2011,7 +2095,7 @@ final class Power$BTUPerHourThermochemical extends Power {
 
   /// Symbol for [Power$BTUPerHourThermochemical]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerHourThermochemical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2048,7 +2132,7 @@ final class Power$BTUPerMinuteThermochemical extends Power {
 
   static const _ratio = 17572.499999573956;
 
-  /// 1 [Power$BTUPerMinuteThermochemical]  ≈  17572.499999573956 [Power$Milliwatt]
+  /// 1 [Power$BTUPerMinuteThermochemical] ≈ 17572.499999573956 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2056,6 +2140,9 @@ final class Power$BTUPerMinuteThermochemical extends Power {
   @override
   Power$BTUPerMinuteThermochemical get _clone =>
       Power$BTUPerMinuteThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$BTUPerMinuteThermochemical] with new value
   @override
@@ -2066,7 +2153,7 @@ final class Power$BTUPerMinuteThermochemical extends Power {
 
   /// Symbol for [Power$BTUPerMinuteThermochemical]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerMinuteThermochemical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2103,7 +2190,7 @@ final class Power$BTUPerSecondThermochemical extends Power {
 
   static const _ratio = 1054349.9999744373;
 
-  /// 1 [Power$BTUPerSecondThermochemical]  ≈  1054349.9999744373 [Power$Milliwatt]
+  /// 1 [Power$BTUPerSecondThermochemical] ≈ 1054349.9999744373 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2111,6 +2198,9 @@ final class Power$BTUPerSecondThermochemical extends Power {
   @override
   Power$BTUPerSecondThermochemical get _clone =>
       Power$BTUPerSecondThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$BTUPerSecondThermochemical] with new value
   @override
@@ -2121,7 +2211,7 @@ final class Power$BTUPerSecondThermochemical extends Power {
 
   /// Symbol for [Power$BTUPerSecondThermochemical]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerSecondThermochemical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2158,13 +2248,16 @@ final class Power$MBTUPerHour extends Power {
 
   static const _ratio = 293071.0701722223;
 
-  /// 1 [Power$MBTUPerHour]  ≈  293071.0701722223 [Power$Milliwatt]
+  /// 1 [Power$MBTUPerHour] ≈ 293071.0701722223 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$MBTUPerHour get _clone => Power$MBTUPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$MBTUPerHour] with new value
   @override
@@ -2175,7 +2268,7 @@ final class Power$MBTUPerHour extends Power {
 
   /// Symbol for [Power$MBTUPerHour]
   @override
-  String get symbol => '';
+  String get symbol => 'MBTUPerHour';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2212,13 +2305,16 @@ final class Power$MBH extends Power {
 
   static const _ratio = 293071.0701722223;
 
-  /// 1 [Power$MBH]  ≈  293071.0701722223 [Power$Milliwatt]
+  /// 1 [Power$MBH] ≈ 293071.0701722223 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$MBH get _clone => Power$MBH(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$MBH] with new value
   @override
@@ -2229,7 +2325,7 @@ final class Power$MBH extends Power {
 
   /// Symbol for [Power$MBH]
   @override
-  String get symbol => '';
+  String get symbol => 'MBH';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2266,13 +2362,16 @@ final class Power$TonRefrigeration extends Power {
 
   static const _ratio = 3516852.8420666675;
 
-  /// 1 [Power$TonRefrigeration]  ≈  3516852.8420666675 [Power$Milliwatt]
+  /// 1 [Power$TonRefrigeration] ≈ 3516852.8420666675 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$TonRefrigeration get _clone => Power$TonRefrigeration(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$TonRefrigeration] with new value
   @override
@@ -2320,7 +2419,7 @@ final class Power$KilocaloriePerHourInternational extends Power {
 
   static const _ratio = 1163.0;
 
-  /// 1 [Power$KilocaloriePerHourInternational]  =  1163.0 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerHourInternational] = 1163.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2328,6 +2427,9 @@ final class Power$KilocaloriePerHourInternational extends Power {
   @override
   Power$KilocaloriePerHourInternational get _clone =>
       Power$KilocaloriePerHourInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilocaloriePerHourInternational] with new value
   @override
@@ -2375,7 +2477,7 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
 
   static const _ratio = 69780.0;
 
-  /// 1 [Power$KilocaloriePerMinuteInternational]  =  69780.0 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerMinuteInternational] = 69780.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2383,6 +2485,9 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
   @override
   Power$KilocaloriePerMinuteInternational get _clone =>
       Power$KilocaloriePerMinuteInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilocaloriePerMinuteInternational] with new value
   @override
@@ -2430,7 +2535,7 @@ final class Power$KilocaloriePerSecondInternational extends Power {
 
   static const _ratio = 4186800.0;
 
-  /// 1 [Power$KilocaloriePerSecondInternational]  =  4186800.0 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerSecondInternational] = 4186800.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2438,6 +2543,9 @@ final class Power$KilocaloriePerSecondInternational extends Power {
   @override
   Power$KilocaloriePerSecondInternational get _clone =>
       Power$KilocaloriePerSecondInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilocaloriePerSecondInternational] with new value
   @override
@@ -2485,7 +2593,7 @@ final class Power$CaloriePerHourInternational extends Power {
 
   static const _ratio = 1.163;
 
-  /// 1 [Power$CaloriePerHourInternational]  ≈  1.163 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerHourInternational] ≈ 1.163 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2493,6 +2601,9 @@ final class Power$CaloriePerHourInternational extends Power {
   @override
   Power$CaloriePerHourInternational get _clone =>
       Power$CaloriePerHourInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$CaloriePerHourInternational] with new value
   @override
@@ -2540,7 +2651,7 @@ final class Power$CaloriePerMinuteInternational extends Power {
 
   static const _ratio = 69.78;
 
-  /// 1 [Power$CaloriePerMinuteInternational]  ≈  69.78 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerMinuteInternational] ≈ 69.78 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2548,6 +2659,9 @@ final class Power$CaloriePerMinuteInternational extends Power {
   @override
   Power$CaloriePerMinuteInternational get _clone =>
       Power$CaloriePerMinuteInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$CaloriePerMinuteInternational] with new value
   @override
@@ -2595,7 +2709,7 @@ final class Power$CaloriePerSecondInternational extends Power {
 
   static const _ratio = 4186.8;
 
-  /// 1 [Power$CaloriePerSecondInternational]  ≈  4186.8 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerSecondInternational] ≈ 4186.8 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2603,6 +2717,9 @@ final class Power$CaloriePerSecondInternational extends Power {
   @override
   Power$CaloriePerSecondInternational get _clone =>
       Power$CaloriePerSecondInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$CaloriePerSecondInternational] with new value
   @override
@@ -2650,7 +2767,7 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
 
   static const _ratio = 1162.2222222222222;
 
-  /// 1 [Power$KilocaloriePerHourThermochemical]  ≈  1162.2222222222222 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerHourThermochemical] ≈ 1162.2222222222222 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2658,6 +2775,9 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
   @override
   Power$KilocaloriePerHourThermochemical get _clone =>
       Power$KilocaloriePerHourThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilocaloriePerHourThermochemical] with new value
   @override
@@ -2705,7 +2825,7 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
 
   static const _ratio = 69733.33333333333;
 
-  /// 1 [Power$KilocaloriePerMinuteThermochemical]  ≈  69733.33333333333 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerMinuteThermochemical] ≈ 69733.33333333333 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2713,6 +2833,9 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
   @override
   Power$KilocaloriePerMinuteThermochemical get _clone =>
       Power$KilocaloriePerMinuteThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilocaloriePerMinuteThermochemical] with new value
   @override
@@ -2760,7 +2883,7 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
 
   static const _ratio = 4184000.0;
 
-  /// 1 [Power$KilocaloriePerSecondThermochemical]  =  4184000.0 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerSecondThermochemical] = 4184000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2768,6 +2891,9 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
   @override
   Power$KilocaloriePerSecondThermochemical get _clone =>
       Power$KilocaloriePerSecondThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilocaloriePerSecondThermochemical] with new value
   @override
@@ -2815,7 +2941,7 @@ final class Power$CaloriePerHourThermochemical extends Power {
 
   static const _ratio = 1.1622222222222223;
 
-  /// 1 [Power$CaloriePerHourThermochemical]  ≈  1.1622222222222223 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerHourThermochemical] ≈ 1.1622222222222223 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2823,6 +2949,9 @@ final class Power$CaloriePerHourThermochemical extends Power {
   @override
   Power$CaloriePerHourThermochemical get _clone =>
       Power$CaloriePerHourThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$CaloriePerHourThermochemical] with new value
   @override
@@ -2870,7 +2999,7 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
 
   static const _ratio = 69.73333333333333;
 
-  /// 1 [Power$CaloriePerMinuteThermochemical]  ≈  69.73333333333333 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerMinuteThermochemical] ≈ 69.73333333333333 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2878,6 +3007,9 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
   @override
   Power$CaloriePerMinuteThermochemical get _clone =>
       Power$CaloriePerMinuteThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$CaloriePerMinuteThermochemical] with new value
   @override
@@ -2925,7 +3057,7 @@ final class Power$CaloriePerSecondThermochemical extends Power {
 
   static const _ratio = 4184.0;
 
-  /// 1 [Power$CaloriePerSecondThermochemical]  =  4184.0 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerSecondThermochemical] = 4184.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
@@ -2933,6 +3065,9 @@ final class Power$CaloriePerSecondThermochemical extends Power {
   @override
   Power$CaloriePerSecondThermochemical get _clone =>
       Power$CaloriePerSecondThermochemical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$CaloriePerSecondThermochemical] with new value
   @override
@@ -2980,13 +3115,16 @@ final class Power$PoundFootPerHour extends Power {
 
   static const _ratio = 0.376616096758177;
 
-  /// 1 [Power$PoundFootPerHour]  ≈  0.376616096758177 [Power$Milliwatt]
+  /// 1 [Power$PoundFootPerHour] ≈ 0.376616096758177 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$PoundFootPerHour get _clone => Power$PoundFootPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$PoundFootPerHour] with new value
   @override
@@ -3034,13 +3172,16 @@ final class Power$PoundFootPerMinute extends Power {
 
   static const _ratio = 22.59696580549062;
 
-  /// 1 [Power$PoundFootPerMinute]  ≈  22.59696580549062 [Power$Milliwatt]
+  /// 1 [Power$PoundFootPerMinute] ≈ 22.59696580549062 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$PoundFootPerMinute get _clone => Power$PoundFootPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$PoundFootPerMinute] with new value
   @override
@@ -3088,13 +3229,16 @@ final class Power$PoundFootPerSecond extends Power {
 
   static const _ratio = 1355.8179483294373;
 
-  /// 1 [Power$PoundFootPerSecond]  ≈  1355.8179483294373 [Power$Milliwatt]
+  /// 1 [Power$PoundFootPerSecond] ≈ 1355.8179483294373 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$PoundFootPerSecond get _clone => Power$PoundFootPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$PoundFootPerSecond] with new value
   @override
@@ -3142,13 +3286,16 @@ final class Power$ErgPerSecond extends Power {
 
   static const _ratio = 0.0001;
 
-  /// 1 [Power$ErgPerSecond]  ≈  0.0001 [Power$Milliwatt]
+  /// 1 [Power$ErgPerSecond] ≈ 0.0001 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$ErgPerSecond get _clone => Power$ErgPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$ErgPerSecond] with new value
   @override
@@ -3159,7 +3306,7 @@ final class Power$ErgPerSecond extends Power {
 
   /// Symbol for [Power$ErgPerSecond]
   @override
-  String get symbol => '';
+  String get symbol => 'ErgPerSecond';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3196,13 +3343,16 @@ final class Power$ExajoulePerSecond extends Power {
 
   static const _ratio = 1e+21;
 
-  /// 1 [Power$ExajoulePerSecond]  =  1e+21 [Power$Milliwatt]
+  /// 1 [Power$ExajoulePerSecond] = 1e+21 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$ExajoulePerSecond get _clone => Power$ExajoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$ExajoulePerSecond] with new value
   @override
@@ -3250,13 +3400,16 @@ final class Power$PetajoulePerSecond extends Power {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [Power$PetajoulePerSecond]  =  1000000000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$PetajoulePerSecond] = 1000000000000000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$PetajoulePerSecond get _clone => Power$PetajoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$PetajoulePerSecond] with new value
   @override
@@ -3304,13 +3457,16 @@ final class Power$TerajoulePerSecond extends Power {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Power$TerajoulePerSecond]  =  1000000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$TerajoulePerSecond] = 1000000000000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$TerajoulePerSecond get _clone => Power$TerajoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$TerajoulePerSecond] with new value
   @override
@@ -3358,13 +3514,16 @@ final class Power$GigajoulePerSecond extends Power {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Power$GigajoulePerSecond]  =  1000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$GigajoulePerSecond] = 1000000000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$GigajoulePerSecond get _clone => Power$GigajoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$GigajoulePerSecond] with new value
   @override
@@ -3412,13 +3571,16 @@ final class Power$MegajoulePerSecond extends Power {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Power$MegajoulePerSecond]  =  1000000000.0 [Power$Milliwatt]
+  /// 1 [Power$MegajoulePerSecond] = 1000000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$MegajoulePerSecond get _clone => Power$MegajoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$MegajoulePerSecond] with new value
   @override
@@ -3466,13 +3628,16 @@ final class Power$KilojoulePerSecond extends Power {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Power$KilojoulePerSecond]  =  1000000.0 [Power$Milliwatt]
+  /// 1 [Power$KilojoulePerSecond] = 1000000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$KilojoulePerSecond get _clone => Power$KilojoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilojoulePerSecond] with new value
   @override
@@ -3520,13 +3685,16 @@ final class Power$HectojoulePerSecond extends Power {
 
   static const _ratio = 100000.0;
 
-  /// 1 [Power$HectojoulePerSecond]  =  100000.0 [Power$Milliwatt]
+  /// 1 [Power$HectojoulePerSecond] = 100000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$HectojoulePerSecond get _clone => Power$HectojoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$HectojoulePerSecond] with new value
   @override
@@ -3574,13 +3742,16 @@ final class Power$DekajoulePerSecond extends Power {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Power$DekajoulePerSecond]  =  10000.0 [Power$Milliwatt]
+  /// 1 [Power$DekajoulePerSecond] = 10000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$DekajoulePerSecond get _clone => Power$DekajoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$DekajoulePerSecond] with new value
   @override
@@ -3628,13 +3799,16 @@ final class Power$JoulePerSecond extends Power {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Power$JoulePerSecond]  =  1000.0 [Power$Milliwatt]
+  /// 1 [Power$JoulePerSecond] = 1000.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$JoulePerSecond get _clone => Power$JoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$JoulePerSecond] with new value
   @override
@@ -3682,13 +3856,16 @@ final class Power$DecijoulePerSecond extends Power {
 
   static const _ratio = 100.0;
 
-  /// 1 [Power$DecijoulePerSecond]  =  100.0 [Power$Milliwatt]
+  /// 1 [Power$DecijoulePerSecond] = 100.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$DecijoulePerSecond get _clone => Power$DecijoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$DecijoulePerSecond] with new value
   @override
@@ -3736,13 +3913,16 @@ final class Power$CentijoulePerSecond extends Power {
 
   static const _ratio = 10.0;
 
-  /// 1 [Power$CentijoulePerSecond]  =  10.0 [Power$Milliwatt]
+  /// 1 [Power$CentijoulePerSecond] = 10.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$CentijoulePerSecond get _clone => Power$CentijoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$CentijoulePerSecond] with new value
   @override
@@ -3790,13 +3970,16 @@ final class Power$MillijoulePerSecond extends Power {
 
   static const _ratio = 1.0;
 
-  /// 1 [Power$MillijoulePerSecond]  =  1.0 [Power$Milliwatt]
+  /// 1 [Power$MillijoulePerSecond] = 1.0 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$MillijoulePerSecond get _clone => Power$MillijoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$MillijoulePerSecond] with new value
   @override
@@ -3844,13 +4027,16 @@ final class Power$MicrojoulePerSecond extends Power {
 
   static const _ratio = 0.001;
 
-  /// 1 [Power$MicrojoulePerSecond]  ≈  0.001 [Power$Milliwatt]
+  /// 1 [Power$MicrojoulePerSecond] ≈ 0.001 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$MicrojoulePerSecond get _clone => Power$MicrojoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$MicrojoulePerSecond] with new value
   @override
@@ -3898,13 +4084,16 @@ final class Power$NanojoulePerSecond extends Power {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Power$NanojoulePerSecond]  ≈  0.000001 [Power$Milliwatt]
+  /// 1 [Power$NanojoulePerSecond] ≈ 0.000001 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$NanojoulePerSecond get _clone => Power$NanojoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$NanojoulePerSecond] with new value
   @override
@@ -3952,13 +4141,16 @@ final class Power$PicojoulePerSecond extends Power {
 
   static const _ratio = 1e-9;
 
-  /// 1 [Power$PicojoulePerSecond]  ≈  1e-9 [Power$Milliwatt]
+  /// 1 [Power$PicojoulePerSecond] ≈ 1e-9 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$PicojoulePerSecond get _clone => Power$PicojoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$PicojoulePerSecond] with new value
   @override
@@ -4006,13 +4198,16 @@ final class Power$FemtojoulePerSecond extends Power {
 
   static const _ratio = 1e-12;
 
-  /// 1 [Power$FemtojoulePerSecond]  ≈  1e-12 [Power$Milliwatt]
+  /// 1 [Power$FemtojoulePerSecond] ≈ 1e-12 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$FemtojoulePerSecond get _clone => Power$FemtojoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$FemtojoulePerSecond] with new value
   @override
@@ -4060,13 +4255,16 @@ final class Power$AttojoulePerSecond extends Power {
 
   static const _ratio = 1e-15;
 
-  /// 1 [Power$AttojoulePerSecond]  ≈  1e-15 [Power$Milliwatt]
+  /// 1 [Power$AttojoulePerSecond] ≈ 1e-15 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$AttojoulePerSecond get _clone => Power$AttojoulePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$AttojoulePerSecond] with new value
   @override
@@ -4114,13 +4312,16 @@ final class Power$JoulePerHour extends Power {
 
   static const _ratio = 0.2777777777777778;
 
-  /// 1 [Power$JoulePerHour]  ≈  0.2777777777777778 [Power$Milliwatt]
+  /// 1 [Power$JoulePerHour] ≈ 0.2777777777777778 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$JoulePerHour get _clone => Power$JoulePerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$JoulePerHour] with new value
   @override
@@ -4168,13 +4369,16 @@ final class Power$JoulePerMinute extends Power {
 
   static const _ratio = 16.666666666666668;
 
-  /// 1 [Power$JoulePerMinute]  ≈  16.666666666666668 [Power$Milliwatt]
+  /// 1 [Power$JoulePerMinute] ≈ 16.666666666666668 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$JoulePerMinute get _clone => Power$JoulePerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$JoulePerMinute] with new value
   @override
@@ -4222,13 +4426,16 @@ final class Power$KilojoulePerHour extends Power {
 
   static const _ratio = 277.77777777777777;
 
-  /// 1 [Power$KilojoulePerHour]  ≈  277.77777777777777 [Power$Milliwatt]
+  /// 1 [Power$KilojoulePerHour] ≈ 277.77777777777777 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$KilojoulePerHour get _clone => Power$KilojoulePerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilojoulePerHour] with new value
   @override
@@ -4276,13 +4483,16 @@ final class Power$KilojoulePerMinute extends Power {
 
   static const _ratio = 16666.666666666668;
 
-  /// 1 [Power$KilojoulePerMinute]  ≈  16666.666666666668 [Power$Milliwatt]
+  /// 1 [Power$KilojoulePerMinute] ≈ 16666.666666666668 [Power$Milliwatt]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Power$KilojoulePerMinute get _clone => Power$KilojoulePerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Power$KilojoulePerMinute] with new value
   @override

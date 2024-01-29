@@ -110,6 +110,9 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
   Permeability$KilogramPerPascalSecondMeterSquare get _clone =>
       Permeability$KilogramPerPascalSecondMeterSquare(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Permeability$KilogramPerPascalSecondMeterSquare] with new value
   @override
   Permeability$KilogramPerPascalSecondMeterSquare withValue(
@@ -156,7 +159,7 @@ final class Permeability$Permeability0DegreeC extends Permeability {
 
   static const _ratio = 5.72135e-11;
 
-  /// 1 [Permeability$Permeability0DegreeC]  ≈  5.72135e-11 [Permeability$KilogramPerPascalSecondMeterSquare]
+  /// 1 [Permeability$Permeability0DegreeC] ≈ 5.72135e-11 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -164,6 +167,9 @@ final class Permeability$Permeability0DegreeC extends Permeability {
   @override
   Permeability$Permeability0DegreeC get _clone =>
       Permeability$Permeability0DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Permeability$Permeability0DegreeC] with new value
   @override
@@ -174,7 +180,7 @@ final class Permeability$Permeability0DegreeC extends Permeability {
 
   /// Symbol for [Permeability$Permeability0DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'Permeability0DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -211,7 +217,7 @@ final class Permeability$Permeability23DegreeC extends Permeability {
 
   static const _ratio = 5.74525e-11;
 
-  /// 1 [Permeability$Permeability23DegreeC]  ≈  5.74525e-11 [Permeability$KilogramPerPascalSecondMeterSquare]
+  /// 1 [Permeability$Permeability23DegreeC] ≈ 5.74525e-11 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -219,6 +225,9 @@ final class Permeability$Permeability23DegreeC extends Permeability {
   @override
   Permeability$Permeability23DegreeC get _clone =>
       Permeability$Permeability23DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Permeability$Permeability23DegreeC] with new value
   @override
@@ -229,7 +238,7 @@ final class Permeability$Permeability23DegreeC extends Permeability {
 
   /// Symbol for [Permeability$Permeability23DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'Permeability23DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -266,7 +275,7 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
 
   static const _ratio = 1.45322e-12;
 
-  /// 1 [Permeability$PermeabilityInches0DegreeC]  ≈  1.45322e-12 [Permeability$KilogramPerPascalSecondMeterSquare]
+  /// 1 [Permeability$PermeabilityInches0DegreeC] ≈ 1.45322e-12 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -274,6 +283,9 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
   @override
   Permeability$PermeabilityInches0DegreeC get _clone =>
       Permeability$PermeabilityInches0DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Permeability$PermeabilityInches0DegreeC] with new value
   @override
@@ -284,7 +296,7 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
 
   /// Symbol for [Permeability$PermeabilityInches0DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'PermeabilityInches0DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -321,7 +333,7 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
 
   static const _ratio = 1.45929e-12;
 
-  /// 1 [Permeability$PermeabilityInches23DegreeC]  ≈  1.45929e-12 [Permeability$KilogramPerPascalSecondMeterSquare]
+  /// 1 [Permeability$PermeabilityInches23DegreeC] ≈ 1.45929e-12 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -329,6 +341,9 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
   @override
   Permeability$PermeabilityInches23DegreeC get _clone =>
       Permeability$PermeabilityInches23DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Permeability$PermeabilityInches23DegreeC] with new value
   @override
@@ -339,7 +354,7 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
 
   /// Symbol for [Permeability$PermeabilityInches23DegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'PermeabilityInches23DegreeC';
 
   @override
   Map<String, dynamic> toJson() => {

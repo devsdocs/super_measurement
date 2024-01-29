@@ -226,13 +226,16 @@ final class Force$Exanewton extends Force {
 
   static const _ratio = 1e+23;
 
-  /// 1 [Force$Exanewton]  =  1e+23 [Force$Dyne]
+  /// 1 [Force$Exanewton] = 1e+23 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Exanewton get _clone => Force$Exanewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Exanewton] with new value
   @override
@@ -280,13 +283,16 @@ final class Force$Petanewton extends Force {
 
   static const _ratio = 100000000000000000000.0;
 
-  /// 1 [Force$Petanewton]  =  100000000000000000000.0 [Force$Dyne]
+  /// 1 [Force$Petanewton] = 100000000000000000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Petanewton get _clone => Force$Petanewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Petanewton] with new value
   @override
@@ -334,13 +340,16 @@ final class Force$Teranewton extends Force {
 
   static const _ratio = 100000000000000000.0;
 
-  /// 1 [Force$Teranewton]  =  100000000000000000.0 [Force$Dyne]
+  /// 1 [Force$Teranewton] = 100000000000000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Teranewton get _clone => Force$Teranewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Teranewton] with new value
   @override
@@ -388,13 +397,16 @@ final class Force$Giganewton extends Force {
 
   static const _ratio = 100000000000000.0;
 
-  /// 1 [Force$Giganewton]  =  100000000000000.0 [Force$Dyne]
+  /// 1 [Force$Giganewton] = 100000000000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Giganewton get _clone => Force$Giganewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Giganewton] with new value
   @override
@@ -442,13 +454,16 @@ final class Force$Meganewton extends Force {
 
   static const _ratio = 100000000000.0;
 
-  /// 1 [Force$Meganewton]  =  100000000000.0 [Force$Dyne]
+  /// 1 [Force$Meganewton] = 100000000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Meganewton get _clone => Force$Meganewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Meganewton] with new value
   @override
@@ -496,13 +511,16 @@ final class Force$Kilonewton extends Force {
 
   static const _ratio = 100000000.0;
 
-  /// 1 [Force$Kilonewton]  =  100000000.0 [Force$Dyne]
+  /// 1 [Force$Kilonewton] = 100000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Kilonewton get _clone => Force$Kilonewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Kilonewton] with new value
   @override
@@ -550,13 +568,16 @@ final class Force$Hectonewton extends Force {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Force$Hectonewton]  =  10000000.0 [Force$Dyne]
+  /// 1 [Force$Hectonewton] = 10000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Hectonewton get _clone => Force$Hectonewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Hectonewton] with new value
   @override
@@ -604,13 +625,16 @@ final class Force$Dekanewton extends Force {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Force$Dekanewton]  =  1000000.0 [Force$Dyne]
+  /// 1 [Force$Dekanewton] = 1000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Dekanewton get _clone => Force$Dekanewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Dekanewton] with new value
   @override
@@ -658,13 +682,16 @@ final class Force$Newton extends Force {
 
   static const _ratio = 100000.0;
 
-  /// 1 [Force$Newton]  =  100000.0 [Force$Dyne]
+  /// 1 [Force$Newton] = 100000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Newton get _clone => Force$Newton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Newton] with new value
   @override
@@ -712,13 +739,16 @@ final class Force$Decinewton extends Force {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Force$Decinewton]  =  10000.0 [Force$Dyne]
+  /// 1 [Force$Decinewton] = 10000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Decinewton get _clone => Force$Decinewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Decinewton] with new value
   @override
@@ -766,13 +796,16 @@ final class Force$Centinewton extends Force {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Force$Centinewton]  =  1000.0 [Force$Dyne]
+  /// 1 [Force$Centinewton] = 1000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Centinewton get _clone => Force$Centinewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Centinewton] with new value
   @override
@@ -820,13 +853,16 @@ final class Force$Millinewton extends Force {
 
   static const _ratio = 100.0;
 
-  /// 1 [Force$Millinewton]  =  100.0 [Force$Dyne]
+  /// 1 [Force$Millinewton] = 100.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Millinewton get _clone => Force$Millinewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Millinewton] with new value
   @override
@@ -874,13 +910,16 @@ final class Force$Micronewton extends Force {
 
   static const _ratio = 0.1;
 
-  /// 1 [Force$Micronewton]  ≈  0.1 [Force$Dyne]
+  /// 1 [Force$Micronewton] ≈ 0.1 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Micronewton get _clone => Force$Micronewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Micronewton] with new value
   @override
@@ -928,13 +967,16 @@ final class Force$Nanonewton extends Force {
 
   static const _ratio = 0.0001;
 
-  /// 1 [Force$Nanonewton]  ≈  0.0001 [Force$Dyne]
+  /// 1 [Force$Nanonewton] ≈ 0.0001 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Nanonewton get _clone => Force$Nanonewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Nanonewton] with new value
   @override
@@ -982,13 +1024,16 @@ final class Force$Piconewton extends Force {
 
   static const _ratio = 1e-7;
 
-  /// 1 [Force$Piconewton]  ≈  1e-7 [Force$Dyne]
+  /// 1 [Force$Piconewton] ≈ 1e-7 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Piconewton get _clone => Force$Piconewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Piconewton] with new value
   @override
@@ -1036,13 +1081,16 @@ final class Force$Femtonewton extends Force {
 
   static const _ratio = 1e-10;
 
-  /// 1 [Force$Femtonewton]  ≈  1e-10 [Force$Dyne]
+  /// 1 [Force$Femtonewton] ≈ 1e-10 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Femtonewton get _clone => Force$Femtonewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Femtonewton] with new value
   @override
@@ -1090,13 +1138,16 @@ final class Force$Attonewton extends Force {
 
   static const _ratio = 1e-13;
 
-  /// 1 [Force$Attonewton]  ≈  1e-13 [Force$Dyne]
+  /// 1 [Force$Attonewton] ≈ 1e-13 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Attonewton get _clone => Force$Attonewton(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Attonewton] with new value
   @override
@@ -1152,6 +1203,9 @@ final class Force$Dyne extends Force {
   @override
   Force$Dyne get _clone => Force$Dyne(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Force$Dyne] with new value
   @override
   Force$Dyne withValue(
@@ -1198,13 +1252,16 @@ final class Force$JoulePerMeter extends Force {
 
   static const _ratio = 100000.0;
 
-  /// 1 [Force$JoulePerMeter]  =  100000.0 [Force$Dyne]
+  /// 1 [Force$JoulePerMeter] = 100000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$JoulePerMeter get _clone => Force$JoulePerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$JoulePerMeter] with new value
   @override
@@ -1252,13 +1309,16 @@ final class Force$JoulePerCentimeter extends Force {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Force$JoulePerCentimeter]  =  1000.0 [Force$Dyne]
+  /// 1 [Force$JoulePerCentimeter] = 1000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$JoulePerCentimeter get _clone => Force$JoulePerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$JoulePerCentimeter] with new value
   @override
@@ -1306,13 +1366,16 @@ final class Force$KilogramForce extends Force {
 
   static const _ratio = 980664.9999980076;
 
-  /// 1 [Force$KilogramForce]  ≈  980664.9999980076 [Force$Dyne]
+  /// 1 [Force$KilogramForce] ≈ 980664.9999980076 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$KilogramForce get _clone => Force$KilogramForce(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$KilogramForce] with new value
   @override
@@ -1360,13 +1423,16 @@ final class Force$GramForce extends Force {
 
   static const _ratio = 980.6649999980076;
 
-  /// 1 [Force$GramForce]  ≈  980.6649999980076 [Force$Dyne]
+  /// 1 [Force$GramForce] ≈ 980.6649999980076 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$GramForce get _clone => Force$GramForce(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$GramForce] with new value
   @override
@@ -1414,13 +1480,16 @@ final class Force$KipForce extends Force {
 
   static const _ratio = 444822161.5254772;
 
-  /// 1 [Force$KipForce]  ≈  444822161.5254772 [Force$Dyne]
+  /// 1 [Force$KipForce] ≈ 444822161.5254772 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$KipForce get _clone => Force$KipForce(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$KipForce] with new value
   @override
@@ -1431,7 +1500,7 @@ final class Force$KipForce extends Force {
 
   /// Symbol for [Force$KipForce]
   @override
-  String get symbol => '';
+  String get symbol => 'KipForce';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1468,13 +1537,16 @@ final class Force$PoundForce extends Force {
 
   static const _ratio = 444822.16152547713;
 
-  /// 1 [Force$PoundForce]  ≈  444822.16152547713 [Force$Dyne]
+  /// 1 [Force$PoundForce] ≈ 444822.16152547713 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$PoundForce get _clone => Force$PoundForce(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$PoundForce] with new value
   @override
@@ -1522,13 +1594,16 @@ final class Force$OunceForce extends Force {
 
   static const _ratio = 27801.38509534232;
 
-  /// 1 [Force$OunceForce]  ≈  27801.38509534232 [Force$Dyne]
+  /// 1 [Force$OunceForce] ≈ 27801.38509534232 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$OunceForce get _clone => Force$OunceForce(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$OunceForce] with new value
   @override
@@ -1576,13 +1651,16 @@ final class Force$Poundal extends Force {
 
   static const _ratio = 13825.495437599799;
 
-  /// 1 [Force$Poundal]  ≈  13825.495437599799 [Force$Dyne]
+  /// 1 [Force$Poundal] ≈ 13825.495437599799 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Force$Poundal get _clone => Force$Poundal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Force$Poundal] with new value
   @override

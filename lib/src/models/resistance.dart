@@ -99,13 +99,16 @@ final class Resistance$Megohm extends Resistance {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Resistance$Megohm]  =  1000000.0 [Resistance$Ohm]
+  /// 1 [Resistance$Megohm] = 1000000.0 [Resistance$Ohm]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistance$Megohm get _clone => Resistance$Megohm(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistance$Megohm] with new value
   @override
@@ -161,6 +164,9 @@ final class Resistance$Ohm extends Resistance {
   @override
   Resistance$Ohm get _clone => Resistance$Ohm(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Resistance$Ohm] with new value
   @override
   Resistance$Ohm withValue(
@@ -207,13 +213,16 @@ final class Resistance$OhmInternational extends Resistance {
 
   static const _ratio = 1.0004949999036774;
 
-  /// 1 [Resistance$OhmInternational]  ≈  1.0004949999036774 [Resistance$Ohm]
+  /// 1 [Resistance$OhmInternational] ≈ 1.0004949999036774 [Resistance$Ohm]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistance$OhmInternational get _clone => Resistance$OhmInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistance$OhmInternational] with new value
   @override
@@ -261,13 +270,16 @@ final class Resistance$Microhm extends Resistance {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Resistance$Microhm]  ≈  0.000001 [Resistance$Ohm]
+  /// 1 [Resistance$Microhm] ≈ 0.000001 [Resistance$Ohm]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistance$Microhm get _clone => Resistance$Microhm(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistance$Microhm] with new value
   @override
@@ -315,13 +327,16 @@ final class Resistance$Abohm extends Resistance {
 
   static const _ratio = 1e-9;
 
-  /// 1 [Resistance$Abohm]  ≈  1e-9 [Resistance$Ohm]
+  /// 1 [Resistance$Abohm] ≈ 1e-9 [Resistance$Ohm]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistance$Abohm get _clone => Resistance$Abohm(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistance$Abohm] with new value
   @override
@@ -369,13 +384,16 @@ final class Resistance$Statohm extends Resistance {
 
   static const _ratio = 898752432400.0;
 
-  /// 1 [Resistance$Statohm]  =  898752432400.0 [Resistance$Ohm]
+  /// 1 [Resistance$Statohm] = 898752432400.0 [Resistance$Ohm]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistance$Statohm get _clone => Resistance$Statohm(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistance$Statohm] with new value
   @override

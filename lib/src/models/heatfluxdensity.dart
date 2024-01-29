@@ -196,7 +196,7 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
 
   static const _ratio = 1000.0;
 
-  /// 1 [HeatFluxDensity$KilowattPerMeterSquare]  =  1000.0 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$KilowattPerMeterSquare] = 1000.0 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -204,6 +204,9 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$KilowattPerMeterSquare get _clone =>
       HeatFluxDensity$KilowattPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$KilowattPerMeterSquare] with new value
   @override
@@ -260,6 +263,9 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
   HeatFluxDensity$WattPerMeterSquare get _clone =>
       HeatFluxDensity$WattPerMeterSquare(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [HeatFluxDensity$WattPerMeterSquare] with new value
   @override
   HeatFluxDensity$WattPerMeterSquare withValue(
@@ -306,7 +312,7 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
 
   static const _ratio = 10000.0;
 
-  /// 1 [HeatFluxDensity$WattPerCentimeterSquare]  =  10000.0 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$WattPerCentimeterSquare] = 10000.0 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -314,6 +320,9 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$WattPerCentimeterSquare get _clone =>
       HeatFluxDensity$WattPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$WattPerCentimeterSquare] with new value
   @override
@@ -361,7 +370,7 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
 
   static const _ratio = 1550.0031011409837;
 
-  /// 1 [HeatFluxDensity$WattPerInchSquare]  ≈  1550.0031011409837 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$WattPerInchSquare] ≈ 1550.0031011409837 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -369,6 +378,9 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$WattPerInchSquare get _clone =>
       HeatFluxDensity$WattPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$WattPerInchSquare] with new value
   @override
@@ -416,7 +428,7 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
 
   static const _ratio = 1.0;
 
-  /// 1 [HeatFluxDensity$JoulePerSecondMeterSquare]  =  1.0 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$JoulePerSecondMeterSquare] = 1.0 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -424,6 +436,9 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$JoulePerSecondMeterSquare get _clone =>
       HeatFluxDensity$JoulePerSecondMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$JoulePerSecondMeterSquare] with new value
   @override
@@ -472,7 +487,7 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
 
   static const _ratio = 1.163;
 
-  /// 1 [HeatFluxDensity$KilocaloriePerHourMeterSquare]  ≈  1.163 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$KilocaloriePerHourMeterSquare] ≈ 1.163 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -480,6 +495,9 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
   @override
   HeatFluxDensity$KilocaloriePerHourMeterSquare get _clone =>
       HeatFluxDensity$KilocaloriePerHourMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$KilocaloriePerHourMeterSquare] with new value
   @override
@@ -528,7 +546,7 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
 
   static const _ratio = 12.51842782;
 
-  /// 1 [HeatFluxDensity$KilocaloriePerHourFootSquare]  ≈  12.51842782 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$KilocaloriePerHourFootSquare] ≈ 12.51842782 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -536,6 +554,9 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
   @override
   HeatFluxDensity$KilocaloriePerHourFootSquare get _clone =>
       HeatFluxDensity$KilocaloriePerHourFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$KilocaloriePerHourFootSquare] with new value
   @override
@@ -584,7 +605,7 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
 
   static const _ratio = 41868.0;
 
-  /// 1 [HeatFluxDensity$CaloriePerSecondCentimeterSquare]  =  41868.0 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$CaloriePerSecondCentimeterSquare] = 41868.0 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -592,6 +613,9 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
   @override
   HeatFluxDensity$CaloriePerSecondCentimeterSquare get _clone =>
       HeatFluxDensity$CaloriePerSecondCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$CaloriePerSecondCentimeterSquare] with new value
   @override
@@ -641,7 +665,7 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
 
   static const _ratio = 11.630000000797818;
 
-  /// 1 [HeatFluxDensity$GramCaloriePerHourCentimeterSquare]  ≈  11.630000000797818 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$GramCaloriePerHourCentimeterSquare] ≈ 11.630000000797818 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -649,6 +673,9 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
   @override
   HeatFluxDensity$GramCaloriePerHourCentimeterSquare get _clone =>
       HeatFluxDensity$GramCaloriePerHourCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$GramCaloriePerHourCentimeterSquare] with new value
   @override
@@ -696,7 +723,7 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
 
   static const _ratio = 2.7777777777777776e-7;
 
-  /// 1 [HeatFluxDensity$DynePerHourCentimeter]  ≈  2.7777777777777776e-7 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$DynePerHourCentimeter] ≈ 2.7777777777777776e-7 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -704,6 +731,9 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
   @override
   HeatFluxDensity$DynePerHourCentimeter get _clone =>
       HeatFluxDensity$DynePerHourCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$DynePerHourCentimeter] with new value
   @override
@@ -751,7 +781,7 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
 
   static const _ratio = 0.00002777777777777778;
 
-  /// 1 [HeatFluxDensity$ErgPerHourMillimeterSquare]  ≈  0.00002777777777777778 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$ErgPerHourMillimeterSquare] ≈ 0.00002777777777777778 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -759,6 +789,9 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$ErgPerHourMillimeterSquare get _clone =>
       HeatFluxDensity$ErgPerHourMillimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$ErgPerHourMillimeterSquare] with new value
   @override
@@ -769,7 +802,7 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
 
   /// Symbol for [HeatFluxDensity$ErgPerHourMillimeterSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'ErgPerHourMillimeterSquare';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -807,7 +840,7 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
 
   static const _ratio = 0.2432317155850531;
 
-  /// 1 [HeatFluxDensity$FootPoundPerMinuteFootSquare]  ≈  0.2432317155850531 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$FootPoundPerMinuteFootSquare] ≈ 0.2432317155850531 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -815,6 +848,9 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
   @override
   HeatFluxDensity$FootPoundPerMinuteFootSquare get _clone =>
       HeatFluxDensity$FootPoundPerMinuteFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$FootPoundPerMinuteFootSquare] with new value
   @override
@@ -863,7 +899,7 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
 
   static const _ratio = 7916.8426580213;
 
-  /// 1 [HeatFluxDensity$HorsepowerMetricPerFootSquare]  ≈  7916.8426580213 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$HorsepowerMetricPerFootSquare] ≈ 7916.8426580213 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -871,6 +907,9 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
   @override
   HeatFluxDensity$HorsepowerMetricPerFootSquare get _clone =>
       HeatFluxDensity$HorsepowerMetricPerFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$HorsepowerMetricPerFootSquare] with new value
   @override
@@ -918,7 +957,7 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
 
   static const _ratio = 8026.646617253367;
 
-  /// 1 [HeatFluxDensity$HorsepowerUKPerFootSquare]  ≈  8026.646617253367 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$HorsepowerUKPerFootSquare] ≈ 8026.646617253367 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -926,6 +965,9 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$HorsepowerUKPerFootSquare get _clone =>
       HeatFluxDensity$HorsepowerUKPerFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$HorsepowerUKPerFootSquare] with new value
   @override
@@ -973,7 +1015,7 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
 
   static const _ratio = 3.154590778;
 
-  /// 1 [HeatFluxDensity$BTUPerHourFootSquare]  ≈  3.154590778 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$BTUPerHourFootSquare] ≈ 3.154590778 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -981,6 +1023,9 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$BTUPerHourFootSquare get _clone =>
       HeatFluxDensity$BTUPerHourFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$BTUPerHourFootSquare] with new value
   @override
@@ -991,7 +1036,7 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
 
   /// Symbol for [HeatFluxDensity$BTUPerHourFootSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerHourFootSquare';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1028,7 +1073,7 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
 
   static const _ratio = 189.27544653946458;
 
-  /// 1 [HeatFluxDensity$BTUPerMinuteFootSquare]  ≈  189.27544653946458 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$BTUPerMinuteFootSquare] ≈ 189.27544653946458 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1036,6 +1081,9 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$BTUPerMinuteFootSquare get _clone =>
       HeatFluxDensity$BTUPerMinuteFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$BTUPerMinuteFootSquare] with new value
   @override
@@ -1046,7 +1094,7 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
 
   /// Symbol for [HeatFluxDensity$BTUPerMinuteFootSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerMinuteFootSquare';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1083,7 +1131,7 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
 
   static const _ratio = 5.678263398;
 
-  /// 1 [HeatFluxDensity$CHUPerHourFootSquare]  ≈  5.678263398 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$CHUPerHourFootSquare] ≈ 5.678263398 [HeatFluxDensity$WattPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1091,6 +1139,9 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
   @override
   HeatFluxDensity$CHUPerHourFootSquare get _clone =>
       HeatFluxDensity$CHUPerHourFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HeatFluxDensity$CHUPerHourFootSquare] with new value
   @override
@@ -1101,7 +1152,7 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
 
   /// Symbol for [HeatFluxDensity$CHUPerHourFootSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'CHUPerHourFootSquare';
 
   @override
   Map<String, dynamic> toJson() => {

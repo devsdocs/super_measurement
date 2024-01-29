@@ -283,7 +283,7 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [FrequencyWavelength$Exahertz]  =  1000000000000000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Exahertz] = 1000000000000000000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -291,6 +291,9 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Exahertz get _clone =>
       FrequencyWavelength$Exahertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Exahertz] with new value
   @override
@@ -338,7 +341,7 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [FrequencyWavelength$Petahertz]  =  1000000000000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Petahertz] = 1000000000000000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -346,6 +349,9 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Petahertz get _clone =>
       FrequencyWavelength$Petahertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Petahertz] with new value
   @override
@@ -393,7 +399,7 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [FrequencyWavelength$Terahertz]  =  1000000000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Terahertz] = 1000000000000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -401,6 +407,9 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Terahertz get _clone =>
       FrequencyWavelength$Terahertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Terahertz] with new value
   @override
@@ -448,7 +457,7 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [FrequencyWavelength$Gigahertz]  =  1000000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Gigahertz] = 1000000000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -456,6 +465,9 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Gigahertz get _clone =>
       FrequencyWavelength$Gigahertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Gigahertz] with new value
   @override
@@ -503,7 +515,7 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [FrequencyWavelength$Megahertz]  =  1000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Megahertz] = 1000000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -511,6 +523,9 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Megahertz get _clone =>
       FrequencyWavelength$Megahertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Megahertz] with new value
   @override
@@ -558,7 +573,7 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
 
   static const _ratio = 1000.0;
 
-  /// 1 [FrequencyWavelength$Kilohertz]  =  1000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Kilohertz] = 1000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -566,6 +581,9 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Kilohertz get _clone =>
       FrequencyWavelength$Kilohertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Kilohertz] with new value
   @override
@@ -613,7 +631,7 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
 
   static const _ratio = 100.0;
 
-  /// 1 [FrequencyWavelength$Hectohertz]  =  100.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Hectohertz] = 100.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -621,6 +639,9 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Hectohertz get _clone =>
       FrequencyWavelength$Hectohertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Hectohertz] with new value
   @override
@@ -668,7 +689,7 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
 
   static const _ratio = 10.0;
 
-  /// 1 [FrequencyWavelength$Dekahertz]  =  10.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Dekahertz] = 10.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -676,6 +697,9 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Dekahertz get _clone =>
       FrequencyWavelength$Dekahertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Dekahertz] with new value
   @override
@@ -731,6 +755,9 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Hertz get _clone => FrequencyWavelength$Hertz(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [FrequencyWavelength$Hertz] with new value
   @override
   FrequencyWavelength$Hertz withValue(
@@ -777,7 +804,7 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
 
   static const _ratio = 0.1;
 
-  /// 1 [FrequencyWavelength$Decihertz]  ≈  0.1 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Decihertz] ≈ 0.1 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -785,6 +812,9 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Decihertz get _clone =>
       FrequencyWavelength$Decihertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Decihertz] with new value
   @override
@@ -832,7 +862,7 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
 
   static const _ratio = 0.01;
 
-  /// 1 [FrequencyWavelength$Centihertz]  ≈  0.01 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Centihertz] ≈ 0.01 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -840,6 +870,9 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Centihertz get _clone =>
       FrequencyWavelength$Centihertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Centihertz] with new value
   @override
@@ -887,7 +920,7 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
 
   static const _ratio = 0.001;
 
-  /// 1 [FrequencyWavelength$Millihertz]  ≈  0.001 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Millihertz] ≈ 0.001 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -895,6 +928,9 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Millihertz get _clone =>
       FrequencyWavelength$Millihertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Millihertz] with new value
   @override
@@ -942,7 +978,7 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
 
   static const _ratio = 0.000001;
 
-  /// 1 [FrequencyWavelength$Microhertz]  ≈  0.000001 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Microhertz] ≈ 0.000001 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -950,6 +986,9 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Microhertz get _clone =>
       FrequencyWavelength$Microhertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Microhertz] with new value
   @override
@@ -997,7 +1036,7 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
 
   static const _ratio = 1e-9;
 
-  /// 1 [FrequencyWavelength$Nanohertz]  ≈  1e-9 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Nanohertz] ≈ 1e-9 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1005,6 +1044,9 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Nanohertz get _clone =>
       FrequencyWavelength$Nanohertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Nanohertz] with new value
   @override
@@ -1052,7 +1094,7 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
 
   static const _ratio = 1e-12;
 
-  /// 1 [FrequencyWavelength$Picohertz]  ≈  1e-12 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Picohertz] ≈ 1e-12 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1060,6 +1102,9 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Picohertz get _clone =>
       FrequencyWavelength$Picohertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Picohertz] with new value
   @override
@@ -1107,7 +1152,7 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
 
   static const _ratio = 1e-15;
 
-  /// 1 [FrequencyWavelength$Femtohertz]  ≈  1e-15 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Femtohertz] ≈ 1e-15 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1115,6 +1160,9 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Femtohertz get _clone =>
       FrequencyWavelength$Femtohertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Femtohertz] with new value
   @override
@@ -1162,7 +1210,7 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
 
   static const _ratio = 1e-18;
 
-  /// 1 [FrequencyWavelength$Attohertz]  ≈  1e-18 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Attohertz] ≈ 1e-18 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1170,6 +1218,9 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
   @override
   FrequencyWavelength$Attohertz get _clone =>
       FrequencyWavelength$Attohertz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$Attohertz] with new value
   @override
@@ -1217,7 +1268,7 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
 
   static const _ratio = 1.0;
 
-  /// 1 [FrequencyWavelength$CyclePerSecond]  =  1.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$CyclePerSecond] = 1.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1225,6 +1276,9 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
   @override
   FrequencyWavelength$CyclePerSecond get _clone =>
       FrequencyWavelength$CyclePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$CyclePerSecond] with new value
   @override
@@ -1235,7 +1289,7 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
 
   /// Symbol for [FrequencyWavelength$CyclePerSecond]
   @override
-  String get symbol => '';
+  String get symbol => 'CyclePerSecond';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1273,7 +1327,7 @@ final class FrequencyWavelength$WavelengthInExametres
 
   static const _ratio = 3335640951.9815207;
 
-  /// 1 [FrequencyWavelength$WavelengthInExametres]  ≈  3335640951.9815207 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInExametres] ≈ 3335640951.9815207 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1281,6 +1335,9 @@ final class FrequencyWavelength$WavelengthInExametres
   @override
   FrequencyWavelength$WavelengthInExametres get _clone =>
       FrequencyWavelength$WavelengthInExametres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInExametres] with new value
   @override
@@ -1329,7 +1386,7 @@ final class FrequencyWavelength$WavelengthInPetametres
 
   static const _ratio = 3335640.9519815203;
 
-  /// 1 [FrequencyWavelength$WavelengthInPetametres]  ≈  3335640.9519815203 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInPetametres] ≈ 3335640.9519815203 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1337,6 +1394,9 @@ final class FrequencyWavelength$WavelengthInPetametres
   @override
   FrequencyWavelength$WavelengthInPetametres get _clone =>
       FrequencyWavelength$WavelengthInPetametres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInPetametres] with new value
   @override
@@ -1385,7 +1445,7 @@ final class FrequencyWavelength$WavelengthInTerametres
 
   static const _ratio = 3335.6409519815206;
 
-  /// 1 [FrequencyWavelength$WavelengthInTerametres]  ≈  3335.6409519815206 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInTerametres] ≈ 3335.6409519815206 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1393,6 +1453,9 @@ final class FrequencyWavelength$WavelengthInTerametres
   @override
   FrequencyWavelength$WavelengthInTerametres get _clone =>
       FrequencyWavelength$WavelengthInTerametres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInTerametres] with new value
   @override
@@ -1441,7 +1504,7 @@ final class FrequencyWavelength$WavelengthInGigametres
 
   static const _ratio = 3.3356409519815204;
 
-  /// 1 [FrequencyWavelength$WavelengthInGigametres]  ≈  3.3356409519815204 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInGigametres] ≈ 3.3356409519815204 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1449,6 +1512,9 @@ final class FrequencyWavelength$WavelengthInGigametres
   @override
   FrequencyWavelength$WavelengthInGigametres get _clone =>
       FrequencyWavelength$WavelengthInGigametres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInGigametres] with new value
   @override
@@ -1497,7 +1563,7 @@ final class FrequencyWavelength$WavelengthInMegametres
 
   static const _ratio = 0.0033356409519815205;
 
-  /// 1 [FrequencyWavelength$WavelengthInMegametres]  ≈  0.0033356409519815205 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInMegametres] ≈ 0.0033356409519815205 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1505,6 +1571,9 @@ final class FrequencyWavelength$WavelengthInMegametres
   @override
   FrequencyWavelength$WavelengthInMegametres get _clone =>
       FrequencyWavelength$WavelengthInMegametres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMegametres] with new value
   @override
@@ -1553,7 +1622,7 @@ final class FrequencyWavelength$WavelengthInKilometres
 
   static const _ratio = 0.0000033356409519815205;
 
-  /// 1 [FrequencyWavelength$WavelengthInKilometres]  ≈  0.0000033356409519815205 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInKilometres] ≈ 0.0000033356409519815205 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1561,6 +1630,9 @@ final class FrequencyWavelength$WavelengthInKilometres
   @override
   FrequencyWavelength$WavelengthInKilometres get _clone =>
       FrequencyWavelength$WavelengthInKilometres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInKilometres] with new value
   @override
@@ -1609,7 +1681,7 @@ final class FrequencyWavelength$WavelengthInHectometres
 
   static const _ratio = 3.3356409519815204e-7;
 
-  /// 1 [FrequencyWavelength$WavelengthInHectometres]  ≈  3.3356409519815204e-7 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInHectometres] ≈ 3.3356409519815204e-7 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1617,6 +1689,9 @@ final class FrequencyWavelength$WavelengthInHectometres
   @override
   FrequencyWavelength$WavelengthInHectometres get _clone =>
       FrequencyWavelength$WavelengthInHectometres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInHectometres] with new value
   @override
@@ -1665,7 +1740,7 @@ final class FrequencyWavelength$WavelengthInDecametres
 
   static const _ratio = 3.3356409519815205e-8;
 
-  /// 1 [FrequencyWavelength$WavelengthInDecametres]  ≈  3.3356409519815205e-8 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInDecametres] ≈ 3.3356409519815205e-8 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1673,6 +1748,9 @@ final class FrequencyWavelength$WavelengthInDecametres
   @override
   FrequencyWavelength$WavelengthInDecametres get _clone =>
       FrequencyWavelength$WavelengthInDecametres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInDecametres] with new value
   @override
@@ -1720,7 +1798,7 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
 
   static const _ratio = 3.3356409519815204e-9;
 
-  /// 1 [FrequencyWavelength$WavelengthInMetres]  ≈  3.3356409519815204e-9 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInMetres] ≈ 3.3356409519815204e-9 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1728,6 +1806,9 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
   @override
   FrequencyWavelength$WavelengthInMetres get _clone =>
       FrequencyWavelength$WavelengthInMetres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMetres] with new value
   @override
@@ -1776,7 +1857,7 @@ final class FrequencyWavelength$WavelengthInDecimetres
 
   static const _ratio = 3.3356409519815207e-10;
 
-  /// 1 [FrequencyWavelength$WavelengthInDecimetres]  ≈  3.3356409519815207e-10 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInDecimetres] ≈ 3.3356409519815207e-10 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1784,6 +1865,9 @@ final class FrequencyWavelength$WavelengthInDecimetres
   @override
   FrequencyWavelength$WavelengthInDecimetres get _clone =>
       FrequencyWavelength$WavelengthInDecimetres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInDecimetres] with new value
   @override
@@ -1832,7 +1916,7 @@ final class FrequencyWavelength$WavelengthInCentimetres
 
   static const _ratio = 3.33564095198152e-11;
 
-  /// 1 [FrequencyWavelength$WavelengthInCentimetres]  ≈  3.33564095198152e-11 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInCentimetres] ≈ 3.33564095198152e-11 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1840,6 +1924,9 @@ final class FrequencyWavelength$WavelengthInCentimetres
   @override
   FrequencyWavelength$WavelengthInCentimetres get _clone =>
       FrequencyWavelength$WavelengthInCentimetres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInCentimetres] with new value
   @override
@@ -1888,7 +1975,7 @@ final class FrequencyWavelength$WavelengthInMillimetres
 
   static const _ratio = 3.3356409519815203e-12;
 
-  /// 1 [FrequencyWavelength$WavelengthInMillimetres]  ≈  3.3356409519815203e-12 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInMillimetres] ≈ 3.3356409519815203e-12 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1896,6 +1983,9 @@ final class FrequencyWavelength$WavelengthInMillimetres
   @override
   FrequencyWavelength$WavelengthInMillimetres get _clone =>
       FrequencyWavelength$WavelengthInMillimetres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMillimetres] with new value
   @override
@@ -1944,7 +2034,7 @@ final class FrequencyWavelength$WavelengthInMicrometres
 
   static const _ratio = 3.3356409519815205e-15;
 
-  /// 1 [FrequencyWavelength$WavelengthInMicrometres]  ≈  3.3356409519815205e-15 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInMicrometres] ≈ 3.3356409519815205e-15 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
 
@@ -1952,6 +2042,9 @@ final class FrequencyWavelength$WavelengthInMicrometres
   @override
   FrequencyWavelength$WavelengthInMicrometres get _clone =>
       FrequencyWavelength$WavelengthInMicrometres(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMicrometres] with new value
   @override

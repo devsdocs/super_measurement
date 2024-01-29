@@ -178,13 +178,16 @@ final class Luminance$Stilb extends Luminance {
 
   static const _ratio = 314159265358.9793;
 
-  /// 1 [Luminance$Stilb]  ≈  314159265358.9793 [Luminance$Bril]
+  /// 1 [Luminance$Stilb] ≈ 314159265358.9793 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$Stilb get _clone => Luminance$Stilb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$Stilb] with new value
   @override
@@ -232,7 +235,7 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
 
   static const _ratio = 31415926.535897933;
 
-  /// 1 [Luminance$CandelaPerMeterSquare]  ≈  31415926.535897933 [Luminance$Bril]
+  /// 1 [Luminance$CandelaPerMeterSquare] ≈ 31415926.535897933 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
@@ -240,6 +243,9 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
   @override
   Luminance$CandelaPerMeterSquare get _clone =>
       Luminance$CandelaPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$CandelaPerMeterSquare] with new value
   @override
@@ -287,7 +293,7 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
 
   static const _ratio = 314159265358.9793;
 
-  /// 1 [Luminance$CandelaPerCentimeterSquare]  ≈  314159265358.9793 [Luminance$Bril]
+  /// 1 [Luminance$CandelaPerCentimeterSquare] ≈ 314159265358.9793 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
@@ -295,6 +301,9 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
   @override
   Luminance$CandelaPerCentimeterSquare get _clone =>
       Luminance$CandelaPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$CandelaPerCentimeterSquare] with new value
   @override
@@ -342,7 +351,7 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
 
   static const _ratio = 338158218.8900337;
 
-  /// 1 [Luminance$CandelaPerFootSquare]  ≈  338158218.8900337 [Luminance$Bril]
+  /// 1 [Luminance$CandelaPerFootSquare] ≈ 338158218.8900337 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
@@ -350,6 +359,9 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
   @override
   Luminance$CandelaPerFootSquare get _clone =>
       Luminance$CandelaPerFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$CandelaPerFootSquare] with new value
   @override
@@ -397,7 +409,7 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
 
   static const _ratio = 31415926.535897933;
 
-  /// 1 [Luminance$LumenPerMeterSquarePerSteradian]  ≈  31415926.535897933 [Luminance$Bril]
+  /// 1 [Luminance$LumenPerMeterSquarePerSteradian] ≈ 31415926.535897933 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
@@ -405,6 +417,9 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
   @override
   Luminance$LumenPerMeterSquarePerSteradian get _clone =>
       Luminance$LumenPerMeterSquarePerSteradian(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$LumenPerMeterSquarePerSteradian] with new value
   @override
@@ -452,7 +467,7 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
 
   static const _ratio = 314159265358.9793;
 
-  /// 1 [Luminance$LumenPerCentimeterSquarePerSteradian]  ≈  314159265358.9793 [Luminance$Bril]
+  /// 1 [Luminance$LumenPerCentimeterSquarePerSteradian] ≈ 314159265358.9793 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
@@ -460,6 +475,9 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
   @override
   Luminance$LumenPerCentimeterSquarePerSteradian get _clone =>
       Luminance$LumenPerCentimeterSquarePerSteradian(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$LumenPerCentimeterSquarePerSteradian] with new value
   @override
@@ -507,7 +525,7 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
 
   static const _ratio = 338158218.8900337;
 
-  /// 1 [Luminance$LumenPerFootSquarePerSteradian]  ≈  338158218.8900337 [Luminance$Bril]
+  /// 1 [Luminance$LumenPerFootSquarePerSteradian] ≈ 338158218.8900337 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
@@ -515,6 +533,9 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
   @override
   Luminance$LumenPerFootSquarePerSteradian get _clone =>
       Luminance$LumenPerFootSquarePerSteradian(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$LumenPerFootSquarePerSteradian] with new value
   @override
@@ -564,7 +585,7 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
 
   static const _ratio = 214570778240182.88;
 
-  /// 1 [Luminance$WattPerCentimeterSquarePerSteradianAt555nm]  ≈  214570778240182.88 [Luminance$Bril]
+  /// 1 [Luminance$WattPerCentimeterSquarePerSteradianAt555nm] ≈ 214570778240182.88 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
@@ -572,6 +593,9 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
   @override
   Luminance$WattPerCentimeterSquarePerSteradianAt555nm get _clone =>
       Luminance$WattPerCentimeterSquarePerSteradianAt555nm(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$WattPerCentimeterSquarePerSteradianAt555nm] with new value
   @override
@@ -582,7 +606,7 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
 
   /// Symbol for [Luminance$WattPerCentimeterSquarePerSteradianAt555nm]
   @override
-  String get symbol => '';
+  String get symbol => 'WattPerCentimeterSquarePerSteradianAt555nm';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -619,13 +643,16 @@ final class Luminance$Nit extends Luminance {
 
   static const _ratio = 31415926.535897933;
 
-  /// 1 [Luminance$Nit]  ≈  31415926.535897933 [Luminance$Bril]
+  /// 1 [Luminance$Nit] ≈ 31415926.535897933 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$Nit get _clone => Luminance$Nit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$Nit] with new value
   @override
@@ -673,13 +700,16 @@ final class Luminance$Millinit extends Luminance {
 
   static const _ratio = 31415.926535897932;
 
-  /// 1 [Luminance$Millinit]  ≈  31415.926535897932 [Luminance$Bril]
+  /// 1 [Luminance$Millinit] ≈ 31415.926535897932 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$Millinit get _clone => Luminance$Millinit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$Millinit] with new value
   @override
@@ -727,13 +757,16 @@ final class Luminance$FootLambert extends Luminance {
 
   static const _ratio = 107639104.167;
 
-  /// 1 [Luminance$FootLambert]  ≈  107639104.167 [Luminance$Bril]
+  /// 1 [Luminance$FootLambert] ≈ 107639104.167 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$FootLambert get _clone => Luminance$FootLambert(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$FootLambert] with new value
   @override
@@ -781,13 +814,16 @@ final class Luminance$Lambert extends Luminance {
 
   static const _ratio = 100000000000.0;
 
-  /// 1 [Luminance$Lambert]  =  100000000000.0 [Luminance$Bril]
+  /// 1 [Luminance$Lambert] = 100000000000.0 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$Lambert get _clone => Luminance$Lambert(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$Lambert] with new value
   @override
@@ -835,13 +871,16 @@ final class Luminance$Millilambert extends Luminance {
 
   static const _ratio = 100000000.0;
 
-  /// 1 [Luminance$Millilambert]  =  100000000.0 [Luminance$Bril]
+  /// 1 [Luminance$Millilambert] = 100000000.0 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$Millilambert get _clone => Luminance$Millilambert(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$Millilambert] with new value
   @override
@@ -889,13 +928,16 @@ final class Luminance$Apostilb extends Luminance {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Luminance$Apostilb]  =  10000000.0 [Luminance$Bril]
+  /// 1 [Luminance$Apostilb] = 10000000.0 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$Apostilb get _clone => Luminance$Apostilb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$Apostilb] with new value
   @override
@@ -943,13 +985,16 @@ final class Luminance$Blondel extends Luminance {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Luminance$Blondel]  =  10000000.0 [Luminance$Bril]
+  /// 1 [Luminance$Blondel] = 10000000.0 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$Blondel get _clone => Luminance$Blondel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$Blondel] with new value
   @override
@@ -960,7 +1005,7 @@ final class Luminance$Blondel extends Luminance {
 
   /// Symbol for [Luminance$Blondel]
   @override
-  String get symbol => '';
+  String get symbol => 'Blondel';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1005,6 +1050,9 @@ final class Luminance$Bril extends Luminance {
   @override
   Luminance$Bril get _clone => Luminance$Bril(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Luminance$Bril] with new value
   @override
   Luminance$Bril withValue(
@@ -1014,7 +1062,7 @@ final class Luminance$Bril extends Luminance {
 
   /// Symbol for [Luminance$Bril]
   @override
-  String get symbol => '';
+  String get symbol => 'Bril';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1051,13 +1099,16 @@ final class Luminance$Skot extends Luminance {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Luminance$Skot]  =  10000.0 [Luminance$Bril]
+  /// 1 [Luminance$Skot] = 10000.0 [Luminance$Bril]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Luminance$Skot get _clone => Luminance$Skot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Luminance$Skot] with new value
   @override
@@ -1068,7 +1119,7 @@ final class Luminance$Skot extends Luminance {
 
   /// Symbol for [Luminance$Skot]
   @override
-  String get symbol => '';
+  String get symbol => 'Skot';
 
   @override
   Map<String, dynamic> toJson() => {

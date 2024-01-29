@@ -252,7 +252,7 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
 
   static const _ratio = 1000.0;
 
-  /// 1 [ViscosityDynamic$NewtonSecondPerMeterSquare]  =  1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$NewtonSecondPerMeterSquare] = 1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -260,6 +260,9 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
   @override
   ViscosityDynamic$NewtonSecondPerMeterSquare get _clone =>
       ViscosityDynamic$NewtonSecondPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$NewtonSecondPerMeterSquare] with new value
   @override
@@ -317,6 +320,9 @@ final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
   ViscosityDynamic$MillinewtonSecondPerMeterSquare get _clone =>
       ViscosityDynamic$MillinewtonSecondPerMeterSquare(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [ViscosityDynamic$MillinewtonSecondPerMeterSquare] with new value
   @override
   ViscosityDynamic$MillinewtonSecondPerMeterSquare withValue(
@@ -364,7 +370,7 @@ final class ViscosityDynamic$DyneSecondPerCentimeterSquare
 
   static const _ratio = 100.0;
 
-  /// 1 [ViscosityDynamic$DyneSecondPerCentimeterSquare]  =  100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$DyneSecondPerCentimeterSquare] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -372,6 +378,9 @@ final class ViscosityDynamic$DyneSecondPerCentimeterSquare
   @override
   ViscosityDynamic$DyneSecondPerCentimeterSquare get _clone =>
       ViscosityDynamic$DyneSecondPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$DyneSecondPerCentimeterSquare] with new value
   @override
@@ -419,13 +428,16 @@ final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
 
   static const _ratio = 100000000000000000000.0;
 
-  /// 1 [ViscosityDynamic$Exapoise]  =  100000000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Exapoise] = 100000000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Exapoise get _clone => ViscosityDynamic$Exapoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Exapoise] with new value
   @override
@@ -473,13 +485,16 @@ final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
 
   static const _ratio = 100000000000000000.0;
 
-  /// 1 [ViscosityDynamic$Petapoise]  =  100000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Petapoise] = 100000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Petapoise get _clone => ViscosityDynamic$Petapoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Petapoise] with new value
   @override
@@ -527,13 +542,16 @@ final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
 
   static const _ratio = 100000000000000.0;
 
-  /// 1 [ViscosityDynamic$Terapoise]  =  100000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Terapoise] = 100000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Terapoise get _clone => ViscosityDynamic$Terapoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Terapoise] with new value
   @override
@@ -581,13 +599,16 @@ final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
 
   static const _ratio = 100000000000.0;
 
-  /// 1 [ViscosityDynamic$Gigapoise]  =  100000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Gigapoise] = 100000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Gigapoise get _clone => ViscosityDynamic$Gigapoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Gigapoise] with new value
   @override
@@ -635,13 +656,16 @@ final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
 
   static const _ratio = 100000000.0;
 
-  /// 1 [ViscosityDynamic$Megapoise]  =  100000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Megapoise] = 100000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Megapoise get _clone => ViscosityDynamic$Megapoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Megapoise] with new value
   @override
@@ -689,13 +713,16 @@ final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
 
   static const _ratio = 100000.0;
 
-  /// 1 [ViscosityDynamic$Kilopoise]  =  100000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Kilopoise] = 100000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Kilopoise get _clone => ViscosityDynamic$Kilopoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Kilopoise] with new value
   @override
@@ -743,13 +770,16 @@ final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
 
   static const _ratio = 10000.0;
 
-  /// 1 [ViscosityDynamic$Hectopoise]  =  10000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Hectopoise] = 10000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Hectopoise get _clone => ViscosityDynamic$Hectopoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Hectopoise] with new value
   @override
@@ -797,13 +827,16 @@ final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
 
   static const _ratio = 1000.0;
 
-  /// 1 [ViscosityDynamic$Dekapoise]  =  1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Dekapoise] = 1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Dekapoise get _clone => ViscosityDynamic$Dekapoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Dekapoise] with new value
   @override
@@ -851,13 +884,16 @@ final class ViscosityDynamic$Poise extends ViscosityDynamic {
 
   static const _ratio = 100.0;
 
-  /// 1 [ViscosityDynamic$Poise]  =  100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Poise] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Poise get _clone => ViscosityDynamic$Poise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Poise] with new value
   @override
@@ -905,13 +941,16 @@ final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
 
   static const _ratio = 10.0;
 
-  /// 1 [ViscosityDynamic$Decipoise]  =  10.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Decipoise] = 10.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Decipoise get _clone => ViscosityDynamic$Decipoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Decipoise] with new value
   @override
@@ -959,13 +998,16 @@ final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
 
   static const _ratio = 1.0;
 
-  /// 1 [ViscosityDynamic$Centipoise]  =  1.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Centipoise] = 1.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Centipoise get _clone => ViscosityDynamic$Centipoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Centipoise] with new value
   @override
@@ -1013,13 +1055,16 @@ final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
 
   static const _ratio = 0.1;
 
-  /// 1 [ViscosityDynamic$Millipoise]  ≈  0.1 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Millipoise] ≈ 0.1 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Millipoise get _clone => ViscosityDynamic$Millipoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Millipoise] with new value
   @override
@@ -1067,13 +1112,16 @@ final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
 
   static const _ratio = 0.0001;
 
-  /// 1 [ViscosityDynamic$Micropoise]  ≈  0.0001 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Micropoise] ≈ 0.0001 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Micropoise get _clone => ViscosityDynamic$Micropoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Micropoise] with new value
   @override
@@ -1121,13 +1169,16 @@ final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
 
   static const _ratio = 1e-7;
 
-  /// 1 [ViscosityDynamic$Nanopoise]  ≈  1e-7 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Nanopoise] ≈ 1e-7 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Nanopoise get _clone => ViscosityDynamic$Nanopoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Nanopoise] with new value
   @override
@@ -1175,13 +1226,16 @@ final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
 
   static const _ratio = 1e-10;
 
-  /// 1 [ViscosityDynamic$Picopoise]  ≈  1e-10 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Picopoise] ≈ 1e-10 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Picopoise get _clone => ViscosityDynamic$Picopoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Picopoise] with new value
   @override
@@ -1229,13 +1283,16 @@ final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
 
   static const _ratio = 1e-13;
 
-  /// 1 [ViscosityDynamic$Femtopoise]  ≈  1e-13 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Femtopoise] ≈ 1e-13 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Femtopoise get _clone => ViscosityDynamic$Femtopoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Femtopoise] with new value
   @override
@@ -1283,13 +1340,16 @@ final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
 
   static const _ratio = 1e-16;
 
-  /// 1 [ViscosityDynamic$Attopoise]  ≈  1e-16 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Attopoise] ≈ 1e-16 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityDynamic$Attopoise get _clone => ViscosityDynamic$Attopoise(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$Attopoise] with new value
   @override
@@ -1338,7 +1398,7 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
 
   static const _ratio = 6894757.0;
 
-  /// 1 [ViscosityDynamic$PoundForceSecondPerInchSquare]  =  6894757.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundForceSecondPerInchSquare] = 6894757.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1346,6 +1406,9 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
   @override
   ViscosityDynamic$PoundForceSecondPerInchSquare get _clone =>
       ViscosityDynamic$PoundForceSecondPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$PoundForceSecondPerInchSquare] with new value
   @override
@@ -1394,7 +1457,7 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
 
   static const _ratio = 47880.25898022151;
 
-  /// 1 [ViscosityDynamic$PoundForceSecondPerFootSquare]  ≈  47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundForceSecondPerFootSquare] ≈ 47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1402,6 +1465,9 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
   @override
   ViscosityDynamic$PoundForceSecondPerFootSquare get _clone =>
       ViscosityDynamic$PoundForceSecondPerFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$PoundForceSecondPerFootSquare] with new value
   @override
@@ -1450,7 +1516,7 @@ final class ViscosityDynamic$PoundalSecondPerFootSquare
 
   static const _ratio = 1488.1639435684617;
 
-  /// 1 [ViscosityDynamic$PoundalSecondPerFootSquare]  ≈  1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundalSecondPerFootSquare] ≈ 1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1458,6 +1524,9 @@ final class ViscosityDynamic$PoundalSecondPerFootSquare
   @override
   ViscosityDynamic$PoundalSecondPerFootSquare get _clone =>
       ViscosityDynamic$PoundalSecondPerFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$PoundalSecondPerFootSquare] with new value
   @override
@@ -1505,7 +1574,7 @@ final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
 
   static const _ratio = 100.0;
 
-  /// 1 [ViscosityDynamic$GramPerCentimeterSecond]  =  100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$GramPerCentimeterSecond] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1513,6 +1582,9 @@ final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
   @override
   ViscosityDynamic$GramPerCentimeterSecond get _clone =>
       ViscosityDynamic$GramPerCentimeterSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$GramPerCentimeterSecond] with new value
   @override
@@ -1560,7 +1632,7 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
 
   static const _ratio = 47880.25898022151;
 
-  /// 1 [ViscosityDynamic$SlugPerFootSecond]  ≈  47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$SlugPerFootSecond] ≈ 47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1568,6 +1640,9 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
   @override
   ViscosityDynamic$SlugPerFootSecond get _clone =>
       ViscosityDynamic$SlugPerFootSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$SlugPerFootSecond] with new value
   @override
@@ -1578,7 +1653,7 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
 
   /// Symbol for [ViscosityDynamic$SlugPerFootSecond]
   @override
-  String get symbol => '';
+  String get symbol => 'SlugPerFootSecond';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1615,7 +1690,7 @@ final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
 
   static const _ratio = 1488.1639435684617;
 
-  /// 1 [ViscosityDynamic$PoundPerFootSecond]  ≈  1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundPerFootSecond] ≈ 1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1623,6 +1698,9 @@ final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
   @override
   ViscosityDynamic$PoundPerFootSecond get _clone =>
       ViscosityDynamic$PoundPerFootSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$PoundPerFootSecond] with new value
   @override
@@ -1670,7 +1748,7 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
 
   static const _ratio = 0.4133789;
 
-  /// 1 [ViscosityDynamic$PoundPerFootHour]  ≈  0.4133789 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundPerFootHour] ≈ 0.4133789 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
 
@@ -1678,6 +1756,9 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
   @override
   ViscosityDynamic$PoundPerFootHour get _clone =>
       ViscosityDynamic$PoundPerFootHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityDynamic$PoundPerFootHour] with new value
   @override

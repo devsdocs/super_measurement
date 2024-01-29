@@ -11,6 +11,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   num get ratio;
 
+  num get _shiftValue;
+
   String get symbol;
 
   String get majorName;
@@ -21,11 +23,21 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   AnchorRatio<T> get _anchorRatio;
 
+  bool get _isShiftedValue => _shiftValue != 0;
+
   bool _convertAndCompare(String operator, T other) {
-    final otherValue =
-        other._clone.convertTo(_anchor).withPrecision(Precision.ten).value;
-    final currentValue =
-        _clone.convertTo(_anchor).withPrecision(Precision.ten).value;
+    num otherValue;
+    num currentValue;
+    if (_isShiftedValue || other._isShiftedValue) {
+      otherValue =
+          other._clone.convertTo(this).withPrecision(Precision.ten).value;
+      currentValue = _clone.withPrecision(Precision.ten).value;
+    } else {
+      otherValue =
+          other._clone.convertTo(_anchor).withPrecision(Precision.ten).value;
+      currentValue =
+          _clone.convertTo(_anchor).withPrecision(Precision.ten).value;
+    }
 
     if (operator == '==') {
       return currentValue == otherValue;
@@ -43,12 +55,20 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   }
 
   T _convertAndCombine(String operator, T other) {
-    final otherValue = other.convertTo(_anchor);
-    final currentValue = convertTo(_anchor);
+    if (_isShiftedValue || other._isShiftedValue) {
+      final convToThis = other.convertTo(this);
 
-    final combine =
-        operator == '+' ? currentValue + otherValue : currentValue - otherValue;
-    return combine.convertTo(this);
+      return operator == '+' ? this + convToThis : this - convToThis;
+    } else {
+      final otherValue = other.convertTo(_anchor);
+      final currentValue = convertTo(_anchor);
+
+      final combine = operator == '+'
+          ? currentValue + otherValue
+          : currentValue - otherValue;
+
+      return combine.convertTo(this);
+    }
   }
 
   /// Convert this unit to another unit under same category, the value
@@ -58,16 +78,31 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     if (runtimeType == to.runtimeType) {
       return result.withValue(value);
     }
-    if (value == 0) {
-      return result.withValue(0);
+    if (_isShiftedValue || result._isShiftedValue) {
+      if (runtimeType == _anchorRatio.anchor) {
+        return result.withValue(
+          (value - result._shiftValue) /
+              _anchorRatio.ratio.getRatio(result.runtimeType),
+        );
+      } else {
+        return _anchor
+            .withValue(
+              (value * _anchorRatio.ratio.getRatio(runtimeType)) + _shiftValue,
+            )
+            .convertTo(result);
+      }
+    } else {
+      if (value == 0) {
+        return result.withValue(0);
+      }
+      if (runtimeType == _anchorRatio.anchor) {
+        return result
+            .withValue(value / _anchorRatio.ratio.getRatio(result.runtimeType));
+      }
+      return _anchor
+          .withValue(value * _anchorRatio.ratio.getRatio(runtimeType))
+          .convertTo(result);
     }
-    if (runtimeType == _anchorRatio.anchor) {
-      return result
-          .withValue(value / _anchorRatio.ratio.getRatio(to.runtimeType));
-    }
-    return _anchor
-        .withValue(value * _anchorRatio.ratio.getRatio(runtimeType))
-        .convertTo(to);
   }
 
   T operator +(T other) {
@@ -117,9 +152,15 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
       return value.compareTo(other.value);
     }
 
-    final otherConvertTo = other._clone.convertTo(_anchor);
-    final currentConvertTo = _clone.convertTo(_anchor);
-    return currentConvertTo.value.compareTo(otherConvertTo.value);
+    if (_isShiftedValue || other._isShiftedValue) {
+      final otherValue = other._clone.convertTo(this).value;
+      final currentValue = _clone.value;
+      return currentValue.compareTo(otherValue);
+    } else {
+      final otherConvertTo = other._clone.convertTo(_anchor);
+      final currentConvertTo = _clone.convertTo(_anchor);
+      return currentConvertTo.value.compareTo(otherConvertTo.value);
+    }
   }
 
   @override

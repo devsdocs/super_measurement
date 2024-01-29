@@ -94,13 +94,16 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
 
   static const _ratio = 1.8;
 
-  /// 1 [TemperatureInterval$Kelvin]  ≈  1.8 [TemperatureInterval$Fahrenheit]
+  /// 1 [TemperatureInterval$Kelvin] ≈ 1.8 [TemperatureInterval$Fahrenheit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   TemperatureInterval$Kelvin get _clone => TemperatureInterval$Kelvin(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [TemperatureInterval$Kelvin] with new value
   @override
@@ -148,13 +151,16 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
 
   static const _ratio = 1.8;
 
-  /// 1 [TemperatureInterval$Celsius]  ≈  1.8 [TemperatureInterval$Fahrenheit]
+  /// 1 [TemperatureInterval$Celsius] ≈ 1.8 [TemperatureInterval$Fahrenheit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   TemperatureInterval$Celsius get _clone => TemperatureInterval$Celsius(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [TemperatureInterval$Celsius] with new value
   @override
@@ -211,6 +217,9 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
   TemperatureInterval$Fahrenheit get _clone =>
       TemperatureInterval$Fahrenheit(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [TemperatureInterval$Fahrenheit] with new value
   @override
   TemperatureInterval$Fahrenheit withValue(
@@ -257,13 +266,16 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
 
   static const _ratio = 1.0;
 
-  /// 1 [TemperatureInterval$Rankine]  =  1.0 [TemperatureInterval$Fahrenheit]
+  /// 1 [TemperatureInterval$Rankine] = 1.0 [TemperatureInterval$Fahrenheit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   TemperatureInterval$Rankine get _clone => TemperatureInterval$Rankine(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [TemperatureInterval$Rankine] with new value
   @override
@@ -311,13 +323,16 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
 
   static const _ratio = 2.25;
 
-  /// 1 [TemperatureInterval$Reaumur]  ≈  2.25 [TemperatureInterval$Fahrenheit]
+  /// 1 [TemperatureInterval$Reaumur] ≈ 2.25 [TemperatureInterval$Fahrenheit]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   TemperatureInterval$Reaumur get _clone => TemperatureInterval$Reaumur(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [TemperatureInterval$Reaumur] with new value
   @override

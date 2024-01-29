@@ -124,6 +124,9 @@ final class Conductivity$MhoPerMeter extends Conductivity {
   @override
   Conductivity$MhoPerMeter get _clone => Conductivity$MhoPerMeter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Conductivity$MhoPerMeter] with new value
   @override
   Conductivity$MhoPerMeter withValue(
@@ -133,7 +136,7 @@ final class Conductivity$MhoPerMeter extends Conductivity {
 
   /// Symbol for [Conductivity$MhoPerMeter]
   @override
-  String get symbol => '';
+  String get symbol => 'MhoPerMeter';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -170,7 +173,7 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
 
   static const _ratio = 100.0;
 
-  /// 1 [Conductivity$MhoPerCentimeter]  =  100.0 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$MhoPerCentimeter] = 100.0 [Conductivity$MhoPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -178,6 +181,9 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
   @override
   Conductivity$MhoPerCentimeter get _clone =>
       Conductivity$MhoPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductivity$MhoPerCentimeter] with new value
   @override
@@ -188,7 +194,7 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
 
   /// Symbol for [Conductivity$MhoPerCentimeter]
   @override
-  String get symbol => '';
+  String get symbol => 'MhoPerCentimeter';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -225,13 +231,16 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Conductivity$AbmhoPerMeter]  =  1000000000.0 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$AbmhoPerMeter] = 1000000000.0 [Conductivity$MhoPerMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductivity$AbmhoPerMeter get _clone => Conductivity$AbmhoPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductivity$AbmhoPerMeter] with new value
   @override
@@ -242,7 +251,7 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
 
   /// Symbol for [Conductivity$AbmhoPerMeter]
   @override
-  String get symbol => '';
+  String get symbol => 'AbmhoPerMeter';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -279,7 +288,7 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
 
   static const _ratio = 100000000000.0;
 
-  /// 1 [Conductivity$AbmhoPerCentimeter]  =  100000000000.0 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$AbmhoPerCentimeter] = 100000000000.0 [Conductivity$MhoPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -287,6 +296,9 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
   @override
   Conductivity$AbmhoPerCentimeter get _clone =>
       Conductivity$AbmhoPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductivity$AbmhoPerCentimeter] with new value
   @override
@@ -297,7 +309,7 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
 
   /// Symbol for [Conductivity$AbmhoPerCentimeter]
   @override
-  String get symbol => '';
+  String get symbol => 'AbmhoPerCentimeter';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -334,7 +346,7 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
 
   static const _ratio = 1.112653456e-12;
 
-  /// 1 [Conductivity$StatmhoPerMeter]  ≈  1.112653456e-12 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$StatmhoPerMeter] ≈ 1.112653456e-12 [Conductivity$MhoPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -342,6 +354,9 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
   @override
   Conductivity$StatmhoPerMeter get _clone =>
       Conductivity$StatmhoPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductivity$StatmhoPerMeter] with new value
   @override
@@ -352,7 +367,7 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
 
   /// Symbol for [Conductivity$StatmhoPerMeter]
   @override
-  String get symbol => '';
+  String get symbol => 'StatmhoPerMeter';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -389,7 +404,7 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
 
   static const _ratio = 1.112653456e-10;
 
-  /// 1 [Conductivity$StatmhoPerCentimeter]  ≈  1.112653456e-10 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$StatmhoPerCentimeter] ≈ 1.112653456e-10 [Conductivity$MhoPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -397,6 +412,9 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
   @override
   Conductivity$StatmhoPerCentimeter get _clone =>
       Conductivity$StatmhoPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductivity$StatmhoPerCentimeter] with new value
   @override
@@ -407,7 +425,7 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
 
   /// Symbol for [Conductivity$StatmhoPerCentimeter]
   @override
-  String get symbol => '';
+  String get symbol => 'StatmhoPerCentimeter';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -444,7 +462,7 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
 
   static const _ratio = 1.0;
 
-  /// 1 [Conductivity$SiemensPerMeter]  =  1.0 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$SiemensPerMeter] = 1.0 [Conductivity$MhoPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -452,6 +470,9 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
   @override
   Conductivity$SiemensPerMeter get _clone =>
       Conductivity$SiemensPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductivity$SiemensPerMeter] with new value
   @override
@@ -499,7 +520,7 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
 
   static const _ratio = 1e-12;
 
-  /// 1 [Conductivity$PicosiemensPerMeter]  ≈  1e-12 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$PicosiemensPerMeter] ≈ 1e-12 [Conductivity$MhoPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -507,6 +528,9 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
   @override
   Conductivity$PicosiemensPerMeter get _clone =>
       Conductivity$PicosiemensPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductivity$PicosiemensPerMeter] with new value
   @override

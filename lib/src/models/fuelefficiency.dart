@@ -334,7 +334,7 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [FuelEfficiency$ExameterPerLiter]  =  1000000000000000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$ExameterPerLiter] = 1000000000000000000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -342,6 +342,9 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$ExameterPerLiter get _clone =>
       FuelEfficiency$ExameterPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$ExameterPerLiter] with new value
   @override
@@ -389,7 +392,7 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [FuelEfficiency$PetameterPerLiter]  =  1000000000000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$PetameterPerLiter] = 1000000000000000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -397,6 +400,9 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$PetameterPerLiter get _clone =>
       FuelEfficiency$PetameterPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$PetameterPerLiter] with new value
   @override
@@ -444,7 +450,7 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [FuelEfficiency$TerameterPerLiter]  =  1000000000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$TerameterPerLiter] = 1000000000000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -452,6 +458,9 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$TerameterPerLiter get _clone =>
       FuelEfficiency$TerameterPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$TerameterPerLiter] with new value
   @override
@@ -499,7 +508,7 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [FuelEfficiency$GigameterPerLiter]  =  1000000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GigameterPerLiter] = 1000000000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -507,6 +516,9 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$GigameterPerLiter get _clone =>
       FuelEfficiency$GigameterPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$GigameterPerLiter] with new value
   @override
@@ -554,7 +566,7 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [FuelEfficiency$MegameterPerLiter]  =  1000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MegameterPerLiter] = 1000000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -562,6 +574,9 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$MegameterPerLiter get _clone =>
       FuelEfficiency$MegameterPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MegameterPerLiter] with new value
   @override
@@ -609,7 +624,7 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000.0;
 
-  /// 1 [FuelEfficiency$KilometerPerLiter]  =  1000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$KilometerPerLiter] = 1000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -617,6 +632,9 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$KilometerPerLiter get _clone =>
       FuelEfficiency$KilometerPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$KilometerPerLiter] with new value
   @override
@@ -664,7 +682,7 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
 
   static const _ratio = 100.0;
 
-  /// 1 [FuelEfficiency$HectometerPerLiter]  =  100.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$HectometerPerLiter] = 100.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -672,6 +690,9 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$HectometerPerLiter get _clone =>
       FuelEfficiency$HectometerPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$HectometerPerLiter] with new value
   @override
@@ -719,7 +740,7 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 10.0;
 
-  /// 1 [FuelEfficiency$DekameterPerLiter]  =  10.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$DekameterPerLiter] = 10.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -727,6 +748,9 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$DekameterPerLiter get _clone =>
       FuelEfficiency$DekameterPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$DekameterPerLiter] with new value
   @override
@@ -783,6 +807,9 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
   FuelEfficiency$MeterPerLiter get _clone =>
       FuelEfficiency$MeterPerLiter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [FuelEfficiency$MeterPerLiter] with new value
   @override
   FuelEfficiency$MeterPerLiter withValue(
@@ -829,7 +856,7 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
 
   static const _ratio = 0.01;
 
-  /// 1 [FuelEfficiency$CentimeterPerLiter]  ≈  0.01 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$CentimeterPerLiter] ≈ 0.01 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -837,6 +864,9 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$CentimeterPerLiter get _clone =>
       FuelEfficiency$CentimeterPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$CentimeterPerLiter] with new value
   @override
@@ -884,7 +914,7 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
 
   static const _ratio = 1609.344;
 
-  /// 1 [FuelEfficiency$MileUSPerLiter]  ≈  1609.344 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MileUSPerLiter] ≈ 1609.344 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -892,6 +922,9 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$MileUSPerLiter get _clone =>
       FuelEfficiency$MileUSPerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MileUSPerLiter] with new value
   @override
@@ -939,7 +972,7 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
 
   static const _ratio = 1.0;
 
-  /// 1 [FuelEfficiency$LiterPerMeter]  =  1.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$LiterPerMeter] = 1.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -947,6 +980,9 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
   @override
   FuelEfficiency$LiterPerMeter get _clone =>
       FuelEfficiency$LiterPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$LiterPerMeter] with new value
   @override
@@ -994,7 +1030,7 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
 
   static const _ratio = 0.00001;
 
-  /// 1 [FuelEfficiency$LiterPer100Km]  ≈  0.00001 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$LiterPer100Km] ≈ 0.00001 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1002,6 +1038,9 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
   @override
   FuelEfficiency$LiterPer100Km get _clone =>
       FuelEfficiency$LiterPer100Km(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$LiterPer100Km] with new value
   @override
@@ -1012,7 +1051,7 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
 
   /// Symbol for [FuelEfficiency$LiterPer100Km]
   @override
-  String get symbol => '';
+  String get symbol => 'LiterPer100Km';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1049,7 +1088,7 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
 
   static const _ratio = 0.0023521458329606934;
 
-  /// 1 [FuelEfficiency$GallonsUSPerMile]  ≈  0.0023521458329606934 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GallonsUSPerMile] ≈ 0.0023521458329606934 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1057,6 +1096,9 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
   @override
   FuelEfficiency$GallonsUSPerMile get _clone =>
       FuelEfficiency$GallonsUSPerMile(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUSPerMile] with new value
   @override
@@ -1104,7 +1146,7 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
 
   static const _ratio = 0.000023521458329606913;
 
-  /// 1 [FuelEfficiency$GallonsUSPer100mi]  ≈  0.000023521458329606913 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GallonsUSPer100mi] ≈ 0.000023521458329606913 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1112,6 +1154,9 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
   @override
   FuelEfficiency$GallonsUSPer100mi get _clone =>
       FuelEfficiency$GallonsUSPer100mi(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUSPer100mi] with new value
   @override
@@ -1122,7 +1167,7 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
 
   /// Symbol for [FuelEfficiency$GallonsUSPer100mi]
   @override
-  String get symbol => '';
+  String get symbol => 'GallonsUSPer100mi';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1159,7 +1204,7 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
 
   static const _ratio = 0.002824809363148498;
 
-  /// 1 [FuelEfficiency$GallonsUKPerMile]  ≈  0.002824809363148498 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GallonsUKPerMile] ≈ 0.002824809363148498 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1167,6 +1212,9 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
   @override
   FuelEfficiency$GallonsUKPerMile get _clone =>
       FuelEfficiency$GallonsUKPerMile(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUKPerMile] with new value
   @override
@@ -1214,7 +1262,7 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
 
   static const _ratio = 0.000028248093631484976;
 
-  /// 1 [FuelEfficiency$GallonsUKPer100mi]  ≈  0.000028248093631484976 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GallonsUKPer100mi] ≈ 0.000028248093631484976 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1222,6 +1270,9 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
   @override
   FuelEfficiency$GallonsUKPer100mi get _clone =>
       FuelEfficiency$GallonsUKPer100mi(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUKPer100mi] with new value
   @override
@@ -1232,7 +1283,7 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
 
   /// Symbol for [FuelEfficiency$GallonsUKPer100mi]
   @override
-  String get symbol => '';
+  String get symbol => 'GallonsUKPer100mi';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1269,7 +1320,7 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
 
   static const _ratio = 1853.24496;
 
-  /// 1 [FuelEfficiency$NauticalMilePerLiter]  ≈  1853.24496 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$NauticalMilePerLiter] ≈ 1853.24496 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1277,6 +1328,9 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
   @override
   FuelEfficiency$NauticalMilePerLiter get _clone =>
       FuelEfficiency$NauticalMilePerLiter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$NauticalMilePerLiter] with new value
   @override
@@ -1324,7 +1378,7 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
 
   static const _ratio = 489.5755247;
 
-  /// 1 [FuelEfficiency$NauticalMilePerGallonUS]  ≈  489.5755247 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$NauticalMilePerGallonUS] ≈ 489.5755247 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1332,6 +1386,9 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
   @override
   FuelEfficiency$NauticalMilePerGallonUS get _clone =>
       FuelEfficiency$NauticalMilePerGallonUS(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$NauticalMilePerGallonUS] with new value
   @override
@@ -1379,7 +1436,7 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
 
   static const _ratio = 264.1720524;
 
-  /// 1 [FuelEfficiency$KilometerPerGallonUS]  ≈  264.1720524 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$KilometerPerGallonUS] ≈ 264.1720524 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1387,6 +1444,9 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
   @override
   FuelEfficiency$KilometerPerGallonUS get _clone =>
       FuelEfficiency$KilometerPerGallonUS(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$KilometerPerGallonUS] with new value
   @override
@@ -1434,7 +1494,7 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
 
   static const _ratio = 0.2641720524;
 
-  /// 1 [FuelEfficiency$MeterPerGallonUS]  ≈  0.2641720524 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerGallonUS] ≈ 0.2641720524 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1442,6 +1502,9 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerGallonUS get _clone =>
       FuelEfficiency$MeterPerGallonUS(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallonUS] with new value
   @override
@@ -1489,7 +1552,7 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
 
   static const _ratio = 0.2199687986;
 
-  /// 1 [FuelEfficiency$MeterPerGallonUK]  ≈  0.2199687986 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerGallonUK] ≈ 0.2199687986 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1497,6 +1560,9 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerGallonUK get _clone =>
       FuelEfficiency$MeterPerGallonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallonUK] with new value
   @override
@@ -1544,7 +1610,7 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
 
   static const _ratio = 425.1437075;
 
-  /// 1 [FuelEfficiency$MilePerGallonUS]  ≈  425.1437075 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MilePerGallonUS] ≈ 425.1437075 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1552,6 +1618,9 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
   @override
   FuelEfficiency$MilePerGallonUS get _clone =>
       FuelEfficiency$MilePerGallonUS(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MilePerGallonUS] with new value
   @override
@@ -1599,7 +1668,7 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
 
   static const _ratio = 354.00619;
 
-  /// 1 [FuelEfficiency$MilePerGallonUK]  ≈  354.00619 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MilePerGallonUK] ≈ 354.00619 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1607,6 +1676,9 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
   @override
   FuelEfficiency$MilePerGallonUK get _clone =>
       FuelEfficiency$MilePerGallonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MilePerGallonUK] with new value
   @override
@@ -1654,7 +1726,7 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
 
   static const _ratio = 0.001;
 
-  /// 1 [FuelEfficiency$MeterPerMeterSquare]  ≈  0.001 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerMeterSquare] ≈ 0.001 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1662,6 +1734,9 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerMeterSquare get _clone =>
       FuelEfficiency$MeterPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerMeterSquare] with new value
   @override
@@ -1709,7 +1784,7 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
 
   static const _ratio = 1000.0;
 
-  /// 1 [FuelEfficiency$MeterPerCentimeterSquare]  =  1000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerCentimeterSquare] = 1000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1717,6 +1792,9 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerCentimeterSquare get _clone =>
       FuelEfficiency$MeterPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCentimeterSquare] with new value
   @override
@@ -1764,7 +1842,7 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
 
   static const _ratio = 0.001307950619;
 
-  /// 1 [FuelEfficiency$MeterPerYardSquare]  ≈  0.001307950619 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerYardSquare] ≈ 0.001307950619 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1772,6 +1850,9 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerYardSquare get _clone =>
       FuelEfficiency$MeterPerYardSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerYardSquare] with new value
   @override
@@ -1819,7 +1900,7 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
 
   static const _ratio = 0.03531466672;
 
-  /// 1 [FuelEfficiency$MeterPerFeetSquare]  ≈  0.03531466672 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerFeetSquare] ≈ 0.03531466672 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1827,6 +1908,9 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerFeetSquare get _clone =>
       FuelEfficiency$MeterPerFeetSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFeetSquare] with new value
   @override
@@ -1874,7 +1958,7 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
 
   static const _ratio = 61.02374409;
 
-  /// 1 [FuelEfficiency$MeterPerInchSquare]  ≈  61.02374409 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerInchSquare] ≈ 61.02374409 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1882,6 +1966,9 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerInchSquare get _clone =>
       FuelEfficiency$MeterPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerInchSquare] with new value
   @override
@@ -1929,7 +2016,7 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
 
   static const _ratio = 0.2641720524;
 
-  /// 1 [FuelEfficiency$MeterPerGallon]  ≈  0.2641720524 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerGallon] ≈ 0.2641720524 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1937,6 +2024,9 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerGallon get _clone =>
       FuelEfficiency$MeterPerGallon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallon] with new value
   @override
@@ -1984,7 +2074,7 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
 
   static const _ratio = 1.056688209;
 
-  /// 1 [FuelEfficiency$MeterPerQuart]  ≈  1.056688209 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerQuart] ≈ 1.056688209 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -1992,6 +2082,9 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerQuart get _clone =>
       FuelEfficiency$MeterPerQuart(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerQuart] with new value
   @override
@@ -2039,7 +2132,7 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
 
   static const _ratio = 0.8798751948;
 
-  /// 1 [FuelEfficiency$MeterPerQuartUK]  ≈  0.8798751948 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerQuartUK] ≈ 0.8798751948 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -2047,6 +2140,9 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerQuartUK get _clone =>
       FuelEfficiency$MeterPerQuartUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerQuartUK] with new value
   @override
@@ -2094,13 +2190,16 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
 
   static const _ratio = 2.113376419;
 
-  /// 1 [FuelEfficiency$MeterPerPint]  ≈  2.113376419 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerPint] ≈ 2.113376419 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FuelEfficiency$MeterPerPint get _clone => FuelEfficiency$MeterPerPint(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerPint] with new value
   @override
@@ -2148,7 +2247,7 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
 
   static const _ratio = 1.759750389;
 
-  /// 1 [FuelEfficiency$MeterPerPintUK]  ≈  1.759750389 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerPintUK] ≈ 1.759750389 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -2156,6 +2255,9 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerPintUK get _clone =>
       FuelEfficiency$MeterPerPintUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerPintUK] with new value
   @override
@@ -2203,13 +2305,16 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
 
   static const _ratio = 4.226752838;
 
-  /// 1 [FuelEfficiency$MeterPerCup]  ≈  4.226752838 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerCup] ≈ 4.226752838 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FuelEfficiency$MeterPerCup get _clone => FuelEfficiency$MeterPerCup(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCup] with new value
   @override
@@ -2257,7 +2362,7 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
 
   static const _ratio = 3.519500777;
 
-  /// 1 [FuelEfficiency$MeterPerCupUK]  ≈  3.519500777 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerCupUK] ≈ 3.519500777 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -2265,6 +2370,9 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerCupUK get _clone =>
       FuelEfficiency$MeterPerCupUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCupUK] with new value
   @override
@@ -2312,7 +2420,7 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
 
   static const _ratio = 33.8140227;
 
-  /// 1 [FuelEfficiency$MeterPerFluidOunce]  ≈  33.8140227 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerFluidOunce] ≈ 33.8140227 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -2320,6 +2428,9 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerFluidOunce get _clone =>
       FuelEfficiency$MeterPerFluidOunce(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFluidOunce] with new value
   @override
@@ -2367,7 +2478,7 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
 
   static const _ratio = 35.19500777;
 
-  /// 1 [FuelEfficiency$MeterPerFluidOunceUK]  ≈  35.19500777 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerFluidOunceUK] ≈ 35.19500777 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
 
@@ -2375,6 +2486,9 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
   @override
   FuelEfficiency$MeterPerFluidOunceUK get _clone =>
       FuelEfficiency$MeterPerFluidOunceUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFluidOunceUK] with new value
   @override

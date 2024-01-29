@@ -134,6 +134,9 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
   ElectricField$KilovoltPerCentimeter get _clone =>
       ElectricField$KilovoltPerCentimeter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [ElectricField$KilovoltPerCentimeter] with new value
   @override
   ElectricField$KilovoltPerCentimeter withValue(
@@ -180,13 +183,16 @@ final class ElectricField$VoltPerMeter extends ElectricField {
 
   static const _ratio = 0.00001;
 
-  /// 1 [ElectricField$VoltPerMeter]  ≈  0.00001 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$VoltPerMeter] ≈ 0.00001 [ElectricField$KilovoltPerCentimeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ElectricField$VoltPerMeter get _clone => ElectricField$VoltPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ElectricField$VoltPerMeter] with new value
   @override
@@ -234,7 +240,7 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
 
   static const _ratio = 0.001;
 
-  /// 1 [ElectricField$VoltPerCentimeter]  ≈  0.001 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$VoltPerCentimeter] ≈ 0.001 [ElectricField$KilovoltPerCentimeter]
   @override
   num get ratio => _ratio;
 
@@ -242,6 +248,9 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
   @override
   ElectricField$VoltPerCentimeter get _clone =>
       ElectricField$VoltPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ElectricField$VoltPerCentimeter] with new value
   @override
@@ -289,13 +298,16 @@ final class ElectricField$VoltPerInch extends ElectricField {
 
   static const _ratio = 0.0003937007874015748;
 
-  /// 1 [ElectricField$VoltPerInch]  ≈  0.0003937007874015748 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$VoltPerInch] ≈ 0.0003937007874015748 [ElectricField$KilovoltPerCentimeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ElectricField$VoltPerInch get _clone => ElectricField$VoltPerInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ElectricField$VoltPerInch] with new value
   @override
@@ -343,7 +355,7 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
 
   static const _ratio = 1e-8;
 
-  /// 1 [ElectricField$MillivoltPerMeter]  ≈  1e-8 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$MillivoltPerMeter] ≈ 1e-8 [ElectricField$KilovoltPerCentimeter]
   @override
   num get ratio => _ratio;
 
@@ -351,6 +363,9 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
   @override
   ElectricField$MillivoltPerMeter get _clone =>
       ElectricField$MillivoltPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ElectricField$MillivoltPerMeter] with new value
   @override
@@ -398,7 +413,7 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
 
   static const _ratio = 1e-11;
 
-  /// 1 [ElectricField$MicrovoltPerMeter]  ≈  1e-11 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$MicrovoltPerMeter] ≈ 1e-11 [ElectricField$KilovoltPerCentimeter]
   @override
   num get ratio => _ratio;
 
@@ -406,6 +421,9 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
   @override
   ElectricField$MicrovoltPerMeter get _clone =>
       ElectricField$MicrovoltPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ElectricField$MicrovoltPerMeter] with new value
   @override
@@ -453,7 +471,7 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
 
   static const _ratio = 1e-11;
 
-  /// 1 [ElectricField$AbvoltPerCentimeter]  ≈  1e-11 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$AbvoltPerCentimeter] ≈ 1e-11 [ElectricField$KilovoltPerCentimeter]
   @override
   num get ratio => _ratio;
 
@@ -461,6 +479,9 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
   @override
   ElectricField$AbvoltPerCentimeter get _clone =>
       ElectricField$AbvoltPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ElectricField$AbvoltPerCentimeter] with new value
   @override
@@ -508,7 +529,7 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
 
   static const _ratio = 0.2997919999933998;
 
-  /// 1 [ElectricField$StatvoltPerCentimeter]  ≈  0.2997919999933998 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$StatvoltPerCentimeter] ≈ 0.2997919999933998 [ElectricField$KilovoltPerCentimeter]
   @override
   num get ratio => _ratio;
 
@@ -516,6 +537,9 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
   @override
   ElectricField$StatvoltPerCentimeter get _clone =>
       ElectricField$StatvoltPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ElectricField$StatvoltPerCentimeter] with new value
   @override
@@ -563,7 +587,7 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
 
   static const _ratio = 0.11802834645669291;
 
-  /// 1 [ElectricField$StatvoltPerInch]  ≈  0.11802834645669291 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$StatvoltPerInch] ≈ 0.11802834645669291 [ElectricField$KilovoltPerCentimeter]
   @override
   num get ratio => _ratio;
 
@@ -571,6 +595,9 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
   @override
   ElectricField$StatvoltPerInch get _clone =>
       ElectricField$StatvoltPerInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ElectricField$StatvoltPerInch] with new value
   @override

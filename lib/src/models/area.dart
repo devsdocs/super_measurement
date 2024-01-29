@@ -269,13 +269,16 @@ final class Area$KilometerSquare extends Area {
 
   static const _ratio = 1e+34;
 
-  /// 1 [Area$KilometerSquare]  =  1e+34 [Area$Barn]
+  /// 1 [Area$KilometerSquare] = 1e+34 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$KilometerSquare get _clone => Area$KilometerSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$KilometerSquare] with new value
   @override
@@ -323,13 +326,16 @@ final class Area$HectometerSquare extends Area {
 
   static const _ratio = 1e+32;
 
-  /// 1 [Area$HectometerSquare]  =  1e+32 [Area$Barn]
+  /// 1 [Area$HectometerSquare] = 1e+32 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$HectometerSquare get _clone => Area$HectometerSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$HectometerSquare] with new value
   @override
@@ -377,13 +383,16 @@ final class Area$DekameterSquare extends Area {
 
   static const _ratio = 1e+30;
 
-  /// 1 [Area$DekameterSquare]  =  1e+30 [Area$Barn]
+  /// 1 [Area$DekameterSquare] = 1e+30 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$DekameterSquare get _clone => Area$DekameterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$DekameterSquare] with new value
   @override
@@ -431,13 +440,16 @@ final class Area$MeterSquare extends Area {
 
   static const _ratio = 1e+28;
 
-  /// 1 [Area$MeterSquare]  =  1e+28 [Area$Barn]
+  /// 1 [Area$MeterSquare] = 1e+28 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$MeterSquare get _clone => Area$MeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$MeterSquare] with new value
   @override
@@ -485,13 +497,16 @@ final class Area$DecimeterSquare extends Area {
 
   static const _ratio = 1e+26;
 
-  /// 1 [Area$DecimeterSquare]  =  1e+26 [Area$Barn]
+  /// 1 [Area$DecimeterSquare] = 1e+26 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$DecimeterSquare get _clone => Area$DecimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$DecimeterSquare] with new value
   @override
@@ -539,13 +554,16 @@ final class Area$CentimeterSquare extends Area {
 
   static const _ratio = 1e+24;
 
-  /// 1 [Area$CentimeterSquare]  =  1e+24 [Area$Barn]
+  /// 1 [Area$CentimeterSquare] = 1e+24 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$CentimeterSquare get _clone => Area$CentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$CentimeterSquare] with new value
   @override
@@ -593,13 +611,16 @@ final class Area$MillimeterSquare extends Area {
 
   static const _ratio = 1e+22;
 
-  /// 1 [Area$MillimeterSquare]  =  1e+22 [Area$Barn]
+  /// 1 [Area$MillimeterSquare] = 1e+22 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$MillimeterSquare get _clone => Area$MillimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$MillimeterSquare] with new value
   @override
@@ -647,13 +668,16 @@ final class Area$MicrometerSquare extends Area {
 
   static const _ratio = 10000000000000000.0;
 
-  /// 1 [Area$MicrometerSquare]  =  10000000000000000.0 [Area$Barn]
+  /// 1 [Area$MicrometerSquare] = 10000000000000000.0 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$MicrometerSquare get _clone => Area$MicrometerSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$MicrometerSquare] with new value
   @override
@@ -701,13 +725,16 @@ final class Area$NanometerSquare extends Area {
 
   static const _ratio = 10000000000.0;
 
-  /// 1 [Area$NanometerSquare]  =  10000000000.0 [Area$Barn]
+  /// 1 [Area$NanometerSquare] = 10000000000.0 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$NanometerSquare get _clone => Area$NanometerSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$NanometerSquare] with new value
   @override
@@ -755,13 +782,16 @@ final class Area$Hectare extends Area {
 
   static const _ratio = 1e+32;
 
-  /// 1 [Area$Hectare]  =  1e+32 [Area$Barn]
+  /// 1 [Area$Hectare] = 1e+32 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Hectare get _clone => Area$Hectare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Hectare] with new value
   @override
@@ -809,13 +839,16 @@ final class Area$Are extends Area {
 
   static const _ratio = 1e+30;
 
-  /// 1 [Area$Are]  =  1e+30 [Area$Barn]
+  /// 1 [Area$Are] = 1e+30 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Are get _clone => Area$Are(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Are] with new value
   @override
@@ -871,6 +904,9 @@ final class Area$Barn extends Area {
   @override
   Area$Barn get _clone => Area$Barn(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Area$Barn] with new value
   @override
   Area$Barn withValue(
@@ -917,13 +953,16 @@ final class Area$MileSquare extends Area {
 
   static const _ratio = 2.5899881103389906e+34;
 
-  /// 1 [Area$MileSquare]  =  2.5899881103389906e+34 [Area$Barn]
+  /// 1 [Area$MileSquare] = 2.5899881103389906e+34 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$MileSquare get _clone => Area$MileSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$MileSquare] with new value
   @override
@@ -971,13 +1010,16 @@ final class Area$YardSquare extends Area {
 
   static const _ratio = 8.361273600009655e+27;
 
-  /// 1 [Area$YardSquare]  =  8.361273600009655e+27 [Area$Barn]
+  /// 1 [Area$YardSquare] = 8.361273600009655e+27 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$YardSquare get _clone => Area$YardSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$YardSquare] with new value
   @override
@@ -1025,13 +1067,16 @@ final class Area$FootSquare extends Area {
 
   static const _ratio = 9.290304000010727e+26;
 
-  /// 1 [Area$FootSquare]  =  9.290304000010727e+26 [Area$Barn]
+  /// 1 [Area$FootSquare] = 9.290304000010727e+26 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$FootSquare get _clone => Area$FootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$FootSquare] with new value
   @override
@@ -1079,13 +1124,16 @@ final class Area$InchSquare extends Area {
 
   static const _ratio = 6.451600000007449e+24;
 
-  /// 1 [Area$InchSquare]  =  6.451600000007449e+24 [Area$Barn]
+  /// 1 [Area$InchSquare] = 6.451600000007449e+24 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$InchSquare get _clone => Area$InchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$InchSquare] with new value
   @override
@@ -1133,13 +1181,16 @@ final class Area$Township extends Area {
 
   static const _ratio = 9.323957197220366e+35;
 
-  /// 1 [Area$Township]  =  9.323957197220366e+35 [Area$Barn]
+  /// 1 [Area$Township] = 9.323957197220366e+35 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Township get _clone => Area$Township(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Township] with new value
   @override
@@ -1187,13 +1238,16 @@ final class Area$Section extends Area {
 
   static const _ratio = 2.5899881103389906e+34;
 
-  /// 1 [Area$Section]  =  2.5899881103389906e+34 [Area$Barn]
+  /// 1 [Area$Section] = 2.5899881103389906e+34 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Section get _clone => Area$Section(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Section] with new value
   @override
@@ -1241,13 +1295,16 @@ final class Area$Acre extends Area {
 
   static const _ratio = 4.046856422404673e+31;
 
-  /// 1 [Area$Acre]  =  4.046856422404673e+31 [Area$Barn]
+  /// 1 [Area$Acre] = 4.046856422404673e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Acre get _clone => Area$Acre(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Acre] with new value
   @override
@@ -1295,13 +1352,16 @@ final class Area$Rood extends Area {
 
   static const _ratio = 1.0117141056011683e+31;
 
-  /// 1 [Area$Rood]  =  1.0117141056011683e+31 [Area$Barn]
+  /// 1 [Area$Rood] = 1.0117141056011683e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Rood get _clone => Area$Rood(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Rood] with new value
   @override
@@ -1312,7 +1372,7 @@ final class Area$Rood extends Area {
 
   /// Symbol for [Area$Rood]
   @override
-  String get symbol => '';
+  String get symbol => 'Rood';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1349,13 +1409,16 @@ final class Area$ChainSquare extends Area {
 
   static const _ratio = 4.046856422404673e+30;
 
-  /// 1 [Area$ChainSquare]  =  4.046856422404673e+30 [Area$Barn]
+  /// 1 [Area$ChainSquare] = 4.046856422404673e+30 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$ChainSquare get _clone => Area$ChainSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$ChainSquare] with new value
   @override
@@ -1403,13 +1466,16 @@ final class Area$RodSquare extends Area {
 
   static const _ratio = 2.5292852640029207e+29;
 
-  /// 1 [Area$RodSquare]  =  2.5292852640029207e+29 [Area$Barn]
+  /// 1 [Area$RodSquare] = 2.5292852640029207e+29 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$RodSquare get _clone => Area$RodSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$RodSquare] with new value
   @override
@@ -1457,13 +1523,16 @@ final class Area$PerchSquare extends Area {
 
   static const _ratio = 2.5292852640029207e+29;
 
-  /// 1 [Area$PerchSquare]  =  2.5292852640029207e+29 [Area$Barn]
+  /// 1 [Area$PerchSquare] = 2.5292852640029207e+29 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$PerchSquare get _clone => Area$PerchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$PerchSquare] with new value
   @override
@@ -1474,7 +1543,7 @@ final class Area$PerchSquare extends Area {
 
   /// Symbol for [Area$PerchSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'PerchSquare';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1511,13 +1580,16 @@ final class Area$PoleSquare extends Area {
 
   static const _ratio = 2.5292852640029207e+29;
 
-  /// 1 [Area$PoleSquare]  =  2.5292852640029207e+29 [Area$Barn]
+  /// 1 [Area$PoleSquare] = 2.5292852640029207e+29 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$PoleSquare get _clone => Area$PoleSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$PoleSquare] with new value
   @override
@@ -1528,7 +1600,7 @@ final class Area$PoleSquare extends Area {
 
   /// Symbol for [Area$PoleSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'PoleSquare';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1565,13 +1637,16 @@ final class Area$Arpent extends Area {
 
   static const _ratio = 4.041282240004667e+31;
 
-  /// 1 [Area$Arpent]  =  4.041282240004667e+31 [Area$Barn]
+  /// 1 [Area$Arpent] = 4.041282240004667e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Arpent get _clone => Area$Arpent(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Arpent] with new value
   @override
@@ -1582,7 +1657,7 @@ final class Area$Arpent extends Area {
 
   /// Symbol for [Area$Arpent]
   @override
-  String get symbol => '';
+  String get symbol => 'Arpent';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1619,13 +1694,16 @@ final class Area$Cuerda extends Area {
 
   static const _ratio = 3.930395625e+31;
 
-  /// 1 [Area$Cuerda]  =  3.930395625e+31 [Area$Barn]
+  /// 1 [Area$Cuerda] = 3.930395625e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Cuerda get _clone => Area$Cuerda(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Cuerda] with new value
   @override
@@ -1673,13 +1751,16 @@ final class Area$Plaza extends Area {
 
   static const _ratio = 6.4e+31;
 
-  /// 1 [Area$Plaza]  =  6.4e+31 [Area$Barn]
+  /// 1 [Area$Plaza] = 6.4e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Plaza get _clone => Area$Plaza(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Plaza] with new value
   @override
@@ -1690,7 +1771,7 @@ final class Area$Plaza extends Area {
 
   /// Symbol for [Area$Plaza]
   @override
-  String get symbol => '';
+  String get symbol => 'Plaza';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1727,13 +1808,16 @@ final class Area$VarasCastellanasCuad extends Area {
 
   static const _ratio = 6.98737e+27;
 
-  /// 1 [Area$VarasCastellanasCuad]  =  6.98737e+27 [Area$Barn]
+  /// 1 [Area$VarasCastellanasCuad] = 6.98737e+27 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$VarasCastellanasCuad get _clone => Area$VarasCastellanasCuad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$VarasCastellanasCuad] with new value
   @override
@@ -1744,7 +1828,7 @@ final class Area$VarasCastellanasCuad extends Area {
 
   /// Symbol for [Area$VarasCastellanasCuad]
   @override
-  String get symbol => '';
+  String get symbol => 'VarasCastellanasCuad';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1781,13 +1865,16 @@ final class Area$VarasConuquerasCuad extends Area {
 
   static const _ratio = 6.288633e+28;
 
-  /// 1 [Area$VarasConuquerasCuad]  =  6.288633e+28 [Area$Barn]
+  /// 1 [Area$VarasConuquerasCuad] = 6.288633e+28 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$VarasConuquerasCuad get _clone => Area$VarasConuquerasCuad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$VarasConuquerasCuad] with new value
   @override
@@ -1798,7 +1885,7 @@ final class Area$VarasConuquerasCuad extends Area {
 
   /// Symbol for [Area$VarasConuquerasCuad]
   @override
-  String get symbol => '';
+  String get symbol => 'VarasConuquerasCuad';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1835,13 +1922,16 @@ final class Area$Strema extends Area {
 
   static const _ratio = 1e+31;
 
-  /// 1 [Area$Strema]  =  1e+31 [Area$Barn]
+  /// 1 [Area$Strema] = 1e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Strema get _clone => Area$Strema(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Strema] with new value
   @override
@@ -1852,7 +1942,7 @@ final class Area$Strema extends Area {
 
   /// Symbol for [Area$Strema]
   @override
-  String get symbol => '';
+  String get symbol => 'Strema';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1889,13 +1979,16 @@ final class Area$CircularInch extends Area {
 
   static const _ratio = 5.06707479098e+24;
 
-  /// 1 [Area$CircularInch]  =  5.06707479098e+24 [Area$Barn]
+  /// 1 [Area$CircularInch] = 5.06707479098e+24 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$CircularInch get _clone => Area$CircularInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$CircularInch] with new value
   @override
@@ -1906,7 +1999,7 @@ final class Area$CircularInch extends Area {
 
   /// Symbol for [Area$CircularInch]
   @override
-  String get symbol => '';
+  String get symbol => 'CircularInch';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1943,13 +2036,16 @@ final class Area$CircularMil extends Area {
 
   static const _ratio = 5067074790980000000.0;
 
-  /// 1 [Area$CircularMil]  =  5067074790980000000.0 [Area$Barn]
+  /// 1 [Area$CircularMil] = 5067074790980000000.0 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$CircularMil get _clone => Area$CircularMil(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$CircularMil] with new value
   @override
@@ -1997,13 +2093,16 @@ final class Area$Tahulla extends Area {
 
   static const _ratio = 1.118e+31;
 
-  /// 1 [Area$Tahulla]  =  1.118e+31 [Area$Barn]
+  /// 1 [Area$Tahulla] = 1.118e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Area$Tahulla get _clone => Area$Tahulla(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Area$Tahulla] with new value
   @override
@@ -2014,7 +2113,7 @@ final class Area$Tahulla extends Area {
 
   /// Symbol for [Area$Tahulla]
   @override
-  String get symbol => '';
+  String get symbol => 'Tahulla';
 
   @override
   Map<String, dynamic> toJson() => {

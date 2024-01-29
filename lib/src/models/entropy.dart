@@ -123,7 +123,7 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Entropy$KilojoulePerKilogramK]  =  1000.0 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$KilojoulePerKilogramK] = 1000.0 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -131,6 +131,9 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
   @override
   Entropy$KilojoulePerKilogramK get _clone =>
       Entropy$KilojoulePerKilogramK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Entropy$KilojoulePerKilogramK] with new value
   @override
@@ -178,7 +181,7 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Entropy$KilojoulePerKilogramDegreeC]  =  1000.0 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$KilojoulePerKilogramDegreeC] = 1000.0 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -186,6 +189,9 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
   @override
   Entropy$KilojoulePerKilogramDegreeC get _clone =>
       Entropy$KilojoulePerKilogramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Entropy$KilojoulePerKilogramDegreeC] with new value
   @override
@@ -241,6 +247,9 @@ final class Entropy$JoulePerKilogramK extends Entropy {
   @override
   Entropy$JoulePerKilogramK get _clone => Entropy$JoulePerKilogramK(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Entropy$JoulePerKilogramK] with new value
   @override
   Entropy$JoulePerKilogramK withValue(
@@ -287,7 +296,7 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
 
   static const _ratio = 1.0;
 
-  /// 1 [Entropy$JoulePerKilogramDegreeC]  =  1.0 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$JoulePerKilogramDegreeC] = 1.0 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -295,6 +304,9 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
   @override
   Entropy$JoulePerKilogramDegreeC get _clone =>
       Entropy$JoulePerKilogramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Entropy$JoulePerKilogramDegreeC] with new value
   @override
@@ -342,7 +354,7 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
 
   static const _ratio = 4186.8;
 
-  /// 1 [Entropy$KilocaloriePerKilogramDegreeC]  ≈  4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$KilocaloriePerKilogramDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -350,6 +362,9 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
   @override
   Entropy$KilocaloriePerKilogramDegreeC get _clone =>
       Entropy$KilocaloriePerKilogramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Entropy$KilocaloriePerKilogramDegreeC] with new value
   @override
@@ -397,7 +412,7 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
 
   static const _ratio = 4186.8;
 
-  /// 1 [Entropy$CaloriePerGramDegreeC]  ≈  4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$CaloriePerGramDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
@@ -405,6 +420,9 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
   @override
   Entropy$CaloriePerGramDegreeC get _clone =>
       Entropy$CaloriePerGramDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Entropy$CaloriePerGramDegreeC] with new value
   @override
@@ -452,13 +470,16 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
 
   static const _ratio = 4186.8;
 
-  /// 1 [Entropy$BTUPerPoundDegreeF]  ≈  4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$BTUPerPoundDegreeF] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Entropy$BTUPerPoundDegreeF get _clone => Entropy$BTUPerPoundDegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Entropy$BTUPerPoundDegreeF] with new value
   @override
@@ -469,7 +490,7 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
 
   /// Symbol for [Entropy$BTUPerPoundDegreeF]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerPoundDegreeF';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -506,13 +527,16 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
 
   static const _ratio = 4186.8;
 
-  /// 1 [Entropy$BTUPerPoundDegreeR]  ≈  4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$BTUPerPoundDegreeR] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Entropy$BTUPerPoundDegreeR get _clone => Entropy$BTUPerPoundDegreeR(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Entropy$BTUPerPoundDegreeR] with new value
   @override
@@ -523,7 +547,7 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
 
   /// Symbol for [Entropy$BTUPerPoundDegreeR]
   @override
-  String get symbol => '';
+  String get symbol => 'BTUPerPoundDegreeR';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -560,13 +584,16 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
 
   static const _ratio = 4186.8;
 
-  /// 1 [Entropy$CHUPerPoundDegreeC]  ≈  4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$CHUPerPoundDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Entropy$CHUPerPoundDegreeC get _clone => Entropy$CHUPerPoundDegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Entropy$CHUPerPoundDegreeC] with new value
   @override
@@ -577,7 +604,7 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
 
   /// Symbol for [Entropy$CHUPerPoundDegreeC]
   @override
-  String get symbol => '';
+  String get symbol => 'CHUPerPoundDegreeC';
 
   @override
   Map<String, dynamic> toJson() => {

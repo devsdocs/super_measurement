@@ -122,6 +122,9 @@ final class Resistivity$OhmMeter extends Resistivity {
   @override
   Resistivity$OhmMeter get _clone => Resistivity$OhmMeter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Resistivity$OhmMeter] with new value
   @override
   Resistivity$OhmMeter withValue(
@@ -168,13 +171,16 @@ final class Resistivity$OhmCentimeter extends Resistivity {
 
   static const _ratio = 0.01;
 
-  /// 1 [Resistivity$OhmCentimeter]  ≈  0.01 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$OhmCentimeter] ≈ 0.01 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistivity$OhmCentimeter get _clone => Resistivity$OhmCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistivity$OhmCentimeter] with new value
   @override
@@ -222,13 +228,16 @@ final class Resistivity$OhmInch extends Resistivity {
 
   static const _ratio = 0.0254;
 
-  /// 1 [Resistivity$OhmInch]  ≈  0.0254 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$OhmInch] ≈ 0.0254 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistivity$OhmInch get _clone => Resistivity$OhmInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistivity$OhmInch] with new value
   @override
@@ -276,7 +285,7 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
 
   static const _ratio = 1e-8;
 
-  /// 1 [Resistivity$MicrohmCentimeter]  ≈  1e-8 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$MicrohmCentimeter] ≈ 1e-8 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
 
@@ -284,6 +293,9 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
   @override
   Resistivity$MicrohmCentimeter get _clone =>
       Resistivity$MicrohmCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistivity$MicrohmCentimeter] with new value
   @override
@@ -331,13 +343,16 @@ final class Resistivity$MicrohmInch extends Resistivity {
 
   static const _ratio = 2.54e-8;
 
-  /// 1 [Resistivity$MicrohmInch]  ≈  2.54e-8 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$MicrohmInch] ≈ 2.54e-8 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistivity$MicrohmInch get _clone => Resistivity$MicrohmInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistivity$MicrohmInch] with new value
   @override
@@ -385,13 +400,16 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
 
   static const _ratio = 1e-11;
 
-  /// 1 [Resistivity$AbohmCentimeter]  ≈  1e-11 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$AbohmCentimeter] ≈ 1e-11 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Resistivity$AbohmCentimeter get _clone => Resistivity$AbohmCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistivity$AbohmCentimeter] with new value
   @override
@@ -439,7 +457,7 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
 
   static const _ratio = 8987524324.0;
 
-  /// 1 [Resistivity$StatohmCentimeter]  =  8987524324.0 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$StatohmCentimeter] = 8987524324.0 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
 
@@ -447,6 +465,9 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
   @override
   Resistivity$StatohmCentimeter get _clone =>
       Resistivity$StatohmCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistivity$StatohmCentimeter] with new value
   @override
@@ -494,7 +515,7 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
 
   static const _ratio = 1.662426113e-9;
 
-  /// 1 [Resistivity$CircularMilOhmPerFoot]  ≈  1.662426113e-9 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$CircularMilOhmPerFoot] ≈ 1.662426113e-9 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
 
@@ -502,6 +523,9 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
   @override
   Resistivity$CircularMilOhmPerFoot get _clone =>
       Resistivity$CircularMilOhmPerFoot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Resistivity$CircularMilOhmPerFoot] with new value
   @override

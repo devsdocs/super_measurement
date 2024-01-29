@@ -109,7 +109,7 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
 
   static const _ratio = 0.00001;
 
-  /// 1 [ChemicalHenrysLaw$NewtonMeterPerKilogram]  ≈  0.00001 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
+  /// 1 [ChemicalHenrysLaw$NewtonMeterPerKilogram] ≈ 0.00001 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -117,6 +117,9 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
   @override
   ChemicalHenrysLaw$NewtonMeterPerKilogram get _clone =>
       ChemicalHenrysLaw$NewtonMeterPerKilogram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ChemicalHenrysLaw$NewtonMeterPerKilogram] with new value
   @override
@@ -174,6 +177,9 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
   ChemicalHenrysLaw$BarPerKilogramPerMeterCubic get _clone =>
       ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic] with new value
   @override
   ChemicalHenrysLaw$BarPerKilogramPerMeterCubic withValue(
@@ -183,7 +189,7 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
 
   /// Symbol for [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
-  String get symbol => '';
+  String get symbol => 'BarPerKilogramPerMeterCubic';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -222,7 +228,7 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
 
   static const _ratio = 1.01325;
 
-  /// 1 [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic]  ≈  1.01325 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
+  /// 1 [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic] ≈ 1.01325 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -230,6 +236,9 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
   @override
   ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic get _clone =>
       ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic] with new value
   @override
@@ -240,7 +249,7 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
 
   /// Symbol for [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic]
   @override
-  String get symbol => '';
+  String get symbol => 'AtmospherePerKilogramPerMeterCubic';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -279,7 +288,7 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
 
   static const _ratio = 0.02869204481;
 
-  /// 1 [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic]  ≈  0.02869204481 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
+  /// 1 [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic] ≈ 0.02869204481 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -287,6 +296,9 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
   @override
   ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic get _clone =>
       ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic] with new value
   @override
@@ -297,7 +309,7 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
 
   /// Symbol for [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic]
   @override
-  String get symbol => '';
+  String get symbol => 'AtmospherePerKilogramPerFootCubic';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -336,7 +348,7 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
 
   static const _ratio = 0.00101325;
 
-  /// 1 [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic]  ≈  0.00101325 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
+  /// 1 [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic] ≈ 0.00101325 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -344,6 +356,9 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
   @override
   ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic get _clone =>
       ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic] with new value
   @override
@@ -354,7 +369,7 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
 
   /// Symbol for [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic]
   @override
-  String get symbol => '';
+  String get symbol => 'AtmospherePerGramPerCentimeterCubic';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -392,7 +407,7 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
 
   static const _ratio = 0.06325513043;
 
-  /// 1 [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic]  ≈  0.06325513043 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
+  /// 1 [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic] ≈ 0.06325513043 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -400,6 +415,9 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
   @override
   ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic get _clone =>
       ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic] with new value
   @override
@@ -410,7 +428,7 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
 
   /// Symbol for [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic]
   @override
-  String get symbol => '';
+  String get symbol => 'AtmospherePerPoundPerFootCubic';
 
   @override
   Map<String, dynamic> toJson() => {

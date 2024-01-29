@@ -125,13 +125,16 @@ final class Conductance$Mho extends Conductance {
 
   static const _ratio = 899000000000.0;
 
-  /// 1 [Conductance$Mho]  =  899000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Mho] = 899000000000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Mho get _clone => Conductance$Mho(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Mho] with new value
   @override
@@ -142,7 +145,7 @@ final class Conductance$Mho extends Conductance {
 
   /// Symbol for [Conductance$Mho]
   @override
-  String get symbol => '';
+  String get symbol => 'Mho';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -179,13 +182,16 @@ final class Conductance$Gemmho extends Conductance {
 
   static const _ratio = 899000.0;
 
-  /// 1 [Conductance$Gemmho]  =  899000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Gemmho] = 899000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Gemmho get _clone => Conductance$Gemmho(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Gemmho] with new value
   @override
@@ -196,7 +202,7 @@ final class Conductance$Gemmho extends Conductance {
 
   /// Symbol for [Conductance$Gemmho]
   @override
-  String get symbol => '';
+  String get symbol => 'Gemmho';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -233,13 +239,16 @@ final class Conductance$Micromho extends Conductance {
 
   static const _ratio = 899000.0;
 
-  /// 1 [Conductance$Micromho]  =  899000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Micromho] = 899000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Micromho get _clone => Conductance$Micromho(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Micromho] with new value
   @override
@@ -250,7 +259,7 @@ final class Conductance$Micromho extends Conductance {
 
   /// Symbol for [Conductance$Micromho]
   @override
-  String get symbol => '';
+  String get symbol => 'Micromho';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -287,13 +296,16 @@ final class Conductance$Megasiemens extends Conductance {
 
   static const _ratio = 899000000000000000.0;
 
-  /// 1 [Conductance$Megasiemens]  =  899000000000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Megasiemens] = 899000000000000000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Megasiemens get _clone => Conductance$Megasiemens(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Megasiemens] with new value
   @override
@@ -341,13 +353,16 @@ final class Conductance$Kilosiemens extends Conductance {
 
   static const _ratio = 899000000000000.0;
 
-  /// 1 [Conductance$Kilosiemens]  =  899000000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Kilosiemens] = 899000000000000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Kilosiemens get _clone => Conductance$Kilosiemens(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Kilosiemens] with new value
   @override
@@ -395,13 +410,16 @@ final class Conductance$Siemens extends Conductance {
 
   static const _ratio = 899000000000.0;
 
-  /// 1 [Conductance$Siemens]  =  899000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Siemens] = 899000000000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Siemens get _clone => Conductance$Siemens(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Siemens] with new value
   @override
@@ -449,13 +467,16 @@ final class Conductance$Millisiemens extends Conductance {
 
   static const _ratio = 899000000.0;
 
-  /// 1 [Conductance$Millisiemens]  =  899000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Millisiemens] = 899000000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Millisiemens get _clone => Conductance$Millisiemens(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Millisiemens] with new value
   @override
@@ -503,13 +524,16 @@ final class Conductance$Microsiemens extends Conductance {
 
   static const _ratio = 899000.0;
 
-  /// 1 [Conductance$Microsiemens]  =  899000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Microsiemens] = 899000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Microsiemens get _clone => Conductance$Microsiemens(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Microsiemens] with new value
   @override
@@ -557,13 +581,16 @@ final class Conductance$Abmho extends Conductance {
 
   static const _ratio = 899000000000000000000.0;
 
-  /// 1 [Conductance$Abmho]  =  899000000000000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Abmho] = 899000000000000000000.0 [Conductance$Statmho]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Conductance$Abmho get _clone => Conductance$Abmho(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Conductance$Abmho] with new value
   @override
@@ -574,7 +601,7 @@ final class Conductance$Abmho extends Conductance {
 
   /// Symbol for [Conductance$Abmho]
   @override
-  String get symbol => '';
+  String get symbol => 'Abmho';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -619,6 +646,9 @@ final class Conductance$Statmho extends Conductance {
   @override
   Conductance$Statmho get _clone => Conductance$Statmho(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Conductance$Statmho] with new value
   @override
   Conductance$Statmho withValue(
@@ -628,7 +658,7 @@ final class Conductance$Statmho extends Conductance {
 
   /// Symbol for [Conductance$Statmho]
   @override
-  String get symbol => '';
+  String get symbol => 'Statmho';
 
   @override
   Map<String, dynamic> toJson() => {

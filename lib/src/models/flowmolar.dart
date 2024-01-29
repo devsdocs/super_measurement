@@ -230,13 +230,16 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
 
   static const _ratio = 8.64e+22;
 
-  /// 1 [FlowMolar$ExamolPerSecond]  =  8.64e+22 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$ExamolPerSecond] = 8.64e+22 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$ExamolPerSecond get _clone => FlowMolar$ExamolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$ExamolPerSecond] with new value
   @override
@@ -284,13 +287,16 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
 
   static const _ratio = 86400000000000000000.0;
 
-  /// 1 [FlowMolar$PetamolPerSecond]  =  86400000000000000000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$PetamolPerSecond] = 86400000000000000000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$PetamolPerSecond get _clone => FlowMolar$PetamolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$PetamolPerSecond] with new value
   @override
@@ -338,13 +344,16 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
 
   static const _ratio = 86400000000000000.0;
 
-  /// 1 [FlowMolar$TeramolPerSecond]  =  86400000000000000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$TeramolPerSecond] = 86400000000000000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$TeramolPerSecond get _clone => FlowMolar$TeramolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$TeramolPerSecond] with new value
   @override
@@ -392,13 +401,16 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
 
   static const _ratio = 86400000000000.0;
 
-  /// 1 [FlowMolar$GigamolPerSecond]  =  86400000000000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$GigamolPerSecond] = 86400000000000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$GigamolPerSecond get _clone => FlowMolar$GigamolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$GigamolPerSecond] with new value
   @override
@@ -446,13 +458,16 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
 
   static const _ratio = 86400000000.0;
 
-  /// 1 [FlowMolar$MegamolPerSecond]  =  86400000000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MegamolPerSecond] = 86400000000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MegamolPerSecond get _clone => FlowMolar$MegamolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MegamolPerSecond] with new value
   @override
@@ -500,13 +515,16 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
 
   static const _ratio = 86400000.0;
 
-  /// 1 [FlowMolar$KilomolPerSecond]  =  86400000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$KilomolPerSecond] = 86400000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$KilomolPerSecond get _clone => FlowMolar$KilomolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$KilomolPerSecond] with new value
   @override
@@ -554,13 +572,16 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
 
   static const _ratio = 8640000.0;
 
-  /// 1 [FlowMolar$HectomolPerSecond]  =  8640000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$HectomolPerSecond] = 8640000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$HectomolPerSecond get _clone => FlowMolar$HectomolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$HectomolPerSecond] with new value
   @override
@@ -608,13 +629,16 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
 
   static const _ratio = 864000.0;
 
-  /// 1 [FlowMolar$DekamolPerSecond]  =  864000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$DekamolPerSecond] = 864000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$DekamolPerSecond get _clone => FlowMolar$DekamolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$DekamolPerSecond] with new value
   @override
@@ -662,13 +686,16 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
 
   static const _ratio = 86400.0;
 
-  /// 1 [FlowMolar$MolPerSecond]  =  86400.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MolPerSecond] = 86400.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MolPerSecond get _clone => FlowMolar$MolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MolPerSecond] with new value
   @override
@@ -716,13 +743,16 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
 
   static const _ratio = 8640.0;
 
-  /// 1 [FlowMolar$DecimolPerSecond]  =  8640.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$DecimolPerSecond] = 8640.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$DecimolPerSecond get _clone => FlowMolar$DecimolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$DecimolPerSecond] with new value
   @override
@@ -770,13 +800,16 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
 
   static const _ratio = 864.0;
 
-  /// 1 [FlowMolar$CentimolPerSecond]  =  864.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$CentimolPerSecond] = 864.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$CentimolPerSecond get _clone => FlowMolar$CentimolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$CentimolPerSecond] with new value
   @override
@@ -824,13 +857,16 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
 
   static const _ratio = 86.4;
 
-  /// 1 [FlowMolar$MillimolPerSecond]  ≈  86.4 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MillimolPerSecond] ≈ 86.4 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MillimolPerSecond get _clone => FlowMolar$MillimolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MillimolPerSecond] with new value
   @override
@@ -878,13 +914,16 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
 
   static const _ratio = 0.0864;
 
-  /// 1 [FlowMolar$MicromolPerSecond]  ≈  0.0864 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MicromolPerSecond] ≈ 0.0864 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MicromolPerSecond get _clone => FlowMolar$MicromolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MicromolPerSecond] with new value
   @override
@@ -932,13 +971,16 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
 
   static const _ratio = 0.0000864;
 
-  /// 1 [FlowMolar$NanomolPerSecond]  ≈  0.0000864 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$NanomolPerSecond] ≈ 0.0000864 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$NanomolPerSecond get _clone => FlowMolar$NanomolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$NanomolPerSecond] with new value
   @override
@@ -986,13 +1028,16 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
 
   static const _ratio = 8.64e-8;
 
-  /// 1 [FlowMolar$PicomolPerSecond]  ≈  8.64e-8 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$PicomolPerSecond] ≈ 8.64e-8 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$PicomolPerSecond get _clone => FlowMolar$PicomolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$PicomolPerSecond] with new value
   @override
@@ -1040,13 +1085,16 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
 
   static const _ratio = 8.64e-11;
 
-  /// 1 [FlowMolar$FemtomolPerSecond]  ≈  8.64e-11 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$FemtomolPerSecond] ≈ 8.64e-11 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$FemtomolPerSecond get _clone => FlowMolar$FemtomolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$FemtomolPerSecond] with new value
   @override
@@ -1094,13 +1142,16 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
 
   static const _ratio = 8.64e-14;
 
-  /// 1 [FlowMolar$AttomolPerSecond]  ≈  8.64e-14 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$AttomolPerSecond] ≈ 8.64e-14 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$AttomolPerSecond get _clone => FlowMolar$AttomolPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$AttomolPerSecond] with new value
   @override
@@ -1148,13 +1199,16 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
 
   static const _ratio = 1440.0;
 
-  /// 1 [FlowMolar$MolPerMinute]  =  1440.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MolPerMinute] = 1440.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MolPerMinute get _clone => FlowMolar$MolPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MolPerMinute] with new value
   @override
@@ -1202,13 +1256,16 @@ final class FlowMolar$MolPerHour extends FlowMolar {
 
   static const _ratio = 24.0;
 
-  /// 1 [FlowMolar$MolPerHour]  =  24.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MolPerHour] = 24.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MolPerHour get _clone => FlowMolar$MolPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MolPerHour] with new value
   @override
@@ -1264,6 +1321,9 @@ final class FlowMolar$MolPerDay extends FlowMolar {
   @override
   FlowMolar$MolPerDay get _clone => FlowMolar$MolPerDay(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [FlowMolar$MolPerDay] with new value
   @override
   FlowMolar$MolPerDay withValue(
@@ -1310,13 +1370,16 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
 
   static const _ratio = 1.44;
 
-  /// 1 [FlowMolar$MillimolPerMinute]  ≈  1.44 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MillimolPerMinute] ≈ 1.44 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MillimolPerMinute get _clone => FlowMolar$MillimolPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MillimolPerMinute] with new value
   @override
@@ -1364,13 +1427,16 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
 
   static const _ratio = 0.024;
 
-  /// 1 [FlowMolar$MillimolPerHour]  ≈  0.024 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MillimolPerHour] ≈ 0.024 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MillimolPerHour get _clone => FlowMolar$MillimolPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MillimolPerHour] with new value
   @override
@@ -1418,13 +1484,16 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
 
   static const _ratio = 0.001;
 
-  /// 1 [FlowMolar$MillimolPerDay]  ≈  0.001 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MillimolPerDay] ≈ 0.001 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$MillimolPerDay get _clone => FlowMolar$MillimolPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$MillimolPerDay] with new value
   @override
@@ -1472,13 +1541,16 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
 
   static const _ratio = 1440000.0;
 
-  /// 1 [FlowMolar$KilomolPerMinute]  =  1440000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$KilomolPerMinute] = 1440000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$KilomolPerMinute get _clone => FlowMolar$KilomolPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$KilomolPerMinute] with new value
   @override
@@ -1526,13 +1598,16 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
 
   static const _ratio = 24000.0;
 
-  /// 1 [FlowMolar$KilomolPerHour]  =  24000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$KilomolPerHour] = 24000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$KilomolPerHour get _clone => FlowMolar$KilomolPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$KilomolPerHour] with new value
   @override
@@ -1580,13 +1655,16 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
 
   static const _ratio = 1000.0;
 
-  /// 1 [FlowMolar$KilomolPerDay]  =  1000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$KilomolPerDay] = 1000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMolar$KilomolPerDay get _clone => FlowMolar$KilomolPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMolar$KilomolPerDay] with new value
   @override

@@ -155,13 +155,16 @@ final class Angle$Degree extends Angle {
 
   static const _ratio = 3600.0;
 
-  /// 1 [Angle$Degree]  =  3600.0 [Angle$Second]
+  /// 1 [Angle$Degree] = 3600.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Degree get _clone => Angle$Degree(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Degree] with new value
   @override
@@ -209,13 +212,16 @@ final class Angle$Radian extends Angle {
 
   static const _ratio = 206264.80624709636;
 
-  /// 1 [Angle$Radian]  ≈  206264.80624709636 [Angle$Second]
+  /// 1 [Angle$Radian] ≈ 206264.80624709636 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Radian get _clone => Angle$Radian(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Radian] with new value
   @override
@@ -263,13 +269,16 @@ final class Angle$Grad extends Angle {
 
   static const _ratio = 3240.0;
 
-  /// 1 [Angle$Grad]  =  3240.0 [Angle$Second]
+  /// 1 [Angle$Grad] = 3240.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Grad get _clone => Angle$Grad(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Grad] with new value
   @override
@@ -317,13 +326,16 @@ final class Angle$Minute extends Angle {
 
   static const _ratio = 60.0;
 
-  /// 1 [Angle$Minute]  =  60.0 [Angle$Second]
+  /// 1 [Angle$Minute] = 60.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Minute get _clone => Angle$Minute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Minute] with new value
   @override
@@ -379,6 +391,9 @@ final class Angle$Second extends Angle {
   @override
   Angle$Second get _clone => Angle$Second(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Angle$Second] with new value
   @override
   Angle$Second withValue(
@@ -425,13 +440,16 @@ final class Angle$Sign extends Angle {
 
   static const _ratio = 108000.0;
 
-  /// 1 [Angle$Sign]  =  108000.0 [Angle$Second]
+  /// 1 [Angle$Sign] = 108000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Sign get _clone => Angle$Sign(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Sign] with new value
   @override
@@ -442,7 +460,7 @@ final class Angle$Sign extends Angle {
 
   /// Symbol for [Angle$Sign]
   @override
-  String get symbol => '';
+  String get symbol => 'Sign';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -479,13 +497,16 @@ final class Angle$Mil extends Angle {
 
   static const _ratio = 202.5;
 
-  /// 1 [Angle$Mil]  ≈  202.5 [Angle$Second]
+  /// 1 [Angle$Mil] ≈ 202.5 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Mil get _clone => Angle$Mil(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Mil] with new value
   @override
@@ -496,7 +517,7 @@ final class Angle$Mil extends Angle {
 
   /// Symbol for [Angle$Mil]
   @override
-  String get symbol => '';
+  String get symbol => 'Mil';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -533,13 +554,16 @@ final class Angle$Revolution extends Angle {
 
   static const _ratio = 1296000.0;
 
-  /// 1 [Angle$Revolution]  =  1296000.0 [Angle$Second]
+  /// 1 [Angle$Revolution] = 1296000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Revolution get _clone => Angle$Revolution(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Revolution] with new value
   @override
@@ -587,13 +611,16 @@ final class Angle$Circle extends Angle {
 
   static const _ratio = 1296000.0;
 
-  /// 1 [Angle$Circle]  =  1296000.0 [Angle$Second]
+  /// 1 [Angle$Circle] = 1296000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Circle get _clone => Angle$Circle(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Circle] with new value
   @override
@@ -641,13 +668,16 @@ final class Angle$Turn extends Angle {
 
   static const _ratio = 1296000.0;
 
-  /// 1 [Angle$Turn]  =  1296000.0 [Angle$Second]
+  /// 1 [Angle$Turn] = 1296000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Turn get _clone => Angle$Turn(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Turn] with new value
   @override
@@ -658,7 +688,7 @@ final class Angle$Turn extends Angle {
 
   /// Symbol for [Angle$Turn]
   @override
-  String get symbol => '';
+  String get symbol => 'Turn';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -695,13 +725,16 @@ final class Angle$Quadrant extends Angle {
 
   static const _ratio = 324000.0;
 
-  /// 1 [Angle$Quadrant]  =  324000.0 [Angle$Second]
+  /// 1 [Angle$Quadrant] = 324000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Quadrant get _clone => Angle$Quadrant(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Quadrant] with new value
   @override
@@ -749,13 +782,16 @@ final class Angle$RightAngle extends Angle {
 
   static const _ratio = 324000.0;
 
-  /// 1 [Angle$RightAngle]  =  324000.0 [Angle$Second]
+  /// 1 [Angle$RightAngle] = 324000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$RightAngle get _clone => Angle$RightAngle(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$RightAngle] with new value
   @override
@@ -766,7 +802,7 @@ final class Angle$RightAngle extends Angle {
 
   /// Symbol for [Angle$RightAngle]
   @override
-  String get symbol => '';
+  String get symbol => 'RightAngle';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -803,13 +839,16 @@ final class Angle$Sextant extends Angle {
 
   static const _ratio = 216000.0;
 
-  /// 1 [Angle$Sextant]  =  216000.0 [Angle$Second]
+  /// 1 [Angle$Sextant] = 216000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Sextant get _clone => Angle$Sextant(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Sextant] with new value
   @override
@@ -820,7 +859,7 @@ final class Angle$Sextant extends Angle {
 
   /// Symbol for [Angle$Sextant]
   @override
-  String get symbol => '';
+  String get symbol => 'Sextant';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -857,13 +896,16 @@ final class Angle$Octant extends Angle {
 
   static const _ratio = 162000.0;
 
-  /// 1 [Angle$Octant]  =  162000.0 [Angle$Second]
+  /// 1 [Angle$Octant] = 162000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$Octant get _clone => Angle$Octant(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$Octant] with new value
   @override
@@ -874,7 +916,7 @@ final class Angle$Octant extends Angle {
 
   /// Symbol for [Angle$Octant]
   @override
-  String get symbol => '';
+  String get symbol => 'Octant';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -911,13 +953,16 @@ final class Angle$PercentOfFullCircle extends Angle {
 
   static const _ratio = 12960.0;
 
-  /// 1 [Angle$PercentOfFullCircle]  =  12960.0 [Angle$Second]
+  /// 1 [Angle$PercentOfFullCircle] = 12960.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Angle$PercentOfFullCircle get _clone => Angle$PercentOfFullCircle(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Angle$PercentOfFullCircle] with new value
   @override
@@ -928,7 +973,7 @@ final class Angle$PercentOfFullCircle extends Angle {
 
   /// Symbol for [Angle$PercentOfFullCircle]
   @override
-  String get symbol => '';
+  String get symbol => 'PercentOfFullCircle';
 
   @override
   Map<String, dynamic> toJson() => {

@@ -529,6 +529,9 @@ final class Volume$MeterCubic extends Volume {
   @override
   Volume$MeterCubic get _clone => Volume$MeterCubic(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Volume$MeterCubic] with new value
   @override
   Volume$MeterCubic withValue(
@@ -575,13 +578,16 @@ final class Volume$CentimeterCubic extends Volume {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Volume$CentimeterCubic]  ≈  0.000001 [Volume$MeterCubic]
+  /// 1 [Volume$CentimeterCubic] ≈ 0.000001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$CentimeterCubic get _clone => Volume$CentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$CentimeterCubic] with new value
   @override
@@ -629,13 +635,16 @@ final class Volume$MillimeterCubic extends Volume {
 
   static const _ratio = 1e-9;
 
-  /// 1 [Volume$MillimeterCubic]  ≈  1e-9 [Volume$MeterCubic]
+  /// 1 [Volume$MillimeterCubic] ≈ 1e-9 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$MillimeterCubic get _clone => Volume$MillimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$MillimeterCubic] with new value
   @override
@@ -683,13 +692,16 @@ final class Volume$Exaliter extends Volume {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Volume$Exaliter]  =  1000000000000000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Exaliter] = 1000000000000000.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Exaliter get _clone => Volume$Exaliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Exaliter] with new value
   @override
@@ -737,13 +749,16 @@ final class Volume$Petaliter extends Volume {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Volume$Petaliter]  =  1000000000000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Petaliter] = 1000000000000.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Petaliter get _clone => Volume$Petaliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Petaliter] with new value
   @override
@@ -791,13 +806,16 @@ final class Volume$Teraliter extends Volume {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Volume$Teraliter]  =  1000000000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Teraliter] = 1000000000.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Teraliter get _clone => Volume$Teraliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Teraliter] with new value
   @override
@@ -845,13 +863,16 @@ final class Volume$Gigaliter extends Volume {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Volume$Gigaliter]  =  1000000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Gigaliter] = 1000000.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Gigaliter get _clone => Volume$Gigaliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Gigaliter] with new value
   @override
@@ -899,13 +920,16 @@ final class Volume$Megaliter extends Volume {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Volume$Megaliter]  =  1000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Megaliter] = 1000.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Megaliter get _clone => Volume$Megaliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Megaliter] with new value
   @override
@@ -953,13 +977,16 @@ final class Volume$Kiloliter extends Volume {
 
   static const _ratio = 1.0;
 
-  /// 1 [Volume$Kiloliter]  =  1.0 [Volume$MeterCubic]
+  /// 1 [Volume$Kiloliter] = 1.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Kiloliter get _clone => Volume$Kiloliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Kiloliter] with new value
   @override
@@ -1007,13 +1034,16 @@ final class Volume$Hectoliter extends Volume {
 
   static const _ratio = 0.1;
 
-  /// 1 [Volume$Hectoliter]  ≈  0.1 [Volume$MeterCubic]
+  /// 1 [Volume$Hectoliter] ≈ 0.1 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Hectoliter get _clone => Volume$Hectoliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Hectoliter] with new value
   @override
@@ -1061,13 +1091,16 @@ final class Volume$Dekaliter extends Volume {
 
   static const _ratio = 0.01;
 
-  /// 1 [Volume$Dekaliter]  ≈  0.01 [Volume$MeterCubic]
+  /// 1 [Volume$Dekaliter] ≈ 0.01 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Dekaliter get _clone => Volume$Dekaliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Dekaliter] with new value
   @override
@@ -1115,13 +1148,16 @@ final class Volume$Liter extends Volume {
 
   static const _ratio = 0.001;
 
-  /// 1 [Volume$Liter]  ≈  0.001 [Volume$MeterCubic]
+  /// 1 [Volume$Liter] ≈ 0.001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Liter get _clone => Volume$Liter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Liter] with new value
   @override
@@ -1169,13 +1205,16 @@ final class Volume$Deciliter extends Volume {
 
   static const _ratio = 0.0001;
 
-  /// 1 [Volume$Deciliter]  ≈  0.0001 [Volume$MeterCubic]
+  /// 1 [Volume$Deciliter] ≈ 0.0001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Deciliter get _clone => Volume$Deciliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Deciliter] with new value
   @override
@@ -1223,13 +1262,16 @@ final class Volume$Centiliter extends Volume {
 
   static const _ratio = 0.00001;
 
-  /// 1 [Volume$Centiliter]  ≈  0.00001 [Volume$MeterCubic]
+  /// 1 [Volume$Centiliter] ≈ 0.00001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Centiliter get _clone => Volume$Centiliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Centiliter] with new value
   @override
@@ -1277,13 +1319,16 @@ final class Volume$Milliliter extends Volume {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Volume$Milliliter]  ≈  0.000001 [Volume$MeterCubic]
+  /// 1 [Volume$Milliliter] ≈ 0.000001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Milliliter get _clone => Volume$Milliliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Milliliter] with new value
   @override
@@ -1331,13 +1376,16 @@ final class Volume$Microliter extends Volume {
 
   static const _ratio = 1e-9;
 
-  /// 1 [Volume$Microliter]  ≈  1e-9 [Volume$MeterCubic]
+  /// 1 [Volume$Microliter] ≈ 1e-9 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Microliter get _clone => Volume$Microliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Microliter] with new value
   @override
@@ -1385,13 +1433,16 @@ final class Volume$Nanoliter extends Volume {
 
   static const _ratio = 1e-12;
 
-  /// 1 [Volume$Nanoliter]  ≈  1e-12 [Volume$MeterCubic]
+  /// 1 [Volume$Nanoliter] ≈ 1e-12 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Nanoliter get _clone => Volume$Nanoliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Nanoliter] with new value
   @override
@@ -1439,13 +1490,16 @@ final class Volume$Picoliter extends Volume {
 
   static const _ratio = 1e-15;
 
-  /// 1 [Volume$Picoliter]  ≈  1e-15 [Volume$MeterCubic]
+  /// 1 [Volume$Picoliter] ≈ 1e-15 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Picoliter get _clone => Volume$Picoliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Picoliter] with new value
   @override
@@ -1493,13 +1547,16 @@ final class Volume$Femtoliter extends Volume {
 
   static const _ratio = 1e-18;
 
-  /// 1 [Volume$Femtoliter]  ≈  1e-18 [Volume$MeterCubic]
+  /// 1 [Volume$Femtoliter] ≈ 1e-18 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Femtoliter get _clone => Volume$Femtoliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Femtoliter] with new value
   @override
@@ -1547,13 +1604,16 @@ final class Volume$Attoliter extends Volume {
 
   static const _ratio = 1e-21;
 
-  /// 1 [Volume$Attoliter]  ≈  1e-21 [Volume$MeterCubic]
+  /// 1 [Volume$Attoliter] ≈ 1e-21 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Attoliter get _clone => Volume$Attoliter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Attoliter] with new value
   @override
@@ -1601,13 +1661,16 @@ final class Volume$Cc extends Volume {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Volume$Cc]  ≈  0.000001 [Volume$MeterCubic]
+  /// 1 [Volume$Cc] ≈ 0.000001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Cc get _clone => Volume$Cc(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Cc] with new value
   @override
@@ -1618,7 +1681,7 @@ final class Volume$Cc extends Volume {
 
   /// Symbol for [Volume$Cc]
   @override
-  String get symbol => '';
+  String get symbol => 'Cc';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1655,13 +1718,16 @@ final class Volume$Drop extends Volume {
 
   static const _ratio = 5e-8;
 
-  /// 1 [Volume$Drop]  ≈  5e-8 [Volume$MeterCubic]
+  /// 1 [Volume$Drop] ≈ 5e-8 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Drop get _clone => Volume$Drop(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Drop] with new value
   @override
@@ -1672,7 +1738,7 @@ final class Volume$Drop extends Volume {
 
   /// Symbol for [Volume$Drop]
   @override
-  String get symbol => '';
+  String get symbol => 'Drop';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1709,13 +1775,16 @@ final class Volume$Barrel extends Volume {
 
   static const _ratio = 0.119240471196;
 
-  /// 1 [Volume$Barrel]  ≈  0.119240471196 [Volume$MeterCubic]
+  /// 1 [Volume$Barrel] ≈ 0.119240471196 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Barrel get _clone => Volume$Barrel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Barrel] with new value
   @override
@@ -1763,13 +1832,16 @@ final class Volume$BarrelOil extends Volume {
 
   static const _ratio = 0.158987294928;
 
-  /// 1 [Volume$BarrelOil]  ≈  0.158987294928 [Volume$MeterCubic]
+  /// 1 [Volume$BarrelOil] ≈ 0.158987294928 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$BarrelOil get _clone => Volume$BarrelOil(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$BarrelOil] with new value
   @override
@@ -1817,13 +1889,16 @@ final class Volume$BushelUK extends Volume {
 
   static const _ratio = 0.03636872;
 
-  /// 1 [Volume$BushelUK]  ≈  0.03636872 [Volume$MeterCubic]
+  /// 1 [Volume$BushelUK] ≈ 0.03636872 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$BushelUK get _clone => Volume$BushelUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$BushelUK] with new value
   @override
@@ -1871,13 +1946,16 @@ final class Volume$PeckUK extends Volume {
 
   static const _ratio = 0.00909218;
 
-  /// 1 [Volume$PeckUK]  ≈  0.00909218 [Volume$MeterCubic]
+  /// 1 [Volume$PeckUK] ≈ 0.00909218 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$PeckUK get _clone => Volume$PeckUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$PeckUK] with new value
   @override
@@ -1925,13 +2003,16 @@ final class Volume$Gallon extends Volume {
 
   static const _ratio = 0.003785411784;
 
-  /// 1 [Volume$Gallon]  ≈  0.003785411784 [Volume$MeterCubic]
+  /// 1 [Volume$Gallon] ≈ 0.003785411784 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Gallon get _clone => Volume$Gallon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Gallon] with new value
   @override
@@ -1979,13 +2060,16 @@ final class Volume$GallonUK extends Volume {
 
   static const _ratio = 0.00454609;
 
-  /// 1 [Volume$GallonUK]  ≈  0.00454609 [Volume$MeterCubic]
+  /// 1 [Volume$GallonUK] ≈ 0.00454609 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$GallonUK get _clone => Volume$GallonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$GallonUK] with new value
   @override
@@ -2033,13 +2117,16 @@ final class Volume$Quart extends Volume {
 
   static const _ratio = 0.000946352946;
 
-  /// 1 [Volume$Quart]  ≈  0.000946352946 [Volume$MeterCubic]
+  /// 1 [Volume$Quart] ≈ 0.000946352946 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Quart get _clone => Volume$Quart(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Quart] with new value
   @override
@@ -2087,13 +2174,16 @@ final class Volume$QuartUK extends Volume {
 
   static const _ratio = 0.0011365225;
 
-  /// 1 [Volume$QuartUK]  ≈  0.0011365225 [Volume$MeterCubic]
+  /// 1 [Volume$QuartUK] ≈ 0.0011365225 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$QuartUK get _clone => Volume$QuartUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$QuartUK] with new value
   @override
@@ -2141,13 +2231,16 @@ final class Volume$Pint extends Volume {
 
   static const _ratio = 0.000473176473;
 
-  /// 1 [Volume$Pint]  ≈  0.000473176473 [Volume$MeterCubic]
+  /// 1 [Volume$Pint] ≈ 0.000473176473 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Pint get _clone => Volume$Pint(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Pint] with new value
   @override
@@ -2195,13 +2288,16 @@ final class Volume$PintUK extends Volume {
 
   static const _ratio = 0.00056826125;
 
-  /// 1 [Volume$PintUK]  ≈  0.00056826125 [Volume$MeterCubic]
+  /// 1 [Volume$PintUK] ≈ 0.00056826125 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$PintUK get _clone => Volume$PintUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$PintUK] with new value
   @override
@@ -2249,13 +2345,16 @@ final class Volume$Cup extends Volume {
 
   static const _ratio = 0.0002365882365;
 
-  /// 1 [Volume$Cup]  ≈  0.0002365882365 [Volume$MeterCubic]
+  /// 1 [Volume$Cup] ≈ 0.0002365882365 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Cup get _clone => Volume$Cup(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Cup] with new value
   @override
@@ -2303,13 +2402,16 @@ final class Volume$CupUK extends Volume {
 
   static const _ratio = 0.000284130625;
 
-  /// 1 [Volume$CupUK]  ≈  0.000284130625 [Volume$MeterCubic]
+  /// 1 [Volume$CupUK] ≈ 0.000284130625 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$CupUK get _clone => Volume$CupUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$CupUK] with new value
   @override
@@ -2357,13 +2459,16 @@ final class Volume$Gill extends Volume {
 
   static const _ratio = 0.00011829411825;
 
-  /// 1 [Volume$Gill]  ≈  0.00011829411825 [Volume$MeterCubic]
+  /// 1 [Volume$Gill] ≈ 0.00011829411825 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Gill get _clone => Volume$Gill(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Gill] with new value
   @override
@@ -2411,13 +2516,16 @@ final class Volume$GillUK extends Volume {
 
   static const _ratio = 0.0001420653125;
 
-  /// 1 [Volume$GillUK]  ≈  0.0001420653125 [Volume$MeterCubic]
+  /// 1 [Volume$GillUK] ≈ 0.0001420653125 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$GillUK get _clone => Volume$GillUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$GillUK] with new value
   @override
@@ -2465,13 +2573,16 @@ final class Volume$Ounce extends Volume {
 
   static const _ratio = 0.0000295735295625;
 
-  /// 1 [Volume$Ounce]  ≈  0.0000295735295625 [Volume$MeterCubic]
+  /// 1 [Volume$Ounce] ≈ 0.0000295735295625 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Ounce get _clone => Volume$Ounce(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Ounce] with new value
   @override
@@ -2519,13 +2630,16 @@ final class Volume$OunceUK extends Volume {
 
   static const _ratio = 0.0000284130625;
 
-  /// 1 [Volume$OunceUK]  ≈  0.0000284130625 [Volume$MeterCubic]
+  /// 1 [Volume$OunceUK] ≈ 0.0000284130625 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$OunceUK get _clone => Volume$OunceUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$OunceUK] with new value
   @override
@@ -2573,13 +2687,16 @@ final class Volume$Dram extends Volume {
 
   static const _ratio = 0.0000036966911953125;
 
-  /// 1 [Volume$Dram]  ≈  0.0000036966911953125 [Volume$MeterCubic]
+  /// 1 [Volume$Dram] ≈ 0.0000036966911953125 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Dram get _clone => Volume$Dram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Dram] with new value
   @override
@@ -2627,13 +2744,16 @@ final class Volume$DramUK extends Volume {
 
   static const _ratio = 0.0000035516328125;
 
-  /// 1 [Volume$DramUK]  ≈  0.0000035516328125 [Volume$MeterCubic]
+  /// 1 [Volume$DramUK] ≈ 0.0000035516328125 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$DramUK get _clone => Volume$DramUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$DramUK] with new value
   @override
@@ -2681,13 +2801,16 @@ final class Volume$Minim extends Volume {
 
   static const _ratio = 6.1611519921875e-8;
 
-  /// 1 [Volume$Minim]  ≈  6.1611519921875e-8 [Volume$MeterCubic]
+  /// 1 [Volume$Minim] ≈ 6.1611519921875e-8 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Minim get _clone => Volume$Minim(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Minim] with new value
   @override
@@ -2735,13 +2858,16 @@ final class Volume$MinimUK extends Volume {
 
   static const _ratio = 5.9193880208333334e-8;
 
-  /// 1 [Volume$MinimUK]  ≈  5.9193880208333334e-8 [Volume$MeterCubic]
+  /// 1 [Volume$MinimUK] ≈ 5.9193880208333334e-8 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$MinimUK get _clone => Volume$MinimUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$MinimUK] with new value
   @override
@@ -2789,13 +2915,16 @@ final class Volume$Tablespoon extends Volume {
 
   static const _ratio = 0.00001478676478125;
 
-  /// 1 [Volume$Tablespoon]  ≈  0.00001478676478125 [Volume$MeterCubic]
+  /// 1 [Volume$Tablespoon] ≈ 0.00001478676478125 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Tablespoon get _clone => Volume$Tablespoon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Tablespoon] with new value
   @override
@@ -2843,13 +2972,16 @@ final class Volume$TablespoonUK extends Volume {
 
   static const _ratio = 0.0000177581640625;
 
-  /// 1 [Volume$TablespoonUK]  ≈  0.0000177581640625 [Volume$MeterCubic]
+  /// 1 [Volume$TablespoonUK] ≈ 0.0000177581640625 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$TablespoonUK get _clone => Volume$TablespoonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$TablespoonUK] with new value
   @override
@@ -2897,13 +3029,16 @@ final class Volume$Dessertspoon extends Volume {
 
   static const _ratio = 0.0000098578431875;
 
-  /// 1 [Volume$Dessertspoon]  ≈  0.0000098578431875 [Volume$MeterCubic]
+  /// 1 [Volume$Dessertspoon] ≈ 0.0000098578431875 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Dessertspoon get _clone => Volume$Dessertspoon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Dessertspoon] with new value
   @override
@@ -2951,13 +3086,16 @@ final class Volume$DessertspoonUK extends Volume {
 
   static const _ratio = 0.000011838776041666667;
 
-  /// 1 [Volume$DessertspoonUK]  ≈  0.000011838776041666667 [Volume$MeterCubic]
+  /// 1 [Volume$DessertspoonUK] ≈ 0.000011838776041666667 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$DessertspoonUK get _clone => Volume$DessertspoonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$DessertspoonUK] with new value
   @override
@@ -3005,13 +3143,16 @@ final class Volume$Teaspoon extends Volume {
 
   static const _ratio = 0.00000492892159375;
 
-  /// 1 [Volume$Teaspoon]  ≈  0.00000492892159375 [Volume$MeterCubic]
+  /// 1 [Volume$Teaspoon] ≈ 0.00000492892159375 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Teaspoon get _clone => Volume$Teaspoon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Teaspoon] with new value
   @override
@@ -3059,13 +3200,16 @@ final class Volume$TeaspoonUK extends Volume {
 
   static const _ratio = 0.000005919388020833334;
 
-  /// 1 [Volume$TeaspoonUK]  ≈  0.000005919388020833334 [Volume$MeterCubic]
+  /// 1 [Volume$TeaspoonUK] ≈ 0.000005919388020833334 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$TeaspoonUK get _clone => Volume$TeaspoonUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$TeaspoonUK] with new value
   @override
@@ -3113,13 +3257,16 @@ final class Volume$Hogshead extends Volume {
 
   static const _ratio = 0.238480942392;
 
-  /// 1 [Volume$Hogshead]  ≈  0.238480942392 [Volume$MeterCubic]
+  /// 1 [Volume$Hogshead] ≈ 0.238480942392 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Hogshead get _clone => Volume$Hogshead(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Hogshead] with new value
   @override
@@ -3167,13 +3314,16 @@ final class Volume$YardCubic extends Volume {
 
   static const _ratio = 0.764554857984;
 
-  /// 1 [Volume$YardCubic]  ≈  0.764554857984 [Volume$MeterCubic]
+  /// 1 [Volume$YardCubic] ≈ 0.764554857984 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$YardCubic get _clone => Volume$YardCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$YardCubic] with new value
   @override
@@ -3221,13 +3371,16 @@ final class Volume$FootCubic extends Volume {
 
   static const _ratio = 0.028316846592;
 
-  /// 1 [Volume$FootCubic]  ≈  0.028316846592 [Volume$MeterCubic]
+  /// 1 [Volume$FootCubic] ≈ 0.028316846592 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$FootCubic get _clone => Volume$FootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$FootCubic] with new value
   @override
@@ -3275,13 +3428,16 @@ final class Volume$InchCubic extends Volume {
 
   static const _ratio = 0.000016387064;
 
-  /// 1 [Volume$InchCubic]  ≈  0.000016387064 [Volume$MeterCubic]
+  /// 1 [Volume$InchCubic] ≈ 0.000016387064 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$InchCubic get _clone => Volume$InchCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$InchCubic] with new value
   @override
@@ -3329,13 +3485,16 @@ final class Volume$Ccf extends Volume {
 
   static const _ratio = 2.8316846592;
 
-  /// 1 [Volume$Ccf]  ≈  2.8316846592 [Volume$MeterCubic]
+  /// 1 [Volume$Ccf] ≈ 2.8316846592 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Ccf get _clone => Volume$Ccf(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Ccf] with new value
   @override
@@ -3346,7 +3505,7 @@ final class Volume$Ccf extends Volume {
 
   /// Symbol for [Volume$Ccf]
   @override
-  String get symbol => '';
+  String get symbol => 'Ccf';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3383,13 +3542,16 @@ final class Volume$HundredFootCubic extends Volume {
 
   static const _ratio = 2.8316846592;
 
-  /// 1 [Volume$HundredFootCubic]  ≈  2.8316846592 [Volume$MeterCubic]
+  /// 1 [Volume$HundredFootCubic] ≈ 2.8316846592 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$HundredFootCubic get _clone => Volume$HundredFootCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$HundredFootCubic] with new value
   @override
@@ -3400,7 +3562,7 @@ final class Volume$HundredFootCubic extends Volume {
 
   /// Symbol for [Volume$HundredFootCubic]
   @override
-  String get symbol => '';
+  String get symbol => 'HundredFootCubic';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3437,13 +3599,16 @@ final class Volume$AcreFoot extends Volume {
 
   static const _ratio = 1233.48183754752;
 
-  /// 1 [Volume$AcreFoot]  ≈  1233.48183754752 [Volume$MeterCubic]
+  /// 1 [Volume$AcreFoot] ≈ 1233.48183754752 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$AcreFoot get _clone => Volume$AcreFoot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$AcreFoot] with new value
   @override
@@ -3491,13 +3656,16 @@ final class Volume$AcreInch extends Volume {
 
   static const _ratio = 102.79015312896;
 
-  /// 1 [Volume$AcreInch]  ≈  102.79015312896 [Volume$MeterCubic]
+  /// 1 [Volume$AcreInch] ≈ 102.79015312896 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$AcreInch get _clone => Volume$AcreInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$AcreInch] with new value
   @override
@@ -3545,13 +3713,16 @@ final class Volume$Dekastere extends Volume {
 
   static const _ratio = 10.0;
 
-  /// 1 [Volume$Dekastere]  =  10.0 [Volume$MeterCubic]
+  /// 1 [Volume$Dekastere] = 10.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Dekastere get _clone => Volume$Dekastere(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Dekastere] with new value
   @override
@@ -3599,13 +3770,16 @@ final class Volume$Stere extends Volume {
 
   static const _ratio = 1.0;
 
-  /// 1 [Volume$Stere]  =  1.0 [Volume$MeterCubic]
+  /// 1 [Volume$Stere] = 1.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Stere get _clone => Volume$Stere(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Stere] with new value
   @override
@@ -3653,13 +3827,16 @@ final class Volume$Decistere extends Volume {
 
   static const _ratio = 0.1;
 
-  /// 1 [Volume$Decistere]  ≈  0.1 [Volume$MeterCubic]
+  /// 1 [Volume$Decistere] ≈ 0.1 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Decistere get _clone => Volume$Decistere(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Decistere] with new value
   @override
@@ -3707,13 +3884,16 @@ final class Volume$Cord extends Volume {
 
   static const _ratio = 3.624556363776;
 
-  /// 1 [Volume$Cord]  ≈  3.624556363776 [Volume$MeterCubic]
+  /// 1 [Volume$Cord] ≈ 3.624556363776 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Cord get _clone => Volume$Cord(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Cord] with new value
   @override
@@ -3761,13 +3941,16 @@ final class Volume$BoardFoot extends Volume {
 
   static const _ratio = 0.002359737216;
 
-  /// 1 [Volume$BoardFoot]  ≈  0.002359737216 [Volume$MeterCubic]
+  /// 1 [Volume$BoardFoot] ≈ 0.002359737216 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$BoardFoot get _clone => Volume$BoardFoot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$BoardFoot] with new value
   @override
@@ -3815,13 +3998,16 @@ final class Volume$Tun extends Volume {
 
   static const _ratio = 0.953923769568;
 
-  /// 1 [Volume$Tun]  ≈  0.953923769568 [Volume$MeterCubic]
+  /// 1 [Volume$Tun] ≈ 0.953923769568 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Tun get _clone => Volume$Tun(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Tun] with new value
   @override
@@ -3832,7 +4018,7 @@ final class Volume$Tun extends Volume {
 
   /// Symbol for [Volume$Tun]
   @override
-  String get symbol => '';
+  String get symbol => 'Tun';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3869,13 +4055,16 @@ final class Volume$CorBiblical extends Volume {
 
   static const _ratio = 0.22;
 
-  /// 1 [Volume$CorBiblical]  ≈  0.22 [Volume$MeterCubic]
+  /// 1 [Volume$CorBiblical] ≈ 0.22 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$CorBiblical get _clone => Volume$CorBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$CorBiblical] with new value
   @override
@@ -3886,7 +4075,7 @@ final class Volume$CorBiblical extends Volume {
 
   /// Symbol for [Volume$CorBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'CorBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3923,13 +4112,16 @@ final class Volume$HomerBiblical extends Volume {
 
   static const _ratio = 0.22;
 
-  /// 1 [Volume$HomerBiblical]  ≈  0.22 [Volume$MeterCubic]
+  /// 1 [Volume$HomerBiblical] ≈ 0.22 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$HomerBiblical get _clone => Volume$HomerBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$HomerBiblical] with new value
   @override
@@ -3940,7 +4132,7 @@ final class Volume$HomerBiblical extends Volume {
 
   /// Symbol for [Volume$HomerBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'HomerBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3977,13 +4169,16 @@ final class Volume$BathBiblical extends Volume {
 
   static const _ratio = 0.022;
 
-  /// 1 [Volume$BathBiblical]  ≈  0.022 [Volume$MeterCubic]
+  /// 1 [Volume$BathBiblical] ≈ 0.022 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$BathBiblical get _clone => Volume$BathBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$BathBiblical] with new value
   @override
@@ -3994,7 +4189,7 @@ final class Volume$BathBiblical extends Volume {
 
   /// Symbol for [Volume$BathBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'BathBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4031,13 +4226,16 @@ final class Volume$HinBiblical extends Volume {
 
   static const _ratio = 0.0036666666666666666;
 
-  /// 1 [Volume$HinBiblical]  ≈  0.0036666666666666666 [Volume$MeterCubic]
+  /// 1 [Volume$HinBiblical] ≈ 0.0036666666666666666 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$HinBiblical get _clone => Volume$HinBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$HinBiblical] with new value
   @override
@@ -4048,7 +4246,7 @@ final class Volume$HinBiblical extends Volume {
 
   /// Symbol for [Volume$HinBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'HinBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4085,13 +4283,16 @@ final class Volume$CabBiblical extends Volume {
 
   static const _ratio = 0.0012222222222222222;
 
-  /// 1 [Volume$CabBiblical]  ≈  0.0012222222222222222 [Volume$MeterCubic]
+  /// 1 [Volume$CabBiblical] ≈ 0.0012222222222222222 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$CabBiblical get _clone => Volume$CabBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$CabBiblical] with new value
   @override
@@ -4102,7 +4303,7 @@ final class Volume$CabBiblical extends Volume {
 
   /// Symbol for [Volume$CabBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'CabBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4139,13 +4340,16 @@ final class Volume$LogBiblical extends Volume {
 
   static const _ratio = 0.00030555555555555555;
 
-  /// 1 [Volume$LogBiblical]  ≈  0.00030555555555555555 [Volume$MeterCubic]
+  /// 1 [Volume$LogBiblical] ≈ 0.00030555555555555555 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$LogBiblical get _clone => Volume$LogBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$LogBiblical] with new value
   @override
@@ -4156,7 +4360,7 @@ final class Volume$LogBiblical extends Volume {
 
   /// Symbol for [Volume$LogBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'LogBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4193,13 +4397,16 @@ final class Volume$TazaSpanish extends Volume {
 
   static const _ratio = 0.0002365882365;
 
-  /// 1 [Volume$TazaSpanish]  ≈  0.0002365882365 [Volume$MeterCubic]
+  /// 1 [Volume$TazaSpanish] ≈ 0.0002365882365 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$TazaSpanish get _clone => Volume$TazaSpanish(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$TazaSpanish] with new value
   @override
@@ -4210,7 +4417,7 @@ final class Volume$TazaSpanish extends Volume {
 
   /// Symbol for [Volume$TazaSpanish]
   @override
-  String get symbol => '';
+  String get symbol => 'TazaSpanish';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4247,13 +4454,16 @@ final class Volume$Bushel extends Volume {
 
   static const _ratio = 0.03523907016688;
 
-  /// 1 [Volume$Bushel]  ≈  0.03523907016688 [Volume$MeterCubic]
+  /// 1 [Volume$Bushel] ≈ 0.03523907016688 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Bushel get _clone => Volume$Bushel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Bushel] with new value
   @override
@@ -4301,13 +4511,16 @@ final class Volume$Peck extends Volume {
 
   static const _ratio = 0.00880976754172;
 
-  /// 1 [Volume$Peck]  ≈  0.00880976754172 [Volume$MeterCubic]
+  /// 1 [Volume$Peck] ≈ 0.00880976754172 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$Peck get _clone => Volume$Peck(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$Peck] with new value
   @override
@@ -4355,13 +4568,16 @@ final class Volume$DryPint extends Volume {
 
   static const _ratio = 0.0005506104713575;
 
-  /// 1 [Volume$DryPint]  ≈  0.0005506104713575 [Volume$MeterCubic]
+  /// 1 [Volume$DryPint] ≈ 0.0005506104713575 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$DryPint get _clone => Volume$DryPint(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$DryPint] with new value
   @override
@@ -4372,7 +4588,7 @@ final class Volume$DryPint extends Volume {
 
   /// Symbol for [Volume$DryPint]
   @override
-  String get symbol => '';
+  String get symbol => 'DryPint';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4409,13 +4625,16 @@ final class Volume$DryQuart extends Volume {
 
   static const _ratio = 0.001101220942715;
 
-  /// 1 [Volume$DryQuart]  ≈  0.001101220942715 [Volume$MeterCubic]
+  /// 1 [Volume$DryQuart] ≈ 0.001101220942715 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Volume$DryQuart get _clone => Volume$DryQuart(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Volume$DryQuart] with new value
   @override
@@ -4426,7 +4645,7 @@ final class Volume$DryQuart extends Volume {
 
   /// Symbol for [Volume$DryQuart]
   @override
-  String get symbol => '';
+  String get symbol => 'DryQuart';
 
   @override
   Map<String, dynamic> toJson() => {

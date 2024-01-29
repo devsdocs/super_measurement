@@ -1223,6 +1223,9 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
   @override
   DataTransfer$BitPerSecond get _clone => DataTransfer$BitPerSecond(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [DataTransfer$BitPerSecond] with new value
   @override
   DataTransfer$BitPerSecond withValue(
@@ -1269,13 +1272,16 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
 
   static const _ratio = 8.0;
 
-  /// 1 [DataTransfer$BytePerSecond]  =  8.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BytePerSecond] = 8.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$BytePerSecond get _clone => DataTransfer$BytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$BytePerSecond] with new value
   @override
@@ -1323,7 +1329,7 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
 
   static const _ratio = 1000.0;
 
-  /// 1 [DataTransfer$KilobitPerSecond]  =  1000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$KilobitPerSecond] = 1000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1331,6 +1337,9 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
   @override
   DataTransfer$KilobitPerSecond get _clone =>
       DataTransfer$KilobitPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$KilobitPerSecond] with new value
   @override
@@ -1378,7 +1387,7 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
 
   static const _ratio = 8000.0;
 
-  /// 1 [DataTransfer$KilobytePerSecond]  =  8000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$KilobytePerSecond] = 8000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1386,6 +1395,9 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
   @override
   DataTransfer$KilobytePerSecond get _clone =>
       DataTransfer$KilobytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$KilobytePerSecond] with new value
   @override
@@ -1433,7 +1445,7 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [DataTransfer$MegabitPerSecond]  =  1000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$MegabitPerSecond] = 1000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1441,6 +1453,9 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
   @override
   DataTransfer$MegabitPerSecond get _clone =>
       DataTransfer$MegabitPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$MegabitPerSecond] with new value
   @override
@@ -1488,7 +1503,7 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
 
   static const _ratio = 8000000.0;
 
-  /// 1 [DataTransfer$MegabytePerSecond]  =  8000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$MegabytePerSecond] = 8000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1496,6 +1511,9 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
   @override
   DataTransfer$MegabytePerSecond get _clone =>
       DataTransfer$MegabytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$MegabytePerSecond] with new value
   @override
@@ -1543,7 +1561,7 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [DataTransfer$GigabitPerSecond]  =  1000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$GigabitPerSecond] = 1000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1551,6 +1569,9 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
   @override
   DataTransfer$GigabitPerSecond get _clone =>
       DataTransfer$GigabitPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$GigabitPerSecond] with new value
   @override
@@ -1598,7 +1619,7 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
 
   static const _ratio = 8000000000.0;
 
-  /// 1 [DataTransfer$GigabytePerSecond]  =  8000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$GigabytePerSecond] = 8000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1606,6 +1627,9 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
   @override
   DataTransfer$GigabytePerSecond get _clone =>
       DataTransfer$GigabytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$GigabytePerSecond] with new value
   @override
@@ -1653,7 +1677,7 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [DataTransfer$TerabitPerSecond]  =  1000000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TerabitPerSecond] = 1000000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1661,6 +1685,9 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
   @override
   DataTransfer$TerabitPerSecond get _clone =>
       DataTransfer$TerabitPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$TerabitPerSecond] with new value
   @override
@@ -1708,7 +1735,7 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
 
   static const _ratio = 8000000000000.0;
 
-  /// 1 [DataTransfer$TerabytePerSecond]  =  8000000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TerabytePerSecond] = 8000000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1716,6 +1743,9 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
   @override
   DataTransfer$TerabytePerSecond get _clone =>
       DataTransfer$TerabytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$TerabytePerSecond] with new value
   @override
@@ -1763,7 +1793,7 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
 
   static const _ratio = 1024.0;
 
-  /// 1 [DataTransfer$KibibitPerSecond]  =  1024.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$KibibitPerSecond] = 1024.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1771,6 +1801,9 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
   @override
   DataTransfer$KibibitPerSecond get _clone =>
       DataTransfer$KibibitPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$KibibitPerSecond] with new value
   @override
@@ -1818,7 +1851,7 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
 
   static const _ratio = 8192.0;
 
-  /// 1 [DataTransfer$KibibytePerSecond]  =  8192.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$KibibytePerSecond] = 8192.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1826,6 +1859,9 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
   @override
   DataTransfer$KibibytePerSecond get _clone =>
       DataTransfer$KibibytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$KibibytePerSecond] with new value
   @override
@@ -1873,7 +1909,7 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
 
   static const _ratio = 1048576.0;
 
-  /// 1 [DataTransfer$MebibitPerSecond]  =  1048576.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$MebibitPerSecond] = 1048576.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1881,6 +1917,9 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
   @override
   DataTransfer$MebibitPerSecond get _clone =>
       DataTransfer$MebibitPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$MebibitPerSecond] with new value
   @override
@@ -1928,7 +1967,7 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
 
   static const _ratio = 8388608.0;
 
-  /// 1 [DataTransfer$MebibytePerSecond]  =  8388608.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$MebibytePerSecond] = 8388608.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1936,6 +1975,9 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
   @override
   DataTransfer$MebibytePerSecond get _clone =>
       DataTransfer$MebibytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$MebibytePerSecond] with new value
   @override
@@ -1983,7 +2025,7 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
 
   static const _ratio = 1073741824.0;
 
-  /// 1 [DataTransfer$GibibitPerSecond]  =  1073741824.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$GibibitPerSecond] = 1073741824.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -1991,6 +2033,9 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
   @override
   DataTransfer$GibibitPerSecond get _clone =>
       DataTransfer$GibibitPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$GibibitPerSecond] with new value
   @override
@@ -2038,7 +2083,7 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
 
   static const _ratio = 8589934592.0;
 
-  /// 1 [DataTransfer$GibibytePerSecond]  =  8589934592.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$GibibytePerSecond] = 8589934592.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -2046,6 +2091,9 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
   @override
   DataTransfer$GibibytePerSecond get _clone =>
       DataTransfer$GibibytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$GibibytePerSecond] with new value
   @override
@@ -2093,7 +2141,7 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
 
   static const _ratio = 1099511627776.0;
 
-  /// 1 [DataTransfer$TebibitPerSecond]  =  1099511627776.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TebibitPerSecond] = 1099511627776.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -2101,6 +2149,9 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
   @override
   DataTransfer$TebibitPerSecond get _clone =>
       DataTransfer$TebibitPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$TebibitPerSecond] with new value
   @override
@@ -2148,7 +2199,7 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
 
   static const _ratio = 8796093022208.0;
 
-  /// 1 [DataTransfer$TebibytePerSecond]  =  8796093022208.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TebibytePerSecond] = 8796093022208.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -2156,6 +2207,9 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
   @override
   DataTransfer$TebibytePerSecond get _clone =>
       DataTransfer$TebibytePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$TebibytePerSecond] with new value
   @override
@@ -2203,13 +2257,16 @@ final class DataTransfer$Ethernet extends DataTransfer {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [DataTransfer$Ethernet]  =  10000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Ethernet] = 10000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Ethernet get _clone => DataTransfer$Ethernet(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Ethernet] with new value
   @override
@@ -2220,7 +2277,7 @@ final class DataTransfer$Ethernet extends DataTransfer {
 
   /// Symbol for [DataTransfer$Ethernet]
   @override
-  String get symbol => '';
+  String get symbol => 'Ethernet';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2257,13 +2314,16 @@ final class DataTransfer$EthernetFast extends DataTransfer {
 
   static const _ratio = 100000000.0;
 
-  /// 1 [DataTransfer$EthernetFast]  =  100000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EthernetFast] = 100000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$EthernetFast get _clone => DataTransfer$EthernetFast(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$EthernetFast] with new value
   @override
@@ -2274,7 +2334,7 @@ final class DataTransfer$EthernetFast extends DataTransfer {
 
   /// Symbol for [DataTransfer$EthernetFast]
   @override
-  String get symbol => '';
+  String get symbol => 'EthernetFast';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2311,7 +2371,7 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [DataTransfer$EthernetGigabit]  =  1000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EthernetGigabit] = 1000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -2319,6 +2379,9 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
   @override
   DataTransfer$EthernetGigabit get _clone =>
       DataTransfer$EthernetGigabit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$EthernetGigabit] with new value
   @override
@@ -2329,7 +2392,7 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
 
   /// Symbol for [DataTransfer$EthernetGigabit]
   @override
-  String get symbol => '';
+  String get symbol => 'EthernetGigabit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2366,7 +2429,7 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
 
   static const _ratio = 10000000000.0;
 
-  /// 1 [DataTransfer$Ethernet10Gigabit]  =  10000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Ethernet10Gigabit] = 10000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -2374,6 +2437,9 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
   @override
   DataTransfer$Ethernet10Gigabit get _clone =>
       DataTransfer$Ethernet10Gigabit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Ethernet10Gigabit] with new value
   @override
@@ -2384,7 +2450,7 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
 
   /// Symbol for [DataTransfer$Ethernet10Gigabit]
   @override
-  String get symbol => '';
+  String get symbol => 'Ethernet10Gigabit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2421,13 +2487,16 @@ final class DataTransfer$OC1 extends DataTransfer {
 
   static const _ratio = 51840000.0;
 
-  /// 1 [DataTransfer$OC1]  =  51840000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC1] = 51840000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$OC1 get _clone => DataTransfer$OC1(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$OC1] with new value
   @override
@@ -2438,7 +2507,7 @@ final class DataTransfer$OC1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$OC1]
   @override
-  String get symbol => '';
+  String get symbol => 'OC1';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2475,13 +2544,16 @@ final class DataTransfer$OC3 extends DataTransfer {
 
   static const _ratio = 155520000.0;
 
-  /// 1 [DataTransfer$OC3]  =  155520000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC3] = 155520000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$OC3 get _clone => DataTransfer$OC3(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$OC3] with new value
   @override
@@ -2492,7 +2564,7 @@ final class DataTransfer$OC3 extends DataTransfer {
 
   /// Symbol for [DataTransfer$OC3]
   @override
-  String get symbol => '';
+  String get symbol => 'OC3';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2529,13 +2601,16 @@ final class DataTransfer$OC12 extends DataTransfer {
 
   static const _ratio = 622080000.0;
 
-  /// 1 [DataTransfer$OC12]  =  622080000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC12] = 622080000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$OC12 get _clone => DataTransfer$OC12(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$OC12] with new value
   @override
@@ -2546,7 +2621,7 @@ final class DataTransfer$OC12 extends DataTransfer {
 
   /// Symbol for [DataTransfer$OC12]
   @override
-  String get symbol => '';
+  String get symbol => 'OC12';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2583,13 +2658,16 @@ final class DataTransfer$OC24 extends DataTransfer {
 
   static const _ratio = 1244160000.0;
 
-  /// 1 [DataTransfer$OC24]  =  1244160000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC24] = 1244160000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$OC24 get _clone => DataTransfer$OC24(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$OC24] with new value
   @override
@@ -2600,7 +2678,7 @@ final class DataTransfer$OC24 extends DataTransfer {
 
   /// Symbol for [DataTransfer$OC24]
   @override
-  String get symbol => '';
+  String get symbol => 'OC24';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2637,13 +2715,16 @@ final class DataTransfer$OC48 extends DataTransfer {
 
   static const _ratio = 2488320000.0;
 
-  /// 1 [DataTransfer$OC48]  =  2488320000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC48] = 2488320000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$OC48 get _clone => DataTransfer$OC48(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$OC48] with new value
   @override
@@ -2654,7 +2735,7 @@ final class DataTransfer$OC48 extends DataTransfer {
 
   /// Symbol for [DataTransfer$OC48]
   @override
-  String get symbol => '';
+  String get symbol => 'OC48';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2691,13 +2772,16 @@ final class DataTransfer$OC192 extends DataTransfer {
 
   static const _ratio = 9953280000.0;
 
-  /// 1 [DataTransfer$OC192]  =  9953280000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC192] = 9953280000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$OC192 get _clone => DataTransfer$OC192(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$OC192] with new value
   @override
@@ -2708,7 +2792,7 @@ final class DataTransfer$OC192 extends DataTransfer {
 
   /// Symbol for [DataTransfer$OC192]
   @override
-  String get symbol => '';
+  String get symbol => 'OC192';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2745,13 +2829,16 @@ final class DataTransfer$OC768 extends DataTransfer {
 
   static const _ratio = 39813120000.0;
 
-  /// 1 [DataTransfer$OC768]  =  39813120000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC768] = 39813120000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$OC768 get _clone => DataTransfer$OC768(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$OC768] with new value
   @override
@@ -2762,7 +2849,7 @@ final class DataTransfer$OC768 extends DataTransfer {
 
   /// Symbol for [DataTransfer$OC768]
   @override
-  String get symbol => '';
+  String get symbol => 'OC768';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2799,7 +2886,7 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
 
   static const _ratio = 64000.0;
 
-  /// 1 [DataTransfer$ISDNSingleChannel]  =  64000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ISDNSingleChannel] = 64000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -2807,6 +2894,9 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
   @override
   DataTransfer$ISDNSingleChannel get _clone =>
       DataTransfer$ISDNSingleChannel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$ISDNSingleChannel] with new value
   @override
@@ -2817,7 +2907,7 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
 
   /// Symbol for [DataTransfer$ISDNSingleChannel]
   @override
-  String get symbol => '';
+  String get symbol => 'ISDNSingleChannel';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2854,7 +2944,7 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
 
   static const _ratio = 128000.0;
 
-  /// 1 [DataTransfer$ISDNDualChannel]  =  128000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ISDNDualChannel] = 128000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -2862,6 +2952,9 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
   @override
   DataTransfer$ISDNDualChannel get _clone =>
       DataTransfer$ISDNDualChannel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$ISDNDualChannel] with new value
   @override
@@ -2872,7 +2965,7 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
 
   /// Symbol for [DataTransfer$ISDNDualChannel]
   @override
-  String get symbol => '';
+  String get symbol => 'ISDNDualChannel';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2909,13 +3002,16 @@ final class DataTransfer$Modem110 extends DataTransfer {
 
   static const _ratio = 110.0;
 
-  /// 1 [DataTransfer$Modem110]  =  110.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem110] = 110.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem110 get _clone => DataTransfer$Modem110(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem110] with new value
   @override
@@ -2926,7 +3022,7 @@ final class DataTransfer$Modem110 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem110]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem110';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2963,13 +3059,16 @@ final class DataTransfer$Modem300 extends DataTransfer {
 
   static const _ratio = 300.0;
 
-  /// 1 [DataTransfer$Modem300]  =  300.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem300] = 300.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem300 get _clone => DataTransfer$Modem300(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem300] with new value
   @override
@@ -2980,7 +3079,7 @@ final class DataTransfer$Modem300 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem300]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem300';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3017,13 +3116,16 @@ final class DataTransfer$Modem1200 extends DataTransfer {
 
   static const _ratio = 1200.0;
 
-  /// 1 [DataTransfer$Modem1200]  =  1200.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem1200] = 1200.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem1200 get _clone => DataTransfer$Modem1200(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem1200] with new value
   @override
@@ -3034,7 +3136,7 @@ final class DataTransfer$Modem1200 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem1200]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem1200';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3071,13 +3173,16 @@ final class DataTransfer$Modem2400 extends DataTransfer {
 
   static const _ratio = 2400.0;
 
-  /// 1 [DataTransfer$Modem2400]  =  2400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem2400] = 2400.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem2400 get _clone => DataTransfer$Modem2400(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem2400] with new value
   @override
@@ -3088,7 +3193,7 @@ final class DataTransfer$Modem2400 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem2400]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem2400';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3125,13 +3230,16 @@ final class DataTransfer$Modem9600 extends DataTransfer {
 
   static const _ratio = 9600.0;
 
-  /// 1 [DataTransfer$Modem9600]  =  9600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem9600] = 9600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem9600 get _clone => DataTransfer$Modem9600(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem9600] with new value
   @override
@@ -3142,7 +3250,7 @@ final class DataTransfer$Modem9600 extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem9600]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem9600';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3179,13 +3287,16 @@ final class DataTransfer$Modem144k extends DataTransfer {
 
   static const _ratio = 14400.0;
 
-  /// 1 [DataTransfer$Modem144k]  =  14400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem144k] = 14400.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem144k get _clone => DataTransfer$Modem144k(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem144k] with new value
   @override
@@ -3196,7 +3307,7 @@ final class DataTransfer$Modem144k extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem144k]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem144k';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3233,13 +3344,16 @@ final class DataTransfer$Modem288k extends DataTransfer {
 
   static const _ratio = 28800.0;
 
-  /// 1 [DataTransfer$Modem288k]  =  28800.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem288k] = 28800.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem288k get _clone => DataTransfer$Modem288k(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem288k] with new value
   @override
@@ -3250,7 +3364,7 @@ final class DataTransfer$Modem288k extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem288k]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem288k';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3287,13 +3401,16 @@ final class DataTransfer$Modem336k extends DataTransfer {
 
   static const _ratio = 33600.0;
 
-  /// 1 [DataTransfer$Modem336k]  =  33600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem336k] = 33600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem336k get _clone => DataTransfer$Modem336k(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem336k] with new value
   @override
@@ -3304,7 +3421,7 @@ final class DataTransfer$Modem336k extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem336k]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem336k';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3341,13 +3458,16 @@ final class DataTransfer$Modem56k extends DataTransfer {
 
   static const _ratio = 56000.0;
 
-  /// 1 [DataTransfer$Modem56k]  =  56000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem56k] = 56000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$Modem56k get _clone => DataTransfer$Modem56k(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$Modem56k] with new value
   @override
@@ -3358,7 +3478,7 @@ final class DataTransfer$Modem56k extends DataTransfer {
 
   /// Symbol for [DataTransfer$Modem56k]
   @override
-  String get symbol => '';
+  String get symbol => 'Modem56k';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3395,13 +3515,16 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
 
   static const _ratio = 12000000.0;
 
-  /// 1 [DataTransfer$SCSIAsync]  =  12000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIAsync] = 12000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SCSIAsync get _clone => DataTransfer$SCSIAsync(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSIAsync] with new value
   @override
@@ -3412,7 +3535,7 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIAsync]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSIAsync';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3449,13 +3572,16 @@ final class DataTransfer$SCSISync extends DataTransfer {
 
   static const _ratio = 40000000.0;
 
-  /// 1 [DataTransfer$SCSISync]  =  40000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSISync] = 40000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SCSISync get _clone => DataTransfer$SCSISync(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSISync] with new value
   @override
@@ -3466,7 +3592,7 @@ final class DataTransfer$SCSISync extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSISync]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSISync';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3503,13 +3629,16 @@ final class DataTransfer$SCSIFast extends DataTransfer {
 
   static const _ratio = 80000000.0;
 
-  /// 1 [DataTransfer$SCSIFast]  =  80000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIFast] = 80000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SCSIFast get _clone => DataTransfer$SCSIFast(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSIFast] with new value
   @override
@@ -3520,7 +3649,7 @@ final class DataTransfer$SCSIFast extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIFast]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSIFast';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3557,13 +3686,16 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
 
   static const _ratio = 160000000.0;
 
-  /// 1 [DataTransfer$SCSIFastUltra]  =  160000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIFastUltra] = 160000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SCSIFastUltra get _clone => DataTransfer$SCSIFastUltra(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSIFastUltra] with new value
   @override
@@ -3574,7 +3706,7 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIFastUltra]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSIFastUltra';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3611,13 +3743,16 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
 
   static const _ratio = 160000000.0;
 
-  /// 1 [DataTransfer$SCSIFastWide]  =  160000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIFastWide] = 160000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SCSIFastWide get _clone => DataTransfer$SCSIFastWide(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSIFastWide] with new value
   @override
@@ -3628,7 +3763,7 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIFastWide]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSIFastWide';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3665,7 +3800,7 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
 
   static const _ratio = 320000000.0;
 
-  /// 1 [DataTransfer$SCSIFastUltraWide]  =  320000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIFastUltraWide] = 320000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -3673,6 +3808,9 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
   @override
   DataTransfer$SCSIFastUltraWide get _clone =>
       DataTransfer$SCSIFastUltraWide(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSIFastUltraWide] with new value
   @override
@@ -3683,7 +3821,7 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIFastUltraWide]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSIFastUltraWide';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3720,13 +3858,16 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
 
   static const _ratio = 640000000.0;
 
-  /// 1 [DataTransfer$SCSIUltra2]  =  640000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIUltra2] = 640000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SCSIUltra2 get _clone => DataTransfer$SCSIUltra2(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSIUltra2] with new value
   @override
@@ -3737,7 +3878,7 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIUltra2]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSIUltra2';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3774,13 +3915,16 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
 
   static const _ratio = 1280000000.0;
 
-  /// 1 [DataTransfer$SCSIUltra3]  =  1280000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIUltra3] = 1280000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SCSIUltra3 get _clone => DataTransfer$SCSIUltra3(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSIUltra3] with new value
   @override
@@ -3791,7 +3935,7 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSIUltra3]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSIUltra3';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3828,13 +3972,16 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
 
   static const _ratio = 640000000.0;
 
-  /// 1 [DataTransfer$SCSILVDUltra80]  =  640000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSILVDUltra80] = 640000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SCSILVDUltra80 get _clone => DataTransfer$SCSILVDUltra80(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra80] with new value
   @override
@@ -3845,7 +3992,7 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSILVDUltra80]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSILVDUltra80';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3882,7 +4029,7 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
 
   static const _ratio = 1280000000.0;
 
-  /// 1 [DataTransfer$SCSILVDUltra160]  =  1280000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSILVDUltra160] = 1280000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -3890,6 +4037,9 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
   @override
   DataTransfer$SCSILVDUltra160 get _clone =>
       DataTransfer$SCSILVDUltra160(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra160] with new value
   @override
@@ -3900,7 +4050,7 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSILVDUltra160]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSILVDUltra160';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3937,7 +4087,7 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
 
   static const _ratio = 2560000000.0;
 
-  /// 1 [DataTransfer$SCSILVDUltra320]  =  2560000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSILVDUltra320] = 2560000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -3945,6 +4095,9 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
   @override
   DataTransfer$SCSILVDUltra320 get _clone =>
       DataTransfer$SCSILVDUltra320(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra320] with new value
   @override
@@ -3955,7 +4108,7 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SCSILVDUltra320]
   @override
-  String get symbol => '';
+  String get symbol => 'SCSILVDUltra320';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3992,13 +4145,16 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
 
   static const _ratio = 26400000.0;
 
-  /// 1 [DataTransfer$IDEPIOMode0]  =  26400000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode0] = 26400000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEPIOMode0 get _clone => DataTransfer$IDEPIOMode0(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode0] with new value
   @override
@@ -4009,7 +4165,7 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode0]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEPIOMode0';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4046,13 +4202,16 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
 
   static const _ratio = 41600000.0;
 
-  /// 1 [DataTransfer$IDEPIOMode1]  =  41600000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode1] = 41600000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEPIOMode1 get _clone => DataTransfer$IDEPIOMode1(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode1] with new value
   @override
@@ -4063,7 +4222,7 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode1]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEPIOMode1';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4100,13 +4259,16 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
 
   static const _ratio = 66400000.0;
 
-  /// 1 [DataTransfer$IDEPIOMode2]  =  66400000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode2] = 66400000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEPIOMode2 get _clone => DataTransfer$IDEPIOMode2(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode2] with new value
   @override
@@ -4117,7 +4279,7 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode2]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEPIOMode2';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4154,13 +4316,16 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
 
   static const _ratio = 88800000.0;
 
-  /// 1 [DataTransfer$IDEPIOMode3]  =  88800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode3] = 88800000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEPIOMode3 get _clone => DataTransfer$IDEPIOMode3(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode3] with new value
   @override
@@ -4171,7 +4336,7 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode3]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEPIOMode3';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4208,13 +4373,16 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
 
   static const _ratio = 132800000.0;
 
-  /// 1 [DataTransfer$IDEPIOMode4]  =  132800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode4] = 132800000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEPIOMode4 get _clone => DataTransfer$IDEPIOMode4(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode4] with new value
   @override
@@ -4225,7 +4393,7 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEPIOMode4]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEPIOMode4';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4262,13 +4430,16 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
 
   static const _ratio = 33600000.0;
 
-  /// 1 [DataTransfer$IDEDMAMode0]  =  33600000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEDMAMode0] = 33600000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEDMAMode0 get _clone => DataTransfer$IDEDMAMode0(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode0] with new value
   @override
@@ -4279,7 +4450,7 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEDMAMode0]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEDMAMode0';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4316,13 +4487,16 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
 
   static const _ratio = 106400000.0;
 
-  /// 1 [DataTransfer$IDEDMAMode1]  =  106400000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEDMAMode1] = 106400000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEDMAMode1 get _clone => DataTransfer$IDEDMAMode1(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode1] with new value
   @override
@@ -4333,7 +4507,7 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEDMAMode1]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEDMAMode1';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4370,13 +4544,16 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
 
   static const _ratio = 132800000.0;
 
-  /// 1 [DataTransfer$IDEDMAMode2]  =  132800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEDMAMode2] = 132800000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEDMAMode2 get _clone => DataTransfer$IDEDMAMode2(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode2] with new value
   @override
@@ -4387,7 +4564,7 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEDMAMode2]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEDMAMode2';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4424,13 +4601,16 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
 
   static const _ratio = 132800000.0;
 
-  /// 1 [DataTransfer$IDEUDMAMode0]  =  132800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode0] = 132800000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMAMode0 get _clone => DataTransfer$IDEUDMAMode0(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode0] with new value
   @override
@@ -4441,7 +4621,7 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode0]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMAMode0';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4478,13 +4658,16 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
 
   static const _ratio = 200000000.0;
 
-  /// 1 [DataTransfer$IDEUDMAMode1]  =  200000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode1] = 200000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMAMode1 get _clone => DataTransfer$IDEUDMAMode1(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode1] with new value
   @override
@@ -4495,7 +4678,7 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode1]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMAMode1';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4532,13 +4715,16 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
 
   static const _ratio = 264000000.0;
 
-  /// 1 [DataTransfer$IDEUDMAMode2]  =  264000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode2] = 264000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMAMode2 get _clone => DataTransfer$IDEUDMAMode2(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode2] with new value
   @override
@@ -4549,7 +4735,7 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode2]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMAMode2';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4586,13 +4772,16 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
 
   static const _ratio = 400000000.0;
 
-  /// 1 [DataTransfer$IDEUDMAMode3]  =  400000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode3] = 400000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMAMode3 get _clone => DataTransfer$IDEUDMAMode3(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode3] with new value
   @override
@@ -4603,7 +4792,7 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode3]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMAMode3';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4640,13 +4829,16 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
 
   static const _ratio = 528000000.0;
 
-  /// 1 [DataTransfer$IDEUDMAMode4]  =  528000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode4] = 528000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMAMode4 get _clone => DataTransfer$IDEUDMAMode4(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode4] with new value
   @override
@@ -4657,7 +4849,7 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode4]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMAMode4';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4694,13 +4886,16 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
 
   static const _ratio = 800000000.0;
 
-  /// 1 [DataTransfer$IDEUDMAMode5]  =  800000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode5] = 800000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMAMode5 get _clone => DataTransfer$IDEUDMAMode5(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode5] with new value
   @override
@@ -4711,7 +4906,7 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode5]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMAMode5';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4748,13 +4943,16 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
 
   static const _ratio = 1066666666.6666666;
 
-  /// 1 [DataTransfer$IDEUDMAMode6]  ≈  1066666666.6666666 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode6] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMAMode6 get _clone => DataTransfer$IDEUDMAMode6(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode6] with new value
   @override
@@ -4765,7 +4963,7 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMAMode6]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMAMode6';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4802,13 +5000,16 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
 
   static const _ratio = 264000000.0;
 
-  /// 1 [DataTransfer$IDEUDMA33]  =  264000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMA33] = 264000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMA33 get _clone => DataTransfer$IDEUDMA33(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA33] with new value
   @override
@@ -4819,7 +5020,7 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMA33]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMA33';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4856,13 +5057,16 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
 
   static const _ratio = 528000000.0;
 
-  /// 1 [DataTransfer$IDEUDMA66]  =  528000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMA66] = 528000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMA66 get _clone => DataTransfer$IDEUDMA66(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA66] with new value
   @override
@@ -4873,7 +5077,7 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMA66]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMA66';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4910,13 +5114,16 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
 
   static const _ratio = 800000000.0;
 
-  /// 1 [DataTransfer$IDEUDMA100]  =  800000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMA100] = 800000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMA100 get _clone => DataTransfer$IDEUDMA100(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA100] with new value
   @override
@@ -4927,7 +5134,7 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMA100]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMA100';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4964,13 +5171,16 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
 
   static const _ratio = 1066666666.6666666;
 
-  /// 1 [DataTransfer$IDEUDMA133]  ≈  1066666666.6666666 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMA133] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IDEUDMA133 get _clone => DataTransfer$IDEUDMA133(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA133] with new value
   @override
@@ -4981,7 +5191,7 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IDEUDMA133]
   @override
-  String get symbol => '';
+  String get symbol => 'IDEUDMA133';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5018,13 +5228,16 @@ final class DataTransfer$SATA10 extends DataTransfer {
 
   static const _ratio = 1500000000.0;
 
-  /// 1 [DataTransfer$SATA10]  =  1500000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SATA10] = 1500000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SATA10 get _clone => DataTransfer$SATA10(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SATA10] with new value
   @override
@@ -5035,7 +5248,7 @@ final class DataTransfer$SATA10 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SATA10]
   @override
-  String get symbol => '';
+  String get symbol => 'SATA10';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5072,13 +5285,16 @@ final class DataTransfer$SATA20 extends DataTransfer {
 
   static const _ratio = 3000000000.0;
 
-  /// 1 [DataTransfer$SATA20]  =  3000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SATA20] = 3000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SATA20 get _clone => DataTransfer$SATA20(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SATA20] with new value
   @override
@@ -5089,7 +5305,7 @@ final class DataTransfer$SATA20 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SATA20]
   @override
-  String get symbol => '';
+  String get symbol => 'SATA20';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5126,13 +5342,16 @@ final class DataTransfer$SATA30 extends DataTransfer {
 
   static const _ratio = 6000000000.0;
 
-  /// 1 [DataTransfer$SATA30]  =  6000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SATA30] = 6000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$SATA30 get _clone => DataTransfer$SATA30(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$SATA30] with new value
   @override
@@ -5143,7 +5362,7 @@ final class DataTransfer$SATA30 extends DataTransfer {
 
   /// Symbol for [DataTransfer$SATA30]
   @override
-  String get symbol => '';
+  String get symbol => 'SATA30';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5180,13 +5399,16 @@ final class DataTransfer$USB extends DataTransfer {
 
   static const _ratio = 12000000.0;
 
-  /// 1 [DataTransfer$USB]  =  12000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$USB] = 12000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$USB get _clone => DataTransfer$USB(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$USB] with new value
   @override
@@ -5197,7 +5419,7 @@ final class DataTransfer$USB extends DataTransfer {
 
   /// Symbol for [DataTransfer$USB]
   @override
-  String get symbol => '';
+  String get symbol => 'USB';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5234,13 +5456,16 @@ final class DataTransfer$USB20 extends DataTransfer {
 
   static const _ratio = 480000000.0;
 
-  /// 1 [DataTransfer$USB20]  =  480000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$USB20] = 480000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$USB20 get _clone => DataTransfer$USB20(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$USB20] with new value
   @override
@@ -5251,7 +5476,7 @@ final class DataTransfer$USB20 extends DataTransfer {
 
   /// Symbol for [DataTransfer$USB20]
   @override
-  String get symbol => '';
+  String get symbol => 'USB20';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5288,13 +5513,16 @@ final class DataTransfer$USB30 extends DataTransfer {
 
   static const _ratio = 5000000000.0;
 
-  /// 1 [DataTransfer$USB30]  =  5000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$USB30] = 5000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$USB30 get _clone => DataTransfer$USB30(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$USB30] with new value
   @override
@@ -5305,7 +5533,7 @@ final class DataTransfer$USB30 extends DataTransfer {
 
   /// Symbol for [DataTransfer$USB30]
   @override
-  String get symbol => '';
+  String get symbol => 'USB30';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5342,7 +5570,7 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
 
   static const _ratio = 400000000.0;
 
-  /// 1 [DataTransfer$FireWire400IEEE1394]  =  400000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$FireWire400IEEE1394] = 400000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -5350,6 +5578,9 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
   @override
   DataTransfer$FireWire400IEEE1394 get _clone =>
       DataTransfer$FireWire400IEEE1394(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$FireWire400IEEE1394] with new value
   @override
@@ -5360,7 +5591,7 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
 
   /// Symbol for [DataTransfer$FireWire400IEEE1394]
   @override
-  String get symbol => '';
+  String get symbol => 'FireWire400IEEE1394';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5397,7 +5628,7 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
 
   static const _ratio = 800000000.0;
 
-  /// 1 [DataTransfer$FireWire800IEEE1394b]  =  800000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$FireWire800IEEE1394b] = 800000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -5405,6 +5636,9 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
   @override
   DataTransfer$FireWire800IEEE1394b get _clone =>
       DataTransfer$FireWire800IEEE1394b(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$FireWire800IEEE1394b] with new value
   @override
@@ -5415,7 +5649,7 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
 
   /// Symbol for [DataTransfer$FireWire800IEEE1394b]
   @override
-  String get symbol => '';
+  String get symbol => 'FireWire800IEEE1394b';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5452,13 +5686,16 @@ final class DataTransfer$IrDA extends DataTransfer {
 
   static const _ratio = 115200.0;
 
-  /// 1 [DataTransfer$IrDA]  =  115200.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IrDA] = 115200.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IrDA get _clone => DataTransfer$IrDA(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IrDA] with new value
   @override
@@ -5469,7 +5706,7 @@ final class DataTransfer$IrDA extends DataTransfer {
 
   /// Symbol for [DataTransfer$IrDA]
   @override
-  String get symbol => '';
+  String get symbol => 'IrDA';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5506,13 +5743,16 @@ final class DataTransfer$IrDA2 extends DataTransfer {
 
   static const _ratio = 4000000.0;
 
-  /// 1 [DataTransfer$IrDA2]  =  4000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IrDA2] = 4000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$IrDA2 get _clone => DataTransfer$IrDA2(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$IrDA2] with new value
   @override
@@ -5523,7 +5763,7 @@ final class DataTransfer$IrDA2 extends DataTransfer {
 
   /// Symbol for [DataTransfer$IrDA2]
   @override
-  String get symbol => '';
+  String get symbol => 'IrDA2';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5560,13 +5800,16 @@ final class DataTransfer$ATM extends DataTransfer {
 
   static const _ratio = 155000000.0;
 
-  /// 1 [DataTransfer$ATM]  =  155000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ATM] = 155000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$ATM get _clone => DataTransfer$ATM(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$ATM] with new value
   @override
@@ -5577,7 +5820,7 @@ final class DataTransfer$ATM extends DataTransfer {
 
   /// Symbol for [DataTransfer$ATM]
   @override
-  String get symbol => '';
+  String get symbol => 'ATM';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5614,13 +5857,16 @@ final class DataTransfer$T0Payload extends DataTransfer {
 
   static const _ratio = 56000.0;
 
-  /// 1 [DataTransfer$T0Payload]  =  56000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T0Payload] = 56000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T0Payload get _clone => DataTransfer$T0Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T0Payload] with new value
   @override
@@ -5631,7 +5877,7 @@ final class DataTransfer$T0Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T0Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'T0Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5668,13 +5914,16 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
 
   static const _ratio = 64000.0;
 
-  /// 1 [DataTransfer$T0B8ZSPayload]  =  64000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T0B8ZSPayload] = 64000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T0B8ZSPayload get _clone => DataTransfer$T0B8ZSPayload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T0B8ZSPayload] with new value
   @override
@@ -5685,7 +5934,7 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T0B8ZSPayload]
   @override
-  String get symbol => '';
+  String get symbol => 'T0B8ZSPayload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5722,13 +5971,16 @@ final class DataTransfer$T1Signal extends DataTransfer {
 
   static const _ratio = 1544000.0;
 
-  /// 1 [DataTransfer$T1Signal]  =  1544000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1Signal] = 1544000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T1Signal get _clone => DataTransfer$T1Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T1Signal] with new value
   @override
@@ -5739,7 +5991,7 @@ final class DataTransfer$T1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'T1Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5776,13 +6028,16 @@ final class DataTransfer$T1Payload extends DataTransfer {
 
   static const _ratio = 1344000.0;
 
-  /// 1 [DataTransfer$T1Payload]  =  1344000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1Payload] = 1344000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T1Payload get _clone => DataTransfer$T1Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T1Payload] with new value
   @override
@@ -5793,7 +6048,7 @@ final class DataTransfer$T1Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'T1Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5830,13 +6085,16 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
 
   static const _ratio = 1544000.0;
 
-  /// 1 [DataTransfer$T1ZPayload]  =  1544000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1ZPayload] = 1544000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T1ZPayload get _clone => DataTransfer$T1ZPayload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T1ZPayload] with new value
   @override
@@ -5847,7 +6105,7 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1ZPayload]
   @override
-  String get symbol => '';
+  String get symbol => 'T1ZPayload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5884,13 +6142,16 @@ final class DataTransfer$T1CSignal extends DataTransfer {
 
   static const _ratio = 3152000.0;
 
-  /// 1 [DataTransfer$T1CSignal]  =  3152000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1CSignal] = 3152000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T1CSignal get _clone => DataTransfer$T1CSignal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T1CSignal] with new value
   @override
@@ -5901,7 +6162,7 @@ final class DataTransfer$T1CSignal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1CSignal]
   @override
-  String get symbol => '';
+  String get symbol => 'T1CSignal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5938,13 +6199,16 @@ final class DataTransfer$T1CPayload extends DataTransfer {
 
   static const _ratio = 2688000.0;
 
-  /// 1 [DataTransfer$T1CPayload]  =  2688000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1CPayload] = 2688000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T1CPayload get _clone => DataTransfer$T1CPayload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T1CPayload] with new value
   @override
@@ -5955,7 +6219,7 @@ final class DataTransfer$T1CPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T1CPayload]
   @override
-  String get symbol => '';
+  String get symbol => 'T1CPayload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -5992,13 +6256,16 @@ final class DataTransfer$T2Signal extends DataTransfer {
 
   static const _ratio = 6312000.0;
 
-  /// 1 [DataTransfer$T2Signal]  =  6312000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T2Signal] = 6312000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T2Signal get _clone => DataTransfer$T2Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T2Signal] with new value
   @override
@@ -6009,7 +6276,7 @@ final class DataTransfer$T2Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T2Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'T2Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6046,13 +6313,16 @@ final class DataTransfer$T3Signal extends DataTransfer {
 
   static const _ratio = 44736000.0;
 
-  /// 1 [DataTransfer$T3Signal]  =  44736000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T3Signal] = 44736000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T3Signal get _clone => DataTransfer$T3Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T3Signal] with new value
   @override
@@ -6063,7 +6333,7 @@ final class DataTransfer$T3Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T3Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'T3Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6100,13 +6370,16 @@ final class DataTransfer$T3Payload extends DataTransfer {
 
   static const _ratio = 37632000.0;
 
-  /// 1 [DataTransfer$T3Payload]  =  37632000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T3Payload] = 37632000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T3Payload get _clone => DataTransfer$T3Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T3Payload] with new value
   @override
@@ -6117,7 +6390,7 @@ final class DataTransfer$T3Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T3Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'T3Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6154,13 +6427,16 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
 
   static const _ratio = 43008000.0;
 
-  /// 1 [DataTransfer$T3ZPayload]  =  43008000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T3ZPayload] = 43008000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T3ZPayload get _clone => DataTransfer$T3ZPayload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T3ZPayload] with new value
   @override
@@ -6171,7 +6447,7 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$T3ZPayload]
   @override
-  String get symbol => '';
+  String get symbol => 'T3ZPayload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6208,13 +6484,16 @@ final class DataTransfer$T4Signal extends DataTransfer {
 
   static const _ratio = 274176000.0;
 
-  /// 1 [DataTransfer$T4Signal]  =  274176000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T4Signal] = 274176000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$T4Signal get _clone => DataTransfer$T4Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$T4Signal] with new value
   @override
@@ -6225,7 +6504,7 @@ final class DataTransfer$T4Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$T4Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'T4Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6262,13 +6541,16 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
 
   static const _ratio = 2048000.0;
 
-  /// 1 [DataTransfer$EPTA1Signal]  =  2048000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA1Signal] = 2048000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$EPTA1Signal get _clone => DataTransfer$EPTA1Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$EPTA1Signal] with new value
   @override
@@ -6279,7 +6561,7 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA1Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'EPTA1Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6316,13 +6598,16 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
 
   static const _ratio = 1920000.0;
 
-  /// 1 [DataTransfer$EPTA1Payload]  =  1920000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA1Payload] = 1920000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$EPTA1Payload get _clone => DataTransfer$EPTA1Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$EPTA1Payload] with new value
   @override
@@ -6333,7 +6618,7 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA1Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'EPTA1Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6370,13 +6655,16 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
 
   static const _ratio = 8448000.0;
 
-  /// 1 [DataTransfer$EPTA2Signal]  =  8448000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA2Signal] = 8448000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$EPTA2Signal get _clone => DataTransfer$EPTA2Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$EPTA2Signal] with new value
   @override
@@ -6387,7 +6675,7 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA2Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'EPTA2Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6424,13 +6712,16 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
 
   static const _ratio = 7680000.0;
 
-  /// 1 [DataTransfer$EPTA2Payload]  =  7680000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA2Payload] = 7680000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$EPTA2Payload get _clone => DataTransfer$EPTA2Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$EPTA2Payload] with new value
   @override
@@ -6441,7 +6732,7 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA2Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'EPTA2Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6478,13 +6769,16 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
 
   static const _ratio = 34368000.0;
 
-  /// 1 [DataTransfer$EPTA3Signal]  =  34368000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA3Signal] = 34368000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$EPTA3Signal get _clone => DataTransfer$EPTA3Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$EPTA3Signal] with new value
   @override
@@ -6495,7 +6789,7 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA3Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'EPTA3Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6532,13 +6826,16 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
 
   static const _ratio = 30720000.0;
 
-  /// 1 [DataTransfer$EPTA3Payload]  =  30720000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA3Payload] = 30720000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$EPTA3Payload get _clone => DataTransfer$EPTA3Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$EPTA3Payload] with new value
   @override
@@ -6549,7 +6846,7 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$EPTA3Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'EPTA3Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6586,13 +6883,16 @@ final class DataTransfer$H0 extends DataTransfer {
 
   static const _ratio = 384000.0;
 
-  /// 1 [DataTransfer$H0]  =  384000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$H0] = 384000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$H0 get _clone => DataTransfer$H0(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$H0] with new value
   @override
@@ -6603,7 +6903,7 @@ final class DataTransfer$H0 extends DataTransfer {
 
   /// Symbol for [DataTransfer$H0]
   @override
-  String get symbol => '';
+  String get symbol => 'H0';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6640,13 +6940,16 @@ final class DataTransfer$H11 extends DataTransfer {
 
   static const _ratio = 1536000.0;
 
-  /// 1 [DataTransfer$H11]  =  1536000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$H11] = 1536000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$H11 get _clone => DataTransfer$H11(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$H11] with new value
   @override
@@ -6657,7 +6960,7 @@ final class DataTransfer$H11 extends DataTransfer {
 
   /// Symbol for [DataTransfer$H11]
   @override
-  String get symbol => '';
+  String get symbol => 'H11';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6694,13 +6997,16 @@ final class DataTransfer$H12 extends DataTransfer {
 
   static const _ratio = 1920000.0;
 
-  /// 1 [DataTransfer$H12]  =  1920000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$H12] = 1920000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$H12 get _clone => DataTransfer$H12(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$H12] with new value
   @override
@@ -6711,7 +7017,7 @@ final class DataTransfer$H12 extends DataTransfer {
 
   /// Symbol for [DataTransfer$H12]
   @override
-  String get symbol => '';
+  String get symbol => 'H12';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6748,7 +7054,7 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
 
   static const _ratio = 1728000.0;
 
-  /// 1 [DataTransfer$VirtualTributary1Signal]  =  1728000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary1Signal] = 1728000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -6756,6 +7062,9 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
   @override
   DataTransfer$VirtualTributary1Signal get _clone =>
       DataTransfer$VirtualTributary1Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary1Signal] with new value
   @override
@@ -6766,7 +7075,7 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary1Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'VirtualTributary1Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6803,7 +7112,7 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
 
   static const _ratio = 1544000.0;
 
-  /// 1 [DataTransfer$VirtualTributary1Payload]  =  1544000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary1Payload] = 1544000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -6811,6 +7120,9 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
   @override
   DataTransfer$VirtualTributary1Payload get _clone =>
       DataTransfer$VirtualTributary1Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary1Payload] with new value
   @override
@@ -6821,7 +7133,7 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary1Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'VirtualTributary1Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6858,7 +7170,7 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
 
   static const _ratio = 2304000.0;
 
-  /// 1 [DataTransfer$VirtualTributary2Signal]  =  2304000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary2Signal] = 2304000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -6866,6 +7178,9 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
   @override
   DataTransfer$VirtualTributary2Signal get _clone =>
       DataTransfer$VirtualTributary2Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary2Signal] with new value
   @override
@@ -6876,7 +7191,7 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary2Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'VirtualTributary2Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6913,7 +7228,7 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
 
   static const _ratio = 2048000.0;
 
-  /// 1 [DataTransfer$VirtualTributary2Payload]  =  2048000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary2Payload] = 2048000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -6921,6 +7236,9 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
   @override
   DataTransfer$VirtualTributary2Payload get _clone =>
       DataTransfer$VirtualTributary2Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary2Payload] with new value
   @override
@@ -6931,7 +7249,7 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary2Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'VirtualTributary2Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -6968,7 +7286,7 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
 
   static const _ratio = 6312000.0;
 
-  /// 1 [DataTransfer$VirtualTributary6Signal]  =  6312000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary6Signal] = 6312000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -6976,6 +7294,9 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
   @override
   DataTransfer$VirtualTributary6Signal get _clone =>
       DataTransfer$VirtualTributary6Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary6Signal] with new value
   @override
@@ -6986,7 +7307,7 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary6Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'VirtualTributary6Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7023,7 +7344,7 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
 
   static const _ratio = 6000000.0;
 
-  /// 1 [DataTransfer$VirtualTributary6Payload]  =  6000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary6Payload] = 6000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -7031,6 +7352,9 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
   @override
   DataTransfer$VirtualTributary6Payload get _clone =>
       DataTransfer$VirtualTributary6Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary6Payload] with new value
   @override
@@ -7041,7 +7365,7 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$VirtualTributary6Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'VirtualTributary6Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7078,13 +7402,16 @@ final class DataTransfer$STS1Signal extends DataTransfer {
 
   static const _ratio = 51840000.0;
 
-  /// 1 [DataTransfer$STS1Signal]  =  51840000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS1Signal] = 51840000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS1Signal get _clone => DataTransfer$STS1Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS1Signal] with new value
   @override
@@ -7095,7 +7422,7 @@ final class DataTransfer$STS1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS1Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STS1Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7132,13 +7459,16 @@ final class DataTransfer$STS1Payload extends DataTransfer {
 
   static const _ratio = 49500000.0;
 
-  /// 1 [DataTransfer$STS1Payload]  =  49500000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS1Payload] = 49500000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS1Payload get _clone => DataTransfer$STS1Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS1Payload] with new value
   @override
@@ -7149,7 +7479,7 @@ final class DataTransfer$STS1Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS1Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'STS1Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7186,13 +7516,16 @@ final class DataTransfer$STS3Signal extends DataTransfer {
 
   static const _ratio = 155520000.0;
 
-  /// 1 [DataTransfer$STS3Signal]  =  155520000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS3Signal] = 155520000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS3Signal get _clone => DataTransfer$STS3Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS3Signal] with new value
   @override
@@ -7203,7 +7536,7 @@ final class DataTransfer$STS3Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS3Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STS3Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7240,13 +7573,16 @@ final class DataTransfer$STS3Payload extends DataTransfer {
 
   static const _ratio = 150336000.0;
 
-  /// 1 [DataTransfer$STS3Payload]  =  150336000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS3Payload] = 150336000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS3Payload get _clone => DataTransfer$STS3Payload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS3Payload] with new value
   @override
@@ -7257,7 +7593,7 @@ final class DataTransfer$STS3Payload extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS3Payload]
   @override
-  String get symbol => '';
+  String get symbol => 'STS3Payload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7294,13 +7630,16 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
 
   static const _ratio = 155520000.0;
 
-  /// 1 [DataTransfer$STS3cSignal]  =  155520000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS3cSignal] = 155520000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS3cSignal get _clone => DataTransfer$STS3cSignal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS3cSignal] with new value
   @override
@@ -7311,7 +7650,7 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS3cSignal]
   @override
-  String get symbol => '';
+  String get symbol => 'STS3cSignal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7348,13 +7687,16 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
 
   static const _ratio = 150336000.0;
 
-  /// 1 [DataTransfer$STS3cPayload]  =  150336000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS3cPayload] = 150336000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS3cPayload get _clone => DataTransfer$STS3cPayload(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS3cPayload] with new value
   @override
@@ -7365,7 +7707,7 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS3cPayload]
   @override
-  String get symbol => '';
+  String get symbol => 'STS3cPayload';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7402,13 +7744,16 @@ final class DataTransfer$STS12Signal extends DataTransfer {
 
   static const _ratio = 622080000.0;
 
-  /// 1 [DataTransfer$STS12Signal]  =  622080000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS12Signal] = 622080000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS12Signal get _clone => DataTransfer$STS12Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS12Signal] with new value
   @override
@@ -7419,7 +7764,7 @@ final class DataTransfer$STS12Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS12Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STS12Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7456,13 +7801,16 @@ final class DataTransfer$STS24Signal extends DataTransfer {
 
   static const _ratio = 1244160000.0;
 
-  /// 1 [DataTransfer$STS24Signal]  =  1244160000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS24Signal] = 1244160000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS24Signal get _clone => DataTransfer$STS24Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS24Signal] with new value
   @override
@@ -7473,7 +7821,7 @@ final class DataTransfer$STS24Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS24Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STS24Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7510,13 +7858,16 @@ final class DataTransfer$STS48Signal extends DataTransfer {
 
   static const _ratio = 2488320000.0;
 
-  /// 1 [DataTransfer$STS48Signal]  =  2488320000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS48Signal] = 2488320000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS48Signal get _clone => DataTransfer$STS48Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS48Signal] with new value
   @override
@@ -7527,7 +7878,7 @@ final class DataTransfer$STS48Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS48Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STS48Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7564,13 +7915,16 @@ final class DataTransfer$STS192Signal extends DataTransfer {
 
   static const _ratio = 9953280000.0;
 
-  /// 1 [DataTransfer$STS192Signal]  =  9953280000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS192Signal] = 9953280000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STS192Signal get _clone => DataTransfer$STS192Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STS192Signal] with new value
   @override
@@ -7581,7 +7935,7 @@ final class DataTransfer$STS192Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STS192Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STS192Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7618,13 +7972,16 @@ final class DataTransfer$STM1Signal extends DataTransfer {
 
   static const _ratio = 155520000.0;
 
-  /// 1 [DataTransfer$STM1Signal]  =  155520000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STM1Signal] = 155520000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STM1Signal get _clone => DataTransfer$STM1Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STM1Signal] with new value
   @override
@@ -7635,7 +7992,7 @@ final class DataTransfer$STM1Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STM1Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STM1Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7672,13 +8029,16 @@ final class DataTransfer$STM4Signal extends DataTransfer {
 
   static const _ratio = 622080000.0;
 
-  /// 1 [DataTransfer$STM4Signal]  =  622080000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STM4Signal] = 622080000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STM4Signal get _clone => DataTransfer$STM4Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STM4Signal] with new value
   @override
@@ -7689,7 +8049,7 @@ final class DataTransfer$STM4Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STM4Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STM4Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7726,13 +8086,16 @@ final class DataTransfer$STM16Signal extends DataTransfer {
 
   static const _ratio = 2488320000.0;
 
-  /// 1 [DataTransfer$STM16Signal]  =  2488320000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STM16Signal] = 2488320000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STM16Signal get _clone => DataTransfer$STM16Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STM16Signal] with new value
   @override
@@ -7743,7 +8106,7 @@ final class DataTransfer$STM16Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STM16Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STM16Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7780,13 +8143,16 @@ final class DataTransfer$STM64Signal extends DataTransfer {
 
   static const _ratio = 9953280000.0;
 
-  /// 1 [DataTransfer$STM64Signal]  =  9953280000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STM64Signal] = 9953280000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$STM64Signal get _clone => DataTransfer$STM64Signal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$STM64Signal] with new value
   @override
@@ -7797,7 +8163,7 @@ final class DataTransfer$STM64Signal extends DataTransfer {
 
   /// Symbol for [DataTransfer$STM64Signal]
   @override
-  String get symbol => '';
+  String get symbol => 'STM64Signal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7834,7 +8200,7 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
 
   static const _ratio = 8.0;
 
-  /// 1 [DataTransfer$CharacterPerSecond]  =  8.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CharacterPerSecond] = 8.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -7842,6 +8208,9 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
   @override
   DataTransfer$CharacterPerSecond get _clone =>
       DataTransfer$CharacterPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CharacterPerSecond] with new value
   @override
@@ -7852,7 +8221,7 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
 
   /// Symbol for [DataTransfer$CharacterPerSecond]
   @override
-  String get symbol => '';
+  String get symbol => 'CharacterPerSecond';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7889,13 +8258,16 @@ final class DataTransfer$TokenRing extends DataTransfer {
 
   static const _ratio = 4000000.0;
 
-  /// 1 [DataTransfer$TokenRing]  =  4000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TokenRing] = 4000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$TokenRing get _clone => DataTransfer$TokenRing(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$TokenRing] with new value
   @override
@@ -7906,7 +8278,7 @@ final class DataTransfer$TokenRing extends DataTransfer {
 
   /// Symbol for [DataTransfer$TokenRing]
   @override
-  String get symbol => '';
+  String get symbol => 'TokenRing';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7943,13 +8315,16 @@ final class DataTransfer$FiberChannel extends DataTransfer {
 
   static const _ratio = 3200000000.0;
 
-  /// 1 [DataTransfer$FiberChannel]  =  3200000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$FiberChannel] = 3200000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$FiberChannel get _clone => DataTransfer$FiberChannel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$FiberChannel] with new value
   @override
@@ -7960,7 +8335,7 @@ final class DataTransfer$FiberChannel extends DataTransfer {
 
   /// Symbol for [DataTransfer$FiberChannel]
   @override
-  String get symbol => '';
+  String get symbol => 'FiberChannel';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -7997,13 +8372,16 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
 
   static const _ratio = 66666666.666666664;
 
-  /// 1 [DataTransfer$ISA8Bit]  ≈  66666666.666666664 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ISA8Bit] ≈ 66666666.666666664 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$ISA8Bit get _clone => DataTransfer$ISA8Bit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$ISA8Bit] with new value
   @override
@@ -8014,7 +8392,7 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
 
   /// Symbol for [DataTransfer$ISA8Bit]
   @override
-  String get symbol => '';
+  String get symbol => 'ISA8Bit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8051,13 +8429,16 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
 
   static const _ratio = 133333333.33333333;
 
-  /// 1 [DataTransfer$ISA16Bit]  ≈  133333333.33333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ISA16Bit] ≈ 133333333.33333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$ISA16Bit get _clone => DataTransfer$ISA16Bit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$ISA16Bit] with new value
   @override
@@ -8068,7 +8449,7 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
 
   /// Symbol for [DataTransfer$ISA16Bit]
   @override
-  String get symbol => '';
+  String get symbol => 'ISA16Bit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8105,13 +8486,16 @@ final class DataTransfer$VLB extends DataTransfer {
 
   static const _ratio = 533333333.3333333;
 
-  /// 1 [DataTransfer$VLB]  ≈  533333333.3333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VLB] ≈ 533333333.3333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$VLB get _clone => DataTransfer$VLB(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$VLB] with new value
   @override
@@ -8122,7 +8506,7 @@ final class DataTransfer$VLB extends DataTransfer {
 
   /// Symbol for [DataTransfer$VLB]
   @override
-  String get symbol => '';
+  String get symbol => 'VLB';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8159,13 +8543,16 @@ final class DataTransfer$PCI extends DataTransfer {
 
   static const _ratio = 1066666666.6666666;
 
-  /// 1 [DataTransfer$PCI]  ≈  1066666666.6666666 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCI] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCI get _clone => DataTransfer$PCI(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCI] with new value
   @override
@@ -8176,7 +8563,7 @@ final class DataTransfer$PCI extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCI]
   @override
-  String get symbol => '';
+  String get symbol => 'PCI';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8213,13 +8600,16 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
 
   static const _ratio = 2133333333.3333333;
 
-  /// 1 [DataTransfer$PCI64Bit]  ≈  2133333333.3333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCI64Bit] ≈ 2133333333.3333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCI64Bit get _clone => DataTransfer$PCI64Bit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCI64Bit] with new value
   @override
@@ -8230,7 +8620,7 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCI64Bit]
   @override
-  String get symbol => '';
+  String get symbol => 'PCI64Bit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8267,13 +8657,16 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
 
   static const _ratio = 4266666666.6666665;
 
-  /// 1 [DataTransfer$PCI64Bit66MHz]  ≈  4266666666.6666665 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCI64Bit66MHz] ≈ 4266666666.6666665 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCI64Bit66MHz get _clone => DataTransfer$PCI64Bit66MHz(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCI64Bit66MHz] with new value
   @override
@@ -8284,7 +8677,7 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCI64Bit66MHz]
   @override
-  String get symbol => '';
+  String get symbol => 'PCI64Bit66MHz';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8321,13 +8714,16 @@ final class DataTransfer$PCIX extends DataTransfer {
 
   static const _ratio = 8533333333.333333;
 
-  /// 1 [DataTransfer$PCIX]  ≈  8533333333.333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIX] ≈ 8533333333.333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIX get _clone => DataTransfer$PCIX(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIX] with new value
   @override
@@ -8338,7 +8734,7 @@ final class DataTransfer$PCIX extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIX]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIX';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8375,13 +8771,16 @@ final class DataTransfer$AGP extends DataTransfer {
 
   static const _ratio = 2133333333.3333333;
 
-  /// 1 [DataTransfer$AGP]  ≈  2133333333.3333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$AGP] ≈ 2133333333.3333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$AGP get _clone => DataTransfer$AGP(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$AGP] with new value
   @override
@@ -8392,7 +8791,7 @@ final class DataTransfer$AGP extends DataTransfer {
 
   /// Symbol for [DataTransfer$AGP]
   @override
-  String get symbol => '';
+  String get symbol => 'AGP';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8429,13 +8828,16 @@ final class DataTransfer$AGP2X extends DataTransfer {
 
   static const _ratio = 4266666666.6666665;
 
-  /// 1 [DataTransfer$AGP2X]  ≈  4266666666.6666665 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$AGP2X] ≈ 4266666666.6666665 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$AGP2X get _clone => DataTransfer$AGP2X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$AGP2X] with new value
   @override
@@ -8446,7 +8848,7 @@ final class DataTransfer$AGP2X extends DataTransfer {
 
   /// Symbol for [DataTransfer$AGP2X]
   @override
-  String get symbol => '';
+  String get symbol => 'AGP2X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8483,13 +8885,16 @@ final class DataTransfer$AGP4X extends DataTransfer {
 
   static const _ratio = 8533333333.333333;
 
-  /// 1 [DataTransfer$AGP4X]  ≈  8533333333.333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$AGP4X] ≈ 8533333333.333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$AGP4X get _clone => DataTransfer$AGP4X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$AGP4X] with new value
   @override
@@ -8500,7 +8905,7 @@ final class DataTransfer$AGP4X extends DataTransfer {
 
   /// Symbol for [DataTransfer$AGP4X]
   @override
-  String get symbol => '';
+  String get symbol => 'AGP4X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8537,13 +8942,16 @@ final class DataTransfer$AGP8X extends DataTransfer {
 
   static const _ratio = 17066666666.666666;
 
-  /// 1 [DataTransfer$AGP8X]  ≈  17066666666.666666 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$AGP8X] ≈ 17066666666.666666 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$AGP8X get _clone => DataTransfer$AGP8X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$AGP8X] with new value
   @override
@@ -8554,7 +8962,7 @@ final class DataTransfer$AGP8X extends DataTransfer {
 
   /// Symbol for [DataTransfer$AGP8X]
   @override
-  String get symbol => '';
+  String get symbol => 'AGP8X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8591,13 +8999,16 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
 
   static const _ratio = 2000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress10X1]  =  2000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress10X1] = 2000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress10X1 get _clone => DataTransfer$PCIExpress10X1(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X1] with new value
   @override
@@ -8608,7 +9019,7 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress10X1]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress10X1';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8645,13 +9056,16 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
 
   static const _ratio = 8000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress10X4]  =  8000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress10X4] = 8000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress10X4 get _clone => DataTransfer$PCIExpress10X4(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X4] with new value
   @override
@@ -8662,7 +9076,7 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress10X4]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress10X4';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8699,13 +9113,16 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
 
   static const _ratio = 16000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress10X8]  =  16000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress10X8] = 16000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress10X8 get _clone => DataTransfer$PCIExpress10X8(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X8] with new value
   @override
@@ -8716,7 +9133,7 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress10X8]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress10X8';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8753,7 +9170,7 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
 
   static const _ratio = 32000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress10X16]  =  32000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress10X16] = 32000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -8761,6 +9178,9 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
   @override
   DataTransfer$PCIExpress10X16 get _clone =>
       DataTransfer$PCIExpress10X16(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X16] with new value
   @override
@@ -8771,7 +9191,7 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress10X16]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress10X16';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8808,13 +9228,16 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
 
   static const _ratio = 4000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress20X1]  =  4000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress20X1] = 4000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress20X1 get _clone => DataTransfer$PCIExpress20X1(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X1] with new value
   @override
@@ -8825,7 +9248,7 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress20X1]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress20X1';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8862,13 +9285,16 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
 
   static const _ratio = 16000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress20X4]  =  16000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress20X4] = 16000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress20X4 get _clone => DataTransfer$PCIExpress20X4(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X4] with new value
   @override
@@ -8879,7 +9305,7 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress20X4]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress20X4';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8916,13 +9342,16 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
 
   static const _ratio = 32000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress20X8]  =  32000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress20X8] = 32000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress20X8 get _clone => DataTransfer$PCIExpress20X8(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X8] with new value
   @override
@@ -8933,7 +9362,7 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress20X8]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress20X8';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -8970,7 +9399,7 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
 
   static const _ratio = 64000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress20X16]  =  64000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress20X16] = 64000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -8978,6 +9407,9 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
   @override
   DataTransfer$PCIExpress20X16 get _clone =>
       DataTransfer$PCIExpress20X16(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X16] with new value
   @override
@@ -8988,7 +9420,7 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress20X16]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress20X16';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9025,13 +9457,16 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
 
   static const _ratio = 8000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress30X1]  =  8000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress30X1] = 8000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress30X1 get _clone => DataTransfer$PCIExpress30X1(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X1] with new value
   @override
@@ -9042,7 +9477,7 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress30X1]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress30X1';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9079,13 +9514,16 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
 
   static const _ratio = 32000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress30X4]  =  32000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress30X4] = 32000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress30X4 get _clone => DataTransfer$PCIExpress30X4(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X4] with new value
   @override
@@ -9096,7 +9534,7 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress30X4]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress30X4';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9133,13 +9571,16 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
 
   static const _ratio = 64000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress30X8]  =  64000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress30X8] = 64000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$PCIExpress30X8 get _clone => DataTransfer$PCIExpress30X8(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X8] with new value
   @override
@@ -9150,7 +9591,7 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress30X8]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress30X8';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9187,7 +9628,7 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
 
   static const _ratio = 128000000000.0;
 
-  /// 1 [DataTransfer$PCIExpress30X16]  =  128000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress30X16] = 128000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
@@ -9195,6 +9636,9 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
   @override
   DataTransfer$PCIExpress30X16 get _clone =>
       DataTransfer$PCIExpress30X16(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X16] with new value
   @override
@@ -9205,7 +9649,7 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
 
   /// Symbol for [DataTransfer$PCIExpress30X16]
   @override
-  String get symbol => '';
+  String get symbol => 'PCIExpress30X16';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9242,13 +9686,16 @@ final class DataTransfer$CDROM1X extends DataTransfer {
 
   static const _ratio = 1228800.0;
 
-  /// 1 [DataTransfer$CDROM1X]  =  1228800.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM1X] = 1228800.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM1X get _clone => DataTransfer$CDROM1X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM1X] with new value
   @override
@@ -9259,7 +9706,7 @@ final class DataTransfer$CDROM1X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM1X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM1X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9296,13 +9743,16 @@ final class DataTransfer$CDROM2X extends DataTransfer {
 
   static const _ratio = 2457600.0;
 
-  /// 1 [DataTransfer$CDROM2X]  =  2457600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM2X] = 2457600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM2X get _clone => DataTransfer$CDROM2X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM2X] with new value
   @override
@@ -9313,7 +9763,7 @@ final class DataTransfer$CDROM2X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM2X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM2X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9350,13 +9800,16 @@ final class DataTransfer$CDROM3X extends DataTransfer {
 
   static const _ratio = 3686400.0;
 
-  /// 1 [DataTransfer$CDROM3X]  =  3686400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM3X] = 3686400.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM3X get _clone => DataTransfer$CDROM3X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM3X] with new value
   @override
@@ -9367,7 +9820,7 @@ final class DataTransfer$CDROM3X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM3X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM3X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9404,13 +9857,16 @@ final class DataTransfer$CDROM4X extends DataTransfer {
 
   static const _ratio = 4915200.0;
 
-  /// 1 [DataTransfer$CDROM4X]  =  4915200.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM4X] = 4915200.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM4X get _clone => DataTransfer$CDROM4X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM4X] with new value
   @override
@@ -9421,7 +9877,7 @@ final class DataTransfer$CDROM4X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM4X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM4X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9458,13 +9914,16 @@ final class DataTransfer$CDROM6X extends DataTransfer {
 
   static const _ratio = 7372800.0;
 
-  /// 1 [DataTransfer$CDROM6X]  =  7372800.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM6X] = 7372800.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM6X get _clone => DataTransfer$CDROM6X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM6X] with new value
   @override
@@ -9475,7 +9934,7 @@ final class DataTransfer$CDROM6X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM6X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM6X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9512,13 +9971,16 @@ final class DataTransfer$CDROM8X extends DataTransfer {
 
   static const _ratio = 9830400.0;
 
-  /// 1 [DataTransfer$CDROM8X]  =  9830400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM8X] = 9830400.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM8X get _clone => DataTransfer$CDROM8X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM8X] with new value
   @override
@@ -9529,7 +9991,7 @@ final class DataTransfer$CDROM8X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM8X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM8X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9566,13 +10028,16 @@ final class DataTransfer$CDROM12X extends DataTransfer {
 
   static const _ratio = 14745600.0;
 
-  /// 1 [DataTransfer$CDROM12X]  =  14745600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM12X] = 14745600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM12X get _clone => DataTransfer$CDROM12X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM12X] with new value
   @override
@@ -9583,7 +10048,7 @@ final class DataTransfer$CDROM12X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM12X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM12X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9620,13 +10085,16 @@ final class DataTransfer$CDROM16X extends DataTransfer {
 
   static const _ratio = 19660800.0;
 
-  /// 1 [DataTransfer$CDROM16X]  =  19660800.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM16X] = 19660800.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM16X get _clone => DataTransfer$CDROM16X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM16X] with new value
   @override
@@ -9637,7 +10105,7 @@ final class DataTransfer$CDROM16X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM16X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM16X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9674,13 +10142,16 @@ final class DataTransfer$CDROM24X extends DataTransfer {
 
   static const _ratio = 29491200.0;
 
-  /// 1 [DataTransfer$CDROM24X]  =  29491200.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM24X] = 29491200.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM24X get _clone => DataTransfer$CDROM24X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM24X] with new value
   @override
@@ -9691,7 +10162,7 @@ final class DataTransfer$CDROM24X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM24X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM24X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9728,13 +10199,16 @@ final class DataTransfer$CDROM32X extends DataTransfer {
 
   static const _ratio = 39321600.0;
 
-  /// 1 [DataTransfer$CDROM32X]  =  39321600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM32X] = 39321600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM32X get _clone => DataTransfer$CDROM32X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM32X] with new value
   @override
@@ -9745,7 +10219,7 @@ final class DataTransfer$CDROM32X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM32X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM32X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9782,13 +10256,16 @@ final class DataTransfer$CDROM40X extends DataTransfer {
 
   static const _ratio = 49152000.0;
 
-  /// 1 [DataTransfer$CDROM40X]  =  49152000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM40X] = 49152000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM40X get _clone => DataTransfer$CDROM40X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM40X] with new value
   @override
@@ -9799,7 +10276,7 @@ final class DataTransfer$CDROM40X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM40X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM40X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9836,13 +10313,16 @@ final class DataTransfer$CDROM48X extends DataTransfer {
 
   static const _ratio = 58982400.0;
 
-  /// 1 [DataTransfer$CDROM48X]  =  58982400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM48X] = 58982400.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM48X get _clone => DataTransfer$CDROM48X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM48X] with new value
   @override
@@ -9853,7 +10333,7 @@ final class DataTransfer$CDROM48X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM48X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM48X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9890,13 +10370,16 @@ final class DataTransfer$CDROM52X extends DataTransfer {
 
   static const _ratio = 63897600.0;
 
-  /// 1 [DataTransfer$CDROM52X]  =  63897600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM52X] = 63897600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$CDROM52X get _clone => DataTransfer$CDROM52X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$CDROM52X] with new value
   @override
@@ -9907,7 +10390,7 @@ final class DataTransfer$CDROM52X extends DataTransfer {
 
   /// Symbol for [DataTransfer$CDROM52X]
   @override
-  String get symbol => '';
+  String get symbol => 'CDROM52X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9944,13 +10427,16 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
 
   static const _ratio = 11080000.0;
 
-  /// 1 [DataTransfer$DVDROM1X]  =  11080000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM1X] = 11080000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM1X get _clone => DataTransfer$DVDROM1X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM1X] with new value
   @override
@@ -9961,7 +10447,7 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM1X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM1X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -9998,13 +10484,16 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
 
   static const _ratio = 22160000.0;
 
-  /// 1 [DataTransfer$DVDROM2X]  =  22160000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM2X] = 22160000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM2X get _clone => DataTransfer$DVDROM2X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM2X] with new value
   @override
@@ -10015,7 +10504,7 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM2X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM2X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10052,13 +10541,16 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
 
   static const _ratio = 33240000.0;
 
-  /// 1 [DataTransfer$DVDROM3X]  =  33240000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM3X] = 33240000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM3X get _clone => DataTransfer$DVDROM3X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM3X] with new value
   @override
@@ -10069,7 +10561,7 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM3X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM3X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10106,13 +10598,16 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
 
   static const _ratio = 44320000.0;
 
-  /// 1 [DataTransfer$DVDROM4X]  =  44320000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM4X] = 44320000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM4X get _clone => DataTransfer$DVDROM4X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM4X] with new value
   @override
@@ -10123,7 +10618,7 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM4X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM4X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10160,13 +10655,16 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
 
   static const _ratio = 66480000.0;
 
-  /// 1 [DataTransfer$DVDROM6X]  =  66480000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM6X] = 66480000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM6X get _clone => DataTransfer$DVDROM6X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM6X] with new value
   @override
@@ -10177,7 +10675,7 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM6X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM6X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10214,13 +10712,16 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
 
   static const _ratio = 88640000.0;
 
-  /// 1 [DataTransfer$DVDROM8X]  =  88640000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM8X] = 88640000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM8X get _clone => DataTransfer$DVDROM8X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM8X] with new value
   @override
@@ -10231,7 +10732,7 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM8X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM8X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10268,13 +10769,16 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
 
   static const _ratio = 110800000.0;
 
-  /// 1 [DataTransfer$DVDROM10X]  =  110800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM10X] = 110800000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM10X get _clone => DataTransfer$DVDROM10X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM10X] with new value
   @override
@@ -10285,7 +10789,7 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM10X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM10X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10322,13 +10826,16 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
 
   static const _ratio = 132960000.0;
 
-  /// 1 [DataTransfer$DVDROM12X]  =  132960000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM12X] = 132960000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM12X get _clone => DataTransfer$DVDROM12X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM12X] with new value
   @override
@@ -10339,7 +10846,7 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM12X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM12X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10376,13 +10883,16 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
 
   static const _ratio = 177280000.0;
 
-  /// 1 [DataTransfer$DVDROM16X]  =  177280000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM16X] = 177280000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$DVDROM16X get _clone => DataTransfer$DVDROM16X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$DVDROM16X] with new value
   @override
@@ -10393,7 +10903,7 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
 
   /// Symbol for [DataTransfer$DVDROM16X]
   @override
-  String get symbol => '';
+  String get symbol => 'DVDROM16X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10430,13 +10940,16 @@ final class DataTransfer$BluRay1X extends DataTransfer {
 
   static const _ratio = 36000000.0;
 
-  /// 1 [DataTransfer$BluRay1X]  =  36000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay1X] = 36000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$BluRay1X get _clone => DataTransfer$BluRay1X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$BluRay1X] with new value
   @override
@@ -10447,7 +10960,7 @@ final class DataTransfer$BluRay1X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay1X]
   @override
-  String get symbol => '';
+  String get symbol => 'BluRay1X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10484,13 +10997,16 @@ final class DataTransfer$BluRay2X extends DataTransfer {
 
   static const _ratio = 72000000.0;
 
-  /// 1 [DataTransfer$BluRay2X]  =  72000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay2X] = 72000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$BluRay2X get _clone => DataTransfer$BluRay2X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$BluRay2X] with new value
   @override
@@ -10501,7 +11017,7 @@ final class DataTransfer$BluRay2X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay2X]
   @override
-  String get symbol => '';
+  String get symbol => 'BluRay2X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10538,13 +11054,16 @@ final class DataTransfer$BluRay4X extends DataTransfer {
 
   static const _ratio = 144000000.0;
 
-  /// 1 [DataTransfer$BluRay4X]  =  144000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay4X] = 144000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$BluRay4X get _clone => DataTransfer$BluRay4X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$BluRay4X] with new value
   @override
@@ -10555,7 +11074,7 @@ final class DataTransfer$BluRay4X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay4X]
   @override
-  String get symbol => '';
+  String get symbol => 'BluRay4X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10592,13 +11111,16 @@ final class DataTransfer$BluRay6X extends DataTransfer {
 
   static const _ratio = 216000000.0;
 
-  /// 1 [DataTransfer$BluRay6X]  =  216000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay6X] = 216000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$BluRay6X get _clone => DataTransfer$BluRay6X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$BluRay6X] with new value
   @override
@@ -10609,7 +11131,7 @@ final class DataTransfer$BluRay6X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay6X]
   @override
-  String get symbol => '';
+  String get symbol => 'BluRay6X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10646,13 +11168,16 @@ final class DataTransfer$BluRay8X extends DataTransfer {
 
   static const _ratio = 288000000.0;
 
-  /// 1 [DataTransfer$BluRay8X]  =  288000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay8X] = 288000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$BluRay8X get _clone => DataTransfer$BluRay8X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$BluRay8X] with new value
   @override
@@ -10663,7 +11188,7 @@ final class DataTransfer$BluRay8X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay8X]
   @override
-  String get symbol => '';
+  String get symbol => 'BluRay8X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10700,13 +11225,16 @@ final class DataTransfer$BluRay10X extends DataTransfer {
 
   static const _ratio = 360000000.0;
 
-  /// 1 [DataTransfer$BluRay10X]  =  360000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay10X] = 360000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$BluRay10X get _clone => DataTransfer$BluRay10X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$BluRay10X] with new value
   @override
@@ -10717,7 +11245,7 @@ final class DataTransfer$BluRay10X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay10X]
   @override
-  String get symbol => '';
+  String get symbol => 'BluRay10X';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -10754,13 +11282,16 @@ final class DataTransfer$BluRay12X extends DataTransfer {
 
   static const _ratio = 432000000.0;
 
-  /// 1 [DataTransfer$BluRay12X]  =  432000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay12X] = 432000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   DataTransfer$BluRay12X get _clone => DataTransfer$BluRay12X(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [DataTransfer$BluRay12X] with new value
   @override
@@ -10771,7 +11302,7 @@ final class DataTransfer$BluRay12X extends DataTransfer {
 
   /// Symbol for [DataTransfer$BluRay12X]
   @override
-  String get symbol => '';
+  String get symbol => 'BluRay12X';
 
   @override
   Map<String, dynamic> toJson() => {

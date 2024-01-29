@@ -497,13 +497,16 @@ final class Length$Exameter extends Length {
 
   static const _ratio = 6.25e+52;
 
-  /// 1 [Length$Exameter]  =  6.25e+52 [Length$Planck]
+  /// 1 [Length$Exameter] = 6.25e+52 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Exameter get _clone => Length$Exameter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Exameter] with new value
   @override
@@ -551,13 +554,16 @@ final class Length$Petameter extends Length {
 
   static const _ratio = 6.25e+49;
 
-  /// 1 [Length$Petameter]  =  6.25e+49 [Length$Planck]
+  /// 1 [Length$Petameter] = 6.25e+49 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Petameter get _clone => Length$Petameter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Petameter] with new value
   @override
@@ -605,13 +611,16 @@ final class Length$Terameter extends Length {
 
   static const _ratio = 6.25e+46;
 
-  /// 1 [Length$Terameter]  =  6.25e+46 [Length$Planck]
+  /// 1 [Length$Terameter] = 6.25e+46 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Terameter get _clone => Length$Terameter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Terameter] with new value
   @override
@@ -659,13 +668,16 @@ final class Length$Gigameter extends Length {
 
   static const _ratio = 6.25e+43;
 
-  /// 1 [Length$Gigameter]  =  6.25e+43 [Length$Planck]
+  /// 1 [Length$Gigameter] = 6.25e+43 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Gigameter get _clone => Length$Gigameter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Gigameter] with new value
   @override
@@ -713,13 +725,16 @@ final class Length$Megameter extends Length {
 
   static const _ratio = 6.25e+40;
 
-  /// 1 [Length$Megameter]  =  6.25e+40 [Length$Planck]
+  /// 1 [Length$Megameter] = 6.25e+40 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Megameter get _clone => Length$Megameter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Megameter] with new value
   @override
@@ -767,13 +782,16 @@ final class Length$Kilometer extends Length {
 
   static const _ratio = 6.25e+37;
 
-  /// 1 [Length$Kilometer]  =  6.25e+37 [Length$Planck]
+  /// 1 [Length$Kilometer] = 6.25e+37 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Kilometer get _clone => Length$Kilometer(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Kilometer] with new value
   @override
@@ -821,13 +839,16 @@ final class Length$Hectometer extends Length {
 
   static const _ratio = 6.25e+36;
 
-  /// 1 [Length$Hectometer]  =  6.25e+36 [Length$Planck]
+  /// 1 [Length$Hectometer] = 6.25e+36 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Hectometer get _clone => Length$Hectometer(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Hectometer] with new value
   @override
@@ -875,13 +896,16 @@ final class Length$Dekameter extends Length {
 
   static const _ratio = 6.25e+35;
 
-  /// 1 [Length$Dekameter]  =  6.25e+35 [Length$Planck]
+  /// 1 [Length$Dekameter] = 6.25e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Dekameter get _clone => Length$Dekameter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Dekameter] with new value
   @override
@@ -929,13 +953,16 @@ final class Length$Meter extends Length {
 
   static const _ratio = 6.25e+34;
 
-  /// 1 [Length$Meter]  =  6.25e+34 [Length$Planck]
+  /// 1 [Length$Meter] = 6.25e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Meter get _clone => Length$Meter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Meter] with new value
   @override
@@ -983,13 +1010,16 @@ final class Length$Decimeter extends Length {
 
   static const _ratio = 6.25e+33;
 
-  /// 1 [Length$Decimeter]  =  6.25e+33 [Length$Planck]
+  /// 1 [Length$Decimeter] = 6.25e+33 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Decimeter get _clone => Length$Decimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Decimeter] with new value
   @override
@@ -1037,13 +1067,16 @@ final class Length$Centimeter extends Length {
 
   static const _ratio = 6.25e+32;
 
-  /// 1 [Length$Centimeter]  =  6.25e+32 [Length$Planck]
+  /// 1 [Length$Centimeter] = 6.25e+32 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Centimeter get _clone => Length$Centimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Centimeter] with new value
   @override
@@ -1091,13 +1124,16 @@ final class Length$Millimeter extends Length {
 
   static const _ratio = 6.25e+31;
 
-  /// 1 [Length$Millimeter]  =  6.25e+31 [Length$Planck]
+  /// 1 [Length$Millimeter] = 6.25e+31 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Millimeter get _clone => Length$Millimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Millimeter] with new value
   @override
@@ -1145,13 +1181,16 @@ final class Length$Micrometer extends Length {
 
   static const _ratio = 6.25e+28;
 
-  /// 1 [Length$Micrometer]  =  6.25e+28 [Length$Planck]
+  /// 1 [Length$Micrometer] = 6.25e+28 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Micrometer get _clone => Length$Micrometer(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Micrometer] with new value
   @override
@@ -1199,13 +1238,16 @@ final class Length$Nanometer extends Length {
 
   static const _ratio = 6.25e+25;
 
-  /// 1 [Length$Nanometer]  =  6.25e+25 [Length$Planck]
+  /// 1 [Length$Nanometer] = 6.25e+25 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Nanometer get _clone => Length$Nanometer(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Nanometer] with new value
   @override
@@ -1253,13 +1295,16 @@ final class Length$Picometer extends Length {
 
   static const _ratio = 6.25e+22;
 
-  /// 1 [Length$Picometer]  =  6.25e+22 [Length$Planck]
+  /// 1 [Length$Picometer] = 6.25e+22 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Picometer get _clone => Length$Picometer(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Picometer] with new value
   @override
@@ -1307,13 +1352,16 @@ final class Length$Femtometer extends Length {
 
   static const _ratio = 62500000000000000000.0;
 
-  /// 1 [Length$Femtometer]  =  62500000000000000000.0 [Length$Planck]
+  /// 1 [Length$Femtometer] = 62500000000000000000.0 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Femtometer get _clone => Length$Femtometer(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Femtometer] with new value
   @override
@@ -1361,13 +1409,16 @@ final class Length$Attometer extends Length {
 
   static const _ratio = 62500000000000000.0;
 
-  /// 1 [Length$Attometer]  =  62500000000000000.0 [Length$Planck]
+  /// 1 [Length$Attometer] = 62500000000000000.0 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Attometer get _clone => Length$Attometer(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Attometer] with new value
   @override
@@ -1415,13 +1466,16 @@ final class Length$Angstrom extends Length {
 
   static const _ratio = 6.25e+24;
 
-  /// 1 [Length$Angstrom]  =  6.25e+24 [Length$Planck]
+  /// 1 [Length$Angstrom] = 6.25e+24 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Angstrom get _clone => Length$Angstrom(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Angstrom] with new value
   @override
@@ -1469,13 +1523,16 @@ final class Length$Fermi extends Length {
 
   static const _ratio = 62500000000000000000.0;
 
-  /// 1 [Length$Fermi]  =  62500000000000000000.0 [Length$Planck]
+  /// 1 [Length$Fermi] = 62500000000000000000.0 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Fermi get _clone => Length$Fermi(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Fermi] with new value
   @override
@@ -1531,6 +1588,9 @@ final class Length$Planck extends Length {
   @override
   Length$Planck get _clone => Length$Planck(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Length$Planck] with new value
   @override
   Length$Planck withValue(
@@ -1540,7 +1600,7 @@ final class Length$Planck extends Length {
 
   /// Symbol for [Length$Planck]
   @override
-  String get symbol => '';
+  String get symbol => 'Planck';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1577,13 +1637,16 @@ final class Length$MileUS extends Length {
 
   static const _ratio = 1.00584e+38;
 
-  /// 1 [Length$MileUS]  =  1.00584e+38 [Length$Planck]
+  /// 1 [Length$MileUS] = 1.00584e+38 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$MileUS get _clone => Length$MileUS(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$MileUS] with new value
   @override
@@ -1631,13 +1694,16 @@ final class Length$MileUSSurveyFoot extends Length {
 
   static const _ratio = 1.0058420116840233e+38;
 
-  /// 1 [Length$MileUSSurveyFoot]  =  1.0058420116840233e+38 [Length$Planck]
+  /// 1 [Length$MileUSSurveyFoot] = 1.0058420116840233e+38 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$MileUSSurveyFoot get _clone => Length$MileUSSurveyFoot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$MileUSSurveyFoot] with new value
   @override
@@ -1648,7 +1714,7 @@ final class Length$MileUSSurveyFoot extends Length {
 
   /// Symbol for [Length$MileUSSurveyFoot]
   @override
-  String get symbol => '';
+  String get symbol => 'MileUSSurveyFoot';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1685,13 +1751,16 @@ final class Length$MileRoman extends Length {
 
   static const _ratio = 9.248775e+37;
 
-  /// 1 [Length$MileRoman]  =  9.248775e+37 [Length$Planck]
+  /// 1 [Length$MileRoman] = 9.248775e+37 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$MileRoman get _clone => Length$MileRoman(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$MileRoman] with new value
   @override
@@ -1702,7 +1771,7 @@ final class Length$MileRoman extends Length {
 
   /// Symbol for [Length$MileRoman]
   @override
-  String get symbol => '';
+  String get symbol => 'MileRoman';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1739,13 +1808,16 @@ final class Length$Furlong extends Length {
 
   static const _ratio = 1.2573e+37;
 
-  /// 1 [Length$Furlong]  =  1.2573e+37 [Length$Planck]
+  /// 1 [Length$Furlong] = 1.2573e+37 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Furlong get _clone => Length$Furlong(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Furlong] with new value
   @override
@@ -1793,13 +1865,16 @@ final class Length$Chain extends Length {
 
   static const _ratio = 1.2573e+36;
 
-  /// 1 [Length$Chain]  =  1.2573e+36 [Length$Planck]
+  /// 1 [Length$Chain] = 1.2573e+36 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Chain get _clone => Length$Chain(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Chain] with new value
   @override
@@ -1847,13 +1922,16 @@ final class Length$Rod extends Length {
 
   static const _ratio = 3.14325e+35;
 
-  /// 1 [Length$Rod]  =  3.14325e+35 [Length$Planck]
+  /// 1 [Length$Rod] = 3.14325e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Rod get _clone => Length$Rod(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Rod] with new value
   @override
@@ -1901,13 +1979,16 @@ final class Length$Perch extends Length {
 
   static const _ratio = 3.14325e+35;
 
-  /// 1 [Length$Perch]  =  3.14325e+35 [Length$Planck]
+  /// 1 [Length$Perch] = 3.14325e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Perch get _clone => Length$Perch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Perch] with new value
   @override
@@ -1918,7 +1999,7 @@ final class Length$Perch extends Length {
 
   /// Symbol for [Length$Perch]
   @override
-  String get symbol => '';
+  String get symbol => 'Perch';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1955,13 +2036,16 @@ final class Length$Pole extends Length {
 
   static const _ratio = 3.14325e+35;
 
-  /// 1 [Length$Pole]  =  3.14325e+35 [Length$Planck]
+  /// 1 [Length$Pole] = 3.14325e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Pole get _clone => Length$Pole(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Pole] with new value
   @override
@@ -1972,7 +2056,7 @@ final class Length$Pole extends Length {
 
   /// Symbol for [Length$Pole]
   @override
-  String get symbol => '';
+  String get symbol => 'Pole';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2009,13 +2093,16 @@ final class Length$Fathom extends Length {
 
   static const _ratio = 1.143e+35;
 
-  /// 1 [Length$Fathom]  =  1.143e+35 [Length$Planck]
+  /// 1 [Length$Fathom] = 1.143e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Fathom get _clone => Length$Fathom(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Fathom] with new value
   @override
@@ -2063,13 +2150,16 @@ final class Length$Yard extends Length {
 
   static const _ratio = 5.715e+34;
 
-  /// 1 [Length$Yard]  =  5.715e+34 [Length$Planck]
+  /// 1 [Length$Yard] = 5.715e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Yard get _clone => Length$Yard(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Yard] with new value
   @override
@@ -2117,13 +2207,16 @@ final class Length$Foot extends Length {
 
   static const _ratio = 1.905e+34;
 
-  /// 1 [Length$Foot]  =  1.905e+34 [Length$Planck]
+  /// 1 [Length$Foot] = 1.905e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Foot get _clone => Length$Foot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Foot] with new value
   @override
@@ -2171,13 +2264,16 @@ final class Length$FootUSSurvey extends Length {
 
   static const _ratio = 1.90500381000762e+34;
 
-  /// 1 [Length$FootUSSurvey]  =  1.90500381000762e+34 [Length$Planck]
+  /// 1 [Length$FootUSSurvey] = 1.90500381000762e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$FootUSSurvey get _clone => Length$FootUSSurvey(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$FootUSSurvey] with new value
   @override
@@ -2188,7 +2284,7 @@ final class Length$FootUSSurvey extends Length {
 
   /// Symbol for [Length$FootUSSurvey]
   @override
-  String get symbol => '';
+  String get symbol => 'FootUSSurvey';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2225,13 +2321,16 @@ final class Length$Link extends Length {
 
   static const _ratio = 1.2573e+34;
 
-  /// 1 [Length$Link]  =  1.2573e+34 [Length$Planck]
+  /// 1 [Length$Link] = 1.2573e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Link get _clone => Length$Link(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Link] with new value
   @override
@@ -2242,7 +2341,7 @@ final class Length$Link extends Length {
 
   /// Symbol for [Length$Link]
   @override
-  String get symbol => '';
+  String get symbol => 'Link';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2279,13 +2378,16 @@ final class Length$Inch extends Length {
 
   static const _ratio = 1.5875e+33;
 
-  /// 1 [Length$Inch]  =  1.5875e+33 [Length$Planck]
+  /// 1 [Length$Inch] = 1.5875e+33 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Inch get _clone => Length$Inch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Inch] with new value
   @override
@@ -2333,13 +2435,16 @@ final class Length$Hand extends Length {
 
   static const _ratio = 6.35e+33;
 
-  /// 1 [Length$Hand]  =  6.35e+33 [Length$Planck]
+  /// 1 [Length$Hand] = 6.35e+33 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Hand get _clone => Length$Hand(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Hand] with new value
   @override
@@ -2350,7 +2455,7 @@ final class Length$Hand extends Length {
 
   /// Symbol for [Length$Hand]
   @override
-  String get symbol => '';
+  String get symbol => 'Hand';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2387,13 +2492,16 @@ final class Length$Mil extends Length {
 
   static const _ratio = 1.5875e+30;
 
-  /// 1 [Length$Mil]  =  1.5875e+30 [Length$Planck]
+  /// 1 [Length$Mil] = 1.5875e+30 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Mil get _clone => Length$Mil(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Mil] with new value
   @override
@@ -2404,7 +2512,7 @@ final class Length$Mil extends Length {
 
   /// Symbol for [Length$Mil]
   @override
-  String get symbol => '';
+  String get symbol => 'Mil';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2441,13 +2549,16 @@ final class Length$MilSweden extends Length {
 
   static const _ratio = 6.25e+38;
 
-  /// 1 [Length$MilSweden]  =  6.25e+38 [Length$Planck]
+  /// 1 [Length$MilSweden] = 6.25e+38 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$MilSweden get _clone => Length$MilSweden(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$MilSweden] with new value
   @override
@@ -2458,7 +2569,7 @@ final class Length$MilSweden extends Length {
 
   /// Symbol for [Length$MilSweden]
   @override
-  String get symbol => '';
+  String get symbol => 'MilSweden';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2495,13 +2606,16 @@ final class Length$Microinch extends Length {
 
   static const _ratio = 1.5875e+27;
 
-  /// 1 [Length$Microinch]  =  1.5875e+27 [Length$Planck]
+  /// 1 [Length$Microinch] = 1.5875e+27 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Microinch get _clone => Length$Microinch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Microinch] with new value
   @override
@@ -2549,13 +2663,16 @@ final class Length$Megaparsec extends Length {
 
   static const _ratio = 1.9285807902221097e+57;
 
-  /// 1 [Length$Megaparsec]  =  1.9285807902221097e+57 [Length$Planck]
+  /// 1 [Length$Megaparsec] = 1.9285807902221097e+57 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Megaparsec get _clone => Length$Megaparsec(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Megaparsec] with new value
   @override
@@ -2603,13 +2720,16 @@ final class Length$Kiloparsec extends Length {
 
   static const _ratio = 1.9285807902221098e+54;
 
-  /// 1 [Length$Kiloparsec]  =  1.9285807902221098e+54 [Length$Planck]
+  /// 1 [Length$Kiloparsec] = 1.9285807902221098e+54 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Kiloparsec get _clone => Length$Kiloparsec(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Kiloparsec] with new value
   @override
@@ -2657,13 +2777,16 @@ final class Length$Parsec extends Length {
 
   static const _ratio = 1.9285807902221097e+51;
 
-  /// 1 [Length$Parsec]  =  1.9285807902221097e+51 [Length$Planck]
+  /// 1 [Length$Parsec] = 1.9285807902221097e+51 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Parsec get _clone => Length$Parsec(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Parsec] with new value
   @override
@@ -2711,13 +2834,16 @@ final class Length$LightYear extends Length {
 
   static const _ratio = 5.91283025305e+50;
 
-  /// 1 [Length$LightYear]  =  5.91283025305e+50 [Length$Planck]
+  /// 1 [Length$LightYear] = 5.91283025305e+50 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$LightYear get _clone => Length$LightYear(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$LightYear] with new value
   @override
@@ -2765,13 +2891,16 @@ final class Length$AstronomicalUnit extends Length {
 
   static const _ratio = 9.35e+45;
 
-  /// 1 [Length$AstronomicalUnit]  =  9.35e+45 [Length$Planck]
+  /// 1 [Length$AstronomicalUnit] = 9.35e+45 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$AstronomicalUnit get _clone => Length$AstronomicalUnit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$AstronomicalUnit] with new value
   @override
@@ -2819,13 +2948,16 @@ final class Length$League extends Length {
 
   static const _ratio = 3.01752e+38;
 
-  /// 1 [Length$League]  =  3.01752e+38 [Length$Planck]
+  /// 1 [Length$League] = 3.01752e+38 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$League get _clone => Length$League(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$League] with new value
   @override
@@ -2836,7 +2968,7 @@ final class Length$League extends Length {
 
   /// Symbol for [Length$League]
   @override
-  String get symbol => '';
+  String get symbol => 'League';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2873,13 +3005,16 @@ final class Length$NauticalMile extends Length {
 
   static const _ratio = 1.1575e+38;
 
-  /// 1 [Length$NauticalMile]  =  1.1575e+38 [Length$Planck]
+  /// 1 [Length$NauticalMile] = 1.1575e+38 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$NauticalMile get _clone => Length$NauticalMile(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$NauticalMile] with new value
   @override
@@ -2927,13 +3062,16 @@ final class Length$Arpent extends Length {
 
   static const _ratio = 3.6576e+36;
 
-  /// 1 [Length$Arpent]  =  3.6576e+36 [Length$Planck]
+  /// 1 [Length$Arpent] = 3.6576e+36 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Arpent get _clone => Length$Arpent(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Arpent] with new value
   @override
@@ -2944,7 +3082,7 @@ final class Length$Arpent extends Length {
 
   /// Symbol for [Length$Arpent]
   @override
-  String get symbol => '';
+  String get symbol => 'Arpent';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2981,13 +3119,16 @@ final class Length$Pica extends Length {
 
   static const _ratio = 2.6458333333333332e+32;
 
-  /// 1 [Length$Pica]  =  2.6458333333333332e+32 [Length$Planck]
+  /// 1 [Length$Pica] = 2.6458333333333332e+32 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Pica get _clone => Length$Pica(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Pica] with new value
   @override
@@ -3035,13 +3176,16 @@ final class Length$Point extends Length {
 
   static const _ratio = 2.204861111111111e+31;
 
-  /// 1 [Length$Point]  =  2.204861111111111e+31 [Length$Planck]
+  /// 1 [Length$Point] = 2.204861111111111e+31 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Point get _clone => Length$Point(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Point] with new value
   @override
@@ -3089,13 +3233,16 @@ final class Length$Twip extends Length {
 
   static const _ratio = 1.1024305555555556e+30;
 
-  /// 1 [Length$Twip]  =  1.1024305555555556e+30 [Length$Planck]
+  /// 1 [Length$Twip] = 1.1024305555555556e+30 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Twip get _clone => Length$Twip(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Twip] with new value
   @override
@@ -3106,7 +3253,7 @@ final class Length$Twip extends Length {
 
   /// Symbol for [Length$Twip]
   @override
-  String get symbol => '';
+  String get symbol => 'Twip';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3143,13 +3290,16 @@ final class Length$Aln extends Length {
 
   static const _ratio = 3.711111111111111e+34;
 
-  /// 1 [Length$Aln]  =  3.711111111111111e+34 [Length$Planck]
+  /// 1 [Length$Aln] = 3.711111111111111e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Aln get _clone => Length$Aln(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Aln] with new value
   @override
@@ -3160,7 +3310,7 @@ final class Length$Aln extends Length {
 
   /// Symbol for [Length$Aln]
   @override
-  String get symbol => '';
+  String get symbol => 'Aln';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3197,13 +3347,16 @@ final class Length$Famn extends Length {
 
   static const _ratio = 1.1133333333333333e+35;
 
-  /// 1 [Length$Famn]  =  1.1133333333333333e+35 [Length$Planck]
+  /// 1 [Length$Famn] = 1.1133333333333333e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Famn get _clone => Length$Famn(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Famn] with new value
   @override
@@ -3214,7 +3367,7 @@ final class Length$Famn extends Length {
 
   /// Symbol for [Length$Famn]
   @override
-  String get symbol => '';
+  String get symbol => 'Famn';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3251,13 +3404,16 @@ final class Length$Caliber extends Length {
 
   static const _ratio = 1.5875e+31;
 
-  /// 1 [Length$Caliber]  =  1.5875e+31 [Length$Planck]
+  /// 1 [Length$Caliber] = 1.5875e+31 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Caliber get _clone => Length$Caliber(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Caliber] with new value
   @override
@@ -3305,13 +3461,16 @@ final class Length$Ken extends Length {
 
   static const _ratio = 1.323975e+35;
 
-  /// 1 [Length$Ken]  =  1.323975e+35 [Length$Planck]
+  /// 1 [Length$Ken] = 1.323975e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Ken get _clone => Length$Ken(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Ken] with new value
   @override
@@ -3322,7 +3481,7 @@ final class Length$Ken extends Length {
 
   /// Symbol for [Length$Ken]
   @override
-  String get symbol => '';
+  String get symbol => 'Ken';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3359,13 +3518,16 @@ final class Length$Barleycorn extends Length {
 
   static const _ratio = 5.2916666666666664e+32;
 
-  /// 1 [Length$Barleycorn]  =  5.2916666666666664e+32 [Length$Planck]
+  /// 1 [Length$Barleycorn] = 5.2916666666666664e+32 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$Barleycorn get _clone => Length$Barleycorn(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$Barleycorn] with new value
   @override
@@ -3376,7 +3538,7 @@ final class Length$Barleycorn extends Length {
 
   /// Symbol for [Length$Barleycorn]
   @override
-  String get symbol => '';
+  String get symbol => 'Barleycorn';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3413,13 +3575,16 @@ final class Length$RussianArchin extends Length {
 
   static const _ratio = 4.445e+34;
 
-  /// 1 [Length$RussianArchin]  =  4.445e+34 [Length$Planck]
+  /// 1 [Length$RussianArchin] = 4.445e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$RussianArchin get _clone => Length$RussianArchin(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$RussianArchin] with new value
   @override
@@ -3430,7 +3595,7 @@ final class Length$RussianArchin extends Length {
 
   /// Symbol for [Length$RussianArchin]
   @override
-  String get symbol => '';
+  String get symbol => 'RussianArchin';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3467,13 +3632,16 @@ final class Length$RomanActus extends Length {
 
   static const _ratio = 2.21742e+36;
 
-  /// 1 [Length$RomanActus]  =  2.21742e+36 [Length$Planck]
+  /// 1 [Length$RomanActus] = 2.21742e+36 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$RomanActus get _clone => Length$RomanActus(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$RomanActus] with new value
   @override
@@ -3484,7 +3652,7 @@ final class Length$RomanActus extends Length {
 
   /// Symbol for [Length$RomanActus]
   @override
-  String get symbol => '';
+  String get symbol => 'RomanActus';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3521,13 +3689,16 @@ final class Length$ClothNail extends Length {
 
   static const _ratio = 3.571875e+33;
 
-  /// 1 [Length$ClothNail]  =  3.571875e+33 [Length$Planck]
+  /// 1 [Length$ClothNail] = 3.571875e+33 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$ClothNail get _clone => Length$ClothNail(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$ClothNail] with new value
   @override
@@ -3538,7 +3709,7 @@ final class Length$ClothNail extends Length {
 
   /// Symbol for [Length$ClothNail]
   @override
-  String get symbol => '';
+  String get symbol => 'ClothNail';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3575,13 +3746,16 @@ final class Length$ClothSpan extends Length {
 
   static const _ratio = 1.42875e+34;
 
-  /// 1 [Length$ClothSpan]  =  1.42875e+34 [Length$Planck]
+  /// 1 [Length$ClothSpan] = 1.42875e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$ClothSpan get _clone => Length$ClothSpan(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$ClothSpan] with new value
   @override
@@ -3592,7 +3766,7 @@ final class Length$ClothSpan extends Length {
 
   /// Symbol for [Length$ClothSpan]
   @override
-  String get symbol => '';
+  String get symbol => 'ClothSpan';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3629,13 +3803,16 @@ final class Length$VaraDeTarea extends Length {
 
   static const _ratio = 1.56591e+35;
 
-  /// 1 [Length$VaraDeTarea]  =  1.56591e+35 [Length$Planck]
+  /// 1 [Length$VaraDeTarea] = 1.56591e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$VaraDeTarea get _clone => Length$VaraDeTarea(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$VaraDeTarea] with new value
   @override
@@ -3646,7 +3823,7 @@ final class Length$VaraDeTarea extends Length {
 
   /// Symbol for [Length$VaraDeTarea]
   @override
-  String get symbol => '';
+  String get symbol => 'VaraDeTarea';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3683,13 +3860,16 @@ final class Length$VaraConuquera extends Length {
 
   static const _ratio = 1.56591e+35;
 
-  /// 1 [Length$VaraConuquera]  =  1.56591e+35 [Length$Planck]
+  /// 1 [Length$VaraConuquera] = 1.56591e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$VaraConuquera get _clone => Length$VaraConuquera(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$VaraConuquera] with new value
   @override
@@ -3700,7 +3880,7 @@ final class Length$VaraConuquera extends Length {
 
   /// Symbol for [Length$VaraConuquera]
   @override
-  String get symbol => '';
+  String get symbol => 'VaraConuquera';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3737,13 +3917,16 @@ final class Length$VaraCastellana extends Length {
 
   static const _ratio = 5.2197e+34;
 
-  /// 1 [Length$VaraCastellana]  =  5.2197e+34 [Length$Planck]
+  /// 1 [Length$VaraCastellana] = 5.2197e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$VaraCastellana get _clone => Length$VaraCastellana(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$VaraCastellana] with new value
   @override
@@ -3754,7 +3937,7 @@ final class Length$VaraCastellana extends Length {
 
   /// Symbol for [Length$VaraCastellana]
   @override
-  String get symbol => '';
+  String get symbol => 'VaraCastellana';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3791,13 +3974,16 @@ final class Length$CubitGreek extends Length {
 
   static const _ratio = 2.892425e+34;
 
-  /// 1 [Length$CubitGreek]  =  2.892425e+34 [Length$Planck]
+  /// 1 [Length$CubitGreek] = 2.892425e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$CubitGreek get _clone => Length$CubitGreek(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$CubitGreek] with new value
   @override
@@ -3808,7 +3994,7 @@ final class Length$CubitGreek extends Length {
 
   /// Symbol for [Length$CubitGreek]
   @override
-  String get symbol => '';
+  String get symbol => 'CubitGreek';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3845,13 +4031,16 @@ final class Length$LongReedBiblical extends Length {
 
   static const _ratio = 2.00025e+35;
 
-  /// 1 [Length$LongReedBiblical]  =  2.00025e+35 [Length$Planck]
+  /// 1 [Length$LongReedBiblical] = 2.00025e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$LongReedBiblical get _clone => Length$LongReedBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$LongReedBiblical] with new value
   @override
@@ -3862,7 +4051,7 @@ final class Length$LongReedBiblical extends Length {
 
   /// Symbol for [Length$LongReedBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'LongReedBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3899,13 +4088,16 @@ final class Length$ReedBiblical extends Length {
 
   static const _ratio = 1.7145e+35;
 
-  /// 1 [Length$ReedBiblical]  =  1.7145e+35 [Length$Planck]
+  /// 1 [Length$ReedBiblical] = 1.7145e+35 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$ReedBiblical get _clone => Length$ReedBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$ReedBiblical] with new value
   @override
@@ -3916,7 +4108,7 @@ final class Length$ReedBiblical extends Length {
 
   /// Symbol for [Length$ReedBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'ReedBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -3953,13 +4145,16 @@ final class Length$CubitBiblical extends Length {
 
   static const _ratio = 2.8575e+34;
 
-  /// 1 [Length$CubitBiblical]  =  2.8575e+34 [Length$Planck]
+  /// 1 [Length$CubitBiblical] = 2.8575e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$CubitBiblical get _clone => Length$CubitBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$CubitBiblical] with new value
   @override
@@ -3970,7 +4165,7 @@ final class Length$CubitBiblical extends Length {
 
   /// Symbol for [Length$CubitBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'CubitBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4007,13 +4202,16 @@ final class Length$LongCubitBiblical extends Length {
 
   static const _ratio = 3.33375e+34;
 
-  /// 1 [Length$LongCubitBiblical]  =  3.33375e+34 [Length$Planck]
+  /// 1 [Length$LongCubitBiblical] = 3.33375e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$LongCubitBiblical get _clone => Length$LongCubitBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$LongCubitBiblical] with new value
   @override
@@ -4024,7 +4222,7 @@ final class Length$LongCubitBiblical extends Length {
 
   /// Symbol for [Length$LongCubitBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'LongCubitBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4061,13 +4259,16 @@ final class Length$SpanBiblical extends Length {
 
   static const _ratio = 1.42875e+34;
 
-  /// 1 [Length$SpanBiblical]  =  1.42875e+34 [Length$Planck]
+  /// 1 [Length$SpanBiblical] = 1.42875e+34 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$SpanBiblical get _clone => Length$SpanBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$SpanBiblical] with new value
   @override
@@ -4078,7 +4279,7 @@ final class Length$SpanBiblical extends Length {
 
   /// Symbol for [Length$SpanBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'SpanBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4115,13 +4316,16 @@ final class Length$HandbreadthBiblical extends Length {
 
   static const _ratio = 4.7625e+33;
 
-  /// 1 [Length$HandbreadthBiblical]  =  4.7625e+33 [Length$Planck]
+  /// 1 [Length$HandbreadthBiblical] = 4.7625e+33 [Length$Planck]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Length$HandbreadthBiblical get _clone => Length$HandbreadthBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$HandbreadthBiblical] with new value
   @override
@@ -4132,7 +4336,7 @@ final class Length$HandbreadthBiblical extends Length {
 
   /// Symbol for [Length$HandbreadthBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'HandbreadthBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -4169,7 +4373,7 @@ final class Length$FingerbreadthBiblical extends Length {
 
   static const _ratio = 1.190625e+33;
 
-  /// 1 [Length$FingerbreadthBiblical]  =  1.190625e+33 [Length$Planck]
+  /// 1 [Length$FingerbreadthBiblical] = 1.190625e+33 [Length$Planck]
   @override
   num get ratio => _ratio;
 
@@ -4177,6 +4381,9 @@ final class Length$FingerbreadthBiblical extends Length {
   @override
   Length$FingerbreadthBiblical get _clone =>
       Length$FingerbreadthBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Length$FingerbreadthBiblical] with new value
   @override
@@ -4187,7 +4394,7 @@ final class Length$FingerbreadthBiblical extends Length {
 
   /// Symbol for [Length$FingerbreadthBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'FingerbreadthBiblical';
 
   @override
   Map<String, dynamic> toJson() => {

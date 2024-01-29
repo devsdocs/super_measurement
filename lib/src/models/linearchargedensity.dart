@@ -118,6 +118,9 @@ final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
   LinearChargeDensity$CoulombPerMeter get _clone =>
       LinearChargeDensity$CoulombPerMeter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [LinearChargeDensity$CoulombPerMeter] with new value
   @override
   LinearChargeDensity$CoulombPerMeter withValue(
@@ -165,7 +168,7 @@ final class LinearChargeDensity$CoulombPerCentimeter
 
   static const _ratio = 100.0;
 
-  /// 1 [LinearChargeDensity$CoulombPerCentimeter]  =  100.0 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$CoulombPerCentimeter] = 100.0 [LinearChargeDensity$CoulombPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -173,6 +176,9 @@ final class LinearChargeDensity$CoulombPerCentimeter
   @override
   LinearChargeDensity$CoulombPerCentimeter get _clone =>
       LinearChargeDensity$CoulombPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearChargeDensity$CoulombPerCentimeter] with new value
   @override
@@ -220,7 +226,7 @@ final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
 
   static const _ratio = 39.37007874;
 
-  /// 1 [LinearChargeDensity$CoulombPerInch]  ≈  39.37007874 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$CoulombPerInch] ≈ 39.37007874 [LinearChargeDensity$CoulombPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -228,6 +234,9 @@ final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
   @override
   LinearChargeDensity$CoulombPerInch get _clone =>
       LinearChargeDensity$CoulombPerInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearChargeDensity$CoulombPerInch] with new value
   @override
@@ -275,7 +284,7 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
 
   static const _ratio = 10.0;
 
-  /// 1 [LinearChargeDensity$AbcoulombPerMeter]  =  10.0 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$AbcoulombPerMeter] = 10.0 [LinearChargeDensity$CoulombPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -283,6 +292,9 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
   @override
   LinearChargeDensity$AbcoulombPerMeter get _clone =>
       LinearChargeDensity$AbcoulombPerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearChargeDensity$AbcoulombPerMeter] with new value
   @override
@@ -331,7 +343,7 @@ final class LinearChargeDensity$AbcoulombPerCentimeter
 
   static const _ratio = 1000.0;
 
-  /// 1 [LinearChargeDensity$AbcoulombPerCentimeter]  =  1000.0 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$AbcoulombPerCentimeter] = 1000.0 [LinearChargeDensity$CoulombPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -339,6 +351,9 @@ final class LinearChargeDensity$AbcoulombPerCentimeter
   @override
   LinearChargeDensity$AbcoulombPerCentimeter get _clone =>
       LinearChargeDensity$AbcoulombPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearChargeDensity$AbcoulombPerCentimeter] with new value
   @override
@@ -386,7 +401,7 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
 
   static const _ratio = 393.7007874;
 
-  /// 1 [LinearChargeDensity$AbcoulombPerInch]  ≈  393.7007874 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$AbcoulombPerInch] ≈ 393.7007874 [LinearChargeDensity$CoulombPerMeter]
   @override
   num get ratio => _ratio;
 
@@ -394,6 +409,9 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
   @override
   LinearChargeDensity$AbcoulombPerInch get _clone =>
       LinearChargeDensity$AbcoulombPerInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearChargeDensity$AbcoulombPerInch] with new value
   @override

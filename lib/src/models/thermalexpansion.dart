@@ -110,6 +110,9 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
   ThermalExpansion$LengthPerLengthPerKelvin get _clone =>
       ThermalExpansion$LengthPerLengthPerKelvin(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [ThermalExpansion$LengthPerLengthPerKelvin] with new value
   @override
   ThermalExpansion$LengthPerLengthPerKelvin withValue(
@@ -119,7 +122,7 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
-  String get symbol => '';
+  String get symbol => 'LengthPerLengthPerKelvin';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -157,7 +160,7 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
 
   static const _ratio = 1.0;
 
-  /// 1 [ThermalExpansion$LengthPerLengthPerCelsius]  =  1.0 [ThermalExpansion$LengthPerLengthPerKelvin]
+  /// 1 [ThermalExpansion$LengthPerLengthPerCelsius] = 1.0 [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
   num get ratio => _ratio;
 
@@ -165,6 +168,9 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
   @override
   ThermalExpansion$LengthPerLengthPerCelsius get _clone =>
       ThermalExpansion$LengthPerLengthPerCelsius(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerCelsius] with new value
   @override
@@ -175,7 +181,7 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerCelsius]
   @override
-  String get symbol => '';
+  String get symbol => 'LengthPerLengthPerCelsius';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -213,7 +219,7 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
 
   static const _ratio = 1.8;
 
-  /// 1 [ThermalExpansion$LengthPerLengthPerFahrenheit]  ≈  1.8 [ThermalExpansion$LengthPerLengthPerKelvin]
+  /// 1 [ThermalExpansion$LengthPerLengthPerFahrenheit] ≈ 1.8 [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
   num get ratio => _ratio;
 
@@ -221,6 +227,9 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
   @override
   ThermalExpansion$LengthPerLengthPerFahrenheit get _clone =>
       ThermalExpansion$LengthPerLengthPerFahrenheit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerFahrenheit] with new value
   @override
@@ -231,7 +240,7 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerFahrenheit]
   @override
-  String get symbol => '';
+  String get symbol => 'LengthPerLengthPerFahrenheit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -269,7 +278,7 @@ final class ThermalExpansion$LengthPerLengthPerRankine
 
   static const _ratio = 1.8;
 
-  /// 1 [ThermalExpansion$LengthPerLengthPerRankine]  ≈  1.8 [ThermalExpansion$LengthPerLengthPerKelvin]
+  /// 1 [ThermalExpansion$LengthPerLengthPerRankine] ≈ 1.8 [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
   num get ratio => _ratio;
 
@@ -277,6 +286,9 @@ final class ThermalExpansion$LengthPerLengthPerRankine
   @override
   ThermalExpansion$LengthPerLengthPerRankine get _clone =>
       ThermalExpansion$LengthPerLengthPerRankine(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerRankine] with new value
   @override
@@ -287,7 +299,7 @@ final class ThermalExpansion$LengthPerLengthPerRankine
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerRankine]
   @override
-  String get symbol => '';
+  String get symbol => 'LengthPerLengthPerRankine';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -325,7 +337,7 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
 
   static const _ratio = 0.8;
 
-  /// 1 [ThermalExpansion$LengthPerLengthPerReaumur]  ≈  0.8 [ThermalExpansion$LengthPerLengthPerKelvin]
+  /// 1 [ThermalExpansion$LengthPerLengthPerReaumur] ≈ 0.8 [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
   num get ratio => _ratio;
 
@@ -333,6 +345,9 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
   @override
   ThermalExpansion$LengthPerLengthPerReaumur get _clone =>
       ThermalExpansion$LengthPerLengthPerReaumur(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerReaumur] with new value
   @override
@@ -343,7 +358,7 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
 
   /// Symbol for [ThermalExpansion$LengthPerLengthPerReaumur]
   @override
-  String get symbol => '';
+  String get symbol => 'LengthPerLengthPerReaumur';
 
   @override
   Map<String, dynamic> toJson() => {

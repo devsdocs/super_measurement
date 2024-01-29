@@ -203,13 +203,16 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
 
   static const _ratio = 100000000000000000000.0;
 
-  /// 1 [ViscosityKinematic$Exastoke]  =  100000000000000000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Exastoke] = 100000000000000000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityKinematic$Exastoke get _clone => ViscosityKinematic$Exastoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Exastoke] with new value
   @override
@@ -257,7 +260,7 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
 
   static const _ratio = 100000000000000000.0;
 
-  /// 1 [ViscosityKinematic$Petastoke]  =  100000000000000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Petastoke] = 100000000000000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -265,6 +268,9 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Petastoke get _clone =>
       ViscosityKinematic$Petastoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Petastoke] with new value
   @override
@@ -312,7 +318,7 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
 
   static const _ratio = 100000000000000.0;
 
-  /// 1 [ViscosityKinematic$Terastoke]  =  100000000000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Terastoke] = 100000000000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -320,6 +326,9 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Terastoke get _clone =>
       ViscosityKinematic$Terastoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Terastoke] with new value
   @override
@@ -367,7 +376,7 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
 
   static const _ratio = 100000000000.0;
 
-  /// 1 [ViscosityKinematic$Gigastoke]  =  100000000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Gigastoke] = 100000000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -375,6 +384,9 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Gigastoke get _clone =>
       ViscosityKinematic$Gigastoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Gigastoke] with new value
   @override
@@ -422,7 +434,7 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
 
   static const _ratio = 100000000.0;
 
-  /// 1 [ViscosityKinematic$Megastoke]  =  100000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Megastoke] = 100000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -430,6 +442,9 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Megastoke get _clone =>
       ViscosityKinematic$Megastoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Megastoke] with new value
   @override
@@ -477,7 +492,7 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
 
   static const _ratio = 100000.0;
 
-  /// 1 [ViscosityKinematic$Kilostoke]  =  100000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Kilostoke] = 100000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -485,6 +500,9 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Kilostoke get _clone =>
       ViscosityKinematic$Kilostoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Kilostoke] with new value
   @override
@@ -532,7 +550,7 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
 
   static const _ratio = 10000.0;
 
-  /// 1 [ViscosityKinematic$Hectostoke]  =  10000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Hectostoke] = 10000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -540,6 +558,9 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Hectostoke get _clone =>
       ViscosityKinematic$Hectostoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Hectostoke] with new value
   @override
@@ -587,7 +608,7 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
 
   static const _ratio = 1000.0;
 
-  /// 1 [ViscosityKinematic$Dekastoke]  =  1000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Dekastoke] = 1000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -595,6 +616,9 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Dekastoke get _clone =>
       ViscosityKinematic$Dekastoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Dekastoke] with new value
   @override
@@ -642,13 +666,16 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
 
   static const _ratio = 100.0;
 
-  /// 1 [ViscosityKinematic$Stoke]  =  100.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Stoke] = 100.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   ViscosityKinematic$Stoke get _clone => ViscosityKinematic$Stoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Stoke] with new value
   @override
@@ -696,7 +723,7 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
 
   static const _ratio = 10.0;
 
-  /// 1 [ViscosityKinematic$Decistoke]  =  10.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Decistoke] = 10.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -704,6 +731,9 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Decistoke get _clone =>
       ViscosityKinematic$Decistoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Decistoke] with new value
   @override
@@ -760,6 +790,9 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
   ViscosityKinematic$Centistoke get _clone =>
       ViscosityKinematic$Centistoke(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [ViscosityKinematic$Centistoke] with new value
   @override
   ViscosityKinematic$Centistoke withValue(
@@ -806,7 +839,7 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
 
   static const _ratio = 0.1;
 
-  /// 1 [ViscosityKinematic$Millistoke]  ≈  0.1 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Millistoke] ≈ 0.1 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -814,6 +847,9 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Millistoke get _clone =>
       ViscosityKinematic$Millistoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Millistoke] with new value
   @override
@@ -861,7 +897,7 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
 
   static const _ratio = 0.0001;
 
-  /// 1 [ViscosityKinematic$Microstoke]  ≈  0.0001 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Microstoke] ≈ 0.0001 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -869,6 +905,9 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Microstoke get _clone =>
       ViscosityKinematic$Microstoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Microstoke] with new value
   @override
@@ -916,7 +955,7 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
 
   static const _ratio = 1e-7;
 
-  /// 1 [ViscosityKinematic$Nanostoke]  ≈  1e-7 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Nanostoke] ≈ 1e-7 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -924,6 +963,9 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Nanostoke get _clone =>
       ViscosityKinematic$Nanostoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Nanostoke] with new value
   @override
@@ -971,7 +1013,7 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
 
   static const _ratio = 1e-10;
 
-  /// 1 [ViscosityKinematic$Picostoke]  ≈  1e-10 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Picostoke] ≈ 1e-10 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -979,6 +1021,9 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Picostoke get _clone =>
       ViscosityKinematic$Picostoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Picostoke] with new value
   @override
@@ -1026,7 +1071,7 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
 
   static const _ratio = 1e-13;
 
-  /// 1 [ViscosityKinematic$Femtostoke]  ≈  1e-13 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Femtostoke] ≈ 1e-13 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -1034,6 +1079,9 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Femtostoke get _clone =>
       ViscosityKinematic$Femtostoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Femtostoke] with new value
   @override
@@ -1081,7 +1129,7 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
 
   static const _ratio = 1e-16;
 
-  /// 1 [ViscosityKinematic$Attostoke]  ≈  1e-16 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Attostoke] ≈ 1e-16 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -1089,6 +1137,9 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
   @override
   ViscosityKinematic$Attostoke get _clone =>
       ViscosityKinematic$Attostoke(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$Attostoke] with new value
   @override
@@ -1136,7 +1187,7 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [ViscosityKinematic$MeterSquarePerSecond]  =  1000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$MeterSquarePerSecond] = 1000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -1144,6 +1195,9 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
   @override
   ViscosityKinematic$MeterSquarePerSecond get _clone =>
       ViscosityKinematic$MeterSquarePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$MeterSquarePerSecond] with new value
   @override
@@ -1192,7 +1246,7 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
 
   static const _ratio = 100.0;
 
-  /// 1 [ViscosityKinematic$CentimeterSquarePerSecond]  =  100.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$CentimeterSquarePerSecond] = 100.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -1200,6 +1254,9 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
   @override
   ViscosityKinematic$CentimeterSquarePerSecond get _clone =>
       ViscosityKinematic$CentimeterSquarePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$CentimeterSquarePerSecond] with new value
   @override
@@ -1248,7 +1305,7 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
 
   static const _ratio = 1.0;
 
-  /// 1 [ViscosityKinematic$MillimeterSquarePerSecond]  =  1.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$MillimeterSquarePerSecond] = 1.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -1256,6 +1313,9 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
   @override
   ViscosityKinematic$MillimeterSquarePerSecond get _clone =>
       ViscosityKinematic$MillimeterSquarePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$MillimeterSquarePerSecond] with new value
   @override
@@ -1303,7 +1363,7 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
 
   static const _ratio = 92903.04000008391;
 
-  /// 1 [ViscosityKinematic$FootSquarePerSecond]  ≈  92903.04000008391 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$FootSquarePerSecond] ≈ 92903.04000008391 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
 
@@ -1311,6 +1371,9 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
   @override
   ViscosityKinematic$FootSquarePerSecond get _clone =>
       ViscosityKinematic$FootSquarePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [ViscosityKinematic$FootSquarePerSecond] with new value
   @override

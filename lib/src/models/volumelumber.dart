@@ -179,13 +179,16 @@ final class VolumeLumber$MeterCubic extends VolumeLumber {
 
   static const _ratio = 61023.74409473228;
 
-  /// 1 [VolumeLumber$MeterCubic]  ≈  61023.74409473228 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$MeterCubic] ≈ 61023.74409473228 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$MeterCubic get _clone => VolumeLumber$MeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$MeterCubic] with new value
   @override
@@ -233,13 +236,16 @@ final class VolumeLumber$CubicFeet extends VolumeLumber {
 
   static const _ratio = 1728.0;
 
-  /// 1 [VolumeLumber$CubicFeet]  =  1728.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$CubicFeet] = 1728.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$CubicFeet get _clone => VolumeLumber$CubicFeet(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$CubicFeet] with new value
   @override
@@ -295,6 +301,9 @@ final class VolumeLumber$CubicInch extends VolumeLumber {
   @override
   VolumeLumber$CubicInch get _clone => VolumeLumber$CubicInch(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [VolumeLumber$CubicInch] with new value
   @override
   VolumeLumber$CubicInch withValue(
@@ -341,13 +350,16 @@ final class VolumeLumber$BoardFeet extends VolumeLumber {
 
   static const _ratio = 144.0;
 
-  /// 1 [VolumeLumber$BoardFeet]  =  144.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$BoardFeet] = 144.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$BoardFeet get _clone => VolumeLumber$BoardFeet(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$BoardFeet] with new value
   @override
@@ -395,7 +407,7 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
 
   static const _ratio = 144000.0;
 
-  /// 1 [VolumeLumber$ThousandBoardFeet]  =  144000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandBoardFeet] = 144000.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
@@ -403,6 +415,9 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
   @override
   VolumeLumber$ThousandBoardFeet get _clone =>
       VolumeLumber$ThousandBoardFeet(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$ThousandBoardFeet] with new value
   @override
@@ -450,13 +465,16 @@ final class VolumeLumber$Cord extends VolumeLumber {
 
   static const _ratio = 221184.0;
 
-  /// 1 [VolumeLumber$Cord]  =  221184.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$Cord] = 221184.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$Cord get _clone => VolumeLumber$Cord(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$Cord] with new value
   @override
@@ -504,13 +522,16 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
 
   static const _ratio = 138240.0;
 
-  /// 1 [VolumeLumber$Cord80FtCubic]  =  138240.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$Cord80FtCubic] = 138240.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$Cord80FtCubic get _clone => VolumeLumber$Cord80FtCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$Cord80FtCubic] with new value
   @override
@@ -521,7 +542,7 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
 
   /// Symbol for [VolumeLumber$Cord80FtCubic]
   @override
-  String get symbol => '';
+  String get symbol => 'Cord80FtCubic';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -558,13 +579,16 @@ final class VolumeLumber$CordFeet extends VolumeLumber {
 
   static const _ratio = 27648.0;
 
-  /// 1 [VolumeLumber$CordFeet]  =  27648.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$CordFeet] = 27648.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$CordFeet get _clone => VolumeLumber$CordFeet(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$CordFeet] with new value
   @override
@@ -612,13 +636,16 @@ final class VolumeLumber$Cunit extends VolumeLumber {
 
   static const _ratio = 172800.0;
 
-  /// 1 [VolumeLumber$Cunit]  =  172800.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$Cunit] = 172800.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$Cunit get _clone => VolumeLumber$Cunit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$Cunit] with new value
   @override
@@ -629,7 +656,7 @@ final class VolumeLumber$Cunit extends VolumeLumber {
 
   /// Symbol for [VolumeLumber$Cunit]
   @override
-  String get symbol => '';
+  String get symbol => 'Cunit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -666,13 +693,16 @@ final class VolumeLumber$Pallet extends VolumeLumber {
 
   static const _ratio = 2448.0;
 
-  /// 1 [VolumeLumber$Pallet]  =  2448.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$Pallet] = 2448.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$Pallet get _clone => VolumeLumber$Pallet(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$Pallet] with new value
   @override
@@ -683,7 +713,7 @@ final class VolumeLumber$Pallet extends VolumeLumber {
 
   /// Symbol for [VolumeLumber$Pallet]
   @override
-  String get symbol => '';
+  String get symbol => 'Pallet';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -720,13 +750,16 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
 
   static const _ratio = 5760.0;
 
-  /// 1 [VolumeLumber$CrossTie]  =  5760.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$CrossTie] = 5760.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$CrossTie get _clone => VolumeLumber$CrossTie(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$CrossTie] with new value
   @override
@@ -737,7 +770,7 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
 
   /// Symbol for [VolumeLumber$CrossTie]
   @override
-  String get symbol => '';
+  String get symbol => 'CrossTie';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -774,13 +807,16 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
 
   static const _ratio = 9072.0;
 
-  /// 1 [VolumeLumber$SwitchTie]  =  9072.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$SwitchTie] = 9072.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeLumber$SwitchTie get _clone => VolumeLumber$SwitchTie(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$SwitchTie] with new value
   @override
@@ -791,7 +827,7 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
 
   /// Symbol for [VolumeLumber$SwitchTie]
   @override
-  String get symbol => '';
+  String get symbol => 'SwitchTie';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -829,7 +865,7 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
 
   static const _ratio = 18000.0;
 
-  /// 1 [VolumeLumber$ThousandSquareFeet1Per8InchPanels]  =  18000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet1Per8InchPanels] = 18000.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
@@ -837,6 +873,9 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
   @override
   VolumeLumber$ThousandSquareFeet1Per8InchPanels get _clone =>
       VolumeLumber$ThousandSquareFeet1Per8InchPanels(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per8InchPanels] with new value
   @override
@@ -847,7 +886,7 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
 
   /// Symbol for [VolumeLumber$ThousandSquareFeet1Per8InchPanels]
   @override
-  String get symbol => '';
+  String get symbol => 'ThousandSquareFeet1Per8InchPanels';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -885,7 +924,7 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
 
   static const _ratio = 36000.0;
 
-  /// 1 [VolumeLumber$ThousandSquareFeet1Per4InchPanels]  =  36000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet1Per4InchPanels] = 36000.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
@@ -893,6 +932,9 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
   @override
   VolumeLumber$ThousandSquareFeet1Per4InchPanels get _clone =>
       VolumeLumber$ThousandSquareFeet1Per4InchPanels(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per4InchPanels] with new value
   @override
@@ -903,7 +945,7 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
 
   /// Symbol for [VolumeLumber$ThousandSquareFeet1Per4InchPanels]
   @override
-  String get symbol => '';
+  String get symbol => 'ThousandSquareFeet1Per4InchPanels';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -941,7 +983,7 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
 
   static const _ratio = 54000.0;
 
-  /// 1 [VolumeLumber$ThousandSquareFeet3Per8InchPanels]  =  54000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet3Per8InchPanels] = 54000.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
@@ -949,6 +991,9 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
   @override
   VolumeLumber$ThousandSquareFeet3Per8InchPanels get _clone =>
       VolumeLumber$ThousandSquareFeet3Per8InchPanels(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet3Per8InchPanels] with new value
   @override
@@ -959,7 +1004,7 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
 
   /// Symbol for [VolumeLumber$ThousandSquareFeet3Per8InchPanels]
   @override
-  String get symbol => '';
+  String get symbol => 'ThousandSquareFeet3Per8InchPanels';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -997,7 +1042,7 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
 
   static const _ratio = 72000.0;
 
-  /// 1 [VolumeLumber$ThousandSquareFeet1Per2InchPanels]  =  72000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet1Per2InchPanels] = 72000.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
@@ -1005,6 +1050,9 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
   @override
   VolumeLumber$ThousandSquareFeet1Per2InchPanels get _clone =>
       VolumeLumber$ThousandSquareFeet1Per2InchPanels(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per2InchPanels] with new value
   @override
@@ -1015,7 +1063,7 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
 
   /// Symbol for [VolumeLumber$ThousandSquareFeet1Per2InchPanels]
   @override
-  String get symbol => '';
+  String get symbol => 'ThousandSquareFeet1Per2InchPanels';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1053,7 +1101,7 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
 
   static const _ratio = 108000.0;
 
-  /// 1 [VolumeLumber$ThousandSquareFeet3Per4InchPanels]  =  108000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet3Per4InchPanels] = 108000.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
 
@@ -1061,6 +1109,9 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
   @override
   VolumeLumber$ThousandSquareFeet3Per4InchPanels get _clone =>
       VolumeLumber$ThousandSquareFeet3Per4InchPanels(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet3Per4InchPanels] with new value
   @override
@@ -1071,7 +1122,7 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
 
   /// Symbol for [VolumeLumber$ThousandSquareFeet3Per4InchPanels]
   @override
-  String get symbol => '';
+  String get symbol => 'ThousandSquareFeet3Per4InchPanels';
 
   @override
   Map<String, dynamic> toJson() => {

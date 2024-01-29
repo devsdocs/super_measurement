@@ -91,13 +91,16 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
 
   static const _ratio = 258.0;
 
-  /// 1 [RadiationExposure$Roentgen]  =  258.0 [RadiationExposure$MicrocoulombPerKilogram]
+  /// 1 [RadiationExposure$Roentgen] = 258.0 [RadiationExposure$MicrocoulombPerKilogram]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   RadiationExposure$Roentgen get _clone => RadiationExposure$Roentgen(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationExposure$Roentgen] with new value
   @override
@@ -145,7 +148,7 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [RadiationExposure$CoulombPerKilogram]  =  1000000.0 [RadiationExposure$MicrocoulombPerKilogram]
+  /// 1 [RadiationExposure$CoulombPerKilogram] = 1000000.0 [RadiationExposure$MicrocoulombPerKilogram]
   @override
   num get ratio => _ratio;
 
@@ -153,6 +156,9 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
   @override
   RadiationExposure$CoulombPerKilogram get _clone =>
       RadiationExposure$CoulombPerKilogram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationExposure$CoulombPerKilogram] with new value
   @override
@@ -201,7 +207,7 @@ final class RadiationExposure$MillicoulombPerKilogram
 
   static const _ratio = 1000.0;
 
-  /// 1 [RadiationExposure$MillicoulombPerKilogram]  =  1000.0 [RadiationExposure$MicrocoulombPerKilogram]
+  /// 1 [RadiationExposure$MillicoulombPerKilogram] = 1000.0 [RadiationExposure$MicrocoulombPerKilogram]
   @override
   num get ratio => _ratio;
 
@@ -209,6 +215,9 @@ final class RadiationExposure$MillicoulombPerKilogram
   @override
   RadiationExposure$MillicoulombPerKilogram get _clone =>
       RadiationExposure$MillicoulombPerKilogram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationExposure$MillicoulombPerKilogram] with new value
   @override
@@ -265,6 +274,9 @@ final class RadiationExposure$MicrocoulombPerKilogram
   @override
   RadiationExposure$MicrocoulombPerKilogram get _clone =>
       RadiationExposure$MicrocoulombPerKilogram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationExposure$MicrocoulombPerKilogram] with new value
   @override

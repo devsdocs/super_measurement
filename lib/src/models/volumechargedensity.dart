@@ -119,6 +119,9 @@ final class VolumeChargeDensity$CoulombPerMeterCubic
   VolumeChargeDensity$CoulombPerMeterCubic get _clone =>
       VolumeChargeDensity$CoulombPerMeterCubic(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [VolumeChargeDensity$CoulombPerMeterCubic] with new value
   @override
   VolumeChargeDensity$CoulombPerMeterCubic withValue(
@@ -166,7 +169,7 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
 
   static const _ratio = 1000000.0;
 
-  /// 1 [VolumeChargeDensity$CoulombPerCentimeterCubic]  =  1000000.0 [VolumeChargeDensity$CoulombPerMeterCubic]
+  /// 1 [VolumeChargeDensity$CoulombPerCentimeterCubic] = 1000000.0 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -174,6 +177,9 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
   @override
   VolumeChargeDensity$CoulombPerCentimeterCubic get _clone =>
       VolumeChargeDensity$CoulombPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeChargeDensity$CoulombPerCentimeterCubic] with new value
   @override
@@ -222,7 +228,7 @@ final class VolumeChargeDensity$CoulombPerInchCubic
 
   static const _ratio = 61023.74409;
 
-  /// 1 [VolumeChargeDensity$CoulombPerInchCubic]  ≈  61023.74409 [VolumeChargeDensity$CoulombPerMeterCubic]
+  /// 1 [VolumeChargeDensity$CoulombPerInchCubic] ≈ 61023.74409 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -230,6 +236,9 @@ final class VolumeChargeDensity$CoulombPerInchCubic
   @override
   VolumeChargeDensity$CoulombPerInchCubic get _clone =>
       VolumeChargeDensity$CoulombPerInchCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeChargeDensity$CoulombPerInchCubic] with new value
   @override
@@ -278,7 +287,7 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
 
   static const _ratio = 10.0;
 
-  /// 1 [VolumeChargeDensity$AbcoulombPerMeterCubic]  =  10.0 [VolumeChargeDensity$CoulombPerMeterCubic]
+  /// 1 [VolumeChargeDensity$AbcoulombPerMeterCubic] = 10.0 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -286,6 +295,9 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
   @override
   VolumeChargeDensity$AbcoulombPerMeterCubic get _clone =>
       VolumeChargeDensity$AbcoulombPerMeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerMeterCubic] with new value
   @override
@@ -334,7 +346,7 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
 
   static const _ratio = 10000000.0;
 
-  /// 1 [VolumeChargeDensity$AbcoulombPerCentimeterCubic]  =  10000000.0 [VolumeChargeDensity$CoulombPerMeterCubic]
+  /// 1 [VolumeChargeDensity$AbcoulombPerCentimeterCubic] = 10000000.0 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -342,6 +354,9 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
   @override
   VolumeChargeDensity$AbcoulombPerCentimeterCubic get _clone =>
       VolumeChargeDensity$AbcoulombPerCentimeterCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerCentimeterCubic] with new value
   @override
@@ -390,7 +405,7 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
 
   static const _ratio = 610237.4409;
 
-  /// 1 [VolumeChargeDensity$AbcoulombPerInchCubic]  ≈  610237.4409 [VolumeChargeDensity$CoulombPerMeterCubic]
+  /// 1 [VolumeChargeDensity$AbcoulombPerInchCubic] ≈ 610237.4409 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
   num get ratio => _ratio;
 
@@ -398,6 +413,9 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
   @override
   VolumeChargeDensity$AbcoulombPerInchCubic get _clone =>
       VolumeChargeDensity$AbcoulombPerInchCubic(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerInchCubic] with new value
   @override

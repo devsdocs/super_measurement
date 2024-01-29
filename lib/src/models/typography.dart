@@ -121,7 +121,7 @@ final class Typography$PostScriptPointDTP extends Typography {
 
   static const _ratio = 0.013888888888888888;
 
-  /// 1 [Typography$PostScriptPointDTP]  ≈  0.013888888888888888 [Typography$Inch]
+  /// 1 [Typography$PostScriptPointDTP] ≈ 0.013888888888888888 [Typography$Inch]
   @override
   num get ratio => _ratio;
 
@@ -129,6 +129,9 @@ final class Typography$PostScriptPointDTP extends Typography {
   @override
   Typography$PostScriptPointDTP get _clone =>
       Typography$PostScriptPointDTP(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$PostScriptPointDTP] with new value
   @override
@@ -139,7 +142,7 @@ final class Typography$PostScriptPointDTP extends Typography {
 
   /// Symbol for [Typography$PostScriptPointDTP]
   @override
-  String get symbol => '';
+  String get symbol => 'PostScriptPointDTP';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -176,7 +179,7 @@ final class Typography$PrintersPointAmerican extends Typography {
 
   static const _ratio = 0.013837000138370002;
 
-  /// 1 [Typography$PrintersPointAmerican]  ≈  0.013837000138370002 [Typography$Inch]
+  /// 1 [Typography$PrintersPointAmerican] ≈ 0.013837000138370002 [Typography$Inch]
   @override
   num get ratio => _ratio;
 
@@ -184,6 +187,9 @@ final class Typography$PrintersPointAmerican extends Typography {
   @override
   Typography$PrintersPointAmerican get _clone =>
       Typography$PrintersPointAmerican(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$PrintersPointAmerican] with new value
   @override
@@ -194,7 +200,7 @@ final class Typography$PrintersPointAmerican extends Typography {
 
   /// Symbol for [Typography$PrintersPointAmerican]
   @override
-  String get symbol => '';
+  String get symbol => 'PrintersPointAmerican';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -231,13 +237,16 @@ final class Typography$DidotsPoint extends Typography {
 
   static const _ratio = 0.014803149606299212;
 
-  /// 1 [Typography$DidotsPoint]  ≈  0.014803149606299212 [Typography$Inch]
+  /// 1 [Typography$DidotsPoint] ≈ 0.014803149606299212 [Typography$Inch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Typography$DidotsPoint get _clone => Typography$DidotsPoint(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$DidotsPoint] with new value
   @override
@@ -248,7 +257,7 @@ final class Typography$DidotsPoint extends Typography {
 
   /// Symbol for [Typography$DidotsPoint]
   @override
-  String get symbol => '';
+  String get symbol => 'DidotsPoint';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -285,7 +294,7 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
 
   static const _ratio = 0.16666666666666666;
 
-  /// 1 [Typography$PicaPostScriptDTPComputer]  ≈  0.16666666666666666 [Typography$Inch]
+  /// 1 [Typography$PicaPostScriptDTPComputer] ≈ 0.16666666666666666 [Typography$Inch]
   @override
   num get ratio => _ratio;
 
@@ -293,6 +302,9 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
   @override
   Typography$PicaPostScriptDTPComputer get _clone =>
       Typography$PicaPostScriptDTPComputer(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$PicaPostScriptDTPComputer] with new value
   @override
@@ -303,7 +315,7 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
 
   /// Symbol for [Typography$PicaPostScriptDTPComputer]
   @override
-  String get symbol => '';
+  String get symbol => 'PicaPostScriptDTPComputer';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -340,13 +352,16 @@ final class Typography$PicaPrinters extends Typography {
 
   static const _ratio = 0.16604400166044;
 
-  /// 1 [Typography$PicaPrinters]  ≈  0.16604400166044 [Typography$Inch]
+  /// 1 [Typography$PicaPrinters] ≈ 0.16604400166044 [Typography$Inch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Typography$PicaPrinters get _clone => Typography$PicaPrinters(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$PicaPrinters] with new value
   @override
@@ -394,13 +409,16 @@ final class Typography$Ciceros extends Typography {
 
   static const _ratio = 0.17763779527559054;
 
-  /// 1 [Typography$Ciceros]  ≈  0.17763779527559054 [Typography$Inch]
+  /// 1 [Typography$Ciceros] ≈ 0.17763779527559054 [Typography$Inch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Typography$Ciceros get _clone => Typography$Ciceros(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$Ciceros] with new value
   @override
@@ -411,7 +429,7 @@ final class Typography$Ciceros extends Typography {
 
   /// Symbol for [Typography$Ciceros]
   @override
-  String get symbol => '';
+  String get symbol => 'Ciceros';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -455,6 +473,9 @@ final class Typography$Inch extends Typography {
   /// Clone this with same value
   @override
   Typography$Inch get _clone => Typography$Inch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$Inch] with new value
   @override
@@ -502,13 +523,16 @@ final class Typography$Millimeter extends Typography {
 
   static const _ratio = 0.03937007874015748;
 
-  /// 1 [Typography$Millimeter]  ≈  0.03937007874015748 [Typography$Inch]
+  /// 1 [Typography$Millimeter] ≈ 0.03937007874015748 [Typography$Inch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Typography$Millimeter get _clone => Typography$Millimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$Millimeter] with new value
   @override
@@ -556,13 +580,16 @@ final class Typography$Centimeter extends Typography {
 
   static const _ratio = 0.3937007874015748;
 
-  /// 1 [Typography$Centimeter]  ≈  0.3937007874015748 [Typography$Inch]
+  /// 1 [Typography$Centimeter] ≈ 0.3937007874015748 [Typography$Inch]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Typography$Centimeter get _clone => Typography$Centimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Typography$Centimeter] with new value
   @override

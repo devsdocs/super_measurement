@@ -163,13 +163,16 @@ final class Charge$Megacoulomb extends Charge {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Charge$Megacoulomb]  =  1000000.0 [Charge$Coulomb]
+  /// 1 [Charge$Megacoulomb] = 1000000.0 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Megacoulomb get _clone => Charge$Megacoulomb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Megacoulomb] with new value
   @override
@@ -217,13 +220,16 @@ final class Charge$Kilocoulomb extends Charge {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Charge$Kilocoulomb]  =  1000.0 [Charge$Coulomb]
+  /// 1 [Charge$Kilocoulomb] = 1000.0 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Kilocoulomb get _clone => Charge$Kilocoulomb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Kilocoulomb] with new value
   @override
@@ -279,6 +285,9 @@ final class Charge$Coulomb extends Charge {
   @override
   Charge$Coulomb get _clone => Charge$Coulomb(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Charge$Coulomb] with new value
   @override
   Charge$Coulomb withValue(
@@ -325,13 +334,16 @@ final class Charge$CoulombInternational extends Charge {
 
   static const _ratio = 0.999835027;
 
-  /// 1 [Charge$CoulombInternational]  ≈  0.999835027 [Charge$Coulomb]
+  /// 1 [Charge$CoulombInternational] ≈ 0.999835027 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$CoulombInternational get _clone => Charge$CoulombInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$CoulombInternational] with new value
   @override
@@ -379,13 +391,16 @@ final class Charge$Millicoulomb extends Charge {
 
   static const _ratio = 0.001;
 
-  /// 1 [Charge$Millicoulomb]  ≈  0.001 [Charge$Coulomb]
+  /// 1 [Charge$Millicoulomb] ≈ 0.001 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Millicoulomb get _clone => Charge$Millicoulomb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Millicoulomb] with new value
   @override
@@ -433,13 +448,16 @@ final class Charge$Microcoulomb extends Charge {
 
   static const _ratio = 0.000001;
 
-  /// 1 [Charge$Microcoulomb]  ≈  0.000001 [Charge$Coulomb]
+  /// 1 [Charge$Microcoulomb] ≈ 0.000001 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Microcoulomb get _clone => Charge$Microcoulomb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Microcoulomb] with new value
   @override
@@ -487,13 +505,16 @@ final class Charge$Nanocoulomb extends Charge {
 
   static const _ratio = 1e-9;
 
-  /// 1 [Charge$Nanocoulomb]  ≈  1e-9 [Charge$Coulomb]
+  /// 1 [Charge$Nanocoulomb] ≈ 1e-9 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Nanocoulomb get _clone => Charge$Nanocoulomb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Nanocoulomb] with new value
   @override
@@ -541,13 +562,16 @@ final class Charge$Picocoulomb extends Charge {
 
   static const _ratio = 1e-12;
 
-  /// 1 [Charge$Picocoulomb]  ≈  1e-12 [Charge$Coulomb]
+  /// 1 [Charge$Picocoulomb] ≈ 1e-12 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Picocoulomb get _clone => Charge$Picocoulomb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Picocoulomb] with new value
   @override
@@ -595,13 +619,16 @@ final class Charge$Abcoulomb extends Charge {
 
   static const _ratio = 10.0;
 
-  /// 1 [Charge$Abcoulomb]  =  10.0 [Charge$Coulomb]
+  /// 1 [Charge$Abcoulomb] = 10.0 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Abcoulomb get _clone => Charge$Abcoulomb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Abcoulomb] with new value
   @override
@@ -649,13 +676,16 @@ final class Charge$Statcoulomb extends Charge {
 
   static const _ratio = 3.335646048e-10;
 
-  /// 1 [Charge$Statcoulomb]  ≈  3.335646048e-10 [Charge$Coulomb]
+  /// 1 [Charge$Statcoulomb] ≈ 3.335646048e-10 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Statcoulomb get _clone => Charge$Statcoulomb(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Statcoulomb] with new value
   @override
@@ -703,13 +733,16 @@ final class Charge$Franklin extends Charge {
 
   static const _ratio = 3.335646048e-10;
 
-  /// 1 [Charge$Franklin]  ≈  3.335646048e-10 [Charge$Coulomb]
+  /// 1 [Charge$Franklin] ≈ 3.335646048e-10 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Franklin get _clone => Charge$Franklin(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Franklin] with new value
   @override
@@ -757,13 +790,16 @@ final class Charge$AmpereHour extends Charge {
 
   static const _ratio = 3600.0;
 
-  /// 1 [Charge$AmpereHour]  =  3600.0 [Charge$Coulomb]
+  /// 1 [Charge$AmpereHour] = 3600.0 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$AmpereHour get _clone => Charge$AmpereHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$AmpereHour] with new value
   @override
@@ -811,13 +847,16 @@ final class Charge$AmpereMinute extends Charge {
 
   static const _ratio = 60.0;
 
-  /// 1 [Charge$AmpereMinute]  =  60.0 [Charge$Coulomb]
+  /// 1 [Charge$AmpereMinute] = 60.0 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$AmpereMinute get _clone => Charge$AmpereMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$AmpereMinute] with new value
   @override
@@ -865,13 +904,16 @@ final class Charge$AmpereSecond extends Charge {
 
   static const _ratio = 1.0;
 
-  /// 1 [Charge$AmpereSecond]  =  1.0 [Charge$Coulomb]
+  /// 1 [Charge$AmpereSecond] = 1.0 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$AmpereSecond get _clone => Charge$AmpereSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$AmpereSecond] with new value
   @override
@@ -919,13 +961,16 @@ final class Charge$Faraday extends Charge {
 
   static const _ratio = 96485.3365;
 
-  /// 1 [Charge$Faraday]  ≈  96485.3365 [Charge$Coulomb]
+  /// 1 [Charge$Faraday] ≈ 96485.3365 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$Faraday get _clone => Charge$Faraday(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$Faraday] with new value
   @override
@@ -936,7 +981,7 @@ final class Charge$Faraday extends Charge {
 
   /// Symbol for [Charge$Faraday]
   @override
-  String get symbol => '';
+  String get symbol => 'Faraday';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -973,13 +1018,16 @@ final class Charge$ElectronicCharge extends Charge {
 
   static const _ratio = 1.6022e-19;
 
-  /// 1 [Charge$ElectronicCharge]  ≈  1.6022e-19 [Charge$Coulomb]
+  /// 1 [Charge$ElectronicCharge] ≈ 1.6022e-19 [Charge$Coulomb]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Charge$ElectronicCharge get _clone => Charge$ElectronicCharge(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Charge$ElectronicCharge] with new value
   @override

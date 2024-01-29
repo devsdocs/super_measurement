@@ -157,6 +157,9 @@ final class VelocityAngular$DegreePerDay extends VelocityAngular {
   VelocityAngular$DegreePerDay get _clone =>
       VelocityAngular$DegreePerDay(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [VelocityAngular$DegreePerDay] with new value
   @override
   VelocityAngular$DegreePerDay withValue(
@@ -203,7 +206,7 @@ final class VelocityAngular$DegreePerHour extends VelocityAngular {
 
   static const _ratio = 24.0;
 
-  /// 1 [VelocityAngular$DegreePerHour]  =  24.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$DegreePerHour] = 24.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -211,6 +214,9 @@ final class VelocityAngular$DegreePerHour extends VelocityAngular {
   @override
   VelocityAngular$DegreePerHour get _clone =>
       VelocityAngular$DegreePerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$DegreePerHour] with new value
   @override
@@ -258,7 +264,7 @@ final class VelocityAngular$DegreePerMinute extends VelocityAngular {
 
   static const _ratio = 1440.0;
 
-  /// 1 [VelocityAngular$DegreePerMinute]  =  1440.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$DegreePerMinute] = 1440.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -266,6 +272,9 @@ final class VelocityAngular$DegreePerMinute extends VelocityAngular {
   @override
   VelocityAngular$DegreePerMinute get _clone =>
       VelocityAngular$DegreePerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$DegreePerMinute] with new value
   @override
@@ -313,7 +322,7 @@ final class VelocityAngular$DegreePerSecond extends VelocityAngular {
 
   static const _ratio = 86400.0;
 
-  /// 1 [VelocityAngular$DegreePerSecond]  =  86400.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$DegreePerSecond] = 86400.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -321,6 +330,9 @@ final class VelocityAngular$DegreePerSecond extends VelocityAngular {
   @override
   VelocityAngular$DegreePerSecond get _clone =>
       VelocityAngular$DegreePerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$DegreePerSecond] with new value
   @override
@@ -368,7 +380,7 @@ final class VelocityAngular$RadianPerDay extends VelocityAngular {
 
   static const _ratio = 57.29577951308232;
 
-  /// 1 [VelocityAngular$RadianPerDay]  ≈  57.29577951308232 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RadianPerDay] ≈ 57.29577951308232 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -376,6 +388,9 @@ final class VelocityAngular$RadianPerDay extends VelocityAngular {
   @override
   VelocityAngular$RadianPerDay get _clone =>
       VelocityAngular$RadianPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$RadianPerDay] with new value
   @override
@@ -423,7 +438,7 @@ final class VelocityAngular$RadianPerHour extends VelocityAngular {
 
   static const _ratio = 1375.0987083139757;
 
-  /// 1 [VelocityAngular$RadianPerHour]  ≈  1375.0987083139757 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RadianPerHour] ≈ 1375.0987083139757 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -431,6 +446,9 @@ final class VelocityAngular$RadianPerHour extends VelocityAngular {
   @override
   VelocityAngular$RadianPerHour get _clone =>
       VelocityAngular$RadianPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$RadianPerHour] with new value
   @override
@@ -478,7 +496,7 @@ final class VelocityAngular$RadianPerMinute extends VelocityAngular {
 
   static const _ratio = 82505.92249883854;
 
-  /// 1 [VelocityAngular$RadianPerMinute]  ≈  82505.92249883854 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RadianPerMinute] ≈ 82505.92249883854 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -486,6 +504,9 @@ final class VelocityAngular$RadianPerMinute extends VelocityAngular {
   @override
   VelocityAngular$RadianPerMinute get _clone =>
       VelocityAngular$RadianPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$RadianPerMinute] with new value
   @override
@@ -533,7 +554,7 @@ final class VelocityAngular$RadianPerSecond extends VelocityAngular {
 
   static const _ratio = 4950355.3499303125;
 
-  /// 1 [VelocityAngular$RadianPerSecond]  ≈  4950355.3499303125 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RadianPerSecond] ≈ 4950355.3499303125 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -541,6 +562,9 @@ final class VelocityAngular$RadianPerSecond extends VelocityAngular {
   @override
   VelocityAngular$RadianPerSecond get _clone =>
       VelocityAngular$RadianPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$RadianPerSecond] with new value
   @override
@@ -588,7 +612,7 @@ final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
 
   static const _ratio = 360.0;
 
-  /// 1 [VelocityAngular$RevolutionPerDay]  =  360.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RevolutionPerDay] = 360.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -596,6 +620,9 @@ final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
   @override
   VelocityAngular$RevolutionPerDay get _clone =>
       VelocityAngular$RevolutionPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$RevolutionPerDay] with new value
   @override
@@ -643,7 +670,7 @@ final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
 
   static const _ratio = 8640.0;
 
-  /// 1 [VelocityAngular$RevolutionPerHour]  =  8640.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RevolutionPerHour] = 8640.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -651,6 +678,9 @@ final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
   @override
   VelocityAngular$RevolutionPerHour get _clone =>
       VelocityAngular$RevolutionPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$RevolutionPerHour] with new value
   @override
@@ -698,7 +728,7 @@ final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
 
   static const _ratio = 518400.0;
 
-  /// 1 [VelocityAngular$RevolutionPerMinute]  =  518400.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RevolutionPerMinute] = 518400.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -706,6 +736,9 @@ final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
   @override
   VelocityAngular$RevolutionPerMinute get _clone =>
       VelocityAngular$RevolutionPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$RevolutionPerMinute] with new value
   @override
@@ -753,7 +786,7 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
 
   static const _ratio = 31104000.0;
 
-  /// 1 [VelocityAngular$RevolutionPerSecond]  =  31104000.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RevolutionPerSecond] = 31104000.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
 
@@ -761,6 +794,9 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
   @override
   VelocityAngular$RevolutionPerSecond get _clone =>
       VelocityAngular$RevolutionPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VelocityAngular$RevolutionPerSecond] with new value
   @override

@@ -102,7 +102,7 @@ final class AccelerationAngular$RadianPerSecondSquare
 
   static const _ratio = 9.549296587;
 
-  /// 1 [AccelerationAngular$RadianPerSecondSquare]  ≈  9.549296587 [AccelerationAngular$RevolutionPerMinuteSecond]
+  /// 1 [AccelerationAngular$RadianPerSecondSquare] ≈ 9.549296587 [AccelerationAngular$RevolutionPerMinuteSecond]
   @override
   num get ratio => _ratio;
 
@@ -110,6 +110,9 @@ final class AccelerationAngular$RadianPerSecondSquare
   @override
   AccelerationAngular$RadianPerSecondSquare get _clone =>
       AccelerationAngular$RadianPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationAngular$RadianPerSecondSquare] with new value
   @override
@@ -158,7 +161,7 @@ final class AccelerationAngular$RadianPerMinuteSquare
 
   static const _ratio = 0.0026525823852777777;
 
-  /// 1 [AccelerationAngular$RadianPerMinuteSquare]  ≈  0.0026525823852777777 [AccelerationAngular$RevolutionPerMinuteSecond]
+  /// 1 [AccelerationAngular$RadianPerMinuteSquare] ≈ 0.0026525823852777777 [AccelerationAngular$RevolutionPerMinuteSecond]
   @override
   num get ratio => _ratio;
 
@@ -166,6 +169,9 @@ final class AccelerationAngular$RadianPerMinuteSquare
   @override
   AccelerationAngular$RadianPerMinuteSquare get _clone =>
       AccelerationAngular$RadianPerMinuteSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationAngular$RadianPerMinuteSquare] with new value
   @override
@@ -214,7 +220,7 @@ final class AccelerationAngular$RevolutionPerSecondSquare
 
   static const _ratio = 60.0;
 
-  /// 1 [AccelerationAngular$RevolutionPerSecondSquare]  =  60.0 [AccelerationAngular$RevolutionPerMinuteSecond]
+  /// 1 [AccelerationAngular$RevolutionPerSecondSquare] = 60.0 [AccelerationAngular$RevolutionPerMinuteSecond]
   @override
   num get ratio => _ratio;
 
@@ -222,6 +228,9 @@ final class AccelerationAngular$RevolutionPerSecondSquare
   @override
   AccelerationAngular$RevolutionPerSecondSquare get _clone =>
       AccelerationAngular$RevolutionPerSecondSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationAngular$RevolutionPerSecondSquare] with new value
   @override
@@ -279,6 +288,9 @@ final class AccelerationAngular$RevolutionPerMinuteSecond
   AccelerationAngular$RevolutionPerMinuteSecond get _clone =>
       AccelerationAngular$RevolutionPerMinuteSecond(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [AccelerationAngular$RevolutionPerMinuteSecond] with new value
   @override
   AccelerationAngular$RevolutionPerMinuteSecond withValue(
@@ -326,7 +338,7 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
 
   static const _ratio = 0.016666666666666666;
 
-  /// 1 [AccelerationAngular$RevolutionPerMinuteSquare]  ≈  0.016666666666666666 [AccelerationAngular$RevolutionPerMinuteSecond]
+  /// 1 [AccelerationAngular$RevolutionPerMinuteSquare] ≈ 0.016666666666666666 [AccelerationAngular$RevolutionPerMinuteSecond]
   @override
   num get ratio => _ratio;
 
@@ -334,6 +346,9 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
   @override
   AccelerationAngular$RevolutionPerMinuteSquare get _clone =>
       AccelerationAngular$RevolutionPerMinuteSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [AccelerationAngular$RevolutionPerMinuteSquare] with new value
   @override

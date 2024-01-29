@@ -125,13 +125,16 @@ final class Current$Kiloampere extends Current {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Current$Kiloampere]  =  1000000.0 [Current$Milliampere]
+  /// 1 [Current$Kiloampere] = 1000000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$Kiloampere get _clone => Current$Kiloampere(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$Kiloampere] with new value
   @override
@@ -179,13 +182,16 @@ final class Current$Ampere extends Current {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Current$Ampere]  =  1000.0 [Current$Milliampere]
+  /// 1 [Current$Ampere] = 1000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$Ampere get _clone => Current$Ampere(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$Ampere] with new value
   @override
@@ -241,6 +247,9 @@ final class Current$Milliampere extends Current {
   @override
   Current$Milliampere get _clone => Current$Milliampere(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Current$Milliampere] with new value
   @override
   Current$Milliampere withValue(
@@ -287,13 +296,16 @@ final class Current$Biot extends Current {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Current$Biot]  =  10000.0 [Current$Milliampere]
+  /// 1 [Current$Biot] = 10000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$Biot get _clone => Current$Biot(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$Biot] with new value
   @override
@@ -341,13 +353,16 @@ final class Current$Abampere extends Current {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Current$Abampere]  =  10000.0 [Current$Milliampere]
+  /// 1 [Current$Abampere] = 10000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$Abampere get _clone => Current$Abampere(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$Abampere] with new value
   @override
@@ -395,13 +410,16 @@ final class Current$Statampere extends Current {
 
   static const _ratio = 3.335641e-7;
 
-  /// 1 [Current$Statampere]  ≈  3.335641e-7 [Current$Milliampere]
+  /// 1 [Current$Statampere] ≈ 3.335641e-7 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$Statampere get _clone => Current$Statampere(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$Statampere] with new value
   @override
@@ -449,13 +467,16 @@ final class Current$EMUOfCurrent extends Current {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Current$EMUOfCurrent]  =  10000.0 [Current$Milliampere]
+  /// 1 [Current$EMUOfCurrent] = 10000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$EMUOfCurrent get _clone => Current$EMUOfCurrent(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$EMUOfCurrent] with new value
   @override
@@ -466,7 +487,7 @@ final class Current$EMUOfCurrent extends Current {
 
   /// Symbol for [Current$EMUOfCurrent]
   @override
-  String get symbol => '';
+  String get symbol => 'EMUOfCurrent';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -503,13 +524,16 @@ final class Current$ESUOfCurrent extends Current {
 
   static const _ratio = 3.335641e-7;
 
-  /// 1 [Current$ESUOfCurrent]  ≈  3.335641e-7 [Current$Milliampere]
+  /// 1 [Current$ESUOfCurrent] ≈ 3.335641e-7 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$ESUOfCurrent get _clone => Current$ESUOfCurrent(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$ESUOfCurrent] with new value
   @override
@@ -520,7 +544,7 @@ final class Current$ESUOfCurrent extends Current {
 
   /// Symbol for [Current$ESUOfCurrent]
   @override
-  String get symbol => '';
+  String get symbol => 'ESUOfCurrent';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -557,13 +581,16 @@ final class Current$CGSEMUnit extends Current {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Current$CGSEMUnit]  =  10000.0 [Current$Milliampere]
+  /// 1 [Current$CGSEMUnit] = 10000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$CGSEMUnit get _clone => Current$CGSEMUnit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$CGSEMUnit] with new value
   @override
@@ -574,7 +601,7 @@ final class Current$CGSEMUnit extends Current {
 
   /// Symbol for [Current$CGSEMUnit]
   @override
-  String get symbol => '';
+  String get symbol => 'CGSEMUnit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -611,13 +638,16 @@ final class Current$CGSESUnit extends Current {
 
   static const _ratio = 3.335641e-7;
 
-  /// 1 [Current$CGSESUnit]  ≈  3.335641e-7 [Current$Milliampere]
+  /// 1 [Current$CGSESUnit] ≈ 3.335641e-7 [Current$Milliampere]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Current$CGSESUnit get _clone => Current$CGSESUnit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Current$CGSESUnit] with new value
   @override
@@ -628,7 +658,7 @@ final class Current$CGSESUnit extends Current {
 
   /// Symbol for [Current$CGSESUnit]
   @override
-  String get symbol => '';
+  String get symbol => 'CGSESUnit';
 
   @override
   Map<String, dynamic> toJson() => {

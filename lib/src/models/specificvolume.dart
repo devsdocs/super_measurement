@@ -122,6 +122,9 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
   SpecificVolume$MeterCubicPerKilogram get _clone =>
       SpecificVolume$MeterCubicPerKilogram(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [SpecificVolume$MeterCubicPerKilogram] with new value
   @override
   SpecificVolume$MeterCubicPerKilogram withValue(
@@ -168,7 +171,7 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
 
   static const _ratio = 0.001;
 
-  /// 1 [SpecificVolume$CentimeterCubicPerGram]  ≈  0.001 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$CentimeterCubicPerGram] ≈ 0.001 [SpecificVolume$MeterCubicPerKilogram]
   @override
   num get ratio => _ratio;
 
@@ -176,6 +179,9 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
   @override
   SpecificVolume$CentimeterCubicPerGram get _clone =>
       SpecificVolume$CentimeterCubicPerGram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificVolume$CentimeterCubicPerGram] with new value
   @override
@@ -223,7 +229,7 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
 
   static const _ratio = 0.001;
 
-  /// 1 [SpecificVolume$LiterPerKilogram]  ≈  0.001 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$LiterPerKilogram] ≈ 0.001 [SpecificVolume$MeterCubicPerKilogram]
   @override
   num get ratio => _ratio;
 
@@ -231,6 +237,9 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
   @override
   SpecificVolume$LiterPerKilogram get _clone =>
       SpecificVolume$LiterPerKilogram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificVolume$LiterPerKilogram] with new value
   @override
@@ -278,13 +287,16 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
 
   static const _ratio = 1.0;
 
-  /// 1 [SpecificVolume$LiterPerGram]  =  1.0 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$LiterPerGram] = 1.0 [SpecificVolume$MeterCubicPerKilogram]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   SpecificVolume$LiterPerGram get _clone => SpecificVolume$LiterPerGram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificVolume$LiterPerGram] with new value
   @override
@@ -332,7 +344,7 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
 
   static const _ratio = 0.028316846593193615;
 
-  /// 1 [SpecificVolume$FeetCubicPerKilogram]  ≈  0.028316846593193615 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$FeetCubicPerKilogram] ≈ 0.028316846593193615 [SpecificVolume$MeterCubicPerKilogram]
   @override
   num get ratio => _ratio;
 
@@ -340,6 +352,9 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
   @override
   SpecificVolume$FeetCubicPerKilogram get _clone =>
       SpecificVolume$FeetCubicPerKilogram(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificVolume$FeetCubicPerKilogram] with new value
   @override
@@ -387,7 +402,7 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
 
   static const _ratio = 0.06242795995;
 
-  /// 1 [SpecificVolume$FeetCubicPerPound]  ≈  0.06242795995 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$FeetCubicPerPound] ≈ 0.06242795995 [SpecificVolume$MeterCubicPerKilogram]
   @override
   num get ratio => _ratio;
 
@@ -395,6 +410,9 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
   @override
   SpecificVolume$FeetCubicPerPound get _clone =>
       SpecificVolume$FeetCubicPerPound(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificVolume$FeetCubicPerPound] with new value
   @override
@@ -442,7 +460,7 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
 
   static const _ratio = 0.010022412755827792;
 
-  /// 1 [SpecificVolume$GallonUKPerPound]  ≈  0.010022412755827792 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$GallonUKPerPound] ≈ 0.010022412755827792 [SpecificVolume$MeterCubicPerKilogram]
   @override
   num get ratio => _ratio;
 
@@ -450,6 +468,9 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
   @override
   SpecificVolume$GallonUKPerPound get _clone =>
       SpecificVolume$GallonUKPerPound(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [SpecificVolume$GallonUKPerPound] with new value
   @override

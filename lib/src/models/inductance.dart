@@ -195,13 +195,16 @@ final class Inductance$Exahenry extends Inductance {
 
   static const _ratio = 1e+36;
 
-  /// 1 [Inductance$Exahenry]  =  1e+36 [Inductance$Attohenry]
+  /// 1 [Inductance$Exahenry] = 1e+36 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Exahenry get _clone => Inductance$Exahenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Exahenry] with new value
   @override
@@ -249,13 +252,16 @@ final class Inductance$Petahenry extends Inductance {
 
   static const _ratio = 1e+33;
 
-  /// 1 [Inductance$Petahenry]  =  1e+33 [Inductance$Attohenry]
+  /// 1 [Inductance$Petahenry] = 1e+33 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Petahenry get _clone => Inductance$Petahenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Petahenry] with new value
   @override
@@ -303,13 +309,16 @@ final class Inductance$Terahenry extends Inductance {
 
   static const _ratio = 1e+30;
 
-  /// 1 [Inductance$Terahenry]  =  1e+30 [Inductance$Attohenry]
+  /// 1 [Inductance$Terahenry] = 1e+30 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Terahenry get _clone => Inductance$Terahenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Terahenry] with new value
   @override
@@ -357,13 +366,16 @@ final class Inductance$Gigahenry extends Inductance {
 
   static const _ratio = 1e+27;
 
-  /// 1 [Inductance$Gigahenry]  =  1e+27 [Inductance$Attohenry]
+  /// 1 [Inductance$Gigahenry] = 1e+27 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Gigahenry get _clone => Inductance$Gigahenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Gigahenry] with new value
   @override
@@ -411,13 +423,16 @@ final class Inductance$Megahenry extends Inductance {
 
   static const _ratio = 1e+24;
 
-  /// 1 [Inductance$Megahenry]  =  1e+24 [Inductance$Attohenry]
+  /// 1 [Inductance$Megahenry] = 1e+24 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Megahenry get _clone => Inductance$Megahenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Megahenry] with new value
   @override
@@ -465,13 +480,16 @@ final class Inductance$Kilohenry extends Inductance {
 
   static const _ratio = 1e+21;
 
-  /// 1 [Inductance$Kilohenry]  =  1e+21 [Inductance$Attohenry]
+  /// 1 [Inductance$Kilohenry] = 1e+21 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Kilohenry get _clone => Inductance$Kilohenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Kilohenry] with new value
   @override
@@ -519,13 +537,16 @@ final class Inductance$Hectohenry extends Inductance {
 
   static const _ratio = 100000000000000000000.0;
 
-  /// 1 [Inductance$Hectohenry]  =  100000000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Hectohenry] = 100000000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Hectohenry get _clone => Inductance$Hectohenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Hectohenry] with new value
   @override
@@ -573,13 +594,16 @@ final class Inductance$Dekahenry extends Inductance {
 
   static const _ratio = 10000000000000000000.0;
 
-  /// 1 [Inductance$Dekahenry]  =  10000000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Dekahenry] = 10000000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Dekahenry get _clone => Inductance$Dekahenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Dekahenry] with new value
   @override
@@ -627,13 +651,16 @@ final class Inductance$Henry extends Inductance {
 
   static const _ratio = 1000000000000000000.0;
 
-  /// 1 [Inductance$Henry]  =  1000000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Henry] = 1000000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Henry get _clone => Inductance$Henry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Henry] with new value
   @override
@@ -681,13 +708,16 @@ final class Inductance$Decihenry extends Inductance {
 
   static const _ratio = 100000000000000000.0;
 
-  /// 1 [Inductance$Decihenry]  =  100000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Decihenry] = 100000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Decihenry get _clone => Inductance$Decihenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Decihenry] with new value
   @override
@@ -735,13 +765,16 @@ final class Inductance$Centihenry extends Inductance {
 
   static const _ratio = 10000000000000000.0;
 
-  /// 1 [Inductance$Centihenry]  =  10000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Centihenry] = 10000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Centihenry get _clone => Inductance$Centihenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Centihenry] with new value
   @override
@@ -789,13 +822,16 @@ final class Inductance$Millihenry extends Inductance {
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [Inductance$Millihenry]  =  1000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Millihenry] = 1000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Millihenry get _clone => Inductance$Millihenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Millihenry] with new value
   @override
@@ -843,13 +879,16 @@ final class Inductance$Microhenry extends Inductance {
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [Inductance$Microhenry]  =  1000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Microhenry] = 1000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Microhenry get _clone => Inductance$Microhenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Microhenry] with new value
   @override
@@ -897,13 +936,16 @@ final class Inductance$Nanohenry extends Inductance {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Inductance$Nanohenry]  =  1000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Nanohenry] = 1000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Nanohenry get _clone => Inductance$Nanohenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Nanohenry] with new value
   @override
@@ -951,13 +993,16 @@ final class Inductance$Picohenry extends Inductance {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Inductance$Picohenry]  =  1000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Picohenry] = 1000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Picohenry get _clone => Inductance$Picohenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Picohenry] with new value
   @override
@@ -1005,13 +1050,16 @@ final class Inductance$Femtohenry extends Inductance {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Inductance$Femtohenry]  =  1000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Femtohenry] = 1000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Femtohenry get _clone => Inductance$Femtohenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Femtohenry] with new value
   @override
@@ -1067,6 +1115,9 @@ final class Inductance$Attohenry extends Inductance {
   @override
   Inductance$Attohenry get _clone => Inductance$Attohenry(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Inductance$Attohenry] with new value
   @override
   Inductance$Attohenry withValue(
@@ -1113,13 +1164,16 @@ final class Inductance$Abhenry extends Inductance {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Inductance$Abhenry]  =  1000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Abhenry] = 1000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Abhenry get _clone => Inductance$Abhenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Abhenry] with new value
   @override
@@ -1167,13 +1221,16 @@ final class Inductance$Stathenry extends Inductance {
 
   static const _ratio = 8.987552e+29;
 
-  /// 1 [Inductance$Stathenry]  =  8.987552e+29 [Inductance$Attohenry]
+  /// 1 [Inductance$Stathenry] = 8.987552e+29 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$Stathenry get _clone => Inductance$Stathenry(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$Stathenry] with new value
   @override
@@ -1221,13 +1278,16 @@ final class Inductance$EMUOfInductance extends Inductance {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [Inductance$EMUOfInductance]  =  1000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$EMUOfInductance] = 1000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$EMUOfInductance get _clone => Inductance$EMUOfInductance(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$EMUOfInductance] with new value
   @override
@@ -1238,7 +1298,7 @@ final class Inductance$EMUOfInductance extends Inductance {
 
   /// Symbol for [Inductance$EMUOfInductance]
   @override
-  String get symbol => '';
+  String get symbol => 'EMUOfInductance';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1275,13 +1335,16 @@ final class Inductance$ESUOfInductance extends Inductance {
 
   static const _ratio = 8.987552e+29;
 
-  /// 1 [Inductance$ESUOfInductance]  =  8.987552e+29 [Inductance$Attohenry]
+  /// 1 [Inductance$ESUOfInductance] = 8.987552e+29 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Inductance$ESUOfInductance get _clone => Inductance$ESUOfInductance(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Inductance$ESUOfInductance] with new value
   @override
@@ -1292,7 +1355,7 @@ final class Inductance$ESUOfInductance extends Inductance {
 
   /// Symbol for [Inductance$ESUOfInductance]
   @override
-  String get symbol => '';
+  String get symbol => 'ESUOfInductance';
 
   @override
   Map<String, dynamic> toJson() => {

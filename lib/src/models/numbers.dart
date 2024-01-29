@@ -312,13 +312,16 @@ final class Numbers$Binary extends Numbers {
 
   static const _ratio = 2.0;
 
-  /// 1 [Numbers$Binary]  =  2.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Binary] = 2.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Binary get _clone => Numbers$Binary(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Binary] with new value
   @override
@@ -329,7 +332,7 @@ final class Numbers$Binary extends Numbers {
 
   /// Symbol for [Numbers$Binary]
   @override
-  String get symbol => '';
+  String get symbol => 'Binary';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -366,13 +369,16 @@ final class Numbers$Octal extends Numbers {
 
   static const _ratio = 8.0;
 
-  /// 1 [Numbers$Octal]  =  8.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Octal] = 8.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Octal get _clone => Numbers$Octal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Octal] with new value
   @override
@@ -383,7 +389,7 @@ final class Numbers$Octal extends Numbers {
 
   /// Symbol for [Numbers$Octal]
   @override
-  String get symbol => '';
+  String get symbol => 'Octal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -420,13 +426,16 @@ final class Numbers$Decimal extends Numbers {
 
   static const _ratio = 10.0;
 
-  /// 1 [Numbers$Decimal]  =  10.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Decimal] = 10.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Decimal get _clone => Numbers$Decimal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Decimal] with new value
   @override
@@ -437,7 +446,7 @@ final class Numbers$Decimal extends Numbers {
 
   /// Symbol for [Numbers$Decimal]
   @override
-  String get symbol => '';
+  String get symbol => 'Decimal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -474,13 +483,16 @@ final class Numbers$Hexadecimal extends Numbers {
 
   static const _ratio = 16.0;
 
-  /// 1 [Numbers$Hexadecimal]  =  16.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Hexadecimal] = 16.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Hexadecimal get _clone => Numbers$Hexadecimal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Hexadecimal] with new value
   @override
@@ -491,7 +503,7 @@ final class Numbers$Hexadecimal extends Numbers {
 
   /// Symbol for [Numbers$Hexadecimal]
   @override
-  String get symbol => '';
+  String get symbol => 'Hexadecimal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -536,6 +548,9 @@ final class Numbers$RomanNumeral extends Numbers {
   @override
   Numbers$RomanNumeral get _clone => Numbers$RomanNumeral(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Numbers$RomanNumeral] with new value
   @override
   Numbers$RomanNumeral withValue(
@@ -545,7 +560,7 @@ final class Numbers$RomanNumeral extends Numbers {
 
   /// Symbol for [Numbers$RomanNumeral]
   @override
-  String get symbol => '';
+  String get symbol => 'RomanNumeral';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -582,13 +597,16 @@ final class Numbers$Base2 extends Numbers {
 
   static const _ratio = 2.0;
 
-  /// 1 [Numbers$Base2]  =  2.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base2] = 2.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base2 get _clone => Numbers$Base2(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base2] with new value
   @override
@@ -599,7 +617,7 @@ final class Numbers$Base2 extends Numbers {
 
   /// Symbol for [Numbers$Base2]
   @override
-  String get symbol => '';
+  String get symbol => 'Base2';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -636,13 +654,16 @@ final class Numbers$Base3 extends Numbers {
 
   static const _ratio = 3.0;
 
-  /// 1 [Numbers$Base3]  =  3.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base3] = 3.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base3 get _clone => Numbers$Base3(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base3] with new value
   @override
@@ -653,7 +674,7 @@ final class Numbers$Base3 extends Numbers {
 
   /// Symbol for [Numbers$Base3]
   @override
-  String get symbol => '';
+  String get symbol => 'Base3';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -690,13 +711,16 @@ final class Numbers$Base4 extends Numbers {
 
   static const _ratio = 4.0;
 
-  /// 1 [Numbers$Base4]  =  4.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base4] = 4.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base4 get _clone => Numbers$Base4(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base4] with new value
   @override
@@ -707,7 +731,7 @@ final class Numbers$Base4 extends Numbers {
 
   /// Symbol for [Numbers$Base4]
   @override
-  String get symbol => '';
+  String get symbol => 'Base4';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -744,13 +768,16 @@ final class Numbers$Base5 extends Numbers {
 
   static const _ratio = 5.0;
 
-  /// 1 [Numbers$Base5]  =  5.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base5] = 5.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base5 get _clone => Numbers$Base5(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base5] with new value
   @override
@@ -761,7 +788,7 @@ final class Numbers$Base5 extends Numbers {
 
   /// Symbol for [Numbers$Base5]
   @override
-  String get symbol => '';
+  String get symbol => 'Base5';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -798,13 +825,16 @@ final class Numbers$Base6 extends Numbers {
 
   static const _ratio = 6.0;
 
-  /// 1 [Numbers$Base6]  =  6.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base6] = 6.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base6 get _clone => Numbers$Base6(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base6] with new value
   @override
@@ -815,7 +845,7 @@ final class Numbers$Base6 extends Numbers {
 
   /// Symbol for [Numbers$Base6]
   @override
-  String get symbol => '';
+  String get symbol => 'Base6';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -852,13 +882,16 @@ final class Numbers$Base7 extends Numbers {
 
   static const _ratio = 7.0;
 
-  /// 1 [Numbers$Base7]  =  7.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base7] = 7.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base7 get _clone => Numbers$Base7(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base7] with new value
   @override
@@ -869,7 +902,7 @@ final class Numbers$Base7 extends Numbers {
 
   /// Symbol for [Numbers$Base7]
   @override
-  String get symbol => '';
+  String get symbol => 'Base7';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -906,13 +939,16 @@ final class Numbers$Base8 extends Numbers {
 
   static const _ratio = 8.0;
 
-  /// 1 [Numbers$Base8]  =  8.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base8] = 8.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base8 get _clone => Numbers$Base8(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base8] with new value
   @override
@@ -923,7 +959,7 @@ final class Numbers$Base8 extends Numbers {
 
   /// Symbol for [Numbers$Base8]
   @override
-  String get symbol => '';
+  String get symbol => 'Base8';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -960,13 +996,16 @@ final class Numbers$Base9 extends Numbers {
 
   static const _ratio = 9.0;
 
-  /// 1 [Numbers$Base9]  =  9.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base9] = 9.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base9 get _clone => Numbers$Base9(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base9] with new value
   @override
@@ -977,7 +1016,7 @@ final class Numbers$Base9 extends Numbers {
 
   /// Symbol for [Numbers$Base9]
   @override
-  String get symbol => '';
+  String get symbol => 'Base9';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1014,13 +1053,16 @@ final class Numbers$Base10 extends Numbers {
 
   static const _ratio = 10.0;
 
-  /// 1 [Numbers$Base10]  =  10.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base10] = 10.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base10 get _clone => Numbers$Base10(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base10] with new value
   @override
@@ -1031,7 +1073,7 @@ final class Numbers$Base10 extends Numbers {
 
   /// Symbol for [Numbers$Base10]
   @override
-  String get symbol => '';
+  String get symbol => 'Base10';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1068,13 +1110,16 @@ final class Numbers$Base11 extends Numbers {
 
   static const _ratio = 11.0;
 
-  /// 1 [Numbers$Base11]  =  11.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base11] = 11.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base11 get _clone => Numbers$Base11(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base11] with new value
   @override
@@ -1085,7 +1130,7 @@ final class Numbers$Base11 extends Numbers {
 
   /// Symbol for [Numbers$Base11]
   @override
-  String get symbol => '';
+  String get symbol => 'Base11';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1122,13 +1167,16 @@ final class Numbers$Base12 extends Numbers {
 
   static const _ratio = 12.0;
 
-  /// 1 [Numbers$Base12]  =  12.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base12] = 12.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base12 get _clone => Numbers$Base12(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base12] with new value
   @override
@@ -1139,7 +1187,7 @@ final class Numbers$Base12 extends Numbers {
 
   /// Symbol for [Numbers$Base12]
   @override
-  String get symbol => '';
+  String get symbol => 'Base12';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1176,13 +1224,16 @@ final class Numbers$Base13 extends Numbers {
 
   static const _ratio = 13.0;
 
-  /// 1 [Numbers$Base13]  =  13.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base13] = 13.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base13 get _clone => Numbers$Base13(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base13] with new value
   @override
@@ -1193,7 +1244,7 @@ final class Numbers$Base13 extends Numbers {
 
   /// Symbol for [Numbers$Base13]
   @override
-  String get symbol => '';
+  String get symbol => 'Base13';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1230,13 +1281,16 @@ final class Numbers$Base14 extends Numbers {
 
   static const _ratio = 14.0;
 
-  /// 1 [Numbers$Base14]  =  14.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base14] = 14.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base14 get _clone => Numbers$Base14(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base14] with new value
   @override
@@ -1247,7 +1301,7 @@ final class Numbers$Base14 extends Numbers {
 
   /// Symbol for [Numbers$Base14]
   @override
-  String get symbol => '';
+  String get symbol => 'Base14';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1284,13 +1338,16 @@ final class Numbers$Base15 extends Numbers {
 
   static const _ratio = 15.0;
 
-  /// 1 [Numbers$Base15]  =  15.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base15] = 15.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base15 get _clone => Numbers$Base15(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base15] with new value
   @override
@@ -1301,7 +1358,7 @@ final class Numbers$Base15 extends Numbers {
 
   /// Symbol for [Numbers$Base15]
   @override
-  String get symbol => '';
+  String get symbol => 'Base15';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1338,13 +1395,16 @@ final class Numbers$Base16 extends Numbers {
 
   static const _ratio = 16.0;
 
-  /// 1 [Numbers$Base16]  =  16.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base16] = 16.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base16 get _clone => Numbers$Base16(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base16] with new value
   @override
@@ -1355,7 +1415,7 @@ final class Numbers$Base16 extends Numbers {
 
   /// Symbol for [Numbers$Base16]
   @override
-  String get symbol => '';
+  String get symbol => 'Base16';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1392,13 +1452,16 @@ final class Numbers$Base17 extends Numbers {
 
   static const _ratio = 17.0;
 
-  /// 1 [Numbers$Base17]  =  17.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base17] = 17.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base17 get _clone => Numbers$Base17(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base17] with new value
   @override
@@ -1409,7 +1472,7 @@ final class Numbers$Base17 extends Numbers {
 
   /// Symbol for [Numbers$Base17]
   @override
-  String get symbol => '';
+  String get symbol => 'Base17';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1446,13 +1509,16 @@ final class Numbers$Base18 extends Numbers {
 
   static const _ratio = 18.0;
 
-  /// 1 [Numbers$Base18]  =  18.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base18] = 18.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base18 get _clone => Numbers$Base18(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base18] with new value
   @override
@@ -1463,7 +1529,7 @@ final class Numbers$Base18 extends Numbers {
 
   /// Symbol for [Numbers$Base18]
   @override
-  String get symbol => '';
+  String get symbol => 'Base18';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1500,13 +1566,16 @@ final class Numbers$Base19 extends Numbers {
 
   static const _ratio = 19.0;
 
-  /// 1 [Numbers$Base19]  =  19.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base19] = 19.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base19 get _clone => Numbers$Base19(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base19] with new value
   @override
@@ -1517,7 +1586,7 @@ final class Numbers$Base19 extends Numbers {
 
   /// Symbol for [Numbers$Base19]
   @override
-  String get symbol => '';
+  String get symbol => 'Base19';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1554,13 +1623,16 @@ final class Numbers$Base20 extends Numbers {
 
   static const _ratio = 20.0;
 
-  /// 1 [Numbers$Base20]  =  20.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base20] = 20.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base20 get _clone => Numbers$Base20(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base20] with new value
   @override
@@ -1571,7 +1643,7 @@ final class Numbers$Base20 extends Numbers {
 
   /// Symbol for [Numbers$Base20]
   @override
-  String get symbol => '';
+  String get symbol => 'Base20';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1608,13 +1680,16 @@ final class Numbers$Base21 extends Numbers {
 
   static const _ratio = 21.0;
 
-  /// 1 [Numbers$Base21]  =  21.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base21] = 21.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base21 get _clone => Numbers$Base21(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base21] with new value
   @override
@@ -1625,7 +1700,7 @@ final class Numbers$Base21 extends Numbers {
 
   /// Symbol for [Numbers$Base21]
   @override
-  String get symbol => '';
+  String get symbol => 'Base21';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1662,13 +1737,16 @@ final class Numbers$Base22 extends Numbers {
 
   static const _ratio = 22.0;
 
-  /// 1 [Numbers$Base22]  =  22.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base22] = 22.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base22 get _clone => Numbers$Base22(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base22] with new value
   @override
@@ -1679,7 +1757,7 @@ final class Numbers$Base22 extends Numbers {
 
   /// Symbol for [Numbers$Base22]
   @override
-  String get symbol => '';
+  String get symbol => 'Base22';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1716,13 +1794,16 @@ final class Numbers$Base23 extends Numbers {
 
   static const _ratio = 23.0;
 
-  /// 1 [Numbers$Base23]  =  23.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base23] = 23.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base23 get _clone => Numbers$Base23(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base23] with new value
   @override
@@ -1733,7 +1814,7 @@ final class Numbers$Base23 extends Numbers {
 
   /// Symbol for [Numbers$Base23]
   @override
-  String get symbol => '';
+  String get symbol => 'Base23';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1770,13 +1851,16 @@ final class Numbers$Base24 extends Numbers {
 
   static const _ratio = 24.0;
 
-  /// 1 [Numbers$Base24]  =  24.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base24] = 24.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base24 get _clone => Numbers$Base24(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base24] with new value
   @override
@@ -1787,7 +1871,7 @@ final class Numbers$Base24 extends Numbers {
 
   /// Symbol for [Numbers$Base24]
   @override
-  String get symbol => '';
+  String get symbol => 'Base24';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1824,13 +1908,16 @@ final class Numbers$Base25 extends Numbers {
 
   static const _ratio = 25.0;
 
-  /// 1 [Numbers$Base25]  =  25.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base25] = 25.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base25 get _clone => Numbers$Base25(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base25] with new value
   @override
@@ -1841,7 +1928,7 @@ final class Numbers$Base25 extends Numbers {
 
   /// Symbol for [Numbers$Base25]
   @override
-  String get symbol => '';
+  String get symbol => 'Base25';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1878,13 +1965,16 @@ final class Numbers$Base26 extends Numbers {
 
   static const _ratio = 26.0;
 
-  /// 1 [Numbers$Base26]  =  26.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base26] = 26.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base26 get _clone => Numbers$Base26(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base26] with new value
   @override
@@ -1895,7 +1985,7 @@ final class Numbers$Base26 extends Numbers {
 
   /// Symbol for [Numbers$Base26]
   @override
-  String get symbol => '';
+  String get symbol => 'Base26';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1932,13 +2022,16 @@ final class Numbers$Base27 extends Numbers {
 
   static const _ratio = 27.0;
 
-  /// 1 [Numbers$Base27]  =  27.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base27] = 27.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base27 get _clone => Numbers$Base27(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base27] with new value
   @override
@@ -1949,7 +2042,7 @@ final class Numbers$Base27 extends Numbers {
 
   /// Symbol for [Numbers$Base27]
   @override
-  String get symbol => '';
+  String get symbol => 'Base27';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1986,13 +2079,16 @@ final class Numbers$Base28 extends Numbers {
 
   static const _ratio = 28.0;
 
-  /// 1 [Numbers$Base28]  =  28.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base28] = 28.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base28 get _clone => Numbers$Base28(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base28] with new value
   @override
@@ -2003,7 +2099,7 @@ final class Numbers$Base28 extends Numbers {
 
   /// Symbol for [Numbers$Base28]
   @override
-  String get symbol => '';
+  String get symbol => 'Base28';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2040,13 +2136,16 @@ final class Numbers$Base29 extends Numbers {
 
   static const _ratio = 29.0;
 
-  /// 1 [Numbers$Base29]  =  29.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base29] = 29.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base29 get _clone => Numbers$Base29(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base29] with new value
   @override
@@ -2057,7 +2156,7 @@ final class Numbers$Base29 extends Numbers {
 
   /// Symbol for [Numbers$Base29]
   @override
-  String get symbol => '';
+  String get symbol => 'Base29';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2094,13 +2193,16 @@ final class Numbers$Base30 extends Numbers {
 
   static const _ratio = 30.0;
 
-  /// 1 [Numbers$Base30]  =  30.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base30] = 30.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base30 get _clone => Numbers$Base30(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base30] with new value
   @override
@@ -2111,7 +2213,7 @@ final class Numbers$Base30 extends Numbers {
 
   /// Symbol for [Numbers$Base30]
   @override
-  String get symbol => '';
+  String get symbol => 'Base30';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2148,13 +2250,16 @@ final class Numbers$Base31 extends Numbers {
 
   static const _ratio = 31.0;
 
-  /// 1 [Numbers$Base31]  =  31.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base31] = 31.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base31 get _clone => Numbers$Base31(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base31] with new value
   @override
@@ -2165,7 +2270,7 @@ final class Numbers$Base31 extends Numbers {
 
   /// Symbol for [Numbers$Base31]
   @override
-  String get symbol => '';
+  String get symbol => 'Base31';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2202,13 +2307,16 @@ final class Numbers$Base32 extends Numbers {
 
   static const _ratio = 32.0;
 
-  /// 1 [Numbers$Base32]  =  32.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base32] = 32.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base32 get _clone => Numbers$Base32(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base32] with new value
   @override
@@ -2219,7 +2327,7 @@ final class Numbers$Base32 extends Numbers {
 
   /// Symbol for [Numbers$Base32]
   @override
-  String get symbol => '';
+  String get symbol => 'Base32';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2256,13 +2364,16 @@ final class Numbers$Base33 extends Numbers {
 
   static const _ratio = 33.0;
 
-  /// 1 [Numbers$Base33]  =  33.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base33] = 33.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base33 get _clone => Numbers$Base33(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base33] with new value
   @override
@@ -2273,7 +2384,7 @@ final class Numbers$Base33 extends Numbers {
 
   /// Symbol for [Numbers$Base33]
   @override
-  String get symbol => '';
+  String get symbol => 'Base33';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2310,13 +2421,16 @@ final class Numbers$Base34 extends Numbers {
 
   static const _ratio = 34.0;
 
-  /// 1 [Numbers$Base34]  =  34.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base34] = 34.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base34 get _clone => Numbers$Base34(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base34] with new value
   @override
@@ -2327,7 +2441,7 @@ final class Numbers$Base34 extends Numbers {
 
   /// Symbol for [Numbers$Base34]
   @override
-  String get symbol => '';
+  String get symbol => 'Base34';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2364,13 +2478,16 @@ final class Numbers$Base35 extends Numbers {
 
   static const _ratio = 35.0;
 
-  /// 1 [Numbers$Base35]  =  35.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base35] = 35.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base35 get _clone => Numbers$Base35(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base35] with new value
   @override
@@ -2381,7 +2498,7 @@ final class Numbers$Base35 extends Numbers {
 
   /// Symbol for [Numbers$Base35]
   @override
-  String get symbol => '';
+  String get symbol => 'Base35';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2418,13 +2535,16 @@ final class Numbers$Base36 extends Numbers {
 
   static const _ratio = 36.0;
 
-  /// 1 [Numbers$Base36]  =  36.0 [Numbers$RomanNumeral]
+  /// 1 [Numbers$Base36] = 36.0 [Numbers$RomanNumeral]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Numbers$Base36 get _clone => Numbers$Base36(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Numbers$Base36] with new value
   @override
@@ -2435,7 +2555,7 @@ final class Numbers$Base36 extends Numbers {
 
   /// Symbol for [Numbers$Base36]
   @override
-  String get symbol => '';
+  String get symbol => 'Base36';
 
   @override
   Map<String, dynamic> toJson() => {

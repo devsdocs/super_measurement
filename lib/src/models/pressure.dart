@@ -342,13 +342,16 @@ final class Pressure$Exapascal extends Pressure {
 
   static const _ratio = 10000000000000000000.0;
 
-  /// 1 [Pressure$Exapascal]  =  10000000000000000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Exapascal] = 10000000000000000000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Exapascal get _clone => Pressure$Exapascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Exapascal] with new value
   @override
@@ -396,13 +399,16 @@ final class Pressure$Petapascal extends Pressure {
 
   static const _ratio = 10000000000000000.0;
 
-  /// 1 [Pressure$Petapascal]  =  10000000000000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Petapascal] = 10000000000000000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Petapascal get _clone => Pressure$Petapascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Petapascal] with new value
   @override
@@ -450,13 +456,16 @@ final class Pressure$Terapascal extends Pressure {
 
   static const _ratio = 10000000000000.0;
 
-  /// 1 [Pressure$Terapascal]  =  10000000000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Terapascal] = 10000000000000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Terapascal get _clone => Pressure$Terapascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Terapascal] with new value
   @override
@@ -504,13 +513,16 @@ final class Pressure$Gigapascal extends Pressure {
 
   static const _ratio = 10000000000.0;
 
-  /// 1 [Pressure$Gigapascal]  =  10000000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Gigapascal] = 10000000000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Gigapascal get _clone => Pressure$Gigapascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Gigapascal] with new value
   @override
@@ -558,13 +570,16 @@ final class Pressure$Megapascal extends Pressure {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Pressure$Megapascal]  =  10000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Megapascal] = 10000000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Megapascal get _clone => Pressure$Megapascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Megapascal] with new value
   @override
@@ -612,13 +627,16 @@ final class Pressure$Kilopascal extends Pressure {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Pressure$Kilopascal]  =  10000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Kilopascal] = 10000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Kilopascal get _clone => Pressure$Kilopascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Kilopascal] with new value
   @override
@@ -666,13 +684,16 @@ final class Pressure$Hectopascal extends Pressure {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Pressure$Hectopascal]  =  1000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Hectopascal] = 1000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Hectopascal get _clone => Pressure$Hectopascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Hectopascal] with new value
   @override
@@ -720,13 +741,16 @@ final class Pressure$Dekapascal extends Pressure {
 
   static const _ratio = 100.0;
 
-  /// 1 [Pressure$Dekapascal]  =  100.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Dekapascal] = 100.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Dekapascal get _clone => Pressure$Dekapascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Dekapascal] with new value
   @override
@@ -774,13 +798,16 @@ final class Pressure$Pascal extends Pressure {
 
   static const _ratio = 10.0;
 
-  /// 1 [Pressure$Pascal]  =  10.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Pascal] = 10.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Pascal get _clone => Pressure$Pascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Pascal] with new value
   @override
@@ -836,6 +863,9 @@ final class Pressure$Decipascal extends Pressure {
   @override
   Pressure$Decipascal get _clone => Pressure$Decipascal(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [Pressure$Decipascal] with new value
   @override
   Pressure$Decipascal withValue(
@@ -882,13 +912,16 @@ final class Pressure$Centipascal extends Pressure {
 
   static const _ratio = 0.1;
 
-  /// 1 [Pressure$Centipascal]  ≈  0.1 [Pressure$Decipascal]
+  /// 1 [Pressure$Centipascal] ≈ 0.1 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Centipascal get _clone => Pressure$Centipascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Centipascal] with new value
   @override
@@ -936,13 +969,16 @@ final class Pressure$Millipascal extends Pressure {
 
   static const _ratio = 0.01;
 
-  /// 1 [Pressure$Millipascal]  ≈  0.01 [Pressure$Decipascal]
+  /// 1 [Pressure$Millipascal] ≈ 0.01 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Millipascal get _clone => Pressure$Millipascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Millipascal] with new value
   @override
@@ -990,13 +1026,16 @@ final class Pressure$Micropascal extends Pressure {
 
   static const _ratio = 0.00001;
 
-  /// 1 [Pressure$Micropascal]  ≈  0.00001 [Pressure$Decipascal]
+  /// 1 [Pressure$Micropascal] ≈ 0.00001 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Micropascal get _clone => Pressure$Micropascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Micropascal] with new value
   @override
@@ -1044,13 +1083,16 @@ final class Pressure$Nanopascal extends Pressure {
 
   static const _ratio = 1e-8;
 
-  /// 1 [Pressure$Nanopascal]  ≈  1e-8 [Pressure$Decipascal]
+  /// 1 [Pressure$Nanopascal] ≈ 1e-8 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Nanopascal get _clone => Pressure$Nanopascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Nanopascal] with new value
   @override
@@ -1098,13 +1140,16 @@ final class Pressure$Picopascal extends Pressure {
 
   static const _ratio = 1e-11;
 
-  /// 1 [Pressure$Picopascal]  ≈  1e-11 [Pressure$Decipascal]
+  /// 1 [Pressure$Picopascal] ≈ 1e-11 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Picopascal get _clone => Pressure$Picopascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Picopascal] with new value
   @override
@@ -1152,13 +1197,16 @@ final class Pressure$Femtopascal extends Pressure {
 
   static const _ratio = 1e-14;
 
-  /// 1 [Pressure$Femtopascal]  ≈  1e-14 [Pressure$Decipascal]
+  /// 1 [Pressure$Femtopascal] ≈ 1e-14 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Femtopascal get _clone => Pressure$Femtopascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Femtopascal] with new value
   @override
@@ -1206,13 +1254,16 @@ final class Pressure$Attopascal extends Pressure {
 
   static const _ratio = 1e-17;
 
-  /// 1 [Pressure$Attopascal]  ≈  1e-17 [Pressure$Decipascal]
+  /// 1 [Pressure$Attopascal] ≈ 1e-17 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Attopascal get _clone => Pressure$Attopascal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Attopascal] with new value
   @override
@@ -1260,7 +1311,7 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
 
   static const _ratio = 10000.0;
 
-  /// 1 [Pressure$KilonewtonPerMeterSquare]  =  10000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$KilonewtonPerMeterSquare] = 10000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -1268,6 +1319,9 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
   @override
   Pressure$KilonewtonPerMeterSquare get _clone =>
       Pressure$KilonewtonPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$KilonewtonPerMeterSquare] with new value
   @override
@@ -1315,7 +1369,7 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
 
   static const _ratio = 10.0;
 
-  /// 1 [Pressure$NewtonPerMeterSquare]  =  10.0 [Pressure$Decipascal]
+  /// 1 [Pressure$NewtonPerMeterSquare] = 10.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -1323,6 +1377,9 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
   @override
   Pressure$NewtonPerMeterSquare get _clone =>
       Pressure$NewtonPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$NewtonPerMeterSquare] with new value
   @override
@@ -1370,7 +1427,7 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
 
   static const _ratio = 100000.0;
 
-  /// 1 [Pressure$NewtonPerCentimeterSquare]  =  100000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$NewtonPerCentimeterSquare] = 100000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -1378,6 +1435,9 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
   @override
   Pressure$NewtonPerCentimeterSquare get _clone =>
       Pressure$NewtonPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$NewtonPerCentimeterSquare] with new value
   @override
@@ -1425,7 +1485,7 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
 
   static const _ratio = 10000000.0;
 
-  /// 1 [Pressure$NewtonPerMillimeterSquare]  =  10000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$NewtonPerMillimeterSquare] = 10000000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -1433,6 +1493,9 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
   @override
   Pressure$NewtonPerMillimeterSquare get _clone =>
       Pressure$NewtonPerMillimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$NewtonPerMillimeterSquare] with new value
   @override
@@ -1480,13 +1543,16 @@ final class Pressure$Bar extends Pressure {
 
   static const _ratio = 1000000.0;
 
-  /// 1 [Pressure$Bar]  =  1000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Bar] = 1000000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Bar get _clone => Pressure$Bar(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Bar] with new value
   @override
@@ -1497,7 +1563,7 @@ final class Pressure$Bar extends Pressure {
 
   /// Symbol for [Pressure$Bar]
   @override
-  String get symbol => '';
+  String get symbol => 'Bar';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1534,13 +1600,16 @@ final class Pressure$Millibar extends Pressure {
 
   static const _ratio = 1000.0;
 
-  /// 1 [Pressure$Millibar]  =  1000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Millibar] = 1000.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Millibar get _clone => Pressure$Millibar(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Millibar] with new value
   @override
@@ -1588,13 +1657,16 @@ final class Pressure$Microbar extends Pressure {
 
   static const _ratio = 1.0;
 
-  /// 1 [Pressure$Microbar]  =  1.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Microbar] = 1.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Microbar get _clone => Pressure$Microbar(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Microbar] with new value
   @override
@@ -1642,13 +1714,16 @@ final class Pressure$Atmosphere extends Pressure {
 
   static const _ratio = 1013250.0;
 
-  /// 1 [Pressure$Atmosphere]  =  1013250.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Atmosphere] = 1013250.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Atmosphere get _clone => Pressure$Atmosphere(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Atmosphere] with new value
   @override
@@ -1696,13 +1771,16 @@ final class Pressure$Psi extends Pressure {
 
   static const _ratio = 68947.57293178307;
 
-  /// 1 [Pressure$Psi]  ≈  68947.57293178307 [Pressure$Decipascal]
+  /// 1 [Pressure$Psi] ≈ 68947.57293178307 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Psi get _clone => Pressure$Psi(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Psi] with new value
   @override
@@ -1713,7 +1791,7 @@ final class Pressure$Psi extends Pressure {
 
   /// Symbol for [Pressure$Psi]
   @override
-  String get symbol => '';
+  String get symbol => 'Psi';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -1750,7 +1828,7 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
 
   static const _ratio = 1.0;
 
-  /// 1 [Pressure$DynePerCentimeterSquare]  =  1.0 [Pressure$Decipascal]
+  /// 1 [Pressure$DynePerCentimeterSquare] = 1.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -1758,6 +1836,9 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
   @override
   Pressure$DynePerCentimeterSquare get _clone =>
       Pressure$DynePerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$DynePerCentimeterSquare] with new value
   @override
@@ -1805,7 +1886,7 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
 
   static const _ratio = 98.0665;
 
-  /// 1 [Pressure$KilogramPerMeterSquare]  ≈  98.0665 [Pressure$Decipascal]
+  /// 1 [Pressure$KilogramPerMeterSquare] ≈ 98.0665 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -1813,6 +1894,9 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
   @override
   Pressure$KilogramPerMeterSquare get _clone =>
       Pressure$KilogramPerMeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$KilogramPerMeterSquare] with new value
   @override
@@ -1860,7 +1944,7 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
 
   static const _ratio = 980665.0;
 
-  /// 1 [Pressure$KilogramPerCentimeterSquare]  =  980665.0 [Pressure$Decipascal]
+  /// 1 [Pressure$KilogramPerCentimeterSquare] = 980665.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -1868,6 +1952,9 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
   @override
   Pressure$KilogramPerCentimeterSquare get _clone =>
       Pressure$KilogramPerCentimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$KilogramPerCentimeterSquare] with new value
   @override
@@ -1915,7 +2002,7 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
 
   static const _ratio = 98066500.0;
 
-  /// 1 [Pressure$KilogramPerMillimeterSquare]  =  98066500.0 [Pressure$Decipascal]
+  /// 1 [Pressure$KilogramPerMillimeterSquare] = 98066500.0 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -1923,6 +2010,9 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
   @override
   Pressure$KilogramPerMillimeterSquare get _clone =>
       Pressure$KilogramPerMillimeterSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$KilogramPerMillimeterSquare] with new value
   @override
@@ -1970,13 +2060,16 @@ final class Pressure$TonPerFootSquare extends Pressure {
 
   static const _ratio = 957605.1796080982;
 
-  /// 1 [Pressure$TonPerFootSquare]  ≈  957605.1796080982 [Pressure$Decipascal]
+  /// 1 [Pressure$TonPerFootSquare] ≈ 957605.1796080982 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$TonPerFootSquare get _clone => Pressure$TonPerFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$TonPerFootSquare] with new value
   @override
@@ -1987,7 +2080,7 @@ final class Pressure$TonPerFootSquare extends Pressure {
 
   /// Symbol for [Pressure$TonPerFootSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'TonPerFootSquare';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2024,13 +2117,16 @@ final class Pressure$TonPerInchSquare extends Pressure {
 
   static const _ratio = 137895145.86356613;
 
-  /// 1 [Pressure$TonPerInchSquare]  ≈  137895145.86356613 [Pressure$Decipascal]
+  /// 1 [Pressure$TonPerInchSquare] ≈ 137895145.86356613 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$TonPerInchSquare get _clone => Pressure$TonPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$TonPerInchSquare] with new value
   @override
@@ -2041,7 +2137,7 @@ final class Pressure$TonPerInchSquare extends Pressure {
 
   /// Symbol for [Pressure$TonPerInchSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'TonPerInchSquare';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2078,13 +2174,16 @@ final class Pressure$PoundPerFootSquare extends Pressure {
 
   static const _ratio = 478.8025898040491;
 
-  /// 1 [Pressure$PoundPerFootSquare]  ≈  478.8025898040491 [Pressure$Decipascal]
+  /// 1 [Pressure$PoundPerFootSquare] ≈ 478.8025898040491 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$PoundPerFootSquare get _clone => Pressure$PoundPerFootSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$PoundPerFootSquare] with new value
   @override
@@ -2132,13 +2231,16 @@ final class Pressure$PoundPerInchSquare extends Pressure {
 
   static const _ratio = 68947.57293178307;
 
-  /// 1 [Pressure$PoundPerInchSquare]  ≈  68947.57293178307 [Pressure$Decipascal]
+  /// 1 [Pressure$PoundPerInchSquare] ≈ 68947.57293178307 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$PoundPerInchSquare get _clone => Pressure$PoundPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$PoundPerInchSquare] with new value
   @override
@@ -2186,13 +2288,16 @@ final class Pressure$KipPerInchSquare extends Pressure {
 
   static const _ratio = 68947572.93178307;
 
-  /// 1 [Pressure$KipPerInchSquare]  ≈  68947572.93178307 [Pressure$Decipascal]
+  /// 1 [Pressure$KipPerInchSquare] ≈ 68947572.93178307 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$KipPerInchSquare get _clone => Pressure$KipPerInchSquare(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$KipPerInchSquare] with new value
   @override
@@ -2203,7 +2308,7 @@ final class Pressure$KipPerInchSquare extends Pressure {
 
   /// Symbol for [Pressure$KipPerInchSquare]
   @override
-  String get symbol => '';
+  String get symbol => 'KipPerInchSquare';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -2240,13 +2345,16 @@ final class Pressure$Torr extends Pressure {
 
   static const _ratio = 1333.223684210828;
 
-  /// 1 [Pressure$Torr]  ≈  1333.223684210828 [Pressure$Decipascal]
+  /// 1 [Pressure$Torr] ≈ 1333.223684210828 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$Torr get _clone => Pressure$Torr(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$Torr] with new value
   @override
@@ -2294,7 +2402,7 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
 
   static const _ratio = 13332.2368421083;
 
-  /// 1 [Pressure$CentimeterMercury0DegreeC]  ≈  13332.2368421083 [Pressure$Decipascal]
+  /// 1 [Pressure$CentimeterMercury0DegreeC] ≈ 13332.2368421083 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -2302,6 +2410,9 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
   @override
   Pressure$CentimeterMercury0DegreeC get _clone =>
       Pressure$CentimeterMercury0DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$CentimeterMercury0DegreeC] with new value
   @override
@@ -2349,7 +2460,7 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
 
   static const _ratio = 1333.223684210828;
 
-  /// 1 [Pressure$MillimeterMercury0DegreeC]  ≈  1333.223684210828 [Pressure$Decipascal]
+  /// 1 [Pressure$MillimeterMercury0DegreeC] ≈ 1333.223684210828 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -2357,6 +2468,9 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
   @override
   Pressure$MillimeterMercury0DegreeC get _clone =>
       Pressure$MillimeterMercury0DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$MillimeterMercury0DegreeC] with new value
   @override
@@ -2404,7 +2518,7 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
 
   static const _ratio = 33863.88157899115;
 
-  /// 1 [Pressure$InchMercury32DegreeF]  ≈  33863.88157899115 [Pressure$Decipascal]
+  /// 1 [Pressure$InchMercury32DegreeF] ≈ 33863.88157899115 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -2412,6 +2526,9 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
   @override
   Pressure$InchMercury32DegreeF get _clone =>
       Pressure$InchMercury32DegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$InchMercury32DegreeF] with new value
   @override
@@ -2459,7 +2576,7 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
 
   static const _ratio = 980.638;
 
-  /// 1 [Pressure$CentimeterWater4DegreeC]  ≈  980.638 [Pressure$Decipascal]
+  /// 1 [Pressure$CentimeterWater4DegreeC] ≈ 980.638 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
@@ -2467,6 +2584,9 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
   @override
   Pressure$CentimeterWater4DegreeC get _clone =>
       Pressure$CentimeterWater4DegreeC(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$CentimeterWater4DegreeC] with new value
   @override
@@ -2514,13 +2634,16 @@ final class Pressure$InchWater60DegreeF extends Pressure {
 
   static const _ratio = 2488.4;
 
-  /// 1 [Pressure$InchWater60DegreeF]  ≈  2488.4 [Pressure$Decipascal]
+  /// 1 [Pressure$InchWater60DegreeF] ≈ 2488.4 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$InchWater60DegreeF get _clone => Pressure$InchWater60DegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$InchWater60DegreeF] with new value
   @override
@@ -2568,13 +2691,16 @@ final class Pressure$FootWater60DegreeF extends Pressure {
 
   static const _ratio = 29860.8;
 
-  /// 1 [Pressure$FootWater60DegreeF]  ≈  29860.8 [Pressure$Decipascal]
+  /// 1 [Pressure$FootWater60DegreeF] ≈ 29860.8 [Pressure$Decipascal]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Pressure$FootWater60DegreeF get _clone => Pressure$FootWater60DegreeF(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [Pressure$FootWater60DegreeF] with new value
   @override

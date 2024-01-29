@@ -156,6 +156,9 @@ final class IlluminationLuminousIntensity$CandleInternational
   IlluminationLuminousIntensity$CandleInternational get _clone =>
       IlluminationLuminousIntensity$CandleInternational(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [IlluminationLuminousIntensity$CandleInternational] with new value
   @override
   IlluminationLuminousIntensity$CandleInternational withValue(
@@ -203,7 +206,7 @@ final class IlluminationLuminousIntensity$CandleGerman
 
   static const _ratio = 1.0526315789473684;
 
-  /// 1 [IlluminationLuminousIntensity$CandleGerman]  ≈  1.0526315789473684 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$CandleGerman] ≈ 1.0526315789473684 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -211,6 +214,9 @@ final class IlluminationLuminousIntensity$CandleGerman
   @override
   IlluminationLuminousIntensity$CandleGerman get _clone =>
       IlluminationLuminousIntensity$CandleGerman(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandleGerman] with new value
   @override
@@ -259,7 +265,7 @@ final class IlluminationLuminousIntensity$CandlePentane
 
   static const _ratio = 1.0;
 
-  /// 1 [IlluminationLuminousIntensity$CandlePentane]  =  1.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$CandlePentane] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -267,6 +273,9 @@ final class IlluminationLuminousIntensity$CandlePentane
   @override
   IlluminationLuminousIntensity$CandlePentane get _clone =>
       IlluminationLuminousIntensity$CandlePentane(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandlePentane] with new value
   @override
@@ -315,7 +324,7 @@ final class IlluminationLuminousIntensity$CandleUK
 
   static const _ratio = 1.0416666666666667;
 
-  /// 1 [IlluminationLuminousIntensity$CandleUK]  ≈  1.0416666666666667 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$CandleUK] ≈ 1.0416666666666667 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -323,6 +332,9 @@ final class IlluminationLuminousIntensity$CandleUK
   @override
   IlluminationLuminousIntensity$CandleUK get _clone =>
       IlluminationLuminousIntensity$CandleUK(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandleUK] with new value
   @override
@@ -371,7 +383,7 @@ final class IlluminationLuminousIntensity$DecimalCandle
 
   static const _ratio = 1.0;
 
-  /// 1 [IlluminationLuminousIntensity$DecimalCandle]  =  1.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$DecimalCandle] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -379,6 +391,9 @@ final class IlluminationLuminousIntensity$DecimalCandle
   @override
   IlluminationLuminousIntensity$DecimalCandle get _clone =>
       IlluminationLuminousIntensity$DecimalCandle(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$DecimalCandle] with new value
   @override
@@ -389,7 +404,7 @@ final class IlluminationLuminousIntensity$DecimalCandle
 
   /// Symbol for [IlluminationLuminousIntensity$DecimalCandle]
   @override
-  String get symbol => '';
+  String get symbol => 'DecimalCandle';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -427,7 +442,7 @@ final class IlluminationLuminousIntensity$HefnerCandle
 
   static const _ratio = 0.9;
 
-  /// 1 [IlluminationLuminousIntensity$HefnerCandle]  ≈  0.9 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$HefnerCandle] ≈ 0.9 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -435,6 +450,9 @@ final class IlluminationLuminousIntensity$HefnerCandle
   @override
   IlluminationLuminousIntensity$HefnerCandle get _clone =>
       IlluminationLuminousIntensity$HefnerCandle(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$HefnerCandle] with new value
   @override
@@ -483,7 +501,7 @@ final class IlluminationLuminousIntensity$CarcelUnit
 
   static const _ratio = 9.61;
 
-  /// 1 [IlluminationLuminousIntensity$CarcelUnit]  ≈  9.61 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$CarcelUnit] ≈ 9.61 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -491,6 +509,9 @@ final class IlluminationLuminousIntensity$CarcelUnit
   @override
   IlluminationLuminousIntensity$CarcelUnit get _clone =>
       IlluminationLuminousIntensity$CarcelUnit(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CarcelUnit] with new value
   @override
@@ -501,7 +522,7 @@ final class IlluminationLuminousIntensity$CarcelUnit
 
   /// Symbol for [IlluminationLuminousIntensity$CarcelUnit]
   @override
-  String get symbol => '';
+  String get symbol => 'CarcelUnit';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -539,7 +560,7 @@ final class IlluminationLuminousIntensity$BougieDecimal
 
   static const _ratio = 1.0;
 
-  /// 1 [IlluminationLuminousIntensity$BougieDecimal]  =  1.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$BougieDecimal] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -547,6 +568,9 @@ final class IlluminationLuminousIntensity$BougieDecimal
   @override
   IlluminationLuminousIntensity$BougieDecimal get _clone =>
       IlluminationLuminousIntensity$BougieDecimal(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$BougieDecimal] with new value
   @override
@@ -557,7 +581,7 @@ final class IlluminationLuminousIntensity$BougieDecimal
 
   /// Symbol for [IlluminationLuminousIntensity$BougieDecimal]
   @override
-  String get symbol => '';
+  String get symbol => 'BougieDecimal';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -596,7 +620,7 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
 
   static const _ratio = 1.0;
 
-  /// 1 [IlluminationLuminousIntensity$LumenInternationalPerSteradian]  =  1.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$LumenInternationalPerSteradian] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -604,6 +628,9 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
   @override
   IlluminationLuminousIntensity$LumenInternationalPerSteradian get _clone =>
       IlluminationLuminousIntensity$LumenInternationalPerSteradian(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$LumenInternationalPerSteradian] with new value
   @override
@@ -653,7 +680,7 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
 
   static const _ratio = 10.0;
 
-  /// 1 [IlluminationLuminousIntensity$PentaneCandle10CandlePower]  =  10.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$PentaneCandle10CandlePower] = 10.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
 
@@ -661,6 +688,9 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
   @override
   IlluminationLuminousIntensity$PentaneCandle10CandlePower get _clone =>
       IlluminationLuminousIntensity$PentaneCandle10CandlePower(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$PentaneCandle10CandlePower] with new value
   @override
@@ -671,7 +701,7 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
 
   /// Symbol for [IlluminationLuminousIntensity$PentaneCandle10CandlePower]
   @override
-  String get symbol => '';
+  String get symbol => 'PentaneCandle10CandlePower';
 
   @override
   Map<String, dynamic> toJson() => {

@@ -84,7 +84,7 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
 
   static const _ratio = 0.2928;
 
-  /// 1 [HVACEfficiency$EEREnergyEfficiencyRatio]  ≈  0.2928 [HVACEfficiency$COPCoefficientOfPerformace]
+  /// 1 [HVACEfficiency$EEREnergyEfficiencyRatio] ≈ 0.2928 [HVACEfficiency$COPCoefficientOfPerformace]
   @override
   num get ratio => _ratio;
 
@@ -92,6 +92,9 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
   @override
   HVACEfficiency$EEREnergyEfficiencyRatio get _clone =>
       HVACEfficiency$EEREnergyEfficiencyRatio(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HVACEfficiency$EEREnergyEfficiencyRatio] with new value
   @override
@@ -102,7 +105,7 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
 
   /// Symbol for [HVACEfficiency$EEREnergyEfficiencyRatio]
   @override
-  String get symbol => '';
+  String get symbol => 'EEREnergyEfficiencyRatio';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -148,6 +151,9 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
   HVACEfficiency$COPCoefficientOfPerformace get _clone =>
       HVACEfficiency$COPCoefficientOfPerformace(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [HVACEfficiency$COPCoefficientOfPerformace] with new value
   @override
   HVACEfficiency$COPCoefficientOfPerformace withValue(
@@ -157,7 +163,7 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
 
   /// Symbol for [HVACEfficiency$COPCoefficientOfPerformace]
   @override
-  String get symbol => '';
+  String get symbol => 'COPCoefficientOfPerformace';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -194,7 +200,7 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
 
   static const _ratio = 0.284608378870674;
 
-  /// 1 [HVACEfficiency$KilowattPerTon]  ≈  0.284608378870674 [HVACEfficiency$COPCoefficientOfPerformace]
+  /// 1 [HVACEfficiency$KilowattPerTon] ≈ 0.284608378870674 [HVACEfficiency$COPCoefficientOfPerformace]
   @override
   num get ratio => _ratio;
 
@@ -202,6 +208,9 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
   @override
   HVACEfficiency$KilowattPerTon get _clone =>
       HVACEfficiency$KilowattPerTon(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [HVACEfficiency$KilowattPerTon] with new value
   @override
@@ -212,7 +221,7 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
 
   /// Symbol for [HVACEfficiency$KilowattPerTon]
   @override
-  String get symbol => '';
+  String get symbol => 'KilowattPerTon';
 
   @override
   Map<String, dynamic> toJson() => {

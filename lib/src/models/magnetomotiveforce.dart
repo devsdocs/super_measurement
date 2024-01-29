@@ -97,7 +97,7 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
 
   static const _ratio = 1000.0;
 
-  /// 1 [MagnetomotiveForce$KiloampereTurn]  =  1000.0 [MagnetomotiveForce$AmpereTurn]
+  /// 1 [MagnetomotiveForce$KiloampereTurn] = 1000.0 [MagnetomotiveForce$AmpereTurn]
   @override
   num get ratio => _ratio;
 
@@ -105,6 +105,9 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
   @override
   MagnetomotiveForce$KiloampereTurn get _clone =>
       MagnetomotiveForce$KiloampereTurn(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagnetomotiveForce$KiloampereTurn] with new value
   @override
@@ -161,6 +164,9 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
   MagnetomotiveForce$AmpereTurn get _clone =>
       MagnetomotiveForce$AmpereTurn(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [MagnetomotiveForce$AmpereTurn] with new value
   @override
   MagnetomotiveForce$AmpereTurn withValue(
@@ -207,7 +213,7 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
 
   static const _ratio = 0.001;
 
-  /// 1 [MagnetomotiveForce$MilliampereTurn]  ≈  0.001 [MagnetomotiveForce$AmpereTurn]
+  /// 1 [MagnetomotiveForce$MilliampereTurn] ≈ 0.001 [MagnetomotiveForce$AmpereTurn]
   @override
   num get ratio => _ratio;
 
@@ -215,6 +221,9 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
   @override
   MagnetomotiveForce$MilliampereTurn get _clone =>
       MagnetomotiveForce$MilliampereTurn(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagnetomotiveForce$MilliampereTurn] with new value
   @override
@@ -262,7 +271,7 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
 
   static const _ratio = 10.0;
 
-  /// 1 [MagnetomotiveForce$AbampereTurn]  =  10.0 [MagnetomotiveForce$AmpereTurn]
+  /// 1 [MagnetomotiveForce$AbampereTurn] = 10.0 [MagnetomotiveForce$AmpereTurn]
   @override
   num get ratio => _ratio;
 
@@ -270,6 +279,9 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
   @override
   MagnetomotiveForce$AbampereTurn get _clone =>
       MagnetomotiveForce$AbampereTurn(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagnetomotiveForce$AbampereTurn] with new value
   @override
@@ -317,13 +329,16 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
 
   static const _ratio = 0.7957747151;
 
-  /// 1 [MagnetomotiveForce$Gilbert]  ≈  0.7957747151 [MagnetomotiveForce$AmpereTurn]
+  /// 1 [MagnetomotiveForce$Gilbert] ≈ 0.7957747151 [MagnetomotiveForce$AmpereTurn]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   MagnetomotiveForce$Gilbert get _clone => MagnetomotiveForce$Gilbert(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [MagnetomotiveForce$Gilbert] with new value
   @override

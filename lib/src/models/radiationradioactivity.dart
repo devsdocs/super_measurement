@@ -180,7 +180,7 @@ final class RadiationRadioactivity$Terabecquerel
 
   static const _ratio = 1000000000000000.0;
 
-  /// 1 [RadiationRadioactivity$Terabecquerel]  =  1000000000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Terabecquerel] = 1000000000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -188,6 +188,9 @@ final class RadiationRadioactivity$Terabecquerel
   @override
   RadiationRadioactivity$Terabecquerel get _clone =>
       RadiationRadioactivity$Terabecquerel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Terabecquerel] with new value
   @override
@@ -236,7 +239,7 @@ final class RadiationRadioactivity$Gigabecquerel
 
   static const _ratio = 1000000000000.0;
 
-  /// 1 [RadiationRadioactivity$Gigabecquerel]  =  1000000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Gigabecquerel] = 1000000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -244,6 +247,9 @@ final class RadiationRadioactivity$Gigabecquerel
   @override
   RadiationRadioactivity$Gigabecquerel get _clone =>
       RadiationRadioactivity$Gigabecquerel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Gigabecquerel] with new value
   @override
@@ -292,7 +298,7 @@ final class RadiationRadioactivity$Megabecquerel
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [RadiationRadioactivity$Megabecquerel]  =  1000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Megabecquerel] = 1000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -300,6 +306,9 @@ final class RadiationRadioactivity$Megabecquerel
   @override
   RadiationRadioactivity$Megabecquerel get _clone =>
       RadiationRadioactivity$Megabecquerel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Megabecquerel] with new value
   @override
@@ -348,7 +357,7 @@ final class RadiationRadioactivity$Kilobecquerel
 
   static const _ratio = 1000000.0;
 
-  /// 1 [RadiationRadioactivity$Kilobecquerel]  =  1000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Kilobecquerel] = 1000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -356,6 +365,9 @@ final class RadiationRadioactivity$Kilobecquerel
   @override
   RadiationRadioactivity$Kilobecquerel get _clone =>
       RadiationRadioactivity$Kilobecquerel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Kilobecquerel] with new value
   @override
@@ -403,7 +415,7 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
 
   static const _ratio = 1000.0;
 
-  /// 1 [RadiationRadioactivity$Becquerel]  =  1000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Becquerel] = 1000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -411,6 +423,9 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
   @override
   RadiationRadioactivity$Becquerel get _clone =>
       RadiationRadioactivity$Becquerel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Becquerel] with new value
   @override
@@ -468,6 +483,9 @@ final class RadiationRadioactivity$Millibecquerel
   RadiationRadioactivity$Millibecquerel get _clone =>
       RadiationRadioactivity$Millibecquerel(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [RadiationRadioactivity$Millibecquerel] with new value
   @override
   RadiationRadioactivity$Millibecquerel withValue(
@@ -514,7 +532,7 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
 
   static const _ratio = 37000000000000000.0;
 
-  /// 1 [RadiationRadioactivity$Kilocurie]  =  37000000000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Kilocurie] = 37000000000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -522,6 +540,9 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
   @override
   RadiationRadioactivity$Kilocurie get _clone =>
       RadiationRadioactivity$Kilocurie(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Kilocurie] with new value
   @override
@@ -569,7 +590,7 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
 
   static const _ratio = 37000000000000.0;
 
-  /// 1 [RadiationRadioactivity$Curie]  =  37000000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Curie] = 37000000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -577,6 +598,9 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
   @override
   RadiationRadioactivity$Curie get _clone =>
       RadiationRadioactivity$Curie(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Curie] with new value
   @override
@@ -624,7 +648,7 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
 
   static const _ratio = 37000000000.0;
 
-  /// 1 [RadiationRadioactivity$Millicurie]  =  37000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Millicurie] = 37000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -632,6 +656,9 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
   @override
   RadiationRadioactivity$Millicurie get _clone =>
       RadiationRadioactivity$Millicurie(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Millicurie] with new value
   @override
@@ -679,7 +706,7 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
 
   static const _ratio = 37000000.0;
 
-  /// 1 [RadiationRadioactivity$Microcurie]  =  37000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Microcurie] = 37000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -687,6 +714,9 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
   @override
   RadiationRadioactivity$Microcurie get _clone =>
       RadiationRadioactivity$Microcurie(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Microcurie] with new value
   @override
@@ -734,7 +764,7 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
 
   static const _ratio = 37000.0;
 
-  /// 1 [RadiationRadioactivity$Nanocurie]  =  37000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Nanocurie] = 37000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -742,6 +772,9 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
   @override
   RadiationRadioactivity$Nanocurie get _clone =>
       RadiationRadioactivity$Nanocurie(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Nanocurie] with new value
   @override
@@ -789,7 +822,7 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
 
   static const _ratio = 37.0;
 
-  /// 1 [RadiationRadioactivity$Picocurie]  =  37.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Picocurie] = 37.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -797,6 +830,9 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
   @override
   RadiationRadioactivity$Picocurie get _clone =>
       RadiationRadioactivity$Picocurie(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Picocurie] with new value
   @override
@@ -844,7 +880,7 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
 
   static const _ratio = 1000000000.0;
 
-  /// 1 [RadiationRadioactivity$Rutherford]  =  1000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Rutherford] = 1000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -852,6 +888,9 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
   @override
   RadiationRadioactivity$Rutherford get _clone =>
       RadiationRadioactivity$Rutherford(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$Rutherford] with new value
   @override
@@ -900,7 +939,7 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
 
   static const _ratio = 1000.0;
 
-  /// 1 [RadiationRadioactivity$DisintegrationsPerSecond]  =  1000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$DisintegrationsPerSecond] = 1000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -908,6 +947,9 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
   @override
   RadiationRadioactivity$DisintegrationsPerSecond get _clone =>
       RadiationRadioactivity$DisintegrationsPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$DisintegrationsPerSecond] with new value
   @override
@@ -918,7 +960,7 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
 
   /// Symbol for [RadiationRadioactivity$DisintegrationsPerSecond]
   @override
-  String get symbol => '';
+  String get symbol => 'DisintegrationsPerSecond';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -956,7 +998,7 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
 
   static const _ratio = 16.666666666666668;
 
-  /// 1 [RadiationRadioactivity$DisintegrationsPerMinute]  ≈  16.666666666666668 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$DisintegrationsPerMinute] ≈ 16.666666666666668 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
 
@@ -964,6 +1006,9 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
   @override
   RadiationRadioactivity$DisintegrationsPerMinute get _clone =>
       RadiationRadioactivity$DisintegrationsPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [RadiationRadioactivity$DisintegrationsPerMinute] with new value
   @override
@@ -974,7 +1019,7 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
 
   /// Symbol for [RadiationRadioactivity$DisintegrationsPerMinute]
   @override
-  String get symbol => '';
+  String get symbol => 'DisintegrationsPerMinute';
 
   @override
   Map<String, dynamic> toJson() => {

@@ -141,6 +141,9 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
   LinearCurrentDensity$AmperePerMeter get _clone =>
       LinearCurrentDensity$AmperePerMeter(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [LinearCurrentDensity$AmperePerMeter] with new value
   @override
   LinearCurrentDensity$AmperePerMeter withValue(
@@ -188,7 +191,7 @@ final class LinearCurrentDensity$AmperePerCentimeter
 
   static const _ratio = 100.0;
 
-  /// 1 [LinearCurrentDensity$AmperePerCentimeter]  =  100.0 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AmperePerCentimeter] = 100.0 [LinearCurrentDensity$AmperePerMeter]
   @override
   num get ratio => _ratio;
 
@@ -196,6 +199,9 @@ final class LinearCurrentDensity$AmperePerCentimeter
   @override
   LinearCurrentDensity$AmperePerCentimeter get _clone =>
       LinearCurrentDensity$AmperePerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearCurrentDensity$AmperePerCentimeter] with new value
   @override
@@ -243,7 +249,7 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
 
   static const _ratio = 39.37007874;
 
-  /// 1 [LinearCurrentDensity$AmperePerInch]  ≈  39.37007874 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AmperePerInch] ≈ 39.37007874 [LinearCurrentDensity$AmperePerMeter]
   @override
   num get ratio => _ratio;
 
@@ -251,6 +257,9 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
   @override
   LinearCurrentDensity$AmperePerInch get _clone =>
       LinearCurrentDensity$AmperePerInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearCurrentDensity$AmperePerInch] with new value
   @override
@@ -298,7 +307,7 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
 
   static const _ratio = 10.0;
 
-  /// 1 [LinearCurrentDensity$AbamperePerMeter]  =  10.0 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AbamperePerMeter] = 10.0 [LinearCurrentDensity$AmperePerMeter]
   @override
   num get ratio => _ratio;
 
@@ -306,6 +315,9 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
   @override
   LinearCurrentDensity$AbamperePerMeter get _clone =>
       LinearCurrentDensity$AbamperePerMeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerMeter] with new value
   @override
@@ -354,7 +366,7 @@ final class LinearCurrentDensity$AbamperePerCentimeter
 
   static const _ratio = 1000.0;
 
-  /// 1 [LinearCurrentDensity$AbamperePerCentimeter]  =  1000.0 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AbamperePerCentimeter] = 1000.0 [LinearCurrentDensity$AmperePerMeter]
   @override
   num get ratio => _ratio;
 
@@ -362,6 +374,9 @@ final class LinearCurrentDensity$AbamperePerCentimeter
   @override
   LinearCurrentDensity$AbamperePerCentimeter get _clone =>
       LinearCurrentDensity$AbamperePerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerCentimeter] with new value
   @override
@@ -409,7 +424,7 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
 
   static const _ratio = 393.7007874;
 
-  /// 1 [LinearCurrentDensity$AbamperePerInch]  ≈  393.7007874 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AbamperePerInch] ≈ 393.7007874 [LinearCurrentDensity$AmperePerMeter]
   @override
   num get ratio => _ratio;
 
@@ -417,6 +432,9 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
   @override
   LinearCurrentDensity$AbamperePerInch get _clone =>
       LinearCurrentDensity$AbamperePerInch(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerInch] with new value
   @override
@@ -464,7 +482,7 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
 
   static const _ratio = 79.57747151;
 
-  /// 1 [LinearCurrentDensity$Oersted]  ≈  79.57747151 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$Oersted] ≈ 79.57747151 [LinearCurrentDensity$AmperePerMeter]
   @override
   num get ratio => _ratio;
 
@@ -472,6 +490,9 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
   @override
   LinearCurrentDensity$Oersted get _clone =>
       LinearCurrentDensity$Oersted(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearCurrentDensity$Oersted] with new value
   @override
@@ -520,7 +541,7 @@ final class LinearCurrentDensity$OerstedInternational
 
   static const _ratio = 79.56434337579257;
 
-  /// 1 [LinearCurrentDensity$OerstedInternational]  ≈  79.56434337579257 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$OerstedInternational] ≈ 79.56434337579257 [LinearCurrentDensity$AmperePerMeter]
   @override
   num get ratio => _ratio;
 
@@ -528,6 +549,9 @@ final class LinearCurrentDensity$OerstedInternational
   @override
   LinearCurrentDensity$OerstedInternational get _clone =>
       LinearCurrentDensity$OerstedInternational(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearCurrentDensity$OerstedInternational] with new value
   @override
@@ -576,7 +600,7 @@ final class LinearCurrentDensity$GilbertPerCentimeter
 
   static const _ratio = 79.57747151;
 
-  /// 1 [LinearCurrentDensity$GilbertPerCentimeter]  ≈  79.57747151 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$GilbertPerCentimeter] ≈ 79.57747151 [LinearCurrentDensity$AmperePerMeter]
   @override
   num get ratio => _ratio;
 
@@ -584,6 +608,9 @@ final class LinearCurrentDensity$GilbertPerCentimeter
   @override
   LinearCurrentDensity$GilbertPerCentimeter get _clone =>
       LinearCurrentDensity$GilbertPerCentimeter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [LinearCurrentDensity$GilbertPerCentimeter] with new value
   @override

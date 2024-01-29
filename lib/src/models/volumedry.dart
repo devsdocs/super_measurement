@@ -144,13 +144,16 @@ final class VolumeDry$Barrel extends VolumeDry {
 
   static const _ratio = 378.41605930454045;
 
-  /// 1 [VolumeDry$Barrel]  ≈  378.41605930454045 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Barrel] ≈ 378.41605930454045 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$Barrel get _clone => VolumeDry$Barrel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$Barrel] with new value
   @override
@@ -198,13 +201,16 @@ final class VolumeDry$Liter extends VolumeDry {
 
   static const _ratio = 3.27272743202319;
 
-  /// 1 [VolumeDry$Liter]  ≈  3.27272743202319 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Liter] ≈ 3.27272743202319 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$Liter get _clone => VolumeDry$Liter(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$Liter] with new value
   @override
@@ -252,13 +258,16 @@ final class VolumeDry$Pint extends VolumeDry {
 
   static const _ratio = 1.80199799411;
 
-  /// 1 [VolumeDry$Pint]  ≈  1.80199799411 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Pint] ≈ 1.80199799411 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$Pint get _clone => VolumeDry$Pint(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$Pint] with new value
   @override
@@ -306,13 +315,16 @@ final class VolumeDry$Quart extends VolumeDry {
 
   static const _ratio = 3.60399598822;
 
-  /// 1 [VolumeDry$Quart]  ≈  3.60399598822 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Quart] ≈ 3.60399598822 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$Quart get _clone => VolumeDry$Quart(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$Quart] with new value
   @override
@@ -360,13 +372,16 @@ final class VolumeDry$Peck extends VolumeDry {
 
   static const _ratio = 28.83196790576;
 
-  /// 1 [VolumeDry$Peck]  ≈  28.83196790576 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Peck] ≈ 28.83196790576 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$Peck get _clone => VolumeDry$Peck(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$Peck] with new value
   @override
@@ -414,13 +429,16 @@ final class VolumeDry$Bushel extends VolumeDry {
 
   static const _ratio = 115.32787162304;
 
-  /// 1 [VolumeDry$Bushel]  ≈  115.32787162304 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Bushel] ≈ 115.32787162304 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$Bushel get _clone => VolumeDry$Bushel(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$Bushel] with new value
   @override
@@ -468,13 +486,16 @@ final class VolumeDry$CorBiblical extends VolumeDry {
 
   static const _ratio = 720.0;
 
-  /// 1 [VolumeDry$CorBiblical]  =  720.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$CorBiblical] = 720.0 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$CorBiblical get _clone => VolumeDry$CorBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$CorBiblical] with new value
   @override
@@ -485,7 +506,7 @@ final class VolumeDry$CorBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$CorBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'CorBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -522,13 +543,16 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
 
   static const _ratio = 720.0;
 
-  /// 1 [VolumeDry$HomerBiblical]  =  720.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$HomerBiblical] = 720.0 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$HomerBiblical get _clone => VolumeDry$HomerBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$HomerBiblical] with new value
   @override
@@ -539,7 +563,7 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$HomerBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'HomerBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -576,13 +600,16 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
 
   static const _ratio = 72.0;
 
-  /// 1 [VolumeDry$EphahBiblical]  =  72.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$EphahBiblical] = 72.0 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$EphahBiblical get _clone => VolumeDry$EphahBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$EphahBiblical] with new value
   @override
@@ -593,7 +620,7 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$EphahBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'EphahBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -630,13 +657,16 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
 
   static const _ratio = 24.0;
 
-  /// 1 [VolumeDry$SeahBiblical]  =  24.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$SeahBiblical] = 24.0 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$SeahBiblical get _clone => VolumeDry$SeahBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$SeahBiblical] with new value
   @override
@@ -647,7 +677,7 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$SeahBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'SeahBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -684,13 +714,16 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
 
   static const _ratio = 7.2;
 
-  /// 1 [VolumeDry$OmerBiblical]  ≈  7.2 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$OmerBiblical] ≈ 7.2 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$OmerBiblical get _clone => VolumeDry$OmerBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$OmerBiblical] with new value
   @override
@@ -701,7 +734,7 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$OmerBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'OmerBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -738,13 +771,16 @@ final class VolumeDry$CabBiblical extends VolumeDry {
 
   static const _ratio = 4.0;
 
-  /// 1 [VolumeDry$CabBiblical]  =  4.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$CabBiblical] = 4.0 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   VolumeDry$CabBiblical get _clone => VolumeDry$CabBiblical(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [VolumeDry$CabBiblical] with new value
   @override
@@ -755,7 +791,7 @@ final class VolumeDry$CabBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$CabBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'CabBiblical';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -800,6 +836,9 @@ final class VolumeDry$LogBiblical extends VolumeDry {
   @override
   VolumeDry$LogBiblical get _clone => VolumeDry$LogBiblical(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [VolumeDry$LogBiblical] with new value
   @override
   VolumeDry$LogBiblical withValue(
@@ -809,7 +848,7 @@ final class VolumeDry$LogBiblical extends VolumeDry {
 
   /// Symbol for [VolumeDry$LogBiblical]
   @override
-  String get symbol => '';
+  String get symbol => 'LogBiblical';
 
   @override
   Map<String, dynamic> toJson() => {

@@ -230,13 +230,16 @@ final class FlowMass$GramPerSecond extends FlowMass {
 
   static const _ratio = 86.4;
 
-  /// 1 [FlowMass$GramPerSecond]  ≈  86.4 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GramPerSecond] ≈ 86.4 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$GramPerSecond get _clone => FlowMass$GramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$GramPerSecond] with new value
   @override
@@ -284,13 +287,16 @@ final class FlowMass$GramPerMinute extends FlowMass {
 
   static const _ratio = 1.44;
 
-  /// 1 [FlowMass$GramPerMinute]  ≈  1.44 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GramPerMinute] ≈ 1.44 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$GramPerMinute get _clone => FlowMass$GramPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$GramPerMinute] with new value
   @override
@@ -338,13 +344,16 @@ final class FlowMass$GramPerHour extends FlowMass {
 
   static const _ratio = 0.024;
 
-  /// 1 [FlowMass$GramPerHour]  ≈  0.024 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GramPerHour] ≈ 0.024 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$GramPerHour get _clone => FlowMass$GramPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$GramPerHour] with new value
   @override
@@ -392,13 +401,16 @@ final class FlowMass$GramPerDay extends FlowMass {
 
   static const _ratio = 0.001;
 
-  /// 1 [FlowMass$GramPerDay]  ≈  0.001 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GramPerDay] ≈ 0.001 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$GramPerDay get _clone => FlowMass$GramPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$GramPerDay] with new value
   @override
@@ -446,13 +458,16 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
 
   static const _ratio = 0.00144;
 
-  /// 1 [FlowMass$MilligramPerMinute]  ≈  0.00144 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MilligramPerMinute] ≈ 0.00144 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$MilligramPerMinute get _clone => FlowMass$MilligramPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$MilligramPerMinute] with new value
   @override
@@ -500,13 +515,16 @@ final class FlowMass$MilligramPerHour extends FlowMass {
 
   static const _ratio = 0.000024;
 
-  /// 1 [FlowMass$MilligramPerHour]  ≈  0.000024 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MilligramPerHour] ≈ 0.000024 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$MilligramPerHour get _clone => FlowMass$MilligramPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$MilligramPerHour] with new value
   @override
@@ -554,13 +572,16 @@ final class FlowMass$MilligramPerDay extends FlowMass {
 
   static const _ratio = 0.000001;
 
-  /// 1 [FlowMass$MilligramPerDay]  ≈  0.000001 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MilligramPerDay] ≈ 0.000001 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$MilligramPerDay get _clone => FlowMass$MilligramPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$MilligramPerDay] with new value
   @override
@@ -608,13 +629,16 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
 
   static const _ratio = 1440.0;
 
-  /// 1 [FlowMass$KilogramPerMinute]  =  1440.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$KilogramPerMinute] = 1440.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$KilogramPerMinute get _clone => FlowMass$KilogramPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$KilogramPerMinute] with new value
   @override
@@ -662,13 +686,16 @@ final class FlowMass$KilogramPerHour extends FlowMass {
 
   static const _ratio = 24.0;
 
-  /// 1 [FlowMass$KilogramPerHour]  =  24.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$KilogramPerHour] = 24.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$KilogramPerHour get _clone => FlowMass$KilogramPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$KilogramPerHour] with new value
   @override
@@ -724,6 +751,9 @@ final class FlowMass$KilogramPerDay extends FlowMass {
   @override
   FlowMass$KilogramPerDay get _clone => FlowMass$KilogramPerDay(value);
 
+  @override
+  num get _shiftValue => 0.0;
+
   /// Creating [FlowMass$KilogramPerDay] with new value
   @override
   FlowMass$KilogramPerDay withValue(
@@ -770,13 +800,16 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
 
   static const _ratio = 86400000000000000000.0;
 
-  /// 1 [FlowMass$ExagramPerSecond]  =  86400000000000000000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$ExagramPerSecond] = 86400000000000000000.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$ExagramPerSecond get _clone => FlowMass$ExagramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$ExagramPerSecond] with new value
   @override
@@ -824,13 +857,16 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
 
   static const _ratio = 86400000000000000.0;
 
-  /// 1 [FlowMass$PetagramPerSecond]  =  86400000000000000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PetagramPerSecond] = 86400000000000000.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$PetagramPerSecond get _clone => FlowMass$PetagramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$PetagramPerSecond] with new value
   @override
@@ -878,13 +914,16 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
 
   static const _ratio = 86400000000000.0;
 
-  /// 1 [FlowMass$TeragramPerSecond]  =  86400000000000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$TeragramPerSecond] = 86400000000000.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$TeragramPerSecond get _clone => FlowMass$TeragramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$TeragramPerSecond] with new value
   @override
@@ -932,13 +971,16 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
 
   static const _ratio = 86400000000.0;
 
-  /// 1 [FlowMass$GigagramPerSecond]  =  86400000000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GigagramPerSecond] = 86400000000.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$GigagramPerSecond get _clone => FlowMass$GigagramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$GigagramPerSecond] with new value
   @override
@@ -986,13 +1028,16 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
 
   static const _ratio = 86400000.0;
 
-  /// 1 [FlowMass$MegagramPerSecond]  =  86400000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MegagramPerSecond] = 86400000.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$MegagramPerSecond get _clone => FlowMass$MegagramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$MegagramPerSecond] with new value
   @override
@@ -1040,13 +1085,16 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
 
   static const _ratio = 86400.0;
 
-  /// 1 [FlowMass$KilogramPerSecond]  =  86400.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$KilogramPerSecond] = 86400.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$KilogramPerSecond get _clone => FlowMass$KilogramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$KilogramPerSecond] with new value
   @override
@@ -1094,13 +1142,16 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
 
   static const _ratio = 8640.0;
 
-  /// 1 [FlowMass$HectogramPerSecond]  =  8640.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$HectogramPerSecond] = 8640.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$HectogramPerSecond get _clone => FlowMass$HectogramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$HectogramPerSecond] with new value
   @override
@@ -1148,13 +1199,16 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
 
   static const _ratio = 864.0;
 
-  /// 1 [FlowMass$DekagramPerSecond]  =  864.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$DekagramPerSecond] = 864.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$DekagramPerSecond get _clone => FlowMass$DekagramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$DekagramPerSecond] with new value
   @override
@@ -1202,13 +1256,16 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
 
   static const _ratio = 8.64;
 
-  /// 1 [FlowMass$DecigramPerSecond]  ≈  8.64 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$DecigramPerSecond] ≈ 8.64 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$DecigramPerSecond get _clone => FlowMass$DecigramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$DecigramPerSecond] with new value
   @override
@@ -1256,13 +1313,16 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
 
   static const _ratio = 0.864;
 
-  /// 1 [FlowMass$CentigramPerSecond]  ≈  0.864 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$CentigramPerSecond] ≈ 0.864 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$CentigramPerSecond get _clone => FlowMass$CentigramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$CentigramPerSecond] with new value
   @override
@@ -1310,13 +1370,16 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
 
   static const _ratio = 0.0864;
 
-  /// 1 [FlowMass$MilligramPerSecond]  ≈  0.0864 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MilligramPerSecond] ≈ 0.0864 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$MilligramPerSecond get _clone => FlowMass$MilligramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$MilligramPerSecond] with new value
   @override
@@ -1364,13 +1427,16 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
 
   static const _ratio = 0.0000864;
 
-  /// 1 [FlowMass$MicrogramPerSecond]  ≈  0.0000864 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MicrogramPerSecond] ≈ 0.0000864 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$MicrogramPerSecond get _clone => FlowMass$MicrogramPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$MicrogramPerSecond] with new value
   @override
@@ -1418,13 +1484,16 @@ final class FlowMass$PoundPerSecond extends FlowMass {
 
   static const _ratio = 39190.38077;
 
-  /// 1 [FlowMass$PoundPerSecond]  ≈  39190.38077 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PoundPerSecond] ≈ 39190.38077 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$PoundPerSecond get _clone => FlowMass$PoundPerSecond(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$PoundPerSecond] with new value
   @override
@@ -1472,13 +1541,16 @@ final class FlowMass$PoundPerMinute extends FlowMass {
 
   static const _ratio = 653.1730128;
 
-  /// 1 [FlowMass$PoundPerMinute]  ≈  653.1730128 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PoundPerMinute] ≈ 653.1730128 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$PoundPerMinute get _clone => FlowMass$PoundPerMinute(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$PoundPerMinute] with new value
   @override
@@ -1526,13 +1598,16 @@ final class FlowMass$PoundPerHour extends FlowMass {
 
   static const _ratio = 10.88621688;
 
-  /// 1 [FlowMass$PoundPerHour]  ≈  10.88621688 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PoundPerHour] ≈ 10.88621688 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$PoundPerHour get _clone => FlowMass$PoundPerHour(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$PoundPerHour] with new value
   @override
@@ -1580,13 +1655,16 @@ final class FlowMass$PoundPerDay extends FlowMass {
 
   static const _ratio = 0.45359237;
 
-  /// 1 [FlowMass$PoundPerDay]  ≈  0.45359237 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PoundPerDay] ≈ 0.45359237 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
   FlowMass$PoundPerDay get _clone => FlowMass$PoundPerDay(value);
+
+  @override
+  num get _shiftValue => 0.0;
 
   /// Creating [FlowMass$PoundPerDay] with new value
   @override
