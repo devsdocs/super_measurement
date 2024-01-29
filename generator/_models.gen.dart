@@ -5,8 +5,16 @@ void generateModels() {
     final name = unit.keys.first;
     final enumSymbol = '${name}Unit';
     final enumValuesSymbol = '${enumSymbol}Values'.snakeCase;
-    final anchor =
-        unit.values.first.singleWhere((e) => e.values.single['ratio'] == 1);
+    print(name);
+    final anchor = unit.values.first
+        .where(
+          (e) =>
+              e.values.single['ratio'] == 1 ||
+              e.values.single['ratio'] == 1.0 ||
+              (e.values.single['ratio'] as double).toPrecision(1) == 1.0 ||
+              e.values.single['ratio'] == 0.0,
+        )
+        .first;
     final fileName = '${name.toLowerCase()}.dart';
     final file = File('$modelsDir/$fileName');
     final typeBuff = StringBuffer();
@@ -37,7 +45,7 @@ void generateModels() {
     typeBuff.writeln();
     typeBuff.writeln('abstract final class $name extends Unit<$name> {');
     typeBuff.writeln();
-    typeBuff.writeln('  const $name([super.value]);');
+    typeBuff.writeln('  const $name([super.value,]);');
     typeBuff.writeln();
     typeBuff.writeln(
       '/// If there is no matched key, returning [${anchor.keys.first}] with 0 value',
@@ -68,7 +76,7 @@ void generateModels() {
       final unitType = e.keys.first;
       typeBuff.writeln('/// Convert to [$unitType]');
       typeBuff.writeln(
-        '$name get to$unitType => convertTo(const $unitType());',
+        '$name get to${unitType.split(r'$').last} => convertTo(const $unitType(),);',
       );
       typeBuff.writeln();
     }
@@ -85,16 +93,16 @@ void generateModels() {
       final unitProps = e.values.first;
       typeBuff.writeln('/// Unit of [$name]');
       typeBuff.writeln('final class $unitType extends $name {');
-      typeBuff.writeln('  const $unitType([super.value]);');
+      typeBuff.writeln('  const $unitType([super.value,]);');
       typeBuff.writeln();
       typeBuff.writeln(
         '/// If there is no matched key, returning with 0 value',
       );
       typeBuff.writeln(
-        '  factory $unitType.fromJson(Map<String,dynamic> json) =>',
+        '  factory $unitType.fromJson(Map<String,dynamic> json,) =>',
       );
       typeBuff.writeln(
-        '$unitType.from($name.fromJson(json));',
+        '$unitType.from($name.fromJson(json),);',
       );
 
       typeBuff.writeln();
@@ -102,14 +110,14 @@ void generateModels() {
         '/// Construct [$unitType] from other [$name]',
       );
       typeBuff.writeln(
-        '  factory $unitType.from($name unit) =>',
+        '  factory $unitType.from($name unit,) =>',
       );
       typeBuff.writeln(
-        ' $unitType(unit.to$unitType.value);',
+        ' $unitType(unit.to${unitType.split(r'$').last}.value,);',
       );
 
       typeBuff.writeln();
-      typeBuff.writeln("  static const _minorName = '${unitType.snakeCase}';");
+      typeBuff.writeln("  static const _minorName = r'${unitType.snakeCase}';");
       typeBuff.writeln();
       typeBuff.writeln("  static const _ratio = ${unitProps['ratio']};");
       typeBuff.writeln();
@@ -117,7 +125,7 @@ void generateModels() {
         typeBuff.writeln('/// Default (anchor) unit of [$name]');
       } else {
         typeBuff.writeln(
-          "/// 1 [${anchor.keys.first}] ${(unitProps['ratio']! as num) % 1 == 0 ? '=' : '≈'} ${unitProps['ratio']} [$unitType]",
+          "/// 1 [$unitType]  ${(unitProps['ratio']! as num) % 1 == 0 ? '=' : '≈'}  ${unitProps['ratio']} [${anchor.keys.first}]",
         );
       }
       typeBuff.writeln('  @override');
@@ -134,7 +142,7 @@ void generateModels() {
       );
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        '  $unitType withValue(num val) => $unitType(val);',
+        '  $unitType withValue(num val,) => $unitType(val);',
       );
       typeBuff.writeln();
       typeBuff.writeln(
@@ -162,7 +170,8 @@ void generateModels() {
     typeBuff.writeln('enum $enumSymbol {');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
-      typeBuff.writeln('${unitType.snakeCase}._($unitType()),');
+      typeBuff
+          .writeln('${unitType.split(r'$').last.snakeCase}._($unitType(),),');
     }
     typeBuff.writeln(';');
     typeBuff.writeln('const $enumSymbol._(this.construct);');
@@ -175,7 +184,7 @@ void generateModels() {
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(
-        '$unitType._minorName: $enumSymbol.${unitType.snakeCase},',
+        '$unitType._minorName: $enumSymbol.${unitType.split(r'$').last.snakeCase},',
       );
     }
     typeBuff.writeln('});');

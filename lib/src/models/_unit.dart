@@ -63,10 +63,10 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     }
     if (runtimeType == _anchorRatio.anchor) {
       return result
-          .withValue(value * _anchorRatio.ratio.getRatio(to.runtimeType));
+          .withValue(value / _anchorRatio.ratio.getRatio(to.runtimeType));
     }
     return _anchor
-        .withValue(value / _anchorRatio.ratio.getRatio(runtimeType))
+        .withValue(value * _anchorRatio.ratio.getRatio(runtimeType))
         .convertTo(to);
   }
 

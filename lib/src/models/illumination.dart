@@ -2,11 +2,19 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Illumination]
 ///
-/// [Flame],[LumenPerFootSquare],[LumenPerMeterSquare],[Phot]
+/// [Illumination$MeterCandle], [Illumination$CentimeterCandle],
+/// [Illumination$FootCandle], [Illumination$Flame], [Illumination$Phot],
+/// [Illumination$Nox], [Illumination$Lux],
+/// [Illumination$LumenPerMeterSquare],
+/// [Illumination$LumenPerCentimeterSquare],
+/// [Illumination$LumenPerFootSquare],
+/// [Illumination$WattPerCentimeterSquareAt555nm]
 abstract final class Illumination extends Unit<Illumination> {
-  const Illumination([super.value]);
+  const Illumination([
+    super.value,
+  ]);
 
-  /// If there is no matched key, returning [LumenPerMeterSquare] with 0 value
+  /// If there is no matched key, returning [Illumination$Nox] with 0 value
   factory Illumination.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
@@ -17,34 +25,86 @@ abstract final class Illumination extends Unit<Illumination> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const LumenPerMeterSquare();
+          : const Illumination$Nox();
 
   @override
   AnchorRatio<Illumination> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Illumination>({
-          Flame: Flame._ratio,
-          LumenPerFootSquare: LumenPerFootSquare._ratio,
-          Phot: Phot._ratio,
+          Illumination$MeterCandle: Illumination$MeterCandle._ratio,
+          Illumination$CentimeterCandle: Illumination$CentimeterCandle._ratio,
+          Illumination$FootCandle: Illumination$FootCandle._ratio,
+          Illumination$Flame: Illumination$Flame._ratio,
+          Illumination$Phot: Illumination$Phot._ratio,
+          Illumination$Lux: Illumination$Lux._ratio,
+          Illumination$LumenPerMeterSquare:
+              Illumination$LumenPerMeterSquare._ratio,
+          Illumination$LumenPerCentimeterSquare:
+              Illumination$LumenPerCentimeterSquare._ratio,
+          Illumination$LumenPerFootSquare:
+              Illumination$LumenPerFootSquare._ratio,
+          Illumination$WattPerCentimeterSquareAt555nm:
+              Illumination$WattPerCentimeterSquareAt555nm._ratio,
         })
       );
 
   @override
-  Illumination get _anchor => const LumenPerMeterSquare();
+  Illumination get _anchor => const Illumination$Nox();
 
-  /// Convert to [Flame]
-  Illumination get toFlame => convertTo(const Flame());
+  /// Convert to [Illumination$MeterCandle]
+  Illumination get toMeterCandle => convertTo(
+        const Illumination$MeterCandle(),
+      );
 
-  /// Convert to [LumenPerFootSquare]
-  Illumination get toLumenPerFootSquare =>
-      convertTo(const LumenPerFootSquare());
+  /// Convert to [Illumination$CentimeterCandle]
+  Illumination get toCentimeterCandle => convertTo(
+        const Illumination$CentimeterCandle(),
+      );
 
-  /// Convert to [LumenPerMeterSquare]
-  Illumination get toLumenPerMeterSquare =>
-      convertTo(const LumenPerMeterSquare());
+  /// Convert to [Illumination$FootCandle]
+  Illumination get toFootCandle => convertTo(
+        const Illumination$FootCandle(),
+      );
 
-  /// Convert to [Phot]
-  Illumination get toPhot => convertTo(const Phot());
+  /// Convert to [Illumination$Flame]
+  Illumination get toFlame => convertTo(
+        const Illumination$Flame(),
+      );
+
+  /// Convert to [Illumination$Phot]
+  Illumination get toPhot => convertTo(
+        const Illumination$Phot(),
+      );
+
+  /// Convert to [Illumination$Nox]
+  Illumination get toNox => convertTo(
+        const Illumination$Nox(),
+      );
+
+  /// Convert to [Illumination$Lux]
+  Illumination get toLux => convertTo(
+        const Illumination$Lux(),
+      );
+
+  /// Convert to [Illumination$LumenPerMeterSquare]
+  Illumination get toLumenPerMeterSquare => convertTo(
+        const Illumination$LumenPerMeterSquare(),
+      );
+
+  /// Convert to [Illumination$LumenPerCentimeterSquare]
+  Illumination get toLumenPerCentimeterSquare => convertTo(
+        const Illumination$LumenPerCentimeterSquare(),
+      );
+
+  /// Convert to [Illumination$LumenPerFootSquare]
+  Illumination get toLumenPerFootSquare => convertTo(
+        const Illumination$LumenPerFootSquare(),
+      );
+
+  /// Convert to [Illumination$WattPerCentimeterSquareAt555nm]
+  Illumination get toWattPerCentimeterSquareAt555nm => convertTo(
+        const Illumination$WattPerCentimeterSquareAt555nm(),
+      );
 
   @override
   String get majorName => _majorName;
@@ -53,35 +113,49 @@ abstract final class Illumination extends Unit<Illumination> {
 }
 
 /// Unit of [Illumination]
-final class Flame extends Illumination {
-  const Flame([super.value]);
+final class Illumination$MeterCandle extends Illumination {
+  const Illumination$MeterCandle([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Flame.fromJson(Map<String, dynamic> json) =>
-      Flame.from(Illumination.fromJson(json));
+  factory Illumination$MeterCandle.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$MeterCandle.from(
+        Illumination.fromJson(json),
+      );
 
-  /// Construct [Flame] from other [Illumination]
-  factory Flame.from(Illumination unit) => Flame(unit.toFlame.value);
+  /// Construct [Illumination$MeterCandle] from other [Illumination]
+  factory Illumination$MeterCandle.from(
+    Illumination unit,
+  ) =>
+      Illumination$MeterCandle(
+        unit.toMeterCandle.value,
+      );
 
-  static const _minorName = 'flame';
+  static const _minorName = r'illumination$MeterCandle';
 
-  static const _ratio = 0.02322576;
+  static const _ratio = 1000.0;
 
-  /// 1 [LumenPerMeterSquare] ≈ 0.02322576 [Flame]
+  /// 1 [Illumination$MeterCandle]  =  1000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  Flame get _clone => Flame(value);
+  Illumination$MeterCandle get _clone => Illumination$MeterCandle(value);
 
-  /// Creating [Flame] with new value
+  /// Creating [Illumination$MeterCandle] with new value
   @override
-  Flame withValue(num val) => Flame(val);
+  Illumination$MeterCandle withValue(
+    num val,
+  ) =>
+      Illumination$MeterCandle(val);
 
-  /// Symbol for [Flame]
+  /// Symbol for [Illumination$MeterCandle]
   @override
-  String get symbol => 'flame';
+  String get symbol => '';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -93,36 +167,50 @@ final class Flame extends Illumination {
 }
 
 /// Unit of [Illumination]
-final class LumenPerFootSquare extends Illumination {
-  const LumenPerFootSquare([super.value]);
+final class Illumination$CentimeterCandle extends Illumination {
+  const Illumination$CentimeterCandle([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory LumenPerFootSquare.fromJson(Map<String, dynamic> json) =>
-      LumenPerFootSquare.from(Illumination.fromJson(json));
+  factory Illumination$CentimeterCandle.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$CentimeterCandle.from(
+        Illumination.fromJson(json),
+      );
 
-  /// Construct [LumenPerFootSquare] from other [Illumination]
-  factory LumenPerFootSquare.from(Illumination unit) =>
-      LumenPerFootSquare(unit.toLumenPerFootSquare.value);
+  /// Construct [Illumination$CentimeterCandle] from other [Illumination]
+  factory Illumination$CentimeterCandle.from(
+    Illumination unit,
+  ) =>
+      Illumination$CentimeterCandle(
+        unit.toCentimeterCandle.value,
+      );
 
-  static const _minorName = 'lumenPerFootSquare';
+  static const _minorName = r'illumination$CentimeterCandle';
 
-  static const _ratio = 0.09290304;
+  static const _ratio = 10000000.0;
 
-  /// 1 [LumenPerMeterSquare] ≈ 0.09290304 [LumenPerFootSquare]
+  /// 1 [Illumination$CentimeterCandle]  =  10000000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  LumenPerFootSquare get _clone => LumenPerFootSquare(value);
+  Illumination$CentimeterCandle get _clone =>
+      Illumination$CentimeterCandle(value);
 
-  /// Creating [LumenPerFootSquare] with new value
+  /// Creating [Illumination$CentimeterCandle] with new value
   @override
-  LumenPerFootSquare withValue(num val) => LumenPerFootSquare(val);
+  Illumination$CentimeterCandle withValue(
+    num val,
+  ) =>
+      Illumination$CentimeterCandle(val);
 
-  /// Symbol for [LumenPerFootSquare]
+  /// Symbol for [Illumination$CentimeterCandle]
   @override
-  String get symbol => 'lumen/ft²';
+  String get symbol => '';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -134,36 +222,49 @@ final class LumenPerFootSquare extends Illumination {
 }
 
 /// Unit of [Illumination]
-final class LumenPerMeterSquare extends Illumination {
-  const LumenPerMeterSquare([super.value]);
+final class Illumination$FootCandle extends Illumination {
+  const Illumination$FootCandle([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory LumenPerMeterSquare.fromJson(Map<String, dynamic> json) =>
-      LumenPerMeterSquare.from(Illumination.fromJson(json));
+  factory Illumination$FootCandle.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$FootCandle.from(
+        Illumination.fromJson(json),
+      );
 
-  /// Construct [LumenPerMeterSquare] from other [Illumination]
-  factory LumenPerMeterSquare.from(Illumination unit) =>
-      LumenPerMeterSquare(unit.toLumenPerMeterSquare.value);
+  /// Construct [Illumination$FootCandle] from other [Illumination]
+  factory Illumination$FootCandle.from(
+    Illumination unit,
+  ) =>
+      Illumination$FootCandle(
+        unit.toFootCandle.value,
+      );
 
-  static const _minorName = 'lumenPerMeterSquare';
+  static const _minorName = r'illumination$FootCandle';
 
-  static const _ratio = 1;
+  static const _ratio = 10763.9104167;
 
-  /// Default (anchor) unit of [Illumination]
+  /// 1 [Illumination$FootCandle]  ≈  10763.9104167 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  LumenPerMeterSquare get _clone => LumenPerMeterSquare(value);
+  Illumination$FootCandle get _clone => Illumination$FootCandle(value);
 
-  /// Creating [LumenPerMeterSquare] with new value
+  /// Creating [Illumination$FootCandle] with new value
   @override
-  LumenPerMeterSquare withValue(num val) => LumenPerMeterSquare(val);
+  Illumination$FootCandle withValue(
+    num val,
+  ) =>
+      Illumination$FootCandle(val);
 
-  /// Symbol for [LumenPerMeterSquare]
+  /// Symbol for [Illumination$FootCandle]
   @override
-  String get symbol => 'lumen/m²';
+  String get symbol => '';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -175,33 +276,101 @@ final class LumenPerMeterSquare extends Illumination {
 }
 
 /// Unit of [Illumination]
-final class Phot extends Illumination {
-  const Phot([super.value]);
+final class Illumination$Flame extends Illumination {
+  const Illumination$Flame([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Phot.fromJson(Map<String, dynamic> json) =>
-      Phot.from(Illumination.fromJson(json));
+  factory Illumination$Flame.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$Flame.from(
+        Illumination.fromJson(json),
+      );
 
-  /// Construct [Phot] from other [Illumination]
-  factory Phot.from(Illumination unit) => Phot(unit.toPhot.value);
+  /// Construct [Illumination$Flame] from other [Illumination]
+  factory Illumination$Flame.from(
+    Illumination unit,
+  ) =>
+      Illumination$Flame(
+        unit.toFlame.value,
+      );
 
-  static const _minorName = 'phot';
+  static const _minorName = r'illumination$Flame';
 
-  static const _ratio = 0.0001;
+  static const _ratio = 43055.6416668;
 
-  /// 1 [LumenPerMeterSquare] ≈ 0.0001 [Phot]
+  /// 1 [Illumination$Flame]  ≈  43055.6416668 [Illumination$Nox]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  Phot get _clone => Phot(value);
+  Illumination$Flame get _clone => Illumination$Flame(value);
 
-  /// Creating [Phot] with new value
+  /// Creating [Illumination$Flame] with new value
   @override
-  Phot withValue(num val) => Phot(val);
+  Illumination$Flame withValue(
+    num val,
+  ) =>
+      Illumination$Flame(val);
 
-  /// Symbol for [Phot]
+  /// Symbol for [Illumination$Flame]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Illumination]
+final class Illumination$Phot extends Illumination {
+  const Illumination$Phot([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Illumination$Phot.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$Phot.from(
+        Illumination.fromJson(json),
+      );
+
+  /// Construct [Illumination$Phot] from other [Illumination]
+  factory Illumination$Phot.from(
+    Illumination unit,
+  ) =>
+      Illumination$Phot(
+        unit.toPhot.value,
+      );
+
+  static const _minorName = r'illumination$Phot';
+
+  static const _ratio = 10000000.0;
+
+  /// 1 [Illumination$Phot]  =  10000000.0 [Illumination$Nox]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Illumination$Phot get _clone => Illumination$Phot(value);
+
+  /// Creating [Illumination$Phot] with new value
+  @override
+  Illumination$Phot withValue(
+    num val,
+  ) =>
+      Illumination$Phot(val);
+
+  /// Symbol for [Illumination$Phot]
   @override
   String get symbol => 'ph';
 
@@ -214,11 +383,368 @@ final class Phot extends Illumination {
       };
 }
 
+/// Unit of [Illumination]
+final class Illumination$Nox extends Illumination {
+  const Illumination$Nox([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Illumination$Nox.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$Nox.from(
+        Illumination.fromJson(json),
+      );
+
+  /// Construct [Illumination$Nox] from other [Illumination]
+  factory Illumination$Nox.from(
+    Illumination unit,
+  ) =>
+      Illumination$Nox(
+        unit.toNox.value,
+      );
+
+  static const _minorName = r'illumination$Nox';
+
+  static const _ratio = 1.0;
+
+  /// Default (anchor) unit of [Illumination]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Illumination$Nox get _clone => Illumination$Nox(value);
+
+  /// Creating [Illumination$Nox] with new value
+  @override
+  Illumination$Nox withValue(
+    num val,
+  ) =>
+      Illumination$Nox(val);
+
+  /// Symbol for [Illumination$Nox]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Illumination]
+final class Illumination$Lux extends Illumination {
+  const Illumination$Lux([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Illumination$Lux.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$Lux.from(
+        Illumination.fromJson(json),
+      );
+
+  /// Construct [Illumination$Lux] from other [Illumination]
+  factory Illumination$Lux.from(
+    Illumination unit,
+  ) =>
+      Illumination$Lux(
+        unit.toLux.value,
+      );
+
+  static const _minorName = r'illumination$Lux';
+
+  static const _ratio = 1000.0;
+
+  /// 1 [Illumination$Lux]  =  1000.0 [Illumination$Nox]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Illumination$Lux get _clone => Illumination$Lux(value);
+
+  /// Creating [Illumination$Lux] with new value
+  @override
+  Illumination$Lux withValue(
+    num val,
+  ) =>
+      Illumination$Lux(val);
+
+  /// Symbol for [Illumination$Lux]
+  @override
+  String get symbol => 'lx';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Illumination]
+final class Illumination$LumenPerMeterSquare extends Illumination {
+  const Illumination$LumenPerMeterSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Illumination$LumenPerMeterSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$LumenPerMeterSquare.from(
+        Illumination.fromJson(json),
+      );
+
+  /// Construct [Illumination$LumenPerMeterSquare] from other [Illumination]
+  factory Illumination$LumenPerMeterSquare.from(
+    Illumination unit,
+  ) =>
+      Illumination$LumenPerMeterSquare(
+        unit.toLumenPerMeterSquare.value,
+      );
+
+  static const _minorName = r'illumination$LumenPerMeterSquare';
+
+  static const _ratio = 1000.0;
+
+  /// 1 [Illumination$LumenPerMeterSquare]  =  1000.0 [Illumination$Nox]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Illumination$LumenPerMeterSquare get _clone =>
+      Illumination$LumenPerMeterSquare(value);
+
+  /// Creating [Illumination$LumenPerMeterSquare] with new value
+  @override
+  Illumination$LumenPerMeterSquare withValue(
+    num val,
+  ) =>
+      Illumination$LumenPerMeterSquare(val);
+
+  /// Symbol for [Illumination$LumenPerMeterSquare]
+  @override
+  String get symbol => 'lm/m²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Illumination]
+final class Illumination$LumenPerCentimeterSquare extends Illumination {
+  const Illumination$LumenPerCentimeterSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Illumination$LumenPerCentimeterSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$LumenPerCentimeterSquare.from(
+        Illumination.fromJson(json),
+      );
+
+  /// Construct [Illumination$LumenPerCentimeterSquare] from other [Illumination]
+  factory Illumination$LumenPerCentimeterSquare.from(
+    Illumination unit,
+  ) =>
+      Illumination$LumenPerCentimeterSquare(
+        unit.toLumenPerCentimeterSquare.value,
+      );
+
+  static const _minorName = r'illumination$LumenPerCentimeterSquare';
+
+  static const _ratio = 10000000.0;
+
+  /// 1 [Illumination$LumenPerCentimeterSquare]  =  10000000.0 [Illumination$Nox]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Illumination$LumenPerCentimeterSquare get _clone =>
+      Illumination$LumenPerCentimeterSquare(value);
+
+  /// Creating [Illumination$LumenPerCentimeterSquare] with new value
+  @override
+  Illumination$LumenPerCentimeterSquare withValue(
+    num val,
+  ) =>
+      Illumination$LumenPerCentimeterSquare(val);
+
+  /// Symbol for [Illumination$LumenPerCentimeterSquare]
+  @override
+  String get symbol => 'lm/cm²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Illumination]
+final class Illumination$LumenPerFootSquare extends Illumination {
+  const Illumination$LumenPerFootSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Illumination$LumenPerFootSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$LumenPerFootSquare.from(
+        Illumination.fromJson(json),
+      );
+
+  /// Construct [Illumination$LumenPerFootSquare] from other [Illumination]
+  factory Illumination$LumenPerFootSquare.from(
+    Illumination unit,
+  ) =>
+      Illumination$LumenPerFootSquare(
+        unit.toLumenPerFootSquare.value,
+      );
+
+  static const _minorName = r'illumination$LumenPerFootSquare';
+
+  static const _ratio = 10763.9104167;
+
+  /// 1 [Illumination$LumenPerFootSquare]  ≈  10763.9104167 [Illumination$Nox]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Illumination$LumenPerFootSquare get _clone =>
+      Illumination$LumenPerFootSquare(value);
+
+  /// Creating [Illumination$LumenPerFootSquare] with new value
+  @override
+  Illumination$LumenPerFootSquare withValue(
+    num val,
+  ) =>
+      Illumination$LumenPerFootSquare(val);
+
+  /// Symbol for [Illumination$LumenPerFootSquare]
+  @override
+  String get symbol => 'lm/ft²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Illumination]
+final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
+  const Illumination$WattPerCentimeterSquareAt555nm([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Illumination$WattPerCentimeterSquareAt555nm.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Illumination$WattPerCentimeterSquareAt555nm.from(
+        Illumination.fromJson(json),
+      );
+
+  /// Construct [Illumination$WattPerCentimeterSquareAt555nm] from other [Illumination]
+  factory Illumination$WattPerCentimeterSquareAt555nm.from(
+    Illumination unit,
+  ) =>
+      Illumination$WattPerCentimeterSquareAt555nm(
+        unit.toWattPerCentimeterSquareAt555nm.value,
+      );
+
+  static const _minorName = r'illumination$WattPerCentimeterSquareAt555nm';
+
+  static const _ratio = 6830000000.0;
+
+  /// 1 [Illumination$WattPerCentimeterSquareAt555nm]  =  6830000000.0 [Illumination$Nox]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Illumination$WattPerCentimeterSquareAt555nm get _clone =>
+      Illumination$WattPerCentimeterSquareAt555nm(value);
+
+  /// Creating [Illumination$WattPerCentimeterSquareAt555nm] with new value
+  @override
+  Illumination$WattPerCentimeterSquareAt555nm withValue(
+    num val,
+  ) =>
+      Illumination$WattPerCentimeterSquareAt555nm(val);
+
+  /// Symbol for [Illumination$WattPerCentimeterSquareAt555nm]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
 enum IlluminationUnit {
-  flame._(Flame()),
-  lumenPerFootSquare._(LumenPerFootSquare()),
-  lumenPerMeterSquare._(LumenPerMeterSquare()),
-  phot._(Phot()),
+  meterCandle._(
+    Illumination$MeterCandle(),
+  ),
+  centimeterCandle._(
+    Illumination$CentimeterCandle(),
+  ),
+  footCandle._(
+    Illumination$FootCandle(),
+  ),
+  flame._(
+    Illumination$Flame(),
+  ),
+  phot._(
+    Illumination$Phot(),
+  ),
+  nox._(
+    Illumination$Nox(),
+  ),
+  lux._(
+    Illumination$Lux(),
+  ),
+  lumenPerMeterSquare._(
+    Illumination$LumenPerMeterSquare(),
+  ),
+  lumenPerCentimeterSquare._(
+    Illumination$LumenPerCentimeterSquare(),
+  ),
+  lumenPerFootSquare._(
+    Illumination$LumenPerFootSquare(),
+  ),
+  wattPerCentimeterSquareAt555nm._(
+    Illumination$WattPerCentimeterSquareAt555nm(),
+  ),
   ;
 
   const IlluminationUnit._(this.construct);
@@ -227,8 +753,19 @@ enum IlluminationUnit {
 }
 
 const illuminationUnitValues = _EnumValues({
-  Flame._minorName: IlluminationUnit.flame,
-  LumenPerFootSquare._minorName: IlluminationUnit.lumenPerFootSquare,
-  LumenPerMeterSquare._minorName: IlluminationUnit.lumenPerMeterSquare,
-  Phot._minorName: IlluminationUnit.phot,
+  Illumination$MeterCandle._minorName: IlluminationUnit.meterCandle,
+  Illumination$CentimeterCandle._minorName: IlluminationUnit.centimeterCandle,
+  Illumination$FootCandle._minorName: IlluminationUnit.footCandle,
+  Illumination$Flame._minorName: IlluminationUnit.flame,
+  Illumination$Phot._minorName: IlluminationUnit.phot,
+  Illumination$Nox._minorName: IlluminationUnit.nox,
+  Illumination$Lux._minorName: IlluminationUnit.lux,
+  Illumination$LumenPerMeterSquare._minorName:
+      IlluminationUnit.lumenPerMeterSquare,
+  Illumination$LumenPerCentimeterSquare._minorName:
+      IlluminationUnit.lumenPerCentimeterSquare,
+  Illumination$LumenPerFootSquare._minorName:
+      IlluminationUnit.lumenPerFootSquare,
+  Illumination$WattPerCentimeterSquareAt555nm._minorName:
+      IlluminationUnit.wattPerCentimeterSquareAt555nm,
 });

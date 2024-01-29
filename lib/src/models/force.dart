@@ -2,12 +2,21 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Force]
 ///
-/// [GramForce], [JoulePerCentimeter], [KilogramForce], [Kilonewton],
-/// [Newton], [OunceForce], [PoundForce], [Poundal]
+/// [Force$Exanewton], [Force$Petanewton], [Force$Teranewton],
+/// [Force$Giganewton], [Force$Meganewton], [Force$Kilonewton],
+/// [Force$Hectonewton], [Force$Dekanewton], [Force$Newton],
+/// [Force$Decinewton], [Force$Centinewton], [Force$Millinewton],
+/// [Force$Micronewton], [Force$Nanonewton], [Force$Piconewton],
+/// [Force$Femtonewton], [Force$Attonewton], [Force$Dyne],
+/// [Force$JoulePerMeter], [Force$JoulePerCentimeter], [Force$KilogramForce],
+/// [Force$GramForce], [Force$KipForce], [Force$PoundForce],
+/// [Force$OunceForce], [Force$Poundal]
 abstract final class Force extends Unit<Force> {
-  const Force([super.value]);
+  const Force([
+    super.value,
+  ]);
 
-  /// If there is no matched key, returning [Newton] with 0 value
+  /// If there is no matched key, returning [Force$Dyne] with 0 value
   factory Force.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
@@ -18,48 +27,172 @@ abstract final class Force extends Unit<Force> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Newton();
+          : const Force$Dyne();
 
   @override
   AnchorRatio<Force> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Force>({
-          GramForce: GramForce._ratio,
-          JoulePerCentimeter: JoulePerCentimeter._ratio,
-          KilogramForce: KilogramForce._ratio,
-          Kilonewton: Kilonewton._ratio,
-          OunceForce: OunceForce._ratio,
-          PoundForce: PoundForce._ratio,
-          Poundal: Poundal._ratio,
+          Force$Exanewton: Force$Exanewton._ratio,
+          Force$Petanewton: Force$Petanewton._ratio,
+          Force$Teranewton: Force$Teranewton._ratio,
+          Force$Giganewton: Force$Giganewton._ratio,
+          Force$Meganewton: Force$Meganewton._ratio,
+          Force$Kilonewton: Force$Kilonewton._ratio,
+          Force$Hectonewton: Force$Hectonewton._ratio,
+          Force$Dekanewton: Force$Dekanewton._ratio,
+          Force$Newton: Force$Newton._ratio,
+          Force$Decinewton: Force$Decinewton._ratio,
+          Force$Centinewton: Force$Centinewton._ratio,
+          Force$Millinewton: Force$Millinewton._ratio,
+          Force$Micronewton: Force$Micronewton._ratio,
+          Force$Nanonewton: Force$Nanonewton._ratio,
+          Force$Piconewton: Force$Piconewton._ratio,
+          Force$Femtonewton: Force$Femtonewton._ratio,
+          Force$Attonewton: Force$Attonewton._ratio,
+          Force$JoulePerMeter: Force$JoulePerMeter._ratio,
+          Force$JoulePerCentimeter: Force$JoulePerCentimeter._ratio,
+          Force$KilogramForce: Force$KilogramForce._ratio,
+          Force$GramForce: Force$GramForce._ratio,
+          Force$KipForce: Force$KipForce._ratio,
+          Force$PoundForce: Force$PoundForce._ratio,
+          Force$OunceForce: Force$OunceForce._ratio,
+          Force$Poundal: Force$Poundal._ratio,
         })
       );
 
   @override
-  Force get _anchor => const Newton();
+  Force get _anchor => const Force$Dyne();
 
-  /// Convert to [GramForce]
-  Force get toGramForce => convertTo(const GramForce());
+  /// Convert to [Force$Exanewton]
+  Force get toExanewton => convertTo(
+        const Force$Exanewton(),
+      );
 
-  /// Convert to [JoulePerCentimeter]
-  Force get toJoulePerCentimeter => convertTo(const JoulePerCentimeter());
+  /// Convert to [Force$Petanewton]
+  Force get toPetanewton => convertTo(
+        const Force$Petanewton(),
+      );
 
-  /// Convert to [KilogramForce]
-  Force get toKilogramForce => convertTo(const KilogramForce());
+  /// Convert to [Force$Teranewton]
+  Force get toTeranewton => convertTo(
+        const Force$Teranewton(),
+      );
 
-  /// Convert to [Kilonewton]
-  Force get toKilonewton => convertTo(const Kilonewton());
+  /// Convert to [Force$Giganewton]
+  Force get toGiganewton => convertTo(
+        const Force$Giganewton(),
+      );
 
-  /// Convert to [Newton]
-  Force get toNewton => convertTo(const Newton());
+  /// Convert to [Force$Meganewton]
+  Force get toMeganewton => convertTo(
+        const Force$Meganewton(),
+      );
 
-  /// Convert to [OunceForce]
-  Force get toOunceForce => convertTo(const OunceForce());
+  /// Convert to [Force$Kilonewton]
+  Force get toKilonewton => convertTo(
+        const Force$Kilonewton(),
+      );
 
-  /// Convert to [PoundForce]
-  Force get toPoundForce => convertTo(const PoundForce());
+  /// Convert to [Force$Hectonewton]
+  Force get toHectonewton => convertTo(
+        const Force$Hectonewton(),
+      );
 
-  /// Convert to [Poundal]
-  Force get toPoundal => convertTo(const Poundal());
+  /// Convert to [Force$Dekanewton]
+  Force get toDekanewton => convertTo(
+        const Force$Dekanewton(),
+      );
+
+  /// Convert to [Force$Newton]
+  Force get toNewton => convertTo(
+        const Force$Newton(),
+      );
+
+  /// Convert to [Force$Decinewton]
+  Force get toDecinewton => convertTo(
+        const Force$Decinewton(),
+      );
+
+  /// Convert to [Force$Centinewton]
+  Force get toCentinewton => convertTo(
+        const Force$Centinewton(),
+      );
+
+  /// Convert to [Force$Millinewton]
+  Force get toMillinewton => convertTo(
+        const Force$Millinewton(),
+      );
+
+  /// Convert to [Force$Micronewton]
+  Force get toMicronewton => convertTo(
+        const Force$Micronewton(),
+      );
+
+  /// Convert to [Force$Nanonewton]
+  Force get toNanonewton => convertTo(
+        const Force$Nanonewton(),
+      );
+
+  /// Convert to [Force$Piconewton]
+  Force get toPiconewton => convertTo(
+        const Force$Piconewton(),
+      );
+
+  /// Convert to [Force$Femtonewton]
+  Force get toFemtonewton => convertTo(
+        const Force$Femtonewton(),
+      );
+
+  /// Convert to [Force$Attonewton]
+  Force get toAttonewton => convertTo(
+        const Force$Attonewton(),
+      );
+
+  /// Convert to [Force$Dyne]
+  Force get toDyne => convertTo(
+        const Force$Dyne(),
+      );
+
+  /// Convert to [Force$JoulePerMeter]
+  Force get toJoulePerMeter => convertTo(
+        const Force$JoulePerMeter(),
+      );
+
+  /// Convert to [Force$JoulePerCentimeter]
+  Force get toJoulePerCentimeter => convertTo(
+        const Force$JoulePerCentimeter(),
+      );
+
+  /// Convert to [Force$KilogramForce]
+  Force get toKilogramForce => convertTo(
+        const Force$KilogramForce(),
+      );
+
+  /// Convert to [Force$GramForce]
+  Force get toGramForce => convertTo(
+        const Force$GramForce(),
+      );
+
+  /// Convert to [Force$KipForce]
+  Force get toKipForce => convertTo(
+        const Force$KipForce(),
+      );
+
+  /// Convert to [Force$PoundForce]
+  Force get toPoundForce => convertTo(
+        const Force$PoundForce(),
+      );
+
+  /// Convert to [Force$OunceForce]
+  Force get toOunceForce => convertTo(
+        const Force$OunceForce(),
+      );
+
+  /// Convert to [Force$Poundal]
+  Force get toPoundal => convertTo(
+        const Force$Poundal(),
+      );
 
   @override
   String get majorName => _majorName;
@@ -68,35 +201,49 @@ abstract final class Force extends Unit<Force> {
 }
 
 /// Unit of [Force]
-final class GramForce extends Force {
-  const GramForce([super.value]);
+final class Force$Exanewton extends Force {
+  const Force$Exanewton([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory GramForce.fromJson(Map<String, dynamic> json) =>
-      GramForce.from(Force.fromJson(json));
+  factory Force$Exanewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Exanewton.from(
+        Force.fromJson(json),
+      );
 
-  /// Construct [GramForce] from other [Force]
-  factory GramForce.from(Force unit) => GramForce(unit.toGramForce.value);
+  /// Construct [Force$Exanewton] from other [Force]
+  factory Force$Exanewton.from(
+    Force unit,
+  ) =>
+      Force$Exanewton(
+        unit.toExanewton.value,
+      );
 
-  static const _minorName = 'gramForce';
+  static const _minorName = r'force$Exanewton';
 
-  static const _ratio = 101.9716213;
+  static const _ratio = 1e+23;
 
-  /// 1 [Newton] ≈ 101.9716213 [GramForce]
+  /// 1 [Force$Exanewton]  =  1e+23 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  GramForce get _clone => GramForce(value);
+  Force$Exanewton get _clone => Force$Exanewton(value);
 
-  /// Creating [GramForce] with new value
+  /// Creating [Force$Exanewton] with new value
   @override
-  GramForce withValue(num val) => GramForce(val);
+  Force$Exanewton withValue(
+    num val,
+  ) =>
+      Force$Exanewton(val);
 
-  /// Symbol for [GramForce]
+  /// Symbol for [Force$Exanewton]
   @override
-  String get symbol => 'gf';
+  String get symbol => 'EN';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -108,36 +255,49 @@ final class GramForce extends Force {
 }
 
 /// Unit of [Force]
-final class JoulePerCentimeter extends Force {
-  const JoulePerCentimeter([super.value]);
+final class Force$Petanewton extends Force {
+  const Force$Petanewton([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory JoulePerCentimeter.fromJson(Map<String, dynamic> json) =>
-      JoulePerCentimeter.from(Force.fromJson(json));
+  factory Force$Petanewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Petanewton.from(
+        Force.fromJson(json),
+      );
 
-  /// Construct [JoulePerCentimeter] from other [Force]
-  factory JoulePerCentimeter.from(Force unit) =>
-      JoulePerCentimeter(unit.toJoulePerCentimeter.value);
+  /// Construct [Force$Petanewton] from other [Force]
+  factory Force$Petanewton.from(
+    Force unit,
+  ) =>
+      Force$Petanewton(
+        unit.toPetanewton.value,
+      );
 
-  static const _minorName = 'joulePerCentimeter';
+  static const _minorName = r'force$Petanewton';
 
-  static const _ratio = 100;
+  static const _ratio = 100000000000000000000.0;
 
-  /// 1 [Newton] = 100 [JoulePerCentimeter]
+  /// 1 [Force$Petanewton]  =  100000000000000000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  JoulePerCentimeter get _clone => JoulePerCentimeter(value);
+  Force$Petanewton get _clone => Force$Petanewton(value);
 
-  /// Creating [JoulePerCentimeter] with new value
+  /// Creating [Force$Petanewton] with new value
   @override
-  JoulePerCentimeter withValue(num val) => JoulePerCentimeter(val);
+  Force$Petanewton withValue(
+    num val,
+  ) =>
+      Force$Petanewton(val);
 
-  /// Symbol for [JoulePerCentimeter]
+  /// Symbol for [Force$Petanewton]
   @override
-  String get symbol => 'J/cm';
+  String get symbol => 'PN';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -149,36 +309,49 @@ final class JoulePerCentimeter extends Force {
 }
 
 /// Unit of [Force]
-final class KilogramForce extends Force {
-  const KilogramForce([super.value]);
+final class Force$Teranewton extends Force {
+  const Force$Teranewton([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory KilogramForce.fromJson(Map<String, dynamic> json) =>
-      KilogramForce.from(Force.fromJson(json));
+  factory Force$Teranewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Teranewton.from(
+        Force.fromJson(json),
+      );
 
-  /// Construct [KilogramForce] from other [Force]
-  factory KilogramForce.from(Force unit) =>
-      KilogramForce(unit.toKilogramForce.value);
+  /// Construct [Force$Teranewton] from other [Force]
+  factory Force$Teranewton.from(
+    Force unit,
+  ) =>
+      Force$Teranewton(
+        unit.toTeranewton.value,
+      );
 
-  static const _minorName = 'kilogramForce';
+  static const _minorName = r'force$Teranewton';
 
-  static const _ratio = 0.1019716213;
+  static const _ratio = 100000000000000000.0;
 
-  /// 1 [Newton] ≈ 0.1019716213 [KilogramForce]
+  /// 1 [Force$Teranewton]  =  100000000000000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  KilogramForce get _clone => KilogramForce(value);
+  Force$Teranewton get _clone => Force$Teranewton(value);
 
-  /// Creating [KilogramForce] with new value
+  /// Creating [Force$Teranewton] with new value
   @override
-  KilogramForce withValue(num val) => KilogramForce(val);
+  Force$Teranewton withValue(
+    num val,
+  ) =>
+      Force$Teranewton(val);
 
-  /// Symbol for [KilogramForce]
+  /// Symbol for [Force$Teranewton]
   @override
-  String get symbol => 'kgf';
+  String get symbol => 'TN';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -190,33 +363,155 @@ final class KilogramForce extends Force {
 }
 
 /// Unit of [Force]
-final class Kilonewton extends Force {
-  const Kilonewton([super.value]);
+final class Force$Giganewton extends Force {
+  const Force$Giganewton([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Kilonewton.fromJson(Map<String, dynamic> json) =>
-      Kilonewton.from(Force.fromJson(json));
+  factory Force$Giganewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Giganewton.from(
+        Force.fromJson(json),
+      );
 
-  /// Construct [Kilonewton] from other [Force]
-  factory Kilonewton.from(Force unit) => Kilonewton(unit.toKilonewton.value);
+  /// Construct [Force$Giganewton] from other [Force]
+  factory Force$Giganewton.from(
+    Force unit,
+  ) =>
+      Force$Giganewton(
+        unit.toGiganewton.value,
+      );
 
-  static const _minorName = 'kilonewton';
+  static const _minorName = r'force$Giganewton';
 
-  static const _ratio = 0.001;
+  static const _ratio = 100000000000000.0;
 
-  /// 1 [Newton] ≈ 0.001 [Kilonewton]
+  /// 1 [Force$Giganewton]  =  100000000000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  Kilonewton get _clone => Kilonewton(value);
+  Force$Giganewton get _clone => Force$Giganewton(value);
 
-  /// Creating [Kilonewton] with new value
+  /// Creating [Force$Giganewton] with new value
   @override
-  Kilonewton withValue(num val) => Kilonewton(val);
+  Force$Giganewton withValue(
+    num val,
+  ) =>
+      Force$Giganewton(val);
 
-  /// Symbol for [Kilonewton]
+  /// Symbol for [Force$Giganewton]
+  @override
+  String get symbol => 'GN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Meganewton extends Force {
+  const Force$Meganewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Meganewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Meganewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Meganewton] from other [Force]
+  factory Force$Meganewton.from(
+    Force unit,
+  ) =>
+      Force$Meganewton(
+        unit.toMeganewton.value,
+      );
+
+  static const _minorName = r'force$Meganewton';
+
+  static const _ratio = 100000000000.0;
+
+  /// 1 [Force$Meganewton]  =  100000000000.0 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Meganewton get _clone => Force$Meganewton(value);
+
+  /// Creating [Force$Meganewton] with new value
+  @override
+  Force$Meganewton withValue(
+    num val,
+  ) =>
+      Force$Meganewton(val);
+
+  /// Symbol for [Force$Meganewton]
+  @override
+  String get symbol => 'MN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Kilonewton extends Force {
+  const Force$Kilonewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Kilonewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Kilonewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Kilonewton] from other [Force]
+  factory Force$Kilonewton.from(
+    Force unit,
+  ) =>
+      Force$Kilonewton(
+        unit.toKilonewton.value,
+      );
+
+  static const _minorName = r'force$Kilonewton';
+
+  static const _ratio = 100000000.0;
+
+  /// 1 [Force$Kilonewton]  =  100000000.0 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Kilonewton get _clone => Force$Kilonewton(value);
+
+  /// Creating [Force$Kilonewton] with new value
+  @override
+  Force$Kilonewton withValue(
+    num val,
+  ) =>
+      Force$Kilonewton(val);
+
+  /// Symbol for [Force$Kilonewton]
   @override
   String get symbol => 'kN';
 
@@ -230,33 +525,155 @@ final class Kilonewton extends Force {
 }
 
 /// Unit of [Force]
-final class Newton extends Force {
-  const Newton([super.value]);
+final class Force$Hectonewton extends Force {
+  const Force$Hectonewton([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Newton.fromJson(Map<String, dynamic> json) =>
-      Newton.from(Force.fromJson(json));
+  factory Force$Hectonewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Hectonewton.from(
+        Force.fromJson(json),
+      );
 
-  /// Construct [Newton] from other [Force]
-  factory Newton.from(Force unit) => Newton(unit.toNewton.value);
+  /// Construct [Force$Hectonewton] from other [Force]
+  factory Force$Hectonewton.from(
+    Force unit,
+  ) =>
+      Force$Hectonewton(
+        unit.toHectonewton.value,
+      );
 
-  static const _minorName = 'newton';
+  static const _minorName = r'force$Hectonewton';
 
-  static const _ratio = 1;
+  static const _ratio = 10000000.0;
 
-  /// Default (anchor) unit of [Force]
+  /// 1 [Force$Hectonewton]  =  10000000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  Newton get _clone => Newton(value);
+  Force$Hectonewton get _clone => Force$Hectonewton(value);
 
-  /// Creating [Newton] with new value
+  /// Creating [Force$Hectonewton] with new value
   @override
-  Newton withValue(num val) => Newton(val);
+  Force$Hectonewton withValue(
+    num val,
+  ) =>
+      Force$Hectonewton(val);
 
-  /// Symbol for [Newton]
+  /// Symbol for [Force$Hectonewton]
+  @override
+  String get symbol => 'hN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Dekanewton extends Force {
+  const Force$Dekanewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Dekanewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Dekanewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Dekanewton] from other [Force]
+  factory Force$Dekanewton.from(
+    Force unit,
+  ) =>
+      Force$Dekanewton(
+        unit.toDekanewton.value,
+      );
+
+  static const _minorName = r'force$Dekanewton';
+
+  static const _ratio = 1000000.0;
+
+  /// 1 [Force$Dekanewton]  =  1000000.0 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Dekanewton get _clone => Force$Dekanewton(value);
+
+  /// Creating [Force$Dekanewton] with new value
+  @override
+  Force$Dekanewton withValue(
+    num val,
+  ) =>
+      Force$Dekanewton(val);
+
+  /// Symbol for [Force$Dekanewton]
+  @override
+  String get symbol => 'daN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Newton extends Force {
+  const Force$Newton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Newton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Newton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Newton] from other [Force]
+  factory Force$Newton.from(
+    Force unit,
+  ) =>
+      Force$Newton(
+        unit.toNewton.value,
+      );
+
+  static const _minorName = r'force$Newton';
+
+  static const _ratio = 100000.0;
+
+  /// 1 [Force$Newton]  =  100000.0 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Newton get _clone => Force$Newton(value);
+
+  /// Creating [Force$Newton] with new value
+  @override
+  Force$Newton withValue(
+    num val,
+  ) =>
+      Force$Newton(val);
+
+  /// Symbol for [Force$Newton]
   @override
   String get symbol => 'N';
 
@@ -270,35 +687,49 @@ final class Newton extends Force {
 }
 
 /// Unit of [Force]
-final class OunceForce extends Force {
-  const OunceForce([super.value]);
+final class Force$Decinewton extends Force {
+  const Force$Decinewton([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory OunceForce.fromJson(Map<String, dynamic> json) =>
-      OunceForce.from(Force.fromJson(json));
+  factory Force$Decinewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Decinewton.from(
+        Force.fromJson(json),
+      );
 
-  /// Construct [OunceForce] from other [Force]
-  factory OunceForce.from(Force unit) => OunceForce(unit.toOunceForce.value);
+  /// Construct [Force$Decinewton] from other [Force]
+  factory Force$Decinewton.from(
+    Force unit,
+  ) =>
+      Force$Decinewton(
+        unit.toDecinewton.value,
+      );
 
-  static const _minorName = 'ounceForce';
+  static const _minorName = r'force$Decinewton';
 
-  static const _ratio = 3.59694309;
+  static const _ratio = 10000.0;
 
-  /// 1 [Newton] ≈ 3.59694309 [OunceForce]
+  /// 1 [Force$Decinewton]  =  10000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  OunceForce get _clone => OunceForce(value);
+  Force$Decinewton get _clone => Force$Decinewton(value);
 
-  /// Creating [OunceForce] with new value
+  /// Creating [Force$Decinewton] with new value
   @override
-  OunceForce withValue(num val) => OunceForce(val);
+  Force$Decinewton withValue(
+    num val,
+  ) =>
+      Force$Decinewton(val);
 
-  /// Symbol for [OunceForce]
+  /// Symbol for [Force$Decinewton]
   @override
-  String get symbol => 'ozf';
+  String get symbol => 'dN';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -310,33 +741,749 @@ final class OunceForce extends Force {
 }
 
 /// Unit of [Force]
-final class PoundForce extends Force {
-  const PoundForce([super.value]);
+final class Force$Centinewton extends Force {
+  const Force$Centinewton([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory PoundForce.fromJson(Map<String, dynamic> json) =>
-      PoundForce.from(Force.fromJson(json));
+  factory Force$Centinewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Centinewton.from(
+        Force.fromJson(json),
+      );
 
-  /// Construct [PoundForce] from other [Force]
-  factory PoundForce.from(Force unit) => PoundForce(unit.toPoundForce.value);
+  /// Construct [Force$Centinewton] from other [Force]
+  factory Force$Centinewton.from(
+    Force unit,
+  ) =>
+      Force$Centinewton(
+        unit.toCentinewton.value,
+      );
 
-  static const _minorName = 'poundForce';
+  static const _minorName = r'force$Centinewton';
 
-  static const _ratio = 0.2248089431;
+  static const _ratio = 1000.0;
 
-  /// 1 [Newton] ≈ 0.2248089431 [PoundForce]
+  /// 1 [Force$Centinewton]  =  1000.0 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  PoundForce get _clone => PoundForce(value);
+  Force$Centinewton get _clone => Force$Centinewton(value);
 
-  /// Creating [PoundForce] with new value
+  /// Creating [Force$Centinewton] with new value
   @override
-  PoundForce withValue(num val) => PoundForce(val);
+  Force$Centinewton withValue(
+    num val,
+  ) =>
+      Force$Centinewton(val);
 
-  /// Symbol for [PoundForce]
+  /// Symbol for [Force$Centinewton]
+  @override
+  String get symbol => 'cN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Millinewton extends Force {
+  const Force$Millinewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Millinewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Millinewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Millinewton] from other [Force]
+  factory Force$Millinewton.from(
+    Force unit,
+  ) =>
+      Force$Millinewton(
+        unit.toMillinewton.value,
+      );
+
+  static const _minorName = r'force$Millinewton';
+
+  static const _ratio = 100.0;
+
+  /// 1 [Force$Millinewton]  =  100.0 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Millinewton get _clone => Force$Millinewton(value);
+
+  /// Creating [Force$Millinewton] with new value
+  @override
+  Force$Millinewton withValue(
+    num val,
+  ) =>
+      Force$Millinewton(val);
+
+  /// Symbol for [Force$Millinewton]
+  @override
+  String get symbol => 'mN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Micronewton extends Force {
+  const Force$Micronewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Micronewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Micronewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Micronewton] from other [Force]
+  factory Force$Micronewton.from(
+    Force unit,
+  ) =>
+      Force$Micronewton(
+        unit.toMicronewton.value,
+      );
+
+  static const _minorName = r'force$Micronewton';
+
+  static const _ratio = 0.1;
+
+  /// 1 [Force$Micronewton]  ≈  0.1 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Micronewton get _clone => Force$Micronewton(value);
+
+  /// Creating [Force$Micronewton] with new value
+  @override
+  Force$Micronewton withValue(
+    num val,
+  ) =>
+      Force$Micronewton(val);
+
+  /// Symbol for [Force$Micronewton]
+  @override
+  String get symbol => 'µN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Nanonewton extends Force {
+  const Force$Nanonewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Nanonewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Nanonewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Nanonewton] from other [Force]
+  factory Force$Nanonewton.from(
+    Force unit,
+  ) =>
+      Force$Nanonewton(
+        unit.toNanonewton.value,
+      );
+
+  static const _minorName = r'force$Nanonewton';
+
+  static const _ratio = 0.0001;
+
+  /// 1 [Force$Nanonewton]  ≈  0.0001 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Nanonewton get _clone => Force$Nanonewton(value);
+
+  /// Creating [Force$Nanonewton] with new value
+  @override
+  Force$Nanonewton withValue(
+    num val,
+  ) =>
+      Force$Nanonewton(val);
+
+  /// Symbol for [Force$Nanonewton]
+  @override
+  String get symbol => 'nN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Piconewton extends Force {
+  const Force$Piconewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Piconewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Piconewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Piconewton] from other [Force]
+  factory Force$Piconewton.from(
+    Force unit,
+  ) =>
+      Force$Piconewton(
+        unit.toPiconewton.value,
+      );
+
+  static const _minorName = r'force$Piconewton';
+
+  static const _ratio = 1e-7;
+
+  /// 1 [Force$Piconewton]  ≈  1e-7 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Piconewton get _clone => Force$Piconewton(value);
+
+  /// Creating [Force$Piconewton] with new value
+  @override
+  Force$Piconewton withValue(
+    num val,
+  ) =>
+      Force$Piconewton(val);
+
+  /// Symbol for [Force$Piconewton]
+  @override
+  String get symbol => 'pN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Femtonewton extends Force {
+  const Force$Femtonewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Femtonewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Femtonewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Femtonewton] from other [Force]
+  factory Force$Femtonewton.from(
+    Force unit,
+  ) =>
+      Force$Femtonewton(
+        unit.toFemtonewton.value,
+      );
+
+  static const _minorName = r'force$Femtonewton';
+
+  static const _ratio = 1e-10;
+
+  /// 1 [Force$Femtonewton]  ≈  1e-10 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Femtonewton get _clone => Force$Femtonewton(value);
+
+  /// Creating [Force$Femtonewton] with new value
+  @override
+  Force$Femtonewton withValue(
+    num val,
+  ) =>
+      Force$Femtonewton(val);
+
+  /// Symbol for [Force$Femtonewton]
+  @override
+  String get symbol => 'fN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Attonewton extends Force {
+  const Force$Attonewton([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Attonewton.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Attonewton.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Attonewton] from other [Force]
+  factory Force$Attonewton.from(
+    Force unit,
+  ) =>
+      Force$Attonewton(
+        unit.toAttonewton.value,
+      );
+
+  static const _minorName = r'force$Attonewton';
+
+  static const _ratio = 1e-13;
+
+  /// 1 [Force$Attonewton]  ≈  1e-13 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Attonewton get _clone => Force$Attonewton(value);
+
+  /// Creating [Force$Attonewton] with new value
+  @override
+  Force$Attonewton withValue(
+    num val,
+  ) =>
+      Force$Attonewton(val);
+
+  /// Symbol for [Force$Attonewton]
+  @override
+  String get symbol => 'aN';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Dyne extends Force {
+  const Force$Dyne([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Dyne.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Dyne.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Dyne] from other [Force]
+  factory Force$Dyne.from(
+    Force unit,
+  ) =>
+      Force$Dyne(
+        unit.toDyne.value,
+      );
+
+  static const _minorName = r'force$Dyne';
+
+  static const _ratio = 1.0;
+
+  /// Default (anchor) unit of [Force]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Dyne get _clone => Force$Dyne(value);
+
+  /// Creating [Force$Dyne] with new value
+  @override
+  Force$Dyne withValue(
+    num val,
+  ) =>
+      Force$Dyne(val);
+
+  /// Symbol for [Force$Dyne]
+  @override
+  String get symbol => 'dyn';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$JoulePerMeter extends Force {
+  const Force$JoulePerMeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$JoulePerMeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$JoulePerMeter.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$JoulePerMeter] from other [Force]
+  factory Force$JoulePerMeter.from(
+    Force unit,
+  ) =>
+      Force$JoulePerMeter(
+        unit.toJoulePerMeter.value,
+      );
+
+  static const _minorName = r'force$JoulePerMeter';
+
+  static const _ratio = 100000.0;
+
+  /// 1 [Force$JoulePerMeter]  =  100000.0 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$JoulePerMeter get _clone => Force$JoulePerMeter(value);
+
+  /// Creating [Force$JoulePerMeter] with new value
+  @override
+  Force$JoulePerMeter withValue(
+    num val,
+  ) =>
+      Force$JoulePerMeter(val);
+
+  /// Symbol for [Force$JoulePerMeter]
+  @override
+  String get symbol => 'J/m';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$JoulePerCentimeter extends Force {
+  const Force$JoulePerCentimeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$JoulePerCentimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$JoulePerCentimeter.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$JoulePerCentimeter] from other [Force]
+  factory Force$JoulePerCentimeter.from(
+    Force unit,
+  ) =>
+      Force$JoulePerCentimeter(
+        unit.toJoulePerCentimeter.value,
+      );
+
+  static const _minorName = r'force$JoulePerCentimeter';
+
+  static const _ratio = 1000.0;
+
+  /// 1 [Force$JoulePerCentimeter]  =  1000.0 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$JoulePerCentimeter get _clone => Force$JoulePerCentimeter(value);
+
+  /// Creating [Force$JoulePerCentimeter] with new value
+  @override
+  Force$JoulePerCentimeter withValue(
+    num val,
+  ) =>
+      Force$JoulePerCentimeter(val);
+
+  /// Symbol for [Force$JoulePerCentimeter]
+  @override
+  String get symbol => 'J/cm';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$KilogramForce extends Force {
+  const Force$KilogramForce([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$KilogramForce.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$KilogramForce.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$KilogramForce] from other [Force]
+  factory Force$KilogramForce.from(
+    Force unit,
+  ) =>
+      Force$KilogramForce(
+        unit.toKilogramForce.value,
+      );
+
+  static const _minorName = r'force$KilogramForce';
+
+  static const _ratio = 980664.9999980076;
+
+  /// 1 [Force$KilogramForce]  ≈  980664.9999980076 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$KilogramForce get _clone => Force$KilogramForce(value);
+
+  /// Creating [Force$KilogramForce] with new value
+  @override
+  Force$KilogramForce withValue(
+    num val,
+  ) =>
+      Force$KilogramForce(val);
+
+  /// Symbol for [Force$KilogramForce]
+  @override
+  String get symbol => 'kgf';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$GramForce extends Force {
+  const Force$GramForce([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$GramForce.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$GramForce.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$GramForce] from other [Force]
+  factory Force$GramForce.from(
+    Force unit,
+  ) =>
+      Force$GramForce(
+        unit.toGramForce.value,
+      );
+
+  static const _minorName = r'force$GramForce';
+
+  static const _ratio = 980.6649999980076;
+
+  /// 1 [Force$GramForce]  ≈  980.6649999980076 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$GramForce get _clone => Force$GramForce(value);
+
+  /// Creating [Force$GramForce] with new value
+  @override
+  Force$GramForce withValue(
+    num val,
+  ) =>
+      Force$GramForce(val);
+
+  /// Symbol for [Force$GramForce]
+  @override
+  String get symbol => 'gf';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$KipForce extends Force {
+  const Force$KipForce([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$KipForce.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$KipForce.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$KipForce] from other [Force]
+  factory Force$KipForce.from(
+    Force unit,
+  ) =>
+      Force$KipForce(
+        unit.toKipForce.value,
+      );
+
+  static const _minorName = r'force$KipForce';
+
+  static const _ratio = 444822161.5254772;
+
+  /// 1 [Force$KipForce]  ≈  444822161.5254772 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$KipForce get _clone => Force$KipForce(value);
+
+  /// Creating [Force$KipForce] with new value
+  @override
+  Force$KipForce withValue(
+    num val,
+  ) =>
+      Force$KipForce(val);
+
+  /// Symbol for [Force$KipForce]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$PoundForce extends Force {
+  const Force$PoundForce([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$PoundForce.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$PoundForce.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$PoundForce] from other [Force]
+  factory Force$PoundForce.from(
+    Force unit,
+  ) =>
+      Force$PoundForce(
+        unit.toPoundForce.value,
+      );
+
+  static const _minorName = r'force$PoundForce';
+
+  static const _ratio = 444822.16152547713;
+
+  /// 1 [Force$PoundForce]  ≈  444822.16152547713 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$PoundForce get _clone => Force$PoundForce(value);
+
+  /// Creating [Force$PoundForce] with new value
+  @override
+  Force$PoundForce withValue(
+    num val,
+  ) =>
+      Force$PoundForce(val);
+
+  /// Symbol for [Force$PoundForce]
   @override
   String get symbol => 'lbf';
 
@@ -350,33 +1497,101 @@ final class PoundForce extends Force {
 }
 
 /// Unit of [Force]
-final class Poundal extends Force {
-  const Poundal([super.value]);
+final class Force$OunceForce extends Force {
+  const Force$OunceForce([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Poundal.fromJson(Map<String, dynamic> json) =>
-      Poundal.from(Force.fromJson(json));
+  factory Force$OunceForce.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$OunceForce.from(
+        Force.fromJson(json),
+      );
 
-  /// Construct [Poundal] from other [Force]
-  factory Poundal.from(Force unit) => Poundal(unit.toPoundal.value);
+  /// Construct [Force$OunceForce] from other [Force]
+  factory Force$OunceForce.from(
+    Force unit,
+  ) =>
+      Force$OunceForce(
+        unit.toOunceForce.value,
+      );
 
-  static const _minorName = 'poundal';
+  static const _minorName = r'force$OunceForce';
 
-  static const _ratio = 7.233013851;
+  static const _ratio = 27801.38509534232;
 
-  /// 1 [Newton] ≈ 7.233013851 [Poundal]
+  /// 1 [Force$OunceForce]  ≈  27801.38509534232 [Force$Dyne]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  Poundal get _clone => Poundal(value);
+  Force$OunceForce get _clone => Force$OunceForce(value);
 
-  /// Creating [Poundal] with new value
+  /// Creating [Force$OunceForce] with new value
   @override
-  Poundal withValue(num val) => Poundal(val);
+  Force$OunceForce withValue(
+    num val,
+  ) =>
+      Force$OunceForce(val);
 
-  /// Symbol for [Poundal]
+  /// Symbol for [Force$OunceForce]
+  @override
+  String get symbol => 'ozf';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Force]
+final class Force$Poundal extends Force {
+  const Force$Poundal([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Force$Poundal.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Force$Poundal.from(
+        Force.fromJson(json),
+      );
+
+  /// Construct [Force$Poundal] from other [Force]
+  factory Force$Poundal.from(
+    Force unit,
+  ) =>
+      Force$Poundal(
+        unit.toPoundal.value,
+      );
+
+  static const _minorName = r'force$Poundal';
+
+  static const _ratio = 13825.495437599799;
+
+  /// 1 [Force$Poundal]  ≈  13825.495437599799 [Force$Dyne]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Force$Poundal get _clone => Force$Poundal(value);
+
+  /// Creating [Force$Poundal] with new value
+  @override
+  Force$Poundal withValue(
+    num val,
+  ) =>
+      Force$Poundal(val);
+
+  /// Symbol for [Force$Poundal]
   @override
   String get symbol => 'pdl';
 
@@ -390,14 +1605,84 @@ final class Poundal extends Force {
 }
 
 enum ForceUnit {
-  gramForce._(GramForce()),
-  joulePerCentimeter._(JoulePerCentimeter()),
-  kilogramForce._(KilogramForce()),
-  kilonewton._(Kilonewton()),
-  newton._(Newton()),
-  ounceForce._(OunceForce()),
-  poundForce._(PoundForce()),
-  poundal._(Poundal()),
+  exanewton._(
+    Force$Exanewton(),
+  ),
+  petanewton._(
+    Force$Petanewton(),
+  ),
+  teranewton._(
+    Force$Teranewton(),
+  ),
+  giganewton._(
+    Force$Giganewton(),
+  ),
+  meganewton._(
+    Force$Meganewton(),
+  ),
+  kilonewton._(
+    Force$Kilonewton(),
+  ),
+  hectonewton._(
+    Force$Hectonewton(),
+  ),
+  dekanewton._(
+    Force$Dekanewton(),
+  ),
+  newton._(
+    Force$Newton(),
+  ),
+  decinewton._(
+    Force$Decinewton(),
+  ),
+  centinewton._(
+    Force$Centinewton(),
+  ),
+  millinewton._(
+    Force$Millinewton(),
+  ),
+  micronewton._(
+    Force$Micronewton(),
+  ),
+  nanonewton._(
+    Force$Nanonewton(),
+  ),
+  piconewton._(
+    Force$Piconewton(),
+  ),
+  femtonewton._(
+    Force$Femtonewton(),
+  ),
+  attonewton._(
+    Force$Attonewton(),
+  ),
+  dyne._(
+    Force$Dyne(),
+  ),
+  joulePerMeter._(
+    Force$JoulePerMeter(),
+  ),
+  joulePerCentimeter._(
+    Force$JoulePerCentimeter(),
+  ),
+  kilogramForce._(
+    Force$KilogramForce(),
+  ),
+  gramForce._(
+    Force$GramForce(),
+  ),
+  kipForce._(
+    Force$KipForce(),
+  ),
+  poundForce._(
+    Force$PoundForce(),
+  ),
+  ounceForce._(
+    Force$OunceForce(),
+  ),
+  poundal._(
+    Force$Poundal(),
+  ),
   ;
 
   const ForceUnit._(this.construct);
@@ -406,12 +1691,30 @@ enum ForceUnit {
 }
 
 const forceUnitValues = _EnumValues({
-  GramForce._minorName: ForceUnit.gramForce,
-  JoulePerCentimeter._minorName: ForceUnit.joulePerCentimeter,
-  KilogramForce._minorName: ForceUnit.kilogramForce,
-  Kilonewton._minorName: ForceUnit.kilonewton,
-  Newton._minorName: ForceUnit.newton,
-  OunceForce._minorName: ForceUnit.ounceForce,
-  PoundForce._minorName: ForceUnit.poundForce,
-  Poundal._minorName: ForceUnit.poundal,
+  Force$Exanewton._minorName: ForceUnit.exanewton,
+  Force$Petanewton._minorName: ForceUnit.petanewton,
+  Force$Teranewton._minorName: ForceUnit.teranewton,
+  Force$Giganewton._minorName: ForceUnit.giganewton,
+  Force$Meganewton._minorName: ForceUnit.meganewton,
+  Force$Kilonewton._minorName: ForceUnit.kilonewton,
+  Force$Hectonewton._minorName: ForceUnit.hectonewton,
+  Force$Dekanewton._minorName: ForceUnit.dekanewton,
+  Force$Newton._minorName: ForceUnit.newton,
+  Force$Decinewton._minorName: ForceUnit.decinewton,
+  Force$Centinewton._minorName: ForceUnit.centinewton,
+  Force$Millinewton._minorName: ForceUnit.millinewton,
+  Force$Micronewton._minorName: ForceUnit.micronewton,
+  Force$Nanonewton._minorName: ForceUnit.nanonewton,
+  Force$Piconewton._minorName: ForceUnit.piconewton,
+  Force$Femtonewton._minorName: ForceUnit.femtonewton,
+  Force$Attonewton._minorName: ForceUnit.attonewton,
+  Force$Dyne._minorName: ForceUnit.dyne,
+  Force$JoulePerMeter._minorName: ForceUnit.joulePerMeter,
+  Force$JoulePerCentimeter._minorName: ForceUnit.joulePerCentimeter,
+  Force$KilogramForce._minorName: ForceUnit.kilogramForce,
+  Force$GramForce._minorName: ForceUnit.gramForce,
+  Force$KipForce._minorName: ForceUnit.kipForce,
+  Force$PoundForce._minorName: ForceUnit.poundForce,
+  Force$OunceForce._minorName: ForceUnit.ounceForce,
+  Force$Poundal._minorName: ForceUnit.poundal,
 });

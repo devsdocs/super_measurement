@@ -1,0 +1,1829 @@
+part of '../../super_measurement.dart';
+
+/// Available units of measurement for [ViscosityDynamic]
+///
+/// [ViscosityDynamic$NewtonSecondPerMeterSquare],
+/// [ViscosityDynamic$MillinewtonSecondPerMeterSquare],
+/// [ViscosityDynamic$DyneSecondPerCentimeterSquare],
+/// [ViscosityDynamic$Exapoise], [ViscosityDynamic$Petapoise],
+/// [ViscosityDynamic$Terapoise], [ViscosityDynamic$Gigapoise],
+/// [ViscosityDynamic$Megapoise], [ViscosityDynamic$Kilopoise],
+/// [ViscosityDynamic$Hectopoise], [ViscosityDynamic$Dekapoise],
+/// [ViscosityDynamic$Poise], [ViscosityDynamic$Decipoise],
+/// [ViscosityDynamic$Centipoise], [ViscosityDynamic$Millipoise],
+/// [ViscosityDynamic$Micropoise], [ViscosityDynamic$Nanopoise],
+/// [ViscosityDynamic$Picopoise], [ViscosityDynamic$Femtopoise],
+/// [ViscosityDynamic$Attopoise],
+/// [ViscosityDynamic$PoundForceSecondPerInchSquare],
+/// [ViscosityDynamic$PoundForceSecondPerFootSquare],
+/// [ViscosityDynamic$PoundalSecondPerFootSquare],
+/// [ViscosityDynamic$GramPerCentimeterSecond],
+/// [ViscosityDynamic$SlugPerFootSecond],
+/// [ViscosityDynamic$PoundPerFootSecond], [ViscosityDynamic$PoundPerFootHour]
+abstract final class ViscosityDynamic extends Unit<ViscosityDynamic> {
+  const ViscosityDynamic([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning [ViscosityDynamic$MillinewtonSecondPerMeterSquare] with 0 value
+  factory ViscosityDynamic.fromJson(Map<String, dynamic> json) => _checkJson(
+        _majorName,
+        json,
+        viscosityDynamicUnitValues,
+      )
+          ? viscosityDynamicUnitValues
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+              .withValue(
+              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+            )
+          : const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
+
+  @override
+  AnchorRatio<ViscosityDynamic> get _anchorRatio => (
+        anchor: _anchor.runtimeType,
+        ratio: const _ConversionRatio<ViscosityDynamic>({
+          ViscosityDynamic$NewtonSecondPerMeterSquare:
+              ViscosityDynamic$NewtonSecondPerMeterSquare._ratio,
+          ViscosityDynamic$DyneSecondPerCentimeterSquare:
+              ViscosityDynamic$DyneSecondPerCentimeterSquare._ratio,
+          ViscosityDynamic$Exapoise: ViscosityDynamic$Exapoise._ratio,
+          ViscosityDynamic$Petapoise: ViscosityDynamic$Petapoise._ratio,
+          ViscosityDynamic$Terapoise: ViscosityDynamic$Terapoise._ratio,
+          ViscosityDynamic$Gigapoise: ViscosityDynamic$Gigapoise._ratio,
+          ViscosityDynamic$Megapoise: ViscosityDynamic$Megapoise._ratio,
+          ViscosityDynamic$Kilopoise: ViscosityDynamic$Kilopoise._ratio,
+          ViscosityDynamic$Hectopoise: ViscosityDynamic$Hectopoise._ratio,
+          ViscosityDynamic$Dekapoise: ViscosityDynamic$Dekapoise._ratio,
+          ViscosityDynamic$Poise: ViscosityDynamic$Poise._ratio,
+          ViscosityDynamic$Decipoise: ViscosityDynamic$Decipoise._ratio,
+          ViscosityDynamic$Centipoise: ViscosityDynamic$Centipoise._ratio,
+          ViscosityDynamic$Millipoise: ViscosityDynamic$Millipoise._ratio,
+          ViscosityDynamic$Micropoise: ViscosityDynamic$Micropoise._ratio,
+          ViscosityDynamic$Nanopoise: ViscosityDynamic$Nanopoise._ratio,
+          ViscosityDynamic$Picopoise: ViscosityDynamic$Picopoise._ratio,
+          ViscosityDynamic$Femtopoise: ViscosityDynamic$Femtopoise._ratio,
+          ViscosityDynamic$Attopoise: ViscosityDynamic$Attopoise._ratio,
+          ViscosityDynamic$PoundForceSecondPerInchSquare:
+              ViscosityDynamic$PoundForceSecondPerInchSquare._ratio,
+          ViscosityDynamic$PoundForceSecondPerFootSquare:
+              ViscosityDynamic$PoundForceSecondPerFootSquare._ratio,
+          ViscosityDynamic$PoundalSecondPerFootSquare:
+              ViscosityDynamic$PoundalSecondPerFootSquare._ratio,
+          ViscosityDynamic$GramPerCentimeterSecond:
+              ViscosityDynamic$GramPerCentimeterSecond._ratio,
+          ViscosityDynamic$SlugPerFootSecond:
+              ViscosityDynamic$SlugPerFootSecond._ratio,
+          ViscosityDynamic$PoundPerFootSecond:
+              ViscosityDynamic$PoundPerFootSecond._ratio,
+          ViscosityDynamic$PoundPerFootHour:
+              ViscosityDynamic$PoundPerFootHour._ratio,
+        })
+      );
+
+  @override
+  ViscosityDynamic get _anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
+
+  /// Convert to [ViscosityDynamic$NewtonSecondPerMeterSquare]
+  ViscosityDynamic get toNewtonSecondPerMeterSquare => convertTo(
+        const ViscosityDynamic$NewtonSecondPerMeterSquare(),
+      );
+
+  /// Convert to [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  ViscosityDynamic get toMillinewtonSecondPerMeterSquare => convertTo(
+        const ViscosityDynamic$MillinewtonSecondPerMeterSquare(),
+      );
+
+  /// Convert to [ViscosityDynamic$DyneSecondPerCentimeterSquare]
+  ViscosityDynamic get toDyneSecondPerCentimeterSquare => convertTo(
+        const ViscosityDynamic$DyneSecondPerCentimeterSquare(),
+      );
+
+  /// Convert to [ViscosityDynamic$Exapoise]
+  ViscosityDynamic get toExapoise => convertTo(
+        const ViscosityDynamic$Exapoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Petapoise]
+  ViscosityDynamic get toPetapoise => convertTo(
+        const ViscosityDynamic$Petapoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Terapoise]
+  ViscosityDynamic get toTerapoise => convertTo(
+        const ViscosityDynamic$Terapoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Gigapoise]
+  ViscosityDynamic get toGigapoise => convertTo(
+        const ViscosityDynamic$Gigapoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Megapoise]
+  ViscosityDynamic get toMegapoise => convertTo(
+        const ViscosityDynamic$Megapoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Kilopoise]
+  ViscosityDynamic get toKilopoise => convertTo(
+        const ViscosityDynamic$Kilopoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Hectopoise]
+  ViscosityDynamic get toHectopoise => convertTo(
+        const ViscosityDynamic$Hectopoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Dekapoise]
+  ViscosityDynamic get toDekapoise => convertTo(
+        const ViscosityDynamic$Dekapoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Poise]
+  ViscosityDynamic get toPoise => convertTo(
+        const ViscosityDynamic$Poise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Decipoise]
+  ViscosityDynamic get toDecipoise => convertTo(
+        const ViscosityDynamic$Decipoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Centipoise]
+  ViscosityDynamic get toCentipoise => convertTo(
+        const ViscosityDynamic$Centipoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Millipoise]
+  ViscosityDynamic get toMillipoise => convertTo(
+        const ViscosityDynamic$Millipoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Micropoise]
+  ViscosityDynamic get toMicropoise => convertTo(
+        const ViscosityDynamic$Micropoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Nanopoise]
+  ViscosityDynamic get toNanopoise => convertTo(
+        const ViscosityDynamic$Nanopoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Picopoise]
+  ViscosityDynamic get toPicopoise => convertTo(
+        const ViscosityDynamic$Picopoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Femtopoise]
+  ViscosityDynamic get toFemtopoise => convertTo(
+        const ViscosityDynamic$Femtopoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$Attopoise]
+  ViscosityDynamic get toAttopoise => convertTo(
+        const ViscosityDynamic$Attopoise(),
+      );
+
+  /// Convert to [ViscosityDynamic$PoundForceSecondPerInchSquare]
+  ViscosityDynamic get toPoundForceSecondPerInchSquare => convertTo(
+        const ViscosityDynamic$PoundForceSecondPerInchSquare(),
+      );
+
+  /// Convert to [ViscosityDynamic$PoundForceSecondPerFootSquare]
+  ViscosityDynamic get toPoundForceSecondPerFootSquare => convertTo(
+        const ViscosityDynamic$PoundForceSecondPerFootSquare(),
+      );
+
+  /// Convert to [ViscosityDynamic$PoundalSecondPerFootSquare]
+  ViscosityDynamic get toPoundalSecondPerFootSquare => convertTo(
+        const ViscosityDynamic$PoundalSecondPerFootSquare(),
+      );
+
+  /// Convert to [ViscosityDynamic$GramPerCentimeterSecond]
+  ViscosityDynamic get toGramPerCentimeterSecond => convertTo(
+        const ViscosityDynamic$GramPerCentimeterSecond(),
+      );
+
+  /// Convert to [ViscosityDynamic$SlugPerFootSecond]
+  ViscosityDynamic get toSlugPerFootSecond => convertTo(
+        const ViscosityDynamic$SlugPerFootSecond(),
+      );
+
+  /// Convert to [ViscosityDynamic$PoundPerFootSecond]
+  ViscosityDynamic get toPoundPerFootSecond => convertTo(
+        const ViscosityDynamic$PoundPerFootSecond(),
+      );
+
+  /// Convert to [ViscosityDynamic$PoundPerFootHour]
+  ViscosityDynamic get toPoundPerFootHour => convertTo(
+        const ViscosityDynamic$PoundPerFootHour(),
+      );
+
+  @override
+  String get majorName => _majorName;
+
+  static const _majorName = 'viscosityDynamic';
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$NewtonSecondPerMeterSquare
+    extends ViscosityDynamic {
+  const ViscosityDynamic$NewtonSecondPerMeterSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$NewtonSecondPerMeterSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$NewtonSecondPerMeterSquare.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$NewtonSecondPerMeterSquare] from other [ViscosityDynamic]
+  factory ViscosityDynamic$NewtonSecondPerMeterSquare.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$NewtonSecondPerMeterSquare(
+        unit.toNewtonSecondPerMeterSquare.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$NewtonSecondPerMeterSquare';
+
+  static const _ratio = 1000.0;
+
+  /// 1 [ViscosityDynamic$NewtonSecondPerMeterSquare]  =  1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$NewtonSecondPerMeterSquare get _clone =>
+      ViscosityDynamic$NewtonSecondPerMeterSquare(value);
+
+  /// Creating [ViscosityDynamic$NewtonSecondPerMeterSquare] with new value
+  @override
+  ViscosityDynamic$NewtonSecondPerMeterSquare withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$NewtonSecondPerMeterSquare(val);
+
+  /// Symbol for [ViscosityDynamic$NewtonSecondPerMeterSquare]
+  @override
+  String get symbol => 'N s/m²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
+    extends ViscosityDynamic {
+  const ViscosityDynamic$MillinewtonSecondPerMeterSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$MillinewtonSecondPerMeterSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$MillinewtonSecondPerMeterSquare] from other [ViscosityDynamic]
+  factory ViscosityDynamic$MillinewtonSecondPerMeterSquare.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(
+        unit.toMillinewtonSecondPerMeterSquare.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$MillinewtonSecondPerMeterSquare';
+
+  static const _ratio = 1.0;
+
+  /// Default (anchor) unit of [ViscosityDynamic]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$MillinewtonSecondPerMeterSquare get _clone =>
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(value);
+
+  /// Creating [ViscosityDynamic$MillinewtonSecondPerMeterSquare] with new value
+  @override
+  ViscosityDynamic$MillinewtonSecondPerMeterSquare withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(val);
+
+  /// Symbol for [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  String get symbol => 'mN s/m²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$DyneSecondPerCentimeterSquare
+    extends ViscosityDynamic {
+  const ViscosityDynamic$DyneSecondPerCentimeterSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$DyneSecondPerCentimeterSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$DyneSecondPerCentimeterSquare.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$DyneSecondPerCentimeterSquare] from other [ViscosityDynamic]
+  factory ViscosityDynamic$DyneSecondPerCentimeterSquare.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$DyneSecondPerCentimeterSquare(
+        unit.toDyneSecondPerCentimeterSquare.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$DyneSecondPerCentimeterSquare';
+
+  static const _ratio = 100.0;
+
+  /// 1 [ViscosityDynamic$DyneSecondPerCentimeterSquare]  =  100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$DyneSecondPerCentimeterSquare get _clone =>
+      ViscosityDynamic$DyneSecondPerCentimeterSquare(value);
+
+  /// Creating [ViscosityDynamic$DyneSecondPerCentimeterSquare] with new value
+  @override
+  ViscosityDynamic$DyneSecondPerCentimeterSquare withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$DyneSecondPerCentimeterSquare(val);
+
+  /// Symbol for [ViscosityDynamic$DyneSecondPerCentimeterSquare]
+  @override
+  String get symbol => 'dyn s/cm²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
+  const ViscosityDynamic$Exapoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Exapoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Exapoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Exapoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Exapoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Exapoise(
+        unit.toExapoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Exapoise';
+
+  static const _ratio = 100000000000000000000.0;
+
+  /// 1 [ViscosityDynamic$Exapoise]  =  100000000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Exapoise get _clone => ViscosityDynamic$Exapoise(value);
+
+  /// Creating [ViscosityDynamic$Exapoise] with new value
+  @override
+  ViscosityDynamic$Exapoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Exapoise(val);
+
+  /// Symbol for [ViscosityDynamic$Exapoise]
+  @override
+  String get symbol => 'EP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
+  const ViscosityDynamic$Petapoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Petapoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Petapoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Petapoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Petapoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Petapoise(
+        unit.toPetapoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Petapoise';
+
+  static const _ratio = 100000000000000000.0;
+
+  /// 1 [ViscosityDynamic$Petapoise]  =  100000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Petapoise get _clone => ViscosityDynamic$Petapoise(value);
+
+  /// Creating [ViscosityDynamic$Petapoise] with new value
+  @override
+  ViscosityDynamic$Petapoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Petapoise(val);
+
+  /// Symbol for [ViscosityDynamic$Petapoise]
+  @override
+  String get symbol => 'PP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
+  const ViscosityDynamic$Terapoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Terapoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Terapoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Terapoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Terapoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Terapoise(
+        unit.toTerapoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Terapoise';
+
+  static const _ratio = 100000000000000.0;
+
+  /// 1 [ViscosityDynamic$Terapoise]  =  100000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Terapoise get _clone => ViscosityDynamic$Terapoise(value);
+
+  /// Creating [ViscosityDynamic$Terapoise] with new value
+  @override
+  ViscosityDynamic$Terapoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Terapoise(val);
+
+  /// Symbol for [ViscosityDynamic$Terapoise]
+  @override
+  String get symbol => 'TP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
+  const ViscosityDynamic$Gigapoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Gigapoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Gigapoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Gigapoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Gigapoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Gigapoise(
+        unit.toGigapoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Gigapoise';
+
+  static const _ratio = 100000000000.0;
+
+  /// 1 [ViscosityDynamic$Gigapoise]  =  100000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Gigapoise get _clone => ViscosityDynamic$Gigapoise(value);
+
+  /// Creating [ViscosityDynamic$Gigapoise] with new value
+  @override
+  ViscosityDynamic$Gigapoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Gigapoise(val);
+
+  /// Symbol for [ViscosityDynamic$Gigapoise]
+  @override
+  String get symbol => 'GP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
+  const ViscosityDynamic$Megapoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Megapoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Megapoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Megapoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Megapoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Megapoise(
+        unit.toMegapoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Megapoise';
+
+  static const _ratio = 100000000.0;
+
+  /// 1 [ViscosityDynamic$Megapoise]  =  100000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Megapoise get _clone => ViscosityDynamic$Megapoise(value);
+
+  /// Creating [ViscosityDynamic$Megapoise] with new value
+  @override
+  ViscosityDynamic$Megapoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Megapoise(val);
+
+  /// Symbol for [ViscosityDynamic$Megapoise]
+  @override
+  String get symbol => 'MP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
+  const ViscosityDynamic$Kilopoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Kilopoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Kilopoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Kilopoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Kilopoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Kilopoise(
+        unit.toKilopoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Kilopoise';
+
+  static const _ratio = 100000.0;
+
+  /// 1 [ViscosityDynamic$Kilopoise]  =  100000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Kilopoise get _clone => ViscosityDynamic$Kilopoise(value);
+
+  /// Creating [ViscosityDynamic$Kilopoise] with new value
+  @override
+  ViscosityDynamic$Kilopoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Kilopoise(val);
+
+  /// Symbol for [ViscosityDynamic$Kilopoise]
+  @override
+  String get symbol => 'kP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
+  const ViscosityDynamic$Hectopoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Hectopoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Hectopoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Hectopoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Hectopoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Hectopoise(
+        unit.toHectopoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Hectopoise';
+
+  static const _ratio = 10000.0;
+
+  /// 1 [ViscosityDynamic$Hectopoise]  =  10000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Hectopoise get _clone => ViscosityDynamic$Hectopoise(value);
+
+  /// Creating [ViscosityDynamic$Hectopoise] with new value
+  @override
+  ViscosityDynamic$Hectopoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Hectopoise(val);
+
+  /// Symbol for [ViscosityDynamic$Hectopoise]
+  @override
+  String get symbol => 'hP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
+  const ViscosityDynamic$Dekapoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Dekapoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Dekapoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Dekapoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Dekapoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Dekapoise(
+        unit.toDekapoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Dekapoise';
+
+  static const _ratio = 1000.0;
+
+  /// 1 [ViscosityDynamic$Dekapoise]  =  1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Dekapoise get _clone => ViscosityDynamic$Dekapoise(value);
+
+  /// Creating [ViscosityDynamic$Dekapoise] with new value
+  @override
+  ViscosityDynamic$Dekapoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Dekapoise(val);
+
+  /// Symbol for [ViscosityDynamic$Dekapoise]
+  @override
+  String get symbol => 'daP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Poise extends ViscosityDynamic {
+  const ViscosityDynamic$Poise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Poise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Poise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Poise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Poise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Poise(
+        unit.toPoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Poise';
+
+  static const _ratio = 100.0;
+
+  /// 1 [ViscosityDynamic$Poise]  =  100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Poise get _clone => ViscosityDynamic$Poise(value);
+
+  /// Creating [ViscosityDynamic$Poise] with new value
+  @override
+  ViscosityDynamic$Poise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Poise(val);
+
+  /// Symbol for [ViscosityDynamic$Poise]
+  @override
+  String get symbol => 'P';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
+  const ViscosityDynamic$Decipoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Decipoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Decipoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Decipoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Decipoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Decipoise(
+        unit.toDecipoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Decipoise';
+
+  static const _ratio = 10.0;
+
+  /// 1 [ViscosityDynamic$Decipoise]  =  10.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Decipoise get _clone => ViscosityDynamic$Decipoise(value);
+
+  /// Creating [ViscosityDynamic$Decipoise] with new value
+  @override
+  ViscosityDynamic$Decipoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Decipoise(val);
+
+  /// Symbol for [ViscosityDynamic$Decipoise]
+  @override
+  String get symbol => 'dP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
+  const ViscosityDynamic$Centipoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Centipoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Centipoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Centipoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Centipoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Centipoise(
+        unit.toCentipoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Centipoise';
+
+  static const _ratio = 1.0;
+
+  /// 1 [ViscosityDynamic$Centipoise]  =  1.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Centipoise get _clone => ViscosityDynamic$Centipoise(value);
+
+  /// Creating [ViscosityDynamic$Centipoise] with new value
+  @override
+  ViscosityDynamic$Centipoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Centipoise(val);
+
+  /// Symbol for [ViscosityDynamic$Centipoise]
+  @override
+  String get symbol => 'cP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
+  const ViscosityDynamic$Millipoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Millipoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Millipoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Millipoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Millipoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Millipoise(
+        unit.toMillipoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Millipoise';
+
+  static const _ratio = 0.1;
+
+  /// 1 [ViscosityDynamic$Millipoise]  ≈  0.1 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Millipoise get _clone => ViscosityDynamic$Millipoise(value);
+
+  /// Creating [ViscosityDynamic$Millipoise] with new value
+  @override
+  ViscosityDynamic$Millipoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Millipoise(val);
+
+  /// Symbol for [ViscosityDynamic$Millipoise]
+  @override
+  String get symbol => 'mP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
+  const ViscosityDynamic$Micropoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Micropoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Micropoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Micropoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Micropoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Micropoise(
+        unit.toMicropoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Micropoise';
+
+  static const _ratio = 0.0001;
+
+  /// 1 [ViscosityDynamic$Micropoise]  ≈  0.0001 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Micropoise get _clone => ViscosityDynamic$Micropoise(value);
+
+  /// Creating [ViscosityDynamic$Micropoise] with new value
+  @override
+  ViscosityDynamic$Micropoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Micropoise(val);
+
+  /// Symbol for [ViscosityDynamic$Micropoise]
+  @override
+  String get symbol => 'µP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
+  const ViscosityDynamic$Nanopoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Nanopoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Nanopoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Nanopoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Nanopoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Nanopoise(
+        unit.toNanopoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Nanopoise';
+
+  static const _ratio = 1e-7;
+
+  /// 1 [ViscosityDynamic$Nanopoise]  ≈  1e-7 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Nanopoise get _clone => ViscosityDynamic$Nanopoise(value);
+
+  /// Creating [ViscosityDynamic$Nanopoise] with new value
+  @override
+  ViscosityDynamic$Nanopoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Nanopoise(val);
+
+  /// Symbol for [ViscosityDynamic$Nanopoise]
+  @override
+  String get symbol => 'nP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
+  const ViscosityDynamic$Picopoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Picopoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Picopoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Picopoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Picopoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Picopoise(
+        unit.toPicopoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Picopoise';
+
+  static const _ratio = 1e-10;
+
+  /// 1 [ViscosityDynamic$Picopoise]  ≈  1e-10 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Picopoise get _clone => ViscosityDynamic$Picopoise(value);
+
+  /// Creating [ViscosityDynamic$Picopoise] with new value
+  @override
+  ViscosityDynamic$Picopoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Picopoise(val);
+
+  /// Symbol for [ViscosityDynamic$Picopoise]
+  @override
+  String get symbol => 'pP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
+  const ViscosityDynamic$Femtopoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Femtopoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Femtopoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Femtopoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Femtopoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Femtopoise(
+        unit.toFemtopoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Femtopoise';
+
+  static const _ratio = 1e-13;
+
+  /// 1 [ViscosityDynamic$Femtopoise]  ≈  1e-13 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Femtopoise get _clone => ViscosityDynamic$Femtopoise(value);
+
+  /// Creating [ViscosityDynamic$Femtopoise] with new value
+  @override
+  ViscosityDynamic$Femtopoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Femtopoise(val);
+
+  /// Symbol for [ViscosityDynamic$Femtopoise]
+  @override
+  String get symbol => 'fP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
+  const ViscosityDynamic$Attopoise([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$Attopoise.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$Attopoise.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$Attopoise] from other [ViscosityDynamic]
+  factory ViscosityDynamic$Attopoise.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$Attopoise(
+        unit.toAttopoise.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$Attopoise';
+
+  static const _ratio = 1e-16;
+
+  /// 1 [ViscosityDynamic$Attopoise]  ≈  1e-16 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$Attopoise get _clone => ViscosityDynamic$Attopoise(value);
+
+  /// Creating [ViscosityDynamic$Attopoise] with new value
+  @override
+  ViscosityDynamic$Attopoise withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$Attopoise(val);
+
+  /// Symbol for [ViscosityDynamic$Attopoise]
+  @override
+  String get symbol => 'aP';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$PoundForceSecondPerInchSquare
+    extends ViscosityDynamic {
+  const ViscosityDynamic$PoundForceSecondPerInchSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$PoundForceSecondPerInchSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$PoundForceSecondPerInchSquare.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$PoundForceSecondPerInchSquare] from other [ViscosityDynamic]
+  factory ViscosityDynamic$PoundForceSecondPerInchSquare.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$PoundForceSecondPerInchSquare(
+        unit.toPoundForceSecondPerInchSquare.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$PoundForceSecondPerInchSquare';
+
+  static const _ratio = 6894757.0;
+
+  /// 1 [ViscosityDynamic$PoundForceSecondPerInchSquare]  =  6894757.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$PoundForceSecondPerInchSquare get _clone =>
+      ViscosityDynamic$PoundForceSecondPerInchSquare(value);
+
+  /// Creating [ViscosityDynamic$PoundForceSecondPerInchSquare] with new value
+  @override
+  ViscosityDynamic$PoundForceSecondPerInchSquare withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$PoundForceSecondPerInchSquare(val);
+
+  /// Symbol for [ViscosityDynamic$PoundForceSecondPerInchSquare]
+  @override
+  String get symbol => 'lbf s/in²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$PoundForceSecondPerFootSquare
+    extends ViscosityDynamic {
+  const ViscosityDynamic$PoundForceSecondPerFootSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$PoundForceSecondPerFootSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$PoundForceSecondPerFootSquare.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$PoundForceSecondPerFootSquare] from other [ViscosityDynamic]
+  factory ViscosityDynamic$PoundForceSecondPerFootSquare.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$PoundForceSecondPerFootSquare(
+        unit.toPoundForceSecondPerFootSquare.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$PoundForceSecondPerFootSquare';
+
+  static const _ratio = 47880.25898022151;
+
+  /// 1 [ViscosityDynamic$PoundForceSecondPerFootSquare]  ≈  47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$PoundForceSecondPerFootSquare get _clone =>
+      ViscosityDynamic$PoundForceSecondPerFootSquare(value);
+
+  /// Creating [ViscosityDynamic$PoundForceSecondPerFootSquare] with new value
+  @override
+  ViscosityDynamic$PoundForceSecondPerFootSquare withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$PoundForceSecondPerFootSquare(val);
+
+  /// Symbol for [ViscosityDynamic$PoundForceSecondPerFootSquare]
+  @override
+  String get symbol => 'lbf s/ft²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$PoundalSecondPerFootSquare
+    extends ViscosityDynamic {
+  const ViscosityDynamic$PoundalSecondPerFootSquare([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$PoundalSecondPerFootSquare.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$PoundalSecondPerFootSquare.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$PoundalSecondPerFootSquare] from other [ViscosityDynamic]
+  factory ViscosityDynamic$PoundalSecondPerFootSquare.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$PoundalSecondPerFootSquare(
+        unit.toPoundalSecondPerFootSquare.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$PoundalSecondPerFootSquare';
+
+  static const _ratio = 1488.1639435684617;
+
+  /// 1 [ViscosityDynamic$PoundalSecondPerFootSquare]  ≈  1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$PoundalSecondPerFootSquare get _clone =>
+      ViscosityDynamic$PoundalSecondPerFootSquare(value);
+
+  /// Creating [ViscosityDynamic$PoundalSecondPerFootSquare] with new value
+  @override
+  ViscosityDynamic$PoundalSecondPerFootSquare withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$PoundalSecondPerFootSquare(val);
+
+  /// Symbol for [ViscosityDynamic$PoundalSecondPerFootSquare]
+  @override
+  String get symbol => 'pdl s/ft²';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
+  const ViscosityDynamic$GramPerCentimeterSecond([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$GramPerCentimeterSecond.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$GramPerCentimeterSecond.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$GramPerCentimeterSecond] from other [ViscosityDynamic]
+  factory ViscosityDynamic$GramPerCentimeterSecond.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$GramPerCentimeterSecond(
+        unit.toGramPerCentimeterSecond.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$GramPerCentimeterSecond';
+
+  static const _ratio = 100.0;
+
+  /// 1 [ViscosityDynamic$GramPerCentimeterSecond]  =  100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$GramPerCentimeterSecond get _clone =>
+      ViscosityDynamic$GramPerCentimeterSecond(value);
+
+  /// Creating [ViscosityDynamic$GramPerCentimeterSecond] with new value
+  @override
+  ViscosityDynamic$GramPerCentimeterSecond withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$GramPerCentimeterSecond(val);
+
+  /// Symbol for [ViscosityDynamic$GramPerCentimeterSecond]
+  @override
+  String get symbol => 'g/cm s';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
+  const ViscosityDynamic$SlugPerFootSecond([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$SlugPerFootSecond.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$SlugPerFootSecond.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$SlugPerFootSecond] from other [ViscosityDynamic]
+  factory ViscosityDynamic$SlugPerFootSecond.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$SlugPerFootSecond(
+        unit.toSlugPerFootSecond.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$SlugPerFootSecond';
+
+  static const _ratio = 47880.25898022151;
+
+  /// 1 [ViscosityDynamic$SlugPerFootSecond]  ≈  47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$SlugPerFootSecond get _clone =>
+      ViscosityDynamic$SlugPerFootSecond(value);
+
+  /// Creating [ViscosityDynamic$SlugPerFootSecond] with new value
+  @override
+  ViscosityDynamic$SlugPerFootSecond withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$SlugPerFootSecond(val);
+
+  /// Symbol for [ViscosityDynamic$SlugPerFootSecond]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
+  const ViscosityDynamic$PoundPerFootSecond([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$PoundPerFootSecond.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$PoundPerFootSecond.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$PoundPerFootSecond] from other [ViscosityDynamic]
+  factory ViscosityDynamic$PoundPerFootSecond.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$PoundPerFootSecond(
+        unit.toPoundPerFootSecond.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$PoundPerFootSecond';
+
+  static const _ratio = 1488.1639435684617;
+
+  /// 1 [ViscosityDynamic$PoundPerFootSecond]  ≈  1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$PoundPerFootSecond get _clone =>
+      ViscosityDynamic$PoundPerFootSecond(value);
+
+  /// Creating [ViscosityDynamic$PoundPerFootSecond] with new value
+  @override
+  ViscosityDynamic$PoundPerFootSecond withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$PoundPerFootSecond(val);
+
+  /// Symbol for [ViscosityDynamic$PoundPerFootSecond]
+  @override
+  String get symbol => 'lb/ft s';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [ViscosityDynamic]
+final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
+  const ViscosityDynamic$PoundPerFootHour([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory ViscosityDynamic$PoundPerFootHour.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      ViscosityDynamic$PoundPerFootHour.from(
+        ViscosityDynamic.fromJson(json),
+      );
+
+  /// Construct [ViscosityDynamic$PoundPerFootHour] from other [ViscosityDynamic]
+  factory ViscosityDynamic$PoundPerFootHour.from(
+    ViscosityDynamic unit,
+  ) =>
+      ViscosityDynamic$PoundPerFootHour(
+        unit.toPoundPerFootHour.value,
+      );
+
+  static const _minorName = r'viscosityDynamic$PoundPerFootHour';
+
+  static const _ratio = 0.4133789;
+
+  /// 1 [ViscosityDynamic$PoundPerFootHour]  ≈  0.4133789 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  ViscosityDynamic$PoundPerFootHour get _clone =>
+      ViscosityDynamic$PoundPerFootHour(value);
+
+  /// Creating [ViscosityDynamic$PoundPerFootHour] with new value
+  @override
+  ViscosityDynamic$PoundPerFootHour withValue(
+    num val,
+  ) =>
+      ViscosityDynamic$PoundPerFootHour(val);
+
+  /// Symbol for [ViscosityDynamic$PoundPerFootHour]
+  @override
+  String get symbol => 'lb/ft h';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+enum ViscosityDynamicUnit {
+  newtonSecondPerMeterSquare._(
+    ViscosityDynamic$NewtonSecondPerMeterSquare(),
+  ),
+  millinewtonSecondPerMeterSquare._(
+    ViscosityDynamic$MillinewtonSecondPerMeterSquare(),
+  ),
+  dyneSecondPerCentimeterSquare._(
+    ViscosityDynamic$DyneSecondPerCentimeterSquare(),
+  ),
+  exapoise._(
+    ViscosityDynamic$Exapoise(),
+  ),
+  petapoise._(
+    ViscosityDynamic$Petapoise(),
+  ),
+  terapoise._(
+    ViscosityDynamic$Terapoise(),
+  ),
+  gigapoise._(
+    ViscosityDynamic$Gigapoise(),
+  ),
+  megapoise._(
+    ViscosityDynamic$Megapoise(),
+  ),
+  kilopoise._(
+    ViscosityDynamic$Kilopoise(),
+  ),
+  hectopoise._(
+    ViscosityDynamic$Hectopoise(),
+  ),
+  dekapoise._(
+    ViscosityDynamic$Dekapoise(),
+  ),
+  poise._(
+    ViscosityDynamic$Poise(),
+  ),
+  decipoise._(
+    ViscosityDynamic$Decipoise(),
+  ),
+  centipoise._(
+    ViscosityDynamic$Centipoise(),
+  ),
+  millipoise._(
+    ViscosityDynamic$Millipoise(),
+  ),
+  micropoise._(
+    ViscosityDynamic$Micropoise(),
+  ),
+  nanopoise._(
+    ViscosityDynamic$Nanopoise(),
+  ),
+  picopoise._(
+    ViscosityDynamic$Picopoise(),
+  ),
+  femtopoise._(
+    ViscosityDynamic$Femtopoise(),
+  ),
+  attopoise._(
+    ViscosityDynamic$Attopoise(),
+  ),
+  poundForceSecondPerInchSquare._(
+    ViscosityDynamic$PoundForceSecondPerInchSquare(),
+  ),
+  poundForceSecondPerFootSquare._(
+    ViscosityDynamic$PoundForceSecondPerFootSquare(),
+  ),
+  poundalSecondPerFootSquare._(
+    ViscosityDynamic$PoundalSecondPerFootSquare(),
+  ),
+  gramPerCentimeterSecond._(
+    ViscosityDynamic$GramPerCentimeterSecond(),
+  ),
+  slugPerFootSecond._(
+    ViscosityDynamic$SlugPerFootSecond(),
+  ),
+  poundPerFootSecond._(
+    ViscosityDynamic$PoundPerFootSecond(),
+  ),
+  poundPerFootHour._(
+    ViscosityDynamic$PoundPerFootHour(),
+  ),
+  ;
+
+  const ViscosityDynamicUnit._(this.construct);
+
+  final ViscosityDynamic construct;
+}
+
+const viscosityDynamicUnitValues = _EnumValues({
+  ViscosityDynamic$NewtonSecondPerMeterSquare._minorName:
+      ViscosityDynamicUnit.newtonSecondPerMeterSquare,
+  ViscosityDynamic$MillinewtonSecondPerMeterSquare._minorName:
+      ViscosityDynamicUnit.millinewtonSecondPerMeterSquare,
+  ViscosityDynamic$DyneSecondPerCentimeterSquare._minorName:
+      ViscosityDynamicUnit.dyneSecondPerCentimeterSquare,
+  ViscosityDynamic$Exapoise._minorName: ViscosityDynamicUnit.exapoise,
+  ViscosityDynamic$Petapoise._minorName: ViscosityDynamicUnit.petapoise,
+  ViscosityDynamic$Terapoise._minorName: ViscosityDynamicUnit.terapoise,
+  ViscosityDynamic$Gigapoise._minorName: ViscosityDynamicUnit.gigapoise,
+  ViscosityDynamic$Megapoise._minorName: ViscosityDynamicUnit.megapoise,
+  ViscosityDynamic$Kilopoise._minorName: ViscosityDynamicUnit.kilopoise,
+  ViscosityDynamic$Hectopoise._minorName: ViscosityDynamicUnit.hectopoise,
+  ViscosityDynamic$Dekapoise._minorName: ViscosityDynamicUnit.dekapoise,
+  ViscosityDynamic$Poise._minorName: ViscosityDynamicUnit.poise,
+  ViscosityDynamic$Decipoise._minorName: ViscosityDynamicUnit.decipoise,
+  ViscosityDynamic$Centipoise._minorName: ViscosityDynamicUnit.centipoise,
+  ViscosityDynamic$Millipoise._minorName: ViscosityDynamicUnit.millipoise,
+  ViscosityDynamic$Micropoise._minorName: ViscosityDynamicUnit.micropoise,
+  ViscosityDynamic$Nanopoise._minorName: ViscosityDynamicUnit.nanopoise,
+  ViscosityDynamic$Picopoise._minorName: ViscosityDynamicUnit.picopoise,
+  ViscosityDynamic$Femtopoise._minorName: ViscosityDynamicUnit.femtopoise,
+  ViscosityDynamic$Attopoise._minorName: ViscosityDynamicUnit.attopoise,
+  ViscosityDynamic$PoundForceSecondPerInchSquare._minorName:
+      ViscosityDynamicUnit.poundForceSecondPerInchSquare,
+  ViscosityDynamic$PoundForceSecondPerFootSquare._minorName:
+      ViscosityDynamicUnit.poundForceSecondPerFootSquare,
+  ViscosityDynamic$PoundalSecondPerFootSquare._minorName:
+      ViscosityDynamicUnit.poundalSecondPerFootSquare,
+  ViscosityDynamic$GramPerCentimeterSecond._minorName:
+      ViscosityDynamicUnit.gramPerCentimeterSecond,
+  ViscosityDynamic$SlugPerFootSecond._minorName:
+      ViscosityDynamicUnit.slugPerFootSecond,
+  ViscosityDynamic$PoundPerFootSecond._minorName:
+      ViscosityDynamicUnit.poundPerFootSecond,
+  ViscosityDynamic$PoundPerFootHour._minorName:
+      ViscosityDynamicUnit.poundPerFootHour,
+});

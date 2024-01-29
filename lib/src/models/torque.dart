@@ -2,15 +2,19 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Torque]
 ///
-/// [DyneCentimeter], [DyneMeter], [DyneMillimeter], [GramForceCentimeter],
-/// [GramForceMeter], [GramForceMillimeter], [KilogramForceCentimeter],
-/// [KilogramForceMeter], [KilogramForceMillimeter], [KilonewtonMeter],
-/// [NewtonCentimeter], [NewtonMeter], [NewtonMillimeter], [OunceForceFoot],
-/// [OunceForceInch], [PoundForceFoot], [PoundForceInch]
+/// [Torque$KilonewtonMeter], [Torque$NewtonMeter], [Torque$NewtonCentimeter],
+/// [Torque$NewtonMillimeter], [Torque$DyneMeter], [Torque$DyneCentimeter],
+/// [Torque$DyneMillimeter], [Torque$KilogramForceMeter],
+/// [Torque$KilogramForceCentimeter], [Torque$KilogramForceMillimeter],
+/// [Torque$GramForceMeter], [Torque$GramForceCentimeter],
+/// [Torque$GramForceMillimeter], [Torque$OunceForceFoot],
+/// [Torque$OunceForceInch], [Torque$PoundForceFoot], [Torque$PoundForceInch]
 abstract final class Torque extends Unit<Torque> {
-  const Torque([super.value]);
+  const Torque([
+    super.value,
+  ]);
 
-  /// If there is no matched key, returning [KilonewtonMeter] with 0 value
+  /// If there is no matched key, returning [Torque$NewtonMeter] with 0 value
   factory Torque.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
@@ -21,86 +25,118 @@ abstract final class Torque extends Unit<Torque> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const KilonewtonMeter();
+          : const Torque$NewtonMeter();
 
   @override
   AnchorRatio<Torque> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Torque>({
-          DyneCentimeter: DyneCentimeter._ratio,
-          DyneMeter: DyneMeter._ratio,
-          DyneMillimeter: DyneMillimeter._ratio,
-          GramForceCentimeter: GramForceCentimeter._ratio,
-          GramForceMeter: GramForceMeter._ratio,
-          GramForceMillimeter: GramForceMillimeter._ratio,
-          KilogramForceCentimeter: KilogramForceCentimeter._ratio,
-          KilogramForceMeter: KilogramForceMeter._ratio,
-          KilogramForceMillimeter: KilogramForceMillimeter._ratio,
-          NewtonCentimeter: NewtonCentimeter._ratio,
-          NewtonMeter: NewtonMeter._ratio,
-          NewtonMillimeter: NewtonMillimeter._ratio,
-          OunceForceFoot: OunceForceFoot._ratio,
-          OunceForceInch: OunceForceInch._ratio,
-          PoundForceFoot: PoundForceFoot._ratio,
-          PoundForceInch: PoundForceInch._ratio,
+          Torque$KilonewtonMeter: Torque$KilonewtonMeter._ratio,
+          Torque$NewtonCentimeter: Torque$NewtonCentimeter._ratio,
+          Torque$NewtonMillimeter: Torque$NewtonMillimeter._ratio,
+          Torque$DyneMeter: Torque$DyneMeter._ratio,
+          Torque$DyneCentimeter: Torque$DyneCentimeter._ratio,
+          Torque$DyneMillimeter: Torque$DyneMillimeter._ratio,
+          Torque$KilogramForceMeter: Torque$KilogramForceMeter._ratio,
+          Torque$KilogramForceCentimeter: Torque$KilogramForceCentimeter._ratio,
+          Torque$KilogramForceMillimeter: Torque$KilogramForceMillimeter._ratio,
+          Torque$GramForceMeter: Torque$GramForceMeter._ratio,
+          Torque$GramForceCentimeter: Torque$GramForceCentimeter._ratio,
+          Torque$GramForceMillimeter: Torque$GramForceMillimeter._ratio,
+          Torque$OunceForceFoot: Torque$OunceForceFoot._ratio,
+          Torque$OunceForceInch: Torque$OunceForceInch._ratio,
+          Torque$PoundForceFoot: Torque$PoundForceFoot._ratio,
+          Torque$PoundForceInch: Torque$PoundForceInch._ratio,
         })
       );
 
   @override
-  Torque get _anchor => const KilonewtonMeter();
+  Torque get _anchor => const Torque$NewtonMeter();
 
-  /// Convert to [DyneCentimeter]
-  Torque get toDyneCentimeter => convertTo(const DyneCentimeter());
+  /// Convert to [Torque$KilonewtonMeter]
+  Torque get toKilonewtonMeter => convertTo(
+        const Torque$KilonewtonMeter(),
+      );
 
-  /// Convert to [DyneMeter]
-  Torque get toDyneMeter => convertTo(const DyneMeter());
+  /// Convert to [Torque$NewtonMeter]
+  Torque get toNewtonMeter => convertTo(
+        const Torque$NewtonMeter(),
+      );
 
-  /// Convert to [DyneMillimeter]
-  Torque get toDyneMillimeter => convertTo(const DyneMillimeter());
+  /// Convert to [Torque$NewtonCentimeter]
+  Torque get toNewtonCentimeter => convertTo(
+        const Torque$NewtonCentimeter(),
+      );
 
-  /// Convert to [GramForceCentimeter]
-  Torque get toGramForceCentimeter => convertTo(const GramForceCentimeter());
+  /// Convert to [Torque$NewtonMillimeter]
+  Torque get toNewtonMillimeter => convertTo(
+        const Torque$NewtonMillimeter(),
+      );
 
-  /// Convert to [GramForceMeter]
-  Torque get toGramForceMeter => convertTo(const GramForceMeter());
+  /// Convert to [Torque$DyneMeter]
+  Torque get toDyneMeter => convertTo(
+        const Torque$DyneMeter(),
+      );
 
-  /// Convert to [GramForceMillimeter]
-  Torque get toGramForceMillimeter => convertTo(const GramForceMillimeter());
+  /// Convert to [Torque$DyneCentimeter]
+  Torque get toDyneCentimeter => convertTo(
+        const Torque$DyneCentimeter(),
+      );
 
-  /// Convert to [KilogramForceCentimeter]
-  Torque get toKilogramForceCentimeter =>
-      convertTo(const KilogramForceCentimeter());
+  /// Convert to [Torque$DyneMillimeter]
+  Torque get toDyneMillimeter => convertTo(
+        const Torque$DyneMillimeter(),
+      );
 
-  /// Convert to [KilogramForceMeter]
-  Torque get toKilogramForceMeter => convertTo(const KilogramForceMeter());
+  /// Convert to [Torque$KilogramForceMeter]
+  Torque get toKilogramForceMeter => convertTo(
+        const Torque$KilogramForceMeter(),
+      );
 
-  /// Convert to [KilogramForceMillimeter]
-  Torque get toKilogramForceMillimeter =>
-      convertTo(const KilogramForceMillimeter());
+  /// Convert to [Torque$KilogramForceCentimeter]
+  Torque get toKilogramForceCentimeter => convertTo(
+        const Torque$KilogramForceCentimeter(),
+      );
 
-  /// Convert to [KilonewtonMeter]
-  Torque get toKilonewtonMeter => convertTo(const KilonewtonMeter());
+  /// Convert to [Torque$KilogramForceMillimeter]
+  Torque get toKilogramForceMillimeter => convertTo(
+        const Torque$KilogramForceMillimeter(),
+      );
 
-  /// Convert to [NewtonCentimeter]
-  Torque get toNewtonCentimeter => convertTo(const NewtonCentimeter());
+  /// Convert to [Torque$GramForceMeter]
+  Torque get toGramForceMeter => convertTo(
+        const Torque$GramForceMeter(),
+      );
 
-  /// Convert to [NewtonMeter]
-  Torque get toNewtonMeter => convertTo(const NewtonMeter());
+  /// Convert to [Torque$GramForceCentimeter]
+  Torque get toGramForceCentimeter => convertTo(
+        const Torque$GramForceCentimeter(),
+      );
 
-  /// Convert to [NewtonMillimeter]
-  Torque get toNewtonMillimeter => convertTo(const NewtonMillimeter());
+  /// Convert to [Torque$GramForceMillimeter]
+  Torque get toGramForceMillimeter => convertTo(
+        const Torque$GramForceMillimeter(),
+      );
 
-  /// Convert to [OunceForceFoot]
-  Torque get toOunceForceFoot => convertTo(const OunceForceFoot());
+  /// Convert to [Torque$OunceForceFoot]
+  Torque get toOunceForceFoot => convertTo(
+        const Torque$OunceForceFoot(),
+      );
 
-  /// Convert to [OunceForceInch]
-  Torque get toOunceForceInch => convertTo(const OunceForceInch());
+  /// Convert to [Torque$OunceForceInch]
+  Torque get toOunceForceInch => convertTo(
+        const Torque$OunceForceInch(),
+      );
 
-  /// Convert to [PoundForceFoot]
-  Torque get toPoundForceFoot => convertTo(const PoundForceFoot());
+  /// Convert to [Torque$PoundForceFoot]
+  Torque get toPoundForceFoot => convertTo(
+        const Torque$PoundForceFoot(),
+      );
 
-  /// Convert to [PoundForceInch]
-  Torque get toPoundForceInch => convertTo(const PoundForceInch());
+  /// Convert to [Torque$PoundForceInch]
+  Torque get toPoundForceInch => convertTo(
+        const Torque$PoundForceInch(),
+      );
 
   @override
   String get majorName => _majorName;
@@ -109,402 +145,47 @@ abstract final class Torque extends Unit<Torque> {
 }
 
 /// Unit of [Torque]
-final class DyneCentimeter extends Torque {
-  const DyneCentimeter([super.value]);
+final class Torque$KilonewtonMeter extends Torque {
+  const Torque$KilonewtonMeter([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory DyneCentimeter.fromJson(Map<String, dynamic> json) =>
-      DyneCentimeter.from(Torque.fromJson(json));
+  factory Torque$KilonewtonMeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$KilonewtonMeter.from(
+        Torque.fromJson(json),
+      );
 
-  /// Construct [DyneCentimeter] from other [Torque]
-  factory DyneCentimeter.from(Torque unit) =>
-      DyneCentimeter(unit.toDyneCentimeter.value);
+  /// Construct [Torque$KilonewtonMeter] from other [Torque]
+  factory Torque$KilonewtonMeter.from(
+    Torque unit,
+  ) =>
+      Torque$KilonewtonMeter(
+        unit.toKilonewtonMeter.value,
+      );
 
-  static const _minorName = 'dyneCentimeter';
+  static const _minorName = r'torque$KilonewtonMeter';
 
-  static const _ratio = 10000000000.0;
+  static const _ratio = 1000.0;
 
-  /// 1 [KilonewtonMeter] = 10000000000.0 [DyneCentimeter]
+  /// 1 [Torque$KilonewtonMeter]  =  1000.0 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  DyneCentimeter get _clone => DyneCentimeter(value);
+  Torque$KilonewtonMeter get _clone => Torque$KilonewtonMeter(value);
 
-  /// Creating [DyneCentimeter] with new value
+  /// Creating [Torque$KilonewtonMeter] with new value
   @override
-  DyneCentimeter withValue(num val) => DyneCentimeter(val);
-
-  /// Symbol for [DyneCentimeter]
-  @override
-  String get symbol => 'dyn cm';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class DyneMeter extends Torque {
-  const DyneMeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory DyneMeter.fromJson(Map<String, dynamic> json) =>
-      DyneMeter.from(Torque.fromJson(json));
-
-  /// Construct [DyneMeter] from other [Torque]
-  factory DyneMeter.from(Torque unit) => DyneMeter(unit.toDyneMeter.value);
-
-  static const _minorName = 'dyneMeter';
-
-  static const _ratio = 100000000;
-
-  /// 1 [KilonewtonMeter] = 100000000 [DyneMeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  DyneMeter get _clone => DyneMeter(value);
-
-  /// Creating [DyneMeter] with new value
-  @override
-  DyneMeter withValue(num val) => DyneMeter(val);
-
-  /// Symbol for [DyneMeter]
-  @override
-  String get symbol => 'dyn m';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class DyneMillimeter extends Torque {
-  const DyneMillimeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory DyneMillimeter.fromJson(Map<String, dynamic> json) =>
-      DyneMillimeter.from(Torque.fromJson(json));
-
-  /// Construct [DyneMillimeter] from other [Torque]
-  factory DyneMillimeter.from(Torque unit) =>
-      DyneMillimeter(unit.toDyneMillimeter.value);
-
-  static const _minorName = 'dyneMillimeter';
-
-  static const _ratio = 100000000000.0;
-
-  /// 1 [KilonewtonMeter] = 100000000000.0 [DyneMillimeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  DyneMillimeter get _clone => DyneMillimeter(value);
-
-  /// Creating [DyneMillimeter] with new value
-  @override
-  DyneMillimeter withValue(num val) => DyneMillimeter(val);
-
-  /// Symbol for [DyneMillimeter]
-  @override
-  String get symbol => 'dyn mm';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class GramForceCentimeter extends Torque {
-  const GramForceCentimeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory GramForceCentimeter.fromJson(Map<String, dynamic> json) =>
-      GramForceCentimeter.from(Torque.fromJson(json));
-
-  /// Construct [GramForceCentimeter] from other [Torque]
-  factory GramForceCentimeter.from(Torque unit) =>
-      GramForceCentimeter(unit.toGramForceCentimeter.value);
-
-  static const _minorName = 'gramForceCentimeter';
-
-  static const _ratio = 10197162.13;
-
-  /// 1 [KilonewtonMeter] ≈ 10197162.13 [GramForceCentimeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  GramForceCentimeter get _clone => GramForceCentimeter(value);
-
-  /// Creating [GramForceCentimeter] with new value
-  @override
-  GramForceCentimeter withValue(num val) => GramForceCentimeter(val);
-
-  /// Symbol for [GramForceCentimeter]
-  @override
-  String get symbol => 'gf cm';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class GramForceMeter extends Torque {
-  const GramForceMeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory GramForceMeter.fromJson(Map<String, dynamic> json) =>
-      GramForceMeter.from(Torque.fromJson(json));
-
-  /// Construct [GramForceMeter] from other [Torque]
-  factory GramForceMeter.from(Torque unit) =>
-      GramForceMeter(unit.toGramForceMeter.value);
-
-  static const _minorName = 'gramForceMeter';
-
-  static const _ratio = 101971.6213;
-
-  /// 1 [KilonewtonMeter] ≈ 101971.6213 [GramForceMeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  GramForceMeter get _clone => GramForceMeter(value);
-
-  /// Creating [GramForceMeter] with new value
-  @override
-  GramForceMeter withValue(num val) => GramForceMeter(val);
-
-  /// Symbol for [GramForceMeter]
-  @override
-  String get symbol => 'gf m';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class GramForceMillimeter extends Torque {
-  const GramForceMillimeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory GramForceMillimeter.fromJson(Map<String, dynamic> json) =>
-      GramForceMillimeter.from(Torque.fromJson(json));
-
-  /// Construct [GramForceMillimeter] from other [Torque]
-  factory GramForceMillimeter.from(Torque unit) =>
-      GramForceMillimeter(unit.toGramForceMillimeter.value);
-
-  static const _minorName = 'gramForceMillimeter';
-
-  static const _ratio = 101971621.3;
-
-  /// 1 [KilonewtonMeter] ≈ 101971621.3 [GramForceMillimeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  GramForceMillimeter get _clone => GramForceMillimeter(value);
-
-  /// Creating [GramForceMillimeter] with new value
-  @override
-  GramForceMillimeter withValue(num val) => GramForceMillimeter(val);
-
-  /// Symbol for [GramForceMillimeter]
-  @override
-  String get symbol => 'gf mm';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class KilogramForceCentimeter extends Torque {
-  const KilogramForceCentimeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory KilogramForceCentimeter.fromJson(Map<String, dynamic> json) =>
-      KilogramForceCentimeter.from(Torque.fromJson(json));
-
-  /// Construct [KilogramForceCentimeter] from other [Torque]
-  factory KilogramForceCentimeter.from(Torque unit) =>
-      KilogramForceCentimeter(unit.toKilogramForceCentimeter.value);
-
-  static const _minorName = 'kilogramForceCentimeter';
-
-  static const _ratio = 10197.16213;
-
-  /// 1 [KilonewtonMeter] ≈ 10197.16213 [KilogramForceCentimeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  KilogramForceCentimeter get _clone => KilogramForceCentimeter(value);
-
-  /// Creating [KilogramForceCentimeter] with new value
-  @override
-  KilogramForceCentimeter withValue(num val) => KilogramForceCentimeter(val);
-
-  /// Symbol for [KilogramForceCentimeter]
-  @override
-  String get symbol => 'kgf cm';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class KilogramForceMeter extends Torque {
-  const KilogramForceMeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory KilogramForceMeter.fromJson(Map<String, dynamic> json) =>
-      KilogramForceMeter.from(Torque.fromJson(json));
-
-  /// Construct [KilogramForceMeter] from other [Torque]
-  factory KilogramForceMeter.from(Torque unit) =>
-      KilogramForceMeter(unit.toKilogramForceMeter.value);
-
-  static const _minorName = 'kilogramForceMeter';
-
-  static const _ratio = 101.9716213;
-
-  /// 1 [KilonewtonMeter] ≈ 101.9716213 [KilogramForceMeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  KilogramForceMeter get _clone => KilogramForceMeter(value);
-
-  /// Creating [KilogramForceMeter] with new value
-  @override
-  KilogramForceMeter withValue(num val) => KilogramForceMeter(val);
-
-  /// Symbol for [KilogramForceMeter]
-  @override
-  String get symbol => 'kgf m';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class KilogramForceMillimeter extends Torque {
-  const KilogramForceMillimeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory KilogramForceMillimeter.fromJson(Map<String, dynamic> json) =>
-      KilogramForceMillimeter.from(Torque.fromJson(json));
-
-  /// Construct [KilogramForceMillimeter] from other [Torque]
-  factory KilogramForceMillimeter.from(Torque unit) =>
-      KilogramForceMillimeter(unit.toKilogramForceMillimeter.value);
-
-  static const _minorName = 'kilogramForceMillimeter';
-
-  static const _ratio = 101971.6213;
-
-  /// 1 [KilonewtonMeter] ≈ 101971.6213 [KilogramForceMillimeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  KilogramForceMillimeter get _clone => KilogramForceMillimeter(value);
-
-  /// Creating [KilogramForceMillimeter] with new value
-  @override
-  KilogramForceMillimeter withValue(num val) => KilogramForceMillimeter(val);
-
-  /// Symbol for [KilogramForceMillimeter]
-  @override
-  String get symbol => 'kgf mm';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class KilonewtonMeter extends Torque {
-  const KilonewtonMeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory KilonewtonMeter.fromJson(Map<String, dynamic> json) =>
-      KilonewtonMeter.from(Torque.fromJson(json));
-
-  /// Construct [KilonewtonMeter] from other [Torque]
-  factory KilonewtonMeter.from(Torque unit) =>
-      KilonewtonMeter(unit.toKilonewtonMeter.value);
-
-  static const _minorName = 'kilonewtonMeter';
-
-  static const _ratio = 1;
-
-  /// Default (anchor) unit of [Torque]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  KilonewtonMeter get _clone => KilonewtonMeter(value);
-
-  /// Creating [KilonewtonMeter] with new value
-  @override
-  KilonewtonMeter withValue(num val) => KilonewtonMeter(val);
-
-  /// Symbol for [KilonewtonMeter]
+  Torque$KilonewtonMeter withValue(
+    num val,
+  ) =>
+      Torque$KilonewtonMeter(val);
+
+  /// Symbol for [Torque$KilonewtonMeter]
   @override
   String get symbol => 'kN m';
 
@@ -518,75 +199,47 @@ final class KilonewtonMeter extends Torque {
 }
 
 /// Unit of [Torque]
-final class NewtonCentimeter extends Torque {
-  const NewtonCentimeter([super.value]);
+final class Torque$NewtonMeter extends Torque {
+  const Torque$NewtonMeter([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory NewtonCentimeter.fromJson(Map<String, dynamic> json) =>
-      NewtonCentimeter.from(Torque.fromJson(json));
+  factory Torque$NewtonMeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$NewtonMeter.from(
+        Torque.fromJson(json),
+      );
 
-  /// Construct [NewtonCentimeter] from other [Torque]
-  factory NewtonCentimeter.from(Torque unit) =>
-      NewtonCentimeter(unit.toNewtonCentimeter.value);
+  /// Construct [Torque$NewtonMeter] from other [Torque]
+  factory Torque$NewtonMeter.from(
+    Torque unit,
+  ) =>
+      Torque$NewtonMeter(
+        unit.toNewtonMeter.value,
+      );
 
-  static const _minorName = 'newtonCentimeter';
+  static const _minorName = r'torque$NewtonMeter';
 
-  static const _ratio = 100000;
+  static const _ratio = 1.0;
 
-  /// 1 [KilonewtonMeter] = 100000 [NewtonCentimeter]
+  /// Default (anchor) unit of [Torque]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  NewtonCentimeter get _clone => NewtonCentimeter(value);
+  Torque$NewtonMeter get _clone => Torque$NewtonMeter(value);
 
-  /// Creating [NewtonCentimeter] with new value
+  /// Creating [Torque$NewtonMeter] with new value
   @override
-  NewtonCentimeter withValue(num val) => NewtonCentimeter(val);
+  Torque$NewtonMeter withValue(
+    num val,
+  ) =>
+      Torque$NewtonMeter(val);
 
-  /// Symbol for [NewtonCentimeter]
-  @override
-  String get symbol => 'N cm';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Torque]
-final class NewtonMeter extends Torque {
-  const NewtonMeter([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory NewtonMeter.fromJson(Map<String, dynamic> json) =>
-      NewtonMeter.from(Torque.fromJson(json));
-
-  /// Construct [NewtonMeter] from other [Torque]
-  factory NewtonMeter.from(Torque unit) =>
-      NewtonMeter(unit.toNewtonMeter.value);
-
-  static const _minorName = 'newtonMeter';
-
-  static const _ratio = 1000;
-
-  /// 1 [KilonewtonMeter] = 1000 [NewtonMeter]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  NewtonMeter get _clone => NewtonMeter(value);
-
-  /// Creating [NewtonMeter] with new value
-  @override
-  NewtonMeter withValue(num val) => NewtonMeter(val);
-
-  /// Symbol for [NewtonMeter]
+  /// Symbol for [Torque$NewtonMeter]
   @override
   String get symbol => 'N m';
 
@@ -600,34 +253,101 @@ final class NewtonMeter extends Torque {
 }
 
 /// Unit of [Torque]
-final class NewtonMillimeter extends Torque {
-  const NewtonMillimeter([super.value]);
+final class Torque$NewtonCentimeter extends Torque {
+  const Torque$NewtonCentimeter([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory NewtonMillimeter.fromJson(Map<String, dynamic> json) =>
-      NewtonMillimeter.from(Torque.fromJson(json));
+  factory Torque$NewtonCentimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$NewtonCentimeter.from(
+        Torque.fromJson(json),
+      );
 
-  /// Construct [NewtonMillimeter] from other [Torque]
-  factory NewtonMillimeter.from(Torque unit) =>
-      NewtonMillimeter(unit.toNewtonMillimeter.value);
+  /// Construct [Torque$NewtonCentimeter] from other [Torque]
+  factory Torque$NewtonCentimeter.from(
+    Torque unit,
+  ) =>
+      Torque$NewtonCentimeter(
+        unit.toNewtonCentimeter.value,
+      );
 
-  static const _minorName = 'newtonMillimeter';
+  static const _minorName = r'torque$NewtonCentimeter';
 
-  static const _ratio = 1000000;
+  static const _ratio = 0.01;
 
-  /// 1 [KilonewtonMeter] = 1000000 [NewtonMillimeter]
+  /// 1 [Torque$NewtonCentimeter]  ≈  0.01 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  NewtonMillimeter get _clone => NewtonMillimeter(value);
+  Torque$NewtonCentimeter get _clone => Torque$NewtonCentimeter(value);
 
-  /// Creating [NewtonMillimeter] with new value
+  /// Creating [Torque$NewtonCentimeter] with new value
   @override
-  NewtonMillimeter withValue(num val) => NewtonMillimeter(val);
+  Torque$NewtonCentimeter withValue(
+    num val,
+  ) =>
+      Torque$NewtonCentimeter(val);
 
-  /// Symbol for [NewtonMillimeter]
+  /// Symbol for [Torque$NewtonCentimeter]
+  @override
+  String get symbol => 'N cm';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$NewtonMillimeter extends Torque {
+  const Torque$NewtonMillimeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$NewtonMillimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$NewtonMillimeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$NewtonMillimeter] from other [Torque]
+  factory Torque$NewtonMillimeter.from(
+    Torque unit,
+  ) =>
+      Torque$NewtonMillimeter(
+        unit.toNewtonMillimeter.value,
+      );
+
+  static const _minorName = r'torque$NewtonMillimeter';
+
+  static const _ratio = 0.001;
+
+  /// 1 [Torque$NewtonMillimeter]  ≈  0.001 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$NewtonMillimeter get _clone => Torque$NewtonMillimeter(value);
+
+  /// Creating [Torque$NewtonMillimeter] with new value
+  @override
+  Torque$NewtonMillimeter withValue(
+    num val,
+  ) =>
+      Torque$NewtonMillimeter(val);
+
+  /// Symbol for [Torque$NewtonMillimeter]
   @override
   String get symbol => 'N mm';
 
@@ -641,34 +361,535 @@ final class NewtonMillimeter extends Torque {
 }
 
 /// Unit of [Torque]
-final class OunceForceFoot extends Torque {
-  const OunceForceFoot([super.value]);
+final class Torque$DyneMeter extends Torque {
+  const Torque$DyneMeter([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory OunceForceFoot.fromJson(Map<String, dynamic> json) =>
-      OunceForceFoot.from(Torque.fromJson(json));
+  factory Torque$DyneMeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$DyneMeter.from(
+        Torque.fromJson(json),
+      );
 
-  /// Construct [OunceForceFoot] from other [Torque]
-  factory OunceForceFoot.from(Torque unit) =>
-      OunceForceFoot(unit.toOunceForceFoot.value);
+  /// Construct [Torque$DyneMeter] from other [Torque]
+  factory Torque$DyneMeter.from(
+    Torque unit,
+  ) =>
+      Torque$DyneMeter(
+        unit.toDyneMeter.value,
+      );
 
-  static const _minorName = 'ounceForceFoot';
+  static const _minorName = r'torque$DyneMeter';
 
-  static const _ratio = 11800.99408;
+  static const _ratio = 0.00001;
 
-  /// 1 [KilonewtonMeter] ≈ 11800.99408 [OunceForceFoot]
+  /// 1 [Torque$DyneMeter]  ≈  0.00001 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  OunceForceFoot get _clone => OunceForceFoot(value);
+  Torque$DyneMeter get _clone => Torque$DyneMeter(value);
 
-  /// Creating [OunceForceFoot] with new value
+  /// Creating [Torque$DyneMeter] with new value
   @override
-  OunceForceFoot withValue(num val) => OunceForceFoot(val);
+  Torque$DyneMeter withValue(
+    num val,
+  ) =>
+      Torque$DyneMeter(val);
 
-  /// Symbol for [OunceForceFoot]
+  /// Symbol for [Torque$DyneMeter]
+  @override
+  String get symbol => 'dyn m';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$DyneCentimeter extends Torque {
+  const Torque$DyneCentimeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$DyneCentimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$DyneCentimeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$DyneCentimeter] from other [Torque]
+  factory Torque$DyneCentimeter.from(
+    Torque unit,
+  ) =>
+      Torque$DyneCentimeter(
+        unit.toDyneCentimeter.value,
+      );
+
+  static const _minorName = r'torque$DyneCentimeter';
+
+  static const _ratio = 1e-7;
+
+  /// 1 [Torque$DyneCentimeter]  ≈  1e-7 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$DyneCentimeter get _clone => Torque$DyneCentimeter(value);
+
+  /// Creating [Torque$DyneCentimeter] with new value
+  @override
+  Torque$DyneCentimeter withValue(
+    num val,
+  ) =>
+      Torque$DyneCentimeter(val);
+
+  /// Symbol for [Torque$DyneCentimeter]
+  @override
+  String get symbol => 'dyn cm';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$DyneMillimeter extends Torque {
+  const Torque$DyneMillimeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$DyneMillimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$DyneMillimeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$DyneMillimeter] from other [Torque]
+  factory Torque$DyneMillimeter.from(
+    Torque unit,
+  ) =>
+      Torque$DyneMillimeter(
+        unit.toDyneMillimeter.value,
+      );
+
+  static const _minorName = r'torque$DyneMillimeter';
+
+  static const _ratio = 1e-8;
+
+  /// 1 [Torque$DyneMillimeter]  ≈  1e-8 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$DyneMillimeter get _clone => Torque$DyneMillimeter(value);
+
+  /// Creating [Torque$DyneMillimeter] with new value
+  @override
+  Torque$DyneMillimeter withValue(
+    num val,
+  ) =>
+      Torque$DyneMillimeter(val);
+
+  /// Symbol for [Torque$DyneMillimeter]
+  @override
+  String get symbol => 'dyn mm';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$KilogramForceMeter extends Torque {
+  const Torque$KilogramForceMeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$KilogramForceMeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$KilogramForceMeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$KilogramForceMeter] from other [Torque]
+  factory Torque$KilogramForceMeter.from(
+    Torque unit,
+  ) =>
+      Torque$KilogramForceMeter(
+        unit.toKilogramForceMeter.value,
+      );
+
+  static const _minorName = r'torque$KilogramForceMeter';
+
+  static const _ratio = 9.80665;
+
+  /// 1 [Torque$KilogramForceMeter]  ≈  9.80665 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$KilogramForceMeter get _clone => Torque$KilogramForceMeter(value);
+
+  /// Creating [Torque$KilogramForceMeter] with new value
+  @override
+  Torque$KilogramForceMeter withValue(
+    num val,
+  ) =>
+      Torque$KilogramForceMeter(val);
+
+  /// Symbol for [Torque$KilogramForceMeter]
+  @override
+  String get symbol => 'kgf m';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$KilogramForceCentimeter extends Torque {
+  const Torque$KilogramForceCentimeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$KilogramForceCentimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$KilogramForceCentimeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$KilogramForceCentimeter] from other [Torque]
+  factory Torque$KilogramForceCentimeter.from(
+    Torque unit,
+  ) =>
+      Torque$KilogramForceCentimeter(
+        unit.toKilogramForceCentimeter.value,
+      );
+
+  static const _minorName = r'torque$KilogramForceCentimeter';
+
+  static const _ratio = 0.0980665;
+
+  /// 1 [Torque$KilogramForceCentimeter]  ≈  0.0980665 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$KilogramForceCentimeter get _clone =>
+      Torque$KilogramForceCentimeter(value);
+
+  /// Creating [Torque$KilogramForceCentimeter] with new value
+  @override
+  Torque$KilogramForceCentimeter withValue(
+    num val,
+  ) =>
+      Torque$KilogramForceCentimeter(val);
+
+  /// Symbol for [Torque$KilogramForceCentimeter]
+  @override
+  String get symbol => 'kgf cm';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$KilogramForceMillimeter extends Torque {
+  const Torque$KilogramForceMillimeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$KilogramForceMillimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$KilogramForceMillimeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$KilogramForceMillimeter] from other [Torque]
+  factory Torque$KilogramForceMillimeter.from(
+    Torque unit,
+  ) =>
+      Torque$KilogramForceMillimeter(
+        unit.toKilogramForceMillimeter.value,
+      );
+
+  static const _minorName = r'torque$KilogramForceMillimeter';
+
+  static const _ratio = 0.00980665;
+
+  /// 1 [Torque$KilogramForceMillimeter]  ≈  0.00980665 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$KilogramForceMillimeter get _clone =>
+      Torque$KilogramForceMillimeter(value);
+
+  /// Creating [Torque$KilogramForceMillimeter] with new value
+  @override
+  Torque$KilogramForceMillimeter withValue(
+    num val,
+  ) =>
+      Torque$KilogramForceMillimeter(val);
+
+  /// Symbol for [Torque$KilogramForceMillimeter]
+  @override
+  String get symbol => 'kgf mm';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$GramForceMeter extends Torque {
+  const Torque$GramForceMeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$GramForceMeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$GramForceMeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$GramForceMeter] from other [Torque]
+  factory Torque$GramForceMeter.from(
+    Torque unit,
+  ) =>
+      Torque$GramForceMeter(
+        unit.toGramForceMeter.value,
+      );
+
+  static const _minorName = r'torque$GramForceMeter';
+
+  static const _ratio = 0.00980665;
+
+  /// 1 [Torque$GramForceMeter]  ≈  0.00980665 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$GramForceMeter get _clone => Torque$GramForceMeter(value);
+
+  /// Creating [Torque$GramForceMeter] with new value
+  @override
+  Torque$GramForceMeter withValue(
+    num val,
+  ) =>
+      Torque$GramForceMeter(val);
+
+  /// Symbol for [Torque$GramForceMeter]
+  @override
+  String get symbol => 'gf m';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$GramForceCentimeter extends Torque {
+  const Torque$GramForceCentimeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$GramForceCentimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$GramForceCentimeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$GramForceCentimeter] from other [Torque]
+  factory Torque$GramForceCentimeter.from(
+    Torque unit,
+  ) =>
+      Torque$GramForceCentimeter(
+        unit.toGramForceCentimeter.value,
+      );
+
+  static const _minorName = r'torque$GramForceCentimeter';
+
+  static const _ratio = 0.0000980665;
+
+  /// 1 [Torque$GramForceCentimeter]  ≈  0.0000980665 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$GramForceCentimeter get _clone => Torque$GramForceCentimeter(value);
+
+  /// Creating [Torque$GramForceCentimeter] with new value
+  @override
+  Torque$GramForceCentimeter withValue(
+    num val,
+  ) =>
+      Torque$GramForceCentimeter(val);
+
+  /// Symbol for [Torque$GramForceCentimeter]
+  @override
+  String get symbol => 'gf cm';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$GramForceMillimeter extends Torque {
+  const Torque$GramForceMillimeter([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$GramForceMillimeter.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$GramForceMillimeter.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$GramForceMillimeter] from other [Torque]
+  factory Torque$GramForceMillimeter.from(
+    Torque unit,
+  ) =>
+      Torque$GramForceMillimeter(
+        unit.toGramForceMillimeter.value,
+      );
+
+  static const _minorName = r'torque$GramForceMillimeter';
+
+  static const _ratio = 0.00000980665;
+
+  /// 1 [Torque$GramForceMillimeter]  ≈  0.00000980665 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$GramForceMillimeter get _clone => Torque$GramForceMillimeter(value);
+
+  /// Creating [Torque$GramForceMillimeter] with new value
+  @override
+  Torque$GramForceMillimeter withValue(
+    num val,
+  ) =>
+      Torque$GramForceMillimeter(val);
+
+  /// Symbol for [Torque$GramForceMillimeter]
+  @override
+  String get symbol => 'gf mm';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Torque]
+final class Torque$OunceForceFoot extends Torque {
+  const Torque$OunceForceFoot([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Torque$OunceForceFoot.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$OunceForceFoot.from(
+        Torque.fromJson(json),
+      );
+
+  /// Construct [Torque$OunceForceFoot] from other [Torque]
+  factory Torque$OunceForceFoot.from(
+    Torque unit,
+  ) =>
+      Torque$OunceForceFoot(
+        unit.toOunceForceFoot.value,
+      );
+
+  static const _minorName = r'torque$OunceForceFoot';
+
+  static const _ratio = 0.084738624;
+
+  /// 1 [Torque$OunceForceFoot]  ≈  0.084738624 [Torque$NewtonMeter]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Torque$OunceForceFoot get _clone => Torque$OunceForceFoot(value);
+
+  /// Creating [Torque$OunceForceFoot] with new value
+  @override
+  Torque$OunceForceFoot withValue(
+    num val,
+  ) =>
+      Torque$OunceForceFoot(val);
+
+  /// Symbol for [Torque$OunceForceFoot]
   @override
   String get symbol => 'ozf ft';
 
@@ -682,34 +903,47 @@ final class OunceForceFoot extends Torque {
 }
 
 /// Unit of [Torque]
-final class OunceForceInch extends Torque {
-  const OunceForceInch([super.value]);
+final class Torque$OunceForceInch extends Torque {
+  const Torque$OunceForceInch([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory OunceForceInch.fromJson(Map<String, dynamic> json) =>
-      OunceForceInch.from(Torque.fromJson(json));
+  factory Torque$OunceForceInch.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$OunceForceInch.from(
+        Torque.fromJson(json),
+      );
 
-  /// Construct [OunceForceInch] from other [Torque]
-  factory OunceForceInch.from(Torque unit) =>
-      OunceForceInch(unit.toOunceForceInch.value);
+  /// Construct [Torque$OunceForceInch] from other [Torque]
+  factory Torque$OunceForceInch.from(
+    Torque unit,
+  ) =>
+      Torque$OunceForceInch(
+        unit.toOunceForceInch.value,
+      );
 
-  static const _minorName = 'ounceForceInch';
+  static const _minorName = r'torque$OunceForceInch';
 
-  static const _ratio = 141611.9289;
+  static const _ratio = 0.007061552;
 
-  /// 1 [KilonewtonMeter] ≈ 141611.9289 [OunceForceInch]
+  /// 1 [Torque$OunceForceInch]  ≈  0.007061552 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  OunceForceInch get _clone => OunceForceInch(value);
+  Torque$OunceForceInch get _clone => Torque$OunceForceInch(value);
 
-  /// Creating [OunceForceInch] with new value
+  /// Creating [Torque$OunceForceInch] with new value
   @override
-  OunceForceInch withValue(num val) => OunceForceInch(val);
+  Torque$OunceForceInch withValue(
+    num val,
+  ) =>
+      Torque$OunceForceInch(val);
 
-  /// Symbol for [OunceForceInch]
+  /// Symbol for [Torque$OunceForceInch]
   @override
   String get symbol => 'ozf in';
 
@@ -723,34 +957,47 @@ final class OunceForceInch extends Torque {
 }
 
 /// Unit of [Torque]
-final class PoundForceFoot extends Torque {
-  const PoundForceFoot([super.value]);
+final class Torque$PoundForceFoot extends Torque {
+  const Torque$PoundForceFoot([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory PoundForceFoot.fromJson(Map<String, dynamic> json) =>
-      PoundForceFoot.from(Torque.fromJson(json));
+  factory Torque$PoundForceFoot.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$PoundForceFoot.from(
+        Torque.fromJson(json),
+      );
 
-  /// Construct [PoundForceFoot] from other [Torque]
-  factory PoundForceFoot.from(Torque unit) =>
-      PoundForceFoot(unit.toPoundForceFoot.value);
+  /// Construct [Torque$PoundForceFoot] from other [Torque]
+  factory Torque$PoundForceFoot.from(
+    Torque unit,
+  ) =>
+      Torque$PoundForceFoot(
+        unit.toPoundForceFoot.value,
+      );
 
-  static const _minorName = 'poundForceFoot';
+  static const _minorName = r'torque$PoundForceFoot';
 
-  static const _ratio = 737.5621212;
+  static const _ratio = 1.355818;
 
-  /// 1 [KilonewtonMeter] ≈ 737.5621212 [PoundForceFoot]
+  /// 1 [Torque$PoundForceFoot]  ≈  1.355818 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  PoundForceFoot get _clone => PoundForceFoot(value);
+  Torque$PoundForceFoot get _clone => Torque$PoundForceFoot(value);
 
-  /// Creating [PoundForceFoot] with new value
+  /// Creating [Torque$PoundForceFoot] with new value
   @override
-  PoundForceFoot withValue(num val) => PoundForceFoot(val);
+  Torque$PoundForceFoot withValue(
+    num val,
+  ) =>
+      Torque$PoundForceFoot(val);
 
-  /// Symbol for [PoundForceFoot]
+  /// Symbol for [Torque$PoundForceFoot]
   @override
   String get symbol => 'lbf ft';
 
@@ -764,34 +1011,47 @@ final class PoundForceFoot extends Torque {
 }
 
 /// Unit of [Torque]
-final class PoundForceInch extends Torque {
-  const PoundForceInch([super.value]);
+final class Torque$PoundForceInch extends Torque {
+  const Torque$PoundForceInch([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory PoundForceInch.fromJson(Map<String, dynamic> json) =>
-      PoundForceInch.from(Torque.fromJson(json));
+  factory Torque$PoundForceInch.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Torque$PoundForceInch.from(
+        Torque.fromJson(json),
+      );
 
-  /// Construct [PoundForceInch] from other [Torque]
-  factory PoundForceInch.from(Torque unit) =>
-      PoundForceInch(unit.toPoundForceInch.value);
+  /// Construct [Torque$PoundForceInch] from other [Torque]
+  factory Torque$PoundForceInch.from(
+    Torque unit,
+  ) =>
+      Torque$PoundForceInch(
+        unit.toPoundForceInch.value,
+      );
 
-  static const _minorName = 'poundForceInch';
+  static const _minorName = r'torque$PoundForceInch';
 
-  static const _ratio = 8850.745454;
+  static const _ratio = 0.11298483333333334;
 
-  /// 1 [KilonewtonMeter] ≈ 8850.745454 [PoundForceInch]
+  /// 1 [Torque$PoundForceInch]  ≈  0.11298483333333334 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  PoundForceInch get _clone => PoundForceInch(value);
+  Torque$PoundForceInch get _clone => Torque$PoundForceInch(value);
 
-  /// Creating [PoundForceInch] with new value
+  /// Creating [Torque$PoundForceInch] with new value
   @override
-  PoundForceInch withValue(num val) => PoundForceInch(val);
+  Torque$PoundForceInch withValue(
+    num val,
+  ) =>
+      Torque$PoundForceInch(val);
 
-  /// Symbol for [PoundForceInch]
+  /// Symbol for [Torque$PoundForceInch]
   @override
   String get symbol => 'lbf in';
 
@@ -805,23 +1065,57 @@ final class PoundForceInch extends Torque {
 }
 
 enum TorqueUnit {
-  dyneCentimeter._(DyneCentimeter()),
-  dyneMeter._(DyneMeter()),
-  dyneMillimeter._(DyneMillimeter()),
-  gramForceCentimeter._(GramForceCentimeter()),
-  gramForceMeter._(GramForceMeter()),
-  gramForceMillimeter._(GramForceMillimeter()),
-  kilogramForceCentimeter._(KilogramForceCentimeter()),
-  kilogramForceMeter._(KilogramForceMeter()),
-  kilogramForceMillimeter._(KilogramForceMillimeter()),
-  kilonewtonMeter._(KilonewtonMeter()),
-  newtonCentimeter._(NewtonCentimeter()),
-  newtonMeter._(NewtonMeter()),
-  newtonMillimeter._(NewtonMillimeter()),
-  ounceForceFoot._(OunceForceFoot()),
-  ounceForceInch._(OunceForceInch()),
-  poundForceFoot._(PoundForceFoot()),
-  poundForceInch._(PoundForceInch()),
+  kilonewtonMeter._(
+    Torque$KilonewtonMeter(),
+  ),
+  newtonMeter._(
+    Torque$NewtonMeter(),
+  ),
+  newtonCentimeter._(
+    Torque$NewtonCentimeter(),
+  ),
+  newtonMillimeter._(
+    Torque$NewtonMillimeter(),
+  ),
+  dyneMeter._(
+    Torque$DyneMeter(),
+  ),
+  dyneCentimeter._(
+    Torque$DyneCentimeter(),
+  ),
+  dyneMillimeter._(
+    Torque$DyneMillimeter(),
+  ),
+  kilogramForceMeter._(
+    Torque$KilogramForceMeter(),
+  ),
+  kilogramForceCentimeter._(
+    Torque$KilogramForceCentimeter(),
+  ),
+  kilogramForceMillimeter._(
+    Torque$KilogramForceMillimeter(),
+  ),
+  gramForceMeter._(
+    Torque$GramForceMeter(),
+  ),
+  gramForceCentimeter._(
+    Torque$GramForceCentimeter(),
+  ),
+  gramForceMillimeter._(
+    Torque$GramForceMillimeter(),
+  ),
+  ounceForceFoot._(
+    Torque$OunceForceFoot(),
+  ),
+  ounceForceInch._(
+    Torque$OunceForceInch(),
+  ),
+  poundForceFoot._(
+    Torque$PoundForceFoot(),
+  ),
+  poundForceInch._(
+    Torque$PoundForceInch(),
+  ),
   ;
 
   const TorqueUnit._(this.construct);
@@ -830,21 +1124,21 @@ enum TorqueUnit {
 }
 
 const torqueUnitValues = _EnumValues({
-  DyneCentimeter._minorName: TorqueUnit.dyneCentimeter,
-  DyneMeter._minorName: TorqueUnit.dyneMeter,
-  DyneMillimeter._minorName: TorqueUnit.dyneMillimeter,
-  GramForceCentimeter._minorName: TorqueUnit.gramForceCentimeter,
-  GramForceMeter._minorName: TorqueUnit.gramForceMeter,
-  GramForceMillimeter._minorName: TorqueUnit.gramForceMillimeter,
-  KilogramForceCentimeter._minorName: TorqueUnit.kilogramForceCentimeter,
-  KilogramForceMeter._minorName: TorqueUnit.kilogramForceMeter,
-  KilogramForceMillimeter._minorName: TorqueUnit.kilogramForceMillimeter,
-  KilonewtonMeter._minorName: TorqueUnit.kilonewtonMeter,
-  NewtonCentimeter._minorName: TorqueUnit.newtonCentimeter,
-  NewtonMeter._minorName: TorqueUnit.newtonMeter,
-  NewtonMillimeter._minorName: TorqueUnit.newtonMillimeter,
-  OunceForceFoot._minorName: TorqueUnit.ounceForceFoot,
-  OunceForceInch._minorName: TorqueUnit.ounceForceInch,
-  PoundForceFoot._minorName: TorqueUnit.poundForceFoot,
-  PoundForceInch._minorName: TorqueUnit.poundForceInch,
+  Torque$KilonewtonMeter._minorName: TorqueUnit.kilonewtonMeter,
+  Torque$NewtonMeter._minorName: TorqueUnit.newtonMeter,
+  Torque$NewtonCentimeter._minorName: TorqueUnit.newtonCentimeter,
+  Torque$NewtonMillimeter._minorName: TorqueUnit.newtonMillimeter,
+  Torque$DyneMeter._minorName: TorqueUnit.dyneMeter,
+  Torque$DyneCentimeter._minorName: TorqueUnit.dyneCentimeter,
+  Torque$DyneMillimeter._minorName: TorqueUnit.dyneMillimeter,
+  Torque$KilogramForceMeter._minorName: TorqueUnit.kilogramForceMeter,
+  Torque$KilogramForceCentimeter._minorName: TorqueUnit.kilogramForceCentimeter,
+  Torque$KilogramForceMillimeter._minorName: TorqueUnit.kilogramForceMillimeter,
+  Torque$GramForceMeter._minorName: TorqueUnit.gramForceMeter,
+  Torque$GramForceCentimeter._minorName: TorqueUnit.gramForceCentimeter,
+  Torque$GramForceMillimeter._minorName: TorqueUnit.gramForceMillimeter,
+  Torque$OunceForceFoot._minorName: TorqueUnit.ounceForceFoot,
+  Torque$OunceForceInch._minorName: TorqueUnit.ounceForceInch,
+  Torque$PoundForceFoot._minorName: TorqueUnit.poundForceFoot,
+  Torque$PoundForceInch._minorName: TorqueUnit.poundForceInch,
 });

@@ -2,12 +2,16 @@ part of '../../super_measurement.dart';
 
 /// Available units of measurement for [Angle]
 ///
-/// [Degree], [Grad], [Mil], [MinuteAngle], [Octant], [PercentOfFullCircle],
-/// [Quadrant], [Radian], [Revolution], [SecondAngle], [Sextant], [SignAngle]
+/// [Angle$Degree], [Angle$Radian], [Angle$Grad], [Angle$Minute],
+/// [Angle$Second], [Angle$Sign], [Angle$Mil], [Angle$Revolution],
+/// [Angle$Circle], [Angle$Turn], [Angle$Quadrant], [Angle$RightAngle],
+/// [Angle$Sextant], [Angle$Octant], [Angle$PercentOfFullCircle]
 abstract final class Angle extends Unit<Angle> {
-  const Angle([super.value]);
+  const Angle([
+    super.value,
+  ]);
 
-  /// If there is no matched key, returning [Revolution] with 0 value
+  /// If there is no matched key, returning [Angle$Second] with 0 value
   factory Angle.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
@@ -18,64 +22,106 @@ abstract final class Angle extends Unit<Angle> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Revolution();
+          : const Angle$Second();
 
   @override
   AnchorRatio<Angle> get _anchorRatio => (
         anchor: _anchor.runtimeType,
         ratio: const _ConversionRatio<Angle>({
-          Degree: Degree._ratio,
-          Grad: Grad._ratio,
-          Mil: Mil._ratio,
-          MinuteAngle: MinuteAngle._ratio,
-          Octant: Octant._ratio,
-          PercentOfFullCircle: PercentOfFullCircle._ratio,
-          Quadrant: Quadrant._ratio,
-          Radian: Radian._ratio,
-          SecondAngle: SecondAngle._ratio,
-          Sextant: Sextant._ratio,
-          SignAngle: SignAngle._ratio,
+          Angle$Degree: Angle$Degree._ratio,
+          Angle$Radian: Angle$Radian._ratio,
+          Angle$Grad: Angle$Grad._ratio,
+          Angle$Minute: Angle$Minute._ratio,
+          Angle$Sign: Angle$Sign._ratio,
+          Angle$Mil: Angle$Mil._ratio,
+          Angle$Revolution: Angle$Revolution._ratio,
+          Angle$Circle: Angle$Circle._ratio,
+          Angle$Turn: Angle$Turn._ratio,
+          Angle$Quadrant: Angle$Quadrant._ratio,
+          Angle$RightAngle: Angle$RightAngle._ratio,
+          Angle$Sextant: Angle$Sextant._ratio,
+          Angle$Octant: Angle$Octant._ratio,
+          Angle$PercentOfFullCircle: Angle$PercentOfFullCircle._ratio,
         })
       );
 
   @override
-  Angle get _anchor => const Revolution();
+  Angle get _anchor => const Angle$Second();
 
-  /// Convert to [Degree]
-  Angle get toDegree => convertTo(const Degree());
+  /// Convert to [Angle$Degree]
+  Angle get toDegree => convertTo(
+        const Angle$Degree(),
+      );
 
-  /// Convert to [Grad]
-  Angle get toGrad => convertTo(const Grad());
+  /// Convert to [Angle$Radian]
+  Angle get toRadian => convertTo(
+        const Angle$Radian(),
+      );
 
-  /// Convert to [Mil]
-  Angle get toMil => convertTo(const Mil());
+  /// Convert to [Angle$Grad]
+  Angle get toGrad => convertTo(
+        const Angle$Grad(),
+      );
 
-  /// Convert to [MinuteAngle]
-  Angle get toMinuteAngle => convertTo(const MinuteAngle());
+  /// Convert to [Angle$Minute]
+  Angle get toMinute => convertTo(
+        const Angle$Minute(),
+      );
 
-  /// Convert to [Octant]
-  Angle get toOctant => convertTo(const Octant());
+  /// Convert to [Angle$Second]
+  Angle get toSecond => convertTo(
+        const Angle$Second(),
+      );
 
-  /// Convert to [PercentOfFullCircle]
-  Angle get toPercentOfFullCircle => convertTo(const PercentOfFullCircle());
+  /// Convert to [Angle$Sign]
+  Angle get toSign => convertTo(
+        const Angle$Sign(),
+      );
 
-  /// Convert to [Quadrant]
-  Angle get toQuadrant => convertTo(const Quadrant());
+  /// Convert to [Angle$Mil]
+  Angle get toMil => convertTo(
+        const Angle$Mil(),
+      );
 
-  /// Convert to [Radian]
-  Angle get toRadian => convertTo(const Radian());
+  /// Convert to [Angle$Revolution]
+  Angle get toRevolution => convertTo(
+        const Angle$Revolution(),
+      );
 
-  /// Convert to [Revolution]
-  Angle get toRevolution => convertTo(const Revolution());
+  /// Convert to [Angle$Circle]
+  Angle get toCircle => convertTo(
+        const Angle$Circle(),
+      );
 
-  /// Convert to [SecondAngle]
-  Angle get toSecondAngle => convertTo(const SecondAngle());
+  /// Convert to [Angle$Turn]
+  Angle get toTurn => convertTo(
+        const Angle$Turn(),
+      );
 
-  /// Convert to [Sextant]
-  Angle get toSextant => convertTo(const Sextant());
+  /// Convert to [Angle$Quadrant]
+  Angle get toQuadrant => convertTo(
+        const Angle$Quadrant(),
+      );
 
-  /// Convert to [SignAngle]
-  Angle get toSignAngle => convertTo(const SignAngle());
+  /// Convert to [Angle$RightAngle]
+  Angle get toRightAngle => convertTo(
+        const Angle$RightAngle(),
+      );
+
+  /// Convert to [Angle$Sextant]
+  Angle get toSextant => convertTo(
+        const Angle$Sextant(),
+      );
+
+  /// Convert to [Angle$Octant]
+  Angle get toOctant => convertTo(
+        const Angle$Octant(),
+      );
+
+  /// Convert to [Angle$PercentOfFullCircle]
+  Angle get toPercentOfFullCircle => convertTo(
+        const Angle$PercentOfFullCircle(),
+      );
 
   @override
   String get majorName => _majorName;
@@ -84,33 +130,47 @@ abstract final class Angle extends Unit<Angle> {
 }
 
 /// Unit of [Angle]
-final class Degree extends Angle {
-  const Degree([super.value]);
+final class Angle$Degree extends Angle {
+  const Angle$Degree([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Degree.fromJson(Map<String, dynamic> json) =>
-      Degree.from(Angle.fromJson(json));
+  factory Angle$Degree.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Degree.from(
+        Angle.fromJson(json),
+      );
 
-  /// Construct [Degree] from other [Angle]
-  factory Degree.from(Angle unit) => Degree(unit.toDegree.value);
+  /// Construct [Angle$Degree] from other [Angle]
+  factory Angle$Degree.from(
+    Angle unit,
+  ) =>
+      Angle$Degree(
+        unit.toDegree.value,
+      );
 
-  static const _minorName = 'degree';
+  static const _minorName = r'angle$Degree';
 
-  static const _ratio = 360;
+  static const _ratio = 3600.0;
 
-  /// 1 [Revolution] = 360 [Degree]
+  /// 1 [Angle$Degree]  =  3600.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  Degree get _clone => Degree(value);
+  Angle$Degree get _clone => Angle$Degree(value);
 
-  /// Creating [Degree] with new value
+  /// Creating [Angle$Degree] with new value
   @override
-  Degree withValue(num val) => Degree(val);
+  Angle$Degree withValue(
+    num val,
+  ) =>
+      Angle$Degree(val);
 
-  /// Symbol for [Degree]
+  /// Symbol for [Angle$Degree]
   @override
   String get symbol => '°';
 
@@ -124,274 +184,47 @@ final class Degree extends Angle {
 }
 
 /// Unit of [Angle]
-final class Grad extends Angle {
-  const Grad([super.value]);
+final class Angle$Radian extends Angle {
+  const Angle$Radian([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Grad.fromJson(Map<String, dynamic> json) =>
-      Grad.from(Angle.fromJson(json));
+  factory Angle$Radian.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Radian.from(
+        Angle.fromJson(json),
+      );
 
-  /// Construct [Grad] from other [Angle]
-  factory Grad.from(Angle unit) => Grad(unit.toGrad.value);
+  /// Construct [Angle$Radian] from other [Angle]
+  factory Angle$Radian.from(
+    Angle unit,
+  ) =>
+      Angle$Radian(
+        unit.toRadian.value,
+      );
 
-  static const _minorName = 'grad';
+  static const _minorName = r'angle$Radian';
 
-  static const _ratio = 400;
+  static const _ratio = 206264.80624709636;
 
-  /// 1 [Revolution] = 400 [Grad]
+  /// 1 [Angle$Radian]  ≈  206264.80624709636 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  Grad get _clone => Grad(value);
+  Angle$Radian get _clone => Angle$Radian(value);
 
-  /// Creating [Grad] with new value
+  /// Creating [Angle$Radian] with new value
   @override
-  Grad withValue(num val) => Grad(val);
+  Angle$Radian withValue(
+    num val,
+  ) =>
+      Angle$Radian(val);
 
-  /// Symbol for [Grad]
-  @override
-  String get symbol => 'gr';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Angle]
-final class Mil extends Angle {
-  const Mil([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory Mil.fromJson(Map<String, dynamic> json) =>
-      Mil.from(Angle.fromJson(json));
-
-  /// Construct [Mil] from other [Angle]
-  factory Mil.from(Angle unit) => Mil(unit.toMil.value);
-
-  static const _minorName = 'mil';
-
-  static const _ratio = 6400;
-
-  /// 1 [Revolution] = 6400 [Mil]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  Mil get _clone => Mil(value);
-
-  /// Creating [Mil] with new value
-  @override
-  Mil withValue(num val) => Mil(val);
-
-  /// Symbol for [Mil]
-  @override
-  String get symbol => 'mil';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Angle]
-final class MinuteAngle extends Angle {
-  const MinuteAngle([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory MinuteAngle.fromJson(Map<String, dynamic> json) =>
-      MinuteAngle.from(Angle.fromJson(json));
-
-  /// Construct [MinuteAngle] from other [Angle]
-  factory MinuteAngle.from(Angle unit) => MinuteAngle(unit.toMinuteAngle.value);
-
-  static const _minorName = 'minuteAngle';
-
-  static const _ratio = 21600;
-
-  /// 1 [Revolution] = 21600 [MinuteAngle]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  MinuteAngle get _clone => MinuteAngle(value);
-
-  /// Creating [MinuteAngle] with new value
-  @override
-  MinuteAngle withValue(num val) => MinuteAngle(val);
-
-  /// Symbol for [MinuteAngle]
-  @override
-  String get symbol => "'";
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Angle]
-final class Octant extends Angle {
-  const Octant([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory Octant.fromJson(Map<String, dynamic> json) =>
-      Octant.from(Angle.fromJson(json));
-
-  /// Construct [Octant] from other [Angle]
-  factory Octant.from(Angle unit) => Octant(unit.toOctant.value);
-
-  static const _minorName = 'octant';
-
-  static const _ratio = 8;
-
-  /// 1 [Revolution] = 8 [Octant]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  Octant get _clone => Octant(value);
-
-  /// Creating [Octant] with new value
-  @override
-  Octant withValue(num val) => Octant(val);
-
-  /// Symbol for [Octant]
-  @override
-  String get symbol => 'octant';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Angle]
-final class PercentOfFullCircle extends Angle {
-  const PercentOfFullCircle([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory PercentOfFullCircle.fromJson(Map<String, dynamic> json) =>
-      PercentOfFullCircle.from(Angle.fromJson(json));
-
-  /// Construct [PercentOfFullCircle] from other [Angle]
-  factory PercentOfFullCircle.from(Angle unit) =>
-      PercentOfFullCircle(unit.toPercentOfFullCircle.value);
-
-  static const _minorName = 'percentOfFullCircle';
-
-  static const _ratio = 100;
-
-  /// 1 [Revolution] = 100 [PercentOfFullCircle]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  PercentOfFullCircle get _clone => PercentOfFullCircle(value);
-
-  /// Creating [PercentOfFullCircle] with new value
-  @override
-  PercentOfFullCircle withValue(num val) => PercentOfFullCircle(val);
-
-  /// Symbol for [PercentOfFullCircle]
-  @override
-  String get symbol => '% of ○';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Angle]
-final class Quadrant extends Angle {
-  const Quadrant([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory Quadrant.fromJson(Map<String, dynamic> json) =>
-      Quadrant.from(Angle.fromJson(json));
-
-  /// Construct [Quadrant] from other [Angle]
-  factory Quadrant.from(Angle unit) => Quadrant(unit.toQuadrant.value);
-
-  static const _minorName = 'quadrant';
-
-  static const _ratio = 4;
-
-  /// 1 [Revolution] = 4 [Quadrant]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  Quadrant get _clone => Quadrant(value);
-
-  /// Creating [Quadrant] with new value
-  @override
-  Quadrant withValue(num val) => Quadrant(val);
-
-  /// Symbol for [Quadrant]
-  @override
-  String get symbol => 'quad';
-
-  @override
-  Map<String, dynamic> toJson() => {
-        majorName: {
-          _unit: _minorName,
-          _value: value,
-        },
-      };
-}
-
-/// Unit of [Angle]
-final class Radian extends Angle {
-  const Radian([super.value]);
-
-  /// If there is no matched key, returning with 0 value
-  factory Radian.fromJson(Map<String, dynamic> json) =>
-      Radian.from(Angle.fromJson(json));
-
-  /// Construct [Radian] from other [Angle]
-  factory Radian.from(Angle unit) => Radian(unit.toRadian.value);
-
-  static const _minorName = 'radian';
-
-  static const _ratio = 6.283185307;
-
-  /// 1 [Revolution] ≈ 6.283185307 [Radian]
-  @override
-  num get ratio => _ratio;
-
-  /// Clone this with same value
-  @override
-  Radian get _clone => Radian(value);
-
-  /// Creating [Radian] with new value
-  @override
-  Radian withValue(num val) => Radian(val);
-
-  /// Symbol for [Radian]
+  /// Symbol for [Angle$Radian]
   @override
   String get symbol => 'rad';
 
@@ -405,19 +238,138 @@ final class Radian extends Angle {
 }
 
 /// Unit of [Angle]
-final class Revolution extends Angle {
-  const Revolution([super.value]);
+final class Angle$Grad extends Angle {
+  const Angle$Grad([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Revolution.fromJson(Map<String, dynamic> json) =>
-      Revolution.from(Angle.fromJson(json));
+  factory Angle$Grad.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Grad.from(
+        Angle.fromJson(json),
+      );
 
-  /// Construct [Revolution] from other [Angle]
-  factory Revolution.from(Angle unit) => Revolution(unit.toRevolution.value);
+  /// Construct [Angle$Grad] from other [Angle]
+  factory Angle$Grad.from(
+    Angle unit,
+  ) =>
+      Angle$Grad(
+        unit.toGrad.value,
+      );
 
-  static const _minorName = 'revolution';
+  static const _minorName = r'angle$Grad';
 
-  static const _ratio = 1;
+  static const _ratio = 3240.0;
+
+  /// 1 [Angle$Grad]  =  3240.0 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$Grad get _clone => Angle$Grad(value);
+
+  /// Creating [Angle$Grad] with new value
+  @override
+  Angle$Grad withValue(
+    num val,
+  ) =>
+      Angle$Grad(val);
+
+  /// Symbol for [Angle$Grad]
+  @override
+  String get symbol => 'gr, grd';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$Minute extends Angle {
+  const Angle$Minute([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$Minute.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Minute.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$Minute] from other [Angle]
+  factory Angle$Minute.from(
+    Angle unit,
+  ) =>
+      Angle$Minute(
+        unit.toMinute.value,
+      );
+
+  static const _minorName = r'angle$Minute';
+
+  static const _ratio = 60.0;
+
+  /// 1 [Angle$Minute]  =  60.0 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$Minute get _clone => Angle$Minute(value);
+
+  /// Creating [Angle$Minute] with new value
+  @override
+  Angle$Minute withValue(
+    num val,
+  ) =>
+      Angle$Minute(val);
+
+  /// Symbol for [Angle$Minute]
+  @override
+  String get symbol => '′';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$Second extends Angle {
+  const Angle$Second([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$Second.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Second.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$Second] from other [Angle]
+  factory Angle$Second.from(
+    Angle unit,
+  ) =>
+      Angle$Second(
+        unit.toSecond.value,
+      );
+
+  static const _minorName = r'angle$Second';
+
+  static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Angle]
   @override
@@ -425,13 +377,178 @@ final class Revolution extends Angle {
 
   /// Clone this with same value
   @override
-  Revolution get _clone => Revolution(value);
+  Angle$Second get _clone => Angle$Second(value);
 
-  /// Creating [Revolution] with new value
+  /// Creating [Angle$Second] with new value
   @override
-  Revolution withValue(num val) => Revolution(val);
+  Angle$Second withValue(
+    num val,
+  ) =>
+      Angle$Second(val);
 
-  /// Symbol for [Revolution]
+  /// Symbol for [Angle$Second]
+  @override
+  String get symbol => '″';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$Sign extends Angle {
+  const Angle$Sign([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$Sign.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Sign.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$Sign] from other [Angle]
+  factory Angle$Sign.from(
+    Angle unit,
+  ) =>
+      Angle$Sign(
+        unit.toSign.value,
+      );
+
+  static const _minorName = r'angle$Sign';
+
+  static const _ratio = 108000.0;
+
+  /// 1 [Angle$Sign]  =  108000.0 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$Sign get _clone => Angle$Sign(value);
+
+  /// Creating [Angle$Sign] with new value
+  @override
+  Angle$Sign withValue(
+    num val,
+  ) =>
+      Angle$Sign(val);
+
+  /// Symbol for [Angle$Sign]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$Mil extends Angle {
+  const Angle$Mil([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$Mil.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Mil.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$Mil] from other [Angle]
+  factory Angle$Mil.from(
+    Angle unit,
+  ) =>
+      Angle$Mil(
+        unit.toMil.value,
+      );
+
+  static const _minorName = r'angle$Mil';
+
+  static const _ratio = 202.5;
+
+  /// 1 [Angle$Mil]  ≈  202.5 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$Mil get _clone => Angle$Mil(value);
+
+  /// Creating [Angle$Mil] with new value
+  @override
+  Angle$Mil withValue(
+    num val,
+  ) =>
+      Angle$Mil(val);
+
+  /// Symbol for [Angle$Mil]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$Revolution extends Angle {
+  const Angle$Revolution([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$Revolution.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Revolution.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$Revolution] from other [Angle]
+  factory Angle$Revolution.from(
+    Angle unit,
+  ) =>
+      Angle$Revolution(
+        unit.toRevolution.value,
+      );
+
+  static const _minorName = r'angle$Revolution';
+
+  static const _ratio = 1296000.0;
+
+  /// 1 [Angle$Revolution]  =  1296000.0 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$Revolution get _clone => Angle$Revolution(value);
+
+  /// Creating [Angle$Revolution] with new value
+  @override
+  Angle$Revolution withValue(
+    num val,
+  ) =>
+      Angle$Revolution(val);
+
+  /// Symbol for [Angle$Revolution]
   @override
   String get symbol => 'rev';
 
@@ -445,35 +562,49 @@ final class Revolution extends Angle {
 }
 
 /// Unit of [Angle]
-final class SecondAngle extends Angle {
-  const SecondAngle([super.value]);
+final class Angle$Circle extends Angle {
+  const Angle$Circle([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory SecondAngle.fromJson(Map<String, dynamic> json) =>
-      SecondAngle.from(Angle.fromJson(json));
+  factory Angle$Circle.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Circle.from(
+        Angle.fromJson(json),
+      );
 
-  /// Construct [SecondAngle] from other [Angle]
-  factory SecondAngle.from(Angle unit) => SecondAngle(unit.toSecondAngle.value);
+  /// Construct [Angle$Circle] from other [Angle]
+  factory Angle$Circle.from(
+    Angle unit,
+  ) =>
+      Angle$Circle(
+        unit.toCircle.value,
+      );
 
-  static const _minorName = 'secondAngle';
+  static const _minorName = r'angle$Circle';
 
-  static const _ratio = 1296000;
+  static const _ratio = 1296000.0;
 
-  /// 1 [Revolution] = 1296000 [SecondAngle]
+  /// 1 [Angle$Circle]  =  1296000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  SecondAngle get _clone => SecondAngle(value);
+  Angle$Circle get _clone => Angle$Circle(value);
 
-  /// Creating [SecondAngle] with new value
+  /// Creating [Angle$Circle] with new value
   @override
-  SecondAngle withValue(num val) => SecondAngle(val);
+  Angle$Circle withValue(
+    num val,
+  ) =>
+      Angle$Circle(val);
 
-  /// Symbol for [SecondAngle]
+  /// Symbol for [Angle$Circle]
   @override
-  String get symbol => '"';
+  String get symbol => 'cir';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -485,35 +616,49 @@ final class SecondAngle extends Angle {
 }
 
 /// Unit of [Angle]
-final class Sextant extends Angle {
-  const Sextant([super.value]);
+final class Angle$Turn extends Angle {
+  const Angle$Turn([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory Sextant.fromJson(Map<String, dynamic> json) =>
-      Sextant.from(Angle.fromJson(json));
+  factory Angle$Turn.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Turn.from(
+        Angle.fromJson(json),
+      );
 
-  /// Construct [Sextant] from other [Angle]
-  factory Sextant.from(Angle unit) => Sextant(unit.toSextant.value);
+  /// Construct [Angle$Turn] from other [Angle]
+  factory Angle$Turn.from(
+    Angle unit,
+  ) =>
+      Angle$Turn(
+        unit.toTurn.value,
+      );
 
-  static const _minorName = 'sextant';
+  static const _minorName = r'angle$Turn';
 
-  static const _ratio = 6;
+  static const _ratio = 1296000.0;
 
-  /// 1 [Revolution] = 6 [Sextant]
+  /// 1 [Angle$Turn]  =  1296000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  Sextant get _clone => Sextant(value);
+  Angle$Turn get _clone => Angle$Turn(value);
 
-  /// Creating [Sextant] with new value
+  /// Creating [Angle$Turn] with new value
   @override
-  Sextant withValue(num val) => Sextant(val);
+  Angle$Turn withValue(
+    num val,
+  ) =>
+      Angle$Turn(val);
 
-  /// Symbol for [Sextant]
+  /// Symbol for [Angle$Turn]
   @override
-  String get symbol => 'sextant';
+  String get symbol => '';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -525,35 +670,265 @@ final class Sextant extends Angle {
 }
 
 /// Unit of [Angle]
-final class SignAngle extends Angle {
-  const SignAngle([super.value]);
+final class Angle$Quadrant extends Angle {
+  const Angle$Quadrant([
+    super.value,
+  ]);
 
   /// If there is no matched key, returning with 0 value
-  factory SignAngle.fromJson(Map<String, dynamic> json) =>
-      SignAngle.from(Angle.fromJson(json));
+  factory Angle$Quadrant.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Quadrant.from(
+        Angle.fromJson(json),
+      );
 
-  /// Construct [SignAngle] from other [Angle]
-  factory SignAngle.from(Angle unit) => SignAngle(unit.toSignAngle.value);
+  /// Construct [Angle$Quadrant] from other [Angle]
+  factory Angle$Quadrant.from(
+    Angle unit,
+  ) =>
+      Angle$Quadrant(
+        unit.toQuadrant.value,
+      );
 
-  static const _minorName = 'signAngle';
+  static const _minorName = r'angle$Quadrant';
 
-  static const _ratio = 12;
+  static const _ratio = 324000.0;
 
-  /// 1 [Revolution] = 12 [SignAngle]
+  /// 1 [Angle$Quadrant]  =  324000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
 
   /// Clone this with same value
   @override
-  SignAngle get _clone => SignAngle(value);
+  Angle$Quadrant get _clone => Angle$Quadrant(value);
 
-  /// Creating [SignAngle] with new value
+  /// Creating [Angle$Quadrant] with new value
   @override
-  SignAngle withValue(num val) => SignAngle(val);
+  Angle$Quadrant withValue(
+    num val,
+  ) =>
+      Angle$Quadrant(val);
 
-  /// Symbol for [SignAngle]
+  /// Symbol for [Angle$Quadrant]
   @override
-  String get symbol => 'sign';
+  String get symbol => 'quad';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$RightAngle extends Angle {
+  const Angle$RightAngle([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$RightAngle.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$RightAngle.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$RightAngle] from other [Angle]
+  factory Angle$RightAngle.from(
+    Angle unit,
+  ) =>
+      Angle$RightAngle(
+        unit.toRightAngle.value,
+      );
+
+  static const _minorName = r'angle$RightAngle';
+
+  static const _ratio = 324000.0;
+
+  /// 1 [Angle$RightAngle]  =  324000.0 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$RightAngle get _clone => Angle$RightAngle(value);
+
+  /// Creating [Angle$RightAngle] with new value
+  @override
+  Angle$RightAngle withValue(
+    num val,
+  ) =>
+      Angle$RightAngle(val);
+
+  /// Symbol for [Angle$RightAngle]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$Sextant extends Angle {
+  const Angle$Sextant([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$Sextant.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Sextant.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$Sextant] from other [Angle]
+  factory Angle$Sextant.from(
+    Angle unit,
+  ) =>
+      Angle$Sextant(
+        unit.toSextant.value,
+      );
+
+  static const _minorName = r'angle$Sextant';
+
+  static const _ratio = 216000.0;
+
+  /// 1 [Angle$Sextant]  =  216000.0 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$Sextant get _clone => Angle$Sextant(value);
+
+  /// Creating [Angle$Sextant] with new value
+  @override
+  Angle$Sextant withValue(
+    num val,
+  ) =>
+      Angle$Sextant(val);
+
+  /// Symbol for [Angle$Sextant]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$Octant extends Angle {
+  const Angle$Octant([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$Octant.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$Octant.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$Octant] from other [Angle]
+  factory Angle$Octant.from(
+    Angle unit,
+  ) =>
+      Angle$Octant(
+        unit.toOctant.value,
+      );
+
+  static const _minorName = r'angle$Octant';
+
+  static const _ratio = 162000.0;
+
+  /// 1 [Angle$Octant]  =  162000.0 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$Octant get _clone => Angle$Octant(value);
+
+  /// Creating [Angle$Octant] with new value
+  @override
+  Angle$Octant withValue(
+    num val,
+  ) =>
+      Angle$Octant(val);
+
+  /// Symbol for [Angle$Octant]
+  @override
+  String get symbol => '';
+
+  @override
+  Map<String, dynamic> toJson() => {
+        majorName: {
+          _unit: _minorName,
+          _value: value,
+        },
+      };
+}
+
+/// Unit of [Angle]
+final class Angle$PercentOfFullCircle extends Angle {
+  const Angle$PercentOfFullCircle([
+    super.value,
+  ]);
+
+  /// If there is no matched key, returning with 0 value
+  factory Angle$PercentOfFullCircle.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      Angle$PercentOfFullCircle.from(
+        Angle.fromJson(json),
+      );
+
+  /// Construct [Angle$PercentOfFullCircle] from other [Angle]
+  factory Angle$PercentOfFullCircle.from(
+    Angle unit,
+  ) =>
+      Angle$PercentOfFullCircle(
+        unit.toPercentOfFullCircle.value,
+      );
+
+  static const _minorName = r'angle$PercentOfFullCircle';
+
+  static const _ratio = 12960.0;
+
+  /// 1 [Angle$PercentOfFullCircle]  =  12960.0 [Angle$Second]
+  @override
+  num get ratio => _ratio;
+
+  /// Clone this with same value
+  @override
+  Angle$PercentOfFullCircle get _clone => Angle$PercentOfFullCircle(value);
+
+  /// Creating [Angle$PercentOfFullCircle] with new value
+  @override
+  Angle$PercentOfFullCircle withValue(
+    num val,
+  ) =>
+      Angle$PercentOfFullCircle(val);
+
+  /// Symbol for [Angle$PercentOfFullCircle]
+  @override
+  String get symbol => '';
 
   @override
   Map<String, dynamic> toJson() => {
@@ -565,18 +940,51 @@ final class SignAngle extends Angle {
 }
 
 enum AngleUnit {
-  degree._(Degree()),
-  grad._(Grad()),
-  mil._(Mil()),
-  minuteAngle._(MinuteAngle()),
-  octant._(Octant()),
-  percentOfFullCircle._(PercentOfFullCircle()),
-  quadrant._(Quadrant()),
-  radian._(Radian()),
-  revolution._(Revolution()),
-  secondAngle._(SecondAngle()),
-  sextant._(Sextant()),
-  signAngle._(SignAngle()),
+  degree._(
+    Angle$Degree(),
+  ),
+  radian._(
+    Angle$Radian(),
+  ),
+  grad._(
+    Angle$Grad(),
+  ),
+  minute._(
+    Angle$Minute(),
+  ),
+  second._(
+    Angle$Second(),
+  ),
+  sign._(
+    Angle$Sign(),
+  ),
+  mil._(
+    Angle$Mil(),
+  ),
+  revolution._(
+    Angle$Revolution(),
+  ),
+  circle._(
+    Angle$Circle(),
+  ),
+  turn._(
+    Angle$Turn(),
+  ),
+  quadrant._(
+    Angle$Quadrant(),
+  ),
+  rightAngle._(
+    Angle$RightAngle(),
+  ),
+  sextant._(
+    Angle$Sextant(),
+  ),
+  octant._(
+    Angle$Octant(),
+  ),
+  percentOfFullCircle._(
+    Angle$PercentOfFullCircle(),
+  ),
   ;
 
   const AngleUnit._(this.construct);
@@ -585,16 +993,19 @@ enum AngleUnit {
 }
 
 const angleUnitValues = _EnumValues({
-  Degree._minorName: AngleUnit.degree,
-  Grad._minorName: AngleUnit.grad,
-  Mil._minorName: AngleUnit.mil,
-  MinuteAngle._minorName: AngleUnit.minuteAngle,
-  Octant._minorName: AngleUnit.octant,
-  PercentOfFullCircle._minorName: AngleUnit.percentOfFullCircle,
-  Quadrant._minorName: AngleUnit.quadrant,
-  Radian._minorName: AngleUnit.radian,
-  Revolution._minorName: AngleUnit.revolution,
-  SecondAngle._minorName: AngleUnit.secondAngle,
-  Sextant._minorName: AngleUnit.sextant,
-  SignAngle._minorName: AngleUnit.signAngle,
+  Angle$Degree._minorName: AngleUnit.degree,
+  Angle$Radian._minorName: AngleUnit.radian,
+  Angle$Grad._minorName: AngleUnit.grad,
+  Angle$Minute._minorName: AngleUnit.minute,
+  Angle$Second._minorName: AngleUnit.second,
+  Angle$Sign._minorName: AngleUnit.sign,
+  Angle$Mil._minorName: AngleUnit.mil,
+  Angle$Revolution._minorName: AngleUnit.revolution,
+  Angle$Circle._minorName: AngleUnit.circle,
+  Angle$Turn._minorName: AngleUnit.turn,
+  Angle$Quadrant._minorName: AngleUnit.quadrant,
+  Angle$RightAngle._minorName: AngleUnit.rightAngle,
+  Angle$Sextant._minorName: AngleUnit.sextant,
+  Angle$Octant._minorName: AngleUnit.octant,
+  Angle$PercentOfFullCircle._minorName: AngleUnit.percentOfFullCircle,
 });

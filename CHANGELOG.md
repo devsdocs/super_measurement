@@ -1,3 +1,6 @@
+## 2.0.0
+- Breaking changes, please adjust your code to new API, see example for usage
+
 ## 1.1.0
 - Bug fix `fromJson`
 - Bug fix at `Length`
