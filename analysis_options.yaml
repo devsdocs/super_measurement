@@ -12,6 +12,8 @@ analyzer:
   exclude:
     #- '**.freezed.dart'
     #- '**.g.dart'
+    # - lib/src/models/
+    # - lib/src/extension/
 
 # You can customize the lint rules set to your own liking. A list of all rules
 # can be found at https://dart-lang.github.io/linter/lints/options/options.html

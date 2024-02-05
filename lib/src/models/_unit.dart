@@ -144,7 +144,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
       other is T && _convertAndCompare('==', other);
 
   @override
-  int get hashCode => value.hashCode;
+  int get hashCode => Object.hash(runtimeType, value);
 
   @override
   int compareTo(T other) {
