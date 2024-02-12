@@ -28,7 +28,7 @@ abstract final class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
 
   @override
   AnchorRatio<VolumeChargeDensity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<VolumeChargeDensity>({
           VolumeChargeDensity$CoulombPerCentimeterCubic:
               VolumeChargeDensity$CoulombPerCentimeterCubic._ratio,
@@ -44,7 +44,7 @@ abstract final class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
       );
 
   @override
-  VolumeChargeDensity get _anchor =>
+  VolumeChargeDensity get anchor =>
       const VolumeChargeDensity$CoulombPerMeterCubic();
 
   /// Convert to [VolumeChargeDensity$CoulombPerMeterCubic]
@@ -108,6 +108,12 @@ final class VolumeChargeDensity$CoulombPerMeterCubic
 
   static const _minorName = 'coulombPerMeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'coulomb/meter³';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [VolumeChargeDensity]
@@ -168,6 +174,12 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
       );
 
   static const _minorName = 'coulombPerCentimeterCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'coulomb/centimeter³';
 
   static const _ratio = 1000000.0;
 
@@ -230,6 +242,12 @@ final class VolumeChargeDensity$CoulombPerInchCubic
 
   static const _minorName = 'coulombPerInchCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'coulomb/inch³';
+
   static const _ratio = 61023.74409;
 
   /// 1 [VolumeChargeDensity$CoulombPerInchCubic] ≈ 61023.74409 [VolumeChargeDensity$CoulombPerMeterCubic]
@@ -290,6 +308,12 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
       );
 
   static const _minorName = 'abcoulombPerMeterCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abcoulomb/meter³';
 
   static const _ratio = 10.0;
 
@@ -352,6 +376,12 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
 
   static const _minorName = 'abcoulombPerCentimeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abcoulomb/centimeter³';
+
   static const _ratio = 10000000.0;
 
   /// 1 [VolumeChargeDensity$AbcoulombPerCentimeterCubic] = 10000000.0 [VolumeChargeDensity$CoulombPerMeterCubic]
@@ -412,6 +442,12 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
       );
 
   static const _minorName = 'abcoulombPerInchCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abcoulomb/inch³';
 
   static const _ratio = 610237.4409;
 

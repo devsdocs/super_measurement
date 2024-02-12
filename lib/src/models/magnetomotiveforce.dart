@@ -25,7 +25,7 @@ abstract final class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
 
   @override
   AnchorRatio<MagnetomotiveForce> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<MagnetomotiveForce>({
           MagnetomotiveForce$KiloampereTurn:
               MagnetomotiveForce$KiloampereTurn._ratio,
@@ -38,7 +38,7 @@ abstract final class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
       );
 
   @override
-  MagnetomotiveForce get _anchor => const MagnetomotiveForce$AmpereTurn();
+  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn();
 
   /// Convert to [MagnetomotiveForce$KiloampereTurn]
   MagnetomotiveForce get toKiloampereTurn => convertTo(
@@ -94,6 +94,12 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
       );
 
   static const _minorName = 'kiloampereTurn';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kiloampere turn';
 
   static const _ratio = 1000.0;
 
@@ -155,6 +161,12 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
 
   static const _minorName = 'ampereTurn';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere turn';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [MagnetomotiveForce]
@@ -214,6 +226,12 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
       );
 
   static const _minorName = 'milliampereTurn';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'milliampere turn';
 
   static const _ratio = 0.001;
 
@@ -275,6 +293,12 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
 
   static const _minorName = 'abampereTurn';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abampere turn';
+
   static const _ratio = 10.0;
 
   /// 1 [MagnetomotiveForce$AbampereTurn] = 10.0 [MagnetomotiveForce$AmpereTurn]
@@ -334,6 +358,12 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
       );
 
   static const _minorName = 'gilbert';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.7957747151;
 

@@ -33,7 +33,7 @@ abstract final class ConcentrationMolar extends Unit<ConcentrationMolar> {
 
   @override
   AnchorRatio<ConcentrationMolar> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<ConcentrationMolar>({
           ConcentrationMolar$MolPerMeterCubic:
               ConcentrationMolar$MolPerMeterCubic._ratio,
@@ -61,7 +61,7 @@ abstract final class ConcentrationMolar extends Unit<ConcentrationMolar> {
       );
 
   @override
-  ConcentrationMolar get _anchor => const ConcentrationMolar$MolPerLiter();
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter();
 
   /// Convert to [ConcentrationMolar$MolPerMeterCubic]
   ConcentrationMolar get toMolPerMeterCubic => convertTo(
@@ -153,6 +153,12 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
 
   static const _minorName = 'molPerMeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mol/meter³';
+
   static const _ratio = 0.001;
 
   /// 1 [ConcentrationMolar$MolPerMeterCubic] ≈ 0.001 [ConcentrationMolar$MolPerLiter]
@@ -212,6 +218,12 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
       );
 
   static const _minorName = 'molPerLiter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mol/liter';
 
   static const _ratio = 1.0;
 
@@ -274,6 +286,12 @@ final class ConcentrationMolar$MolPerCentimeterCubic
 
   static const _minorName = 'molPerCentimeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mol/centimeter³';
+
   static const _ratio = 1000.0;
 
   /// 1 [ConcentrationMolar$MolPerCentimeterCubic] = 1000.0 [ConcentrationMolar$MolPerLiter]
@@ -335,6 +353,12 @@ final class ConcentrationMolar$MolPerMillimeterCubic
 
   static const _minorName = 'molPerMillimeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mol/millimeter³';
+
   static const _ratio = 1000000.0;
 
   /// 1 [ConcentrationMolar$MolPerMillimeterCubic] = 1000000.0 [ConcentrationMolar$MolPerLiter]
@@ -395,6 +419,12 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
 
   static const _minorName = 'kilomolPerMeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilomol/meter³';
+
   static const _ratio = 1.0;
 
   /// 1 [ConcentrationMolar$KilomolPerMeterCubic] = 1.0 [ConcentrationMolar$MolPerLiter]
@@ -454,6 +484,12 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
       );
 
   static const _minorName = 'kilomolPerLiter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilomol/liter';
 
   static const _ratio = 1000.0;
 
@@ -516,6 +552,12 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
 
   static const _minorName = 'kilomolPerCentimeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilomol/centimeter³';
+
   static const _ratio = 1000000.0;
 
   /// 1 [ConcentrationMolar$KilomolPerCentimeterCubic] = 1000000.0 [ConcentrationMolar$MolPerLiter]
@@ -576,6 +618,12 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
       );
 
   static const _minorName = 'kilomolPerMillimeterCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilomol/millimeter³';
 
   static const _ratio = 1000000000.0;
 
@@ -638,6 +686,12 @@ final class ConcentrationMolar$MillimolPerMeterCubic
 
   static const _minorName = 'millimolPerMeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millimol/meter³';
+
   static const _ratio = 0.000001;
 
   /// 1 [ConcentrationMolar$MillimolPerMeterCubic] ≈ 0.000001 [ConcentrationMolar$MolPerLiter]
@@ -697,6 +751,12 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
       );
 
   static const _minorName = 'millimolPerLiter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millimol/liter';
 
   static const _ratio = 0.001;
 
@@ -759,6 +819,12 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
 
   static const _minorName = 'millimolPerCentimeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millimol/centimeter³';
+
   static const _ratio = 1.0;
 
   /// 1 [ConcentrationMolar$MillimolPerCentimeterCubic] = 1.0 [ConcentrationMolar$MolPerLiter]
@@ -819,6 +885,12 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
       );
 
   static const _minorName = 'millimolPerMillimeterCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millimol/millimeter³';
 
   static const _ratio = 1000.0;
 

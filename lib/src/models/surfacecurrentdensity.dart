@@ -29,7 +29,7 @@ abstract final class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
 
   @override
   AnchorRatio<SurfaceCurrentDensity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<SurfaceCurrentDensity>({
           SurfaceCurrentDensity$AmperePerCentimeterSquare:
               SurfaceCurrentDensity$AmperePerCentimeterSquare._ratio,
@@ -45,7 +45,7 @@ abstract final class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
       );
 
   @override
-  SurfaceCurrentDensity get _anchor =>
+  SurfaceCurrentDensity get anchor =>
       const SurfaceCurrentDensity$AmperePerMeterSquare();
 
   /// Convert to [SurfaceCurrentDensity$AmperePerMeterSquare]
@@ -109,6 +109,12 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
 
   static const _minorName = 'amperePerMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere/meter²';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [SurfaceCurrentDensity]
@@ -169,6 +175,12 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
       );
 
   static const _minorName = 'amperePerCentimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere/centimeter²';
 
   static const _ratio = 10000.0;
 
@@ -231,6 +243,12 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
 
   static const _minorName = 'amperePerInchSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere/inch²';
+
   static const _ratio = 1550.0031;
 
   /// 1 [SurfaceCurrentDensity$AmperePerInchSquare] ≈ 1550.0031 [SurfaceCurrentDensity$AmperePerMeterSquare]
@@ -291,6 +309,12 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
       );
 
   static const _minorName = 'amperePerMilSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere/mil²';
 
   static const _ratio = 1550003100.0;
 
@@ -353,6 +377,12 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
 
   static const _minorName = 'amperePerCicularMil';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere/cicular mil';
+
   static const _ratio = 1973525240.990759;
 
   /// 1 [SurfaceCurrentDensity$AmperePerCicularMil] ≈ 1973525240.990759 [SurfaceCurrentDensity$AmperePerMeterSquare]
@@ -413,6 +443,12 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
       );
 
   static const _minorName = 'abamperePerCentimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abampere/centimeter²';
 
   static const _ratio = 100000.0;
 

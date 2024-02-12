@@ -28,7 +28,7 @@ abstract final class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
 
   @override
   AnchorRatio<ChemicalHenrysLaw> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<ChemicalHenrysLaw>({
           ChemicalHenrysLaw$NewtonMeterPerKilogram:
               ChemicalHenrysLaw$NewtonMeterPerKilogram._ratio,
@@ -44,7 +44,7 @@ abstract final class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
       );
 
   @override
-  ChemicalHenrysLaw get _anchor =>
+  ChemicalHenrysLaw get anchor =>
       const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic();
 
   /// Convert to [ChemicalHenrysLaw$NewtonMeterPerKilogram]
@@ -107,6 +107,12 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
 
   static const _minorName = 'newtonMeterPerKilogram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'newton meter/kilogram';
+
   static const _ratio = 0.00001;
 
   /// 1 [ChemicalHenrysLaw$NewtonMeterPerKilogram] ≈ 0.00001 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
@@ -167,6 +173,12 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
       );
 
   static const _minorName = 'barPerKilogramPerMeterCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'bar/(kilogram/meter³)';
 
   static const _ratio = 1.0;
 
@@ -229,6 +241,12 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
 
   static const _minorName = 'atmospherePerKilogramPerMeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'atmosphere/(kilogram/meter³)';
+
   static const _ratio = 1.01325;
 
   /// 1 [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic] ≈ 1.01325 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
@@ -289,6 +307,12 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
       );
 
   static const _minorName = 'atmospherePerKilogramPerFootCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'atmosphere/(kilogram/foot³)';
 
   static const _ratio = 0.02869204481;
 
@@ -351,6 +375,12 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
 
   static const _minorName = 'atmospherePerGramPerCentimeterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'atmosphere/(gram/centimeter³)';
+
   static const _ratio = 0.00101325;
 
   /// 1 [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic] ≈ 0.00101325 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
@@ -411,6 +441,12 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
       );
 
   static const _minorName = 'atmospherePerPoundPerFootCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'atmosphere/(pound/foot³)';
 
   static const _ratio = 0.06325513043;
 

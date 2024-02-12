@@ -28,7 +28,7 @@ abstract final class Charge extends Unit<Charge> {
 
   @override
   AnchorRatio<Charge> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Charge>({
           Charge$Megacoulomb: Charge$Megacoulomb._ratio,
           Charge$Kilocoulomb: Charge$Kilocoulomb._ratio,
@@ -49,7 +49,7 @@ abstract final class Charge extends Unit<Charge> {
       );
 
   @override
-  Charge get _anchor => const Charge$Coulomb();
+  Charge get anchor => const Charge$Coulomb();
 
   /// Convert to [Charge$Megacoulomb]
   Charge get toMegacoulomb => convertTo(
@@ -161,6 +161,12 @@ final class Charge$Megacoulomb extends Charge {
 
   static const _minorName = 'megacoulomb';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000.0;
 
   /// 1 [Charge$Megacoulomb] = 1000000.0 [Charge$Coulomb]
@@ -219,6 +225,12 @@ final class Charge$Kilocoulomb extends Charge {
       );
 
   static const _minorName = 'kilocoulomb';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000.0;
 
@@ -279,6 +291,12 @@ final class Charge$Coulomb extends Charge {
 
   static const _minorName = 'coulomb';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Charge]
@@ -337,6 +355,12 @@ final class Charge$CoulombInternational extends Charge {
       );
 
   static const _minorName = 'coulombInternational';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'coulomb (international)';
 
   static const _ratio = 0.999835027;
 
@@ -397,6 +421,12 @@ final class Charge$Millicoulomb extends Charge {
 
   static const _minorName = 'millicoulomb';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.001;
 
   /// 1 [Charge$Millicoulomb] ≈ 0.001 [Charge$Coulomb]
@@ -455,6 +485,12 @@ final class Charge$Microcoulomb extends Charge {
       );
 
   static const _minorName = 'microcoulomb';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.000001;
 
@@ -515,6 +551,12 @@ final class Charge$Nanocoulomb extends Charge {
 
   static const _minorName = 'nanocoulomb';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-9;
 
   /// 1 [Charge$Nanocoulomb] ≈ 1e-9 [Charge$Coulomb]
@@ -573,6 +615,12 @@ final class Charge$Picocoulomb extends Charge {
       );
 
   static const _minorName = 'picocoulomb';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e-12;
 
@@ -633,6 +681,12 @@ final class Charge$Abcoulomb extends Charge {
 
   static const _minorName = 'abcoulomb';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10.0;
 
   /// 1 [Charge$Abcoulomb] = 10.0 [Charge$Coulomb]
@@ -691,6 +745,12 @@ final class Charge$Statcoulomb extends Charge {
       );
 
   static const _minorName = 'statcoulomb';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 3.335646048e-10;
 
@@ -751,6 +811,12 @@ final class Charge$Franklin extends Charge {
 
   static const _minorName = 'franklin';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 3.335646048e-10;
 
   /// 1 [Charge$Franklin] ≈ 3.335646048e-10 [Charge$Coulomb]
@@ -809,6 +875,12 @@ final class Charge$AmpereHour extends Charge {
       );
 
   static const _minorName = 'ampereHour';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere-hour';
 
   static const _ratio = 3600.0;
 
@@ -869,6 +941,12 @@ final class Charge$AmpereMinute extends Charge {
 
   static const _minorName = 'ampereMinute';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere-minute';
+
   static const _ratio = 60.0;
 
   /// 1 [Charge$AmpereMinute] = 60.0 [Charge$Coulomb]
@@ -927,6 +1005,12 @@ final class Charge$AmpereSecond extends Charge {
       );
 
   static const _minorName = 'ampereSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere-second';
 
   static const _ratio = 1.0;
 
@@ -987,6 +1071,12 @@ final class Charge$Faraday extends Charge {
 
   static const _minorName = 'faraday';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 96485.3365;
 
   /// 1 [Charge$Faraday] ≈ 96485.3365 [Charge$Coulomb]
@@ -1045,6 +1135,12 @@ final class Charge$ElectronicCharge extends Charge {
       );
 
   static const _minorName = 'electronicCharge';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'electronic charge';
 
   static const _ratio = 1.6022e-19;
 

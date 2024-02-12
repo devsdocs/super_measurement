@@ -23,7 +23,7 @@ abstract final class Sound extends Unit<Sound> {
 
   @override
   AnchorRatio<Sound> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Sound>({
           Sound$Bel: Sound$Bel._ratio,
           Sound$Neper: Sound$Neper._ratio,
@@ -31,7 +31,7 @@ abstract final class Sound extends Unit<Sound> {
       );
 
   @override
-  Sound get _anchor => const Sound$Decibel();
+  Sound get anchor => const Sound$Decibel();
 
   /// Convert to [Sound$Bel]
   Sound get toBel => convertTo(
@@ -77,6 +77,12 @@ final class Sound$Bel extends Sound {
       );
 
   static const _minorName = 'bel';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10.0;
 
@@ -137,6 +143,12 @@ final class Sound$Decibel extends Sound {
 
   static const _minorName = 'decibel';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Sound]
@@ -195,6 +207,12 @@ final class Sound$Neper extends Sound {
       );
 
   static const _minorName = 'neper';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 8.686;
 

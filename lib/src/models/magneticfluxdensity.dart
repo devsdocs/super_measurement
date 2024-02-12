@@ -32,7 +32,7 @@ abstract final class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
 
   @override
   AnchorRatio<MagneticFluxDensity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<MagneticFluxDensity>({
           MagneticFluxDensity$Gauss: MagneticFluxDensity$Gauss._ratio,
           MagneticFluxDensity$GaussInternational:
@@ -57,7 +57,7 @@ abstract final class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
       );
 
   @override
-  MagneticFluxDensity get _anchor => const MagneticFluxDensity$Tesla();
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla();
 
   /// Convert to [MagneticFluxDensity$Tesla]
   MagneticFluxDensity get toTesla => convertTo(
@@ -144,6 +144,12 @@ final class MagneticFluxDensity$Tesla extends MagneticFluxDensity {
 
   static const _minorName = 'tesla';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [MagneticFluxDensity]
@@ -203,6 +209,12 @@ final class MagneticFluxDensity$Gauss extends MagneticFluxDensity {
 
   static const _minorName = 'gauss';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.0001;
 
   /// 1 [MagneticFluxDensity$Gauss] ≈ 0.0001 [MagneticFluxDensity$Tesla]
@@ -261,6 +273,12 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
       );
 
   static const _minorName = 'gaussInternational';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gauss (International)';
 
   static const _ratio = 0.0001000331;
 
@@ -323,6 +341,12 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
 
   static const _minorName = 'linePerCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'line/centimeter²';
+
   static const _ratio = 0.0001;
 
   /// 1 [MagneticFluxDensity$LinePerCentimeterSquare] ≈ 0.0001 [MagneticFluxDensity$Tesla]
@@ -382,6 +406,12 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
       );
 
   static const _minorName = 'linePerInchSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'line/inch²';
 
   static const _ratio = 0.000015500031;
 
@@ -444,6 +474,12 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
 
   static const _minorName = 'maxwellPerMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'maxwell/meter²';
+
   static const _ratio = 1.0;
 
   /// 1 [MagneticFluxDensity$MaxwellPerMeterSquare] = 1.0 [MagneticFluxDensity$Tesla]
@@ -504,6 +540,12 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
       );
 
   static const _minorName = 'maxwellPerCentimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'maxwell/centimeter²';
 
   static const _ratio = 0.0001;
 
@@ -566,6 +608,12 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
 
   static const _minorName = 'maxwellPerInchSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'maxwell/inch²';
+
   static const _ratio = 0.000015500031;
 
   /// 1 [MagneticFluxDensity$MaxwellPerInchSquare] ≈ 0.000015500031 [MagneticFluxDensity$Tesla]
@@ -626,6 +674,12 @@ final class MagneticFluxDensity$WeberPerMeterSquare
       );
 
   static const _minorName = 'weberPerMeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'weber/meter²';
 
   static const _ratio = 1.0;
 
@@ -688,6 +742,12 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
 
   static const _minorName = 'weberPerCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'weber/centimeter²';
+
   static const _ratio = 10000.0;
 
   /// 1 [MagneticFluxDensity$WeberPerCentimeterSquare] = 10000.0 [MagneticFluxDensity$Tesla]
@@ -747,6 +807,12 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
       );
 
   static const _minorName = 'weberPerInchSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'weber/inch²';
 
   static const _ratio = 1550.0031;
 

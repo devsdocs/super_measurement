@@ -7,7 +7,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T get _clone;
 
-  T get _anchor;
+  T get anchor;
 
   num get ratio;
 
@@ -16,6 +16,10 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   String get symbol;
 
   String get majorName;
+
+  String get minorName;
+
+  String get displayName;
 
   T withValue(num val);
 
@@ -34,9 +38,9 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
       currentValue = _clone.withPrecision(Precision.ten).value;
     } else {
       otherValue =
-          other._clone.convertTo(_anchor).withPrecision(Precision.ten).value;
+          other._clone.convertTo(anchor).withPrecision(Precision.ten).value;
       currentValue =
-          _clone.convertTo(_anchor).withPrecision(Precision.ten).value;
+          _clone.convertTo(anchor).withPrecision(Precision.ten).value;
     }
 
     if (operator == '==') {
@@ -60,8 +64,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
       return operator == '+' ? this + convToThis : this - convToThis;
     } else {
-      final otherValue = other.convertTo(_anchor);
-      final currentValue = convertTo(_anchor);
+      final otherValue = other.convertTo(anchor);
+      final currentValue = convertTo(anchor);
 
       final combine = operator == '+'
           ? currentValue + otherValue
@@ -85,7 +89,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
               _anchorRatio.ratio.getRatio(result.runtimeType),
         );
       } else {
-        return _anchor
+        return anchor
             .withValue(
               (value * _anchorRatio.ratio.getRatio(runtimeType)) + _valueShift,
             )
@@ -99,7 +103,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
         return result
             .withValue(value / _anchorRatio.ratio.getRatio(result.runtimeType));
       }
-      return _anchor
+      return anchor
           .withValue(value * _anchorRatio.ratio.getRatio(runtimeType))
           .convertTo(result);
     }
@@ -157,8 +161,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
       final currentValue = _clone.value;
       return currentValue.compareTo(otherValue);
     } else {
-      final otherConvertTo = other._clone.convertTo(_anchor);
-      final currentConvertTo = _clone.convertTo(_anchor);
+      final otherConvertTo = other._clone.convertTo(anchor);
+      final currentConvertTo = _clone.convertTo(anchor);
       return currentConvertTo.value.compareTo(otherConvertTo.value);
     }
   }

@@ -27,7 +27,7 @@ abstract final class ElectricField extends Unit<ElectricField> {
 
   @override
   AnchorRatio<ElectricField> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<ElectricField>({
           ElectricField$VoltPerMeter: ElectricField$VoltPerMeter._ratio,
           ElectricField$VoltPerCentimeter:
@@ -46,7 +46,7 @@ abstract final class ElectricField extends Unit<ElectricField> {
       );
 
   @override
-  ElectricField get _anchor => const ElectricField$KilovoltPerCentimeter();
+  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter();
 
   /// Convert to [ElectricField$KilovoltPerCentimeter]
   ElectricField get toKilovoltPerCentimeter => convertTo(
@@ -123,6 +123,12 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
 
   static const _minorName = 'kilovoltPerCentimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilovolt/centimeter';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [ElectricField]
@@ -183,6 +189,12 @@ final class ElectricField$VoltPerMeter extends ElectricField {
 
   static const _minorName = 'voltPerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'volt/meter';
+
   static const _ratio = 0.00001;
 
   /// 1 [ElectricField$VoltPerMeter] ≈ 0.00001 [ElectricField$KilovoltPerCentimeter]
@@ -241,6 +253,12 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
       );
 
   static const _minorName = 'voltPerCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'volt/centimeter';
 
   static const _ratio = 0.001;
 
@@ -302,6 +320,12 @@ final class ElectricField$VoltPerInch extends ElectricField {
 
   static const _minorName = 'voltPerInch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'volt/inch';
+
   static const _ratio = 0.0003937007874015748;
 
   /// 1 [ElectricField$VoltPerInch] ≈ 0.0003937007874015748 [ElectricField$KilovoltPerCentimeter]
@@ -360,6 +384,12 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
       );
 
   static const _minorName = 'millivoltPerMeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millivolt/meter';
 
   static const _ratio = 1e-8;
 
@@ -421,6 +451,12 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
 
   static const _minorName = 'microvoltPerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'microvolt/meter';
+
   static const _ratio = 1e-11;
 
   /// 1 [ElectricField$MicrovoltPerMeter] ≈ 1e-11 [ElectricField$KilovoltPerCentimeter]
@@ -480,6 +516,12 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
       );
 
   static const _minorName = 'abvoltPerCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abvolt/centimeter';
 
   static const _ratio = 1e-11;
 
@@ -541,6 +583,12 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
 
   static const _minorName = 'statvoltPerCentimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Statvolt/centimeter';
+
   static const _ratio = 0.2997919999933998;
 
   /// 1 [ElectricField$StatvoltPerCentimeter] ≈ 0.2997919999933998 [ElectricField$KilovoltPerCentimeter]
@@ -600,6 +648,12 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
       );
 
   static const _minorName = 'statvoltPerInch';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Statvolt/inch';
 
   static const _ratio = 0.11802834645669291;
 

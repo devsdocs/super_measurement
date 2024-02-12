@@ -26,7 +26,7 @@ abstract final class MagneticFlux extends Unit<MagneticFlux> {
 
   @override
   AnchorRatio<MagneticFlux> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<MagneticFlux>({
           MagneticFlux$VoltSecond: MagneticFlux$VoltSecond._ratio,
           MagneticFlux$Megaline: MagneticFlux$Megaline._ratio,
@@ -44,7 +44,7 @@ abstract final class MagneticFlux extends Unit<MagneticFlux> {
       );
 
   @override
-  MagneticFlux get _anchor => const MagneticFlux$Weber();
+  MagneticFlux get anchor => const MagneticFlux$Weber();
 
   /// Convert to [MagneticFlux$Weber]
   MagneticFlux get toWeber => convertTo(
@@ -126,6 +126,12 @@ final class MagneticFlux$Weber extends MagneticFlux {
 
   static const _minorName = 'weber';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [MagneticFlux]
@@ -184,6 +190,12 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
       );
 
   static const _minorName = 'voltSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'volt second';
 
   static const _ratio = 1.0;
 
@@ -244,6 +256,12 @@ final class MagneticFlux$Megaline extends MagneticFlux {
 
   static const _minorName = 'megaline';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.01;
 
   /// 1 [MagneticFlux$Megaline] ≈ 0.01 [MagneticFlux$Weber]
@@ -302,6 +320,12 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
       );
 
   static const _minorName = 'kiloline';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.00001;
 
@@ -362,6 +386,12 @@ final class MagneticFlux$Line extends MagneticFlux {
 
   static const _minorName = 'line';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-8;
 
   /// 1 [MagneticFlux$Line] ≈ 1e-8 [MagneticFlux$Weber]
@@ -421,6 +451,12 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
 
   static const _minorName = 'maxwell';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-8;
 
   /// 1 [MagneticFlux$Maxwell] ≈ 1e-8 [MagneticFlux$Weber]
@@ -479,6 +515,12 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
       );
 
   static const _minorName = 'maxwellInternational';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'maxwell (International)';
 
   static const _ratio = 1.000331e-8;
 
@@ -540,6 +582,12 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
 
   static const _minorName = 'teslaMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'tesla meter²';
+
   static const _ratio = 1.0;
 
   /// 1 [MagneticFlux$TeslaMeterSquare] = 1.0 [MagneticFlux$Weber]
@@ -600,6 +648,12 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
 
   static const _minorName = 'teslaCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'tesla centimeter²';
+
   static const _ratio = 0.0001;
 
   /// 1 [MagneticFlux$TeslaCentimeterSquare] ≈ 0.0001 [MagneticFlux$Weber]
@@ -659,6 +713,12 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
       );
 
   static const _minorName = 'gaussCentimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gauss centimeter²';
 
   static const _ratio = 1e-8;
 

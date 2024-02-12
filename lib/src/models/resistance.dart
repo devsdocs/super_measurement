@@ -24,7 +24,7 @@ abstract final class Resistance extends Unit<Resistance> {
 
   @override
   AnchorRatio<Resistance> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Resistance>({
           Resistance$Megohm: Resistance$Megohm._ratio,
           Resistance$OhmInternational: Resistance$OhmInternational._ratio,
@@ -35,7 +35,7 @@ abstract final class Resistance extends Unit<Resistance> {
       );
 
   @override
-  Resistance get _anchor => const Resistance$Ohm();
+  Resistance get anchor => const Resistance$Ohm();
 
   /// Convert to [Resistance$Megohm]
   Resistance get toMegohm => convertTo(
@@ -97,6 +97,12 @@ final class Resistance$Megohm extends Resistance {
 
   static const _minorName = 'megohm';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000.0;
 
   /// 1 [Resistance$Megohm] = 1000000.0 [Resistance$Ohm]
@@ -155,6 +161,12 @@ final class Resistance$Ohm extends Resistance {
       );
 
   static const _minorName = 'ohm';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.0;
 
@@ -215,6 +227,12 @@ final class Resistance$OhmInternational extends Resistance {
 
   static const _minorName = 'ohmInternational';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ohm (International)';
+
   static const _ratio = 1.0004949999036774;
 
   /// 1 [Resistance$OhmInternational] ≈ 1.0004949999036774 [Resistance$Ohm]
@@ -273,6 +291,12 @@ final class Resistance$Microhm extends Resistance {
       );
 
   static const _minorName = 'microhm';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.000001;
 
@@ -333,6 +357,12 @@ final class Resistance$Abohm extends Resistance {
 
   static const _minorName = 'abohm';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abohm';
+
   static const _ratio = 1e-9;
 
   /// 1 [Resistance$Abohm] ≈ 1e-9 [Resistance$Ohm]
@@ -391,6 +421,12 @@ final class Resistance$Statohm extends Resistance {
       );
 
   static const _minorName = 'statohm';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Statohm';
 
   static const _ratio = 898752432400.0;
 

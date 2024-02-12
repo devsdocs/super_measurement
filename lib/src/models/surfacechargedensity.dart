@@ -29,7 +29,7 @@ abstract final class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
 
   @override
   AnchorRatio<SurfaceChargeDensity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<SurfaceChargeDensity>({
           SurfaceChargeDensity$CoulombPerInchSquare:
               SurfaceChargeDensity$CoulombPerInchSquare._ratio,
@@ -45,7 +45,7 @@ abstract final class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
       );
 
   @override
-  SurfaceChargeDensity get _anchor =>
+  SurfaceChargeDensity get anchor =>
       const SurfaceChargeDensity$CoulombPerMeterSquare();
 
   /// Convert to [SurfaceChargeDensity$CoulombPerMeterSquare]
@@ -109,6 +109,12 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
 
   static const _minorName = 'coulombPerMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'coulomb/meter²';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [SurfaceChargeDensity]
@@ -169,6 +175,12 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
       );
 
   static const _minorName = 'coulombPerInchSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'coulomb/inch²';
 
   static const _ratio = 1550.0031;
 
@@ -231,6 +243,12 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
 
   static const _minorName = 'coulombPerCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'coulomb/centimeter²';
+
   static const _ratio = 10000.0;
 
   /// 1 [SurfaceChargeDensity$CoulombPerCentimeterSquare] = 10000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
@@ -291,6 +309,12 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
       );
 
   static const _minorName = 'abcoulombPerMeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abcoulomb/meter²';
 
   static const _ratio = 10.0;
 
@@ -353,6 +377,12 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
 
   static const _minorName = 'abcoulombPerCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abcoulomb/centimeter²';
+
   static const _ratio = 100000.0;
 
   /// 1 [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] = 100000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
@@ -413,6 +443,12 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
       );
 
   static const _minorName = 'abcoulombPerInchSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abcoulomb/inch²';
 
   static const _ratio = 15500.031;
 

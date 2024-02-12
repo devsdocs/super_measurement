@@ -25,7 +25,7 @@ abstract final class RadiationExposure extends Unit<RadiationExposure> {
 
   @override
   AnchorRatio<RadiationExposure> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<RadiationExposure>({
           RadiationExposure$Roentgen: RadiationExposure$Roentgen._ratio,
           RadiationExposure$CoulombPerKilogram:
@@ -36,7 +36,7 @@ abstract final class RadiationExposure extends Unit<RadiationExposure> {
       );
 
   @override
-  RadiationExposure get _anchor =>
+  RadiationExposure get anchor =>
       const RadiationExposure$MicrocoulombPerKilogram();
 
   /// Convert to [RadiationExposure$Roentgen]
@@ -88,6 +88,12 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
       );
 
   static const _minorName = 'roentgen';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 258.0;
 
@@ -147,6 +153,12 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
       );
 
   static const _minorName = 'coulombPerKilogram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'coulomb/kilogram';
 
   static const _ratio = 1000000.0;
 
@@ -209,6 +221,12 @@ final class RadiationExposure$MillicoulombPerKilogram
 
   static const _minorName = 'millicoulombPerKilogram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millicoulomb/kilogram';
+
   static const _ratio = 1000.0;
 
   /// 1 [RadiationExposure$MillicoulombPerKilogram] = 1000.0 [RadiationExposure$MicrocoulombPerKilogram]
@@ -269,6 +287,12 @@ final class RadiationExposure$MicrocoulombPerKilogram
       );
 
   static const _minorName = 'microcoulombPerKilogram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'microcoulomb/kilogram';
 
   static const _ratio = 1.0;
 

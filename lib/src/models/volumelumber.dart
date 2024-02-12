@@ -33,7 +33,7 @@ abstract final class VolumeLumber extends Unit<VolumeLumber> {
 
   @override
   AnchorRatio<VolumeLumber> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<VolumeLumber>({
           VolumeLumber$MeterCubic: VolumeLumber$MeterCubic._ratio,
           VolumeLumber$CubicFeet: VolumeLumber$CubicFeet._ratio,
@@ -60,7 +60,7 @@ abstract final class VolumeLumber extends Unit<VolumeLumber> {
       );
 
   @override
-  VolumeLumber get _anchor => const VolumeLumber$CubicInch();
+  VolumeLumber get anchor => const VolumeLumber$CubicInch();
 
   /// Convert to [VolumeLumber$MeterCubic]
   VolumeLumber get toMeterCubic => convertTo(
@@ -177,6 +177,12 @@ final class VolumeLumber$MeterCubic extends VolumeLumber {
 
   static const _minorName = 'meterCubic';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'meter³';
+
   static const _ratio = 61023.74409473228;
 
   /// 1 [VolumeLumber$MeterCubic] ≈ 61023.74409473228 [VolumeLumber$CubicInch]
@@ -235,6 +241,12 @@ final class VolumeLumber$CubicFeet extends VolumeLumber {
       );
 
   static const _minorName = 'cubicFeet';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'cubic feet';
 
   static const _ratio = 1728.0;
 
@@ -295,6 +307,12 @@ final class VolumeLumber$CubicInch extends VolumeLumber {
 
   static const _minorName = 'cubicInch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'cubic inch';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [VolumeLumber]
@@ -354,6 +372,12 @@ final class VolumeLumber$BoardFeet extends VolumeLumber {
 
   static const _minorName = 'boardFeet';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'board feet';
+
   static const _ratio = 144.0;
 
   /// 1 [VolumeLumber$BoardFeet] = 144.0 [VolumeLumber$CubicInch]
@@ -412,6 +436,12 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
       );
 
   static const _minorName = 'thousandBoardFeet';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => '1000 board feet';
 
   static const _ratio = 144000.0;
 
@@ -473,6 +503,12 @@ final class VolumeLumber$Cord extends VolumeLumber {
 
   static const _minorName = 'cord';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 221184.0;
 
   /// 1 [VolumeLumber$Cord] = 221184.0 [VolumeLumber$CubicInch]
@@ -531,6 +567,12 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
       );
 
   static const _minorName = 'cord80FtCubic';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'cord (80 ft³)';
 
   static const _ratio = 138240.0;
 
@@ -591,6 +633,12 @@ final class VolumeLumber$CordFeet extends VolumeLumber {
 
   static const _minorName = 'cordFeet';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'cord feet';
+
   static const _ratio = 27648.0;
 
   /// 1 [VolumeLumber$CordFeet] = 27648.0 [VolumeLumber$CubicInch]
@@ -649,6 +697,12 @@ final class VolumeLumber$Cunit extends VolumeLumber {
       );
 
   static const _minorName = 'cunit';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 172800.0;
 
@@ -709,6 +763,12 @@ final class VolumeLumber$Pallet extends VolumeLumber {
 
   static const _minorName = 'pallet';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 2448.0;
 
   /// 1 [VolumeLumber$Pallet] = 2448.0 [VolumeLumber$CubicInch]
@@ -767,6 +827,12 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
       );
 
   static const _minorName = 'crossTie';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'cross tie';
 
   static const _ratio = 5760.0;
 
@@ -827,6 +893,12 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
 
   static const _minorName = 'switchTie';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'switch tie';
+
   static const _ratio = 9072.0;
 
   /// 1 [VolumeLumber$SwitchTie] = 9072.0 [VolumeLumber$CubicInch]
@@ -886,6 +958,12 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
       );
 
   static const _minorName = 'thousandSquareFeet1Per8InchPanels';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => '1000 square feet (1/8-inch panels)';
 
   static const _ratio = 18000.0;
 
@@ -948,6 +1026,12 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
 
   static const _minorName = 'thousandSquareFeet1Per4InchPanels';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => '1000 square feet (1/4-inch panels)';
+
   static const _ratio = 36000.0;
 
   /// 1 [VolumeLumber$ThousandSquareFeet1Per4InchPanels] = 36000.0 [VolumeLumber$CubicInch]
@@ -1008,6 +1092,12 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
       );
 
   static const _minorName = 'thousandSquareFeet3Per8InchPanels';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => '1000 square feet (3/8-inch panels)';
 
   static const _ratio = 54000.0;
 
@@ -1070,6 +1160,12 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
 
   static const _minorName = 'thousandSquareFeet1Per2InchPanels';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => '1000 square feet (1/2-inch panels)';
+
   static const _ratio = 72000.0;
 
   /// 1 [VolumeLumber$ThousandSquareFeet1Per2InchPanels] = 72000.0 [VolumeLumber$CubicInch]
@@ -1130,6 +1226,12 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
       );
 
   static const _minorName = 'thousandSquareFeet3Per4InchPanels';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => '1000 square feet (3/4-inch panels)';
 
   static const _ratio = 108000.0;
 

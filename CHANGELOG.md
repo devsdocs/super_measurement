@@ -1,3 +1,6 @@
+## 2.0.1
+- Some minor API changes
+
 ## 2.0.0
 - Breaking changes, please adjust your code to new API, see example for usage
 

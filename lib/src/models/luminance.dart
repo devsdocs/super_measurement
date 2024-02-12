@@ -31,7 +31,7 @@ abstract final class Luminance extends Unit<Luminance> {
 
   @override
   AnchorRatio<Luminance> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Luminance>({
           Luminance$Stilb: Luminance$Stilb._ratio,
           Luminance$CandelaPerMeterSquare:
@@ -59,7 +59,7 @@ abstract final class Luminance extends Unit<Luminance> {
       );
 
   @override
-  Luminance get _anchor => const Luminance$Bril();
+  Luminance get anchor => const Luminance$Bril();
 
   /// Convert to [Luminance$Stilb]
   Luminance get toStilb => convertTo(
@@ -176,6 +176,12 @@ final class Luminance$Stilb extends Luminance {
 
   static const _minorName = 'stilb';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 314159265358.9793;
 
   /// 1 [Luminance$Stilb] ≈ 314159265358.9793 [Luminance$Bril]
@@ -234,6 +240,12 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
       );
 
   static const _minorName = 'candelaPerMeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'candela/meter²';
 
   static const _ratio = 31415926.535897933;
 
@@ -295,6 +307,12 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
 
   static const _minorName = 'candelaPerCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'candela/centimeter²';
+
   static const _ratio = 314159265358.9793;
 
   /// 1 [Luminance$CandelaPerCentimeterSquare] ≈ 314159265358.9793 [Luminance$Bril]
@@ -354,6 +372,12 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
       );
 
   static const _minorName = 'candelaPerFootSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'candela/foot²';
 
   static const _ratio = 338158218.8900337;
 
@@ -415,6 +439,12 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
 
   static const _minorName = 'lumenPerMeterSquarePerSteradian';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'lumen/meter²/steradian';
+
   static const _ratio = 31415926.535897933;
 
   /// 1 [Luminance$LumenPerMeterSquarePerSteradian] ≈ 31415926.535897933 [Luminance$Bril]
@@ -475,6 +505,12 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
 
   static const _minorName = 'lumenPerCentimeterSquarePerSteradian';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'lumen/centimeter²/steradian';
+
   static const _ratio = 314159265358.9793;
 
   /// 1 [Luminance$LumenPerCentimeterSquarePerSteradian] ≈ 314159265358.9793 [Luminance$Bril]
@@ -534,6 +570,12 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
       );
 
   static const _minorName = 'lumenPerFootSquarePerSteradian';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'lumen/foot²/steradian';
 
   static const _ratio = 338158218.8900337;
 
@@ -596,6 +638,12 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
 
   static const _minorName = 'wattPerCentimeterSquarePerSteradianAt555nm';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'watt/centimeter²/steradian (at 555nm)';
+
   static const _ratio = 214570778240182.88;
 
   /// 1 [Luminance$WattPerCentimeterSquarePerSteradianAt555nm] ≈ 214570778240182.88 [Luminance$Bril]
@@ -656,6 +704,12 @@ final class Luminance$Nit extends Luminance {
 
   static const _minorName = 'nit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 31415926.535897933;
 
   /// 1 [Luminance$Nit] ≈ 31415926.535897933 [Luminance$Bril]
@@ -714,6 +768,12 @@ final class Luminance$Millinit extends Luminance {
       );
 
   static const _minorName = 'millinit';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 31415.926535897932;
 
@@ -774,6 +834,12 @@ final class Luminance$FootLambert extends Luminance {
 
   static const _minorName = 'footLambert';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'foot-lambert';
+
   static const _ratio = 107639104.167;
 
   /// 1 [Luminance$FootLambert] ≈ 107639104.167 [Luminance$Bril]
@@ -832,6 +898,12 @@ final class Luminance$Lambert extends Luminance {
       );
 
   static const _minorName = 'lambert';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 100000000000.0;
 
@@ -892,6 +964,12 @@ final class Luminance$Millilambert extends Luminance {
 
   static const _minorName = 'millilambert';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 100000000.0;
 
   /// 1 [Luminance$Millilambert] = 100000000.0 [Luminance$Bril]
@@ -950,6 +1028,12 @@ final class Luminance$Apostilb extends Luminance {
       );
 
   static const _minorName = 'apostilb';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10000000.0;
 
@@ -1010,6 +1094,12 @@ final class Luminance$Blondel extends Luminance {
 
   static const _minorName = 'blondel';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000.0;
 
   /// 1 [Luminance$Blondel] = 10000000.0 [Luminance$Bril]
@@ -1069,6 +1159,12 @@ final class Luminance$Bril extends Luminance {
 
   static const _minorName = 'bril';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Luminance]
@@ -1127,6 +1223,12 @@ final class Luminance$Skot extends Luminance {
       );
 
   static const _minorName = 'skot';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10000.0;
 

@@ -33,7 +33,7 @@ abstract final class RadiationDoseEquivalent
 
   @override
   AnchorRatio<RadiationDoseEquivalent> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<RadiationDoseEquivalent>({
           RadiationDoseEquivalent$Millisievert:
               RadiationDoseEquivalent$Millisievert._ratio,
@@ -57,8 +57,7 @@ abstract final class RadiationDoseEquivalent
       );
 
   @override
-  RadiationDoseEquivalent get _anchor =>
-      const RadiationDoseEquivalent$Sievert();
+  RadiationDoseEquivalent get anchor => const RadiationDoseEquivalent$Sievert();
 
   /// Convert to [RadiationDoseEquivalent$Sievert]
   RadiationDoseEquivalent get toSievert => convertTo(
@@ -140,6 +139,12 @@ final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
 
   static const _minorName = 'sievert';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [RadiationDoseEquivalent]
@@ -200,6 +205,12 @@ final class RadiationDoseEquivalent$Millisievert
       );
 
   static const _minorName = 'millisievert';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.001;
 
@@ -262,6 +273,12 @@ final class RadiationDoseEquivalent$Microsievert
 
   static const _minorName = 'microsievert';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.000001;
 
   /// 1 [RadiationDoseEquivalent$Microsievert] ≈ 0.000001 [RadiationDoseEquivalent$Sievert]
@@ -322,6 +339,12 @@ final class RadiationDoseEquivalent$JoulePerKilogram
       );
 
   static const _minorName = 'joulePerKilogram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/kilogram';
 
   static const _ratio = 1.0;
 
@@ -384,6 +407,12 @@ final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
 
   static const _minorName = 'meterSquarePerSecondSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'meter²/second²';
+
   static const _ratio = 1.0;
 
   /// 1 [RadiationDoseEquivalent$MeterSquarePerSecondSquare] = 1.0 [RadiationDoseEquivalent$Sievert]
@@ -445,6 +474,12 @@ final class RadiationDoseEquivalent$RemRoentgenEqMan
 
   static const _minorName = 'remRoentgenEqMan';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'rem (Roentgen eq. man)';
+
   static const _ratio = 0.01;
 
   /// 1 [RadiationDoseEquivalent$RemRoentgenEqMan] ≈ 0.01 [RadiationDoseEquivalent$Sievert]
@@ -504,6 +539,12 @@ final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
       );
 
   static const _minorName = 'millirem';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.00001;
 
@@ -566,6 +607,12 @@ final class RadiationDoseEquivalent$IntensityMillicurie
 
   static const _minorName = 'intensityMillicurie';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'intensity millicurie';
+
   static const _ratio = 1.0;
 
   /// 1 [RadiationDoseEquivalent$IntensityMillicurie] = 1.0 [RadiationDoseEquivalent$Sievert]
@@ -627,6 +674,12 @@ final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
 
   static const _minorName = 'grayWr1XRayGammaRayElectrons';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gray (Wr=1, X-ray, gamma ray, electrons)';
+
   static const _ratio = 1.0;
 
   /// 1 [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons] = 1.0 [RadiationDoseEquivalent$Sievert]
@@ -687,6 +740,12 @@ final class RadiationDoseEquivalent$GrayWr20AlphaParticles
       );
 
   static const _minorName = 'grayWr20AlphaParticles';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gray (Wr=20, alpha particles)';
 
   static const _ratio = 20.0;
 

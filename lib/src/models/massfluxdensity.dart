@@ -29,7 +29,7 @@ abstract final class MassFluxDensity extends Unit<MassFluxDensity> {
 
   @override
   AnchorRatio<MassFluxDensity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<MassFluxDensity>({
           MassFluxDensity$KilogramPerHourMeterSquare:
               MassFluxDensity$KilogramPerHourMeterSquare._ratio,
@@ -47,7 +47,7 @@ abstract final class MassFluxDensity extends Unit<MassFluxDensity> {
       );
 
   @override
-  MassFluxDensity get _anchor =>
+  MassFluxDensity get anchor =>
       const MassFluxDensity$KilogramPerSecondMeterSquare();
 
   /// Convert to [MassFluxDensity$KilogramPerHourMeterSquare]
@@ -115,6 +115,12 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
 
   static const _minorName = 'kilogramPerHourMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram/hour meter²';
+
   static const _ratio = 0.0002777777777777778;
 
   /// 1 [MassFluxDensity$KilogramPerHourMeterSquare] ≈ 0.0002777777777777778 [MassFluxDensity$KilogramPerSecondMeterSquare]
@@ -174,6 +180,12 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
       );
 
   static const _minorName = 'kilogramPerHourFootSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram/hour foot²';
 
   static const _ratio = 0.002989975117;
 
@@ -236,6 +248,12 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
 
   static const _minorName = 'kilogramPerSecondMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram/second meter²';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [MassFluxDensity]
@@ -295,6 +313,12 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
       );
 
   static const _minorName = 'gramPerSecondMeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gram/second meter²';
 
   static const _ratio = 0.001;
 
@@ -357,6 +381,12 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
 
   static const _minorName = 'gramPerSecondCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gram/second centimeter²';
+
   static const _ratio = 10.0;
 
   /// 1 [MassFluxDensity$GramPerSecondCentimeterSquare] = 10.0 [MassFluxDensity$KilogramPerSecondMeterSquare]
@@ -417,6 +447,12 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
 
   static const _minorName = 'poundPerHourFootSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound/hour foot²';
+
   static const _ratio = 0.001356229913;
 
   /// 1 [MassFluxDensity$PoundPerHourFootSquare] ≈ 0.001356229913 [MassFluxDensity$KilogramPerSecondMeterSquare]
@@ -476,6 +512,12 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
       );
 
   static const _minorName = 'poundPerSecondFootSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound/second foot²';
 
   static const _ratio = 4.882427687;
 

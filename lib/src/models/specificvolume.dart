@@ -27,7 +27,7 @@ abstract final class SpecificVolume extends Unit<SpecificVolume> {
 
   @override
   AnchorRatio<SpecificVolume> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<SpecificVolume>({
           SpecificVolume$CentimeterCubicPerGram:
               SpecificVolume$CentimeterCubicPerGram._ratio,
@@ -44,7 +44,7 @@ abstract final class SpecificVolume extends Unit<SpecificVolume> {
       );
 
   @override
-  SpecificVolume get _anchor => const SpecificVolume$MeterCubicPerKilogram();
+  SpecificVolume get anchor => const SpecificVolume$MeterCubicPerKilogram();
 
   /// Convert to [SpecificVolume$MeterCubicPerKilogram]
   SpecificVolume get toMeterCubicPerKilogram => convertTo(
@@ -111,6 +111,12 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
 
   static const _minorName = 'meterCubicPerKilogram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'meter³/kilogram';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [SpecificVolume]
@@ -170,6 +176,12 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
       );
 
   static const _minorName = 'centimeterCubicPerGram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'centimeter³/gram';
 
   static const _ratio = 0.001;
 
@@ -231,6 +243,12 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
 
   static const _minorName = 'literPerKilogram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'liter/kilogram';
+
   static const _ratio = 0.001;
 
   /// 1 [SpecificVolume$LiterPerKilogram] ≈ 0.001 [SpecificVolume$MeterCubicPerKilogram]
@@ -291,6 +309,12 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
 
   static const _minorName = 'literPerGram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'liter/gram';
+
   static const _ratio = 1.0;
 
   /// 1 [SpecificVolume$LiterPerGram] = 1.0 [SpecificVolume$MeterCubicPerKilogram]
@@ -349,6 +373,12 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
       );
 
   static const _minorName = 'feetCubicPerKilogram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'feet³/kilogram';
 
   static const _ratio = 0.028316846593193615;
 
@@ -410,6 +440,12 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
 
   static const _minorName = 'feetCubicPerPound';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'feet³/pound';
+
   static const _ratio = 0.06242795995;
 
   /// 1 [SpecificVolume$FeetCubicPerPound] ≈ 0.06242795995 [SpecificVolume$MeterCubicPerKilogram]
@@ -469,6 +505,12 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
       );
 
   static const _minorName = 'gallonUKPerPound';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gallon (UK)/pound';
 
   static const _ratio = 0.010022412755827792;
 

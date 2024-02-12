@@ -26,7 +26,7 @@ abstract final class Conductivity extends Unit<Conductivity> {
 
   @override
   AnchorRatio<Conductivity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Conductivity>({
           Conductivity$MhoPerCentimeter: Conductivity$MhoPerCentimeter._ratio,
           Conductivity$AbmhoPerMeter: Conductivity$AbmhoPerMeter._ratio,
@@ -42,7 +42,7 @@ abstract final class Conductivity extends Unit<Conductivity> {
       );
 
   @override
-  Conductivity get _anchor => const Conductivity$MhoPerMeter();
+  Conductivity get anchor => const Conductivity$MhoPerMeter();
 
   /// Convert to [Conductivity$MhoPerMeter]
   Conductivity get toMhoPerMeter => convertTo(
@@ -114,6 +114,12 @@ final class Conductivity$MhoPerMeter extends Conductivity {
 
   static const _minorName = 'mhoPerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mho/meter';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Conductivity]
@@ -172,6 +178,12 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
       );
 
   static const _minorName = 'mhoPerCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mho/centimeter';
 
   static const _ratio = 100.0;
 
@@ -233,6 +245,12 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
 
   static const _minorName = 'abmhoPerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abmho/meter';
+
   static const _ratio = 1000000000.0;
 
   /// 1 [Conductivity$AbmhoPerMeter] = 1000000000.0 [Conductivity$MhoPerMeter]
@@ -291,6 +309,12 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
       );
 
   static const _minorName = 'abmhoPerCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abmho/centimeter';
 
   static const _ratio = 100000000000.0;
 
@@ -352,6 +376,12 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
 
   static const _minorName = 'statmhoPerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Statmho/meter';
+
   static const _ratio = 1.112653456e-12;
 
   /// 1 [Conductivity$StatmhoPerMeter] ≈ 1.112653456e-12 [Conductivity$MhoPerMeter]
@@ -411,6 +441,12 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
       );
 
   static const _minorName = 'statmhoPerCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Statmho/centimeter';
 
   static const _ratio = 1.112653456e-10;
 
@@ -472,6 +508,12 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
 
   static const _minorName = 'siemensPerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'siemens/meter';
+
   static const _ratio = 1.0;
 
   /// 1 [Conductivity$SiemensPerMeter] = 1.0 [Conductivity$MhoPerMeter]
@@ -531,6 +573,12 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
       );
 
   static const _minorName = 'picosiemensPerMeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'picosiemens/meter';
 
   static const _ratio = 1e-12;
 

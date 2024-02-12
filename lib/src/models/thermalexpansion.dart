@@ -27,7 +27,7 @@ abstract final class ThermalExpansion extends Unit<ThermalExpansion> {
 
   @override
   AnchorRatio<ThermalExpansion> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<ThermalExpansion>({
           ThermalExpansion$LengthPerLengthPerCelsius:
               ThermalExpansion$LengthPerLengthPerCelsius._ratio,
@@ -41,7 +41,7 @@ abstract final class ThermalExpansion extends Unit<ThermalExpansion> {
       );
 
   @override
-  ThermalExpansion get _anchor =>
+  ThermalExpansion get anchor =>
       const ThermalExpansion$LengthPerLengthPerKelvin();
 
   /// Convert to [ThermalExpansion$LengthPerLengthPerKelvin]
@@ -98,6 +98,12 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
       );
 
   static const _minorName = 'lengthPerLengthPerKelvin';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'length/length/Kelvin';
 
   static const _ratio = 1.0;
 
@@ -160,6 +166,12 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
 
   static const _minorName = 'lengthPerLengthPerCelsius';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'length/length/Celsius';
+
   static const _ratio = 1.0;
 
   /// 1 [ThermalExpansion$LengthPerLengthPerCelsius] = 1.0 [ThermalExpansion$LengthPerLengthPerKelvin]
@@ -220,6 +232,12 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
       );
 
   static const _minorName = 'lengthPerLengthPerFahrenheit';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'length/length/Fahrenheit';
 
   static const _ratio = 1.8;
 
@@ -282,6 +300,12 @@ final class ThermalExpansion$LengthPerLengthPerRankine
 
   static const _minorName = 'lengthPerLengthPerRankine';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'length/length/Rankine';
+
   static const _ratio = 1.8;
 
   /// 1 [ThermalExpansion$LengthPerLengthPerRankine] ≈ 1.8 [ThermalExpansion$LengthPerLengthPerKelvin]
@@ -342,6 +366,12 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
       );
 
   static const _minorName = 'lengthPerLengthPerReaumur';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'length/length/Réaumur';
 
   static const _ratio = 0.8;
 

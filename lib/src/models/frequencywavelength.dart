@@ -44,7 +44,7 @@ abstract final class FrequencyWavelength extends Unit<FrequencyWavelength> {
 
   @override
   AnchorRatio<FrequencyWavelength> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<FrequencyWavelength>({
           FrequencyWavelength$Exahertz: FrequencyWavelength$Exahertz._ratio,
           FrequencyWavelength$Petahertz: FrequencyWavelength$Petahertz._ratio,
@@ -94,7 +94,7 @@ abstract final class FrequencyWavelength extends Unit<FrequencyWavelength> {
       );
 
   @override
-  FrequencyWavelength get _anchor => const FrequencyWavelength$Hertz();
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz();
 
   /// Convert to [FrequencyWavelength$Exahertz]
   FrequencyWavelength get toExahertz => convertTo(
@@ -281,6 +281,12 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
 
   static const _minorName = 'exahertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000000000000.0;
 
   /// 1 [FrequencyWavelength$Exahertz] = 1000000000000000000.0 [FrequencyWavelength$Hertz]
@@ -340,6 +346,12 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
       );
 
   static const _minorName = 'petahertz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
 
@@ -401,6 +413,12 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
 
   static const _minorName = 'terahertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000000.0;
 
   /// 1 [FrequencyWavelength$Terahertz] = 1000000000000.0 [FrequencyWavelength$Hertz]
@@ -460,6 +478,12 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
       );
 
   static const _minorName = 'gigahertz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
 
@@ -521,6 +545,12 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
 
   static const _minorName = 'megahertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000.0;
 
   /// 1 [FrequencyWavelength$Megahertz] = 1000000.0 [FrequencyWavelength$Hertz]
@@ -580,6 +610,12 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
       );
 
   static const _minorName = 'kilohertz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000.0;
 
@@ -641,6 +677,12 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
 
   static const _minorName = 'hectohertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 100.0;
 
   /// 1 [FrequencyWavelength$Hectohertz] = 100.0 [FrequencyWavelength$Hertz]
@@ -700,6 +742,12 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
       );
 
   static const _minorName = 'dekahertz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10.0;
 
@@ -761,6 +809,12 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
 
   static const _minorName = 'hertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [FrequencyWavelength]
@@ -819,6 +873,12 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
       );
 
   static const _minorName = 'decihertz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.1;
 
@@ -880,6 +940,12 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
 
   static const _minorName = 'centihertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.01;
 
   /// 1 [FrequencyWavelength$Centihertz] ≈ 0.01 [FrequencyWavelength$Hertz]
@@ -939,6 +1005,12 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
       );
 
   static const _minorName = 'millihertz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.001;
 
@@ -1000,6 +1072,12 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
 
   static const _minorName = 'microhertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.000001;
 
   /// 1 [FrequencyWavelength$Microhertz] ≈ 0.000001 [FrequencyWavelength$Hertz]
@@ -1059,6 +1137,12 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
       );
 
   static const _minorName = 'nanohertz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e-9;
 
@@ -1120,6 +1204,12 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
 
   static const _minorName = 'picohertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-12;
 
   /// 1 [FrequencyWavelength$Picohertz] ≈ 1e-12 [FrequencyWavelength$Hertz]
@@ -1179,6 +1269,12 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
       );
 
   static const _minorName = 'femtohertz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e-15;
 
@@ -1240,6 +1336,12 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
 
   static const _minorName = 'attohertz';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-18;
 
   /// 1 [FrequencyWavelength$Attohertz] ≈ 1e-18 [FrequencyWavelength$Hertz]
@@ -1299,6 +1401,12 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
       );
 
   static const _minorName = 'cyclePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'cycle/second';
 
   static const _ratio = 1.0;
 
@@ -1361,6 +1469,12 @@ final class FrequencyWavelength$WavelengthInExametres
 
   static const _minorName = 'wavelengthInExametres';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in exametres';
+
   static const _ratio = 3335640951.9815207;
 
   /// 1 [FrequencyWavelength$WavelengthInExametres] ≈ 3335640951.9815207 [FrequencyWavelength$Hertz]
@@ -1421,6 +1535,12 @@ final class FrequencyWavelength$WavelengthInPetametres
       );
 
   static const _minorName = 'wavelengthInPetametres';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in petametres';
 
   static const _ratio = 3335640.9519815203;
 
@@ -1483,6 +1603,12 @@ final class FrequencyWavelength$WavelengthInTerametres
 
   static const _minorName = 'wavelengthInTerametres';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in terametres';
+
   static const _ratio = 3335.6409519815206;
 
   /// 1 [FrequencyWavelength$WavelengthInTerametres] ≈ 3335.6409519815206 [FrequencyWavelength$Hertz]
@@ -1543,6 +1669,12 @@ final class FrequencyWavelength$WavelengthInGigametres
       );
 
   static const _minorName = 'wavelengthInGigametres';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in gigametres';
 
   static const _ratio = 3.3356409519815204;
 
@@ -1605,6 +1737,12 @@ final class FrequencyWavelength$WavelengthInMegametres
 
   static const _minorName = 'wavelengthInMegametres';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in megametres';
+
   static const _ratio = 0.0033356409519815205;
 
   /// 1 [FrequencyWavelength$WavelengthInMegametres] ≈ 0.0033356409519815205 [FrequencyWavelength$Hertz]
@@ -1665,6 +1803,12 @@ final class FrequencyWavelength$WavelengthInKilometres
       );
 
   static const _minorName = 'wavelengthInKilometres';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in kilometres';
 
   static const _ratio = 0.0000033356409519815205;
 
@@ -1727,6 +1871,12 @@ final class FrequencyWavelength$WavelengthInHectometres
 
   static const _minorName = 'wavelengthInHectometres';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in hectometres';
+
   static const _ratio = 3.3356409519815204e-7;
 
   /// 1 [FrequencyWavelength$WavelengthInHectometres] ≈ 3.3356409519815204e-7 [FrequencyWavelength$Hertz]
@@ -1788,6 +1938,12 @@ final class FrequencyWavelength$WavelengthInDecametres
 
   static const _minorName = 'wavelengthInDecametres';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in decametres';
+
   static const _ratio = 3.3356409519815205e-8;
 
   /// 1 [FrequencyWavelength$WavelengthInDecametres] ≈ 3.3356409519815205e-8 [FrequencyWavelength$Hertz]
@@ -1847,6 +2003,12 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
       );
 
   static const _minorName = 'wavelengthInMetres';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in metres';
 
   static const _ratio = 3.3356409519815204e-9;
 
@@ -1909,6 +2071,12 @@ final class FrequencyWavelength$WavelengthInDecimetres
 
   static const _minorName = 'wavelengthInDecimetres';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in decimetres';
+
   static const _ratio = 3.3356409519815207e-10;
 
   /// 1 [FrequencyWavelength$WavelengthInDecimetres] ≈ 3.3356409519815207e-10 [FrequencyWavelength$Hertz]
@@ -1969,6 +2137,12 @@ final class FrequencyWavelength$WavelengthInCentimetres
       );
 
   static const _minorName = 'wavelengthInCentimetres';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in centimetres';
 
   static const _ratio = 3.33564095198152e-11;
 
@@ -2031,6 +2205,12 @@ final class FrequencyWavelength$WavelengthInMillimetres
 
   static const _minorName = 'wavelengthInMillimetres';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in millimetres';
+
   static const _ratio = 3.3356409519815203e-12;
 
   /// 1 [FrequencyWavelength$WavelengthInMillimetres] ≈ 3.3356409519815203e-12 [FrequencyWavelength$Hertz]
@@ -2091,6 +2271,12 @@ final class FrequencyWavelength$WavelengthInMicrometres
       );
 
   static const _minorName = 'wavelengthInMicrometres';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'wavelength in micrometres';
 
   static const _ratio = 3.3356409519815205e-15;
 

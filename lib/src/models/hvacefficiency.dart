@@ -25,7 +25,7 @@ abstract final class HVACEfficiency extends Unit<HVACEfficiency> {
 
   @override
   AnchorRatio<HVACEfficiency> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<HVACEfficiency>({
           HVACEfficiency$EEREnergyEfficiencyRatio:
               HVACEfficiency$EEREnergyEfficiencyRatio._ratio,
@@ -34,7 +34,7 @@ abstract final class HVACEfficiency extends Unit<HVACEfficiency> {
       );
 
   @override
-  HVACEfficiency get _anchor =>
+  HVACEfficiency get anchor =>
       const HVACEfficiency$COPCoefficientOfPerformace();
 
   /// Convert to [HVACEfficiency$EEREnergyEfficiencyRatio]
@@ -81,6 +81,12 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
       );
 
   static const _minorName = 'eEREnergyEfficiencyRatio';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'EER (energy efficiency ratio)';
 
   static const _ratio = 0.2928;
 
@@ -142,6 +148,12 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
 
   static const _minorName = 'cOPCoefficientOfPerformace';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'COP (coefficient of performace)';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [HVACEfficiency]
@@ -201,6 +213,12 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
       );
 
   static const _minorName = 'kilowattPerTon';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilowatt/ton';
 
   static const _ratio = 0.284608378870674;
 

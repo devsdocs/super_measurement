@@ -36,7 +36,7 @@ abstract final class RadiationRadioactivity
 
   @override
   AnchorRatio<RadiationRadioactivity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<RadiationRadioactivity>({
           RadiationRadioactivity$Terabecquerel:
               RadiationRadioactivity$Terabecquerel._ratio,
@@ -69,7 +69,7 @@ abstract final class RadiationRadioactivity
       );
 
   @override
-  RadiationRadioactivity get _anchor =>
+  RadiationRadioactivity get anchor =>
       const RadiationRadioactivity$Millibecquerel();
 
   /// Convert to [RadiationRadioactivity$Terabecquerel]
@@ -178,6 +178,12 @@ final class RadiationRadioactivity$Terabecquerel
 
   static const _minorName = 'terabecquerel';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000000000.0;
 
   /// 1 [RadiationRadioactivity$Terabecquerel] = 1000000000000000.0 [RadiationRadioactivity$Millibecquerel]
@@ -238,6 +244,12 @@ final class RadiationRadioactivity$Gigabecquerel
       );
 
   static const _minorName = 'gigabecquerel';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000000.0;
 
@@ -300,6 +312,12 @@ final class RadiationRadioactivity$Megabecquerel
 
   static const _minorName = 'megabecquerel';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000.0;
 
   /// 1 [RadiationRadioactivity$Megabecquerel] = 1000000000.0 [RadiationRadioactivity$Millibecquerel]
@@ -361,6 +379,12 @@ final class RadiationRadioactivity$Kilobecquerel
 
   static const _minorName = 'kilobecquerel';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000.0;
 
   /// 1 [RadiationRadioactivity$Kilobecquerel] = 1000000.0 [RadiationRadioactivity$Millibecquerel]
@@ -420,6 +444,12 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
       );
 
   static const _minorName = 'becquerel';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000.0;
 
@@ -482,6 +512,12 @@ final class RadiationRadioactivity$Millibecquerel
 
   static const _minorName = 'millibecquerel';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [RadiationRadioactivity]
@@ -541,6 +577,12 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
       );
 
   static const _minorName = 'kilocurie';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 37000000000000000.0;
 
@@ -602,6 +644,12 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
 
   static const _minorName = 'curie';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 37000000000000.0;
 
   /// 1 [RadiationRadioactivity$Curie] = 37000000000000.0 [RadiationRadioactivity$Millibecquerel]
@@ -661,6 +709,12 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
       );
 
   static const _minorName = 'millicurie';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 37000000000.0;
 
@@ -722,6 +776,12 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
 
   static const _minorName = 'microcurie';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 37000000.0;
 
   /// 1 [RadiationRadioactivity$Microcurie] = 37000000.0 [RadiationRadioactivity$Millibecquerel]
@@ -781,6 +841,12 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
       );
 
   static const _minorName = 'nanocurie';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 37000.0;
 
@@ -842,6 +908,12 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
 
   static const _minorName = 'picocurie';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 37.0;
 
   /// 1 [RadiationRadioactivity$Picocurie] = 37.0 [RadiationRadioactivity$Millibecquerel]
@@ -901,6 +973,12 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
       );
 
   static const _minorName = 'rutherford';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
 
@@ -963,6 +1041,12 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
 
   static const _minorName = 'disintegrationsPerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'disintegrations/second';
+
   static const _ratio = 1000.0;
 
   /// 1 [RadiationRadioactivity$DisintegrationsPerSecond] = 1000.0 [RadiationRadioactivity$Millibecquerel]
@@ -1023,6 +1107,12 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
       );
 
   static const _minorName = 'disintegrationsPerMinute';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'disintegrations/minute';
 
   static const _ratio = 16.666666666666668;
 

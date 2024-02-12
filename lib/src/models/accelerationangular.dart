@@ -27,7 +27,7 @@ abstract final class AccelerationAngular extends Unit<AccelerationAngular> {
 
   @override
   AnchorRatio<AccelerationAngular> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<AccelerationAngular>({
           AccelerationAngular$RadianPerSecondSquare:
               AccelerationAngular$RadianPerSecondSquare._ratio,
@@ -41,7 +41,7 @@ abstract final class AccelerationAngular extends Unit<AccelerationAngular> {
       );
 
   @override
-  AccelerationAngular get _anchor =>
+  AccelerationAngular get anchor =>
       const AccelerationAngular$RevolutionPerMinuteSecond();
 
   /// Convert to [AccelerationAngular$RadianPerSecondSquare]
@@ -99,6 +99,12 @@ final class AccelerationAngular$RadianPerSecondSquare
       );
 
   static const _minorName = 'radianPerSecondSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'radian/second²';
 
   static const _ratio = 9.549296587;
 
@@ -161,6 +167,12 @@ final class AccelerationAngular$RadianPerMinuteSquare
 
   static const _minorName = 'radianPerMinuteSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'radian/minute²';
+
   static const _ratio = 0.0026525823852777777;
 
   /// 1 [AccelerationAngular$RadianPerMinuteSquare] ≈ 0.0026525823852777777 [AccelerationAngular$RevolutionPerMinuteSecond]
@@ -221,6 +233,12 @@ final class AccelerationAngular$RevolutionPerSecondSquare
       );
 
   static const _minorName = 'revolutionPerSecondSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'revolution/second²';
 
   static const _ratio = 60.0;
 
@@ -283,6 +301,12 @@ final class AccelerationAngular$RevolutionPerMinuteSecond
 
   static const _minorName = 'revolutionPerMinuteSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'revolution/minute second';
+
   static const _ratio = 1.000000000074009;
 
   /// Default (anchor) unit of [AccelerationAngular]
@@ -343,6 +367,12 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
       );
 
   static const _minorName = 'revolutionPerMinuteSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'revolution/minute²';
 
   static const _ratio = 0.016666666666666666;
 

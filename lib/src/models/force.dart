@@ -31,7 +31,7 @@ abstract final class Force extends Unit<Force> {
 
   @override
   AnchorRatio<Force> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Force>({
           Force$Exanewton: Force$Exanewton._ratio,
           Force$Petanewton: Force$Petanewton._ratio,
@@ -62,7 +62,7 @@ abstract final class Force extends Unit<Force> {
       );
 
   @override
-  Force get _anchor => const Force$Dyne();
+  Force get anchor => const Force$Dyne();
 
   /// Convert to [Force$Exanewton]
   Force get toExanewton => convertTo(
@@ -224,6 +224,12 @@ final class Force$Exanewton extends Force {
 
   static const _minorName = 'exanewton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e+23;
 
   /// 1 [Force$Exanewton] = 1e+23 [Force$Dyne]
@@ -282,6 +288,12 @@ final class Force$Petanewton extends Force {
       );
 
   static const _minorName = 'petanewton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 100000000000000000000.0;
 
@@ -342,6 +354,12 @@ final class Force$Teranewton extends Force {
 
   static const _minorName = 'teranewton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 100000000000000000.0;
 
   /// 1 [Force$Teranewton] = 100000000000000000.0 [Force$Dyne]
@@ -400,6 +418,12 @@ final class Force$Giganewton extends Force {
       );
 
   static const _minorName = 'giganewton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 100000000000000.0;
 
@@ -460,6 +484,12 @@ final class Force$Meganewton extends Force {
 
   static const _minorName = 'meganewton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 100000000000.0;
 
   /// 1 [Force$Meganewton] = 100000000000.0 [Force$Dyne]
@@ -518,6 +548,12 @@ final class Force$Kilonewton extends Force {
       );
 
   static const _minorName = 'kilonewton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 100000000.0;
 
@@ -578,6 +614,12 @@ final class Force$Hectonewton extends Force {
 
   static const _minorName = 'hectonewton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000.0;
 
   /// 1 [Force$Hectonewton] = 10000000.0 [Force$Dyne]
@@ -636,6 +678,12 @@ final class Force$Dekanewton extends Force {
       );
 
   static const _minorName = 'dekanewton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
 
@@ -696,6 +744,12 @@ final class Force$Newton extends Force {
 
   static const _minorName = 'newton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 100000.0;
 
   /// 1 [Force$Newton] = 100000.0 [Force$Dyne]
@@ -754,6 +808,12 @@ final class Force$Decinewton extends Force {
       );
 
   static const _minorName = 'decinewton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10000.0;
 
@@ -814,6 +874,12 @@ final class Force$Centinewton extends Force {
 
   static const _minorName = 'centinewton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000.0;
 
   /// 1 [Force$Centinewton] = 1000.0 [Force$Dyne]
@@ -872,6 +938,12 @@ final class Force$Millinewton extends Force {
       );
 
   static const _minorName = 'millinewton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 100.0;
 
@@ -932,6 +1004,12 @@ final class Force$Micronewton extends Force {
 
   static const _minorName = 'micronewton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.1;
 
   /// 1 [Force$Micronewton] ≈ 0.1 [Force$Dyne]
@@ -990,6 +1068,12 @@ final class Force$Nanonewton extends Force {
       );
 
   static const _minorName = 'nanonewton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.0001;
 
@@ -1050,6 +1134,12 @@ final class Force$Piconewton extends Force {
 
   static const _minorName = 'piconewton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-7;
 
   /// 1 [Force$Piconewton] ≈ 1e-7 [Force$Dyne]
@@ -1108,6 +1198,12 @@ final class Force$Femtonewton extends Force {
       );
 
   static const _minorName = 'femtonewton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e-10;
 
@@ -1168,6 +1264,12 @@ final class Force$Attonewton extends Force {
 
   static const _minorName = 'attonewton';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-13;
 
   /// 1 [Force$Attonewton] ≈ 1e-13 [Force$Dyne]
@@ -1226,6 +1328,12 @@ final class Force$Dyne extends Force {
       );
 
   static const _minorName = 'dyne';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.0;
 
@@ -1286,6 +1394,12 @@ final class Force$JoulePerMeter extends Force {
 
   static const _minorName = 'joulePerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/meter';
+
   static const _ratio = 100000.0;
 
   /// 1 [Force$JoulePerMeter] = 100000.0 [Force$Dyne]
@@ -1344,6 +1458,12 @@ final class Force$JoulePerCentimeter extends Force {
       );
 
   static const _minorName = 'joulePerCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/centimeter';
 
   static const _ratio = 1000.0;
 
@@ -1404,6 +1524,12 @@ final class Force$KilogramForce extends Force {
 
   static const _minorName = 'kilogramForce';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram force';
+
   static const _ratio = 980664.9999980076;
 
   /// 1 [Force$KilogramForce] ≈ 980664.9999980076 [Force$Dyne]
@@ -1462,6 +1588,12 @@ final class Force$GramForce extends Force {
       );
 
   static const _minorName = 'gramForce';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gram force';
 
   static const _ratio = 980.6649999980076;
 
@@ -1522,6 +1654,12 @@ final class Force$KipForce extends Force {
 
   static const _minorName = 'kipForce';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kip force';
+
   static const _ratio = 444822161.5254772;
 
   /// 1 [Force$KipForce] ≈ 444822161.5254772 [Force$Dyne]
@@ -1580,6 +1718,12 @@ final class Force$PoundForce extends Force {
       );
 
   static const _minorName = 'poundForce';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound force';
 
   static const _ratio = 444822.16152547713;
 
@@ -1640,6 +1784,12 @@ final class Force$OunceForce extends Force {
 
   static const _minorName = 'ounceForce';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ounce force';
+
   static const _ratio = 27801.38509534232;
 
   /// 1 [Force$OunceForce] ≈ 27801.38509534232 [Force$Dyne]
@@ -1698,6 +1848,12 @@ final class Force$Poundal extends Force {
       );
 
   static const _minorName = 'poundal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 13825.495437599799;
 

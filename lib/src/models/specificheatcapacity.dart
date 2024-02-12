@@ -34,7 +34,7 @@ abstract final class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
 
   @override
   AnchorRatio<SpecificHeatCapacity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<SpecificHeatCapacity>({
           SpecificHeatCapacity$KilojoulePerKilogramK:
               SpecificHeatCapacity$KilojoulePerKilogramK._ratio,
@@ -60,7 +60,7 @@ abstract final class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
       );
 
   @override
-  SpecificHeatCapacity get _anchor =>
+  SpecificHeatCapacity get anchor =>
       const SpecificHeatCapacity$JoulePerKilogramK();
 
   /// Convert to [SpecificHeatCapacity$KilojoulePerKilogramK]
@@ -149,6 +149,12 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
 
   static const _minorName = 'kilojoulePerKilogramK';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilojoule/kilogram K';
+
   static const _ratio = 1000.0;
 
   /// 1 [SpecificHeatCapacity$KilojoulePerKilogramK] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
@@ -209,6 +215,12 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
       );
 
   static const _minorName = 'kilojoulePerKilogramDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilojoule/kilogram °C';
 
   static const _ratio = 1000.0;
 
@@ -271,6 +283,12 @@ final class SpecificHeatCapacity$JoulePerKilogramK
 
   static const _minorName = 'joulePerKilogramK';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/kilogram K';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [SpecificHeatCapacity]
@@ -331,6 +349,12 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
       );
 
   static const _minorName = 'joulePerKilogramDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/kilogram °C';
 
   static const _ratio = 1.0;
 
@@ -393,6 +417,12 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
 
   static const _minorName = 'joulePerGramDegreeC';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/gram °C';
+
   static const _ratio = 1000.0;
 
   /// 1 [SpecificHeatCapacity$JoulePerGramDegreeC] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
@@ -453,6 +483,12 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
       );
 
   static const _minorName = 'kilocaloriePerKilogramDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/kilogram °C';
 
   static const _ratio = 4186.8;
 
@@ -515,6 +551,12 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
 
   static const _minorName = 'caloriePerGramDegreeC';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/gram °C';
+
   static const _ratio = 4186.8;
 
   /// 1 [SpecificHeatCapacity$CaloriePerGramDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
@@ -575,6 +617,12 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
       );
 
   static const _minorName = 'bTUPerPoundDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/pound °C';
 
   static const _ratio = 2326.0;
 
@@ -637,6 +685,12 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
 
   static const _minorName = 'bTUPerPoundDegreeF';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/pound °F';
+
   static const _ratio = 4186.8;
 
   /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeF] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
@@ -698,6 +752,12 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
 
   static const _minorName = 'bTUPerPoundDegreeR';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/pound °R';
+
   static const _ratio = 4186.8;
 
   /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeR] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
@@ -758,6 +818,12 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
       );
 
   static const _minorName = 'cHUPerPoundDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CHU/pound °C';
 
   static const _ratio = 4186.8;
 

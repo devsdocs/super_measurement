@@ -29,7 +29,7 @@ abstract final class Illumination extends Unit<Illumination> {
 
   @override
   AnchorRatio<Illumination> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Illumination>({
           Illumination$MeterCandle: Illumination$MeterCandle._ratio,
           Illumination$CentimeterCandle: Illumination$CentimeterCandle._ratio,
@@ -49,7 +49,7 @@ abstract final class Illumination extends Unit<Illumination> {
       );
 
   @override
-  Illumination get _anchor => const Illumination$Nox();
+  Illumination get anchor => const Illumination$Nox();
 
   /// Convert to [Illumination$MeterCandle]
   Illumination get toMeterCandle => convertTo(
@@ -136,6 +136,12 @@ final class Illumination$MeterCandle extends Illumination {
 
   static const _minorName = 'meterCandle';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'meter-candle';
+
   static const _ratio = 1000.0;
 
   /// 1 [Illumination$MeterCandle] = 1000.0 [Illumination$Nox]
@@ -194,6 +200,12 @@ final class Illumination$CentimeterCandle extends Illumination {
       );
 
   static const _minorName = 'centimeterCandle';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'centimeter-candle';
 
   static const _ratio = 10000000.0;
 
@@ -255,6 +267,12 @@ final class Illumination$FootCandle extends Illumination {
 
   static const _minorName = 'footCandle';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'foot-candle';
+
   static const _ratio = 10763.9104167;
 
   /// 1 [Illumination$FootCandle] ≈ 10763.9104167 [Illumination$Nox]
@@ -313,6 +331,12 @@ final class Illumination$Flame extends Illumination {
       );
 
   static const _minorName = 'flame';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 43055.6416668;
 
@@ -373,6 +397,12 @@ final class Illumination$Phot extends Illumination {
 
   static const _minorName = 'phot';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000.0;
 
   /// 1 [Illumination$Phot] = 10000000.0 [Illumination$Nox]
@@ -431,6 +461,12 @@ final class Illumination$Nox extends Illumination {
       );
 
   static const _minorName = 'nox';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.0;
 
@@ -491,6 +527,12 @@ final class Illumination$Lux extends Illumination {
 
   static const _minorName = 'lux';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000.0;
 
   /// 1 [Illumination$Lux] = 1000.0 [Illumination$Nox]
@@ -549,6 +591,12 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
       );
 
   static const _minorName = 'lumenPerMeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'lumen/meter²';
 
   static const _ratio = 1000.0;
 
@@ -610,6 +658,12 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
 
   static const _minorName = 'lumenPerCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'lumen/centimeter²';
+
   static const _ratio = 10000000.0;
 
   /// 1 [Illumination$LumenPerCentimeterSquare] = 10000000.0 [Illumination$Nox]
@@ -670,6 +724,12 @@ final class Illumination$LumenPerFootSquare extends Illumination {
 
   static const _minorName = 'lumenPerFootSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'lumen/foot²';
+
   static const _ratio = 10763.9104167;
 
   /// 1 [Illumination$LumenPerFootSquare] ≈ 10763.9104167 [Illumination$Nox]
@@ -729,6 +789,12 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
       );
 
   static const _minorName = 'wattPerCentimeterSquareAt555nm';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'watt/centimeter² (at 555nm)';
 
   static const _ratio = 6830000000.0;
 

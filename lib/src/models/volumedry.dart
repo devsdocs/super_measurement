@@ -27,7 +27,7 @@ abstract final class VolumeDry extends Unit<VolumeDry> {
 
   @override
   AnchorRatio<VolumeDry> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<VolumeDry>({
           VolumeDry$Barrel: VolumeDry$Barrel._ratio,
           VolumeDry$Liter: VolumeDry$Liter._ratio,
@@ -45,7 +45,7 @@ abstract final class VolumeDry extends Unit<VolumeDry> {
       );
 
   @override
-  VolumeDry get _anchor => const VolumeDry$LogBiblical();
+  VolumeDry get anchor => const VolumeDry$LogBiblical();
 
   /// Convert to [VolumeDry$Barrel]
   VolumeDry get toBarrel => convertTo(
@@ -142,6 +142,12 @@ final class VolumeDry$Barrel extends VolumeDry {
 
   static const _minorName = 'barrel';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 378.41605930454045;
 
   /// 1 [VolumeDry$Barrel] ≈ 378.41605930454045 [VolumeDry$LogBiblical]
@@ -200,6 +206,12 @@ final class VolumeDry$Liter extends VolumeDry {
       );
 
   static const _minorName = 'liter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 3.27272743202319;
 
@@ -260,6 +272,12 @@ final class VolumeDry$Pint extends VolumeDry {
 
   static const _minorName = 'pint';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.80199799411;
 
   /// 1 [VolumeDry$Pint] ≈ 1.80199799411 [VolumeDry$LogBiblical]
@@ -318,6 +336,12 @@ final class VolumeDry$Quart extends VolumeDry {
       );
 
   static const _minorName = 'quart';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 3.60399598822;
 
@@ -378,6 +402,12 @@ final class VolumeDry$Peck extends VolumeDry {
 
   static const _minorName = 'peck';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 28.83196790576;
 
   /// 1 [VolumeDry$Peck] ≈ 28.83196790576 [VolumeDry$LogBiblical]
@@ -436,6 +466,12 @@ final class VolumeDry$Bushel extends VolumeDry {
       );
 
   static const _minorName = 'bushel';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 115.32787162304;
 
@@ -496,6 +532,12 @@ final class VolumeDry$CorBiblical extends VolumeDry {
 
   static const _minorName = 'corBiblical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'cor (Biblical)';
+
   static const _ratio = 720.0;
 
   /// 1 [VolumeDry$CorBiblical] = 720.0 [VolumeDry$LogBiblical]
@@ -554,6 +596,12 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
       );
 
   static const _minorName = 'homerBiblical';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'homer (Biblical)';
 
   static const _ratio = 720.0;
 
@@ -614,6 +662,12 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
 
   static const _minorName = 'ephahBiblical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ephah (Biblical)';
+
   static const _ratio = 72.0;
 
   /// 1 [VolumeDry$EphahBiblical] = 72.0 [VolumeDry$LogBiblical]
@@ -672,6 +726,12 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
       );
 
   static const _minorName = 'seahBiblical';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'seah (Biblical)';
 
   static const _ratio = 24.0;
 
@@ -732,6 +792,12 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
 
   static const _minorName = 'omerBiblical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'omer (Biblical)';
+
   static const _ratio = 7.2;
 
   /// 1 [VolumeDry$OmerBiblical] ≈ 7.2 [VolumeDry$LogBiblical]
@@ -791,6 +857,12 @@ final class VolumeDry$CabBiblical extends VolumeDry {
 
   static const _minorName = 'cabBiblical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'cab (Biblical)';
+
   static const _ratio = 4.0;
 
   /// 1 [VolumeDry$CabBiblical] = 4.0 [VolumeDry$LogBiblical]
@@ -849,6 +921,12 @@ final class VolumeDry$LogBiblical extends VolumeDry {
       );
 
   static const _minorName = 'logBiblical';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'log (Biblical)';
 
   static const _ratio = 1.0;
 

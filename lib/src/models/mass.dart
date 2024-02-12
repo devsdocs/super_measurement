@@ -40,7 +40,7 @@ abstract final class Mass extends Unit<Mass> {
 
   @override
   AnchorRatio<Mass> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Mass>({
           Mass$Exagram: Mass$Exagram._ratio,
           Mass$Petagram: Mass$Petagram._ratio,
@@ -101,7 +101,7 @@ abstract final class Mass extends Unit<Mass> {
       );
 
   @override
-  Mass get _anchor => const Mass$Dalton();
+  Mass get anchor => const Mass$Dalton();
 
   /// Convert to [Mass$Exagram]
   Mass get toExagram => convertTo(
@@ -413,6 +413,12 @@ final class Mass$Exagram extends Mass {
 
   static const _minorName = 'exagram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 6.02217364335e+41;
 
   /// 1 [Mass$Exagram] = 6.02217364335e+41 [Mass$Dalton]
@@ -471,6 +477,12 @@ final class Mass$Petagram extends Mass {
       );
 
   static const _minorName = 'petagram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 6.02217364335e+38;
 
@@ -531,6 +543,12 @@ final class Mass$Teragram extends Mass {
 
   static const _minorName = 'teragram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 6.02217364335e+35;
 
   /// 1 [Mass$Teragram] = 6.02217364335e+35 [Mass$Dalton]
@@ -589,6 +607,12 @@ final class Mass$Gigagram extends Mass {
       );
 
   static const _minorName = 'gigagram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 6.02217364335e+32;
 
@@ -649,6 +673,12 @@ final class Mass$Megagram extends Mass {
 
   static const _minorName = 'megagram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 6.02217364335e+29;
 
   /// 1 [Mass$Megagram] = 6.02217364335e+29 [Mass$Dalton]
@@ -707,6 +737,12 @@ final class Mass$Kilogram extends Mass {
       );
 
   static const _minorName = 'kilogram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 6.02217364335e+26;
 
@@ -767,6 +803,12 @@ final class Mass$Hectogram extends Mass {
 
   static const _minorName = 'hectogram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 6.02217364335e+25;
 
   /// 1 [Mass$Hectogram] = 6.02217364335e+25 [Mass$Dalton]
@@ -825,6 +867,12 @@ final class Mass$Dekagram extends Mass {
       );
 
   static const _minorName = 'dekagram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 6.02217364335e+24;
 
@@ -885,6 +933,12 @@ final class Mass$Gram extends Mass {
 
   static const _minorName = 'gram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 6.02217364335e+23;
 
   /// 1 [Mass$Gram] = 6.02217364335e+23 [Mass$Dalton]
@@ -943,6 +997,12 @@ final class Mass$Decigram extends Mass {
       );
 
   static const _minorName = 'decigram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 6.02217364335e+22;
 
@@ -1003,6 +1063,12 @@ final class Mass$Centigram extends Mass {
 
   static const _minorName = 'centigram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 6.02217364335e+21;
 
   /// 1 [Mass$Centigram] = 6.02217364335e+21 [Mass$Dalton]
@@ -1061,6 +1127,12 @@ final class Mass$Milligram extends Mass {
       );
 
   static const _minorName = 'milligram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 602217364335000000000.0;
 
@@ -1121,6 +1193,12 @@ final class Mass$Microgram extends Mass {
 
   static const _minorName = 'microgram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 602217364335000000.0;
 
   /// 1 [Mass$Microgram] = 602217364335000000.0 [Mass$Dalton]
@@ -1179,6 +1257,12 @@ final class Mass$Nanogram extends Mass {
       );
 
   static const _minorName = 'nanogram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 602217364335000.0;
 
@@ -1239,6 +1323,12 @@ final class Mass$Picogram extends Mass {
 
   static const _minorName = 'picogram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 602217364335.0;
 
   /// 1 [Mass$Picogram] = 602217364335.0 [Mass$Dalton]
@@ -1297,6 +1387,12 @@ final class Mass$Femtogram extends Mass {
       );
 
   static const _minorName = 'femtogram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 602217364.335;
 
@@ -1357,6 +1453,12 @@ final class Mass$Attogram extends Mass {
 
   static const _minorName = 'attogram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 602217.364335;
 
   /// 1 [Mass$Attogram] ≈ 602217.364335 [Mass$Dalton]
@@ -1415,6 +1517,12 @@ final class Mass$Quintal extends Mass {
       );
 
   static const _minorName = 'quintal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 6.02217364335e+28;
 
@@ -1475,6 +1583,12 @@ final class Mass$Dyne extends Mass {
 
   static const _minorName = 'dyne';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 614090810149235500000.0;
 
   /// 1 [Mass$Dyne] = 614090810149235500000.0 [Mass$Dalton]
@@ -1533,6 +1647,12 @@ final class Mass$Dalton extends Mass {
       );
 
   static const _minorName = 'dalton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.0000053356450456;
 
@@ -1593,6 +1713,12 @@ final class Mass$Kip extends Mass {
 
   static const _minorName = 'kip';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 2.7316120154386614e+29;
 
   /// 1 [Mass$Kip] = 2.7316120154386614e+29 [Mass$Dalton]
@@ -1651,6 +1777,12 @@ final class Mass$Pound extends Mass {
       );
 
   static const _minorName = 'pound';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 2.731612015438661e+26;
 
@@ -1711,6 +1843,12 @@ final class Mass$Ounce extends Mass {
 
   static const _minorName = 'ounce';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.7072575096491634e+25;
 
   /// 1 [Mass$Ounce] = 1.7072575096491634e+25 [Mass$Dalton]
@@ -1769,6 +1907,12 @@ final class Mass$Poundal extends Mass {
       );
 
   static const _minorName = 'poundal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 8.483267128683199e+24;
 
@@ -1829,6 +1973,12 @@ final class Mass$Slug extends Mass {
 
   static const _minorName = 'slug';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 8.788701762204175e+27;
 
   /// 1 [Mass$Slug] = 8.788701762204175e+27 [Mass$Dalton]
@@ -1887,6 +2037,12 @@ final class Mass$Ton extends Mass {
       );
 
   static const _minorName = 'ton';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 5.463224030877323e+29;
 
@@ -1947,6 +2103,12 @@ final class Mass$TonLong extends Mass {
 
   static const _minorName = 'tonLong';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ton (long)';
+
   static const _ratio = 6.118810914582601e+29;
 
   /// 1 [Mass$TonLong] = 6.118810914582601e+29 [Mass$Dalton]
@@ -2005,6 +2167,12 @@ final class Mass$TonMetric extends Mass {
       );
 
   static const _minorName = 'tonMetric';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ton (metric)';
 
   static const _ratio = 6.02217364335e+29;
 
@@ -2065,6 +2233,12 @@ final class Mass$Hundredweight extends Mass {
 
   static const _minorName = 'hundredweight';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 2.7316120154386614e+28;
 
   /// 1 [Mass$Hundredweight] = 2.7316120154386614e+28 [Mass$Dalton]
@@ -2123,6 +2297,12 @@ final class Mass$HundredweightUK extends Mass {
       );
 
   static const _minorName = 'hundredweightUK';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'hundredweight (UK)';
 
   static const _ratio = 3.0594054572913004e+28;
 
@@ -2183,6 +2363,12 @@ final class Mass$Quarter extends Mass {
 
   static const _minorName = 'quarter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 6.829030038596654e+27;
 
   /// 1 [Mass$Quarter] = 6.829030038596654e+27 [Mass$Dalton]
@@ -2241,6 +2427,12 @@ final class Mass$QuarterUK extends Mass {
       );
 
   static const _minorName = 'quarterUK';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'quarter (UK)';
 
   static const _ratio = 7.648513643228251e+27;
 
@@ -2301,6 +2493,12 @@ final class Mass$Stone extends Mass {
 
   static const _minorName = 'stone';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 3.414515019298327e+27;
 
   /// 1 [Mass$Stone] = 3.414515019298327e+27 [Mass$Dalton]
@@ -2359,6 +2557,12 @@ final class Mass$StoneUK extends Mass {
       );
 
   static const _minorName = 'stoneUK';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'stone (UK)';
 
   static const _ratio = 3.8242568216141255e+27;
 
@@ -2419,6 +2623,12 @@ final class Mass$Tonne extends Mass {
 
   static const _minorName = 'tonne';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 6.02217364335e+29;
 
   /// 1 [Mass$Tonne] = 6.02217364335e+29 [Mass$Dalton]
@@ -2477,6 +2687,12 @@ final class Mass$TroyPound extends Mass {
       );
 
   static const _minorName = 'troyPound';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'troy pound';
 
   static const _ratio = 2.247726328338798e+26;
 
@@ -2537,6 +2753,12 @@ final class Mass$TroyOunce extends Mass {
 
   static const _minorName = 'troyOunce';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'troy ounce';
+
   static const _ratio = 1.873105273615665e+25;
 
   /// 1 [Mass$TroyOunce] = 1.873105273615665e+25 [Mass$Dalton]
@@ -2595,6 +2817,12 @@ final class Mass$Carat extends Mass {
       );
 
   static const _minorName = 'carat';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.20443472867e+23;
 
@@ -2655,6 +2883,12 @@ final class Mass$Grain extends Mass {
 
   static const _minorName = 'grain';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 3.9023028792085635e+22;
 
   /// 1 [Mass$Grain] = 3.9023028792085635e+22 [Mass$Dalton]
@@ -2713,6 +2947,12 @@ final class Mass$Pennyweight extends Mass {
       );
 
   static const _minorName = 'pennyweight';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 9.365526910100554e+23;
 
@@ -2773,6 +3013,12 @@ final class Mass$Scruple extends Mass {
 
   static const _minorName = 'scruple';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 7.804605758417128e+23;
 
   /// 1 [Mass$Scruple] = 7.804605758417128e+23 [Mass$Dalton]
@@ -2831,6 +3077,12 @@ final class Mass$TalentBiblicalHebrew extends Mass {
       );
 
   static const _minorName = 'talentBiblicalHebrew';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'talent (Biblical Hebrew)';
 
   static const _ratio = 2.0595833860257e+28;
 
@@ -2891,6 +3143,12 @@ final class Mass$MinaBiblicalHebrew extends Mass {
 
   static const _minorName = 'minaBiblicalHebrew';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mina (Biblical Hebrew)';
+
   static const _ratio = 3.4326389767095e+26;
 
   /// 1 [Mass$MinaBiblicalHebrew] = 3.4326389767095e+26 [Mass$Dalton]
@@ -2949,6 +3207,12 @@ final class Mass$ShekelBiblicalHebrew extends Mass {
       );
 
   static const _minorName = 'shekelBiblicalHebrew';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'shekel (Biblical Hebrew)';
 
   static const _ratio = 6.865277953419e+24;
 
@@ -3009,6 +3273,12 @@ final class Mass$BekahBiblicalHebrew extends Mass {
 
   static const _minorName = 'bekahBiblicalHebrew';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'bekah (Biblical Hebrew)';
+
   static const _ratio = 3.4326389767095e+24;
 
   /// 1 [Mass$BekahBiblicalHebrew] = 3.4326389767095e+24 [Mass$Dalton]
@@ -3067,6 +3337,12 @@ final class Mass$GerahBiblicalHebrew extends Mass {
       );
 
   static const _minorName = 'gerahBiblicalHebrew';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gerah (Biblical Hebrew)';
 
   static const _ratio = 3.4326389767095e+23;
 
@@ -3127,6 +3403,12 @@ final class Mass$TalentBiblicalGreek extends Mass {
 
   static const _minorName = 'talentBiblicalGreek';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'talent (Biblical Greek)';
+
   static const _ratio = 1.2285234232434e+28;
 
   /// 1 [Mass$TalentBiblicalGreek] = 1.2285234232434e+28 [Mass$Dalton]
@@ -3186,6 +3468,12 @@ final class Mass$MinaBiblicalGreek extends Mass {
 
   static const _minorName = 'minaBiblicalGreek';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mina (Biblical Greek)';
+
   static const _ratio = 2.047539038739e+26;
 
   /// 1 [Mass$MinaBiblicalGreek] = 2.047539038739e+26 [Mass$Dalton]
@@ -3244,6 +3532,12 @@ final class Mass$TetradrachmaBiblicalGreek extends Mass {
       );
 
   static const _minorName = 'tetradrachmaBiblicalGreek';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'tetradrachma (Biblical Greek)';
 
   static const _ratio = 8.190156154956e+24;
 
@@ -3305,6 +3599,12 @@ final class Mass$DidrachmaBiblicalGreek extends Mass {
 
   static const _minorName = 'didrachmaBiblicalGreek';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'didrachma (Biblical Greek)';
+
   static const _ratio = 4.095078077478e+24;
 
   /// 1 [Mass$DidrachmaBiblicalGreek] = 4.095078077478e+24 [Mass$Dalton]
@@ -3363,6 +3663,12 @@ final class Mass$DrachmaBiblicalGreek extends Mass {
       );
 
   static const _minorName = 'drachmaBiblicalGreek';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'drachma (Biblical Greek)';
 
   static const _ratio = 2.047539038739e+24;
 
@@ -3423,6 +3729,12 @@ final class Mass$DenariusBiblicalRoman extends Mass {
 
   static const _minorName = 'denariusBiblicalRoman';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'denarius (Biblical Roman)';
+
   static const _ratio = 2.31853685268975e+24;
 
   /// 1 [Mass$DenariusBiblicalRoman] = 2.31853685268975e+24 [Mass$Dalton]
@@ -3481,6 +3793,12 @@ final class Mass$AssarionBiblicalRoman extends Mass {
       );
 
   static const _minorName = 'assarionBiblicalRoman';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'assarion (Biblical Roman)';
 
   static const _ratio = 1.4490855329310938e+23;
 
@@ -3541,6 +3859,12 @@ final class Mass$QuadransBiblicalRoman extends Mass {
 
   static const _minorName = 'quadransBiblicalRoman';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'quadrans (Biblical Roman)';
+
   static const _ratio = 3.6227138323277345e+22;
 
   /// 1 [Mass$QuadransBiblicalRoman] = 3.6227138323277345e+22 [Mass$Dalton]
@@ -3600,6 +3924,12 @@ final class Mass$LeptonBiblicalRoman extends Mass {
 
   static const _minorName = 'leptonBiblicalRoman';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'lepton (Biblical Roman)';
+
   static const _ratio = 1.8113569161638673e+22;
 
   /// 1 [Mass$LeptonBiblicalRoman] = 1.8113569161638673e+22 [Mass$Dalton]
@@ -3658,6 +3988,12 @@ final class Mass$AtomicMassUnit extends Mass {
       );
 
   static const _minorName = 'atomicMassUnit';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'atomic mass unit';
 
   static const _ratio = 1.0000053356450456;
 

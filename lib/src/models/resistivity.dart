@@ -26,7 +26,7 @@ abstract final class Resistivity extends Unit<Resistivity> {
 
   @override
   AnchorRatio<Resistivity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Resistivity>({
           Resistivity$OhmCentimeter: Resistivity$OhmCentimeter._ratio,
           Resistivity$OhmInch: Resistivity$OhmInch._ratio,
@@ -40,7 +40,7 @@ abstract final class Resistivity extends Unit<Resistivity> {
       );
 
   @override
-  Resistivity get _anchor => const Resistivity$OhmMeter();
+  Resistivity get anchor => const Resistivity$OhmMeter();
 
   /// Convert to [Resistivity$OhmMeter]
   Resistivity get toOhmMeter => convertTo(
@@ -112,6 +112,12 @@ final class Resistivity$OhmMeter extends Resistivity {
 
   static const _minorName = 'ohmMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ohm meter';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Resistivity]
@@ -170,6 +176,12 @@ final class Resistivity$OhmCentimeter extends Resistivity {
       );
 
   static const _minorName = 'ohmCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ohm centimeter';
 
   static const _ratio = 0.01;
 
@@ -230,6 +242,12 @@ final class Resistivity$OhmInch extends Resistivity {
 
   static const _minorName = 'ohmInch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ohm inch';
+
   static const _ratio = 0.0254;
 
   /// 1 [Resistivity$OhmInch] ≈ 0.0254 [Resistivity$OhmMeter]
@@ -288,6 +306,12 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
       );
 
   static const _minorName = 'microhmCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'microhm centimeter';
 
   static const _ratio = 1e-8;
 
@@ -349,6 +373,12 @@ final class Resistivity$MicrohmInch extends Resistivity {
 
   static const _minorName = 'microhmInch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'microhm inch';
+
   static const _ratio = 2.54e-8;
 
   /// 1 [Resistivity$MicrohmInch] ≈ 2.54e-8 [Resistivity$OhmMeter]
@@ -407,6 +437,12 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
       );
 
   static const _minorName = 'abohmCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abohm centimeter';
 
   static const _ratio = 1e-11;
 
@@ -467,6 +503,12 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
 
   static const _minorName = 'statohmCentimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Statohm centimeter';
+
   static const _ratio = 8987524324.0;
 
   /// 1 [Resistivity$StatohmCentimeter] = 8987524324.0 [Resistivity$OhmMeter]
@@ -526,6 +568,12 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
       );
 
   static const _minorName = 'circularMilOhmPerFoot';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'circular mil ohm/foot';
 
   static const _ratio = 1.662426113e-9;
 

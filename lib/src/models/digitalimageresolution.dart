@@ -27,7 +27,7 @@ abstract final class DigitalImageResolution
 
   @override
   AnchorRatio<DigitalImageResolution> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<DigitalImageResolution>({
           DigitalImageResolution$DotPerMeter:
               DigitalImageResolution$DotPerMeter._ratio,
@@ -39,7 +39,7 @@ abstract final class DigitalImageResolution
       );
 
   @override
-  DigitalImageResolution get _anchor =>
+  DigitalImageResolution get anchor =>
       const DigitalImageResolution$DotPerInch();
 
   /// Convert to [DigitalImageResolution$DotPerInch]
@@ -91,6 +91,12 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
       );
 
   static const _minorName = 'dotPerInch';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dot/inch';
 
   static const _ratio = 1.0;
 
@@ -151,6 +157,12 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
       );
 
   static const _minorName = 'dotPerMeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dot/meter';
 
   static const _ratio = 0.0254;
 
@@ -213,6 +225,12 @@ final class DigitalImageResolution$DotPerMillimeter
 
   static const _minorName = 'dotPerMillimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dot/millimeter';
+
   static const _ratio = 25.4;
 
   /// 1 [DigitalImageResolution$DotPerMillimeter] ≈ 25.4 [DigitalImageResolution$DotPerInch]
@@ -272,6 +290,12 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
       );
 
   static const _minorName = 'pixelPerInch';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pixel/inch';
 
   static const _ratio = 1.0;
 

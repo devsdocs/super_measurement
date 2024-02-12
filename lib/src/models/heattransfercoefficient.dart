@@ -32,7 +32,7 @@ abstract final class HeatTransferCoefficient
 
   @override
   AnchorRatio<HeatTransferCoefficient> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<HeatTransferCoefficient>({
           HeatTransferCoefficient$WattPerMeterSquareDegreeC:
               HeatTransferCoefficient$WattPerMeterSquareDegreeC._ratio,
@@ -55,7 +55,7 @@ abstract final class HeatTransferCoefficient
       );
 
   @override
-  HeatTransferCoefficient get _anchor =>
+  HeatTransferCoefficient get anchor =>
       const HeatTransferCoefficient$WattPerMeterSquareK();
 
   /// Convert to [HeatTransferCoefficient$WattPerMeterSquareK]
@@ -132,6 +132,12 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
 
   static const _minorName = 'wattPerMeterSquareK';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'watt/meter² K';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [HeatTransferCoefficient]
@@ -192,6 +198,12 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
       );
 
   static const _minorName = 'wattPerMeterSquareDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'watt/meter² °C';
 
   static const _ratio = 1.0;
 
@@ -254,6 +266,12 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
 
   static const _minorName = 'joulePerSecondMeterSquareK';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/second meter² K';
+
   static const _ratio = 1.0;
 
   /// 1 [HeatTransferCoefficient$JoulePerSecondMeterSquareK] = 1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
@@ -314,6 +332,12 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
       );
 
   static const _minorName = 'kilocaloriePerHourMeterSquareDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/hour meter² °C';
 
   static const _ratio = 1.163;
 
@@ -376,6 +400,12 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
 
   static const _minorName = 'kilocaloriePerHourFootSquareDegreeC';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/hour foot² °C';
+
   static const _ratio = 12.51842782;
 
   /// 1 [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] ≈ 12.51842782 [HeatTransferCoefficient$WattPerMeterSquareK]
@@ -436,6 +466,12 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
       );
 
   static const _minorName = 'caloriePerSecondCentimeterSquareDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/second centimeter² °C';
 
   static const _ratio = 41868.0;
 
@@ -498,6 +534,12 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
 
   static const _minorName = 'bTUPerHourFootSquareDegreeF';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/hour foot² °F';
+
   static const _ratio = 5.678263398;
 
   /// 1 [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] ≈ 5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
@@ -558,6 +600,12 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
       );
 
   static const _minorName = 'cHUPerHourFootSquareDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CHU/hour foot² °C';
 
   static const _ratio = 5.678263398;
 

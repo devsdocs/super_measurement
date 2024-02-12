@@ -64,8 +64,7 @@ Future<void> main() async {
           ..remove('esname');
 
         return {
-          '$formatMajorName\$${formatName(e['Name'])}':
-              NewRes.fromMap(newMap),
+          '$formatMajorName\$${formatName(e['Name'])}': NewRes.fromMap(newMap),
         };
       },
     ).toList();
@@ -182,9 +181,10 @@ String formatName(String s) {
         ..removeWhere((element) => element == '.')
         ..removeWhere((element) => element == '-'))
       .join();
-  final finalName = join[0].toUpperCase() + join.substring(1);
+  final finalName =
+      join.isEmpty ? 'MetricUnit' : join[0].toUpperCase() + join.substring(1);
 
-  return join.isEmpty ? 'MetricUnit' : finalName;
+  return finalName;
 }
 
 List<int> indexOfs<T>(List<T> s, T t) {

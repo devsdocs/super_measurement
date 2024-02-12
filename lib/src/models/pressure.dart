@@ -41,7 +41,7 @@ abstract final class Pressure extends Unit<Pressure> {
 
   @override
   AnchorRatio<Pressure> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Pressure>({
           Pressure$Exapascal: Pressure$Exapascal._ratio,
           Pressure$Petapascal: Pressure$Petapascal._ratio,
@@ -98,7 +98,7 @@ abstract final class Pressure extends Unit<Pressure> {
       );
 
   @override
-  Pressure get _anchor => const Pressure$Decipascal();
+  Pressure get anchor => const Pressure$Decipascal();
 
   /// Convert to [Pressure$Exapascal]
   Pressure get toExapascal => convertTo(
@@ -340,6 +340,12 @@ final class Pressure$Exapascal extends Pressure {
 
   static const _minorName = 'exapascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000000000000000.0;
 
   /// 1 [Pressure$Exapascal] = 10000000000000000000.0 [Pressure$Decipascal]
@@ -398,6 +404,12 @@ final class Pressure$Petapascal extends Pressure {
       );
 
   static const _minorName = 'petapascal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10000000000000000.0;
 
@@ -458,6 +470,12 @@ final class Pressure$Terapascal extends Pressure {
 
   static const _minorName = 'terapascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000000000.0;
 
   /// 1 [Pressure$Terapascal] = 10000000000000.0 [Pressure$Decipascal]
@@ -516,6 +534,12 @@ final class Pressure$Gigapascal extends Pressure {
       );
 
   static const _minorName = 'gigapascal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10000000000.0;
 
@@ -576,6 +600,12 @@ final class Pressure$Megapascal extends Pressure {
 
   static const _minorName = 'megapascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000.0;
 
   /// 1 [Pressure$Megapascal] = 10000000.0 [Pressure$Decipascal]
@@ -634,6 +664,12 @@ final class Pressure$Kilopascal extends Pressure {
       );
 
   static const _minorName = 'kilopascal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10000.0;
 
@@ -694,6 +730,12 @@ final class Pressure$Hectopascal extends Pressure {
 
   static const _minorName = 'hectopascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000.0;
 
   /// 1 [Pressure$Hectopascal] = 1000.0 [Pressure$Decipascal]
@@ -752,6 +794,12 @@ final class Pressure$Dekapascal extends Pressure {
       );
 
   static const _minorName = 'dekapascal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 100.0;
 
@@ -812,6 +860,12 @@ final class Pressure$Pascal extends Pressure {
 
   static const _minorName = 'pascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10.0;
 
   /// 1 [Pressure$Pascal] = 10.0 [Pressure$Decipascal]
@@ -870,6 +924,12 @@ final class Pressure$Decipascal extends Pressure {
       );
 
   static const _minorName = 'decipascal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.0;
 
@@ -930,6 +990,12 @@ final class Pressure$Centipascal extends Pressure {
 
   static const _minorName = 'centipascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.1;
 
   /// 1 [Pressure$Centipascal] ≈ 0.1 [Pressure$Decipascal]
@@ -988,6 +1054,12 @@ final class Pressure$Millipascal extends Pressure {
       );
 
   static const _minorName = 'millipascal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.01;
 
@@ -1048,6 +1120,12 @@ final class Pressure$Micropascal extends Pressure {
 
   static const _minorName = 'micropascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.00001;
 
   /// 1 [Pressure$Micropascal] ≈ 0.00001 [Pressure$Decipascal]
@@ -1106,6 +1184,12 @@ final class Pressure$Nanopascal extends Pressure {
       );
 
   static const _minorName = 'nanopascal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e-8;
 
@@ -1166,6 +1250,12 @@ final class Pressure$Picopascal extends Pressure {
 
   static const _minorName = 'picopascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-11;
 
   /// 1 [Pressure$Picopascal] ≈ 1e-11 [Pressure$Decipascal]
@@ -1224,6 +1314,12 @@ final class Pressure$Femtopascal extends Pressure {
       );
 
   static const _minorName = 'femtopascal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e-14;
 
@@ -1284,6 +1380,12 @@ final class Pressure$Attopascal extends Pressure {
 
   static const _minorName = 'attopascal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-17;
 
   /// 1 [Pressure$Attopascal] ≈ 1e-17 [Pressure$Decipascal]
@@ -1342,6 +1444,12 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
       );
 
   static const _minorName = 'kilonewtonPerMeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilonewton/meter²';
 
   static const _ratio = 10000.0;
 
@@ -1403,6 +1511,12 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
 
   static const _minorName = 'newtonPerMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'newton/meter²';
+
   static const _ratio = 10.0;
 
   /// 1 [Pressure$NewtonPerMeterSquare] = 10.0 [Pressure$Decipascal]
@@ -1462,6 +1576,12 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
       );
 
   static const _minorName = 'newtonPerCentimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'newton/centimeter²';
 
   static const _ratio = 100000.0;
 
@@ -1523,6 +1643,12 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
 
   static const _minorName = 'newtonPerMillimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'newton/millimeter²';
+
   static const _ratio = 10000000.0;
 
   /// 1 [Pressure$NewtonPerMillimeterSquare] = 10000000.0 [Pressure$Decipascal]
@@ -1583,6 +1709,12 @@ final class Pressure$Bar extends Pressure {
 
   static const _minorName = 'bar';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000.0;
 
   /// 1 [Pressure$Bar] = 1000000.0 [Pressure$Decipascal]
@@ -1641,6 +1773,12 @@ final class Pressure$Millibar extends Pressure {
       );
 
   static const _minorName = 'millibar';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000.0;
 
@@ -1701,6 +1839,12 @@ final class Pressure$Microbar extends Pressure {
 
   static const _minorName = 'microbar';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// 1 [Pressure$Microbar] = 1.0 [Pressure$Decipascal]
@@ -1759,6 +1903,12 @@ final class Pressure$Atmosphere extends Pressure {
       );
 
   static const _minorName = 'atmosphere';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1013250.0;
 
@@ -1819,6 +1969,12 @@ final class Pressure$Psi extends Pressure {
 
   static const _minorName = 'psi';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 68947.57293178307;
 
   /// 1 [Pressure$Psi] ≈ 68947.57293178307 [Pressure$Decipascal]
@@ -1877,6 +2033,12 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
       );
 
   static const _minorName = 'dynePerCentimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dyne/centimeter²';
 
   static const _ratio = 1.0;
 
@@ -1938,6 +2100,12 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
 
   static const _minorName = 'kilogramPerMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram/meter²';
+
   static const _ratio = 98.0665;
 
   /// 1 [Pressure$KilogramPerMeterSquare] ≈ 98.0665 [Pressure$Decipascal]
@@ -1997,6 +2165,12 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
       );
 
   static const _minorName = 'kilogramPerCentimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram/centimeter²';
 
   static const _ratio = 980665.0;
 
@@ -2058,6 +2232,12 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
 
   static const _minorName = 'kilogramPerMillimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram/millimeter²';
+
   static const _ratio = 98066500.0;
 
   /// 1 [Pressure$KilogramPerMillimeterSquare] = 98066500.0 [Pressure$Decipascal]
@@ -2118,6 +2298,12 @@ final class Pressure$TonPerFootSquare extends Pressure {
 
   static const _minorName = 'tonPerFootSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ton/foot²';
+
   static const _ratio = 957605.1796080982;
 
   /// 1 [Pressure$TonPerFootSquare] ≈ 957605.1796080982 [Pressure$Decipascal]
@@ -2176,6 +2362,12 @@ final class Pressure$TonPerInchSquare extends Pressure {
       );
 
   static const _minorName = 'tonPerInchSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ton/inch²';
 
   static const _ratio = 137895145.86356613;
 
@@ -2236,6 +2428,12 @@ final class Pressure$PoundPerFootSquare extends Pressure {
 
   static const _minorName = 'poundPerFootSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound/foot²';
+
   static const _ratio = 478.8025898040491;
 
   /// 1 [Pressure$PoundPerFootSquare] ≈ 478.8025898040491 [Pressure$Decipascal]
@@ -2294,6 +2492,12 @@ final class Pressure$PoundPerInchSquare extends Pressure {
       );
 
   static const _minorName = 'poundPerInchSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound/inch²';
 
   static const _ratio = 68947.57293178307;
 
@@ -2354,6 +2558,12 @@ final class Pressure$KipPerInchSquare extends Pressure {
 
   static const _minorName = 'kipPerInchSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kip/inch²';
+
   static const _ratio = 68947572.93178307;
 
   /// 1 [Pressure$KipPerInchSquare] ≈ 68947572.93178307 [Pressure$Decipascal]
@@ -2413,6 +2623,12 @@ final class Pressure$Torr extends Pressure {
 
   static const _minorName = 'torr';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1333.223684210828;
 
   /// 1 [Pressure$Torr] ≈ 1333.223684210828 [Pressure$Decipascal]
@@ -2471,6 +2687,12 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
       );
 
   static const _minorName = 'centimeterMercury0DegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'centimeter mercury (0°C)';
 
   static const _ratio = 13332.2368421083;
 
@@ -2532,6 +2754,12 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
 
   static const _minorName = 'millimeterMercury0DegreeC';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millimeter mercury (0°C)';
+
   static const _ratio = 1333.223684210828;
 
   /// 1 [Pressure$MillimeterMercury0DegreeC] ≈ 1333.223684210828 [Pressure$Decipascal]
@@ -2591,6 +2819,12 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
       );
 
   static const _minorName = 'inchMercury32DegreeF';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'inch mercury (32°F)';
 
   static const _ratio = 33863.88157899115;
 
@@ -2652,6 +2886,12 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
 
   static const _minorName = 'centimeterWater4DegreeC';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'centimeter water (4°C)';
+
   static const _ratio = 980.638;
 
   /// 1 [Pressure$CentimeterWater4DegreeC] ≈ 980.638 [Pressure$Decipascal]
@@ -2712,6 +2952,12 @@ final class Pressure$InchWater60DegreeF extends Pressure {
 
   static const _minorName = 'inchWater60DegreeF';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'inch water (60°F)';
+
   static const _ratio = 2488.4;
 
   /// 1 [Pressure$InchWater60DegreeF] ≈ 2488.4 [Pressure$Decipascal]
@@ -2770,6 +3016,12 @@ final class Pressure$FootWater60DegreeF extends Pressure {
       );
 
   static const _minorName = 'footWater60DegreeF';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'foot water (60°F)';
 
   static const _ratio = 29860.8;
 

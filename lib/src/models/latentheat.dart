@@ -24,7 +24,7 @@ abstract final class LatentHeat extends Unit<LatentHeat> {
 
   @override
   AnchorRatio<LatentHeat> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<LatentHeat>({
           LatentHeat$CaloriePerGram: LatentHeat$CaloriePerGram._ratio,
           LatentHeat$BTUPerPound: LatentHeat$BTUPerPound._ratio,
@@ -32,7 +32,7 @@ abstract final class LatentHeat extends Unit<LatentHeat> {
       );
 
   @override
-  LatentHeat get _anchor => const LatentHeat$KilojoulePerKilogram();
+  LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram();
 
   /// Convert to [LatentHeat$CaloriePerGram]
   LatentHeat get toCaloriePerGram => convertTo(
@@ -78,6 +78,12 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
       );
 
   static const _minorName = 'caloriePerGram';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/gram';
 
   static const _ratio = 4.1868;
 
@@ -138,6 +144,12 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
 
   static const _minorName = 'kilojoulePerKilogram';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilojoule/kilogram';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [LatentHeat]
@@ -197,6 +209,12 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
       );
 
   static const _minorName = 'bTUPerPound';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/pound';
 
   static const _ratio = 2.326;
 

@@ -57,7 +57,7 @@ abstract final class Power extends Unit<Power> {
 
   @override
   AnchorRatio<Power> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Power>({
           Power$Exawatt: Power$Exawatt._ratio,
           Power$Petawatt: Power$Petawatt._ratio,
@@ -148,7 +148,7 @@ abstract final class Power extends Unit<Power> {
       );
 
   @override
-  Power get _anchor => const Power$Milliwatt();
+  Power get anchor => const Power$Milliwatt();
 
   /// Convert to [Power$Exawatt]
   Power get toExawatt => convertTo(
@@ -530,6 +530,12 @@ final class Power$Exawatt extends Power {
 
   static const _minorName = 'exawatt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e+21;
 
   /// 1 [Power$Exawatt] = 1e+21 [Power$Milliwatt]
@@ -588,6 +594,12 @@ final class Power$Petawatt extends Power {
       );
 
   static const _minorName = 'petawatt';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000000000000.0;
 
@@ -648,6 +660,12 @@ final class Power$Terawatt extends Power {
 
   static const _minorName = 'terawatt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000000000.0;
 
   /// 1 [Power$Terawatt] = 1000000000000000.0 [Power$Milliwatt]
@@ -706,6 +724,12 @@ final class Power$Gigawatt extends Power {
       );
 
   static const _minorName = 'gigawatt';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000000.0;
 
@@ -766,6 +790,12 @@ final class Power$Megawatt extends Power {
 
   static const _minorName = 'megawatt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000.0;
 
   /// 1 [Power$Megawatt] = 1000000000.0 [Power$Milliwatt]
@@ -824,6 +854,12 @@ final class Power$Kilowatt extends Power {
       );
 
   static const _minorName = 'kilowatt';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
 
@@ -884,6 +920,12 @@ final class Power$Hectowatt extends Power {
 
   static const _minorName = 'hectowatt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 100000.0;
 
   /// 1 [Power$Hectowatt] = 100000.0 [Power$Milliwatt]
@@ -942,6 +984,12 @@ final class Power$Dekawatt extends Power {
       );
 
   static const _minorName = 'dekawatt';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10000.0;
 
@@ -1002,6 +1050,12 @@ final class Power$Watt extends Power {
 
   static const _minorName = 'watt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000.0;
 
   /// 1 [Power$Watt] = 1000.0 [Power$Milliwatt]
@@ -1060,6 +1114,12 @@ final class Power$Deciwatt extends Power {
       );
 
   static const _minorName = 'deciwatt';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 100.0;
 
@@ -1120,6 +1180,12 @@ final class Power$Centiwatt extends Power {
 
   static const _minorName = 'centiwatt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10.0;
 
   /// 1 [Power$Centiwatt] = 10.0 [Power$Milliwatt]
@@ -1178,6 +1244,12 @@ final class Power$Milliwatt extends Power {
       );
 
   static const _minorName = 'milliwatt';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.0;
 
@@ -1238,6 +1310,12 @@ final class Power$Microwatt extends Power {
 
   static const _minorName = 'microwatt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.001;
 
   /// 1 [Power$Microwatt] ≈ 0.001 [Power$Milliwatt]
@@ -1296,6 +1374,12 @@ final class Power$Nanowatt extends Power {
       );
 
   static const _minorName = 'nanowatt';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.000001;
 
@@ -1356,6 +1440,12 @@ final class Power$Picowatt extends Power {
 
   static const _minorName = 'picowatt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-9;
 
   /// 1 [Power$Picowatt] ≈ 1e-9 [Power$Milliwatt]
@@ -1414,6 +1504,12 @@ final class Power$Femtowatt extends Power {
       );
 
   static const _minorName = 'femtowatt';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e-12;
 
@@ -1474,6 +1570,12 @@ final class Power$Attowatt extends Power {
 
   static const _minorName = 'attowatt';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e-15;
 
   /// 1 [Power$Attowatt] ≈ 1e-15 [Power$Milliwatt]
@@ -1532,6 +1634,12 @@ final class Power$Horsepower extends Power {
       );
 
   static const _minorName = 'horsepower';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 745699.8715795054;
 
@@ -1592,6 +1700,12 @@ final class Power$HorsepowerBoiler extends Power {
 
   static const _minorName = 'horsepowerBoiler';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'horsepower (boiler)';
+
   static const _ratio = 9809709.99;
 
   /// 1 [Power$HorsepowerBoiler] ≈ 9809709.99 [Power$Milliwatt]
@@ -1650,6 +1764,12 @@ final class Power$HorsepowerMetric extends Power {
       );
 
   static const _minorName = 'horsepowerMetric';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'horsepower (metric)';
 
   static const _ratio = 735498.8;
 
@@ -1710,6 +1830,12 @@ final class Power$HorsepowerElectric extends Power {
 
   static const _minorName = 'horsepowerElectric';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'horsepower (electric)';
+
   static const _ratio = 746000.0;
 
   /// 1 [Power$HorsepowerElectric] = 746000.0 [Power$Milliwatt]
@@ -1768,6 +1894,12 @@ final class Power$HorsepowerUK extends Power {
       );
 
   static const _minorName = 'horsepowerUK';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'horsepower (UK)';
 
   static const _ratio = 745700.0;
 
@@ -1828,6 +1960,12 @@ final class Power$HorsepowerWater extends Power {
 
   static const _minorName = 'horsepowerWater';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'horsepower (water)';
+
   static const _ratio = 746043.0;
 
   /// 1 [Power$HorsepowerWater] = 746043.0 [Power$Milliwatt]
@@ -1887,6 +2025,12 @@ final class Power$PferdestarkePs extends Power {
 
   static const _minorName = 'pferdestarkePs';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pferdestärke (ps)';
+
   static const _ratio = 735498.75;
 
   /// 1 [Power$PferdestarkePs] ≈ 735498.75 [Power$Milliwatt]
@@ -1945,6 +2089,12 @@ final class Power$BTUPerHourInternational extends Power {
       );
 
   static const _minorName = 'bTUPerHourInternational';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/hour (international)';
 
   static const _ratio = 293.071070172222;
 
@@ -2006,6 +2156,12 @@ final class Power$BTUPerMinuteInternational extends Power {
 
   static const _minorName = 'bTUPerMinuteInternational';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/minute (international)';
+
   static const _ratio = 17584.2642103333;
 
   /// 1 [Power$BTUPerMinuteInternational] ≈ 17584.2642103333 [Power$Milliwatt]
@@ -2065,6 +2221,12 @@ final class Power$BTUPerSecondInternational extends Power {
       );
 
   static const _minorName = 'bTUPerSecondInternational';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/second (international)';
 
   static const _ratio = 1055055.85262;
 
@@ -2126,6 +2288,12 @@ final class Power$BTUPerHourThermochemical extends Power {
 
   static const _minorName = 'bTUPerHourThermochemical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/hour (thermochemical)';
+
   static const _ratio = 292.87499999289923;
 
   /// 1 [Power$BTUPerHourThermochemical] ≈ 292.87499999289923 [Power$Milliwatt]
@@ -2185,6 +2353,12 @@ final class Power$BTUPerMinuteThermochemical extends Power {
       );
 
   static const _minorName = 'bTUPerMinuteThermochemical';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/minute (thermochemical)';
 
   static const _ratio = 17572.499999573956;
 
@@ -2246,6 +2420,12 @@ final class Power$BTUPerSecondThermochemical extends Power {
 
   static const _minorName = 'bTUPerSecondThermochemical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU/second (thermochemical)';
+
   static const _ratio = 1054349.9999744373;
 
   /// 1 [Power$BTUPerSecondThermochemical] ≈ 1054349.9999744373 [Power$Milliwatt]
@@ -2306,6 +2486,12 @@ final class Power$MBTUPerHour extends Power {
 
   static const _minorName = 'mBTUPerHour';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'MBTU/hour';
+
   static const _ratio = 293071.0701722223;
 
   /// 1 [Power$MBTUPerHour] ≈ 293071.0701722223 [Power$Milliwatt]
@@ -2364,6 +2550,12 @@ final class Power$MBH extends Power {
       );
 
   static const _minorName = 'mBH';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'MBH';
 
   static const _ratio = 293071.0701722223;
 
@@ -2424,6 +2616,12 @@ final class Power$TonRefrigeration extends Power {
 
   static const _minorName = 'tonRefrigeration';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ton (refrigeration)';
+
   static const _ratio = 3516852.8420666675;
 
   /// 1 [Power$TonRefrigeration] ≈ 3516852.8420666675 [Power$Milliwatt]
@@ -2482,6 +2680,12 @@ final class Power$KilocaloriePerHourInternational extends Power {
       );
 
   static const _minorName = 'kilocaloriePerHourInternational';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/hour (international)';
 
   static const _ratio = 1163.0;
 
@@ -2543,6 +2747,12 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
 
   static const _minorName = 'kilocaloriePerMinuteInternational';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/minute (international)';
+
   static const _ratio = 69780.0;
 
   /// 1 [Power$KilocaloriePerMinuteInternational] = 69780.0 [Power$Milliwatt]
@@ -2602,6 +2812,12 @@ final class Power$KilocaloriePerSecondInternational extends Power {
       );
 
   static const _minorName = 'kilocaloriePerSecondInternational';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/second (international)';
 
   static const _ratio = 4186800.0;
 
@@ -2663,6 +2879,12 @@ final class Power$CaloriePerHourInternational extends Power {
 
   static const _minorName = 'caloriePerHourInternational';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/hour (international)';
+
   static const _ratio = 1.163;
 
   /// 1 [Power$CaloriePerHourInternational] ≈ 1.163 [Power$Milliwatt]
@@ -2722,6 +2944,12 @@ final class Power$CaloriePerMinuteInternational extends Power {
       );
 
   static const _minorName = 'caloriePerMinuteInternational';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/minute (international)';
 
   static const _ratio = 69.78;
 
@@ -2783,6 +3011,12 @@ final class Power$CaloriePerSecondInternational extends Power {
 
   static const _minorName = 'caloriePerSecondInternational';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/second (international)';
+
   static const _ratio = 4186.8;
 
   /// 1 [Power$CaloriePerSecondInternational] ≈ 4186.8 [Power$Milliwatt]
@@ -2842,6 +3076,12 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
       );
 
   static const _minorName = 'kilocaloriePerHourThermochemical';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/hour (thermochemical)';
 
   static const _ratio = 1162.2222222222222;
 
@@ -2903,6 +3143,12 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
 
   static const _minorName = 'kilocaloriePerMinuteThermochemical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/minute (thermochemical)';
+
   static const _ratio = 69733.33333333333;
 
   /// 1 [Power$KilocaloriePerMinuteThermochemical] ≈ 69733.33333333333 [Power$Milliwatt]
@@ -2962,6 +3208,12 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
       );
 
   static const _minorName = 'kilocaloriePerSecondThermochemical';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilocalorie/second (thermochemical)';
 
   static const _ratio = 4184000.0;
 
@@ -3023,6 +3275,12 @@ final class Power$CaloriePerHourThermochemical extends Power {
 
   static const _minorName = 'caloriePerHourThermochemical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/hour (thermochemical)';
+
   static const _ratio = 1.1622222222222223;
 
   /// 1 [Power$CaloriePerHourThermochemical] ≈ 1.1622222222222223 [Power$Milliwatt]
@@ -3082,6 +3340,12 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
       );
 
   static const _minorName = 'caloriePerMinuteThermochemical';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/minute (thermochemical)';
 
   static const _ratio = 69.73333333333333;
 
@@ -3143,6 +3407,12 @@ final class Power$CaloriePerSecondThermochemical extends Power {
 
   static const _minorName = 'caloriePerSecondThermochemical';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie/second (thermochemical)';
+
   static const _ratio = 4184.0;
 
   /// 1 [Power$CaloriePerSecondThermochemical] = 4184.0 [Power$Milliwatt]
@@ -3203,6 +3473,12 @@ final class Power$PoundFootPerHour extends Power {
 
   static const _minorName = 'poundFootPerHour';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound-foot/hour';
+
   static const _ratio = 0.376616096758177;
 
   /// 1 [Power$PoundFootPerHour] ≈ 0.376616096758177 [Power$Milliwatt]
@@ -3261,6 +3537,12 @@ final class Power$PoundFootPerMinute extends Power {
       );
 
   static const _minorName = 'poundFootPerMinute';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound-foot/minute';
 
   static const _ratio = 22.59696580549062;
 
@@ -3321,6 +3603,12 @@ final class Power$PoundFootPerSecond extends Power {
 
   static const _minorName = 'poundFootPerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound-foot/second';
+
   static const _ratio = 1355.8179483294373;
 
   /// 1 [Power$PoundFootPerSecond] ≈ 1355.8179483294373 [Power$Milliwatt]
@@ -3379,6 +3667,12 @@ final class Power$ErgPerSecond extends Power {
       );
 
   static const _minorName = 'ergPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'erg/second';
 
   static const _ratio = 0.0001;
 
@@ -3439,6 +3733,12 @@ final class Power$ExajoulePerSecond extends Power {
 
   static const _minorName = 'exajoulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'exajoule/second';
+
   static const _ratio = 1e+21;
 
   /// 1 [Power$ExajoulePerSecond] = 1e+21 [Power$Milliwatt]
@@ -3497,6 +3797,12 @@ final class Power$PetajoulePerSecond extends Power {
       );
 
   static const _minorName = 'petajoulePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'petajoule/second';
 
   static const _ratio = 1000000000000000000.0;
 
@@ -3557,6 +3863,12 @@ final class Power$TerajoulePerSecond extends Power {
 
   static const _minorName = 'terajoulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'terajoule/second';
+
   static const _ratio = 1000000000000000.0;
 
   /// 1 [Power$TerajoulePerSecond] = 1000000000000000.0 [Power$Milliwatt]
@@ -3615,6 +3927,12 @@ final class Power$GigajoulePerSecond extends Power {
       );
 
   static const _minorName = 'gigajoulePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gigajoule/second';
 
   static const _ratio = 1000000000000.0;
 
@@ -3675,6 +3993,12 @@ final class Power$MegajoulePerSecond extends Power {
 
   static const _minorName = 'megajoulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'megajoule/second';
+
   static const _ratio = 1000000000.0;
 
   /// 1 [Power$MegajoulePerSecond] = 1000000000.0 [Power$Milliwatt]
@@ -3733,6 +4057,12 @@ final class Power$KilojoulePerSecond extends Power {
       );
 
   static const _minorName = 'kilojoulePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilojoule/second';
 
   static const _ratio = 1000000.0;
 
@@ -3793,6 +4123,12 @@ final class Power$HectojoulePerSecond extends Power {
 
   static const _minorName = 'hectojoulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'hectojoule/second';
+
   static const _ratio = 100000.0;
 
   /// 1 [Power$HectojoulePerSecond] = 100000.0 [Power$Milliwatt]
@@ -3851,6 +4187,12 @@ final class Power$DekajoulePerSecond extends Power {
       );
 
   static const _minorName = 'dekajoulePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dekajoule/second';
 
   static const _ratio = 10000.0;
 
@@ -3911,6 +4253,12 @@ final class Power$JoulePerSecond extends Power {
 
   static const _minorName = 'joulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/second';
+
   static const _ratio = 1000.0;
 
   /// 1 [Power$JoulePerSecond] = 1000.0 [Power$Milliwatt]
@@ -3969,6 +4317,12 @@ final class Power$DecijoulePerSecond extends Power {
       );
 
   static const _minorName = 'decijoulePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'decijoule/second';
 
   static const _ratio = 100.0;
 
@@ -4029,6 +4383,12 @@ final class Power$CentijoulePerSecond extends Power {
 
   static const _minorName = 'centijoulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'centijoule/second';
+
   static const _ratio = 10.0;
 
   /// 1 [Power$CentijoulePerSecond] = 10.0 [Power$Milliwatt]
@@ -4087,6 +4447,12 @@ final class Power$MillijoulePerSecond extends Power {
       );
 
   static const _minorName = 'millijoulePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millijoule/second';
 
   static const _ratio = 1.0;
 
@@ -4147,6 +4513,12 @@ final class Power$MicrojoulePerSecond extends Power {
 
   static const _minorName = 'microjoulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'microjoule/second';
+
   static const _ratio = 0.001;
 
   /// 1 [Power$MicrojoulePerSecond] ≈ 0.001 [Power$Milliwatt]
@@ -4205,6 +4577,12 @@ final class Power$NanojoulePerSecond extends Power {
       );
 
   static const _minorName = 'nanojoulePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'nanojoule/second';
 
   static const _ratio = 0.000001;
 
@@ -4265,6 +4643,12 @@ final class Power$PicojoulePerSecond extends Power {
 
   static const _minorName = 'picojoulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'picojoule/second';
+
   static const _ratio = 1e-9;
 
   /// 1 [Power$PicojoulePerSecond] ≈ 1e-9 [Power$Milliwatt]
@@ -4323,6 +4707,12 @@ final class Power$FemtojoulePerSecond extends Power {
       );
 
   static const _minorName = 'femtojoulePerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'femtojoule/second';
 
   static const _ratio = 1e-12;
 
@@ -4383,6 +4773,12 @@ final class Power$AttojoulePerSecond extends Power {
 
   static const _minorName = 'attojoulePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'attojoule/second';
+
   static const _ratio = 1e-15;
 
   /// 1 [Power$AttojoulePerSecond] ≈ 1e-15 [Power$Milliwatt]
@@ -4441,6 +4837,12 @@ final class Power$JoulePerHour extends Power {
       );
 
   static const _minorName = 'joulePerHour';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/hour';
 
   static const _ratio = 0.2777777777777778;
 
@@ -4501,6 +4903,12 @@ final class Power$JoulePerMinute extends Power {
 
   static const _minorName = 'joulePerMinute';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'joule/minute';
+
   static const _ratio = 16.666666666666668;
 
   /// 1 [Power$JoulePerMinute] ≈ 16.666666666666668 [Power$Milliwatt]
@@ -4560,6 +4968,12 @@ final class Power$KilojoulePerHour extends Power {
 
   static const _minorName = 'kilojoulePerHour';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilojoule/hour';
+
   static const _ratio = 277.77777777777777;
 
   /// 1 [Power$KilojoulePerHour] ≈ 277.77777777777777 [Power$Milliwatt]
@@ -4618,6 +5032,12 @@ final class Power$KilojoulePerMinute extends Power {
       );
 
   static const _minorName = 'kilojoulePerMinute';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilojoule/minute';
 
   static const _ratio = 16666.666666666668;
 

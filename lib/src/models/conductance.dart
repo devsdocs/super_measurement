@@ -26,7 +26,7 @@ abstract final class Conductance extends Unit<Conductance> {
 
   @override
   AnchorRatio<Conductance> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Conductance>({
           Conductance$Mho: Conductance$Mho._ratio,
           Conductance$Gemmho: Conductance$Gemmho._ratio,
@@ -41,7 +41,7 @@ abstract final class Conductance extends Unit<Conductance> {
       );
 
   @override
-  Conductance get _anchor => const Conductance$Statmho();
+  Conductance get anchor => const Conductance$Statmho();
 
   /// Convert to [Conductance$Mho]
   Conductance get toMho => convertTo(
@@ -123,6 +123,12 @@ final class Conductance$Mho extends Conductance {
 
   static const _minorName = 'mho';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 899000000000.0;
 
   /// 1 [Conductance$Mho] = 899000000000.0 [Conductance$Statmho]
@@ -181,6 +187,12 @@ final class Conductance$Gemmho extends Conductance {
       );
 
   static const _minorName = 'gemmho';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 899000.0;
 
@@ -241,6 +253,12 @@ final class Conductance$Micromho extends Conductance {
 
   static const _minorName = 'micromho';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 899000.0;
 
   /// 1 [Conductance$Micromho] = 899000.0 [Conductance$Statmho]
@@ -299,6 +317,12 @@ final class Conductance$Megasiemens extends Conductance {
       );
 
   static const _minorName = 'megasiemens';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 899000000000000000.0;
 
@@ -359,6 +383,12 @@ final class Conductance$Kilosiemens extends Conductance {
 
   static const _minorName = 'kilosiemens';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 899000000000000.0;
 
   /// 1 [Conductance$Kilosiemens] = 899000000000000.0 [Conductance$Statmho]
@@ -417,6 +447,12 @@ final class Conductance$Siemens extends Conductance {
       );
 
   static const _minorName = 'siemens';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 899000000000.0;
 
@@ -477,6 +513,12 @@ final class Conductance$Millisiemens extends Conductance {
 
   static const _minorName = 'millisiemens';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 899000000.0;
 
   /// 1 [Conductance$Millisiemens] = 899000000.0 [Conductance$Statmho]
@@ -535,6 +577,12 @@ final class Conductance$Microsiemens extends Conductance {
       );
 
   static const _minorName = 'microsiemens';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 899000.0;
 
@@ -595,6 +643,12 @@ final class Conductance$Abmho extends Conductance {
 
   static const _minorName = 'abmho';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 899000000000000000000.0;
 
   /// 1 [Conductance$Abmho] = 899000000000000000000.0 [Conductance$Statmho]
@@ -653,6 +707,12 @@ final class Conductance$Statmho extends Conductance {
       );
 
   static const _minorName = 'statmho';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.0;
 

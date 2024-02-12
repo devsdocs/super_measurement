@@ -41,7 +41,7 @@ abstract final class DataStorage extends Unit<DataStorage> {
 
   @override
   AnchorRatio<DataStorage> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<DataStorage>({
           DataStorage$Nibble: DataStorage$Nibble._ratio,
           DataStorage$Byte: DataStorage$Byte._ratio,
@@ -94,7 +94,7 @@ abstract final class DataStorage extends Unit<DataStorage> {
       );
 
   @override
-  DataStorage get _anchor => const DataStorage$Bit();
+  DataStorage get anchor => const DataStorage$Bit();
 
   /// Convert to [DataStorage$Bit]
   DataStorage get toBit => convertTo(
@@ -336,6 +336,12 @@ final class DataStorage$Bit extends DataStorage {
 
   static const _minorName = 'bit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [DataStorage]
@@ -394,6 +400,12 @@ final class DataStorage$Nibble extends DataStorage {
       );
 
   static const _minorName = 'nibble';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 4.0;
 
@@ -454,6 +466,12 @@ final class DataStorage$Byte extends DataStorage {
 
   static const _minorName = 'byte';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 8.0;
 
   /// 1 [DataStorage$Byte] = 8.0 [DataStorage$Bit]
@@ -512,6 +530,12 @@ final class DataStorage$Word extends DataStorage {
       );
 
   static const _minorName = 'word';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 16.0;
 
@@ -572,6 +596,12 @@ final class DataStorage$DoubleWord extends DataStorage {
 
   static const _minorName = 'doubleWord';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'double-word';
+
   static const _ratio = 32.0;
 
   /// 1 [DataStorage$DoubleWord] = 32.0 [DataStorage$Bit]
@@ -630,6 +660,12 @@ final class DataStorage$QuadrupleWord extends DataStorage {
       );
 
   static const _minorName = 'quadrupleWord';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'quadruple-word';
 
   static const _ratio = 64.0;
 
@@ -690,6 +726,12 @@ final class DataStorage$Block extends DataStorage {
 
   static const _minorName = 'block';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 4096.0;
 
   /// 1 [DataStorage$Block] = 4096.0 [DataStorage$Bit]
@@ -748,6 +790,12 @@ final class DataStorage$Kilobit extends DataStorage {
       );
 
   static const _minorName = 'kilobit';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1024.0;
 
@@ -808,6 +856,12 @@ final class DataStorage$Kilobyte extends DataStorage {
 
   static const _minorName = 'kilobyte';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 8192.0;
 
   /// 1 [DataStorage$Kilobyte] = 8192.0 [DataStorage$Bit]
@@ -866,6 +920,12 @@ final class DataStorage$Kilobyte10PowerOf3Bytes extends DataStorage {
       );
 
   static const _minorName = 'kilobyte10PowerOf3Bytes';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilobyte (10^3 bytes)';
 
   static const _ratio = 8000.0;
 
@@ -927,6 +987,12 @@ final class DataStorage$Megabit extends DataStorage {
 
   static const _minorName = 'megabit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1048576.0;
 
   /// 1 [DataStorage$Megabit] = 1048576.0 [DataStorage$Bit]
@@ -986,6 +1052,12 @@ final class DataStorage$Megabyte extends DataStorage {
 
   static const _minorName = 'megabyte';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 8388608.0;
 
   /// 1 [DataStorage$Megabyte] = 8388608.0 [DataStorage$Bit]
@@ -1044,6 +1116,12 @@ final class DataStorage$Megabyte10PowerOf6Bytes extends DataStorage {
       );
 
   static const _minorName = 'megabyte10PowerOf6Bytes';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'megabyte (10^6 bytes)';
 
   static const _ratio = 8000000.0;
 
@@ -1105,6 +1183,12 @@ final class DataStorage$Gigabit extends DataStorage {
 
   static const _minorName = 'gigabit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1073741824.0;
 
   /// 1 [DataStorage$Gigabit] = 1073741824.0 [DataStorage$Bit]
@@ -1164,6 +1248,12 @@ final class DataStorage$Gigabyte extends DataStorage {
 
   static const _minorName = 'gigabyte';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 8589934592.0;
 
   /// 1 [DataStorage$Gigabyte] = 8589934592.0 [DataStorage$Bit]
@@ -1222,6 +1312,12 @@ final class DataStorage$Gigabyte10PowerOf9Bytes extends DataStorage {
       );
 
   static const _minorName = 'gigabyte10PowerOf9Bytes';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gigabyte (10^9 bytes)';
 
   static const _ratio = 8000000000.0;
 
@@ -1283,6 +1379,12 @@ final class DataStorage$Terabit extends DataStorage {
 
   static const _minorName = 'terabit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1099511627776.0;
 
   /// 1 [DataStorage$Terabit] = 1099511627776.0 [DataStorage$Bit]
@@ -1342,6 +1444,12 @@ final class DataStorage$Terabyte extends DataStorage {
 
   static const _minorName = 'terabyte';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 8796093022208.0;
 
   /// 1 [DataStorage$Terabyte] = 8796093022208.0 [DataStorage$Bit]
@@ -1400,6 +1508,12 @@ final class DataStorage$Terabyte10PowerOf12Bytes extends DataStorage {
       );
 
   static const _minorName = 'terabyte10PowerOf12Bytes';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'terabyte (10^12 bytes)';
 
   static const _ratio = 8000000000000.0;
 
@@ -1461,6 +1575,12 @@ final class DataStorage$Petabit extends DataStorage {
 
   static const _minorName = 'petabit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1125899906842624.0;
 
   /// 1 [DataStorage$Petabit] = 1125899906842624.0 [DataStorage$Bit]
@@ -1520,6 +1640,12 @@ final class DataStorage$Petabyte extends DataStorage {
 
   static const _minorName = 'petabyte';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 9007199254740992.0;
 
   /// 1 [DataStorage$Petabyte] = 9007199254740992.0 [DataStorage$Bit]
@@ -1578,6 +1704,12 @@ final class DataStorage$Petabyte10PowerOf15Bytes extends DataStorage {
       );
 
   static const _minorName = 'petabyte10PowerOf15Bytes';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'petabyte (10^15 bytes)';
 
   static const _ratio = 8000000000000000.0;
 
@@ -1639,6 +1771,12 @@ final class DataStorage$Exabit extends DataStorage {
 
   static const _minorName = 'exabit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1152921504606847000.0;
 
   /// 1 [DataStorage$Exabit] = 1152921504606847000.0 [DataStorage$Bit]
@@ -1698,6 +1836,12 @@ final class DataStorage$Exabyte extends DataStorage {
 
   static const _minorName = 'exabyte';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 9223372036854776000.0;
 
   /// 1 [DataStorage$Exabyte] = 9223372036854776000.0 [DataStorage$Bit]
@@ -1756,6 +1900,12 @@ final class DataStorage$Exabyte10PowerOf18Bytes extends DataStorage {
       );
 
   static const _minorName = 'exabyte10PowerOf18Bytes';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'exabyte (10^18 bytes)';
 
   static const _ratio = 8000000000000000000.0;
 
@@ -1817,6 +1967,12 @@ final class DataStorage$FloppyDisk35DD extends DataStorage {
 
   static const _minorName = 'floppyDisk35DD';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'floppy disk (3.5", DD)';
+
   static const _ratio = 5830656.0;
 
   /// 1 [DataStorage$FloppyDisk35DD] = 5830656.0 [DataStorage$Bit]
@@ -1875,6 +2031,12 @@ final class DataStorage$FloppyDisk35HD extends DataStorage {
       );
 
   static const _minorName = 'floppyDisk35HD';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'floppy disk (3.5", HD)';
 
   static const _ratio = 11661312.0;
 
@@ -1935,6 +2097,12 @@ final class DataStorage$FloppyDisk35ED extends DataStorage {
 
   static const _minorName = 'floppyDisk35ED';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'floppy disk (3.5", ED)';
+
   static const _ratio = 23322624.0;
 
   /// 1 [DataStorage$FloppyDisk35ED] = 23322624.0 [DataStorage$Bit]
@@ -1993,6 +2161,12 @@ final class DataStorage$FloppyDisk525DD extends DataStorage {
       );
 
   static const _minorName = 'floppyDisk525DD';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'floppy disk (5.25", DD)';
 
   static const _ratio = 2915328.0;
 
@@ -2053,6 +2227,12 @@ final class DataStorage$FloppyDisk525HD extends DataStorage {
 
   static const _minorName = 'floppyDisk525HD';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'floppy disk (5.25", HD)';
+
   static const _ratio = 9711616.0;
 
   /// 1 [DataStorage$FloppyDisk525HD] = 9711616.0 [DataStorage$Bit]
@@ -2111,6 +2291,12 @@ final class DataStorage$Zip100 extends DataStorage {
       );
 
   static const _minorName = 'zip100';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Zip 100';
 
   static const _ratio = 803454976.0;
 
@@ -2171,6 +2357,12 @@ final class DataStorage$Zip250 extends DataStorage {
 
   static const _minorName = 'zip250';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Zip 250';
+
   static const _ratio = 2008637440.0;
 
   /// 1 [DataStorage$Zip250] = 2008637440.0 [DataStorage$Bit]
@@ -2229,6 +2421,12 @@ final class DataStorage$Jaz1GB extends DataStorage {
       );
 
   static const _minorName = 'jaz1GB';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Jaz 1GB';
 
   static const _ratio = 8589934592.0;
 
@@ -2289,6 +2487,12 @@ final class DataStorage$Jaz2GB extends DataStorage {
 
   static const _minorName = 'jaz2GB';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Jaz 2GB';
+
   static const _ratio = 17179869184.0;
 
   /// 1 [DataStorage$Jaz2GB] = 17179869184.0 [DataStorage$Bit]
@@ -2347,6 +2551,12 @@ final class DataStorage$CD74Minute extends DataStorage {
       );
 
   static const _minorName = 'cD74Minute';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD (74 minute)';
 
   static const _ratio = 5455872000.0;
 
@@ -2407,6 +2617,12 @@ final class DataStorage$CD80Minute extends DataStorage {
 
   static const _minorName = 'cD80Minute';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD (80 minute)';
+
   static const _ratio = 5898240000.0;
 
   /// 1 [DataStorage$CD80Minute] = 5898240000.0 [DataStorage$Bit]
@@ -2465,6 +2681,12 @@ final class DataStorage$DVD1Layer1Side extends DataStorage {
       );
 
   static const _minorName = 'dVD1Layer1Side';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD (1 layer, 1 side)';
 
   static const _ratio = 37600000000.0;
 
@@ -2525,6 +2747,12 @@ final class DataStorage$DVD2Layers1Side extends DataStorage {
 
   static const _minorName = 'dVD2Layers1Side';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD (2 layers, 1 side)';
+
   static const _ratio = 68320000000.0;
 
   /// 1 [DataStorage$DVD2Layers1Side] = 68320000000.0 [DataStorage$Bit]
@@ -2584,6 +2812,12 @@ final class DataStorage$DVD1Layer2Sides extends DataStorage {
 
   static const _minorName = 'dVD1Layer2Sides';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD (1 layer, 2 sides)';
+
   static const _ratio = 75200000000.0;
 
   /// 1 [DataStorage$DVD1Layer2Sides] = 75200000000.0 [DataStorage$Bit]
@@ -2642,6 +2876,12 @@ final class DataStorage$DVD2Layers2Sides extends DataStorage {
       );
 
   static const _minorName = 'dVD2Layers2Sides';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD (2 layers, 2 sides)';
 
   static const _ratio = 136640000000.0;
 
@@ -2703,6 +2943,12 @@ final class DataStorage$BluRay1Layer extends DataStorage {
 
   static const _minorName = 'bluRay1Layer';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray (1 layer)';
+
   static const _ratio = 200202518528.0;
 
   /// 1 [DataStorage$BluRay1Layer] = 200202518528.0 [DataStorage$Bit]
@@ -2761,6 +3007,12 @@ final class DataStorage$BluRay2Layer extends DataStorage {
       );
 
   static const _minorName = 'bluRay2Layer';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray (2 layer)';
 
   static const _ratio = 400405037056.0;
 

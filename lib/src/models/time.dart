@@ -31,7 +31,7 @@ abstract final class Time extends Unit<Time> {
 
   @override
   AnchorRatio<Time> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Time>({
           Time$Millennium: Time$Millennium._ratio,
           Time$Century: Time$Century._ratio,
@@ -66,7 +66,7 @@ abstract final class Time extends Unit<Time> {
       );
 
   @override
-  Time get _anchor => const Time$Attosecond();
+  Time get anchor => const Time$Attosecond();
 
   /// Convert to [Time$Millennium]
   Time get toMillennium => convertTo(
@@ -248,6 +248,12 @@ final class Time$Millennium extends Time {
 
   static const _minorName = 'millennium';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 3.1536e+28;
 
   /// 1 [Time$Millennium] = 3.1536e+28 [Time$Attosecond]
@@ -306,6 +312,12 @@ final class Time$Century extends Time {
       );
 
   static const _minorName = 'century';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 3.1536e+27;
 
@@ -366,6 +378,12 @@ final class Time$Decade extends Time {
 
   static const _minorName = 'decade';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 3.1536e+26;
 
   /// 1 [Time$Decade] = 3.1536e+26 [Time$Attosecond]
@@ -424,6 +442,12 @@ final class Time$Year extends Time {
       );
 
   static const _minorName = 'year';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 3.1536e+25;
 
@@ -484,6 +508,12 @@ final class Time$LeapYear extends Time {
 
   static const _minorName = 'leapYear';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'leap year';
+
   static const _ratio = 3.16224e+25;
 
   /// 1 [Time$LeapYear] = 3.16224e+25 [Time$Attosecond]
@@ -542,6 +572,12 @@ final class Time$MeanYear extends Time {
       );
 
   static const _minorName = 'meanYear';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mean year';
 
   static const _ratio = 3.15576e+25;
 
@@ -602,6 +638,12 @@ final class Time$SiderealYear extends Time {
 
   static const _minorName = 'siderealYear';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'sidereal year';
+
   static const _ratio = 3.1558149504e+25;
 
   /// 1 [Time$SiderealYear] = 3.1558149504e+25 [Time$Attosecond]
@@ -660,6 +702,12 @@ final class Time$TropicalYear extends Time {
       );
 
   static const _minorName = 'tropicalYear';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'tropical year';
 
   static const _ratio = 3.155692608e+25;
 
@@ -720,6 +768,12 @@ final class Time$Month extends Time {
 
   static const _minorName = 'month';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 2.592e+24;
 
   /// 1 [Time$Month] = 2.592e+24 [Time$Attosecond]
@@ -778,6 +832,12 @@ final class Time$SynodicMonth extends Time {
       );
 
   static const _minorName = 'synodicMonth';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'synodic month';
 
   static const _ratio = 2.55144384e+24;
 
@@ -838,6 +898,12 @@ final class Time$Fortnight extends Time {
 
   static const _minorName = 'fortnight';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.2096e+24;
 
   /// 1 [Time$Fortnight] = 1.2096e+24 [Time$Attosecond]
@@ -896,6 +962,12 @@ final class Time$Week extends Time {
       );
 
   static const _minorName = 'week';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 6.048e+23;
 
@@ -956,6 +1028,12 @@ final class Time$Day extends Time {
 
   static const _minorName = 'day';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 8.64e+22;
 
   /// 1 [Time$Day] = 8.64e+22 [Time$Attosecond]
@@ -1014,6 +1092,12 @@ final class Time$SiderealDay extends Time {
       );
 
   static const _minorName = 'siderealDay';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'sidereal day';
 
   static const _ratio = 8.6164091e+22;
 
@@ -1074,6 +1158,12 @@ final class Time$Hour extends Time {
 
   static const _minorName = 'hour';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 3.6e+21;
 
   /// 1 [Time$Hour] = 3.6e+21 [Time$Attosecond]
@@ -1132,6 +1222,12 @@ final class Time$SiderealHour extends Time {
       );
 
   static const _minorName = 'siderealHour';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'sidereal hour';
 
   static const _ratio = 3.59017e+21;
 
@@ -1192,6 +1288,12 @@ final class Time$Minute extends Time {
 
   static const _minorName = 'minute';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 60000000000000000000.0;
 
   /// 1 [Time$Minute] = 60000000000000000000.0 [Time$Attosecond]
@@ -1250,6 +1352,12 @@ final class Time$Second extends Time {
       );
 
   static const _minorName = 'second';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000000000000.0;
 
@@ -1310,6 +1418,12 @@ final class Time$Millisecond extends Time {
 
   static const _minorName = 'millisecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000000000.0;
 
   /// 1 [Time$Millisecond] = 1000000000000000.0 [Time$Attosecond]
@@ -1368,6 +1482,12 @@ final class Time$Microsecond extends Time {
       );
 
   static const _minorName = 'microsecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000000.0;
 
@@ -1428,6 +1548,12 @@ final class Time$Nanosecond extends Time {
 
   static const _minorName = 'nanosecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000.0;
 
   /// 1 [Time$Nanosecond] = 1000000000.0 [Time$Attosecond]
@@ -1486,6 +1612,12 @@ final class Time$Picosecond extends Time {
       );
 
   static const _minorName = 'picosecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
 
@@ -1546,6 +1678,12 @@ final class Time$Femtosecond extends Time {
 
   static const _minorName = 'femtosecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000.0;
 
   /// 1 [Time$Femtosecond] = 1000.0 [Time$Attosecond]
@@ -1604,6 +1742,12 @@ final class Time$Attosecond extends Time {
       );
 
   static const _minorName = 'attosecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.0;
 
@@ -1664,6 +1808,12 @@ final class Time$Shake extends Time {
 
   static const _minorName = 'shake';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000000.0;
 
   /// 1 [Time$Shake] = 10000000000.0 [Time$Attosecond]
@@ -1722,6 +1872,12 @@ final class Time$Septennial extends Time {
       );
 
   static const _minorName = 'septennial';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 2.20752e+26;
 
@@ -1782,6 +1938,12 @@ final class Time$Octennial extends Time {
 
   static const _minorName = 'octennial';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 2.52288e+26;
 
   /// 1 [Time$Octennial] = 2.52288e+26 [Time$Attosecond]
@@ -1840,6 +2002,12 @@ final class Time$Novennial extends Time {
       );
 
   static const _minorName = 'novennial';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 2.83824e+26;
 
@@ -1900,6 +2068,12 @@ final class Time$Quindecennial extends Time {
 
   static const _minorName = 'quindecennial';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 4.7304e+26;
 
   /// 1 [Time$Quindecennial] = 4.7304e+26 [Time$Attosecond]
@@ -1958,6 +2132,12 @@ final class Time$Quinquennial extends Time {
       );
 
   static const _minorName = 'quinquennial';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1.5768e+26;
 

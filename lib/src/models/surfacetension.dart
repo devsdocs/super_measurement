@@ -28,7 +28,7 @@ abstract final class SurfaceTension extends Unit<SurfaceTension> {
 
   @override
   AnchorRatio<SurfaceTension> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<SurfaceTension>({
           SurfaceTension$NewtonPerMeter: SurfaceTension$NewtonPerMeter._ratio,
           SurfaceTension$GramForcePerCentimeter:
@@ -46,7 +46,7 @@ abstract final class SurfaceTension extends Unit<SurfaceTension> {
       );
 
   @override
-  SurfaceTension get _anchor => const SurfaceTension$MillinewtonPerMeter();
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter();
 
   /// Convert to [SurfaceTension$NewtonPerMeter]
   SurfaceTension get toNewtonPerMeter => convertTo(
@@ -118,6 +118,12 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
 
   static const _minorName = 'newtonPerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'newton/meter';
+
   static const _ratio = 1000.0;
 
   /// 1 [SurfaceTension$NewtonPerMeter] = 1000.0 [SurfaceTension$MillinewtonPerMeter]
@@ -177,6 +183,12 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
       );
 
   static const _minorName = 'millinewtonPerMeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'millinewton/meter';
 
   static const _ratio = 1.0;
 
@@ -238,6 +250,12 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
 
   static const _minorName = 'gramForcePerCentimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gram force/centimeter';
+
   static const _ratio = 980.6649999787735;
 
   /// 1 [SurfaceTension$GramForcePerCentimeter] ≈ 980.6649999787735 [SurfaceTension$MillinewtonPerMeter]
@@ -297,6 +315,12 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
       );
 
   static const _minorName = 'dynePerCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dyne/centimeter';
 
   static const _ratio = 1.0;
 
@@ -358,6 +382,12 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
 
   static const _minorName = 'ergPerCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'erg/centimeter²';
+
   static const _ratio = 1.0;
 
   /// 1 [SurfaceTension$ErgPerCentimeterSquare] = 1.0 [SurfaceTension$MillinewtonPerMeter]
@@ -417,6 +447,12 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
       );
 
   static const _minorName = 'ergPerMillimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'erg/millimeter²';
 
   static const _ratio = 100.0;
 
@@ -478,6 +514,12 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
 
   static const _minorName = 'poundalPerInch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'poundal/inch';
+
   static const _ratio = 5443.108492;
 
   /// 1 [SurfaceTension$PoundalPerInch] ≈ 5443.108492 [SurfaceTension$MillinewtonPerMeter]
@@ -537,6 +579,12 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
       );
 
   static const _minorName = 'poundForcePerInch';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound force/inch';
 
   static const _ratio = 175126.837;
 

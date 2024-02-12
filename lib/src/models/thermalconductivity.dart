@@ -31,7 +31,7 @@ abstract final class ThermalConductivity extends Unit<ThermalConductivity> {
 
   @override
   AnchorRatio<ThermalConductivity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<ThermalConductivity>({
           ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF:
               ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF._ratio,
@@ -54,7 +54,7 @@ abstract final class ThermalConductivity extends Unit<ThermalConductivity> {
       );
 
   @override
-  ThermalConductivity get _anchor =>
+  ThermalConductivity get anchor =>
       const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
 
   /// Convert to [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
@@ -135,6 +135,12 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
 
   static const _minorName = 'bTUThermochemInchPerHourFootSquareDegreeF';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU (thermochem)-inch/hour-foot²-°F';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [ThermalConductivity]
@@ -195,6 +201,12 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
       );
 
   static const _minorName = 'bTUIntInchPerHourFootSquareDegreeF';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU (int)-inch/hour-foot²-°F';
 
   static const _ratio = 1.0006692161075852;
 
@@ -257,6 +269,12 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
 
   static const _minorName = 'bTUThermochemPerHourFootDegreeF';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU (thermochem)/hour-foot-°F';
+
   static const _ratio = 12.0;
 
   /// 1 [ThermalConductivity$BTUThermochemPerHourFootDegreeF] = 12.0 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
@@ -317,6 +335,12 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
       );
 
   static const _minorName = 'bTUIntPerHourFootDegreeF';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'BTU (int)/hour-foot-°F';
 
   static const _ratio = 12.008030593291023;
 
@@ -379,6 +403,12 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
 
   static const _minorName = 'calorieThermochemPerSecondCentimeterDegreeC';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie (thermochem)/second-centimeter-°C';
+
   static const _ratio = 2902.9059727372737;
 
   /// 1 [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC] ≈ 2902.9059727372737 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
@@ -440,6 +470,12 @@ final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
 
   static const _minorName = 'calorieIntPerSecondCentimeterDegreeC';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'calorie (int)/second-centimeter-°C';
+
   static const _ratio = 2904.848644038341;
 
   /// 1 [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC] ≈ 2904.848644038341 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
@@ -499,6 +535,12 @@ final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
       );
 
   static const _minorName = 'kilowattPerMeterK';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilowatt/meter-K';
 
   static const _ratio = 6938.111789525033;
 
@@ -560,6 +602,12 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
 
   static const _minorName = 'wattPerMeterK';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'watt/meter-K';
+
   static const _ratio = 6.938111789525033;
 
   /// 1 [ThermalConductivity$WattPerMeterK] ≈ 6.938111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
@@ -620,6 +668,12 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
       );
 
   static const _minorName = 'wattPerCentimeterDegreeC';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'watt/centimeter-°C';
 
   static const _ratio = 693.8111789525033;
 

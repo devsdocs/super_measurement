@@ -25,7 +25,7 @@ abstract final class TemperatureInterval extends Unit<TemperatureInterval> {
 
   @override
   AnchorRatio<TemperatureInterval> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<TemperatureInterval>({
           TemperatureInterval$Kelvin: TemperatureInterval$Kelvin._ratio,
           TemperatureInterval$Celsius: TemperatureInterval$Celsius._ratio,
@@ -35,7 +35,7 @@ abstract final class TemperatureInterval extends Unit<TemperatureInterval> {
       );
 
   @override
-  TemperatureInterval get _anchor => const TemperatureInterval$Fahrenheit();
+  TemperatureInterval get anchor => const TemperatureInterval$Fahrenheit();
 
   /// Convert to [TemperatureInterval$Kelvin]
   TemperatureInterval get toKelvin => convertTo(
@@ -91,6 +91,12 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
       );
 
   static const _minorName = 'kelvin';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Kelvin';
 
   static const _ratio = 1.8;
 
@@ -151,6 +157,12 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
 
   static const _minorName = 'celsius';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Celsius';
+
   static const _ratio = 1.8;
 
   /// 1 [TemperatureInterval$Celsius] ≈ 1.8 [TemperatureInterval$Fahrenheit]
@@ -209,6 +221,12 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
       );
 
   static const _minorName = 'fahrenheit';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Fahrenheit';
 
   static const _ratio = 1.0;
 
@@ -270,6 +288,12 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
 
   static const _minorName = 'rankine';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Rankine';
+
   static const _ratio = 1.0;
 
   /// 1 [TemperatureInterval$Rankine] = 1.0 [TemperatureInterval$Fahrenheit]
@@ -328,6 +352,12 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
       );
 
   static const _minorName = 'reaumur';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Réaumur';
 
   static const _ratio = 2.25;
 

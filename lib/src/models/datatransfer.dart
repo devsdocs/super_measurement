@@ -105,7 +105,7 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
 
   @override
   AnchorRatio<DataTransfer> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<DataTransfer>({
           DataTransfer$BytePerSecond: DataTransfer$BytePerSecond._ratio,
           DataTransfer$KilobitPerSecond: DataTransfer$KilobitPerSecond._ratio,
@@ -296,7 +296,7 @@ abstract final class DataTransfer extends Unit<DataTransfer> {
       );
 
   @override
-  DataTransfer get _anchor => const DataTransfer$BitPerSecond();
+  DataTransfer get anchor => const DataTransfer$BitPerSecond();
 
   /// Convert to [DataTransfer$BitPerSecond]
   DataTransfer get toBitPerSecond => convertTo(
@@ -1213,6 +1213,12 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
 
   static const _minorName = 'bitPerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'bit/second';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [DataTransfer]
@@ -1272,6 +1278,12 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
 
   static const _minorName = 'bytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'byte/second';
+
   static const _ratio = 8.0;
 
   /// 1 [DataTransfer$BytePerSecond] = 8.0 [DataTransfer$BitPerSecond]
@@ -1330,6 +1342,12 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'kilobitPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilobit/second';
 
   static const _ratio = 1000.0;
 
@@ -1391,6 +1409,12 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
 
   static const _minorName = 'kilobytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilobyte/second';
+
   static const _ratio = 8000.0;
 
   /// 1 [DataTransfer$KilobytePerSecond] = 8000.0 [DataTransfer$BitPerSecond]
@@ -1450,6 +1474,12 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'megabitPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'megabit/second';
 
   static const _ratio = 1000000.0;
 
@@ -1511,6 +1541,12 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
 
   static const _minorName = 'megabytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'megabyte/second';
+
   static const _ratio = 8000000.0;
 
   /// 1 [DataTransfer$MegabytePerSecond] = 8000000.0 [DataTransfer$BitPerSecond]
@@ -1570,6 +1606,12 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'gigabitPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gigabit/second';
 
   static const _ratio = 1000000000.0;
 
@@ -1631,6 +1673,12 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
 
   static const _minorName = 'gigabytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gigabyte/second';
+
   static const _ratio = 8000000000.0;
 
   /// 1 [DataTransfer$GigabytePerSecond] = 8000000000.0 [DataTransfer$BitPerSecond]
@@ -1690,6 +1738,12 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'terabitPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'terabit/second';
 
   static const _ratio = 1000000000000.0;
 
@@ -1751,6 +1805,12 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
 
   static const _minorName = 'terabytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'terabyte/second';
+
   static const _ratio = 8000000000000.0;
 
   /// 1 [DataTransfer$TerabytePerSecond] = 8000000000000.0 [DataTransfer$BitPerSecond]
@@ -1810,6 +1870,12 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'kibibitPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kibibit/second';
 
   static const _ratio = 1024.0;
 
@@ -1871,6 +1937,12 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
 
   static const _minorName = 'kibibytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kibibyte/second';
+
   static const _ratio = 8192.0;
 
   /// 1 [DataTransfer$KibibytePerSecond] = 8192.0 [DataTransfer$BitPerSecond]
@@ -1930,6 +2002,12 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'mebibitPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mebibit/second';
 
   static const _ratio = 1048576.0;
 
@@ -1991,6 +2069,12 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
 
   static const _minorName = 'mebibytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'mebibyte/second';
+
   static const _ratio = 8388608.0;
 
   /// 1 [DataTransfer$MebibytePerSecond] = 8388608.0 [DataTransfer$BitPerSecond]
@@ -2050,6 +2134,12 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'gibibitPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gibibit/second';
 
   static const _ratio = 1073741824.0;
 
@@ -2111,6 +2201,12 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
 
   static const _minorName = 'gibibytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gibibyte/second';
+
   static const _ratio = 8589934592.0;
 
   /// 1 [DataTransfer$GibibytePerSecond] = 8589934592.0 [DataTransfer$BitPerSecond]
@@ -2170,6 +2266,12 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'tebibitPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'tebibit/second';
 
   static const _ratio = 1099511627776.0;
 
@@ -2231,6 +2333,12 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
 
   static const _minorName = 'tebibytePerSecond';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'tebibyte/second';
+
   static const _ratio = 8796093022208.0;
 
   /// 1 [DataTransfer$TebibytePerSecond] = 8796093022208.0 [DataTransfer$BitPerSecond]
@@ -2291,6 +2399,12 @@ final class DataTransfer$Ethernet extends DataTransfer {
 
   static const _minorName = 'ethernet';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000.0;
 
   /// 1 [DataTransfer$Ethernet] = 10000000.0 [DataTransfer$BitPerSecond]
@@ -2350,6 +2464,12 @@ final class DataTransfer$EthernetFast extends DataTransfer {
 
   static const _minorName = 'ethernetFast';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ethernet (fast)';
+
   static const _ratio = 100000000.0;
 
   /// 1 [DataTransfer$EthernetFast] = 100000000.0 [DataTransfer$BitPerSecond]
@@ -2408,6 +2528,12 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
       );
 
   static const _minorName = 'ethernetGigabit';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ethernet (gigabit)';
 
   static const _ratio = 1000000000.0;
 
@@ -2469,6 +2595,12 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
 
   static const _minorName = 'ethernet10Gigabit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ethernet (10 gigabit)';
+
   static const _ratio = 10000000000.0;
 
   /// 1 [DataTransfer$Ethernet10Gigabit] = 10000000000.0 [DataTransfer$BitPerSecond]
@@ -2529,6 +2661,12 @@ final class DataTransfer$OC1 extends DataTransfer {
 
   static const _minorName = 'oC1';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'OC1';
+
   static const _ratio = 51840000.0;
 
   /// 1 [DataTransfer$OC1] = 51840000.0 [DataTransfer$BitPerSecond]
@@ -2587,6 +2725,12 @@ final class DataTransfer$OC3 extends DataTransfer {
       );
 
   static const _minorName = 'oC3';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'OC3';
 
   static const _ratio = 155520000.0;
 
@@ -2647,6 +2791,12 @@ final class DataTransfer$OC12 extends DataTransfer {
 
   static const _minorName = 'oC12';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'OC12';
+
   static const _ratio = 622080000.0;
 
   /// 1 [DataTransfer$OC12] = 622080000.0 [DataTransfer$BitPerSecond]
@@ -2705,6 +2855,12 @@ final class DataTransfer$OC24 extends DataTransfer {
       );
 
   static const _minorName = 'oC24';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'OC24';
 
   static const _ratio = 1244160000.0;
 
@@ -2765,6 +2921,12 @@ final class DataTransfer$OC48 extends DataTransfer {
 
   static const _minorName = 'oC48';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'OC48';
+
   static const _ratio = 2488320000.0;
 
   /// 1 [DataTransfer$OC48] = 2488320000.0 [DataTransfer$BitPerSecond]
@@ -2823,6 +2985,12 @@ final class DataTransfer$OC192 extends DataTransfer {
       );
 
   static const _minorName = 'oC192';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'OC192';
 
   static const _ratio = 9953280000.0;
 
@@ -2883,6 +3051,12 @@ final class DataTransfer$OC768 extends DataTransfer {
 
   static const _minorName = 'oC768';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'OC768';
+
   static const _ratio = 39813120000.0;
 
   /// 1 [DataTransfer$OC768] = 39813120000.0 [DataTransfer$BitPerSecond]
@@ -2941,6 +3115,12 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
       );
 
   static const _minorName = 'iSDNSingleChannel';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ISDN (single channel)';
 
   static const _ratio = 64000.0;
 
@@ -3002,6 +3182,12 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
 
   static const _minorName = 'iSDNDualChannel';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ISDN (dual channel)';
+
   static const _ratio = 128000.0;
 
   /// 1 [DataTransfer$ISDNDualChannel] = 128000.0 [DataTransfer$BitPerSecond]
@@ -3062,6 +3248,12 @@ final class DataTransfer$Modem110 extends DataTransfer {
 
   static const _minorName = 'modem110';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (110)';
+
   static const _ratio = 110.0;
 
   /// 1 [DataTransfer$Modem110] = 110.0 [DataTransfer$BitPerSecond]
@@ -3120,6 +3312,12 @@ final class DataTransfer$Modem300 extends DataTransfer {
       );
 
   static const _minorName = 'modem300';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (300)';
 
   static const _ratio = 300.0;
 
@@ -3180,6 +3378,12 @@ final class DataTransfer$Modem1200 extends DataTransfer {
 
   static const _minorName = 'modem1200';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (1200)';
+
   static const _ratio = 1200.0;
 
   /// 1 [DataTransfer$Modem1200] = 1200.0 [DataTransfer$BitPerSecond]
@@ -3238,6 +3442,12 @@ final class DataTransfer$Modem2400 extends DataTransfer {
       );
 
   static const _minorName = 'modem2400';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (2400)';
 
   static const _ratio = 2400.0;
 
@@ -3298,6 +3508,12 @@ final class DataTransfer$Modem9600 extends DataTransfer {
 
   static const _minorName = 'modem9600';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (9600)';
+
   static const _ratio = 9600.0;
 
   /// 1 [DataTransfer$Modem9600] = 9600.0 [DataTransfer$BitPerSecond]
@@ -3356,6 +3572,12 @@ final class DataTransfer$Modem144k extends DataTransfer {
       );
 
   static const _minorName = 'modem144k';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (14.4k)';
 
   static const _ratio = 14400.0;
 
@@ -3416,6 +3638,12 @@ final class DataTransfer$Modem288k extends DataTransfer {
 
   static const _minorName = 'modem288k';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (28.8k)';
+
   static const _ratio = 28800.0;
 
   /// 1 [DataTransfer$Modem288k] = 28800.0 [DataTransfer$BitPerSecond]
@@ -3474,6 +3702,12 @@ final class DataTransfer$Modem336k extends DataTransfer {
       );
 
   static const _minorName = 'modem336k';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (33.6k)';
 
   static const _ratio = 33600.0;
 
@@ -3534,6 +3768,12 @@ final class DataTransfer$Modem56k extends DataTransfer {
 
   static const _minorName = 'modem56k';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'modem (56k)';
+
   static const _ratio = 56000.0;
 
   /// 1 [DataTransfer$Modem56k] = 56000.0 [DataTransfer$BitPerSecond]
@@ -3592,6 +3832,12 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
       );
 
   static const _minorName = 'sCSIAsync';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (Async)';
 
   static const _ratio = 12000000.0;
 
@@ -3652,6 +3898,12 @@ final class DataTransfer$SCSISync extends DataTransfer {
 
   static const _minorName = 'sCSISync';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (Sync)';
+
   static const _ratio = 40000000.0;
 
   /// 1 [DataTransfer$SCSISync] = 40000000.0 [DataTransfer$BitPerSecond]
@@ -3710,6 +3962,12 @@ final class DataTransfer$SCSIFast extends DataTransfer {
       );
 
   static const _minorName = 'sCSIFast';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (Fast)';
 
   static const _ratio = 80000000.0;
 
@@ -3770,6 +4028,12 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
 
   static const _minorName = 'sCSIFastUltra';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (Fast Ultra)';
+
   static const _ratio = 160000000.0;
 
   /// 1 [DataTransfer$SCSIFastUltra] = 160000000.0 [DataTransfer$BitPerSecond]
@@ -3829,6 +4093,12 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
 
   static const _minorName = 'sCSIFastWide';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (Fast Wide)';
+
   static const _ratio = 160000000.0;
 
   /// 1 [DataTransfer$SCSIFastWide] = 160000000.0 [DataTransfer$BitPerSecond]
@@ -3887,6 +4157,12 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
       );
 
   static const _minorName = 'sCSIFastUltraWide';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (Fast Ultra Wide)';
 
   static const _ratio = 320000000.0;
 
@@ -3948,6 +4224,12 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
 
   static const _minorName = 'sCSIUltra2';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (Ultra-2)';
+
   static const _ratio = 640000000.0;
 
   /// 1 [DataTransfer$SCSIUltra2] = 640000000.0 [DataTransfer$BitPerSecond]
@@ -4006,6 +4288,12 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
       );
 
   static const _minorName = 'sCSIUltra3';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (Ultra-3)';
 
   static const _ratio = 1280000000.0;
 
@@ -4066,6 +4354,12 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
 
   static const _minorName = 'sCSILVDUltra80';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (LVD Ultra80)';
+
   static const _ratio = 640000000.0;
 
   /// 1 [DataTransfer$SCSILVDUltra80] = 640000000.0 [DataTransfer$BitPerSecond]
@@ -4124,6 +4418,12 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
       );
 
   static const _minorName = 'sCSILVDUltra160';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (LVD Ultra160)';
 
   static const _ratio = 1280000000.0;
 
@@ -4185,6 +4485,12 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
 
   static const _minorName = 'sCSILVDUltra320';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SCSI (LVD Ultra320)';
+
   static const _ratio = 2560000000.0;
 
   /// 1 [DataTransfer$SCSILVDUltra320] = 2560000000.0 [DataTransfer$BitPerSecond]
@@ -4245,6 +4551,12 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
 
   static const _minorName = 'iDEPIOMode0';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (PIO mode 0)';
+
   static const _ratio = 26400000.0;
 
   /// 1 [DataTransfer$IDEPIOMode0] = 26400000.0 [DataTransfer$BitPerSecond]
@@ -4303,6 +4615,12 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
       );
 
   static const _minorName = 'iDEPIOMode1';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (PIO mode 1)';
 
   static const _ratio = 41600000.0;
 
@@ -4363,6 +4681,12 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
 
   static const _minorName = 'iDEPIOMode2';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (PIO mode 2)';
+
   static const _ratio = 66400000.0;
 
   /// 1 [DataTransfer$IDEPIOMode2] = 66400000.0 [DataTransfer$BitPerSecond]
@@ -4421,6 +4745,12 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
       );
 
   static const _minorName = 'iDEPIOMode3';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (PIO mode 3)';
 
   static const _ratio = 88800000.0;
 
@@ -4481,6 +4811,12 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
 
   static const _minorName = 'iDEPIOMode4';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (PIO mode 4)';
+
   static const _ratio = 132800000.0;
 
   /// 1 [DataTransfer$IDEPIOMode4] = 132800000.0 [DataTransfer$BitPerSecond]
@@ -4539,6 +4875,12 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
       );
 
   static const _minorName = 'iDEDMAMode0';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (DMA mode 0)';
 
   static const _ratio = 33600000.0;
 
@@ -4599,6 +4941,12 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
 
   static const _minorName = 'iDEDMAMode1';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (DMA mode 1)';
+
   static const _ratio = 106400000.0;
 
   /// 1 [DataTransfer$IDEDMAMode1] = 106400000.0 [DataTransfer$BitPerSecond]
@@ -4657,6 +5005,12 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
       );
 
   static const _minorName = 'iDEDMAMode2';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (DMA mode 2)';
 
   static const _ratio = 132800000.0;
 
@@ -4717,6 +5071,12 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
 
   static const _minorName = 'iDEUDMAMode0';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA mode 0)';
+
   static const _ratio = 132800000.0;
 
   /// 1 [DataTransfer$IDEUDMAMode0] = 132800000.0 [DataTransfer$BitPerSecond]
@@ -4775,6 +5135,12 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
       );
 
   static const _minorName = 'iDEUDMAMode1';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA mode 1)';
 
   static const _ratio = 200000000.0;
 
@@ -4835,6 +5201,12 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
 
   static const _minorName = 'iDEUDMAMode2';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA mode 2)';
+
   static const _ratio = 264000000.0;
 
   /// 1 [DataTransfer$IDEUDMAMode2] = 264000000.0 [DataTransfer$BitPerSecond]
@@ -4893,6 +5265,12 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
       );
 
   static const _minorName = 'iDEUDMAMode3';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA mode 3)';
 
   static const _ratio = 400000000.0;
 
@@ -4953,6 +5331,12 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
 
   static const _minorName = 'iDEUDMAMode4';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA mode 4)';
+
   static const _ratio = 528000000.0;
 
   /// 1 [DataTransfer$IDEUDMAMode4] = 528000000.0 [DataTransfer$BitPerSecond]
@@ -5011,6 +5395,12 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
       );
 
   static const _minorName = 'iDEUDMAMode5';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA mode 5)';
 
   static const _ratio = 800000000.0;
 
@@ -5071,6 +5461,12 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
 
   static const _minorName = 'iDEUDMAMode6';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA mode 6)';
+
   static const _ratio = 1066666666.6666666;
 
   /// 1 [DataTransfer$IDEUDMAMode6] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
@@ -5129,6 +5525,12 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
       );
 
   static const _minorName = 'iDEUDMA33';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA-33)';
 
   static const _ratio = 264000000.0;
 
@@ -5189,6 +5591,12 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
 
   static const _minorName = 'iDEUDMA66';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA-66)';
+
   static const _ratio = 528000000.0;
 
   /// 1 [DataTransfer$IDEUDMA66] = 528000000.0 [DataTransfer$BitPerSecond]
@@ -5247,6 +5655,12 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
       );
 
   static const _minorName = 'iDEUDMA100';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA-100)';
 
   static const _ratio = 800000000.0;
 
@@ -5307,6 +5721,12 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
 
   static const _minorName = 'iDEUDMA133';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IDE (UDMA-133)';
+
   static const _ratio = 1066666666.6666666;
 
   /// 1 [DataTransfer$IDEUDMA133] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
@@ -5365,6 +5785,12 @@ final class DataTransfer$SATA10 extends DataTransfer {
       );
 
   static const _minorName = 'sATA10';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SATA 1.0';
 
   static const _ratio = 1500000000.0;
 
@@ -5425,6 +5851,12 @@ final class DataTransfer$SATA20 extends DataTransfer {
 
   static const _minorName = 'sATA20';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SATA 2.0';
+
   static const _ratio = 3000000000.0;
 
   /// 1 [DataTransfer$SATA20] = 3000000000.0 [DataTransfer$BitPerSecond]
@@ -5483,6 +5915,12 @@ final class DataTransfer$SATA30 extends DataTransfer {
       );
 
   static const _minorName = 'sATA30';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'SATA 3.0';
 
   static const _ratio = 6000000000.0;
 
@@ -5543,6 +5981,12 @@ final class DataTransfer$USB extends DataTransfer {
 
   static const _minorName = 'uSB';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'USB';
+
   static const _ratio = 12000000.0;
 
   /// 1 [DataTransfer$USB] = 12000000.0 [DataTransfer$BitPerSecond]
@@ -5601,6 +6045,12 @@ final class DataTransfer$USB20 extends DataTransfer {
       );
 
   static const _minorName = 'uSB20';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'USB 2.0';
 
   static const _ratio = 480000000.0;
 
@@ -5661,6 +6111,12 @@ final class DataTransfer$USB30 extends DataTransfer {
 
   static const _minorName = 'uSB30';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'USB 3.0';
+
   static const _ratio = 5000000000.0;
 
   /// 1 [DataTransfer$USB30] = 5000000000.0 [DataTransfer$BitPerSecond]
@@ -5719,6 +6175,12 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
       );
 
   static const _minorName = 'fireWire400IEEE1394';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'FireWire 400 (IEEE-1394)';
 
   static const _ratio = 400000000.0;
 
@@ -5780,6 +6242,12 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
 
   static const _minorName = 'fireWire800IEEE1394b';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'FireWire 800 (IEEE-1394b)';
+
   static const _ratio = 800000000.0;
 
   /// 1 [DataTransfer$FireWire800IEEE1394b] = 800000000.0 [DataTransfer$BitPerSecond]
@@ -5840,6 +6308,12 @@ final class DataTransfer$IrDA extends DataTransfer {
 
   static const _minorName = 'irDA';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IrDA';
+
   static const _ratio = 115200.0;
 
   /// 1 [DataTransfer$IrDA] = 115200.0 [DataTransfer$BitPerSecond]
@@ -5898,6 +6372,12 @@ final class DataTransfer$IrDA2 extends DataTransfer {
       );
 
   static const _minorName = 'irDA2';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'IrDA-2';
 
   static const _ratio = 4000000.0;
 
@@ -5958,6 +6438,12 @@ final class DataTransfer$ATM extends DataTransfer {
 
   static const _minorName = 'aTM';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ATM';
+
   static const _ratio = 155000000.0;
 
   /// 1 [DataTransfer$ATM] = 155000000.0 [DataTransfer$BitPerSecond]
@@ -6016,6 +6502,12 @@ final class DataTransfer$T0Payload extends DataTransfer {
       );
 
   static const _minorName = 't0Payload';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T0 (payload)';
 
   static const _ratio = 56000.0;
 
@@ -6076,6 +6568,12 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
 
   static const _minorName = 't0B8ZSPayload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T0 (B8ZS payload)';
+
   static const _ratio = 64000.0;
 
   /// 1 [DataTransfer$T0B8ZSPayload] = 64000.0 [DataTransfer$BitPerSecond]
@@ -6134,6 +6632,12 @@ final class DataTransfer$T1Signal extends DataTransfer {
       );
 
   static const _minorName = 't1Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T1 (signal)';
 
   static const _ratio = 1544000.0;
 
@@ -6194,6 +6698,12 @@ final class DataTransfer$T1Payload extends DataTransfer {
 
   static const _minorName = 't1Payload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T1 (payload)';
+
   static const _ratio = 1344000.0;
 
   /// 1 [DataTransfer$T1Payload] = 1344000.0 [DataTransfer$BitPerSecond]
@@ -6252,6 +6762,12 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
       );
 
   static const _minorName = 't1ZPayload';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T1Z (payload)';
 
   static const _ratio = 1544000.0;
 
@@ -6312,6 +6828,12 @@ final class DataTransfer$T1CSignal extends DataTransfer {
 
   static const _minorName = 't1CSignal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T1C (signal)';
+
   static const _ratio = 3152000.0;
 
   /// 1 [DataTransfer$T1CSignal] = 3152000.0 [DataTransfer$BitPerSecond]
@@ -6370,6 +6892,12 @@ final class DataTransfer$T1CPayload extends DataTransfer {
       );
 
   static const _minorName = 't1CPayload';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T1C (payload)';
 
   static const _ratio = 2688000.0;
 
@@ -6430,6 +6958,12 @@ final class DataTransfer$T2Signal extends DataTransfer {
 
   static const _minorName = 't2Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T2 (signal)';
+
   static const _ratio = 6312000.0;
 
   /// 1 [DataTransfer$T2Signal] = 6312000.0 [DataTransfer$BitPerSecond]
@@ -6488,6 +7022,12 @@ final class DataTransfer$T3Signal extends DataTransfer {
       );
 
   static const _minorName = 't3Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T3 (signal)';
 
   static const _ratio = 44736000.0;
 
@@ -6548,6 +7088,12 @@ final class DataTransfer$T3Payload extends DataTransfer {
 
   static const _minorName = 't3Payload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T3 (payload)';
+
   static const _ratio = 37632000.0;
 
   /// 1 [DataTransfer$T3Payload] = 37632000.0 [DataTransfer$BitPerSecond]
@@ -6606,6 +7152,12 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
       );
 
   static const _minorName = 't3ZPayload';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T3Z (payload)';
 
   static const _ratio = 43008000.0;
 
@@ -6666,6 +7218,12 @@ final class DataTransfer$T4Signal extends DataTransfer {
 
   static const _minorName = 't4Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'T4 (signal)';
+
   static const _ratio = 274176000.0;
 
   /// 1 [DataTransfer$T4Signal] = 274176000.0 [DataTransfer$BitPerSecond]
@@ -6724,6 +7282,12 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
       );
 
   static const _minorName = 'ePTA1Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'E.P.T.A. 1 (signal)';
 
   static const _ratio = 2048000.0;
 
@@ -6784,6 +7348,12 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
 
   static const _minorName = 'ePTA1Payload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'E.P.T.A. 1 (payload)';
+
   static const _ratio = 1920000.0;
 
   /// 1 [DataTransfer$EPTA1Payload] = 1920000.0 [DataTransfer$BitPerSecond]
@@ -6842,6 +7412,12 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
       );
 
   static const _minorName = 'ePTA2Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'E.P.T.A. 2 (signal)';
 
   static const _ratio = 8448000.0;
 
@@ -6902,6 +7478,12 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
 
   static const _minorName = 'ePTA2Payload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'E.P.T.A. 2 (payload)';
+
   static const _ratio = 7680000.0;
 
   /// 1 [DataTransfer$EPTA2Payload] = 7680000.0 [DataTransfer$BitPerSecond]
@@ -6960,6 +7542,12 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
       );
 
   static const _minorName = 'ePTA3Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'E.P.T.A. 3 (signal)';
 
   static const _ratio = 34368000.0;
 
@@ -7020,6 +7608,12 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
 
   static const _minorName = 'ePTA3Payload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'E.P.T.A. 3 (payload)';
+
   static const _ratio = 30720000.0;
 
   /// 1 [DataTransfer$EPTA3Payload] = 30720000.0 [DataTransfer$BitPerSecond]
@@ -7078,6 +7672,12 @@ final class DataTransfer$H0 extends DataTransfer {
       );
 
   static const _minorName = 'h0';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'H0';
 
   static const _ratio = 384000.0;
 
@@ -7138,6 +7738,12 @@ final class DataTransfer$H11 extends DataTransfer {
 
   static const _minorName = 'h11';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'H11';
+
   static const _ratio = 1536000.0;
 
   /// 1 [DataTransfer$H11] = 1536000.0 [DataTransfer$BitPerSecond]
@@ -7197,6 +7803,12 @@ final class DataTransfer$H12 extends DataTransfer {
 
   static const _minorName = 'h12';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'H12';
+
   static const _ratio = 1920000.0;
 
   /// 1 [DataTransfer$H12] = 1920000.0 [DataTransfer$BitPerSecond]
@@ -7255,6 +7867,12 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
       );
 
   static const _minorName = 'virtualTributary1Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Virtual Tributary 1 (signal)';
 
   static const _ratio = 1728000.0;
 
@@ -7316,6 +7934,12 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
 
   static const _minorName = 'virtualTributary1Payload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Virtual Tributary 1 (payload)';
+
   static const _ratio = 1544000.0;
 
   /// 1 [DataTransfer$VirtualTributary1Payload] = 1544000.0 [DataTransfer$BitPerSecond]
@@ -7375,6 +7999,12 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
       );
 
   static const _minorName = 'virtualTributary2Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Virtual Tributary 2 (signal)';
 
   static const _ratio = 2304000.0;
 
@@ -7436,6 +8066,12 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
 
   static const _minorName = 'virtualTributary2Payload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Virtual Tributary 2 (payload)';
+
   static const _ratio = 2048000.0;
 
   /// 1 [DataTransfer$VirtualTributary2Payload] = 2048000.0 [DataTransfer$BitPerSecond]
@@ -7495,6 +8131,12 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
       );
 
   static const _minorName = 'virtualTributary6Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Virtual Tributary 6 (signal)';
 
   static const _ratio = 6312000.0;
 
@@ -7556,6 +8198,12 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
 
   static const _minorName = 'virtualTributary6Payload';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Virtual Tributary 6 (payload)';
+
   static const _ratio = 6000000.0;
 
   /// 1 [DataTransfer$VirtualTributary6Payload] = 6000000.0 [DataTransfer$BitPerSecond]
@@ -7616,6 +8264,12 @@ final class DataTransfer$STS1Signal extends DataTransfer {
 
   static const _minorName = 'sTS1Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS1 (signal)';
+
   static const _ratio = 51840000.0;
 
   /// 1 [DataTransfer$STS1Signal] = 51840000.0 [DataTransfer$BitPerSecond]
@@ -7674,6 +8328,12 @@ final class DataTransfer$STS1Payload extends DataTransfer {
       );
 
   static const _minorName = 'sTS1Payload';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS1 (payload)';
 
   static const _ratio = 49500000.0;
 
@@ -7734,6 +8394,12 @@ final class DataTransfer$STS3Signal extends DataTransfer {
 
   static const _minorName = 'sTS3Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS3 (signal)';
+
   static const _ratio = 155520000.0;
 
   /// 1 [DataTransfer$STS3Signal] = 155520000.0 [DataTransfer$BitPerSecond]
@@ -7792,6 +8458,12 @@ final class DataTransfer$STS3Payload extends DataTransfer {
       );
 
   static const _minorName = 'sTS3Payload';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS3 (payload)';
 
   static const _ratio = 150336000.0;
 
@@ -7852,6 +8524,12 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
 
   static const _minorName = 'sTS3cSignal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS3c (signal)';
+
   static const _ratio = 155520000.0;
 
   /// 1 [DataTransfer$STS3cSignal] = 155520000.0 [DataTransfer$BitPerSecond]
@@ -7910,6 +8588,12 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
       );
 
   static const _minorName = 'sTS3cPayload';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS3c (payload)';
 
   static const _ratio = 150336000.0;
 
@@ -7970,6 +8654,12 @@ final class DataTransfer$STS12Signal extends DataTransfer {
 
   static const _minorName = 'sTS12Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS12 (signal)';
+
   static const _ratio = 622080000.0;
 
   /// 1 [DataTransfer$STS12Signal] = 622080000.0 [DataTransfer$BitPerSecond]
@@ -8028,6 +8718,12 @@ final class DataTransfer$STS24Signal extends DataTransfer {
       );
 
   static const _minorName = 'sTS24Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS24 (signal)';
 
   static const _ratio = 1244160000.0;
 
@@ -8088,6 +8784,12 @@ final class DataTransfer$STS48Signal extends DataTransfer {
 
   static const _minorName = 'sTS48Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS48 (signal)';
+
   static const _ratio = 2488320000.0;
 
   /// 1 [DataTransfer$STS48Signal] = 2488320000.0 [DataTransfer$BitPerSecond]
@@ -8146,6 +8848,12 @@ final class DataTransfer$STS192Signal extends DataTransfer {
       );
 
   static const _minorName = 'sTS192Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STS192 (signal)';
 
   static const _ratio = 9953280000.0;
 
@@ -8206,6 +8914,12 @@ final class DataTransfer$STM1Signal extends DataTransfer {
 
   static const _minorName = 'sTM1Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STM-1 (signal)';
+
   static const _ratio = 155520000.0;
 
   /// 1 [DataTransfer$STM1Signal] = 155520000.0 [DataTransfer$BitPerSecond]
@@ -8264,6 +8978,12 @@ final class DataTransfer$STM4Signal extends DataTransfer {
       );
 
   static const _minorName = 'sTM4Signal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STM-4 (signal)';
 
   static const _ratio = 622080000.0;
 
@@ -8324,6 +9044,12 @@ final class DataTransfer$STM16Signal extends DataTransfer {
 
   static const _minorName = 'sTM16Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STM-16 (signal)';
+
   static const _ratio = 2488320000.0;
 
   /// 1 [DataTransfer$STM16Signal] = 2488320000.0 [DataTransfer$BitPerSecond]
@@ -8383,6 +9109,12 @@ final class DataTransfer$STM64Signal extends DataTransfer {
 
   static const _minorName = 'sTM64Signal';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'STM-64 (signal)';
+
   static const _ratio = 9953280000.0;
 
   /// 1 [DataTransfer$STM64Signal] = 9953280000.0 [DataTransfer$BitPerSecond]
@@ -8441,6 +9173,12 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
       );
 
   static const _minorName = 'characterPerSecond';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'character/second';
 
   static const _ratio = 8.0;
 
@@ -8502,6 +9240,12 @@ final class DataTransfer$TokenRing extends DataTransfer {
 
   static const _minorName = 'tokenRing';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'token ring';
+
   static const _ratio = 4000000.0;
 
   /// 1 [DataTransfer$TokenRing] = 4000000.0 [DataTransfer$BitPerSecond]
@@ -8560,6 +9304,12 @@ final class DataTransfer$FiberChannel extends DataTransfer {
       );
 
   static const _minorName = 'fiberChannel';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'fiber channel';
 
   static const _ratio = 3200000000.0;
 
@@ -8620,6 +9370,12 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
 
   static const _minorName = 'iSA8Bit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ISA (8-bit)';
+
   static const _ratio = 66666666.666666664;
 
   /// 1 [DataTransfer$ISA8Bit] ≈ 66666666.666666664 [DataTransfer$BitPerSecond]
@@ -8678,6 +9434,12 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
       );
 
   static const _minorName = 'iSA16Bit';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ISA (16-bit)';
 
   static const _ratio = 133333333.33333333;
 
@@ -8738,6 +9500,12 @@ final class DataTransfer$VLB extends DataTransfer {
 
   static const _minorName = 'vLB';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'VLB';
+
   static const _ratio = 533333333.3333333;
 
   /// 1 [DataTransfer$VLB] ≈ 533333333.3333333 [DataTransfer$BitPerSecond]
@@ -8796,6 +9564,12 @@ final class DataTransfer$PCI extends DataTransfer {
       );
 
   static const _minorName = 'pCI';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI';
 
   static const _ratio = 1066666666.6666666;
 
@@ -8856,6 +9630,12 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
 
   static const _minorName = 'pCI64Bit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI (64-bit)';
+
   static const _ratio = 2133333333.3333333;
 
   /// 1 [DataTransfer$PCI64Bit] ≈ 2133333333.3333333 [DataTransfer$BitPerSecond]
@@ -8914,6 +9694,12 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
       );
 
   static const _minorName = 'pCI64Bit66MHz';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI (64-bit 66MHz)';
 
   static const _ratio = 4266666666.6666665;
 
@@ -8974,6 +9760,12 @@ final class DataTransfer$PCIX extends DataTransfer {
 
   static const _minorName = 'pCIX';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI-X';
+
   static const _ratio = 8533333333.333333;
 
   /// 1 [DataTransfer$PCIX] ≈ 8533333333.333333 [DataTransfer$BitPerSecond]
@@ -9032,6 +9824,12 @@ final class DataTransfer$AGP extends DataTransfer {
       );
 
   static const _minorName = 'aGP';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'AGP';
 
   static const _ratio = 2133333333.3333333;
 
@@ -9092,6 +9890,12 @@ final class DataTransfer$AGP2X extends DataTransfer {
 
   static const _minorName = 'aGP2X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'AGP 2X';
+
   static const _ratio = 4266666666.6666665;
 
   /// 1 [DataTransfer$AGP2X] ≈ 4266666666.6666665 [DataTransfer$BitPerSecond]
@@ -9150,6 +9954,12 @@ final class DataTransfer$AGP4X extends DataTransfer {
       );
 
   static const _minorName = 'aGP4X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'AGP 4X';
 
   static const _ratio = 8533333333.333333;
 
@@ -9210,6 +10020,12 @@ final class DataTransfer$AGP8X extends DataTransfer {
 
   static const _minorName = 'aGP8X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'AGP 8X';
+
   static const _ratio = 17066666666.666666;
 
   /// 1 [DataTransfer$AGP8X] ≈ 17066666666.666666 [DataTransfer$BitPerSecond]
@@ -9268,6 +10084,12 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
       );
 
   static const _minorName = 'pCIExpress10X1';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 1.0 (x1)';
 
   static const _ratio = 2000000000.0;
 
@@ -9328,6 +10150,12 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
 
   static const _minorName = 'pCIExpress10X4';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 1.0 (x4)';
+
   static const _ratio = 8000000000.0;
 
   /// 1 [DataTransfer$PCIExpress10X4] = 8000000000.0 [DataTransfer$BitPerSecond]
@@ -9387,6 +10215,12 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
 
   static const _minorName = 'pCIExpress10X8';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 1.0 (x8)';
+
   static const _ratio = 16000000000.0;
 
   /// 1 [DataTransfer$PCIExpress10X8] = 16000000000.0 [DataTransfer$BitPerSecond]
@@ -9445,6 +10279,12 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
       );
 
   static const _minorName = 'pCIExpress10X16';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 1.0 (x16)';
 
   static const _ratio = 32000000000.0;
 
@@ -9506,6 +10346,12 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
 
   static const _minorName = 'pCIExpress20X1';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 2.0 (x1)';
+
   static const _ratio = 4000000000.0;
 
   /// 1 [DataTransfer$PCIExpress20X1] = 4000000000.0 [DataTransfer$BitPerSecond]
@@ -9564,6 +10410,12 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
       );
 
   static const _minorName = 'pCIExpress20X4';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 2.0 (x4)';
 
   static const _ratio = 16000000000.0;
 
@@ -9624,6 +10476,12 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
 
   static const _minorName = 'pCIExpress20X8';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 2.0 (x8)';
+
   static const _ratio = 32000000000.0;
 
   /// 1 [DataTransfer$PCIExpress20X8] = 32000000000.0 [DataTransfer$BitPerSecond]
@@ -9682,6 +10540,12 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
       );
 
   static const _minorName = 'pCIExpress20X16';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 2.0 (x16)';
 
   static const _ratio = 64000000000.0;
 
@@ -9743,6 +10607,12 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
 
   static const _minorName = 'pCIExpress30X1';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 3.0 (x1)';
+
   static const _ratio = 8000000000.0;
 
   /// 1 [DataTransfer$PCIExpress30X1] = 8000000000.0 [DataTransfer$BitPerSecond]
@@ -9801,6 +10671,12 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
       );
 
   static const _minorName = 'pCIExpress30X4';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 3.0 (x4)';
 
   static const _ratio = 32000000000.0;
 
@@ -9861,6 +10737,12 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
 
   static const _minorName = 'pCIExpress30X8';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 3.0 (x8)';
+
   static const _ratio = 64000000000.0;
 
   /// 1 [DataTransfer$PCIExpress30X8] = 64000000000.0 [DataTransfer$BitPerSecond]
@@ -9919,6 +10801,12 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
       );
 
   static const _minorName = 'pCIExpress30X16';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PCI Express 3.0 (x16)';
 
   static const _ratio = 128000000000.0;
 
@@ -9980,6 +10868,12 @@ final class DataTransfer$CDROM1X extends DataTransfer {
 
   static const _minorName = 'cDROM1X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 1X';
+
   static const _ratio = 1228800.0;
 
   /// 1 [DataTransfer$CDROM1X] = 1228800.0 [DataTransfer$BitPerSecond]
@@ -10038,6 +10932,12 @@ final class DataTransfer$CDROM2X extends DataTransfer {
       );
 
   static const _minorName = 'cDROM2X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 2X';
 
   static const _ratio = 2457600.0;
 
@@ -10098,6 +10998,12 @@ final class DataTransfer$CDROM3X extends DataTransfer {
 
   static const _minorName = 'cDROM3X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 3X';
+
   static const _ratio = 3686400.0;
 
   /// 1 [DataTransfer$CDROM3X] = 3686400.0 [DataTransfer$BitPerSecond]
@@ -10156,6 +11062,12 @@ final class DataTransfer$CDROM4X extends DataTransfer {
       );
 
   static const _minorName = 'cDROM4X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 4X';
 
   static const _ratio = 4915200.0;
 
@@ -10216,6 +11128,12 @@ final class DataTransfer$CDROM6X extends DataTransfer {
 
   static const _minorName = 'cDROM6X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 6X';
+
   static const _ratio = 7372800.0;
 
   /// 1 [DataTransfer$CDROM6X] = 7372800.0 [DataTransfer$BitPerSecond]
@@ -10274,6 +11192,12 @@ final class DataTransfer$CDROM8X extends DataTransfer {
       );
 
   static const _minorName = 'cDROM8X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 8X';
 
   static const _ratio = 9830400.0;
 
@@ -10334,6 +11258,12 @@ final class DataTransfer$CDROM12X extends DataTransfer {
 
   static const _minorName = 'cDROM12X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 12X';
+
   static const _ratio = 14745600.0;
 
   /// 1 [DataTransfer$CDROM12X] = 14745600.0 [DataTransfer$BitPerSecond]
@@ -10392,6 +11322,12 @@ final class DataTransfer$CDROM16X extends DataTransfer {
       );
 
   static const _minorName = 'cDROM16X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 16X';
 
   static const _ratio = 19660800.0;
 
@@ -10452,6 +11388,12 @@ final class DataTransfer$CDROM24X extends DataTransfer {
 
   static const _minorName = 'cDROM24X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 24X';
+
   static const _ratio = 29491200.0;
 
   /// 1 [DataTransfer$CDROM24X] = 29491200.0 [DataTransfer$BitPerSecond]
@@ -10510,6 +11452,12 @@ final class DataTransfer$CDROM32X extends DataTransfer {
       );
 
   static const _minorName = 'cDROM32X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 32X';
 
   static const _ratio = 39321600.0;
 
@@ -10570,6 +11518,12 @@ final class DataTransfer$CDROM40X extends DataTransfer {
 
   static const _minorName = 'cDROM40X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 40X';
+
   static const _ratio = 49152000.0;
 
   /// 1 [DataTransfer$CDROM40X] = 49152000.0 [DataTransfer$BitPerSecond]
@@ -10628,6 +11582,12 @@ final class DataTransfer$CDROM48X extends DataTransfer {
       );
 
   static const _minorName = 'cDROM48X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 48X';
 
   static const _ratio = 58982400.0;
 
@@ -10688,6 +11648,12 @@ final class DataTransfer$CDROM52X extends DataTransfer {
 
   static const _minorName = 'cDROM52X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'CD-ROM 52X';
+
   static const _ratio = 63897600.0;
 
   /// 1 [DataTransfer$CDROM52X] = 63897600.0 [DataTransfer$BitPerSecond]
@@ -10746,6 +11712,12 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
       );
 
   static const _minorName = 'dVDROM1X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 1X';
 
   static const _ratio = 11080000.0;
 
@@ -10806,6 +11778,12 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
 
   static const _minorName = 'dVDROM2X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 2X';
+
   static const _ratio = 22160000.0;
 
   /// 1 [DataTransfer$DVDROM2X] = 22160000.0 [DataTransfer$BitPerSecond]
@@ -10864,6 +11842,12 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
       );
 
   static const _minorName = 'dVDROM3X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 3X';
 
   static const _ratio = 33240000.0;
 
@@ -10924,6 +11908,12 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
 
   static const _minorName = 'dVDROM4X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 4X';
+
   static const _ratio = 44320000.0;
 
   /// 1 [DataTransfer$DVDROM4X] = 44320000.0 [DataTransfer$BitPerSecond]
@@ -10982,6 +11972,12 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
       );
 
   static const _minorName = 'dVDROM6X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 6X';
 
   static const _ratio = 66480000.0;
 
@@ -11042,6 +12038,12 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
 
   static const _minorName = 'dVDROM8X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 8X';
+
   static const _ratio = 88640000.0;
 
   /// 1 [DataTransfer$DVDROM8X] = 88640000.0 [DataTransfer$BitPerSecond]
@@ -11100,6 +12102,12 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
       );
 
   static const _minorName = 'dVDROM10X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 10X';
 
   static const _ratio = 110800000.0;
 
@@ -11160,6 +12168,12 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
 
   static const _minorName = 'dVDROM12X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 12X';
+
   static const _ratio = 132960000.0;
 
   /// 1 [DataTransfer$DVDROM12X] = 132960000.0 [DataTransfer$BitPerSecond]
@@ -11218,6 +12232,12 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
       );
 
   static const _minorName = 'dVDROM16X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'DVD-ROM 16X';
 
   static const _ratio = 177280000.0;
 
@@ -11278,6 +12298,12 @@ final class DataTransfer$BluRay1X extends DataTransfer {
 
   static const _minorName = 'bluRay1X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray 1X';
+
   static const _ratio = 36000000.0;
 
   /// 1 [DataTransfer$BluRay1X] = 36000000.0 [DataTransfer$BitPerSecond]
@@ -11336,6 +12362,12 @@ final class DataTransfer$BluRay2X extends DataTransfer {
       );
 
   static const _minorName = 'bluRay2X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray 2X';
 
   static const _ratio = 72000000.0;
 
@@ -11396,6 +12428,12 @@ final class DataTransfer$BluRay4X extends DataTransfer {
 
   static const _minorName = 'bluRay4X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray 4X';
+
   static const _ratio = 144000000.0;
 
   /// 1 [DataTransfer$BluRay4X] = 144000000.0 [DataTransfer$BitPerSecond]
@@ -11454,6 +12492,12 @@ final class DataTransfer$BluRay6X extends DataTransfer {
       );
 
   static const _minorName = 'bluRay6X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray 6X';
 
   static const _ratio = 216000000.0;
 
@@ -11514,6 +12558,12 @@ final class DataTransfer$BluRay8X extends DataTransfer {
 
   static const _minorName = 'bluRay8X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray 8X';
+
   static const _ratio = 288000000.0;
 
   /// 1 [DataTransfer$BluRay8X] = 288000000.0 [DataTransfer$BitPerSecond]
@@ -11573,6 +12623,12 @@ final class DataTransfer$BluRay10X extends DataTransfer {
 
   static const _minorName = 'bluRay10X';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray 10X';
+
   static const _ratio = 360000000.0;
 
   /// 1 [DataTransfer$BluRay10X] = 360000000.0 [DataTransfer$BitPerSecond]
@@ -11631,6 +12687,12 @@ final class DataTransfer$BluRay12X extends DataTransfer {
       );
 
   static const _minorName = 'bluRay12X';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Blu-ray 12X';
 
   static const _ratio = 432000000.0;
 

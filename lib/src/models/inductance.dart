@@ -30,7 +30,7 @@ abstract final class Inductance extends Unit<Inductance> {
 
   @override
   AnchorRatio<Inductance> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Inductance>({
           Inductance$Exahenry: Inductance$Exahenry._ratio,
           Inductance$Petahenry: Inductance$Petahenry._ratio,
@@ -56,7 +56,7 @@ abstract final class Inductance extends Unit<Inductance> {
       );
 
   @override
-  Inductance get _anchor => const Inductance$Attohenry();
+  Inductance get anchor => const Inductance$Attohenry();
 
   /// Convert to [Inductance$Exahenry]
   Inductance get toExahenry => convertTo(
@@ -193,6 +193,12 @@ final class Inductance$Exahenry extends Inductance {
 
   static const _minorName = 'exahenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e+36;
 
   /// 1 [Inductance$Exahenry] = 1e+36 [Inductance$Attohenry]
@@ -251,6 +257,12 @@ final class Inductance$Petahenry extends Inductance {
       );
 
   static const _minorName = 'petahenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e+33;
 
@@ -311,6 +323,12 @@ final class Inductance$Terahenry extends Inductance {
 
   static const _minorName = 'terahenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e+30;
 
   /// 1 [Inductance$Terahenry] = 1e+30 [Inductance$Attohenry]
@@ -369,6 +387,12 @@ final class Inductance$Gigahenry extends Inductance {
       );
 
   static const _minorName = 'gigahenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e+27;
 
@@ -429,6 +453,12 @@ final class Inductance$Megahenry extends Inductance {
 
   static const _minorName = 'megahenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1e+24;
 
   /// 1 [Inductance$Megahenry] = 1e+24 [Inductance$Attohenry]
@@ -487,6 +517,12 @@ final class Inductance$Kilohenry extends Inductance {
       );
 
   static const _minorName = 'kilohenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1e+21;
 
@@ -547,6 +583,12 @@ final class Inductance$Hectohenry extends Inductance {
 
   static const _minorName = 'hectohenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 100000000000000000000.0;
 
   /// 1 [Inductance$Hectohenry] = 100000000000000000000.0 [Inductance$Attohenry]
@@ -605,6 +647,12 @@ final class Inductance$Dekahenry extends Inductance {
       );
 
   static const _minorName = 'dekahenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 10000000000000000000.0;
 
@@ -665,6 +713,12 @@ final class Inductance$Henry extends Inductance {
 
   static const _minorName = 'henry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000000000000.0;
 
   /// 1 [Inductance$Henry] = 1000000000000000000.0 [Inductance$Attohenry]
@@ -723,6 +777,12 @@ final class Inductance$Decihenry extends Inductance {
       );
 
   static const _minorName = 'decihenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 100000000000000000.0;
 
@@ -783,6 +843,12 @@ final class Inductance$Centihenry extends Inductance {
 
   static const _minorName = 'centihenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 10000000000000000.0;
 
   /// 1 [Inductance$Centihenry] = 10000000000000000.0 [Inductance$Attohenry]
@@ -841,6 +907,12 @@ final class Inductance$Millihenry extends Inductance {
       );
 
   static const _minorName = 'millihenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
 
@@ -901,6 +973,12 @@ final class Inductance$Microhenry extends Inductance {
 
   static const _minorName = 'microhenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000000000.0;
 
   /// 1 [Inductance$Microhenry] = 1000000000000.0 [Inductance$Attohenry]
@@ -959,6 +1037,12 @@ final class Inductance$Nanohenry extends Inductance {
       );
 
   static const _minorName = 'nanohenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
 
@@ -1019,6 +1103,12 @@ final class Inductance$Picohenry extends Inductance {
 
   static const _minorName = 'picohenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1000000.0;
 
   /// 1 [Inductance$Picohenry] = 1000000.0 [Inductance$Attohenry]
@@ -1077,6 +1167,12 @@ final class Inductance$Femtohenry extends Inductance {
       );
 
   static const _minorName = 'femtohenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000.0;
 
@@ -1137,6 +1233,12 @@ final class Inductance$Attohenry extends Inductance {
 
   static const _minorName = 'attohenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Inductance]
@@ -1195,6 +1297,12 @@ final class Inductance$Abhenry extends Inductance {
       );
 
   static const _minorName = 'abhenry';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
 
@@ -1255,6 +1363,12 @@ final class Inductance$Stathenry extends Inductance {
 
   static const _minorName = 'stathenry';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 8.987552e+29;
 
   /// 1 [Inductance$Stathenry] = 8.987552e+29 [Inductance$Attohenry]
@@ -1314,6 +1428,12 @@ final class Inductance$EMUOfInductance extends Inductance {
 
   static const _minorName = 'eMUOfInductance';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'EMU of inductance';
+
   static const _ratio = 1000000000.0;
 
   /// 1 [Inductance$EMUOfInductance] = 1000000000.0 [Inductance$Attohenry]
@@ -1372,6 +1492,12 @@ final class Inductance$ESUOfInductance extends Inductance {
       );
 
   static const _minorName = 'eSUOfInductance';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ESU of inductance';
 
   static const _ratio = 8.987552e+29;
 

@@ -29,7 +29,7 @@ abstract final class Torque extends Unit<Torque> {
 
   @override
   AnchorRatio<Torque> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Torque>({
           Torque$KilonewtonMeter: Torque$KilonewtonMeter._ratio,
           Torque$NewtonCentimeter: Torque$NewtonCentimeter._ratio,
@@ -51,7 +51,7 @@ abstract final class Torque extends Unit<Torque> {
       );
 
   @override
-  Torque get _anchor => const Torque$NewtonMeter();
+  Torque get anchor => const Torque$NewtonMeter();
 
   /// Convert to [Torque$KilonewtonMeter]
   Torque get toKilonewtonMeter => convertTo(
@@ -168,6 +168,12 @@ final class Torque$KilonewtonMeter extends Torque {
 
   static const _minorName = 'kilonewtonMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilonewton meter';
+
   static const _ratio = 1000.0;
 
   /// 1 [Torque$KilonewtonMeter] = 1000.0 [Torque$NewtonMeter]
@@ -226,6 +232,12 @@ final class Torque$NewtonMeter extends Torque {
       );
 
   static const _minorName = 'newtonMeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'newton meter';
 
   static const _ratio = 1.0;
 
@@ -286,6 +298,12 @@ final class Torque$NewtonCentimeter extends Torque {
 
   static const _minorName = 'newtonCentimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'newton centimeter';
+
   static const _ratio = 0.01;
 
   /// 1 [Torque$NewtonCentimeter] ≈ 0.01 [Torque$NewtonMeter]
@@ -344,6 +362,12 @@ final class Torque$NewtonMillimeter extends Torque {
       );
 
   static const _minorName = 'newtonMillimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'newton millimeter';
 
   static const _ratio = 0.001;
 
@@ -404,6 +428,12 @@ final class Torque$DyneMeter extends Torque {
 
   static const _minorName = 'dyneMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dyne meter';
+
   static const _ratio = 0.00001;
 
   /// 1 [Torque$DyneMeter] ≈ 0.00001 [Torque$NewtonMeter]
@@ -462,6 +492,12 @@ final class Torque$DyneCentimeter extends Torque {
       );
 
   static const _minorName = 'dyneCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dyne centimeter';
 
   static const _ratio = 1e-7;
 
@@ -522,6 +558,12 @@ final class Torque$DyneMillimeter extends Torque {
 
   static const _minorName = 'dyneMillimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'dyne millimeter';
+
   static const _ratio = 1e-8;
 
   /// 1 [Torque$DyneMillimeter] ≈ 1e-8 [Torque$NewtonMeter]
@@ -581,6 +623,12 @@ final class Torque$KilogramForceMeter extends Torque {
 
   static const _minorName = 'kilogramForceMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram force meter';
+
   static const _ratio = 9.80665;
 
   /// 1 [Torque$KilogramForceMeter] ≈ 9.80665 [Torque$NewtonMeter]
@@ -639,6 +687,12 @@ final class Torque$KilogramForceCentimeter extends Torque {
       );
 
   static const _minorName = 'kilogramForceCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram force centimeter';
 
   static const _ratio = 0.0980665;
 
@@ -700,6 +754,12 @@ final class Torque$KilogramForceMillimeter extends Torque {
 
   static const _minorName = 'kilogramForceMillimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram force millimeter';
+
   static const _ratio = 0.00980665;
 
   /// 1 [Torque$KilogramForceMillimeter] ≈ 0.00980665 [Torque$NewtonMeter]
@@ -760,6 +820,12 @@ final class Torque$GramForceMeter extends Torque {
 
   static const _minorName = 'gramForceMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gram force meter';
+
   static const _ratio = 0.00980665;
 
   /// 1 [Torque$GramForceMeter] ≈ 0.00980665 [Torque$NewtonMeter]
@@ -818,6 +884,12 @@ final class Torque$GramForceCentimeter extends Torque {
       );
 
   static const _minorName = 'gramForceCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gram force centimeter';
 
   static const _ratio = 0.0000980665;
 
@@ -878,6 +950,12 @@ final class Torque$GramForceMillimeter extends Torque {
 
   static const _minorName = 'gramForceMillimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gram force millimeter';
+
   static const _ratio = 0.00000980665;
 
   /// 1 [Torque$GramForceMillimeter] ≈ 0.00000980665 [Torque$NewtonMeter]
@@ -936,6 +1014,12 @@ final class Torque$OunceForceFoot extends Torque {
       );
 
   static const _minorName = 'ounceForceFoot';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ounce force foot';
 
   static const _ratio = 0.084738624;
 
@@ -996,6 +1080,12 @@ final class Torque$OunceForceInch extends Torque {
 
   static const _minorName = 'ounceForceInch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ounce force inch';
+
   static const _ratio = 0.007061552;
 
   /// 1 [Torque$OunceForceInch] ≈ 0.007061552 [Torque$NewtonMeter]
@@ -1055,6 +1145,12 @@ final class Torque$PoundForceFoot extends Torque {
 
   static const _minorName = 'poundForceFoot';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound force foot';
+
   static const _ratio = 1.355818;
 
   /// 1 [Torque$PoundForceFoot] ≈ 1.355818 [Torque$NewtonMeter]
@@ -1113,6 +1209,12 @@ final class Torque$PoundForceInch extends Torque {
       );
 
   static const _minorName = 'poundForceInch';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound force inch';
 
   static const _ratio = 0.11298483333333334;
 

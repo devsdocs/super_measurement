@@ -26,7 +26,7 @@ abstract final class Typography extends Unit<Typography> {
 
   @override
   AnchorRatio<Typography> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Typography>({
           Typography$PostScriptPointDTP: Typography$PostScriptPointDTP._ratio,
           Typography$PrintersPointAmerican:
@@ -42,7 +42,7 @@ abstract final class Typography extends Unit<Typography> {
       );
 
   @override
-  Typography get _anchor => const Typography$Inch();
+  Typography get anchor => const Typography$Inch();
 
   /// Convert to [Typography$PostScriptPointDTP]
   Typography get toPostScriptPointDTP => convertTo(
@@ -119,6 +119,12 @@ final class Typography$PostScriptPointDTP extends Typography {
 
   static const _minorName = 'postScriptPointDTP';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'PostScript point (DTP)';
+
   static const _ratio = 0.013888888888888888;
 
   /// 1 [Typography$PostScriptPointDTP] ≈ 0.013888888888888888 [Typography$Inch]
@@ -178,6 +184,12 @@ final class Typography$PrintersPointAmerican extends Typography {
       );
 
   static const _minorName = 'printersPointAmerican';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'printer"s point (American)';
 
   static const _ratio = 0.013837000138370002;
 
@@ -239,6 +251,12 @@ final class Typography$DidotsPoint extends Typography {
 
   static const _minorName = 'didotsPoint';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Didot"s point';
+
   static const _ratio = 0.014803149606299212;
 
   /// 1 [Typography$DidotsPoint] ≈ 0.014803149606299212 [Typography$Inch]
@@ -297,6 +315,12 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
       );
 
   static const _minorName = 'picaPostScriptDTPComputer';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pica (PostScript, DTP, computer)';
 
   static const _ratio = 0.16666666666666666;
 
@@ -358,6 +382,12 @@ final class Typography$PicaPrinters extends Typography {
 
   static const _minorName = 'picaPrinters';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pica (printer"s)';
+
   static const _ratio = 0.16604400166044;
 
   /// 1 [Typography$PicaPrinters] ≈ 0.16604400166044 [Typography$Inch]
@@ -416,6 +446,12 @@ final class Typography$Ciceros extends Typography {
       );
 
   static const _minorName = 'ciceros';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Ciceros';
 
   static const _ratio = 0.17763779527559054;
 
@@ -476,6 +512,12 @@ final class Typography$Inch extends Typography {
 
   static const _minorName = 'inch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Typography]
@@ -535,6 +577,12 @@ final class Typography$Millimeter extends Typography {
 
   static const _minorName = 'millimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 0.03937007874015748;
 
   /// 1 [Typography$Millimeter] ≈ 0.03937007874015748 [Typography$Inch]
@@ -593,6 +641,12 @@ final class Typography$Centimeter extends Typography {
       );
 
   static const _minorName = 'centimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 0.3937007874015748;
 

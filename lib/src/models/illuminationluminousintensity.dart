@@ -34,7 +34,7 @@ abstract final class IlluminationLuminousIntensity
 
   @override
   AnchorRatio<IlluminationLuminousIntensity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<IlluminationLuminousIntensity>({
           IlluminationLuminousIntensity$CandleGerman:
               IlluminationLuminousIntensity$CandleGerman._ratio,
@@ -59,7 +59,7 @@ abstract final class IlluminationLuminousIntensity
       );
 
   @override
-  IlluminationLuminousIntensity get _anchor =>
+  IlluminationLuminousIntensity get anchor =>
       const IlluminationLuminousIntensity$CandleInternational();
 
   /// Convert to [IlluminationLuminousIntensity$CandleInternational]
@@ -144,6 +144,12 @@ final class IlluminationLuminousIntensity$CandleInternational
 
   static const _minorName = 'candleInternational';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'candle (International)';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [IlluminationLuminousIntensity]
@@ -204,6 +210,12 @@ final class IlluminationLuminousIntensity$CandleGerman
       );
 
   static const _minorName = 'candleGerman';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'candle (German)';
 
   static const _ratio = 1.0526315789473684;
 
@@ -266,6 +278,12 @@ final class IlluminationLuminousIntensity$CandlePentane
 
   static const _minorName = 'candlePentane';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'candle (pentane)';
+
   static const _ratio = 1.0;
 
   /// 1 [IlluminationLuminousIntensity$CandlePentane] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
@@ -326,6 +344,12 @@ final class IlluminationLuminousIntensity$CandleUK
       );
 
   static const _minorName = 'candleUK';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'candle (UK)';
 
   static const _ratio = 1.0416666666666667;
 
@@ -388,6 +412,12 @@ final class IlluminationLuminousIntensity$DecimalCandle
 
   static const _minorName = 'decimalCandle';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'decimal candle';
+
   static const _ratio = 1.0;
 
   /// 1 [IlluminationLuminousIntensity$DecimalCandle] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
@@ -448,6 +478,12 @@ final class IlluminationLuminousIntensity$HefnerCandle
       );
 
   static const _minorName = 'hefnerCandle';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'hefner candle';
 
   static const _ratio = 0.9;
 
@@ -510,6 +546,12 @@ final class IlluminationLuminousIntensity$CarcelUnit
 
   static const _minorName = 'carcelUnit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'carcel unit';
+
   static const _ratio = 9.61;
 
   /// 1 [IlluminationLuminousIntensity$CarcelUnit] ≈ 9.61 [IlluminationLuminousIntensity$CandleInternational]
@@ -570,6 +612,12 @@ final class IlluminationLuminousIntensity$BougieDecimal
       );
 
   static const _minorName = 'bougieDecimal';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'bougie decimal';
 
   static const _ratio = 1.0;
 
@@ -632,6 +680,12 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
 
   static const _minorName = 'lumenInternationalPerSteradian';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'lumen (International)/steradian';
+
   static const _ratio = 1.0;
 
   /// 1 [IlluminationLuminousIntensity$LumenInternationalPerSteradian] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
@@ -692,6 +746,12 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
       );
 
   static const _minorName = 'pentaneCandle10CandlePower';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pentane candle (10 candle power)';
 
   static const _ratio = 10.0;
 

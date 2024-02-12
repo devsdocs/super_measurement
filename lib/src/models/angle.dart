@@ -26,7 +26,7 @@ abstract final class Angle extends Unit<Angle> {
 
   @override
   AnchorRatio<Angle> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Angle>({
           Angle$Degree: Angle$Degree._ratio,
           Angle$Radian: Angle$Radian._ratio,
@@ -46,7 +46,7 @@ abstract final class Angle extends Unit<Angle> {
       );
 
   @override
-  Angle get _anchor => const Angle$Second();
+  Angle get anchor => const Angle$Second();
 
   /// Convert to [Angle$Degree]
   Angle get toDegree => convertTo(
@@ -153,6 +153,12 @@ final class Angle$Degree extends Angle {
 
   static const _minorName = 'degree';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 3600.0;
 
   /// 1 [Angle$Degree] = 3600.0 [Angle$Second]
@@ -211,6 +217,12 @@ final class Angle$Radian extends Angle {
       );
 
   static const _minorName = 'radian';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 206264.80624709636;
 
@@ -271,6 +283,12 @@ final class Angle$Grad extends Angle {
 
   static const _minorName = 'grad';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 3240.0;
 
   /// 1 [Angle$Grad] = 3240.0 [Angle$Second]
@@ -329,6 +347,12 @@ final class Angle$Minute extends Angle {
       );
 
   static const _minorName = 'minute';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 60.0;
 
@@ -389,6 +413,12 @@ final class Angle$Second extends Angle {
 
   static const _minorName = 'second';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Angle]
@@ -447,6 +477,12 @@ final class Angle$Sign extends Angle {
       );
 
   static const _minorName = 'sign';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 108000.0;
 
@@ -507,6 +543,12 @@ final class Angle$Mil extends Angle {
 
   static const _minorName = 'mil';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 202.5;
 
   /// 1 [Angle$Mil] ≈ 202.5 [Angle$Second]
@@ -565,6 +607,12 @@ final class Angle$Revolution extends Angle {
       );
 
   static const _minorName = 'revolution';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1296000.0;
 
@@ -625,6 +673,12 @@ final class Angle$Circle extends Angle {
 
   static const _minorName = 'circle';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 1296000.0;
 
   /// 1 [Angle$Circle] = 1296000.0 [Angle$Second]
@@ -683,6 +737,12 @@ final class Angle$Turn extends Angle {
       );
 
   static const _minorName = 'turn';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 1296000.0;
 
@@ -743,6 +803,12 @@ final class Angle$Quadrant extends Angle {
 
   static const _minorName = 'quadrant';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 324000.0;
 
   /// 1 [Angle$Quadrant] = 324000.0 [Angle$Second]
@@ -801,6 +867,12 @@ final class Angle$RightAngle extends Angle {
       );
 
   static const _minorName = 'rightAngle';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'right angle';
 
   static const _ratio = 324000.0;
 
@@ -861,6 +933,12 @@ final class Angle$Sextant extends Angle {
 
   static const _minorName = 'sextant';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 216000.0;
 
   /// 1 [Angle$Sextant] = 216000.0 [Angle$Second]
@@ -920,6 +998,12 @@ final class Angle$Octant extends Angle {
 
   static const _minorName = 'octant';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
+
   static const _ratio = 162000.0;
 
   /// 1 [Angle$Octant] = 162000.0 [Angle$Second]
@@ -978,6 +1062,12 @@ final class Angle$PercentOfFullCircle extends Angle {
       );
 
   static const _minorName = 'percentOfFullCircle';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'percent of full circle';
 
   static const _ratio = 12960.0;
 

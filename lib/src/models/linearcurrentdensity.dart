@@ -31,7 +31,7 @@ abstract final class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
 
   @override
   AnchorRatio<LinearCurrentDensity> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<LinearCurrentDensity>({
           LinearCurrentDensity$AmperePerCentimeter:
               LinearCurrentDensity$AmperePerCentimeter._ratio,
@@ -52,7 +52,7 @@ abstract final class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
       );
 
   @override
-  LinearCurrentDensity get _anchor =>
+  LinearCurrentDensity get anchor =>
       const LinearCurrentDensity$AmperePerMeter();
 
   /// Convert to [LinearCurrentDensity$AmperePerMeter]
@@ -130,6 +130,12 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
 
   static const _minorName = 'amperePerMeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere/meter';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [LinearCurrentDensity]
@@ -191,6 +197,12 @@ final class LinearCurrentDensity$AmperePerCentimeter
 
   static const _minorName = 'amperePerCentimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere/centimeter';
+
   static const _ratio = 100.0;
 
   /// 1 [LinearCurrentDensity$AmperePerCentimeter] = 100.0 [LinearCurrentDensity$AmperePerMeter]
@@ -251,6 +263,12 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
 
   static const _minorName = 'amperePerInch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ampere/inch';
+
   static const _ratio = 39.37007874;
 
   /// 1 [LinearCurrentDensity$AmperePerInch] ≈ 39.37007874 [LinearCurrentDensity$AmperePerMeter]
@@ -310,6 +328,12 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
       );
 
   static const _minorName = 'abamperePerMeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abampere/meter';
 
   static const _ratio = 10.0;
 
@@ -372,6 +396,12 @@ final class LinearCurrentDensity$AbamperePerCentimeter
 
   static const _minorName = 'abamperePerCentimeter';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abampere/centimeter';
+
   static const _ratio = 1000.0;
 
   /// 1 [LinearCurrentDensity$AbamperePerCentimeter] = 1000.0 [LinearCurrentDensity$AmperePerMeter]
@@ -432,6 +462,12 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
 
   static const _minorName = 'abamperePerInch';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Abampere/inch';
+
   static const _ratio = 393.7007874;
 
   /// 1 [LinearCurrentDensity$AbamperePerInch] ≈ 393.7007874 [LinearCurrentDensity$AmperePerMeter]
@@ -491,6 +527,12 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
       );
 
   static const _minorName = 'oersted';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => _minorName;
 
   static const _ratio = 79.57747151;
 
@@ -553,6 +595,12 @@ final class LinearCurrentDensity$OerstedInternational
 
   static const _minorName = 'oerstedInternational';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'oersted (International)';
+
   static const _ratio = 79.56434337579257;
 
   /// 1 [LinearCurrentDensity$OerstedInternational] ≈ 79.56434337579257 [LinearCurrentDensity$AmperePerMeter]
@@ -613,6 +661,12 @@ final class LinearCurrentDensity$GilbertPerCentimeter
       );
 
   static const _minorName = 'gilbertPerCentimeter';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gilbert/centimeter';
 
   static const _ratio = 79.57747151;
 

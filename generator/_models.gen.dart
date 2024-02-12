@@ -62,7 +62,7 @@ void generateModels() {
     typeBuff.writeln();
     typeBuff.writeln('  @override');
     typeBuff.writeln('  AnchorRatio<$name> get _anchorRatio => (');
-    typeBuff.writeln('        anchor: _anchor.runtimeType,');
+    typeBuff.writeln('        anchor: anchor.runtimeType,');
     typeBuff.writeln('        ratio: const _ConversionRatio<$name>({');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
@@ -73,7 +73,7 @@ void generateModels() {
     typeBuff.writeln('      );');
     typeBuff.writeln();
     typeBuff.writeln('  @override');
-    typeBuff.writeln('  $name get _anchor => const ${anchor.keys.first}();');
+    typeBuff.writeln('  $name get anchor => const ${anchor.keys.first}();');
     typeBuff.writeln();
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
@@ -120,8 +120,18 @@ void generateModels() {
       );
 
       typeBuff.writeln();
+      final snakeCaseName = unitType.split(r'$').last.snakeCase;
       typeBuff.writeln(
-        "  static const _minorName = '${unitType.split(r'$').last.snakeCase}';",
+        "  static const _minorName = '$snakeCaseName';",
+      );
+      typeBuff.writeln();
+      typeBuff.writeln('  @override');
+      typeBuff.writeln('  String get minorName => _minorName;');
+      typeBuff.writeln();
+      typeBuff.writeln('  @override');
+      final displayName = unitProps['name'].toString().replaceAll("'", '"');
+      typeBuff.writeln(
+        "  String get displayName => ${displayName == snakeCaseName ? '' : "'"}${displayName == snakeCaseName ? '_minorName' : displayName}${displayName == snakeCaseName ? '' : "'"};",
       );
       typeBuff.writeln();
       typeBuff.writeln("  static const _ratio = ${unitProps['ratio']};");

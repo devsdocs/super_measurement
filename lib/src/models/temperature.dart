@@ -24,7 +24,7 @@ abstract final class Temperature extends Unit<Temperature> {
 
   @override
   AnchorRatio<Temperature> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<Temperature>({
           Temperature$Kelvin: Temperature$Kelvin._ratio,
           Temperature$Celsius: Temperature$Celsius._ratio,
@@ -34,7 +34,7 @@ abstract final class Temperature extends Unit<Temperature> {
       );
 
   @override
-  Temperature get _anchor => const Temperature$Rankine();
+  Temperature get anchor => const Temperature$Rankine();
 
   /// Convert to [Temperature$Kelvin]
   Temperature get toKelvin => convertTo(
@@ -90,6 +90,12 @@ final class Temperature$Kelvin extends Temperature {
       );
 
   static const _minorName = 'kelvin';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Kelvin';
 
   static const _ratio = 1.8;
 
@@ -149,6 +155,12 @@ final class Temperature$Celsius extends Temperature {
       );
 
   static const _minorName = 'celsius';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Celsius';
 
   static const _ratio = 1.8;
 
@@ -211,6 +223,12 @@ final class Temperature$Fahrenheit extends Temperature {
 
   static const _minorName = 'fahrenheit';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Fahrenheit';
+
   static const _ratio = 1.0;
 
   /// 1 [Temperature$Fahrenheit] = 1.0 [Temperature$Rankine]
@@ -272,6 +290,12 @@ final class Temperature$Rankine extends Temperature {
 
   static const _minorName = 'rankine';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Rankine';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [Temperature]
@@ -330,6 +354,12 @@ final class Temperature$Reaumur extends Temperature {
       );
 
   static const _minorName = 'reaumur';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'Réaumur';
 
   static const _ratio = 2.25;
 

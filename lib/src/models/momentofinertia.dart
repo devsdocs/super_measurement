@@ -33,7 +33,7 @@ abstract final class MomentofInertia extends Unit<MomentofInertia> {
 
   @override
   AnchorRatio<MomentofInertia> get _anchorRatio => (
-        anchor: _anchor.runtimeType,
+        anchor: anchor.runtimeType,
         ratio: const _ConversionRatio<MomentofInertia>({
           MomentofInertia$KilogramMeterSquare:
               MomentofInertia$KilogramMeterSquare._ratio,
@@ -60,7 +60,7 @@ abstract final class MomentofInertia extends Unit<MomentofInertia> {
       );
 
   @override
-  MomentofInertia get _anchor =>
+  MomentofInertia get anchor =>
       const MomentofInertia$KilogramCentimeterSquare();
 
   /// Convert to [MomentofInertia$KilogramMeterSquare]
@@ -153,6 +153,12 @@ final class MomentofInertia$KilogramMeterSquare extends MomentofInertia {
 
   static const _minorName = 'kilogramMeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram meter²';
+
   static const _ratio = 10000.0;
 
   /// 1 [MomentofInertia$KilogramMeterSquare] = 10000.0 [MomentofInertia$KilogramCentimeterSquare]
@@ -213,6 +219,12 @@ final class MomentofInertia$KilogramCentimeterSquare extends MomentofInertia {
 
   static const _minorName = 'kilogramCentimeterSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram centimeter²';
+
   static const _ratio = 1.0;
 
   /// Default (anchor) unit of [MomentofInertia]
@@ -272,6 +284,12 @@ final class MomentofInertia$GramCentimeterSquare extends MomentofInertia {
       );
 
   static const _minorName = 'gramCentimeterSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'gram centimeter²';
 
   static const _ratio = 0.001;
 
@@ -334,6 +352,12 @@ final class MomentofInertia$KilogramForceMeterSecondSquare
 
   static const _minorName = 'kilogramForceMeterSecondSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram force meter second²';
+
   static const _ratio = 98066.5;
 
   /// 1 [MomentofInertia$KilogramForceMeterSecondSquare] ≈ 98066.5 [MomentofInertia$KilogramCentimeterSquare]
@@ -395,6 +419,12 @@ final class MomentofInertia$KilogramForceCentimeterSecondSquare
 
   static const _minorName = 'kilogramForceCentimeterSecondSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'kilogram force centimeter second²';
+
   static const _ratio = 980.665;
 
   /// 1 [MomentofInertia$KilogramForceCentimeterSecondSquare] ≈ 980.665 [MomentofInertia$KilogramCentimeterSquare]
@@ -454,6 +484,12 @@ final class MomentofInertia$OunceInchSquare extends MomentofInertia {
       );
 
   static const _minorName = 'ounceInchSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ounce inch²';
 
   static const _ratio = 0.1828997851875;
 
@@ -515,6 +551,12 @@ final class MomentofInertia$OunceInchSecondSquare extends MomentofInertia {
 
   static const _minorName = 'ounceInchSecondSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'ounce inch second²';
+
   static const _ratio = 70.61551885;
 
   /// 1 [MomentofInertia$OunceInchSecondSquare] ≈ 70.61551885 [MomentofInertia$KilogramCentimeterSquare]
@@ -574,6 +616,12 @@ final class MomentofInertia$PoundFootSquare extends MomentofInertia {
       );
 
   static const _minorName = 'poundFootSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound foot²';
 
   static const _ratio = 421.401105;
 
@@ -635,6 +683,12 @@ final class MomentofInertia$PoundFootSecondSquare extends MomentofInertia {
 
   static const _minorName = 'poundFootSecondSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound foot second²';
+
   static const _ratio = 13558.1796192;
 
   /// 1 [MomentofInertia$PoundFootSecondSquare] ≈ 13558.1796192 [MomentofInertia$KilogramCentimeterSquare]
@@ -694,6 +748,12 @@ final class MomentofInertia$PoundInchSquare extends MomentofInertia {
       );
 
   static const _minorName = 'poundInchSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound inch²';
 
   static const _ratio = 2.926396563;
 
@@ -755,6 +815,12 @@ final class MomentofInertia$PoundInchSecondSquare extends MomentofInertia {
 
   static const _minorName = 'poundInchSecondSquare';
 
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'pound inch second²';
+
   static const _ratio = 1129.8483016;
 
   /// 1 [MomentofInertia$PoundInchSecondSquare] ≈ 1129.8483016 [MomentofInertia$KilogramCentimeterSquare]
@@ -814,6 +880,12 @@ final class MomentofInertia$SlugFootSquare extends MomentofInertia {
       );
 
   static const _minorName = 'slugFootSquare';
+
+  @override
+  String get minorName => _minorName;
+
+  @override
+  String get displayName => 'slug foot²';
 
   static const _ratio = 13558.1796192;
 
