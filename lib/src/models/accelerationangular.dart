@@ -16,10 +16,9 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
   factory AccelerationAngular.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        accelerationAngularUnits,
+        valuesAsMap,
       )
-          ? accelerationAngularUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -91,6 +90,9 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
   @override
   List<AccelerationAngular> get units => values;
 
+  @override
+  EnumValues<AccelerationAngular> get unitsAsMap => valuesAsMap;
+
   static const values = [
     radianPerSecondSquare,
     radianPerMinuteSquare,
@@ -98,6 +100,17 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
     revolutionPerMinuteSecond,
     revolutionPerMinuteSquare,
   ];
+
+  static const valuesAsMap = EnumValues({
+    AccelerationAngular$RadianPerSecondSquare._minorName: radianPerSecondSquare,
+    AccelerationAngular$RadianPerMinuteSquare._minorName: radianPerMinuteSquare,
+    AccelerationAngular$RevolutionPerSecondSquare._minorName:
+        revolutionPerSecondSquare,
+    AccelerationAngular$RevolutionPerMinuteSecond._minorName:
+        revolutionPerMinuteSecond,
+    AccelerationAngular$RevolutionPerMinuteSquare._minorName:
+        revolutionPerMinuteSquare,
+  });
 }
 
 /// Unit of [AccelerationAngular]
@@ -434,16 +447,3 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
         },
       };
 }
-
-const accelerationAngularUnits = EnumValues({
-  AccelerationAngular$RadianPerSecondSquare._minorName:
-      AccelerationAngular.radianPerSecondSquare,
-  AccelerationAngular$RadianPerMinuteSquare._minorName:
-      AccelerationAngular.radianPerMinuteSquare,
-  AccelerationAngular$RevolutionPerSecondSquare._minorName:
-      AccelerationAngular.revolutionPerSecondSquare,
-  AccelerationAngular$RevolutionPerMinuteSecond._minorName:
-      AccelerationAngular.revolutionPerMinuteSecond,
-  AccelerationAngular$RevolutionPerMinuteSquare._minorName:
-      AccelerationAngular.revolutionPerMinuteSquare,
-});

@@ -16,9 +16,9 @@ sealed class Entropy extends Unit<Entropy> {
   factory Entropy.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        entropyUnits,
+        valuesAsMap,
       )
-          ? entropyUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -112,6 +112,9 @@ sealed class Entropy extends Unit<Entropy> {
   @override
   List<Entropy> get units => values;
 
+  @override
+  EnumValues<Entropy> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilojoulePerKilogramK,
     kilojoulePerKilogramDegreeC,
@@ -123,6 +126,19 @@ sealed class Entropy extends Unit<Entropy> {
     bTUPerPoundDegreeR,
     cHUPerPoundDegreeC,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Entropy$KilojoulePerKilogramK._minorName: kilojoulePerKilogramK,
+    Entropy$KilojoulePerKilogramDegreeC._minorName: kilojoulePerKilogramDegreeC,
+    Entropy$JoulePerKilogramK._minorName: joulePerKilogramK,
+    Entropy$JoulePerKilogramDegreeC._minorName: joulePerKilogramDegreeC,
+    Entropy$KilocaloriePerKilogramDegreeC._minorName:
+        kilocaloriePerKilogramDegreeC,
+    Entropy$CaloriePerGramDegreeC._minorName: caloriePerGramDegreeC,
+    Entropy$BTUPerPoundDegreeF._minorName: bTUPerPoundDegreeF,
+    Entropy$BTUPerPoundDegreeR._minorName: bTUPerPoundDegreeR,
+    Entropy$CHUPerPoundDegreeC._minorName: cHUPerPoundDegreeC,
+  });
 }
 
 /// Unit of [Entropy]
@@ -714,17 +730,3 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
         },
       };
 }
-
-const entropyUnits = EnumValues({
-  Entropy$KilojoulePerKilogramK._minorName: Entropy.kilojoulePerKilogramK,
-  Entropy$KilojoulePerKilogramDegreeC._minorName:
-      Entropy.kilojoulePerKilogramDegreeC,
-  Entropy$JoulePerKilogramK._minorName: Entropy.joulePerKilogramK,
-  Entropy$JoulePerKilogramDegreeC._minorName: Entropy.joulePerKilogramDegreeC,
-  Entropy$KilocaloriePerKilogramDegreeC._minorName:
-      Entropy.kilocaloriePerKilogramDegreeC,
-  Entropy$CaloriePerGramDegreeC._minorName: Entropy.caloriePerGramDegreeC,
-  Entropy$BTUPerPoundDegreeF._minorName: Entropy.bTUPerPoundDegreeF,
-  Entropy$BTUPerPoundDegreeR._minorName: Entropy.bTUPerPoundDegreeR,
-  Entropy$CHUPerPoundDegreeC._minorName: Entropy.cHUPerPoundDegreeC,
-});

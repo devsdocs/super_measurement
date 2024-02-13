@@ -14,10 +14,9 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
   factory HVACEfficiency.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        hVACEfficiencyUnits,
+        valuesAsMap,
       )
-          ? hVACEfficiencyUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -69,11 +68,22 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
   @override
   List<HVACEfficiency> get units => values;
 
+  @override
+  EnumValues<HVACEfficiency> get unitsAsMap => valuesAsMap;
+
   static const values = [
     eEREnergyEfficiencyRatio,
     cOPCoefficientOfPerformace,
     kilowattPerTon,
   ];
+
+  static const valuesAsMap = EnumValues({
+    HVACEfficiency$EEREnergyEfficiencyRatio._minorName:
+        eEREnergyEfficiencyRatio,
+    HVACEfficiency$COPCoefficientOfPerformace._minorName:
+        cOPCoefficientOfPerformace,
+    HVACEfficiency$KilowattPerTon._minorName: kilowattPerTon,
+  });
 }
 
 /// Unit of [HVACEfficiency]
@@ -273,11 +283,3 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
         },
       };
 }
-
-const hVACEfficiencyUnits = EnumValues({
-  HVACEfficiency$EEREnergyEfficiencyRatio._minorName:
-      HVACEfficiency.eEREnergyEfficiencyRatio,
-  HVACEfficiency$COPCoefficientOfPerformace._minorName:
-      HVACEfficiency.cOPCoefficientOfPerformace,
-  HVACEfficiency$KilowattPerTon._minorName: HVACEfficiency.kilowattPerTon,
-});

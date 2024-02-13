@@ -22,10 +22,9 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
   factory ConcentrationMolar.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        concentrationMolarUnits,
+        valuesAsMap,
       )
-          ? concentrationMolarUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -153,6 +152,9 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
   @override
   List<ConcentrationMolar> get units => values;
 
+  @override
+  EnumValues<ConcentrationMolar> get unitsAsMap => valuesAsMap;
+
   static const values = [
     molPerMeterCubic,
     molPerLiter,
@@ -167,6 +169,25 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
     millimolPerCentimeterCubic,
     millimolPerMillimeterCubic,
   ];
+
+  static const valuesAsMap = EnumValues({
+    ConcentrationMolar$MolPerMeterCubic._minorName: molPerMeterCubic,
+    ConcentrationMolar$MolPerLiter._minorName: molPerLiter,
+    ConcentrationMolar$MolPerCentimeterCubic._minorName: molPerCentimeterCubic,
+    ConcentrationMolar$MolPerMillimeterCubic._minorName: molPerMillimeterCubic,
+    ConcentrationMolar$KilomolPerMeterCubic._minorName: kilomolPerMeterCubic,
+    ConcentrationMolar$KilomolPerLiter._minorName: kilomolPerLiter,
+    ConcentrationMolar$KilomolPerCentimeterCubic._minorName:
+        kilomolPerCentimeterCubic,
+    ConcentrationMolar$KilomolPerMillimeterCubic._minorName:
+        kilomolPerMillimeterCubic,
+    ConcentrationMolar$MillimolPerMeterCubic._minorName: millimolPerMeterCubic,
+    ConcentrationMolar$MillimolPerLiter._minorName: millimolPerLiter,
+    ConcentrationMolar$MillimolPerCentimeterCubic._minorName:
+        millimolPerCentimeterCubic,
+    ConcentrationMolar$MillimolPerMillimeterCubic._minorName:
+        millimolPerMillimeterCubic,
+  });
 }
 
 /// Unit of [ConcentrationMolar]
@@ -967,29 +988,3 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
         },
       };
 }
-
-const concentrationMolarUnits = EnumValues({
-  ConcentrationMolar$MolPerMeterCubic._minorName:
-      ConcentrationMolar.molPerMeterCubic,
-  ConcentrationMolar$MolPerLiter._minorName: ConcentrationMolar.molPerLiter,
-  ConcentrationMolar$MolPerCentimeterCubic._minorName:
-      ConcentrationMolar.molPerCentimeterCubic,
-  ConcentrationMolar$MolPerMillimeterCubic._minorName:
-      ConcentrationMolar.molPerMillimeterCubic,
-  ConcentrationMolar$KilomolPerMeterCubic._minorName:
-      ConcentrationMolar.kilomolPerMeterCubic,
-  ConcentrationMolar$KilomolPerLiter._minorName:
-      ConcentrationMolar.kilomolPerLiter,
-  ConcentrationMolar$KilomolPerCentimeterCubic._minorName:
-      ConcentrationMolar.kilomolPerCentimeterCubic,
-  ConcentrationMolar$KilomolPerMillimeterCubic._minorName:
-      ConcentrationMolar.kilomolPerMillimeterCubic,
-  ConcentrationMolar$MillimolPerMeterCubic._minorName:
-      ConcentrationMolar.millimolPerMeterCubic,
-  ConcentrationMolar$MillimolPerLiter._minorName:
-      ConcentrationMolar.millimolPerLiter,
-  ConcentrationMolar$MillimolPerCentimeterCubic._minorName:
-      ConcentrationMolar.millimolPerCentimeterCubic,
-  ConcentrationMolar$MillimolPerMillimeterCubic._minorName:
-      ConcentrationMolar.millimolPerMillimeterCubic,
-});

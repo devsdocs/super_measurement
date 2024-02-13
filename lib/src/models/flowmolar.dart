@@ -24,10 +24,9 @@ sealed class FlowMolar extends Unit<FlowMolar> {
   factory FlowMolar.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        flowMolarUnits,
+        valuesAsMap,
       )
-          ? flowMolarUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -235,6 +234,9 @@ sealed class FlowMolar extends Unit<FlowMolar> {
   @override
   List<FlowMolar> get units => values;
 
+  @override
+  EnumValues<FlowMolar> get unitsAsMap => valuesAsMap;
+
   static const values = [
     examolPerSecond,
     petamolPerSecond,
@@ -263,6 +265,35 @@ sealed class FlowMolar extends Unit<FlowMolar> {
     kilomolPerHour,
     kilomolPerDay,
   ];
+
+  static const valuesAsMap = EnumValues({
+    FlowMolar$ExamolPerSecond._minorName: examolPerSecond,
+    FlowMolar$PetamolPerSecond._minorName: petamolPerSecond,
+    FlowMolar$TeramolPerSecond._minorName: teramolPerSecond,
+    FlowMolar$GigamolPerSecond._minorName: gigamolPerSecond,
+    FlowMolar$MegamolPerSecond._minorName: megamolPerSecond,
+    FlowMolar$KilomolPerSecond._minorName: kilomolPerSecond,
+    FlowMolar$HectomolPerSecond._minorName: hectomolPerSecond,
+    FlowMolar$DekamolPerSecond._minorName: dekamolPerSecond,
+    FlowMolar$MolPerSecond._minorName: molPerSecond,
+    FlowMolar$DecimolPerSecond._minorName: decimolPerSecond,
+    FlowMolar$CentimolPerSecond._minorName: centimolPerSecond,
+    FlowMolar$MillimolPerSecond._minorName: millimolPerSecond,
+    FlowMolar$MicromolPerSecond._minorName: micromolPerSecond,
+    FlowMolar$NanomolPerSecond._minorName: nanomolPerSecond,
+    FlowMolar$PicomolPerSecond._minorName: picomolPerSecond,
+    FlowMolar$FemtomolPerSecond._minorName: femtomolPerSecond,
+    FlowMolar$AttomolPerSecond._minorName: attomolPerSecond,
+    FlowMolar$MolPerMinute._minorName: molPerMinute,
+    FlowMolar$MolPerHour._minorName: molPerHour,
+    FlowMolar$MolPerDay._minorName: molPerDay,
+    FlowMolar$MillimolPerMinute._minorName: millimolPerMinute,
+    FlowMolar$MillimolPerHour._minorName: millimolPerHour,
+    FlowMolar$MillimolPerDay._minorName: millimolPerDay,
+    FlowMolar$KilomolPerMinute._minorName: kilomolPerMinute,
+    FlowMolar$KilomolPerHour._minorName: kilomolPerHour,
+    FlowMolar$KilomolPerDay._minorName: kilomolPerDay,
+  });
 }
 
 /// Unit of [FlowMolar]
@@ -1954,32 +1985,3 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
         },
       };
 }
-
-const flowMolarUnits = EnumValues({
-  FlowMolar$ExamolPerSecond._minorName: FlowMolar.examolPerSecond,
-  FlowMolar$PetamolPerSecond._minorName: FlowMolar.petamolPerSecond,
-  FlowMolar$TeramolPerSecond._minorName: FlowMolar.teramolPerSecond,
-  FlowMolar$GigamolPerSecond._minorName: FlowMolar.gigamolPerSecond,
-  FlowMolar$MegamolPerSecond._minorName: FlowMolar.megamolPerSecond,
-  FlowMolar$KilomolPerSecond._minorName: FlowMolar.kilomolPerSecond,
-  FlowMolar$HectomolPerSecond._minorName: FlowMolar.hectomolPerSecond,
-  FlowMolar$DekamolPerSecond._minorName: FlowMolar.dekamolPerSecond,
-  FlowMolar$MolPerSecond._minorName: FlowMolar.molPerSecond,
-  FlowMolar$DecimolPerSecond._minorName: FlowMolar.decimolPerSecond,
-  FlowMolar$CentimolPerSecond._minorName: FlowMolar.centimolPerSecond,
-  FlowMolar$MillimolPerSecond._minorName: FlowMolar.millimolPerSecond,
-  FlowMolar$MicromolPerSecond._minorName: FlowMolar.micromolPerSecond,
-  FlowMolar$NanomolPerSecond._minorName: FlowMolar.nanomolPerSecond,
-  FlowMolar$PicomolPerSecond._minorName: FlowMolar.picomolPerSecond,
-  FlowMolar$FemtomolPerSecond._minorName: FlowMolar.femtomolPerSecond,
-  FlowMolar$AttomolPerSecond._minorName: FlowMolar.attomolPerSecond,
-  FlowMolar$MolPerMinute._minorName: FlowMolar.molPerMinute,
-  FlowMolar$MolPerHour._minorName: FlowMolar.molPerHour,
-  FlowMolar$MolPerDay._minorName: FlowMolar.molPerDay,
-  FlowMolar$MillimolPerMinute._minorName: FlowMolar.millimolPerMinute,
-  FlowMolar$MillimolPerHour._minorName: FlowMolar.millimolPerHour,
-  FlowMolar$MillimolPerDay._minorName: FlowMolar.millimolPerDay,
-  FlowMolar$KilomolPerMinute._minorName: FlowMolar.kilomolPerMinute,
-  FlowMolar$KilomolPerHour._minorName: FlowMolar.kilomolPerHour,
-  FlowMolar$KilomolPerDay._minorName: FlowMolar.kilomolPerDay,
-});

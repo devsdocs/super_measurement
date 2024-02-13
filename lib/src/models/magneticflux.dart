@@ -15,10 +15,9 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
   factory MagneticFlux.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        magneticFluxUnits,
+        valuesAsMap,
       )
-          ? magneticFluxUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -117,6 +116,9 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
   @override
   List<MagneticFlux> get units => values;
 
+  @override
+  EnumValues<MagneticFlux> get unitsAsMap => valuesAsMap;
+
   static const values = [
     weber,
     voltSecond,
@@ -129,6 +131,19 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
     teslaCentimeterSquare,
     gaussCentimeterSquare,
   ];
+
+  static const valuesAsMap = EnumValues({
+    MagneticFlux$Weber._minorName: weber,
+    MagneticFlux$VoltSecond._minorName: voltSecond,
+    MagneticFlux$Megaline._minorName: megaline,
+    MagneticFlux$Kiloline._minorName: kiloline,
+    MagneticFlux$Line._minorName: line,
+    MagneticFlux$Maxwell._minorName: maxwell,
+    MagneticFlux$MaxwellInternational._minorName: maxwellInternational,
+    MagneticFlux$TeslaMeterSquare._minorName: teslaMeterSquare,
+    MagneticFlux$TeslaCentimeterSquare._minorName: teslaCentimeterSquare,
+    MagneticFlux$GaussCentimeterSquare._minorName: gaussCentimeterSquare,
+  });
 }
 
 /// Unit of [MagneticFlux]
@@ -784,19 +799,3 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
         },
       };
 }
-
-const magneticFluxUnits = EnumValues({
-  MagneticFlux$Weber._minorName: MagneticFlux.weber,
-  MagneticFlux$VoltSecond._minorName: MagneticFlux.voltSecond,
-  MagneticFlux$Megaline._minorName: MagneticFlux.megaline,
-  MagneticFlux$Kiloline._minorName: MagneticFlux.kiloline,
-  MagneticFlux$Line._minorName: MagneticFlux.line,
-  MagneticFlux$Maxwell._minorName: MagneticFlux.maxwell,
-  MagneticFlux$MaxwellInternational._minorName:
-      MagneticFlux.maxwellInternational,
-  MagneticFlux$TeslaMeterSquare._minorName: MagneticFlux.teslaMeterSquare,
-  MagneticFlux$TeslaCentimeterSquare._minorName:
-      MagneticFlux.teslaCentimeterSquare,
-  MagneticFlux$GaussCentimeterSquare._minorName:
-      MagneticFlux.gaussCentimeterSquare,
-});

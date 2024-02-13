@@ -16,10 +16,9 @@ sealed class ThermalExpansion extends Unit<ThermalExpansion> {
   factory ThermalExpansion.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        thermalExpansionUnits,
+        valuesAsMap,
       )
-          ? thermalExpansionUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -91,6 +90,9 @@ sealed class ThermalExpansion extends Unit<ThermalExpansion> {
   @override
   List<ThermalExpansion> get units => values;
 
+  @override
+  EnumValues<ThermalExpansion> get unitsAsMap => valuesAsMap;
+
   static const values = [
     lengthPerLengthPerKelvin,
     lengthPerLengthPerCelsius,
@@ -98,6 +100,19 @@ sealed class ThermalExpansion extends Unit<ThermalExpansion> {
     lengthPerLengthPerRankine,
     lengthPerLengthPerReaumur,
   ];
+
+  static const valuesAsMap = EnumValues({
+    ThermalExpansion$LengthPerLengthPerKelvin._minorName:
+        lengthPerLengthPerKelvin,
+    ThermalExpansion$LengthPerLengthPerCelsius._minorName:
+        lengthPerLengthPerCelsius,
+    ThermalExpansion$LengthPerLengthPerFahrenheit._minorName:
+        lengthPerLengthPerFahrenheit,
+    ThermalExpansion$LengthPerLengthPerRankine._minorName:
+        lengthPerLengthPerRankine,
+    ThermalExpansion$LengthPerLengthPerReaumur._minorName:
+        lengthPerLengthPerReaumur,
+  });
 }
 
 /// Unit of [ThermalExpansion]
@@ -433,16 +448,3 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
         },
       };
 }
-
-const thermalExpansionUnits = EnumValues({
-  ThermalExpansion$LengthPerLengthPerKelvin._minorName:
-      ThermalExpansion.lengthPerLengthPerKelvin,
-  ThermalExpansion$LengthPerLengthPerCelsius._minorName:
-      ThermalExpansion.lengthPerLengthPerCelsius,
-  ThermalExpansion$LengthPerLengthPerFahrenheit._minorName:
-      ThermalExpansion.lengthPerLengthPerFahrenheit,
-  ThermalExpansion$LengthPerLengthPerRankine._minorName:
-      ThermalExpansion.lengthPerLengthPerRankine,
-  ThermalExpansion$LengthPerLengthPerReaumur._minorName:
-      ThermalExpansion.lengthPerLengthPerReaumur,
-});

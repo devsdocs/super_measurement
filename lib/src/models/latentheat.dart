@@ -13,10 +13,9 @@ sealed class LatentHeat extends Unit<LatentHeat> {
   factory LatentHeat.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        latentHeatUnits,
+        valuesAsMap,
       )
-          ? latentHeatUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -63,11 +62,20 @@ sealed class LatentHeat extends Unit<LatentHeat> {
   @override
   List<LatentHeat> get units => values;
 
+  @override
+  EnumValues<LatentHeat> get unitsAsMap => valuesAsMap;
+
   static const values = [
     caloriePerGram,
     kilojoulePerKilogram,
     bTUPerPound,
   ];
+
+  static const valuesAsMap = EnumValues({
+    LatentHeat$CaloriePerGram._minorName: caloriePerGram,
+    LatentHeat$KilojoulePerKilogram._minorName: kilojoulePerKilogram,
+    LatentHeat$BTUPerPound._minorName: bTUPerPound,
+  });
 }
 
 /// Unit of [LatentHeat]
@@ -265,9 +273,3 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
         },
       };
 }
-
-const latentHeatUnits = EnumValues({
-  LatentHeat$CaloriePerGram._minorName: LatentHeat.caloriePerGram,
-  LatentHeat$KilojoulePerKilogram._minorName: LatentHeat.kilojoulePerKilogram,
-  LatentHeat$BTUPerPound._minorName: LatentHeat.bTUPerPound,
-});

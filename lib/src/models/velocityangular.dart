@@ -18,10 +18,9 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
   factory VelocityAngular.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        velocityAngularUnits,
+        valuesAsMap,
       )
-          ? velocityAngularUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -139,6 +138,9 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
   @override
   List<VelocityAngular> get units => values;
 
+  @override
+  EnumValues<VelocityAngular> get unitsAsMap => valuesAsMap;
+
   static const values = [
     degreePerDay,
     degreePerHour,
@@ -153,6 +155,21 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
     revolutionPerMinute,
     revolutionPerSecond,
   ];
+
+  static const valuesAsMap = EnumValues({
+    VelocityAngular$DegreePerDay._minorName: degreePerDay,
+    VelocityAngular$DegreePerHour._minorName: degreePerHour,
+    VelocityAngular$DegreePerMinute._minorName: degreePerMinute,
+    VelocityAngular$DegreePerSecond._minorName: degreePerSecond,
+    VelocityAngular$RadianPerDay._minorName: radianPerDay,
+    VelocityAngular$RadianPerHour._minorName: radianPerHour,
+    VelocityAngular$RadianPerMinute._minorName: radianPerMinute,
+    VelocityAngular$RadianPerSecond._minorName: radianPerSecond,
+    VelocityAngular$RevolutionPerDay._minorName: revolutionPerDay,
+    VelocityAngular$RevolutionPerHour._minorName: revolutionPerHour,
+    VelocityAngular$RevolutionPerMinute._minorName: revolutionPerMinute,
+    VelocityAngular$RevolutionPerSecond._minorName: revolutionPerSecond,
+  });
 }
 
 /// Unit of [VelocityAngular]
@@ -946,21 +963,3 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
         },
       };
 }
-
-const velocityAngularUnits = EnumValues({
-  VelocityAngular$DegreePerDay._minorName: VelocityAngular.degreePerDay,
-  VelocityAngular$DegreePerHour._minorName: VelocityAngular.degreePerHour,
-  VelocityAngular$DegreePerMinute._minorName: VelocityAngular.degreePerMinute,
-  VelocityAngular$DegreePerSecond._minorName: VelocityAngular.degreePerSecond,
-  VelocityAngular$RadianPerDay._minorName: VelocityAngular.radianPerDay,
-  VelocityAngular$RadianPerHour._minorName: VelocityAngular.radianPerHour,
-  VelocityAngular$RadianPerMinute._minorName: VelocityAngular.radianPerMinute,
-  VelocityAngular$RadianPerSecond._minorName: VelocityAngular.radianPerSecond,
-  VelocityAngular$RevolutionPerDay._minorName: VelocityAngular.revolutionPerDay,
-  VelocityAngular$RevolutionPerHour._minorName:
-      VelocityAngular.revolutionPerHour,
-  VelocityAngular$RevolutionPerMinute._minorName:
-      VelocityAngular.revolutionPerMinute,
-  VelocityAngular$RevolutionPerSecond._minorName:
-      VelocityAngular.revolutionPerSecond,
-});

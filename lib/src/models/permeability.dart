@@ -15,10 +15,9 @@ sealed class Permeability extends Unit<Permeability> {
   factory Permeability.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        permeabilityUnits,
+        valuesAsMap,
       )
-          ? permeabilityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -88,6 +87,9 @@ sealed class Permeability extends Unit<Permeability> {
   @override
   List<Permeability> get units => values;
 
+  @override
+  EnumValues<Permeability> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilogramPerPascalSecondMeterSquare,
     permeability0DegreeC,
@@ -95,6 +97,17 @@ sealed class Permeability extends Unit<Permeability> {
     permeabilityInches0DegreeC,
     permeabilityInches23DegreeC,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Permeability$KilogramPerPascalSecondMeterSquare._minorName:
+        kilogramPerPascalSecondMeterSquare,
+    Permeability$Permeability0DegreeC._minorName: permeability0DegreeC,
+    Permeability$Permeability23DegreeC._minorName: permeability23DegreeC,
+    Permeability$PermeabilityInches0DegreeC._minorName:
+        permeabilityInches0DegreeC,
+    Permeability$PermeabilityInches23DegreeC._minorName:
+        permeabilityInches23DegreeC,
+  });
 }
 
 /// Unit of [Permeability]
@@ -427,16 +440,3 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
         },
       };
 }
-
-const permeabilityUnits = EnumValues({
-  Permeability$KilogramPerPascalSecondMeterSquare._minorName:
-      Permeability.kilogramPerPascalSecondMeterSquare,
-  Permeability$Permeability0DegreeC._minorName:
-      Permeability.permeability0DegreeC,
-  Permeability$Permeability23DegreeC._minorName:
-      Permeability.permeability23DegreeC,
-  Permeability$PermeabilityInches0DegreeC._minorName:
-      Permeability.permeabilityInches0DegreeC,
-  Permeability$PermeabilityInches23DegreeC._minorName:
-      Permeability.permeabilityInches23DegreeC,
-});

@@ -24,10 +24,9 @@ sealed class FlowMass extends Unit<FlowMass> {
   factory FlowMass.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        flowMassUnits,
+        valuesAsMap,
       )
-          ? flowMassUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -235,6 +234,9 @@ sealed class FlowMass extends Unit<FlowMass> {
   @override
   List<FlowMass> get units => values;
 
+  @override
+  EnumValues<FlowMass> get unitsAsMap => valuesAsMap;
+
   static const values = [
     gramPerSecond,
     gramPerMinute,
@@ -263,6 +265,35 @@ sealed class FlowMass extends Unit<FlowMass> {
     poundPerHour,
     poundPerDay,
   ];
+
+  static const valuesAsMap = EnumValues({
+    FlowMass$GramPerSecond._minorName: gramPerSecond,
+    FlowMass$GramPerMinute._minorName: gramPerMinute,
+    FlowMass$GramPerHour._minorName: gramPerHour,
+    FlowMass$GramPerDay._minorName: gramPerDay,
+    FlowMass$MilligramPerMinute._minorName: milligramPerMinute,
+    FlowMass$MilligramPerHour._minorName: milligramPerHour,
+    FlowMass$MilligramPerDay._minorName: milligramPerDay,
+    FlowMass$KilogramPerMinute._minorName: kilogramPerMinute,
+    FlowMass$KilogramPerHour._minorName: kilogramPerHour,
+    FlowMass$KilogramPerDay._minorName: kilogramPerDay,
+    FlowMass$ExagramPerSecond._minorName: exagramPerSecond,
+    FlowMass$PetagramPerSecond._minorName: petagramPerSecond,
+    FlowMass$TeragramPerSecond._minorName: teragramPerSecond,
+    FlowMass$GigagramPerSecond._minorName: gigagramPerSecond,
+    FlowMass$MegagramPerSecond._minorName: megagramPerSecond,
+    FlowMass$KilogramPerSecond._minorName: kilogramPerSecond,
+    FlowMass$HectogramPerSecond._minorName: hectogramPerSecond,
+    FlowMass$DekagramPerSecond._minorName: dekagramPerSecond,
+    FlowMass$DecigramPerSecond._minorName: decigramPerSecond,
+    FlowMass$CentigramPerSecond._minorName: centigramPerSecond,
+    FlowMass$MilligramPerSecond._minorName: milligramPerSecond,
+    FlowMass$MicrogramPerSecond._minorName: microgramPerSecond,
+    FlowMass$PoundPerSecond._minorName: poundPerSecond,
+    FlowMass$PoundPerMinute._minorName: poundPerMinute,
+    FlowMass$PoundPerHour._minorName: poundPerHour,
+    FlowMass$PoundPerDay._minorName: poundPerDay,
+  });
 }
 
 /// Unit of [FlowMass]
@@ -1954,32 +1985,3 @@ final class FlowMass$PoundPerDay extends FlowMass {
         },
       };
 }
-
-const flowMassUnits = EnumValues({
-  FlowMass$GramPerSecond._minorName: FlowMass.gramPerSecond,
-  FlowMass$GramPerMinute._minorName: FlowMass.gramPerMinute,
-  FlowMass$GramPerHour._minorName: FlowMass.gramPerHour,
-  FlowMass$GramPerDay._minorName: FlowMass.gramPerDay,
-  FlowMass$MilligramPerMinute._minorName: FlowMass.milligramPerMinute,
-  FlowMass$MilligramPerHour._minorName: FlowMass.milligramPerHour,
-  FlowMass$MilligramPerDay._minorName: FlowMass.milligramPerDay,
-  FlowMass$KilogramPerMinute._minorName: FlowMass.kilogramPerMinute,
-  FlowMass$KilogramPerHour._minorName: FlowMass.kilogramPerHour,
-  FlowMass$KilogramPerDay._minorName: FlowMass.kilogramPerDay,
-  FlowMass$ExagramPerSecond._minorName: FlowMass.exagramPerSecond,
-  FlowMass$PetagramPerSecond._minorName: FlowMass.petagramPerSecond,
-  FlowMass$TeragramPerSecond._minorName: FlowMass.teragramPerSecond,
-  FlowMass$GigagramPerSecond._minorName: FlowMass.gigagramPerSecond,
-  FlowMass$MegagramPerSecond._minorName: FlowMass.megagramPerSecond,
-  FlowMass$KilogramPerSecond._minorName: FlowMass.kilogramPerSecond,
-  FlowMass$HectogramPerSecond._minorName: FlowMass.hectogramPerSecond,
-  FlowMass$DekagramPerSecond._minorName: FlowMass.dekagramPerSecond,
-  FlowMass$DecigramPerSecond._minorName: FlowMass.decigramPerSecond,
-  FlowMass$CentigramPerSecond._minorName: FlowMass.centigramPerSecond,
-  FlowMass$MilligramPerSecond._minorName: FlowMass.milligramPerSecond,
-  FlowMass$MicrogramPerSecond._minorName: FlowMass.microgramPerSecond,
-  FlowMass$PoundPerSecond._minorName: FlowMass.poundPerSecond,
-  FlowMass$PoundPerMinute._minorName: FlowMass.poundPerMinute,
-  FlowMass$PoundPerHour._minorName: FlowMass.poundPerHour,
-  FlowMass$PoundPerDay._minorName: FlowMass.poundPerDay,
-});

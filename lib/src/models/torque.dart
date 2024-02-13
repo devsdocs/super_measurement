@@ -18,9 +18,9 @@ sealed class Torque extends Unit<Torque> {
   factory Torque.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        torqueUnits,
+        valuesAsMap,
       )
-          ? torqueUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -165,6 +165,9 @@ sealed class Torque extends Unit<Torque> {
   @override
   List<Torque> get units => values;
 
+  @override
+  EnumValues<Torque> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilonewtonMeter,
     newtonMeter,
@@ -184,6 +187,26 @@ sealed class Torque extends Unit<Torque> {
     poundForceFoot,
     poundForceInch,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Torque$KilonewtonMeter._minorName: kilonewtonMeter,
+    Torque$NewtonMeter._minorName: newtonMeter,
+    Torque$NewtonCentimeter._minorName: newtonCentimeter,
+    Torque$NewtonMillimeter._minorName: newtonMillimeter,
+    Torque$DyneMeter._minorName: dyneMeter,
+    Torque$DyneCentimeter._minorName: dyneCentimeter,
+    Torque$DyneMillimeter._minorName: dyneMillimeter,
+    Torque$KilogramForceMeter._minorName: kilogramForceMeter,
+    Torque$KilogramForceCentimeter._minorName: kilogramForceCentimeter,
+    Torque$KilogramForceMillimeter._minorName: kilogramForceMillimeter,
+    Torque$GramForceMeter._minorName: gramForceMeter,
+    Torque$GramForceCentimeter._minorName: gramForceCentimeter,
+    Torque$GramForceMillimeter._minorName: gramForceMillimeter,
+    Torque$OunceForceFoot._minorName: ounceForceFoot,
+    Torque$OunceForceInch._minorName: ounceForceInch,
+    Torque$PoundForceFoot._minorName: poundForceFoot,
+    Torque$PoundForceInch._minorName: poundForceInch,
+  });
 }
 
 /// Unit of [Torque]
@@ -1292,23 +1315,3 @@ final class Torque$PoundForceInch extends Torque {
         },
       };
 }
-
-const torqueUnits = EnumValues({
-  Torque$KilonewtonMeter._minorName: Torque.kilonewtonMeter,
-  Torque$NewtonMeter._minorName: Torque.newtonMeter,
-  Torque$NewtonCentimeter._minorName: Torque.newtonCentimeter,
-  Torque$NewtonMillimeter._minorName: Torque.newtonMillimeter,
-  Torque$DyneMeter._minorName: Torque.dyneMeter,
-  Torque$DyneCentimeter._minorName: Torque.dyneCentimeter,
-  Torque$DyneMillimeter._minorName: Torque.dyneMillimeter,
-  Torque$KilogramForceMeter._minorName: Torque.kilogramForceMeter,
-  Torque$KilogramForceCentimeter._minorName: Torque.kilogramForceCentimeter,
-  Torque$KilogramForceMillimeter._minorName: Torque.kilogramForceMillimeter,
-  Torque$GramForceMeter._minorName: Torque.gramForceMeter,
-  Torque$GramForceCentimeter._minorName: Torque.gramForceCentimeter,
-  Torque$GramForceMillimeter._minorName: Torque.gramForceMillimeter,
-  Torque$OunceForceFoot._minorName: Torque.ounceForceFoot,
-  Torque$OunceForceInch._minorName: Torque.ounceForceInch,
-  Torque$PoundForceFoot._minorName: Torque.poundForceFoot,
-  Torque$PoundForceInch._minorName: Torque.poundForceInch,
-});

@@ -21,10 +21,9 @@ sealed class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
   factory MagneticFluxDensity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        magneticFluxDensityUnits,
+        valuesAsMap,
       )
-          ? magneticFluxDensityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -141,6 +140,9 @@ sealed class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
   @override
   List<MagneticFluxDensity> get units => values;
 
+  @override
+  EnumValues<MagneticFluxDensity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     tesla,
     gauss,
@@ -154,6 +156,23 @@ sealed class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
     weberPerCentimeterSquare,
     weberPerInchSquare,
   ];
+
+  static const valuesAsMap = EnumValues({
+    MagneticFluxDensity$Tesla._minorName: tesla,
+    MagneticFluxDensity$Gauss._minorName: gauss,
+    MagneticFluxDensity$GaussInternational._minorName: gaussInternational,
+    MagneticFluxDensity$LinePerCentimeterSquare._minorName:
+        linePerCentimeterSquare,
+    MagneticFluxDensity$LinePerInchSquare._minorName: linePerInchSquare,
+    MagneticFluxDensity$MaxwellPerMeterSquare._minorName: maxwellPerMeterSquare,
+    MagneticFluxDensity$MaxwellPerCentimeterSquare._minorName:
+        maxwellPerCentimeterSquare,
+    MagneticFluxDensity$MaxwellPerInchSquare._minorName: maxwellPerInchSquare,
+    MagneticFluxDensity$WeberPerMeterSquare._minorName: weberPerMeterSquare,
+    MagneticFluxDensity$WeberPerCentimeterSquare._minorName:
+        weberPerCentimeterSquare,
+    MagneticFluxDensity$WeberPerInchSquare._minorName: weberPerInchSquare,
+  });
 }
 
 /// Unit of [MagneticFluxDensity]
@@ -885,26 +904,3 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
         },
       };
 }
-
-const magneticFluxDensityUnits = EnumValues({
-  MagneticFluxDensity$Tesla._minorName: MagneticFluxDensity.tesla,
-  MagneticFluxDensity$Gauss._minorName: MagneticFluxDensity.gauss,
-  MagneticFluxDensity$GaussInternational._minorName:
-      MagneticFluxDensity.gaussInternational,
-  MagneticFluxDensity$LinePerCentimeterSquare._minorName:
-      MagneticFluxDensity.linePerCentimeterSquare,
-  MagneticFluxDensity$LinePerInchSquare._minorName:
-      MagneticFluxDensity.linePerInchSquare,
-  MagneticFluxDensity$MaxwellPerMeterSquare._minorName:
-      MagneticFluxDensity.maxwellPerMeterSquare,
-  MagneticFluxDensity$MaxwellPerCentimeterSquare._minorName:
-      MagneticFluxDensity.maxwellPerCentimeterSquare,
-  MagneticFluxDensity$MaxwellPerInchSquare._minorName:
-      MagneticFluxDensity.maxwellPerInchSquare,
-  MagneticFluxDensity$WeberPerMeterSquare._minorName:
-      MagneticFluxDensity.weberPerMeterSquare,
-  MagneticFluxDensity$WeberPerCentimeterSquare._minorName:
-      MagneticFluxDensity.weberPerCentimeterSquare,
-  MagneticFluxDensity$WeberPerInchSquare._minorName:
-      MagneticFluxDensity.weberPerInchSquare,
-});

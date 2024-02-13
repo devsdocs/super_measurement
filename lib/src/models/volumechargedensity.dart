@@ -17,10 +17,9 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
   factory VolumeChargeDensity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        volumeChargeDensityUnits,
+        valuesAsMap,
       )
-          ? volumeChargeDensityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -100,6 +99,9 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
   @override
   List<VolumeChargeDensity> get units => values;
 
+  @override
+  EnumValues<VolumeChargeDensity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     coulombPerMeterCubic,
     coulombPerCentimeterCubic,
@@ -108,6 +110,18 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
     abcoulombPerCentimeterCubic,
     abcoulombPerInchCubic,
   ];
+
+  static const valuesAsMap = EnumValues({
+    VolumeChargeDensity$CoulombPerMeterCubic._minorName: coulombPerMeterCubic,
+    VolumeChargeDensity$CoulombPerCentimeterCubic._minorName:
+        coulombPerCentimeterCubic,
+    VolumeChargeDensity$CoulombPerInchCubic._minorName: coulombPerInchCubic,
+    VolumeChargeDensity$AbcoulombPerMeterCubic._minorName:
+        abcoulombPerMeterCubic,
+    VolumeChargeDensity$AbcoulombPerCentimeterCubic._minorName:
+        abcoulombPerCentimeterCubic,
+    VolumeChargeDensity$AbcoulombPerInchCubic._minorName: abcoulombPerInchCubic,
+  });
 }
 
 /// Unit of [VolumeChargeDensity]
@@ -511,18 +525,3 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
         },
       };
 }
-
-const volumeChargeDensityUnits = EnumValues({
-  VolumeChargeDensity$CoulombPerMeterCubic._minorName:
-      VolumeChargeDensity.coulombPerMeterCubic,
-  VolumeChargeDensity$CoulombPerCentimeterCubic._minorName:
-      VolumeChargeDensity.coulombPerCentimeterCubic,
-  VolumeChargeDensity$CoulombPerInchCubic._minorName:
-      VolumeChargeDensity.coulombPerInchCubic,
-  VolumeChargeDensity$AbcoulombPerMeterCubic._minorName:
-      VolumeChargeDensity.abcoulombPerMeterCubic,
-  VolumeChargeDensity$AbcoulombPerCentimeterCubic._minorName:
-      VolumeChargeDensity.abcoulombPerCentimeterCubic,
-  VolumeChargeDensity$AbcoulombPerInchCubic._minorName:
-      VolumeChargeDensity.abcoulombPerInchCubic,
-});

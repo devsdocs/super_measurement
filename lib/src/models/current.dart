@@ -15,9 +15,9 @@ sealed class Current extends Unit<Current> {
   factory Current.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        currentUnits,
+        valuesAsMap,
       )
-          ? currentUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -113,6 +113,9 @@ sealed class Current extends Unit<Current> {
   @override
   List<Current> get units => values;
 
+  @override
+  EnumValues<Current> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kiloampere,
     ampere,
@@ -125,6 +128,19 @@ sealed class Current extends Unit<Current> {
     cGSEMUnit,
     cGSESUnit,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Current$Kiloampere._minorName: kiloampere,
+    Current$Ampere._minorName: ampere,
+    Current$Milliampere._minorName: milliampere,
+    Current$Biot._minorName: biot,
+    Current$Abampere._minorName: abampere,
+    Current$Statampere._minorName: statampere,
+    Current$EMUOfCurrent._minorName: eMUOfCurrent,
+    Current$ESUOfCurrent._minorName: eSUOfCurrent,
+    Current$CGSEMUnit._minorName: cGSEMUnit,
+    Current$CGSESUnit._minorName: cGSESUnit,
+  });
 }
 
 /// Unit of [Current]
@@ -776,16 +792,3 @@ final class Current$CGSESUnit extends Current {
         },
       };
 }
-
-const currentUnits = EnumValues({
-  Current$Kiloampere._minorName: Current.kiloampere,
-  Current$Ampere._minorName: Current.ampere,
-  Current$Milliampere._minorName: Current.milliampere,
-  Current$Biot._minorName: Current.biot,
-  Current$Abampere._minorName: Current.abampere,
-  Current$Statampere._minorName: Current.statampere,
-  Current$EMUOfCurrent._minorName: Current.eMUOfCurrent,
-  Current$ESUOfCurrent._minorName: Current.eSUOfCurrent,
-  Current$CGSEMUnit._minorName: Current.cGSEMUnit,
-  Current$CGSESUnit._minorName: Current.cGSESUnit,
-});

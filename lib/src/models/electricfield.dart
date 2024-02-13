@@ -16,10 +16,9 @@ sealed class ElectricField extends Unit<ElectricField> {
   factory ElectricField.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        electricFieldUnits,
+        valuesAsMap,
       )
-          ? electricFieldUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -113,6 +112,9 @@ sealed class ElectricField extends Unit<ElectricField> {
   @override
   List<ElectricField> get units => values;
 
+  @override
+  EnumValues<ElectricField> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilovoltPerCentimeter,
     voltPerMeter,
@@ -124,6 +126,18 @@ sealed class ElectricField extends Unit<ElectricField> {
     statvoltPerCentimeter,
     statvoltPerInch,
   ];
+
+  static const valuesAsMap = EnumValues({
+    ElectricField$KilovoltPerCentimeter._minorName: kilovoltPerCentimeter,
+    ElectricField$VoltPerMeter._minorName: voltPerMeter,
+    ElectricField$VoltPerCentimeter._minorName: voltPerCentimeter,
+    ElectricField$VoltPerInch._minorName: voltPerInch,
+    ElectricField$MillivoltPerMeter._minorName: millivoltPerMeter,
+    ElectricField$MicrovoltPerMeter._minorName: microvoltPerMeter,
+    ElectricField$AbvoltPerCentimeter._minorName: abvoltPerCentimeter,
+    ElectricField$StatvoltPerCentimeter._minorName: statvoltPerCentimeter,
+    ElectricField$StatvoltPerInch._minorName: statvoltPerInch,
+  });
 }
 
 /// Unit of [ElectricField]
@@ -717,18 +731,3 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
         },
       };
 }
-
-const electricFieldUnits = EnumValues({
-  ElectricField$KilovoltPerCentimeter._minorName:
-      ElectricField.kilovoltPerCentimeter,
-  ElectricField$VoltPerMeter._minorName: ElectricField.voltPerMeter,
-  ElectricField$VoltPerCentimeter._minorName: ElectricField.voltPerCentimeter,
-  ElectricField$VoltPerInch._minorName: ElectricField.voltPerInch,
-  ElectricField$MillivoltPerMeter._minorName: ElectricField.millivoltPerMeter,
-  ElectricField$MicrovoltPerMeter._minorName: ElectricField.microvoltPerMeter,
-  ElectricField$AbvoltPerCentimeter._minorName:
-      ElectricField.abvoltPerCentimeter,
-  ElectricField$StatvoltPerCentimeter._minorName:
-      ElectricField.statvoltPerCentimeter,
-  ElectricField$StatvoltPerInch._minorName: ElectricField.statvoltPerInch,
-});

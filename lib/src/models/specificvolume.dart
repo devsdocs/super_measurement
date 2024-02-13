@@ -16,10 +16,9 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
   factory SpecificVolume.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        specificVolumeUnits,
+        valuesAsMap,
       )
-          ? specificVolumeUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -100,6 +99,9 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
   @override
   List<SpecificVolume> get units => values;
 
+  @override
+  EnumValues<SpecificVolume> get unitsAsMap => valuesAsMap;
+
   static const values = [
     meterCubicPerKilogram,
     centimeterCubicPerGram,
@@ -109,6 +111,16 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
     feetCubicPerPound,
     gallonUKPerPound,
   ];
+
+  static const valuesAsMap = EnumValues({
+    SpecificVolume$MeterCubicPerKilogram._minorName: meterCubicPerKilogram,
+    SpecificVolume$CentimeterCubicPerGram._minorName: centimeterCubicPerGram,
+    SpecificVolume$LiterPerKilogram._minorName: literPerKilogram,
+    SpecificVolume$LiterPerGram._minorName: literPerGram,
+    SpecificVolume$FeetCubicPerKilogram._minorName: feetCubicPerKilogram,
+    SpecificVolume$FeetCubicPerPound._minorName: feetCubicPerPound,
+    SpecificVolume$GallonUKPerPound._minorName: gallonUKPerPound,
+  });
 }
 
 /// Unit of [SpecificVolume]
@@ -571,16 +583,3 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
         },
       };
 }
-
-const specificVolumeUnits = EnumValues({
-  SpecificVolume$MeterCubicPerKilogram._minorName:
-      SpecificVolume.meterCubicPerKilogram,
-  SpecificVolume$CentimeterCubicPerGram._minorName:
-      SpecificVolume.centimeterCubicPerGram,
-  SpecificVolume$LiterPerKilogram._minorName: SpecificVolume.literPerKilogram,
-  SpecificVolume$LiterPerGram._minorName: SpecificVolume.literPerGram,
-  SpecificVolume$FeetCubicPerKilogram._minorName:
-      SpecificVolume.feetCubicPerKilogram,
-  SpecificVolume$FeetCubicPerPound._minorName: SpecificVolume.feetCubicPerPound,
-  SpecificVolume$GallonUKPerPound._minorName: SpecificVolume.gallonUKPerPound,
-});

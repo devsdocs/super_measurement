@@ -18,10 +18,9 @@ sealed class EUCurrency extends Unit<EUCurrency> {
   factory EUCurrency.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        eUCurrencyUnits,
+        valuesAsMap,
       )
-          ? eUCurrencyUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -139,6 +138,9 @@ sealed class EUCurrency extends Unit<EUCurrency> {
   @override
   List<EUCurrency> get units => values;
 
+  @override
+  EnumValues<EUCurrency> get unitsAsMap => valuesAsMap;
+
   static const values = [
     euroEUR,
     irishPoundIEP,
@@ -154,6 +156,22 @@ sealed class EUCurrency extends Unit<EUCurrency> {
     italianLireITL,
     greekDrachmaGRD,
   ];
+
+  static const valuesAsMap = EnumValues({
+    EUCurrency$EuroEUR._minorName: euroEUR,
+    EUCurrency$IrishPoundIEP._minorName: irishPoundIEP,
+    EUCurrency$DeutschMarkDEM._minorName: deutschMarkDEM,
+    EUCurrency$DutchGuildenNLG._minorName: dutchGuildenNLG,
+    EUCurrency$FinnishMarkFIM._minorName: finnishMarkFIM,
+    EUCurrency$FrenchFrancFRF._minorName: frenchFrancFRF,
+    EUCurrency$AustrianSchillingATS._minorName: austrianSchillingATS,
+    EUCurrency$BelgianFrancBEF._minorName: belgianFrancBEF,
+    EUCurrency$LuxembourgFrancLUF._minorName: luxembourgFrancLUF,
+    EUCurrency$SpanishPesetaESP._minorName: spanishPesetaESP,
+    EUCurrency$PortugueseEscudoPTE._minorName: portugueseEscudoPTE,
+    EUCurrency$ItalianLireITL._minorName: italianLireITL,
+    EUCurrency$GreekDrachmaGRD._minorName: greekDrachmaGRD,
+  });
 }
 
 /// Unit of [EUCurrency]
@@ -1003,19 +1021,3 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
         },
       };
 }
-
-const eUCurrencyUnits = EnumValues({
-  EUCurrency$EuroEUR._minorName: EUCurrency.euroEUR,
-  EUCurrency$IrishPoundIEP._minorName: EUCurrency.irishPoundIEP,
-  EUCurrency$DeutschMarkDEM._minorName: EUCurrency.deutschMarkDEM,
-  EUCurrency$DutchGuildenNLG._minorName: EUCurrency.dutchGuildenNLG,
-  EUCurrency$FinnishMarkFIM._minorName: EUCurrency.finnishMarkFIM,
-  EUCurrency$FrenchFrancFRF._minorName: EUCurrency.frenchFrancFRF,
-  EUCurrency$AustrianSchillingATS._minorName: EUCurrency.austrianSchillingATS,
-  EUCurrency$BelgianFrancBEF._minorName: EUCurrency.belgianFrancBEF,
-  EUCurrency$LuxembourgFrancLUF._minorName: EUCurrency.luxembourgFrancLUF,
-  EUCurrency$SpanishPesetaESP._minorName: EUCurrency.spanishPesetaESP,
-  EUCurrency$PortugueseEscudoPTE._minorName: EUCurrency.portugueseEscudoPTE,
-  EUCurrency$ItalianLireITL._minorName: EUCurrency.italianLireITL,
-  EUCurrency$GreekDrachmaGRD._minorName: EUCurrency.greekDrachmaGRD,
-});

@@ -22,10 +22,9 @@ sealed class Velocity extends Unit<Velocity> {
   factory Velocity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        velocityUnits,
+        valuesAsMap,
       )
-          ? velocityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -205,6 +204,9 @@ sealed class Velocity extends Unit<Velocity> {
   @override
   List<Velocity> get units => values;
 
+  @override
+  EnumValues<Velocity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilometerPerHour,
     kilometerPerMinute,
@@ -229,6 +231,31 @@ sealed class Velocity extends Unit<Velocity> {
     light,
     knot,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Velocity$KilometerPerHour._minorName: kilometerPerHour,
+    Velocity$KilometerPerMinute._minorName: kilometerPerMinute,
+    Velocity$KilometerPerSecond._minorName: kilometerPerSecond,
+    Velocity$MeterPerHour._minorName: meterPerHour,
+    Velocity$MeterPerMinute._minorName: meterPerMinute,
+    Velocity$MeterPerSecond._minorName: meterPerSecond,
+    Velocity$CentimeterPerHour._minorName: centimeterPerHour,
+    Velocity$CentimeterPerMinute._minorName: centimeterPerMinute,
+    Velocity$CentimeterPerSecond._minorName: centimeterPerSecond,
+    Velocity$MilePerHour._minorName: milePerHour,
+    Velocity$MilePerMinute._minorName: milePerMinute,
+    Velocity$MilePerSecond._minorName: milePerSecond,
+    Velocity$YardPerHour._minorName: yardPerHour,
+    Velocity$YardPerMinute._minorName: yardPerMinute,
+    Velocity$YardPerSecond._minorName: yardPerSecond,
+    Velocity$FootPerHour._minorName: footPerHour,
+    Velocity$FootPerMinute._minorName: footPerMinute,
+    Velocity$FootPerSecond._minorName: footPerSecond,
+    Velocity$MachSIStandard._minorName: machSIStandard,
+    Velocity$MachAtSeaLevel._minorName: machAtSeaLevel,
+    Velocity$Light._minorName: light,
+    Velocity$Knot._minorName: knot,
+  });
 }
 
 /// Unit of [Velocity]
@@ -1662,28 +1689,3 @@ final class Velocity$Knot extends Velocity {
         },
       };
 }
-
-const velocityUnits = EnumValues({
-  Velocity$KilometerPerHour._minorName: Velocity.kilometerPerHour,
-  Velocity$KilometerPerMinute._minorName: Velocity.kilometerPerMinute,
-  Velocity$KilometerPerSecond._minorName: Velocity.kilometerPerSecond,
-  Velocity$MeterPerHour._minorName: Velocity.meterPerHour,
-  Velocity$MeterPerMinute._minorName: Velocity.meterPerMinute,
-  Velocity$MeterPerSecond._minorName: Velocity.meterPerSecond,
-  Velocity$CentimeterPerHour._minorName: Velocity.centimeterPerHour,
-  Velocity$CentimeterPerMinute._minorName: Velocity.centimeterPerMinute,
-  Velocity$CentimeterPerSecond._minorName: Velocity.centimeterPerSecond,
-  Velocity$MilePerHour._minorName: Velocity.milePerHour,
-  Velocity$MilePerMinute._minorName: Velocity.milePerMinute,
-  Velocity$MilePerSecond._minorName: Velocity.milePerSecond,
-  Velocity$YardPerHour._minorName: Velocity.yardPerHour,
-  Velocity$YardPerMinute._minorName: Velocity.yardPerMinute,
-  Velocity$YardPerSecond._minorName: Velocity.yardPerSecond,
-  Velocity$FootPerHour._minorName: Velocity.footPerHour,
-  Velocity$FootPerMinute._minorName: Velocity.footPerMinute,
-  Velocity$FootPerSecond._minorName: Velocity.footPerSecond,
-  Velocity$MachSIStandard._minorName: Velocity.machSIStandard,
-  Velocity$MachAtSeaLevel._minorName: Velocity.machAtSeaLevel,
-  Velocity$Light._minorName: Velocity.light,
-  Velocity$Knot._minorName: Velocity.knot,
-});

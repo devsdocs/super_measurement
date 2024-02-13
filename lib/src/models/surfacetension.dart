@@ -17,10 +17,9 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
   factory SurfaceTension.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        surfaceTensionUnits,
+        valuesAsMap,
       )
-          ? surfaceTensionUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -107,6 +106,9 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
   @override
   List<SurfaceTension> get units => values;
 
+  @override
+  EnumValues<SurfaceTension> get unitsAsMap => valuesAsMap;
+
   static const values = [
     newtonPerMeter,
     millinewtonPerMeter,
@@ -117,6 +119,17 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
     poundalPerInch,
     poundForcePerInch,
   ];
+
+  static const valuesAsMap = EnumValues({
+    SurfaceTension$NewtonPerMeter._minorName: newtonPerMeter,
+    SurfaceTension$MillinewtonPerMeter._minorName: millinewtonPerMeter,
+    SurfaceTension$GramForcePerCentimeter._minorName: gramForcePerCentimeter,
+    SurfaceTension$DynePerCentimeter._minorName: dynePerCentimeter,
+    SurfaceTension$ErgPerCentimeterSquare._minorName: ergPerCentimeterSquare,
+    SurfaceTension$ErgPerMillimeterSquare._minorName: ergPerMillimeterSquare,
+    SurfaceTension$PoundalPerInch._minorName: poundalPerInch,
+    SurfaceTension$PoundForcePerInch._minorName: poundForcePerInch,
+  });
 }
 
 /// Unit of [SurfaceTension]
@@ -646,18 +659,3 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
         },
       };
 }
-
-const surfaceTensionUnits = EnumValues({
-  SurfaceTension$NewtonPerMeter._minorName: SurfaceTension.newtonPerMeter,
-  SurfaceTension$MillinewtonPerMeter._minorName:
-      SurfaceTension.millinewtonPerMeter,
-  SurfaceTension$GramForcePerCentimeter._minorName:
-      SurfaceTension.gramForcePerCentimeter,
-  SurfaceTension$DynePerCentimeter._minorName: SurfaceTension.dynePerCentimeter,
-  SurfaceTension$ErgPerCentimeterSquare._minorName:
-      SurfaceTension.ergPerCentimeterSquare,
-  SurfaceTension$ErgPerMillimeterSquare._minorName:
-      SurfaceTension.ergPerMillimeterSquare,
-  SurfaceTension$PoundalPerInch._minorName: SurfaceTension.poundalPerInch,
-  SurfaceTension$PoundForcePerInch._minorName: SurfaceTension.poundForcePerInch,
-});

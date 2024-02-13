@@ -29,10 +29,9 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
   factory ViscosityDynamic.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        viscosityDynamicUnits,
+        valuesAsMap,
       )
-          ? viscosityDynamicUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -265,6 +264,9 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
   @override
   List<ViscosityDynamic> get units => values;
 
+  @override
+  EnumValues<ViscosityDynamic> get unitsAsMap => valuesAsMap;
+
   static const values = [
     newtonSecondPerMeterSquare,
     millinewtonSecondPerMeterSquare,
@@ -294,6 +296,43 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
     poundPerFootSecond,
     poundPerFootHour,
   ];
+
+  static const valuesAsMap = EnumValues({
+    ViscosityDynamic$NewtonSecondPerMeterSquare._minorName:
+        newtonSecondPerMeterSquare,
+    ViscosityDynamic$MillinewtonSecondPerMeterSquare._minorName:
+        millinewtonSecondPerMeterSquare,
+    ViscosityDynamic$DyneSecondPerCentimeterSquare._minorName:
+        dyneSecondPerCentimeterSquare,
+    ViscosityDynamic$Exapoise._minorName: exapoise,
+    ViscosityDynamic$Petapoise._minorName: petapoise,
+    ViscosityDynamic$Terapoise._minorName: terapoise,
+    ViscosityDynamic$Gigapoise._minorName: gigapoise,
+    ViscosityDynamic$Megapoise._minorName: megapoise,
+    ViscosityDynamic$Kilopoise._minorName: kilopoise,
+    ViscosityDynamic$Hectopoise._minorName: hectopoise,
+    ViscosityDynamic$Dekapoise._minorName: dekapoise,
+    ViscosityDynamic$Poise._minorName: poise,
+    ViscosityDynamic$Decipoise._minorName: decipoise,
+    ViscosityDynamic$Centipoise._minorName: centipoise,
+    ViscosityDynamic$Millipoise._minorName: millipoise,
+    ViscosityDynamic$Micropoise._minorName: micropoise,
+    ViscosityDynamic$Nanopoise._minorName: nanopoise,
+    ViscosityDynamic$Picopoise._minorName: picopoise,
+    ViscosityDynamic$Femtopoise._minorName: femtopoise,
+    ViscosityDynamic$Attopoise._minorName: attopoise,
+    ViscosityDynamic$PoundForceSecondPerInchSquare._minorName:
+        poundForceSecondPerInchSquare,
+    ViscosityDynamic$PoundForceSecondPerFootSquare._minorName:
+        poundForceSecondPerFootSquare,
+    ViscosityDynamic$PoundalSecondPerFootSquare._minorName:
+        poundalSecondPerFootSquare,
+    ViscosityDynamic$GramPerCentimeterSecond._minorName:
+        gramPerCentimeterSecond,
+    ViscosityDynamic$SlugPerFootSecond._minorName: slugPerFootSecond,
+    ViscosityDynamic$PoundPerFootSecond._minorName: poundPerFootSecond,
+    ViscosityDynamic$PoundPerFootHour._minorName: poundPerFootHour,
+  });
 }
 
 /// Unit of [ViscosityDynamic]
@@ -2066,43 +2105,3 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
         },
       };
 }
-
-const viscosityDynamicUnits = EnumValues({
-  ViscosityDynamic$NewtonSecondPerMeterSquare._minorName:
-      ViscosityDynamic.newtonSecondPerMeterSquare,
-  ViscosityDynamic$MillinewtonSecondPerMeterSquare._minorName:
-      ViscosityDynamic.millinewtonSecondPerMeterSquare,
-  ViscosityDynamic$DyneSecondPerCentimeterSquare._minorName:
-      ViscosityDynamic.dyneSecondPerCentimeterSquare,
-  ViscosityDynamic$Exapoise._minorName: ViscosityDynamic.exapoise,
-  ViscosityDynamic$Petapoise._minorName: ViscosityDynamic.petapoise,
-  ViscosityDynamic$Terapoise._minorName: ViscosityDynamic.terapoise,
-  ViscosityDynamic$Gigapoise._minorName: ViscosityDynamic.gigapoise,
-  ViscosityDynamic$Megapoise._minorName: ViscosityDynamic.megapoise,
-  ViscosityDynamic$Kilopoise._minorName: ViscosityDynamic.kilopoise,
-  ViscosityDynamic$Hectopoise._minorName: ViscosityDynamic.hectopoise,
-  ViscosityDynamic$Dekapoise._minorName: ViscosityDynamic.dekapoise,
-  ViscosityDynamic$Poise._minorName: ViscosityDynamic.poise,
-  ViscosityDynamic$Decipoise._minorName: ViscosityDynamic.decipoise,
-  ViscosityDynamic$Centipoise._minorName: ViscosityDynamic.centipoise,
-  ViscosityDynamic$Millipoise._minorName: ViscosityDynamic.millipoise,
-  ViscosityDynamic$Micropoise._minorName: ViscosityDynamic.micropoise,
-  ViscosityDynamic$Nanopoise._minorName: ViscosityDynamic.nanopoise,
-  ViscosityDynamic$Picopoise._minorName: ViscosityDynamic.picopoise,
-  ViscosityDynamic$Femtopoise._minorName: ViscosityDynamic.femtopoise,
-  ViscosityDynamic$Attopoise._minorName: ViscosityDynamic.attopoise,
-  ViscosityDynamic$PoundForceSecondPerInchSquare._minorName:
-      ViscosityDynamic.poundForceSecondPerInchSquare,
-  ViscosityDynamic$PoundForceSecondPerFootSquare._minorName:
-      ViscosityDynamic.poundForceSecondPerFootSquare,
-  ViscosityDynamic$PoundalSecondPerFootSquare._minorName:
-      ViscosityDynamic.poundalSecondPerFootSquare,
-  ViscosityDynamic$GramPerCentimeterSecond._minorName:
-      ViscosityDynamic.gramPerCentimeterSecond,
-  ViscosityDynamic$SlugPerFootSecond._minorName:
-      ViscosityDynamic.slugPerFootSecond,
-  ViscosityDynamic$PoundPerFootSecond._minorName:
-      ViscosityDynamic.poundPerFootSecond,
-  ViscosityDynamic$PoundPerFootHour._minorName:
-      ViscosityDynamic.poundPerFootHour,
-});

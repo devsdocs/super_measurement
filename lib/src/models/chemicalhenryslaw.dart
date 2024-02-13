@@ -17,10 +17,9 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
   factory ChemicalHenrysLaw.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        chemicalHenrysLawUnits,
+        valuesAsMap,
       )
-          ? chemicalHenrysLawUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -101,6 +100,9 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
   @override
   List<ChemicalHenrysLaw> get units => values;
 
+  @override
+  EnumValues<ChemicalHenrysLaw> get unitsAsMap => valuesAsMap;
+
   static const values = [
     newtonMeterPerKilogram,
     barPerKilogramPerMeterCubic,
@@ -109,6 +111,20 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
     atmospherePerGramPerCentimeterCubic,
     atmospherePerPoundPerFootCubic,
   ];
+
+  static const valuesAsMap = EnumValues({
+    ChemicalHenrysLaw$NewtonMeterPerKilogram._minorName: newtonMeterPerKilogram,
+    ChemicalHenrysLaw$BarPerKilogramPerMeterCubic._minorName:
+        barPerKilogramPerMeterCubic,
+    ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic._minorName:
+        atmospherePerKilogramPerMeterCubic,
+    ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic._minorName:
+        atmospherePerKilogramPerFootCubic,
+    ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic._minorName:
+        atmospherePerGramPerCentimeterCubic,
+    ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic._minorName:
+        atmospherePerPoundPerFootCubic,
+  });
 }
 
 /// Unit of [ChemicalHenrysLaw]
@@ -511,18 +527,3 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
         },
       };
 }
-
-const chemicalHenrysLawUnits = EnumValues({
-  ChemicalHenrysLaw$NewtonMeterPerKilogram._minorName:
-      ChemicalHenrysLaw.newtonMeterPerKilogram,
-  ChemicalHenrysLaw$BarPerKilogramPerMeterCubic._minorName:
-      ChemicalHenrysLaw.barPerKilogramPerMeterCubic,
-  ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic._minorName:
-      ChemicalHenrysLaw.atmospherePerKilogramPerMeterCubic,
-  ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic._minorName:
-      ChemicalHenrysLaw.atmospherePerKilogramPerFootCubic,
-  ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic._minorName:
-      ChemicalHenrysLaw.atmospherePerGramPerCentimeterCubic,
-  ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic._minorName:
-      ChemicalHenrysLaw.atmospherePerPoundPerFootCubic,
-});

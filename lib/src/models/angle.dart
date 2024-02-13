@@ -15,9 +15,9 @@ sealed class Angle extends Unit<Angle> {
   factory Angle.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        angleUnits,
+        valuesAsMap,
       )
-          ? angleUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -148,6 +148,9 @@ sealed class Angle extends Unit<Angle> {
   @override
   List<Angle> get units => values;
 
+  @override
+  EnumValues<Angle> get unitsAsMap => valuesAsMap;
+
   static const values = [
     degree,
     radian,
@@ -165,6 +168,24 @@ sealed class Angle extends Unit<Angle> {
     octant,
     percentOfFullCircle,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Angle$Degree._minorName: degree,
+    Angle$Radian._minorName: radian,
+    Angle$Grad._minorName: grad,
+    Angle$Minute._minorName: minute,
+    Angle$Second._minorName: second,
+    Angle$Sign._minorName: sign,
+    Angle$Mil._minorName: mil,
+    Angle$Revolution._minorName: revolution,
+    Angle$Circle._minorName: circle,
+    Angle$Turn._minorName: turn,
+    Angle$Quadrant._minorName: quadrant,
+    Angle$RightAngle._minorName: rightAngle,
+    Angle$Sextant._minorName: sextant,
+    Angle$Octant._minorName: octant,
+    Angle$PercentOfFullCircle._minorName: percentOfFullCircle,
+  });
 }
 
 /// Unit of [Angle]
@@ -1141,21 +1162,3 @@ final class Angle$PercentOfFullCircle extends Angle {
         },
       };
 }
-
-const angleUnits = EnumValues({
-  Angle$Degree._minorName: Angle.degree,
-  Angle$Radian._minorName: Angle.radian,
-  Angle$Grad._minorName: Angle.grad,
-  Angle$Minute._minorName: Angle.minute,
-  Angle$Second._minorName: Angle.second,
-  Angle$Sign._minorName: Angle.sign,
-  Angle$Mil._minorName: Angle.mil,
-  Angle$Revolution._minorName: Angle.revolution,
-  Angle$Circle._minorName: Angle.circle,
-  Angle$Turn._minorName: Angle.turn,
-  Angle$Quadrant._minorName: Angle.quadrant,
-  Angle$RightAngle._minorName: Angle.rightAngle,
-  Angle$Sextant._minorName: Angle.sextant,
-  Angle$Octant._minorName: Angle.octant,
-  Angle$PercentOfFullCircle._minorName: Angle.percentOfFullCircle,
-});

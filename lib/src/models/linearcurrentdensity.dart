@@ -20,10 +20,9 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
       _checkJson(
         _majorName,
         json,
-        linearCurrentDensityUnits,
+        valuesAsMap,
       )
-          ? linearCurrentDensityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -124,6 +123,9 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
   @override
   List<LinearCurrentDensity> get units => values;
 
+  @override
+  EnumValues<LinearCurrentDensity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     amperePerMeter,
     amperePerCentimeter,
@@ -135,6 +137,19 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
     oerstedInternational,
     gilbertPerCentimeter,
   ];
+
+  static const valuesAsMap = EnumValues({
+    LinearCurrentDensity$AmperePerMeter._minorName: amperePerMeter,
+    LinearCurrentDensity$AmperePerCentimeter._minorName: amperePerCentimeter,
+    LinearCurrentDensity$AmperePerInch._minorName: amperePerInch,
+    LinearCurrentDensity$AbamperePerMeter._minorName: abamperePerMeter,
+    LinearCurrentDensity$AbamperePerCentimeter._minorName:
+        abamperePerCentimeter,
+    LinearCurrentDensity$AbamperePerInch._minorName: abamperePerInch,
+    LinearCurrentDensity$Oersted._minorName: oersted,
+    LinearCurrentDensity$OerstedInternational._minorName: oerstedInternational,
+    LinearCurrentDensity$GilbertPerCentimeter._minorName: gilbertPerCentimeter,
+  });
 }
 
 /// Unit of [LinearCurrentDensity]
@@ -734,23 +749,3 @@ final class LinearCurrentDensity$GilbertPerCentimeter
         },
       };
 }
-
-const linearCurrentDensityUnits = EnumValues({
-  LinearCurrentDensity$AmperePerMeter._minorName:
-      LinearCurrentDensity.amperePerMeter,
-  LinearCurrentDensity$AmperePerCentimeter._minorName:
-      LinearCurrentDensity.amperePerCentimeter,
-  LinearCurrentDensity$AmperePerInch._minorName:
-      LinearCurrentDensity.amperePerInch,
-  LinearCurrentDensity$AbamperePerMeter._minorName:
-      LinearCurrentDensity.abamperePerMeter,
-  LinearCurrentDensity$AbamperePerCentimeter._minorName:
-      LinearCurrentDensity.abamperePerCentimeter,
-  LinearCurrentDensity$AbamperePerInch._minorName:
-      LinearCurrentDensity.abamperePerInch,
-  LinearCurrentDensity$Oersted._minorName: LinearCurrentDensity.oersted,
-  LinearCurrentDensity$OerstedInternational._minorName:
-      LinearCurrentDensity.oerstedInternational,
-  LinearCurrentDensity$GilbertPerCentimeter._minorName:
-      LinearCurrentDensity.gilbertPerCentimeter,
-});

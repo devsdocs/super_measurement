@@ -12,9 +12,9 @@ sealed class Sound extends Unit<Sound> {
   factory Sound.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        soundUnits,
+        valuesAsMap,
       )
-          ? soundUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -61,11 +61,20 @@ sealed class Sound extends Unit<Sound> {
   @override
   List<Sound> get units => values;
 
+  @override
+  EnumValues<Sound> get unitsAsMap => valuesAsMap;
+
   static const values = [
     bel,
     decibel,
     neper,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Sound$Bel._minorName: bel,
+    Sound$Decibel._minorName: decibel,
+    Sound$Neper._minorName: neper,
+  });
 }
 
 /// Unit of [Sound]
@@ -262,9 +271,3 @@ final class Sound$Neper extends Sound {
         },
       };
 }
-
-const soundUnits = EnumValues({
-  Sound$Bel._minorName: Sound.bel,
-  Sound$Decibel._minorName: Sound.decibel,
-  Sound$Neper._minorName: Sound.neper,
-});

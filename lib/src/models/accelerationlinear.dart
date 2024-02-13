@@ -27,10 +27,9 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
   factory AccelerationLinear.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        accelerationLinearUnits,
+        valuesAsMap,
       )
-          ? accelerationLinearUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -210,6 +209,9 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
   @override
   List<AccelerationLinear> get units => values;
 
+  @override
+  EnumValues<AccelerationLinear> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilometerPerSecondSquare,
     hectometerPerSecondSquare,
@@ -230,6 +232,38 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
     footPerSecondSquare,
     inchPerSecondSquare,
   ];
+
+  static const valuesAsMap = EnumValues({
+    AccelerationLinear$KilometerPerSecondSquare._minorName:
+        kilometerPerSecondSquare,
+    AccelerationLinear$HectometerPerSecondSquare._minorName:
+        hectometerPerSecondSquare,
+    AccelerationLinear$DekameterPerSecondSquare._minorName:
+        dekameterPerSecondSquare,
+    AccelerationLinear$MeterPerSecondSquare._minorName: meterPerSecondSquare,
+    AccelerationLinear$DecimeterPerSecondSquare._minorName:
+        decimeterPerSecondSquare,
+    AccelerationLinear$CentimeterPerSecondSquare._minorName:
+        centimeterPerSecondSquare,
+    AccelerationLinear$MillimeterPerSecondSquare._minorName:
+        millimeterPerSecondSquare,
+    AccelerationLinear$MicrometerPerSecondSquare._minorName:
+        micrometerPerSecondSquare,
+    AccelerationLinear$NanometerPerSecondSquare._minorName:
+        nanometerPerSecondSquare,
+    AccelerationLinear$PicometerPerSecondSquare._minorName:
+        picometerPerSecondSquare,
+    AccelerationLinear$FemtometerPerSecondSquare._minorName:
+        femtometerPerSecondSquare,
+    AccelerationLinear$AttometerPerSecondSquare._minorName:
+        attometerPerSecondSquare,
+    AccelerationLinear$G._minorName: g,
+    AccelerationLinear$Gal._minorName: gal,
+    AccelerationLinear$MilePerSecondSquare._minorName: milePerSecondSquare,
+    AccelerationLinear$YardPerSecondSquare._minorName: yardPerSecondSquare,
+    AccelerationLinear$FootPerSecondSquare._minorName: footPerSecondSquare,
+    AccelerationLinear$InchPerSecondSquare._minorName: inchPerSecondSquare,
+  });
 }
 
 /// Unit of [AccelerationLinear]
@@ -1428,40 +1462,3 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
         },
       };
 }
-
-const accelerationLinearUnits = EnumValues({
-  AccelerationLinear$KilometerPerSecondSquare._minorName:
-      AccelerationLinear.kilometerPerSecondSquare,
-  AccelerationLinear$HectometerPerSecondSquare._minorName:
-      AccelerationLinear.hectometerPerSecondSquare,
-  AccelerationLinear$DekameterPerSecondSquare._minorName:
-      AccelerationLinear.dekameterPerSecondSquare,
-  AccelerationLinear$MeterPerSecondSquare._minorName:
-      AccelerationLinear.meterPerSecondSquare,
-  AccelerationLinear$DecimeterPerSecondSquare._minorName:
-      AccelerationLinear.decimeterPerSecondSquare,
-  AccelerationLinear$CentimeterPerSecondSquare._minorName:
-      AccelerationLinear.centimeterPerSecondSquare,
-  AccelerationLinear$MillimeterPerSecondSquare._minorName:
-      AccelerationLinear.millimeterPerSecondSquare,
-  AccelerationLinear$MicrometerPerSecondSquare._minorName:
-      AccelerationLinear.micrometerPerSecondSquare,
-  AccelerationLinear$NanometerPerSecondSquare._minorName:
-      AccelerationLinear.nanometerPerSecondSquare,
-  AccelerationLinear$PicometerPerSecondSquare._minorName:
-      AccelerationLinear.picometerPerSecondSquare,
-  AccelerationLinear$FemtometerPerSecondSquare._minorName:
-      AccelerationLinear.femtometerPerSecondSquare,
-  AccelerationLinear$AttometerPerSecondSquare._minorName:
-      AccelerationLinear.attometerPerSecondSquare,
-  AccelerationLinear$G._minorName: AccelerationLinear.g,
-  AccelerationLinear$Gal._minorName: AccelerationLinear.gal,
-  AccelerationLinear$MilePerSecondSquare._minorName:
-      AccelerationLinear.milePerSecondSquare,
-  AccelerationLinear$YardPerSecondSquare._minorName:
-      AccelerationLinear.yardPerSecondSquare,
-  AccelerationLinear$FootPerSecondSquare._minorName:
-      AccelerationLinear.footPerSecondSquare,
-  AccelerationLinear$InchPerSecondSquare._minorName:
-      AccelerationLinear.inchPerSecondSquare,
-});

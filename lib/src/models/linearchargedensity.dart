@@ -17,10 +17,9 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
   factory LinearChargeDensity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        linearChargeDensityUnits,
+        valuesAsMap,
       )
-          ? linearChargeDensityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -96,6 +95,9 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
   @override
   List<LinearChargeDensity> get units => values;
 
+  @override
+  EnumValues<LinearChargeDensity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     coulombPerMeter,
     coulombPerCentimeter,
@@ -104,6 +106,16 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
     abcoulombPerCentimeter,
     abcoulombPerInch,
   ];
+
+  static const valuesAsMap = EnumValues({
+    LinearChargeDensity$CoulombPerMeter._minorName: coulombPerMeter,
+    LinearChargeDensity$CoulombPerCentimeter._minorName: coulombPerCentimeter,
+    LinearChargeDensity$CoulombPerInch._minorName: coulombPerInch,
+    LinearChargeDensity$AbcoulombPerMeter._minorName: abcoulombPerMeter,
+    LinearChargeDensity$AbcoulombPerCentimeter._minorName:
+        abcoulombPerCentimeter,
+    LinearChargeDensity$AbcoulombPerInch._minorName: abcoulombPerInch,
+  });
 }
 
 /// Unit of [LinearChargeDensity]
@@ -503,18 +515,3 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
         },
       };
 }
-
-const linearChargeDensityUnits = EnumValues({
-  LinearChargeDensity$CoulombPerMeter._minorName:
-      LinearChargeDensity.coulombPerMeter,
-  LinearChargeDensity$CoulombPerCentimeter._minorName:
-      LinearChargeDensity.coulombPerCentimeter,
-  LinearChargeDensity$CoulombPerInch._minorName:
-      LinearChargeDensity.coulombPerInch,
-  LinearChargeDensity$AbcoulombPerMeter._minorName:
-      LinearChargeDensity.abcoulombPerMeter,
-  LinearChargeDensity$AbcoulombPerCentimeter._minorName:
-      LinearChargeDensity.abcoulombPerCentimeter,
-  LinearChargeDensity$AbcoulombPerInch._minorName:
-      LinearChargeDensity.abcoulombPerInch,
-});

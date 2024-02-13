@@ -24,10 +24,9 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
       _checkJson(
         _majorName,
         json,
-        radiationRadioactivityUnits,
+        valuesAsMap,
       )
-          ? radiationRadioactivityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -175,6 +174,9 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
   @override
   List<RadiationRadioactivity> get units => values;
 
+  @override
+  EnumValues<RadiationRadioactivity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     terabecquerel,
     gigabecquerel,
@@ -192,6 +194,26 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
     disintegrationsPerSecond,
     disintegrationsPerMinute,
   ];
+
+  static const valuesAsMap = EnumValues({
+    RadiationRadioactivity$Terabecquerel._minorName: terabecquerel,
+    RadiationRadioactivity$Gigabecquerel._minorName: gigabecquerel,
+    RadiationRadioactivity$Megabecquerel._minorName: megabecquerel,
+    RadiationRadioactivity$Kilobecquerel._minorName: kilobecquerel,
+    RadiationRadioactivity$Becquerel._minorName: becquerel,
+    RadiationRadioactivity$Millibecquerel._minorName: millibecquerel,
+    RadiationRadioactivity$Kilocurie._minorName: kilocurie,
+    RadiationRadioactivity$Curie._minorName: curie,
+    RadiationRadioactivity$Millicurie._minorName: millicurie,
+    RadiationRadioactivity$Microcurie._minorName: microcurie,
+    RadiationRadioactivity$Nanocurie._minorName: nanocurie,
+    RadiationRadioactivity$Picocurie._minorName: picocurie,
+    RadiationRadioactivity$Rutherford._minorName: rutherford,
+    RadiationRadioactivity$DisintegrationsPerSecond._minorName:
+        disintegrationsPerSecond,
+    RadiationRadioactivity$DisintegrationsPerMinute._minorName:
+        disintegrationsPerMinute,
+  });
 }
 
 /// Unit of [RadiationRadioactivity]
@@ -1190,31 +1212,3 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
         },
       };
 }
-
-const radiationRadioactivityUnits = EnumValues({
-  RadiationRadioactivity$Terabecquerel._minorName:
-      RadiationRadioactivity.terabecquerel,
-  RadiationRadioactivity$Gigabecquerel._minorName:
-      RadiationRadioactivity.gigabecquerel,
-  RadiationRadioactivity$Megabecquerel._minorName:
-      RadiationRadioactivity.megabecquerel,
-  RadiationRadioactivity$Kilobecquerel._minorName:
-      RadiationRadioactivity.kilobecquerel,
-  RadiationRadioactivity$Becquerel._minorName: RadiationRadioactivity.becquerel,
-  RadiationRadioactivity$Millibecquerel._minorName:
-      RadiationRadioactivity.millibecquerel,
-  RadiationRadioactivity$Kilocurie._minorName: RadiationRadioactivity.kilocurie,
-  RadiationRadioactivity$Curie._minorName: RadiationRadioactivity.curie,
-  RadiationRadioactivity$Millicurie._minorName:
-      RadiationRadioactivity.millicurie,
-  RadiationRadioactivity$Microcurie._minorName:
-      RadiationRadioactivity.microcurie,
-  RadiationRadioactivity$Nanocurie._minorName: RadiationRadioactivity.nanocurie,
-  RadiationRadioactivity$Picocurie._minorName: RadiationRadioactivity.picocurie,
-  RadiationRadioactivity$Rutherford._minorName:
-      RadiationRadioactivity.rutherford,
-  RadiationRadioactivity$DisintegrationsPerSecond._minorName:
-      RadiationRadioactivity.disintegrationsPerSecond,
-  RadiationRadioactivity$DisintegrationsPerMinute._minorName:
-      RadiationRadioactivity.disintegrationsPerMinute,
-});

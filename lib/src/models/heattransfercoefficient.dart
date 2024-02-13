@@ -20,10 +20,9 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
       _checkJson(
         _majorName,
         json,
-        heatTransferCoefficientUnits,
+        valuesAsMap,
       )
-          ? heatTransferCoefficientUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -128,6 +127,9 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
   @override
   List<HeatTransferCoefficient> get units => values;
 
+  @override
+  EnumValues<HeatTransferCoefficient> get unitsAsMap => valuesAsMap;
+
   static const values = [
     wattPerMeterSquareK,
     wattPerMeterSquareDegreeC,
@@ -138,6 +140,24 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
     bTUPerHourFootSquareDegreeF,
     cHUPerHourFootSquareDegreeC,
   ];
+
+  static const valuesAsMap = EnumValues({
+    HeatTransferCoefficient$WattPerMeterSquareK._minorName: wattPerMeterSquareK,
+    HeatTransferCoefficient$WattPerMeterSquareDegreeC._minorName:
+        wattPerMeterSquareDegreeC,
+    HeatTransferCoefficient$JoulePerSecondMeterSquareK._minorName:
+        joulePerSecondMeterSquareK,
+    HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC._minorName:
+        kilocaloriePerHourMeterSquareDegreeC,
+    HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC._minorName:
+        kilocaloriePerHourFootSquareDegreeC,
+    HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC._minorName:
+        caloriePerSecondCentimeterSquareDegreeC,
+    HeatTransferCoefficient$BTUPerHourFootSquareDegreeF._minorName:
+        bTUPerHourFootSquareDegreeF,
+    HeatTransferCoefficient$CHUPerHourFootSquareDegreeC._minorName:
+        cHUPerHourFootSquareDegreeC,
+  });
 }
 
 /// Unit of [HeatTransferCoefficient]
@@ -675,22 +695,3 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
         },
       };
 }
-
-const heatTransferCoefficientUnits = EnumValues({
-  HeatTransferCoefficient$WattPerMeterSquareK._minorName:
-      HeatTransferCoefficient.wattPerMeterSquareK,
-  HeatTransferCoefficient$WattPerMeterSquareDegreeC._minorName:
-      HeatTransferCoefficient.wattPerMeterSquareDegreeC,
-  HeatTransferCoefficient$JoulePerSecondMeterSquareK._minorName:
-      HeatTransferCoefficient.joulePerSecondMeterSquareK,
-  HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC._minorName:
-      HeatTransferCoefficient.kilocaloriePerHourMeterSquareDegreeC,
-  HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC._minorName:
-      HeatTransferCoefficient.kilocaloriePerHourFootSquareDegreeC,
-  HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC._minorName:
-      HeatTransferCoefficient.caloriePerSecondCentimeterSquareDegreeC,
-  HeatTransferCoefficient$BTUPerHourFootSquareDegreeF._minorName:
-      HeatTransferCoefficient.bTUPerHourFootSquareDegreeF,
-  HeatTransferCoefficient$CHUPerHourFootSquareDegreeC._minorName:
-      HeatTransferCoefficient.cHUPerHourFootSquareDegreeC,
-});

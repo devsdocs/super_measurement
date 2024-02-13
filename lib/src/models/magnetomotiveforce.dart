@@ -14,10 +14,9 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
   factory MagnetomotiveForce.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        magnetomotiveForceUnits,
+        valuesAsMap,
       )
-          ? magnetomotiveForceUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -81,6 +80,9 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
   @override
   List<MagnetomotiveForce> get units => values;
 
+  @override
+  EnumValues<MagnetomotiveForce> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kiloampereTurn,
     ampereTurn,
@@ -88,6 +90,14 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
     abampereTurn,
     gilbert,
   ];
+
+  static const valuesAsMap = EnumValues({
+    MagnetomotiveForce$KiloampereTurn._minorName: kiloampereTurn,
+    MagnetomotiveForce$AmpereTurn._minorName: ampereTurn,
+    MagnetomotiveForce$MilliampereTurn._minorName: milliampereTurn,
+    MagnetomotiveForce$AbampereTurn._minorName: abampereTurn,
+    MagnetomotiveForce$Gilbert._minorName: gilbert,
+  });
 }
 
 /// Unit of [MagnetomotiveForce]
@@ -418,13 +428,3 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
         },
       };
 }
-
-const magnetomotiveForceUnits = EnumValues({
-  MagnetomotiveForce$KiloampereTurn._minorName:
-      MagnetomotiveForce.kiloampereTurn,
-  MagnetomotiveForce$AmpereTurn._minorName: MagnetomotiveForce.ampereTurn,
-  MagnetomotiveForce$MilliampereTurn._minorName:
-      MagnetomotiveForce.milliampereTurn,
-  MagnetomotiveForce$AbampereTurn._minorName: MagnetomotiveForce.abampereTurn,
-  MagnetomotiveForce$Gilbert._minorName: MagnetomotiveForce.gilbert,
-});

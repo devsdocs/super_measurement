@@ -28,9 +28,9 @@ sealed class Density extends Unit<Density> {
   factory Density.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        densityUnits,
+        valuesAsMap,
       )
-          ? densityUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -293,6 +293,9 @@ sealed class Density extends Unit<Density> {
   @override
   List<Density> get units => values;
 
+  @override
+  EnumValues<Density> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilogramPerMeterCubic,
     kilogramPerCentimeterCubic,
@@ -328,6 +331,42 @@ sealed class Density extends Unit<Density> {
     tonPerYardCubic,
     psiPer1000Feet,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Density$KilogramPerMeterCubic._minorName: kilogramPerMeterCubic,
+    Density$KilogramPerCentimeterCubic._minorName: kilogramPerCentimeterCubic,
+    Density$GramPerMeterCubic._minorName: gramPerMeterCubic,
+    Density$GramPerCentimeterCubic._minorName: gramPerCentimeterCubic,
+    Density$GramPerMillimeterCubic._minorName: gramPerMillimeterCubic,
+    Density$MilligramPerMeterCubic._minorName: milligramPerMeterCubic,
+    Density$MilligramPerCentimeterCubic._minorName: milligramPerCentimeterCubic,
+    Density$MilligramPerMillimeterCubic._minorName: milligramPerMillimeterCubic,
+    Density$ExagramPerLiter._minorName: exagramPerLiter,
+    Density$PetagramPerLiter._minorName: petagramPerLiter,
+    Density$TeragramPerLiter._minorName: teragramPerLiter,
+    Density$GigagramPerLiter._minorName: gigagramPerLiter,
+    Density$MegagramPerLiter._minorName: megagramPerLiter,
+    Density$KilogramPerLiter._minorName: kilogramPerLiter,
+    Density$HectogramPerLiter._minorName: hectogramPerLiter,
+    Density$DekagramPerLiter._minorName: dekagramPerLiter,
+    Density$GramPerLiter._minorName: gramPerLiter,
+    Density$DecigramPerLiter._minorName: decigramPerLiter,
+    Density$CentigramPerLiter._minorName: centigramPerLiter,
+    Density$MilligramPerLiter._minorName: milligramPerLiter,
+    Density$MicrogramPerLiter._minorName: microgramPerLiter,
+    Density$NanogramPerLiter._minorName: nanogramPerLiter,
+    Density$PicogramPerLiter._minorName: picogramPerLiter,
+    Density$FemtogramPerLiter._minorName: femtogramPerLiter,
+    Density$AttogramPerLiter._minorName: attogramPerLiter,
+    Density$PoundPerInchCubic._minorName: poundPerInchCubic,
+    Density$PoundPerFootCubic._minorName: poundPerFootCubic,
+    Density$PoundPerGallon._minorName: poundPerGallon,
+    Density$OuncePerInchCubic._minorName: ouncePerInchCubic,
+    Density$OuncePerFootCubic._minorName: ouncePerFootCubic,
+    Density$OuncePerGallon._minorName: ouncePerGallon,
+    Density$TonPerYardCubic._minorName: tonPerYardCubic,
+    Density$PsiPer1000Feet._minorName: psiPer1000Feet,
+  });
 }
 
 /// Unit of [Density]
@@ -2481,42 +2520,3 @@ final class Density$PsiPer1000Feet extends Density {
         },
       };
 }
-
-const densityUnits = EnumValues({
-  Density$KilogramPerMeterCubic._minorName: Density.kilogramPerMeterCubic,
-  Density$KilogramPerCentimeterCubic._minorName:
-      Density.kilogramPerCentimeterCubic,
-  Density$GramPerMeterCubic._minorName: Density.gramPerMeterCubic,
-  Density$GramPerCentimeterCubic._minorName: Density.gramPerCentimeterCubic,
-  Density$GramPerMillimeterCubic._minorName: Density.gramPerMillimeterCubic,
-  Density$MilligramPerMeterCubic._minorName: Density.milligramPerMeterCubic,
-  Density$MilligramPerCentimeterCubic._minorName:
-      Density.milligramPerCentimeterCubic,
-  Density$MilligramPerMillimeterCubic._minorName:
-      Density.milligramPerMillimeterCubic,
-  Density$ExagramPerLiter._minorName: Density.exagramPerLiter,
-  Density$PetagramPerLiter._minorName: Density.petagramPerLiter,
-  Density$TeragramPerLiter._minorName: Density.teragramPerLiter,
-  Density$GigagramPerLiter._minorName: Density.gigagramPerLiter,
-  Density$MegagramPerLiter._minorName: Density.megagramPerLiter,
-  Density$KilogramPerLiter._minorName: Density.kilogramPerLiter,
-  Density$HectogramPerLiter._minorName: Density.hectogramPerLiter,
-  Density$DekagramPerLiter._minorName: Density.dekagramPerLiter,
-  Density$GramPerLiter._minorName: Density.gramPerLiter,
-  Density$DecigramPerLiter._minorName: Density.decigramPerLiter,
-  Density$CentigramPerLiter._minorName: Density.centigramPerLiter,
-  Density$MilligramPerLiter._minorName: Density.milligramPerLiter,
-  Density$MicrogramPerLiter._minorName: Density.microgramPerLiter,
-  Density$NanogramPerLiter._minorName: Density.nanogramPerLiter,
-  Density$PicogramPerLiter._minorName: Density.picogramPerLiter,
-  Density$FemtogramPerLiter._minorName: Density.femtogramPerLiter,
-  Density$AttogramPerLiter._minorName: Density.attogramPerLiter,
-  Density$PoundPerInchCubic._minorName: Density.poundPerInchCubic,
-  Density$PoundPerFootCubic._minorName: Density.poundPerFootCubic,
-  Density$PoundPerGallon._minorName: Density.poundPerGallon,
-  Density$OuncePerInchCubic._minorName: Density.ouncePerInchCubic,
-  Density$OuncePerFootCubic._minorName: Density.ouncePerFootCubic,
-  Density$OuncePerGallon._minorName: Density.ouncePerGallon,
-  Density$TonPerYardCubic._minorName: Density.tonPerYardCubic,
-  Density$PsiPer1000Feet._minorName: Density.psiPer1000Feet,
-});

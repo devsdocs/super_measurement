@@ -21,9 +21,9 @@ sealed class Area extends Unit<Area> {
   factory Area.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        areaUnits,
+        valuesAsMap,
       )
-          ? areaUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -280,6 +280,9 @@ sealed class Area extends Unit<Area> {
   @override
   List<Area> get units => values;
 
+  @override
+  EnumValues<Area> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilometerSquare,
     hectometerSquare,
@@ -315,6 +318,42 @@ sealed class Area extends Unit<Area> {
     circularMil,
     tahulla,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Area$KilometerSquare._minorName: kilometerSquare,
+    Area$HectometerSquare._minorName: hectometerSquare,
+    Area$DekameterSquare._minorName: dekameterSquare,
+    Area$MeterSquare._minorName: meterSquare,
+    Area$DecimeterSquare._minorName: decimeterSquare,
+    Area$CentimeterSquare._minorName: centimeterSquare,
+    Area$MillimeterSquare._minorName: millimeterSquare,
+    Area$MicrometerSquare._minorName: micrometerSquare,
+    Area$NanometerSquare._minorName: nanometerSquare,
+    Area$Hectare._minorName: hectare,
+    Area$Are._minorName: are,
+    Area$Barn._minorName: barn,
+    Area$MileSquare._minorName: mileSquare,
+    Area$YardSquare._minorName: yardSquare,
+    Area$FootSquare._minorName: footSquare,
+    Area$InchSquare._minorName: inchSquare,
+    Area$Township._minorName: township,
+    Area$Section._minorName: section,
+    Area$Acre._minorName: acre,
+    Area$Rood._minorName: rood,
+    Area$ChainSquare._minorName: chainSquare,
+    Area$RodSquare._minorName: rodSquare,
+    Area$PerchSquare._minorName: perchSquare,
+    Area$PoleSquare._minorName: poleSquare,
+    Area$Arpent._minorName: arpent,
+    Area$Cuerda._minorName: cuerda,
+    Area$Plaza._minorName: plaza,
+    Area$VarasCastellanasCuad._minorName: varasCastellanasCuad,
+    Area$VarasConuquerasCuad._minorName: varasConuquerasCuad,
+    Area$Strema._minorName: strema,
+    Area$CircularInch._minorName: circularInch,
+    Area$CircularMil._minorName: circularMil,
+    Area$Tahulla._minorName: tahulla,
+  });
 }
 
 /// Unit of [Area]
@@ -2461,39 +2500,3 @@ final class Area$Tahulla extends Area {
         },
       };
 }
-
-const areaUnits = EnumValues({
-  Area$KilometerSquare._minorName: Area.kilometerSquare,
-  Area$HectometerSquare._minorName: Area.hectometerSquare,
-  Area$DekameterSquare._minorName: Area.dekameterSquare,
-  Area$MeterSquare._minorName: Area.meterSquare,
-  Area$DecimeterSquare._minorName: Area.decimeterSquare,
-  Area$CentimeterSquare._minorName: Area.centimeterSquare,
-  Area$MillimeterSquare._minorName: Area.millimeterSquare,
-  Area$MicrometerSquare._minorName: Area.micrometerSquare,
-  Area$NanometerSquare._minorName: Area.nanometerSquare,
-  Area$Hectare._minorName: Area.hectare,
-  Area$Are._minorName: Area.are,
-  Area$Barn._minorName: Area.barn,
-  Area$MileSquare._minorName: Area.mileSquare,
-  Area$YardSquare._minorName: Area.yardSquare,
-  Area$FootSquare._minorName: Area.footSquare,
-  Area$InchSquare._minorName: Area.inchSquare,
-  Area$Township._minorName: Area.township,
-  Area$Section._minorName: Area.section,
-  Area$Acre._minorName: Area.acre,
-  Area$Rood._minorName: Area.rood,
-  Area$ChainSquare._minorName: Area.chainSquare,
-  Area$RodSquare._minorName: Area.rodSquare,
-  Area$PerchSquare._minorName: Area.perchSquare,
-  Area$PoleSquare._minorName: Area.poleSquare,
-  Area$Arpent._minorName: Area.arpent,
-  Area$Cuerda._minorName: Area.cuerda,
-  Area$Plaza._minorName: Area.plaza,
-  Area$VarasCastellanasCuad._minorName: Area.varasCastellanasCuad,
-  Area$VarasConuquerasCuad._minorName: Area.varasConuquerasCuad,
-  Area$Strema._minorName: Area.strema,
-  Area$CircularInch._minorName: Area.circularInch,
-  Area$CircularMil._minorName: Area.circularMil,
-  Area$Tahulla._minorName: Area.tahulla,
-});

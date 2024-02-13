@@ -20,9 +20,9 @@ sealed class Time extends Unit<Time> {
   factory Time.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        timeUnits,
+        valuesAsMap,
       )
-          ? timeUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -258,6 +258,9 @@ sealed class Time extends Unit<Time> {
   @override
   List<Time> get units => values;
 
+  @override
+  EnumValues<Time> get unitsAsMap => valuesAsMap;
+
   static const values = [
     millennium,
     century,
@@ -290,6 +293,39 @@ sealed class Time extends Unit<Time> {
     quindecennial,
     quinquennial,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Time$Millennium._minorName: millennium,
+    Time$Century._minorName: century,
+    Time$Decade._minorName: decade,
+    Time$Year._minorName: year,
+    Time$LeapYear._minorName: leapYear,
+    Time$MeanYear._minorName: meanYear,
+    Time$SiderealYear._minorName: siderealYear,
+    Time$TropicalYear._minorName: tropicalYear,
+    Time$Month._minorName: month,
+    Time$SynodicMonth._minorName: synodicMonth,
+    Time$Fortnight._minorName: fortnight,
+    Time$Week._minorName: week,
+    Time$Day._minorName: day,
+    Time$SiderealDay._minorName: siderealDay,
+    Time$Hour._minorName: hour,
+    Time$SiderealHour._minorName: siderealHour,
+    Time$Minute._minorName: minute,
+    Time$Second._minorName: second,
+    Time$Millisecond._minorName: millisecond,
+    Time$Microsecond._minorName: microsecond,
+    Time$Nanosecond._minorName: nanosecond,
+    Time$Picosecond._minorName: picosecond,
+    Time$Femtosecond._minorName: femtosecond,
+    Time$Attosecond._minorName: attosecond,
+    Time$Shake._minorName: shake,
+    Time$Septennial._minorName: septennial,
+    Time$Octennial._minorName: octennial,
+    Time$Novennial._minorName: novennial,
+    Time$Quindecennial._minorName: quindecennial,
+    Time$Quinquennial._minorName: quinquennial,
+  });
 }
 
 /// Unit of [Time]
@@ -2241,36 +2277,3 @@ final class Time$Quinquennial extends Time {
         },
       };
 }
-
-const timeUnits = EnumValues({
-  Time$Millennium._minorName: Time.millennium,
-  Time$Century._minorName: Time.century,
-  Time$Decade._minorName: Time.decade,
-  Time$Year._minorName: Time.year,
-  Time$LeapYear._minorName: Time.leapYear,
-  Time$MeanYear._minorName: Time.meanYear,
-  Time$SiderealYear._minorName: Time.siderealYear,
-  Time$TropicalYear._minorName: Time.tropicalYear,
-  Time$Month._minorName: Time.month,
-  Time$SynodicMonth._minorName: Time.synodicMonth,
-  Time$Fortnight._minorName: Time.fortnight,
-  Time$Week._minorName: Time.week,
-  Time$Day._minorName: Time.day,
-  Time$SiderealDay._minorName: Time.siderealDay,
-  Time$Hour._minorName: Time.hour,
-  Time$SiderealHour._minorName: Time.siderealHour,
-  Time$Minute._minorName: Time.minute,
-  Time$Second._minorName: Time.second,
-  Time$Millisecond._minorName: Time.millisecond,
-  Time$Microsecond._minorName: Time.microsecond,
-  Time$Nanosecond._minorName: Time.nanosecond,
-  Time$Picosecond._minorName: Time.picosecond,
-  Time$Femtosecond._minorName: Time.femtosecond,
-  Time$Attosecond._minorName: Time.attosecond,
-  Time$Shake._minorName: Time.shake,
-  Time$Septennial._minorName: Time.septennial,
-  Time$Octennial._minorName: Time.octennial,
-  Time$Novennial._minorName: Time.novennial,
-  Time$Quindecennial._minorName: Time.quindecennial,
-  Time$Quinquennial._minorName: Time.quinquennial,
-});

@@ -15,10 +15,9 @@ sealed class Typography extends Unit<Typography> {
   factory Typography.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        typographyUnits,
+        valuesAsMap,
       )
-          ? typographyUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -110,6 +109,9 @@ sealed class Typography extends Unit<Typography> {
   @override
   List<Typography> get units => values;
 
+  @override
+  EnumValues<Typography> get unitsAsMap => valuesAsMap;
+
   static const values = [
     postScriptPointDTP,
     printersPointAmerican,
@@ -121,6 +123,18 @@ sealed class Typography extends Unit<Typography> {
     millimeter,
     centimeter,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Typography$PostScriptPointDTP._minorName: postScriptPointDTP,
+    Typography$PrintersPointAmerican._minorName: printersPointAmerican,
+    Typography$DidotsPoint._minorName: didotsPoint,
+    Typography$PicaPostScriptDTPComputer._minorName: picaPostScriptDTPComputer,
+    Typography$PicaPrinters._minorName: picaPrinters,
+    Typography$Ciceros._minorName: ciceros,
+    Typography$Inch._minorName: inch,
+    Typography$Millimeter._minorName: millimeter,
+    Typography$Centimeter._minorName: centimeter,
+  });
 }
 
 /// Unit of [Typography]
@@ -710,16 +724,3 @@ final class Typography$Centimeter extends Typography {
         },
       };
 }
-
-const typographyUnits = EnumValues({
-  Typography$PostScriptPointDTP._minorName: Typography.postScriptPointDTP,
-  Typography$PrintersPointAmerican._minorName: Typography.printersPointAmerican,
-  Typography$DidotsPoint._minorName: Typography.didotsPoint,
-  Typography$PicaPostScriptDTPComputer._minorName:
-      Typography.picaPostScriptDTPComputer,
-  Typography$PicaPrinters._minorName: Typography.picaPrinters,
-  Typography$Ciceros._minorName: Typography.ciceros,
-  Typography$Inch._minorName: Typography.inch,
-  Typography$Millimeter._minorName: Typography.millimeter,
-  Typography$Centimeter._minorName: Typography.centimeter,
-});

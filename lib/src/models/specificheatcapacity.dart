@@ -23,10 +23,9 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
       _checkJson(
         _majorName,
         json,
-        specificHeatCapacityUnits,
+        valuesAsMap,
       )
-          ? specificHeatCapacityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -146,6 +145,9 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
   @override
   List<SpecificHeatCapacity> get units => values;
 
+  @override
+  EnumValues<SpecificHeatCapacity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilojoulePerKilogramK,
     kilojoulePerKilogramDegreeC,
@@ -159,6 +161,25 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
     bTUPerPoundDegreeR,
     cHUPerPoundDegreeC,
   ];
+
+  static const valuesAsMap = EnumValues({
+    SpecificHeatCapacity$KilojoulePerKilogramK._minorName:
+        kilojoulePerKilogramK,
+    SpecificHeatCapacity$KilojoulePerKilogramDegreeC._minorName:
+        kilojoulePerKilogramDegreeC,
+    SpecificHeatCapacity$JoulePerKilogramK._minorName: joulePerKilogramK,
+    SpecificHeatCapacity$JoulePerKilogramDegreeC._minorName:
+        joulePerKilogramDegreeC,
+    SpecificHeatCapacity$JoulePerGramDegreeC._minorName: joulePerGramDegreeC,
+    SpecificHeatCapacity$KilocaloriePerKilogramDegreeC._minorName:
+        kilocaloriePerKilogramDegreeC,
+    SpecificHeatCapacity$CaloriePerGramDegreeC._minorName:
+        caloriePerGramDegreeC,
+    SpecificHeatCapacity$BTUPerPoundDegreeC._minorName: bTUPerPoundDegreeC,
+    SpecificHeatCapacity$BTUPerPoundDegreeF._minorName: bTUPerPoundDegreeF,
+    SpecificHeatCapacity$BTUPerPoundDegreeR._minorName: bTUPerPoundDegreeR,
+    SpecificHeatCapacity$CHUPerPoundDegreeC._minorName: cHUPerPoundDegreeC,
+  });
 }
 
 /// Unit of [SpecificHeatCapacity]
@@ -897,28 +918,3 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
         },
       };
 }
-
-const specificHeatCapacityUnits = EnumValues({
-  SpecificHeatCapacity$KilojoulePerKilogramK._minorName:
-      SpecificHeatCapacity.kilojoulePerKilogramK,
-  SpecificHeatCapacity$KilojoulePerKilogramDegreeC._minorName:
-      SpecificHeatCapacity.kilojoulePerKilogramDegreeC,
-  SpecificHeatCapacity$JoulePerKilogramK._minorName:
-      SpecificHeatCapacity.joulePerKilogramK,
-  SpecificHeatCapacity$JoulePerKilogramDegreeC._minorName:
-      SpecificHeatCapacity.joulePerKilogramDegreeC,
-  SpecificHeatCapacity$JoulePerGramDegreeC._minorName:
-      SpecificHeatCapacity.joulePerGramDegreeC,
-  SpecificHeatCapacity$KilocaloriePerKilogramDegreeC._minorName:
-      SpecificHeatCapacity.kilocaloriePerKilogramDegreeC,
-  SpecificHeatCapacity$CaloriePerGramDegreeC._minorName:
-      SpecificHeatCapacity.caloriePerGramDegreeC,
-  SpecificHeatCapacity$BTUPerPoundDegreeC._minorName:
-      SpecificHeatCapacity.bTUPerPoundDegreeC,
-  SpecificHeatCapacity$BTUPerPoundDegreeF._minorName:
-      SpecificHeatCapacity.bTUPerPoundDegreeF,
-  SpecificHeatCapacity$BTUPerPoundDegreeR._minorName:
-      SpecificHeatCapacity.bTUPerPoundDegreeR,
-  SpecificHeatCapacity$CHUPerPoundDegreeC._minorName:
-      SpecificHeatCapacity.cHUPerPoundDegreeC,
-});

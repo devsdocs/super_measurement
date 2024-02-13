@@ -14,10 +14,9 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
   factory RadiationExposure.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        radiationExposureUnits,
+        valuesAsMap,
       )
-          ? radiationExposureUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -77,12 +76,24 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
   @override
   List<RadiationExposure> get units => values;
 
+  @override
+  EnumValues<RadiationExposure> get unitsAsMap => valuesAsMap;
+
   static const values = [
     roentgen,
     coulombPerKilogram,
     millicoulombPerKilogram,
     microcoulombPerKilogram,
   ];
+
+  static const valuesAsMap = EnumValues({
+    RadiationExposure$Roentgen._minorName: roentgen,
+    RadiationExposure$CoulombPerKilogram._minorName: coulombPerKilogram,
+    RadiationExposure$MillicoulombPerKilogram._minorName:
+        millicoulombPerKilogram,
+    RadiationExposure$MicrocoulombPerKilogram._minorName:
+        microcoulombPerKilogram,
+  });
 }
 
 /// Unit of [RadiationExposure]
@@ -349,13 +360,3 @@ final class RadiationExposure$MicrocoulombPerKilogram
         },
       };
 }
-
-const radiationExposureUnits = EnumValues({
-  RadiationExposure$Roentgen._minorName: RadiationExposure.roentgen,
-  RadiationExposure$CoulombPerKilogram._minorName:
-      RadiationExposure.coulombPerKilogram,
-  RadiationExposure$MillicoulombPerKilogram._minorName:
-      RadiationExposure.millicoulombPerKilogram,
-  RadiationExposure$MicrocoulombPerKilogram._minorName:
-      RadiationExposure.microcoulombPerKilogram,
-});

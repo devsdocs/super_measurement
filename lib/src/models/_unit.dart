@@ -11,6 +11,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   List<T> get units;
 
+  EnumValues<T> get unitsAsMap;
+
   num get ratio;
 
   num get valueShift;

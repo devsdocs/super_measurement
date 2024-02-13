@@ -20,9 +20,9 @@ sealed class Force extends Unit<Force> {
   factory Force.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        forceUnits,
+        valuesAsMap,
       )
-          ? forceUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -230,6 +230,9 @@ sealed class Force extends Unit<Force> {
   @override
   List<Force> get units => values;
 
+  @override
+  EnumValues<Force> get unitsAsMap => valuesAsMap;
+
   static const values = [
     exanewton,
     petanewton,
@@ -258,6 +261,35 @@ sealed class Force extends Unit<Force> {
     ounceForce,
     poundal,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Force$Exanewton._minorName: exanewton,
+    Force$Petanewton._minorName: petanewton,
+    Force$Teranewton._minorName: teranewton,
+    Force$Giganewton._minorName: giganewton,
+    Force$Meganewton._minorName: meganewton,
+    Force$Kilonewton._minorName: kilonewton,
+    Force$Hectonewton._minorName: hectonewton,
+    Force$Dekanewton._minorName: dekanewton,
+    Force$Newton._minorName: newton,
+    Force$Decinewton._minorName: decinewton,
+    Force$Centinewton._minorName: centinewton,
+    Force$Millinewton._minorName: millinewton,
+    Force$Micronewton._minorName: micronewton,
+    Force$Nanonewton._minorName: nanonewton,
+    Force$Piconewton._minorName: piconewton,
+    Force$Femtonewton._minorName: femtonewton,
+    Force$Attonewton._minorName: attonewton,
+    Force$Dyne._minorName: dyne,
+    Force$JoulePerMeter._minorName: joulePerMeter,
+    Force$JoulePerCentimeter._minorName: joulePerCentimeter,
+    Force$KilogramForce._minorName: kilogramForce,
+    Force$GramForce._minorName: gramForce,
+    Force$KipForce._minorName: kipForce,
+    Force$PoundForce._minorName: poundForce,
+    Force$OunceForce._minorName: ounceForce,
+    Force$Poundal._minorName: poundal,
+  });
 }
 
 /// Unit of [Force]
@@ -1949,32 +1981,3 @@ final class Force$Poundal extends Force {
         },
       };
 }
-
-const forceUnits = EnumValues({
-  Force$Exanewton._minorName: Force.exanewton,
-  Force$Petanewton._minorName: Force.petanewton,
-  Force$Teranewton._minorName: Force.teranewton,
-  Force$Giganewton._minorName: Force.giganewton,
-  Force$Meganewton._minorName: Force.meganewton,
-  Force$Kilonewton._minorName: Force.kilonewton,
-  Force$Hectonewton._minorName: Force.hectonewton,
-  Force$Dekanewton._minorName: Force.dekanewton,
-  Force$Newton._minorName: Force.newton,
-  Force$Decinewton._minorName: Force.decinewton,
-  Force$Centinewton._minorName: Force.centinewton,
-  Force$Millinewton._minorName: Force.millinewton,
-  Force$Micronewton._minorName: Force.micronewton,
-  Force$Nanonewton._minorName: Force.nanonewton,
-  Force$Piconewton._minorName: Force.piconewton,
-  Force$Femtonewton._minorName: Force.femtonewton,
-  Force$Attonewton._minorName: Force.attonewton,
-  Force$Dyne._minorName: Force.dyne,
-  Force$JoulePerMeter._minorName: Force.joulePerMeter,
-  Force$JoulePerCentimeter._minorName: Force.joulePerCentimeter,
-  Force$KilogramForce._minorName: Force.kilogramForce,
-  Force$GramForce._minorName: Force.gramForce,
-  Force$KipForce._minorName: Force.kipForce,
-  Force$PoundForce._minorName: Force.poundForce,
-  Force$OunceForce._minorName: Force.ounceForce,
-  Force$Poundal._minorName: Force.poundal,
-});

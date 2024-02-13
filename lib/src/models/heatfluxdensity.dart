@@ -28,10 +28,9 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
   factory HeatFluxDensity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        heatFluxDensityUnits,
+        valuesAsMap,
       )
-          ? heatFluxDensityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -205,6 +204,9 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
   @override
   List<HeatFluxDensity> get units => values;
 
+  @override
+  EnumValues<HeatFluxDensity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kilowattPerMeterSquare,
     wattPerMeterSquare,
@@ -224,6 +226,35 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
     bTUPerMinuteFootSquare,
     cHUPerHourFootSquare,
   ];
+
+  static const valuesAsMap = EnumValues({
+    HeatFluxDensity$KilowattPerMeterSquare._minorName: kilowattPerMeterSquare,
+    HeatFluxDensity$WattPerMeterSquare._minorName: wattPerMeterSquare,
+    HeatFluxDensity$WattPerCentimeterSquare._minorName: wattPerCentimeterSquare,
+    HeatFluxDensity$WattPerInchSquare._minorName: wattPerInchSquare,
+    HeatFluxDensity$JoulePerSecondMeterSquare._minorName:
+        joulePerSecondMeterSquare,
+    HeatFluxDensity$KilocaloriePerHourMeterSquare._minorName:
+        kilocaloriePerHourMeterSquare,
+    HeatFluxDensity$KilocaloriePerHourFootSquare._minorName:
+        kilocaloriePerHourFootSquare,
+    HeatFluxDensity$CaloriePerSecondCentimeterSquare._minorName:
+        caloriePerSecondCentimeterSquare,
+    HeatFluxDensity$GramCaloriePerHourCentimeterSquare._minorName:
+        gramCaloriePerHourCentimeterSquare,
+    HeatFluxDensity$DynePerHourCentimeter._minorName: dynePerHourCentimeter,
+    HeatFluxDensity$ErgPerHourMillimeterSquare._minorName:
+        ergPerHourMillimeterSquare,
+    HeatFluxDensity$FootPoundPerMinuteFootSquare._minorName:
+        footPoundPerMinuteFootSquare,
+    HeatFluxDensity$HorsepowerMetricPerFootSquare._minorName:
+        horsepowerMetricPerFootSquare,
+    HeatFluxDensity$HorsepowerUKPerFootSquare._minorName:
+        horsepowerUKPerFootSquare,
+    HeatFluxDensity$BTUPerHourFootSquare._minorName: bTUPerHourFootSquare,
+    HeatFluxDensity$BTUPerMinuteFootSquare._minorName: bTUPerMinuteFootSquare,
+    HeatFluxDensity$CHUPerHourFootSquare._minorName: cHUPerHourFootSquare,
+  });
 }
 
 /// Unit of [HeatFluxDensity]
@@ -1353,40 +1384,3 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
         },
       };
 }
-
-const heatFluxDensityUnits = EnumValues({
-  HeatFluxDensity$KilowattPerMeterSquare._minorName:
-      HeatFluxDensity.kilowattPerMeterSquare,
-  HeatFluxDensity$WattPerMeterSquare._minorName:
-      HeatFluxDensity.wattPerMeterSquare,
-  HeatFluxDensity$WattPerCentimeterSquare._minorName:
-      HeatFluxDensity.wattPerCentimeterSquare,
-  HeatFluxDensity$WattPerInchSquare._minorName:
-      HeatFluxDensity.wattPerInchSquare,
-  HeatFluxDensity$JoulePerSecondMeterSquare._minorName:
-      HeatFluxDensity.joulePerSecondMeterSquare,
-  HeatFluxDensity$KilocaloriePerHourMeterSquare._minorName:
-      HeatFluxDensity.kilocaloriePerHourMeterSquare,
-  HeatFluxDensity$KilocaloriePerHourFootSquare._minorName:
-      HeatFluxDensity.kilocaloriePerHourFootSquare,
-  HeatFluxDensity$CaloriePerSecondCentimeterSquare._minorName:
-      HeatFluxDensity.caloriePerSecondCentimeterSquare,
-  HeatFluxDensity$GramCaloriePerHourCentimeterSquare._minorName:
-      HeatFluxDensity.gramCaloriePerHourCentimeterSquare,
-  HeatFluxDensity$DynePerHourCentimeter._minorName:
-      HeatFluxDensity.dynePerHourCentimeter,
-  HeatFluxDensity$ErgPerHourMillimeterSquare._minorName:
-      HeatFluxDensity.ergPerHourMillimeterSquare,
-  HeatFluxDensity$FootPoundPerMinuteFootSquare._minorName:
-      HeatFluxDensity.footPoundPerMinuteFootSquare,
-  HeatFluxDensity$HorsepowerMetricPerFootSquare._minorName:
-      HeatFluxDensity.horsepowerMetricPerFootSquare,
-  HeatFluxDensity$HorsepowerUKPerFootSquare._minorName:
-      HeatFluxDensity.horsepowerUKPerFootSquare,
-  HeatFluxDensity$BTUPerHourFootSquare._minorName:
-      HeatFluxDensity.bTUPerHourFootSquare,
-  HeatFluxDensity$BTUPerMinuteFootSquare._minorName:
-      HeatFluxDensity.bTUPerMinuteFootSquare,
-  HeatFluxDensity$CHUPerHourFootSquare._minorName:
-      HeatFluxDensity.cHUPerHourFootSquare,
-});

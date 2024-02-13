@@ -15,10 +15,9 @@ sealed class Conductance extends Unit<Conductance> {
   factory Conductance.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        conductanceUnits,
+        valuesAsMap,
       )
-          ? conductanceUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -114,6 +113,9 @@ sealed class Conductance extends Unit<Conductance> {
   @override
   List<Conductance> get units => values;
 
+  @override
+  EnumValues<Conductance> get unitsAsMap => valuesAsMap;
+
   static const values = [
     mho,
     gemmho,
@@ -126,6 +128,19 @@ sealed class Conductance extends Unit<Conductance> {
     abmho,
     statmho,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Conductance$Mho._minorName: mho,
+    Conductance$Gemmho._minorName: gemmho,
+    Conductance$Micromho._minorName: micromho,
+    Conductance$Megasiemens._minorName: megasiemens,
+    Conductance$Kilosiemens._minorName: kilosiemens,
+    Conductance$Siemens._minorName: siemens,
+    Conductance$Millisiemens._minorName: millisiemens,
+    Conductance$Microsiemens._minorName: microsiemens,
+    Conductance$Abmho._minorName: abmho,
+    Conductance$Statmho._minorName: statmho,
+  });
 }
 
 /// Unit of [Conductance]
@@ -777,16 +792,3 @@ final class Conductance$Statmho extends Conductance {
         },
       };
 }
-
-const conductanceUnits = EnumValues({
-  Conductance$Mho._minorName: Conductance.mho,
-  Conductance$Gemmho._minorName: Conductance.gemmho,
-  Conductance$Micromho._minorName: Conductance.micromho,
-  Conductance$Megasiemens._minorName: Conductance.megasiemens,
-  Conductance$Kilosiemens._minorName: Conductance.kilosiemens,
-  Conductance$Siemens._minorName: Conductance.siemens,
-  Conductance$Millisiemens._minorName: Conductance.millisiemens,
-  Conductance$Microsiemens._minorName: Conductance.microsiemens,
-  Conductance$Abmho._minorName: Conductance.abmho,
-  Conductance$Statmho._minorName: Conductance.statmho,
-});

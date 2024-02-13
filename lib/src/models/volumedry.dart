@@ -16,10 +16,9 @@ sealed class VolumeDry extends Unit<VolumeDry> {
   factory VolumeDry.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        volumeDryUnits,
+        valuesAsMap,
       )
-          ? volumeDryUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -136,6 +135,9 @@ sealed class VolumeDry extends Unit<VolumeDry> {
   @override
   List<VolumeDry> get units => values;
 
+  @override
+  EnumValues<VolumeDry> get unitsAsMap => valuesAsMap;
+
   static const values = [
     barrel,
     liter,
@@ -151,6 +153,22 @@ sealed class VolumeDry extends Unit<VolumeDry> {
     cabBiblical,
     logBiblical,
   ];
+
+  static const valuesAsMap = EnumValues({
+    VolumeDry$Barrel._minorName: barrel,
+    VolumeDry$Liter._minorName: liter,
+    VolumeDry$Pint._minorName: pint,
+    VolumeDry$Quart._minorName: quart,
+    VolumeDry$Peck._minorName: peck,
+    VolumeDry$Bushel._minorName: bushel,
+    VolumeDry$CorBiblical._minorName: corBiblical,
+    VolumeDry$HomerBiblical._minorName: homerBiblical,
+    VolumeDry$EphahBiblical._minorName: ephahBiblical,
+    VolumeDry$SeahBiblical._minorName: seahBiblical,
+    VolumeDry$OmerBiblical._minorName: omerBiblical,
+    VolumeDry$CabBiblical._minorName: cabBiblical,
+    VolumeDry$LogBiblical._minorName: logBiblical,
+  });
 }
 
 /// Unit of [VolumeDry]
@@ -997,19 +1015,3 @@ final class VolumeDry$LogBiblical extends VolumeDry {
         },
       };
 }
-
-const volumeDryUnits = EnumValues({
-  VolumeDry$Barrel._minorName: VolumeDry.barrel,
-  VolumeDry$Liter._minorName: VolumeDry.liter,
-  VolumeDry$Pint._minorName: VolumeDry.pint,
-  VolumeDry$Quart._minorName: VolumeDry.quart,
-  VolumeDry$Peck._minorName: VolumeDry.peck,
-  VolumeDry$Bushel._minorName: VolumeDry.bushel,
-  VolumeDry$CorBiblical._minorName: VolumeDry.corBiblical,
-  VolumeDry$HomerBiblical._minorName: VolumeDry.homerBiblical,
-  VolumeDry$EphahBiblical._minorName: VolumeDry.ephahBiblical,
-  VolumeDry$SeahBiblical._minorName: VolumeDry.seahBiblical,
-  VolumeDry$OmerBiblical._minorName: VolumeDry.omerBiblical,
-  VolumeDry$CabBiblical._minorName: VolumeDry.cabBiblical,
-  VolumeDry$LogBiblical._minorName: VolumeDry.logBiblical,
-});

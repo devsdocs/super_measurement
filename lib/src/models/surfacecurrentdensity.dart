@@ -18,10 +18,9 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
       _checkJson(
         _majorName,
         json,
-        surfaceCurrentDensityUnits,
+        valuesAsMap,
       )
-          ? surfaceCurrentDensityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -101,6 +100,9 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
   @override
   List<SurfaceCurrentDensity> get units => values;
 
+  @override
+  EnumValues<SurfaceCurrentDensity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     amperePerMeterSquare,
     amperePerCentimeterSquare,
@@ -109,6 +111,17 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
     amperePerCicularMil,
     abamperePerCentimeterSquare,
   ];
+
+  static const valuesAsMap = EnumValues({
+    SurfaceCurrentDensity$AmperePerMeterSquare._minorName: amperePerMeterSquare,
+    SurfaceCurrentDensity$AmperePerCentimeterSquare._minorName:
+        amperePerCentimeterSquare,
+    SurfaceCurrentDensity$AmperePerInchSquare._minorName: amperePerInchSquare,
+    SurfaceCurrentDensity$AmperePerMilSquare._minorName: amperePerMilSquare,
+    SurfaceCurrentDensity$AmperePerCicularMil._minorName: amperePerCicularMil,
+    SurfaceCurrentDensity$AbamperePerCentimeterSquare._minorName:
+        abamperePerCentimeterSquare,
+  });
 }
 
 /// Unit of [SurfaceCurrentDensity]
@@ -512,18 +525,3 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
         },
       };
 }
-
-const surfaceCurrentDensityUnits = EnumValues({
-  SurfaceCurrentDensity$AmperePerMeterSquare._minorName:
-      SurfaceCurrentDensity.amperePerMeterSquare,
-  SurfaceCurrentDensity$AmperePerCentimeterSquare._minorName:
-      SurfaceCurrentDensity.amperePerCentimeterSquare,
-  SurfaceCurrentDensity$AmperePerInchSquare._minorName:
-      SurfaceCurrentDensity.amperePerInchSquare,
-  SurfaceCurrentDensity$AmperePerMilSquare._minorName:
-      SurfaceCurrentDensity.amperePerMilSquare,
-  SurfaceCurrentDensity$AmperePerCicularMil._minorName:
-      SurfaceCurrentDensity.amperePerCicularMil,
-  SurfaceCurrentDensity$AbamperePerCentimeterSquare._minorName:
-      SurfaceCurrentDensity.abamperePerCentimeterSquare,
-});

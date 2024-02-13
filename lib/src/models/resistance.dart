@@ -13,10 +13,9 @@ sealed class Resistance extends Unit<Resistance> {
   factory Resistance.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        resistanceUnits,
+        valuesAsMap,
       )
-          ? resistanceUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -84,6 +83,9 @@ sealed class Resistance extends Unit<Resistance> {
   @override
   List<Resistance> get units => values;
 
+  @override
+  EnumValues<Resistance> get unitsAsMap => valuesAsMap;
+
   static const values = [
     megohm,
     ohm,
@@ -92,6 +94,15 @@ sealed class Resistance extends Unit<Resistance> {
     abohm,
     statohm,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Resistance$Megohm._minorName: megohm,
+    Resistance$Ohm._minorName: ohm,
+    Resistance$OhmInternational._minorName: ohmInternational,
+    Resistance$Microhm._minorName: microhm,
+    Resistance$Abohm._minorName: abohm,
+    Resistance$Statohm._minorName: statohm,
+  });
 }
 
 /// Unit of [Resistance]
@@ -483,12 +494,3 @@ final class Resistance$Statohm extends Resistance {
         },
       };
 }
-
-const resistanceUnits = EnumValues({
-  Resistance$Megohm._minorName: Resistance.megohm,
-  Resistance$Ohm._minorName: Resistance.ohm,
-  Resistance$OhmInternational._minorName: Resistance.ohmInternational,
-  Resistance$Microhm._minorName: Resistance.microhm,
-  Resistance$Abohm._minorName: Resistance.abohm,
-  Resistance$Statohm._minorName: Resistance.statohm,
-});

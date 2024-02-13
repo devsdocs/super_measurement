@@ -15,10 +15,9 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
       _checkJson(
         _majorName,
         json,
-        digitalImageResolutionUnits,
+        valuesAsMap,
       )
-          ? digitalImageResolutionUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -77,12 +76,22 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
   @override
   List<DigitalImageResolution> get units => values;
 
+  @override
+  EnumValues<DigitalImageResolution> get unitsAsMap => valuesAsMap;
+
   static const values = [
     dotPerInch,
     dotPerMeter,
     dotPerMillimeter,
     pixelPerInch,
   ];
+
+  static const valuesAsMap = EnumValues({
+    DigitalImageResolution$DotPerInch._minorName: dotPerInch,
+    DigitalImageResolution$DotPerMeter._minorName: dotPerMeter,
+    DigitalImageResolution$DotPerMillimeter._minorName: dotPerMillimeter,
+    DigitalImageResolution$PixelPerInch._minorName: pixelPerInch,
+  });
 }
 
 /// Unit of [DigitalImageResolution]
@@ -349,14 +358,3 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
         },
       };
 }
-
-const digitalImageResolutionUnits = EnumValues({
-  DigitalImageResolution$DotPerInch._minorName:
-      DigitalImageResolution.dotPerInch,
-  DigitalImageResolution$DotPerMeter._minorName:
-      DigitalImageResolution.dotPerMeter,
-  DigitalImageResolution$DotPerMillimeter._minorName:
-      DigitalImageResolution.dotPerMillimeter,
-  DigitalImageResolution$PixelPerInch._minorName:
-      DigitalImageResolution.pixelPerInch,
-});

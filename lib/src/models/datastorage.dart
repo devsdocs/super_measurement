@@ -30,10 +30,9 @@ sealed class DataStorage extends Unit<DataStorage> {
   factory DataStorage.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        dataStorageUnits,
+        valuesAsMap,
       )
-          ? dataStorageUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -361,6 +360,9 @@ sealed class DataStorage extends Unit<DataStorage> {
   @override
   List<DataStorage> get units => values;
 
+  @override
+  EnumValues<DataStorage> get unitsAsMap => valuesAsMap;
+
   static const values = [
     bit,
     nibble,
@@ -405,6 +407,51 @@ sealed class DataStorage extends Unit<DataStorage> {
     bluRay1Layer,
     bluRay2Layer,
   ];
+
+  static const valuesAsMap = EnumValues({
+    DataStorage$Bit._minorName: bit,
+    DataStorage$Nibble._minorName: nibble,
+    DataStorage$Byte._minorName: byte,
+    DataStorage$Word._minorName: word,
+    DataStorage$DoubleWord._minorName: doubleWord,
+    DataStorage$QuadrupleWord._minorName: quadrupleWord,
+    DataStorage$Block._minorName: block,
+    DataStorage$Kilobit._minorName: kilobit,
+    DataStorage$Kilobyte._minorName: kilobyte,
+    DataStorage$Kilobyte10PowerOf3Bytes._minorName: kilobyte10PowerOf3Bytes,
+    DataStorage$Megabit._minorName: megabit,
+    DataStorage$Megabyte._minorName: megabyte,
+    DataStorage$Megabyte10PowerOf6Bytes._minorName: megabyte10PowerOf6Bytes,
+    DataStorage$Gigabit._minorName: gigabit,
+    DataStorage$Gigabyte._minorName: gigabyte,
+    DataStorage$Gigabyte10PowerOf9Bytes._minorName: gigabyte10PowerOf9Bytes,
+    DataStorage$Terabit._minorName: terabit,
+    DataStorage$Terabyte._minorName: terabyte,
+    DataStorage$Terabyte10PowerOf12Bytes._minorName: terabyte10PowerOf12Bytes,
+    DataStorage$Petabit._minorName: petabit,
+    DataStorage$Petabyte._minorName: petabyte,
+    DataStorage$Petabyte10PowerOf15Bytes._minorName: petabyte10PowerOf15Bytes,
+    DataStorage$Exabit._minorName: exabit,
+    DataStorage$Exabyte._minorName: exabyte,
+    DataStorage$Exabyte10PowerOf18Bytes._minorName: exabyte10PowerOf18Bytes,
+    DataStorage$FloppyDisk35DD._minorName: floppyDisk35DD,
+    DataStorage$FloppyDisk35HD._minorName: floppyDisk35HD,
+    DataStorage$FloppyDisk35ED._minorName: floppyDisk35ED,
+    DataStorage$FloppyDisk525DD._minorName: floppyDisk525DD,
+    DataStorage$FloppyDisk525HD._minorName: floppyDisk525HD,
+    DataStorage$Zip100._minorName: zip100,
+    DataStorage$Zip250._minorName: zip250,
+    DataStorage$Jaz1GB._minorName: jaz1GB,
+    DataStorage$Jaz2GB._minorName: jaz2GB,
+    DataStorage$CD74Minute._minorName: cD74Minute,
+    DataStorage$CD80Minute._minorName: cD80Minute,
+    DataStorage$DVD1Layer1Side._minorName: dVD1Layer1Side,
+    DataStorage$DVD2Layers1Side._minorName: dVD2Layers1Side,
+    DataStorage$DVD1Layer2Sides._minorName: dVD1Layer2Sides,
+    DataStorage$DVD2Layers2Sides._minorName: dVD2Layers2Sides,
+    DataStorage$BluRay1Layer._minorName: bluRay1Layer,
+    DataStorage$BluRay2Layer._minorName: bluRay2Layer,
+  });
 }
 
 /// Unit of [DataStorage]
@@ -3143,54 +3190,3 @@ final class DataStorage$BluRay2Layer extends DataStorage {
         },
       };
 }
-
-const dataStorageUnits = EnumValues({
-  DataStorage$Bit._minorName: DataStorage.bit,
-  DataStorage$Nibble._minorName: DataStorage.nibble,
-  DataStorage$Byte._minorName: DataStorage.byte,
-  DataStorage$Word._minorName: DataStorage.word,
-  DataStorage$DoubleWord._minorName: DataStorage.doubleWord,
-  DataStorage$QuadrupleWord._minorName: DataStorage.quadrupleWord,
-  DataStorage$Block._minorName: DataStorage.block,
-  DataStorage$Kilobit._minorName: DataStorage.kilobit,
-  DataStorage$Kilobyte._minorName: DataStorage.kilobyte,
-  DataStorage$Kilobyte10PowerOf3Bytes._minorName:
-      DataStorage.kilobyte10PowerOf3Bytes,
-  DataStorage$Megabit._minorName: DataStorage.megabit,
-  DataStorage$Megabyte._minorName: DataStorage.megabyte,
-  DataStorage$Megabyte10PowerOf6Bytes._minorName:
-      DataStorage.megabyte10PowerOf6Bytes,
-  DataStorage$Gigabit._minorName: DataStorage.gigabit,
-  DataStorage$Gigabyte._minorName: DataStorage.gigabyte,
-  DataStorage$Gigabyte10PowerOf9Bytes._minorName:
-      DataStorage.gigabyte10PowerOf9Bytes,
-  DataStorage$Terabit._minorName: DataStorage.terabit,
-  DataStorage$Terabyte._minorName: DataStorage.terabyte,
-  DataStorage$Terabyte10PowerOf12Bytes._minorName:
-      DataStorage.terabyte10PowerOf12Bytes,
-  DataStorage$Petabit._minorName: DataStorage.petabit,
-  DataStorage$Petabyte._minorName: DataStorage.petabyte,
-  DataStorage$Petabyte10PowerOf15Bytes._minorName:
-      DataStorage.petabyte10PowerOf15Bytes,
-  DataStorage$Exabit._minorName: DataStorage.exabit,
-  DataStorage$Exabyte._minorName: DataStorage.exabyte,
-  DataStorage$Exabyte10PowerOf18Bytes._minorName:
-      DataStorage.exabyte10PowerOf18Bytes,
-  DataStorage$FloppyDisk35DD._minorName: DataStorage.floppyDisk35DD,
-  DataStorage$FloppyDisk35HD._minorName: DataStorage.floppyDisk35HD,
-  DataStorage$FloppyDisk35ED._minorName: DataStorage.floppyDisk35ED,
-  DataStorage$FloppyDisk525DD._minorName: DataStorage.floppyDisk525DD,
-  DataStorage$FloppyDisk525HD._minorName: DataStorage.floppyDisk525HD,
-  DataStorage$Zip100._minorName: DataStorage.zip100,
-  DataStorage$Zip250._minorName: DataStorage.zip250,
-  DataStorage$Jaz1GB._minorName: DataStorage.jaz1GB,
-  DataStorage$Jaz2GB._minorName: DataStorage.jaz2GB,
-  DataStorage$CD74Minute._minorName: DataStorage.cD74Minute,
-  DataStorage$CD80Minute._minorName: DataStorage.cD80Minute,
-  DataStorage$DVD1Layer1Side._minorName: DataStorage.dVD1Layer1Side,
-  DataStorage$DVD2Layers1Side._minorName: DataStorage.dVD2Layers1Side,
-  DataStorage$DVD1Layer2Sides._minorName: DataStorage.dVD1Layer2Sides,
-  DataStorage$DVD2Layers2Sides._minorName: DataStorage.dVD2Layers2Sides,
-  DataStorage$BluRay1Layer._minorName: DataStorage.bluRay1Layer,
-  DataStorage$BluRay2Layer._minorName: DataStorage.bluRay2Layer,
-});

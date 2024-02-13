@@ -14,10 +14,9 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
   factory TemperatureInterval.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        temperatureIntervalUnits,
+        valuesAsMap,
       )
-          ? temperatureIntervalUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -79,6 +78,9 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
   @override
   List<TemperatureInterval> get units => values;
 
+  @override
+  EnumValues<TemperatureInterval> get unitsAsMap => valuesAsMap;
+
   static const values = [
     kelvin,
     celsius,
@@ -86,6 +88,14 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
     rankine,
     reaumur,
   ];
+
+  static const valuesAsMap = EnumValues({
+    TemperatureInterval$Kelvin._minorName: kelvin,
+    TemperatureInterval$Celsius._minorName: celsius,
+    TemperatureInterval$Fahrenheit._minorName: fahrenheit,
+    TemperatureInterval$Rankine._minorName: rankine,
+    TemperatureInterval$Reaumur._minorName: reaumur,
+  });
 }
 
 /// Unit of [TemperatureInterval]
@@ -413,11 +423,3 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
         },
       };
 }
-
-const temperatureIntervalUnits = EnumValues({
-  TemperatureInterval$Kelvin._minorName: TemperatureInterval.kelvin,
-  TemperatureInterval$Celsius._minorName: TemperatureInterval.celsius,
-  TemperatureInterval$Fahrenheit._minorName: TemperatureInterval.fahrenheit,
-  TemperatureInterval$Rankine._minorName: TemperatureInterval.rankine,
-  TemperatureInterval$Reaumur._minorName: TemperatureInterval.reaumur,
-});

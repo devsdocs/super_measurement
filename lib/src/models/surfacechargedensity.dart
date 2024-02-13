@@ -18,10 +18,9 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
       _checkJson(
         _majorName,
         json,
-        surfaceChargeDensityUnits,
+        valuesAsMap,
       )
-          ? surfaceChargeDensityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -102,6 +101,9 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
   @override
   List<SurfaceChargeDensity> get units => values;
 
+  @override
+  EnumValues<SurfaceChargeDensity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     coulombPerMeterSquare,
     coulombPerInchSquare,
@@ -110,6 +112,20 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
     abcoulombPerCentimeterSquare,
     abcoulombPerInchSquare,
   ];
+
+  static const valuesAsMap = EnumValues({
+    SurfaceChargeDensity$CoulombPerMeterSquare._minorName:
+        coulombPerMeterSquare,
+    SurfaceChargeDensity$CoulombPerInchSquare._minorName: coulombPerInchSquare,
+    SurfaceChargeDensity$CoulombPerCentimeterSquare._minorName:
+        coulombPerCentimeterSquare,
+    SurfaceChargeDensity$AbcoulombPerMeterSquare._minorName:
+        abcoulombPerMeterSquare,
+    SurfaceChargeDensity$AbcoulombPerCentimeterSquare._minorName:
+        abcoulombPerCentimeterSquare,
+    SurfaceChargeDensity$AbcoulombPerInchSquare._minorName:
+        abcoulombPerInchSquare,
+  });
 }
 
 /// Unit of [SurfaceChargeDensity]
@@ -513,18 +529,3 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
         },
       };
 }
-
-const surfaceChargeDensityUnits = EnumValues({
-  SurfaceChargeDensity$CoulombPerMeterSquare._minorName:
-      SurfaceChargeDensity.coulombPerMeterSquare,
-  SurfaceChargeDensity$CoulombPerInchSquare._minorName:
-      SurfaceChargeDensity.coulombPerInchSquare,
-  SurfaceChargeDensity$CoulombPerCentimeterSquare._minorName:
-      SurfaceChargeDensity.coulombPerCentimeterSquare,
-  SurfaceChargeDensity$AbcoulombPerMeterSquare._minorName:
-      SurfaceChargeDensity.abcoulombPerMeterSquare,
-  SurfaceChargeDensity$AbcoulombPerCentimeterSquare._minorName:
-      SurfaceChargeDensity.abcoulombPerCentimeterSquare,
-  SurfaceChargeDensity$AbcoulombPerInchSquare._minorName:
-      SurfaceChargeDensity.abcoulombPerInchSquare,
-});

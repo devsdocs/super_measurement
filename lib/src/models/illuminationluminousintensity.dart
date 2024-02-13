@@ -23,10 +23,9 @@ sealed class IlluminationLuminousIntensity
       _checkJson(
         _majorName,
         json,
-        illuminationLuminousIntensityUnits,
+        valuesAsMap,
       )
-          ? illuminationLuminousIntensityUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -138,6 +137,9 @@ sealed class IlluminationLuminousIntensity
   @override
   List<IlluminationLuminousIntensity> get units => values;
 
+  @override
+  EnumValues<IlluminationLuminousIntensity> get unitsAsMap => valuesAsMap;
+
   static const values = [
     candleInternational,
     candleGerman,
@@ -150,6 +152,22 @@ sealed class IlluminationLuminousIntensity
     lumenInternationalPerSteradian,
     pentaneCandle10CandlePower,
   ];
+
+  static const valuesAsMap = EnumValues({
+    IlluminationLuminousIntensity$CandleInternational._minorName:
+        candleInternational,
+    IlluminationLuminousIntensity$CandleGerman._minorName: candleGerman,
+    IlluminationLuminousIntensity$CandlePentane._minorName: candlePentane,
+    IlluminationLuminousIntensity$CandleUK._minorName: candleUK,
+    IlluminationLuminousIntensity$DecimalCandle._minorName: decimalCandle,
+    IlluminationLuminousIntensity$HefnerCandle._minorName: hefnerCandle,
+    IlluminationLuminousIntensity$CarcelUnit._minorName: carcelUnit,
+    IlluminationLuminousIntensity$BougieDecimal._minorName: bougieDecimal,
+    IlluminationLuminousIntensity$LumenInternationalPerSteradian._minorName:
+        lumenInternationalPerSteradian,
+    IlluminationLuminousIntensity$PentaneCandle10CandlePower._minorName:
+        pentaneCandle10CandlePower,
+  });
 }
 
 /// Unit of [IlluminationLuminousIntensity]
@@ -821,26 +839,3 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
         },
       };
 }
-
-const illuminationLuminousIntensityUnits = EnumValues({
-  IlluminationLuminousIntensity$CandleInternational._minorName:
-      IlluminationLuminousIntensity.candleInternational,
-  IlluminationLuminousIntensity$CandleGerman._minorName:
-      IlluminationLuminousIntensity.candleGerman,
-  IlluminationLuminousIntensity$CandlePentane._minorName:
-      IlluminationLuminousIntensity.candlePentane,
-  IlluminationLuminousIntensity$CandleUK._minorName:
-      IlluminationLuminousIntensity.candleUK,
-  IlluminationLuminousIntensity$DecimalCandle._minorName:
-      IlluminationLuminousIntensity.decimalCandle,
-  IlluminationLuminousIntensity$HefnerCandle._minorName:
-      IlluminationLuminousIntensity.hefnerCandle,
-  IlluminationLuminousIntensity$CarcelUnit._minorName:
-      IlluminationLuminousIntensity.carcelUnit,
-  IlluminationLuminousIntensity$BougieDecimal._minorName:
-      IlluminationLuminousIntensity.bougieDecimal,
-  IlluminationLuminousIntensity$LumenInternationalPerSteradian._minorName:
-      IlluminationLuminousIntensity.lumenInternationalPerSteradian,
-  IlluminationLuminousIntensity$PentaneCandle10CandlePower._minorName:
-      IlluminationLuminousIntensity.pentaneCandle10CandlePower,
-});

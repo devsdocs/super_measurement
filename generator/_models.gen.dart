@@ -5,8 +5,8 @@ part of '__gen_new.dart';
 void generateModels() {
   for (final unit in allData) {
     final name = unit.keys.first;
-    final enumSymbol = '${name}Units';
-    final enumValuesSymbol = enumSymbol.snakeCase;
+    // final enumSymbol = '${name}Units';
+    // final enumValuesSymbol = enumSymbol.snakeCase;
 
     final anchor = unit.values.first
         .where(
@@ -57,7 +57,7 @@ void generateModels() {
       '  factory $name.fromJson(Map<String,dynamic> json) =>',
     );
     typeBuff.writeln(
-      '_checkJson(_majorName,json, $enumValuesSymbol,) ? $enumValuesSymbol.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.withValue((json[_majorName] as Map<String, dynamic>)[_value] as num,) : $name.anchor();',
+      '_checkJson(_majorName,json, valuesAsMap,) ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.withValue((json[_majorName] as Map<String, dynamic>)[_value] as num,) : $name.anchor();',
     );
     typeBuff.writeln();
     typeBuff.writeln(
@@ -103,6 +103,9 @@ void generateModels() {
     typeBuff.writeln('  @override');
     typeBuff.writeln('  List<$name> get units => values;');
     typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln('  EnumValues<$name> get unitsAsMap => valuesAsMap;');
+    typeBuff.writeln();
     typeBuff.writeln('static const values = [');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
@@ -111,6 +114,18 @@ void generateModels() {
       );
     }
     typeBuff.writeln('];');
+    typeBuff.writeln();
+    typeBuff.writeln();
+
+    typeBuff.writeln('static const valuesAsMap = EnumValues({');
+    for (final e in unit.values.first) {
+      final unitType = e.keys.first;
+      typeBuff.writeln(
+        '$unitType._minorName: ${unitType.split(r'$').last.snakeCase},',
+      );
+    }
+    typeBuff.writeln('});');
+    typeBuff.writeln();
     typeBuff.writeln();
     typeBuff.writeln('  }');
     typeBuff.writeln();
@@ -237,17 +252,17 @@ void generateModels() {
     // }
     // typeBuff.writeln();
     // typeBuff.writeln('}');
-    typeBuff.writeln();
+    // typeBuff.writeln();
 
-    typeBuff.writeln('const $enumValuesSymbol = EnumValues({');
-    for (final e in unit.values.first) {
-      final unitType = e.keys.first;
-      typeBuff.writeln(
-        '$unitType._minorName: $name.${unitType.split(r'$').last.snakeCase},',
-      );
-    }
-    typeBuff.writeln('});');
-    typeBuff.writeln();
+    // typeBuff.writeln('const $enumValuesSymbol = EnumValues({');
+    // for (final e in unit.values.first) {
+    //   final unitType = e.keys.first;
+    //   typeBuff.writeln(
+    //     '$unitType._minorName: $name.${unitType.split(r'$').last.snakeCase},',
+    //   );
+    // }
+    // typeBuff.writeln('});');
+    // typeBuff.writeln();
     file.writeAsStringSync(typeBuff.toString());
     final contents = "part 'src/models/$fileName';";
     if (!libFile.readAsLinesSync().contains(contents)) {

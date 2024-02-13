@@ -18,10 +18,9 @@ sealed class CalorificValue extends Unit<CalorificValue> {
   factory CalorificValue.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        calorificValueUnits,
+        valuesAsMap,
       )
-          ? calorificValueUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -119,6 +118,9 @@ sealed class CalorificValue extends Unit<CalorificValue> {
   @override
   List<CalorificValue> get units => values;
 
+  @override
+  EnumValues<CalorificValue> get unitsAsMap => valuesAsMap;
+
   static const values = [
     megajoulePerMeterCubic,
     kilojoulePerMeterCubic,
@@ -130,6 +132,20 @@ sealed class CalorificValue extends Unit<CalorificValue> {
     bTUPerFootCubic,
     cHUPerFootCubic,
   ];
+
+  static const valuesAsMap = EnumValues({
+    CalorificValue$MegajoulePerMeterCubic._minorName: megajoulePerMeterCubic,
+    CalorificValue$KilojoulePerMeterCubic._minorName: kilojoulePerMeterCubic,
+    CalorificValue$JoulePerMeterCubic._minorName: joulePerMeterCubic,
+    CalorificValue$KilocaloriePerMeterCubic._minorName:
+        kilocaloriePerMeterCubic,
+    CalorificValue$CaloriePerCentimeterCubic._minorName:
+        caloriePerCentimeterCubic,
+    CalorificValue$ThermPerFootCubic._minorName: thermPerFootCubic,
+    CalorificValue$ThermPerGallonUK._minorName: thermPerGallonUK,
+    CalorificValue$BTUPerFootCubic._minorName: bTUPerFootCubic,
+    CalorificValue$CHUPerFootCubic._minorName: cHUPerFootCubic,
+  });
 }
 
 /// Unit of [CalorificValue]
@@ -725,20 +741,3 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
         },
       };
 }
-
-const calorificValueUnits = EnumValues({
-  CalorificValue$MegajoulePerMeterCubic._minorName:
-      CalorificValue.megajoulePerMeterCubic,
-  CalorificValue$KilojoulePerMeterCubic._minorName:
-      CalorificValue.kilojoulePerMeterCubic,
-  CalorificValue$JoulePerMeterCubic._minorName:
-      CalorificValue.joulePerMeterCubic,
-  CalorificValue$KilocaloriePerMeterCubic._minorName:
-      CalorificValue.kilocaloriePerMeterCubic,
-  CalorificValue$CaloriePerCentimeterCubic._minorName:
-      CalorificValue.caloriePerCentimeterCubic,
-  CalorificValue$ThermPerFootCubic._minorName: CalorificValue.thermPerFootCubic,
-  CalorificValue$ThermPerGallonUK._minorName: CalorificValue.thermPerGallonUK,
-  CalorificValue$BTUPerFootCubic._minorName: CalorificValue.bTUPerFootCubic,
-  CalorificValue$CHUPerFootCubic._minorName: CalorificValue.cHUPerFootCubic,
-});

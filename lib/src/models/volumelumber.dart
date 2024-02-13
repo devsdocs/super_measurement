@@ -22,10 +22,9 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
   factory VolumeLumber.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        volumeLumberUnits,
+        valuesAsMap,
       )
-          ? volumeLumberUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -180,6 +179,9 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
   @override
   List<VolumeLumber> get units => values;
 
+  @override
+  EnumValues<VolumeLumber> get unitsAsMap => valuesAsMap;
+
   static const values = [
     meterCubic,
     cubicFeet,
@@ -199,6 +201,31 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
     thousandSquareFeet1Per2InchPanels,
     thousandSquareFeet3Per4InchPanels,
   ];
+
+  static const valuesAsMap = EnumValues({
+    VolumeLumber$MeterCubic._minorName: meterCubic,
+    VolumeLumber$CubicFeet._minorName: cubicFeet,
+    VolumeLumber$CubicInch._minorName: cubicInch,
+    VolumeLumber$BoardFeet._minorName: boardFeet,
+    VolumeLumber$ThousandBoardFeet._minorName: thousandBoardFeet,
+    VolumeLumber$Cord._minorName: cord,
+    VolumeLumber$Cord80FtCubic._minorName: cord80FtCubic,
+    VolumeLumber$CordFeet._minorName: cordFeet,
+    VolumeLumber$Cunit._minorName: cunit,
+    VolumeLumber$Pallet._minorName: pallet,
+    VolumeLumber$CrossTie._minorName: crossTie,
+    VolumeLumber$SwitchTie._minorName: switchTie,
+    VolumeLumber$ThousandSquareFeet1Per8InchPanels._minorName:
+        thousandSquareFeet1Per8InchPanels,
+    VolumeLumber$ThousandSquareFeet1Per4InchPanels._minorName:
+        thousandSquareFeet1Per4InchPanels,
+    VolumeLumber$ThousandSquareFeet3Per8InchPanels._minorName:
+        thousandSquareFeet3Per8InchPanels,
+    VolumeLumber$ThousandSquareFeet1Per2InchPanels._minorName:
+        thousandSquareFeet1Per2InchPanels,
+    VolumeLumber$ThousandSquareFeet3Per4InchPanels._minorName:
+        thousandSquareFeet3Per4InchPanels,
+  });
 }
 
 /// Unit of [VolumeLumber]
@@ -1316,28 +1343,3 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
         },
       };
 }
-
-const volumeLumberUnits = EnumValues({
-  VolumeLumber$MeterCubic._minorName: VolumeLumber.meterCubic,
-  VolumeLumber$CubicFeet._minorName: VolumeLumber.cubicFeet,
-  VolumeLumber$CubicInch._minorName: VolumeLumber.cubicInch,
-  VolumeLumber$BoardFeet._minorName: VolumeLumber.boardFeet,
-  VolumeLumber$ThousandBoardFeet._minorName: VolumeLumber.thousandBoardFeet,
-  VolumeLumber$Cord._minorName: VolumeLumber.cord,
-  VolumeLumber$Cord80FtCubic._minorName: VolumeLumber.cord80FtCubic,
-  VolumeLumber$CordFeet._minorName: VolumeLumber.cordFeet,
-  VolumeLumber$Cunit._minorName: VolumeLumber.cunit,
-  VolumeLumber$Pallet._minorName: VolumeLumber.pallet,
-  VolumeLumber$CrossTie._minorName: VolumeLumber.crossTie,
-  VolumeLumber$SwitchTie._minorName: VolumeLumber.switchTie,
-  VolumeLumber$ThousandSquareFeet1Per8InchPanels._minorName:
-      VolumeLumber.thousandSquareFeet1Per8InchPanels,
-  VolumeLumber$ThousandSquareFeet1Per4InchPanels._minorName:
-      VolumeLumber.thousandSquareFeet1Per4InchPanels,
-  VolumeLumber$ThousandSquareFeet3Per8InchPanels._minorName:
-      VolumeLumber.thousandSquareFeet3Per8InchPanels,
-  VolumeLumber$ThousandSquareFeet1Per2InchPanels._minorName:
-      VolumeLumber.thousandSquareFeet1Per2InchPanels,
-  VolumeLumber$ThousandSquareFeet3Per4InchPanels._minorName:
-      VolumeLumber.thousandSquareFeet3Per4InchPanels,
-});

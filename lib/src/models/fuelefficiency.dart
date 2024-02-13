@@ -31,10 +31,9 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
   factory FuelEfficiency.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        fuelEfficiencyUnits,
+        valuesAsMap,
       )
-          ? fuelEfficiencyUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -353,6 +352,9 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
   @override
   List<FuelEfficiency> get units => values;
 
+  @override
+  EnumValues<FuelEfficiency> get unitsAsMap => valuesAsMap;
+
   static const values = [
     exameterPerLiter,
     petameterPerLiter,
@@ -393,6 +395,48 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
     meterPerFluidOunce,
     meterPerFluidOunceUK,
   ];
+
+  static const valuesAsMap = EnumValues({
+    FuelEfficiency$ExameterPerLiter._minorName: exameterPerLiter,
+    FuelEfficiency$PetameterPerLiter._minorName: petameterPerLiter,
+    FuelEfficiency$TerameterPerLiter._minorName: terameterPerLiter,
+    FuelEfficiency$GigameterPerLiter._minorName: gigameterPerLiter,
+    FuelEfficiency$MegameterPerLiter._minorName: megameterPerLiter,
+    FuelEfficiency$KilometerPerLiter._minorName: kilometerPerLiter,
+    FuelEfficiency$HectometerPerLiter._minorName: hectometerPerLiter,
+    FuelEfficiency$DekameterPerLiter._minorName: dekameterPerLiter,
+    FuelEfficiency$MeterPerLiter._minorName: meterPerLiter,
+    FuelEfficiency$CentimeterPerLiter._minorName: centimeterPerLiter,
+    FuelEfficiency$MileUSPerLiter._minorName: mileUSPerLiter,
+    FuelEfficiency$LiterPerMeter._minorName: literPerMeter,
+    FuelEfficiency$LiterPer100Km._minorName: literPer100Km,
+    FuelEfficiency$GallonsUSPerMile._minorName: gallonsUSPerMile,
+    FuelEfficiency$GallonsUSPer100mi._minorName: gallonsUSPer100mi,
+    FuelEfficiency$GallonsUKPerMile._minorName: gallonsUKPerMile,
+    FuelEfficiency$GallonsUKPer100mi._minorName: gallonsUKPer100mi,
+    FuelEfficiency$NauticalMilePerLiter._minorName: nauticalMilePerLiter,
+    FuelEfficiency$NauticalMilePerGallonUS._minorName: nauticalMilePerGallonUS,
+    FuelEfficiency$KilometerPerGallonUS._minorName: kilometerPerGallonUS,
+    FuelEfficiency$MeterPerGallonUS._minorName: meterPerGallonUS,
+    FuelEfficiency$MeterPerGallonUK._minorName: meterPerGallonUK,
+    FuelEfficiency$MilePerGallonUS._minorName: milePerGallonUS,
+    FuelEfficiency$MilePerGallonUK._minorName: milePerGallonUK,
+    FuelEfficiency$MeterPerMeterSquare._minorName: meterPerMeterSquare,
+    FuelEfficiency$MeterPerCentimeterSquare._minorName:
+        meterPerCentimeterSquare,
+    FuelEfficiency$MeterPerYardSquare._minorName: meterPerYardSquare,
+    FuelEfficiency$MeterPerFeetSquare._minorName: meterPerFeetSquare,
+    FuelEfficiency$MeterPerInchSquare._minorName: meterPerInchSquare,
+    FuelEfficiency$MeterPerGallon._minorName: meterPerGallon,
+    FuelEfficiency$MeterPerQuart._minorName: meterPerQuart,
+    FuelEfficiency$MeterPerQuartUK._minorName: meterPerQuartUK,
+    FuelEfficiency$MeterPerPint._minorName: meterPerPint,
+    FuelEfficiency$MeterPerPintUK._minorName: meterPerPintUK,
+    FuelEfficiency$MeterPerCup._minorName: meterPerCup,
+    FuelEfficiency$MeterPerCupUK._minorName: meterPerCupUK,
+    FuelEfficiency$MeterPerFluidOunce._minorName: meterPerFluidOunce,
+    FuelEfficiency$MeterPerFluidOunceUK._minorName: meterPerFluidOunceUK,
+  });
 }
 
 /// Unit of [FuelEfficiency]
@@ -2900,56 +2944,3 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
         },
       };
 }
-
-const fuelEfficiencyUnits = EnumValues({
-  FuelEfficiency$ExameterPerLiter._minorName: FuelEfficiency.exameterPerLiter,
-  FuelEfficiency$PetameterPerLiter._minorName: FuelEfficiency.petameterPerLiter,
-  FuelEfficiency$TerameterPerLiter._minorName: FuelEfficiency.terameterPerLiter,
-  FuelEfficiency$GigameterPerLiter._minorName: FuelEfficiency.gigameterPerLiter,
-  FuelEfficiency$MegameterPerLiter._minorName: FuelEfficiency.megameterPerLiter,
-  FuelEfficiency$KilometerPerLiter._minorName: FuelEfficiency.kilometerPerLiter,
-  FuelEfficiency$HectometerPerLiter._minorName:
-      FuelEfficiency.hectometerPerLiter,
-  FuelEfficiency$DekameterPerLiter._minorName: FuelEfficiency.dekameterPerLiter,
-  FuelEfficiency$MeterPerLiter._minorName: FuelEfficiency.meterPerLiter,
-  FuelEfficiency$CentimeterPerLiter._minorName:
-      FuelEfficiency.centimeterPerLiter,
-  FuelEfficiency$MileUSPerLiter._minorName: FuelEfficiency.mileUSPerLiter,
-  FuelEfficiency$LiterPerMeter._minorName: FuelEfficiency.literPerMeter,
-  FuelEfficiency$LiterPer100Km._minorName: FuelEfficiency.literPer100Km,
-  FuelEfficiency$GallonsUSPerMile._minorName: FuelEfficiency.gallonsUSPerMile,
-  FuelEfficiency$GallonsUSPer100mi._minorName: FuelEfficiency.gallonsUSPer100mi,
-  FuelEfficiency$GallonsUKPerMile._minorName: FuelEfficiency.gallonsUKPerMile,
-  FuelEfficiency$GallonsUKPer100mi._minorName: FuelEfficiency.gallonsUKPer100mi,
-  FuelEfficiency$NauticalMilePerLiter._minorName:
-      FuelEfficiency.nauticalMilePerLiter,
-  FuelEfficiency$NauticalMilePerGallonUS._minorName:
-      FuelEfficiency.nauticalMilePerGallonUS,
-  FuelEfficiency$KilometerPerGallonUS._minorName:
-      FuelEfficiency.kilometerPerGallonUS,
-  FuelEfficiency$MeterPerGallonUS._minorName: FuelEfficiency.meterPerGallonUS,
-  FuelEfficiency$MeterPerGallonUK._minorName: FuelEfficiency.meterPerGallonUK,
-  FuelEfficiency$MilePerGallonUS._minorName: FuelEfficiency.milePerGallonUS,
-  FuelEfficiency$MilePerGallonUK._minorName: FuelEfficiency.milePerGallonUK,
-  FuelEfficiency$MeterPerMeterSquare._minorName:
-      FuelEfficiency.meterPerMeterSquare,
-  FuelEfficiency$MeterPerCentimeterSquare._minorName:
-      FuelEfficiency.meterPerCentimeterSquare,
-  FuelEfficiency$MeterPerYardSquare._minorName:
-      FuelEfficiency.meterPerYardSquare,
-  FuelEfficiency$MeterPerFeetSquare._minorName:
-      FuelEfficiency.meterPerFeetSquare,
-  FuelEfficiency$MeterPerInchSquare._minorName:
-      FuelEfficiency.meterPerInchSquare,
-  FuelEfficiency$MeterPerGallon._minorName: FuelEfficiency.meterPerGallon,
-  FuelEfficiency$MeterPerQuart._minorName: FuelEfficiency.meterPerQuart,
-  FuelEfficiency$MeterPerQuartUK._minorName: FuelEfficiency.meterPerQuartUK,
-  FuelEfficiency$MeterPerPint._minorName: FuelEfficiency.meterPerPint,
-  FuelEfficiency$MeterPerPintUK._minorName: FuelEfficiency.meterPerPintUK,
-  FuelEfficiency$MeterPerCup._minorName: FuelEfficiency.meterPerCup,
-  FuelEfficiency$MeterPerCupUK._minorName: FuelEfficiency.meterPerCupUK,
-  FuelEfficiency$MeterPerFluidOunce._minorName:
-      FuelEfficiency.meterPerFluidOunce,
-  FuelEfficiency$MeterPerFluidOunceUK._minorName:
-      FuelEfficiency.meterPerFluidOunceUK,
-});

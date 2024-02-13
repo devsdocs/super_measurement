@@ -20,10 +20,9 @@ sealed class Luminance extends Unit<Luminance> {
   factory Luminance.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        luminanceUnits,
+        valuesAsMap,
       )
-          ? luminanceUnits
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -179,6 +178,9 @@ sealed class Luminance extends Unit<Luminance> {
   @override
   List<Luminance> get units => values;
 
+  @override
+  EnumValues<Luminance> get unitsAsMap => valuesAsMap;
+
   static const values = [
     stilb,
     candelaPerMeterSquare,
@@ -198,6 +200,30 @@ sealed class Luminance extends Unit<Luminance> {
     bril,
     skot,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Luminance$Stilb._minorName: stilb,
+    Luminance$CandelaPerMeterSquare._minorName: candelaPerMeterSquare,
+    Luminance$CandelaPerCentimeterSquare._minorName: candelaPerCentimeterSquare,
+    Luminance$CandelaPerFootSquare._minorName: candelaPerFootSquare,
+    Luminance$LumenPerMeterSquarePerSteradian._minorName:
+        lumenPerMeterSquarePerSteradian,
+    Luminance$LumenPerCentimeterSquarePerSteradian._minorName:
+        lumenPerCentimeterSquarePerSteradian,
+    Luminance$LumenPerFootSquarePerSteradian._minorName:
+        lumenPerFootSquarePerSteradian,
+    Luminance$WattPerCentimeterSquarePerSteradianAt555nm._minorName:
+        wattPerCentimeterSquarePerSteradianAt555nm,
+    Luminance$Nit._minorName: nit,
+    Luminance$Millinit._minorName: millinit,
+    Luminance$FootLambert._minorName: footLambert,
+    Luminance$Lambert._minorName: lambert,
+    Luminance$Millilambert._minorName: millilambert,
+    Luminance$Apostilb._minorName: apostilb,
+    Luminance$Blondel._minorName: blondel,
+    Luminance$Bril._minorName: bril,
+    Luminance$Skot._minorName: skot,
+  });
 }
 
 /// Unit of [Luminance]
@@ -1312,28 +1338,3 @@ final class Luminance$Skot extends Luminance {
         },
       };
 }
-
-const luminanceUnits = EnumValues({
-  Luminance$Stilb._minorName: Luminance.stilb,
-  Luminance$CandelaPerMeterSquare._minorName: Luminance.candelaPerMeterSquare,
-  Luminance$CandelaPerCentimeterSquare._minorName:
-      Luminance.candelaPerCentimeterSquare,
-  Luminance$CandelaPerFootSquare._minorName: Luminance.candelaPerFootSquare,
-  Luminance$LumenPerMeterSquarePerSteradian._minorName:
-      Luminance.lumenPerMeterSquarePerSteradian,
-  Luminance$LumenPerCentimeterSquarePerSteradian._minorName:
-      Luminance.lumenPerCentimeterSquarePerSteradian,
-  Luminance$LumenPerFootSquarePerSteradian._minorName:
-      Luminance.lumenPerFootSquarePerSteradian,
-  Luminance$WattPerCentimeterSquarePerSteradianAt555nm._minorName:
-      Luminance.wattPerCentimeterSquarePerSteradianAt555nm,
-  Luminance$Nit._minorName: Luminance.nit,
-  Luminance$Millinit._minorName: Luminance.millinit,
-  Luminance$FootLambert._minorName: Luminance.footLambert,
-  Luminance$Lambert._minorName: Luminance.lambert,
-  Luminance$Millilambert._minorName: Luminance.millilambert,
-  Luminance$Apostilb._minorName: Luminance.apostilb,
-  Luminance$Blondel._minorName: Luminance.blondel,
-  Luminance$Bril._minorName: Luminance.bril,
-  Luminance$Skot._minorName: Luminance.skot,
-});

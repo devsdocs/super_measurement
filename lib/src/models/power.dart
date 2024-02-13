@@ -46,9 +46,9 @@ sealed class Power extends Unit<Power> {
   factory Power.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        powerUnits,
+        valuesAsMap,
       )
-          ? powerUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
+          ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -592,6 +592,9 @@ sealed class Power extends Unit<Power> {
   @override
   List<Power> get units => values;
 
+  @override
+  EnumValues<Power> get unitsAsMap => valuesAsMap;
+
   static const values = [
     exawatt,
     petawatt,
@@ -664,6 +667,89 @@ sealed class Power extends Unit<Power> {
     kilojoulePerHour,
     kilojoulePerMinute,
   ];
+
+  static const valuesAsMap = EnumValues({
+    Power$Exawatt._minorName: exawatt,
+    Power$Petawatt._minorName: petawatt,
+    Power$Terawatt._minorName: terawatt,
+    Power$Gigawatt._minorName: gigawatt,
+    Power$Megawatt._minorName: megawatt,
+    Power$Kilowatt._minorName: kilowatt,
+    Power$Hectowatt._minorName: hectowatt,
+    Power$Dekawatt._minorName: dekawatt,
+    Power$Watt._minorName: watt,
+    Power$Deciwatt._minorName: deciwatt,
+    Power$Centiwatt._minorName: centiwatt,
+    Power$Milliwatt._minorName: milliwatt,
+    Power$Microwatt._minorName: microwatt,
+    Power$Nanowatt._minorName: nanowatt,
+    Power$Picowatt._minorName: picowatt,
+    Power$Femtowatt._minorName: femtowatt,
+    Power$Attowatt._minorName: attowatt,
+    Power$Horsepower._minorName: horsepower,
+    Power$HorsepowerBoiler._minorName: horsepowerBoiler,
+    Power$HorsepowerMetric._minorName: horsepowerMetric,
+    Power$HorsepowerElectric._minorName: horsepowerElectric,
+    Power$HorsepowerUK._minorName: horsepowerUK,
+    Power$HorsepowerWater._minorName: horsepowerWater,
+    Power$PferdestarkePs._minorName: pferdestarkePs,
+    Power$BTUPerHourInternational._minorName: bTUPerHourInternational,
+    Power$BTUPerMinuteInternational._minorName: bTUPerMinuteInternational,
+    Power$BTUPerSecondInternational._minorName: bTUPerSecondInternational,
+    Power$BTUPerHourThermochemical._minorName: bTUPerHourThermochemical,
+    Power$BTUPerMinuteThermochemical._minorName: bTUPerMinuteThermochemical,
+    Power$BTUPerSecondThermochemical._minorName: bTUPerSecondThermochemical,
+    Power$MBTUPerHour._minorName: mBTUPerHour,
+    Power$MBH._minorName: mBH,
+    Power$TonRefrigeration._minorName: tonRefrigeration,
+    Power$KilocaloriePerHourInternational._minorName:
+        kilocaloriePerHourInternational,
+    Power$KilocaloriePerMinuteInternational._minorName:
+        kilocaloriePerMinuteInternational,
+    Power$KilocaloriePerSecondInternational._minorName:
+        kilocaloriePerSecondInternational,
+    Power$CaloriePerHourInternational._minorName: caloriePerHourInternational,
+    Power$CaloriePerMinuteInternational._minorName:
+        caloriePerMinuteInternational,
+    Power$CaloriePerSecondInternational._minorName:
+        caloriePerSecondInternational,
+    Power$KilocaloriePerHourThermochemical._minorName:
+        kilocaloriePerHourThermochemical,
+    Power$KilocaloriePerMinuteThermochemical._minorName:
+        kilocaloriePerMinuteThermochemical,
+    Power$KilocaloriePerSecondThermochemical._minorName:
+        kilocaloriePerSecondThermochemical,
+    Power$CaloriePerHourThermochemical._minorName: caloriePerHourThermochemical,
+    Power$CaloriePerMinuteThermochemical._minorName:
+        caloriePerMinuteThermochemical,
+    Power$CaloriePerSecondThermochemical._minorName:
+        caloriePerSecondThermochemical,
+    Power$PoundFootPerHour._minorName: poundFootPerHour,
+    Power$PoundFootPerMinute._minorName: poundFootPerMinute,
+    Power$PoundFootPerSecond._minorName: poundFootPerSecond,
+    Power$ErgPerSecond._minorName: ergPerSecond,
+    Power$ExajoulePerSecond._minorName: exajoulePerSecond,
+    Power$PetajoulePerSecond._minorName: petajoulePerSecond,
+    Power$TerajoulePerSecond._minorName: terajoulePerSecond,
+    Power$GigajoulePerSecond._minorName: gigajoulePerSecond,
+    Power$MegajoulePerSecond._minorName: megajoulePerSecond,
+    Power$KilojoulePerSecond._minorName: kilojoulePerSecond,
+    Power$HectojoulePerSecond._minorName: hectojoulePerSecond,
+    Power$DekajoulePerSecond._minorName: dekajoulePerSecond,
+    Power$JoulePerSecond._minorName: joulePerSecond,
+    Power$DecijoulePerSecond._minorName: decijoulePerSecond,
+    Power$CentijoulePerSecond._minorName: centijoulePerSecond,
+    Power$MillijoulePerSecond._minorName: millijoulePerSecond,
+    Power$MicrojoulePerSecond._minorName: microjoulePerSecond,
+    Power$NanojoulePerSecond._minorName: nanojoulePerSecond,
+    Power$PicojoulePerSecond._minorName: picojoulePerSecond,
+    Power$FemtojoulePerSecond._minorName: femtojoulePerSecond,
+    Power$AttojoulePerSecond._minorName: attojoulePerSecond,
+    Power$JoulePerHour._minorName: joulePerHour,
+    Power$JoulePerMinute._minorName: joulePerMinute,
+    Power$KilojoulePerHour._minorName: kilojoulePerHour,
+    Power$KilojoulePerMinute._minorName: kilojoulePerMinute,
+  });
 }
 
 /// Unit of [Power]
@@ -5233,88 +5319,3 @@ final class Power$KilojoulePerMinute extends Power {
         },
       };
 }
-
-const powerUnits = EnumValues({
-  Power$Exawatt._minorName: Power.exawatt,
-  Power$Petawatt._minorName: Power.petawatt,
-  Power$Terawatt._minorName: Power.terawatt,
-  Power$Gigawatt._minorName: Power.gigawatt,
-  Power$Megawatt._minorName: Power.megawatt,
-  Power$Kilowatt._minorName: Power.kilowatt,
-  Power$Hectowatt._minorName: Power.hectowatt,
-  Power$Dekawatt._minorName: Power.dekawatt,
-  Power$Watt._minorName: Power.watt,
-  Power$Deciwatt._minorName: Power.deciwatt,
-  Power$Centiwatt._minorName: Power.centiwatt,
-  Power$Milliwatt._minorName: Power.milliwatt,
-  Power$Microwatt._minorName: Power.microwatt,
-  Power$Nanowatt._minorName: Power.nanowatt,
-  Power$Picowatt._minorName: Power.picowatt,
-  Power$Femtowatt._minorName: Power.femtowatt,
-  Power$Attowatt._minorName: Power.attowatt,
-  Power$Horsepower._minorName: Power.horsepower,
-  Power$HorsepowerBoiler._minorName: Power.horsepowerBoiler,
-  Power$HorsepowerMetric._minorName: Power.horsepowerMetric,
-  Power$HorsepowerElectric._minorName: Power.horsepowerElectric,
-  Power$HorsepowerUK._minorName: Power.horsepowerUK,
-  Power$HorsepowerWater._minorName: Power.horsepowerWater,
-  Power$PferdestarkePs._minorName: Power.pferdestarkePs,
-  Power$BTUPerHourInternational._minorName: Power.bTUPerHourInternational,
-  Power$BTUPerMinuteInternational._minorName: Power.bTUPerMinuteInternational,
-  Power$BTUPerSecondInternational._minorName: Power.bTUPerSecondInternational,
-  Power$BTUPerHourThermochemical._minorName: Power.bTUPerHourThermochemical,
-  Power$BTUPerMinuteThermochemical._minorName: Power.bTUPerMinuteThermochemical,
-  Power$BTUPerSecondThermochemical._minorName: Power.bTUPerSecondThermochemical,
-  Power$MBTUPerHour._minorName: Power.mBTUPerHour,
-  Power$MBH._minorName: Power.mBH,
-  Power$TonRefrigeration._minorName: Power.tonRefrigeration,
-  Power$KilocaloriePerHourInternational._minorName:
-      Power.kilocaloriePerHourInternational,
-  Power$KilocaloriePerMinuteInternational._minorName:
-      Power.kilocaloriePerMinuteInternational,
-  Power$KilocaloriePerSecondInternational._minorName:
-      Power.kilocaloriePerSecondInternational,
-  Power$CaloriePerHourInternational._minorName:
-      Power.caloriePerHourInternational,
-  Power$CaloriePerMinuteInternational._minorName:
-      Power.caloriePerMinuteInternational,
-  Power$CaloriePerSecondInternational._minorName:
-      Power.caloriePerSecondInternational,
-  Power$KilocaloriePerHourThermochemical._minorName:
-      Power.kilocaloriePerHourThermochemical,
-  Power$KilocaloriePerMinuteThermochemical._minorName:
-      Power.kilocaloriePerMinuteThermochemical,
-  Power$KilocaloriePerSecondThermochemical._minorName:
-      Power.kilocaloriePerSecondThermochemical,
-  Power$CaloriePerHourThermochemical._minorName:
-      Power.caloriePerHourThermochemical,
-  Power$CaloriePerMinuteThermochemical._minorName:
-      Power.caloriePerMinuteThermochemical,
-  Power$CaloriePerSecondThermochemical._minorName:
-      Power.caloriePerSecondThermochemical,
-  Power$PoundFootPerHour._minorName: Power.poundFootPerHour,
-  Power$PoundFootPerMinute._minorName: Power.poundFootPerMinute,
-  Power$PoundFootPerSecond._minorName: Power.poundFootPerSecond,
-  Power$ErgPerSecond._minorName: Power.ergPerSecond,
-  Power$ExajoulePerSecond._minorName: Power.exajoulePerSecond,
-  Power$PetajoulePerSecond._minorName: Power.petajoulePerSecond,
-  Power$TerajoulePerSecond._minorName: Power.terajoulePerSecond,
-  Power$GigajoulePerSecond._minorName: Power.gigajoulePerSecond,
-  Power$MegajoulePerSecond._minorName: Power.megajoulePerSecond,
-  Power$KilojoulePerSecond._minorName: Power.kilojoulePerSecond,
-  Power$HectojoulePerSecond._minorName: Power.hectojoulePerSecond,
-  Power$DekajoulePerSecond._minorName: Power.dekajoulePerSecond,
-  Power$JoulePerSecond._minorName: Power.joulePerSecond,
-  Power$DecijoulePerSecond._minorName: Power.decijoulePerSecond,
-  Power$CentijoulePerSecond._minorName: Power.centijoulePerSecond,
-  Power$MillijoulePerSecond._minorName: Power.millijoulePerSecond,
-  Power$MicrojoulePerSecond._minorName: Power.microjoulePerSecond,
-  Power$NanojoulePerSecond._minorName: Power.nanojoulePerSecond,
-  Power$PicojoulePerSecond._minorName: Power.picojoulePerSecond,
-  Power$FemtojoulePerSecond._minorName: Power.femtojoulePerSecond,
-  Power$AttojoulePerSecond._minorName: Power.attojoulePerSecond,
-  Power$JoulePerHour._minorName: Power.joulePerHour,
-  Power$JoulePerMinute._minorName: Power.joulePerMinute,
-  Power$KilojoulePerHour._minorName: Power.kilojoulePerHour,
-  Power$KilojoulePerMinute._minorName: Power.kilojoulePerMinute,
-});
