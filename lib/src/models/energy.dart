@@ -21,7 +21,7 @@ part of '../../super_measurement.dart';
 /// [Energy$PoundalFoot], [Energy$MegaelectronVolt],
 /// [Energy$KiloelectronVolt], [Energy$ElectronVolt], [Energy$Therm],
 /// [Energy$ThermEC], [Energy$ThermUS], [Energy$Hartree]
-abstract final class Energy extends Unit<Energy> {
+sealed class Energy extends Unit<Energy> {
   const Energy([
     super.value,
   ]);

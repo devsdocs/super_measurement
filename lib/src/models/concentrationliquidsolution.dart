@@ -13,7 +13,7 @@ part of '../../super_measurement.dart';
 /// [ConcentrationLiquidSolution$PoundPerGallonUS],
 /// [ConcentrationLiquidSolution$PoundPerMillionUKGallon],
 /// [ConcentrationLiquidSolution$PoundPerMillionUSGallon]
-abstract final class ConcentrationLiquidSolution
+sealed class ConcentrationLiquidSolution
     extends Unit<ConcentrationLiquidSolution> {
   const ConcentrationLiquidSolution([
     super.value,

@@ -5,8 +5,7 @@ part of '../../super_measurement.dart';
 /// [DigitalImageResolution$DotPerInch], [DigitalImageResolution$DotPerMeter],
 /// [DigitalImageResolution$DotPerMillimeter],
 /// [DigitalImageResolution$PixelPerInch]
-abstract final class DigitalImageResolution
-    extends Unit<DigitalImageResolution> {
+sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
   const DigitalImageResolution([
     super.value,
   ]);

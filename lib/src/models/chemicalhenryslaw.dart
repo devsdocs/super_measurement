@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic],
 /// [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic],
 /// [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic]
-abstract final class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
+sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
   const ChemicalHenrysLaw([
     super.value,
   ]);

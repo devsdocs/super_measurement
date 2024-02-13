@@ -85,7 +85,7 @@ part of '../../super_measurement.dart';
 /// [DataTransfer$BluRay2X], [DataTransfer$BluRay4X], [DataTransfer$BluRay6X],
 /// [DataTransfer$BluRay8X], [DataTransfer$BluRay10X],
 /// [DataTransfer$BluRay12X]
-abstract final class DataTransfer extends Unit<DataTransfer> {
+sealed class DataTransfer extends Unit<DataTransfer> {
   const DataTransfer([
     super.value,
   ]);

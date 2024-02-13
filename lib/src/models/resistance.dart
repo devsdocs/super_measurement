@@ -4,7 +4,7 @@ part of '../../super_measurement.dart';
 ///
 /// [Resistance$Megohm], [Resistance$Ohm], [Resistance$OhmInternational],
 /// [Resistance$Microhm], [Resistance$Abohm], [Resistance$Statohm]
-abstract final class Resistance extends Unit<Resistance> {
+sealed class Resistance extends Unit<Resistance> {
   const Resistance([
     super.value,
   ]);

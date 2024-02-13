@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [Current$Biot], [Current$Abampere], [Current$Statampere],
 /// [Current$EMUOfCurrent], [Current$ESUOfCurrent], [Current$CGSEMUnit],
 /// [Current$CGSESUnit]
-abstract final class Current extends Unit<Current> {
+sealed class Current extends Unit<Current> {
   const Current([
     super.value,
   ]);

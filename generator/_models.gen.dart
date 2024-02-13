@@ -46,7 +46,7 @@ void generateModels() {
       typeBuff.write(types);
     }
     typeBuff.writeln();
-    typeBuff.writeln('abstract final class $name extends Unit<$name> {');
+    typeBuff.writeln('sealed class $name extends Unit<$name> {');
     typeBuff.writeln();
     typeBuff.writeln('  const $name([super.value,]);');
     typeBuff.writeln();

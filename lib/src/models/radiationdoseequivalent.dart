@@ -11,8 +11,7 @@ part of '../../super_measurement.dart';
 /// [RadiationDoseEquivalent$IntensityMillicurie],
 /// [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons],
 /// [RadiationDoseEquivalent$GrayWr20AlphaParticles]
-abstract final class RadiationDoseEquivalent
-    extends Unit<RadiationDoseEquivalent> {
+sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
   const RadiationDoseEquivalent([
     super.value,
   ]);

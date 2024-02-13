@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [CalorificValue$CaloriePerCentimeterCubic],
 /// [CalorificValue$ThermPerFootCubic], [CalorificValue$ThermPerGallonUK],
 /// [CalorificValue$BTUPerFootCubic], [CalorificValue$CHUPerFootCubic]
-abstract final class CalorificValue extends Unit<CalorificValue> {
+sealed class CalorificValue extends Unit<CalorificValue> {
   const CalorificValue([
     super.value,
   ]);

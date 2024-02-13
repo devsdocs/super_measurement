@@ -21,8 +21,7 @@ part of '../../super_measurement.dart';
 /// [RadiationAbsorbedDoseRate$PicograyPerSecond],
 /// [RadiationAbsorbedDoseRate$FemtograyPerSecond],
 /// [RadiationAbsorbedDoseRate$AttograyPerSecond]
-abstract final class RadiationAbsorbedDoseRate
-    extends Unit<RadiationAbsorbedDoseRate> {
+sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
   const RadiationAbsorbedDoseRate([
     super.value,
   ]);

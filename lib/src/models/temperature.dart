@@ -4,7 +4,7 @@ part of '../../super_measurement.dart';
 ///
 /// [Temperature$Kelvin], [Temperature$Celsius], [Temperature$Fahrenheit],
 /// [Temperature$Rankine], [Temperature$Reaumur]
-abstract final class Temperature extends Unit<Temperature> {
+sealed class Temperature extends Unit<Temperature> {
   const Temperature([
     super.value,
   ]);

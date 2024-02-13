@@ -12,7 +12,7 @@ part of '../../super_measurement.dart';
 /// [Area$Cuerda], [Area$Plaza], [Area$VarasCastellanasCuad],
 /// [Area$VarasConuquerasCuad], [Area$Strema], [Area$CircularInch],
 /// [Area$CircularMil], [Area$Tahulla]
-abstract final class Area extends Unit<Area> {
+sealed class Area extends Unit<Area> {
   const Area([
     super.value,
   ]);

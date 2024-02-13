@@ -4,7 +4,7 @@ part of '../../super_measurement.dart';
 ///
 /// [LatentHeat$CaloriePerGram], [LatentHeat$KilojoulePerKilogram],
 /// [LatentHeat$BTUPerPound]
-abstract final class LatentHeat extends Unit<LatentHeat> {
+sealed class LatentHeat extends Unit<LatentHeat> {
   const LatentHeat([
     super.value,
   ]);

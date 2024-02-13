@@ -22,7 +22,7 @@ part of '../../super_measurement.dart';
 /// [FuelEfficiency$MeterPerPint], [FuelEfficiency$MeterPerPintUK],
 /// [FuelEfficiency$MeterPerCup], [FuelEfficiency$MeterPerCupUK],
 /// [FuelEfficiency$MeterPerFluidOunce], [FuelEfficiency$MeterPerFluidOunceUK]
-abstract final class FuelEfficiency extends Unit<FuelEfficiency> {
+sealed class FuelEfficiency extends Unit<FuelEfficiency> {
   const FuelEfficiency([
     super.value,
   ]);

@@ -19,7 +19,7 @@ part of '../../super_measurement.dart';
 /// [HeatFluxDensity$BTUPerHourFootSquare],
 /// [HeatFluxDensity$BTUPerMinuteFootSquare],
 /// [HeatFluxDensity$CHUPerHourFootSquare]
-abstract final class HeatFluxDensity extends Unit<HeatFluxDensity> {
+sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
   const HeatFluxDensity([
     super.value,
   ]);

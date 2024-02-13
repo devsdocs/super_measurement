@@ -24,7 +24,7 @@ part of '../../super_measurement.dart';
 /// [Length$LongReedBiblical], [Length$ReedBiblical], [Length$CubitBiblical],
 /// [Length$LongCubitBiblical], [Length$SpanBiblical],
 /// [Length$HandbreadthBiblical], [Length$FingerbreadthBiblical]
-abstract final class Length extends Unit<Length> {
+sealed class Length extends Unit<Length> {
   const Length([
     super.value,
   ]);

@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [ElectricField$MillivoltPerMeter], [ElectricField$MicrovoltPerMeter],
 /// [ElectricField$AbvoltPerCentimeter],
 /// [ElectricField$StatvoltPerCentimeter], [ElectricField$StatvoltPerInch]
-abstract final class ElectricField extends Unit<ElectricField> {
+sealed class ElectricField extends Unit<ElectricField> {
   const ElectricField([
     super.value,
   ]);

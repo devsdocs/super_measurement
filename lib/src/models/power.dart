@@ -37,7 +37,7 @@ part of '../../super_measurement.dart';
 /// [Power$FemtojoulePerSecond], [Power$AttojoulePerSecond],
 /// [Power$JoulePerHour], [Power$JoulePerMinute], [Power$KilojoulePerHour],
 /// [Power$KilojoulePerMinute]
-abstract final class Power extends Unit<Power> {
+sealed class Power extends Unit<Power> {
   const Power([
     super.value,
   ]);

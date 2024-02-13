@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [Charge$Abcoulomb], [Charge$Statcoulomb], [Charge$Franklin],
 /// [Charge$AmpereHour], [Charge$AmpereMinute], [Charge$AmpereSecond],
 /// [Charge$Faraday], [Charge$ElectronicCharge]
-abstract final class Charge extends Unit<Charge> {
+sealed class Charge extends Unit<Charge> {
   const Charge([
     super.value,
   ]);

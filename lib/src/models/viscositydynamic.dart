@@ -20,7 +20,7 @@ part of '../../super_measurement.dart';
 /// [ViscosityDynamic$GramPerCentimeterSecond],
 /// [ViscosityDynamic$SlugPerFootSecond],
 /// [ViscosityDynamic$PoundPerFootSecond], [ViscosityDynamic$PoundPerFootHour]
-abstract final class ViscosityDynamic extends Unit<ViscosityDynamic> {
+sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
   const ViscosityDynamic([
     super.value,
   ]);

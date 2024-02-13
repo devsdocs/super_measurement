@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [Conductance$Megasiemens], [Conductance$Kilosiemens],
 /// [Conductance$Siemens], [Conductance$Millisiemens],
 /// [Conductance$Microsiemens], [Conductance$Abmho], [Conductance$Statmho]
-abstract final class Conductance extends Unit<Conductance> {
+sealed class Conductance extends Unit<Conductance> {
   const Conductance([
     super.value,
   ]);

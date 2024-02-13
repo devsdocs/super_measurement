@@ -11,7 +11,7 @@ part of '../../super_measurement.dart';
 /// [Luminance$Millinit], [Luminance$FootLambert], [Luminance$Lambert],
 /// [Luminance$Millilambert], [Luminance$Apostilb], [Luminance$Blondel],
 /// [Luminance$Bril], [Luminance$Skot]
-abstract final class Luminance extends Unit<Luminance> {
+sealed class Luminance extends Unit<Luminance> {
   const Luminance([
     super.value,
   ]);

@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [Capacitance$Nanofarad], [Capacitance$Picofarad],
 /// [Capacitance$Femtofarad], [Capacitance$Attofarad], [Capacitance$Abfarad],
 /// [Capacitance$Statfarad]
-abstract final class Capacitance extends Unit<Capacitance> {
+sealed class Capacitance extends Unit<Capacitance> {
   const Capacitance([
     super.value,
   ]);

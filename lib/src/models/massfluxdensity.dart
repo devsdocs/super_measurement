@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [MassFluxDensity$GramPerSecondCentimeterSquare],
 /// [MassFluxDensity$PoundPerHourFootSquare],
 /// [MassFluxDensity$PoundPerSecondFootSquare]
-abstract final class MassFluxDensity extends Unit<MassFluxDensity> {
+sealed class MassFluxDensity extends Unit<MassFluxDensity> {
   const MassFluxDensity([
     super.value,
   ]);

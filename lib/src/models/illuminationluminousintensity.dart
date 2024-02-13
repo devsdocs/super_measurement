@@ -12,7 +12,7 @@ part of '../../super_measurement.dart';
 /// [IlluminationLuminousIntensity$BougieDecimal],
 /// [IlluminationLuminousIntensity$LumenInternationalPerSteradian],
 /// [IlluminationLuminousIntensity$PentaneCandle10CandlePower]
-abstract final class IlluminationLuminousIntensity
+sealed class IlluminationLuminousIntensity
     extends Unit<IlluminationLuminousIntensity> {
   const IlluminationLuminousIntensity([
     super.value,

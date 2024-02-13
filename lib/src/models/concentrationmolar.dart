@@ -13,7 +13,7 @@ part of '../../super_measurement.dart';
 /// [ConcentrationMolar$MillimolPerLiter],
 /// [ConcentrationMolar$MillimolPerCentimeterCubic],
 /// [ConcentrationMolar$MillimolPerMillimeterCubic]
-abstract final class ConcentrationMolar extends Unit<ConcentrationMolar> {
+sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
   const ConcentrationMolar([
     super.value,
   ]);

@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [EUCurrency$LuxembourgFrancLUF], [EUCurrency$SpanishPesetaESP],
 /// [EUCurrency$PortugueseEscudoPTE], [EUCurrency$ItalianLireITL],
 /// [EUCurrency$GreekDrachmaGRD]
-abstract final class EUCurrency extends Unit<EUCurrency> {
+sealed class EUCurrency extends Unit<EUCurrency> {
   const EUCurrency([
     super.value,
   ]);

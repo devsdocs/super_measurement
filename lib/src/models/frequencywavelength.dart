@@ -24,7 +24,7 @@ part of '../../super_measurement.dart';
 /// [FrequencyWavelength$WavelengthInCentimetres],
 /// [FrequencyWavelength$WavelengthInMillimetres],
 /// [FrequencyWavelength$WavelengthInMicrometres]
-abstract final class FrequencyWavelength extends Unit<FrequencyWavelength> {
+sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
   const FrequencyWavelength([
     super.value,
   ]);

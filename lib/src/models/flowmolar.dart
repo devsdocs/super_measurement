@@ -15,7 +15,7 @@ part of '../../super_measurement.dart';
 /// [FlowMolar$MillimolPerMinute], [FlowMolar$MillimolPerHour],
 /// [FlowMolar$MillimolPerDay], [FlowMolar$KilomolPerMinute],
 /// [FlowMolar$KilomolPerHour], [FlowMolar$KilomolPerDay]
-abstract final class FlowMolar extends Unit<FlowMolar> {
+sealed class FlowMolar extends Unit<FlowMolar> {
   const FlowMolar([
     super.value,
   ]);

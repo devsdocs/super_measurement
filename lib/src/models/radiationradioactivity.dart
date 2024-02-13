@@ -14,8 +14,7 @@ part of '../../super_measurement.dart';
 /// [RadiationRadioactivity$Rutherford],
 /// [RadiationRadioactivity$DisintegrationsPerSecond],
 /// [RadiationRadioactivity$DisintegrationsPerMinute]
-abstract final class RadiationRadioactivity
-    extends Unit<RadiationRadioactivity> {
+sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
   const RadiationRadioactivity([
     super.value,
   ]);

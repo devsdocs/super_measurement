@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [SpecificVolume$LiterPerKilogram], [SpecificVolume$LiterPerGram],
 /// [SpecificVolume$FeetCubicPerKilogram], [SpecificVolume$FeetCubicPerPound],
 /// [SpecificVolume$GallonUKPerPound]
-abstract final class SpecificVolume extends Unit<SpecificVolume> {
+sealed class SpecificVolume extends Unit<SpecificVolume> {
   const SpecificVolume([
     super.value,
   ]);

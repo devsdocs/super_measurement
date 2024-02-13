@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [SurfaceTension$ErgPerCentimeterSquare],
 /// [SurfaceTension$ErgPerMillimeterSquare], [SurfaceTension$PoundalPerInch],
 /// [SurfaceTension$PoundForcePerInch]
-abstract final class SurfaceTension extends Unit<SurfaceTension> {
+sealed class SurfaceTension extends Unit<SurfaceTension> {
   const SurfaceTension([
     super.value,
   ]);

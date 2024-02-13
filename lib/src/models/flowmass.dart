@@ -15,7 +15,7 @@ part of '../../super_measurement.dart';
 /// [FlowMass$MilligramPerSecond], [FlowMass$MicrogramPerSecond],
 /// [FlowMass$PoundPerSecond], [FlowMass$PoundPerMinute],
 /// [FlowMass$PoundPerHour], [FlowMass$PoundPerDay]
-abstract final class FlowMass extends Unit<FlowMass> {
+sealed class FlowMass extends Unit<FlowMass> {
   const FlowMass([
     super.value,
   ]);

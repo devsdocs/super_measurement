@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [LinearCurrentDensity$AbamperePerInch], [LinearCurrentDensity$Oersted],
 /// [LinearCurrentDensity$OerstedInternational],
 /// [LinearCurrentDensity$GilbertPerCentimeter]
-abstract final class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
+sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
   const LinearCurrentDensity([
     super.value,
   ]);

@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [Resistivity$OhmInch], [Resistivity$MicrohmCentimeter],
 /// [Resistivity$MicrohmInch], [Resistivity$AbohmCentimeter],
 /// [Resistivity$StatohmCentimeter], [Resistivity$CircularMilOhmPerFoot]
-abstract final class Resistivity extends Unit<Resistivity> {
+sealed class Resistivity extends Unit<Resistivity> {
   const Resistivity([
     super.value,
   ]);

@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [Inductance$Femtohenry], [Inductance$Attohenry], [Inductance$Abhenry],
 /// [Inductance$Stathenry], [Inductance$EMUOfInductance],
 /// [Inductance$ESUOfInductance]
-abstract final class Inductance extends Unit<Inductance> {
+sealed class Inductance extends Unit<Inductance> {
   const Inductance([
     super.value,
   ]);

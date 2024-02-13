@@ -12,7 +12,7 @@ part of '../../super_measurement.dart';
 /// [MagneticFluxDensity$WeberPerMeterSquare],
 /// [MagneticFluxDensity$WeberPerCentimeterSquare],
 /// [MagneticFluxDensity$WeberPerInchSquare]
-abstract final class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
+sealed class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
   const MagneticFluxDensity([
     super.value,
   ]);

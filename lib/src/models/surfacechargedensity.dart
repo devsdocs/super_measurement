@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [SurfaceChargeDensity$AbcoulombPerMeterSquare],
 /// [SurfaceChargeDensity$AbcoulombPerCentimeterSquare],
 /// [SurfaceChargeDensity$AbcoulombPerInchSquare]
-abstract final class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
+sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
   const SurfaceChargeDensity([
     super.value,
   ]);

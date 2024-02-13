@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [TemperatureInterval$Kelvin], [TemperatureInterval$Celsius],
 /// [TemperatureInterval$Fahrenheit], [TemperatureInterval$Rankine],
 /// [TemperatureInterval$Reaumur]
-abstract final class TemperatureInterval extends Unit<TemperatureInterval> {
+sealed class TemperatureInterval extends Unit<TemperatureInterval> {
   const TemperatureInterval([
     super.value,
   ]);

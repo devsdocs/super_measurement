@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [Torque$GramForceMeter], [Torque$GramForceCentimeter],
 /// [Torque$GramForceMillimeter], [Torque$OunceForceFoot],
 /// [Torque$OunceForceInch], [Torque$PoundForceFoot], [Torque$PoundForceInch]
-abstract final class Torque extends Unit<Torque> {
+sealed class Torque extends Unit<Torque> {
   const Torque([
     super.value,
   ]);

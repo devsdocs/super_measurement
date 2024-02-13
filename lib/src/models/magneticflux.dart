@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [MagneticFlux$Kiloline], [MagneticFlux$Line], [MagneticFlux$Maxwell],
 /// [MagneticFlux$MaxwellInternational], [MagneticFlux$TeslaMeterSquare],
 /// [MagneticFlux$TeslaCentimeterSquare], [MagneticFlux$GaussCentimeterSquare]
-abstract final class MagneticFlux extends Unit<MagneticFlux> {
+sealed class MagneticFlux extends Unit<MagneticFlux> {
   const MagneticFlux([
     super.value,
   ]);

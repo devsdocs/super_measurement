@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [Illumination$LumenPerCentimeterSquare],
 /// [Illumination$LumenPerFootSquare],
 /// [Illumination$WattPerCentimeterSquareAt555nm]
-abstract final class Illumination extends Unit<Illumination> {
+sealed class Illumination extends Unit<Illumination> {
   const Illumination([
     super.value,
   ]);

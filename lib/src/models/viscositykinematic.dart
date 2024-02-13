@@ -14,7 +14,7 @@ part of '../../super_measurement.dart';
 /// [ViscosityKinematic$CentimeterSquarePerSecond],
 /// [ViscosityKinematic$MillimeterSquarePerSecond],
 /// [ViscosityKinematic$FootSquarePerSecond]
-abstract final class ViscosityKinematic extends Unit<ViscosityKinematic> {
+sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
   const ViscosityKinematic([
     super.value,
   ]);

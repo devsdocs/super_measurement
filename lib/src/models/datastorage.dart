@@ -21,7 +21,7 @@ part of '../../super_measurement.dart';
 /// [DataStorage$DVD2Layers1Side], [DataStorage$DVD1Layer2Sides],
 /// [DataStorage$DVD2Layers2Sides], [DataStorage$BluRay1Layer],
 /// [DataStorage$BluRay2Layer]
-abstract final class DataStorage extends Unit<DataStorage> {
+sealed class DataStorage extends Unit<DataStorage> {
   const DataStorage([
     super.value,
   ]);

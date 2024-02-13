@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [VelocityAngular$RevolutionPerDay], [VelocityAngular$RevolutionPerHour],
 /// [VelocityAngular$RevolutionPerMinute],
 /// [VelocityAngular$RevolutionPerSecond]
-abstract final class VelocityAngular extends Unit<VelocityAngular> {
+sealed class VelocityAngular extends Unit<VelocityAngular> {
   const VelocityAngular([
     super.value,
   ]);

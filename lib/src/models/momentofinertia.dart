@@ -13,7 +13,7 @@ part of '../../super_measurement.dart';
 /// [MomentofInertia$PoundFootSecondSquare],
 /// [MomentofInertia$PoundInchSquare],
 /// [MomentofInertia$PoundInchSecondSquare], [MomentofInertia$SlugFootSquare]
-abstract final class MomentofInertia extends Unit<MomentofInertia> {
+sealed class MomentofInertia extends Unit<MomentofInertia> {
   const MomentofInertia([
     super.value,
   ]);

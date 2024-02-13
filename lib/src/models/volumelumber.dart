@@ -13,7 +13,7 @@ part of '../../super_measurement.dart';
 /// [VolumeLumber$ThousandSquareFeet3Per8InchPanels],
 /// [VolumeLumber$ThousandSquareFeet1Per2InchPanels],
 /// [VolumeLumber$ThousandSquareFeet3Per4InchPanels]
-abstract final class VolumeLumber extends Unit<VolumeLumber> {
+sealed class VolumeLumber extends Unit<VolumeLumber> {
   const VolumeLumber([
     super.value,
   ]);

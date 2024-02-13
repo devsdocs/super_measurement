@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [LinearChargeDensity$AbcoulombPerMeter],
 /// [LinearChargeDensity$AbcoulombPerCentimeter],
 /// [LinearChargeDensity$AbcoulombPerInch]
-abstract final class LinearChargeDensity extends Unit<LinearChargeDensity> {
+sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
   const LinearChargeDensity([
     super.value,
   ]);

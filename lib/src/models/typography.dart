@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [Typography$DidotsPoint], [Typography$PicaPostScriptDTPComputer],
 /// [Typography$PicaPrinters], [Typography$Ciceros], [Typography$Inch],
 /// [Typography$Millimeter], [Typography$Centimeter]
-abstract final class Typography extends Unit<Typography> {
+sealed class Typography extends Unit<Typography> {
   const Typography([
     super.value,
   ]);

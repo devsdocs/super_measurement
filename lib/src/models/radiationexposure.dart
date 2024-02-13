@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [RadiationExposure$Roentgen], [RadiationExposure$CoulombPerKilogram],
 /// [RadiationExposure$MillicoulombPerKilogram],
 /// [RadiationExposure$MicrocoulombPerKilogram]
-abstract final class RadiationExposure extends Unit<RadiationExposure> {
+sealed class RadiationExposure extends Unit<RadiationExposure> {
   const RadiationExposure([
     super.value,
   ]);

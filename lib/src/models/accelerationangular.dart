@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [AccelerationAngular$RevolutionPerSecondSquare],
 /// [AccelerationAngular$RevolutionPerMinuteSecond],
 /// [AccelerationAngular$RevolutionPerMinuteSquare]
-abstract final class AccelerationAngular extends Unit<AccelerationAngular> {
+sealed class AccelerationAngular extends Unit<AccelerationAngular> {
   const AccelerationAngular([
     super.value,
   ]);

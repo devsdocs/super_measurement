@@ -20,7 +20,7 @@ part of '../../super_measurement.dart';
 /// [Mass$DenariusBiblicalRoman], [Mass$AssarionBiblicalRoman],
 /// [Mass$QuadransBiblicalRoman], [Mass$LeptonBiblicalRoman],
 /// [Mass$AtomicMassUnit]
-abstract final class Mass extends Unit<Mass> {
+sealed class Mass extends Unit<Mass> {
   const Mass([
     super.value,
   ]);

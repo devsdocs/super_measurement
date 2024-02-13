@@ -31,7 +31,7 @@ part of '../../super_measurement.dart';
 /// [Flow$KilogramPerMinuteGasolineAt155DegreeC],
 /// [Flow$KilogramPerHourGasolineAt155DegreeC],
 /// [Flow$KilogramPerDayGasolineAt155DegreeC]
-abstract final class Flow extends Unit<Flow> {
+sealed class Flow extends Unit<Flow> {
   const Flow([
     super.value,
   ]);

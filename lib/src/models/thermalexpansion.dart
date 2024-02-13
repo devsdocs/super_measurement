@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [ThermalExpansion$LengthPerLengthPerFahrenheit],
 /// [ThermalExpansion$LengthPerLengthPerRankine],
 /// [ThermalExpansion$LengthPerLengthPerReaumur]
-abstract final class ThermalExpansion extends Unit<ThermalExpansion> {
+sealed class ThermalExpansion extends Unit<ThermalExpansion> {
   const ThermalExpansion([
     super.value,
   ]);

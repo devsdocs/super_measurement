@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [Conductivity$AbmhoPerMeter], [Conductivity$AbmhoPerCentimeter],
 /// [Conductivity$StatmhoPerMeter], [Conductivity$StatmhoPerCentimeter],
 /// [Conductivity$SiemensPerMeter], [Conductivity$PicosiemensPerMeter]
-abstract final class Conductivity extends Unit<Conductivity> {
+sealed class Conductivity extends Unit<Conductivity> {
   const Conductivity([
     super.value,
   ]);

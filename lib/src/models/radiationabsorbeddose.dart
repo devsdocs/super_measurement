@@ -18,7 +18,7 @@ part of '../../super_measurement.dart';
 /// [RadiationAbsorbedDose$Milligray], [RadiationAbsorbedDose$Microgray],
 /// [RadiationAbsorbedDose$Nanogray], [RadiationAbsorbedDose$Picogray],
 /// [RadiationAbsorbedDose$Femtogray], [RadiationAbsorbedDose$Attogray]
-abstract final class RadiationAbsorbedDose extends Unit<RadiationAbsorbedDose> {
+sealed class RadiationAbsorbedDose extends Unit<RadiationAbsorbedDose> {
   const RadiationAbsorbedDose([
     super.value,
   ]);

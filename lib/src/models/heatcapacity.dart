@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [HeatCapacity$KilocaloriePerDegreeC], [HeatCapacity$CaloriePerDegreeC],
 /// [HeatCapacity$BTUPerDegreeC], [HeatCapacity$BTUPerDegreeF],
 /// [HeatCapacity$BTUPerDegreeR], [HeatCapacity$CHUPerDegreeC]
-abstract final class HeatCapacity extends Unit<HeatCapacity> {
+sealed class HeatCapacity extends Unit<HeatCapacity> {
   const HeatCapacity([
     super.value,
   ]);

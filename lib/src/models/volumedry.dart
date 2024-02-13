@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [VolumeDry$CorBiblical], [VolumeDry$HomerBiblical],
 /// [VolumeDry$EphahBiblical], [VolumeDry$SeahBiblical],
 /// [VolumeDry$OmerBiblical], [VolumeDry$CabBiblical], [VolumeDry$LogBiblical]
-abstract final class VolumeDry extends Unit<VolumeDry> {
+sealed class VolumeDry extends Unit<VolumeDry> {
   const VolumeDry([
     super.value,
   ]);

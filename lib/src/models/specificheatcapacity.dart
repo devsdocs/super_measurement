@@ -13,7 +13,7 @@ part of '../../super_measurement.dart';
 /// [SpecificHeatCapacity$BTUPerPoundDegreeF],
 /// [SpecificHeatCapacity$BTUPerPoundDegreeR],
 /// [SpecificHeatCapacity$CHUPerPoundDegreeC]
-abstract final class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
+sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
   const SpecificHeatCapacity([
     super.value,
   ]);

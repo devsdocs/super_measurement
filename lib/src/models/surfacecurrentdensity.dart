@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [SurfaceCurrentDensity$AmperePerMilSquare],
 /// [SurfaceCurrentDensity$AmperePerCicularMil],
 /// [SurfaceCurrentDensity$AbamperePerCentimeterSquare]
-abstract final class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
+sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
   const SurfaceCurrentDensity([
     super.value,
   ]);

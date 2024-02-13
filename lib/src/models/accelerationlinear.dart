@@ -18,7 +18,7 @@ part of '../../super_measurement.dart';
 /// [AccelerationLinear$YardPerSecondSquare],
 /// [AccelerationLinear$FootPerSecondSquare],
 /// [AccelerationLinear$InchPerSecondSquare]
-abstract final class AccelerationLinear extends Unit<AccelerationLinear> {
+sealed class AccelerationLinear extends Unit<AccelerationLinear> {
   const AccelerationLinear([
     super.value,
   ]);

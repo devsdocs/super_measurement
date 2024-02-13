@@ -3,7 +3,7 @@ part of '../../super_measurement.dart';
 /// Available units of measurement for [Sound]
 ///
 /// [Sound$Bel],[Sound$Decibel],[Sound$Neper]
-abstract final class Sound extends Unit<Sound> {
+sealed class Sound extends Unit<Sound> {
   const Sound([
     super.value,
   ]);

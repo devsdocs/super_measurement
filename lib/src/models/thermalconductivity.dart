@@ -11,7 +11,7 @@ part of '../../super_measurement.dart';
 /// [ThermalConductivity$KilowattPerMeterK],
 /// [ThermalConductivity$WattPerMeterK],
 /// [ThermalConductivity$WattPerCentimeterDegreeC]
-abstract final class ThermalConductivity extends Unit<ThermalConductivity> {
+sealed class ThermalConductivity extends Unit<ThermalConductivity> {
   const ThermalConductivity([
     super.value,
   ]);

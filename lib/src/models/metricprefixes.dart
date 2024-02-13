@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [MetricPrefixes$Centi], [MetricPrefixes$Milli], [MetricPrefixes$Micro],
 /// [MetricPrefixes$Nano], [MetricPrefixes$Pico], [MetricPrefixes$Femto],
 /// [MetricPrefixes$Atto], [MetricPrefixes$Zepto], [MetricPrefixes$Yocto]
-abstract final class MetricPrefixes extends Unit<MetricPrefixes> {
+sealed class MetricPrefixes extends Unit<MetricPrefixes> {
   const MetricPrefixes([
     super.value,
   ]);

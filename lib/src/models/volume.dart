@@ -24,7 +24,7 @@ part of '../../super_measurement.dart';
 /// [Volume$HinBiblical], [Volume$CabBiblical], [Volume$LogBiblical],
 /// [Volume$TazaSpanish], [Volume$Bushel], [Volume$Peck], [Volume$DryPint],
 /// [Volume$DryQuart]
-abstract final class Volume extends Unit<Volume> {
+sealed class Volume extends Unit<Volume> {
   const Volume([
     super.value,
   ]);

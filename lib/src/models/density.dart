@@ -19,7 +19,7 @@ part of '../../super_measurement.dart';
 /// [Density$PoundPerGallon], [Density$OuncePerInchCubic],
 /// [Density$OuncePerFootCubic], [Density$OuncePerGallon],
 /// [Density$TonPerYardCubic], [Density$PsiPer1000Feet]
-abstract final class Density extends Unit<Density> {
+sealed class Density extends Unit<Density> {
   const Density([
     super.value,
   ]);

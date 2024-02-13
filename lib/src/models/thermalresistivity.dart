@@ -20,7 +20,7 @@ part of '../../super_measurement.dart';
 /// [ThermalResistivity$KilowattPerMeterK],
 /// [ThermalResistivity$WattPerMeterK],
 /// [ThermalResistivity$WattPerCentimeterDegreeC]
-abstract final class ThermalResistivity extends Unit<ThermalResistivity> {
+sealed class ThermalResistivity extends Unit<ThermalResistivity> {
   const ThermalResistivity([
     super.value,
   ]);

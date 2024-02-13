@@ -10,8 +10,7 @@ part of '../../super_measurement.dart';
 /// [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC],
 /// [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF],
 /// [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC]
-abstract final class HeatTransferCoefficient
-    extends Unit<HeatTransferCoefficient> {
+sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
   const HeatTransferCoefficient([
     super.value,
   ]);

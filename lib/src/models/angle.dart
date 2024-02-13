@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [Angle$Second], [Angle$Sign], [Angle$Mil], [Angle$Revolution],
 /// [Angle$Circle], [Angle$Turn], [Angle$Quadrant], [Angle$RightAngle],
 /// [Angle$Sextant], [Angle$Octant], [Angle$PercentOfFullCircle]
-abstract final class Angle extends Unit<Angle> {
+sealed class Angle extends Unit<Angle> {
   const Angle([
     super.value,
   ]);

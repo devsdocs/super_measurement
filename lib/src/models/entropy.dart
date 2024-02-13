@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [Entropy$KilocaloriePerKilogramDegreeC], [Entropy$CaloriePerGramDegreeC],
 /// [Entropy$BTUPerPoundDegreeF], [Entropy$BTUPerPoundDegreeR],
 /// [Entropy$CHUPerPoundDegreeC]
-abstract final class Entropy extends Unit<Entropy> {
+sealed class Entropy extends Unit<Entropy> {
   const Entropy([
     super.value,
   ]);

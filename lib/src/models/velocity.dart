@@ -13,7 +13,7 @@ part of '../../super_measurement.dart';
 /// [Velocity$FootPerMinute], [Velocity$FootPerSecond],
 /// [Velocity$MachSIStandard], [Velocity$MachAtSeaLevel], [Velocity$Light],
 /// [Velocity$Knot]
-abstract final class Velocity extends Unit<Velocity> {
+sealed class Velocity extends Unit<Velocity> {
   const Velocity([
     super.value,
   ]);

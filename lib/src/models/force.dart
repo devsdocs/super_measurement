@@ -11,7 +11,7 @@ part of '../../super_measurement.dart';
 /// [Force$JoulePerMeter], [Force$JoulePerCentimeter], [Force$KilogramForce],
 /// [Force$GramForce], [Force$KipForce], [Force$PoundForce],
 /// [Force$OunceForce], [Force$Poundal]
-abstract final class Force extends Unit<Force> {
+sealed class Force extends Unit<Force> {
   const Force([
     super.value,
   ]);

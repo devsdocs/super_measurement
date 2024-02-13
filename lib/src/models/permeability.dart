@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [Permeability$Permeability0DegreeC], [Permeability$Permeability23DegreeC],
 /// [Permeability$PermeabilityInches0DegreeC],
 /// [Permeability$PermeabilityInches23DegreeC]
-abstract final class Permeability extends Unit<Permeability> {
+sealed class Permeability extends Unit<Permeability> {
   const Permeability([
     super.value,
   ]);

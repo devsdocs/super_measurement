@@ -21,7 +21,7 @@ part of '../../super_measurement.dart';
 /// [Pressure$MillimeterMercury0DegreeC], [Pressure$InchMercury32DegreeF],
 /// [Pressure$CentimeterWater4DegreeC], [Pressure$InchWater60DegreeF],
 /// [Pressure$FootWater60DegreeF]
-abstract final class Pressure extends Unit<Pressure> {
+sealed class Pressure extends Unit<Pressure> {
   const Pressure([
     super.value,
   ]);

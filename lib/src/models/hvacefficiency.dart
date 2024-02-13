@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [HVACEfficiency$EEREnergyEfficiencyRatio],
 /// [HVACEfficiency$COPCoefficientOfPerformace],
 /// [HVACEfficiency$KilowattPerTon]
-abstract final class HVACEfficiency extends Unit<HVACEfficiency> {
+sealed class HVACEfficiency extends Unit<HVACEfficiency> {
   const HVACEfficiency([
     super.value,
   ]);

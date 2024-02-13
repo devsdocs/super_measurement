@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [MagnetomotiveForce$KiloampereTurn], [MagnetomotiveForce$AmpereTurn],
 /// [MagnetomotiveForce$MilliampereTurn], [MagnetomotiveForce$AbampereTurn],
 /// [MagnetomotiveForce$Gilbert]
-abstract final class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
+sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
   const MagnetomotiveForce([
     super.value,
   ]);

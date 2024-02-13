@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [VolumeChargeDensity$AbcoulombPerMeterCubic],
 /// [VolumeChargeDensity$AbcoulombPerCentimeterCubic],
 /// [VolumeChargeDensity$AbcoulombPerInchCubic]
-abstract final class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
+sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
   const VolumeChargeDensity([
     super.value,
   ]);

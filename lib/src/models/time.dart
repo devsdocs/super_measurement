@@ -11,7 +11,7 @@ part of '../../super_measurement.dart';
 /// [Time$Femtosecond], [Time$Attosecond], [Time$Shake], [Time$Septennial],
 /// [Time$Octennial], [Time$Novennial], [Time$Quindecennial],
 /// [Time$Quinquennial]
-abstract final class Time extends Unit<Time> {
+sealed class Time extends Unit<Time> {
   const Time([
     super.value,
   ]);
