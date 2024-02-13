@@ -31,7 +31,9 @@ sealed class FlowMolar extends Unit<FlowMolar> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const FlowMolar$MolPerDay();
+          : FlowMolar.anchor();
+
+  factory FlowMolar.anchor() => const FlowMolar$MolPerDay();
 
   @override
   AnchorRatio<FlowMolar> get _anchorRatio => (
@@ -246,7 +248,7 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$ExamolPerSecond] with new value
   @override
@@ -311,7 +313,7 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$PetamolPerSecond] with new value
   @override
@@ -376,7 +378,7 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$TeramolPerSecond] with new value
   @override
@@ -441,7 +443,7 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$GigamolPerSecond] with new value
   @override
@@ -506,7 +508,7 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MegamolPerSecond] with new value
   @override
@@ -571,7 +573,7 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$KilomolPerSecond] with new value
   @override
@@ -636,7 +638,7 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$HectomolPerSecond] with new value
   @override
@@ -701,7 +703,7 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$DekamolPerSecond] with new value
   @override
@@ -766,7 +768,7 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MolPerSecond] with new value
   @override
@@ -831,7 +833,7 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$DecimolPerSecond] with new value
   @override
@@ -896,7 +898,7 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$CentimolPerSecond] with new value
   @override
@@ -961,7 +963,7 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MillimolPerSecond] with new value
   @override
@@ -1026,7 +1028,7 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MicromolPerSecond] with new value
   @override
@@ -1091,7 +1093,7 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$NanomolPerSecond] with new value
   @override
@@ -1156,7 +1158,7 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$PicomolPerSecond] with new value
   @override
@@ -1221,7 +1223,7 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$FemtomolPerSecond] with new value
   @override
@@ -1286,7 +1288,7 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$AttomolPerSecond] with new value
   @override
@@ -1351,7 +1353,7 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MolPerMinute] with new value
   @override
@@ -1416,7 +1418,7 @@ final class FlowMolar$MolPerHour extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MolPerHour] with new value
   @override
@@ -1481,7 +1483,7 @@ final class FlowMolar$MolPerDay extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MolPerDay] with new value
   @override
@@ -1546,7 +1548,7 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MillimolPerMinute] with new value
   @override
@@ -1611,7 +1613,7 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MillimolPerHour] with new value
   @override
@@ -1676,7 +1678,7 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$MillimolPerDay] with new value
   @override
@@ -1741,7 +1743,7 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$KilomolPerMinute] with new value
   @override
@@ -1806,7 +1808,7 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$KilomolPerHour] with new value
   @override
@@ -1871,7 +1873,7 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMolar$KilomolPerDay] with new value
   @override

@@ -26,7 +26,9 @@ sealed class Capacitance extends Unit<Capacitance> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Capacitance$Farad();
+          : Capacitance.anchor();
+
+  factory Capacitance.anchor() => const Capacitance$Farad();
 
   @override
   AnchorRatio<Capacitance> get _anchorRatio => (
@@ -199,7 +201,7 @@ final class Capacitance$Exafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Exafarad] with new value
   @override
@@ -264,7 +266,7 @@ final class Capacitance$Petafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Petafarad] with new value
   @override
@@ -329,7 +331,7 @@ final class Capacitance$Terafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Terafarad] with new value
   @override
@@ -394,7 +396,7 @@ final class Capacitance$Gigafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Gigafarad] with new value
   @override
@@ -459,7 +461,7 @@ final class Capacitance$Megafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Megafarad] with new value
   @override
@@ -524,7 +526,7 @@ final class Capacitance$Kilofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Kilofarad] with new value
   @override
@@ -589,7 +591,7 @@ final class Capacitance$Hectofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Hectofarad] with new value
   @override
@@ -654,7 +656,7 @@ final class Capacitance$Dekafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Dekafarad] with new value
   @override
@@ -719,7 +721,7 @@ final class Capacitance$Farad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Farad] with new value
   @override
@@ -784,7 +786,7 @@ final class Capacitance$Decifarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Decifarad] with new value
   @override
@@ -849,7 +851,7 @@ final class Capacitance$Centifarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Centifarad] with new value
   @override
@@ -914,7 +916,7 @@ final class Capacitance$Millifarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Millifarad] with new value
   @override
@@ -979,7 +981,7 @@ final class Capacitance$Microfarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Microfarad] with new value
   @override
@@ -1044,7 +1046,7 @@ final class Capacitance$Nanofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Nanofarad] with new value
   @override
@@ -1109,7 +1111,7 @@ final class Capacitance$Picofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Picofarad] with new value
   @override
@@ -1174,7 +1176,7 @@ final class Capacitance$Femtofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Femtofarad] with new value
   @override
@@ -1239,7 +1241,7 @@ final class Capacitance$Attofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Attofarad] with new value
   @override
@@ -1304,7 +1306,7 @@ final class Capacitance$Abfarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Abfarad] with new value
   @override
@@ -1369,7 +1371,7 @@ final class Capacitance$Statfarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Capacitance$Statfarad] with new value
   @override

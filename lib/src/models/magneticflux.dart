@@ -22,7 +22,9 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const MagneticFlux$Weber();
+          : MagneticFlux.anchor();
+
+  factory MagneticFlux.anchor() => const MagneticFlux$Weber();
 
   @override
   AnchorRatio<MagneticFlux> get _anchorRatio => (
@@ -144,7 +146,7 @@ final class MagneticFlux$Weber extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$Weber] with new value
   @override
@@ -209,7 +211,7 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$VoltSecond] with new value
   @override
@@ -274,7 +276,7 @@ final class MagneticFlux$Megaline extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$Megaline] with new value
   @override
@@ -339,7 +341,7 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$Kiloline] with new value
   @override
@@ -404,7 +406,7 @@ final class MagneticFlux$Line extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$Line] with new value
   @override
@@ -469,7 +471,7 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$Maxwell] with new value
   @override
@@ -535,7 +537,7 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$MaxwellInternational] with new value
   @override
@@ -601,7 +603,7 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$TeslaMeterSquare] with new value
   @override
@@ -667,7 +669,7 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$TeslaCentimeterSquare] with new value
   @override
@@ -733,7 +735,7 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFlux$GaussCentimeterSquare] with new value
   @override

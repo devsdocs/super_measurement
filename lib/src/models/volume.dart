@@ -40,7 +40,9 @@ sealed class Volume extends Unit<Volume> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Volume$MeterCubic();
+          : Volume.anchor();
+
+  factory Volume.anchor() => const Volume$MeterCubic();
 
   @override
   AnchorRatio<Volume> get _anchorRatio => (
@@ -537,7 +539,7 @@ final class Volume$MeterCubic extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$MeterCubic] with new value
   @override
@@ -602,7 +604,7 @@ final class Volume$CentimeterCubic extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$CentimeterCubic] with new value
   @override
@@ -667,7 +669,7 @@ final class Volume$MillimeterCubic extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$MillimeterCubic] with new value
   @override
@@ -732,7 +734,7 @@ final class Volume$Exaliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Exaliter] with new value
   @override
@@ -797,7 +799,7 @@ final class Volume$Petaliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Petaliter] with new value
   @override
@@ -862,7 +864,7 @@ final class Volume$Teraliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Teraliter] with new value
   @override
@@ -927,7 +929,7 @@ final class Volume$Gigaliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Gigaliter] with new value
   @override
@@ -992,7 +994,7 @@ final class Volume$Megaliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Megaliter] with new value
   @override
@@ -1057,7 +1059,7 @@ final class Volume$Kiloliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Kiloliter] with new value
   @override
@@ -1122,7 +1124,7 @@ final class Volume$Hectoliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Hectoliter] with new value
   @override
@@ -1187,7 +1189,7 @@ final class Volume$Dekaliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Dekaliter] with new value
   @override
@@ -1252,7 +1254,7 @@ final class Volume$Liter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Liter] with new value
   @override
@@ -1317,7 +1319,7 @@ final class Volume$Deciliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Deciliter] with new value
   @override
@@ -1382,7 +1384,7 @@ final class Volume$Centiliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Centiliter] with new value
   @override
@@ -1447,7 +1449,7 @@ final class Volume$Milliliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Milliliter] with new value
   @override
@@ -1512,7 +1514,7 @@ final class Volume$Microliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Microliter] with new value
   @override
@@ -1577,7 +1579,7 @@ final class Volume$Nanoliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Nanoliter] with new value
   @override
@@ -1642,7 +1644,7 @@ final class Volume$Picoliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Picoliter] with new value
   @override
@@ -1707,7 +1709,7 @@ final class Volume$Femtoliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Femtoliter] with new value
   @override
@@ -1772,7 +1774,7 @@ final class Volume$Attoliter extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Attoliter] with new value
   @override
@@ -1837,7 +1839,7 @@ final class Volume$Cc extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Cc] with new value
   @override
@@ -1902,7 +1904,7 @@ final class Volume$Drop extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Drop] with new value
   @override
@@ -1967,7 +1969,7 @@ final class Volume$Barrel extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Barrel] with new value
   @override
@@ -2032,7 +2034,7 @@ final class Volume$BarrelOil extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$BarrelOil] with new value
   @override
@@ -2097,7 +2099,7 @@ final class Volume$BushelUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$BushelUK] with new value
   @override
@@ -2162,7 +2164,7 @@ final class Volume$PeckUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$PeckUK] with new value
   @override
@@ -2227,7 +2229,7 @@ final class Volume$Gallon extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Gallon] with new value
   @override
@@ -2292,7 +2294,7 @@ final class Volume$GallonUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$GallonUK] with new value
   @override
@@ -2357,7 +2359,7 @@ final class Volume$Quart extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Quart] with new value
   @override
@@ -2422,7 +2424,7 @@ final class Volume$QuartUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$QuartUK] with new value
   @override
@@ -2487,7 +2489,7 @@ final class Volume$Pint extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Pint] with new value
   @override
@@ -2552,7 +2554,7 @@ final class Volume$PintUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$PintUK] with new value
   @override
@@ -2617,7 +2619,7 @@ final class Volume$Cup extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Cup] with new value
   @override
@@ -2682,7 +2684,7 @@ final class Volume$CupUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$CupUK] with new value
   @override
@@ -2747,7 +2749,7 @@ final class Volume$Gill extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Gill] with new value
   @override
@@ -2812,7 +2814,7 @@ final class Volume$GillUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$GillUK] with new value
   @override
@@ -2877,7 +2879,7 @@ final class Volume$Ounce extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Ounce] with new value
   @override
@@ -2942,7 +2944,7 @@ final class Volume$OunceUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$OunceUK] with new value
   @override
@@ -3007,7 +3009,7 @@ final class Volume$Dram extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Dram] with new value
   @override
@@ -3072,7 +3074,7 @@ final class Volume$DramUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$DramUK] with new value
   @override
@@ -3137,7 +3139,7 @@ final class Volume$Minim extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Minim] with new value
   @override
@@ -3202,7 +3204,7 @@ final class Volume$MinimUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$MinimUK] with new value
   @override
@@ -3267,7 +3269,7 @@ final class Volume$Tablespoon extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Tablespoon] with new value
   @override
@@ -3332,7 +3334,7 @@ final class Volume$TablespoonUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$TablespoonUK] with new value
   @override
@@ -3397,7 +3399,7 @@ final class Volume$Dessertspoon extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Dessertspoon] with new value
   @override
@@ -3462,7 +3464,7 @@ final class Volume$DessertspoonUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$DessertspoonUK] with new value
   @override
@@ -3527,7 +3529,7 @@ final class Volume$Teaspoon extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Teaspoon] with new value
   @override
@@ -3592,7 +3594,7 @@ final class Volume$TeaspoonUK extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$TeaspoonUK] with new value
   @override
@@ -3657,7 +3659,7 @@ final class Volume$Hogshead extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Hogshead] with new value
   @override
@@ -3722,7 +3724,7 @@ final class Volume$YardCubic extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$YardCubic] with new value
   @override
@@ -3787,7 +3789,7 @@ final class Volume$FootCubic extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$FootCubic] with new value
   @override
@@ -3852,7 +3854,7 @@ final class Volume$InchCubic extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$InchCubic] with new value
   @override
@@ -3917,7 +3919,7 @@ final class Volume$Ccf extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Ccf] with new value
   @override
@@ -3982,7 +3984,7 @@ final class Volume$HundredFootCubic extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$HundredFootCubic] with new value
   @override
@@ -4047,7 +4049,7 @@ final class Volume$AcreFoot extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$AcreFoot] with new value
   @override
@@ -4112,7 +4114,7 @@ final class Volume$AcreInch extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$AcreInch] with new value
   @override
@@ -4177,7 +4179,7 @@ final class Volume$Dekastere extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Dekastere] with new value
   @override
@@ -4242,7 +4244,7 @@ final class Volume$Stere extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Stere] with new value
   @override
@@ -4307,7 +4309,7 @@ final class Volume$Decistere extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Decistere] with new value
   @override
@@ -4372,7 +4374,7 @@ final class Volume$Cord extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Cord] with new value
   @override
@@ -4437,7 +4439,7 @@ final class Volume$BoardFoot extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$BoardFoot] with new value
   @override
@@ -4502,7 +4504,7 @@ final class Volume$Tun extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Tun] with new value
   @override
@@ -4567,7 +4569,7 @@ final class Volume$CorBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$CorBiblical] with new value
   @override
@@ -4632,7 +4634,7 @@ final class Volume$HomerBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$HomerBiblical] with new value
   @override
@@ -4697,7 +4699,7 @@ final class Volume$BathBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$BathBiblical] with new value
   @override
@@ -4762,7 +4764,7 @@ final class Volume$HinBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$HinBiblical] with new value
   @override
@@ -4827,7 +4829,7 @@ final class Volume$CabBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$CabBiblical] with new value
   @override
@@ -4892,7 +4894,7 @@ final class Volume$LogBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$LogBiblical] with new value
   @override
@@ -4957,7 +4959,7 @@ final class Volume$TazaSpanish extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$TazaSpanish] with new value
   @override
@@ -5022,7 +5024,7 @@ final class Volume$Bushel extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Bushel] with new value
   @override
@@ -5087,7 +5089,7 @@ final class Volume$Peck extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$Peck] with new value
   @override
@@ -5152,7 +5154,7 @@ final class Volume$DryPint extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$DryPint] with new value
   @override
@@ -5217,7 +5219,7 @@ final class Volume$DryQuart extends Volume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Volume$DryQuart] with new value
   @override

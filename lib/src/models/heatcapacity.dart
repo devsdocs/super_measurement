@@ -23,7 +23,9 @@ sealed class HeatCapacity extends Unit<HeatCapacity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const HeatCapacity$KilojoulePerK();
+          : HeatCapacity.anchor();
+
+  factory HeatCapacity.anchor() => const HeatCapacity$KilojoulePerK();
 
   @override
   AnchorRatio<HeatCapacity> get _anchorRatio => (
@@ -144,7 +146,7 @@ final class HeatCapacity$KilojoulePerK extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$KilojoulePerK] with new value
   @override
@@ -210,7 +212,7 @@ final class HeatCapacity$KilojoulePerDegreeC extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$KilojoulePerDegreeC] with new value
   @override
@@ -275,7 +277,7 @@ final class HeatCapacity$JoulePerK extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$JoulePerK] with new value
   @override
@@ -341,7 +343,7 @@ final class HeatCapacity$JoulePerDegreeC extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$JoulePerDegreeC] with new value
   @override
@@ -407,7 +409,7 @@ final class HeatCapacity$KilocaloriePerDegreeC extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$KilocaloriePerDegreeC] with new value
   @override
@@ -473,7 +475,7 @@ final class HeatCapacity$CaloriePerDegreeC extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$CaloriePerDegreeC] with new value
   @override
@@ -538,7 +540,7 @@ final class HeatCapacity$BTUPerDegreeC extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeC] with new value
   @override
@@ -603,7 +605,7 @@ final class HeatCapacity$BTUPerDegreeF extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeF] with new value
   @override
@@ -668,7 +670,7 @@ final class HeatCapacity$BTUPerDegreeR extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$BTUPerDegreeR] with new value
   @override
@@ -733,7 +735,7 @@ final class HeatCapacity$CHUPerDegreeC extends HeatCapacity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatCapacity$CHUPerDegreeC] with new value
   @override

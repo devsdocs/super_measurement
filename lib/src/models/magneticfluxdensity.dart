@@ -28,7 +28,9 @@ sealed class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const MagneticFluxDensity$Tesla();
+          : MagneticFluxDensity.anchor();
+
+  factory MagneticFluxDensity.anchor() => const MagneticFluxDensity$Tesla();
 
   @override
   AnchorRatio<MagneticFluxDensity> get _anchorRatio => (
@@ -162,7 +164,7 @@ final class MagneticFluxDensity$Tesla extends MagneticFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$Tesla] with new value
   @override
@@ -227,7 +229,7 @@ final class MagneticFluxDensity$Gauss extends MagneticFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$Gauss] with new value
   @override
@@ -293,7 +295,7 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$GaussInternational] with new value
   @override
@@ -360,7 +362,7 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$LinePerCentimeterSquare] with new value
   @override
@@ -426,7 +428,7 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$LinePerInchSquare] with new value
   @override
@@ -493,7 +495,7 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerMeterSquare] with new value
   @override
@@ -560,7 +562,7 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerCentimeterSquare] with new value
   @override
@@ -627,7 +629,7 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$MaxwellPerInchSquare] with new value
   @override
@@ -694,7 +696,7 @@ final class MagneticFluxDensity$WeberPerMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerMeterSquare] with new value
   @override
@@ -761,7 +763,7 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerCentimeterSquare] with new value
   @override
@@ -827,7 +829,7 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagneticFluxDensity$WeberPerInchSquare] with new value
   @override

@@ -22,7 +22,9 @@ sealed class Current extends Unit<Current> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Current$Milliampere();
+          : Current.anchor();
+
+  factory Current.anchor() => const Current$Milliampere();
 
   @override
   AnchorRatio<Current> get _anchorRatio => (
@@ -141,7 +143,7 @@ final class Current$Kiloampere extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$Kiloampere] with new value
   @override
@@ -206,7 +208,7 @@ final class Current$Ampere extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$Ampere] with new value
   @override
@@ -271,7 +273,7 @@ final class Current$Milliampere extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$Milliampere] with new value
   @override
@@ -336,7 +338,7 @@ final class Current$Biot extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$Biot] with new value
   @override
@@ -401,7 +403,7 @@ final class Current$Abampere extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$Abampere] with new value
   @override
@@ -466,7 +468,7 @@ final class Current$Statampere extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$Statampere] with new value
   @override
@@ -531,7 +533,7 @@ final class Current$EMUOfCurrent extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$EMUOfCurrent] with new value
   @override
@@ -596,7 +598,7 @@ final class Current$ESUOfCurrent extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$ESUOfCurrent] with new value
   @override
@@ -661,7 +663,7 @@ final class Current$CGSEMUnit extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$CGSEMUnit] with new value
   @override
@@ -726,7 +728,7 @@ final class Current$CGSESUnit extends Current {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Current$CGSESUnit] with new value
   @override

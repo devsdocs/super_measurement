@@ -29,7 +29,9 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ConcentrationMolar$MolPerLiter();
+          : ConcentrationMolar.anchor();
+
+  factory ConcentrationMolar.anchor() => const ConcentrationMolar$MolPerLiter();
 
   @override
   AnchorRatio<ConcentrationMolar> get _anchorRatio => (
@@ -172,7 +174,7 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerMeterCubic] with new value
   @override
@@ -238,7 +240,7 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerLiter] with new value
   @override
@@ -305,7 +307,7 @@ final class ConcentrationMolar$MolPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerCentimeterCubic] with new value
   @override
@@ -372,7 +374,7 @@ final class ConcentrationMolar$MolPerMillimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MolPerMillimeterCubic] with new value
   @override
@@ -438,7 +440,7 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerMeterCubic] with new value
   @override
@@ -504,7 +506,7 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerLiter] with new value
   @override
@@ -571,7 +573,7 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerCentimeterCubic] with new value
   @override
@@ -638,7 +640,7 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$KilomolPerMillimeterCubic] with new value
   @override
@@ -705,7 +707,7 @@ final class ConcentrationMolar$MillimolPerMeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerMeterCubic] with new value
   @override
@@ -771,7 +773,7 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerLiter] with new value
   @override
@@ -838,7 +840,7 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerCentimeterCubic] with new value
   @override
@@ -905,7 +907,7 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationMolar$MillimolPerMillimeterCubic] with new value
   @override

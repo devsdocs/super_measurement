@@ -57,7 +57,11 @@ void generateModels() {
       '  factory $name.fromJson(Map<String,dynamic> json) =>',
     );
     typeBuff.writeln(
-      '_checkJson(_majorName,json, $enumValuesSymbol,) ? $enumValuesSymbol.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct.withValue((json[_majorName] as Map<String, dynamic>)[_value] as num,) : const ${anchor.keys.first}();',
+      '_checkJson(_majorName,json, $enumValuesSymbol,) ? $enumValuesSymbol.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct.withValue((json[_majorName] as Map<String, dynamic>)[_value] as num,) : $name.anchor();',
+    );
+    typeBuff.writeln();
+    typeBuff.writeln(
+      '  factory $name.anchor() => const ${anchor.keys.first}();',
     );
     typeBuff.writeln();
     typeBuff.writeln('  @override');
@@ -145,7 +149,7 @@ void generateModels() {
         );
         if (isShiftedValue) {
           typeBuff.writeln('///');
-          typeBuff.writeln('/// See [_valueShift]');
+          typeBuff.writeln('/// See [valueShift]');
         }
       }
       typeBuff.writeln('  @override');
@@ -168,7 +172,7 @@ void generateModels() {
         );
       }
       typeBuff.writeln('  @override');
-      typeBuff.writeln('  num get _valueShift => ${unitProps['valueshift']};');
+      typeBuff.writeln('  num get valueShift => ${unitProps['valueshift']};');
       typeBuff.writeln(
         '/// Creating [$unitType] with new value',
       );

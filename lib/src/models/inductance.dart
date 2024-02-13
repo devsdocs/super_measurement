@@ -26,7 +26,9 @@ sealed class Inductance extends Unit<Inductance> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Inductance$Attohenry();
+          : Inductance.anchor();
+
+  factory Inductance.anchor() => const Inductance$Attohenry();
 
   @override
   AnchorRatio<Inductance> get _anchorRatio => (
@@ -211,7 +213,7 @@ final class Inductance$Exahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Exahenry] with new value
   @override
@@ -276,7 +278,7 @@ final class Inductance$Petahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Petahenry] with new value
   @override
@@ -341,7 +343,7 @@ final class Inductance$Terahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Terahenry] with new value
   @override
@@ -406,7 +408,7 @@ final class Inductance$Gigahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Gigahenry] with new value
   @override
@@ -471,7 +473,7 @@ final class Inductance$Megahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Megahenry] with new value
   @override
@@ -536,7 +538,7 @@ final class Inductance$Kilohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Kilohenry] with new value
   @override
@@ -601,7 +603,7 @@ final class Inductance$Hectohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Hectohenry] with new value
   @override
@@ -666,7 +668,7 @@ final class Inductance$Dekahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Dekahenry] with new value
   @override
@@ -731,7 +733,7 @@ final class Inductance$Henry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Henry] with new value
   @override
@@ -796,7 +798,7 @@ final class Inductance$Decihenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Decihenry] with new value
   @override
@@ -861,7 +863,7 @@ final class Inductance$Centihenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Centihenry] with new value
   @override
@@ -926,7 +928,7 @@ final class Inductance$Millihenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Millihenry] with new value
   @override
@@ -991,7 +993,7 @@ final class Inductance$Microhenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Microhenry] with new value
   @override
@@ -1056,7 +1058,7 @@ final class Inductance$Nanohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Nanohenry] with new value
   @override
@@ -1121,7 +1123,7 @@ final class Inductance$Picohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Picohenry] with new value
   @override
@@ -1186,7 +1188,7 @@ final class Inductance$Femtohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Femtohenry] with new value
   @override
@@ -1251,7 +1253,7 @@ final class Inductance$Attohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Attohenry] with new value
   @override
@@ -1316,7 +1318,7 @@ final class Inductance$Abhenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Abhenry] with new value
   @override
@@ -1381,7 +1383,7 @@ final class Inductance$Stathenry extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$Stathenry] with new value
   @override
@@ -1446,7 +1448,7 @@ final class Inductance$EMUOfInductance extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$EMUOfInductance] with new value
   @override
@@ -1511,7 +1513,7 @@ final class Inductance$ESUOfInductance extends Inductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Inductance$ESUOfInductance] with new value
   @override

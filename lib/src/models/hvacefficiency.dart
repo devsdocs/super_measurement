@@ -21,7 +21,10 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const HVACEfficiency$COPCoefficientOfPerformace();
+          : HVACEfficiency.anchor();
+
+  factory HVACEfficiency.anchor() =>
+      const HVACEfficiency$COPCoefficientOfPerformace();
 
   @override
   AnchorRatio<HVACEfficiency> get _anchorRatio => (
@@ -101,7 +104,7 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HVACEfficiency$EEREnergyEfficiencyRatio] with new value
   @override
@@ -167,7 +170,7 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HVACEfficiency$COPCoefficientOfPerformace] with new value
   @override
@@ -233,7 +236,7 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HVACEfficiency$KilowattPerTon] with new value
   @override

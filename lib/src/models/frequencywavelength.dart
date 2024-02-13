@@ -40,7 +40,9 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const FrequencyWavelength$Hertz();
+          : FrequencyWavelength.anchor();
+
+  factory FrequencyWavelength.anchor() => const FrequencyWavelength$Hertz();
 
   @override
   AnchorRatio<FrequencyWavelength> get _anchorRatio => (
@@ -300,7 +302,7 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Exahertz] with new value
   @override
@@ -366,7 +368,7 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Petahertz] with new value
   @override
@@ -432,7 +434,7 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Terahertz] with new value
   @override
@@ -498,7 +500,7 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Gigahertz] with new value
   @override
@@ -564,7 +566,7 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Megahertz] with new value
   @override
@@ -630,7 +632,7 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Kilohertz] with new value
   @override
@@ -696,7 +698,7 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Hectohertz] with new value
   @override
@@ -762,7 +764,7 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Dekahertz] with new value
   @override
@@ -827,7 +829,7 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Hertz] with new value
   @override
@@ -893,7 +895,7 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Decihertz] with new value
   @override
@@ -959,7 +961,7 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Centihertz] with new value
   @override
@@ -1025,7 +1027,7 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Millihertz] with new value
   @override
@@ -1091,7 +1093,7 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Microhertz] with new value
   @override
@@ -1157,7 +1159,7 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Nanohertz] with new value
   @override
@@ -1223,7 +1225,7 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Picohertz] with new value
   @override
@@ -1289,7 +1291,7 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Femtohertz] with new value
   @override
@@ -1355,7 +1357,7 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$Attohertz] with new value
   @override
@@ -1421,7 +1423,7 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$CyclePerSecond] with new value
   @override
@@ -1488,7 +1490,7 @@ final class FrequencyWavelength$WavelengthInExametres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInExametres] with new value
   @override
@@ -1555,7 +1557,7 @@ final class FrequencyWavelength$WavelengthInPetametres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInPetametres] with new value
   @override
@@ -1622,7 +1624,7 @@ final class FrequencyWavelength$WavelengthInTerametres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInTerametres] with new value
   @override
@@ -1689,7 +1691,7 @@ final class FrequencyWavelength$WavelengthInGigametres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInGigametres] with new value
   @override
@@ -1756,7 +1758,7 @@ final class FrequencyWavelength$WavelengthInMegametres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMegametres] with new value
   @override
@@ -1823,7 +1825,7 @@ final class FrequencyWavelength$WavelengthInKilometres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInKilometres] with new value
   @override
@@ -1890,7 +1892,7 @@ final class FrequencyWavelength$WavelengthInHectometres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInHectometres] with new value
   @override
@@ -1957,7 +1959,7 @@ final class FrequencyWavelength$WavelengthInDecametres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInDecametres] with new value
   @override
@@ -2023,7 +2025,7 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMetres] with new value
   @override
@@ -2090,7 +2092,7 @@ final class FrequencyWavelength$WavelengthInDecimetres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInDecimetres] with new value
   @override
@@ -2157,7 +2159,7 @@ final class FrequencyWavelength$WavelengthInCentimetres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInCentimetres] with new value
   @override
@@ -2224,7 +2226,7 @@ final class FrequencyWavelength$WavelengthInMillimetres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMillimetres] with new value
   @override
@@ -2291,7 +2293,7 @@ final class FrequencyWavelength$WavelengthInMicrometres
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FrequencyWavelength$WavelengthInMicrometres] with new value
   @override

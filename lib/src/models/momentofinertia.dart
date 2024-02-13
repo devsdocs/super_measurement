@@ -29,7 +29,10 @@ sealed class MomentofInertia extends Unit<MomentofInertia> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const MomentofInertia$KilogramCentimeterSquare();
+          : MomentofInertia.anchor();
+
+  factory MomentofInertia.anchor() =>
+      const MomentofInertia$KilogramCentimeterSquare();
 
   @override
   AnchorRatio<MomentofInertia> get _anchorRatio => (
@@ -172,7 +175,7 @@ final class MomentofInertia$KilogramMeterSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$KilogramMeterSquare] with new value
   @override
@@ -238,7 +241,7 @@ final class MomentofInertia$KilogramCentimeterSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$KilogramCentimeterSquare] with new value
   @override
@@ -304,7 +307,7 @@ final class MomentofInertia$GramCentimeterSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$GramCentimeterSquare] with new value
   @override
@@ -371,7 +374,7 @@ final class MomentofInertia$KilogramForceMeterSecondSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$KilogramForceMeterSecondSquare] with new value
   @override
@@ -438,7 +441,7 @@ final class MomentofInertia$KilogramForceCentimeterSecondSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$KilogramForceCentimeterSecondSquare] with new value
   @override
@@ -504,7 +507,7 @@ final class MomentofInertia$OunceInchSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$OunceInchSquare] with new value
   @override
@@ -570,7 +573,7 @@ final class MomentofInertia$OunceInchSecondSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$OunceInchSecondSquare] with new value
   @override
@@ -636,7 +639,7 @@ final class MomentofInertia$PoundFootSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$PoundFootSquare] with new value
   @override
@@ -702,7 +705,7 @@ final class MomentofInertia$PoundFootSecondSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$PoundFootSecondSquare] with new value
   @override
@@ -768,7 +771,7 @@ final class MomentofInertia$PoundInchSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$PoundInchSquare] with new value
   @override
@@ -834,7 +837,7 @@ final class MomentofInertia$PoundInchSecondSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$PoundInchSecondSquare] with new value
   @override
@@ -900,7 +903,7 @@ final class MomentofInertia$SlugFootSquare extends MomentofInertia {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MomentofInertia$SlugFootSquare] with new value
   @override

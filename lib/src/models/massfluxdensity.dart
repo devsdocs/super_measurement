@@ -25,7 +25,10 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const MassFluxDensity$KilogramPerSecondMeterSquare();
+          : MassFluxDensity.anchor();
+
+  factory MassFluxDensity.anchor() =>
+      const MassFluxDensity$KilogramPerSecondMeterSquare();
 
   @override
   AnchorRatio<MassFluxDensity> get _anchorRatio => (
@@ -134,7 +137,7 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MassFluxDensity$KilogramPerHourMeterSquare] with new value
   @override
@@ -200,7 +203,7 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MassFluxDensity$KilogramPerHourFootSquare] with new value
   @override
@@ -267,7 +270,7 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MassFluxDensity$KilogramPerSecondMeterSquare] with new value
   @override
@@ -333,7 +336,7 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MassFluxDensity$GramPerSecondMeterSquare] with new value
   @override
@@ -400,7 +403,7 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MassFluxDensity$GramPerSecondCentimeterSquare] with new value
   @override
@@ -466,7 +469,7 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MassFluxDensity$PoundPerHourFootSquare] with new value
   @override
@@ -532,7 +535,7 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MassFluxDensity$PoundPerSecondFootSquare] with new value
   @override

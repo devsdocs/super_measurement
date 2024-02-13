@@ -22,7 +22,9 @@ sealed class Conductivity extends Unit<Conductivity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Conductivity$MhoPerMeter();
+          : Conductivity.anchor();
+
+  factory Conductivity.anchor() => const Conductivity$MhoPerMeter();
 
   @override
   AnchorRatio<Conductivity> get _anchorRatio => (
@@ -132,7 +134,7 @@ final class Conductivity$MhoPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductivity$MhoPerMeter] with new value
   @override
@@ -198,7 +200,7 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductivity$MhoPerCentimeter] with new value
   @override
@@ -263,7 +265,7 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductivity$AbmhoPerMeter] with new value
   @override
@@ -329,7 +331,7 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductivity$AbmhoPerCentimeter] with new value
   @override
@@ -395,7 +397,7 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductivity$StatmhoPerMeter] with new value
   @override
@@ -461,7 +463,7 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductivity$StatmhoPerCentimeter] with new value
   @override
@@ -527,7 +529,7 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductivity$SiemensPerMeter] with new value
   @override
@@ -593,7 +595,7 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductivity$PicosiemensPerMeter] with new value
   @override

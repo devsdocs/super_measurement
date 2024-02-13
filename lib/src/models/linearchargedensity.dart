@@ -24,7 +24,10 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const LinearChargeDensity$CoulombPerMeter();
+          : LinearChargeDensity.anchor();
+
+  factory LinearChargeDensity.anchor() =>
+      const LinearChargeDensity$CoulombPerMeter();
 
   @override
   AnchorRatio<LinearChargeDensity> get _anchorRatio => (
@@ -125,7 +128,7 @@ final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearChargeDensity$CoulombPerMeter] with new value
   @override
@@ -192,7 +195,7 @@ final class LinearChargeDensity$CoulombPerCentimeter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearChargeDensity$CoulombPerCentimeter] with new value
   @override
@@ -258,7 +261,7 @@ final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearChargeDensity$CoulombPerInch] with new value
   @override
@@ -324,7 +327,7 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearChargeDensity$AbcoulombPerMeter] with new value
   @override
@@ -391,7 +394,7 @@ final class LinearChargeDensity$AbcoulombPerCentimeter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearChargeDensity$AbcoulombPerCentimeter] with new value
   @override
@@ -457,7 +460,7 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearChargeDensity$AbcoulombPerInch] with new value
   @override

@@ -35,7 +35,9 @@ sealed class Density extends Unit<Density> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Density$NanogramPerLiter();
+          : Density.anchor();
+
+  factory Density.anchor() => const Density$NanogramPerLiter();
 
   @override
   AnchorRatio<Density> get _anchorRatio => (
@@ -296,7 +298,7 @@ final class Density$KilogramPerMeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$KilogramPerMeterCubic] with new value
   @override
@@ -362,7 +364,7 @@ final class Density$KilogramPerCentimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$KilogramPerCentimeterCubic] with new value
   @override
@@ -427,7 +429,7 @@ final class Density$GramPerMeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$GramPerMeterCubic] with new value
   @override
@@ -493,7 +495,7 @@ final class Density$GramPerCentimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$GramPerCentimeterCubic] with new value
   @override
@@ -559,7 +561,7 @@ final class Density$GramPerMillimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$GramPerMillimeterCubic] with new value
   @override
@@ -625,7 +627,7 @@ final class Density$MilligramPerMeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$MilligramPerMeterCubic] with new value
   @override
@@ -691,7 +693,7 @@ final class Density$MilligramPerCentimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$MilligramPerCentimeterCubic] with new value
   @override
@@ -757,7 +759,7 @@ final class Density$MilligramPerMillimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$MilligramPerMillimeterCubic] with new value
   @override
@@ -822,7 +824,7 @@ final class Density$ExagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$ExagramPerLiter] with new value
   @override
@@ -887,7 +889,7 @@ final class Density$PetagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$PetagramPerLiter] with new value
   @override
@@ -952,7 +954,7 @@ final class Density$TeragramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$TeragramPerLiter] with new value
   @override
@@ -1017,7 +1019,7 @@ final class Density$GigagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$GigagramPerLiter] with new value
   @override
@@ -1082,7 +1084,7 @@ final class Density$MegagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$MegagramPerLiter] with new value
   @override
@@ -1147,7 +1149,7 @@ final class Density$KilogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$KilogramPerLiter] with new value
   @override
@@ -1212,7 +1214,7 @@ final class Density$HectogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$HectogramPerLiter] with new value
   @override
@@ -1277,7 +1279,7 @@ final class Density$DekagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$DekagramPerLiter] with new value
   @override
@@ -1342,7 +1344,7 @@ final class Density$GramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$GramPerLiter] with new value
   @override
@@ -1407,7 +1409,7 @@ final class Density$DecigramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$DecigramPerLiter] with new value
   @override
@@ -1472,7 +1474,7 @@ final class Density$CentigramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$CentigramPerLiter] with new value
   @override
@@ -1537,7 +1539,7 @@ final class Density$MilligramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$MilligramPerLiter] with new value
   @override
@@ -1602,7 +1604,7 @@ final class Density$MicrogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$MicrogramPerLiter] with new value
   @override
@@ -1667,7 +1669,7 @@ final class Density$NanogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$NanogramPerLiter] with new value
   @override
@@ -1732,7 +1734,7 @@ final class Density$PicogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$PicogramPerLiter] with new value
   @override
@@ -1797,7 +1799,7 @@ final class Density$FemtogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$FemtogramPerLiter] with new value
   @override
@@ -1862,7 +1864,7 @@ final class Density$AttogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$AttogramPerLiter] with new value
   @override
@@ -1927,7 +1929,7 @@ final class Density$PoundPerInchCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$PoundPerInchCubic] with new value
   @override
@@ -1992,7 +1994,7 @@ final class Density$PoundPerFootCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$PoundPerFootCubic] with new value
   @override
@@ -2057,7 +2059,7 @@ final class Density$PoundPerGallon extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$PoundPerGallon] with new value
   @override
@@ -2122,7 +2124,7 @@ final class Density$OuncePerInchCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$OuncePerInchCubic] with new value
   @override
@@ -2187,7 +2189,7 @@ final class Density$OuncePerFootCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$OuncePerFootCubic] with new value
   @override
@@ -2252,7 +2254,7 @@ final class Density$OuncePerGallon extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$OuncePerGallon] with new value
   @override
@@ -2317,7 +2319,7 @@ final class Density$TonPerYardCubic extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$TonPerYardCubic] with new value
   @override
@@ -2382,7 +2384,7 @@ final class Density$PsiPer1000Feet extends Density {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Density$PsiPer1000Feet] with new value
   @override

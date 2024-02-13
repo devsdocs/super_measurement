@@ -36,7 +36,9 @@ sealed class Mass extends Unit<Mass> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Mass$Dalton();
+          : Mass.anchor();
+
+  factory Mass.anchor() => const Mass$Dalton();
 
   @override
   AnchorRatio<Mass> get _anchorRatio => (
@@ -431,7 +433,7 @@ final class Mass$Exagram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Exagram] with new value
   @override
@@ -496,7 +498,7 @@ final class Mass$Petagram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Petagram] with new value
   @override
@@ -561,7 +563,7 @@ final class Mass$Teragram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Teragram] with new value
   @override
@@ -626,7 +628,7 @@ final class Mass$Gigagram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Gigagram] with new value
   @override
@@ -691,7 +693,7 @@ final class Mass$Megagram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Megagram] with new value
   @override
@@ -756,7 +758,7 @@ final class Mass$Kilogram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Kilogram] with new value
   @override
@@ -821,7 +823,7 @@ final class Mass$Hectogram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Hectogram] with new value
   @override
@@ -886,7 +888,7 @@ final class Mass$Dekagram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Dekagram] with new value
   @override
@@ -951,7 +953,7 @@ final class Mass$Gram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Gram] with new value
   @override
@@ -1016,7 +1018,7 @@ final class Mass$Decigram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Decigram] with new value
   @override
@@ -1081,7 +1083,7 @@ final class Mass$Centigram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Centigram] with new value
   @override
@@ -1146,7 +1148,7 @@ final class Mass$Milligram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Milligram] with new value
   @override
@@ -1211,7 +1213,7 @@ final class Mass$Microgram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Microgram] with new value
   @override
@@ -1276,7 +1278,7 @@ final class Mass$Nanogram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Nanogram] with new value
   @override
@@ -1341,7 +1343,7 @@ final class Mass$Picogram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Picogram] with new value
   @override
@@ -1406,7 +1408,7 @@ final class Mass$Femtogram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Femtogram] with new value
   @override
@@ -1471,7 +1473,7 @@ final class Mass$Attogram extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Attogram] with new value
   @override
@@ -1536,7 +1538,7 @@ final class Mass$Quintal extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Quintal] with new value
   @override
@@ -1601,7 +1603,7 @@ final class Mass$Dyne extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Dyne] with new value
   @override
@@ -1666,7 +1668,7 @@ final class Mass$Dalton extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Dalton] with new value
   @override
@@ -1731,7 +1733,7 @@ final class Mass$Kip extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Kip] with new value
   @override
@@ -1796,7 +1798,7 @@ final class Mass$Pound extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Pound] with new value
   @override
@@ -1861,7 +1863,7 @@ final class Mass$Ounce extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Ounce] with new value
   @override
@@ -1926,7 +1928,7 @@ final class Mass$Poundal extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Poundal] with new value
   @override
@@ -1991,7 +1993,7 @@ final class Mass$Slug extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Slug] with new value
   @override
@@ -2056,7 +2058,7 @@ final class Mass$Ton extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Ton] with new value
   @override
@@ -2121,7 +2123,7 @@ final class Mass$TonLong extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$TonLong] with new value
   @override
@@ -2186,7 +2188,7 @@ final class Mass$TonMetric extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$TonMetric] with new value
   @override
@@ -2251,7 +2253,7 @@ final class Mass$Hundredweight extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Hundredweight] with new value
   @override
@@ -2316,7 +2318,7 @@ final class Mass$HundredweightUK extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$HundredweightUK] with new value
   @override
@@ -2381,7 +2383,7 @@ final class Mass$Quarter extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Quarter] with new value
   @override
@@ -2446,7 +2448,7 @@ final class Mass$QuarterUK extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$QuarterUK] with new value
   @override
@@ -2511,7 +2513,7 @@ final class Mass$Stone extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Stone] with new value
   @override
@@ -2576,7 +2578,7 @@ final class Mass$StoneUK extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$StoneUK] with new value
   @override
@@ -2641,7 +2643,7 @@ final class Mass$Tonne extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Tonne] with new value
   @override
@@ -2706,7 +2708,7 @@ final class Mass$TroyPound extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$TroyPound] with new value
   @override
@@ -2771,7 +2773,7 @@ final class Mass$TroyOunce extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$TroyOunce] with new value
   @override
@@ -2836,7 +2838,7 @@ final class Mass$Carat extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Carat] with new value
   @override
@@ -2901,7 +2903,7 @@ final class Mass$Grain extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Grain] with new value
   @override
@@ -2966,7 +2968,7 @@ final class Mass$Pennyweight extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Pennyweight] with new value
   @override
@@ -3031,7 +3033,7 @@ final class Mass$Scruple extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$Scruple] with new value
   @override
@@ -3096,7 +3098,7 @@ final class Mass$TalentBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$TalentBiblicalHebrew] with new value
   @override
@@ -3161,7 +3163,7 @@ final class Mass$MinaBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$MinaBiblicalHebrew] with new value
   @override
@@ -3226,7 +3228,7 @@ final class Mass$ShekelBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$ShekelBiblicalHebrew] with new value
   @override
@@ -3291,7 +3293,7 @@ final class Mass$BekahBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$BekahBiblicalHebrew] with new value
   @override
@@ -3356,7 +3358,7 @@ final class Mass$GerahBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$GerahBiblicalHebrew] with new value
   @override
@@ -3421,7 +3423,7 @@ final class Mass$TalentBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$TalentBiblicalGreek] with new value
   @override
@@ -3486,7 +3488,7 @@ final class Mass$MinaBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$MinaBiblicalGreek] with new value
   @override
@@ -3552,7 +3554,7 @@ final class Mass$TetradrachmaBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$TetradrachmaBiblicalGreek] with new value
   @override
@@ -3617,7 +3619,7 @@ final class Mass$DidrachmaBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$DidrachmaBiblicalGreek] with new value
   @override
@@ -3682,7 +3684,7 @@ final class Mass$DrachmaBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$DrachmaBiblicalGreek] with new value
   @override
@@ -3747,7 +3749,7 @@ final class Mass$DenariusBiblicalRoman extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$DenariusBiblicalRoman] with new value
   @override
@@ -3812,7 +3814,7 @@ final class Mass$AssarionBiblicalRoman extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$AssarionBiblicalRoman] with new value
   @override
@@ -3877,7 +3879,7 @@ final class Mass$QuadransBiblicalRoman extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$QuadransBiblicalRoman] with new value
   @override
@@ -3942,7 +3944,7 @@ final class Mass$LeptonBiblicalRoman extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$LeptonBiblicalRoman] with new value
   @override
@@ -4007,7 +4009,7 @@ final class Mass$AtomicMassUnit extends Mass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Mass$AtomicMassUnit] with new value
   @override

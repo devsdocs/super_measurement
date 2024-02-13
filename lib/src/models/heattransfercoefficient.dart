@@ -27,7 +27,10 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const HeatTransferCoefficient$WattPerMeterSquareK();
+          : HeatTransferCoefficient.anchor();
+
+  factory HeatTransferCoefficient.anchor() =>
+      const HeatTransferCoefficient$WattPerMeterSquareK();
 
   @override
   AnchorRatio<HeatTransferCoefficient> get _anchorRatio => (
@@ -150,7 +153,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$WattPerMeterSquareK] with new value
   @override
@@ -217,7 +220,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$WattPerMeterSquareDegreeC] with new value
   @override
@@ -284,7 +287,7 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$JoulePerSecondMeterSquareK] with new value
   @override
@@ -351,7 +354,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] with new value
   @override
@@ -418,7 +421,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] with new value
   @override
@@ -485,7 +488,7 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] with new value
   @override
@@ -552,7 +555,7 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] with new value
   @override
@@ -619,7 +622,7 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] with new value
   @override

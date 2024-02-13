@@ -23,7 +23,10 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const SpecificVolume$MeterCubicPerKilogram();
+          : SpecificVolume.anchor();
+
+  factory SpecificVolume.anchor() =>
+      const SpecificVolume$MeterCubicPerKilogram();
 
   @override
   AnchorRatio<SpecificVolume> get _anchorRatio => (
@@ -130,7 +133,7 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificVolume$MeterCubicPerKilogram] with new value
   @override
@@ -196,7 +199,7 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificVolume$CentimeterCubicPerGram] with new value
   @override
@@ -262,7 +265,7 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificVolume$LiterPerKilogram] with new value
   @override
@@ -327,7 +330,7 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificVolume$LiterPerGram] with new value
   @override
@@ -393,7 +396,7 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificVolume$FeetCubicPerKilogram] with new value
   @override
@@ -459,7 +462,7 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificVolume$FeetCubicPerPound] with new value
   @override
@@ -525,7 +528,7 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificVolume$GallonUKPerPound] with new value
   @override

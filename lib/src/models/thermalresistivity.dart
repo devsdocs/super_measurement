@@ -36,7 +36,10 @@ sealed class ThermalResistivity extends Unit<ThermalResistivity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch();
+          : ThermalResistivity.anchor();
+
+  factory ThermalResistivity.anchor() =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch();
 
   @override
   AnchorRatio<ThermalResistivity> get _anchorRatio => (
@@ -230,7 +233,7 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch] with new value
   @override
@@ -297,7 +300,7 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch] with new value
   @override
@@ -364,7 +367,7 @@ final class ThermalResistivity$HourFootDegreeFPerBTUThemochem
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$HourFootDegreeFPerBTUThemochem] with new value
   @override
@@ -431,7 +434,7 @@ final class ThermalResistivity$HourFootDegreeFPerBTUInt
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$HourFootDegreeFPerBTUInt] with new value
   @override
@@ -498,7 +501,7 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem] with new value
   @override
@@ -565,7 +568,7 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt] with new value
   @override
@@ -631,7 +634,7 @@ final class ThermalResistivity$MeterKPerKilowatt extends ThermalResistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$MeterKPerKilowatt] with new value
   @override
@@ -697,7 +700,7 @@ final class ThermalResistivity$MeterKPerWatt extends ThermalResistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$MeterKPerWatt] with new value
   @override
@@ -764,7 +767,7 @@ final class ThermalResistivity$CentimeterDegreeCPerWatt
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$CentimeterDegreeCPerWatt] with new value
   @override
@@ -831,7 +834,7 @@ final class ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF] with new value
   @override
@@ -898,7 +901,7 @@ final class ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF] with new value
   @override
@@ -965,7 +968,7 @@ final class ThermalResistivity$BTUThemochemPerHourFootDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$BTUThemochemPerHourFootDegreeF] with new value
   @override
@@ -1032,7 +1035,7 @@ final class ThermalResistivity$BTUIntPerHourFootDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$BTUIntPerHourFootDegreeF] with new value
   @override
@@ -1099,7 +1102,7 @@ final class ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC] with new value
   @override
@@ -1166,7 +1169,7 @@ final class ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC] with new value
   @override
@@ -1232,7 +1235,7 @@ final class ThermalResistivity$KilowattPerMeterK extends ThermalResistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$KilowattPerMeterK] with new value
   @override
@@ -1298,7 +1301,7 @@ final class ThermalResistivity$WattPerMeterK extends ThermalResistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$WattPerMeterK] with new value
   @override
@@ -1365,7 +1368,7 @@ final class ThermalResistivity$WattPerCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalResistivity$WattPerCentimeterDegreeC] with new value
   @override

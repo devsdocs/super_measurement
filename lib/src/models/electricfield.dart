@@ -23,7 +23,9 @@ sealed class ElectricField extends Unit<ElectricField> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ElectricField$KilovoltPerCentimeter();
+          : ElectricField.anchor();
+
+  factory ElectricField.anchor() => const ElectricField$KilovoltPerCentimeter();
 
   @override
   AnchorRatio<ElectricField> get _anchorRatio => (
@@ -142,7 +144,7 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$KilovoltPerCentimeter] with new value
   @override
@@ -207,7 +209,7 @@ final class ElectricField$VoltPerMeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$VoltPerMeter] with new value
   @override
@@ -273,7 +275,7 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$VoltPerCentimeter] with new value
   @override
@@ -338,7 +340,7 @@ final class ElectricField$VoltPerInch extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$VoltPerInch] with new value
   @override
@@ -404,7 +406,7 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$MillivoltPerMeter] with new value
   @override
@@ -470,7 +472,7 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$MicrovoltPerMeter] with new value
   @override
@@ -536,7 +538,7 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$AbvoltPerCentimeter] with new value
   @override
@@ -602,7 +604,7 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$StatvoltPerCentimeter] with new value
   @override
@@ -668,7 +670,7 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ElectricField$StatvoltPerInch] with new value
   @override

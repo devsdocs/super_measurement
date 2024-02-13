@@ -27,7 +27,9 @@ sealed class Force extends Unit<Force> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Force$Dyne();
+          : Force.anchor();
+
+  factory Force.anchor() => const Force$Dyne();
 
   @override
   AnchorRatio<Force> get _anchorRatio => (
@@ -242,7 +244,7 @@ final class Force$Exanewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Exanewton] with new value
   @override
@@ -307,7 +309,7 @@ final class Force$Petanewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Petanewton] with new value
   @override
@@ -372,7 +374,7 @@ final class Force$Teranewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Teranewton] with new value
   @override
@@ -437,7 +439,7 @@ final class Force$Giganewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Giganewton] with new value
   @override
@@ -502,7 +504,7 @@ final class Force$Meganewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Meganewton] with new value
   @override
@@ -567,7 +569,7 @@ final class Force$Kilonewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Kilonewton] with new value
   @override
@@ -632,7 +634,7 @@ final class Force$Hectonewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Hectonewton] with new value
   @override
@@ -697,7 +699,7 @@ final class Force$Dekanewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Dekanewton] with new value
   @override
@@ -762,7 +764,7 @@ final class Force$Newton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Newton] with new value
   @override
@@ -827,7 +829,7 @@ final class Force$Decinewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Decinewton] with new value
   @override
@@ -892,7 +894,7 @@ final class Force$Centinewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Centinewton] with new value
   @override
@@ -957,7 +959,7 @@ final class Force$Millinewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Millinewton] with new value
   @override
@@ -1022,7 +1024,7 @@ final class Force$Micronewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Micronewton] with new value
   @override
@@ -1087,7 +1089,7 @@ final class Force$Nanonewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Nanonewton] with new value
   @override
@@ -1152,7 +1154,7 @@ final class Force$Piconewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Piconewton] with new value
   @override
@@ -1217,7 +1219,7 @@ final class Force$Femtonewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Femtonewton] with new value
   @override
@@ -1282,7 +1284,7 @@ final class Force$Attonewton extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Attonewton] with new value
   @override
@@ -1347,7 +1349,7 @@ final class Force$Dyne extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Dyne] with new value
   @override
@@ -1412,7 +1414,7 @@ final class Force$JoulePerMeter extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$JoulePerMeter] with new value
   @override
@@ -1477,7 +1479,7 @@ final class Force$JoulePerCentimeter extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$JoulePerCentimeter] with new value
   @override
@@ -1542,7 +1544,7 @@ final class Force$KilogramForce extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$KilogramForce] with new value
   @override
@@ -1607,7 +1609,7 @@ final class Force$GramForce extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$GramForce] with new value
   @override
@@ -1672,7 +1674,7 @@ final class Force$KipForce extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$KipForce] with new value
   @override
@@ -1737,7 +1739,7 @@ final class Force$PoundForce extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$PoundForce] with new value
   @override
@@ -1802,7 +1804,7 @@ final class Force$OunceForce extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$OunceForce] with new value
   @override
@@ -1867,7 +1869,7 @@ final class Force$Poundal extends Force {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Force$Poundal] with new value
   @override

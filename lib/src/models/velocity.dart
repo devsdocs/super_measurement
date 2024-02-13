@@ -29,7 +29,9 @@ sealed class Velocity extends Unit<Velocity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Velocity$CentimeterPerHour();
+          : Velocity.anchor();
+
+  factory Velocity.anchor() => const Velocity$CentimeterPerHour();
 
   @override
   AnchorRatio<Velocity> get _anchorRatio => (
@@ -220,7 +222,7 @@ final class Velocity$KilometerPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$KilometerPerHour] with new value
   @override
@@ -285,7 +287,7 @@ final class Velocity$KilometerPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$KilometerPerMinute] with new value
   @override
@@ -350,7 +352,7 @@ final class Velocity$KilometerPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$KilometerPerSecond] with new value
   @override
@@ -415,7 +417,7 @@ final class Velocity$MeterPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$MeterPerHour] with new value
   @override
@@ -480,7 +482,7 @@ final class Velocity$MeterPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$MeterPerMinute] with new value
   @override
@@ -545,7 +547,7 @@ final class Velocity$MeterPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$MeterPerSecond] with new value
   @override
@@ -610,7 +612,7 @@ final class Velocity$CentimeterPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$CentimeterPerHour] with new value
   @override
@@ -676,7 +678,7 @@ final class Velocity$CentimeterPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$CentimeterPerMinute] with new value
   @override
@@ -742,7 +744,7 @@ final class Velocity$CentimeterPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$CentimeterPerSecond] with new value
   @override
@@ -807,7 +809,7 @@ final class Velocity$MilePerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$MilePerHour] with new value
   @override
@@ -872,7 +874,7 @@ final class Velocity$MilePerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$MilePerMinute] with new value
   @override
@@ -937,7 +939,7 @@ final class Velocity$MilePerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$MilePerSecond] with new value
   @override
@@ -1002,7 +1004,7 @@ final class Velocity$YardPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$YardPerHour] with new value
   @override
@@ -1067,7 +1069,7 @@ final class Velocity$YardPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$YardPerMinute] with new value
   @override
@@ -1132,7 +1134,7 @@ final class Velocity$YardPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$YardPerSecond] with new value
   @override
@@ -1197,7 +1199,7 @@ final class Velocity$FootPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$FootPerHour] with new value
   @override
@@ -1262,7 +1264,7 @@ final class Velocity$FootPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$FootPerMinute] with new value
   @override
@@ -1327,7 +1329,7 @@ final class Velocity$FootPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$FootPerSecond] with new value
   @override
@@ -1392,7 +1394,7 @@ final class Velocity$MachSIStandard extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$MachSIStandard] with new value
   @override
@@ -1457,7 +1459,7 @@ final class Velocity$MachAtSeaLevel extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$MachAtSeaLevel] with new value
   @override
@@ -1522,7 +1524,7 @@ final class Velocity$Light extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$Light] with new value
   @override
@@ -1587,7 +1589,7 @@ final class Velocity$Knot extends Velocity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Velocity$Knot] with new value
   @override

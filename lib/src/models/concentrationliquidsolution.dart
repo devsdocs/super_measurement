@@ -31,7 +31,10 @@ sealed class ConcentrationLiquidSolution
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ConcentrationLiquidSolution$KilogramPerLiter();
+          : ConcentrationLiquidSolution.anchor();
+
+  factory ConcentrationLiquidSolution.anchor() =>
+      const ConcentrationLiquidSolution$KilogramPerLiter();
 
   @override
   AnchorRatio<ConcentrationLiquidSolution> get _anchorRatio => (
@@ -169,7 +172,7 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$KilogramPerLiter] with new value
   @override
@@ -236,7 +239,7 @@ final class ConcentrationLiquidSolution$GramPerLiter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GramPerLiter] with new value
   @override
@@ -303,7 +306,7 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$MilligramPerLiter] with new value
   @override
@@ -370,7 +373,7 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PartPerMillionPpm] with new value
   @override
@@ -437,7 +440,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GrainPerGallonUK] with new value
   @override
@@ -504,7 +507,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$GrainPerGallonUS] with new value
   @override
@@ -571,7 +574,7 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerFootCubic] with new value
   @override
@@ -638,7 +641,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerGallonUK] with new value
   @override
@@ -705,7 +708,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerGallonUS] with new value
   @override
@@ -772,7 +775,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerMillionUKGallon] with new value
   @override
@@ -839,7 +842,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ConcentrationLiquidSolution$PoundPerMillionUSGallon] with new value
   @override

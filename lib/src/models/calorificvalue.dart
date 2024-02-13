@@ -25,7 +25,9 @@ sealed class CalorificValue extends Unit<CalorificValue> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const CalorificValue$BTUPerFootCubic();
+          : CalorificValue.anchor();
+
+  factory CalorificValue.anchor() => const CalorificValue$BTUPerFootCubic();
 
   @override
   AnchorRatio<CalorificValue> get _anchorRatio => (
@@ -146,7 +148,7 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$MegajoulePerMeterCubic] with new value
   @override
@@ -212,7 +214,7 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$KilojoulePerMeterCubic] with new value
   @override
@@ -278,7 +280,7 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$JoulePerMeterCubic] with new value
   @override
@@ -344,7 +346,7 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$KilocaloriePerMeterCubic] with new value
   @override
@@ -410,7 +412,7 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$CaloriePerCentimeterCubic] with new value
   @override
@@ -476,7 +478,7 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$ThermPerFootCubic] with new value
   @override
@@ -542,7 +544,7 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$ThermPerGallonUK] with new value
   @override
@@ -608,7 +610,7 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$BTUPerFootCubic] with new value
   @override
@@ -674,7 +676,7 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [CalorificValue$CHUPerFootCubic] with new value
   @override

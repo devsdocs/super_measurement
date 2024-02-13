@@ -19,7 +19,9 @@ sealed class Sound extends Unit<Sound> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Sound$Decibel();
+          : Sound.anchor();
+
+  factory Sound.anchor() => const Sound$Decibel();
 
   @override
   AnchorRatio<Sound> get _anchorRatio => (
@@ -96,7 +98,7 @@ final class Sound$Bel extends Sound {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Sound$Bel] with new value
   @override
@@ -161,7 +163,7 @@ final class Sound$Decibel extends Sound {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Sound$Decibel] with new value
   @override
@@ -226,7 +228,7 @@ final class Sound$Neper extends Sound {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Sound$Neper] with new value
   @override

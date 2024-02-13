@@ -23,7 +23,10 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const AccelerationAngular$RevolutionPerMinuteSecond();
+          : AccelerationAngular.anchor();
+
+  factory AccelerationAngular.anchor() =>
+      const AccelerationAngular$RevolutionPerMinuteSecond();
 
   @override
   AnchorRatio<AccelerationAngular> get _anchorRatio => (
@@ -119,7 +122,7 @@ final class AccelerationAngular$RadianPerSecondSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RadianPerSecondSquare] with new value
   @override
@@ -186,7 +189,7 @@ final class AccelerationAngular$RadianPerMinuteSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RadianPerMinuteSquare] with new value
   @override
@@ -253,7 +256,7 @@ final class AccelerationAngular$RevolutionPerSecondSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RevolutionPerSecondSquare] with new value
   @override
@@ -320,7 +323,7 @@ final class AccelerationAngular$RevolutionPerMinuteSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RevolutionPerMinuteSecond] with new value
   @override
@@ -387,7 +390,7 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [AccelerationAngular$RevolutionPerMinuteSquare] with new value
   @override

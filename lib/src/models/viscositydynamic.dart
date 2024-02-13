@@ -36,7 +36,10 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
+          : ViscosityDynamic.anchor();
+
+  factory ViscosityDynamic.anchor() =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
 
   @override
   AnchorRatio<ViscosityDynamic> get _anchorRatio => (
@@ -269,7 +272,7 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$NewtonSecondPerMeterSquare] with new value
   @override
@@ -336,7 +339,7 @@ final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$MillinewtonSecondPerMeterSquare] with new value
   @override
@@ -403,7 +406,7 @@ final class ViscosityDynamic$DyneSecondPerCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$DyneSecondPerCentimeterSquare] with new value
   @override
@@ -468,7 +471,7 @@ final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Exapoise] with new value
   @override
@@ -533,7 +536,7 @@ final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Petapoise] with new value
   @override
@@ -598,7 +601,7 @@ final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Terapoise] with new value
   @override
@@ -663,7 +666,7 @@ final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Gigapoise] with new value
   @override
@@ -728,7 +731,7 @@ final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Megapoise] with new value
   @override
@@ -793,7 +796,7 @@ final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Kilopoise] with new value
   @override
@@ -858,7 +861,7 @@ final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Hectopoise] with new value
   @override
@@ -923,7 +926,7 @@ final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Dekapoise] with new value
   @override
@@ -988,7 +991,7 @@ final class ViscosityDynamic$Poise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Poise] with new value
   @override
@@ -1053,7 +1056,7 @@ final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Decipoise] with new value
   @override
@@ -1118,7 +1121,7 @@ final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Centipoise] with new value
   @override
@@ -1183,7 +1186,7 @@ final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Millipoise] with new value
   @override
@@ -1248,7 +1251,7 @@ final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Micropoise] with new value
   @override
@@ -1313,7 +1316,7 @@ final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Nanopoise] with new value
   @override
@@ -1378,7 +1381,7 @@ final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Picopoise] with new value
   @override
@@ -1443,7 +1446,7 @@ final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Femtopoise] with new value
   @override
@@ -1508,7 +1511,7 @@ final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$Attopoise] with new value
   @override
@@ -1575,7 +1578,7 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$PoundForceSecondPerInchSquare] with new value
   @override
@@ -1642,7 +1645,7 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$PoundForceSecondPerFootSquare] with new value
   @override
@@ -1709,7 +1712,7 @@ final class ViscosityDynamic$PoundalSecondPerFootSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$PoundalSecondPerFootSquare] with new value
   @override
@@ -1775,7 +1778,7 @@ final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$GramPerCentimeterSecond] with new value
   @override
@@ -1841,7 +1844,7 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$SlugPerFootSecond] with new value
   @override
@@ -1907,7 +1910,7 @@ final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$PoundPerFootSecond] with new value
   @override
@@ -1973,7 +1976,7 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityDynamic$PoundPerFootHour] with new value
   @override

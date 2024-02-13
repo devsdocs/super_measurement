@@ -22,7 +22,9 @@ sealed class Resistivity extends Unit<Resistivity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Resistivity$OhmMeter();
+          : Resistivity.anchor();
+
+  factory Resistivity.anchor() => const Resistivity$OhmMeter();
 
   @override
   AnchorRatio<Resistivity> get _anchorRatio => (
@@ -130,7 +132,7 @@ final class Resistivity$OhmMeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistivity$OhmMeter] with new value
   @override
@@ -195,7 +197,7 @@ final class Resistivity$OhmCentimeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistivity$OhmCentimeter] with new value
   @override
@@ -260,7 +262,7 @@ final class Resistivity$OhmInch extends Resistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistivity$OhmInch] with new value
   @override
@@ -326,7 +328,7 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistivity$MicrohmCentimeter] with new value
   @override
@@ -391,7 +393,7 @@ final class Resistivity$MicrohmInch extends Resistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistivity$MicrohmInch] with new value
   @override
@@ -456,7 +458,7 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistivity$AbohmCentimeter] with new value
   @override
@@ -522,7 +524,7 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistivity$StatohmCentimeter] with new value
   @override
@@ -588,7 +590,7 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistivity$CircularMilOhmPerFoot] with new value
   @override

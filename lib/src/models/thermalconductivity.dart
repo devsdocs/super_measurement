@@ -27,7 +27,10 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
+          : ThermalConductivity.anchor();
+
+  factory ThermalConductivity.anchor() =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
 
   @override
   AnchorRatio<ThermalConductivity> get _anchorRatio => (
@@ -154,7 +157,7 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF] with new value
   @override
@@ -221,7 +224,7 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF] with new value
   @override
@@ -288,7 +291,7 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$BTUThermochemPerHourFootDegreeF] with new value
   @override
@@ -355,7 +358,7 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$BTUIntPerHourFootDegreeF] with new value
   @override
@@ -422,7 +425,7 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC] with new value
   @override
@@ -489,7 +492,7 @@ final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC] with new value
   @override
@@ -555,7 +558,7 @@ final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$KilowattPerMeterK] with new value
   @override
@@ -621,7 +624,7 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$WattPerMeterK] with new value
   @override
@@ -688,7 +691,7 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalConductivity$WattPerCentimeterDegreeC] with new value
   @override

@@ -24,7 +24,10 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic();
+          : ChemicalHenrysLaw.anchor();
+
+  factory ChemicalHenrysLaw.anchor() =>
+      const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic();
 
   @override
   AnchorRatio<ChemicalHenrysLaw> get _anchorRatio => (
@@ -126,7 +129,7 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$NewtonMeterPerKilogram] with new value
   @override
@@ -193,7 +196,7 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic] with new value
   @override
@@ -260,7 +263,7 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic] with new value
   @override
@@ -327,7 +330,7 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic] with new value
   @override
@@ -394,7 +397,7 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic] with new value
   @override
@@ -461,7 +464,7 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic] with new value
   @override

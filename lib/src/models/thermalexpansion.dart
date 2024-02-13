@@ -23,7 +23,10 @@ sealed class ThermalExpansion extends Unit<ThermalExpansion> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ThermalExpansion$LengthPerLengthPerKelvin();
+          : ThermalExpansion.anchor();
+
+  factory ThermalExpansion.anchor() =>
+      const ThermalExpansion$LengthPerLengthPerKelvin();
 
   @override
   AnchorRatio<ThermalExpansion> get _anchorRatio => (
@@ -118,7 +121,7 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerKelvin] with new value
   @override
@@ -185,7 +188,7 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerCelsius] with new value
   @override
@@ -252,7 +255,7 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerFahrenheit] with new value
   @override
@@ -319,7 +322,7 @@ final class ThermalExpansion$LengthPerLengthPerRankine
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerRankine] with new value
   @override
@@ -386,7 +389,7 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ThermalExpansion$LengthPerLengthPerReaumur] with new value
   @override

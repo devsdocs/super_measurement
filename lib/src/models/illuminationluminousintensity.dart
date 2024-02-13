@@ -30,7 +30,10 @@ sealed class IlluminationLuminousIntensity
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const IlluminationLuminousIntensity$CandleInternational();
+          : IlluminationLuminousIntensity.anchor();
+
+  factory IlluminationLuminousIntensity.anchor() =>
+      const IlluminationLuminousIntensity$CandleInternational();
 
   @override
   AnchorRatio<IlluminationLuminousIntensity> get _anchorRatio => (
@@ -163,7 +166,7 @@ final class IlluminationLuminousIntensity$CandleInternational
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandleInternational] with new value
   @override
@@ -230,7 +233,7 @@ final class IlluminationLuminousIntensity$CandleGerman
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandleGerman] with new value
   @override
@@ -297,7 +300,7 @@ final class IlluminationLuminousIntensity$CandlePentane
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandlePentane] with new value
   @override
@@ -364,7 +367,7 @@ final class IlluminationLuminousIntensity$CandleUK
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CandleUK] with new value
   @override
@@ -431,7 +434,7 @@ final class IlluminationLuminousIntensity$DecimalCandle
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$DecimalCandle] with new value
   @override
@@ -498,7 +501,7 @@ final class IlluminationLuminousIntensity$HefnerCandle
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$HefnerCandle] with new value
   @override
@@ -565,7 +568,7 @@ final class IlluminationLuminousIntensity$CarcelUnit
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$CarcelUnit] with new value
   @override
@@ -632,7 +635,7 @@ final class IlluminationLuminousIntensity$BougieDecimal
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$BougieDecimal] with new value
   @override
@@ -699,7 +702,7 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$LumenInternationalPerSteradian] with new value
   @override
@@ -766,7 +769,7 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [IlluminationLuminousIntensity$PentaneCandle10CandlePower] with new value
   @override

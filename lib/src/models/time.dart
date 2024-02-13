@@ -27,7 +27,9 @@ sealed class Time extends Unit<Time> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Time$Attosecond();
+          : Time.anchor();
+
+  factory Time.anchor() => const Time$Attosecond();
 
   @override
   AnchorRatio<Time> get _anchorRatio => (
@@ -266,7 +268,7 @@ final class Time$Millennium extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Millennium] with new value
   @override
@@ -331,7 +333,7 @@ final class Time$Century extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Century] with new value
   @override
@@ -396,7 +398,7 @@ final class Time$Decade extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Decade] with new value
   @override
@@ -461,7 +463,7 @@ final class Time$Year extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Year] with new value
   @override
@@ -526,7 +528,7 @@ final class Time$LeapYear extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$LeapYear] with new value
   @override
@@ -591,7 +593,7 @@ final class Time$MeanYear extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$MeanYear] with new value
   @override
@@ -656,7 +658,7 @@ final class Time$SiderealYear extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$SiderealYear] with new value
   @override
@@ -721,7 +723,7 @@ final class Time$TropicalYear extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$TropicalYear] with new value
   @override
@@ -786,7 +788,7 @@ final class Time$Month extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Month] with new value
   @override
@@ -851,7 +853,7 @@ final class Time$SynodicMonth extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$SynodicMonth] with new value
   @override
@@ -916,7 +918,7 @@ final class Time$Fortnight extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Fortnight] with new value
   @override
@@ -981,7 +983,7 @@ final class Time$Week extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Week] with new value
   @override
@@ -1046,7 +1048,7 @@ final class Time$Day extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Day] with new value
   @override
@@ -1111,7 +1113,7 @@ final class Time$SiderealDay extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$SiderealDay] with new value
   @override
@@ -1176,7 +1178,7 @@ final class Time$Hour extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Hour] with new value
   @override
@@ -1241,7 +1243,7 @@ final class Time$SiderealHour extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$SiderealHour] with new value
   @override
@@ -1306,7 +1308,7 @@ final class Time$Minute extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Minute] with new value
   @override
@@ -1371,7 +1373,7 @@ final class Time$Second extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Second] with new value
   @override
@@ -1436,7 +1438,7 @@ final class Time$Millisecond extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Millisecond] with new value
   @override
@@ -1501,7 +1503,7 @@ final class Time$Microsecond extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Microsecond] with new value
   @override
@@ -1566,7 +1568,7 @@ final class Time$Nanosecond extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Nanosecond] with new value
   @override
@@ -1631,7 +1633,7 @@ final class Time$Picosecond extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Picosecond] with new value
   @override
@@ -1696,7 +1698,7 @@ final class Time$Femtosecond extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Femtosecond] with new value
   @override
@@ -1761,7 +1763,7 @@ final class Time$Attosecond extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Attosecond] with new value
   @override
@@ -1826,7 +1828,7 @@ final class Time$Shake extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Shake] with new value
   @override
@@ -1891,7 +1893,7 @@ final class Time$Septennial extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Septennial] with new value
   @override
@@ -1956,7 +1958,7 @@ final class Time$Octennial extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Octennial] with new value
   @override
@@ -2021,7 +2023,7 @@ final class Time$Novennial extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Novennial] with new value
   @override
@@ -2086,7 +2088,7 @@ final class Time$Quindecennial extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Quindecennial] with new value
   @override
@@ -2151,7 +2153,7 @@ final class Time$Quinquennial extends Time {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Time$Quinquennial] with new value
   @override

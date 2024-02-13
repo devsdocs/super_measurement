@@ -22,7 +22,9 @@ sealed class Angle extends Unit<Angle> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Angle$Second();
+          : Angle.anchor();
+
+  factory Angle.anchor() => const Angle$Second();
 
   @override
   AnchorRatio<Angle> get _anchorRatio => (
@@ -171,7 +173,7 @@ final class Angle$Degree extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Degree] with new value
   @override
@@ -236,7 +238,7 @@ final class Angle$Radian extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Radian] with new value
   @override
@@ -301,7 +303,7 @@ final class Angle$Grad extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Grad] with new value
   @override
@@ -366,7 +368,7 @@ final class Angle$Minute extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Minute] with new value
   @override
@@ -431,7 +433,7 @@ final class Angle$Second extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Second] with new value
   @override
@@ -496,7 +498,7 @@ final class Angle$Sign extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Sign] with new value
   @override
@@ -561,7 +563,7 @@ final class Angle$Mil extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Mil] with new value
   @override
@@ -626,7 +628,7 @@ final class Angle$Revolution extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Revolution] with new value
   @override
@@ -691,7 +693,7 @@ final class Angle$Circle extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Circle] with new value
   @override
@@ -756,7 +758,7 @@ final class Angle$Turn extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Turn] with new value
   @override
@@ -821,7 +823,7 @@ final class Angle$Quadrant extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Quadrant] with new value
   @override
@@ -886,7 +888,7 @@ final class Angle$RightAngle extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$RightAngle] with new value
   @override
@@ -951,7 +953,7 @@ final class Angle$Sextant extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Sextant] with new value
   @override
@@ -1016,7 +1018,7 @@ final class Angle$Octant extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$Octant] with new value
   @override
@@ -1081,7 +1083,7 @@ final class Angle$PercentOfFullCircle extends Angle {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Angle$PercentOfFullCircle] with new value
   @override

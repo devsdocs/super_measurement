@@ -30,7 +30,10 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const SpecificHeatCapacity$JoulePerKilogramK();
+          : SpecificHeatCapacity.anchor();
+
+  factory SpecificHeatCapacity.anchor() =>
+      const SpecificHeatCapacity$JoulePerKilogramK();
 
   @override
   AnchorRatio<SpecificHeatCapacity> get _anchorRatio => (
@@ -168,7 +171,7 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$KilojoulePerKilogramK] with new value
   @override
@@ -235,7 +238,7 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$KilojoulePerKilogramDegreeC] with new value
   @override
@@ -302,7 +305,7 @@ final class SpecificHeatCapacity$JoulePerKilogramK
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$JoulePerKilogramK] with new value
   @override
@@ -369,7 +372,7 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$JoulePerKilogramDegreeC] with new value
   @override
@@ -436,7 +439,7 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$JoulePerGramDegreeC] with new value
   @override
@@ -503,7 +506,7 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC] with new value
   @override
@@ -570,7 +573,7 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$CaloriePerGramDegreeC] with new value
   @override
@@ -637,7 +640,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeC] with new value
   @override
@@ -704,7 +707,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeF] with new value
   @override
@@ -771,7 +774,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeR] with new value
   @override
@@ -838,7 +841,7 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SpecificHeatCapacity$CHUPerPoundDegreeC] with new value
   @override

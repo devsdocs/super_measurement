@@ -24,7 +24,10 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const VolumeChargeDensity$CoulombPerMeterCubic();
+          : VolumeChargeDensity.anchor();
+
+  factory VolumeChargeDensity.anchor() =>
+      const VolumeChargeDensity$CoulombPerMeterCubic();
 
   @override
   AnchorRatio<VolumeChargeDensity> get _anchorRatio => (
@@ -127,7 +130,7 @@ final class VolumeChargeDensity$CoulombPerMeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$CoulombPerMeterCubic] with new value
   @override
@@ -194,7 +197,7 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$CoulombPerCentimeterCubic] with new value
   @override
@@ -261,7 +264,7 @@ final class VolumeChargeDensity$CoulombPerInchCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$CoulombPerInchCubic] with new value
   @override
@@ -328,7 +331,7 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerMeterCubic] with new value
   @override
@@ -395,7 +398,7 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerCentimeterCubic] with new value
   @override
@@ -462,7 +465,7 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeChargeDensity$AbcoulombPerInchCubic] with new value
   @override

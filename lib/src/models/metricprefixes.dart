@@ -25,7 +25,9 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const MetricPrefixes$MetricUnit();
+          : MetricPrefixes.anchor();
+
+  factory MetricPrefixes.anchor() => const MetricPrefixes$MetricUnit();
 
   @override
   AnchorRatio<MetricPrefixes> get _anchorRatio => (
@@ -210,7 +212,7 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Yotta] with new value
   @override
@@ -275,7 +277,7 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Zetta] with new value
   @override
@@ -340,7 +342,7 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Exa] with new value
   @override
@@ -405,7 +407,7 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Peta] with new value
   @override
@@ -470,7 +472,7 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Tera] with new value
   @override
@@ -535,7 +537,7 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Giga] with new value
   @override
@@ -600,7 +602,7 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Mega] with new value
   @override
@@ -665,7 +667,7 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Kilo] with new value
   @override
@@ -730,7 +732,7 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Hecto] with new value
   @override
@@ -795,7 +797,7 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Deka] with new value
   @override
@@ -860,7 +862,7 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$MetricUnit] with new value
   @override
@@ -925,7 +927,7 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Deci] with new value
   @override
@@ -990,7 +992,7 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Centi] with new value
   @override
@@ -1055,7 +1057,7 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Milli] with new value
   @override
@@ -1120,7 +1122,7 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Micro] with new value
   @override
@@ -1185,7 +1187,7 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Nano] with new value
   @override
@@ -1250,7 +1252,7 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Pico] with new value
   @override
@@ -1315,7 +1317,7 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Femto] with new value
   @override
@@ -1380,7 +1382,7 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Atto] with new value
   @override
@@ -1445,7 +1447,7 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Zepto] with new value
   @override
@@ -1510,7 +1512,7 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MetricPrefixes$Yocto] with new value
   @override

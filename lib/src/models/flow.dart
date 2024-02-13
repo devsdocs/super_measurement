@@ -47,7 +47,9 @@ sealed class Flow extends Unit<Flow> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Flow$MilliliterPerDay();
+          : Flow.anchor();
+
+  factory Flow.anchor() => const Flow$MilliliterPerDay();
 
   @override
   AnchorRatio<Flow> get _anchorRatio => (
@@ -456,7 +458,7 @@ final class Flow$GallonPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$GallonPerDay] with new value
   @override
@@ -521,7 +523,7 @@ final class Flow$GallonPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$GallonPerHour] with new value
   @override
@@ -586,7 +588,7 @@ final class Flow$GallonPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$GallonPerMinute] with new value
   @override
@@ -651,7 +653,7 @@ final class Flow$GallonPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$GallonPerSecond] with new value
   @override
@@ -716,7 +718,7 @@ final class Flow$GallonUKPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$GallonUKPerDay] with new value
   @override
@@ -781,7 +783,7 @@ final class Flow$GallonUKPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$GallonUKPerHour] with new value
   @override
@@ -846,7 +848,7 @@ final class Flow$GallonUKPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$GallonUKPerMinute] with new value
   @override
@@ -911,7 +913,7 @@ final class Flow$GallonUKPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$GallonUKPerSecond] with new value
   @override
@@ -976,7 +978,7 @@ final class Flow$BarrelOilPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$BarrelOilPerDay] with new value
   @override
@@ -1041,7 +1043,7 @@ final class Flow$BarrelOilPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$BarrelOilPerHour] with new value
   @override
@@ -1106,7 +1108,7 @@ final class Flow$BarrelOilPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$BarrelOilPerMinute] with new value
   @override
@@ -1171,7 +1173,7 @@ final class Flow$BarrelOilPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$BarrelOilPerSecond] with new value
   @override
@@ -1236,7 +1238,7 @@ final class Flow$AcreFootPerYear extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$AcreFootPerYear] with new value
   @override
@@ -1301,7 +1303,7 @@ final class Flow$AcreFootPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$AcreFootPerDay] with new value
   @override
@@ -1366,7 +1368,7 @@ final class Flow$AcreFootPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$AcreFootPerHour] with new value
   @override
@@ -1431,7 +1433,7 @@ final class Flow$HundredFootCubicPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerDay] with new value
   @override
@@ -1497,7 +1499,7 @@ final class Flow$HundredFootCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerHour] with new value
   @override
@@ -1563,7 +1565,7 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$HundredFootCubicPerMinute] with new value
   @override
@@ -1628,7 +1630,7 @@ final class Flow$OuncePerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$OuncePerHour] with new value
   @override
@@ -1693,7 +1695,7 @@ final class Flow$OuncePerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$OuncePerMinute] with new value
   @override
@@ -1758,7 +1760,7 @@ final class Flow$OuncePerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$OuncePerSecond] with new value
   @override
@@ -1823,7 +1825,7 @@ final class Flow$OunceUKPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$OunceUKPerHour] with new value
   @override
@@ -1888,7 +1890,7 @@ final class Flow$OunceUKPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$OunceUKPerMinute] with new value
   @override
@@ -1953,7 +1955,7 @@ final class Flow$OunceUKPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$OunceUKPerSecond] with new value
   @override
@@ -2018,7 +2020,7 @@ final class Flow$LiterPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$LiterPerDay] with new value
   @override
@@ -2083,7 +2085,7 @@ final class Flow$LiterPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$LiterPerHour] with new value
   @override
@@ -2148,7 +2150,7 @@ final class Flow$LiterPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$LiterPerMinute] with new value
   @override
@@ -2213,7 +2215,7 @@ final class Flow$LiterPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$LiterPerSecond] with new value
   @override
@@ -2278,7 +2280,7 @@ final class Flow$MilliliterPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$MilliliterPerDay] with new value
   @override
@@ -2343,7 +2345,7 @@ final class Flow$MilliliterPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$MilliliterPerHour] with new value
   @override
@@ -2408,7 +2410,7 @@ final class Flow$MilliliterPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$MilliliterPerMinute] with new value
   @override
@@ -2473,7 +2475,7 @@ final class Flow$MilliliterPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$MilliliterPerSecond] with new value
   @override
@@ -2538,7 +2540,7 @@ final class Flow$MeterCubicPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$MeterCubicPerDay] with new value
   @override
@@ -2603,7 +2605,7 @@ final class Flow$MeterCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$MeterCubicPerHour] with new value
   @override
@@ -2668,7 +2670,7 @@ final class Flow$MeterCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$MeterCubicPerMinute] with new value
   @override
@@ -2733,7 +2735,7 @@ final class Flow$MeterCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$MeterCubicPerSecond] with new value
   @override
@@ -2798,7 +2800,7 @@ final class Flow$CentimeterCubicPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerDay] with new value
   @override
@@ -2863,7 +2865,7 @@ final class Flow$CentimeterCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerHour] with new value
   @override
@@ -2929,7 +2931,7 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerMinute] with new value
   @override
@@ -2995,7 +2997,7 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$CentimeterCubicPerSecond] with new value
   @override
@@ -3060,7 +3062,7 @@ final class Flow$YardCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$YardCubicPerHour] with new value
   @override
@@ -3125,7 +3127,7 @@ final class Flow$YardCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$YardCubicPerMinute] with new value
   @override
@@ -3190,7 +3192,7 @@ final class Flow$YardCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$YardCubicPerSecond] with new value
   @override
@@ -3255,7 +3257,7 @@ final class Flow$FootCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$FootCubicPerHour] with new value
   @override
@@ -3320,7 +3322,7 @@ final class Flow$FootCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$FootCubicPerMinute] with new value
   @override
@@ -3385,7 +3387,7 @@ final class Flow$FootCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$FootCubicPerSecond] with new value
   @override
@@ -3450,7 +3452,7 @@ final class Flow$InchCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$InchCubicPerHour] with new value
   @override
@@ -3515,7 +3517,7 @@ final class Flow$InchCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$InchCubicPerMinute] with new value
   @override
@@ -3580,7 +3582,7 @@ final class Flow$InchCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$InchCubicPerSecond] with new value
   @override
@@ -3646,7 +3648,7 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$PoundPerSecondGasolineAt155DegreeC] with new value
   @override
@@ -3712,7 +3714,7 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$PoundPerMinuteGasolineAt155DegreeC] with new value
   @override
@@ -3778,7 +3780,7 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$PoundPerHourGasolineAt155DegreeC] with new value
   @override
@@ -3844,7 +3846,7 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$PoundPerDayGasolineAt155DegreeC] with new value
   @override
@@ -3910,7 +3912,7 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$KilogramPerSecondGasolineAt155DegreeC] with new value
   @override
@@ -3976,7 +3978,7 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$KilogramPerMinuteGasolineAt155DegreeC] with new value
   @override
@@ -4042,7 +4044,7 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$KilogramPerHourGasolineAt155DegreeC] with new value
   @override
@@ -4108,7 +4110,7 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Flow$KilogramPerDayGasolineAt155DegreeC] with new value
   @override

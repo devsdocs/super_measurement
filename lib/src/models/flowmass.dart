@@ -31,7 +31,9 @@ sealed class FlowMass extends Unit<FlowMass> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const FlowMass$KilogramPerDay();
+          : FlowMass.anchor();
+
+  factory FlowMass.anchor() => const FlowMass$KilogramPerDay();
 
   @override
   AnchorRatio<FlowMass> get _anchorRatio => (
@@ -246,7 +248,7 @@ final class FlowMass$GramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$GramPerSecond] with new value
   @override
@@ -311,7 +313,7 @@ final class FlowMass$GramPerMinute extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$GramPerMinute] with new value
   @override
@@ -376,7 +378,7 @@ final class FlowMass$GramPerHour extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$GramPerHour] with new value
   @override
@@ -441,7 +443,7 @@ final class FlowMass$GramPerDay extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$GramPerDay] with new value
   @override
@@ -506,7 +508,7 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$MilligramPerMinute] with new value
   @override
@@ -571,7 +573,7 @@ final class FlowMass$MilligramPerHour extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$MilligramPerHour] with new value
   @override
@@ -636,7 +638,7 @@ final class FlowMass$MilligramPerDay extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$MilligramPerDay] with new value
   @override
@@ -701,7 +703,7 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$KilogramPerMinute] with new value
   @override
@@ -766,7 +768,7 @@ final class FlowMass$KilogramPerHour extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$KilogramPerHour] with new value
   @override
@@ -831,7 +833,7 @@ final class FlowMass$KilogramPerDay extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$KilogramPerDay] with new value
   @override
@@ -896,7 +898,7 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$ExagramPerSecond] with new value
   @override
@@ -961,7 +963,7 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$PetagramPerSecond] with new value
   @override
@@ -1026,7 +1028,7 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$TeragramPerSecond] with new value
   @override
@@ -1091,7 +1093,7 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$GigagramPerSecond] with new value
   @override
@@ -1156,7 +1158,7 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$MegagramPerSecond] with new value
   @override
@@ -1221,7 +1223,7 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$KilogramPerSecond] with new value
   @override
@@ -1286,7 +1288,7 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$HectogramPerSecond] with new value
   @override
@@ -1351,7 +1353,7 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$DekagramPerSecond] with new value
   @override
@@ -1416,7 +1418,7 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$DecigramPerSecond] with new value
   @override
@@ -1481,7 +1483,7 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$CentigramPerSecond] with new value
   @override
@@ -1546,7 +1548,7 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$MilligramPerSecond] with new value
   @override
@@ -1611,7 +1613,7 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$MicrogramPerSecond] with new value
   @override
@@ -1676,7 +1678,7 @@ final class FlowMass$PoundPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$PoundPerSecond] with new value
   @override
@@ -1741,7 +1743,7 @@ final class FlowMass$PoundPerMinute extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$PoundPerMinute] with new value
   @override
@@ -1806,7 +1808,7 @@ final class FlowMass$PoundPerHour extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$PoundPerHour] with new value
   @override
@@ -1871,7 +1873,7 @@ final class FlowMass$PoundPerDay extends FlowMass {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FlowMass$PoundPerDay] with new value
   @override

@@ -35,7 +35,10 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const HeatFluxDensity$WattPerMeterSquare();
+          : HeatFluxDensity.anchor();
+
+  factory HeatFluxDensity.anchor() =>
+      const HeatFluxDensity$WattPerMeterSquare();
 
   @override
   AnchorRatio<HeatFluxDensity> get _anchorRatio => (
@@ -213,7 +216,7 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$KilowattPerMeterSquare] with new value
   @override
@@ -279,7 +282,7 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$WattPerMeterSquare] with new value
   @override
@@ -345,7 +348,7 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$WattPerCentimeterSquare] with new value
   @override
@@ -411,7 +414,7 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$WattPerInchSquare] with new value
   @override
@@ -477,7 +480,7 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$JoulePerSecondMeterSquare] with new value
   @override
@@ -544,7 +547,7 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$KilocaloriePerHourMeterSquare] with new value
   @override
@@ -611,7 +614,7 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$KilocaloriePerHourFootSquare] with new value
   @override
@@ -678,7 +681,7 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$CaloriePerSecondCentimeterSquare] with new value
   @override
@@ -745,7 +748,7 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$GramCaloriePerHourCentimeterSquare] with new value
   @override
@@ -811,7 +814,7 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$DynePerHourCentimeter] with new value
   @override
@@ -877,7 +880,7 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$ErgPerHourMillimeterSquare] with new value
   @override
@@ -944,7 +947,7 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$FootPoundPerMinuteFootSquare] with new value
   @override
@@ -1011,7 +1014,7 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$HorsepowerMetricPerFootSquare] with new value
   @override
@@ -1077,7 +1080,7 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$HorsepowerUKPerFootSquare] with new value
   @override
@@ -1143,7 +1146,7 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$BTUPerHourFootSquare] with new value
   @override
@@ -1209,7 +1212,7 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$BTUPerMinuteFootSquare] with new value
   @override
@@ -1275,7 +1278,7 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [HeatFluxDensity$CHUPerHourFootSquare] with new value
   @override

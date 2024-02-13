@@ -28,7 +28,10 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const RadiationDoseEquivalent$Sievert();
+          : RadiationDoseEquivalent.anchor();
+
+  factory RadiationDoseEquivalent.anchor() =>
+      const RadiationDoseEquivalent$Sievert();
 
   @override
   AnchorRatio<RadiationDoseEquivalent> get _anchorRatio => (
@@ -157,7 +160,7 @@ final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$Sievert] with new value
   @override
@@ -224,7 +227,7 @@ final class RadiationDoseEquivalent$Millisievert
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$Millisievert] with new value
   @override
@@ -291,7 +294,7 @@ final class RadiationDoseEquivalent$Microsievert
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$Microsievert] with new value
   @override
@@ -358,7 +361,7 @@ final class RadiationDoseEquivalent$JoulePerKilogram
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$JoulePerKilogram] with new value
   @override
@@ -425,7 +428,7 @@ final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$MeterSquarePerSecondSquare] with new value
   @override
@@ -492,7 +495,7 @@ final class RadiationDoseEquivalent$RemRoentgenEqMan
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$RemRoentgenEqMan] with new value
   @override
@@ -558,7 +561,7 @@ final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$Millirem] with new value
   @override
@@ -625,7 +628,7 @@ final class RadiationDoseEquivalent$IntensityMillicurie
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$IntensityMillicurie] with new value
   @override
@@ -692,7 +695,7 @@ final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons] with new value
   @override
@@ -759,7 +762,7 @@ final class RadiationDoseEquivalent$GrayWr20AlphaParticles
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationDoseEquivalent$GrayWr20AlphaParticles] with new value
   @override

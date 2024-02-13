@@ -37,7 +37,9 @@ sealed class Energy extends Unit<Energy> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Energy$ElectronVolt();
+          : Energy.anchor();
+
+  factory Energy.anchor() => const Energy$ElectronVolt();
 
   @override
   AnchorRatio<Energy> get _anchorRatio => (
@@ -398,7 +400,7 @@ final class Energy$Gigajoule extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Gigajoule] with new value
   @override
@@ -463,7 +465,7 @@ final class Energy$Megajoule extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Megajoule] with new value
   @override
@@ -528,7 +530,7 @@ final class Energy$Kilojoule extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Kilojoule] with new value
   @override
@@ -593,7 +595,7 @@ final class Energy$Joule extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Joule] with new value
   @override
@@ -658,7 +660,7 @@ final class Energy$Millijoule extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Millijoule] with new value
   @override
@@ -723,7 +725,7 @@ final class Energy$Microjoule extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Microjoule] with new value
   @override
@@ -788,7 +790,7 @@ final class Energy$Nanojoule extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Nanojoule] with new value
   @override
@@ -853,7 +855,7 @@ final class Energy$Attojoule extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Attojoule] with new value
   @override
@@ -918,7 +920,7 @@ final class Energy$Erg extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Erg] with new value
   @override
@@ -983,7 +985,7 @@ final class Energy$GigawattHour extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$GigawattHour] with new value
   @override
@@ -1048,7 +1050,7 @@ final class Energy$MegawattHour extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$MegawattHour] with new value
   @override
@@ -1113,7 +1115,7 @@ final class Energy$KilowattHour extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$KilowattHour] with new value
   @override
@@ -1178,7 +1180,7 @@ final class Energy$KilowattSecond extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$KilowattSecond] with new value
   @override
@@ -1243,7 +1245,7 @@ final class Energy$WattHour extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$WattHour] with new value
   @override
@@ -1308,7 +1310,7 @@ final class Energy$WattSecond extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$WattSecond] with new value
   @override
@@ -1373,7 +1375,7 @@ final class Energy$HorsepowerHour extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$HorsepowerHour] with new value
   @override
@@ -1439,7 +1441,7 @@ final class Energy$KilocalorieInternational extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$KilocalorieInternational] with new value
   @override
@@ -1505,7 +1507,7 @@ final class Energy$KilocalorieThermochemical extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$KilocalorieThermochemical] with new value
   @override
@@ -1570,7 +1572,7 @@ final class Energy$CalorieInternational extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$CalorieInternational] with new value
   @override
@@ -1636,7 +1638,7 @@ final class Energy$CalorieThermochemical extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$CalorieThermochemical] with new value
   @override
@@ -1701,7 +1703,7 @@ final class Energy$CalorieNutritional extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$CalorieNutritional] with new value
   @override
@@ -1766,7 +1768,7 @@ final class Energy$BTUInternational extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$BTUInternational] with new value
   @override
@@ -1831,7 +1833,7 @@ final class Energy$BTUThermochemical extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$BTUThermochemical] with new value
   @override
@@ -1896,7 +1898,7 @@ final class Energy$MBTU extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$MBTU] with new value
   @override
@@ -1961,7 +1963,7 @@ final class Energy$TonHourRefrigeration extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$TonHourRefrigeration] with new value
   @override
@@ -2026,7 +2028,7 @@ final class Energy$Gigaton extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Gigaton] with new value
   @override
@@ -2091,7 +2093,7 @@ final class Energy$Megaton extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Megaton] with new value
   @override
@@ -2156,7 +2158,7 @@ final class Energy$Kiloton extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Kiloton] with new value
   @override
@@ -2221,7 +2223,7 @@ final class Energy$TonExplosives extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$TonExplosives] with new value
   @override
@@ -2286,7 +2288,7 @@ final class Energy$NewtonMeter extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$NewtonMeter] with new value
   @override
@@ -2351,7 +2353,7 @@ final class Energy$DyneCentimeter extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$DyneCentimeter] with new value
   @override
@@ -2416,7 +2418,7 @@ final class Energy$GramForceMeter extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$GramForceMeter] with new value
   @override
@@ -2481,7 +2483,7 @@ final class Energy$GramForceCentimeter extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$GramForceCentimeter] with new value
   @override
@@ -2546,7 +2548,7 @@ final class Energy$KilogramForceMeter extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$KilogramForceMeter] with new value
   @override
@@ -2612,7 +2614,7 @@ final class Energy$KilogramForceCentimeter extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$KilogramForceCentimeter] with new value
   @override
@@ -2677,7 +2679,7 @@ final class Energy$MeterKilopond extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$MeterKilopond] with new value
   @override
@@ -2742,7 +2744,7 @@ final class Energy$PoundForceFoot extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$PoundForceFoot] with new value
   @override
@@ -2807,7 +2809,7 @@ final class Energy$PoundForceInch extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$PoundForceInch] with new value
   @override
@@ -2872,7 +2874,7 @@ final class Energy$OunceForceInch extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$OunceForceInch] with new value
   @override
@@ -2937,7 +2939,7 @@ final class Energy$FootPound extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$FootPound] with new value
   @override
@@ -3002,7 +3004,7 @@ final class Energy$InchPound extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$InchPound] with new value
   @override
@@ -3067,7 +3069,7 @@ final class Energy$InchOunce extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$InchOunce] with new value
   @override
@@ -3132,7 +3134,7 @@ final class Energy$PoundalFoot extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$PoundalFoot] with new value
   @override
@@ -3197,7 +3199,7 @@ final class Energy$MegaelectronVolt extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$MegaelectronVolt] with new value
   @override
@@ -3262,7 +3264,7 @@ final class Energy$KiloelectronVolt extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$KiloelectronVolt] with new value
   @override
@@ -3327,7 +3329,7 @@ final class Energy$ElectronVolt extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$ElectronVolt] with new value
   @override
@@ -3392,7 +3394,7 @@ final class Energy$Therm extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Therm] with new value
   @override
@@ -3457,7 +3459,7 @@ final class Energy$ThermEC extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$ThermEC] with new value
   @override
@@ -3522,7 +3524,7 @@ final class Energy$ThermUS extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$ThermUS] with new value
   @override
@@ -3587,7 +3589,7 @@ final class Energy$Hartree extends Energy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Energy$Hartree] with new value
   @override

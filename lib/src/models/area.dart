@@ -28,7 +28,9 @@ sealed class Area extends Unit<Area> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Area$Barn();
+          : Area.anchor();
+
+  factory Area.anchor() => const Area$Barn();
 
   @override
   AnchorRatio<Area> get _anchorRatio => (
@@ -285,7 +287,7 @@ final class Area$KilometerSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$KilometerSquare] with new value
   @override
@@ -350,7 +352,7 @@ final class Area$HectometerSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$HectometerSquare] with new value
   @override
@@ -415,7 +417,7 @@ final class Area$DekameterSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$DekameterSquare] with new value
   @override
@@ -480,7 +482,7 @@ final class Area$MeterSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$MeterSquare] with new value
   @override
@@ -545,7 +547,7 @@ final class Area$DecimeterSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$DecimeterSquare] with new value
   @override
@@ -610,7 +612,7 @@ final class Area$CentimeterSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$CentimeterSquare] with new value
   @override
@@ -675,7 +677,7 @@ final class Area$MillimeterSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$MillimeterSquare] with new value
   @override
@@ -740,7 +742,7 @@ final class Area$MicrometerSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$MicrometerSquare] with new value
   @override
@@ -805,7 +807,7 @@ final class Area$NanometerSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$NanometerSquare] with new value
   @override
@@ -870,7 +872,7 @@ final class Area$Hectare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Hectare] with new value
   @override
@@ -935,7 +937,7 @@ final class Area$Are extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Are] with new value
   @override
@@ -1000,7 +1002,7 @@ final class Area$Barn extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Barn] with new value
   @override
@@ -1065,7 +1067,7 @@ final class Area$MileSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$MileSquare] with new value
   @override
@@ -1130,7 +1132,7 @@ final class Area$YardSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$YardSquare] with new value
   @override
@@ -1195,7 +1197,7 @@ final class Area$FootSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$FootSquare] with new value
   @override
@@ -1260,7 +1262,7 @@ final class Area$InchSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$InchSquare] with new value
   @override
@@ -1325,7 +1327,7 @@ final class Area$Township extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Township] with new value
   @override
@@ -1390,7 +1392,7 @@ final class Area$Section extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Section] with new value
   @override
@@ -1455,7 +1457,7 @@ final class Area$Acre extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Acre] with new value
   @override
@@ -1520,7 +1522,7 @@ final class Area$Rood extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Rood] with new value
   @override
@@ -1585,7 +1587,7 @@ final class Area$ChainSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$ChainSquare] with new value
   @override
@@ -1650,7 +1652,7 @@ final class Area$RodSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$RodSquare] with new value
   @override
@@ -1715,7 +1717,7 @@ final class Area$PerchSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$PerchSquare] with new value
   @override
@@ -1780,7 +1782,7 @@ final class Area$PoleSquare extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$PoleSquare] with new value
   @override
@@ -1845,7 +1847,7 @@ final class Area$Arpent extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Arpent] with new value
   @override
@@ -1910,7 +1912,7 @@ final class Area$Cuerda extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Cuerda] with new value
   @override
@@ -1975,7 +1977,7 @@ final class Area$Plaza extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Plaza] with new value
   @override
@@ -2040,7 +2042,7 @@ final class Area$VarasCastellanasCuad extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$VarasCastellanasCuad] with new value
   @override
@@ -2105,7 +2107,7 @@ final class Area$VarasConuquerasCuad extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$VarasConuquerasCuad] with new value
   @override
@@ -2170,7 +2172,7 @@ final class Area$Strema extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Strema] with new value
   @override
@@ -2235,7 +2237,7 @@ final class Area$CircularInch extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$CircularInch] with new value
   @override
@@ -2300,7 +2302,7 @@ final class Area$CircularMil extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$CircularMil] with new value
   @override
@@ -2365,7 +2367,7 @@ final class Area$Tahulla extends Area {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Area$Tahulla] with new value
   @override

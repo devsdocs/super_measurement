@@ -31,7 +31,10 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const RadiationRadioactivity$Millibecquerel();
+          : RadiationRadioactivity.anchor();
+
+  factory RadiationRadioactivity.anchor() =>
+      const RadiationRadioactivity$Millibecquerel();
 
   @override
   AnchorRatio<RadiationRadioactivity> get _anchorRatio => (
@@ -196,7 +199,7 @@ final class RadiationRadioactivity$Terabecquerel
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Terabecquerel] with new value
   @override
@@ -263,7 +266,7 @@ final class RadiationRadioactivity$Gigabecquerel
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Gigabecquerel] with new value
   @override
@@ -330,7 +333,7 @@ final class RadiationRadioactivity$Megabecquerel
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Megabecquerel] with new value
   @override
@@ -397,7 +400,7 @@ final class RadiationRadioactivity$Kilobecquerel
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Kilobecquerel] with new value
   @override
@@ -463,7 +466,7 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Becquerel] with new value
   @override
@@ -530,7 +533,7 @@ final class RadiationRadioactivity$Millibecquerel
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Millibecquerel] with new value
   @override
@@ -596,7 +599,7 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Kilocurie] with new value
   @override
@@ -662,7 +665,7 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Curie] with new value
   @override
@@ -728,7 +731,7 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Millicurie] with new value
   @override
@@ -794,7 +797,7 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Microcurie] with new value
   @override
@@ -860,7 +863,7 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Nanocurie] with new value
   @override
@@ -926,7 +929,7 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Picocurie] with new value
   @override
@@ -992,7 +995,7 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$Rutherford] with new value
   @override
@@ -1059,7 +1062,7 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$DisintegrationsPerSecond] with new value
   @override
@@ -1126,7 +1129,7 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationRadioactivity$DisintegrationsPerMinute] with new value
   @override

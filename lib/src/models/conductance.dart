@@ -22,7 +22,9 @@ sealed class Conductance extends Unit<Conductance> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Conductance$Statmho();
+          : Conductance.anchor();
+
+  factory Conductance.anchor() => const Conductance$Statmho();
 
   @override
   AnchorRatio<Conductance> get _anchorRatio => (
@@ -141,7 +143,7 @@ final class Conductance$Mho extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Mho] with new value
   @override
@@ -206,7 +208,7 @@ final class Conductance$Gemmho extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Gemmho] with new value
   @override
@@ -271,7 +273,7 @@ final class Conductance$Micromho extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Micromho] with new value
   @override
@@ -336,7 +338,7 @@ final class Conductance$Megasiemens extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Megasiemens] with new value
   @override
@@ -401,7 +403,7 @@ final class Conductance$Kilosiemens extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Kilosiemens] with new value
   @override
@@ -466,7 +468,7 @@ final class Conductance$Siemens extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Siemens] with new value
   @override
@@ -531,7 +533,7 @@ final class Conductance$Millisiemens extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Millisiemens] with new value
   @override
@@ -596,7 +598,7 @@ final class Conductance$Microsiemens extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Microsiemens] with new value
   @override
@@ -661,7 +663,7 @@ final class Conductance$Abmho extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Abmho] with new value
   @override
@@ -726,7 +728,7 @@ final class Conductance$Statmho extends Conductance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Conductance$Statmho] with new value
   @override

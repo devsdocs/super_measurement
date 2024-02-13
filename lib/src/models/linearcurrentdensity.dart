@@ -27,7 +27,10 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const LinearCurrentDensity$AmperePerMeter();
+          : LinearCurrentDensity.anchor();
+
+  factory LinearCurrentDensity.anchor() =>
+      const LinearCurrentDensity$AmperePerMeter();
 
   @override
   AnchorRatio<LinearCurrentDensity> get _anchorRatio => (
@@ -149,7 +152,7 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AmperePerMeter] with new value
   @override
@@ -216,7 +219,7 @@ final class LinearCurrentDensity$AmperePerCentimeter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AmperePerCentimeter] with new value
   @override
@@ -282,7 +285,7 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AmperePerInch] with new value
   @override
@@ -348,7 +351,7 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerMeter] with new value
   @override
@@ -415,7 +418,7 @@ final class LinearCurrentDensity$AbamperePerCentimeter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerCentimeter] with new value
   @override
@@ -481,7 +484,7 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$AbamperePerInch] with new value
   @override
@@ -547,7 +550,7 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$Oersted] with new value
   @override
@@ -614,7 +617,7 @@ final class LinearCurrentDensity$OerstedInternational
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$OerstedInternational] with new value
   @override
@@ -681,7 +684,7 @@ final class LinearCurrentDensity$GilbertPerCentimeter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LinearCurrentDensity$GilbertPerCentimeter] with new value
   @override

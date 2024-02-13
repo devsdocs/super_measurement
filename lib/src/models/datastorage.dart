@@ -37,7 +37,9 @@ sealed class DataStorage extends Unit<DataStorage> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const DataStorage$Bit();
+          : DataStorage.anchor();
+
+  factory DataStorage.anchor() => const DataStorage$Bit();
 
   @override
   AnchorRatio<DataStorage> get _anchorRatio => (
@@ -354,7 +356,7 @@ final class DataStorage$Bit extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Bit] with new value
   @override
@@ -419,7 +421,7 @@ final class DataStorage$Nibble extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Nibble] with new value
   @override
@@ -484,7 +486,7 @@ final class DataStorage$Byte extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Byte] with new value
   @override
@@ -549,7 +551,7 @@ final class DataStorage$Word extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Word] with new value
   @override
@@ -614,7 +616,7 @@ final class DataStorage$DoubleWord extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$DoubleWord] with new value
   @override
@@ -679,7 +681,7 @@ final class DataStorage$QuadrupleWord extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$QuadrupleWord] with new value
   @override
@@ -744,7 +746,7 @@ final class DataStorage$Block extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Block] with new value
   @override
@@ -809,7 +811,7 @@ final class DataStorage$Kilobit extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Kilobit] with new value
   @override
@@ -874,7 +876,7 @@ final class DataStorage$Kilobyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Kilobyte] with new value
   @override
@@ -940,7 +942,7 @@ final class DataStorage$Kilobyte10PowerOf3Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Kilobyte10PowerOf3Bytes] with new value
   @override
@@ -1005,7 +1007,7 @@ final class DataStorage$Megabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Megabit] with new value
   @override
@@ -1070,7 +1072,7 @@ final class DataStorage$Megabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Megabyte] with new value
   @override
@@ -1136,7 +1138,7 @@ final class DataStorage$Megabyte10PowerOf6Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Megabyte10PowerOf6Bytes] with new value
   @override
@@ -1201,7 +1203,7 @@ final class DataStorage$Gigabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Gigabit] with new value
   @override
@@ -1266,7 +1268,7 @@ final class DataStorage$Gigabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Gigabyte] with new value
   @override
@@ -1332,7 +1334,7 @@ final class DataStorage$Gigabyte10PowerOf9Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Gigabyte10PowerOf9Bytes] with new value
   @override
@@ -1397,7 +1399,7 @@ final class DataStorage$Terabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Terabit] with new value
   @override
@@ -1462,7 +1464,7 @@ final class DataStorage$Terabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Terabyte] with new value
   @override
@@ -1528,7 +1530,7 @@ final class DataStorage$Terabyte10PowerOf12Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Terabyte10PowerOf12Bytes] with new value
   @override
@@ -1593,7 +1595,7 @@ final class DataStorage$Petabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Petabit] with new value
   @override
@@ -1658,7 +1660,7 @@ final class DataStorage$Petabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Petabyte] with new value
   @override
@@ -1724,7 +1726,7 @@ final class DataStorage$Petabyte10PowerOf15Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Petabyte10PowerOf15Bytes] with new value
   @override
@@ -1789,7 +1791,7 @@ final class DataStorage$Exabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Exabit] with new value
   @override
@@ -1854,7 +1856,7 @@ final class DataStorage$Exabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Exabyte] with new value
   @override
@@ -1920,7 +1922,7 @@ final class DataStorage$Exabyte10PowerOf18Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Exabyte10PowerOf18Bytes] with new value
   @override
@@ -1985,7 +1987,7 @@ final class DataStorage$FloppyDisk35DD extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$FloppyDisk35DD] with new value
   @override
@@ -2050,7 +2052,7 @@ final class DataStorage$FloppyDisk35HD extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$FloppyDisk35HD] with new value
   @override
@@ -2115,7 +2117,7 @@ final class DataStorage$FloppyDisk35ED extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$FloppyDisk35ED] with new value
   @override
@@ -2180,7 +2182,7 @@ final class DataStorage$FloppyDisk525DD extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$FloppyDisk525DD] with new value
   @override
@@ -2245,7 +2247,7 @@ final class DataStorage$FloppyDisk525HD extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$FloppyDisk525HD] with new value
   @override
@@ -2310,7 +2312,7 @@ final class DataStorage$Zip100 extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Zip100] with new value
   @override
@@ -2375,7 +2377,7 @@ final class DataStorage$Zip250 extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Zip250] with new value
   @override
@@ -2440,7 +2442,7 @@ final class DataStorage$Jaz1GB extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Jaz1GB] with new value
   @override
@@ -2505,7 +2507,7 @@ final class DataStorage$Jaz2GB extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$Jaz2GB] with new value
   @override
@@ -2570,7 +2572,7 @@ final class DataStorage$CD74Minute extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$CD74Minute] with new value
   @override
@@ -2635,7 +2637,7 @@ final class DataStorage$CD80Minute extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$CD80Minute] with new value
   @override
@@ -2700,7 +2702,7 @@ final class DataStorage$DVD1Layer1Side extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$DVD1Layer1Side] with new value
   @override
@@ -2765,7 +2767,7 @@ final class DataStorage$DVD2Layers1Side extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$DVD2Layers1Side] with new value
   @override
@@ -2830,7 +2832,7 @@ final class DataStorage$DVD1Layer2Sides extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$DVD1Layer2Sides] with new value
   @override
@@ -2896,7 +2898,7 @@ final class DataStorage$DVD2Layers2Sides extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$DVD2Layers2Sides] with new value
   @override
@@ -2961,7 +2963,7 @@ final class DataStorage$BluRay1Layer extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$BluRay1Layer] with new value
   @override
@@ -3026,7 +3028,7 @@ final class DataStorage$BluRay2Layer extends DataStorage {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataStorage$BluRay2Layer] with new value
   @override

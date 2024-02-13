@@ -20,7 +20,9 @@ sealed class LatentHeat extends Unit<LatentHeat> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const LatentHeat$KilojoulePerKilogram();
+          : LatentHeat.anchor();
+
+  factory LatentHeat.anchor() => const LatentHeat$KilojoulePerKilogram();
 
   @override
   AnchorRatio<LatentHeat> get _anchorRatio => (
@@ -97,7 +99,7 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LatentHeat$CaloriePerGram] with new value
   @override
@@ -163,7 +165,7 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LatentHeat$KilojoulePerKilogram] with new value
   @override
@@ -228,7 +230,7 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [LatentHeat$BTUPerPound] with new value
   @override

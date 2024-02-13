@@ -53,7 +53,9 @@ sealed class Power extends Unit<Power> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Power$Milliwatt();
+          : Power.anchor();
+
+  factory Power.anchor() => const Power$Milliwatt();
 
   @override
   AnchorRatio<Power> get _anchorRatio => (
@@ -548,7 +550,7 @@ final class Power$Exawatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Exawatt] with new value
   @override
@@ -613,7 +615,7 @@ final class Power$Petawatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Petawatt] with new value
   @override
@@ -678,7 +680,7 @@ final class Power$Terawatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Terawatt] with new value
   @override
@@ -743,7 +745,7 @@ final class Power$Gigawatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Gigawatt] with new value
   @override
@@ -808,7 +810,7 @@ final class Power$Megawatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Megawatt] with new value
   @override
@@ -873,7 +875,7 @@ final class Power$Kilowatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Kilowatt] with new value
   @override
@@ -938,7 +940,7 @@ final class Power$Hectowatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Hectowatt] with new value
   @override
@@ -1003,7 +1005,7 @@ final class Power$Dekawatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Dekawatt] with new value
   @override
@@ -1068,7 +1070,7 @@ final class Power$Watt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Watt] with new value
   @override
@@ -1133,7 +1135,7 @@ final class Power$Deciwatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Deciwatt] with new value
   @override
@@ -1198,7 +1200,7 @@ final class Power$Centiwatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Centiwatt] with new value
   @override
@@ -1263,7 +1265,7 @@ final class Power$Milliwatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Milliwatt] with new value
   @override
@@ -1328,7 +1330,7 @@ final class Power$Microwatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Microwatt] with new value
   @override
@@ -1393,7 +1395,7 @@ final class Power$Nanowatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Nanowatt] with new value
   @override
@@ -1458,7 +1460,7 @@ final class Power$Picowatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Picowatt] with new value
   @override
@@ -1523,7 +1525,7 @@ final class Power$Femtowatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Femtowatt] with new value
   @override
@@ -1588,7 +1590,7 @@ final class Power$Attowatt extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Attowatt] with new value
   @override
@@ -1653,7 +1655,7 @@ final class Power$Horsepower extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$Horsepower] with new value
   @override
@@ -1718,7 +1720,7 @@ final class Power$HorsepowerBoiler extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$HorsepowerBoiler] with new value
   @override
@@ -1783,7 +1785,7 @@ final class Power$HorsepowerMetric extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$HorsepowerMetric] with new value
   @override
@@ -1848,7 +1850,7 @@ final class Power$HorsepowerElectric extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$HorsepowerElectric] with new value
   @override
@@ -1913,7 +1915,7 @@ final class Power$HorsepowerUK extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$HorsepowerUK] with new value
   @override
@@ -1978,7 +1980,7 @@ final class Power$HorsepowerWater extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$HorsepowerWater] with new value
   @override
@@ -2043,7 +2045,7 @@ final class Power$PferdestarkePs extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$PferdestarkePs] with new value
   @override
@@ -2109,7 +2111,7 @@ final class Power$BTUPerHourInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$BTUPerHourInternational] with new value
   @override
@@ -2175,7 +2177,7 @@ final class Power$BTUPerMinuteInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$BTUPerMinuteInternational] with new value
   @override
@@ -2241,7 +2243,7 @@ final class Power$BTUPerSecondInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$BTUPerSecondInternational] with new value
   @override
@@ -2307,7 +2309,7 @@ final class Power$BTUPerHourThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$BTUPerHourThermochemical] with new value
   @override
@@ -2373,7 +2375,7 @@ final class Power$BTUPerMinuteThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$BTUPerMinuteThermochemical] with new value
   @override
@@ -2439,7 +2441,7 @@ final class Power$BTUPerSecondThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$BTUPerSecondThermochemical] with new value
   @override
@@ -2504,7 +2506,7 @@ final class Power$MBTUPerHour extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$MBTUPerHour] with new value
   @override
@@ -2569,7 +2571,7 @@ final class Power$MBH extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$MBH] with new value
   @override
@@ -2634,7 +2636,7 @@ final class Power$TonRefrigeration extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$TonRefrigeration] with new value
   @override
@@ -2700,7 +2702,7 @@ final class Power$KilocaloriePerHourInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerHourInternational] with new value
   @override
@@ -2766,7 +2768,7 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerMinuteInternational] with new value
   @override
@@ -2832,7 +2834,7 @@ final class Power$KilocaloriePerSecondInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerSecondInternational] with new value
   @override
@@ -2898,7 +2900,7 @@ final class Power$CaloriePerHourInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$CaloriePerHourInternational] with new value
   @override
@@ -2964,7 +2966,7 @@ final class Power$CaloriePerMinuteInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$CaloriePerMinuteInternational] with new value
   @override
@@ -3030,7 +3032,7 @@ final class Power$CaloriePerSecondInternational extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$CaloriePerSecondInternational] with new value
   @override
@@ -3096,7 +3098,7 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerHourThermochemical] with new value
   @override
@@ -3162,7 +3164,7 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerMinuteThermochemical] with new value
   @override
@@ -3228,7 +3230,7 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilocaloriePerSecondThermochemical] with new value
   @override
@@ -3294,7 +3296,7 @@ final class Power$CaloriePerHourThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$CaloriePerHourThermochemical] with new value
   @override
@@ -3360,7 +3362,7 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$CaloriePerMinuteThermochemical] with new value
   @override
@@ -3426,7 +3428,7 @@ final class Power$CaloriePerSecondThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$CaloriePerSecondThermochemical] with new value
   @override
@@ -3491,7 +3493,7 @@ final class Power$PoundFootPerHour extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$PoundFootPerHour] with new value
   @override
@@ -3556,7 +3558,7 @@ final class Power$PoundFootPerMinute extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$PoundFootPerMinute] with new value
   @override
@@ -3621,7 +3623,7 @@ final class Power$PoundFootPerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$PoundFootPerSecond] with new value
   @override
@@ -3686,7 +3688,7 @@ final class Power$ErgPerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$ErgPerSecond] with new value
   @override
@@ -3751,7 +3753,7 @@ final class Power$ExajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$ExajoulePerSecond] with new value
   @override
@@ -3816,7 +3818,7 @@ final class Power$PetajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$PetajoulePerSecond] with new value
   @override
@@ -3881,7 +3883,7 @@ final class Power$TerajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$TerajoulePerSecond] with new value
   @override
@@ -3946,7 +3948,7 @@ final class Power$GigajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$GigajoulePerSecond] with new value
   @override
@@ -4011,7 +4013,7 @@ final class Power$MegajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$MegajoulePerSecond] with new value
   @override
@@ -4076,7 +4078,7 @@ final class Power$KilojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilojoulePerSecond] with new value
   @override
@@ -4141,7 +4143,7 @@ final class Power$HectojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$HectojoulePerSecond] with new value
   @override
@@ -4206,7 +4208,7 @@ final class Power$DekajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$DekajoulePerSecond] with new value
   @override
@@ -4271,7 +4273,7 @@ final class Power$JoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$JoulePerSecond] with new value
   @override
@@ -4336,7 +4338,7 @@ final class Power$DecijoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$DecijoulePerSecond] with new value
   @override
@@ -4401,7 +4403,7 @@ final class Power$CentijoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$CentijoulePerSecond] with new value
   @override
@@ -4466,7 +4468,7 @@ final class Power$MillijoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$MillijoulePerSecond] with new value
   @override
@@ -4531,7 +4533,7 @@ final class Power$MicrojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$MicrojoulePerSecond] with new value
   @override
@@ -4596,7 +4598,7 @@ final class Power$NanojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$NanojoulePerSecond] with new value
   @override
@@ -4661,7 +4663,7 @@ final class Power$PicojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$PicojoulePerSecond] with new value
   @override
@@ -4726,7 +4728,7 @@ final class Power$FemtojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$FemtojoulePerSecond] with new value
   @override
@@ -4791,7 +4793,7 @@ final class Power$AttojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$AttojoulePerSecond] with new value
   @override
@@ -4856,7 +4858,7 @@ final class Power$JoulePerHour extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$JoulePerHour] with new value
   @override
@@ -4921,7 +4923,7 @@ final class Power$JoulePerMinute extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$JoulePerMinute] with new value
   @override
@@ -4986,7 +4988,7 @@ final class Power$KilojoulePerHour extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilojoulePerHour] with new value
   @override
@@ -5051,7 +5053,7 @@ final class Power$KilojoulePerMinute extends Power {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Power$KilojoulePerMinute] with new value
   @override

@@ -29,7 +29,9 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const VolumeLumber$CubicInch();
+          : VolumeLumber.anchor();
+
+  factory VolumeLumber.anchor() => const VolumeLumber$CubicInch();
 
   @override
   AnchorRatio<VolumeLumber> get _anchorRatio => (
@@ -195,7 +197,7 @@ final class VolumeLumber$MeterCubic extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$MeterCubic] with new value
   @override
@@ -260,7 +262,7 @@ final class VolumeLumber$CubicFeet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$CubicFeet] with new value
   @override
@@ -325,7 +327,7 @@ final class VolumeLumber$CubicInch extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$CubicInch] with new value
   @override
@@ -390,7 +392,7 @@ final class VolumeLumber$BoardFeet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$BoardFeet] with new value
   @override
@@ -456,7 +458,7 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$ThousandBoardFeet] with new value
   @override
@@ -521,7 +523,7 @@ final class VolumeLumber$Cord extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$Cord] with new value
   @override
@@ -586,7 +588,7 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$Cord80FtCubic] with new value
   @override
@@ -651,7 +653,7 @@ final class VolumeLumber$CordFeet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$CordFeet] with new value
   @override
@@ -716,7 +718,7 @@ final class VolumeLumber$Cunit extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$Cunit] with new value
   @override
@@ -781,7 +783,7 @@ final class VolumeLumber$Pallet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$Pallet] with new value
   @override
@@ -846,7 +848,7 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$CrossTie] with new value
   @override
@@ -911,7 +913,7 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$SwitchTie] with new value
   @override
@@ -978,7 +980,7 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per8InchPanels] with new value
   @override
@@ -1045,7 +1047,7 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per4InchPanels] with new value
   @override
@@ -1112,7 +1114,7 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet3Per8InchPanels] with new value
   @override
@@ -1179,7 +1181,7 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per2InchPanels] with new value
   @override
@@ -1246,7 +1248,7 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeLumber$ThousandSquareFeet3Per4InchPanels] with new value
   @override

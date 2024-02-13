@@ -24,7 +24,9 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const SurfaceTension$MillinewtonPerMeter();
+          : SurfaceTension.anchor();
+
+  factory SurfaceTension.anchor() => const SurfaceTension$MillinewtonPerMeter();
 
   @override
   AnchorRatio<SurfaceTension> get _anchorRatio => (
@@ -137,7 +139,7 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceTension$NewtonPerMeter] with new value
   @override
@@ -203,7 +205,7 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceTension$MillinewtonPerMeter] with new value
   @override
@@ -269,7 +271,7 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceTension$GramForcePerCentimeter] with new value
   @override
@@ -335,7 +337,7 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceTension$DynePerCentimeter] with new value
   @override
@@ -401,7 +403,7 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceTension$ErgPerCentimeterSquare] with new value
   @override
@@ -467,7 +469,7 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceTension$ErgPerMillimeterSquare] with new value
   @override
@@ -533,7 +535,7 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceTension$PoundalPerInch] with new value
   @override
@@ -599,7 +601,7 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceTension$PoundForcePerInch] with new value
   @override

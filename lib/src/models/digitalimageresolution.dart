@@ -22,7 +22,10 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const DigitalImageResolution$DotPerInch();
+          : DigitalImageResolution.anchor();
+
+  factory DigitalImageResolution.anchor() =>
+      const DigitalImageResolution$DotPerInch();
 
   @override
   AnchorRatio<DigitalImageResolution> get _anchorRatio => (
@@ -110,7 +113,7 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DigitalImageResolution$DotPerInch] with new value
   @override
@@ -176,7 +179,7 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DigitalImageResolution$DotPerMeter] with new value
   @override
@@ -243,7 +246,7 @@ final class DigitalImageResolution$DotPerMillimeter
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DigitalImageResolution$DotPerMillimeter] with new value
   @override
@@ -309,7 +312,7 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DigitalImageResolution$PixelPerInch] with new value
   @override

@@ -38,7 +38,9 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const FuelEfficiency$MeterPerLiter();
+          : FuelEfficiency.anchor();
+
+  factory FuelEfficiency.anchor() => const FuelEfficiency$MeterPerLiter();
 
   @override
   AnchorRatio<FuelEfficiency> get _anchorRatio => (
@@ -351,7 +353,7 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$ExameterPerLiter] with new value
   @override
@@ -417,7 +419,7 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$PetameterPerLiter] with new value
   @override
@@ -483,7 +485,7 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$TerameterPerLiter] with new value
   @override
@@ -549,7 +551,7 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GigameterPerLiter] with new value
   @override
@@ -615,7 +617,7 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MegameterPerLiter] with new value
   @override
@@ -681,7 +683,7 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$KilometerPerLiter] with new value
   @override
@@ -747,7 +749,7 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$HectometerPerLiter] with new value
   @override
@@ -813,7 +815,7 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$DekameterPerLiter] with new value
   @override
@@ -879,7 +881,7 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerLiter] with new value
   @override
@@ -945,7 +947,7 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$CentimeterPerLiter] with new value
   @override
@@ -1011,7 +1013,7 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MileUSPerLiter] with new value
   @override
@@ -1077,7 +1079,7 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$LiterPerMeter] with new value
   @override
@@ -1143,7 +1145,7 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$LiterPer100Km] with new value
   @override
@@ -1209,7 +1211,7 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUSPerMile] with new value
   @override
@@ -1275,7 +1277,7 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUSPer100mi] with new value
   @override
@@ -1341,7 +1343,7 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUKPerMile] with new value
   @override
@@ -1407,7 +1409,7 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$GallonsUKPer100mi] with new value
   @override
@@ -1473,7 +1475,7 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$NauticalMilePerLiter] with new value
   @override
@@ -1539,7 +1541,7 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$NauticalMilePerGallonUS] with new value
   @override
@@ -1605,7 +1607,7 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$KilometerPerGallonUS] with new value
   @override
@@ -1671,7 +1673,7 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallonUS] with new value
   @override
@@ -1737,7 +1739,7 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallonUK] with new value
   @override
@@ -1803,7 +1805,7 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MilePerGallonUS] with new value
   @override
@@ -1869,7 +1871,7 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MilePerGallonUK] with new value
   @override
@@ -1935,7 +1937,7 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerMeterSquare] with new value
   @override
@@ -2001,7 +2003,7 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCentimeterSquare] with new value
   @override
@@ -2067,7 +2069,7 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerYardSquare] with new value
   @override
@@ -2133,7 +2135,7 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFeetSquare] with new value
   @override
@@ -2199,7 +2201,7 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerInchSquare] with new value
   @override
@@ -2265,7 +2267,7 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerGallon] with new value
   @override
@@ -2331,7 +2333,7 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerQuart] with new value
   @override
@@ -2397,7 +2399,7 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerQuartUK] with new value
   @override
@@ -2462,7 +2464,7 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerPint] with new value
   @override
@@ -2528,7 +2530,7 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerPintUK] with new value
   @override
@@ -2593,7 +2595,7 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCup] with new value
   @override
@@ -2659,7 +2661,7 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerCupUK] with new value
   @override
@@ -2725,7 +2727,7 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFluidOunce] with new value
   @override
@@ -2791,7 +2793,7 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [FuelEfficiency$MeterPerFluidOunceUK] with new value
   @override

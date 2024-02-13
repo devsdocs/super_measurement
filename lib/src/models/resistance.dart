@@ -20,7 +20,9 @@ sealed class Resistance extends Unit<Resistance> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Resistance$Ohm();
+          : Resistance.anchor();
+
+  factory Resistance.anchor() => const Resistance$Ohm();
 
   @override
   AnchorRatio<Resistance> get _anchorRatio => (
@@ -115,7 +117,7 @@ final class Resistance$Megohm extends Resistance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistance$Megohm] with new value
   @override
@@ -180,7 +182,7 @@ final class Resistance$Ohm extends Resistance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistance$Ohm] with new value
   @override
@@ -245,7 +247,7 @@ final class Resistance$OhmInternational extends Resistance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistance$OhmInternational] with new value
   @override
@@ -310,7 +312,7 @@ final class Resistance$Microhm extends Resistance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistance$Microhm] with new value
   @override
@@ -375,7 +377,7 @@ final class Resistance$Abohm extends Resistance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistance$Abohm] with new value
   @override
@@ -440,7 +442,7 @@ final class Resistance$Statohm extends Resistance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Resistance$Statohm] with new value
   @override

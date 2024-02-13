@@ -30,7 +30,9 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const ViscosityKinematic$Centistoke();
+          : ViscosityKinematic.anchor();
+
+  factory ViscosityKinematic.anchor() => const ViscosityKinematic$Centistoke();
 
   @override
   AnchorRatio<ViscosityKinematic> get _anchorRatio => (
@@ -219,7 +221,7 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Exastoke] with new value
   @override
@@ -285,7 +287,7 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Petastoke] with new value
   @override
@@ -351,7 +353,7 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Terastoke] with new value
   @override
@@ -417,7 +419,7 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Gigastoke] with new value
   @override
@@ -483,7 +485,7 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Megastoke] with new value
   @override
@@ -549,7 +551,7 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Kilostoke] with new value
   @override
@@ -615,7 +617,7 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Hectostoke] with new value
   @override
@@ -681,7 +683,7 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Dekastoke] with new value
   @override
@@ -746,7 +748,7 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Stoke] with new value
   @override
@@ -812,7 +814,7 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Decistoke] with new value
   @override
@@ -878,7 +880,7 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Centistoke] with new value
   @override
@@ -944,7 +946,7 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Millistoke] with new value
   @override
@@ -1010,7 +1012,7 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Microstoke] with new value
   @override
@@ -1076,7 +1078,7 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Nanostoke] with new value
   @override
@@ -1142,7 +1144,7 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Picostoke] with new value
   @override
@@ -1208,7 +1210,7 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Femtostoke] with new value
   @override
@@ -1274,7 +1276,7 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$Attostoke] with new value
   @override
@@ -1340,7 +1342,7 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$MeterSquarePerSecond] with new value
   @override
@@ -1407,7 +1409,7 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$CentimeterSquarePerSecond] with new value
   @override
@@ -1474,7 +1476,7 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$MillimeterSquarePerSecond] with new value
   @override
@@ -1540,7 +1542,7 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [ViscosityKinematic$FootSquarePerSecond] with new value
   @override

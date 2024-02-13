@@ -25,7 +25,9 @@ sealed class Illumination extends Unit<Illumination> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Illumination$Nox();
+          : Illumination.anchor();
+
+  factory Illumination.anchor() => const Illumination$Nox();
 
   @override
   AnchorRatio<Illumination> get _anchorRatio => (
@@ -154,7 +156,7 @@ final class Illumination$MeterCandle extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$MeterCandle] with new value
   @override
@@ -220,7 +222,7 @@ final class Illumination$CentimeterCandle extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$CentimeterCandle] with new value
   @override
@@ -285,7 +287,7 @@ final class Illumination$FootCandle extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$FootCandle] with new value
   @override
@@ -350,7 +352,7 @@ final class Illumination$Flame extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$Flame] with new value
   @override
@@ -415,7 +417,7 @@ final class Illumination$Phot extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$Phot] with new value
   @override
@@ -480,7 +482,7 @@ final class Illumination$Nox extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$Nox] with new value
   @override
@@ -545,7 +547,7 @@ final class Illumination$Lux extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$Lux] with new value
   @override
@@ -611,7 +613,7 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$LumenPerMeterSquare] with new value
   @override
@@ -677,7 +679,7 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$LumenPerCentimeterSquare] with new value
   @override
@@ -743,7 +745,7 @@ final class Illumination$LumenPerFootSquare extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$LumenPerFootSquare] with new value
   @override
@@ -809,7 +811,7 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Illumination$WattPerCentimeterSquareAt555nm] with new value
   @override

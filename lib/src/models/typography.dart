@@ -22,7 +22,9 @@ sealed class Typography extends Unit<Typography> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Typography$Inch();
+          : Typography.anchor();
+
+  factory Typography.anchor() => const Typography$Inch();
 
   @override
   AnchorRatio<Typography> get _anchorRatio => (
@@ -138,7 +140,7 @@ final class Typography$PostScriptPointDTP extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$PostScriptPointDTP] with new value
   @override
@@ -204,7 +206,7 @@ final class Typography$PrintersPointAmerican extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$PrintersPointAmerican] with new value
   @override
@@ -269,7 +271,7 @@ final class Typography$DidotsPoint extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$DidotsPoint] with new value
   @override
@@ -335,7 +337,7 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$PicaPostScriptDTPComputer] with new value
   @override
@@ -400,7 +402,7 @@ final class Typography$PicaPrinters extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$PicaPrinters] with new value
   @override
@@ -465,7 +467,7 @@ final class Typography$Ciceros extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$Ciceros] with new value
   @override
@@ -530,7 +532,7 @@ final class Typography$Inch extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$Inch] with new value
   @override
@@ -595,7 +597,7 @@ final class Typography$Millimeter extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$Millimeter] with new value
   @override
@@ -660,7 +662,7 @@ final class Typography$Centimeter extends Typography {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Typography$Centimeter] with new value
   @override

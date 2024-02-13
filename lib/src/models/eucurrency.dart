@@ -25,7 +25,9 @@ sealed class EUCurrency extends Unit<EUCurrency> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const EUCurrency$EuroEUR();
+          : EUCurrency.anchor();
+
+  factory EUCurrency.anchor() => const EUCurrency$EuroEUR();
 
   @override
   AnchorRatio<EUCurrency> get _anchorRatio => (
@@ -163,7 +165,7 @@ final class EUCurrency$EuroEUR extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$EuroEUR] with new value
   @override
@@ -228,7 +230,7 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$IrishPoundIEP] with new value
   @override
@@ -293,7 +295,7 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$DeutschMarkDEM] with new value
   @override
@@ -358,7 +360,7 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$DutchGuildenNLG] with new value
   @override
@@ -423,7 +425,7 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$FinnishMarkFIM] with new value
   @override
@@ -488,7 +490,7 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$FrenchFrancFRF] with new value
   @override
@@ -554,7 +556,7 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$AustrianSchillingATS] with new value
   @override
@@ -619,7 +621,7 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$BelgianFrancBEF] with new value
   @override
@@ -685,7 +687,7 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$LuxembourgFrancLUF] with new value
   @override
@@ -750,7 +752,7 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$SpanishPesetaESP] with new value
   @override
@@ -816,7 +818,7 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$PortugueseEscudoPTE] with new value
   @override
@@ -881,7 +883,7 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$ItalianLireITL] with new value
   @override
@@ -946,7 +948,7 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [EUCurrency$GreekDrachmaGRD] with new value
   @override

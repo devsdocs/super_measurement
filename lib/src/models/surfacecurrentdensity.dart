@@ -25,7 +25,10 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const SurfaceCurrentDensity$AmperePerMeterSquare();
+          : SurfaceCurrentDensity.anchor();
+
+  factory SurfaceCurrentDensity.anchor() =>
+      const SurfaceCurrentDensity$AmperePerMeterSquare();
 
   @override
   AnchorRatio<SurfaceCurrentDensity> get _anchorRatio => (
@@ -128,7 +131,7 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerMeterSquare] with new value
   @override
@@ -195,7 +198,7 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerCentimeterSquare] with new value
   @override
@@ -262,7 +265,7 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerInchSquare] with new value
   @override
@@ -329,7 +332,7 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerMilSquare] with new value
   @override
@@ -396,7 +399,7 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AmperePerCicularMil] with new value
   @override
@@ -463,7 +466,7 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceCurrentDensity$AbamperePerCentimeterSquare] with new value
   @override

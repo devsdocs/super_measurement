@@ -27,7 +27,9 @@ sealed class Luminance extends Unit<Luminance> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Luminance$Bril();
+          : Luminance.anchor();
+
+  factory Luminance.anchor() => const Luminance$Bril();
 
   @override
   AnchorRatio<Luminance> get _anchorRatio => (
@@ -194,7 +196,7 @@ final class Luminance$Stilb extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Stilb] with new value
   @override
@@ -260,7 +262,7 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$CandelaPerMeterSquare] with new value
   @override
@@ -326,7 +328,7 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$CandelaPerCentimeterSquare] with new value
   @override
@@ -392,7 +394,7 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$CandelaPerFootSquare] with new value
   @override
@@ -458,7 +460,7 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$LumenPerMeterSquarePerSteradian] with new value
   @override
@@ -524,7 +526,7 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$LumenPerCentimeterSquarePerSteradian] with new value
   @override
@@ -590,7 +592,7 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$LumenPerFootSquarePerSteradian] with new value
   @override
@@ -657,7 +659,7 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$WattPerCentimeterSquarePerSteradianAt555nm] with new value
   @override
@@ -722,7 +724,7 @@ final class Luminance$Nit extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Nit] with new value
   @override
@@ -787,7 +789,7 @@ final class Luminance$Millinit extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Millinit] with new value
   @override
@@ -852,7 +854,7 @@ final class Luminance$FootLambert extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$FootLambert] with new value
   @override
@@ -917,7 +919,7 @@ final class Luminance$Lambert extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Lambert] with new value
   @override
@@ -982,7 +984,7 @@ final class Luminance$Millilambert extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Millilambert] with new value
   @override
@@ -1047,7 +1049,7 @@ final class Luminance$Apostilb extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Apostilb] with new value
   @override
@@ -1112,7 +1114,7 @@ final class Luminance$Blondel extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Blondel] with new value
   @override
@@ -1177,7 +1179,7 @@ final class Luminance$Bril extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Bril] with new value
   @override
@@ -1242,7 +1244,7 @@ final class Luminance$Skot extends Luminance {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Luminance$Skot] with new value
   @override

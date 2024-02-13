@@ -101,7 +101,9 @@ sealed class DataTransfer extends Unit<DataTransfer> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const DataTransfer$BitPerSecond();
+          : DataTransfer.anchor();
+
+  factory DataTransfer.anchor() => const DataTransfer$BitPerSecond();
 
   @override
   AnchorRatio<DataTransfer> get _anchorRatio => (
@@ -1231,7 +1233,7 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BitPerSecond] with new value
   @override
@@ -1296,7 +1298,7 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BytePerSecond] with new value
   @override
@@ -1362,7 +1364,7 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$KilobitPerSecond] with new value
   @override
@@ -1428,7 +1430,7 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$KilobytePerSecond] with new value
   @override
@@ -1494,7 +1496,7 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$MegabitPerSecond] with new value
   @override
@@ -1560,7 +1562,7 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$MegabytePerSecond] with new value
   @override
@@ -1626,7 +1628,7 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$GigabitPerSecond] with new value
   @override
@@ -1692,7 +1694,7 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$GigabytePerSecond] with new value
   @override
@@ -1758,7 +1760,7 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$TerabitPerSecond] with new value
   @override
@@ -1824,7 +1826,7 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$TerabytePerSecond] with new value
   @override
@@ -1890,7 +1892,7 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$KibibitPerSecond] with new value
   @override
@@ -1956,7 +1958,7 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$KibibytePerSecond] with new value
   @override
@@ -2022,7 +2024,7 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$MebibitPerSecond] with new value
   @override
@@ -2088,7 +2090,7 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$MebibytePerSecond] with new value
   @override
@@ -2154,7 +2156,7 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$GibibitPerSecond] with new value
   @override
@@ -2220,7 +2222,7 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$GibibytePerSecond] with new value
   @override
@@ -2286,7 +2288,7 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$TebibitPerSecond] with new value
   @override
@@ -2352,7 +2354,7 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$TebibytePerSecond] with new value
   @override
@@ -2417,7 +2419,7 @@ final class DataTransfer$Ethernet extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Ethernet] with new value
   @override
@@ -2482,7 +2484,7 @@ final class DataTransfer$EthernetFast extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$EthernetFast] with new value
   @override
@@ -2548,7 +2550,7 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$EthernetGigabit] with new value
   @override
@@ -2614,7 +2616,7 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Ethernet10Gigabit] with new value
   @override
@@ -2679,7 +2681,7 @@ final class DataTransfer$OC1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$OC1] with new value
   @override
@@ -2744,7 +2746,7 @@ final class DataTransfer$OC3 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$OC3] with new value
   @override
@@ -2809,7 +2811,7 @@ final class DataTransfer$OC12 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$OC12] with new value
   @override
@@ -2874,7 +2876,7 @@ final class DataTransfer$OC24 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$OC24] with new value
   @override
@@ -2939,7 +2941,7 @@ final class DataTransfer$OC48 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$OC48] with new value
   @override
@@ -3004,7 +3006,7 @@ final class DataTransfer$OC192 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$OC192] with new value
   @override
@@ -3069,7 +3071,7 @@ final class DataTransfer$OC768 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$OC768] with new value
   @override
@@ -3135,7 +3137,7 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$ISDNSingleChannel] with new value
   @override
@@ -3201,7 +3203,7 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$ISDNDualChannel] with new value
   @override
@@ -3266,7 +3268,7 @@ final class DataTransfer$Modem110 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem110] with new value
   @override
@@ -3331,7 +3333,7 @@ final class DataTransfer$Modem300 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem300] with new value
   @override
@@ -3396,7 +3398,7 @@ final class DataTransfer$Modem1200 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem1200] with new value
   @override
@@ -3461,7 +3463,7 @@ final class DataTransfer$Modem2400 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem2400] with new value
   @override
@@ -3526,7 +3528,7 @@ final class DataTransfer$Modem9600 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem9600] with new value
   @override
@@ -3591,7 +3593,7 @@ final class DataTransfer$Modem144k extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem144k] with new value
   @override
@@ -3656,7 +3658,7 @@ final class DataTransfer$Modem288k extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem288k] with new value
   @override
@@ -3721,7 +3723,7 @@ final class DataTransfer$Modem336k extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem336k] with new value
   @override
@@ -3786,7 +3788,7 @@ final class DataTransfer$Modem56k extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$Modem56k] with new value
   @override
@@ -3851,7 +3853,7 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIAsync] with new value
   @override
@@ -3916,7 +3918,7 @@ final class DataTransfer$SCSISync extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSISync] with new value
   @override
@@ -3981,7 +3983,7 @@ final class DataTransfer$SCSIFast extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIFast] with new value
   @override
@@ -4046,7 +4048,7 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIFastUltra] with new value
   @override
@@ -4111,7 +4113,7 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIFastWide] with new value
   @override
@@ -4177,7 +4179,7 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIFastUltraWide] with new value
   @override
@@ -4242,7 +4244,7 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIUltra2] with new value
   @override
@@ -4307,7 +4309,7 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSIUltra3] with new value
   @override
@@ -4372,7 +4374,7 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra80] with new value
   @override
@@ -4438,7 +4440,7 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra160] with new value
   @override
@@ -4504,7 +4506,7 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SCSILVDUltra320] with new value
   @override
@@ -4569,7 +4571,7 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode0] with new value
   @override
@@ -4634,7 +4636,7 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode1] with new value
   @override
@@ -4699,7 +4701,7 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode2] with new value
   @override
@@ -4764,7 +4766,7 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode3] with new value
   @override
@@ -4829,7 +4831,7 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEPIOMode4] with new value
   @override
@@ -4894,7 +4896,7 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode0] with new value
   @override
@@ -4959,7 +4961,7 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode1] with new value
   @override
@@ -5024,7 +5026,7 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEDMAMode2] with new value
   @override
@@ -5089,7 +5091,7 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode0] with new value
   @override
@@ -5154,7 +5156,7 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode1] with new value
   @override
@@ -5219,7 +5221,7 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode2] with new value
   @override
@@ -5284,7 +5286,7 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode3] with new value
   @override
@@ -5349,7 +5351,7 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode4] with new value
   @override
@@ -5414,7 +5416,7 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode5] with new value
   @override
@@ -5479,7 +5481,7 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMAMode6] with new value
   @override
@@ -5544,7 +5546,7 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA33] with new value
   @override
@@ -5609,7 +5611,7 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA66] with new value
   @override
@@ -5674,7 +5676,7 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA100] with new value
   @override
@@ -5739,7 +5741,7 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IDEUDMA133] with new value
   @override
@@ -5804,7 +5806,7 @@ final class DataTransfer$SATA10 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SATA10] with new value
   @override
@@ -5869,7 +5871,7 @@ final class DataTransfer$SATA20 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SATA20] with new value
   @override
@@ -5934,7 +5936,7 @@ final class DataTransfer$SATA30 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$SATA30] with new value
   @override
@@ -5999,7 +6001,7 @@ final class DataTransfer$USB extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$USB] with new value
   @override
@@ -6064,7 +6066,7 @@ final class DataTransfer$USB20 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$USB20] with new value
   @override
@@ -6129,7 +6131,7 @@ final class DataTransfer$USB30 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$USB30] with new value
   @override
@@ -6195,7 +6197,7 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$FireWire400IEEE1394] with new value
   @override
@@ -6261,7 +6263,7 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$FireWire800IEEE1394b] with new value
   @override
@@ -6326,7 +6328,7 @@ final class DataTransfer$IrDA extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IrDA] with new value
   @override
@@ -6391,7 +6393,7 @@ final class DataTransfer$IrDA2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$IrDA2] with new value
   @override
@@ -6456,7 +6458,7 @@ final class DataTransfer$ATM extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$ATM] with new value
   @override
@@ -6521,7 +6523,7 @@ final class DataTransfer$T0Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T0Payload] with new value
   @override
@@ -6586,7 +6588,7 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T0B8ZSPayload] with new value
   @override
@@ -6651,7 +6653,7 @@ final class DataTransfer$T1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T1Signal] with new value
   @override
@@ -6716,7 +6718,7 @@ final class DataTransfer$T1Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T1Payload] with new value
   @override
@@ -6781,7 +6783,7 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T1ZPayload] with new value
   @override
@@ -6846,7 +6848,7 @@ final class DataTransfer$T1CSignal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T1CSignal] with new value
   @override
@@ -6911,7 +6913,7 @@ final class DataTransfer$T1CPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T1CPayload] with new value
   @override
@@ -6976,7 +6978,7 @@ final class DataTransfer$T2Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T2Signal] with new value
   @override
@@ -7041,7 +7043,7 @@ final class DataTransfer$T3Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T3Signal] with new value
   @override
@@ -7106,7 +7108,7 @@ final class DataTransfer$T3Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T3Payload] with new value
   @override
@@ -7171,7 +7173,7 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T3ZPayload] with new value
   @override
@@ -7236,7 +7238,7 @@ final class DataTransfer$T4Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$T4Signal] with new value
   @override
@@ -7301,7 +7303,7 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA1Signal] with new value
   @override
@@ -7366,7 +7368,7 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA1Payload] with new value
   @override
@@ -7431,7 +7433,7 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA2Signal] with new value
   @override
@@ -7496,7 +7498,7 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA2Payload] with new value
   @override
@@ -7561,7 +7563,7 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA3Signal] with new value
   @override
@@ -7626,7 +7628,7 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$EPTA3Payload] with new value
   @override
@@ -7691,7 +7693,7 @@ final class DataTransfer$H0 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$H0] with new value
   @override
@@ -7756,7 +7758,7 @@ final class DataTransfer$H11 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$H11] with new value
   @override
@@ -7821,7 +7823,7 @@ final class DataTransfer$H12 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$H12] with new value
   @override
@@ -7887,7 +7889,7 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary1Signal] with new value
   @override
@@ -7953,7 +7955,7 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary1Payload] with new value
   @override
@@ -8019,7 +8021,7 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary2Signal] with new value
   @override
@@ -8085,7 +8087,7 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary2Payload] with new value
   @override
@@ -8151,7 +8153,7 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary6Signal] with new value
   @override
@@ -8217,7 +8219,7 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$VirtualTributary6Payload] with new value
   @override
@@ -8282,7 +8284,7 @@ final class DataTransfer$STS1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS1Signal] with new value
   @override
@@ -8347,7 +8349,7 @@ final class DataTransfer$STS1Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS1Payload] with new value
   @override
@@ -8412,7 +8414,7 @@ final class DataTransfer$STS3Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS3Signal] with new value
   @override
@@ -8477,7 +8479,7 @@ final class DataTransfer$STS3Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS3Payload] with new value
   @override
@@ -8542,7 +8544,7 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS3cSignal] with new value
   @override
@@ -8607,7 +8609,7 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS3cPayload] with new value
   @override
@@ -8672,7 +8674,7 @@ final class DataTransfer$STS12Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS12Signal] with new value
   @override
@@ -8737,7 +8739,7 @@ final class DataTransfer$STS24Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS24Signal] with new value
   @override
@@ -8802,7 +8804,7 @@ final class DataTransfer$STS48Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS48Signal] with new value
   @override
@@ -8867,7 +8869,7 @@ final class DataTransfer$STS192Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STS192Signal] with new value
   @override
@@ -8932,7 +8934,7 @@ final class DataTransfer$STM1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STM1Signal] with new value
   @override
@@ -8997,7 +8999,7 @@ final class DataTransfer$STM4Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STM4Signal] with new value
   @override
@@ -9062,7 +9064,7 @@ final class DataTransfer$STM16Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STM16Signal] with new value
   @override
@@ -9127,7 +9129,7 @@ final class DataTransfer$STM64Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$STM64Signal] with new value
   @override
@@ -9193,7 +9195,7 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CharacterPerSecond] with new value
   @override
@@ -9258,7 +9260,7 @@ final class DataTransfer$TokenRing extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$TokenRing] with new value
   @override
@@ -9323,7 +9325,7 @@ final class DataTransfer$FiberChannel extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$FiberChannel] with new value
   @override
@@ -9388,7 +9390,7 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$ISA8Bit] with new value
   @override
@@ -9453,7 +9455,7 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$ISA16Bit] with new value
   @override
@@ -9518,7 +9520,7 @@ final class DataTransfer$VLB extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$VLB] with new value
   @override
@@ -9583,7 +9585,7 @@ final class DataTransfer$PCI extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCI] with new value
   @override
@@ -9648,7 +9650,7 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCI64Bit] with new value
   @override
@@ -9713,7 +9715,7 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCI64Bit66MHz] with new value
   @override
@@ -9778,7 +9780,7 @@ final class DataTransfer$PCIX extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIX] with new value
   @override
@@ -9843,7 +9845,7 @@ final class DataTransfer$AGP extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$AGP] with new value
   @override
@@ -9908,7 +9910,7 @@ final class DataTransfer$AGP2X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$AGP2X] with new value
   @override
@@ -9973,7 +9975,7 @@ final class DataTransfer$AGP4X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$AGP4X] with new value
   @override
@@ -10038,7 +10040,7 @@ final class DataTransfer$AGP8X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$AGP8X] with new value
   @override
@@ -10103,7 +10105,7 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X1] with new value
   @override
@@ -10168,7 +10170,7 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X4] with new value
   @override
@@ -10233,7 +10235,7 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X8] with new value
   @override
@@ -10299,7 +10301,7 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress10X16] with new value
   @override
@@ -10364,7 +10366,7 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X1] with new value
   @override
@@ -10429,7 +10431,7 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X4] with new value
   @override
@@ -10494,7 +10496,7 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X8] with new value
   @override
@@ -10560,7 +10562,7 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress20X16] with new value
   @override
@@ -10625,7 +10627,7 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X1] with new value
   @override
@@ -10690,7 +10692,7 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X4] with new value
   @override
@@ -10755,7 +10757,7 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X8] with new value
   @override
@@ -10821,7 +10823,7 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$PCIExpress30X16] with new value
   @override
@@ -10886,7 +10888,7 @@ final class DataTransfer$CDROM1X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM1X] with new value
   @override
@@ -10951,7 +10953,7 @@ final class DataTransfer$CDROM2X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM2X] with new value
   @override
@@ -11016,7 +11018,7 @@ final class DataTransfer$CDROM3X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM3X] with new value
   @override
@@ -11081,7 +11083,7 @@ final class DataTransfer$CDROM4X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM4X] with new value
   @override
@@ -11146,7 +11148,7 @@ final class DataTransfer$CDROM6X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM6X] with new value
   @override
@@ -11211,7 +11213,7 @@ final class DataTransfer$CDROM8X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM8X] with new value
   @override
@@ -11276,7 +11278,7 @@ final class DataTransfer$CDROM12X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM12X] with new value
   @override
@@ -11341,7 +11343,7 @@ final class DataTransfer$CDROM16X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM16X] with new value
   @override
@@ -11406,7 +11408,7 @@ final class DataTransfer$CDROM24X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM24X] with new value
   @override
@@ -11471,7 +11473,7 @@ final class DataTransfer$CDROM32X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM32X] with new value
   @override
@@ -11536,7 +11538,7 @@ final class DataTransfer$CDROM40X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM40X] with new value
   @override
@@ -11601,7 +11603,7 @@ final class DataTransfer$CDROM48X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM48X] with new value
   @override
@@ -11666,7 +11668,7 @@ final class DataTransfer$CDROM52X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$CDROM52X] with new value
   @override
@@ -11731,7 +11733,7 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM1X] with new value
   @override
@@ -11796,7 +11798,7 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM2X] with new value
   @override
@@ -11861,7 +11863,7 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM3X] with new value
   @override
@@ -11926,7 +11928,7 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM4X] with new value
   @override
@@ -11991,7 +11993,7 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM6X] with new value
   @override
@@ -12056,7 +12058,7 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM8X] with new value
   @override
@@ -12121,7 +12123,7 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM10X] with new value
   @override
@@ -12186,7 +12188,7 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM12X] with new value
   @override
@@ -12251,7 +12253,7 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$DVDROM16X] with new value
   @override
@@ -12316,7 +12318,7 @@ final class DataTransfer$BluRay1X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay1X] with new value
   @override
@@ -12381,7 +12383,7 @@ final class DataTransfer$BluRay2X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay2X] with new value
   @override
@@ -12446,7 +12448,7 @@ final class DataTransfer$BluRay4X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay4X] with new value
   @override
@@ -12511,7 +12513,7 @@ final class DataTransfer$BluRay6X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay6X] with new value
   @override
@@ -12576,7 +12578,7 @@ final class DataTransfer$BluRay8X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay8X] with new value
   @override
@@ -12641,7 +12643,7 @@ final class DataTransfer$BluRay10X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay10X] with new value
   @override
@@ -12706,7 +12708,7 @@ final class DataTransfer$BluRay12X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [DataTransfer$BluRay12X] with new value
   @override

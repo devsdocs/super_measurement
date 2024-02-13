@@ -22,7 +22,10 @@ sealed class Permeability extends Unit<Permeability> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Permeability$KilogramPerPascalSecondMeterSquare();
+          : Permeability.anchor();
+
+  factory Permeability.anchor() =>
+      const Permeability$KilogramPerPascalSecondMeterSquare();
 
   @override
   AnchorRatio<Permeability> get _anchorRatio => (
@@ -118,7 +121,7 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Permeability$KilogramPerPascalSecondMeterSquare] with new value
   @override
@@ -184,7 +187,7 @@ final class Permeability$Permeability0DegreeC extends Permeability {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Permeability$Permeability0DegreeC] with new value
   @override
@@ -250,7 +253,7 @@ final class Permeability$Permeability23DegreeC extends Permeability {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Permeability$Permeability23DegreeC] with new value
   @override
@@ -316,7 +319,7 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Permeability$PermeabilityInches0DegreeC] with new value
   @override
@@ -382,7 +385,7 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Permeability$PermeabilityInches23DegreeC] with new value
   @override

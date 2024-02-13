@@ -24,7 +24,9 @@ sealed class Charge extends Unit<Charge> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Charge$Coulomb();
+          : Charge.anchor();
+
+  factory Charge.anchor() => const Charge$Coulomb();
 
   @override
   AnchorRatio<Charge> get _anchorRatio => (
@@ -179,7 +181,7 @@ final class Charge$Megacoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Megacoulomb] with new value
   @override
@@ -244,7 +246,7 @@ final class Charge$Kilocoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Kilocoulomb] with new value
   @override
@@ -309,7 +311,7 @@ final class Charge$Coulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Coulomb] with new value
   @override
@@ -374,7 +376,7 @@ final class Charge$CoulombInternational extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$CoulombInternational] with new value
   @override
@@ -439,7 +441,7 @@ final class Charge$Millicoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Millicoulomb] with new value
   @override
@@ -504,7 +506,7 @@ final class Charge$Microcoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Microcoulomb] with new value
   @override
@@ -569,7 +571,7 @@ final class Charge$Nanocoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Nanocoulomb] with new value
   @override
@@ -634,7 +636,7 @@ final class Charge$Picocoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Picocoulomb] with new value
   @override
@@ -699,7 +701,7 @@ final class Charge$Abcoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Abcoulomb] with new value
   @override
@@ -764,7 +766,7 @@ final class Charge$Statcoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Statcoulomb] with new value
   @override
@@ -829,7 +831,7 @@ final class Charge$Franklin extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Franklin] with new value
   @override
@@ -894,7 +896,7 @@ final class Charge$AmpereHour extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$AmpereHour] with new value
   @override
@@ -959,7 +961,7 @@ final class Charge$AmpereMinute extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$AmpereMinute] with new value
   @override
@@ -1024,7 +1026,7 @@ final class Charge$AmpereSecond extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$AmpereSecond] with new value
   @override
@@ -1089,7 +1091,7 @@ final class Charge$Faraday extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$Faraday] with new value
   @override
@@ -1154,7 +1156,7 @@ final class Charge$ElectronicCharge extends Charge {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Charge$ElectronicCharge] with new value
   @override

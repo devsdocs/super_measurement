@@ -23,7 +23,9 @@ sealed class Entropy extends Unit<Entropy> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Entropy$JoulePerKilogramK();
+          : Entropy.anchor();
+
+  factory Entropy.anchor() => const Entropy$JoulePerKilogramK();
 
   @override
   AnchorRatio<Entropy> get _anchorRatio => (
@@ -140,7 +142,7 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$KilojoulePerKilogramK] with new value
   @override
@@ -206,7 +208,7 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$KilojoulePerKilogramDegreeC] with new value
   @override
@@ -271,7 +273,7 @@ final class Entropy$JoulePerKilogramK extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$JoulePerKilogramK] with new value
   @override
@@ -337,7 +339,7 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$JoulePerKilogramDegreeC] with new value
   @override
@@ -403,7 +405,7 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$KilocaloriePerKilogramDegreeC] with new value
   @override
@@ -469,7 +471,7 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$CaloriePerGramDegreeC] with new value
   @override
@@ -534,7 +536,7 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$BTUPerPoundDegreeF] with new value
   @override
@@ -599,7 +601,7 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$BTUPerPoundDegreeR] with new value
   @override
@@ -664,7 +666,7 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Entropy$CHUPerPoundDegreeC] with new value
   @override

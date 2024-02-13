@@ -21,7 +21,9 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const MagnetomotiveForce$AmpereTurn();
+          : MagnetomotiveForce.anchor();
+
+  factory MagnetomotiveForce.anchor() => const MagnetomotiveForce$AmpereTurn();
 
   @override
   AnchorRatio<MagnetomotiveForce> get _anchorRatio => (
@@ -114,7 +116,7 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$KiloampereTurn] with new value
   @override
@@ -180,7 +182,7 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$AmpereTurn] with new value
   @override
@@ -246,7 +248,7 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$MilliampereTurn] with new value
   @override
@@ -312,7 +314,7 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$AbampereTurn] with new value
   @override
@@ -377,7 +379,7 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [MagnetomotiveForce$Gilbert] with new value
   @override

@@ -21,7 +21,10 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const RadiationExposure$MicrocoulombPerKilogram();
+          : RadiationExposure.anchor();
+
+  factory RadiationExposure.anchor() =>
+      const RadiationExposure$MicrocoulombPerKilogram();
 
   @override
   AnchorRatio<RadiationExposure> get _anchorRatio => (
@@ -107,7 +110,7 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationExposure$Roentgen] with new value
   @override
@@ -173,7 +176,7 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationExposure$CoulombPerKilogram] with new value
   @override
@@ -240,7 +243,7 @@ final class RadiationExposure$MillicoulombPerKilogram
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationExposure$MillicoulombPerKilogram] with new value
   @override
@@ -307,7 +310,7 @@ final class RadiationExposure$MicrocoulombPerKilogram
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationExposure$MicrocoulombPerKilogram] with new value
   @override

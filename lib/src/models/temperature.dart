@@ -20,7 +20,9 @@ sealed class Temperature extends Unit<Temperature> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Temperature$Rankine();
+          : Temperature.anchor();
+
+  factory Temperature.anchor() => const Temperature$Rankine();
 
   @override
   AnchorRatio<Temperature> get _anchorRatio => (
@@ -109,7 +111,7 @@ final class Temperature$Kelvin extends Temperature {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Temperature$Kelvin] with new value
   @override
@@ -166,7 +168,7 @@ final class Temperature$Celsius extends Temperature {
 
   /// 1 [Temperature$Celsius] ≈ 1.8 [Temperature$Rankine]
   ///
-  /// See [_valueShift]
+  /// See [valueShift]
   @override
   num get ratio => _ratio;
 
@@ -176,7 +178,7 @@ final class Temperature$Celsius extends Temperature {
 
   /// 1 [Temperature$Celsius] = ((1 * [ratio]) + 491.67) [Temperature$Rankine]
   @override
-  num get _valueShift => 491.67;
+  num get valueShift => 491.67;
 
   /// Creating [Temperature$Celsius] with new value
   @override
@@ -233,7 +235,7 @@ final class Temperature$Fahrenheit extends Temperature {
 
   /// 1 [Temperature$Fahrenheit] = 1.0 [Temperature$Rankine]
   ///
-  /// See [_valueShift]
+  /// See [valueShift]
   @override
   num get ratio => _ratio;
 
@@ -243,7 +245,7 @@ final class Temperature$Fahrenheit extends Temperature {
 
   /// 1 [Temperature$Fahrenheit] = ((1 * [ratio]) + 459.67) [Temperature$Rankine]
   @override
-  num get _valueShift => 459.67;
+  num get valueShift => 459.67;
 
   /// Creating [Temperature$Fahrenheit] with new value
   @override
@@ -308,7 +310,7 @@ final class Temperature$Rankine extends Temperature {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Temperature$Rankine] with new value
   @override
@@ -365,7 +367,7 @@ final class Temperature$Reaumur extends Temperature {
 
   /// 1 [Temperature$Reaumur] ≈ 2.25 [Temperature$Rankine]
   ///
-  /// See [_valueShift]
+  /// See [valueShift]
   @override
   num get ratio => _ratio;
 
@@ -375,7 +377,7 @@ final class Temperature$Reaumur extends Temperature {
 
   /// 1 [Temperature$Reaumur] = ((1 * [ratio]) + 491.67) [Temperature$Rankine]
   @override
-  num get _valueShift => 491.67;
+  num get valueShift => 491.67;
 
   /// Creating [Temperature$Reaumur] with new value
   @override

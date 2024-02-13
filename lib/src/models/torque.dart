@@ -25,7 +25,9 @@ sealed class Torque extends Unit<Torque> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const Torque$NewtonMeter();
+          : Torque.anchor();
+
+  factory Torque.anchor() => const Torque$NewtonMeter();
 
   @override
   AnchorRatio<Torque> get _anchorRatio => (
@@ -186,7 +188,7 @@ final class Torque$KilonewtonMeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$KilonewtonMeter] with new value
   @override
@@ -251,7 +253,7 @@ final class Torque$NewtonMeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$NewtonMeter] with new value
   @override
@@ -316,7 +318,7 @@ final class Torque$NewtonCentimeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$NewtonCentimeter] with new value
   @override
@@ -381,7 +383,7 @@ final class Torque$NewtonMillimeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$NewtonMillimeter] with new value
   @override
@@ -446,7 +448,7 @@ final class Torque$DyneMeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$DyneMeter] with new value
   @override
@@ -511,7 +513,7 @@ final class Torque$DyneCentimeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$DyneCentimeter] with new value
   @override
@@ -576,7 +578,7 @@ final class Torque$DyneMillimeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$DyneMillimeter] with new value
   @override
@@ -641,7 +643,7 @@ final class Torque$KilogramForceMeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$KilogramForceMeter] with new value
   @override
@@ -707,7 +709,7 @@ final class Torque$KilogramForceCentimeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$KilogramForceCentimeter] with new value
   @override
@@ -773,7 +775,7 @@ final class Torque$KilogramForceMillimeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$KilogramForceMillimeter] with new value
   @override
@@ -838,7 +840,7 @@ final class Torque$GramForceMeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$GramForceMeter] with new value
   @override
@@ -903,7 +905,7 @@ final class Torque$GramForceCentimeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$GramForceCentimeter] with new value
   @override
@@ -968,7 +970,7 @@ final class Torque$GramForceMillimeter extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$GramForceMillimeter] with new value
   @override
@@ -1033,7 +1035,7 @@ final class Torque$OunceForceFoot extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$OunceForceFoot] with new value
   @override
@@ -1098,7 +1100,7 @@ final class Torque$OunceForceInch extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$OunceForceInch] with new value
   @override
@@ -1163,7 +1165,7 @@ final class Torque$PoundForceFoot extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$PoundForceFoot] with new value
   @override
@@ -1228,7 +1230,7 @@ final class Torque$PoundForceInch extends Torque {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [Torque$PoundForceInch] with new value
   @override

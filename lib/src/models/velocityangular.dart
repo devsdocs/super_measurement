@@ -25,7 +25,9 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const VelocityAngular$DegreePerDay();
+          : VelocityAngular.anchor();
+
+  factory VelocityAngular.anchor() => const VelocityAngular$DegreePerDay();
 
   @override
   AnchorRatio<VelocityAngular> get _anchorRatio => (
@@ -165,7 +167,7 @@ final class VelocityAngular$DegreePerDay extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$DegreePerDay] with new value
   @override
@@ -231,7 +233,7 @@ final class VelocityAngular$DegreePerHour extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$DegreePerHour] with new value
   @override
@@ -297,7 +299,7 @@ final class VelocityAngular$DegreePerMinute extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$DegreePerMinute] with new value
   @override
@@ -363,7 +365,7 @@ final class VelocityAngular$DegreePerSecond extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$DegreePerSecond] with new value
   @override
@@ -429,7 +431,7 @@ final class VelocityAngular$RadianPerDay extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$RadianPerDay] with new value
   @override
@@ -495,7 +497,7 @@ final class VelocityAngular$RadianPerHour extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$RadianPerHour] with new value
   @override
@@ -561,7 +563,7 @@ final class VelocityAngular$RadianPerMinute extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$RadianPerMinute] with new value
   @override
@@ -627,7 +629,7 @@ final class VelocityAngular$RadianPerSecond extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$RadianPerSecond] with new value
   @override
@@ -693,7 +695,7 @@ final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$RevolutionPerDay] with new value
   @override
@@ -759,7 +761,7 @@ final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$RevolutionPerHour] with new value
   @override
@@ -825,7 +827,7 @@ final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$RevolutionPerMinute] with new value
   @override
@@ -891,7 +893,7 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VelocityAngular$RevolutionPerSecond] with new value
   @override

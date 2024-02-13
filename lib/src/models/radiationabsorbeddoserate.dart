@@ -38,7 +38,10 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const RadiationAbsorbedDoseRate$AttograyPerSecond();
+          : RadiationAbsorbedDoseRate.anchor();
+
+  factory RadiationAbsorbedDoseRate.anchor() =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond();
 
   @override
   AnchorRatio<RadiationAbsorbedDoseRate> get _anchorRatio => (
@@ -232,7 +235,7 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$RadPerSecond] with new value
   @override
@@ -299,7 +302,7 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond] with new value
   @override
@@ -366,7 +369,7 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$ExagrayPerSecond] with new value
   @override
@@ -433,7 +436,7 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$PetagrayPerSecond] with new value
   @override
@@ -500,7 +503,7 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$TeragrayPerSecond] with new value
   @override
@@ -567,7 +570,7 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$GigagrayPerSecond] with new value
   @override
@@ -634,7 +637,7 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$MegagrayPerSecond] with new value
   @override
@@ -701,7 +704,7 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$KilograyPerSecond] with new value
   @override
@@ -768,7 +771,7 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$HectograyPerSecond] with new value
   @override
@@ -835,7 +838,7 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$DekagrayPerSecond] with new value
   @override
@@ -902,7 +905,7 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$GrayPerSecond] with new value
   @override
@@ -969,7 +972,7 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$DecigrayPerSecond] with new value
   @override
@@ -1036,7 +1039,7 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$CentigrayPerSecond] with new value
   @override
@@ -1103,7 +1106,7 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$MilligrayPerSecond] with new value
   @override
@@ -1170,7 +1173,7 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$MicrograyPerSecond] with new value
   @override
@@ -1237,7 +1240,7 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$NanograyPerSecond] with new value
   @override
@@ -1304,7 +1307,7 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$PicograyPerSecond] with new value
   @override
@@ -1371,7 +1374,7 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$FemtograyPerSecond] with new value
   @override
@@ -1438,7 +1441,7 @@ final class RadiationAbsorbedDoseRate$AttograyPerSecond
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [RadiationAbsorbedDoseRate$AttograyPerSecond] with new value
   @override

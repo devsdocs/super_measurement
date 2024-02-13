@@ -25,7 +25,10 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const SurfaceChargeDensity$CoulombPerMeterSquare();
+          : SurfaceChargeDensity.anchor();
+
+  factory SurfaceChargeDensity.anchor() =>
+      const SurfaceChargeDensity$CoulombPerMeterSquare();
 
   @override
   AnchorRatio<SurfaceChargeDensity> get _anchorRatio => (
@@ -128,7 +131,7 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$CoulombPerMeterSquare] with new value
   @override
@@ -195,7 +198,7 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$CoulombPerInchSquare] with new value
   @override
@@ -262,7 +265,7 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$CoulombPerCentimeterSquare] with new value
   @override
@@ -329,7 +332,7 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerMeterSquare] with new value
   @override
@@ -396,7 +399,7 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] with new value
   @override
@@ -463,7 +466,7 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerInchSquare] with new value
   @override

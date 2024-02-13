@@ -21,7 +21,10 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const TemperatureInterval$Fahrenheit();
+          : TemperatureInterval.anchor();
+
+  factory TemperatureInterval.anchor() =>
+      const TemperatureInterval$Fahrenheit();
 
   @override
   AnchorRatio<TemperatureInterval> get _anchorRatio => (
@@ -110,7 +113,7 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Kelvin] with new value
   @override
@@ -175,7 +178,7 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Celsius] with new value
   @override
@@ -241,7 +244,7 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Fahrenheit] with new value
   @override
@@ -306,7 +309,7 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Rankine] with new value
   @override
@@ -371,7 +374,7 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [TemperatureInterval$Reaumur] with new value
   @override

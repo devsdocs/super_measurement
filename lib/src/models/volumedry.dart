@@ -23,7 +23,9 @@ sealed class VolumeDry extends Unit<VolumeDry> {
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
-          : const VolumeDry$LogBiblical();
+          : VolumeDry.anchor();
+
+  factory VolumeDry.anchor() => const VolumeDry$LogBiblical();
 
   @override
   AnchorRatio<VolumeDry> get _anchorRatio => (
@@ -160,7 +162,7 @@ final class VolumeDry$Barrel extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$Barrel] with new value
   @override
@@ -225,7 +227,7 @@ final class VolumeDry$Liter extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$Liter] with new value
   @override
@@ -290,7 +292,7 @@ final class VolumeDry$Pint extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$Pint] with new value
   @override
@@ -355,7 +357,7 @@ final class VolumeDry$Quart extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$Quart] with new value
   @override
@@ -420,7 +422,7 @@ final class VolumeDry$Peck extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$Peck] with new value
   @override
@@ -485,7 +487,7 @@ final class VolumeDry$Bushel extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$Bushel] with new value
   @override
@@ -550,7 +552,7 @@ final class VolumeDry$CorBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$CorBiblical] with new value
   @override
@@ -615,7 +617,7 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$HomerBiblical] with new value
   @override
@@ -680,7 +682,7 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$EphahBiblical] with new value
   @override
@@ -745,7 +747,7 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$SeahBiblical] with new value
   @override
@@ -810,7 +812,7 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$OmerBiblical] with new value
   @override
@@ -875,7 +877,7 @@ final class VolumeDry$CabBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$CabBiblical] with new value
   @override
@@ -940,7 +942,7 @@ final class VolumeDry$LogBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get _valueShift => 0.0;
+  num get valueShift => 0.0;
 
   /// Creating [VolumeDry$LogBiblical] with new value
   @override
