@@ -15,10 +15,10 @@ sealed class Permeability extends Unit<Permeability> {
   factory Permeability.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        permeabilityUnitValues,
+        permeabilityUnits,
       )
-          ? permeabilityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? permeabilityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -75,6 +75,26 @@ sealed class Permeability extends Unit<Permeability> {
   String get majorName => _majorName;
 
   static const _majorName = 'permeability';
+
+  static const kilogramPerPascalSecondMeterSquare =
+      Permeability$KilogramPerPascalSecondMeterSquare();
+  static const permeability0DegreeC = Permeability$Permeability0DegreeC();
+  static const permeability23DegreeC = Permeability$Permeability23DegreeC();
+  static const permeabilityInches0DegreeC =
+      Permeability$PermeabilityInches0DegreeC();
+  static const permeabilityInches23DegreeC =
+      Permeability$PermeabilityInches23DegreeC();
+
+  @override
+  List<Permeability> get units => values;
+
+  static const values = [
+    kilogramPerPascalSecondMeterSquare,
+    permeability0DegreeC,
+    permeability23DegreeC,
+    permeabilityInches0DegreeC,
+    permeabilityInches23DegreeC,
+  ];
 }
 
 /// Unit of [Permeability]
@@ -408,38 +428,15 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
       };
 }
 
-enum PermeabilityUnit {
-  kilogramPerPascalSecondMeterSquare._(
-    Permeability$KilogramPerPascalSecondMeterSquare(),
-  ),
-  permeability0DegreeC._(
-    Permeability$Permeability0DegreeC(),
-  ),
-  permeability23DegreeC._(
-    Permeability$Permeability23DegreeC(),
-  ),
-  permeabilityInches0DegreeC._(
-    Permeability$PermeabilityInches0DegreeC(),
-  ),
-  permeabilityInches23DegreeC._(
-    Permeability$PermeabilityInches23DegreeC(),
-  ),
-  ;
-
-  const PermeabilityUnit._(this.construct);
-
-  final Permeability construct;
-}
-
-const permeabilityUnitValues = _EnumValues({
+const permeabilityUnits = EnumValues({
   Permeability$KilogramPerPascalSecondMeterSquare._minorName:
-      PermeabilityUnit.kilogramPerPascalSecondMeterSquare,
+      Permeability.kilogramPerPascalSecondMeterSquare,
   Permeability$Permeability0DegreeC._minorName:
-      PermeabilityUnit.permeability0DegreeC,
+      Permeability.permeability0DegreeC,
   Permeability$Permeability23DegreeC._minorName:
-      PermeabilityUnit.permeability23DegreeC,
+      Permeability.permeability23DegreeC,
   Permeability$PermeabilityInches0DegreeC._minorName:
-      PermeabilityUnit.permeabilityInches0DegreeC,
+      Permeability.permeabilityInches0DegreeC,
   Permeability$PermeabilityInches23DegreeC._minorName:
-      PermeabilityUnit.permeabilityInches23DegreeC,
+      Permeability.permeabilityInches23DegreeC,
 });

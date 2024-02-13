@@ -15,10 +15,10 @@ sealed class Resistivity extends Unit<Resistivity> {
   factory Resistivity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        resistivityUnitValues,
+        resistivityUnits,
       )
-          ? resistivityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? resistivityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -88,6 +88,29 @@ sealed class Resistivity extends Unit<Resistivity> {
   String get majorName => _majorName;
 
   static const _majorName = 'resistivity';
+
+  static const ohmMeter = Resistivity$OhmMeter();
+  static const ohmCentimeter = Resistivity$OhmCentimeter();
+  static const ohmInch = Resistivity$OhmInch();
+  static const microhmCentimeter = Resistivity$MicrohmCentimeter();
+  static const microhmInch = Resistivity$MicrohmInch();
+  static const abohmCentimeter = Resistivity$AbohmCentimeter();
+  static const statohmCentimeter = Resistivity$StatohmCentimeter();
+  static const circularMilOhmPerFoot = Resistivity$CircularMilOhmPerFoot();
+
+  @override
+  List<Resistivity> get units => values;
+
+  static const values = [
+    ohmMeter,
+    ohmCentimeter,
+    ohmInch,
+    microhmCentimeter,
+    microhmInch,
+    abohmCentimeter,
+    statohmCentimeter,
+    circularMilOhmPerFoot,
+  ];
 }
 
 /// Unit of [Resistivity]
@@ -613,46 +636,14 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
       };
 }
 
-enum ResistivityUnit {
-  ohmMeter._(
-    Resistivity$OhmMeter(),
-  ),
-  ohmCentimeter._(
-    Resistivity$OhmCentimeter(),
-  ),
-  ohmInch._(
-    Resistivity$OhmInch(),
-  ),
-  microhmCentimeter._(
-    Resistivity$MicrohmCentimeter(),
-  ),
-  microhmInch._(
-    Resistivity$MicrohmInch(),
-  ),
-  abohmCentimeter._(
-    Resistivity$AbohmCentimeter(),
-  ),
-  statohmCentimeter._(
-    Resistivity$StatohmCentimeter(),
-  ),
-  circularMilOhmPerFoot._(
-    Resistivity$CircularMilOhmPerFoot(),
-  ),
-  ;
-
-  const ResistivityUnit._(this.construct);
-
-  final Resistivity construct;
-}
-
-const resistivityUnitValues = _EnumValues({
-  Resistivity$OhmMeter._minorName: ResistivityUnit.ohmMeter,
-  Resistivity$OhmCentimeter._minorName: ResistivityUnit.ohmCentimeter,
-  Resistivity$OhmInch._minorName: ResistivityUnit.ohmInch,
-  Resistivity$MicrohmCentimeter._minorName: ResistivityUnit.microhmCentimeter,
-  Resistivity$MicrohmInch._minorName: ResistivityUnit.microhmInch,
-  Resistivity$AbohmCentimeter._minorName: ResistivityUnit.abohmCentimeter,
-  Resistivity$StatohmCentimeter._minorName: ResistivityUnit.statohmCentimeter,
+const resistivityUnits = EnumValues({
+  Resistivity$OhmMeter._minorName: Resistivity.ohmMeter,
+  Resistivity$OhmCentimeter._minorName: Resistivity.ohmCentimeter,
+  Resistivity$OhmInch._minorName: Resistivity.ohmInch,
+  Resistivity$MicrohmCentimeter._minorName: Resistivity.microhmCentimeter,
+  Resistivity$MicrohmInch._minorName: Resistivity.microhmInch,
+  Resistivity$AbohmCentimeter._minorName: Resistivity.abohmCentimeter,
+  Resistivity$StatohmCentimeter._minorName: Resistivity.statohmCentimeter,
   Resistivity$CircularMilOhmPerFoot._minorName:
-      ResistivityUnit.circularMilOhmPerFoot,
+      Resistivity.circularMilOhmPerFoot,
 });

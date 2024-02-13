@@ -31,10 +31,10 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
       _checkJson(
         _majorName,
         json,
-        radiationAbsorbedDoseRateUnitValues,
+        radiationAbsorbedDoseRateUnits,
       )
-          ? radiationAbsorbedDoseRateUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? radiationAbsorbedDoseRateUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -189,6 +189,67 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
   String get majorName => _majorName;
 
   static const _majorName = 'radiationAbsorbedDoseRate';
+
+  static const radPerSecond = RadiationAbsorbedDoseRate$RadPerSecond();
+  static const joulePerKilogramPerSecond =
+      RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond();
+  static const exagrayPerSecond = RadiationAbsorbedDoseRate$ExagrayPerSecond();
+  static const petagrayPerSecond =
+      RadiationAbsorbedDoseRate$PetagrayPerSecond();
+  static const teragrayPerSecond =
+      RadiationAbsorbedDoseRate$TeragrayPerSecond();
+  static const gigagrayPerSecond =
+      RadiationAbsorbedDoseRate$GigagrayPerSecond();
+  static const megagrayPerSecond =
+      RadiationAbsorbedDoseRate$MegagrayPerSecond();
+  static const kilograyPerSecond =
+      RadiationAbsorbedDoseRate$KilograyPerSecond();
+  static const hectograyPerSecond =
+      RadiationAbsorbedDoseRate$HectograyPerSecond();
+  static const dekagrayPerSecond =
+      RadiationAbsorbedDoseRate$DekagrayPerSecond();
+  static const grayPerSecond = RadiationAbsorbedDoseRate$GrayPerSecond();
+  static const decigrayPerSecond =
+      RadiationAbsorbedDoseRate$DecigrayPerSecond();
+  static const centigrayPerSecond =
+      RadiationAbsorbedDoseRate$CentigrayPerSecond();
+  static const milligrayPerSecond =
+      RadiationAbsorbedDoseRate$MilligrayPerSecond();
+  static const micrograyPerSecond =
+      RadiationAbsorbedDoseRate$MicrograyPerSecond();
+  static const nanograyPerSecond =
+      RadiationAbsorbedDoseRate$NanograyPerSecond();
+  static const picograyPerSecond =
+      RadiationAbsorbedDoseRate$PicograyPerSecond();
+  static const femtograyPerSecond =
+      RadiationAbsorbedDoseRate$FemtograyPerSecond();
+  static const attograyPerSecond =
+      RadiationAbsorbedDoseRate$AttograyPerSecond();
+
+  @override
+  List<RadiationAbsorbedDoseRate> get units => values;
+
+  static const values = [
+    radPerSecond,
+    joulePerKilogramPerSecond,
+    exagrayPerSecond,
+    petagrayPerSecond,
+    teragrayPerSecond,
+    gigagrayPerSecond,
+    megagrayPerSecond,
+    kilograyPerSecond,
+    hectograyPerSecond,
+    dekagrayPerSecond,
+    grayPerSecond,
+    decigrayPerSecond,
+    centigrayPerSecond,
+    milligrayPerSecond,
+    micrograyPerSecond,
+    nanograyPerSecond,
+    picograyPerSecond,
+    femtograyPerSecond,
+    attograyPerSecond,
+  ];
 }
 
 /// Unit of [RadiationAbsorbedDoseRate]
@@ -1464,108 +1525,43 @@ final class RadiationAbsorbedDoseRate$AttograyPerSecond
       };
 }
 
-enum RadiationAbsorbedDoseRateUnit {
-  radPerSecond._(
-    RadiationAbsorbedDoseRate$RadPerSecond(),
-  ),
-  joulePerKilogramPerSecond._(
-    RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond(),
-  ),
-  exagrayPerSecond._(
-    RadiationAbsorbedDoseRate$ExagrayPerSecond(),
-  ),
-  petagrayPerSecond._(
-    RadiationAbsorbedDoseRate$PetagrayPerSecond(),
-  ),
-  teragrayPerSecond._(
-    RadiationAbsorbedDoseRate$TeragrayPerSecond(),
-  ),
-  gigagrayPerSecond._(
-    RadiationAbsorbedDoseRate$GigagrayPerSecond(),
-  ),
-  megagrayPerSecond._(
-    RadiationAbsorbedDoseRate$MegagrayPerSecond(),
-  ),
-  kilograyPerSecond._(
-    RadiationAbsorbedDoseRate$KilograyPerSecond(),
-  ),
-  hectograyPerSecond._(
-    RadiationAbsorbedDoseRate$HectograyPerSecond(),
-  ),
-  dekagrayPerSecond._(
-    RadiationAbsorbedDoseRate$DekagrayPerSecond(),
-  ),
-  grayPerSecond._(
-    RadiationAbsorbedDoseRate$GrayPerSecond(),
-  ),
-  decigrayPerSecond._(
-    RadiationAbsorbedDoseRate$DecigrayPerSecond(),
-  ),
-  centigrayPerSecond._(
-    RadiationAbsorbedDoseRate$CentigrayPerSecond(),
-  ),
-  milligrayPerSecond._(
-    RadiationAbsorbedDoseRate$MilligrayPerSecond(),
-  ),
-  micrograyPerSecond._(
-    RadiationAbsorbedDoseRate$MicrograyPerSecond(),
-  ),
-  nanograyPerSecond._(
-    RadiationAbsorbedDoseRate$NanograyPerSecond(),
-  ),
-  picograyPerSecond._(
-    RadiationAbsorbedDoseRate$PicograyPerSecond(),
-  ),
-  femtograyPerSecond._(
-    RadiationAbsorbedDoseRate$FemtograyPerSecond(),
-  ),
-  attograyPerSecond._(
-    RadiationAbsorbedDoseRate$AttograyPerSecond(),
-  ),
-  ;
-
-  const RadiationAbsorbedDoseRateUnit._(this.construct);
-
-  final RadiationAbsorbedDoseRate construct;
-}
-
-const radiationAbsorbedDoseRateUnitValues = _EnumValues({
+const radiationAbsorbedDoseRateUnits = EnumValues({
   RadiationAbsorbedDoseRate$RadPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.radPerSecond,
+      RadiationAbsorbedDoseRate.radPerSecond,
   RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.joulePerKilogramPerSecond,
+      RadiationAbsorbedDoseRate.joulePerKilogramPerSecond,
   RadiationAbsorbedDoseRate$ExagrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.exagrayPerSecond,
+      RadiationAbsorbedDoseRate.exagrayPerSecond,
   RadiationAbsorbedDoseRate$PetagrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.petagrayPerSecond,
+      RadiationAbsorbedDoseRate.petagrayPerSecond,
   RadiationAbsorbedDoseRate$TeragrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.teragrayPerSecond,
+      RadiationAbsorbedDoseRate.teragrayPerSecond,
   RadiationAbsorbedDoseRate$GigagrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.gigagrayPerSecond,
+      RadiationAbsorbedDoseRate.gigagrayPerSecond,
   RadiationAbsorbedDoseRate$MegagrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.megagrayPerSecond,
+      RadiationAbsorbedDoseRate.megagrayPerSecond,
   RadiationAbsorbedDoseRate$KilograyPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.kilograyPerSecond,
+      RadiationAbsorbedDoseRate.kilograyPerSecond,
   RadiationAbsorbedDoseRate$HectograyPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.hectograyPerSecond,
+      RadiationAbsorbedDoseRate.hectograyPerSecond,
   RadiationAbsorbedDoseRate$DekagrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.dekagrayPerSecond,
+      RadiationAbsorbedDoseRate.dekagrayPerSecond,
   RadiationAbsorbedDoseRate$GrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.grayPerSecond,
+      RadiationAbsorbedDoseRate.grayPerSecond,
   RadiationAbsorbedDoseRate$DecigrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.decigrayPerSecond,
+      RadiationAbsorbedDoseRate.decigrayPerSecond,
   RadiationAbsorbedDoseRate$CentigrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.centigrayPerSecond,
+      RadiationAbsorbedDoseRate.centigrayPerSecond,
   RadiationAbsorbedDoseRate$MilligrayPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.milligrayPerSecond,
+      RadiationAbsorbedDoseRate.milligrayPerSecond,
   RadiationAbsorbedDoseRate$MicrograyPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.micrograyPerSecond,
+      RadiationAbsorbedDoseRate.micrograyPerSecond,
   RadiationAbsorbedDoseRate$NanograyPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.nanograyPerSecond,
+      RadiationAbsorbedDoseRate.nanograyPerSecond,
   RadiationAbsorbedDoseRate$PicograyPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.picograyPerSecond,
+      RadiationAbsorbedDoseRate.picograyPerSecond,
   RadiationAbsorbedDoseRate$FemtograyPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.femtograyPerSecond,
+      RadiationAbsorbedDoseRate.femtograyPerSecond,
   RadiationAbsorbedDoseRate$AttograyPerSecond._minorName:
-      RadiationAbsorbedDoseRateUnit.attograyPerSecond,
+      RadiationAbsorbedDoseRate.attograyPerSecond,
 });

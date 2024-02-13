@@ -113,9 +113,9 @@ void generateExample() {
 
     if (Random().nextBool()) {
       final listNameByEnum = 'listOf${name.capitalizeWord}ByEnum';
-      exampleBuff.writeln('final $listNameByEnum = ${name}Unit.values;');
+      exampleBuff.writeln('final $listNameByEnum = $name.values;');
       exampleBuff.writeln(
-        '$listNameByEnum.forEach((e) => print("Access \${e.construct.runtimeType} with \$e"));',
+        '$listNameByEnum.forEach((e) => print("Access \${e.runtimeType} with \$e"));',
       );
     }
 

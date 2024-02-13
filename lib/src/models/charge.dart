@@ -17,10 +17,9 @@ sealed class Charge extends Unit<Charge> {
   factory Charge.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        chargeUnitValues,
+        chargeUnits,
       )
-          ? chargeUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? chargeUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -137,6 +136,45 @@ sealed class Charge extends Unit<Charge> {
   String get majorName => _majorName;
 
   static const _majorName = 'charge';
+
+  static const megacoulomb = Charge$Megacoulomb();
+  static const kilocoulomb = Charge$Kilocoulomb();
+  static const coulomb = Charge$Coulomb();
+  static const coulombInternational = Charge$CoulombInternational();
+  static const millicoulomb = Charge$Millicoulomb();
+  static const microcoulomb = Charge$Microcoulomb();
+  static const nanocoulomb = Charge$Nanocoulomb();
+  static const picocoulomb = Charge$Picocoulomb();
+  static const abcoulomb = Charge$Abcoulomb();
+  static const statcoulomb = Charge$Statcoulomb();
+  static const franklin = Charge$Franklin();
+  static const ampereHour = Charge$AmpereHour();
+  static const ampereMinute = Charge$AmpereMinute();
+  static const ampereSecond = Charge$AmpereSecond();
+  static const faraday = Charge$Faraday();
+  static const electronicCharge = Charge$ElectronicCharge();
+
+  @override
+  List<Charge> get units => values;
+
+  static const values = [
+    megacoulomb,
+    kilocoulomb,
+    coulomb,
+    coulombInternational,
+    millicoulomb,
+    microcoulomb,
+    nanocoulomb,
+    picocoulomb,
+    abcoulomb,
+    statcoulomb,
+    franklin,
+    ampereHour,
+    ampereMinute,
+    ampereSecond,
+    faraday,
+    electronicCharge,
+  ];
 }
 
 /// Unit of [Charge]
@@ -1179,77 +1217,21 @@ final class Charge$ElectronicCharge extends Charge {
       };
 }
 
-enum ChargeUnit {
-  megacoulomb._(
-    Charge$Megacoulomb(),
-  ),
-  kilocoulomb._(
-    Charge$Kilocoulomb(),
-  ),
-  coulomb._(
-    Charge$Coulomb(),
-  ),
-  coulombInternational._(
-    Charge$CoulombInternational(),
-  ),
-  millicoulomb._(
-    Charge$Millicoulomb(),
-  ),
-  microcoulomb._(
-    Charge$Microcoulomb(),
-  ),
-  nanocoulomb._(
-    Charge$Nanocoulomb(),
-  ),
-  picocoulomb._(
-    Charge$Picocoulomb(),
-  ),
-  abcoulomb._(
-    Charge$Abcoulomb(),
-  ),
-  statcoulomb._(
-    Charge$Statcoulomb(),
-  ),
-  franklin._(
-    Charge$Franklin(),
-  ),
-  ampereHour._(
-    Charge$AmpereHour(),
-  ),
-  ampereMinute._(
-    Charge$AmpereMinute(),
-  ),
-  ampereSecond._(
-    Charge$AmpereSecond(),
-  ),
-  faraday._(
-    Charge$Faraday(),
-  ),
-  electronicCharge._(
-    Charge$ElectronicCharge(),
-  ),
-  ;
-
-  const ChargeUnit._(this.construct);
-
-  final Charge construct;
-}
-
-const chargeUnitValues = _EnumValues({
-  Charge$Megacoulomb._minorName: ChargeUnit.megacoulomb,
-  Charge$Kilocoulomb._minorName: ChargeUnit.kilocoulomb,
-  Charge$Coulomb._minorName: ChargeUnit.coulomb,
-  Charge$CoulombInternational._minorName: ChargeUnit.coulombInternational,
-  Charge$Millicoulomb._minorName: ChargeUnit.millicoulomb,
-  Charge$Microcoulomb._minorName: ChargeUnit.microcoulomb,
-  Charge$Nanocoulomb._minorName: ChargeUnit.nanocoulomb,
-  Charge$Picocoulomb._minorName: ChargeUnit.picocoulomb,
-  Charge$Abcoulomb._minorName: ChargeUnit.abcoulomb,
-  Charge$Statcoulomb._minorName: ChargeUnit.statcoulomb,
-  Charge$Franklin._minorName: ChargeUnit.franklin,
-  Charge$AmpereHour._minorName: ChargeUnit.ampereHour,
-  Charge$AmpereMinute._minorName: ChargeUnit.ampereMinute,
-  Charge$AmpereSecond._minorName: ChargeUnit.ampereSecond,
-  Charge$Faraday._minorName: ChargeUnit.faraday,
-  Charge$ElectronicCharge._minorName: ChargeUnit.electronicCharge,
+const chargeUnits = EnumValues({
+  Charge$Megacoulomb._minorName: Charge.megacoulomb,
+  Charge$Kilocoulomb._minorName: Charge.kilocoulomb,
+  Charge$Coulomb._minorName: Charge.coulomb,
+  Charge$CoulombInternational._minorName: Charge.coulombInternational,
+  Charge$Millicoulomb._minorName: Charge.millicoulomb,
+  Charge$Microcoulomb._minorName: Charge.microcoulomb,
+  Charge$Nanocoulomb._minorName: Charge.nanocoulomb,
+  Charge$Picocoulomb._minorName: Charge.picocoulomb,
+  Charge$Abcoulomb._minorName: Charge.abcoulomb,
+  Charge$Statcoulomb._minorName: Charge.statcoulomb,
+  Charge$Franklin._minorName: Charge.franklin,
+  Charge$AmpereHour._minorName: Charge.ampereHour,
+  Charge$AmpereMinute._minorName: Charge.ampereMinute,
+  Charge$AmpereSecond._minorName: Charge.ampereSecond,
+  Charge$Faraday._minorName: Charge.faraday,
+  Charge$ElectronicCharge._minorName: Charge.electronicCharge,
 });

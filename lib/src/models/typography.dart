@@ -15,10 +15,10 @@ sealed class Typography extends Unit<Typography> {
   factory Typography.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        typographyUnitValues,
+        typographyUnits,
       )
-          ? typographyUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? typographyUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -95,6 +95,32 @@ sealed class Typography extends Unit<Typography> {
   String get majorName => _majorName;
 
   static const _majorName = 'typography';
+
+  static const postScriptPointDTP = Typography$PostScriptPointDTP();
+  static const printersPointAmerican = Typography$PrintersPointAmerican();
+  static const didotsPoint = Typography$DidotsPoint();
+  static const picaPostScriptDTPComputer =
+      Typography$PicaPostScriptDTPComputer();
+  static const picaPrinters = Typography$PicaPrinters();
+  static const ciceros = Typography$Ciceros();
+  static const inch = Typography$Inch();
+  static const millimeter = Typography$Millimeter();
+  static const centimeter = Typography$Centimeter();
+
+  @override
+  List<Typography> get units => values;
+
+  static const values = [
+    postScriptPointDTP,
+    printersPointAmerican,
+    didotsPoint,
+    picaPostScriptDTPComputer,
+    picaPrinters,
+    ciceros,
+    inch,
+    millimeter,
+    centimeter,
+  ];
 }
 
 /// Unit of [Typography]
@@ -685,51 +711,15 @@ final class Typography$Centimeter extends Typography {
       };
 }
 
-enum TypographyUnit {
-  postScriptPointDTP._(
-    Typography$PostScriptPointDTP(),
-  ),
-  printersPointAmerican._(
-    Typography$PrintersPointAmerican(),
-  ),
-  didotsPoint._(
-    Typography$DidotsPoint(),
-  ),
-  picaPostScriptDTPComputer._(
-    Typography$PicaPostScriptDTPComputer(),
-  ),
-  picaPrinters._(
-    Typography$PicaPrinters(),
-  ),
-  ciceros._(
-    Typography$Ciceros(),
-  ),
-  inch._(
-    Typography$Inch(),
-  ),
-  millimeter._(
-    Typography$Millimeter(),
-  ),
-  centimeter._(
-    Typography$Centimeter(),
-  ),
-  ;
-
-  const TypographyUnit._(this.construct);
-
-  final Typography construct;
-}
-
-const typographyUnitValues = _EnumValues({
-  Typography$PostScriptPointDTP._minorName: TypographyUnit.postScriptPointDTP,
-  Typography$PrintersPointAmerican._minorName:
-      TypographyUnit.printersPointAmerican,
-  Typography$DidotsPoint._minorName: TypographyUnit.didotsPoint,
+const typographyUnits = EnumValues({
+  Typography$PostScriptPointDTP._minorName: Typography.postScriptPointDTP,
+  Typography$PrintersPointAmerican._minorName: Typography.printersPointAmerican,
+  Typography$DidotsPoint._minorName: Typography.didotsPoint,
   Typography$PicaPostScriptDTPComputer._minorName:
-      TypographyUnit.picaPostScriptDTPComputer,
-  Typography$PicaPrinters._minorName: TypographyUnit.picaPrinters,
-  Typography$Ciceros._minorName: TypographyUnit.ciceros,
-  Typography$Inch._minorName: TypographyUnit.inch,
-  Typography$Millimeter._minorName: TypographyUnit.millimeter,
-  Typography$Centimeter._minorName: TypographyUnit.centimeter,
+      Typography.picaPostScriptDTPComputer,
+  Typography$PicaPrinters._minorName: Typography.picaPrinters,
+  Typography$Ciceros._minorName: Typography.ciceros,
+  Typography$Inch._minorName: Typography.inch,
+  Typography$Millimeter._minorName: Typography.millimeter,
+  Typography$Centimeter._minorName: Typography.centimeter,
 });

@@ -30,10 +30,10 @@ sealed class DataStorage extends Unit<DataStorage> {
   factory DataStorage.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        dataStorageUnitValues,
+        dataStorageUnits,
       )
-          ? dataStorageUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? dataStorageUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -312,6 +312,99 @@ sealed class DataStorage extends Unit<DataStorage> {
   String get majorName => _majorName;
 
   static const _majorName = 'dataStorage';
+
+  static const bit = DataStorage$Bit();
+  static const nibble = DataStorage$Nibble();
+  static const byte = DataStorage$Byte();
+  static const word = DataStorage$Word();
+  static const doubleWord = DataStorage$DoubleWord();
+  static const quadrupleWord = DataStorage$QuadrupleWord();
+  static const block = DataStorage$Block();
+  static const kilobit = DataStorage$Kilobit();
+  static const kilobyte = DataStorage$Kilobyte();
+  static const kilobyte10PowerOf3Bytes = DataStorage$Kilobyte10PowerOf3Bytes();
+  static const megabit = DataStorage$Megabit();
+  static const megabyte = DataStorage$Megabyte();
+  static const megabyte10PowerOf6Bytes = DataStorage$Megabyte10PowerOf6Bytes();
+  static const gigabit = DataStorage$Gigabit();
+  static const gigabyte = DataStorage$Gigabyte();
+  static const gigabyte10PowerOf9Bytes = DataStorage$Gigabyte10PowerOf9Bytes();
+  static const terabit = DataStorage$Terabit();
+  static const terabyte = DataStorage$Terabyte();
+  static const terabyte10PowerOf12Bytes =
+      DataStorage$Terabyte10PowerOf12Bytes();
+  static const petabit = DataStorage$Petabit();
+  static const petabyte = DataStorage$Petabyte();
+  static const petabyte10PowerOf15Bytes =
+      DataStorage$Petabyte10PowerOf15Bytes();
+  static const exabit = DataStorage$Exabit();
+  static const exabyte = DataStorage$Exabyte();
+  static const exabyte10PowerOf18Bytes = DataStorage$Exabyte10PowerOf18Bytes();
+  static const floppyDisk35DD = DataStorage$FloppyDisk35DD();
+  static const floppyDisk35HD = DataStorage$FloppyDisk35HD();
+  static const floppyDisk35ED = DataStorage$FloppyDisk35ED();
+  static const floppyDisk525DD = DataStorage$FloppyDisk525DD();
+  static const floppyDisk525HD = DataStorage$FloppyDisk525HD();
+  static const zip100 = DataStorage$Zip100();
+  static const zip250 = DataStorage$Zip250();
+  static const jaz1GB = DataStorage$Jaz1GB();
+  static const jaz2GB = DataStorage$Jaz2GB();
+  static const cD74Minute = DataStorage$CD74Minute();
+  static const cD80Minute = DataStorage$CD80Minute();
+  static const dVD1Layer1Side = DataStorage$DVD1Layer1Side();
+  static const dVD2Layers1Side = DataStorage$DVD2Layers1Side();
+  static const dVD1Layer2Sides = DataStorage$DVD1Layer2Sides();
+  static const dVD2Layers2Sides = DataStorage$DVD2Layers2Sides();
+  static const bluRay1Layer = DataStorage$BluRay1Layer();
+  static const bluRay2Layer = DataStorage$BluRay2Layer();
+
+  @override
+  List<DataStorage> get units => values;
+
+  static const values = [
+    bit,
+    nibble,
+    byte,
+    word,
+    doubleWord,
+    quadrupleWord,
+    block,
+    kilobit,
+    kilobyte,
+    kilobyte10PowerOf3Bytes,
+    megabit,
+    megabyte,
+    megabyte10PowerOf6Bytes,
+    gigabit,
+    gigabyte,
+    gigabyte10PowerOf9Bytes,
+    terabit,
+    terabyte,
+    terabyte10PowerOf12Bytes,
+    petabit,
+    petabyte,
+    petabyte10PowerOf15Bytes,
+    exabit,
+    exabyte,
+    exabyte10PowerOf18Bytes,
+    floppyDisk35DD,
+    floppyDisk35HD,
+    floppyDisk35ED,
+    floppyDisk525DD,
+    floppyDisk525HD,
+    zip100,
+    zip250,
+    jaz1GB,
+    jaz2GB,
+    cD74Minute,
+    cD80Minute,
+    dVD1Layer1Side,
+    dVD2Layers1Side,
+    dVD1Layer2Sides,
+    dVD2Layers2Sides,
+    bluRay1Layer,
+    bluRay2Layer,
+  ];
 }
 
 /// Unit of [DataStorage]
@@ -3051,187 +3144,53 @@ final class DataStorage$BluRay2Layer extends DataStorage {
       };
 }
 
-enum DataStorageUnit {
-  bit._(
-    DataStorage$Bit(),
-  ),
-  nibble._(
-    DataStorage$Nibble(),
-  ),
-  byte._(
-    DataStorage$Byte(),
-  ),
-  word._(
-    DataStorage$Word(),
-  ),
-  doubleWord._(
-    DataStorage$DoubleWord(),
-  ),
-  quadrupleWord._(
-    DataStorage$QuadrupleWord(),
-  ),
-  block._(
-    DataStorage$Block(),
-  ),
-  kilobit._(
-    DataStorage$Kilobit(),
-  ),
-  kilobyte._(
-    DataStorage$Kilobyte(),
-  ),
-  kilobyte10PowerOf3Bytes._(
-    DataStorage$Kilobyte10PowerOf3Bytes(),
-  ),
-  megabit._(
-    DataStorage$Megabit(),
-  ),
-  megabyte._(
-    DataStorage$Megabyte(),
-  ),
-  megabyte10PowerOf6Bytes._(
-    DataStorage$Megabyte10PowerOf6Bytes(),
-  ),
-  gigabit._(
-    DataStorage$Gigabit(),
-  ),
-  gigabyte._(
-    DataStorage$Gigabyte(),
-  ),
-  gigabyte10PowerOf9Bytes._(
-    DataStorage$Gigabyte10PowerOf9Bytes(),
-  ),
-  terabit._(
-    DataStorage$Terabit(),
-  ),
-  terabyte._(
-    DataStorage$Terabyte(),
-  ),
-  terabyte10PowerOf12Bytes._(
-    DataStorage$Terabyte10PowerOf12Bytes(),
-  ),
-  petabit._(
-    DataStorage$Petabit(),
-  ),
-  petabyte._(
-    DataStorage$Petabyte(),
-  ),
-  petabyte10PowerOf15Bytes._(
-    DataStorage$Petabyte10PowerOf15Bytes(),
-  ),
-  exabit._(
-    DataStorage$Exabit(),
-  ),
-  exabyte._(
-    DataStorage$Exabyte(),
-  ),
-  exabyte10PowerOf18Bytes._(
-    DataStorage$Exabyte10PowerOf18Bytes(),
-  ),
-  floppyDisk35DD._(
-    DataStorage$FloppyDisk35DD(),
-  ),
-  floppyDisk35HD._(
-    DataStorage$FloppyDisk35HD(),
-  ),
-  floppyDisk35ED._(
-    DataStorage$FloppyDisk35ED(),
-  ),
-  floppyDisk525DD._(
-    DataStorage$FloppyDisk525DD(),
-  ),
-  floppyDisk525HD._(
-    DataStorage$FloppyDisk525HD(),
-  ),
-  zip100._(
-    DataStorage$Zip100(),
-  ),
-  zip250._(
-    DataStorage$Zip250(),
-  ),
-  jaz1GB._(
-    DataStorage$Jaz1GB(),
-  ),
-  jaz2GB._(
-    DataStorage$Jaz2GB(),
-  ),
-  cD74Minute._(
-    DataStorage$CD74Minute(),
-  ),
-  cD80Minute._(
-    DataStorage$CD80Minute(),
-  ),
-  dVD1Layer1Side._(
-    DataStorage$DVD1Layer1Side(),
-  ),
-  dVD2Layers1Side._(
-    DataStorage$DVD2Layers1Side(),
-  ),
-  dVD1Layer2Sides._(
-    DataStorage$DVD1Layer2Sides(),
-  ),
-  dVD2Layers2Sides._(
-    DataStorage$DVD2Layers2Sides(),
-  ),
-  bluRay1Layer._(
-    DataStorage$BluRay1Layer(),
-  ),
-  bluRay2Layer._(
-    DataStorage$BluRay2Layer(),
-  ),
-  ;
-
-  const DataStorageUnit._(this.construct);
-
-  final DataStorage construct;
-}
-
-const dataStorageUnitValues = _EnumValues({
-  DataStorage$Bit._minorName: DataStorageUnit.bit,
-  DataStorage$Nibble._minorName: DataStorageUnit.nibble,
-  DataStorage$Byte._minorName: DataStorageUnit.byte,
-  DataStorage$Word._minorName: DataStorageUnit.word,
-  DataStorage$DoubleWord._minorName: DataStorageUnit.doubleWord,
-  DataStorage$QuadrupleWord._minorName: DataStorageUnit.quadrupleWord,
-  DataStorage$Block._minorName: DataStorageUnit.block,
-  DataStorage$Kilobit._minorName: DataStorageUnit.kilobit,
-  DataStorage$Kilobyte._minorName: DataStorageUnit.kilobyte,
+const dataStorageUnits = EnumValues({
+  DataStorage$Bit._minorName: DataStorage.bit,
+  DataStorage$Nibble._minorName: DataStorage.nibble,
+  DataStorage$Byte._minorName: DataStorage.byte,
+  DataStorage$Word._minorName: DataStorage.word,
+  DataStorage$DoubleWord._minorName: DataStorage.doubleWord,
+  DataStorage$QuadrupleWord._minorName: DataStorage.quadrupleWord,
+  DataStorage$Block._minorName: DataStorage.block,
+  DataStorage$Kilobit._minorName: DataStorage.kilobit,
+  DataStorage$Kilobyte._minorName: DataStorage.kilobyte,
   DataStorage$Kilobyte10PowerOf3Bytes._minorName:
-      DataStorageUnit.kilobyte10PowerOf3Bytes,
-  DataStorage$Megabit._minorName: DataStorageUnit.megabit,
-  DataStorage$Megabyte._minorName: DataStorageUnit.megabyte,
+      DataStorage.kilobyte10PowerOf3Bytes,
+  DataStorage$Megabit._minorName: DataStorage.megabit,
+  DataStorage$Megabyte._minorName: DataStorage.megabyte,
   DataStorage$Megabyte10PowerOf6Bytes._minorName:
-      DataStorageUnit.megabyte10PowerOf6Bytes,
-  DataStorage$Gigabit._minorName: DataStorageUnit.gigabit,
-  DataStorage$Gigabyte._minorName: DataStorageUnit.gigabyte,
+      DataStorage.megabyte10PowerOf6Bytes,
+  DataStorage$Gigabit._minorName: DataStorage.gigabit,
+  DataStorage$Gigabyte._minorName: DataStorage.gigabyte,
   DataStorage$Gigabyte10PowerOf9Bytes._minorName:
-      DataStorageUnit.gigabyte10PowerOf9Bytes,
-  DataStorage$Terabit._minorName: DataStorageUnit.terabit,
-  DataStorage$Terabyte._minorName: DataStorageUnit.terabyte,
+      DataStorage.gigabyte10PowerOf9Bytes,
+  DataStorage$Terabit._minorName: DataStorage.terabit,
+  DataStorage$Terabyte._minorName: DataStorage.terabyte,
   DataStorage$Terabyte10PowerOf12Bytes._minorName:
-      DataStorageUnit.terabyte10PowerOf12Bytes,
-  DataStorage$Petabit._minorName: DataStorageUnit.petabit,
-  DataStorage$Petabyte._minorName: DataStorageUnit.petabyte,
+      DataStorage.terabyte10PowerOf12Bytes,
+  DataStorage$Petabit._minorName: DataStorage.petabit,
+  DataStorage$Petabyte._minorName: DataStorage.petabyte,
   DataStorage$Petabyte10PowerOf15Bytes._minorName:
-      DataStorageUnit.petabyte10PowerOf15Bytes,
-  DataStorage$Exabit._minorName: DataStorageUnit.exabit,
-  DataStorage$Exabyte._minorName: DataStorageUnit.exabyte,
+      DataStorage.petabyte10PowerOf15Bytes,
+  DataStorage$Exabit._minorName: DataStorage.exabit,
+  DataStorage$Exabyte._minorName: DataStorage.exabyte,
   DataStorage$Exabyte10PowerOf18Bytes._minorName:
-      DataStorageUnit.exabyte10PowerOf18Bytes,
-  DataStorage$FloppyDisk35DD._minorName: DataStorageUnit.floppyDisk35DD,
-  DataStorage$FloppyDisk35HD._minorName: DataStorageUnit.floppyDisk35HD,
-  DataStorage$FloppyDisk35ED._minorName: DataStorageUnit.floppyDisk35ED,
-  DataStorage$FloppyDisk525DD._minorName: DataStorageUnit.floppyDisk525DD,
-  DataStorage$FloppyDisk525HD._minorName: DataStorageUnit.floppyDisk525HD,
-  DataStorage$Zip100._minorName: DataStorageUnit.zip100,
-  DataStorage$Zip250._minorName: DataStorageUnit.zip250,
-  DataStorage$Jaz1GB._minorName: DataStorageUnit.jaz1GB,
-  DataStorage$Jaz2GB._minorName: DataStorageUnit.jaz2GB,
-  DataStorage$CD74Minute._minorName: DataStorageUnit.cD74Minute,
-  DataStorage$CD80Minute._minorName: DataStorageUnit.cD80Minute,
-  DataStorage$DVD1Layer1Side._minorName: DataStorageUnit.dVD1Layer1Side,
-  DataStorage$DVD2Layers1Side._minorName: DataStorageUnit.dVD2Layers1Side,
-  DataStorage$DVD1Layer2Sides._minorName: DataStorageUnit.dVD1Layer2Sides,
-  DataStorage$DVD2Layers2Sides._minorName: DataStorageUnit.dVD2Layers2Sides,
-  DataStorage$BluRay1Layer._minorName: DataStorageUnit.bluRay1Layer,
-  DataStorage$BluRay2Layer._minorName: DataStorageUnit.bluRay2Layer,
+      DataStorage.exabyte10PowerOf18Bytes,
+  DataStorage$FloppyDisk35DD._minorName: DataStorage.floppyDisk35DD,
+  DataStorage$FloppyDisk35HD._minorName: DataStorage.floppyDisk35HD,
+  DataStorage$FloppyDisk35ED._minorName: DataStorage.floppyDisk35ED,
+  DataStorage$FloppyDisk525DD._minorName: DataStorage.floppyDisk525DD,
+  DataStorage$FloppyDisk525HD._minorName: DataStorage.floppyDisk525HD,
+  DataStorage$Zip100._minorName: DataStorage.zip100,
+  DataStorage$Zip250._minorName: DataStorage.zip250,
+  DataStorage$Jaz1GB._minorName: DataStorage.jaz1GB,
+  DataStorage$Jaz2GB._minorName: DataStorage.jaz2GB,
+  DataStorage$CD74Minute._minorName: DataStorage.cD74Minute,
+  DataStorage$CD80Minute._minorName: DataStorage.cD80Minute,
+  DataStorage$DVD1Layer1Side._minorName: DataStorage.dVD1Layer1Side,
+  DataStorage$DVD2Layers1Side._minorName: DataStorage.dVD2Layers1Side,
+  DataStorage$DVD1Layer2Sides._minorName: DataStorage.dVD1Layer2Sides,
+  DataStorage$DVD2Layers2Sides._minorName: DataStorage.dVD2Layers2Sides,
+  DataStorage$BluRay1Layer._minorName: DataStorage.bluRay1Layer,
+  DataStorage$BluRay2Layer._minorName: DataStorage.bluRay2Layer,
 });

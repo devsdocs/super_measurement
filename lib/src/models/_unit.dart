@@ -9,6 +9,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T get anchor;
 
+  List<T> get units;
+
   num get ratio;
 
   num get valueShift;
@@ -190,8 +192,8 @@ class _ConversionRatio<T extends Unit<T>> {
   }
 }
 
-class _EnumValues<T> {
-  const _EnumValues(this.map);
+class EnumValues<T> {
+  const EnumValues(this.map);
   final Map<String, T> map;
 
   Map<T, String> get reverse => map.map((k, v) => MapEntry(v, k));
@@ -200,7 +202,7 @@ class _EnumValues<T> {
 bool _checkJson<T>(
   String key,
   Map<String, dynamic> json,
-  _EnumValues<T> enumV,
+  EnumValues<T> enumV,
 ) {
   final map = json[key] as Map<String, dynamic>?;
 

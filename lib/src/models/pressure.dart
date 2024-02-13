@@ -30,10 +30,10 @@ sealed class Pressure extends Unit<Pressure> {
   factory Pressure.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        pressureUnitValues,
+        pressureUnits,
       )
-          ? pressureUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? pressureUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -316,6 +316,99 @@ sealed class Pressure extends Unit<Pressure> {
   String get majorName => _majorName;
 
   static const _majorName = 'pressure';
+
+  static const exapascal = Pressure$Exapascal();
+  static const petapascal = Pressure$Petapascal();
+  static const terapascal = Pressure$Terapascal();
+  static const gigapascal = Pressure$Gigapascal();
+  static const megapascal = Pressure$Megapascal();
+  static const kilopascal = Pressure$Kilopascal();
+  static const hectopascal = Pressure$Hectopascal();
+  static const dekapascal = Pressure$Dekapascal();
+  static const pascal = Pressure$Pascal();
+  static const decipascal = Pressure$Decipascal();
+  static const centipascal = Pressure$Centipascal();
+  static const millipascal = Pressure$Millipascal();
+  static const micropascal = Pressure$Micropascal();
+  static const nanopascal = Pressure$Nanopascal();
+  static const picopascal = Pressure$Picopascal();
+  static const femtopascal = Pressure$Femtopascal();
+  static const attopascal = Pressure$Attopascal();
+  static const kilonewtonPerMeterSquare = Pressure$KilonewtonPerMeterSquare();
+  static const newtonPerMeterSquare = Pressure$NewtonPerMeterSquare();
+  static const newtonPerCentimeterSquare = Pressure$NewtonPerCentimeterSquare();
+  static const newtonPerMillimeterSquare = Pressure$NewtonPerMillimeterSquare();
+  static const bar = Pressure$Bar();
+  static const millibar = Pressure$Millibar();
+  static const microbar = Pressure$Microbar();
+  static const atmosphere = Pressure$Atmosphere();
+  static const psi = Pressure$Psi();
+  static const dynePerCentimeterSquare = Pressure$DynePerCentimeterSquare();
+  static const kilogramPerMeterSquare = Pressure$KilogramPerMeterSquare();
+  static const kilogramPerCentimeterSquare =
+      Pressure$KilogramPerCentimeterSquare();
+  static const kilogramPerMillimeterSquare =
+      Pressure$KilogramPerMillimeterSquare();
+  static const tonPerFootSquare = Pressure$TonPerFootSquare();
+  static const tonPerInchSquare = Pressure$TonPerInchSquare();
+  static const poundPerFootSquare = Pressure$PoundPerFootSquare();
+  static const poundPerInchSquare = Pressure$PoundPerInchSquare();
+  static const kipPerInchSquare = Pressure$KipPerInchSquare();
+  static const torr = Pressure$Torr();
+  static const centimeterMercury0DegreeC = Pressure$CentimeterMercury0DegreeC();
+  static const millimeterMercury0DegreeC = Pressure$MillimeterMercury0DegreeC();
+  static const inchMercury32DegreeF = Pressure$InchMercury32DegreeF();
+  static const centimeterWater4DegreeC = Pressure$CentimeterWater4DegreeC();
+  static const inchWater60DegreeF = Pressure$InchWater60DegreeF();
+  static const footWater60DegreeF = Pressure$FootWater60DegreeF();
+
+  @override
+  List<Pressure> get units => values;
+
+  static const values = [
+    exapascal,
+    petapascal,
+    terapascal,
+    gigapascal,
+    megapascal,
+    kilopascal,
+    hectopascal,
+    dekapascal,
+    pascal,
+    decipascal,
+    centipascal,
+    millipascal,
+    micropascal,
+    nanopascal,
+    picopascal,
+    femtopascal,
+    attopascal,
+    kilonewtonPerMeterSquare,
+    newtonPerMeterSquare,
+    newtonPerCentimeterSquare,
+    newtonPerMillimeterSquare,
+    bar,
+    millibar,
+    microbar,
+    atmosphere,
+    psi,
+    dynePerCentimeterSquare,
+    kilogramPerMeterSquare,
+    kilogramPerCentimeterSquare,
+    kilogramPerMillimeterSquare,
+    tonPerFootSquare,
+    tonPerInchSquare,
+    poundPerFootSquare,
+    poundPerInchSquare,
+    kipPerInchSquare,
+    torr,
+    centimeterMercury0DegreeC,
+    millimeterMercury0DegreeC,
+    inchMercury32DegreeF,
+    centimeterWater4DegreeC,
+    inchWater60DegreeF,
+    footWater60DegreeF,
+  ];
 }
 
 /// Unit of [Pressure]
@@ -3060,191 +3153,54 @@ final class Pressure$FootWater60DegreeF extends Pressure {
       };
 }
 
-enum PressureUnit {
-  exapascal._(
-    Pressure$Exapascal(),
-  ),
-  petapascal._(
-    Pressure$Petapascal(),
-  ),
-  terapascal._(
-    Pressure$Terapascal(),
-  ),
-  gigapascal._(
-    Pressure$Gigapascal(),
-  ),
-  megapascal._(
-    Pressure$Megapascal(),
-  ),
-  kilopascal._(
-    Pressure$Kilopascal(),
-  ),
-  hectopascal._(
-    Pressure$Hectopascal(),
-  ),
-  dekapascal._(
-    Pressure$Dekapascal(),
-  ),
-  pascal._(
-    Pressure$Pascal(),
-  ),
-  decipascal._(
-    Pressure$Decipascal(),
-  ),
-  centipascal._(
-    Pressure$Centipascal(),
-  ),
-  millipascal._(
-    Pressure$Millipascal(),
-  ),
-  micropascal._(
-    Pressure$Micropascal(),
-  ),
-  nanopascal._(
-    Pressure$Nanopascal(),
-  ),
-  picopascal._(
-    Pressure$Picopascal(),
-  ),
-  femtopascal._(
-    Pressure$Femtopascal(),
-  ),
-  attopascal._(
-    Pressure$Attopascal(),
-  ),
-  kilonewtonPerMeterSquare._(
-    Pressure$KilonewtonPerMeterSquare(),
-  ),
-  newtonPerMeterSquare._(
-    Pressure$NewtonPerMeterSquare(),
-  ),
-  newtonPerCentimeterSquare._(
-    Pressure$NewtonPerCentimeterSquare(),
-  ),
-  newtonPerMillimeterSquare._(
-    Pressure$NewtonPerMillimeterSquare(),
-  ),
-  bar._(
-    Pressure$Bar(),
-  ),
-  millibar._(
-    Pressure$Millibar(),
-  ),
-  microbar._(
-    Pressure$Microbar(),
-  ),
-  atmosphere._(
-    Pressure$Atmosphere(),
-  ),
-  psi._(
-    Pressure$Psi(),
-  ),
-  dynePerCentimeterSquare._(
-    Pressure$DynePerCentimeterSquare(),
-  ),
-  kilogramPerMeterSquare._(
-    Pressure$KilogramPerMeterSquare(),
-  ),
-  kilogramPerCentimeterSquare._(
-    Pressure$KilogramPerCentimeterSquare(),
-  ),
-  kilogramPerMillimeterSquare._(
-    Pressure$KilogramPerMillimeterSquare(),
-  ),
-  tonPerFootSquare._(
-    Pressure$TonPerFootSquare(),
-  ),
-  tonPerInchSquare._(
-    Pressure$TonPerInchSquare(),
-  ),
-  poundPerFootSquare._(
-    Pressure$PoundPerFootSquare(),
-  ),
-  poundPerInchSquare._(
-    Pressure$PoundPerInchSquare(),
-  ),
-  kipPerInchSquare._(
-    Pressure$KipPerInchSquare(),
-  ),
-  torr._(
-    Pressure$Torr(),
-  ),
-  centimeterMercury0DegreeC._(
-    Pressure$CentimeterMercury0DegreeC(),
-  ),
-  millimeterMercury0DegreeC._(
-    Pressure$MillimeterMercury0DegreeC(),
-  ),
-  inchMercury32DegreeF._(
-    Pressure$InchMercury32DegreeF(),
-  ),
-  centimeterWater4DegreeC._(
-    Pressure$CentimeterWater4DegreeC(),
-  ),
-  inchWater60DegreeF._(
-    Pressure$InchWater60DegreeF(),
-  ),
-  footWater60DegreeF._(
-    Pressure$FootWater60DegreeF(),
-  ),
-  ;
-
-  const PressureUnit._(this.construct);
-
-  final Pressure construct;
-}
-
-const pressureUnitValues = _EnumValues({
-  Pressure$Exapascal._minorName: PressureUnit.exapascal,
-  Pressure$Petapascal._minorName: PressureUnit.petapascal,
-  Pressure$Terapascal._minorName: PressureUnit.terapascal,
-  Pressure$Gigapascal._minorName: PressureUnit.gigapascal,
-  Pressure$Megapascal._minorName: PressureUnit.megapascal,
-  Pressure$Kilopascal._minorName: PressureUnit.kilopascal,
-  Pressure$Hectopascal._minorName: PressureUnit.hectopascal,
-  Pressure$Dekapascal._minorName: PressureUnit.dekapascal,
-  Pressure$Pascal._minorName: PressureUnit.pascal,
-  Pressure$Decipascal._minorName: PressureUnit.decipascal,
-  Pressure$Centipascal._minorName: PressureUnit.centipascal,
-  Pressure$Millipascal._minorName: PressureUnit.millipascal,
-  Pressure$Micropascal._minorName: PressureUnit.micropascal,
-  Pressure$Nanopascal._minorName: PressureUnit.nanopascal,
-  Pressure$Picopascal._minorName: PressureUnit.picopascal,
-  Pressure$Femtopascal._minorName: PressureUnit.femtopascal,
-  Pressure$Attopascal._minorName: PressureUnit.attopascal,
+const pressureUnits = EnumValues({
+  Pressure$Exapascal._minorName: Pressure.exapascal,
+  Pressure$Petapascal._minorName: Pressure.petapascal,
+  Pressure$Terapascal._minorName: Pressure.terapascal,
+  Pressure$Gigapascal._minorName: Pressure.gigapascal,
+  Pressure$Megapascal._minorName: Pressure.megapascal,
+  Pressure$Kilopascal._minorName: Pressure.kilopascal,
+  Pressure$Hectopascal._minorName: Pressure.hectopascal,
+  Pressure$Dekapascal._minorName: Pressure.dekapascal,
+  Pressure$Pascal._minorName: Pressure.pascal,
+  Pressure$Decipascal._minorName: Pressure.decipascal,
+  Pressure$Centipascal._minorName: Pressure.centipascal,
+  Pressure$Millipascal._minorName: Pressure.millipascal,
+  Pressure$Micropascal._minorName: Pressure.micropascal,
+  Pressure$Nanopascal._minorName: Pressure.nanopascal,
+  Pressure$Picopascal._minorName: Pressure.picopascal,
+  Pressure$Femtopascal._minorName: Pressure.femtopascal,
+  Pressure$Attopascal._minorName: Pressure.attopascal,
   Pressure$KilonewtonPerMeterSquare._minorName:
-      PressureUnit.kilonewtonPerMeterSquare,
-  Pressure$NewtonPerMeterSquare._minorName: PressureUnit.newtonPerMeterSquare,
+      Pressure.kilonewtonPerMeterSquare,
+  Pressure$NewtonPerMeterSquare._minorName: Pressure.newtonPerMeterSquare,
   Pressure$NewtonPerCentimeterSquare._minorName:
-      PressureUnit.newtonPerCentimeterSquare,
+      Pressure.newtonPerCentimeterSquare,
   Pressure$NewtonPerMillimeterSquare._minorName:
-      PressureUnit.newtonPerMillimeterSquare,
-  Pressure$Bar._minorName: PressureUnit.bar,
-  Pressure$Millibar._minorName: PressureUnit.millibar,
-  Pressure$Microbar._minorName: PressureUnit.microbar,
-  Pressure$Atmosphere._minorName: PressureUnit.atmosphere,
-  Pressure$Psi._minorName: PressureUnit.psi,
-  Pressure$DynePerCentimeterSquare._minorName:
-      PressureUnit.dynePerCentimeterSquare,
-  Pressure$KilogramPerMeterSquare._minorName:
-      PressureUnit.kilogramPerMeterSquare,
+      Pressure.newtonPerMillimeterSquare,
+  Pressure$Bar._minorName: Pressure.bar,
+  Pressure$Millibar._minorName: Pressure.millibar,
+  Pressure$Microbar._minorName: Pressure.microbar,
+  Pressure$Atmosphere._minorName: Pressure.atmosphere,
+  Pressure$Psi._minorName: Pressure.psi,
+  Pressure$DynePerCentimeterSquare._minorName: Pressure.dynePerCentimeterSquare,
+  Pressure$KilogramPerMeterSquare._minorName: Pressure.kilogramPerMeterSquare,
   Pressure$KilogramPerCentimeterSquare._minorName:
-      PressureUnit.kilogramPerCentimeterSquare,
+      Pressure.kilogramPerCentimeterSquare,
   Pressure$KilogramPerMillimeterSquare._minorName:
-      PressureUnit.kilogramPerMillimeterSquare,
-  Pressure$TonPerFootSquare._minorName: PressureUnit.tonPerFootSquare,
-  Pressure$TonPerInchSquare._minorName: PressureUnit.tonPerInchSquare,
-  Pressure$PoundPerFootSquare._minorName: PressureUnit.poundPerFootSquare,
-  Pressure$PoundPerInchSquare._minorName: PressureUnit.poundPerInchSquare,
-  Pressure$KipPerInchSquare._minorName: PressureUnit.kipPerInchSquare,
-  Pressure$Torr._minorName: PressureUnit.torr,
+      Pressure.kilogramPerMillimeterSquare,
+  Pressure$TonPerFootSquare._minorName: Pressure.tonPerFootSquare,
+  Pressure$TonPerInchSquare._minorName: Pressure.tonPerInchSquare,
+  Pressure$PoundPerFootSquare._minorName: Pressure.poundPerFootSquare,
+  Pressure$PoundPerInchSquare._minorName: Pressure.poundPerInchSquare,
+  Pressure$KipPerInchSquare._minorName: Pressure.kipPerInchSquare,
+  Pressure$Torr._minorName: Pressure.torr,
   Pressure$CentimeterMercury0DegreeC._minorName:
-      PressureUnit.centimeterMercury0DegreeC,
+      Pressure.centimeterMercury0DegreeC,
   Pressure$MillimeterMercury0DegreeC._minorName:
-      PressureUnit.millimeterMercury0DegreeC,
-  Pressure$InchMercury32DegreeF._minorName: PressureUnit.inchMercury32DegreeF,
-  Pressure$CentimeterWater4DegreeC._minorName:
-      PressureUnit.centimeterWater4DegreeC,
-  Pressure$InchWater60DegreeF._minorName: PressureUnit.inchWater60DegreeF,
-  Pressure$FootWater60DegreeF._minorName: PressureUnit.footWater60DegreeF,
+      Pressure.millimeterMercury0DegreeC,
+  Pressure$InchMercury32DegreeF._minorName: Pressure.inchMercury32DegreeF,
+  Pressure$CentimeterWater4DegreeC._minorName: Pressure.centimeterWater4DegreeC,
+  Pressure$InchWater60DegreeF._minorName: Pressure.inchWater60DegreeF,
+  Pressure$FootWater60DegreeF._minorName: Pressure.footWater60DegreeF,
 });

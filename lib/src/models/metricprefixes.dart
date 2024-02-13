@@ -18,10 +18,10 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
   factory MetricPrefixes.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        metricPrefixesUnitValues,
+        metricPrefixesUnits,
       )
-          ? metricPrefixesUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? metricPrefixesUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -168,6 +168,55 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
   String get majorName => _majorName;
 
   static const _majorName = 'metricPrefixes';
+
+  static const yotta = MetricPrefixes$Yotta();
+  static const zetta = MetricPrefixes$Zetta();
+  static const exa = MetricPrefixes$Exa();
+  static const peta = MetricPrefixes$Peta();
+  static const tera = MetricPrefixes$Tera();
+  static const giga = MetricPrefixes$Giga();
+  static const mega = MetricPrefixes$Mega();
+  static const kilo = MetricPrefixes$Kilo();
+  static const hecto = MetricPrefixes$Hecto();
+  static const deka = MetricPrefixes$Deka();
+  static const metricUnit = MetricPrefixes$MetricUnit();
+  static const deci = MetricPrefixes$Deci();
+  static const centi = MetricPrefixes$Centi();
+  static const milli = MetricPrefixes$Milli();
+  static const micro = MetricPrefixes$Micro();
+  static const nano = MetricPrefixes$Nano();
+  static const pico = MetricPrefixes$Pico();
+  static const femto = MetricPrefixes$Femto();
+  static const atto = MetricPrefixes$Atto();
+  static const zepto = MetricPrefixes$Zepto();
+  static const yocto = MetricPrefixes$Yocto();
+
+  @override
+  List<MetricPrefixes> get units => values;
+
+  static const values = [
+    yotta,
+    zetta,
+    exa,
+    peta,
+    tera,
+    giga,
+    mega,
+    kilo,
+    hecto,
+    deka,
+    metricUnit,
+    deci,
+    centi,
+    milli,
+    micro,
+    nano,
+    pico,
+    femto,
+    atto,
+    zepto,
+    yocto,
+  ];
 }
 
 /// Unit of [MetricPrefixes]
@@ -1535,97 +1584,26 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
       };
 }
 
-enum MetricPrefixesUnit {
-  yotta._(
-    MetricPrefixes$Yotta(),
-  ),
-  zetta._(
-    MetricPrefixes$Zetta(),
-  ),
-  exa._(
-    MetricPrefixes$Exa(),
-  ),
-  peta._(
-    MetricPrefixes$Peta(),
-  ),
-  tera._(
-    MetricPrefixes$Tera(),
-  ),
-  giga._(
-    MetricPrefixes$Giga(),
-  ),
-  mega._(
-    MetricPrefixes$Mega(),
-  ),
-  kilo._(
-    MetricPrefixes$Kilo(),
-  ),
-  hecto._(
-    MetricPrefixes$Hecto(),
-  ),
-  deka._(
-    MetricPrefixes$Deka(),
-  ),
-  metricUnit._(
-    MetricPrefixes$MetricUnit(),
-  ),
-  deci._(
-    MetricPrefixes$Deci(),
-  ),
-  centi._(
-    MetricPrefixes$Centi(),
-  ),
-  milli._(
-    MetricPrefixes$Milli(),
-  ),
-  micro._(
-    MetricPrefixes$Micro(),
-  ),
-  nano._(
-    MetricPrefixes$Nano(),
-  ),
-  pico._(
-    MetricPrefixes$Pico(),
-  ),
-  femto._(
-    MetricPrefixes$Femto(),
-  ),
-  atto._(
-    MetricPrefixes$Atto(),
-  ),
-  zepto._(
-    MetricPrefixes$Zepto(),
-  ),
-  yocto._(
-    MetricPrefixes$Yocto(),
-  ),
-  ;
-
-  const MetricPrefixesUnit._(this.construct);
-
-  final MetricPrefixes construct;
-}
-
-const metricPrefixesUnitValues = _EnumValues({
-  MetricPrefixes$Yotta._minorName: MetricPrefixesUnit.yotta,
-  MetricPrefixes$Zetta._minorName: MetricPrefixesUnit.zetta,
-  MetricPrefixes$Exa._minorName: MetricPrefixesUnit.exa,
-  MetricPrefixes$Peta._minorName: MetricPrefixesUnit.peta,
-  MetricPrefixes$Tera._minorName: MetricPrefixesUnit.tera,
-  MetricPrefixes$Giga._minorName: MetricPrefixesUnit.giga,
-  MetricPrefixes$Mega._minorName: MetricPrefixesUnit.mega,
-  MetricPrefixes$Kilo._minorName: MetricPrefixesUnit.kilo,
-  MetricPrefixes$Hecto._minorName: MetricPrefixesUnit.hecto,
-  MetricPrefixes$Deka._minorName: MetricPrefixesUnit.deka,
-  MetricPrefixes$MetricUnit._minorName: MetricPrefixesUnit.metricUnit,
-  MetricPrefixes$Deci._minorName: MetricPrefixesUnit.deci,
-  MetricPrefixes$Centi._minorName: MetricPrefixesUnit.centi,
-  MetricPrefixes$Milli._minorName: MetricPrefixesUnit.milli,
-  MetricPrefixes$Micro._minorName: MetricPrefixesUnit.micro,
-  MetricPrefixes$Nano._minorName: MetricPrefixesUnit.nano,
-  MetricPrefixes$Pico._minorName: MetricPrefixesUnit.pico,
-  MetricPrefixes$Femto._minorName: MetricPrefixesUnit.femto,
-  MetricPrefixes$Atto._minorName: MetricPrefixesUnit.atto,
-  MetricPrefixes$Zepto._minorName: MetricPrefixesUnit.zepto,
-  MetricPrefixes$Yocto._minorName: MetricPrefixesUnit.yocto,
+const metricPrefixesUnits = EnumValues({
+  MetricPrefixes$Yotta._minorName: MetricPrefixes.yotta,
+  MetricPrefixes$Zetta._minorName: MetricPrefixes.zetta,
+  MetricPrefixes$Exa._minorName: MetricPrefixes.exa,
+  MetricPrefixes$Peta._minorName: MetricPrefixes.peta,
+  MetricPrefixes$Tera._minorName: MetricPrefixes.tera,
+  MetricPrefixes$Giga._minorName: MetricPrefixes.giga,
+  MetricPrefixes$Mega._minorName: MetricPrefixes.mega,
+  MetricPrefixes$Kilo._minorName: MetricPrefixes.kilo,
+  MetricPrefixes$Hecto._minorName: MetricPrefixes.hecto,
+  MetricPrefixes$Deka._minorName: MetricPrefixes.deka,
+  MetricPrefixes$MetricUnit._minorName: MetricPrefixes.metricUnit,
+  MetricPrefixes$Deci._minorName: MetricPrefixes.deci,
+  MetricPrefixes$Centi._minorName: MetricPrefixes.centi,
+  MetricPrefixes$Milli._minorName: MetricPrefixes.milli,
+  MetricPrefixes$Micro._minorName: MetricPrefixes.micro,
+  MetricPrefixes$Nano._minorName: MetricPrefixes.nano,
+  MetricPrefixes$Pico._minorName: MetricPrefixes.pico,
+  MetricPrefixes$Femto._minorName: MetricPrefixes.femto,
+  MetricPrefixes$Atto._minorName: MetricPrefixes.atto,
+  MetricPrefixes$Zepto._minorName: MetricPrefixes.zepto,
+  MetricPrefixes$Yocto._minorName: MetricPrefixes.yocto,
 });

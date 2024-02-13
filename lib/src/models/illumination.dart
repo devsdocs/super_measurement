@@ -18,10 +18,10 @@ sealed class Illumination extends Unit<Illumination> {
   factory Illumination.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        illuminationUnitValues,
+        illuminationUnits,
       )
-          ? illuminationUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? illuminationUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -112,6 +112,37 @@ sealed class Illumination extends Unit<Illumination> {
   String get majorName => _majorName;
 
   static const _majorName = 'illumination';
+
+  static const meterCandle = Illumination$MeterCandle();
+  static const centimeterCandle = Illumination$CentimeterCandle();
+  static const footCandle = Illumination$FootCandle();
+  static const flame = Illumination$Flame();
+  static const phot = Illumination$Phot();
+  static const nox = Illumination$Nox();
+  static const lux = Illumination$Lux();
+  static const lumenPerMeterSquare = Illumination$LumenPerMeterSquare();
+  static const lumenPerCentimeterSquare =
+      Illumination$LumenPerCentimeterSquare();
+  static const lumenPerFootSquare = Illumination$LumenPerFootSquare();
+  static const wattPerCentimeterSquareAt555nm =
+      Illumination$WattPerCentimeterSquareAt555nm();
+
+  @override
+  List<Illumination> get units => values;
+
+  static const values = [
+    meterCandle,
+    centimeterCandle,
+    footCandle,
+    flame,
+    phot,
+    nox,
+    lux,
+    lumenPerMeterSquare,
+    lumenPerCentimeterSquare,
+    lumenPerFootSquare,
+    wattPerCentimeterSquareAt555nm,
+  ];
 }
 
 /// Unit of [Illumination]
@@ -834,61 +865,18 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
       };
 }
 
-enum IlluminationUnit {
-  meterCandle._(
-    Illumination$MeterCandle(),
-  ),
-  centimeterCandle._(
-    Illumination$CentimeterCandle(),
-  ),
-  footCandle._(
-    Illumination$FootCandle(),
-  ),
-  flame._(
-    Illumination$Flame(),
-  ),
-  phot._(
-    Illumination$Phot(),
-  ),
-  nox._(
-    Illumination$Nox(),
-  ),
-  lux._(
-    Illumination$Lux(),
-  ),
-  lumenPerMeterSquare._(
-    Illumination$LumenPerMeterSquare(),
-  ),
-  lumenPerCentimeterSquare._(
-    Illumination$LumenPerCentimeterSquare(),
-  ),
-  lumenPerFootSquare._(
-    Illumination$LumenPerFootSquare(),
-  ),
-  wattPerCentimeterSquareAt555nm._(
-    Illumination$WattPerCentimeterSquareAt555nm(),
-  ),
-  ;
-
-  const IlluminationUnit._(this.construct);
-
-  final Illumination construct;
-}
-
-const illuminationUnitValues = _EnumValues({
-  Illumination$MeterCandle._minorName: IlluminationUnit.meterCandle,
-  Illumination$CentimeterCandle._minorName: IlluminationUnit.centimeterCandle,
-  Illumination$FootCandle._minorName: IlluminationUnit.footCandle,
-  Illumination$Flame._minorName: IlluminationUnit.flame,
-  Illumination$Phot._minorName: IlluminationUnit.phot,
-  Illumination$Nox._minorName: IlluminationUnit.nox,
-  Illumination$Lux._minorName: IlluminationUnit.lux,
-  Illumination$LumenPerMeterSquare._minorName:
-      IlluminationUnit.lumenPerMeterSquare,
+const illuminationUnits = EnumValues({
+  Illumination$MeterCandle._minorName: Illumination.meterCandle,
+  Illumination$CentimeterCandle._minorName: Illumination.centimeterCandle,
+  Illumination$FootCandle._minorName: Illumination.footCandle,
+  Illumination$Flame._minorName: Illumination.flame,
+  Illumination$Phot._minorName: Illumination.phot,
+  Illumination$Nox._minorName: Illumination.nox,
+  Illumination$Lux._minorName: Illumination.lux,
+  Illumination$LumenPerMeterSquare._minorName: Illumination.lumenPerMeterSquare,
   Illumination$LumenPerCentimeterSquare._minorName:
-      IlluminationUnit.lumenPerCentimeterSquare,
-  Illumination$LumenPerFootSquare._minorName:
-      IlluminationUnit.lumenPerFootSquare,
+      Illumination.lumenPerCentimeterSquare,
+  Illumination$LumenPerFootSquare._minorName: Illumination.lumenPerFootSquare,
   Illumination$WattPerCentimeterSquareAt555nm._minorName:
-      IlluminationUnit.wattPerCentimeterSquareAt555nm,
+      Illumination.wattPerCentimeterSquareAt555nm,
 });

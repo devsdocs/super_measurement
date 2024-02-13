@@ -23,10 +23,10 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
       _checkJson(
         _majorName,
         json,
-        specificHeatCapacityUnitValues,
+        specificHeatCapacityUnits,
       )
-          ? specificHeatCapacityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? specificHeatCapacityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -125,6 +125,40 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
   String get majorName => _majorName;
 
   static const _majorName = 'specificHeatCapacity';
+
+  static const kilojoulePerKilogramK =
+      SpecificHeatCapacity$KilojoulePerKilogramK();
+  static const kilojoulePerKilogramDegreeC =
+      SpecificHeatCapacity$KilojoulePerKilogramDegreeC();
+  static const joulePerKilogramK = SpecificHeatCapacity$JoulePerKilogramK();
+  static const joulePerKilogramDegreeC =
+      SpecificHeatCapacity$JoulePerKilogramDegreeC();
+  static const joulePerGramDegreeC = SpecificHeatCapacity$JoulePerGramDegreeC();
+  static const kilocaloriePerKilogramDegreeC =
+      SpecificHeatCapacity$KilocaloriePerKilogramDegreeC();
+  static const caloriePerGramDegreeC =
+      SpecificHeatCapacity$CaloriePerGramDegreeC();
+  static const bTUPerPoundDegreeC = SpecificHeatCapacity$BTUPerPoundDegreeC();
+  static const bTUPerPoundDegreeF = SpecificHeatCapacity$BTUPerPoundDegreeF();
+  static const bTUPerPoundDegreeR = SpecificHeatCapacity$BTUPerPoundDegreeR();
+  static const cHUPerPoundDegreeC = SpecificHeatCapacity$CHUPerPoundDegreeC();
+
+  @override
+  List<SpecificHeatCapacity> get units => values;
+
+  static const values = [
+    kilojoulePerKilogramK,
+    kilojoulePerKilogramDegreeC,
+    joulePerKilogramK,
+    joulePerKilogramDegreeC,
+    joulePerGramDegreeC,
+    kilocaloriePerKilogramDegreeC,
+    caloriePerGramDegreeC,
+    bTUPerPoundDegreeC,
+    bTUPerPoundDegreeF,
+    bTUPerPoundDegreeR,
+    cHUPerPoundDegreeC,
+  ];
 }
 
 /// Unit of [SpecificHeatCapacity]
@@ -864,68 +898,27 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
       };
 }
 
-enum SpecificHeatCapacityUnit {
-  kilojoulePerKilogramK._(
-    SpecificHeatCapacity$KilojoulePerKilogramK(),
-  ),
-  kilojoulePerKilogramDegreeC._(
-    SpecificHeatCapacity$KilojoulePerKilogramDegreeC(),
-  ),
-  joulePerKilogramK._(
-    SpecificHeatCapacity$JoulePerKilogramK(),
-  ),
-  joulePerKilogramDegreeC._(
-    SpecificHeatCapacity$JoulePerKilogramDegreeC(),
-  ),
-  joulePerGramDegreeC._(
-    SpecificHeatCapacity$JoulePerGramDegreeC(),
-  ),
-  kilocaloriePerKilogramDegreeC._(
-    SpecificHeatCapacity$KilocaloriePerKilogramDegreeC(),
-  ),
-  caloriePerGramDegreeC._(
-    SpecificHeatCapacity$CaloriePerGramDegreeC(),
-  ),
-  bTUPerPoundDegreeC._(
-    SpecificHeatCapacity$BTUPerPoundDegreeC(),
-  ),
-  bTUPerPoundDegreeF._(
-    SpecificHeatCapacity$BTUPerPoundDegreeF(),
-  ),
-  bTUPerPoundDegreeR._(
-    SpecificHeatCapacity$BTUPerPoundDegreeR(),
-  ),
-  cHUPerPoundDegreeC._(
-    SpecificHeatCapacity$CHUPerPoundDegreeC(),
-  ),
-  ;
-
-  const SpecificHeatCapacityUnit._(this.construct);
-
-  final SpecificHeatCapacity construct;
-}
-
-const specificHeatCapacityUnitValues = _EnumValues({
+const specificHeatCapacityUnits = EnumValues({
   SpecificHeatCapacity$KilojoulePerKilogramK._minorName:
-      SpecificHeatCapacityUnit.kilojoulePerKilogramK,
+      SpecificHeatCapacity.kilojoulePerKilogramK,
   SpecificHeatCapacity$KilojoulePerKilogramDegreeC._minorName:
-      SpecificHeatCapacityUnit.kilojoulePerKilogramDegreeC,
+      SpecificHeatCapacity.kilojoulePerKilogramDegreeC,
   SpecificHeatCapacity$JoulePerKilogramK._minorName:
-      SpecificHeatCapacityUnit.joulePerKilogramK,
+      SpecificHeatCapacity.joulePerKilogramK,
   SpecificHeatCapacity$JoulePerKilogramDegreeC._minorName:
-      SpecificHeatCapacityUnit.joulePerKilogramDegreeC,
+      SpecificHeatCapacity.joulePerKilogramDegreeC,
   SpecificHeatCapacity$JoulePerGramDegreeC._minorName:
-      SpecificHeatCapacityUnit.joulePerGramDegreeC,
+      SpecificHeatCapacity.joulePerGramDegreeC,
   SpecificHeatCapacity$KilocaloriePerKilogramDegreeC._minorName:
-      SpecificHeatCapacityUnit.kilocaloriePerKilogramDegreeC,
+      SpecificHeatCapacity.kilocaloriePerKilogramDegreeC,
   SpecificHeatCapacity$CaloriePerGramDegreeC._minorName:
-      SpecificHeatCapacityUnit.caloriePerGramDegreeC,
+      SpecificHeatCapacity.caloriePerGramDegreeC,
   SpecificHeatCapacity$BTUPerPoundDegreeC._minorName:
-      SpecificHeatCapacityUnit.bTUPerPoundDegreeC,
+      SpecificHeatCapacity.bTUPerPoundDegreeC,
   SpecificHeatCapacity$BTUPerPoundDegreeF._minorName:
-      SpecificHeatCapacityUnit.bTUPerPoundDegreeF,
+      SpecificHeatCapacity.bTUPerPoundDegreeF,
   SpecificHeatCapacity$BTUPerPoundDegreeR._minorName:
-      SpecificHeatCapacityUnit.bTUPerPoundDegreeR,
+      SpecificHeatCapacity.bTUPerPoundDegreeR,
   SpecificHeatCapacity$CHUPerPoundDegreeC._minorName:
-      SpecificHeatCapacityUnit.cHUPerPoundDegreeC,
+      SpecificHeatCapacity.cHUPerPoundDegreeC,
 });

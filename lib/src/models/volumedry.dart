@@ -16,10 +16,10 @@ sealed class VolumeDry extends Unit<VolumeDry> {
   factory VolumeDry.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        volumeDryUnitValues,
+        volumeDryUnits,
       )
-          ? volumeDryUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? volumeDryUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -118,6 +118,39 @@ sealed class VolumeDry extends Unit<VolumeDry> {
   String get majorName => _majorName;
 
   static const _majorName = 'volumeDry';
+
+  static const barrel = VolumeDry$Barrel();
+  static const liter = VolumeDry$Liter();
+  static const pint = VolumeDry$Pint();
+  static const quart = VolumeDry$Quart();
+  static const peck = VolumeDry$Peck();
+  static const bushel = VolumeDry$Bushel();
+  static const corBiblical = VolumeDry$CorBiblical();
+  static const homerBiblical = VolumeDry$HomerBiblical();
+  static const ephahBiblical = VolumeDry$EphahBiblical();
+  static const seahBiblical = VolumeDry$SeahBiblical();
+  static const omerBiblical = VolumeDry$OmerBiblical();
+  static const cabBiblical = VolumeDry$CabBiblical();
+  static const logBiblical = VolumeDry$LogBiblical();
+
+  @override
+  List<VolumeDry> get units => values;
+
+  static const values = [
+    barrel,
+    liter,
+    pint,
+    quart,
+    peck,
+    bushel,
+    corBiblical,
+    homerBiblical,
+    ephahBiblical,
+    seahBiblical,
+    omerBiblical,
+    cabBiblical,
+    logBiblical,
+  ];
 }
 
 /// Unit of [VolumeDry]
@@ -965,65 +998,18 @@ final class VolumeDry$LogBiblical extends VolumeDry {
       };
 }
 
-enum VolumeDryUnit {
-  barrel._(
-    VolumeDry$Barrel(),
-  ),
-  liter._(
-    VolumeDry$Liter(),
-  ),
-  pint._(
-    VolumeDry$Pint(),
-  ),
-  quart._(
-    VolumeDry$Quart(),
-  ),
-  peck._(
-    VolumeDry$Peck(),
-  ),
-  bushel._(
-    VolumeDry$Bushel(),
-  ),
-  corBiblical._(
-    VolumeDry$CorBiblical(),
-  ),
-  homerBiblical._(
-    VolumeDry$HomerBiblical(),
-  ),
-  ephahBiblical._(
-    VolumeDry$EphahBiblical(),
-  ),
-  seahBiblical._(
-    VolumeDry$SeahBiblical(),
-  ),
-  omerBiblical._(
-    VolumeDry$OmerBiblical(),
-  ),
-  cabBiblical._(
-    VolumeDry$CabBiblical(),
-  ),
-  logBiblical._(
-    VolumeDry$LogBiblical(),
-  ),
-  ;
-
-  const VolumeDryUnit._(this.construct);
-
-  final VolumeDry construct;
-}
-
-const volumeDryUnitValues = _EnumValues({
-  VolumeDry$Barrel._minorName: VolumeDryUnit.barrel,
-  VolumeDry$Liter._minorName: VolumeDryUnit.liter,
-  VolumeDry$Pint._minorName: VolumeDryUnit.pint,
-  VolumeDry$Quart._minorName: VolumeDryUnit.quart,
-  VolumeDry$Peck._minorName: VolumeDryUnit.peck,
-  VolumeDry$Bushel._minorName: VolumeDryUnit.bushel,
-  VolumeDry$CorBiblical._minorName: VolumeDryUnit.corBiblical,
-  VolumeDry$HomerBiblical._minorName: VolumeDryUnit.homerBiblical,
-  VolumeDry$EphahBiblical._minorName: VolumeDryUnit.ephahBiblical,
-  VolumeDry$SeahBiblical._minorName: VolumeDryUnit.seahBiblical,
-  VolumeDry$OmerBiblical._minorName: VolumeDryUnit.omerBiblical,
-  VolumeDry$CabBiblical._minorName: VolumeDryUnit.cabBiblical,
-  VolumeDry$LogBiblical._minorName: VolumeDryUnit.logBiblical,
+const volumeDryUnits = EnumValues({
+  VolumeDry$Barrel._minorName: VolumeDry.barrel,
+  VolumeDry$Liter._minorName: VolumeDry.liter,
+  VolumeDry$Pint._minorName: VolumeDry.pint,
+  VolumeDry$Quart._minorName: VolumeDry.quart,
+  VolumeDry$Peck._minorName: VolumeDry.peck,
+  VolumeDry$Bushel._minorName: VolumeDry.bushel,
+  VolumeDry$CorBiblical._minorName: VolumeDry.corBiblical,
+  VolumeDry$HomerBiblical._minorName: VolumeDry.homerBiblical,
+  VolumeDry$EphahBiblical._minorName: VolumeDry.ephahBiblical,
+  VolumeDry$SeahBiblical._minorName: VolumeDry.seahBiblical,
+  VolumeDry$OmerBiblical._minorName: VolumeDry.omerBiblical,
+  VolumeDry$CabBiblical._minorName: VolumeDry.cabBiblical,
+  VolumeDry$LogBiblical._minorName: VolumeDry.logBiblical,
 });

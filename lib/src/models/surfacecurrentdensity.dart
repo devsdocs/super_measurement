@@ -18,10 +18,10 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
       _checkJson(
         _majorName,
         json,
-        surfaceCurrentDensityUnitValues,
+        surfaceCurrentDensityUnits,
       )
-          ? surfaceCurrentDensityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? surfaceCurrentDensityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -85,6 +85,30 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
   String get majorName => _majorName;
 
   static const _majorName = 'surfaceCurrentDensity';
+
+  static const amperePerMeterSquare =
+      SurfaceCurrentDensity$AmperePerMeterSquare();
+  static const amperePerCentimeterSquare =
+      SurfaceCurrentDensity$AmperePerCentimeterSquare();
+  static const amperePerInchSquare =
+      SurfaceCurrentDensity$AmperePerInchSquare();
+  static const amperePerMilSquare = SurfaceCurrentDensity$AmperePerMilSquare();
+  static const amperePerCicularMil =
+      SurfaceCurrentDensity$AmperePerCicularMil();
+  static const abamperePerCentimeterSquare =
+      SurfaceCurrentDensity$AbamperePerCentimeterSquare();
+
+  @override
+  List<SurfaceCurrentDensity> get units => values;
+
+  static const values = [
+    amperePerMeterSquare,
+    amperePerCentimeterSquare,
+    amperePerInchSquare,
+    amperePerMilSquare,
+    amperePerCicularMil,
+    abamperePerCentimeterSquare,
+  ];
 }
 
 /// Unit of [SurfaceCurrentDensity]
@@ -489,43 +513,17 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
       };
 }
 
-enum SurfaceCurrentDensityUnit {
-  amperePerMeterSquare._(
-    SurfaceCurrentDensity$AmperePerMeterSquare(),
-  ),
-  amperePerCentimeterSquare._(
-    SurfaceCurrentDensity$AmperePerCentimeterSquare(),
-  ),
-  amperePerInchSquare._(
-    SurfaceCurrentDensity$AmperePerInchSquare(),
-  ),
-  amperePerMilSquare._(
-    SurfaceCurrentDensity$AmperePerMilSquare(),
-  ),
-  amperePerCicularMil._(
-    SurfaceCurrentDensity$AmperePerCicularMil(),
-  ),
-  abamperePerCentimeterSquare._(
-    SurfaceCurrentDensity$AbamperePerCentimeterSquare(),
-  ),
-  ;
-
-  const SurfaceCurrentDensityUnit._(this.construct);
-
-  final SurfaceCurrentDensity construct;
-}
-
-const surfaceCurrentDensityUnitValues = _EnumValues({
+const surfaceCurrentDensityUnits = EnumValues({
   SurfaceCurrentDensity$AmperePerMeterSquare._minorName:
-      SurfaceCurrentDensityUnit.amperePerMeterSquare,
+      SurfaceCurrentDensity.amperePerMeterSquare,
   SurfaceCurrentDensity$AmperePerCentimeterSquare._minorName:
-      SurfaceCurrentDensityUnit.amperePerCentimeterSquare,
+      SurfaceCurrentDensity.amperePerCentimeterSquare,
   SurfaceCurrentDensity$AmperePerInchSquare._minorName:
-      SurfaceCurrentDensityUnit.amperePerInchSquare,
+      SurfaceCurrentDensity.amperePerInchSquare,
   SurfaceCurrentDensity$AmperePerMilSquare._minorName:
-      SurfaceCurrentDensityUnit.amperePerMilSquare,
+      SurfaceCurrentDensity.amperePerMilSquare,
   SurfaceCurrentDensity$AmperePerCicularMil._minorName:
-      SurfaceCurrentDensityUnit.amperePerCicularMil,
+      SurfaceCurrentDensity.amperePerCicularMil,
   SurfaceCurrentDensity$AbamperePerCentimeterSquare._minorName:
-      SurfaceCurrentDensityUnit.abamperePerCentimeterSquare,
+      SurfaceCurrentDensity.abamperePerCentimeterSquare,
 });

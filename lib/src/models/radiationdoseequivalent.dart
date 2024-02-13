@@ -21,10 +21,10 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
       _checkJson(
         _majorName,
         json,
-        radiationDoseEquivalentUnitValues,
+        radiationDoseEquivalentUnits,
       )
-          ? radiationDoseEquivalentUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? radiationDoseEquivalentUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -115,6 +115,37 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
   String get majorName => _majorName;
 
   static const _majorName = 'radiationDoseEquivalent';
+
+  static const sievert = RadiationDoseEquivalent$Sievert();
+  static const millisievert = RadiationDoseEquivalent$Millisievert();
+  static const microsievert = RadiationDoseEquivalent$Microsievert();
+  static const joulePerKilogram = RadiationDoseEquivalent$JoulePerKilogram();
+  static const meterSquarePerSecondSquare =
+      RadiationDoseEquivalent$MeterSquarePerSecondSquare();
+  static const remRoentgenEqMan = RadiationDoseEquivalent$RemRoentgenEqMan();
+  static const millirem = RadiationDoseEquivalent$Millirem();
+  static const intensityMillicurie =
+      RadiationDoseEquivalent$IntensityMillicurie();
+  static const grayWr1XRayGammaRayElectrons =
+      RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons();
+  static const grayWr20AlphaParticles =
+      RadiationDoseEquivalent$GrayWr20AlphaParticles();
+
+  @override
+  List<RadiationDoseEquivalent> get units => values;
+
+  static const values = [
+    sievert,
+    millisievert,
+    microsievert,
+    joulePerKilogram,
+    meterSquarePerSecondSquare,
+    remRoentgenEqMan,
+    millirem,
+    intensityMillicurie,
+    grayWr1XRayGammaRayElectrons,
+    grayWr20AlphaParticles,
+  ];
 }
 
 /// Unit of [RadiationDoseEquivalent]
@@ -785,63 +816,23 @@ final class RadiationDoseEquivalent$GrayWr20AlphaParticles
       };
 }
 
-enum RadiationDoseEquivalentUnit {
-  sievert._(
-    RadiationDoseEquivalent$Sievert(),
-  ),
-  millisievert._(
-    RadiationDoseEquivalent$Millisievert(),
-  ),
-  microsievert._(
-    RadiationDoseEquivalent$Microsievert(),
-  ),
-  joulePerKilogram._(
-    RadiationDoseEquivalent$JoulePerKilogram(),
-  ),
-  meterSquarePerSecondSquare._(
-    RadiationDoseEquivalent$MeterSquarePerSecondSquare(),
-  ),
-  remRoentgenEqMan._(
-    RadiationDoseEquivalent$RemRoentgenEqMan(),
-  ),
-  millirem._(
-    RadiationDoseEquivalent$Millirem(),
-  ),
-  intensityMillicurie._(
-    RadiationDoseEquivalent$IntensityMillicurie(),
-  ),
-  grayWr1XRayGammaRayElectrons._(
-    RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons(),
-  ),
-  grayWr20AlphaParticles._(
-    RadiationDoseEquivalent$GrayWr20AlphaParticles(),
-  ),
-  ;
-
-  const RadiationDoseEquivalentUnit._(this.construct);
-
-  final RadiationDoseEquivalent construct;
-}
-
-const radiationDoseEquivalentUnitValues = _EnumValues({
-  RadiationDoseEquivalent$Sievert._minorName:
-      RadiationDoseEquivalentUnit.sievert,
+const radiationDoseEquivalentUnits = EnumValues({
+  RadiationDoseEquivalent$Sievert._minorName: RadiationDoseEquivalent.sievert,
   RadiationDoseEquivalent$Millisievert._minorName:
-      RadiationDoseEquivalentUnit.millisievert,
+      RadiationDoseEquivalent.millisievert,
   RadiationDoseEquivalent$Microsievert._minorName:
-      RadiationDoseEquivalentUnit.microsievert,
+      RadiationDoseEquivalent.microsievert,
   RadiationDoseEquivalent$JoulePerKilogram._minorName:
-      RadiationDoseEquivalentUnit.joulePerKilogram,
+      RadiationDoseEquivalent.joulePerKilogram,
   RadiationDoseEquivalent$MeterSquarePerSecondSquare._minorName:
-      RadiationDoseEquivalentUnit.meterSquarePerSecondSquare,
+      RadiationDoseEquivalent.meterSquarePerSecondSquare,
   RadiationDoseEquivalent$RemRoentgenEqMan._minorName:
-      RadiationDoseEquivalentUnit.remRoentgenEqMan,
-  RadiationDoseEquivalent$Millirem._minorName:
-      RadiationDoseEquivalentUnit.millirem,
+      RadiationDoseEquivalent.remRoentgenEqMan,
+  RadiationDoseEquivalent$Millirem._minorName: RadiationDoseEquivalent.millirem,
   RadiationDoseEquivalent$IntensityMillicurie._minorName:
-      RadiationDoseEquivalentUnit.intensityMillicurie,
+      RadiationDoseEquivalent.intensityMillicurie,
   RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons._minorName:
-      RadiationDoseEquivalentUnit.grayWr1XRayGammaRayElectrons,
+      RadiationDoseEquivalent.grayWr1XRayGammaRayElectrons,
   RadiationDoseEquivalent$GrayWr20AlphaParticles._minorName:
-      RadiationDoseEquivalentUnit.grayWr20AlphaParticles,
+      RadiationDoseEquivalent.grayWr20AlphaParticles,
 });

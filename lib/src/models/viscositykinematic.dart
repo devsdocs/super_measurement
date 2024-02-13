@@ -23,10 +23,10 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
   factory ViscosityKinematic.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        viscosityKinematicUnitValues,
+        viscosityKinematicUnits,
       )
-          ? viscosityKinematicUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? viscosityKinematicUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -177,6 +177,57 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
   String get majorName => _majorName;
 
   static const _majorName = 'viscosityKinematic';
+
+  static const exastoke = ViscosityKinematic$Exastoke();
+  static const petastoke = ViscosityKinematic$Petastoke();
+  static const terastoke = ViscosityKinematic$Terastoke();
+  static const gigastoke = ViscosityKinematic$Gigastoke();
+  static const megastoke = ViscosityKinematic$Megastoke();
+  static const kilostoke = ViscosityKinematic$Kilostoke();
+  static const hectostoke = ViscosityKinematic$Hectostoke();
+  static const dekastoke = ViscosityKinematic$Dekastoke();
+  static const stoke = ViscosityKinematic$Stoke();
+  static const decistoke = ViscosityKinematic$Decistoke();
+  static const centistoke = ViscosityKinematic$Centistoke();
+  static const millistoke = ViscosityKinematic$Millistoke();
+  static const microstoke = ViscosityKinematic$Microstoke();
+  static const nanostoke = ViscosityKinematic$Nanostoke();
+  static const picostoke = ViscosityKinematic$Picostoke();
+  static const femtostoke = ViscosityKinematic$Femtostoke();
+  static const attostoke = ViscosityKinematic$Attostoke();
+  static const meterSquarePerSecond = ViscosityKinematic$MeterSquarePerSecond();
+  static const centimeterSquarePerSecond =
+      ViscosityKinematic$CentimeterSquarePerSecond();
+  static const millimeterSquarePerSecond =
+      ViscosityKinematic$MillimeterSquarePerSecond();
+  static const footSquarePerSecond = ViscosityKinematic$FootSquarePerSecond();
+
+  @override
+  List<ViscosityKinematic> get units => values;
+
+  static const values = [
+    exastoke,
+    petastoke,
+    terastoke,
+    gigastoke,
+    megastoke,
+    kilostoke,
+    hectostoke,
+    dekastoke,
+    stoke,
+    decistoke,
+    centistoke,
+    millistoke,
+    microstoke,
+    nanostoke,
+    picostoke,
+    femtostoke,
+    attostoke,
+    meterSquarePerSecond,
+    centimeterSquarePerSecond,
+    millimeterSquarePerSecond,
+    footSquarePerSecond,
+  ];
 }
 
 /// Unit of [ViscosityKinematic]
@@ -1565,101 +1616,30 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
       };
 }
 
-enum ViscosityKinematicUnit {
-  exastoke._(
-    ViscosityKinematic$Exastoke(),
-  ),
-  petastoke._(
-    ViscosityKinematic$Petastoke(),
-  ),
-  terastoke._(
-    ViscosityKinematic$Terastoke(),
-  ),
-  gigastoke._(
-    ViscosityKinematic$Gigastoke(),
-  ),
-  megastoke._(
-    ViscosityKinematic$Megastoke(),
-  ),
-  kilostoke._(
-    ViscosityKinematic$Kilostoke(),
-  ),
-  hectostoke._(
-    ViscosityKinematic$Hectostoke(),
-  ),
-  dekastoke._(
-    ViscosityKinematic$Dekastoke(),
-  ),
-  stoke._(
-    ViscosityKinematic$Stoke(),
-  ),
-  decistoke._(
-    ViscosityKinematic$Decistoke(),
-  ),
-  centistoke._(
-    ViscosityKinematic$Centistoke(),
-  ),
-  millistoke._(
-    ViscosityKinematic$Millistoke(),
-  ),
-  microstoke._(
-    ViscosityKinematic$Microstoke(),
-  ),
-  nanostoke._(
-    ViscosityKinematic$Nanostoke(),
-  ),
-  picostoke._(
-    ViscosityKinematic$Picostoke(),
-  ),
-  femtostoke._(
-    ViscosityKinematic$Femtostoke(),
-  ),
-  attostoke._(
-    ViscosityKinematic$Attostoke(),
-  ),
-  meterSquarePerSecond._(
-    ViscosityKinematic$MeterSquarePerSecond(),
-  ),
-  centimeterSquarePerSecond._(
-    ViscosityKinematic$CentimeterSquarePerSecond(),
-  ),
-  millimeterSquarePerSecond._(
-    ViscosityKinematic$MillimeterSquarePerSecond(),
-  ),
-  footSquarePerSecond._(
-    ViscosityKinematic$FootSquarePerSecond(),
-  ),
-  ;
-
-  const ViscosityKinematicUnit._(this.construct);
-
-  final ViscosityKinematic construct;
-}
-
-const viscosityKinematicUnitValues = _EnumValues({
-  ViscosityKinematic$Exastoke._minorName: ViscosityKinematicUnit.exastoke,
-  ViscosityKinematic$Petastoke._minorName: ViscosityKinematicUnit.petastoke,
-  ViscosityKinematic$Terastoke._minorName: ViscosityKinematicUnit.terastoke,
-  ViscosityKinematic$Gigastoke._minorName: ViscosityKinematicUnit.gigastoke,
-  ViscosityKinematic$Megastoke._minorName: ViscosityKinematicUnit.megastoke,
-  ViscosityKinematic$Kilostoke._minorName: ViscosityKinematicUnit.kilostoke,
-  ViscosityKinematic$Hectostoke._minorName: ViscosityKinematicUnit.hectostoke,
-  ViscosityKinematic$Dekastoke._minorName: ViscosityKinematicUnit.dekastoke,
-  ViscosityKinematic$Stoke._minorName: ViscosityKinematicUnit.stoke,
-  ViscosityKinematic$Decistoke._minorName: ViscosityKinematicUnit.decistoke,
-  ViscosityKinematic$Centistoke._minorName: ViscosityKinematicUnit.centistoke,
-  ViscosityKinematic$Millistoke._minorName: ViscosityKinematicUnit.millistoke,
-  ViscosityKinematic$Microstoke._minorName: ViscosityKinematicUnit.microstoke,
-  ViscosityKinematic$Nanostoke._minorName: ViscosityKinematicUnit.nanostoke,
-  ViscosityKinematic$Picostoke._minorName: ViscosityKinematicUnit.picostoke,
-  ViscosityKinematic$Femtostoke._minorName: ViscosityKinematicUnit.femtostoke,
-  ViscosityKinematic$Attostoke._minorName: ViscosityKinematicUnit.attostoke,
+const viscosityKinematicUnits = EnumValues({
+  ViscosityKinematic$Exastoke._minorName: ViscosityKinematic.exastoke,
+  ViscosityKinematic$Petastoke._minorName: ViscosityKinematic.petastoke,
+  ViscosityKinematic$Terastoke._minorName: ViscosityKinematic.terastoke,
+  ViscosityKinematic$Gigastoke._minorName: ViscosityKinematic.gigastoke,
+  ViscosityKinematic$Megastoke._minorName: ViscosityKinematic.megastoke,
+  ViscosityKinematic$Kilostoke._minorName: ViscosityKinematic.kilostoke,
+  ViscosityKinematic$Hectostoke._minorName: ViscosityKinematic.hectostoke,
+  ViscosityKinematic$Dekastoke._minorName: ViscosityKinematic.dekastoke,
+  ViscosityKinematic$Stoke._minorName: ViscosityKinematic.stoke,
+  ViscosityKinematic$Decistoke._minorName: ViscosityKinematic.decistoke,
+  ViscosityKinematic$Centistoke._minorName: ViscosityKinematic.centistoke,
+  ViscosityKinematic$Millistoke._minorName: ViscosityKinematic.millistoke,
+  ViscosityKinematic$Microstoke._minorName: ViscosityKinematic.microstoke,
+  ViscosityKinematic$Nanostoke._minorName: ViscosityKinematic.nanostoke,
+  ViscosityKinematic$Picostoke._minorName: ViscosityKinematic.picostoke,
+  ViscosityKinematic$Femtostoke._minorName: ViscosityKinematic.femtostoke,
+  ViscosityKinematic$Attostoke._minorName: ViscosityKinematic.attostoke,
   ViscosityKinematic$MeterSquarePerSecond._minorName:
-      ViscosityKinematicUnit.meterSquarePerSecond,
+      ViscosityKinematic.meterSquarePerSecond,
   ViscosityKinematic$CentimeterSquarePerSecond._minorName:
-      ViscosityKinematicUnit.centimeterSquarePerSecond,
+      ViscosityKinematic.centimeterSquarePerSecond,
   ViscosityKinematic$MillimeterSquarePerSecond._minorName:
-      ViscosityKinematicUnit.millimeterSquarePerSecond,
+      ViscosityKinematic.millimeterSquarePerSecond,
   ViscosityKinematic$FootSquarePerSecond._minorName:
-      ViscosityKinematicUnit.footSquarePerSecond,
+      ViscosityKinematic.footSquarePerSecond,
 });

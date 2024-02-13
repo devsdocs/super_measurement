@@ -93,7 +93,7 @@ Future<void> main() async {
 
   generateModels();
   generateExtension();
-  // generateExample();
+  generateExample();
   generateReadme();
 
   await Process.run('dart', ['format', '.']);

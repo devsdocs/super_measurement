@@ -15,10 +15,10 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
       _checkJson(
         _majorName,
         json,
-        digitalImageResolutionUnitValues,
+        digitalImageResolutionUnits,
       )
-          ? digitalImageResolutionUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? digitalImageResolutionUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -68,6 +68,21 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
   String get majorName => _majorName;
 
   static const _majorName = 'digitalImageResolution';
+
+  static const dotPerInch = DigitalImageResolution$DotPerInch();
+  static const dotPerMeter = DigitalImageResolution$DotPerMeter();
+  static const dotPerMillimeter = DigitalImageResolution$DotPerMillimeter();
+  static const pixelPerInch = DigitalImageResolution$PixelPerInch();
+
+  @override
+  List<DigitalImageResolution> get units => values;
+
+  static const values = [
+    dotPerInch,
+    dotPerMeter,
+    dotPerMillimeter,
+    pixelPerInch,
+  ];
 }
 
 /// Unit of [DigitalImageResolution]
@@ -335,33 +350,13 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
       };
 }
 
-enum DigitalImageResolutionUnit {
-  dotPerInch._(
-    DigitalImageResolution$DotPerInch(),
-  ),
-  dotPerMeter._(
-    DigitalImageResolution$DotPerMeter(),
-  ),
-  dotPerMillimeter._(
-    DigitalImageResolution$DotPerMillimeter(),
-  ),
-  pixelPerInch._(
-    DigitalImageResolution$PixelPerInch(),
-  ),
-  ;
-
-  const DigitalImageResolutionUnit._(this.construct);
-
-  final DigitalImageResolution construct;
-}
-
-const digitalImageResolutionUnitValues = _EnumValues({
+const digitalImageResolutionUnits = EnumValues({
   DigitalImageResolution$DotPerInch._minorName:
-      DigitalImageResolutionUnit.dotPerInch,
+      DigitalImageResolution.dotPerInch,
   DigitalImageResolution$DotPerMeter._minorName:
-      DigitalImageResolutionUnit.dotPerMeter,
+      DigitalImageResolution.dotPerMeter,
   DigitalImageResolution$DotPerMillimeter._minorName:
-      DigitalImageResolutionUnit.dotPerMillimeter,
+      DigitalImageResolution.dotPerMillimeter,
   DigitalImageResolution$PixelPerInch._minorName:
-      DigitalImageResolutionUnit.pixelPerInch,
+      DigitalImageResolution.pixelPerInch,
 });

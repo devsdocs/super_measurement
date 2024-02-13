@@ -16,10 +16,10 @@ sealed class HeatCapacity extends Unit<HeatCapacity> {
   factory HeatCapacity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        heatCapacityUnitValues,
+        heatCapacityUnits,
       )
-          ? heatCapacityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? heatCapacityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -102,6 +102,33 @@ sealed class HeatCapacity extends Unit<HeatCapacity> {
   String get majorName => _majorName;
 
   static const _majorName = 'heatCapacity';
+
+  static const kilojoulePerK = HeatCapacity$KilojoulePerK();
+  static const kilojoulePerDegreeC = HeatCapacity$KilojoulePerDegreeC();
+  static const joulePerK = HeatCapacity$JoulePerK();
+  static const joulePerDegreeC = HeatCapacity$JoulePerDegreeC();
+  static const kilocaloriePerDegreeC = HeatCapacity$KilocaloriePerDegreeC();
+  static const caloriePerDegreeC = HeatCapacity$CaloriePerDegreeC();
+  static const bTUPerDegreeC = HeatCapacity$BTUPerDegreeC();
+  static const bTUPerDegreeF = HeatCapacity$BTUPerDegreeF();
+  static const bTUPerDegreeR = HeatCapacity$BTUPerDegreeR();
+  static const cHUPerDegreeC = HeatCapacity$CHUPerDegreeC();
+
+  @override
+  List<HeatCapacity> get units => values;
+
+  static const values = [
+    kilojoulePerK,
+    kilojoulePerDegreeC,
+    joulePerK,
+    joulePerDegreeC,
+    kilocaloriePerDegreeC,
+    caloriePerDegreeC,
+    bTUPerDegreeC,
+    bTUPerDegreeF,
+    bTUPerDegreeR,
+    cHUPerDegreeC,
+  ];
 }
 
 /// Unit of [HeatCapacity]
@@ -758,55 +785,16 @@ final class HeatCapacity$CHUPerDegreeC extends HeatCapacity {
       };
 }
 
-enum HeatCapacityUnit {
-  kilojoulePerK._(
-    HeatCapacity$KilojoulePerK(),
-  ),
-  kilojoulePerDegreeC._(
-    HeatCapacity$KilojoulePerDegreeC(),
-  ),
-  joulePerK._(
-    HeatCapacity$JoulePerK(),
-  ),
-  joulePerDegreeC._(
-    HeatCapacity$JoulePerDegreeC(),
-  ),
-  kilocaloriePerDegreeC._(
-    HeatCapacity$KilocaloriePerDegreeC(),
-  ),
-  caloriePerDegreeC._(
-    HeatCapacity$CaloriePerDegreeC(),
-  ),
-  bTUPerDegreeC._(
-    HeatCapacity$BTUPerDegreeC(),
-  ),
-  bTUPerDegreeF._(
-    HeatCapacity$BTUPerDegreeF(),
-  ),
-  bTUPerDegreeR._(
-    HeatCapacity$BTUPerDegreeR(),
-  ),
-  cHUPerDegreeC._(
-    HeatCapacity$CHUPerDegreeC(),
-  ),
-  ;
-
-  const HeatCapacityUnit._(this.construct);
-
-  final HeatCapacity construct;
-}
-
-const heatCapacityUnitValues = _EnumValues({
-  HeatCapacity$KilojoulePerK._minorName: HeatCapacityUnit.kilojoulePerK,
-  HeatCapacity$KilojoulePerDegreeC._minorName:
-      HeatCapacityUnit.kilojoulePerDegreeC,
-  HeatCapacity$JoulePerK._minorName: HeatCapacityUnit.joulePerK,
-  HeatCapacity$JoulePerDegreeC._minorName: HeatCapacityUnit.joulePerDegreeC,
+const heatCapacityUnits = EnumValues({
+  HeatCapacity$KilojoulePerK._minorName: HeatCapacity.kilojoulePerK,
+  HeatCapacity$KilojoulePerDegreeC._minorName: HeatCapacity.kilojoulePerDegreeC,
+  HeatCapacity$JoulePerK._minorName: HeatCapacity.joulePerK,
+  HeatCapacity$JoulePerDegreeC._minorName: HeatCapacity.joulePerDegreeC,
   HeatCapacity$KilocaloriePerDegreeC._minorName:
-      HeatCapacityUnit.kilocaloriePerDegreeC,
-  HeatCapacity$CaloriePerDegreeC._minorName: HeatCapacityUnit.caloriePerDegreeC,
-  HeatCapacity$BTUPerDegreeC._minorName: HeatCapacityUnit.bTUPerDegreeC,
-  HeatCapacity$BTUPerDegreeF._minorName: HeatCapacityUnit.bTUPerDegreeF,
-  HeatCapacity$BTUPerDegreeR._minorName: HeatCapacityUnit.bTUPerDegreeR,
-  HeatCapacity$CHUPerDegreeC._minorName: HeatCapacityUnit.cHUPerDegreeC,
+      HeatCapacity.kilocaloriePerDegreeC,
+  HeatCapacity$CaloriePerDegreeC._minorName: HeatCapacity.caloriePerDegreeC,
+  HeatCapacity$BTUPerDegreeC._minorName: HeatCapacity.bTUPerDegreeC,
+  HeatCapacity$BTUPerDegreeF._minorName: HeatCapacity.bTUPerDegreeF,
+  HeatCapacity$BTUPerDegreeR._minorName: HeatCapacity.bTUPerDegreeR,
+  HeatCapacity$CHUPerDegreeC._minorName: HeatCapacity.cHUPerDegreeC,
 });

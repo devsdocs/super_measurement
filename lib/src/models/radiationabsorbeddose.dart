@@ -28,10 +28,10 @@ sealed class RadiationAbsorbedDose extends Unit<RadiationAbsorbedDose> {
       _checkJson(
         _majorName,
         json,
-        radiationAbsorbedDoseUnitValues,
+        radiationAbsorbedDoseUnits,
       )
-          ? radiationAbsorbedDoseUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? radiationAbsorbedDoseUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -219,6 +219,66 @@ sealed class RadiationAbsorbedDose extends Unit<RadiationAbsorbedDose> {
   String get majorName => _majorName;
 
   static const _majorName = 'radiationAbsorbedDose';
+
+  static const rad = RadiationAbsorbedDose$Rad();
+  static const millirad = RadiationAbsorbedDose$Millirad();
+  static const joulePerKilogram = RadiationAbsorbedDose$JoulePerKilogram();
+  static const joulePerGram = RadiationAbsorbedDose$JoulePerGram();
+  static const joulePerCentigram = RadiationAbsorbedDose$JoulePerCentigram();
+  static const joulePerMilligram = RadiationAbsorbedDose$JoulePerMilligram();
+  static const ergPerGram = RadiationAbsorbedDose$ErgPerGram();
+  static const repRoentgenEqPhysical =
+      RadiationAbsorbedDose$RepRoentgenEqPhysical();
+  static const parker = RadiationAbsorbedDose$Parker();
+  static const exagray = RadiationAbsorbedDose$Exagray();
+  static const petagray = RadiationAbsorbedDose$Petagray();
+  static const teragray = RadiationAbsorbedDose$Teragray();
+  static const gigagray = RadiationAbsorbedDose$Gigagray();
+  static const megagray = RadiationAbsorbedDose$Megagray();
+  static const kilogray = RadiationAbsorbedDose$Kilogray();
+  static const hectogray = RadiationAbsorbedDose$Hectogray();
+  static const dekagray = RadiationAbsorbedDose$Dekagray();
+  static const gray = RadiationAbsorbedDose$Gray();
+  static const decigray = RadiationAbsorbedDose$Decigray();
+  static const centigray = RadiationAbsorbedDose$Centigray();
+  static const milligray = RadiationAbsorbedDose$Milligray();
+  static const microgray = RadiationAbsorbedDose$Microgray();
+  static const nanogray = RadiationAbsorbedDose$Nanogray();
+  static const picogray = RadiationAbsorbedDose$Picogray();
+  static const femtogray = RadiationAbsorbedDose$Femtogray();
+  static const attogray = RadiationAbsorbedDose$Attogray();
+
+  @override
+  List<RadiationAbsorbedDose> get units => values;
+
+  static const values = [
+    rad,
+    millirad,
+    joulePerKilogram,
+    joulePerGram,
+    joulePerCentigram,
+    joulePerMilligram,
+    ergPerGram,
+    repRoentgenEqPhysical,
+    parker,
+    exagray,
+    petagray,
+    teragray,
+    gigagray,
+    megagray,
+    kilogray,
+    hectogray,
+    dekagray,
+    gray,
+    decigray,
+    centigray,
+    milligray,
+    microgray,
+    nanogray,
+    picogray,
+    femtogray,
+    attogray,
+  ];
 }
 
 /// Unit of [RadiationAbsorbedDose]
@@ -1939,128 +1999,36 @@ final class RadiationAbsorbedDose$Attogray extends RadiationAbsorbedDose {
       };
 }
 
-enum RadiationAbsorbedDoseUnit {
-  rad._(
-    RadiationAbsorbedDose$Rad(),
-  ),
-  millirad._(
-    RadiationAbsorbedDose$Millirad(),
-  ),
-  joulePerKilogram._(
-    RadiationAbsorbedDose$JoulePerKilogram(),
-  ),
-  joulePerGram._(
-    RadiationAbsorbedDose$JoulePerGram(),
-  ),
-  joulePerCentigram._(
-    RadiationAbsorbedDose$JoulePerCentigram(),
-  ),
-  joulePerMilligram._(
-    RadiationAbsorbedDose$JoulePerMilligram(),
-  ),
-  ergPerGram._(
-    RadiationAbsorbedDose$ErgPerGram(),
-  ),
-  repRoentgenEqPhysical._(
-    RadiationAbsorbedDose$RepRoentgenEqPhysical(),
-  ),
-  parker._(
-    RadiationAbsorbedDose$Parker(),
-  ),
-  exagray._(
-    RadiationAbsorbedDose$Exagray(),
-  ),
-  petagray._(
-    RadiationAbsorbedDose$Petagray(),
-  ),
-  teragray._(
-    RadiationAbsorbedDose$Teragray(),
-  ),
-  gigagray._(
-    RadiationAbsorbedDose$Gigagray(),
-  ),
-  megagray._(
-    RadiationAbsorbedDose$Megagray(),
-  ),
-  kilogray._(
-    RadiationAbsorbedDose$Kilogray(),
-  ),
-  hectogray._(
-    RadiationAbsorbedDose$Hectogray(),
-  ),
-  dekagray._(
-    RadiationAbsorbedDose$Dekagray(),
-  ),
-  gray._(
-    RadiationAbsorbedDose$Gray(),
-  ),
-  decigray._(
-    RadiationAbsorbedDose$Decigray(),
-  ),
-  centigray._(
-    RadiationAbsorbedDose$Centigray(),
-  ),
-  milligray._(
-    RadiationAbsorbedDose$Milligray(),
-  ),
-  microgray._(
-    RadiationAbsorbedDose$Microgray(),
-  ),
-  nanogray._(
-    RadiationAbsorbedDose$Nanogray(),
-  ),
-  picogray._(
-    RadiationAbsorbedDose$Picogray(),
-  ),
-  femtogray._(
-    RadiationAbsorbedDose$Femtogray(),
-  ),
-  attogray._(
-    RadiationAbsorbedDose$Attogray(),
-  ),
-  ;
-
-  const RadiationAbsorbedDoseUnit._(this.construct);
-
-  final RadiationAbsorbedDose construct;
-}
-
-const radiationAbsorbedDoseUnitValues = _EnumValues({
-  RadiationAbsorbedDose$Rad._minorName: RadiationAbsorbedDoseUnit.rad,
-  RadiationAbsorbedDose$Millirad._minorName: RadiationAbsorbedDoseUnit.millirad,
+const radiationAbsorbedDoseUnits = EnumValues({
+  RadiationAbsorbedDose$Rad._minorName: RadiationAbsorbedDose.rad,
+  RadiationAbsorbedDose$Millirad._minorName: RadiationAbsorbedDose.millirad,
   RadiationAbsorbedDose$JoulePerKilogram._minorName:
-      RadiationAbsorbedDoseUnit.joulePerKilogram,
+      RadiationAbsorbedDose.joulePerKilogram,
   RadiationAbsorbedDose$JoulePerGram._minorName:
-      RadiationAbsorbedDoseUnit.joulePerGram,
+      RadiationAbsorbedDose.joulePerGram,
   RadiationAbsorbedDose$JoulePerCentigram._minorName:
-      RadiationAbsorbedDoseUnit.joulePerCentigram,
+      RadiationAbsorbedDose.joulePerCentigram,
   RadiationAbsorbedDose$JoulePerMilligram._minorName:
-      RadiationAbsorbedDoseUnit.joulePerMilligram,
-  RadiationAbsorbedDose$ErgPerGram._minorName:
-      RadiationAbsorbedDoseUnit.ergPerGram,
+      RadiationAbsorbedDose.joulePerMilligram,
+  RadiationAbsorbedDose$ErgPerGram._minorName: RadiationAbsorbedDose.ergPerGram,
   RadiationAbsorbedDose$RepRoentgenEqPhysical._minorName:
-      RadiationAbsorbedDoseUnit.repRoentgenEqPhysical,
-  RadiationAbsorbedDose$Parker._minorName: RadiationAbsorbedDoseUnit.parker,
-  RadiationAbsorbedDose$Exagray._minorName: RadiationAbsorbedDoseUnit.exagray,
-  RadiationAbsorbedDose$Petagray._minorName: RadiationAbsorbedDoseUnit.petagray,
-  RadiationAbsorbedDose$Teragray._minorName: RadiationAbsorbedDoseUnit.teragray,
-  RadiationAbsorbedDose$Gigagray._minorName: RadiationAbsorbedDoseUnit.gigagray,
-  RadiationAbsorbedDose$Megagray._minorName: RadiationAbsorbedDoseUnit.megagray,
-  RadiationAbsorbedDose$Kilogray._minorName: RadiationAbsorbedDoseUnit.kilogray,
-  RadiationAbsorbedDose$Hectogray._minorName:
-      RadiationAbsorbedDoseUnit.hectogray,
-  RadiationAbsorbedDose$Dekagray._minorName: RadiationAbsorbedDoseUnit.dekagray,
-  RadiationAbsorbedDose$Gray._minorName: RadiationAbsorbedDoseUnit.gray,
-  RadiationAbsorbedDose$Decigray._minorName: RadiationAbsorbedDoseUnit.decigray,
-  RadiationAbsorbedDose$Centigray._minorName:
-      RadiationAbsorbedDoseUnit.centigray,
-  RadiationAbsorbedDose$Milligray._minorName:
-      RadiationAbsorbedDoseUnit.milligray,
-  RadiationAbsorbedDose$Microgray._minorName:
-      RadiationAbsorbedDoseUnit.microgray,
-  RadiationAbsorbedDose$Nanogray._minorName: RadiationAbsorbedDoseUnit.nanogray,
-  RadiationAbsorbedDose$Picogray._minorName: RadiationAbsorbedDoseUnit.picogray,
-  RadiationAbsorbedDose$Femtogray._minorName:
-      RadiationAbsorbedDoseUnit.femtogray,
-  RadiationAbsorbedDose$Attogray._minorName: RadiationAbsorbedDoseUnit.attogray,
+      RadiationAbsorbedDose.repRoentgenEqPhysical,
+  RadiationAbsorbedDose$Parker._minorName: RadiationAbsorbedDose.parker,
+  RadiationAbsorbedDose$Exagray._minorName: RadiationAbsorbedDose.exagray,
+  RadiationAbsorbedDose$Petagray._minorName: RadiationAbsorbedDose.petagray,
+  RadiationAbsorbedDose$Teragray._minorName: RadiationAbsorbedDose.teragray,
+  RadiationAbsorbedDose$Gigagray._minorName: RadiationAbsorbedDose.gigagray,
+  RadiationAbsorbedDose$Megagray._minorName: RadiationAbsorbedDose.megagray,
+  RadiationAbsorbedDose$Kilogray._minorName: RadiationAbsorbedDose.kilogray,
+  RadiationAbsorbedDose$Hectogray._minorName: RadiationAbsorbedDose.hectogray,
+  RadiationAbsorbedDose$Dekagray._minorName: RadiationAbsorbedDose.dekagray,
+  RadiationAbsorbedDose$Gray._minorName: RadiationAbsorbedDose.gray,
+  RadiationAbsorbedDose$Decigray._minorName: RadiationAbsorbedDose.decigray,
+  RadiationAbsorbedDose$Centigray._minorName: RadiationAbsorbedDose.centigray,
+  RadiationAbsorbedDose$Milligray._minorName: RadiationAbsorbedDose.milligray,
+  RadiationAbsorbedDose$Microgray._minorName: RadiationAbsorbedDose.microgray,
+  RadiationAbsorbedDose$Nanogray._minorName: RadiationAbsorbedDose.nanogray,
+  RadiationAbsorbedDose$Picogray._minorName: RadiationAbsorbedDose.picogray,
+  RadiationAbsorbedDose$Femtogray._minorName: RadiationAbsorbedDose.femtogray,
+  RadiationAbsorbedDose$Attogray._minorName: RadiationAbsorbedDose.attogray,
 });

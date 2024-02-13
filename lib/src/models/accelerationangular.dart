@@ -16,10 +16,10 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
   factory AccelerationAngular.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        accelerationAngularUnitValues,
+        accelerationAngularUnits,
       )
-          ? accelerationAngularUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? accelerationAngularUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -76,6 +76,28 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
   String get majorName => _majorName;
 
   static const _majorName = 'accelerationAngular';
+
+  static const radianPerSecondSquare =
+      AccelerationAngular$RadianPerSecondSquare();
+  static const radianPerMinuteSquare =
+      AccelerationAngular$RadianPerMinuteSquare();
+  static const revolutionPerSecondSquare =
+      AccelerationAngular$RevolutionPerSecondSquare();
+  static const revolutionPerMinuteSecond =
+      AccelerationAngular$RevolutionPerMinuteSecond();
+  static const revolutionPerMinuteSquare =
+      AccelerationAngular$RevolutionPerMinuteSquare();
+
+  @override
+  List<AccelerationAngular> get units => values;
+
+  static const values = [
+    radianPerSecondSquare,
+    radianPerMinuteSquare,
+    revolutionPerSecondSquare,
+    revolutionPerMinuteSecond,
+    revolutionPerMinuteSquare,
+  ];
 }
 
 /// Unit of [AccelerationAngular]
@@ -413,38 +435,15 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
       };
 }
 
-enum AccelerationAngularUnit {
-  radianPerSecondSquare._(
-    AccelerationAngular$RadianPerSecondSquare(),
-  ),
-  radianPerMinuteSquare._(
-    AccelerationAngular$RadianPerMinuteSquare(),
-  ),
-  revolutionPerSecondSquare._(
-    AccelerationAngular$RevolutionPerSecondSquare(),
-  ),
-  revolutionPerMinuteSecond._(
-    AccelerationAngular$RevolutionPerMinuteSecond(),
-  ),
-  revolutionPerMinuteSquare._(
-    AccelerationAngular$RevolutionPerMinuteSquare(),
-  ),
-  ;
-
-  const AccelerationAngularUnit._(this.construct);
-
-  final AccelerationAngular construct;
-}
-
-const accelerationAngularUnitValues = _EnumValues({
+const accelerationAngularUnits = EnumValues({
   AccelerationAngular$RadianPerSecondSquare._minorName:
-      AccelerationAngularUnit.radianPerSecondSquare,
+      AccelerationAngular.radianPerSecondSquare,
   AccelerationAngular$RadianPerMinuteSquare._minorName:
-      AccelerationAngularUnit.radianPerMinuteSquare,
+      AccelerationAngular.radianPerMinuteSquare,
   AccelerationAngular$RevolutionPerSecondSquare._minorName:
-      AccelerationAngularUnit.revolutionPerSecondSquare,
+      AccelerationAngular.revolutionPerSecondSquare,
   AccelerationAngular$RevolutionPerMinuteSecond._minorName:
-      AccelerationAngularUnit.revolutionPerMinuteSecond,
+      AccelerationAngular.revolutionPerMinuteSecond,
   AccelerationAngular$RevolutionPerMinuteSquare._minorName:
-      AccelerationAngularUnit.revolutionPerMinuteSquare,
+      AccelerationAngular.revolutionPerMinuteSquare,
 });

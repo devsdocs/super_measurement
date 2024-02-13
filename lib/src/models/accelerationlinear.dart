@@ -27,10 +27,10 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
   factory AccelerationLinear.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        accelerationLinearUnitValues,
+        accelerationLinearUnits,
       )
-          ? accelerationLinearUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? accelerationLinearUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -176,6 +176,60 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
   String get majorName => _majorName;
 
   static const _majorName = 'accelerationLinear';
+
+  static const kilometerPerSecondSquare =
+      AccelerationLinear$KilometerPerSecondSquare();
+  static const hectometerPerSecondSquare =
+      AccelerationLinear$HectometerPerSecondSquare();
+  static const dekameterPerSecondSquare =
+      AccelerationLinear$DekameterPerSecondSquare();
+  static const meterPerSecondSquare = AccelerationLinear$MeterPerSecondSquare();
+  static const decimeterPerSecondSquare =
+      AccelerationLinear$DecimeterPerSecondSquare();
+  static const centimeterPerSecondSquare =
+      AccelerationLinear$CentimeterPerSecondSquare();
+  static const millimeterPerSecondSquare =
+      AccelerationLinear$MillimeterPerSecondSquare();
+  static const micrometerPerSecondSquare =
+      AccelerationLinear$MicrometerPerSecondSquare();
+  static const nanometerPerSecondSquare =
+      AccelerationLinear$NanometerPerSecondSquare();
+  static const picometerPerSecondSquare =
+      AccelerationLinear$PicometerPerSecondSquare();
+  static const femtometerPerSecondSquare =
+      AccelerationLinear$FemtometerPerSecondSquare();
+  static const attometerPerSecondSquare =
+      AccelerationLinear$AttometerPerSecondSquare();
+  static const g = AccelerationLinear$G();
+  static const gal = AccelerationLinear$Gal();
+  static const milePerSecondSquare = AccelerationLinear$MilePerSecondSquare();
+  static const yardPerSecondSquare = AccelerationLinear$YardPerSecondSquare();
+  static const footPerSecondSquare = AccelerationLinear$FootPerSecondSquare();
+  static const inchPerSecondSquare = AccelerationLinear$InchPerSecondSquare();
+
+  @override
+  List<AccelerationLinear> get units => values;
+
+  static const values = [
+    kilometerPerSecondSquare,
+    hectometerPerSecondSquare,
+    dekameterPerSecondSquare,
+    meterPerSecondSquare,
+    decimeterPerSecondSquare,
+    centimeterPerSecondSquare,
+    millimeterPerSecondSquare,
+    micrometerPerSecondSquare,
+    nanometerPerSecondSquare,
+    picometerPerSecondSquare,
+    femtometerPerSecondSquare,
+    attometerPerSecondSquare,
+    g,
+    gal,
+    milePerSecondSquare,
+    yardPerSecondSquare,
+    footPerSecondSquare,
+    inchPerSecondSquare,
+  ];
 }
 
 /// Unit of [AccelerationLinear]
@@ -1375,101 +1429,39 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
       };
 }
 
-enum AccelerationLinearUnit {
-  kilometerPerSecondSquare._(
-    AccelerationLinear$KilometerPerSecondSquare(),
-  ),
-  hectometerPerSecondSquare._(
-    AccelerationLinear$HectometerPerSecondSquare(),
-  ),
-  dekameterPerSecondSquare._(
-    AccelerationLinear$DekameterPerSecondSquare(),
-  ),
-  meterPerSecondSquare._(
-    AccelerationLinear$MeterPerSecondSquare(),
-  ),
-  decimeterPerSecondSquare._(
-    AccelerationLinear$DecimeterPerSecondSquare(),
-  ),
-  centimeterPerSecondSquare._(
-    AccelerationLinear$CentimeterPerSecondSquare(),
-  ),
-  millimeterPerSecondSquare._(
-    AccelerationLinear$MillimeterPerSecondSquare(),
-  ),
-  micrometerPerSecondSquare._(
-    AccelerationLinear$MicrometerPerSecondSquare(),
-  ),
-  nanometerPerSecondSquare._(
-    AccelerationLinear$NanometerPerSecondSquare(),
-  ),
-  picometerPerSecondSquare._(
-    AccelerationLinear$PicometerPerSecondSquare(),
-  ),
-  femtometerPerSecondSquare._(
-    AccelerationLinear$FemtometerPerSecondSquare(),
-  ),
-  attometerPerSecondSquare._(
-    AccelerationLinear$AttometerPerSecondSquare(),
-  ),
-  g._(
-    AccelerationLinear$G(),
-  ),
-  gal._(
-    AccelerationLinear$Gal(),
-  ),
-  milePerSecondSquare._(
-    AccelerationLinear$MilePerSecondSquare(),
-  ),
-  yardPerSecondSquare._(
-    AccelerationLinear$YardPerSecondSquare(),
-  ),
-  footPerSecondSquare._(
-    AccelerationLinear$FootPerSecondSquare(),
-  ),
-  inchPerSecondSquare._(
-    AccelerationLinear$InchPerSecondSquare(),
-  ),
-  ;
-
-  const AccelerationLinearUnit._(this.construct);
-
-  final AccelerationLinear construct;
-}
-
-const accelerationLinearUnitValues = _EnumValues({
+const accelerationLinearUnits = EnumValues({
   AccelerationLinear$KilometerPerSecondSquare._minorName:
-      AccelerationLinearUnit.kilometerPerSecondSquare,
+      AccelerationLinear.kilometerPerSecondSquare,
   AccelerationLinear$HectometerPerSecondSquare._minorName:
-      AccelerationLinearUnit.hectometerPerSecondSquare,
+      AccelerationLinear.hectometerPerSecondSquare,
   AccelerationLinear$DekameterPerSecondSquare._minorName:
-      AccelerationLinearUnit.dekameterPerSecondSquare,
+      AccelerationLinear.dekameterPerSecondSquare,
   AccelerationLinear$MeterPerSecondSquare._minorName:
-      AccelerationLinearUnit.meterPerSecondSquare,
+      AccelerationLinear.meterPerSecondSquare,
   AccelerationLinear$DecimeterPerSecondSquare._minorName:
-      AccelerationLinearUnit.decimeterPerSecondSquare,
+      AccelerationLinear.decimeterPerSecondSquare,
   AccelerationLinear$CentimeterPerSecondSquare._minorName:
-      AccelerationLinearUnit.centimeterPerSecondSquare,
+      AccelerationLinear.centimeterPerSecondSquare,
   AccelerationLinear$MillimeterPerSecondSquare._minorName:
-      AccelerationLinearUnit.millimeterPerSecondSquare,
+      AccelerationLinear.millimeterPerSecondSquare,
   AccelerationLinear$MicrometerPerSecondSquare._minorName:
-      AccelerationLinearUnit.micrometerPerSecondSquare,
+      AccelerationLinear.micrometerPerSecondSquare,
   AccelerationLinear$NanometerPerSecondSquare._minorName:
-      AccelerationLinearUnit.nanometerPerSecondSquare,
+      AccelerationLinear.nanometerPerSecondSquare,
   AccelerationLinear$PicometerPerSecondSquare._minorName:
-      AccelerationLinearUnit.picometerPerSecondSquare,
+      AccelerationLinear.picometerPerSecondSquare,
   AccelerationLinear$FemtometerPerSecondSquare._minorName:
-      AccelerationLinearUnit.femtometerPerSecondSquare,
+      AccelerationLinear.femtometerPerSecondSquare,
   AccelerationLinear$AttometerPerSecondSquare._minorName:
-      AccelerationLinearUnit.attometerPerSecondSquare,
-  AccelerationLinear$G._minorName: AccelerationLinearUnit.g,
-  AccelerationLinear$Gal._minorName: AccelerationLinearUnit.gal,
+      AccelerationLinear.attometerPerSecondSquare,
+  AccelerationLinear$G._minorName: AccelerationLinear.g,
+  AccelerationLinear$Gal._minorName: AccelerationLinear.gal,
   AccelerationLinear$MilePerSecondSquare._minorName:
-      AccelerationLinearUnit.milePerSecondSquare,
+      AccelerationLinear.milePerSecondSquare,
   AccelerationLinear$YardPerSecondSquare._minorName:
-      AccelerationLinearUnit.yardPerSecondSquare,
+      AccelerationLinear.yardPerSecondSquare,
   AccelerationLinear$FootPerSecondSquare._minorName:
-      AccelerationLinearUnit.footPerSecondSquare,
+      AccelerationLinear.footPerSecondSquare,
   AccelerationLinear$InchPerSecondSquare._minorName:
-      AccelerationLinearUnit.inchPerSecondSquare,
+      AccelerationLinear.inchPerSecondSquare,
 });

@@ -40,10 +40,9 @@ sealed class Flow extends Unit<Flow> {
   factory Flow.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        flowUnitValues,
+        flowUnits,
       )
-          ? flowUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? flowUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -414,6 +413,135 @@ sealed class Flow extends Unit<Flow> {
   String get majorName => _majorName;
 
   static const _majorName = 'flow';
+
+  static const gallonPerDay = Flow$GallonPerDay();
+  static const gallonPerHour = Flow$GallonPerHour();
+  static const gallonPerMinute = Flow$GallonPerMinute();
+  static const gallonPerSecond = Flow$GallonPerSecond();
+  static const gallonUKPerDay = Flow$GallonUKPerDay();
+  static const gallonUKPerHour = Flow$GallonUKPerHour();
+  static const gallonUKPerMinute = Flow$GallonUKPerMinute();
+  static const gallonUKPerSecond = Flow$GallonUKPerSecond();
+  static const barrelOilPerDay = Flow$BarrelOilPerDay();
+  static const barrelOilPerHour = Flow$BarrelOilPerHour();
+  static const barrelOilPerMinute = Flow$BarrelOilPerMinute();
+  static const barrelOilPerSecond = Flow$BarrelOilPerSecond();
+  static const acreFootPerYear = Flow$AcreFootPerYear();
+  static const acreFootPerDay = Flow$AcreFootPerDay();
+  static const acreFootPerHour = Flow$AcreFootPerHour();
+  static const hundredFootCubicPerDay = Flow$HundredFootCubicPerDay();
+  static const hundredFootCubicPerHour = Flow$HundredFootCubicPerHour();
+  static const hundredFootCubicPerMinute = Flow$HundredFootCubicPerMinute();
+  static const ouncePerHour = Flow$OuncePerHour();
+  static const ouncePerMinute = Flow$OuncePerMinute();
+  static const ouncePerSecond = Flow$OuncePerSecond();
+  static const ounceUKPerHour = Flow$OunceUKPerHour();
+  static const ounceUKPerMinute = Flow$OunceUKPerMinute();
+  static const ounceUKPerSecond = Flow$OunceUKPerSecond();
+  static const literPerDay = Flow$LiterPerDay();
+  static const literPerHour = Flow$LiterPerHour();
+  static const literPerMinute = Flow$LiterPerMinute();
+  static const literPerSecond = Flow$LiterPerSecond();
+  static const milliliterPerDay = Flow$MilliliterPerDay();
+  static const milliliterPerHour = Flow$MilliliterPerHour();
+  static const milliliterPerMinute = Flow$MilliliterPerMinute();
+  static const milliliterPerSecond = Flow$MilliliterPerSecond();
+  static const meterCubicPerDay = Flow$MeterCubicPerDay();
+  static const meterCubicPerHour = Flow$MeterCubicPerHour();
+  static const meterCubicPerMinute = Flow$MeterCubicPerMinute();
+  static const meterCubicPerSecond = Flow$MeterCubicPerSecond();
+  static const centimeterCubicPerDay = Flow$CentimeterCubicPerDay();
+  static const centimeterCubicPerHour = Flow$CentimeterCubicPerHour();
+  static const centimeterCubicPerMinute = Flow$CentimeterCubicPerMinute();
+  static const centimeterCubicPerSecond = Flow$CentimeterCubicPerSecond();
+  static const yardCubicPerHour = Flow$YardCubicPerHour();
+  static const yardCubicPerMinute = Flow$YardCubicPerMinute();
+  static const yardCubicPerSecond = Flow$YardCubicPerSecond();
+  static const footCubicPerHour = Flow$FootCubicPerHour();
+  static const footCubicPerMinute = Flow$FootCubicPerMinute();
+  static const footCubicPerSecond = Flow$FootCubicPerSecond();
+  static const inchCubicPerHour = Flow$InchCubicPerHour();
+  static const inchCubicPerMinute = Flow$InchCubicPerMinute();
+  static const inchCubicPerSecond = Flow$InchCubicPerSecond();
+  static const poundPerSecondGasolineAt155DegreeC =
+      Flow$PoundPerSecondGasolineAt155DegreeC();
+  static const poundPerMinuteGasolineAt155DegreeC =
+      Flow$PoundPerMinuteGasolineAt155DegreeC();
+  static const poundPerHourGasolineAt155DegreeC =
+      Flow$PoundPerHourGasolineAt155DegreeC();
+  static const poundPerDayGasolineAt155DegreeC =
+      Flow$PoundPerDayGasolineAt155DegreeC();
+  static const kilogramPerSecondGasolineAt155DegreeC =
+      Flow$KilogramPerSecondGasolineAt155DegreeC();
+  static const kilogramPerMinuteGasolineAt155DegreeC =
+      Flow$KilogramPerMinuteGasolineAt155DegreeC();
+  static const kilogramPerHourGasolineAt155DegreeC =
+      Flow$KilogramPerHourGasolineAt155DegreeC();
+  static const kilogramPerDayGasolineAt155DegreeC =
+      Flow$KilogramPerDayGasolineAt155DegreeC();
+
+  @override
+  List<Flow> get units => values;
+
+  static const values = [
+    gallonPerDay,
+    gallonPerHour,
+    gallonPerMinute,
+    gallonPerSecond,
+    gallonUKPerDay,
+    gallonUKPerHour,
+    gallonUKPerMinute,
+    gallonUKPerSecond,
+    barrelOilPerDay,
+    barrelOilPerHour,
+    barrelOilPerMinute,
+    barrelOilPerSecond,
+    acreFootPerYear,
+    acreFootPerDay,
+    acreFootPerHour,
+    hundredFootCubicPerDay,
+    hundredFootCubicPerHour,
+    hundredFootCubicPerMinute,
+    ouncePerHour,
+    ouncePerMinute,
+    ouncePerSecond,
+    ounceUKPerHour,
+    ounceUKPerMinute,
+    ounceUKPerSecond,
+    literPerDay,
+    literPerHour,
+    literPerMinute,
+    literPerSecond,
+    milliliterPerDay,
+    milliliterPerHour,
+    milliliterPerMinute,
+    milliliterPerSecond,
+    meterCubicPerDay,
+    meterCubicPerHour,
+    meterCubicPerMinute,
+    meterCubicPerSecond,
+    centimeterCubicPerDay,
+    centimeterCubicPerHour,
+    centimeterCubicPerMinute,
+    centimeterCubicPerSecond,
+    yardCubicPerHour,
+    yardCubicPerMinute,
+    yardCubicPerSecond,
+    footCubicPerHour,
+    footCubicPerMinute,
+    footCubicPerSecond,
+    inchCubicPerHour,
+    inchCubicPerMinute,
+    inchCubicPerSecond,
+    poundPerSecondGasolineAt155DegreeC,
+    poundPerMinuteGasolineAt155DegreeC,
+    poundPerHourGasolineAt155DegreeC,
+    poundPerDayGasolineAt155DegreeC,
+    kilogramPerSecondGasolineAt155DegreeC,
+    kilogramPerMinuteGasolineAt155DegreeC,
+    kilogramPerHourGasolineAt155DegreeC,
+    kilogramPerDayGasolineAt155DegreeC,
+  ];
 }
 
 /// Unit of [Flow]
@@ -4133,249 +4261,70 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
       };
 }
 
-enum FlowUnit {
-  gallonPerDay._(
-    Flow$GallonPerDay(),
-  ),
-  gallonPerHour._(
-    Flow$GallonPerHour(),
-  ),
-  gallonPerMinute._(
-    Flow$GallonPerMinute(),
-  ),
-  gallonPerSecond._(
-    Flow$GallonPerSecond(),
-  ),
-  gallonUKPerDay._(
-    Flow$GallonUKPerDay(),
-  ),
-  gallonUKPerHour._(
-    Flow$GallonUKPerHour(),
-  ),
-  gallonUKPerMinute._(
-    Flow$GallonUKPerMinute(),
-  ),
-  gallonUKPerSecond._(
-    Flow$GallonUKPerSecond(),
-  ),
-  barrelOilPerDay._(
-    Flow$BarrelOilPerDay(),
-  ),
-  barrelOilPerHour._(
-    Flow$BarrelOilPerHour(),
-  ),
-  barrelOilPerMinute._(
-    Flow$BarrelOilPerMinute(),
-  ),
-  barrelOilPerSecond._(
-    Flow$BarrelOilPerSecond(),
-  ),
-  acreFootPerYear._(
-    Flow$AcreFootPerYear(),
-  ),
-  acreFootPerDay._(
-    Flow$AcreFootPerDay(),
-  ),
-  acreFootPerHour._(
-    Flow$AcreFootPerHour(),
-  ),
-  hundredFootCubicPerDay._(
-    Flow$HundredFootCubicPerDay(),
-  ),
-  hundredFootCubicPerHour._(
-    Flow$HundredFootCubicPerHour(),
-  ),
-  hundredFootCubicPerMinute._(
-    Flow$HundredFootCubicPerMinute(),
-  ),
-  ouncePerHour._(
-    Flow$OuncePerHour(),
-  ),
-  ouncePerMinute._(
-    Flow$OuncePerMinute(),
-  ),
-  ouncePerSecond._(
-    Flow$OuncePerSecond(),
-  ),
-  ounceUKPerHour._(
-    Flow$OunceUKPerHour(),
-  ),
-  ounceUKPerMinute._(
-    Flow$OunceUKPerMinute(),
-  ),
-  ounceUKPerSecond._(
-    Flow$OunceUKPerSecond(),
-  ),
-  literPerDay._(
-    Flow$LiterPerDay(),
-  ),
-  literPerHour._(
-    Flow$LiterPerHour(),
-  ),
-  literPerMinute._(
-    Flow$LiterPerMinute(),
-  ),
-  literPerSecond._(
-    Flow$LiterPerSecond(),
-  ),
-  milliliterPerDay._(
-    Flow$MilliliterPerDay(),
-  ),
-  milliliterPerHour._(
-    Flow$MilliliterPerHour(),
-  ),
-  milliliterPerMinute._(
-    Flow$MilliliterPerMinute(),
-  ),
-  milliliterPerSecond._(
-    Flow$MilliliterPerSecond(),
-  ),
-  meterCubicPerDay._(
-    Flow$MeterCubicPerDay(),
-  ),
-  meterCubicPerHour._(
-    Flow$MeterCubicPerHour(),
-  ),
-  meterCubicPerMinute._(
-    Flow$MeterCubicPerMinute(),
-  ),
-  meterCubicPerSecond._(
-    Flow$MeterCubicPerSecond(),
-  ),
-  centimeterCubicPerDay._(
-    Flow$CentimeterCubicPerDay(),
-  ),
-  centimeterCubicPerHour._(
-    Flow$CentimeterCubicPerHour(),
-  ),
-  centimeterCubicPerMinute._(
-    Flow$CentimeterCubicPerMinute(),
-  ),
-  centimeterCubicPerSecond._(
-    Flow$CentimeterCubicPerSecond(),
-  ),
-  yardCubicPerHour._(
-    Flow$YardCubicPerHour(),
-  ),
-  yardCubicPerMinute._(
-    Flow$YardCubicPerMinute(),
-  ),
-  yardCubicPerSecond._(
-    Flow$YardCubicPerSecond(),
-  ),
-  footCubicPerHour._(
-    Flow$FootCubicPerHour(),
-  ),
-  footCubicPerMinute._(
-    Flow$FootCubicPerMinute(),
-  ),
-  footCubicPerSecond._(
-    Flow$FootCubicPerSecond(),
-  ),
-  inchCubicPerHour._(
-    Flow$InchCubicPerHour(),
-  ),
-  inchCubicPerMinute._(
-    Flow$InchCubicPerMinute(),
-  ),
-  inchCubicPerSecond._(
-    Flow$InchCubicPerSecond(),
-  ),
-  poundPerSecondGasolineAt155DegreeC._(
-    Flow$PoundPerSecondGasolineAt155DegreeC(),
-  ),
-  poundPerMinuteGasolineAt155DegreeC._(
-    Flow$PoundPerMinuteGasolineAt155DegreeC(),
-  ),
-  poundPerHourGasolineAt155DegreeC._(
-    Flow$PoundPerHourGasolineAt155DegreeC(),
-  ),
-  poundPerDayGasolineAt155DegreeC._(
-    Flow$PoundPerDayGasolineAt155DegreeC(),
-  ),
-  kilogramPerSecondGasolineAt155DegreeC._(
-    Flow$KilogramPerSecondGasolineAt155DegreeC(),
-  ),
-  kilogramPerMinuteGasolineAt155DegreeC._(
-    Flow$KilogramPerMinuteGasolineAt155DegreeC(),
-  ),
-  kilogramPerHourGasolineAt155DegreeC._(
-    Flow$KilogramPerHourGasolineAt155DegreeC(),
-  ),
-  kilogramPerDayGasolineAt155DegreeC._(
-    Flow$KilogramPerDayGasolineAt155DegreeC(),
-  ),
-  ;
-
-  const FlowUnit._(this.construct);
-
-  final Flow construct;
-}
-
-const flowUnitValues = _EnumValues({
-  Flow$GallonPerDay._minorName: FlowUnit.gallonPerDay,
-  Flow$GallonPerHour._minorName: FlowUnit.gallonPerHour,
-  Flow$GallonPerMinute._minorName: FlowUnit.gallonPerMinute,
-  Flow$GallonPerSecond._minorName: FlowUnit.gallonPerSecond,
-  Flow$GallonUKPerDay._minorName: FlowUnit.gallonUKPerDay,
-  Flow$GallonUKPerHour._minorName: FlowUnit.gallonUKPerHour,
-  Flow$GallonUKPerMinute._minorName: FlowUnit.gallonUKPerMinute,
-  Flow$GallonUKPerSecond._minorName: FlowUnit.gallonUKPerSecond,
-  Flow$BarrelOilPerDay._minorName: FlowUnit.barrelOilPerDay,
-  Flow$BarrelOilPerHour._minorName: FlowUnit.barrelOilPerHour,
-  Flow$BarrelOilPerMinute._minorName: FlowUnit.barrelOilPerMinute,
-  Flow$BarrelOilPerSecond._minorName: FlowUnit.barrelOilPerSecond,
-  Flow$AcreFootPerYear._minorName: FlowUnit.acreFootPerYear,
-  Flow$AcreFootPerDay._minorName: FlowUnit.acreFootPerDay,
-  Flow$AcreFootPerHour._minorName: FlowUnit.acreFootPerHour,
-  Flow$HundredFootCubicPerDay._minorName: FlowUnit.hundredFootCubicPerDay,
-  Flow$HundredFootCubicPerHour._minorName: FlowUnit.hundredFootCubicPerHour,
-  Flow$HundredFootCubicPerMinute._minorName: FlowUnit.hundredFootCubicPerMinute,
-  Flow$OuncePerHour._minorName: FlowUnit.ouncePerHour,
-  Flow$OuncePerMinute._minorName: FlowUnit.ouncePerMinute,
-  Flow$OuncePerSecond._minorName: FlowUnit.ouncePerSecond,
-  Flow$OunceUKPerHour._minorName: FlowUnit.ounceUKPerHour,
-  Flow$OunceUKPerMinute._minorName: FlowUnit.ounceUKPerMinute,
-  Flow$OunceUKPerSecond._minorName: FlowUnit.ounceUKPerSecond,
-  Flow$LiterPerDay._minorName: FlowUnit.literPerDay,
-  Flow$LiterPerHour._minorName: FlowUnit.literPerHour,
-  Flow$LiterPerMinute._minorName: FlowUnit.literPerMinute,
-  Flow$LiterPerSecond._minorName: FlowUnit.literPerSecond,
-  Flow$MilliliterPerDay._minorName: FlowUnit.milliliterPerDay,
-  Flow$MilliliterPerHour._minorName: FlowUnit.milliliterPerHour,
-  Flow$MilliliterPerMinute._minorName: FlowUnit.milliliterPerMinute,
-  Flow$MilliliterPerSecond._minorName: FlowUnit.milliliterPerSecond,
-  Flow$MeterCubicPerDay._minorName: FlowUnit.meterCubicPerDay,
-  Flow$MeterCubicPerHour._minorName: FlowUnit.meterCubicPerHour,
-  Flow$MeterCubicPerMinute._minorName: FlowUnit.meterCubicPerMinute,
-  Flow$MeterCubicPerSecond._minorName: FlowUnit.meterCubicPerSecond,
-  Flow$CentimeterCubicPerDay._minorName: FlowUnit.centimeterCubicPerDay,
-  Flow$CentimeterCubicPerHour._minorName: FlowUnit.centimeterCubicPerHour,
-  Flow$CentimeterCubicPerMinute._minorName: FlowUnit.centimeterCubicPerMinute,
-  Flow$CentimeterCubicPerSecond._minorName: FlowUnit.centimeterCubicPerSecond,
-  Flow$YardCubicPerHour._minorName: FlowUnit.yardCubicPerHour,
-  Flow$YardCubicPerMinute._minorName: FlowUnit.yardCubicPerMinute,
-  Flow$YardCubicPerSecond._minorName: FlowUnit.yardCubicPerSecond,
-  Flow$FootCubicPerHour._minorName: FlowUnit.footCubicPerHour,
-  Flow$FootCubicPerMinute._minorName: FlowUnit.footCubicPerMinute,
-  Flow$FootCubicPerSecond._minorName: FlowUnit.footCubicPerSecond,
-  Flow$InchCubicPerHour._minorName: FlowUnit.inchCubicPerHour,
-  Flow$InchCubicPerMinute._minorName: FlowUnit.inchCubicPerMinute,
-  Flow$InchCubicPerSecond._minorName: FlowUnit.inchCubicPerSecond,
+const flowUnits = EnumValues({
+  Flow$GallonPerDay._minorName: Flow.gallonPerDay,
+  Flow$GallonPerHour._minorName: Flow.gallonPerHour,
+  Flow$GallonPerMinute._minorName: Flow.gallonPerMinute,
+  Flow$GallonPerSecond._minorName: Flow.gallonPerSecond,
+  Flow$GallonUKPerDay._minorName: Flow.gallonUKPerDay,
+  Flow$GallonUKPerHour._minorName: Flow.gallonUKPerHour,
+  Flow$GallonUKPerMinute._minorName: Flow.gallonUKPerMinute,
+  Flow$GallonUKPerSecond._minorName: Flow.gallonUKPerSecond,
+  Flow$BarrelOilPerDay._minorName: Flow.barrelOilPerDay,
+  Flow$BarrelOilPerHour._minorName: Flow.barrelOilPerHour,
+  Flow$BarrelOilPerMinute._minorName: Flow.barrelOilPerMinute,
+  Flow$BarrelOilPerSecond._minorName: Flow.barrelOilPerSecond,
+  Flow$AcreFootPerYear._minorName: Flow.acreFootPerYear,
+  Flow$AcreFootPerDay._minorName: Flow.acreFootPerDay,
+  Flow$AcreFootPerHour._minorName: Flow.acreFootPerHour,
+  Flow$HundredFootCubicPerDay._minorName: Flow.hundredFootCubicPerDay,
+  Flow$HundredFootCubicPerHour._minorName: Flow.hundredFootCubicPerHour,
+  Flow$HundredFootCubicPerMinute._minorName: Flow.hundredFootCubicPerMinute,
+  Flow$OuncePerHour._minorName: Flow.ouncePerHour,
+  Flow$OuncePerMinute._minorName: Flow.ouncePerMinute,
+  Flow$OuncePerSecond._minorName: Flow.ouncePerSecond,
+  Flow$OunceUKPerHour._minorName: Flow.ounceUKPerHour,
+  Flow$OunceUKPerMinute._minorName: Flow.ounceUKPerMinute,
+  Flow$OunceUKPerSecond._minorName: Flow.ounceUKPerSecond,
+  Flow$LiterPerDay._minorName: Flow.literPerDay,
+  Flow$LiterPerHour._minorName: Flow.literPerHour,
+  Flow$LiterPerMinute._minorName: Flow.literPerMinute,
+  Flow$LiterPerSecond._minorName: Flow.literPerSecond,
+  Flow$MilliliterPerDay._minorName: Flow.milliliterPerDay,
+  Flow$MilliliterPerHour._minorName: Flow.milliliterPerHour,
+  Flow$MilliliterPerMinute._minorName: Flow.milliliterPerMinute,
+  Flow$MilliliterPerSecond._minorName: Flow.milliliterPerSecond,
+  Flow$MeterCubicPerDay._minorName: Flow.meterCubicPerDay,
+  Flow$MeterCubicPerHour._minorName: Flow.meterCubicPerHour,
+  Flow$MeterCubicPerMinute._minorName: Flow.meterCubicPerMinute,
+  Flow$MeterCubicPerSecond._minorName: Flow.meterCubicPerSecond,
+  Flow$CentimeterCubicPerDay._minorName: Flow.centimeterCubicPerDay,
+  Flow$CentimeterCubicPerHour._minorName: Flow.centimeterCubicPerHour,
+  Flow$CentimeterCubicPerMinute._minorName: Flow.centimeterCubicPerMinute,
+  Flow$CentimeterCubicPerSecond._minorName: Flow.centimeterCubicPerSecond,
+  Flow$YardCubicPerHour._minorName: Flow.yardCubicPerHour,
+  Flow$YardCubicPerMinute._minorName: Flow.yardCubicPerMinute,
+  Flow$YardCubicPerSecond._minorName: Flow.yardCubicPerSecond,
+  Flow$FootCubicPerHour._minorName: Flow.footCubicPerHour,
+  Flow$FootCubicPerMinute._minorName: Flow.footCubicPerMinute,
+  Flow$FootCubicPerSecond._minorName: Flow.footCubicPerSecond,
+  Flow$InchCubicPerHour._minorName: Flow.inchCubicPerHour,
+  Flow$InchCubicPerMinute._minorName: Flow.inchCubicPerMinute,
+  Flow$InchCubicPerSecond._minorName: Flow.inchCubicPerSecond,
   Flow$PoundPerSecondGasolineAt155DegreeC._minorName:
-      FlowUnit.poundPerSecondGasolineAt155DegreeC,
+      Flow.poundPerSecondGasolineAt155DegreeC,
   Flow$PoundPerMinuteGasolineAt155DegreeC._minorName:
-      FlowUnit.poundPerMinuteGasolineAt155DegreeC,
+      Flow.poundPerMinuteGasolineAt155DegreeC,
   Flow$PoundPerHourGasolineAt155DegreeC._minorName:
-      FlowUnit.poundPerHourGasolineAt155DegreeC,
+      Flow.poundPerHourGasolineAt155DegreeC,
   Flow$PoundPerDayGasolineAt155DegreeC._minorName:
-      FlowUnit.poundPerDayGasolineAt155DegreeC,
+      Flow.poundPerDayGasolineAt155DegreeC,
   Flow$KilogramPerSecondGasolineAt155DegreeC._minorName:
-      FlowUnit.kilogramPerSecondGasolineAt155DegreeC,
+      Flow.kilogramPerSecondGasolineAt155DegreeC,
   Flow$KilogramPerMinuteGasolineAt155DegreeC._minorName:
-      FlowUnit.kilogramPerMinuteGasolineAt155DegreeC,
+      Flow.kilogramPerMinuteGasolineAt155DegreeC,
   Flow$KilogramPerHourGasolineAt155DegreeC._minorName:
-      FlowUnit.kilogramPerHourGasolineAt155DegreeC,
+      Flow.kilogramPerHourGasolineAt155DegreeC,
   Flow$KilogramPerDayGasolineAt155DegreeC._minorName:
-      FlowUnit.kilogramPerDayGasolineAt155DegreeC,
+      Flow.kilogramPerDayGasolineAt155DegreeC,
 });

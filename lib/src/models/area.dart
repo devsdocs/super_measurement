@@ -21,10 +21,9 @@ sealed class Area extends Unit<Area> {
   factory Area.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        areaUnitValues,
+        areaUnits,
       )
-          ? areaUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? areaUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -243,6 +242,79 @@ sealed class Area extends Unit<Area> {
   String get majorName => _majorName;
 
   static const _majorName = 'area';
+
+  static const kilometerSquare = Area$KilometerSquare();
+  static const hectometerSquare = Area$HectometerSquare();
+  static const dekameterSquare = Area$DekameterSquare();
+  static const meterSquare = Area$MeterSquare();
+  static const decimeterSquare = Area$DecimeterSquare();
+  static const centimeterSquare = Area$CentimeterSquare();
+  static const millimeterSquare = Area$MillimeterSquare();
+  static const micrometerSquare = Area$MicrometerSquare();
+  static const nanometerSquare = Area$NanometerSquare();
+  static const hectare = Area$Hectare();
+  static const are = Area$Are();
+  static const barn = Area$Barn();
+  static const mileSquare = Area$MileSquare();
+  static const yardSquare = Area$YardSquare();
+  static const footSquare = Area$FootSquare();
+  static const inchSquare = Area$InchSquare();
+  static const township = Area$Township();
+  static const section = Area$Section();
+  static const acre = Area$Acre();
+  static const rood = Area$Rood();
+  static const chainSquare = Area$ChainSquare();
+  static const rodSquare = Area$RodSquare();
+  static const perchSquare = Area$PerchSquare();
+  static const poleSquare = Area$PoleSquare();
+  static const arpent = Area$Arpent();
+  static const cuerda = Area$Cuerda();
+  static const plaza = Area$Plaza();
+  static const varasCastellanasCuad = Area$VarasCastellanasCuad();
+  static const varasConuquerasCuad = Area$VarasConuquerasCuad();
+  static const strema = Area$Strema();
+  static const circularInch = Area$CircularInch();
+  static const circularMil = Area$CircularMil();
+  static const tahulla = Area$Tahulla();
+
+  @override
+  List<Area> get units => values;
+
+  static const values = [
+    kilometerSquare,
+    hectometerSquare,
+    dekameterSquare,
+    meterSquare,
+    decimeterSquare,
+    centimeterSquare,
+    millimeterSquare,
+    micrometerSquare,
+    nanometerSquare,
+    hectare,
+    are,
+    barn,
+    mileSquare,
+    yardSquare,
+    footSquare,
+    inchSquare,
+    township,
+    section,
+    acre,
+    rood,
+    chainSquare,
+    rodSquare,
+    perchSquare,
+    poleSquare,
+    arpent,
+    cuerda,
+    plaza,
+    varasCastellanasCuad,
+    varasConuquerasCuad,
+    strema,
+    circularInch,
+    circularMil,
+    tahulla,
+  ];
 }
 
 /// Unit of [Area]
@@ -2390,145 +2462,38 @@ final class Area$Tahulla extends Area {
       };
 }
 
-enum AreaUnit {
-  kilometerSquare._(
-    Area$KilometerSquare(),
-  ),
-  hectometerSquare._(
-    Area$HectometerSquare(),
-  ),
-  dekameterSquare._(
-    Area$DekameterSquare(),
-  ),
-  meterSquare._(
-    Area$MeterSquare(),
-  ),
-  decimeterSquare._(
-    Area$DecimeterSquare(),
-  ),
-  centimeterSquare._(
-    Area$CentimeterSquare(),
-  ),
-  millimeterSquare._(
-    Area$MillimeterSquare(),
-  ),
-  micrometerSquare._(
-    Area$MicrometerSquare(),
-  ),
-  nanometerSquare._(
-    Area$NanometerSquare(),
-  ),
-  hectare._(
-    Area$Hectare(),
-  ),
-  are._(
-    Area$Are(),
-  ),
-  barn._(
-    Area$Barn(),
-  ),
-  mileSquare._(
-    Area$MileSquare(),
-  ),
-  yardSquare._(
-    Area$YardSquare(),
-  ),
-  footSquare._(
-    Area$FootSquare(),
-  ),
-  inchSquare._(
-    Area$InchSquare(),
-  ),
-  township._(
-    Area$Township(),
-  ),
-  section._(
-    Area$Section(),
-  ),
-  acre._(
-    Area$Acre(),
-  ),
-  rood._(
-    Area$Rood(),
-  ),
-  chainSquare._(
-    Area$ChainSquare(),
-  ),
-  rodSquare._(
-    Area$RodSquare(),
-  ),
-  perchSquare._(
-    Area$PerchSquare(),
-  ),
-  poleSquare._(
-    Area$PoleSquare(),
-  ),
-  arpent._(
-    Area$Arpent(),
-  ),
-  cuerda._(
-    Area$Cuerda(),
-  ),
-  plaza._(
-    Area$Plaza(),
-  ),
-  varasCastellanasCuad._(
-    Area$VarasCastellanasCuad(),
-  ),
-  varasConuquerasCuad._(
-    Area$VarasConuquerasCuad(),
-  ),
-  strema._(
-    Area$Strema(),
-  ),
-  circularInch._(
-    Area$CircularInch(),
-  ),
-  circularMil._(
-    Area$CircularMil(),
-  ),
-  tahulla._(
-    Area$Tahulla(),
-  ),
-  ;
-
-  const AreaUnit._(this.construct);
-
-  final Area construct;
-}
-
-const areaUnitValues = _EnumValues({
-  Area$KilometerSquare._minorName: AreaUnit.kilometerSquare,
-  Area$HectometerSquare._minorName: AreaUnit.hectometerSquare,
-  Area$DekameterSquare._minorName: AreaUnit.dekameterSquare,
-  Area$MeterSquare._minorName: AreaUnit.meterSquare,
-  Area$DecimeterSquare._minorName: AreaUnit.decimeterSquare,
-  Area$CentimeterSquare._minorName: AreaUnit.centimeterSquare,
-  Area$MillimeterSquare._minorName: AreaUnit.millimeterSquare,
-  Area$MicrometerSquare._minorName: AreaUnit.micrometerSquare,
-  Area$NanometerSquare._minorName: AreaUnit.nanometerSquare,
-  Area$Hectare._minorName: AreaUnit.hectare,
-  Area$Are._minorName: AreaUnit.are,
-  Area$Barn._minorName: AreaUnit.barn,
-  Area$MileSquare._minorName: AreaUnit.mileSquare,
-  Area$YardSquare._minorName: AreaUnit.yardSquare,
-  Area$FootSquare._minorName: AreaUnit.footSquare,
-  Area$InchSquare._minorName: AreaUnit.inchSquare,
-  Area$Township._minorName: AreaUnit.township,
-  Area$Section._minorName: AreaUnit.section,
-  Area$Acre._minorName: AreaUnit.acre,
-  Area$Rood._minorName: AreaUnit.rood,
-  Area$ChainSquare._minorName: AreaUnit.chainSquare,
-  Area$RodSquare._minorName: AreaUnit.rodSquare,
-  Area$PerchSquare._minorName: AreaUnit.perchSquare,
-  Area$PoleSquare._minorName: AreaUnit.poleSquare,
-  Area$Arpent._minorName: AreaUnit.arpent,
-  Area$Cuerda._minorName: AreaUnit.cuerda,
-  Area$Plaza._minorName: AreaUnit.plaza,
-  Area$VarasCastellanasCuad._minorName: AreaUnit.varasCastellanasCuad,
-  Area$VarasConuquerasCuad._minorName: AreaUnit.varasConuquerasCuad,
-  Area$Strema._minorName: AreaUnit.strema,
-  Area$CircularInch._minorName: AreaUnit.circularInch,
-  Area$CircularMil._minorName: AreaUnit.circularMil,
-  Area$Tahulla._minorName: AreaUnit.tahulla,
+const areaUnits = EnumValues({
+  Area$KilometerSquare._minorName: Area.kilometerSquare,
+  Area$HectometerSquare._minorName: Area.hectometerSquare,
+  Area$DekameterSquare._minorName: Area.dekameterSquare,
+  Area$MeterSquare._minorName: Area.meterSquare,
+  Area$DecimeterSquare._minorName: Area.decimeterSquare,
+  Area$CentimeterSquare._minorName: Area.centimeterSquare,
+  Area$MillimeterSquare._minorName: Area.millimeterSquare,
+  Area$MicrometerSquare._minorName: Area.micrometerSquare,
+  Area$NanometerSquare._minorName: Area.nanometerSquare,
+  Area$Hectare._minorName: Area.hectare,
+  Area$Are._minorName: Area.are,
+  Area$Barn._minorName: Area.barn,
+  Area$MileSquare._minorName: Area.mileSquare,
+  Area$YardSquare._minorName: Area.yardSquare,
+  Area$FootSquare._minorName: Area.footSquare,
+  Area$InchSquare._minorName: Area.inchSquare,
+  Area$Township._minorName: Area.township,
+  Area$Section._minorName: Area.section,
+  Area$Acre._minorName: Area.acre,
+  Area$Rood._minorName: Area.rood,
+  Area$ChainSquare._minorName: Area.chainSquare,
+  Area$RodSquare._minorName: Area.rodSquare,
+  Area$PerchSquare._minorName: Area.perchSquare,
+  Area$PoleSquare._minorName: Area.poleSquare,
+  Area$Arpent._minorName: Area.arpent,
+  Area$Cuerda._minorName: Area.cuerda,
+  Area$Plaza._minorName: Area.plaza,
+  Area$VarasCastellanasCuad._minorName: Area.varasCastellanasCuad,
+  Area$VarasConuquerasCuad._minorName: Area.varasConuquerasCuad,
+  Area$Strema._minorName: Area.strema,
+  Area$CircularInch._minorName: Area.circularInch,
+  Area$CircularMil._minorName: Area.circularMil,
+  Area$Tahulla._minorName: Area.tahulla,
 });

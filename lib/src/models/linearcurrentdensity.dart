@@ -20,10 +20,10 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
       _checkJson(
         _majorName,
         json,
-        linearCurrentDensityUnitValues,
+        linearCurrentDensityUnits,
       )
-          ? linearCurrentDensityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? linearCurrentDensityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -107,6 +107,34 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
   String get majorName => _majorName;
 
   static const _majorName = 'linearCurrentDensity';
+
+  static const amperePerMeter = LinearCurrentDensity$AmperePerMeter();
+  static const amperePerCentimeter = LinearCurrentDensity$AmperePerCentimeter();
+  static const amperePerInch = LinearCurrentDensity$AmperePerInch();
+  static const abamperePerMeter = LinearCurrentDensity$AbamperePerMeter();
+  static const abamperePerCentimeter =
+      LinearCurrentDensity$AbamperePerCentimeter();
+  static const abamperePerInch = LinearCurrentDensity$AbamperePerInch();
+  static const oersted = LinearCurrentDensity$Oersted();
+  static const oerstedInternational =
+      LinearCurrentDensity$OerstedInternational();
+  static const gilbertPerCentimeter =
+      LinearCurrentDensity$GilbertPerCentimeter();
+
+  @override
+  List<LinearCurrentDensity> get units => values;
+
+  static const values = [
+    amperePerMeter,
+    amperePerCentimeter,
+    amperePerInch,
+    abamperePerMeter,
+    abamperePerCentimeter,
+    abamperePerInch,
+    oersted,
+    oerstedInternational,
+    gilbertPerCentimeter,
+  ];
 }
 
 /// Unit of [LinearCurrentDensity]
@@ -707,57 +735,22 @@ final class LinearCurrentDensity$GilbertPerCentimeter
       };
 }
 
-enum LinearCurrentDensityUnit {
-  amperePerMeter._(
-    LinearCurrentDensity$AmperePerMeter(),
-  ),
-  amperePerCentimeter._(
-    LinearCurrentDensity$AmperePerCentimeter(),
-  ),
-  amperePerInch._(
-    LinearCurrentDensity$AmperePerInch(),
-  ),
-  abamperePerMeter._(
-    LinearCurrentDensity$AbamperePerMeter(),
-  ),
-  abamperePerCentimeter._(
-    LinearCurrentDensity$AbamperePerCentimeter(),
-  ),
-  abamperePerInch._(
-    LinearCurrentDensity$AbamperePerInch(),
-  ),
-  oersted._(
-    LinearCurrentDensity$Oersted(),
-  ),
-  oerstedInternational._(
-    LinearCurrentDensity$OerstedInternational(),
-  ),
-  gilbertPerCentimeter._(
-    LinearCurrentDensity$GilbertPerCentimeter(),
-  ),
-  ;
-
-  const LinearCurrentDensityUnit._(this.construct);
-
-  final LinearCurrentDensity construct;
-}
-
-const linearCurrentDensityUnitValues = _EnumValues({
+const linearCurrentDensityUnits = EnumValues({
   LinearCurrentDensity$AmperePerMeter._minorName:
-      LinearCurrentDensityUnit.amperePerMeter,
+      LinearCurrentDensity.amperePerMeter,
   LinearCurrentDensity$AmperePerCentimeter._minorName:
-      LinearCurrentDensityUnit.amperePerCentimeter,
+      LinearCurrentDensity.amperePerCentimeter,
   LinearCurrentDensity$AmperePerInch._minorName:
-      LinearCurrentDensityUnit.amperePerInch,
+      LinearCurrentDensity.amperePerInch,
   LinearCurrentDensity$AbamperePerMeter._minorName:
-      LinearCurrentDensityUnit.abamperePerMeter,
+      LinearCurrentDensity.abamperePerMeter,
   LinearCurrentDensity$AbamperePerCentimeter._minorName:
-      LinearCurrentDensityUnit.abamperePerCentimeter,
+      LinearCurrentDensity.abamperePerCentimeter,
   LinearCurrentDensity$AbamperePerInch._minorName:
-      LinearCurrentDensityUnit.abamperePerInch,
-  LinearCurrentDensity$Oersted._minorName: LinearCurrentDensityUnit.oersted,
+      LinearCurrentDensity.abamperePerInch,
+  LinearCurrentDensity$Oersted._minorName: LinearCurrentDensity.oersted,
   LinearCurrentDensity$OerstedInternational._minorName:
-      LinearCurrentDensityUnit.oerstedInternational,
+      LinearCurrentDensity.oerstedInternational,
   LinearCurrentDensity$GilbertPerCentimeter._minorName:
-      LinearCurrentDensityUnit.gilbertPerCentimeter,
+      LinearCurrentDensity.gilbertPerCentimeter,
 });

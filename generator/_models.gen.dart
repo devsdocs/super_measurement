@@ -5,8 +5,8 @@ part of '__gen_new.dart';
 void generateModels() {
   for (final unit in allData) {
     final name = unit.keys.first;
-    final enumSymbol = '${name}Unit';
-    final enumValuesSymbol = '${enumSymbol}Values'.snakeCase;
+    final enumSymbol = '${name}Units';
+    final enumValuesSymbol = enumSymbol.snakeCase;
 
     final anchor = unit.values.first
         .where(
@@ -57,7 +57,7 @@ void generateModels() {
       '  factory $name.fromJson(Map<String,dynamic> json) =>',
     );
     typeBuff.writeln(
-      '_checkJson(_majorName,json, $enumValuesSymbol,) ? $enumValuesSymbol.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct.withValue((json[_majorName] as Map<String, dynamic>)[_value] as num,) : $name.anchor();',
+      '_checkJson(_majorName,json, $enumValuesSymbol,) ? $enumValuesSymbol.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.withValue((json[_majorName] as Map<String, dynamic>)[_value] as num,) : $name.anchor();',
     );
     typeBuff.writeln();
     typeBuff.writeln(
@@ -92,6 +92,25 @@ void generateModels() {
     typeBuff.writeln('  String get majorName => _majorName;');
     typeBuff.writeln();
     typeBuff.writeln("  static const _majorName = '${name.snakeCase}';");
+    typeBuff.writeln();
+    for (final e in unit.values.first) {
+      final unitType = e.keys.first;
+      typeBuff.writeln(
+        'static const ${unitType.split(r'$').last.snakeCase} = $unitType();',
+      );
+    }
+    typeBuff.writeln();
+    typeBuff.writeln('  @override');
+    typeBuff.writeln('  List<$name> get units => values;');
+    typeBuff.writeln();
+    typeBuff.writeln('static const values = [');
+    for (final e in unit.values.first) {
+      final unitType = e.keys.first;
+      typeBuff.writeln(
+        '${unitType.split(r'$').last.snakeCase},',
+      );
+    }
+    typeBuff.writeln('];');
     typeBuff.writeln();
     typeBuff.writeln('  }');
     typeBuff.writeln();
@@ -207,24 +226,24 @@ void generateModels() {
     }
     typeBuff.writeln();
 
-    typeBuff.writeln('enum $enumSymbol {');
-    for (final e in unit.values.first) {
-      final unitType = e.keys.first;
-      typeBuff
-          .writeln('${unitType.split(r'$').last.snakeCase}._($unitType(),),');
-    }
-    typeBuff.writeln(';');
-    typeBuff.writeln('const $enumSymbol._(this.construct);');
-    typeBuff.writeln();
-    typeBuff.writeln('final $name construct;');
-    typeBuff.writeln('}');
+    // typeBuff.writeln('class $enumSymbol {');
+    // typeBuff.writeln('const $enumSymbol._(this.construct);');
+    // typeBuff.writeln('final $name construct;');
+    // for (final e in unit.values.first) {
+    //   final unitType = e.keys.first;
+    //   typeBuff.writeln(
+    //     'static const ${unitType.split(r'$').last.snakeCase} = $enumSymbol._($unitType(),);',
+    //   );
+    // }
+    // typeBuff.writeln();
+    // typeBuff.writeln('}');
     typeBuff.writeln();
 
-    typeBuff.writeln('const $enumValuesSymbol = _EnumValues({');
+    typeBuff.writeln('const $enumValuesSymbol = EnumValues({');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(
-        '$unitType._minorName: $enumSymbol.${unitType.split(r'$').last.snakeCase},',
+        '$unitType._minorName: $name.${unitType.split(r'$').last.snakeCase},',
       );
     }
     typeBuff.writeln('});');

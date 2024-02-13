@@ -18,10 +18,10 @@ sealed class EUCurrency extends Unit<EUCurrency> {
   factory EUCurrency.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        eUCurrencyUnitValues,
+        eUCurrencyUnits,
       )
-          ? eUCurrencyUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? eUCurrencyUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -121,6 +121,39 @@ sealed class EUCurrency extends Unit<EUCurrency> {
   String get majorName => _majorName;
 
   static const _majorName = 'eUCurrency';
+
+  static const euroEUR = EUCurrency$EuroEUR();
+  static const irishPoundIEP = EUCurrency$IrishPoundIEP();
+  static const deutschMarkDEM = EUCurrency$DeutschMarkDEM();
+  static const dutchGuildenNLG = EUCurrency$DutchGuildenNLG();
+  static const finnishMarkFIM = EUCurrency$FinnishMarkFIM();
+  static const frenchFrancFRF = EUCurrency$FrenchFrancFRF();
+  static const austrianSchillingATS = EUCurrency$AustrianSchillingATS();
+  static const belgianFrancBEF = EUCurrency$BelgianFrancBEF();
+  static const luxembourgFrancLUF = EUCurrency$LuxembourgFrancLUF();
+  static const spanishPesetaESP = EUCurrency$SpanishPesetaESP();
+  static const portugueseEscudoPTE = EUCurrency$PortugueseEscudoPTE();
+  static const italianLireITL = EUCurrency$ItalianLireITL();
+  static const greekDrachmaGRD = EUCurrency$GreekDrachmaGRD();
+
+  @override
+  List<EUCurrency> get units => values;
+
+  static const values = [
+    euroEUR,
+    irishPoundIEP,
+    deutschMarkDEM,
+    dutchGuildenNLG,
+    finnishMarkFIM,
+    frenchFrancFRF,
+    austrianSchillingATS,
+    belgianFrancBEF,
+    luxembourgFrancLUF,
+    spanishPesetaESP,
+    portugueseEscudoPTE,
+    italianLireITL,
+    greekDrachmaGRD,
+  ];
 }
 
 /// Unit of [EUCurrency]
@@ -971,66 +1004,18 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
       };
 }
 
-enum EUCurrencyUnit {
-  euroEUR._(
-    EUCurrency$EuroEUR(),
-  ),
-  irishPoundIEP._(
-    EUCurrency$IrishPoundIEP(),
-  ),
-  deutschMarkDEM._(
-    EUCurrency$DeutschMarkDEM(),
-  ),
-  dutchGuildenNLG._(
-    EUCurrency$DutchGuildenNLG(),
-  ),
-  finnishMarkFIM._(
-    EUCurrency$FinnishMarkFIM(),
-  ),
-  frenchFrancFRF._(
-    EUCurrency$FrenchFrancFRF(),
-  ),
-  austrianSchillingATS._(
-    EUCurrency$AustrianSchillingATS(),
-  ),
-  belgianFrancBEF._(
-    EUCurrency$BelgianFrancBEF(),
-  ),
-  luxembourgFrancLUF._(
-    EUCurrency$LuxembourgFrancLUF(),
-  ),
-  spanishPesetaESP._(
-    EUCurrency$SpanishPesetaESP(),
-  ),
-  portugueseEscudoPTE._(
-    EUCurrency$PortugueseEscudoPTE(),
-  ),
-  italianLireITL._(
-    EUCurrency$ItalianLireITL(),
-  ),
-  greekDrachmaGRD._(
-    EUCurrency$GreekDrachmaGRD(),
-  ),
-  ;
-
-  const EUCurrencyUnit._(this.construct);
-
-  final EUCurrency construct;
-}
-
-const eUCurrencyUnitValues = _EnumValues({
-  EUCurrency$EuroEUR._minorName: EUCurrencyUnit.euroEUR,
-  EUCurrency$IrishPoundIEP._minorName: EUCurrencyUnit.irishPoundIEP,
-  EUCurrency$DeutschMarkDEM._minorName: EUCurrencyUnit.deutschMarkDEM,
-  EUCurrency$DutchGuildenNLG._minorName: EUCurrencyUnit.dutchGuildenNLG,
-  EUCurrency$FinnishMarkFIM._minorName: EUCurrencyUnit.finnishMarkFIM,
-  EUCurrency$FrenchFrancFRF._minorName: EUCurrencyUnit.frenchFrancFRF,
-  EUCurrency$AustrianSchillingATS._minorName:
-      EUCurrencyUnit.austrianSchillingATS,
-  EUCurrency$BelgianFrancBEF._minorName: EUCurrencyUnit.belgianFrancBEF,
-  EUCurrency$LuxembourgFrancLUF._minorName: EUCurrencyUnit.luxembourgFrancLUF,
-  EUCurrency$SpanishPesetaESP._minorName: EUCurrencyUnit.spanishPesetaESP,
-  EUCurrency$PortugueseEscudoPTE._minorName: EUCurrencyUnit.portugueseEscudoPTE,
-  EUCurrency$ItalianLireITL._minorName: EUCurrencyUnit.italianLireITL,
-  EUCurrency$GreekDrachmaGRD._minorName: EUCurrencyUnit.greekDrachmaGRD,
+const eUCurrencyUnits = EnumValues({
+  EUCurrency$EuroEUR._minorName: EUCurrency.euroEUR,
+  EUCurrency$IrishPoundIEP._minorName: EUCurrency.irishPoundIEP,
+  EUCurrency$DeutschMarkDEM._minorName: EUCurrency.deutschMarkDEM,
+  EUCurrency$DutchGuildenNLG._minorName: EUCurrency.dutchGuildenNLG,
+  EUCurrency$FinnishMarkFIM._minorName: EUCurrency.finnishMarkFIM,
+  EUCurrency$FrenchFrancFRF._minorName: EUCurrency.frenchFrancFRF,
+  EUCurrency$AustrianSchillingATS._minorName: EUCurrency.austrianSchillingATS,
+  EUCurrency$BelgianFrancBEF._minorName: EUCurrency.belgianFrancBEF,
+  EUCurrency$LuxembourgFrancLUF._minorName: EUCurrency.luxembourgFrancLUF,
+  EUCurrency$SpanishPesetaESP._minorName: EUCurrency.spanishPesetaESP,
+  EUCurrency$PortugueseEscudoPTE._minorName: EUCurrency.portugueseEscudoPTE,
+  EUCurrency$ItalianLireITL._minorName: EUCurrency.italianLireITL,
+  EUCurrency$GreekDrachmaGRD._minorName: EUCurrency.greekDrachmaGRD,
 });

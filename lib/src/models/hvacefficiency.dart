@@ -14,10 +14,10 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
   factory HVACEfficiency.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        hVACEfficiencyUnitValues,
+        hVACEfficiencyUnits,
       )
-          ? hVACEfficiencyUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? hVACEfficiencyUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -59,6 +59,21 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
   String get majorName => _majorName;
 
   static const _majorName = 'hVACEfficiency';
+
+  static const eEREnergyEfficiencyRatio =
+      HVACEfficiency$EEREnergyEfficiencyRatio();
+  static const cOPCoefficientOfPerformace =
+      HVACEfficiency$COPCoefficientOfPerformace();
+  static const kilowattPerTon = HVACEfficiency$KilowattPerTon();
+
+  @override
+  List<HVACEfficiency> get units => values;
+
+  static const values = [
+    eEREnergyEfficiencyRatio,
+    cOPCoefficientOfPerformace,
+    kilowattPerTon,
+  ];
 }
 
 /// Unit of [HVACEfficiency]
@@ -259,27 +274,10 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
       };
 }
 
-enum HVACEfficiencyUnit {
-  eEREnergyEfficiencyRatio._(
-    HVACEfficiency$EEREnergyEfficiencyRatio(),
-  ),
-  cOPCoefficientOfPerformace._(
-    HVACEfficiency$COPCoefficientOfPerformace(),
-  ),
-  kilowattPerTon._(
-    HVACEfficiency$KilowattPerTon(),
-  ),
-  ;
-
-  const HVACEfficiencyUnit._(this.construct);
-
-  final HVACEfficiency construct;
-}
-
-const hVACEfficiencyUnitValues = _EnumValues({
+const hVACEfficiencyUnits = EnumValues({
   HVACEfficiency$EEREnergyEfficiencyRatio._minorName:
-      HVACEfficiencyUnit.eEREnergyEfficiencyRatio,
+      HVACEfficiency.eEREnergyEfficiencyRatio,
   HVACEfficiency$COPCoefficientOfPerformace._minorName:
-      HVACEfficiencyUnit.cOPCoefficientOfPerformace,
-  HVACEfficiency$KilowattPerTon._minorName: HVACEfficiencyUnit.kilowattPerTon,
+      HVACEfficiency.cOPCoefficientOfPerformace,
+  HVACEfficiency$KilowattPerTon._minorName: HVACEfficiency.kilowattPerTon,
 });

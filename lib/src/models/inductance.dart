@@ -19,10 +19,10 @@ sealed class Inductance extends Unit<Inductance> {
   factory Inductance.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        inductanceUnitValues,
+        inductanceUnits,
       )
-          ? inductanceUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? inductanceUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -169,6 +169,55 @@ sealed class Inductance extends Unit<Inductance> {
   String get majorName => _majorName;
 
   static const _majorName = 'inductance';
+
+  static const exahenry = Inductance$Exahenry();
+  static const petahenry = Inductance$Petahenry();
+  static const terahenry = Inductance$Terahenry();
+  static const gigahenry = Inductance$Gigahenry();
+  static const megahenry = Inductance$Megahenry();
+  static const kilohenry = Inductance$Kilohenry();
+  static const hectohenry = Inductance$Hectohenry();
+  static const dekahenry = Inductance$Dekahenry();
+  static const henry = Inductance$Henry();
+  static const decihenry = Inductance$Decihenry();
+  static const centihenry = Inductance$Centihenry();
+  static const millihenry = Inductance$Millihenry();
+  static const microhenry = Inductance$Microhenry();
+  static const nanohenry = Inductance$Nanohenry();
+  static const picohenry = Inductance$Picohenry();
+  static const femtohenry = Inductance$Femtohenry();
+  static const attohenry = Inductance$Attohenry();
+  static const abhenry = Inductance$Abhenry();
+  static const stathenry = Inductance$Stathenry();
+  static const eMUOfInductance = Inductance$EMUOfInductance();
+  static const eSUOfInductance = Inductance$ESUOfInductance();
+
+  @override
+  List<Inductance> get units => values;
+
+  static const values = [
+    exahenry,
+    petahenry,
+    terahenry,
+    gigahenry,
+    megahenry,
+    kilohenry,
+    hectohenry,
+    dekahenry,
+    henry,
+    decihenry,
+    centihenry,
+    millihenry,
+    microhenry,
+    nanohenry,
+    picohenry,
+    femtohenry,
+    attohenry,
+    abhenry,
+    stathenry,
+    eMUOfInductance,
+    eSUOfInductance,
+  ];
 }
 
 /// Unit of [Inductance]
@@ -1536,97 +1585,26 @@ final class Inductance$ESUOfInductance extends Inductance {
       };
 }
 
-enum InductanceUnit {
-  exahenry._(
-    Inductance$Exahenry(),
-  ),
-  petahenry._(
-    Inductance$Petahenry(),
-  ),
-  terahenry._(
-    Inductance$Terahenry(),
-  ),
-  gigahenry._(
-    Inductance$Gigahenry(),
-  ),
-  megahenry._(
-    Inductance$Megahenry(),
-  ),
-  kilohenry._(
-    Inductance$Kilohenry(),
-  ),
-  hectohenry._(
-    Inductance$Hectohenry(),
-  ),
-  dekahenry._(
-    Inductance$Dekahenry(),
-  ),
-  henry._(
-    Inductance$Henry(),
-  ),
-  decihenry._(
-    Inductance$Decihenry(),
-  ),
-  centihenry._(
-    Inductance$Centihenry(),
-  ),
-  millihenry._(
-    Inductance$Millihenry(),
-  ),
-  microhenry._(
-    Inductance$Microhenry(),
-  ),
-  nanohenry._(
-    Inductance$Nanohenry(),
-  ),
-  picohenry._(
-    Inductance$Picohenry(),
-  ),
-  femtohenry._(
-    Inductance$Femtohenry(),
-  ),
-  attohenry._(
-    Inductance$Attohenry(),
-  ),
-  abhenry._(
-    Inductance$Abhenry(),
-  ),
-  stathenry._(
-    Inductance$Stathenry(),
-  ),
-  eMUOfInductance._(
-    Inductance$EMUOfInductance(),
-  ),
-  eSUOfInductance._(
-    Inductance$ESUOfInductance(),
-  ),
-  ;
-
-  const InductanceUnit._(this.construct);
-
-  final Inductance construct;
-}
-
-const inductanceUnitValues = _EnumValues({
-  Inductance$Exahenry._minorName: InductanceUnit.exahenry,
-  Inductance$Petahenry._minorName: InductanceUnit.petahenry,
-  Inductance$Terahenry._minorName: InductanceUnit.terahenry,
-  Inductance$Gigahenry._minorName: InductanceUnit.gigahenry,
-  Inductance$Megahenry._minorName: InductanceUnit.megahenry,
-  Inductance$Kilohenry._minorName: InductanceUnit.kilohenry,
-  Inductance$Hectohenry._minorName: InductanceUnit.hectohenry,
-  Inductance$Dekahenry._minorName: InductanceUnit.dekahenry,
-  Inductance$Henry._minorName: InductanceUnit.henry,
-  Inductance$Decihenry._minorName: InductanceUnit.decihenry,
-  Inductance$Centihenry._minorName: InductanceUnit.centihenry,
-  Inductance$Millihenry._minorName: InductanceUnit.millihenry,
-  Inductance$Microhenry._minorName: InductanceUnit.microhenry,
-  Inductance$Nanohenry._minorName: InductanceUnit.nanohenry,
-  Inductance$Picohenry._minorName: InductanceUnit.picohenry,
-  Inductance$Femtohenry._minorName: InductanceUnit.femtohenry,
-  Inductance$Attohenry._minorName: InductanceUnit.attohenry,
-  Inductance$Abhenry._minorName: InductanceUnit.abhenry,
-  Inductance$Stathenry._minorName: InductanceUnit.stathenry,
-  Inductance$EMUOfInductance._minorName: InductanceUnit.eMUOfInductance,
-  Inductance$ESUOfInductance._minorName: InductanceUnit.eSUOfInductance,
+const inductanceUnits = EnumValues({
+  Inductance$Exahenry._minorName: Inductance.exahenry,
+  Inductance$Petahenry._minorName: Inductance.petahenry,
+  Inductance$Terahenry._minorName: Inductance.terahenry,
+  Inductance$Gigahenry._minorName: Inductance.gigahenry,
+  Inductance$Megahenry._minorName: Inductance.megahenry,
+  Inductance$Kilohenry._minorName: Inductance.kilohenry,
+  Inductance$Hectohenry._minorName: Inductance.hectohenry,
+  Inductance$Dekahenry._minorName: Inductance.dekahenry,
+  Inductance$Henry._minorName: Inductance.henry,
+  Inductance$Decihenry._minorName: Inductance.decihenry,
+  Inductance$Centihenry._minorName: Inductance.centihenry,
+  Inductance$Millihenry._minorName: Inductance.millihenry,
+  Inductance$Microhenry._minorName: Inductance.microhenry,
+  Inductance$Nanohenry._minorName: Inductance.nanohenry,
+  Inductance$Picohenry._minorName: Inductance.picohenry,
+  Inductance$Femtohenry._minorName: Inductance.femtohenry,
+  Inductance$Attohenry._minorName: Inductance.attohenry,
+  Inductance$Abhenry._minorName: Inductance.abhenry,
+  Inductance$Stathenry._minorName: Inductance.stathenry,
+  Inductance$EMUOfInductance._minorName: Inductance.eMUOfInductance,
+  Inductance$ESUOfInductance._minorName: Inductance.eSUOfInductance,
 });

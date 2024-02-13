@@ -15,10 +15,10 @@ sealed class Conductance extends Unit<Conductance> {
   factory Conductance.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        conductanceUnitValues,
+        conductanceUnits,
       )
-          ? conductanceUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? conductanceUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -99,6 +99,33 @@ sealed class Conductance extends Unit<Conductance> {
   String get majorName => _majorName;
 
   static const _majorName = 'conductance';
+
+  static const mho = Conductance$Mho();
+  static const gemmho = Conductance$Gemmho();
+  static const micromho = Conductance$Micromho();
+  static const megasiemens = Conductance$Megasiemens();
+  static const kilosiemens = Conductance$Kilosiemens();
+  static const siemens = Conductance$Siemens();
+  static const millisiemens = Conductance$Millisiemens();
+  static const microsiemens = Conductance$Microsiemens();
+  static const abmho = Conductance$Abmho();
+  static const statmho = Conductance$Statmho();
+
+  @override
+  List<Conductance> get units => values;
+
+  static const values = [
+    mho,
+    gemmho,
+    micromho,
+    megasiemens,
+    kilosiemens,
+    siemens,
+    millisiemens,
+    microsiemens,
+    abmho,
+    statmho,
+  ];
 }
 
 /// Unit of [Conductance]
@@ -751,53 +778,15 @@ final class Conductance$Statmho extends Conductance {
       };
 }
 
-enum ConductanceUnit {
-  mho._(
-    Conductance$Mho(),
-  ),
-  gemmho._(
-    Conductance$Gemmho(),
-  ),
-  micromho._(
-    Conductance$Micromho(),
-  ),
-  megasiemens._(
-    Conductance$Megasiemens(),
-  ),
-  kilosiemens._(
-    Conductance$Kilosiemens(),
-  ),
-  siemens._(
-    Conductance$Siemens(),
-  ),
-  millisiemens._(
-    Conductance$Millisiemens(),
-  ),
-  microsiemens._(
-    Conductance$Microsiemens(),
-  ),
-  abmho._(
-    Conductance$Abmho(),
-  ),
-  statmho._(
-    Conductance$Statmho(),
-  ),
-  ;
-
-  const ConductanceUnit._(this.construct);
-
-  final Conductance construct;
-}
-
-const conductanceUnitValues = _EnumValues({
-  Conductance$Mho._minorName: ConductanceUnit.mho,
-  Conductance$Gemmho._minorName: ConductanceUnit.gemmho,
-  Conductance$Micromho._minorName: ConductanceUnit.micromho,
-  Conductance$Megasiemens._minorName: ConductanceUnit.megasiemens,
-  Conductance$Kilosiemens._minorName: ConductanceUnit.kilosiemens,
-  Conductance$Siemens._minorName: ConductanceUnit.siemens,
-  Conductance$Millisiemens._minorName: ConductanceUnit.millisiemens,
-  Conductance$Microsiemens._minorName: ConductanceUnit.microsiemens,
-  Conductance$Abmho._minorName: ConductanceUnit.abmho,
-  Conductance$Statmho._minorName: ConductanceUnit.statmho,
+const conductanceUnits = EnumValues({
+  Conductance$Mho._minorName: Conductance.mho,
+  Conductance$Gemmho._minorName: Conductance.gemmho,
+  Conductance$Micromho._minorName: Conductance.micromho,
+  Conductance$Megasiemens._minorName: Conductance.megasiemens,
+  Conductance$Kilosiemens._minorName: Conductance.kilosiemens,
+  Conductance$Siemens._minorName: Conductance.siemens,
+  Conductance$Millisiemens._minorName: Conductance.millisiemens,
+  Conductance$Microsiemens._minorName: Conductance.microsiemens,
+  Conductance$Abmho._minorName: Conductance.abmho,
+  Conductance$Statmho._minorName: Conductance.statmho,
 });

@@ -17,10 +17,10 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
   factory VolumeChargeDensity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        volumeChargeDensityUnitValues,
+        volumeChargeDensityUnits,
       )
-          ? volumeChargeDensityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? volumeChargeDensityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -84,6 +84,30 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
   String get majorName => _majorName;
 
   static const _majorName = 'volumeChargeDensity';
+
+  static const coulombPerMeterCubic =
+      VolumeChargeDensity$CoulombPerMeterCubic();
+  static const coulombPerCentimeterCubic =
+      VolumeChargeDensity$CoulombPerCentimeterCubic();
+  static const coulombPerInchCubic = VolumeChargeDensity$CoulombPerInchCubic();
+  static const abcoulombPerMeterCubic =
+      VolumeChargeDensity$AbcoulombPerMeterCubic();
+  static const abcoulombPerCentimeterCubic =
+      VolumeChargeDensity$AbcoulombPerCentimeterCubic();
+  static const abcoulombPerInchCubic =
+      VolumeChargeDensity$AbcoulombPerInchCubic();
+
+  @override
+  List<VolumeChargeDensity> get units => values;
+
+  static const values = [
+    coulombPerMeterCubic,
+    coulombPerCentimeterCubic,
+    coulombPerInchCubic,
+    abcoulombPerMeterCubic,
+    abcoulombPerCentimeterCubic,
+    abcoulombPerInchCubic,
+  ];
 }
 
 /// Unit of [VolumeChargeDensity]
@@ -488,43 +512,17 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
       };
 }
 
-enum VolumeChargeDensityUnit {
-  coulombPerMeterCubic._(
-    VolumeChargeDensity$CoulombPerMeterCubic(),
-  ),
-  coulombPerCentimeterCubic._(
-    VolumeChargeDensity$CoulombPerCentimeterCubic(),
-  ),
-  coulombPerInchCubic._(
-    VolumeChargeDensity$CoulombPerInchCubic(),
-  ),
-  abcoulombPerMeterCubic._(
-    VolumeChargeDensity$AbcoulombPerMeterCubic(),
-  ),
-  abcoulombPerCentimeterCubic._(
-    VolumeChargeDensity$AbcoulombPerCentimeterCubic(),
-  ),
-  abcoulombPerInchCubic._(
-    VolumeChargeDensity$AbcoulombPerInchCubic(),
-  ),
-  ;
-
-  const VolumeChargeDensityUnit._(this.construct);
-
-  final VolumeChargeDensity construct;
-}
-
-const volumeChargeDensityUnitValues = _EnumValues({
+const volumeChargeDensityUnits = EnumValues({
   VolumeChargeDensity$CoulombPerMeterCubic._minorName:
-      VolumeChargeDensityUnit.coulombPerMeterCubic,
+      VolumeChargeDensity.coulombPerMeterCubic,
   VolumeChargeDensity$CoulombPerCentimeterCubic._minorName:
-      VolumeChargeDensityUnit.coulombPerCentimeterCubic,
+      VolumeChargeDensity.coulombPerCentimeterCubic,
   VolumeChargeDensity$CoulombPerInchCubic._minorName:
-      VolumeChargeDensityUnit.coulombPerInchCubic,
+      VolumeChargeDensity.coulombPerInchCubic,
   VolumeChargeDensity$AbcoulombPerMeterCubic._minorName:
-      VolumeChargeDensityUnit.abcoulombPerMeterCubic,
+      VolumeChargeDensity.abcoulombPerMeterCubic,
   VolumeChargeDensity$AbcoulombPerCentimeterCubic._minorName:
-      VolumeChargeDensityUnit.abcoulombPerCentimeterCubic,
+      VolumeChargeDensity.abcoulombPerCentimeterCubic,
   VolumeChargeDensity$AbcoulombPerInchCubic._minorName:
-      VolumeChargeDensityUnit.abcoulombPerInchCubic,
+      VolumeChargeDensity.abcoulombPerInchCubic,
 });

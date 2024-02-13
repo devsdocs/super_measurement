@@ -24,10 +24,10 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
       _checkJson(
         _majorName,
         json,
-        radiationRadioactivityUnitValues,
+        radiationRadioactivityUnits,
       )
-          ? radiationRadioactivityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? radiationRadioactivityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -153,6 +153,45 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
   String get majorName => _majorName;
 
   static const _majorName = 'radiationRadioactivity';
+
+  static const terabecquerel = RadiationRadioactivity$Terabecquerel();
+  static const gigabecquerel = RadiationRadioactivity$Gigabecquerel();
+  static const megabecquerel = RadiationRadioactivity$Megabecquerel();
+  static const kilobecquerel = RadiationRadioactivity$Kilobecquerel();
+  static const becquerel = RadiationRadioactivity$Becquerel();
+  static const millibecquerel = RadiationRadioactivity$Millibecquerel();
+  static const kilocurie = RadiationRadioactivity$Kilocurie();
+  static const curie = RadiationRadioactivity$Curie();
+  static const millicurie = RadiationRadioactivity$Millicurie();
+  static const microcurie = RadiationRadioactivity$Microcurie();
+  static const nanocurie = RadiationRadioactivity$Nanocurie();
+  static const picocurie = RadiationRadioactivity$Picocurie();
+  static const rutherford = RadiationRadioactivity$Rutherford();
+  static const disintegrationsPerSecond =
+      RadiationRadioactivity$DisintegrationsPerSecond();
+  static const disintegrationsPerMinute =
+      RadiationRadioactivity$DisintegrationsPerMinute();
+
+  @override
+  List<RadiationRadioactivity> get units => values;
+
+  static const values = [
+    terabecquerel,
+    gigabecquerel,
+    megabecquerel,
+    kilobecquerel,
+    becquerel,
+    millibecquerel,
+    kilocurie,
+    curie,
+    millicurie,
+    microcurie,
+    nanocurie,
+    picocurie,
+    rutherford,
+    disintegrationsPerSecond,
+    disintegrationsPerMinute,
+  ];
 }
 
 /// Unit of [RadiationRadioactivity]
@@ -1152,87 +1191,30 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
       };
 }
 
-enum RadiationRadioactivityUnit {
-  terabecquerel._(
-    RadiationRadioactivity$Terabecquerel(),
-  ),
-  gigabecquerel._(
-    RadiationRadioactivity$Gigabecquerel(),
-  ),
-  megabecquerel._(
-    RadiationRadioactivity$Megabecquerel(),
-  ),
-  kilobecquerel._(
-    RadiationRadioactivity$Kilobecquerel(),
-  ),
-  becquerel._(
-    RadiationRadioactivity$Becquerel(),
-  ),
-  millibecquerel._(
-    RadiationRadioactivity$Millibecquerel(),
-  ),
-  kilocurie._(
-    RadiationRadioactivity$Kilocurie(),
-  ),
-  curie._(
-    RadiationRadioactivity$Curie(),
-  ),
-  millicurie._(
-    RadiationRadioactivity$Millicurie(),
-  ),
-  microcurie._(
-    RadiationRadioactivity$Microcurie(),
-  ),
-  nanocurie._(
-    RadiationRadioactivity$Nanocurie(),
-  ),
-  picocurie._(
-    RadiationRadioactivity$Picocurie(),
-  ),
-  rutherford._(
-    RadiationRadioactivity$Rutherford(),
-  ),
-  disintegrationsPerSecond._(
-    RadiationRadioactivity$DisintegrationsPerSecond(),
-  ),
-  disintegrationsPerMinute._(
-    RadiationRadioactivity$DisintegrationsPerMinute(),
-  ),
-  ;
-
-  const RadiationRadioactivityUnit._(this.construct);
-
-  final RadiationRadioactivity construct;
-}
-
-const radiationRadioactivityUnitValues = _EnumValues({
+const radiationRadioactivityUnits = EnumValues({
   RadiationRadioactivity$Terabecquerel._minorName:
-      RadiationRadioactivityUnit.terabecquerel,
+      RadiationRadioactivity.terabecquerel,
   RadiationRadioactivity$Gigabecquerel._minorName:
-      RadiationRadioactivityUnit.gigabecquerel,
+      RadiationRadioactivity.gigabecquerel,
   RadiationRadioactivity$Megabecquerel._minorName:
-      RadiationRadioactivityUnit.megabecquerel,
+      RadiationRadioactivity.megabecquerel,
   RadiationRadioactivity$Kilobecquerel._minorName:
-      RadiationRadioactivityUnit.kilobecquerel,
-  RadiationRadioactivity$Becquerel._minorName:
-      RadiationRadioactivityUnit.becquerel,
+      RadiationRadioactivity.kilobecquerel,
+  RadiationRadioactivity$Becquerel._minorName: RadiationRadioactivity.becquerel,
   RadiationRadioactivity$Millibecquerel._minorName:
-      RadiationRadioactivityUnit.millibecquerel,
-  RadiationRadioactivity$Kilocurie._minorName:
-      RadiationRadioactivityUnit.kilocurie,
-  RadiationRadioactivity$Curie._minorName: RadiationRadioactivityUnit.curie,
+      RadiationRadioactivity.millibecquerel,
+  RadiationRadioactivity$Kilocurie._minorName: RadiationRadioactivity.kilocurie,
+  RadiationRadioactivity$Curie._minorName: RadiationRadioactivity.curie,
   RadiationRadioactivity$Millicurie._minorName:
-      RadiationRadioactivityUnit.millicurie,
+      RadiationRadioactivity.millicurie,
   RadiationRadioactivity$Microcurie._minorName:
-      RadiationRadioactivityUnit.microcurie,
-  RadiationRadioactivity$Nanocurie._minorName:
-      RadiationRadioactivityUnit.nanocurie,
-  RadiationRadioactivity$Picocurie._minorName:
-      RadiationRadioactivityUnit.picocurie,
+      RadiationRadioactivity.microcurie,
+  RadiationRadioactivity$Nanocurie._minorName: RadiationRadioactivity.nanocurie,
+  RadiationRadioactivity$Picocurie._minorName: RadiationRadioactivity.picocurie,
   RadiationRadioactivity$Rutherford._minorName:
-      RadiationRadioactivityUnit.rutherford,
+      RadiationRadioactivity.rutherford,
   RadiationRadioactivity$DisintegrationsPerSecond._minorName:
-      RadiationRadioactivityUnit.disintegrationsPerSecond,
+      RadiationRadioactivity.disintegrationsPerSecond,
   RadiationRadioactivity$DisintegrationsPerMinute._minorName:
-      RadiationRadioactivityUnit.disintegrationsPerMinute,
+      RadiationRadioactivity.disintegrationsPerMinute,
 });

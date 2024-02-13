@@ -33,10 +33,10 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
   factory FrequencyWavelength.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        frequencyWavelengthUnitValues,
+        frequencyWavelengthUnits,
       )
-          ? frequencyWavelengthUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? frequencyWavelengthUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -257,6 +257,87 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
   String get majorName => _majorName;
 
   static const _majorName = 'frequencyWavelength';
+
+  static const exahertz = FrequencyWavelength$Exahertz();
+  static const petahertz = FrequencyWavelength$Petahertz();
+  static const terahertz = FrequencyWavelength$Terahertz();
+  static const gigahertz = FrequencyWavelength$Gigahertz();
+  static const megahertz = FrequencyWavelength$Megahertz();
+  static const kilohertz = FrequencyWavelength$Kilohertz();
+  static const hectohertz = FrequencyWavelength$Hectohertz();
+  static const dekahertz = FrequencyWavelength$Dekahertz();
+  static const hertz = FrequencyWavelength$Hertz();
+  static const decihertz = FrequencyWavelength$Decihertz();
+  static const centihertz = FrequencyWavelength$Centihertz();
+  static const millihertz = FrequencyWavelength$Millihertz();
+  static const microhertz = FrequencyWavelength$Microhertz();
+  static const nanohertz = FrequencyWavelength$Nanohertz();
+  static const picohertz = FrequencyWavelength$Picohertz();
+  static const femtohertz = FrequencyWavelength$Femtohertz();
+  static const attohertz = FrequencyWavelength$Attohertz();
+  static const cyclePerSecond = FrequencyWavelength$CyclePerSecond();
+  static const wavelengthInExametres =
+      FrequencyWavelength$WavelengthInExametres();
+  static const wavelengthInPetametres =
+      FrequencyWavelength$WavelengthInPetametres();
+  static const wavelengthInTerametres =
+      FrequencyWavelength$WavelengthInTerametres();
+  static const wavelengthInGigametres =
+      FrequencyWavelength$WavelengthInGigametres();
+  static const wavelengthInMegametres =
+      FrequencyWavelength$WavelengthInMegametres();
+  static const wavelengthInKilometres =
+      FrequencyWavelength$WavelengthInKilometres();
+  static const wavelengthInHectometres =
+      FrequencyWavelength$WavelengthInHectometres();
+  static const wavelengthInDecametres =
+      FrequencyWavelength$WavelengthInDecametres();
+  static const wavelengthInMetres = FrequencyWavelength$WavelengthInMetres();
+  static const wavelengthInDecimetres =
+      FrequencyWavelength$WavelengthInDecimetres();
+  static const wavelengthInCentimetres =
+      FrequencyWavelength$WavelengthInCentimetres();
+  static const wavelengthInMillimetres =
+      FrequencyWavelength$WavelengthInMillimetres();
+  static const wavelengthInMicrometres =
+      FrequencyWavelength$WavelengthInMicrometres();
+
+  @override
+  List<FrequencyWavelength> get units => values;
+
+  static const values = [
+    exahertz,
+    petahertz,
+    terahertz,
+    gigahertz,
+    megahertz,
+    kilohertz,
+    hectohertz,
+    dekahertz,
+    hertz,
+    decihertz,
+    centihertz,
+    millihertz,
+    microhertz,
+    nanohertz,
+    picohertz,
+    femtohertz,
+    attohertz,
+    cyclePerSecond,
+    wavelengthInExametres,
+    wavelengthInPetametres,
+    wavelengthInTerametres,
+    wavelengthInGigametres,
+    wavelengthInMegametres,
+    wavelengthInKilometres,
+    wavelengthInHectometres,
+    wavelengthInDecametres,
+    wavelengthInMetres,
+    wavelengthInDecimetres,
+    wavelengthInCentimetres,
+    wavelengthInMillimetres,
+    wavelengthInMicrometres,
+  ];
 }
 
 /// Unit of [FrequencyWavelength]
@@ -2316,151 +2397,50 @@ final class FrequencyWavelength$WavelengthInMicrometres
       };
 }
 
-enum FrequencyWavelengthUnit {
-  exahertz._(
-    FrequencyWavelength$Exahertz(),
-  ),
-  petahertz._(
-    FrequencyWavelength$Petahertz(),
-  ),
-  terahertz._(
-    FrequencyWavelength$Terahertz(),
-  ),
-  gigahertz._(
-    FrequencyWavelength$Gigahertz(),
-  ),
-  megahertz._(
-    FrequencyWavelength$Megahertz(),
-  ),
-  kilohertz._(
-    FrequencyWavelength$Kilohertz(),
-  ),
-  hectohertz._(
-    FrequencyWavelength$Hectohertz(),
-  ),
-  dekahertz._(
-    FrequencyWavelength$Dekahertz(),
-  ),
-  hertz._(
-    FrequencyWavelength$Hertz(),
-  ),
-  decihertz._(
-    FrequencyWavelength$Decihertz(),
-  ),
-  centihertz._(
-    FrequencyWavelength$Centihertz(),
-  ),
-  millihertz._(
-    FrequencyWavelength$Millihertz(),
-  ),
-  microhertz._(
-    FrequencyWavelength$Microhertz(),
-  ),
-  nanohertz._(
-    FrequencyWavelength$Nanohertz(),
-  ),
-  picohertz._(
-    FrequencyWavelength$Picohertz(),
-  ),
-  femtohertz._(
-    FrequencyWavelength$Femtohertz(),
-  ),
-  attohertz._(
-    FrequencyWavelength$Attohertz(),
-  ),
-  cyclePerSecond._(
-    FrequencyWavelength$CyclePerSecond(),
-  ),
-  wavelengthInExametres._(
-    FrequencyWavelength$WavelengthInExametres(),
-  ),
-  wavelengthInPetametres._(
-    FrequencyWavelength$WavelengthInPetametres(),
-  ),
-  wavelengthInTerametres._(
-    FrequencyWavelength$WavelengthInTerametres(),
-  ),
-  wavelengthInGigametres._(
-    FrequencyWavelength$WavelengthInGigametres(),
-  ),
-  wavelengthInMegametres._(
-    FrequencyWavelength$WavelengthInMegametres(),
-  ),
-  wavelengthInKilometres._(
-    FrequencyWavelength$WavelengthInKilometres(),
-  ),
-  wavelengthInHectometres._(
-    FrequencyWavelength$WavelengthInHectometres(),
-  ),
-  wavelengthInDecametres._(
-    FrequencyWavelength$WavelengthInDecametres(),
-  ),
-  wavelengthInMetres._(
-    FrequencyWavelength$WavelengthInMetres(),
-  ),
-  wavelengthInDecimetres._(
-    FrequencyWavelength$WavelengthInDecimetres(),
-  ),
-  wavelengthInCentimetres._(
-    FrequencyWavelength$WavelengthInCentimetres(),
-  ),
-  wavelengthInMillimetres._(
-    FrequencyWavelength$WavelengthInMillimetres(),
-  ),
-  wavelengthInMicrometres._(
-    FrequencyWavelength$WavelengthInMicrometres(),
-  ),
-  ;
-
-  const FrequencyWavelengthUnit._(this.construct);
-
-  final FrequencyWavelength construct;
-}
-
-const frequencyWavelengthUnitValues = _EnumValues({
-  FrequencyWavelength$Exahertz._minorName: FrequencyWavelengthUnit.exahertz,
-  FrequencyWavelength$Petahertz._minorName: FrequencyWavelengthUnit.petahertz,
-  FrequencyWavelength$Terahertz._minorName: FrequencyWavelengthUnit.terahertz,
-  FrequencyWavelength$Gigahertz._minorName: FrequencyWavelengthUnit.gigahertz,
-  FrequencyWavelength$Megahertz._minorName: FrequencyWavelengthUnit.megahertz,
-  FrequencyWavelength$Kilohertz._minorName: FrequencyWavelengthUnit.kilohertz,
-  FrequencyWavelength$Hectohertz._minorName: FrequencyWavelengthUnit.hectohertz,
-  FrequencyWavelength$Dekahertz._minorName: FrequencyWavelengthUnit.dekahertz,
-  FrequencyWavelength$Hertz._minorName: FrequencyWavelengthUnit.hertz,
-  FrequencyWavelength$Decihertz._minorName: FrequencyWavelengthUnit.decihertz,
-  FrequencyWavelength$Centihertz._minorName: FrequencyWavelengthUnit.centihertz,
-  FrequencyWavelength$Millihertz._minorName: FrequencyWavelengthUnit.millihertz,
-  FrequencyWavelength$Microhertz._minorName: FrequencyWavelengthUnit.microhertz,
-  FrequencyWavelength$Nanohertz._minorName: FrequencyWavelengthUnit.nanohertz,
-  FrequencyWavelength$Picohertz._minorName: FrequencyWavelengthUnit.picohertz,
-  FrequencyWavelength$Femtohertz._minorName: FrequencyWavelengthUnit.femtohertz,
-  FrequencyWavelength$Attohertz._minorName: FrequencyWavelengthUnit.attohertz,
+const frequencyWavelengthUnits = EnumValues({
+  FrequencyWavelength$Exahertz._minorName: FrequencyWavelength.exahertz,
+  FrequencyWavelength$Petahertz._minorName: FrequencyWavelength.petahertz,
+  FrequencyWavelength$Terahertz._minorName: FrequencyWavelength.terahertz,
+  FrequencyWavelength$Gigahertz._minorName: FrequencyWavelength.gigahertz,
+  FrequencyWavelength$Megahertz._minorName: FrequencyWavelength.megahertz,
+  FrequencyWavelength$Kilohertz._minorName: FrequencyWavelength.kilohertz,
+  FrequencyWavelength$Hectohertz._minorName: FrequencyWavelength.hectohertz,
+  FrequencyWavelength$Dekahertz._minorName: FrequencyWavelength.dekahertz,
+  FrequencyWavelength$Hertz._minorName: FrequencyWavelength.hertz,
+  FrequencyWavelength$Decihertz._minorName: FrequencyWavelength.decihertz,
+  FrequencyWavelength$Centihertz._minorName: FrequencyWavelength.centihertz,
+  FrequencyWavelength$Millihertz._minorName: FrequencyWavelength.millihertz,
+  FrequencyWavelength$Microhertz._minorName: FrequencyWavelength.microhertz,
+  FrequencyWavelength$Nanohertz._minorName: FrequencyWavelength.nanohertz,
+  FrequencyWavelength$Picohertz._minorName: FrequencyWavelength.picohertz,
+  FrequencyWavelength$Femtohertz._minorName: FrequencyWavelength.femtohertz,
+  FrequencyWavelength$Attohertz._minorName: FrequencyWavelength.attohertz,
   FrequencyWavelength$CyclePerSecond._minorName:
-      FrequencyWavelengthUnit.cyclePerSecond,
+      FrequencyWavelength.cyclePerSecond,
   FrequencyWavelength$WavelengthInExametres._minorName:
-      FrequencyWavelengthUnit.wavelengthInExametres,
+      FrequencyWavelength.wavelengthInExametres,
   FrequencyWavelength$WavelengthInPetametres._minorName:
-      FrequencyWavelengthUnit.wavelengthInPetametres,
+      FrequencyWavelength.wavelengthInPetametres,
   FrequencyWavelength$WavelengthInTerametres._minorName:
-      FrequencyWavelengthUnit.wavelengthInTerametres,
+      FrequencyWavelength.wavelengthInTerametres,
   FrequencyWavelength$WavelengthInGigametres._minorName:
-      FrequencyWavelengthUnit.wavelengthInGigametres,
+      FrequencyWavelength.wavelengthInGigametres,
   FrequencyWavelength$WavelengthInMegametres._minorName:
-      FrequencyWavelengthUnit.wavelengthInMegametres,
+      FrequencyWavelength.wavelengthInMegametres,
   FrequencyWavelength$WavelengthInKilometres._minorName:
-      FrequencyWavelengthUnit.wavelengthInKilometres,
+      FrequencyWavelength.wavelengthInKilometres,
   FrequencyWavelength$WavelengthInHectometres._minorName:
-      FrequencyWavelengthUnit.wavelengthInHectometres,
+      FrequencyWavelength.wavelengthInHectometres,
   FrequencyWavelength$WavelengthInDecametres._minorName:
-      FrequencyWavelengthUnit.wavelengthInDecametres,
+      FrequencyWavelength.wavelengthInDecametres,
   FrequencyWavelength$WavelengthInMetres._minorName:
-      FrequencyWavelengthUnit.wavelengthInMetres,
+      FrequencyWavelength.wavelengthInMetres,
   FrequencyWavelength$WavelengthInDecimetres._minorName:
-      FrequencyWavelengthUnit.wavelengthInDecimetres,
+      FrequencyWavelength.wavelengthInDecimetres,
   FrequencyWavelength$WavelengthInCentimetres._minorName:
-      FrequencyWavelengthUnit.wavelengthInCentimetres,
+      FrequencyWavelength.wavelengthInCentimetres,
   FrequencyWavelength$WavelengthInMillimetres._minorName:
-      FrequencyWavelengthUnit.wavelengthInMillimetres,
+      FrequencyWavelength.wavelengthInMillimetres,
   FrequencyWavelength$WavelengthInMicrometres._minorName:
-      FrequencyWavelengthUnit.wavelengthInMicrometres,
+      FrequencyWavelength.wavelengthInMicrometres,
 });

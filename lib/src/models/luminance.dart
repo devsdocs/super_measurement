@@ -20,10 +20,10 @@ sealed class Luminance extends Unit<Luminance> {
   factory Luminance.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        luminanceUnitValues,
+        luminanceUnits,
       )
-          ? luminanceUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? luminanceUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -152,6 +152,52 @@ sealed class Luminance extends Unit<Luminance> {
   String get majorName => _majorName;
 
   static const _majorName = 'luminance';
+
+  static const stilb = Luminance$Stilb();
+  static const candelaPerMeterSquare = Luminance$CandelaPerMeterSquare();
+  static const candelaPerCentimeterSquare =
+      Luminance$CandelaPerCentimeterSquare();
+  static const candelaPerFootSquare = Luminance$CandelaPerFootSquare();
+  static const lumenPerMeterSquarePerSteradian =
+      Luminance$LumenPerMeterSquarePerSteradian();
+  static const lumenPerCentimeterSquarePerSteradian =
+      Luminance$LumenPerCentimeterSquarePerSteradian();
+  static const lumenPerFootSquarePerSteradian =
+      Luminance$LumenPerFootSquarePerSteradian();
+  static const wattPerCentimeterSquarePerSteradianAt555nm =
+      Luminance$WattPerCentimeterSquarePerSteradianAt555nm();
+  static const nit = Luminance$Nit();
+  static const millinit = Luminance$Millinit();
+  static const footLambert = Luminance$FootLambert();
+  static const lambert = Luminance$Lambert();
+  static const millilambert = Luminance$Millilambert();
+  static const apostilb = Luminance$Apostilb();
+  static const blondel = Luminance$Blondel();
+  static const bril = Luminance$Bril();
+  static const skot = Luminance$Skot();
+
+  @override
+  List<Luminance> get units => values;
+
+  static const values = [
+    stilb,
+    candelaPerMeterSquare,
+    candelaPerCentimeterSquare,
+    candelaPerFootSquare,
+    lumenPerMeterSquarePerSteradian,
+    lumenPerCentimeterSquarePerSteradian,
+    lumenPerFootSquarePerSteradian,
+    wattPerCentimeterSquarePerSteradianAt555nm,
+    nit,
+    millinit,
+    footLambert,
+    lambert,
+    millilambert,
+    apostilb,
+    blondel,
+    bril,
+    skot,
+  ];
 }
 
 /// Unit of [Luminance]
@@ -1267,87 +1313,27 @@ final class Luminance$Skot extends Luminance {
       };
 }
 
-enum LuminanceUnit {
-  stilb._(
-    Luminance$Stilb(),
-  ),
-  candelaPerMeterSquare._(
-    Luminance$CandelaPerMeterSquare(),
-  ),
-  candelaPerCentimeterSquare._(
-    Luminance$CandelaPerCentimeterSquare(),
-  ),
-  candelaPerFootSquare._(
-    Luminance$CandelaPerFootSquare(),
-  ),
-  lumenPerMeterSquarePerSteradian._(
-    Luminance$LumenPerMeterSquarePerSteradian(),
-  ),
-  lumenPerCentimeterSquarePerSteradian._(
-    Luminance$LumenPerCentimeterSquarePerSteradian(),
-  ),
-  lumenPerFootSquarePerSteradian._(
-    Luminance$LumenPerFootSquarePerSteradian(),
-  ),
-  wattPerCentimeterSquarePerSteradianAt555nm._(
-    Luminance$WattPerCentimeterSquarePerSteradianAt555nm(),
-  ),
-  nit._(
-    Luminance$Nit(),
-  ),
-  millinit._(
-    Luminance$Millinit(),
-  ),
-  footLambert._(
-    Luminance$FootLambert(),
-  ),
-  lambert._(
-    Luminance$Lambert(),
-  ),
-  millilambert._(
-    Luminance$Millilambert(),
-  ),
-  apostilb._(
-    Luminance$Apostilb(),
-  ),
-  blondel._(
-    Luminance$Blondel(),
-  ),
-  bril._(
-    Luminance$Bril(),
-  ),
-  skot._(
-    Luminance$Skot(),
-  ),
-  ;
-
-  const LuminanceUnit._(this.construct);
-
-  final Luminance construct;
-}
-
-const luminanceUnitValues = _EnumValues({
-  Luminance$Stilb._minorName: LuminanceUnit.stilb,
-  Luminance$CandelaPerMeterSquare._minorName:
-      LuminanceUnit.candelaPerMeterSquare,
+const luminanceUnits = EnumValues({
+  Luminance$Stilb._minorName: Luminance.stilb,
+  Luminance$CandelaPerMeterSquare._minorName: Luminance.candelaPerMeterSquare,
   Luminance$CandelaPerCentimeterSquare._minorName:
-      LuminanceUnit.candelaPerCentimeterSquare,
-  Luminance$CandelaPerFootSquare._minorName: LuminanceUnit.candelaPerFootSquare,
+      Luminance.candelaPerCentimeterSquare,
+  Luminance$CandelaPerFootSquare._minorName: Luminance.candelaPerFootSquare,
   Luminance$LumenPerMeterSquarePerSteradian._minorName:
-      LuminanceUnit.lumenPerMeterSquarePerSteradian,
+      Luminance.lumenPerMeterSquarePerSteradian,
   Luminance$LumenPerCentimeterSquarePerSteradian._minorName:
-      LuminanceUnit.lumenPerCentimeterSquarePerSteradian,
+      Luminance.lumenPerCentimeterSquarePerSteradian,
   Luminance$LumenPerFootSquarePerSteradian._minorName:
-      LuminanceUnit.lumenPerFootSquarePerSteradian,
+      Luminance.lumenPerFootSquarePerSteradian,
   Luminance$WattPerCentimeterSquarePerSteradianAt555nm._minorName:
-      LuminanceUnit.wattPerCentimeterSquarePerSteradianAt555nm,
-  Luminance$Nit._minorName: LuminanceUnit.nit,
-  Luminance$Millinit._minorName: LuminanceUnit.millinit,
-  Luminance$FootLambert._minorName: LuminanceUnit.footLambert,
-  Luminance$Lambert._minorName: LuminanceUnit.lambert,
-  Luminance$Millilambert._minorName: LuminanceUnit.millilambert,
-  Luminance$Apostilb._minorName: LuminanceUnit.apostilb,
-  Luminance$Blondel._minorName: LuminanceUnit.blondel,
-  Luminance$Bril._minorName: LuminanceUnit.bril,
-  Luminance$Skot._minorName: LuminanceUnit.skot,
+      Luminance.wattPerCentimeterSquarePerSteradianAt555nm,
+  Luminance$Nit._minorName: Luminance.nit,
+  Luminance$Millinit._minorName: Luminance.millinit,
+  Luminance$FootLambert._minorName: Luminance.footLambert,
+  Luminance$Lambert._minorName: Luminance.lambert,
+  Luminance$Millilambert._minorName: Luminance.millilambert,
+  Luminance$Apostilb._minorName: Luminance.apostilb,
+  Luminance$Blondel._minorName: Luminance.blondel,
+  Luminance$Bril._minorName: Luminance.bril,
+  Luminance$Skot._minorName: Luminance.skot,
 });

@@ -15,10 +15,10 @@ sealed class Conductivity extends Unit<Conductivity> {
   factory Conductivity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        conductivityUnitValues,
+        conductivityUnits,
       )
-          ? conductivityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? conductivityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -90,6 +90,29 @@ sealed class Conductivity extends Unit<Conductivity> {
   String get majorName => _majorName;
 
   static const _majorName = 'conductivity';
+
+  static const mhoPerMeter = Conductivity$MhoPerMeter();
+  static const mhoPerCentimeter = Conductivity$MhoPerCentimeter();
+  static const abmhoPerMeter = Conductivity$AbmhoPerMeter();
+  static const abmhoPerCentimeter = Conductivity$AbmhoPerCentimeter();
+  static const statmhoPerMeter = Conductivity$StatmhoPerMeter();
+  static const statmhoPerCentimeter = Conductivity$StatmhoPerCentimeter();
+  static const siemensPerMeter = Conductivity$SiemensPerMeter();
+  static const picosiemensPerMeter = Conductivity$PicosiemensPerMeter();
+
+  @override
+  List<Conductivity> get units => values;
+
+  static const values = [
+    mhoPerMeter,
+    mhoPerCentimeter,
+    abmhoPerMeter,
+    abmhoPerCentimeter,
+    statmhoPerMeter,
+    statmhoPerCentimeter,
+    siemensPerMeter,
+    picosiemensPerMeter,
+  ];
 }
 
 /// Unit of [Conductivity]
@@ -618,48 +641,14 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
       };
 }
 
-enum ConductivityUnit {
-  mhoPerMeter._(
-    Conductivity$MhoPerMeter(),
-  ),
-  mhoPerCentimeter._(
-    Conductivity$MhoPerCentimeter(),
-  ),
-  abmhoPerMeter._(
-    Conductivity$AbmhoPerMeter(),
-  ),
-  abmhoPerCentimeter._(
-    Conductivity$AbmhoPerCentimeter(),
-  ),
-  statmhoPerMeter._(
-    Conductivity$StatmhoPerMeter(),
-  ),
-  statmhoPerCentimeter._(
-    Conductivity$StatmhoPerCentimeter(),
-  ),
-  siemensPerMeter._(
-    Conductivity$SiemensPerMeter(),
-  ),
-  picosiemensPerMeter._(
-    Conductivity$PicosiemensPerMeter(),
-  ),
-  ;
-
-  const ConductivityUnit._(this.construct);
-
-  final Conductivity construct;
-}
-
-const conductivityUnitValues = _EnumValues({
-  Conductivity$MhoPerMeter._minorName: ConductivityUnit.mhoPerMeter,
-  Conductivity$MhoPerCentimeter._minorName: ConductivityUnit.mhoPerCentimeter,
-  Conductivity$AbmhoPerMeter._minorName: ConductivityUnit.abmhoPerMeter,
-  Conductivity$AbmhoPerCentimeter._minorName:
-      ConductivityUnit.abmhoPerCentimeter,
-  Conductivity$StatmhoPerMeter._minorName: ConductivityUnit.statmhoPerMeter,
+const conductivityUnits = EnumValues({
+  Conductivity$MhoPerMeter._minorName: Conductivity.mhoPerMeter,
+  Conductivity$MhoPerCentimeter._minorName: Conductivity.mhoPerCentimeter,
+  Conductivity$AbmhoPerMeter._minorName: Conductivity.abmhoPerMeter,
+  Conductivity$AbmhoPerCentimeter._minorName: Conductivity.abmhoPerCentimeter,
+  Conductivity$StatmhoPerMeter._minorName: Conductivity.statmhoPerMeter,
   Conductivity$StatmhoPerCentimeter._minorName:
-      ConductivityUnit.statmhoPerCentimeter,
-  Conductivity$SiemensPerMeter._minorName: ConductivityUnit.siemensPerMeter,
-  Conductivity$PicosiemensPerMeter._minorName:
-      ConductivityUnit.picosiemensPerMeter,
+      Conductivity.statmhoPerCentimeter,
+  Conductivity$SiemensPerMeter._minorName: Conductivity.siemensPerMeter,
+  Conductivity$PicosiemensPerMeter._minorName: Conductivity.picosiemensPerMeter,
 });

@@ -13,10 +13,10 @@ sealed class Resistance extends Unit<Resistance> {
   factory Resistance.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        resistanceUnitValues,
+        resistanceUnits,
       )
-          ? resistanceUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? resistanceUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -73,6 +73,25 @@ sealed class Resistance extends Unit<Resistance> {
   String get majorName => _majorName;
 
   static const _majorName = 'resistance';
+
+  static const megohm = Resistance$Megohm();
+  static const ohm = Resistance$Ohm();
+  static const ohmInternational = Resistance$OhmInternational();
+  static const microhm = Resistance$Microhm();
+  static const abohm = Resistance$Abohm();
+  static const statohm = Resistance$Statohm();
+
+  @override
+  List<Resistance> get units => values;
+
+  static const values = [
+    megohm,
+    ohm,
+    ohmInternational,
+    microhm,
+    abohm,
+    statohm,
+  ];
 }
 
 /// Unit of [Resistance]
@@ -465,37 +484,11 @@ final class Resistance$Statohm extends Resistance {
       };
 }
 
-enum ResistanceUnit {
-  megohm._(
-    Resistance$Megohm(),
-  ),
-  ohm._(
-    Resistance$Ohm(),
-  ),
-  ohmInternational._(
-    Resistance$OhmInternational(),
-  ),
-  microhm._(
-    Resistance$Microhm(),
-  ),
-  abohm._(
-    Resistance$Abohm(),
-  ),
-  statohm._(
-    Resistance$Statohm(),
-  ),
-  ;
-
-  const ResistanceUnit._(this.construct);
-
-  final Resistance construct;
-}
-
-const resistanceUnitValues = _EnumValues({
-  Resistance$Megohm._minorName: ResistanceUnit.megohm,
-  Resistance$Ohm._minorName: ResistanceUnit.ohm,
-  Resistance$OhmInternational._minorName: ResistanceUnit.ohmInternational,
-  Resistance$Microhm._minorName: ResistanceUnit.microhm,
-  Resistance$Abohm._minorName: ResistanceUnit.abohm,
-  Resistance$Statohm._minorName: ResistanceUnit.statohm,
+const resistanceUnits = EnumValues({
+  Resistance$Megohm._minorName: Resistance.megohm,
+  Resistance$Ohm._minorName: Resistance.ohm,
+  Resistance$OhmInternational._minorName: Resistance.ohmInternational,
+  Resistance$Microhm._minorName: Resistance.microhm,
+  Resistance$Abohm._minorName: Resistance.abohm,
+  Resistance$Statohm._minorName: Resistance.statohm,
 });

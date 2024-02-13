@@ -17,10 +17,10 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
   factory LinearChargeDensity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        linearChargeDensityUnitValues,
+        linearChargeDensityUnits,
       )
-          ? linearChargeDensityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? linearChargeDensityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -83,6 +83,27 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
   String get majorName => _majorName;
 
   static const _majorName = 'linearChargeDensity';
+
+  static const coulombPerMeter = LinearChargeDensity$CoulombPerMeter();
+  static const coulombPerCentimeter =
+      LinearChargeDensity$CoulombPerCentimeter();
+  static const coulombPerInch = LinearChargeDensity$CoulombPerInch();
+  static const abcoulombPerMeter = LinearChargeDensity$AbcoulombPerMeter();
+  static const abcoulombPerCentimeter =
+      LinearChargeDensity$AbcoulombPerCentimeter();
+  static const abcoulombPerInch = LinearChargeDensity$AbcoulombPerInch();
+
+  @override
+  List<LinearChargeDensity> get units => values;
+
+  static const values = [
+    coulombPerMeter,
+    coulombPerCentimeter,
+    coulombPerInch,
+    abcoulombPerMeter,
+    abcoulombPerCentimeter,
+    abcoulombPerInch,
+  ];
 }
 
 /// Unit of [LinearChargeDensity]
@@ -483,43 +504,17 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
       };
 }
 
-enum LinearChargeDensityUnit {
-  coulombPerMeter._(
-    LinearChargeDensity$CoulombPerMeter(),
-  ),
-  coulombPerCentimeter._(
-    LinearChargeDensity$CoulombPerCentimeter(),
-  ),
-  coulombPerInch._(
-    LinearChargeDensity$CoulombPerInch(),
-  ),
-  abcoulombPerMeter._(
-    LinearChargeDensity$AbcoulombPerMeter(),
-  ),
-  abcoulombPerCentimeter._(
-    LinearChargeDensity$AbcoulombPerCentimeter(),
-  ),
-  abcoulombPerInch._(
-    LinearChargeDensity$AbcoulombPerInch(),
-  ),
-  ;
-
-  const LinearChargeDensityUnit._(this.construct);
-
-  final LinearChargeDensity construct;
-}
-
-const linearChargeDensityUnitValues = _EnumValues({
+const linearChargeDensityUnits = EnumValues({
   LinearChargeDensity$CoulombPerMeter._minorName:
-      LinearChargeDensityUnit.coulombPerMeter,
+      LinearChargeDensity.coulombPerMeter,
   LinearChargeDensity$CoulombPerCentimeter._minorName:
-      LinearChargeDensityUnit.coulombPerCentimeter,
+      LinearChargeDensity.coulombPerCentimeter,
   LinearChargeDensity$CoulombPerInch._minorName:
-      LinearChargeDensityUnit.coulombPerInch,
+      LinearChargeDensity.coulombPerInch,
   LinearChargeDensity$AbcoulombPerMeter._minorName:
-      LinearChargeDensityUnit.abcoulombPerMeter,
+      LinearChargeDensity.abcoulombPerMeter,
   LinearChargeDensity$AbcoulombPerCentimeter._minorName:
-      LinearChargeDensityUnit.abcoulombPerCentimeter,
+      LinearChargeDensity.abcoulombPerCentimeter,
   LinearChargeDensity$AbcoulombPerInch._minorName:
-      LinearChargeDensityUnit.abcoulombPerInch,
+      LinearChargeDensity.abcoulombPerInch,
 });

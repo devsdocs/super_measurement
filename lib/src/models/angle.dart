@@ -15,10 +15,9 @@ sealed class Angle extends Unit<Angle> {
   factory Angle.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        angleUnitValues,
+        angleUnits,
       )
-          ? angleUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? angleUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -129,6 +128,43 @@ sealed class Angle extends Unit<Angle> {
   String get majorName => _majorName;
 
   static const _majorName = 'angle';
+
+  static const degree = Angle$Degree();
+  static const radian = Angle$Radian();
+  static const grad = Angle$Grad();
+  static const minute = Angle$Minute();
+  static const second = Angle$Second();
+  static const sign = Angle$Sign();
+  static const mil = Angle$Mil();
+  static const revolution = Angle$Revolution();
+  static const circle = Angle$Circle();
+  static const turn = Angle$Turn();
+  static const quadrant = Angle$Quadrant();
+  static const rightAngle = Angle$RightAngle();
+  static const sextant = Angle$Sextant();
+  static const octant = Angle$Octant();
+  static const percentOfFullCircle = Angle$PercentOfFullCircle();
+
+  @override
+  List<Angle> get units => values;
+
+  static const values = [
+    degree,
+    radian,
+    grad,
+    minute,
+    second,
+    sign,
+    mil,
+    revolution,
+    circle,
+    turn,
+    quadrant,
+    rightAngle,
+    sextant,
+    octant,
+    percentOfFullCircle,
+  ];
 }
 
 /// Unit of [Angle]
@@ -1106,73 +1142,20 @@ final class Angle$PercentOfFullCircle extends Angle {
       };
 }
 
-enum AngleUnit {
-  degree._(
-    Angle$Degree(),
-  ),
-  radian._(
-    Angle$Radian(),
-  ),
-  grad._(
-    Angle$Grad(),
-  ),
-  minute._(
-    Angle$Minute(),
-  ),
-  second._(
-    Angle$Second(),
-  ),
-  sign._(
-    Angle$Sign(),
-  ),
-  mil._(
-    Angle$Mil(),
-  ),
-  revolution._(
-    Angle$Revolution(),
-  ),
-  circle._(
-    Angle$Circle(),
-  ),
-  turn._(
-    Angle$Turn(),
-  ),
-  quadrant._(
-    Angle$Quadrant(),
-  ),
-  rightAngle._(
-    Angle$RightAngle(),
-  ),
-  sextant._(
-    Angle$Sextant(),
-  ),
-  octant._(
-    Angle$Octant(),
-  ),
-  percentOfFullCircle._(
-    Angle$PercentOfFullCircle(),
-  ),
-  ;
-
-  const AngleUnit._(this.construct);
-
-  final Angle construct;
-}
-
-const angleUnitValues = _EnumValues({
-  Angle$Degree._minorName: AngleUnit.degree,
-  Angle$Radian._minorName: AngleUnit.radian,
-  Angle$Grad._minorName: AngleUnit.grad,
-  Angle$Minute._minorName: AngleUnit.minute,
-  Angle$Second._minorName: AngleUnit.second,
-  Angle$Sign._minorName: AngleUnit.sign,
-  Angle$Mil._minorName: AngleUnit.mil,
-  Angle$Revolution._minorName: AngleUnit.revolution,
-  Angle$Circle._minorName: AngleUnit.circle,
-  Angle$Turn._minorName: AngleUnit.turn,
-  Angle$Quadrant._minorName: AngleUnit.quadrant,
-  Angle$RightAngle._minorName: AngleUnit.rightAngle,
-  Angle$Sextant._minorName: AngleUnit.sextant,
-  Angle$Octant._minorName: AngleUnit.octant,
-  Angle$PercentOfFullCircle._minorName: AngleUnit.percentOfFullCircle,
+const angleUnits = EnumValues({
+  Angle$Degree._minorName: Angle.degree,
+  Angle$Radian._minorName: Angle.radian,
+  Angle$Grad._minorName: Angle.grad,
+  Angle$Minute._minorName: Angle.minute,
+  Angle$Second._minorName: Angle.second,
+  Angle$Sign._minorName: Angle.sign,
+  Angle$Mil._minorName: Angle.mil,
+  Angle$Revolution._minorName: Angle.revolution,
+  Angle$Circle._minorName: Angle.circle,
+  Angle$Turn._minorName: Angle.turn,
+  Angle$Quadrant._minorName: Angle.quadrant,
+  Angle$RightAngle._minorName: Angle.rightAngle,
+  Angle$Sextant._minorName: Angle.sextant,
+  Angle$Octant._minorName: Angle.octant,
+  Angle$PercentOfFullCircle._minorName: Angle.percentOfFullCircle,
 });

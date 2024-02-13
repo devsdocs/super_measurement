@@ -33,10 +33,9 @@ sealed class Length extends Unit<Length> {
   factory Length.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        lengthUnitValues,
+        lengthUnits,
       )
-          ? lengthUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? lengthUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -471,6 +470,151 @@ sealed class Length extends Unit<Length> {
   String get majorName => _majorName;
 
   static const _majorName = 'length';
+
+  static const exameter = Length$Exameter();
+  static const petameter = Length$Petameter();
+  static const terameter = Length$Terameter();
+  static const gigameter = Length$Gigameter();
+  static const megameter = Length$Megameter();
+  static const kilometer = Length$Kilometer();
+  static const hectometer = Length$Hectometer();
+  static const dekameter = Length$Dekameter();
+  static const meter = Length$Meter();
+  static const decimeter = Length$Decimeter();
+  static const centimeter = Length$Centimeter();
+  static const millimeter = Length$Millimeter();
+  static const micrometer = Length$Micrometer();
+  static const nanometer = Length$Nanometer();
+  static const picometer = Length$Picometer();
+  static const femtometer = Length$Femtometer();
+  static const attometer = Length$Attometer();
+  static const angstrom = Length$Angstrom();
+  static const fermi = Length$Fermi();
+  static const planck = Length$Planck();
+  static const mileUS = Length$MileUS();
+  static const mileUSSurveyFoot = Length$MileUSSurveyFoot();
+  static const mileRoman = Length$MileRoman();
+  static const furlong = Length$Furlong();
+  static const chain = Length$Chain();
+  static const rod = Length$Rod();
+  static const perch = Length$Perch();
+  static const pole = Length$Pole();
+  static const fathom = Length$Fathom();
+  static const yard = Length$Yard();
+  static const foot = Length$Foot();
+  static const footUSSurvey = Length$FootUSSurvey();
+  static const link = Length$Link();
+  static const inch = Length$Inch();
+  static const hand = Length$Hand();
+  static const mil = Length$Mil();
+  static const milSweden = Length$MilSweden();
+  static const microinch = Length$Microinch();
+  static const megaparsec = Length$Megaparsec();
+  static const kiloparsec = Length$Kiloparsec();
+  static const parsec = Length$Parsec();
+  static const lightYear = Length$LightYear();
+  static const astronomicalUnit = Length$AstronomicalUnit();
+  static const league = Length$League();
+  static const nauticalMile = Length$NauticalMile();
+  static const arpent = Length$Arpent();
+  static const pica = Length$Pica();
+  static const point = Length$Point();
+  static const twip = Length$Twip();
+  static const aln = Length$Aln();
+  static const famn = Length$Famn();
+  static const caliber = Length$Caliber();
+  static const ken = Length$Ken();
+  static const barleycorn = Length$Barleycorn();
+  static const russianArchin = Length$RussianArchin();
+  static const romanActus = Length$RomanActus();
+  static const clothNail = Length$ClothNail();
+  static const clothSpan = Length$ClothSpan();
+  static const varaDeTarea = Length$VaraDeTarea();
+  static const varaConuquera = Length$VaraConuquera();
+  static const varaCastellana = Length$VaraCastellana();
+  static const cubitGreek = Length$CubitGreek();
+  static const longReedBiblical = Length$LongReedBiblical();
+  static const reedBiblical = Length$ReedBiblical();
+  static const cubitBiblical = Length$CubitBiblical();
+  static const longCubitBiblical = Length$LongCubitBiblical();
+  static const spanBiblical = Length$SpanBiblical();
+  static const handbreadthBiblical = Length$HandbreadthBiblical();
+  static const fingerbreadthBiblical = Length$FingerbreadthBiblical();
+
+  @override
+  List<Length> get units => values;
+
+  static const values = [
+    exameter,
+    petameter,
+    terameter,
+    gigameter,
+    megameter,
+    kilometer,
+    hectometer,
+    dekameter,
+    meter,
+    decimeter,
+    centimeter,
+    millimeter,
+    micrometer,
+    nanometer,
+    picometer,
+    femtometer,
+    attometer,
+    angstrom,
+    fermi,
+    planck,
+    mileUS,
+    mileUSSurveyFoot,
+    mileRoman,
+    furlong,
+    chain,
+    rod,
+    perch,
+    pole,
+    fathom,
+    yard,
+    foot,
+    footUSSurvey,
+    link,
+    inch,
+    hand,
+    mil,
+    milSweden,
+    microinch,
+    megaparsec,
+    kiloparsec,
+    parsec,
+    lightYear,
+    astronomicalUnit,
+    league,
+    nauticalMile,
+    arpent,
+    pica,
+    point,
+    twip,
+    aln,
+    famn,
+    caliber,
+    ken,
+    barleycorn,
+    russianArchin,
+    romanActus,
+    clothNail,
+    clothSpan,
+    varaDeTarea,
+    varaConuquera,
+    varaCastellana,
+    cubitGreek,
+    longReedBiblical,
+    reedBiblical,
+    cubitBiblical,
+    longCubitBiblical,
+    spanBiblical,
+    handbreadthBiblical,
+    fingerbreadthBiblical,
+  ];
 }
 
 /// Unit of [Length]
@@ -4959,289 +5103,74 @@ final class Length$FingerbreadthBiblical extends Length {
       };
 }
 
-enum LengthUnit {
-  exameter._(
-    Length$Exameter(),
-  ),
-  petameter._(
-    Length$Petameter(),
-  ),
-  terameter._(
-    Length$Terameter(),
-  ),
-  gigameter._(
-    Length$Gigameter(),
-  ),
-  megameter._(
-    Length$Megameter(),
-  ),
-  kilometer._(
-    Length$Kilometer(),
-  ),
-  hectometer._(
-    Length$Hectometer(),
-  ),
-  dekameter._(
-    Length$Dekameter(),
-  ),
-  meter._(
-    Length$Meter(),
-  ),
-  decimeter._(
-    Length$Decimeter(),
-  ),
-  centimeter._(
-    Length$Centimeter(),
-  ),
-  millimeter._(
-    Length$Millimeter(),
-  ),
-  micrometer._(
-    Length$Micrometer(),
-  ),
-  nanometer._(
-    Length$Nanometer(),
-  ),
-  picometer._(
-    Length$Picometer(),
-  ),
-  femtometer._(
-    Length$Femtometer(),
-  ),
-  attometer._(
-    Length$Attometer(),
-  ),
-  angstrom._(
-    Length$Angstrom(),
-  ),
-  fermi._(
-    Length$Fermi(),
-  ),
-  planck._(
-    Length$Planck(),
-  ),
-  mileUS._(
-    Length$MileUS(),
-  ),
-  mileUSSurveyFoot._(
-    Length$MileUSSurveyFoot(),
-  ),
-  mileRoman._(
-    Length$MileRoman(),
-  ),
-  furlong._(
-    Length$Furlong(),
-  ),
-  chain._(
-    Length$Chain(),
-  ),
-  rod._(
-    Length$Rod(),
-  ),
-  perch._(
-    Length$Perch(),
-  ),
-  pole._(
-    Length$Pole(),
-  ),
-  fathom._(
-    Length$Fathom(),
-  ),
-  yard._(
-    Length$Yard(),
-  ),
-  foot._(
-    Length$Foot(),
-  ),
-  footUSSurvey._(
-    Length$FootUSSurvey(),
-  ),
-  link._(
-    Length$Link(),
-  ),
-  inch._(
-    Length$Inch(),
-  ),
-  hand._(
-    Length$Hand(),
-  ),
-  mil._(
-    Length$Mil(),
-  ),
-  milSweden._(
-    Length$MilSweden(),
-  ),
-  microinch._(
-    Length$Microinch(),
-  ),
-  megaparsec._(
-    Length$Megaparsec(),
-  ),
-  kiloparsec._(
-    Length$Kiloparsec(),
-  ),
-  parsec._(
-    Length$Parsec(),
-  ),
-  lightYear._(
-    Length$LightYear(),
-  ),
-  astronomicalUnit._(
-    Length$AstronomicalUnit(),
-  ),
-  league._(
-    Length$League(),
-  ),
-  nauticalMile._(
-    Length$NauticalMile(),
-  ),
-  arpent._(
-    Length$Arpent(),
-  ),
-  pica._(
-    Length$Pica(),
-  ),
-  point._(
-    Length$Point(),
-  ),
-  twip._(
-    Length$Twip(),
-  ),
-  aln._(
-    Length$Aln(),
-  ),
-  famn._(
-    Length$Famn(),
-  ),
-  caliber._(
-    Length$Caliber(),
-  ),
-  ken._(
-    Length$Ken(),
-  ),
-  barleycorn._(
-    Length$Barleycorn(),
-  ),
-  russianArchin._(
-    Length$RussianArchin(),
-  ),
-  romanActus._(
-    Length$RomanActus(),
-  ),
-  clothNail._(
-    Length$ClothNail(),
-  ),
-  clothSpan._(
-    Length$ClothSpan(),
-  ),
-  varaDeTarea._(
-    Length$VaraDeTarea(),
-  ),
-  varaConuquera._(
-    Length$VaraConuquera(),
-  ),
-  varaCastellana._(
-    Length$VaraCastellana(),
-  ),
-  cubitGreek._(
-    Length$CubitGreek(),
-  ),
-  longReedBiblical._(
-    Length$LongReedBiblical(),
-  ),
-  reedBiblical._(
-    Length$ReedBiblical(),
-  ),
-  cubitBiblical._(
-    Length$CubitBiblical(),
-  ),
-  longCubitBiblical._(
-    Length$LongCubitBiblical(),
-  ),
-  spanBiblical._(
-    Length$SpanBiblical(),
-  ),
-  handbreadthBiblical._(
-    Length$HandbreadthBiblical(),
-  ),
-  fingerbreadthBiblical._(
-    Length$FingerbreadthBiblical(),
-  ),
-  ;
-
-  const LengthUnit._(this.construct);
-
-  final Length construct;
-}
-
-const lengthUnitValues = _EnumValues({
-  Length$Exameter._minorName: LengthUnit.exameter,
-  Length$Petameter._minorName: LengthUnit.petameter,
-  Length$Terameter._minorName: LengthUnit.terameter,
-  Length$Gigameter._minorName: LengthUnit.gigameter,
-  Length$Megameter._minorName: LengthUnit.megameter,
-  Length$Kilometer._minorName: LengthUnit.kilometer,
-  Length$Hectometer._minorName: LengthUnit.hectometer,
-  Length$Dekameter._minorName: LengthUnit.dekameter,
-  Length$Meter._minorName: LengthUnit.meter,
-  Length$Decimeter._minorName: LengthUnit.decimeter,
-  Length$Centimeter._minorName: LengthUnit.centimeter,
-  Length$Millimeter._minorName: LengthUnit.millimeter,
-  Length$Micrometer._minorName: LengthUnit.micrometer,
-  Length$Nanometer._minorName: LengthUnit.nanometer,
-  Length$Picometer._minorName: LengthUnit.picometer,
-  Length$Femtometer._minorName: LengthUnit.femtometer,
-  Length$Attometer._minorName: LengthUnit.attometer,
-  Length$Angstrom._minorName: LengthUnit.angstrom,
-  Length$Fermi._minorName: LengthUnit.fermi,
-  Length$Planck._minorName: LengthUnit.planck,
-  Length$MileUS._minorName: LengthUnit.mileUS,
-  Length$MileUSSurveyFoot._minorName: LengthUnit.mileUSSurveyFoot,
-  Length$MileRoman._minorName: LengthUnit.mileRoman,
-  Length$Furlong._minorName: LengthUnit.furlong,
-  Length$Chain._minorName: LengthUnit.chain,
-  Length$Rod._minorName: LengthUnit.rod,
-  Length$Perch._minorName: LengthUnit.perch,
-  Length$Pole._minorName: LengthUnit.pole,
-  Length$Fathom._minorName: LengthUnit.fathom,
-  Length$Yard._minorName: LengthUnit.yard,
-  Length$Foot._minorName: LengthUnit.foot,
-  Length$FootUSSurvey._minorName: LengthUnit.footUSSurvey,
-  Length$Link._minorName: LengthUnit.link,
-  Length$Inch._minorName: LengthUnit.inch,
-  Length$Hand._minorName: LengthUnit.hand,
-  Length$Mil._minorName: LengthUnit.mil,
-  Length$MilSweden._minorName: LengthUnit.milSweden,
-  Length$Microinch._minorName: LengthUnit.microinch,
-  Length$Megaparsec._minorName: LengthUnit.megaparsec,
-  Length$Kiloparsec._minorName: LengthUnit.kiloparsec,
-  Length$Parsec._minorName: LengthUnit.parsec,
-  Length$LightYear._minorName: LengthUnit.lightYear,
-  Length$AstronomicalUnit._minorName: LengthUnit.astronomicalUnit,
-  Length$League._minorName: LengthUnit.league,
-  Length$NauticalMile._minorName: LengthUnit.nauticalMile,
-  Length$Arpent._minorName: LengthUnit.arpent,
-  Length$Pica._minorName: LengthUnit.pica,
-  Length$Point._minorName: LengthUnit.point,
-  Length$Twip._minorName: LengthUnit.twip,
-  Length$Aln._minorName: LengthUnit.aln,
-  Length$Famn._minorName: LengthUnit.famn,
-  Length$Caliber._minorName: LengthUnit.caliber,
-  Length$Ken._minorName: LengthUnit.ken,
-  Length$Barleycorn._minorName: LengthUnit.barleycorn,
-  Length$RussianArchin._minorName: LengthUnit.russianArchin,
-  Length$RomanActus._minorName: LengthUnit.romanActus,
-  Length$ClothNail._minorName: LengthUnit.clothNail,
-  Length$ClothSpan._minorName: LengthUnit.clothSpan,
-  Length$VaraDeTarea._minorName: LengthUnit.varaDeTarea,
-  Length$VaraConuquera._minorName: LengthUnit.varaConuquera,
-  Length$VaraCastellana._minorName: LengthUnit.varaCastellana,
-  Length$CubitGreek._minorName: LengthUnit.cubitGreek,
-  Length$LongReedBiblical._minorName: LengthUnit.longReedBiblical,
-  Length$ReedBiblical._minorName: LengthUnit.reedBiblical,
-  Length$CubitBiblical._minorName: LengthUnit.cubitBiblical,
-  Length$LongCubitBiblical._minorName: LengthUnit.longCubitBiblical,
-  Length$SpanBiblical._minorName: LengthUnit.spanBiblical,
-  Length$HandbreadthBiblical._minorName: LengthUnit.handbreadthBiblical,
-  Length$FingerbreadthBiblical._minorName: LengthUnit.fingerbreadthBiblical,
+const lengthUnits = EnumValues({
+  Length$Exameter._minorName: Length.exameter,
+  Length$Petameter._minorName: Length.petameter,
+  Length$Terameter._minorName: Length.terameter,
+  Length$Gigameter._minorName: Length.gigameter,
+  Length$Megameter._minorName: Length.megameter,
+  Length$Kilometer._minorName: Length.kilometer,
+  Length$Hectometer._minorName: Length.hectometer,
+  Length$Dekameter._minorName: Length.dekameter,
+  Length$Meter._minorName: Length.meter,
+  Length$Decimeter._minorName: Length.decimeter,
+  Length$Centimeter._minorName: Length.centimeter,
+  Length$Millimeter._minorName: Length.millimeter,
+  Length$Micrometer._minorName: Length.micrometer,
+  Length$Nanometer._minorName: Length.nanometer,
+  Length$Picometer._minorName: Length.picometer,
+  Length$Femtometer._minorName: Length.femtometer,
+  Length$Attometer._minorName: Length.attometer,
+  Length$Angstrom._minorName: Length.angstrom,
+  Length$Fermi._minorName: Length.fermi,
+  Length$Planck._minorName: Length.planck,
+  Length$MileUS._minorName: Length.mileUS,
+  Length$MileUSSurveyFoot._minorName: Length.mileUSSurveyFoot,
+  Length$MileRoman._minorName: Length.mileRoman,
+  Length$Furlong._minorName: Length.furlong,
+  Length$Chain._minorName: Length.chain,
+  Length$Rod._minorName: Length.rod,
+  Length$Perch._minorName: Length.perch,
+  Length$Pole._minorName: Length.pole,
+  Length$Fathom._minorName: Length.fathom,
+  Length$Yard._minorName: Length.yard,
+  Length$Foot._minorName: Length.foot,
+  Length$FootUSSurvey._minorName: Length.footUSSurvey,
+  Length$Link._minorName: Length.link,
+  Length$Inch._minorName: Length.inch,
+  Length$Hand._minorName: Length.hand,
+  Length$Mil._minorName: Length.mil,
+  Length$MilSweden._minorName: Length.milSweden,
+  Length$Microinch._minorName: Length.microinch,
+  Length$Megaparsec._minorName: Length.megaparsec,
+  Length$Kiloparsec._minorName: Length.kiloparsec,
+  Length$Parsec._minorName: Length.parsec,
+  Length$LightYear._minorName: Length.lightYear,
+  Length$AstronomicalUnit._minorName: Length.astronomicalUnit,
+  Length$League._minorName: Length.league,
+  Length$NauticalMile._minorName: Length.nauticalMile,
+  Length$Arpent._minorName: Length.arpent,
+  Length$Pica._minorName: Length.pica,
+  Length$Point._minorName: Length.point,
+  Length$Twip._minorName: Length.twip,
+  Length$Aln._minorName: Length.aln,
+  Length$Famn._minorName: Length.famn,
+  Length$Caliber._minorName: Length.caliber,
+  Length$Ken._minorName: Length.ken,
+  Length$Barleycorn._minorName: Length.barleycorn,
+  Length$RussianArchin._minorName: Length.russianArchin,
+  Length$RomanActus._minorName: Length.romanActus,
+  Length$ClothNail._minorName: Length.clothNail,
+  Length$ClothSpan._minorName: Length.clothSpan,
+  Length$VaraDeTarea._minorName: Length.varaDeTarea,
+  Length$VaraConuquera._minorName: Length.varaConuquera,
+  Length$VaraCastellana._minorName: Length.varaCastellana,
+  Length$CubitGreek._minorName: Length.cubitGreek,
+  Length$LongReedBiblical._minorName: Length.longReedBiblical,
+  Length$ReedBiblical._minorName: Length.reedBiblical,
+  Length$CubitBiblical._minorName: Length.cubitBiblical,
+  Length$LongCubitBiblical._minorName: Length.longCubitBiblical,
+  Length$SpanBiblical._minorName: Length.spanBiblical,
+  Length$HandbreadthBiblical._minorName: Length.handbreadthBiblical,
+  Length$FingerbreadthBiblical._minorName: Length.fingerbreadthBiblical,
 });

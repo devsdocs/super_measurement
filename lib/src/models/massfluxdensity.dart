@@ -18,10 +18,10 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
   factory MassFluxDensity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        massFluxDensityUnitValues,
+        massFluxDensityUnits,
       )
-          ? massFluxDensityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? massFluxDensityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -92,6 +92,34 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
   String get majorName => _majorName;
 
   static const _majorName = 'massFluxDensity';
+
+  static const kilogramPerHourMeterSquare =
+      MassFluxDensity$KilogramPerHourMeterSquare();
+  static const kilogramPerHourFootSquare =
+      MassFluxDensity$KilogramPerHourFootSquare();
+  static const kilogramPerSecondMeterSquare =
+      MassFluxDensity$KilogramPerSecondMeterSquare();
+  static const gramPerSecondMeterSquare =
+      MassFluxDensity$GramPerSecondMeterSquare();
+  static const gramPerSecondCentimeterSquare =
+      MassFluxDensity$GramPerSecondCentimeterSquare();
+  static const poundPerHourFootSquare =
+      MassFluxDensity$PoundPerHourFootSquare();
+  static const poundPerSecondFootSquare =
+      MassFluxDensity$PoundPerSecondFootSquare();
+
+  @override
+  List<MassFluxDensity> get units => values;
+
+  static const values = [
+    kilogramPerHourMeterSquare,
+    kilogramPerHourFootSquare,
+    kilogramPerSecondMeterSquare,
+    gramPerSecondMeterSquare,
+    gramPerSecondCentimeterSquare,
+    poundPerHourFootSquare,
+    poundPerSecondFootSquare,
+  ];
 }
 
 /// Unit of [MassFluxDensity]
@@ -558,48 +586,19 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
       };
 }
 
-enum MassFluxDensityUnit {
-  kilogramPerHourMeterSquare._(
-    MassFluxDensity$KilogramPerHourMeterSquare(),
-  ),
-  kilogramPerHourFootSquare._(
-    MassFluxDensity$KilogramPerHourFootSquare(),
-  ),
-  kilogramPerSecondMeterSquare._(
-    MassFluxDensity$KilogramPerSecondMeterSquare(),
-  ),
-  gramPerSecondMeterSquare._(
-    MassFluxDensity$GramPerSecondMeterSquare(),
-  ),
-  gramPerSecondCentimeterSquare._(
-    MassFluxDensity$GramPerSecondCentimeterSquare(),
-  ),
-  poundPerHourFootSquare._(
-    MassFluxDensity$PoundPerHourFootSquare(),
-  ),
-  poundPerSecondFootSquare._(
-    MassFluxDensity$PoundPerSecondFootSquare(),
-  ),
-  ;
-
-  const MassFluxDensityUnit._(this.construct);
-
-  final MassFluxDensity construct;
-}
-
-const massFluxDensityUnitValues = _EnumValues({
+const massFluxDensityUnits = EnumValues({
   MassFluxDensity$KilogramPerHourMeterSquare._minorName:
-      MassFluxDensityUnit.kilogramPerHourMeterSquare,
+      MassFluxDensity.kilogramPerHourMeterSquare,
   MassFluxDensity$KilogramPerHourFootSquare._minorName:
-      MassFluxDensityUnit.kilogramPerHourFootSquare,
+      MassFluxDensity.kilogramPerHourFootSquare,
   MassFluxDensity$KilogramPerSecondMeterSquare._minorName:
-      MassFluxDensityUnit.kilogramPerSecondMeterSquare,
+      MassFluxDensity.kilogramPerSecondMeterSquare,
   MassFluxDensity$GramPerSecondMeterSquare._minorName:
-      MassFluxDensityUnit.gramPerSecondMeterSquare,
+      MassFluxDensity.gramPerSecondMeterSquare,
   MassFluxDensity$GramPerSecondCentimeterSquare._minorName:
-      MassFluxDensityUnit.gramPerSecondCentimeterSquare,
+      MassFluxDensity.gramPerSecondCentimeterSquare,
   MassFluxDensity$PoundPerHourFootSquare._minorName:
-      MassFluxDensityUnit.poundPerHourFootSquare,
+      MassFluxDensity.poundPerHourFootSquare,
   MassFluxDensity$PoundPerSecondFootSquare._minorName:
-      MassFluxDensityUnit.poundPerSecondFootSquare,
+      MassFluxDensity.poundPerSecondFootSquare,
 });

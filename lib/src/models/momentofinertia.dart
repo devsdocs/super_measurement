@@ -22,10 +22,10 @@ sealed class MomentofInertia extends Unit<MomentofInertia> {
   factory MomentofInertia.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        momentofInertiaUnitValues,
+        momentofInertiaUnits,
       )
-          ? momentofInertiaUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? momentofInertiaUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -130,6 +130,40 @@ sealed class MomentofInertia extends Unit<MomentofInertia> {
   String get majorName => _majorName;
 
   static const _majorName = 'momentofInertia';
+
+  static const kilogramMeterSquare = MomentofInertia$KilogramMeterSquare();
+  static const kilogramCentimeterSquare =
+      MomentofInertia$KilogramCentimeterSquare();
+  static const gramCentimeterSquare = MomentofInertia$GramCentimeterSquare();
+  static const kilogramForceMeterSecondSquare =
+      MomentofInertia$KilogramForceMeterSecondSquare();
+  static const kilogramForceCentimeterSecondSquare =
+      MomentofInertia$KilogramForceCentimeterSecondSquare();
+  static const ounceInchSquare = MomentofInertia$OunceInchSquare();
+  static const ounceInchSecondSquare = MomentofInertia$OunceInchSecondSquare();
+  static const poundFootSquare = MomentofInertia$PoundFootSquare();
+  static const poundFootSecondSquare = MomentofInertia$PoundFootSecondSquare();
+  static const poundInchSquare = MomentofInertia$PoundInchSquare();
+  static const poundInchSecondSquare = MomentofInertia$PoundInchSecondSquare();
+  static const slugFootSquare = MomentofInertia$SlugFootSquare();
+
+  @override
+  List<MomentofInertia> get units => values;
+
+  static const values = [
+    kilogramMeterSquare,
+    kilogramCentimeterSquare,
+    gramCentimeterSquare,
+    kilogramForceMeterSecondSquare,
+    kilogramForceCentimeterSecondSquare,
+    ounceInchSquare,
+    ounceInchSecondSquare,
+    poundFootSquare,
+    poundFootSecondSquare,
+    poundInchSquare,
+    poundInchSecondSquare,
+    slugFootSquare,
+  ];
 }
 
 /// Unit of [MomentofInertia]
@@ -926,72 +960,25 @@ final class MomentofInertia$SlugFootSquare extends MomentofInertia {
       };
 }
 
-enum MomentofInertiaUnit {
-  kilogramMeterSquare._(
-    MomentofInertia$KilogramMeterSquare(),
-  ),
-  kilogramCentimeterSquare._(
-    MomentofInertia$KilogramCentimeterSquare(),
-  ),
-  gramCentimeterSquare._(
-    MomentofInertia$GramCentimeterSquare(),
-  ),
-  kilogramForceMeterSecondSquare._(
-    MomentofInertia$KilogramForceMeterSecondSquare(),
-  ),
-  kilogramForceCentimeterSecondSquare._(
-    MomentofInertia$KilogramForceCentimeterSecondSquare(),
-  ),
-  ounceInchSquare._(
-    MomentofInertia$OunceInchSquare(),
-  ),
-  ounceInchSecondSquare._(
-    MomentofInertia$OunceInchSecondSquare(),
-  ),
-  poundFootSquare._(
-    MomentofInertia$PoundFootSquare(),
-  ),
-  poundFootSecondSquare._(
-    MomentofInertia$PoundFootSecondSquare(),
-  ),
-  poundInchSquare._(
-    MomentofInertia$PoundInchSquare(),
-  ),
-  poundInchSecondSquare._(
-    MomentofInertia$PoundInchSecondSquare(),
-  ),
-  slugFootSquare._(
-    MomentofInertia$SlugFootSquare(),
-  ),
-  ;
-
-  const MomentofInertiaUnit._(this.construct);
-
-  final MomentofInertia construct;
-}
-
-const momentofInertiaUnitValues = _EnumValues({
+const momentofInertiaUnits = EnumValues({
   MomentofInertia$KilogramMeterSquare._minorName:
-      MomentofInertiaUnit.kilogramMeterSquare,
+      MomentofInertia.kilogramMeterSquare,
   MomentofInertia$KilogramCentimeterSquare._minorName:
-      MomentofInertiaUnit.kilogramCentimeterSquare,
+      MomentofInertia.kilogramCentimeterSquare,
   MomentofInertia$GramCentimeterSquare._minorName:
-      MomentofInertiaUnit.gramCentimeterSquare,
+      MomentofInertia.gramCentimeterSquare,
   MomentofInertia$KilogramForceMeterSecondSquare._minorName:
-      MomentofInertiaUnit.kilogramForceMeterSecondSquare,
+      MomentofInertia.kilogramForceMeterSecondSquare,
   MomentofInertia$KilogramForceCentimeterSecondSquare._minorName:
-      MomentofInertiaUnit.kilogramForceCentimeterSecondSquare,
-  MomentofInertia$OunceInchSquare._minorName:
-      MomentofInertiaUnit.ounceInchSquare,
+      MomentofInertia.kilogramForceCentimeterSecondSquare,
+  MomentofInertia$OunceInchSquare._minorName: MomentofInertia.ounceInchSquare,
   MomentofInertia$OunceInchSecondSquare._minorName:
-      MomentofInertiaUnit.ounceInchSecondSquare,
-  MomentofInertia$PoundFootSquare._minorName:
-      MomentofInertiaUnit.poundFootSquare,
+      MomentofInertia.ounceInchSecondSquare,
+  MomentofInertia$PoundFootSquare._minorName: MomentofInertia.poundFootSquare,
   MomentofInertia$PoundFootSecondSquare._minorName:
-      MomentofInertiaUnit.poundFootSecondSquare,
-  MomentofInertia$PoundInchSquare._minorName:
-      MomentofInertiaUnit.poundInchSquare,
+      MomentofInertia.poundFootSecondSquare,
+  MomentofInertia$PoundInchSquare._minorName: MomentofInertia.poundInchSquare,
   MomentofInertia$PoundInchSecondSquare._minorName:
-      MomentofInertiaUnit.poundInchSecondSquare,
-  MomentofInertia$SlugFootSquare._minorName: MomentofInertiaUnit.slugFootSquare,
+      MomentofInertia.poundInchSecondSquare,
+  MomentofInertia$SlugFootSquare._minorName: MomentofInertia.slugFootSquare,
 });

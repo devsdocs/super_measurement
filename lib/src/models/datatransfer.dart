@@ -94,10 +94,10 @@ sealed class DataTransfer extends Unit<DataTransfer> {
   factory DataTransfer.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        dataTransferUnitValues,
+        dataTransferUnits,
       )
-          ? dataTransferUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? dataTransferUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -1189,6 +1189,370 @@ sealed class DataTransfer extends Unit<DataTransfer> {
   String get majorName => _majorName;
 
   static const _majorName = 'dataTransfer';
+
+  static const bitPerSecond = DataTransfer$BitPerSecond();
+  static const bytePerSecond = DataTransfer$BytePerSecond();
+  static const kilobitPerSecond = DataTransfer$KilobitPerSecond();
+  static const kilobytePerSecond = DataTransfer$KilobytePerSecond();
+  static const megabitPerSecond = DataTransfer$MegabitPerSecond();
+  static const megabytePerSecond = DataTransfer$MegabytePerSecond();
+  static const gigabitPerSecond = DataTransfer$GigabitPerSecond();
+  static const gigabytePerSecond = DataTransfer$GigabytePerSecond();
+  static const terabitPerSecond = DataTransfer$TerabitPerSecond();
+  static const terabytePerSecond = DataTransfer$TerabytePerSecond();
+  static const kibibitPerSecond = DataTransfer$KibibitPerSecond();
+  static const kibibytePerSecond = DataTransfer$KibibytePerSecond();
+  static const mebibitPerSecond = DataTransfer$MebibitPerSecond();
+  static const mebibytePerSecond = DataTransfer$MebibytePerSecond();
+  static const gibibitPerSecond = DataTransfer$GibibitPerSecond();
+  static const gibibytePerSecond = DataTransfer$GibibytePerSecond();
+  static const tebibitPerSecond = DataTransfer$TebibitPerSecond();
+  static const tebibytePerSecond = DataTransfer$TebibytePerSecond();
+  static const ethernet = DataTransfer$Ethernet();
+  static const ethernetFast = DataTransfer$EthernetFast();
+  static const ethernetGigabit = DataTransfer$EthernetGigabit();
+  static const ethernet10Gigabit = DataTransfer$Ethernet10Gigabit();
+  static const oC1 = DataTransfer$OC1();
+  static const oC3 = DataTransfer$OC3();
+  static const oC12 = DataTransfer$OC12();
+  static const oC24 = DataTransfer$OC24();
+  static const oC48 = DataTransfer$OC48();
+  static const oC192 = DataTransfer$OC192();
+  static const oC768 = DataTransfer$OC768();
+  static const iSDNSingleChannel = DataTransfer$ISDNSingleChannel();
+  static const iSDNDualChannel = DataTransfer$ISDNDualChannel();
+  static const modem110 = DataTransfer$Modem110();
+  static const modem300 = DataTransfer$Modem300();
+  static const modem1200 = DataTransfer$Modem1200();
+  static const modem2400 = DataTransfer$Modem2400();
+  static const modem9600 = DataTransfer$Modem9600();
+  static const modem144k = DataTransfer$Modem144k();
+  static const modem288k = DataTransfer$Modem288k();
+  static const modem336k = DataTransfer$Modem336k();
+  static const modem56k = DataTransfer$Modem56k();
+  static const sCSIAsync = DataTransfer$SCSIAsync();
+  static const sCSISync = DataTransfer$SCSISync();
+  static const sCSIFast = DataTransfer$SCSIFast();
+  static const sCSIFastUltra = DataTransfer$SCSIFastUltra();
+  static const sCSIFastWide = DataTransfer$SCSIFastWide();
+  static const sCSIFastUltraWide = DataTransfer$SCSIFastUltraWide();
+  static const sCSIUltra2 = DataTransfer$SCSIUltra2();
+  static const sCSIUltra3 = DataTransfer$SCSIUltra3();
+  static const sCSILVDUltra80 = DataTransfer$SCSILVDUltra80();
+  static const sCSILVDUltra160 = DataTransfer$SCSILVDUltra160();
+  static const sCSILVDUltra320 = DataTransfer$SCSILVDUltra320();
+  static const iDEPIOMode0 = DataTransfer$IDEPIOMode0();
+  static const iDEPIOMode1 = DataTransfer$IDEPIOMode1();
+  static const iDEPIOMode2 = DataTransfer$IDEPIOMode2();
+  static const iDEPIOMode3 = DataTransfer$IDEPIOMode3();
+  static const iDEPIOMode4 = DataTransfer$IDEPIOMode4();
+  static const iDEDMAMode0 = DataTransfer$IDEDMAMode0();
+  static const iDEDMAMode1 = DataTransfer$IDEDMAMode1();
+  static const iDEDMAMode2 = DataTransfer$IDEDMAMode2();
+  static const iDEUDMAMode0 = DataTransfer$IDEUDMAMode0();
+  static const iDEUDMAMode1 = DataTransfer$IDEUDMAMode1();
+  static const iDEUDMAMode2 = DataTransfer$IDEUDMAMode2();
+  static const iDEUDMAMode3 = DataTransfer$IDEUDMAMode3();
+  static const iDEUDMAMode4 = DataTransfer$IDEUDMAMode4();
+  static const iDEUDMAMode5 = DataTransfer$IDEUDMAMode5();
+  static const iDEUDMAMode6 = DataTransfer$IDEUDMAMode6();
+  static const iDEUDMA33 = DataTransfer$IDEUDMA33();
+  static const iDEUDMA66 = DataTransfer$IDEUDMA66();
+  static const iDEUDMA100 = DataTransfer$IDEUDMA100();
+  static const iDEUDMA133 = DataTransfer$IDEUDMA133();
+  static const sATA10 = DataTransfer$SATA10();
+  static const sATA20 = DataTransfer$SATA20();
+  static const sATA30 = DataTransfer$SATA30();
+  static const uSB = DataTransfer$USB();
+  static const uSB20 = DataTransfer$USB20();
+  static const uSB30 = DataTransfer$USB30();
+  static const fireWire400IEEE1394 = DataTransfer$FireWire400IEEE1394();
+  static const fireWire800IEEE1394b = DataTransfer$FireWire800IEEE1394b();
+  static const irDA = DataTransfer$IrDA();
+  static const irDA2 = DataTransfer$IrDA2();
+  static const aTM = DataTransfer$ATM();
+  static const t0Payload = DataTransfer$T0Payload();
+  static const t0B8ZSPayload = DataTransfer$T0B8ZSPayload();
+  static const t1Signal = DataTransfer$T1Signal();
+  static const t1Payload = DataTransfer$T1Payload();
+  static const t1ZPayload = DataTransfer$T1ZPayload();
+  static const t1CSignal = DataTransfer$T1CSignal();
+  static const t1CPayload = DataTransfer$T1CPayload();
+  static const t2Signal = DataTransfer$T2Signal();
+  static const t3Signal = DataTransfer$T3Signal();
+  static const t3Payload = DataTransfer$T3Payload();
+  static const t3ZPayload = DataTransfer$T3ZPayload();
+  static const t4Signal = DataTransfer$T4Signal();
+  static const ePTA1Signal = DataTransfer$EPTA1Signal();
+  static const ePTA1Payload = DataTransfer$EPTA1Payload();
+  static const ePTA2Signal = DataTransfer$EPTA2Signal();
+  static const ePTA2Payload = DataTransfer$EPTA2Payload();
+  static const ePTA3Signal = DataTransfer$EPTA3Signal();
+  static const ePTA3Payload = DataTransfer$EPTA3Payload();
+  static const h0 = DataTransfer$H0();
+  static const h11 = DataTransfer$H11();
+  static const h12 = DataTransfer$H12();
+  static const virtualTributary1Signal = DataTransfer$VirtualTributary1Signal();
+  static const virtualTributary1Payload =
+      DataTransfer$VirtualTributary1Payload();
+  static const virtualTributary2Signal = DataTransfer$VirtualTributary2Signal();
+  static const virtualTributary2Payload =
+      DataTransfer$VirtualTributary2Payload();
+  static const virtualTributary6Signal = DataTransfer$VirtualTributary6Signal();
+  static const virtualTributary6Payload =
+      DataTransfer$VirtualTributary6Payload();
+  static const sTS1Signal = DataTransfer$STS1Signal();
+  static const sTS1Payload = DataTransfer$STS1Payload();
+  static const sTS3Signal = DataTransfer$STS3Signal();
+  static const sTS3Payload = DataTransfer$STS3Payload();
+  static const sTS3cSignal = DataTransfer$STS3cSignal();
+  static const sTS3cPayload = DataTransfer$STS3cPayload();
+  static const sTS12Signal = DataTransfer$STS12Signal();
+  static const sTS24Signal = DataTransfer$STS24Signal();
+  static const sTS48Signal = DataTransfer$STS48Signal();
+  static const sTS192Signal = DataTransfer$STS192Signal();
+  static const sTM1Signal = DataTransfer$STM1Signal();
+  static const sTM4Signal = DataTransfer$STM4Signal();
+  static const sTM16Signal = DataTransfer$STM16Signal();
+  static const sTM64Signal = DataTransfer$STM64Signal();
+  static const characterPerSecond = DataTransfer$CharacterPerSecond();
+  static const tokenRing = DataTransfer$TokenRing();
+  static const fiberChannel = DataTransfer$FiberChannel();
+  static const iSA8Bit = DataTransfer$ISA8Bit();
+  static const iSA16Bit = DataTransfer$ISA16Bit();
+  static const vLB = DataTransfer$VLB();
+  static const pCI = DataTransfer$PCI();
+  static const pCI64Bit = DataTransfer$PCI64Bit();
+  static const pCI64Bit66MHz = DataTransfer$PCI64Bit66MHz();
+  static const pCIX = DataTransfer$PCIX();
+  static const aGP = DataTransfer$AGP();
+  static const aGP2X = DataTransfer$AGP2X();
+  static const aGP4X = DataTransfer$AGP4X();
+  static const aGP8X = DataTransfer$AGP8X();
+  static const pCIExpress10X1 = DataTransfer$PCIExpress10X1();
+  static const pCIExpress10X4 = DataTransfer$PCIExpress10X4();
+  static const pCIExpress10X8 = DataTransfer$PCIExpress10X8();
+  static const pCIExpress10X16 = DataTransfer$PCIExpress10X16();
+  static const pCIExpress20X1 = DataTransfer$PCIExpress20X1();
+  static const pCIExpress20X4 = DataTransfer$PCIExpress20X4();
+  static const pCIExpress20X8 = DataTransfer$PCIExpress20X8();
+  static const pCIExpress20X16 = DataTransfer$PCIExpress20X16();
+  static const pCIExpress30X1 = DataTransfer$PCIExpress30X1();
+  static const pCIExpress30X4 = DataTransfer$PCIExpress30X4();
+  static const pCIExpress30X8 = DataTransfer$PCIExpress30X8();
+  static const pCIExpress30X16 = DataTransfer$PCIExpress30X16();
+  static const cDROM1X = DataTransfer$CDROM1X();
+  static const cDROM2X = DataTransfer$CDROM2X();
+  static const cDROM3X = DataTransfer$CDROM3X();
+  static const cDROM4X = DataTransfer$CDROM4X();
+  static const cDROM6X = DataTransfer$CDROM6X();
+  static const cDROM8X = DataTransfer$CDROM8X();
+  static const cDROM12X = DataTransfer$CDROM12X();
+  static const cDROM16X = DataTransfer$CDROM16X();
+  static const cDROM24X = DataTransfer$CDROM24X();
+  static const cDROM32X = DataTransfer$CDROM32X();
+  static const cDROM40X = DataTransfer$CDROM40X();
+  static const cDROM48X = DataTransfer$CDROM48X();
+  static const cDROM52X = DataTransfer$CDROM52X();
+  static const dVDROM1X = DataTransfer$DVDROM1X();
+  static const dVDROM2X = DataTransfer$DVDROM2X();
+  static const dVDROM3X = DataTransfer$DVDROM3X();
+  static const dVDROM4X = DataTransfer$DVDROM4X();
+  static const dVDROM6X = DataTransfer$DVDROM6X();
+  static const dVDROM8X = DataTransfer$DVDROM8X();
+  static const dVDROM10X = DataTransfer$DVDROM10X();
+  static const dVDROM12X = DataTransfer$DVDROM12X();
+  static const dVDROM16X = DataTransfer$DVDROM16X();
+  static const bluRay1X = DataTransfer$BluRay1X();
+  static const bluRay2X = DataTransfer$BluRay2X();
+  static const bluRay4X = DataTransfer$BluRay4X();
+  static const bluRay6X = DataTransfer$BluRay6X();
+  static const bluRay8X = DataTransfer$BluRay8X();
+  static const bluRay10X = DataTransfer$BluRay10X();
+  static const bluRay12X = DataTransfer$BluRay12X();
+
+  @override
+  List<DataTransfer> get units => values;
+
+  static const values = [
+    bitPerSecond,
+    bytePerSecond,
+    kilobitPerSecond,
+    kilobytePerSecond,
+    megabitPerSecond,
+    megabytePerSecond,
+    gigabitPerSecond,
+    gigabytePerSecond,
+    terabitPerSecond,
+    terabytePerSecond,
+    kibibitPerSecond,
+    kibibytePerSecond,
+    mebibitPerSecond,
+    mebibytePerSecond,
+    gibibitPerSecond,
+    gibibytePerSecond,
+    tebibitPerSecond,
+    tebibytePerSecond,
+    ethernet,
+    ethernetFast,
+    ethernetGigabit,
+    ethernet10Gigabit,
+    oC1,
+    oC3,
+    oC12,
+    oC24,
+    oC48,
+    oC192,
+    oC768,
+    iSDNSingleChannel,
+    iSDNDualChannel,
+    modem110,
+    modem300,
+    modem1200,
+    modem2400,
+    modem9600,
+    modem144k,
+    modem288k,
+    modem336k,
+    modem56k,
+    sCSIAsync,
+    sCSISync,
+    sCSIFast,
+    sCSIFastUltra,
+    sCSIFastWide,
+    sCSIFastUltraWide,
+    sCSIUltra2,
+    sCSIUltra3,
+    sCSILVDUltra80,
+    sCSILVDUltra160,
+    sCSILVDUltra320,
+    iDEPIOMode0,
+    iDEPIOMode1,
+    iDEPIOMode2,
+    iDEPIOMode3,
+    iDEPIOMode4,
+    iDEDMAMode0,
+    iDEDMAMode1,
+    iDEDMAMode2,
+    iDEUDMAMode0,
+    iDEUDMAMode1,
+    iDEUDMAMode2,
+    iDEUDMAMode3,
+    iDEUDMAMode4,
+    iDEUDMAMode5,
+    iDEUDMAMode6,
+    iDEUDMA33,
+    iDEUDMA66,
+    iDEUDMA100,
+    iDEUDMA133,
+    sATA10,
+    sATA20,
+    sATA30,
+    uSB,
+    uSB20,
+    uSB30,
+    fireWire400IEEE1394,
+    fireWire800IEEE1394b,
+    irDA,
+    irDA2,
+    aTM,
+    t0Payload,
+    t0B8ZSPayload,
+    t1Signal,
+    t1Payload,
+    t1ZPayload,
+    t1CSignal,
+    t1CPayload,
+    t2Signal,
+    t3Signal,
+    t3Payload,
+    t3ZPayload,
+    t4Signal,
+    ePTA1Signal,
+    ePTA1Payload,
+    ePTA2Signal,
+    ePTA2Payload,
+    ePTA3Signal,
+    ePTA3Payload,
+    h0,
+    h11,
+    h12,
+    virtualTributary1Signal,
+    virtualTributary1Payload,
+    virtualTributary2Signal,
+    virtualTributary2Payload,
+    virtualTributary6Signal,
+    virtualTributary6Payload,
+    sTS1Signal,
+    sTS1Payload,
+    sTS3Signal,
+    sTS3Payload,
+    sTS3cSignal,
+    sTS3cPayload,
+    sTS12Signal,
+    sTS24Signal,
+    sTS48Signal,
+    sTS192Signal,
+    sTM1Signal,
+    sTM4Signal,
+    sTM16Signal,
+    sTM64Signal,
+    characterPerSecond,
+    tokenRing,
+    fiberChannel,
+    iSA8Bit,
+    iSA16Bit,
+    vLB,
+    pCI,
+    pCI64Bit,
+    pCI64Bit66MHz,
+    pCIX,
+    aGP,
+    aGP2X,
+    aGP4X,
+    aGP8X,
+    pCIExpress10X1,
+    pCIExpress10X4,
+    pCIExpress10X8,
+    pCIExpress10X16,
+    pCIExpress20X1,
+    pCIExpress20X4,
+    pCIExpress20X8,
+    pCIExpress20X16,
+    pCIExpress30X1,
+    pCIExpress30X4,
+    pCIExpress30X8,
+    pCIExpress30X16,
+    cDROM1X,
+    cDROM2X,
+    cDROM3X,
+    cDROM4X,
+    cDROM6X,
+    cDROM8X,
+    cDROM12X,
+    cDROM16X,
+    cDROM24X,
+    cDROM32X,
+    cDROM40X,
+    cDROM48X,
+    cDROM52X,
+    dVDROM1X,
+    dVDROM2X,
+    dVDROM3X,
+    dVDROM4X,
+    dVDROM6X,
+    dVDROM8X,
+    dVDROM10X,
+    dVDROM12X,
+    dVDROM16X,
+    bluRay1X,
+    bluRay2X,
+    bluRay4X,
+    bluRay6X,
+    bluRay8X,
+    bluRay10X,
+    bluRay12X,
+  ];
 }
 
 /// Unit of [DataTransfer]
@@ -12731,730 +13095,189 @@ final class DataTransfer$BluRay12X extends DataTransfer {
       };
 }
 
-enum DataTransferUnit {
-  bitPerSecond._(
-    DataTransfer$BitPerSecond(),
-  ),
-  bytePerSecond._(
-    DataTransfer$BytePerSecond(),
-  ),
-  kilobitPerSecond._(
-    DataTransfer$KilobitPerSecond(),
-  ),
-  kilobytePerSecond._(
-    DataTransfer$KilobytePerSecond(),
-  ),
-  megabitPerSecond._(
-    DataTransfer$MegabitPerSecond(),
-  ),
-  megabytePerSecond._(
-    DataTransfer$MegabytePerSecond(),
-  ),
-  gigabitPerSecond._(
-    DataTransfer$GigabitPerSecond(),
-  ),
-  gigabytePerSecond._(
-    DataTransfer$GigabytePerSecond(),
-  ),
-  terabitPerSecond._(
-    DataTransfer$TerabitPerSecond(),
-  ),
-  terabytePerSecond._(
-    DataTransfer$TerabytePerSecond(),
-  ),
-  kibibitPerSecond._(
-    DataTransfer$KibibitPerSecond(),
-  ),
-  kibibytePerSecond._(
-    DataTransfer$KibibytePerSecond(),
-  ),
-  mebibitPerSecond._(
-    DataTransfer$MebibitPerSecond(),
-  ),
-  mebibytePerSecond._(
-    DataTransfer$MebibytePerSecond(),
-  ),
-  gibibitPerSecond._(
-    DataTransfer$GibibitPerSecond(),
-  ),
-  gibibytePerSecond._(
-    DataTransfer$GibibytePerSecond(),
-  ),
-  tebibitPerSecond._(
-    DataTransfer$TebibitPerSecond(),
-  ),
-  tebibytePerSecond._(
-    DataTransfer$TebibytePerSecond(),
-  ),
-  ethernet._(
-    DataTransfer$Ethernet(),
-  ),
-  ethernetFast._(
-    DataTransfer$EthernetFast(),
-  ),
-  ethernetGigabit._(
-    DataTransfer$EthernetGigabit(),
-  ),
-  ethernet10Gigabit._(
-    DataTransfer$Ethernet10Gigabit(),
-  ),
-  oC1._(
-    DataTransfer$OC1(),
-  ),
-  oC3._(
-    DataTransfer$OC3(),
-  ),
-  oC12._(
-    DataTransfer$OC12(),
-  ),
-  oC24._(
-    DataTransfer$OC24(),
-  ),
-  oC48._(
-    DataTransfer$OC48(),
-  ),
-  oC192._(
-    DataTransfer$OC192(),
-  ),
-  oC768._(
-    DataTransfer$OC768(),
-  ),
-  iSDNSingleChannel._(
-    DataTransfer$ISDNSingleChannel(),
-  ),
-  iSDNDualChannel._(
-    DataTransfer$ISDNDualChannel(),
-  ),
-  modem110._(
-    DataTransfer$Modem110(),
-  ),
-  modem300._(
-    DataTransfer$Modem300(),
-  ),
-  modem1200._(
-    DataTransfer$Modem1200(),
-  ),
-  modem2400._(
-    DataTransfer$Modem2400(),
-  ),
-  modem9600._(
-    DataTransfer$Modem9600(),
-  ),
-  modem144k._(
-    DataTransfer$Modem144k(),
-  ),
-  modem288k._(
-    DataTransfer$Modem288k(),
-  ),
-  modem336k._(
-    DataTransfer$Modem336k(),
-  ),
-  modem56k._(
-    DataTransfer$Modem56k(),
-  ),
-  sCSIAsync._(
-    DataTransfer$SCSIAsync(),
-  ),
-  sCSISync._(
-    DataTransfer$SCSISync(),
-  ),
-  sCSIFast._(
-    DataTransfer$SCSIFast(),
-  ),
-  sCSIFastUltra._(
-    DataTransfer$SCSIFastUltra(),
-  ),
-  sCSIFastWide._(
-    DataTransfer$SCSIFastWide(),
-  ),
-  sCSIFastUltraWide._(
-    DataTransfer$SCSIFastUltraWide(),
-  ),
-  sCSIUltra2._(
-    DataTransfer$SCSIUltra2(),
-  ),
-  sCSIUltra3._(
-    DataTransfer$SCSIUltra3(),
-  ),
-  sCSILVDUltra80._(
-    DataTransfer$SCSILVDUltra80(),
-  ),
-  sCSILVDUltra160._(
-    DataTransfer$SCSILVDUltra160(),
-  ),
-  sCSILVDUltra320._(
-    DataTransfer$SCSILVDUltra320(),
-  ),
-  iDEPIOMode0._(
-    DataTransfer$IDEPIOMode0(),
-  ),
-  iDEPIOMode1._(
-    DataTransfer$IDEPIOMode1(),
-  ),
-  iDEPIOMode2._(
-    DataTransfer$IDEPIOMode2(),
-  ),
-  iDEPIOMode3._(
-    DataTransfer$IDEPIOMode3(),
-  ),
-  iDEPIOMode4._(
-    DataTransfer$IDEPIOMode4(),
-  ),
-  iDEDMAMode0._(
-    DataTransfer$IDEDMAMode0(),
-  ),
-  iDEDMAMode1._(
-    DataTransfer$IDEDMAMode1(),
-  ),
-  iDEDMAMode2._(
-    DataTransfer$IDEDMAMode2(),
-  ),
-  iDEUDMAMode0._(
-    DataTransfer$IDEUDMAMode0(),
-  ),
-  iDEUDMAMode1._(
-    DataTransfer$IDEUDMAMode1(),
-  ),
-  iDEUDMAMode2._(
-    DataTransfer$IDEUDMAMode2(),
-  ),
-  iDEUDMAMode3._(
-    DataTransfer$IDEUDMAMode3(),
-  ),
-  iDEUDMAMode4._(
-    DataTransfer$IDEUDMAMode4(),
-  ),
-  iDEUDMAMode5._(
-    DataTransfer$IDEUDMAMode5(),
-  ),
-  iDEUDMAMode6._(
-    DataTransfer$IDEUDMAMode6(),
-  ),
-  iDEUDMA33._(
-    DataTransfer$IDEUDMA33(),
-  ),
-  iDEUDMA66._(
-    DataTransfer$IDEUDMA66(),
-  ),
-  iDEUDMA100._(
-    DataTransfer$IDEUDMA100(),
-  ),
-  iDEUDMA133._(
-    DataTransfer$IDEUDMA133(),
-  ),
-  sATA10._(
-    DataTransfer$SATA10(),
-  ),
-  sATA20._(
-    DataTransfer$SATA20(),
-  ),
-  sATA30._(
-    DataTransfer$SATA30(),
-  ),
-  uSB._(
-    DataTransfer$USB(),
-  ),
-  uSB20._(
-    DataTransfer$USB20(),
-  ),
-  uSB30._(
-    DataTransfer$USB30(),
-  ),
-  fireWire400IEEE1394._(
-    DataTransfer$FireWire400IEEE1394(),
-  ),
-  fireWire800IEEE1394b._(
-    DataTransfer$FireWire800IEEE1394b(),
-  ),
-  irDA._(
-    DataTransfer$IrDA(),
-  ),
-  irDA2._(
-    DataTransfer$IrDA2(),
-  ),
-  aTM._(
-    DataTransfer$ATM(),
-  ),
-  t0Payload._(
-    DataTransfer$T0Payload(),
-  ),
-  t0B8ZSPayload._(
-    DataTransfer$T0B8ZSPayload(),
-  ),
-  t1Signal._(
-    DataTransfer$T1Signal(),
-  ),
-  t1Payload._(
-    DataTransfer$T1Payload(),
-  ),
-  t1ZPayload._(
-    DataTransfer$T1ZPayload(),
-  ),
-  t1CSignal._(
-    DataTransfer$T1CSignal(),
-  ),
-  t1CPayload._(
-    DataTransfer$T1CPayload(),
-  ),
-  t2Signal._(
-    DataTransfer$T2Signal(),
-  ),
-  t3Signal._(
-    DataTransfer$T3Signal(),
-  ),
-  t3Payload._(
-    DataTransfer$T3Payload(),
-  ),
-  t3ZPayload._(
-    DataTransfer$T3ZPayload(),
-  ),
-  t4Signal._(
-    DataTransfer$T4Signal(),
-  ),
-  ePTA1Signal._(
-    DataTransfer$EPTA1Signal(),
-  ),
-  ePTA1Payload._(
-    DataTransfer$EPTA1Payload(),
-  ),
-  ePTA2Signal._(
-    DataTransfer$EPTA2Signal(),
-  ),
-  ePTA2Payload._(
-    DataTransfer$EPTA2Payload(),
-  ),
-  ePTA3Signal._(
-    DataTransfer$EPTA3Signal(),
-  ),
-  ePTA3Payload._(
-    DataTransfer$EPTA3Payload(),
-  ),
-  h0._(
-    DataTransfer$H0(),
-  ),
-  h11._(
-    DataTransfer$H11(),
-  ),
-  h12._(
-    DataTransfer$H12(),
-  ),
-  virtualTributary1Signal._(
-    DataTransfer$VirtualTributary1Signal(),
-  ),
-  virtualTributary1Payload._(
-    DataTransfer$VirtualTributary1Payload(),
-  ),
-  virtualTributary2Signal._(
-    DataTransfer$VirtualTributary2Signal(),
-  ),
-  virtualTributary2Payload._(
-    DataTransfer$VirtualTributary2Payload(),
-  ),
-  virtualTributary6Signal._(
-    DataTransfer$VirtualTributary6Signal(),
-  ),
-  virtualTributary6Payload._(
-    DataTransfer$VirtualTributary6Payload(),
-  ),
-  sTS1Signal._(
-    DataTransfer$STS1Signal(),
-  ),
-  sTS1Payload._(
-    DataTransfer$STS1Payload(),
-  ),
-  sTS3Signal._(
-    DataTransfer$STS3Signal(),
-  ),
-  sTS3Payload._(
-    DataTransfer$STS3Payload(),
-  ),
-  sTS3cSignal._(
-    DataTransfer$STS3cSignal(),
-  ),
-  sTS3cPayload._(
-    DataTransfer$STS3cPayload(),
-  ),
-  sTS12Signal._(
-    DataTransfer$STS12Signal(),
-  ),
-  sTS24Signal._(
-    DataTransfer$STS24Signal(),
-  ),
-  sTS48Signal._(
-    DataTransfer$STS48Signal(),
-  ),
-  sTS192Signal._(
-    DataTransfer$STS192Signal(),
-  ),
-  sTM1Signal._(
-    DataTransfer$STM1Signal(),
-  ),
-  sTM4Signal._(
-    DataTransfer$STM4Signal(),
-  ),
-  sTM16Signal._(
-    DataTransfer$STM16Signal(),
-  ),
-  sTM64Signal._(
-    DataTransfer$STM64Signal(),
-  ),
-  characterPerSecond._(
-    DataTransfer$CharacterPerSecond(),
-  ),
-  tokenRing._(
-    DataTransfer$TokenRing(),
-  ),
-  fiberChannel._(
-    DataTransfer$FiberChannel(),
-  ),
-  iSA8Bit._(
-    DataTransfer$ISA8Bit(),
-  ),
-  iSA16Bit._(
-    DataTransfer$ISA16Bit(),
-  ),
-  vLB._(
-    DataTransfer$VLB(),
-  ),
-  pCI._(
-    DataTransfer$PCI(),
-  ),
-  pCI64Bit._(
-    DataTransfer$PCI64Bit(),
-  ),
-  pCI64Bit66MHz._(
-    DataTransfer$PCI64Bit66MHz(),
-  ),
-  pCIX._(
-    DataTransfer$PCIX(),
-  ),
-  aGP._(
-    DataTransfer$AGP(),
-  ),
-  aGP2X._(
-    DataTransfer$AGP2X(),
-  ),
-  aGP4X._(
-    DataTransfer$AGP4X(),
-  ),
-  aGP8X._(
-    DataTransfer$AGP8X(),
-  ),
-  pCIExpress10X1._(
-    DataTransfer$PCIExpress10X1(),
-  ),
-  pCIExpress10X4._(
-    DataTransfer$PCIExpress10X4(),
-  ),
-  pCIExpress10X8._(
-    DataTransfer$PCIExpress10X8(),
-  ),
-  pCIExpress10X16._(
-    DataTransfer$PCIExpress10X16(),
-  ),
-  pCIExpress20X1._(
-    DataTransfer$PCIExpress20X1(),
-  ),
-  pCIExpress20X4._(
-    DataTransfer$PCIExpress20X4(),
-  ),
-  pCIExpress20X8._(
-    DataTransfer$PCIExpress20X8(),
-  ),
-  pCIExpress20X16._(
-    DataTransfer$PCIExpress20X16(),
-  ),
-  pCIExpress30X1._(
-    DataTransfer$PCIExpress30X1(),
-  ),
-  pCIExpress30X4._(
-    DataTransfer$PCIExpress30X4(),
-  ),
-  pCIExpress30X8._(
-    DataTransfer$PCIExpress30X8(),
-  ),
-  pCIExpress30X16._(
-    DataTransfer$PCIExpress30X16(),
-  ),
-  cDROM1X._(
-    DataTransfer$CDROM1X(),
-  ),
-  cDROM2X._(
-    DataTransfer$CDROM2X(),
-  ),
-  cDROM3X._(
-    DataTransfer$CDROM3X(),
-  ),
-  cDROM4X._(
-    DataTransfer$CDROM4X(),
-  ),
-  cDROM6X._(
-    DataTransfer$CDROM6X(),
-  ),
-  cDROM8X._(
-    DataTransfer$CDROM8X(),
-  ),
-  cDROM12X._(
-    DataTransfer$CDROM12X(),
-  ),
-  cDROM16X._(
-    DataTransfer$CDROM16X(),
-  ),
-  cDROM24X._(
-    DataTransfer$CDROM24X(),
-  ),
-  cDROM32X._(
-    DataTransfer$CDROM32X(),
-  ),
-  cDROM40X._(
-    DataTransfer$CDROM40X(),
-  ),
-  cDROM48X._(
-    DataTransfer$CDROM48X(),
-  ),
-  cDROM52X._(
-    DataTransfer$CDROM52X(),
-  ),
-  dVDROM1X._(
-    DataTransfer$DVDROM1X(),
-  ),
-  dVDROM2X._(
-    DataTransfer$DVDROM2X(),
-  ),
-  dVDROM3X._(
-    DataTransfer$DVDROM3X(),
-  ),
-  dVDROM4X._(
-    DataTransfer$DVDROM4X(),
-  ),
-  dVDROM6X._(
-    DataTransfer$DVDROM6X(),
-  ),
-  dVDROM8X._(
-    DataTransfer$DVDROM8X(),
-  ),
-  dVDROM10X._(
-    DataTransfer$DVDROM10X(),
-  ),
-  dVDROM12X._(
-    DataTransfer$DVDROM12X(),
-  ),
-  dVDROM16X._(
-    DataTransfer$DVDROM16X(),
-  ),
-  bluRay1X._(
-    DataTransfer$BluRay1X(),
-  ),
-  bluRay2X._(
-    DataTransfer$BluRay2X(),
-  ),
-  bluRay4X._(
-    DataTransfer$BluRay4X(),
-  ),
-  bluRay6X._(
-    DataTransfer$BluRay6X(),
-  ),
-  bluRay8X._(
-    DataTransfer$BluRay8X(),
-  ),
-  bluRay10X._(
-    DataTransfer$BluRay10X(),
-  ),
-  bluRay12X._(
-    DataTransfer$BluRay12X(),
-  ),
-  ;
-
-  const DataTransferUnit._(this.construct);
-
-  final DataTransfer construct;
-}
-
-const dataTransferUnitValues = _EnumValues({
-  DataTransfer$BitPerSecond._minorName: DataTransferUnit.bitPerSecond,
-  DataTransfer$BytePerSecond._minorName: DataTransferUnit.bytePerSecond,
-  DataTransfer$KilobitPerSecond._minorName: DataTransferUnit.kilobitPerSecond,
-  DataTransfer$KilobytePerSecond._minorName: DataTransferUnit.kilobytePerSecond,
-  DataTransfer$MegabitPerSecond._minorName: DataTransferUnit.megabitPerSecond,
-  DataTransfer$MegabytePerSecond._minorName: DataTransferUnit.megabytePerSecond,
-  DataTransfer$GigabitPerSecond._minorName: DataTransferUnit.gigabitPerSecond,
-  DataTransfer$GigabytePerSecond._minorName: DataTransferUnit.gigabytePerSecond,
-  DataTransfer$TerabitPerSecond._minorName: DataTransferUnit.terabitPerSecond,
-  DataTransfer$TerabytePerSecond._minorName: DataTransferUnit.terabytePerSecond,
-  DataTransfer$KibibitPerSecond._minorName: DataTransferUnit.kibibitPerSecond,
-  DataTransfer$KibibytePerSecond._minorName: DataTransferUnit.kibibytePerSecond,
-  DataTransfer$MebibitPerSecond._minorName: DataTransferUnit.mebibitPerSecond,
-  DataTransfer$MebibytePerSecond._minorName: DataTransferUnit.mebibytePerSecond,
-  DataTransfer$GibibitPerSecond._minorName: DataTransferUnit.gibibitPerSecond,
-  DataTransfer$GibibytePerSecond._minorName: DataTransferUnit.gibibytePerSecond,
-  DataTransfer$TebibitPerSecond._minorName: DataTransferUnit.tebibitPerSecond,
-  DataTransfer$TebibytePerSecond._minorName: DataTransferUnit.tebibytePerSecond,
-  DataTransfer$Ethernet._minorName: DataTransferUnit.ethernet,
-  DataTransfer$EthernetFast._minorName: DataTransferUnit.ethernetFast,
-  DataTransfer$EthernetGigabit._minorName: DataTransferUnit.ethernetGigabit,
-  DataTransfer$Ethernet10Gigabit._minorName: DataTransferUnit.ethernet10Gigabit,
-  DataTransfer$OC1._minorName: DataTransferUnit.oC1,
-  DataTransfer$OC3._minorName: DataTransferUnit.oC3,
-  DataTransfer$OC12._minorName: DataTransferUnit.oC12,
-  DataTransfer$OC24._minorName: DataTransferUnit.oC24,
-  DataTransfer$OC48._minorName: DataTransferUnit.oC48,
-  DataTransfer$OC192._minorName: DataTransferUnit.oC192,
-  DataTransfer$OC768._minorName: DataTransferUnit.oC768,
-  DataTransfer$ISDNSingleChannel._minorName: DataTransferUnit.iSDNSingleChannel,
-  DataTransfer$ISDNDualChannel._minorName: DataTransferUnit.iSDNDualChannel,
-  DataTransfer$Modem110._minorName: DataTransferUnit.modem110,
-  DataTransfer$Modem300._minorName: DataTransferUnit.modem300,
-  DataTransfer$Modem1200._minorName: DataTransferUnit.modem1200,
-  DataTransfer$Modem2400._minorName: DataTransferUnit.modem2400,
-  DataTransfer$Modem9600._minorName: DataTransferUnit.modem9600,
-  DataTransfer$Modem144k._minorName: DataTransferUnit.modem144k,
-  DataTransfer$Modem288k._minorName: DataTransferUnit.modem288k,
-  DataTransfer$Modem336k._minorName: DataTransferUnit.modem336k,
-  DataTransfer$Modem56k._minorName: DataTransferUnit.modem56k,
-  DataTransfer$SCSIAsync._minorName: DataTransferUnit.sCSIAsync,
-  DataTransfer$SCSISync._minorName: DataTransferUnit.sCSISync,
-  DataTransfer$SCSIFast._minorName: DataTransferUnit.sCSIFast,
-  DataTransfer$SCSIFastUltra._minorName: DataTransferUnit.sCSIFastUltra,
-  DataTransfer$SCSIFastWide._minorName: DataTransferUnit.sCSIFastWide,
-  DataTransfer$SCSIFastUltraWide._minorName: DataTransferUnit.sCSIFastUltraWide,
-  DataTransfer$SCSIUltra2._minorName: DataTransferUnit.sCSIUltra2,
-  DataTransfer$SCSIUltra3._minorName: DataTransferUnit.sCSIUltra3,
-  DataTransfer$SCSILVDUltra80._minorName: DataTransferUnit.sCSILVDUltra80,
-  DataTransfer$SCSILVDUltra160._minorName: DataTransferUnit.sCSILVDUltra160,
-  DataTransfer$SCSILVDUltra320._minorName: DataTransferUnit.sCSILVDUltra320,
-  DataTransfer$IDEPIOMode0._minorName: DataTransferUnit.iDEPIOMode0,
-  DataTransfer$IDEPIOMode1._minorName: DataTransferUnit.iDEPIOMode1,
-  DataTransfer$IDEPIOMode2._minorName: DataTransferUnit.iDEPIOMode2,
-  DataTransfer$IDEPIOMode3._minorName: DataTransferUnit.iDEPIOMode3,
-  DataTransfer$IDEPIOMode4._minorName: DataTransferUnit.iDEPIOMode4,
-  DataTransfer$IDEDMAMode0._minorName: DataTransferUnit.iDEDMAMode0,
-  DataTransfer$IDEDMAMode1._minorName: DataTransferUnit.iDEDMAMode1,
-  DataTransfer$IDEDMAMode2._minorName: DataTransferUnit.iDEDMAMode2,
-  DataTransfer$IDEUDMAMode0._minorName: DataTransferUnit.iDEUDMAMode0,
-  DataTransfer$IDEUDMAMode1._minorName: DataTransferUnit.iDEUDMAMode1,
-  DataTransfer$IDEUDMAMode2._minorName: DataTransferUnit.iDEUDMAMode2,
-  DataTransfer$IDEUDMAMode3._minorName: DataTransferUnit.iDEUDMAMode3,
-  DataTransfer$IDEUDMAMode4._minorName: DataTransferUnit.iDEUDMAMode4,
-  DataTransfer$IDEUDMAMode5._minorName: DataTransferUnit.iDEUDMAMode5,
-  DataTransfer$IDEUDMAMode6._minorName: DataTransferUnit.iDEUDMAMode6,
-  DataTransfer$IDEUDMA33._minorName: DataTransferUnit.iDEUDMA33,
-  DataTransfer$IDEUDMA66._minorName: DataTransferUnit.iDEUDMA66,
-  DataTransfer$IDEUDMA100._minorName: DataTransferUnit.iDEUDMA100,
-  DataTransfer$IDEUDMA133._minorName: DataTransferUnit.iDEUDMA133,
-  DataTransfer$SATA10._minorName: DataTransferUnit.sATA10,
-  DataTransfer$SATA20._minorName: DataTransferUnit.sATA20,
-  DataTransfer$SATA30._minorName: DataTransferUnit.sATA30,
-  DataTransfer$USB._minorName: DataTransferUnit.uSB,
-  DataTransfer$USB20._minorName: DataTransferUnit.uSB20,
-  DataTransfer$USB30._minorName: DataTransferUnit.uSB30,
-  DataTransfer$FireWire400IEEE1394._minorName:
-      DataTransferUnit.fireWire400IEEE1394,
+const dataTransferUnits = EnumValues({
+  DataTransfer$BitPerSecond._minorName: DataTransfer.bitPerSecond,
+  DataTransfer$BytePerSecond._minorName: DataTransfer.bytePerSecond,
+  DataTransfer$KilobitPerSecond._minorName: DataTransfer.kilobitPerSecond,
+  DataTransfer$KilobytePerSecond._minorName: DataTransfer.kilobytePerSecond,
+  DataTransfer$MegabitPerSecond._minorName: DataTransfer.megabitPerSecond,
+  DataTransfer$MegabytePerSecond._minorName: DataTransfer.megabytePerSecond,
+  DataTransfer$GigabitPerSecond._minorName: DataTransfer.gigabitPerSecond,
+  DataTransfer$GigabytePerSecond._minorName: DataTransfer.gigabytePerSecond,
+  DataTransfer$TerabitPerSecond._minorName: DataTransfer.terabitPerSecond,
+  DataTransfer$TerabytePerSecond._minorName: DataTransfer.terabytePerSecond,
+  DataTransfer$KibibitPerSecond._minorName: DataTransfer.kibibitPerSecond,
+  DataTransfer$KibibytePerSecond._minorName: DataTransfer.kibibytePerSecond,
+  DataTransfer$MebibitPerSecond._minorName: DataTransfer.mebibitPerSecond,
+  DataTransfer$MebibytePerSecond._minorName: DataTransfer.mebibytePerSecond,
+  DataTransfer$GibibitPerSecond._minorName: DataTransfer.gibibitPerSecond,
+  DataTransfer$GibibytePerSecond._minorName: DataTransfer.gibibytePerSecond,
+  DataTransfer$TebibitPerSecond._minorName: DataTransfer.tebibitPerSecond,
+  DataTransfer$TebibytePerSecond._minorName: DataTransfer.tebibytePerSecond,
+  DataTransfer$Ethernet._minorName: DataTransfer.ethernet,
+  DataTransfer$EthernetFast._minorName: DataTransfer.ethernetFast,
+  DataTransfer$EthernetGigabit._minorName: DataTransfer.ethernetGigabit,
+  DataTransfer$Ethernet10Gigabit._minorName: DataTransfer.ethernet10Gigabit,
+  DataTransfer$OC1._minorName: DataTransfer.oC1,
+  DataTransfer$OC3._minorName: DataTransfer.oC3,
+  DataTransfer$OC12._minorName: DataTransfer.oC12,
+  DataTransfer$OC24._minorName: DataTransfer.oC24,
+  DataTransfer$OC48._minorName: DataTransfer.oC48,
+  DataTransfer$OC192._minorName: DataTransfer.oC192,
+  DataTransfer$OC768._minorName: DataTransfer.oC768,
+  DataTransfer$ISDNSingleChannel._minorName: DataTransfer.iSDNSingleChannel,
+  DataTransfer$ISDNDualChannel._minorName: DataTransfer.iSDNDualChannel,
+  DataTransfer$Modem110._minorName: DataTransfer.modem110,
+  DataTransfer$Modem300._minorName: DataTransfer.modem300,
+  DataTransfer$Modem1200._minorName: DataTransfer.modem1200,
+  DataTransfer$Modem2400._minorName: DataTransfer.modem2400,
+  DataTransfer$Modem9600._minorName: DataTransfer.modem9600,
+  DataTransfer$Modem144k._minorName: DataTransfer.modem144k,
+  DataTransfer$Modem288k._minorName: DataTransfer.modem288k,
+  DataTransfer$Modem336k._minorName: DataTransfer.modem336k,
+  DataTransfer$Modem56k._minorName: DataTransfer.modem56k,
+  DataTransfer$SCSIAsync._minorName: DataTransfer.sCSIAsync,
+  DataTransfer$SCSISync._minorName: DataTransfer.sCSISync,
+  DataTransfer$SCSIFast._minorName: DataTransfer.sCSIFast,
+  DataTransfer$SCSIFastUltra._minorName: DataTransfer.sCSIFastUltra,
+  DataTransfer$SCSIFastWide._minorName: DataTransfer.sCSIFastWide,
+  DataTransfer$SCSIFastUltraWide._minorName: DataTransfer.sCSIFastUltraWide,
+  DataTransfer$SCSIUltra2._minorName: DataTransfer.sCSIUltra2,
+  DataTransfer$SCSIUltra3._minorName: DataTransfer.sCSIUltra3,
+  DataTransfer$SCSILVDUltra80._minorName: DataTransfer.sCSILVDUltra80,
+  DataTransfer$SCSILVDUltra160._minorName: DataTransfer.sCSILVDUltra160,
+  DataTransfer$SCSILVDUltra320._minorName: DataTransfer.sCSILVDUltra320,
+  DataTransfer$IDEPIOMode0._minorName: DataTransfer.iDEPIOMode0,
+  DataTransfer$IDEPIOMode1._minorName: DataTransfer.iDEPIOMode1,
+  DataTransfer$IDEPIOMode2._minorName: DataTransfer.iDEPIOMode2,
+  DataTransfer$IDEPIOMode3._minorName: DataTransfer.iDEPIOMode3,
+  DataTransfer$IDEPIOMode4._minorName: DataTransfer.iDEPIOMode4,
+  DataTransfer$IDEDMAMode0._minorName: DataTransfer.iDEDMAMode0,
+  DataTransfer$IDEDMAMode1._minorName: DataTransfer.iDEDMAMode1,
+  DataTransfer$IDEDMAMode2._minorName: DataTransfer.iDEDMAMode2,
+  DataTransfer$IDEUDMAMode0._minorName: DataTransfer.iDEUDMAMode0,
+  DataTransfer$IDEUDMAMode1._minorName: DataTransfer.iDEUDMAMode1,
+  DataTransfer$IDEUDMAMode2._minorName: DataTransfer.iDEUDMAMode2,
+  DataTransfer$IDEUDMAMode3._minorName: DataTransfer.iDEUDMAMode3,
+  DataTransfer$IDEUDMAMode4._minorName: DataTransfer.iDEUDMAMode4,
+  DataTransfer$IDEUDMAMode5._minorName: DataTransfer.iDEUDMAMode5,
+  DataTransfer$IDEUDMAMode6._minorName: DataTransfer.iDEUDMAMode6,
+  DataTransfer$IDEUDMA33._minorName: DataTransfer.iDEUDMA33,
+  DataTransfer$IDEUDMA66._minorName: DataTransfer.iDEUDMA66,
+  DataTransfer$IDEUDMA100._minorName: DataTransfer.iDEUDMA100,
+  DataTransfer$IDEUDMA133._minorName: DataTransfer.iDEUDMA133,
+  DataTransfer$SATA10._minorName: DataTransfer.sATA10,
+  DataTransfer$SATA20._minorName: DataTransfer.sATA20,
+  DataTransfer$SATA30._minorName: DataTransfer.sATA30,
+  DataTransfer$USB._minorName: DataTransfer.uSB,
+  DataTransfer$USB20._minorName: DataTransfer.uSB20,
+  DataTransfer$USB30._minorName: DataTransfer.uSB30,
+  DataTransfer$FireWire400IEEE1394._minorName: DataTransfer.fireWire400IEEE1394,
   DataTransfer$FireWire800IEEE1394b._minorName:
-      DataTransferUnit.fireWire800IEEE1394b,
-  DataTransfer$IrDA._minorName: DataTransferUnit.irDA,
-  DataTransfer$IrDA2._minorName: DataTransferUnit.irDA2,
-  DataTransfer$ATM._minorName: DataTransferUnit.aTM,
-  DataTransfer$T0Payload._minorName: DataTransferUnit.t0Payload,
-  DataTransfer$T0B8ZSPayload._minorName: DataTransferUnit.t0B8ZSPayload,
-  DataTransfer$T1Signal._minorName: DataTransferUnit.t1Signal,
-  DataTransfer$T1Payload._minorName: DataTransferUnit.t1Payload,
-  DataTransfer$T1ZPayload._minorName: DataTransferUnit.t1ZPayload,
-  DataTransfer$T1CSignal._minorName: DataTransferUnit.t1CSignal,
-  DataTransfer$T1CPayload._minorName: DataTransferUnit.t1CPayload,
-  DataTransfer$T2Signal._minorName: DataTransferUnit.t2Signal,
-  DataTransfer$T3Signal._minorName: DataTransferUnit.t3Signal,
-  DataTransfer$T3Payload._minorName: DataTransferUnit.t3Payload,
-  DataTransfer$T3ZPayload._minorName: DataTransferUnit.t3ZPayload,
-  DataTransfer$T4Signal._minorName: DataTransferUnit.t4Signal,
-  DataTransfer$EPTA1Signal._minorName: DataTransferUnit.ePTA1Signal,
-  DataTransfer$EPTA1Payload._minorName: DataTransferUnit.ePTA1Payload,
-  DataTransfer$EPTA2Signal._minorName: DataTransferUnit.ePTA2Signal,
-  DataTransfer$EPTA2Payload._minorName: DataTransferUnit.ePTA2Payload,
-  DataTransfer$EPTA3Signal._minorName: DataTransferUnit.ePTA3Signal,
-  DataTransfer$EPTA3Payload._minorName: DataTransferUnit.ePTA3Payload,
-  DataTransfer$H0._minorName: DataTransferUnit.h0,
-  DataTransfer$H11._minorName: DataTransferUnit.h11,
-  DataTransfer$H12._minorName: DataTransferUnit.h12,
+      DataTransfer.fireWire800IEEE1394b,
+  DataTransfer$IrDA._minorName: DataTransfer.irDA,
+  DataTransfer$IrDA2._minorName: DataTransfer.irDA2,
+  DataTransfer$ATM._minorName: DataTransfer.aTM,
+  DataTransfer$T0Payload._minorName: DataTransfer.t0Payload,
+  DataTransfer$T0B8ZSPayload._minorName: DataTransfer.t0B8ZSPayload,
+  DataTransfer$T1Signal._minorName: DataTransfer.t1Signal,
+  DataTransfer$T1Payload._minorName: DataTransfer.t1Payload,
+  DataTransfer$T1ZPayload._minorName: DataTransfer.t1ZPayload,
+  DataTransfer$T1CSignal._minorName: DataTransfer.t1CSignal,
+  DataTransfer$T1CPayload._minorName: DataTransfer.t1CPayload,
+  DataTransfer$T2Signal._minorName: DataTransfer.t2Signal,
+  DataTransfer$T3Signal._minorName: DataTransfer.t3Signal,
+  DataTransfer$T3Payload._minorName: DataTransfer.t3Payload,
+  DataTransfer$T3ZPayload._minorName: DataTransfer.t3ZPayload,
+  DataTransfer$T4Signal._minorName: DataTransfer.t4Signal,
+  DataTransfer$EPTA1Signal._minorName: DataTransfer.ePTA1Signal,
+  DataTransfer$EPTA1Payload._minorName: DataTransfer.ePTA1Payload,
+  DataTransfer$EPTA2Signal._minorName: DataTransfer.ePTA2Signal,
+  DataTransfer$EPTA2Payload._minorName: DataTransfer.ePTA2Payload,
+  DataTransfer$EPTA3Signal._minorName: DataTransfer.ePTA3Signal,
+  DataTransfer$EPTA3Payload._minorName: DataTransfer.ePTA3Payload,
+  DataTransfer$H0._minorName: DataTransfer.h0,
+  DataTransfer$H11._minorName: DataTransfer.h11,
+  DataTransfer$H12._minorName: DataTransfer.h12,
   DataTransfer$VirtualTributary1Signal._minorName:
-      DataTransferUnit.virtualTributary1Signal,
+      DataTransfer.virtualTributary1Signal,
   DataTransfer$VirtualTributary1Payload._minorName:
-      DataTransferUnit.virtualTributary1Payload,
+      DataTransfer.virtualTributary1Payload,
   DataTransfer$VirtualTributary2Signal._minorName:
-      DataTransferUnit.virtualTributary2Signal,
+      DataTransfer.virtualTributary2Signal,
   DataTransfer$VirtualTributary2Payload._minorName:
-      DataTransferUnit.virtualTributary2Payload,
+      DataTransfer.virtualTributary2Payload,
   DataTransfer$VirtualTributary6Signal._minorName:
-      DataTransferUnit.virtualTributary6Signal,
+      DataTransfer.virtualTributary6Signal,
   DataTransfer$VirtualTributary6Payload._minorName:
-      DataTransferUnit.virtualTributary6Payload,
-  DataTransfer$STS1Signal._minorName: DataTransferUnit.sTS1Signal,
-  DataTransfer$STS1Payload._minorName: DataTransferUnit.sTS1Payload,
-  DataTransfer$STS3Signal._minorName: DataTransferUnit.sTS3Signal,
-  DataTransfer$STS3Payload._minorName: DataTransferUnit.sTS3Payload,
-  DataTransfer$STS3cSignal._minorName: DataTransferUnit.sTS3cSignal,
-  DataTransfer$STS3cPayload._minorName: DataTransferUnit.sTS3cPayload,
-  DataTransfer$STS12Signal._minorName: DataTransferUnit.sTS12Signal,
-  DataTransfer$STS24Signal._minorName: DataTransferUnit.sTS24Signal,
-  DataTransfer$STS48Signal._minorName: DataTransferUnit.sTS48Signal,
-  DataTransfer$STS192Signal._minorName: DataTransferUnit.sTS192Signal,
-  DataTransfer$STM1Signal._minorName: DataTransferUnit.sTM1Signal,
-  DataTransfer$STM4Signal._minorName: DataTransferUnit.sTM4Signal,
-  DataTransfer$STM16Signal._minorName: DataTransferUnit.sTM16Signal,
-  DataTransfer$STM64Signal._minorName: DataTransferUnit.sTM64Signal,
-  DataTransfer$CharacterPerSecond._minorName:
-      DataTransferUnit.characterPerSecond,
-  DataTransfer$TokenRing._minorName: DataTransferUnit.tokenRing,
-  DataTransfer$FiberChannel._minorName: DataTransferUnit.fiberChannel,
-  DataTransfer$ISA8Bit._minorName: DataTransferUnit.iSA8Bit,
-  DataTransfer$ISA16Bit._minorName: DataTransferUnit.iSA16Bit,
-  DataTransfer$VLB._minorName: DataTransferUnit.vLB,
-  DataTransfer$PCI._minorName: DataTransferUnit.pCI,
-  DataTransfer$PCI64Bit._minorName: DataTransferUnit.pCI64Bit,
-  DataTransfer$PCI64Bit66MHz._minorName: DataTransferUnit.pCI64Bit66MHz,
-  DataTransfer$PCIX._minorName: DataTransferUnit.pCIX,
-  DataTransfer$AGP._minorName: DataTransferUnit.aGP,
-  DataTransfer$AGP2X._minorName: DataTransferUnit.aGP2X,
-  DataTransfer$AGP4X._minorName: DataTransferUnit.aGP4X,
-  DataTransfer$AGP8X._minorName: DataTransferUnit.aGP8X,
-  DataTransfer$PCIExpress10X1._minorName: DataTransferUnit.pCIExpress10X1,
-  DataTransfer$PCIExpress10X4._minorName: DataTransferUnit.pCIExpress10X4,
-  DataTransfer$PCIExpress10X8._minorName: DataTransferUnit.pCIExpress10X8,
-  DataTransfer$PCIExpress10X16._minorName: DataTransferUnit.pCIExpress10X16,
-  DataTransfer$PCIExpress20X1._minorName: DataTransferUnit.pCIExpress20X1,
-  DataTransfer$PCIExpress20X4._minorName: DataTransferUnit.pCIExpress20X4,
-  DataTransfer$PCIExpress20X8._minorName: DataTransferUnit.pCIExpress20X8,
-  DataTransfer$PCIExpress20X16._minorName: DataTransferUnit.pCIExpress20X16,
-  DataTransfer$PCIExpress30X1._minorName: DataTransferUnit.pCIExpress30X1,
-  DataTransfer$PCIExpress30X4._minorName: DataTransferUnit.pCIExpress30X4,
-  DataTransfer$PCIExpress30X8._minorName: DataTransferUnit.pCIExpress30X8,
-  DataTransfer$PCIExpress30X16._minorName: DataTransferUnit.pCIExpress30X16,
-  DataTransfer$CDROM1X._minorName: DataTransferUnit.cDROM1X,
-  DataTransfer$CDROM2X._minorName: DataTransferUnit.cDROM2X,
-  DataTransfer$CDROM3X._minorName: DataTransferUnit.cDROM3X,
-  DataTransfer$CDROM4X._minorName: DataTransferUnit.cDROM4X,
-  DataTransfer$CDROM6X._minorName: DataTransferUnit.cDROM6X,
-  DataTransfer$CDROM8X._minorName: DataTransferUnit.cDROM8X,
-  DataTransfer$CDROM12X._minorName: DataTransferUnit.cDROM12X,
-  DataTransfer$CDROM16X._minorName: DataTransferUnit.cDROM16X,
-  DataTransfer$CDROM24X._minorName: DataTransferUnit.cDROM24X,
-  DataTransfer$CDROM32X._minorName: DataTransferUnit.cDROM32X,
-  DataTransfer$CDROM40X._minorName: DataTransferUnit.cDROM40X,
-  DataTransfer$CDROM48X._minorName: DataTransferUnit.cDROM48X,
-  DataTransfer$CDROM52X._minorName: DataTransferUnit.cDROM52X,
-  DataTransfer$DVDROM1X._minorName: DataTransferUnit.dVDROM1X,
-  DataTransfer$DVDROM2X._minorName: DataTransferUnit.dVDROM2X,
-  DataTransfer$DVDROM3X._minorName: DataTransferUnit.dVDROM3X,
-  DataTransfer$DVDROM4X._minorName: DataTransferUnit.dVDROM4X,
-  DataTransfer$DVDROM6X._minorName: DataTransferUnit.dVDROM6X,
-  DataTransfer$DVDROM8X._minorName: DataTransferUnit.dVDROM8X,
-  DataTransfer$DVDROM10X._minorName: DataTransferUnit.dVDROM10X,
-  DataTransfer$DVDROM12X._minorName: DataTransferUnit.dVDROM12X,
-  DataTransfer$DVDROM16X._minorName: DataTransferUnit.dVDROM16X,
-  DataTransfer$BluRay1X._minorName: DataTransferUnit.bluRay1X,
-  DataTransfer$BluRay2X._minorName: DataTransferUnit.bluRay2X,
-  DataTransfer$BluRay4X._minorName: DataTransferUnit.bluRay4X,
-  DataTransfer$BluRay6X._minorName: DataTransferUnit.bluRay6X,
-  DataTransfer$BluRay8X._minorName: DataTransferUnit.bluRay8X,
-  DataTransfer$BluRay10X._minorName: DataTransferUnit.bluRay10X,
-  DataTransfer$BluRay12X._minorName: DataTransferUnit.bluRay12X,
+      DataTransfer.virtualTributary6Payload,
+  DataTransfer$STS1Signal._minorName: DataTransfer.sTS1Signal,
+  DataTransfer$STS1Payload._minorName: DataTransfer.sTS1Payload,
+  DataTransfer$STS3Signal._minorName: DataTransfer.sTS3Signal,
+  DataTransfer$STS3Payload._minorName: DataTransfer.sTS3Payload,
+  DataTransfer$STS3cSignal._minorName: DataTransfer.sTS3cSignal,
+  DataTransfer$STS3cPayload._minorName: DataTransfer.sTS3cPayload,
+  DataTransfer$STS12Signal._minorName: DataTransfer.sTS12Signal,
+  DataTransfer$STS24Signal._minorName: DataTransfer.sTS24Signal,
+  DataTransfer$STS48Signal._minorName: DataTransfer.sTS48Signal,
+  DataTransfer$STS192Signal._minorName: DataTransfer.sTS192Signal,
+  DataTransfer$STM1Signal._minorName: DataTransfer.sTM1Signal,
+  DataTransfer$STM4Signal._minorName: DataTransfer.sTM4Signal,
+  DataTransfer$STM16Signal._minorName: DataTransfer.sTM16Signal,
+  DataTransfer$STM64Signal._minorName: DataTransfer.sTM64Signal,
+  DataTransfer$CharacterPerSecond._minorName: DataTransfer.characterPerSecond,
+  DataTransfer$TokenRing._minorName: DataTransfer.tokenRing,
+  DataTransfer$FiberChannel._minorName: DataTransfer.fiberChannel,
+  DataTransfer$ISA8Bit._minorName: DataTransfer.iSA8Bit,
+  DataTransfer$ISA16Bit._minorName: DataTransfer.iSA16Bit,
+  DataTransfer$VLB._minorName: DataTransfer.vLB,
+  DataTransfer$PCI._minorName: DataTransfer.pCI,
+  DataTransfer$PCI64Bit._minorName: DataTransfer.pCI64Bit,
+  DataTransfer$PCI64Bit66MHz._minorName: DataTransfer.pCI64Bit66MHz,
+  DataTransfer$PCIX._minorName: DataTransfer.pCIX,
+  DataTransfer$AGP._minorName: DataTransfer.aGP,
+  DataTransfer$AGP2X._minorName: DataTransfer.aGP2X,
+  DataTransfer$AGP4X._minorName: DataTransfer.aGP4X,
+  DataTransfer$AGP8X._minorName: DataTransfer.aGP8X,
+  DataTransfer$PCIExpress10X1._minorName: DataTransfer.pCIExpress10X1,
+  DataTransfer$PCIExpress10X4._minorName: DataTransfer.pCIExpress10X4,
+  DataTransfer$PCIExpress10X8._minorName: DataTransfer.pCIExpress10X8,
+  DataTransfer$PCIExpress10X16._minorName: DataTransfer.pCIExpress10X16,
+  DataTransfer$PCIExpress20X1._minorName: DataTransfer.pCIExpress20X1,
+  DataTransfer$PCIExpress20X4._minorName: DataTransfer.pCIExpress20X4,
+  DataTransfer$PCIExpress20X8._minorName: DataTransfer.pCIExpress20X8,
+  DataTransfer$PCIExpress20X16._minorName: DataTransfer.pCIExpress20X16,
+  DataTransfer$PCIExpress30X1._minorName: DataTransfer.pCIExpress30X1,
+  DataTransfer$PCIExpress30X4._minorName: DataTransfer.pCIExpress30X4,
+  DataTransfer$PCIExpress30X8._minorName: DataTransfer.pCIExpress30X8,
+  DataTransfer$PCIExpress30X16._minorName: DataTransfer.pCIExpress30X16,
+  DataTransfer$CDROM1X._minorName: DataTransfer.cDROM1X,
+  DataTransfer$CDROM2X._minorName: DataTransfer.cDROM2X,
+  DataTransfer$CDROM3X._minorName: DataTransfer.cDROM3X,
+  DataTransfer$CDROM4X._minorName: DataTransfer.cDROM4X,
+  DataTransfer$CDROM6X._minorName: DataTransfer.cDROM6X,
+  DataTransfer$CDROM8X._minorName: DataTransfer.cDROM8X,
+  DataTransfer$CDROM12X._minorName: DataTransfer.cDROM12X,
+  DataTransfer$CDROM16X._minorName: DataTransfer.cDROM16X,
+  DataTransfer$CDROM24X._minorName: DataTransfer.cDROM24X,
+  DataTransfer$CDROM32X._minorName: DataTransfer.cDROM32X,
+  DataTransfer$CDROM40X._minorName: DataTransfer.cDROM40X,
+  DataTransfer$CDROM48X._minorName: DataTransfer.cDROM48X,
+  DataTransfer$CDROM52X._minorName: DataTransfer.cDROM52X,
+  DataTransfer$DVDROM1X._minorName: DataTransfer.dVDROM1X,
+  DataTransfer$DVDROM2X._minorName: DataTransfer.dVDROM2X,
+  DataTransfer$DVDROM3X._minorName: DataTransfer.dVDROM3X,
+  DataTransfer$DVDROM4X._minorName: DataTransfer.dVDROM4X,
+  DataTransfer$DVDROM6X._minorName: DataTransfer.dVDROM6X,
+  DataTransfer$DVDROM8X._minorName: DataTransfer.dVDROM8X,
+  DataTransfer$DVDROM10X._minorName: DataTransfer.dVDROM10X,
+  DataTransfer$DVDROM12X._minorName: DataTransfer.dVDROM12X,
+  DataTransfer$DVDROM16X._minorName: DataTransfer.dVDROM16X,
+  DataTransfer$BluRay1X._minorName: DataTransfer.bluRay1X,
+  DataTransfer$BluRay2X._minorName: DataTransfer.bluRay2X,
+  DataTransfer$BluRay4X._minorName: DataTransfer.bluRay4X,
+  DataTransfer$BluRay6X._minorName: DataTransfer.bluRay6X,
+  DataTransfer$BluRay8X._minorName: DataTransfer.bluRay8X,
+  DataTransfer$BluRay10X._minorName: DataTransfer.bluRay10X,
+  DataTransfer$BluRay12X._minorName: DataTransfer.bluRay12X,
 });

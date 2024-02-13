@@ -22,10 +22,10 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
   factory VolumeLumber.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        volumeLumberUnitValues,
+        volumeLumberUnits,
       )
-          ? volumeLumberUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? volumeLumberUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -153,6 +153,52 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
   String get majorName => _majorName;
 
   static const _majorName = 'volumeLumber';
+
+  static const meterCubic = VolumeLumber$MeterCubic();
+  static const cubicFeet = VolumeLumber$CubicFeet();
+  static const cubicInch = VolumeLumber$CubicInch();
+  static const boardFeet = VolumeLumber$BoardFeet();
+  static const thousandBoardFeet = VolumeLumber$ThousandBoardFeet();
+  static const cord = VolumeLumber$Cord();
+  static const cord80FtCubic = VolumeLumber$Cord80FtCubic();
+  static const cordFeet = VolumeLumber$CordFeet();
+  static const cunit = VolumeLumber$Cunit();
+  static const pallet = VolumeLumber$Pallet();
+  static const crossTie = VolumeLumber$CrossTie();
+  static const switchTie = VolumeLumber$SwitchTie();
+  static const thousandSquareFeet1Per8InchPanels =
+      VolumeLumber$ThousandSquareFeet1Per8InchPanels();
+  static const thousandSquareFeet1Per4InchPanels =
+      VolumeLumber$ThousandSquareFeet1Per4InchPanels();
+  static const thousandSquareFeet3Per8InchPanels =
+      VolumeLumber$ThousandSquareFeet3Per8InchPanels();
+  static const thousandSquareFeet1Per2InchPanels =
+      VolumeLumber$ThousandSquareFeet1Per2InchPanels();
+  static const thousandSquareFeet3Per4InchPanels =
+      VolumeLumber$ThousandSquareFeet3Per4InchPanels();
+
+  @override
+  List<VolumeLumber> get units => values;
+
+  static const values = [
+    meterCubic,
+    cubicFeet,
+    cubicInch,
+    boardFeet,
+    thousandBoardFeet,
+    cord,
+    cord80FtCubic,
+    cordFeet,
+    cunit,
+    pallet,
+    crossTie,
+    switchTie,
+    thousandSquareFeet1Per8InchPanels,
+    thousandSquareFeet1Per4InchPanels,
+    thousandSquareFeet3Per8InchPanels,
+    thousandSquareFeet1Per2InchPanels,
+    thousandSquareFeet3Per4InchPanels,
+  ];
 }
 
 /// Unit of [VolumeLumber]
@@ -1271,86 +1317,27 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
       };
 }
 
-enum VolumeLumberUnit {
-  meterCubic._(
-    VolumeLumber$MeterCubic(),
-  ),
-  cubicFeet._(
-    VolumeLumber$CubicFeet(),
-  ),
-  cubicInch._(
-    VolumeLumber$CubicInch(),
-  ),
-  boardFeet._(
-    VolumeLumber$BoardFeet(),
-  ),
-  thousandBoardFeet._(
-    VolumeLumber$ThousandBoardFeet(),
-  ),
-  cord._(
-    VolumeLumber$Cord(),
-  ),
-  cord80FtCubic._(
-    VolumeLumber$Cord80FtCubic(),
-  ),
-  cordFeet._(
-    VolumeLumber$CordFeet(),
-  ),
-  cunit._(
-    VolumeLumber$Cunit(),
-  ),
-  pallet._(
-    VolumeLumber$Pallet(),
-  ),
-  crossTie._(
-    VolumeLumber$CrossTie(),
-  ),
-  switchTie._(
-    VolumeLumber$SwitchTie(),
-  ),
-  thousandSquareFeet1Per8InchPanels._(
-    VolumeLumber$ThousandSquareFeet1Per8InchPanels(),
-  ),
-  thousandSquareFeet1Per4InchPanels._(
-    VolumeLumber$ThousandSquareFeet1Per4InchPanels(),
-  ),
-  thousandSquareFeet3Per8InchPanels._(
-    VolumeLumber$ThousandSquareFeet3Per8InchPanels(),
-  ),
-  thousandSquareFeet1Per2InchPanels._(
-    VolumeLumber$ThousandSquareFeet1Per2InchPanels(),
-  ),
-  thousandSquareFeet3Per4InchPanels._(
-    VolumeLumber$ThousandSquareFeet3Per4InchPanels(),
-  ),
-  ;
-
-  const VolumeLumberUnit._(this.construct);
-
-  final VolumeLumber construct;
-}
-
-const volumeLumberUnitValues = _EnumValues({
-  VolumeLumber$MeterCubic._minorName: VolumeLumberUnit.meterCubic,
-  VolumeLumber$CubicFeet._minorName: VolumeLumberUnit.cubicFeet,
-  VolumeLumber$CubicInch._minorName: VolumeLumberUnit.cubicInch,
-  VolumeLumber$BoardFeet._minorName: VolumeLumberUnit.boardFeet,
-  VolumeLumber$ThousandBoardFeet._minorName: VolumeLumberUnit.thousandBoardFeet,
-  VolumeLumber$Cord._minorName: VolumeLumberUnit.cord,
-  VolumeLumber$Cord80FtCubic._minorName: VolumeLumberUnit.cord80FtCubic,
-  VolumeLumber$CordFeet._minorName: VolumeLumberUnit.cordFeet,
-  VolumeLumber$Cunit._minorName: VolumeLumberUnit.cunit,
-  VolumeLumber$Pallet._minorName: VolumeLumberUnit.pallet,
-  VolumeLumber$CrossTie._minorName: VolumeLumberUnit.crossTie,
-  VolumeLumber$SwitchTie._minorName: VolumeLumberUnit.switchTie,
+const volumeLumberUnits = EnumValues({
+  VolumeLumber$MeterCubic._minorName: VolumeLumber.meterCubic,
+  VolumeLumber$CubicFeet._minorName: VolumeLumber.cubicFeet,
+  VolumeLumber$CubicInch._minorName: VolumeLumber.cubicInch,
+  VolumeLumber$BoardFeet._minorName: VolumeLumber.boardFeet,
+  VolumeLumber$ThousandBoardFeet._minorName: VolumeLumber.thousandBoardFeet,
+  VolumeLumber$Cord._minorName: VolumeLumber.cord,
+  VolumeLumber$Cord80FtCubic._minorName: VolumeLumber.cord80FtCubic,
+  VolumeLumber$CordFeet._minorName: VolumeLumber.cordFeet,
+  VolumeLumber$Cunit._minorName: VolumeLumber.cunit,
+  VolumeLumber$Pallet._minorName: VolumeLumber.pallet,
+  VolumeLumber$CrossTie._minorName: VolumeLumber.crossTie,
+  VolumeLumber$SwitchTie._minorName: VolumeLumber.switchTie,
   VolumeLumber$ThousandSquareFeet1Per8InchPanels._minorName:
-      VolumeLumberUnit.thousandSquareFeet1Per8InchPanels,
+      VolumeLumber.thousandSquareFeet1Per8InchPanels,
   VolumeLumber$ThousandSquareFeet1Per4InchPanels._minorName:
-      VolumeLumberUnit.thousandSquareFeet1Per4InchPanels,
+      VolumeLumber.thousandSquareFeet1Per4InchPanels,
   VolumeLumber$ThousandSquareFeet3Per8InchPanels._minorName:
-      VolumeLumberUnit.thousandSquareFeet3Per8InchPanels,
+      VolumeLumber.thousandSquareFeet3Per8InchPanels,
   VolumeLumber$ThousandSquareFeet1Per2InchPanels._minorName:
-      VolumeLumberUnit.thousandSquareFeet1Per2InchPanels,
+      VolumeLumber.thousandSquareFeet1Per2InchPanels,
   VolumeLumber$ThousandSquareFeet3Per4InchPanels._minorName:
-      VolumeLumberUnit.thousandSquareFeet3Per4InchPanels,
+      VolumeLumber.thousandSquareFeet3Per4InchPanels,
 });

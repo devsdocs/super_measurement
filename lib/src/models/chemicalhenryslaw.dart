@@ -17,10 +17,10 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
   factory ChemicalHenrysLaw.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        chemicalHenrysLawUnitValues,
+        chemicalHenrysLawUnits,
       )
-          ? chemicalHenrysLawUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? chemicalHenrysLawUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -84,6 +84,31 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
   String get majorName => _majorName;
 
   static const _majorName = 'chemicalHenrysLaw';
+
+  static const newtonMeterPerKilogram =
+      ChemicalHenrysLaw$NewtonMeterPerKilogram();
+  static const barPerKilogramPerMeterCubic =
+      ChemicalHenrysLaw$BarPerKilogramPerMeterCubic();
+  static const atmospherePerKilogramPerMeterCubic =
+      ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic();
+  static const atmospherePerKilogramPerFootCubic =
+      ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic();
+  static const atmospherePerGramPerCentimeterCubic =
+      ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic();
+  static const atmospherePerPoundPerFootCubic =
+      ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic();
+
+  @override
+  List<ChemicalHenrysLaw> get units => values;
+
+  static const values = [
+    newtonMeterPerKilogram,
+    barPerKilogramPerMeterCubic,
+    atmospherePerKilogramPerMeterCubic,
+    atmospherePerKilogramPerFootCubic,
+    atmospherePerGramPerCentimeterCubic,
+    atmospherePerPoundPerFootCubic,
+  ];
 }
 
 /// Unit of [ChemicalHenrysLaw]
@@ -487,43 +512,17 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
       };
 }
 
-enum ChemicalHenrysLawUnit {
-  newtonMeterPerKilogram._(
-    ChemicalHenrysLaw$NewtonMeterPerKilogram(),
-  ),
-  barPerKilogramPerMeterCubic._(
-    ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(),
-  ),
-  atmospherePerKilogramPerMeterCubic._(
-    ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic(),
-  ),
-  atmospherePerKilogramPerFootCubic._(
-    ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic(),
-  ),
-  atmospherePerGramPerCentimeterCubic._(
-    ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic(),
-  ),
-  atmospherePerPoundPerFootCubic._(
-    ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic(),
-  ),
-  ;
-
-  const ChemicalHenrysLawUnit._(this.construct);
-
-  final ChemicalHenrysLaw construct;
-}
-
-const chemicalHenrysLawUnitValues = _EnumValues({
+const chemicalHenrysLawUnits = EnumValues({
   ChemicalHenrysLaw$NewtonMeterPerKilogram._minorName:
-      ChemicalHenrysLawUnit.newtonMeterPerKilogram,
+      ChemicalHenrysLaw.newtonMeterPerKilogram,
   ChemicalHenrysLaw$BarPerKilogramPerMeterCubic._minorName:
-      ChemicalHenrysLawUnit.barPerKilogramPerMeterCubic,
+      ChemicalHenrysLaw.barPerKilogramPerMeterCubic,
   ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic._minorName:
-      ChemicalHenrysLawUnit.atmospherePerKilogramPerMeterCubic,
+      ChemicalHenrysLaw.atmospherePerKilogramPerMeterCubic,
   ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic._minorName:
-      ChemicalHenrysLawUnit.atmospherePerKilogramPerFootCubic,
+      ChemicalHenrysLaw.atmospherePerKilogramPerFootCubic,
   ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic._minorName:
-      ChemicalHenrysLawUnit.atmospherePerGramPerCentimeterCubic,
+      ChemicalHenrysLaw.atmospherePerGramPerCentimeterCubic,
   ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic._minorName:
-      ChemicalHenrysLawUnit.atmospherePerPoundPerFootCubic,
+      ChemicalHenrysLaw.atmospherePerPoundPerFootCubic,
 });

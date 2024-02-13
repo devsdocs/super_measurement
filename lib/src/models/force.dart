@@ -20,10 +20,9 @@ sealed class Force extends Unit<Force> {
   factory Force.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        forceUnitValues,
+        forceUnits,
       )
-          ? forceUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? forceUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -200,6 +199,65 @@ sealed class Force extends Unit<Force> {
   String get majorName => _majorName;
 
   static const _majorName = 'force';
+
+  static const exanewton = Force$Exanewton();
+  static const petanewton = Force$Petanewton();
+  static const teranewton = Force$Teranewton();
+  static const giganewton = Force$Giganewton();
+  static const meganewton = Force$Meganewton();
+  static const kilonewton = Force$Kilonewton();
+  static const hectonewton = Force$Hectonewton();
+  static const dekanewton = Force$Dekanewton();
+  static const newton = Force$Newton();
+  static const decinewton = Force$Decinewton();
+  static const centinewton = Force$Centinewton();
+  static const millinewton = Force$Millinewton();
+  static const micronewton = Force$Micronewton();
+  static const nanonewton = Force$Nanonewton();
+  static const piconewton = Force$Piconewton();
+  static const femtonewton = Force$Femtonewton();
+  static const attonewton = Force$Attonewton();
+  static const dyne = Force$Dyne();
+  static const joulePerMeter = Force$JoulePerMeter();
+  static const joulePerCentimeter = Force$JoulePerCentimeter();
+  static const kilogramForce = Force$KilogramForce();
+  static const gramForce = Force$GramForce();
+  static const kipForce = Force$KipForce();
+  static const poundForce = Force$PoundForce();
+  static const ounceForce = Force$OunceForce();
+  static const poundal = Force$Poundal();
+
+  @override
+  List<Force> get units => values;
+
+  static const values = [
+    exanewton,
+    petanewton,
+    teranewton,
+    giganewton,
+    meganewton,
+    kilonewton,
+    hectonewton,
+    dekanewton,
+    newton,
+    decinewton,
+    centinewton,
+    millinewton,
+    micronewton,
+    nanonewton,
+    piconewton,
+    femtonewton,
+    attonewton,
+    dyne,
+    joulePerMeter,
+    joulePerCentimeter,
+    kilogramForce,
+    gramForce,
+    kipForce,
+    poundForce,
+    ounceForce,
+    poundal,
+  ];
 }
 
 /// Unit of [Force]
@@ -1892,117 +1950,31 @@ final class Force$Poundal extends Force {
       };
 }
 
-enum ForceUnit {
-  exanewton._(
-    Force$Exanewton(),
-  ),
-  petanewton._(
-    Force$Petanewton(),
-  ),
-  teranewton._(
-    Force$Teranewton(),
-  ),
-  giganewton._(
-    Force$Giganewton(),
-  ),
-  meganewton._(
-    Force$Meganewton(),
-  ),
-  kilonewton._(
-    Force$Kilonewton(),
-  ),
-  hectonewton._(
-    Force$Hectonewton(),
-  ),
-  dekanewton._(
-    Force$Dekanewton(),
-  ),
-  newton._(
-    Force$Newton(),
-  ),
-  decinewton._(
-    Force$Decinewton(),
-  ),
-  centinewton._(
-    Force$Centinewton(),
-  ),
-  millinewton._(
-    Force$Millinewton(),
-  ),
-  micronewton._(
-    Force$Micronewton(),
-  ),
-  nanonewton._(
-    Force$Nanonewton(),
-  ),
-  piconewton._(
-    Force$Piconewton(),
-  ),
-  femtonewton._(
-    Force$Femtonewton(),
-  ),
-  attonewton._(
-    Force$Attonewton(),
-  ),
-  dyne._(
-    Force$Dyne(),
-  ),
-  joulePerMeter._(
-    Force$JoulePerMeter(),
-  ),
-  joulePerCentimeter._(
-    Force$JoulePerCentimeter(),
-  ),
-  kilogramForce._(
-    Force$KilogramForce(),
-  ),
-  gramForce._(
-    Force$GramForce(),
-  ),
-  kipForce._(
-    Force$KipForce(),
-  ),
-  poundForce._(
-    Force$PoundForce(),
-  ),
-  ounceForce._(
-    Force$OunceForce(),
-  ),
-  poundal._(
-    Force$Poundal(),
-  ),
-  ;
-
-  const ForceUnit._(this.construct);
-
-  final Force construct;
-}
-
-const forceUnitValues = _EnumValues({
-  Force$Exanewton._minorName: ForceUnit.exanewton,
-  Force$Petanewton._minorName: ForceUnit.petanewton,
-  Force$Teranewton._minorName: ForceUnit.teranewton,
-  Force$Giganewton._minorName: ForceUnit.giganewton,
-  Force$Meganewton._minorName: ForceUnit.meganewton,
-  Force$Kilonewton._minorName: ForceUnit.kilonewton,
-  Force$Hectonewton._minorName: ForceUnit.hectonewton,
-  Force$Dekanewton._minorName: ForceUnit.dekanewton,
-  Force$Newton._minorName: ForceUnit.newton,
-  Force$Decinewton._minorName: ForceUnit.decinewton,
-  Force$Centinewton._minorName: ForceUnit.centinewton,
-  Force$Millinewton._minorName: ForceUnit.millinewton,
-  Force$Micronewton._minorName: ForceUnit.micronewton,
-  Force$Nanonewton._minorName: ForceUnit.nanonewton,
-  Force$Piconewton._minorName: ForceUnit.piconewton,
-  Force$Femtonewton._minorName: ForceUnit.femtonewton,
-  Force$Attonewton._minorName: ForceUnit.attonewton,
-  Force$Dyne._minorName: ForceUnit.dyne,
-  Force$JoulePerMeter._minorName: ForceUnit.joulePerMeter,
-  Force$JoulePerCentimeter._minorName: ForceUnit.joulePerCentimeter,
-  Force$KilogramForce._minorName: ForceUnit.kilogramForce,
-  Force$GramForce._minorName: ForceUnit.gramForce,
-  Force$KipForce._minorName: ForceUnit.kipForce,
-  Force$PoundForce._minorName: ForceUnit.poundForce,
-  Force$OunceForce._minorName: ForceUnit.ounceForce,
-  Force$Poundal._minorName: ForceUnit.poundal,
+const forceUnits = EnumValues({
+  Force$Exanewton._minorName: Force.exanewton,
+  Force$Petanewton._minorName: Force.petanewton,
+  Force$Teranewton._minorName: Force.teranewton,
+  Force$Giganewton._minorName: Force.giganewton,
+  Force$Meganewton._minorName: Force.meganewton,
+  Force$Kilonewton._minorName: Force.kilonewton,
+  Force$Hectonewton._minorName: Force.hectonewton,
+  Force$Dekanewton._minorName: Force.dekanewton,
+  Force$Newton._minorName: Force.newton,
+  Force$Decinewton._minorName: Force.decinewton,
+  Force$Centinewton._minorName: Force.centinewton,
+  Force$Millinewton._minorName: Force.millinewton,
+  Force$Micronewton._minorName: Force.micronewton,
+  Force$Nanonewton._minorName: Force.nanonewton,
+  Force$Piconewton._minorName: Force.piconewton,
+  Force$Femtonewton._minorName: Force.femtonewton,
+  Force$Attonewton._minorName: Force.attonewton,
+  Force$Dyne._minorName: Force.dyne,
+  Force$JoulePerMeter._minorName: Force.joulePerMeter,
+  Force$JoulePerCentimeter._minorName: Force.joulePerCentimeter,
+  Force$KilogramForce._minorName: Force.kilogramForce,
+  Force$GramForce._minorName: Force.gramForce,
+  Force$KipForce._minorName: Force.kipForce,
+  Force$PoundForce._minorName: Force.poundForce,
+  Force$OunceForce._minorName: Force.ounceForce,
+  Force$Poundal._minorName: Force.poundal,
 });

@@ -16,10 +16,10 @@ sealed class ElectricField extends Unit<ElectricField> {
   factory ElectricField.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        electricFieldUnitValues,
+        electricFieldUnits,
       )
-          ? electricFieldUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? electricFieldUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -99,6 +99,31 @@ sealed class ElectricField extends Unit<ElectricField> {
   String get majorName => _majorName;
 
   static const _majorName = 'electricField';
+
+  static const kilovoltPerCentimeter = ElectricField$KilovoltPerCentimeter();
+  static const voltPerMeter = ElectricField$VoltPerMeter();
+  static const voltPerCentimeter = ElectricField$VoltPerCentimeter();
+  static const voltPerInch = ElectricField$VoltPerInch();
+  static const millivoltPerMeter = ElectricField$MillivoltPerMeter();
+  static const microvoltPerMeter = ElectricField$MicrovoltPerMeter();
+  static const abvoltPerCentimeter = ElectricField$AbvoltPerCentimeter();
+  static const statvoltPerCentimeter = ElectricField$StatvoltPerCentimeter();
+  static const statvoltPerInch = ElectricField$StatvoltPerInch();
+
+  @override
+  List<ElectricField> get units => values;
+
+  static const values = [
+    kilovoltPerCentimeter,
+    voltPerMeter,
+    voltPerCentimeter,
+    voltPerInch,
+    millivoltPerMeter,
+    microvoltPerMeter,
+    abvoltPerCentimeter,
+    statvoltPerCentimeter,
+    statvoltPerInch,
+  ];
 }
 
 /// Unit of [ElectricField]
@@ -693,55 +718,17 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
       };
 }
 
-enum ElectricFieldUnit {
-  kilovoltPerCentimeter._(
-    ElectricField$KilovoltPerCentimeter(),
-  ),
-  voltPerMeter._(
-    ElectricField$VoltPerMeter(),
-  ),
-  voltPerCentimeter._(
-    ElectricField$VoltPerCentimeter(),
-  ),
-  voltPerInch._(
-    ElectricField$VoltPerInch(),
-  ),
-  millivoltPerMeter._(
-    ElectricField$MillivoltPerMeter(),
-  ),
-  microvoltPerMeter._(
-    ElectricField$MicrovoltPerMeter(),
-  ),
-  abvoltPerCentimeter._(
-    ElectricField$AbvoltPerCentimeter(),
-  ),
-  statvoltPerCentimeter._(
-    ElectricField$StatvoltPerCentimeter(),
-  ),
-  statvoltPerInch._(
-    ElectricField$StatvoltPerInch(),
-  ),
-  ;
-
-  const ElectricFieldUnit._(this.construct);
-
-  final ElectricField construct;
-}
-
-const electricFieldUnitValues = _EnumValues({
+const electricFieldUnits = EnumValues({
   ElectricField$KilovoltPerCentimeter._minorName:
-      ElectricFieldUnit.kilovoltPerCentimeter,
-  ElectricField$VoltPerMeter._minorName: ElectricFieldUnit.voltPerMeter,
-  ElectricField$VoltPerCentimeter._minorName:
-      ElectricFieldUnit.voltPerCentimeter,
-  ElectricField$VoltPerInch._minorName: ElectricFieldUnit.voltPerInch,
-  ElectricField$MillivoltPerMeter._minorName:
-      ElectricFieldUnit.millivoltPerMeter,
-  ElectricField$MicrovoltPerMeter._minorName:
-      ElectricFieldUnit.microvoltPerMeter,
+      ElectricField.kilovoltPerCentimeter,
+  ElectricField$VoltPerMeter._minorName: ElectricField.voltPerMeter,
+  ElectricField$VoltPerCentimeter._minorName: ElectricField.voltPerCentimeter,
+  ElectricField$VoltPerInch._minorName: ElectricField.voltPerInch,
+  ElectricField$MillivoltPerMeter._minorName: ElectricField.millivoltPerMeter,
+  ElectricField$MicrovoltPerMeter._minorName: ElectricField.microvoltPerMeter,
   ElectricField$AbvoltPerCentimeter._minorName:
-      ElectricFieldUnit.abvoltPerCentimeter,
+      ElectricField.abvoltPerCentimeter,
   ElectricField$StatvoltPerCentimeter._minorName:
-      ElectricFieldUnit.statvoltPerCentimeter,
-  ElectricField$StatvoltPerInch._minorName: ElectricFieldUnit.statvoltPerInch,
+      ElectricField.statvoltPerCentimeter,
+  ElectricField$StatvoltPerInch._minorName: ElectricField.statvoltPerInch,
 });

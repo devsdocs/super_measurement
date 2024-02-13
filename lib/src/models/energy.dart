@@ -30,10 +30,9 @@ sealed class Energy extends Unit<Energy> {
   factory Energy.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        energyUnitValues,
+        energyUnits,
       )
-          ? energyUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? energyUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -356,6 +355,113 @@ sealed class Energy extends Unit<Energy> {
   String get majorName => _majorName;
 
   static const _majorName = 'energy';
+
+  static const gigajoule = Energy$Gigajoule();
+  static const megajoule = Energy$Megajoule();
+  static const kilojoule = Energy$Kilojoule();
+  static const joule = Energy$Joule();
+  static const millijoule = Energy$Millijoule();
+  static const microjoule = Energy$Microjoule();
+  static const nanojoule = Energy$Nanojoule();
+  static const attojoule = Energy$Attojoule();
+  static const erg = Energy$Erg();
+  static const gigawattHour = Energy$GigawattHour();
+  static const megawattHour = Energy$MegawattHour();
+  static const kilowattHour = Energy$KilowattHour();
+  static const kilowattSecond = Energy$KilowattSecond();
+  static const wattHour = Energy$WattHour();
+  static const wattSecond = Energy$WattSecond();
+  static const horsepowerHour = Energy$HorsepowerHour();
+  static const kilocalorieInternational = Energy$KilocalorieInternational();
+  static const kilocalorieThermochemical = Energy$KilocalorieThermochemical();
+  static const calorieInternational = Energy$CalorieInternational();
+  static const calorieThermochemical = Energy$CalorieThermochemical();
+  static const calorieNutritional = Energy$CalorieNutritional();
+  static const bTUInternational = Energy$BTUInternational();
+  static const bTUThermochemical = Energy$BTUThermochemical();
+  static const mBTU = Energy$MBTU();
+  static const tonHourRefrigeration = Energy$TonHourRefrigeration();
+  static const gigaton = Energy$Gigaton();
+  static const megaton = Energy$Megaton();
+  static const kiloton = Energy$Kiloton();
+  static const tonExplosives = Energy$TonExplosives();
+  static const newtonMeter = Energy$NewtonMeter();
+  static const dyneCentimeter = Energy$DyneCentimeter();
+  static const gramForceMeter = Energy$GramForceMeter();
+  static const gramForceCentimeter = Energy$GramForceCentimeter();
+  static const kilogramForceMeter = Energy$KilogramForceMeter();
+  static const kilogramForceCentimeter = Energy$KilogramForceCentimeter();
+  static const meterKilopond = Energy$MeterKilopond();
+  static const poundForceFoot = Energy$PoundForceFoot();
+  static const poundForceInch = Energy$PoundForceInch();
+  static const ounceForceInch = Energy$OunceForceInch();
+  static const footPound = Energy$FootPound();
+  static const inchPound = Energy$InchPound();
+  static const inchOunce = Energy$InchOunce();
+  static const poundalFoot = Energy$PoundalFoot();
+  static const megaelectronVolt = Energy$MegaelectronVolt();
+  static const kiloelectronVolt = Energy$KiloelectronVolt();
+  static const electronVolt = Energy$ElectronVolt();
+  static const therm = Energy$Therm();
+  static const thermEC = Energy$ThermEC();
+  static const thermUS = Energy$ThermUS();
+  static const hartree = Energy$Hartree();
+
+  @override
+  List<Energy> get units => values;
+
+  static const values = [
+    gigajoule,
+    megajoule,
+    kilojoule,
+    joule,
+    millijoule,
+    microjoule,
+    nanojoule,
+    attojoule,
+    erg,
+    gigawattHour,
+    megawattHour,
+    kilowattHour,
+    kilowattSecond,
+    wattHour,
+    wattSecond,
+    horsepowerHour,
+    kilocalorieInternational,
+    kilocalorieThermochemical,
+    calorieInternational,
+    calorieThermochemical,
+    calorieNutritional,
+    bTUInternational,
+    bTUThermochemical,
+    mBTU,
+    tonHourRefrigeration,
+    gigaton,
+    megaton,
+    kiloton,
+    tonExplosives,
+    newtonMeter,
+    dyneCentimeter,
+    gramForceMeter,
+    gramForceCentimeter,
+    kilogramForceMeter,
+    kilogramForceCentimeter,
+    meterKilopond,
+    poundForceFoot,
+    poundForceInch,
+    ounceForceInch,
+    footPound,
+    inchPound,
+    inchOunce,
+    poundalFoot,
+    megaelectronVolt,
+    kiloelectronVolt,
+    electronVolt,
+    therm,
+    thermEC,
+    thermUS,
+    hartree,
+  ];
 }
 
 /// Unit of [Energy]
@@ -3612,215 +3718,55 @@ final class Energy$Hartree extends Energy {
       };
 }
 
-enum EnergyUnit {
-  gigajoule._(
-    Energy$Gigajoule(),
-  ),
-  megajoule._(
-    Energy$Megajoule(),
-  ),
-  kilojoule._(
-    Energy$Kilojoule(),
-  ),
-  joule._(
-    Energy$Joule(),
-  ),
-  millijoule._(
-    Energy$Millijoule(),
-  ),
-  microjoule._(
-    Energy$Microjoule(),
-  ),
-  nanojoule._(
-    Energy$Nanojoule(),
-  ),
-  attojoule._(
-    Energy$Attojoule(),
-  ),
-  erg._(
-    Energy$Erg(),
-  ),
-  gigawattHour._(
-    Energy$GigawattHour(),
-  ),
-  megawattHour._(
-    Energy$MegawattHour(),
-  ),
-  kilowattHour._(
-    Energy$KilowattHour(),
-  ),
-  kilowattSecond._(
-    Energy$KilowattSecond(),
-  ),
-  wattHour._(
-    Energy$WattHour(),
-  ),
-  wattSecond._(
-    Energy$WattSecond(),
-  ),
-  horsepowerHour._(
-    Energy$HorsepowerHour(),
-  ),
-  kilocalorieInternational._(
-    Energy$KilocalorieInternational(),
-  ),
-  kilocalorieThermochemical._(
-    Energy$KilocalorieThermochemical(),
-  ),
-  calorieInternational._(
-    Energy$CalorieInternational(),
-  ),
-  calorieThermochemical._(
-    Energy$CalorieThermochemical(),
-  ),
-  calorieNutritional._(
-    Energy$CalorieNutritional(),
-  ),
-  bTUInternational._(
-    Energy$BTUInternational(),
-  ),
-  bTUThermochemical._(
-    Energy$BTUThermochemical(),
-  ),
-  mBTU._(
-    Energy$MBTU(),
-  ),
-  tonHourRefrigeration._(
-    Energy$TonHourRefrigeration(),
-  ),
-  gigaton._(
-    Energy$Gigaton(),
-  ),
-  megaton._(
-    Energy$Megaton(),
-  ),
-  kiloton._(
-    Energy$Kiloton(),
-  ),
-  tonExplosives._(
-    Energy$TonExplosives(),
-  ),
-  newtonMeter._(
-    Energy$NewtonMeter(),
-  ),
-  dyneCentimeter._(
-    Energy$DyneCentimeter(),
-  ),
-  gramForceMeter._(
-    Energy$GramForceMeter(),
-  ),
-  gramForceCentimeter._(
-    Energy$GramForceCentimeter(),
-  ),
-  kilogramForceMeter._(
-    Energy$KilogramForceMeter(),
-  ),
-  kilogramForceCentimeter._(
-    Energy$KilogramForceCentimeter(),
-  ),
-  meterKilopond._(
-    Energy$MeterKilopond(),
-  ),
-  poundForceFoot._(
-    Energy$PoundForceFoot(),
-  ),
-  poundForceInch._(
-    Energy$PoundForceInch(),
-  ),
-  ounceForceInch._(
-    Energy$OunceForceInch(),
-  ),
-  footPound._(
-    Energy$FootPound(),
-  ),
-  inchPound._(
-    Energy$InchPound(),
-  ),
-  inchOunce._(
-    Energy$InchOunce(),
-  ),
-  poundalFoot._(
-    Energy$PoundalFoot(),
-  ),
-  megaelectronVolt._(
-    Energy$MegaelectronVolt(),
-  ),
-  kiloelectronVolt._(
-    Energy$KiloelectronVolt(),
-  ),
-  electronVolt._(
-    Energy$ElectronVolt(),
-  ),
-  therm._(
-    Energy$Therm(),
-  ),
-  thermEC._(
-    Energy$ThermEC(),
-  ),
-  thermUS._(
-    Energy$ThermUS(),
-  ),
-  hartree._(
-    Energy$Hartree(),
-  ),
-  ;
-
-  const EnergyUnit._(this.construct);
-
-  final Energy construct;
-}
-
-const energyUnitValues = _EnumValues({
-  Energy$Gigajoule._minorName: EnergyUnit.gigajoule,
-  Energy$Megajoule._minorName: EnergyUnit.megajoule,
-  Energy$Kilojoule._minorName: EnergyUnit.kilojoule,
-  Energy$Joule._minorName: EnergyUnit.joule,
-  Energy$Millijoule._minorName: EnergyUnit.millijoule,
-  Energy$Microjoule._minorName: EnergyUnit.microjoule,
-  Energy$Nanojoule._minorName: EnergyUnit.nanojoule,
-  Energy$Attojoule._minorName: EnergyUnit.attojoule,
-  Energy$Erg._minorName: EnergyUnit.erg,
-  Energy$GigawattHour._minorName: EnergyUnit.gigawattHour,
-  Energy$MegawattHour._minorName: EnergyUnit.megawattHour,
-  Energy$KilowattHour._minorName: EnergyUnit.kilowattHour,
-  Energy$KilowattSecond._minorName: EnergyUnit.kilowattSecond,
-  Energy$WattHour._minorName: EnergyUnit.wattHour,
-  Energy$WattSecond._minorName: EnergyUnit.wattSecond,
-  Energy$HorsepowerHour._minorName: EnergyUnit.horsepowerHour,
-  Energy$KilocalorieInternational._minorName:
-      EnergyUnit.kilocalorieInternational,
-  Energy$KilocalorieThermochemical._minorName:
-      EnergyUnit.kilocalorieThermochemical,
-  Energy$CalorieInternational._minorName: EnergyUnit.calorieInternational,
-  Energy$CalorieThermochemical._minorName: EnergyUnit.calorieThermochemical,
-  Energy$CalorieNutritional._minorName: EnergyUnit.calorieNutritional,
-  Energy$BTUInternational._minorName: EnergyUnit.bTUInternational,
-  Energy$BTUThermochemical._minorName: EnergyUnit.bTUThermochemical,
-  Energy$MBTU._minorName: EnergyUnit.mBTU,
-  Energy$TonHourRefrigeration._minorName: EnergyUnit.tonHourRefrigeration,
-  Energy$Gigaton._minorName: EnergyUnit.gigaton,
-  Energy$Megaton._minorName: EnergyUnit.megaton,
-  Energy$Kiloton._minorName: EnergyUnit.kiloton,
-  Energy$TonExplosives._minorName: EnergyUnit.tonExplosives,
-  Energy$NewtonMeter._minorName: EnergyUnit.newtonMeter,
-  Energy$DyneCentimeter._minorName: EnergyUnit.dyneCentimeter,
-  Energy$GramForceMeter._minorName: EnergyUnit.gramForceMeter,
-  Energy$GramForceCentimeter._minorName: EnergyUnit.gramForceCentimeter,
-  Energy$KilogramForceMeter._minorName: EnergyUnit.kilogramForceMeter,
-  Energy$KilogramForceCentimeter._minorName: EnergyUnit.kilogramForceCentimeter,
-  Energy$MeterKilopond._minorName: EnergyUnit.meterKilopond,
-  Energy$PoundForceFoot._minorName: EnergyUnit.poundForceFoot,
-  Energy$PoundForceInch._minorName: EnergyUnit.poundForceInch,
-  Energy$OunceForceInch._minorName: EnergyUnit.ounceForceInch,
-  Energy$FootPound._minorName: EnergyUnit.footPound,
-  Energy$InchPound._minorName: EnergyUnit.inchPound,
-  Energy$InchOunce._minorName: EnergyUnit.inchOunce,
-  Energy$PoundalFoot._minorName: EnergyUnit.poundalFoot,
-  Energy$MegaelectronVolt._minorName: EnergyUnit.megaelectronVolt,
-  Energy$KiloelectronVolt._minorName: EnergyUnit.kiloelectronVolt,
-  Energy$ElectronVolt._minorName: EnergyUnit.electronVolt,
-  Energy$Therm._minorName: EnergyUnit.therm,
-  Energy$ThermEC._minorName: EnergyUnit.thermEC,
-  Energy$ThermUS._minorName: EnergyUnit.thermUS,
-  Energy$Hartree._minorName: EnergyUnit.hartree,
+const energyUnits = EnumValues({
+  Energy$Gigajoule._minorName: Energy.gigajoule,
+  Energy$Megajoule._minorName: Energy.megajoule,
+  Energy$Kilojoule._minorName: Energy.kilojoule,
+  Energy$Joule._minorName: Energy.joule,
+  Energy$Millijoule._minorName: Energy.millijoule,
+  Energy$Microjoule._minorName: Energy.microjoule,
+  Energy$Nanojoule._minorName: Energy.nanojoule,
+  Energy$Attojoule._minorName: Energy.attojoule,
+  Energy$Erg._minorName: Energy.erg,
+  Energy$GigawattHour._minorName: Energy.gigawattHour,
+  Energy$MegawattHour._minorName: Energy.megawattHour,
+  Energy$KilowattHour._minorName: Energy.kilowattHour,
+  Energy$KilowattSecond._minorName: Energy.kilowattSecond,
+  Energy$WattHour._minorName: Energy.wattHour,
+  Energy$WattSecond._minorName: Energy.wattSecond,
+  Energy$HorsepowerHour._minorName: Energy.horsepowerHour,
+  Energy$KilocalorieInternational._minorName: Energy.kilocalorieInternational,
+  Energy$KilocalorieThermochemical._minorName: Energy.kilocalorieThermochemical,
+  Energy$CalorieInternational._minorName: Energy.calorieInternational,
+  Energy$CalorieThermochemical._minorName: Energy.calorieThermochemical,
+  Energy$CalorieNutritional._minorName: Energy.calorieNutritional,
+  Energy$BTUInternational._minorName: Energy.bTUInternational,
+  Energy$BTUThermochemical._minorName: Energy.bTUThermochemical,
+  Energy$MBTU._minorName: Energy.mBTU,
+  Energy$TonHourRefrigeration._minorName: Energy.tonHourRefrigeration,
+  Energy$Gigaton._minorName: Energy.gigaton,
+  Energy$Megaton._minorName: Energy.megaton,
+  Energy$Kiloton._minorName: Energy.kiloton,
+  Energy$TonExplosives._minorName: Energy.tonExplosives,
+  Energy$NewtonMeter._minorName: Energy.newtonMeter,
+  Energy$DyneCentimeter._minorName: Energy.dyneCentimeter,
+  Energy$GramForceMeter._minorName: Energy.gramForceMeter,
+  Energy$GramForceCentimeter._minorName: Energy.gramForceCentimeter,
+  Energy$KilogramForceMeter._minorName: Energy.kilogramForceMeter,
+  Energy$KilogramForceCentimeter._minorName: Energy.kilogramForceCentimeter,
+  Energy$MeterKilopond._minorName: Energy.meterKilopond,
+  Energy$PoundForceFoot._minorName: Energy.poundForceFoot,
+  Energy$PoundForceInch._minorName: Energy.poundForceInch,
+  Energy$OunceForceInch._minorName: Energy.ounceForceInch,
+  Energy$FootPound._minorName: Energy.footPound,
+  Energy$InchPound._minorName: Energy.inchPound,
+  Energy$InchOunce._minorName: Energy.inchOunce,
+  Energy$PoundalFoot._minorName: Energy.poundalFoot,
+  Energy$MegaelectronVolt._minorName: Energy.megaelectronVolt,
+  Energy$KiloelectronVolt._minorName: Energy.kiloelectronVolt,
+  Energy$ElectronVolt._minorName: Energy.electronVolt,
+  Energy$Therm._minorName: Energy.therm,
+  Energy$ThermEC._minorName: Energy.thermEC,
+  Energy$ThermUS._minorName: Energy.thermUS,
+  Energy$Hartree._minorName: Energy.hartree,
 });

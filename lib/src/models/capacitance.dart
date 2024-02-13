@@ -19,10 +19,10 @@ sealed class Capacitance extends Unit<Capacitance> {
   factory Capacitance.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        capacitanceUnitValues,
+        capacitanceUnits,
       )
-          ? capacitanceUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? capacitanceUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -157,6 +157,51 @@ sealed class Capacitance extends Unit<Capacitance> {
   String get majorName => _majorName;
 
   static const _majorName = 'capacitance';
+
+  static const exafarad = Capacitance$Exafarad();
+  static const petafarad = Capacitance$Petafarad();
+  static const terafarad = Capacitance$Terafarad();
+  static const gigafarad = Capacitance$Gigafarad();
+  static const megafarad = Capacitance$Megafarad();
+  static const kilofarad = Capacitance$Kilofarad();
+  static const hectofarad = Capacitance$Hectofarad();
+  static const dekafarad = Capacitance$Dekafarad();
+  static const farad = Capacitance$Farad();
+  static const decifarad = Capacitance$Decifarad();
+  static const centifarad = Capacitance$Centifarad();
+  static const millifarad = Capacitance$Millifarad();
+  static const microfarad = Capacitance$Microfarad();
+  static const nanofarad = Capacitance$Nanofarad();
+  static const picofarad = Capacitance$Picofarad();
+  static const femtofarad = Capacitance$Femtofarad();
+  static const attofarad = Capacitance$Attofarad();
+  static const abfarad = Capacitance$Abfarad();
+  static const statfarad = Capacitance$Statfarad();
+
+  @override
+  List<Capacitance> get units => values;
+
+  static const values = [
+    exafarad,
+    petafarad,
+    terafarad,
+    gigafarad,
+    megafarad,
+    kilofarad,
+    hectofarad,
+    dekafarad,
+    farad,
+    decifarad,
+    centifarad,
+    millifarad,
+    microfarad,
+    nanofarad,
+    picofarad,
+    femtofarad,
+    attofarad,
+    abfarad,
+    statfarad,
+  ];
 }
 
 /// Unit of [Capacitance]
@@ -1394,89 +1439,24 @@ final class Capacitance$Statfarad extends Capacitance {
       };
 }
 
-enum CapacitanceUnit {
-  exafarad._(
-    Capacitance$Exafarad(),
-  ),
-  petafarad._(
-    Capacitance$Petafarad(),
-  ),
-  terafarad._(
-    Capacitance$Terafarad(),
-  ),
-  gigafarad._(
-    Capacitance$Gigafarad(),
-  ),
-  megafarad._(
-    Capacitance$Megafarad(),
-  ),
-  kilofarad._(
-    Capacitance$Kilofarad(),
-  ),
-  hectofarad._(
-    Capacitance$Hectofarad(),
-  ),
-  dekafarad._(
-    Capacitance$Dekafarad(),
-  ),
-  farad._(
-    Capacitance$Farad(),
-  ),
-  decifarad._(
-    Capacitance$Decifarad(),
-  ),
-  centifarad._(
-    Capacitance$Centifarad(),
-  ),
-  millifarad._(
-    Capacitance$Millifarad(),
-  ),
-  microfarad._(
-    Capacitance$Microfarad(),
-  ),
-  nanofarad._(
-    Capacitance$Nanofarad(),
-  ),
-  picofarad._(
-    Capacitance$Picofarad(),
-  ),
-  femtofarad._(
-    Capacitance$Femtofarad(),
-  ),
-  attofarad._(
-    Capacitance$Attofarad(),
-  ),
-  abfarad._(
-    Capacitance$Abfarad(),
-  ),
-  statfarad._(
-    Capacitance$Statfarad(),
-  ),
-  ;
-
-  const CapacitanceUnit._(this.construct);
-
-  final Capacitance construct;
-}
-
-const capacitanceUnitValues = _EnumValues({
-  Capacitance$Exafarad._minorName: CapacitanceUnit.exafarad,
-  Capacitance$Petafarad._minorName: CapacitanceUnit.petafarad,
-  Capacitance$Terafarad._minorName: CapacitanceUnit.terafarad,
-  Capacitance$Gigafarad._minorName: CapacitanceUnit.gigafarad,
-  Capacitance$Megafarad._minorName: CapacitanceUnit.megafarad,
-  Capacitance$Kilofarad._minorName: CapacitanceUnit.kilofarad,
-  Capacitance$Hectofarad._minorName: CapacitanceUnit.hectofarad,
-  Capacitance$Dekafarad._minorName: CapacitanceUnit.dekafarad,
-  Capacitance$Farad._minorName: CapacitanceUnit.farad,
-  Capacitance$Decifarad._minorName: CapacitanceUnit.decifarad,
-  Capacitance$Centifarad._minorName: CapacitanceUnit.centifarad,
-  Capacitance$Millifarad._minorName: CapacitanceUnit.millifarad,
-  Capacitance$Microfarad._minorName: CapacitanceUnit.microfarad,
-  Capacitance$Nanofarad._minorName: CapacitanceUnit.nanofarad,
-  Capacitance$Picofarad._minorName: CapacitanceUnit.picofarad,
-  Capacitance$Femtofarad._minorName: CapacitanceUnit.femtofarad,
-  Capacitance$Attofarad._minorName: CapacitanceUnit.attofarad,
-  Capacitance$Abfarad._minorName: CapacitanceUnit.abfarad,
-  Capacitance$Statfarad._minorName: CapacitanceUnit.statfarad,
+const capacitanceUnits = EnumValues({
+  Capacitance$Exafarad._minorName: Capacitance.exafarad,
+  Capacitance$Petafarad._minorName: Capacitance.petafarad,
+  Capacitance$Terafarad._minorName: Capacitance.terafarad,
+  Capacitance$Gigafarad._minorName: Capacitance.gigafarad,
+  Capacitance$Megafarad._minorName: Capacitance.megafarad,
+  Capacitance$Kilofarad._minorName: Capacitance.kilofarad,
+  Capacitance$Hectofarad._minorName: Capacitance.hectofarad,
+  Capacitance$Dekafarad._minorName: Capacitance.dekafarad,
+  Capacitance$Farad._minorName: Capacitance.farad,
+  Capacitance$Decifarad._minorName: Capacitance.decifarad,
+  Capacitance$Centifarad._minorName: Capacitance.centifarad,
+  Capacitance$Millifarad._minorName: Capacitance.millifarad,
+  Capacitance$Microfarad._minorName: Capacitance.microfarad,
+  Capacitance$Nanofarad._minorName: Capacitance.nanofarad,
+  Capacitance$Picofarad._minorName: Capacitance.picofarad,
+  Capacitance$Femtofarad._minorName: Capacitance.femtofarad,
+  Capacitance$Attofarad._minorName: Capacitance.attofarad,
+  Capacitance$Abfarad._minorName: Capacitance.abfarad,
+  Capacitance$Statfarad._minorName: Capacitance.statfarad,
 });

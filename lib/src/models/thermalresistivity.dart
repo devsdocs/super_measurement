@@ -29,10 +29,10 @@ sealed class ThermalResistivity extends Unit<ThermalResistivity> {
   factory ThermalResistivity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        thermalResistivityUnitValues,
+        thermalResistivityUnits,
       )
-          ? thermalResistivityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? thermalResistivityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -187,6 +187,63 @@ sealed class ThermalResistivity extends Unit<ThermalResistivity> {
   String get majorName => _majorName;
 
   static const _majorName = 'thermalResistivity';
+
+  static const hourFootSquareDegreeFPerBTUThermochemInch =
+      ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch();
+  static const hourFootSquareDegreeFPerBTUIntInch =
+      ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch();
+  static const hourFootDegreeFPerBTUThemochem =
+      ThermalResistivity$HourFootDegreeFPerBTUThemochem();
+  static const hourFootDegreeFPerBTUInt =
+      ThermalResistivity$HourFootDegreeFPerBTUInt();
+  static const secondCentimeterDegreeCPerCalorieThermochem =
+      ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem();
+  static const secondCentimeterDegreeCPerCalorieInt =
+      ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt();
+  static const meterKPerKilowatt = ThermalResistivity$MeterKPerKilowatt();
+  static const meterKPerWatt = ThermalResistivity$MeterKPerWatt();
+  static const centimeterDegreeCPerWatt =
+      ThermalResistivity$CentimeterDegreeCPerWatt();
+  static const bTUThermochemInchPerHourFootSquareDegreeF =
+      ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF();
+  static const bTUIntInchPerHourFootSquareDegreeF =
+      ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF();
+  static const bTUThemochemPerHourFootDegreeF =
+      ThermalResistivity$BTUThemochemPerHourFootDegreeF();
+  static const bTUIntPerHourFootDegreeF =
+      ThermalResistivity$BTUIntPerHourFootDegreeF();
+  static const calorieThermochPerSecondCentimeterDegreeC =
+      ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC();
+  static const calorieIntPerSecondCentimeterDegreeC =
+      ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC();
+  static const kilowattPerMeterK = ThermalResistivity$KilowattPerMeterK();
+  static const wattPerMeterK = ThermalResistivity$WattPerMeterK();
+  static const wattPerCentimeterDegreeC =
+      ThermalResistivity$WattPerCentimeterDegreeC();
+
+  @override
+  List<ThermalResistivity> get units => values;
+
+  static const values = [
+    hourFootSquareDegreeFPerBTUThermochemInch,
+    hourFootSquareDegreeFPerBTUIntInch,
+    hourFootDegreeFPerBTUThemochem,
+    hourFootDegreeFPerBTUInt,
+    secondCentimeterDegreeCPerCalorieThermochem,
+    secondCentimeterDegreeCPerCalorieInt,
+    meterKPerKilowatt,
+    meterKPerWatt,
+    centimeterDegreeCPerWatt,
+    bTUThermochemInchPerHourFootSquareDegreeF,
+    bTUIntInchPerHourFootSquareDegreeF,
+    bTUThemochemPerHourFootDegreeF,
+    bTUIntPerHourFootDegreeF,
+    calorieThermochPerSecondCentimeterDegreeC,
+    calorieIntPerSecondCentimeterDegreeC,
+    kilowattPerMeterK,
+    wattPerMeterK,
+    wattPerCentimeterDegreeC,
+  ];
 }
 
 /// Unit of [ThermalResistivity]
@@ -1391,103 +1448,39 @@ final class ThermalResistivity$WattPerCentimeterDegreeC
       };
 }
 
-enum ThermalResistivityUnit {
-  hourFootSquareDegreeFPerBTUThermochemInch._(
-    ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(),
-  ),
-  hourFootSquareDegreeFPerBTUIntInch._(
-    ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch(),
-  ),
-  hourFootDegreeFPerBTUThemochem._(
-    ThermalResistivity$HourFootDegreeFPerBTUThemochem(),
-  ),
-  hourFootDegreeFPerBTUInt._(
-    ThermalResistivity$HourFootDegreeFPerBTUInt(),
-  ),
-  secondCentimeterDegreeCPerCalorieThermochem._(
-    ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem(),
-  ),
-  secondCentimeterDegreeCPerCalorieInt._(
-    ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt(),
-  ),
-  meterKPerKilowatt._(
-    ThermalResistivity$MeterKPerKilowatt(),
-  ),
-  meterKPerWatt._(
-    ThermalResistivity$MeterKPerWatt(),
-  ),
-  centimeterDegreeCPerWatt._(
-    ThermalResistivity$CentimeterDegreeCPerWatt(),
-  ),
-  bTUThermochemInchPerHourFootSquareDegreeF._(
-    ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF(),
-  ),
-  bTUIntInchPerHourFootSquareDegreeF._(
-    ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF(),
-  ),
-  bTUThemochemPerHourFootDegreeF._(
-    ThermalResistivity$BTUThemochemPerHourFootDegreeF(),
-  ),
-  bTUIntPerHourFootDegreeF._(
-    ThermalResistivity$BTUIntPerHourFootDegreeF(),
-  ),
-  calorieThermochPerSecondCentimeterDegreeC._(
-    ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC(),
-  ),
-  calorieIntPerSecondCentimeterDegreeC._(
-    ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC(),
-  ),
-  kilowattPerMeterK._(
-    ThermalResistivity$KilowattPerMeterK(),
-  ),
-  wattPerMeterK._(
-    ThermalResistivity$WattPerMeterK(),
-  ),
-  wattPerCentimeterDegreeC._(
-    ThermalResistivity$WattPerCentimeterDegreeC(),
-  ),
-  ;
-
-  const ThermalResistivityUnit._(this.construct);
-
-  final ThermalResistivity construct;
-}
-
-const thermalResistivityUnitValues = _EnumValues({
+const thermalResistivityUnits = EnumValues({
   ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch._minorName:
-      ThermalResistivityUnit.hourFootSquareDegreeFPerBTUThermochemInch,
+      ThermalResistivity.hourFootSquareDegreeFPerBTUThermochemInch,
   ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch._minorName:
-      ThermalResistivityUnit.hourFootSquareDegreeFPerBTUIntInch,
+      ThermalResistivity.hourFootSquareDegreeFPerBTUIntInch,
   ThermalResistivity$HourFootDegreeFPerBTUThemochem._minorName:
-      ThermalResistivityUnit.hourFootDegreeFPerBTUThemochem,
+      ThermalResistivity.hourFootDegreeFPerBTUThemochem,
   ThermalResistivity$HourFootDegreeFPerBTUInt._minorName:
-      ThermalResistivityUnit.hourFootDegreeFPerBTUInt,
+      ThermalResistivity.hourFootDegreeFPerBTUInt,
   ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem._minorName:
-      ThermalResistivityUnit.secondCentimeterDegreeCPerCalorieThermochem,
+      ThermalResistivity.secondCentimeterDegreeCPerCalorieThermochem,
   ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt._minorName:
-      ThermalResistivityUnit.secondCentimeterDegreeCPerCalorieInt,
+      ThermalResistivity.secondCentimeterDegreeCPerCalorieInt,
   ThermalResistivity$MeterKPerKilowatt._minorName:
-      ThermalResistivityUnit.meterKPerKilowatt,
-  ThermalResistivity$MeterKPerWatt._minorName:
-      ThermalResistivityUnit.meterKPerWatt,
+      ThermalResistivity.meterKPerKilowatt,
+  ThermalResistivity$MeterKPerWatt._minorName: ThermalResistivity.meterKPerWatt,
   ThermalResistivity$CentimeterDegreeCPerWatt._minorName:
-      ThermalResistivityUnit.centimeterDegreeCPerWatt,
+      ThermalResistivity.centimeterDegreeCPerWatt,
   ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF._minorName:
-      ThermalResistivityUnit.bTUThermochemInchPerHourFootSquareDegreeF,
+      ThermalResistivity.bTUThermochemInchPerHourFootSquareDegreeF,
   ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF._minorName:
-      ThermalResistivityUnit.bTUIntInchPerHourFootSquareDegreeF,
+      ThermalResistivity.bTUIntInchPerHourFootSquareDegreeF,
   ThermalResistivity$BTUThemochemPerHourFootDegreeF._minorName:
-      ThermalResistivityUnit.bTUThemochemPerHourFootDegreeF,
+      ThermalResistivity.bTUThemochemPerHourFootDegreeF,
   ThermalResistivity$BTUIntPerHourFootDegreeF._minorName:
-      ThermalResistivityUnit.bTUIntPerHourFootDegreeF,
+      ThermalResistivity.bTUIntPerHourFootDegreeF,
   ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC._minorName:
-      ThermalResistivityUnit.calorieThermochPerSecondCentimeterDegreeC,
+      ThermalResistivity.calorieThermochPerSecondCentimeterDegreeC,
   ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC._minorName:
-      ThermalResistivityUnit.calorieIntPerSecondCentimeterDegreeC,
+      ThermalResistivity.calorieIntPerSecondCentimeterDegreeC,
   ThermalResistivity$KilowattPerMeterK._minorName:
-      ThermalResistivityUnit.kilowattPerMeterK,
-  ThermalResistivity$WattPerMeterK._minorName:
-      ThermalResistivityUnit.wattPerMeterK,
+      ThermalResistivity.kilowattPerMeterK,
+  ThermalResistivity$WattPerMeterK._minorName: ThermalResistivity.wattPerMeterK,
   ThermalResistivity$WattPerCentimeterDegreeC._minorName:
-      ThermalResistivityUnit.wattPerCentimeterDegreeC,
+      ThermalResistivity.wattPerCentimeterDegreeC,
 });

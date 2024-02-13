@@ -16,10 +16,10 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
   factory SpecificVolume.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        specificVolumeUnitValues,
+        specificVolumeUnits,
       )
-          ? specificVolumeUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? specificVolumeUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -88,6 +88,27 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
   String get majorName => _majorName;
 
   static const _majorName = 'specificVolume';
+
+  static const meterCubicPerKilogram = SpecificVolume$MeterCubicPerKilogram();
+  static const centimeterCubicPerGram = SpecificVolume$CentimeterCubicPerGram();
+  static const literPerKilogram = SpecificVolume$LiterPerKilogram();
+  static const literPerGram = SpecificVolume$LiterPerGram();
+  static const feetCubicPerKilogram = SpecificVolume$FeetCubicPerKilogram();
+  static const feetCubicPerPound = SpecificVolume$FeetCubicPerPound();
+  static const gallonUKPerPound = SpecificVolume$GallonUKPerPound();
+
+  @override
+  List<SpecificVolume> get units => values;
+
+  static const values = [
+    meterCubicPerKilogram,
+    centimeterCubicPerGram,
+    literPerKilogram,
+    literPerGram,
+    feetCubicPerKilogram,
+    feetCubicPerPound,
+    gallonUKPerPound,
+  ];
 }
 
 /// Unit of [SpecificVolume]
@@ -551,47 +572,15 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
       };
 }
 
-enum SpecificVolumeUnit {
-  meterCubicPerKilogram._(
-    SpecificVolume$MeterCubicPerKilogram(),
-  ),
-  centimeterCubicPerGram._(
-    SpecificVolume$CentimeterCubicPerGram(),
-  ),
-  literPerKilogram._(
-    SpecificVolume$LiterPerKilogram(),
-  ),
-  literPerGram._(
-    SpecificVolume$LiterPerGram(),
-  ),
-  feetCubicPerKilogram._(
-    SpecificVolume$FeetCubicPerKilogram(),
-  ),
-  feetCubicPerPound._(
-    SpecificVolume$FeetCubicPerPound(),
-  ),
-  gallonUKPerPound._(
-    SpecificVolume$GallonUKPerPound(),
-  ),
-  ;
-
-  const SpecificVolumeUnit._(this.construct);
-
-  final SpecificVolume construct;
-}
-
-const specificVolumeUnitValues = _EnumValues({
+const specificVolumeUnits = EnumValues({
   SpecificVolume$MeterCubicPerKilogram._minorName:
-      SpecificVolumeUnit.meterCubicPerKilogram,
+      SpecificVolume.meterCubicPerKilogram,
   SpecificVolume$CentimeterCubicPerGram._minorName:
-      SpecificVolumeUnit.centimeterCubicPerGram,
-  SpecificVolume$LiterPerKilogram._minorName:
-      SpecificVolumeUnit.literPerKilogram,
-  SpecificVolume$LiterPerGram._minorName: SpecificVolumeUnit.literPerGram,
+      SpecificVolume.centimeterCubicPerGram,
+  SpecificVolume$LiterPerKilogram._minorName: SpecificVolume.literPerKilogram,
+  SpecificVolume$LiterPerGram._minorName: SpecificVolume.literPerGram,
   SpecificVolume$FeetCubicPerKilogram._minorName:
-      SpecificVolumeUnit.feetCubicPerKilogram,
-  SpecificVolume$FeetCubicPerPound._minorName:
-      SpecificVolumeUnit.feetCubicPerPound,
-  SpecificVolume$GallonUKPerPound._minorName:
-      SpecificVolumeUnit.gallonUKPerPound,
+      SpecificVolume.feetCubicPerKilogram,
+  SpecificVolume$FeetCubicPerPound._minorName: SpecificVolume.feetCubicPerPound,
+  SpecificVolume$GallonUKPerPound._minorName: SpecificVolume.gallonUKPerPound,
 });

@@ -15,10 +15,9 @@ sealed class Current extends Unit<Current> {
   factory Current.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        currentUnitValues,
+        currentUnits,
       )
-          ? currentUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? currentUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -99,6 +98,33 @@ sealed class Current extends Unit<Current> {
   String get majorName => _majorName;
 
   static const _majorName = 'current';
+
+  static const kiloampere = Current$Kiloampere();
+  static const ampere = Current$Ampere();
+  static const milliampere = Current$Milliampere();
+  static const biot = Current$Biot();
+  static const abampere = Current$Abampere();
+  static const statampere = Current$Statampere();
+  static const eMUOfCurrent = Current$EMUOfCurrent();
+  static const eSUOfCurrent = Current$ESUOfCurrent();
+  static const cGSEMUnit = Current$CGSEMUnit();
+  static const cGSESUnit = Current$CGSESUnit();
+
+  @override
+  List<Current> get units => values;
+
+  static const values = [
+    kiloampere,
+    ampere,
+    milliampere,
+    biot,
+    abampere,
+    statampere,
+    eMUOfCurrent,
+    eSUOfCurrent,
+    cGSEMUnit,
+    cGSESUnit,
+  ];
 }
 
 /// Unit of [Current]
@@ -751,53 +777,15 @@ final class Current$CGSESUnit extends Current {
       };
 }
 
-enum CurrentUnit {
-  kiloampere._(
-    Current$Kiloampere(),
-  ),
-  ampere._(
-    Current$Ampere(),
-  ),
-  milliampere._(
-    Current$Milliampere(),
-  ),
-  biot._(
-    Current$Biot(),
-  ),
-  abampere._(
-    Current$Abampere(),
-  ),
-  statampere._(
-    Current$Statampere(),
-  ),
-  eMUOfCurrent._(
-    Current$EMUOfCurrent(),
-  ),
-  eSUOfCurrent._(
-    Current$ESUOfCurrent(),
-  ),
-  cGSEMUnit._(
-    Current$CGSEMUnit(),
-  ),
-  cGSESUnit._(
-    Current$CGSESUnit(),
-  ),
-  ;
-
-  const CurrentUnit._(this.construct);
-
-  final Current construct;
-}
-
-const currentUnitValues = _EnumValues({
-  Current$Kiloampere._minorName: CurrentUnit.kiloampere,
-  Current$Ampere._minorName: CurrentUnit.ampere,
-  Current$Milliampere._minorName: CurrentUnit.milliampere,
-  Current$Biot._minorName: CurrentUnit.biot,
-  Current$Abampere._minorName: CurrentUnit.abampere,
-  Current$Statampere._minorName: CurrentUnit.statampere,
-  Current$EMUOfCurrent._minorName: CurrentUnit.eMUOfCurrent,
-  Current$ESUOfCurrent._minorName: CurrentUnit.eSUOfCurrent,
-  Current$CGSEMUnit._minorName: CurrentUnit.cGSEMUnit,
-  Current$CGSESUnit._minorName: CurrentUnit.cGSESUnit,
+const currentUnits = EnumValues({
+  Current$Kiloampere._minorName: Current.kiloampere,
+  Current$Ampere._minorName: Current.ampere,
+  Current$Milliampere._minorName: Current.milliampere,
+  Current$Biot._minorName: Current.biot,
+  Current$Abampere._minorName: Current.abampere,
+  Current$Statampere._minorName: Current.statampere,
+  Current$EMUOfCurrent._minorName: Current.eMUOfCurrent,
+  Current$ESUOfCurrent._minorName: Current.eSUOfCurrent,
+  Current$CGSEMUnit._minorName: Current.cGSEMUnit,
+  Current$CGSESUnit._minorName: Current.cGSESUnit,
 });

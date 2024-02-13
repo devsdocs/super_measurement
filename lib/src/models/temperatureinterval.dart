@@ -14,10 +14,10 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
   factory TemperatureInterval.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        temperatureIntervalUnitValues,
+        temperatureIntervalUnits,
       )
-          ? temperatureIntervalUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? temperatureIntervalUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -69,6 +69,23 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
   String get majorName => _majorName;
 
   static const _majorName = 'temperatureInterval';
+
+  static const kelvin = TemperatureInterval$Kelvin();
+  static const celsius = TemperatureInterval$Celsius();
+  static const fahrenheit = TemperatureInterval$Fahrenheit();
+  static const rankine = TemperatureInterval$Rankine();
+  static const reaumur = TemperatureInterval$Reaumur();
+
+  @override
+  List<TemperatureInterval> get units => values;
+
+  static const values = [
+    kelvin,
+    celsius,
+    fahrenheit,
+    rankine,
+    reaumur,
+  ];
 }
 
 /// Unit of [TemperatureInterval]
@@ -397,33 +414,10 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
       };
 }
 
-enum TemperatureIntervalUnit {
-  kelvin._(
-    TemperatureInterval$Kelvin(),
-  ),
-  celsius._(
-    TemperatureInterval$Celsius(),
-  ),
-  fahrenheit._(
-    TemperatureInterval$Fahrenheit(),
-  ),
-  rankine._(
-    TemperatureInterval$Rankine(),
-  ),
-  reaumur._(
-    TemperatureInterval$Reaumur(),
-  ),
-  ;
-
-  const TemperatureIntervalUnit._(this.construct);
-
-  final TemperatureInterval construct;
-}
-
-const temperatureIntervalUnitValues = _EnumValues({
-  TemperatureInterval$Kelvin._minorName: TemperatureIntervalUnit.kelvin,
-  TemperatureInterval$Celsius._minorName: TemperatureIntervalUnit.celsius,
-  TemperatureInterval$Fahrenheit._minorName: TemperatureIntervalUnit.fahrenheit,
-  TemperatureInterval$Rankine._minorName: TemperatureIntervalUnit.rankine,
-  TemperatureInterval$Reaumur._minorName: TemperatureIntervalUnit.reaumur,
+const temperatureIntervalUnits = EnumValues({
+  TemperatureInterval$Kelvin._minorName: TemperatureInterval.kelvin,
+  TemperatureInterval$Celsius._minorName: TemperatureInterval.celsius,
+  TemperatureInterval$Fahrenheit._minorName: TemperatureInterval.fahrenheit,
+  TemperatureInterval$Rankine._minorName: TemperatureInterval.rankine,
+  TemperatureInterval$Reaumur._minorName: TemperatureInterval.reaumur,
 });

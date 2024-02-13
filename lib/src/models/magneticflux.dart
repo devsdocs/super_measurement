@@ -15,10 +15,10 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
   factory MagneticFlux.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        magneticFluxUnitValues,
+        magneticFluxUnits,
       )
-          ? magneticFluxUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? magneticFluxUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -102,6 +102,33 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
   String get majorName => _majorName;
 
   static const _majorName = 'magneticFlux';
+
+  static const weber = MagneticFlux$Weber();
+  static const voltSecond = MagneticFlux$VoltSecond();
+  static const megaline = MagneticFlux$Megaline();
+  static const kiloline = MagneticFlux$Kiloline();
+  static const line = MagneticFlux$Line();
+  static const maxwell = MagneticFlux$Maxwell();
+  static const maxwellInternational = MagneticFlux$MaxwellInternational();
+  static const teslaMeterSquare = MagneticFlux$TeslaMeterSquare();
+  static const teslaCentimeterSquare = MagneticFlux$TeslaCentimeterSquare();
+  static const gaussCentimeterSquare = MagneticFlux$GaussCentimeterSquare();
+
+  @override
+  List<MagneticFlux> get units => values;
+
+  static const values = [
+    weber,
+    voltSecond,
+    megaline,
+    kiloline,
+    line,
+    maxwell,
+    maxwellInternational,
+    teslaMeterSquare,
+    teslaCentimeterSquare,
+    gaussCentimeterSquare,
+  ];
 }
 
 /// Unit of [MagneticFlux]
@@ -758,56 +785,18 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
       };
 }
 
-enum MagneticFluxUnit {
-  weber._(
-    MagneticFlux$Weber(),
-  ),
-  voltSecond._(
-    MagneticFlux$VoltSecond(),
-  ),
-  megaline._(
-    MagneticFlux$Megaline(),
-  ),
-  kiloline._(
-    MagneticFlux$Kiloline(),
-  ),
-  line._(
-    MagneticFlux$Line(),
-  ),
-  maxwell._(
-    MagneticFlux$Maxwell(),
-  ),
-  maxwellInternational._(
-    MagneticFlux$MaxwellInternational(),
-  ),
-  teslaMeterSquare._(
-    MagneticFlux$TeslaMeterSquare(),
-  ),
-  teslaCentimeterSquare._(
-    MagneticFlux$TeslaCentimeterSquare(),
-  ),
-  gaussCentimeterSquare._(
-    MagneticFlux$GaussCentimeterSquare(),
-  ),
-  ;
-
-  const MagneticFluxUnit._(this.construct);
-
-  final MagneticFlux construct;
-}
-
-const magneticFluxUnitValues = _EnumValues({
-  MagneticFlux$Weber._minorName: MagneticFluxUnit.weber,
-  MagneticFlux$VoltSecond._minorName: MagneticFluxUnit.voltSecond,
-  MagneticFlux$Megaline._minorName: MagneticFluxUnit.megaline,
-  MagneticFlux$Kiloline._minorName: MagneticFluxUnit.kiloline,
-  MagneticFlux$Line._minorName: MagneticFluxUnit.line,
-  MagneticFlux$Maxwell._minorName: MagneticFluxUnit.maxwell,
+const magneticFluxUnits = EnumValues({
+  MagneticFlux$Weber._minorName: MagneticFlux.weber,
+  MagneticFlux$VoltSecond._minorName: MagneticFlux.voltSecond,
+  MagneticFlux$Megaline._minorName: MagneticFlux.megaline,
+  MagneticFlux$Kiloline._minorName: MagneticFlux.kiloline,
+  MagneticFlux$Line._minorName: MagneticFlux.line,
+  MagneticFlux$Maxwell._minorName: MagneticFlux.maxwell,
   MagneticFlux$MaxwellInternational._minorName:
-      MagneticFluxUnit.maxwellInternational,
-  MagneticFlux$TeslaMeterSquare._minorName: MagneticFluxUnit.teslaMeterSquare,
+      MagneticFlux.maxwellInternational,
+  MagneticFlux$TeslaMeterSquare._minorName: MagneticFlux.teslaMeterSquare,
   MagneticFlux$TeslaCentimeterSquare._minorName:
-      MagneticFluxUnit.teslaCentimeterSquare,
+      MagneticFlux.teslaCentimeterSquare,
   MagneticFlux$GaussCentimeterSquare._minorName:
-      MagneticFluxUnit.gaussCentimeterSquare,
+      MagneticFlux.gaussCentimeterSquare,
 });

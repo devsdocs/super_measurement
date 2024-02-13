@@ -23,10 +23,10 @@ sealed class IlluminationLuminousIntensity
       _checkJson(
         _majorName,
         json,
-        illuminationLuminousIntensityUnitValues,
+        illuminationLuminousIntensityUnits,
       )
-          ? illuminationLuminousIntensityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? illuminationLuminousIntensityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -120,6 +120,36 @@ sealed class IlluminationLuminousIntensity
   String get majorName => _majorName;
 
   static const _majorName = 'illuminationLuminousIntensity';
+
+  static const candleInternational =
+      IlluminationLuminousIntensity$CandleInternational();
+  static const candleGerman = IlluminationLuminousIntensity$CandleGerman();
+  static const candlePentane = IlluminationLuminousIntensity$CandlePentane();
+  static const candleUK = IlluminationLuminousIntensity$CandleUK();
+  static const decimalCandle = IlluminationLuminousIntensity$DecimalCandle();
+  static const hefnerCandle = IlluminationLuminousIntensity$HefnerCandle();
+  static const carcelUnit = IlluminationLuminousIntensity$CarcelUnit();
+  static const bougieDecimal = IlluminationLuminousIntensity$BougieDecimal();
+  static const lumenInternationalPerSteradian =
+      IlluminationLuminousIntensity$LumenInternationalPerSteradian();
+  static const pentaneCandle10CandlePower =
+      IlluminationLuminousIntensity$PentaneCandle10CandlePower();
+
+  @override
+  List<IlluminationLuminousIntensity> get units => values;
+
+  static const values = [
+    candleInternational,
+    candleGerman,
+    candlePentane,
+    candleUK,
+    decimalCandle,
+    hefnerCandle,
+    carcelUnit,
+    bougieDecimal,
+    lumenInternationalPerSteradian,
+    pentaneCandle10CandlePower,
+  ];
 }
 
 /// Unit of [IlluminationLuminousIntensity]
@@ -792,63 +822,25 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
       };
 }
 
-enum IlluminationLuminousIntensityUnit {
-  candleInternational._(
-    IlluminationLuminousIntensity$CandleInternational(),
-  ),
-  candleGerman._(
-    IlluminationLuminousIntensity$CandleGerman(),
-  ),
-  candlePentane._(
-    IlluminationLuminousIntensity$CandlePentane(),
-  ),
-  candleUK._(
-    IlluminationLuminousIntensity$CandleUK(),
-  ),
-  decimalCandle._(
-    IlluminationLuminousIntensity$DecimalCandle(),
-  ),
-  hefnerCandle._(
-    IlluminationLuminousIntensity$HefnerCandle(),
-  ),
-  carcelUnit._(
-    IlluminationLuminousIntensity$CarcelUnit(),
-  ),
-  bougieDecimal._(
-    IlluminationLuminousIntensity$BougieDecimal(),
-  ),
-  lumenInternationalPerSteradian._(
-    IlluminationLuminousIntensity$LumenInternationalPerSteradian(),
-  ),
-  pentaneCandle10CandlePower._(
-    IlluminationLuminousIntensity$PentaneCandle10CandlePower(),
-  ),
-  ;
-
-  const IlluminationLuminousIntensityUnit._(this.construct);
-
-  final IlluminationLuminousIntensity construct;
-}
-
-const illuminationLuminousIntensityUnitValues = _EnumValues({
+const illuminationLuminousIntensityUnits = EnumValues({
   IlluminationLuminousIntensity$CandleInternational._minorName:
-      IlluminationLuminousIntensityUnit.candleInternational,
+      IlluminationLuminousIntensity.candleInternational,
   IlluminationLuminousIntensity$CandleGerman._minorName:
-      IlluminationLuminousIntensityUnit.candleGerman,
+      IlluminationLuminousIntensity.candleGerman,
   IlluminationLuminousIntensity$CandlePentane._minorName:
-      IlluminationLuminousIntensityUnit.candlePentane,
+      IlluminationLuminousIntensity.candlePentane,
   IlluminationLuminousIntensity$CandleUK._minorName:
-      IlluminationLuminousIntensityUnit.candleUK,
+      IlluminationLuminousIntensity.candleUK,
   IlluminationLuminousIntensity$DecimalCandle._minorName:
-      IlluminationLuminousIntensityUnit.decimalCandle,
+      IlluminationLuminousIntensity.decimalCandle,
   IlluminationLuminousIntensity$HefnerCandle._minorName:
-      IlluminationLuminousIntensityUnit.hefnerCandle,
+      IlluminationLuminousIntensity.hefnerCandle,
   IlluminationLuminousIntensity$CarcelUnit._minorName:
-      IlluminationLuminousIntensityUnit.carcelUnit,
+      IlluminationLuminousIntensity.carcelUnit,
   IlluminationLuminousIntensity$BougieDecimal._minorName:
-      IlluminationLuminousIntensityUnit.bougieDecimal,
+      IlluminationLuminousIntensity.bougieDecimal,
   IlluminationLuminousIntensity$LumenInternationalPerSteradian._minorName:
-      IlluminationLuminousIntensityUnit.lumenInternationalPerSteradian,
+      IlluminationLuminousIntensity.lumenInternationalPerSteradian,
   IlluminationLuminousIntensity$PentaneCandle10CandlePower._minorName:
-      IlluminationLuminousIntensityUnit.pentaneCandle10CandlePower,
+      IlluminationLuminousIntensity.pentaneCandle10CandlePower,
 });

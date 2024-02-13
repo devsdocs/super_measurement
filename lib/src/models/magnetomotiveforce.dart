@@ -14,10 +14,10 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
   factory MagnetomotiveForce.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        magnetomotiveForceUnitValues,
+        magnetomotiveForceUnits,
       )
-          ? magnetomotiveForceUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? magnetomotiveForceUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -71,6 +71,23 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
   String get majorName => _majorName;
 
   static const _majorName = 'magnetomotiveForce';
+
+  static const kiloampereTurn = MagnetomotiveForce$KiloampereTurn();
+  static const ampereTurn = MagnetomotiveForce$AmpereTurn();
+  static const milliampereTurn = MagnetomotiveForce$MilliampereTurn();
+  static const abampereTurn = MagnetomotiveForce$AbampereTurn();
+  static const gilbert = MagnetomotiveForce$Gilbert();
+
+  @override
+  List<MagnetomotiveForce> get units => values;
+
+  static const values = [
+    kiloampereTurn,
+    ampereTurn,
+    milliampereTurn,
+    abampereTurn,
+    gilbert,
+  ];
 }
 
 /// Unit of [MagnetomotiveForce]
@@ -402,36 +419,12 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
       };
 }
 
-enum MagnetomotiveForceUnit {
-  kiloampereTurn._(
-    MagnetomotiveForce$KiloampereTurn(),
-  ),
-  ampereTurn._(
-    MagnetomotiveForce$AmpereTurn(),
-  ),
-  milliampereTurn._(
-    MagnetomotiveForce$MilliampereTurn(),
-  ),
-  abampereTurn._(
-    MagnetomotiveForce$AbampereTurn(),
-  ),
-  gilbert._(
-    MagnetomotiveForce$Gilbert(),
-  ),
-  ;
-
-  const MagnetomotiveForceUnit._(this.construct);
-
-  final MagnetomotiveForce construct;
-}
-
-const magnetomotiveForceUnitValues = _EnumValues({
+const magnetomotiveForceUnits = EnumValues({
   MagnetomotiveForce$KiloampereTurn._minorName:
-      MagnetomotiveForceUnit.kiloampereTurn,
-  MagnetomotiveForce$AmpereTurn._minorName: MagnetomotiveForceUnit.ampereTurn,
+      MagnetomotiveForce.kiloampereTurn,
+  MagnetomotiveForce$AmpereTurn._minorName: MagnetomotiveForce.ampereTurn,
   MagnetomotiveForce$MilliampereTurn._minorName:
-      MagnetomotiveForceUnit.milliampereTurn,
-  MagnetomotiveForce$AbampereTurn._minorName:
-      MagnetomotiveForceUnit.abampereTurn,
-  MagnetomotiveForce$Gilbert._minorName: MagnetomotiveForceUnit.gilbert,
+      MagnetomotiveForce.milliampereTurn,
+  MagnetomotiveForce$AbampereTurn._minorName: MagnetomotiveForce.abampereTurn,
+  MagnetomotiveForce$Gilbert._minorName: MagnetomotiveForce.gilbert,
 });

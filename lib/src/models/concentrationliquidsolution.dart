@@ -24,10 +24,10 @@ sealed class ConcentrationLiquidSolution
       _checkJson(
         _majorName,
         json,
-        concentrationLiquidSolutionUnitValues,
+        concentrationLiquidSolutionUnits,
       )
-          ? concentrationLiquidSolutionUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? concentrationLiquidSolutionUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -126,6 +126,45 @@ sealed class ConcentrationLiquidSolution
   String get majorName => _majorName;
 
   static const _majorName = 'concentrationLiquidSolution';
+
+  static const kilogramPerLiter =
+      ConcentrationLiquidSolution$KilogramPerLiter();
+  static const gramPerLiter = ConcentrationLiquidSolution$GramPerLiter();
+  static const milligramPerLiter =
+      ConcentrationLiquidSolution$MilligramPerLiter();
+  static const partPerMillionPpm =
+      ConcentrationLiquidSolution$PartPerMillionPpm();
+  static const grainPerGallonUK =
+      ConcentrationLiquidSolution$GrainPerGallonUK();
+  static const grainPerGallonUS =
+      ConcentrationLiquidSolution$GrainPerGallonUS();
+  static const poundPerFootCubic =
+      ConcentrationLiquidSolution$PoundPerFootCubic();
+  static const poundPerGallonUK =
+      ConcentrationLiquidSolution$PoundPerGallonUK();
+  static const poundPerGallonUS =
+      ConcentrationLiquidSolution$PoundPerGallonUS();
+  static const poundPerMillionUKGallon =
+      ConcentrationLiquidSolution$PoundPerMillionUKGallon();
+  static const poundPerMillionUSGallon =
+      ConcentrationLiquidSolution$PoundPerMillionUSGallon();
+
+  @override
+  List<ConcentrationLiquidSolution> get units => values;
+
+  static const values = [
+    kilogramPerLiter,
+    gramPerLiter,
+    milligramPerLiter,
+    partPerMillionPpm,
+    grainPerGallonUK,
+    grainPerGallonUS,
+    poundPerFootCubic,
+    poundPerGallonUK,
+    poundPerGallonUS,
+    poundPerMillionUKGallon,
+    poundPerMillionUSGallon,
+  ];
 }
 
 /// Unit of [ConcentrationLiquidSolution]
@@ -865,68 +904,27 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
       };
 }
 
-enum ConcentrationLiquidSolutionUnit {
-  kilogramPerLiter._(
-    ConcentrationLiquidSolution$KilogramPerLiter(),
-  ),
-  gramPerLiter._(
-    ConcentrationLiquidSolution$GramPerLiter(),
-  ),
-  milligramPerLiter._(
-    ConcentrationLiquidSolution$MilligramPerLiter(),
-  ),
-  partPerMillionPpm._(
-    ConcentrationLiquidSolution$PartPerMillionPpm(),
-  ),
-  grainPerGallonUK._(
-    ConcentrationLiquidSolution$GrainPerGallonUK(),
-  ),
-  grainPerGallonUS._(
-    ConcentrationLiquidSolution$GrainPerGallonUS(),
-  ),
-  poundPerFootCubic._(
-    ConcentrationLiquidSolution$PoundPerFootCubic(),
-  ),
-  poundPerGallonUK._(
-    ConcentrationLiquidSolution$PoundPerGallonUK(),
-  ),
-  poundPerGallonUS._(
-    ConcentrationLiquidSolution$PoundPerGallonUS(),
-  ),
-  poundPerMillionUKGallon._(
-    ConcentrationLiquidSolution$PoundPerMillionUKGallon(),
-  ),
-  poundPerMillionUSGallon._(
-    ConcentrationLiquidSolution$PoundPerMillionUSGallon(),
-  ),
-  ;
-
-  const ConcentrationLiquidSolutionUnit._(this.construct);
-
-  final ConcentrationLiquidSolution construct;
-}
-
-const concentrationLiquidSolutionUnitValues = _EnumValues({
+const concentrationLiquidSolutionUnits = EnumValues({
   ConcentrationLiquidSolution$KilogramPerLiter._minorName:
-      ConcentrationLiquidSolutionUnit.kilogramPerLiter,
+      ConcentrationLiquidSolution.kilogramPerLiter,
   ConcentrationLiquidSolution$GramPerLiter._minorName:
-      ConcentrationLiquidSolutionUnit.gramPerLiter,
+      ConcentrationLiquidSolution.gramPerLiter,
   ConcentrationLiquidSolution$MilligramPerLiter._minorName:
-      ConcentrationLiquidSolutionUnit.milligramPerLiter,
+      ConcentrationLiquidSolution.milligramPerLiter,
   ConcentrationLiquidSolution$PartPerMillionPpm._minorName:
-      ConcentrationLiquidSolutionUnit.partPerMillionPpm,
+      ConcentrationLiquidSolution.partPerMillionPpm,
   ConcentrationLiquidSolution$GrainPerGallonUK._minorName:
-      ConcentrationLiquidSolutionUnit.grainPerGallonUK,
+      ConcentrationLiquidSolution.grainPerGallonUK,
   ConcentrationLiquidSolution$GrainPerGallonUS._minorName:
-      ConcentrationLiquidSolutionUnit.grainPerGallonUS,
+      ConcentrationLiquidSolution.grainPerGallonUS,
   ConcentrationLiquidSolution$PoundPerFootCubic._minorName:
-      ConcentrationLiquidSolutionUnit.poundPerFootCubic,
+      ConcentrationLiquidSolution.poundPerFootCubic,
   ConcentrationLiquidSolution$PoundPerGallonUK._minorName:
-      ConcentrationLiquidSolutionUnit.poundPerGallonUK,
+      ConcentrationLiquidSolution.poundPerGallonUK,
   ConcentrationLiquidSolution$PoundPerGallonUS._minorName:
-      ConcentrationLiquidSolutionUnit.poundPerGallonUS,
+      ConcentrationLiquidSolution.poundPerGallonUS,
   ConcentrationLiquidSolution$PoundPerMillionUKGallon._minorName:
-      ConcentrationLiquidSolutionUnit.poundPerMillionUKGallon,
+      ConcentrationLiquidSolution.poundPerMillionUKGallon,
   ConcentrationLiquidSolution$PoundPerMillionUSGallon._minorName:
-      ConcentrationLiquidSolutionUnit.poundPerMillionUSGallon,
+      ConcentrationLiquidSolution.poundPerMillionUSGallon,
 });

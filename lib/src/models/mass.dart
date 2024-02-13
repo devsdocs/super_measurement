@@ -29,10 +29,9 @@ sealed class Mass extends Unit<Mass> {
   factory Mass.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        massUnitValues,
+        massUnits,
       )
-          ? massUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? massUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -389,6 +388,125 @@ sealed class Mass extends Unit<Mass> {
   String get majorName => _majorName;
 
   static const _majorName = 'mass';
+
+  static const exagram = Mass$Exagram();
+  static const petagram = Mass$Petagram();
+  static const teragram = Mass$Teragram();
+  static const gigagram = Mass$Gigagram();
+  static const megagram = Mass$Megagram();
+  static const kilogram = Mass$Kilogram();
+  static const hectogram = Mass$Hectogram();
+  static const dekagram = Mass$Dekagram();
+  static const gram = Mass$Gram();
+  static const decigram = Mass$Decigram();
+  static const centigram = Mass$Centigram();
+  static const milligram = Mass$Milligram();
+  static const microgram = Mass$Microgram();
+  static const nanogram = Mass$Nanogram();
+  static const picogram = Mass$Picogram();
+  static const femtogram = Mass$Femtogram();
+  static const attogram = Mass$Attogram();
+  static const quintal = Mass$Quintal();
+  static const dyne = Mass$Dyne();
+  static const dalton = Mass$Dalton();
+  static const kip = Mass$Kip();
+  static const pound = Mass$Pound();
+  static const ounce = Mass$Ounce();
+  static const poundal = Mass$Poundal();
+  static const slug = Mass$Slug();
+  static const ton = Mass$Ton();
+  static const tonLong = Mass$TonLong();
+  static const tonMetric = Mass$TonMetric();
+  static const hundredweight = Mass$Hundredweight();
+  static const hundredweightUK = Mass$HundredweightUK();
+  static const quarter = Mass$Quarter();
+  static const quarterUK = Mass$QuarterUK();
+  static const stone = Mass$Stone();
+  static const stoneUK = Mass$StoneUK();
+  static const tonne = Mass$Tonne();
+  static const troyPound = Mass$TroyPound();
+  static const troyOunce = Mass$TroyOunce();
+  static const carat = Mass$Carat();
+  static const grain = Mass$Grain();
+  static const pennyweight = Mass$Pennyweight();
+  static const scruple = Mass$Scruple();
+  static const talentBiblicalHebrew = Mass$TalentBiblicalHebrew();
+  static const minaBiblicalHebrew = Mass$MinaBiblicalHebrew();
+  static const shekelBiblicalHebrew = Mass$ShekelBiblicalHebrew();
+  static const bekahBiblicalHebrew = Mass$BekahBiblicalHebrew();
+  static const gerahBiblicalHebrew = Mass$GerahBiblicalHebrew();
+  static const talentBiblicalGreek = Mass$TalentBiblicalGreek();
+  static const minaBiblicalGreek = Mass$MinaBiblicalGreek();
+  static const tetradrachmaBiblicalGreek = Mass$TetradrachmaBiblicalGreek();
+  static const didrachmaBiblicalGreek = Mass$DidrachmaBiblicalGreek();
+  static const drachmaBiblicalGreek = Mass$DrachmaBiblicalGreek();
+  static const denariusBiblicalRoman = Mass$DenariusBiblicalRoman();
+  static const assarionBiblicalRoman = Mass$AssarionBiblicalRoman();
+  static const quadransBiblicalRoman = Mass$QuadransBiblicalRoman();
+  static const leptonBiblicalRoman = Mass$LeptonBiblicalRoman();
+  static const atomicMassUnit = Mass$AtomicMassUnit();
+
+  @override
+  List<Mass> get units => values;
+
+  static const values = [
+    exagram,
+    petagram,
+    teragram,
+    gigagram,
+    megagram,
+    kilogram,
+    hectogram,
+    dekagram,
+    gram,
+    decigram,
+    centigram,
+    milligram,
+    microgram,
+    nanogram,
+    picogram,
+    femtogram,
+    attogram,
+    quintal,
+    dyne,
+    dalton,
+    kip,
+    pound,
+    ounce,
+    poundal,
+    slug,
+    ton,
+    tonLong,
+    tonMetric,
+    hundredweight,
+    hundredweightUK,
+    quarter,
+    quarterUK,
+    stone,
+    stoneUK,
+    tonne,
+    troyPound,
+    troyOunce,
+    carat,
+    grain,
+    pennyweight,
+    scruple,
+    talentBiblicalHebrew,
+    minaBiblicalHebrew,
+    shekelBiblicalHebrew,
+    bekahBiblicalHebrew,
+    gerahBiblicalHebrew,
+    talentBiblicalGreek,
+    minaBiblicalGreek,
+    tetradrachmaBiblicalGreek,
+    didrachmaBiblicalGreek,
+    drachmaBiblicalGreek,
+    denariusBiblicalRoman,
+    assarionBiblicalRoman,
+    quadransBiblicalRoman,
+    leptonBiblicalRoman,
+    atomicMassUnit,
+  ];
 }
 
 /// Unit of [Mass]
@@ -4032,237 +4150,61 @@ final class Mass$AtomicMassUnit extends Mass {
       };
 }
 
-enum MassUnit {
-  exagram._(
-    Mass$Exagram(),
-  ),
-  petagram._(
-    Mass$Petagram(),
-  ),
-  teragram._(
-    Mass$Teragram(),
-  ),
-  gigagram._(
-    Mass$Gigagram(),
-  ),
-  megagram._(
-    Mass$Megagram(),
-  ),
-  kilogram._(
-    Mass$Kilogram(),
-  ),
-  hectogram._(
-    Mass$Hectogram(),
-  ),
-  dekagram._(
-    Mass$Dekagram(),
-  ),
-  gram._(
-    Mass$Gram(),
-  ),
-  decigram._(
-    Mass$Decigram(),
-  ),
-  centigram._(
-    Mass$Centigram(),
-  ),
-  milligram._(
-    Mass$Milligram(),
-  ),
-  microgram._(
-    Mass$Microgram(),
-  ),
-  nanogram._(
-    Mass$Nanogram(),
-  ),
-  picogram._(
-    Mass$Picogram(),
-  ),
-  femtogram._(
-    Mass$Femtogram(),
-  ),
-  attogram._(
-    Mass$Attogram(),
-  ),
-  quintal._(
-    Mass$Quintal(),
-  ),
-  dyne._(
-    Mass$Dyne(),
-  ),
-  dalton._(
-    Mass$Dalton(),
-  ),
-  kip._(
-    Mass$Kip(),
-  ),
-  pound._(
-    Mass$Pound(),
-  ),
-  ounce._(
-    Mass$Ounce(),
-  ),
-  poundal._(
-    Mass$Poundal(),
-  ),
-  slug._(
-    Mass$Slug(),
-  ),
-  ton._(
-    Mass$Ton(),
-  ),
-  tonLong._(
-    Mass$TonLong(),
-  ),
-  tonMetric._(
-    Mass$TonMetric(),
-  ),
-  hundredweight._(
-    Mass$Hundredweight(),
-  ),
-  hundredweightUK._(
-    Mass$HundredweightUK(),
-  ),
-  quarter._(
-    Mass$Quarter(),
-  ),
-  quarterUK._(
-    Mass$QuarterUK(),
-  ),
-  stone._(
-    Mass$Stone(),
-  ),
-  stoneUK._(
-    Mass$StoneUK(),
-  ),
-  tonne._(
-    Mass$Tonne(),
-  ),
-  troyPound._(
-    Mass$TroyPound(),
-  ),
-  troyOunce._(
-    Mass$TroyOunce(),
-  ),
-  carat._(
-    Mass$Carat(),
-  ),
-  grain._(
-    Mass$Grain(),
-  ),
-  pennyweight._(
-    Mass$Pennyweight(),
-  ),
-  scruple._(
-    Mass$Scruple(),
-  ),
-  talentBiblicalHebrew._(
-    Mass$TalentBiblicalHebrew(),
-  ),
-  minaBiblicalHebrew._(
-    Mass$MinaBiblicalHebrew(),
-  ),
-  shekelBiblicalHebrew._(
-    Mass$ShekelBiblicalHebrew(),
-  ),
-  bekahBiblicalHebrew._(
-    Mass$BekahBiblicalHebrew(),
-  ),
-  gerahBiblicalHebrew._(
-    Mass$GerahBiblicalHebrew(),
-  ),
-  talentBiblicalGreek._(
-    Mass$TalentBiblicalGreek(),
-  ),
-  minaBiblicalGreek._(
-    Mass$MinaBiblicalGreek(),
-  ),
-  tetradrachmaBiblicalGreek._(
-    Mass$TetradrachmaBiblicalGreek(),
-  ),
-  didrachmaBiblicalGreek._(
-    Mass$DidrachmaBiblicalGreek(),
-  ),
-  drachmaBiblicalGreek._(
-    Mass$DrachmaBiblicalGreek(),
-  ),
-  denariusBiblicalRoman._(
-    Mass$DenariusBiblicalRoman(),
-  ),
-  assarionBiblicalRoman._(
-    Mass$AssarionBiblicalRoman(),
-  ),
-  quadransBiblicalRoman._(
-    Mass$QuadransBiblicalRoman(),
-  ),
-  leptonBiblicalRoman._(
-    Mass$LeptonBiblicalRoman(),
-  ),
-  atomicMassUnit._(
-    Mass$AtomicMassUnit(),
-  ),
-  ;
-
-  const MassUnit._(this.construct);
-
-  final Mass construct;
-}
-
-const massUnitValues = _EnumValues({
-  Mass$Exagram._minorName: MassUnit.exagram,
-  Mass$Petagram._minorName: MassUnit.petagram,
-  Mass$Teragram._minorName: MassUnit.teragram,
-  Mass$Gigagram._minorName: MassUnit.gigagram,
-  Mass$Megagram._minorName: MassUnit.megagram,
-  Mass$Kilogram._minorName: MassUnit.kilogram,
-  Mass$Hectogram._minorName: MassUnit.hectogram,
-  Mass$Dekagram._minorName: MassUnit.dekagram,
-  Mass$Gram._minorName: MassUnit.gram,
-  Mass$Decigram._minorName: MassUnit.decigram,
-  Mass$Centigram._minorName: MassUnit.centigram,
-  Mass$Milligram._minorName: MassUnit.milligram,
-  Mass$Microgram._minorName: MassUnit.microgram,
-  Mass$Nanogram._minorName: MassUnit.nanogram,
-  Mass$Picogram._minorName: MassUnit.picogram,
-  Mass$Femtogram._minorName: MassUnit.femtogram,
-  Mass$Attogram._minorName: MassUnit.attogram,
-  Mass$Quintal._minorName: MassUnit.quintal,
-  Mass$Dyne._minorName: MassUnit.dyne,
-  Mass$Dalton._minorName: MassUnit.dalton,
-  Mass$Kip._minorName: MassUnit.kip,
-  Mass$Pound._minorName: MassUnit.pound,
-  Mass$Ounce._minorName: MassUnit.ounce,
-  Mass$Poundal._minorName: MassUnit.poundal,
-  Mass$Slug._minorName: MassUnit.slug,
-  Mass$Ton._minorName: MassUnit.ton,
-  Mass$TonLong._minorName: MassUnit.tonLong,
-  Mass$TonMetric._minorName: MassUnit.tonMetric,
-  Mass$Hundredweight._minorName: MassUnit.hundredweight,
-  Mass$HundredweightUK._minorName: MassUnit.hundredweightUK,
-  Mass$Quarter._minorName: MassUnit.quarter,
-  Mass$QuarterUK._minorName: MassUnit.quarterUK,
-  Mass$Stone._minorName: MassUnit.stone,
-  Mass$StoneUK._minorName: MassUnit.stoneUK,
-  Mass$Tonne._minorName: MassUnit.tonne,
-  Mass$TroyPound._minorName: MassUnit.troyPound,
-  Mass$TroyOunce._minorName: MassUnit.troyOunce,
-  Mass$Carat._minorName: MassUnit.carat,
-  Mass$Grain._minorName: MassUnit.grain,
-  Mass$Pennyweight._minorName: MassUnit.pennyweight,
-  Mass$Scruple._minorName: MassUnit.scruple,
-  Mass$TalentBiblicalHebrew._minorName: MassUnit.talentBiblicalHebrew,
-  Mass$MinaBiblicalHebrew._minorName: MassUnit.minaBiblicalHebrew,
-  Mass$ShekelBiblicalHebrew._minorName: MassUnit.shekelBiblicalHebrew,
-  Mass$BekahBiblicalHebrew._minorName: MassUnit.bekahBiblicalHebrew,
-  Mass$GerahBiblicalHebrew._minorName: MassUnit.gerahBiblicalHebrew,
-  Mass$TalentBiblicalGreek._minorName: MassUnit.talentBiblicalGreek,
-  Mass$MinaBiblicalGreek._minorName: MassUnit.minaBiblicalGreek,
-  Mass$TetradrachmaBiblicalGreek._minorName: MassUnit.tetradrachmaBiblicalGreek,
-  Mass$DidrachmaBiblicalGreek._minorName: MassUnit.didrachmaBiblicalGreek,
-  Mass$DrachmaBiblicalGreek._minorName: MassUnit.drachmaBiblicalGreek,
-  Mass$DenariusBiblicalRoman._minorName: MassUnit.denariusBiblicalRoman,
-  Mass$AssarionBiblicalRoman._minorName: MassUnit.assarionBiblicalRoman,
-  Mass$QuadransBiblicalRoman._minorName: MassUnit.quadransBiblicalRoman,
-  Mass$LeptonBiblicalRoman._minorName: MassUnit.leptonBiblicalRoman,
-  Mass$AtomicMassUnit._minorName: MassUnit.atomicMassUnit,
+const massUnits = EnumValues({
+  Mass$Exagram._minorName: Mass.exagram,
+  Mass$Petagram._minorName: Mass.petagram,
+  Mass$Teragram._minorName: Mass.teragram,
+  Mass$Gigagram._minorName: Mass.gigagram,
+  Mass$Megagram._minorName: Mass.megagram,
+  Mass$Kilogram._minorName: Mass.kilogram,
+  Mass$Hectogram._minorName: Mass.hectogram,
+  Mass$Dekagram._minorName: Mass.dekagram,
+  Mass$Gram._minorName: Mass.gram,
+  Mass$Decigram._minorName: Mass.decigram,
+  Mass$Centigram._minorName: Mass.centigram,
+  Mass$Milligram._minorName: Mass.milligram,
+  Mass$Microgram._minorName: Mass.microgram,
+  Mass$Nanogram._minorName: Mass.nanogram,
+  Mass$Picogram._minorName: Mass.picogram,
+  Mass$Femtogram._minorName: Mass.femtogram,
+  Mass$Attogram._minorName: Mass.attogram,
+  Mass$Quintal._minorName: Mass.quintal,
+  Mass$Dyne._minorName: Mass.dyne,
+  Mass$Dalton._minorName: Mass.dalton,
+  Mass$Kip._minorName: Mass.kip,
+  Mass$Pound._minorName: Mass.pound,
+  Mass$Ounce._minorName: Mass.ounce,
+  Mass$Poundal._minorName: Mass.poundal,
+  Mass$Slug._minorName: Mass.slug,
+  Mass$Ton._minorName: Mass.ton,
+  Mass$TonLong._minorName: Mass.tonLong,
+  Mass$TonMetric._minorName: Mass.tonMetric,
+  Mass$Hundredweight._minorName: Mass.hundredweight,
+  Mass$HundredweightUK._minorName: Mass.hundredweightUK,
+  Mass$Quarter._minorName: Mass.quarter,
+  Mass$QuarterUK._minorName: Mass.quarterUK,
+  Mass$Stone._minorName: Mass.stone,
+  Mass$StoneUK._minorName: Mass.stoneUK,
+  Mass$Tonne._minorName: Mass.tonne,
+  Mass$TroyPound._minorName: Mass.troyPound,
+  Mass$TroyOunce._minorName: Mass.troyOunce,
+  Mass$Carat._minorName: Mass.carat,
+  Mass$Grain._minorName: Mass.grain,
+  Mass$Pennyweight._minorName: Mass.pennyweight,
+  Mass$Scruple._minorName: Mass.scruple,
+  Mass$TalentBiblicalHebrew._minorName: Mass.talentBiblicalHebrew,
+  Mass$MinaBiblicalHebrew._minorName: Mass.minaBiblicalHebrew,
+  Mass$ShekelBiblicalHebrew._minorName: Mass.shekelBiblicalHebrew,
+  Mass$BekahBiblicalHebrew._minorName: Mass.bekahBiblicalHebrew,
+  Mass$GerahBiblicalHebrew._minorName: Mass.gerahBiblicalHebrew,
+  Mass$TalentBiblicalGreek._minorName: Mass.talentBiblicalGreek,
+  Mass$MinaBiblicalGreek._minorName: Mass.minaBiblicalGreek,
+  Mass$TetradrachmaBiblicalGreek._minorName: Mass.tetradrachmaBiblicalGreek,
+  Mass$DidrachmaBiblicalGreek._minorName: Mass.didrachmaBiblicalGreek,
+  Mass$DrachmaBiblicalGreek._minorName: Mass.drachmaBiblicalGreek,
+  Mass$DenariusBiblicalRoman._minorName: Mass.denariusBiblicalRoman,
+  Mass$AssarionBiblicalRoman._minorName: Mass.assarionBiblicalRoman,
+  Mass$QuadransBiblicalRoman._minorName: Mass.quadransBiblicalRoman,
+  Mass$LeptonBiblicalRoman._minorName: Mass.leptonBiblicalRoman,
+  Mass$AtomicMassUnit._minorName: Mass.atomicMassUnit,
 });

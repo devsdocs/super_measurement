@@ -18,10 +18,10 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
       _checkJson(
         _majorName,
         json,
-        surfaceChargeDensityUnitValues,
+        surfaceChargeDensityUnits,
       )
-          ? surfaceChargeDensityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? surfaceChargeDensityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -85,6 +85,31 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
   String get majorName => _majorName;
 
   static const _majorName = 'surfaceChargeDensity';
+
+  static const coulombPerMeterSquare =
+      SurfaceChargeDensity$CoulombPerMeterSquare();
+  static const coulombPerInchSquare =
+      SurfaceChargeDensity$CoulombPerInchSquare();
+  static const coulombPerCentimeterSquare =
+      SurfaceChargeDensity$CoulombPerCentimeterSquare();
+  static const abcoulombPerMeterSquare =
+      SurfaceChargeDensity$AbcoulombPerMeterSquare();
+  static const abcoulombPerCentimeterSquare =
+      SurfaceChargeDensity$AbcoulombPerCentimeterSquare();
+  static const abcoulombPerInchSquare =
+      SurfaceChargeDensity$AbcoulombPerInchSquare();
+
+  @override
+  List<SurfaceChargeDensity> get units => values;
+
+  static const values = [
+    coulombPerMeterSquare,
+    coulombPerInchSquare,
+    coulombPerCentimeterSquare,
+    abcoulombPerMeterSquare,
+    abcoulombPerCentimeterSquare,
+    abcoulombPerInchSquare,
+  ];
 }
 
 /// Unit of [SurfaceChargeDensity]
@@ -489,43 +514,17 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
       };
 }
 
-enum SurfaceChargeDensityUnit {
-  coulombPerMeterSquare._(
-    SurfaceChargeDensity$CoulombPerMeterSquare(),
-  ),
-  coulombPerInchSquare._(
-    SurfaceChargeDensity$CoulombPerInchSquare(),
-  ),
-  coulombPerCentimeterSquare._(
-    SurfaceChargeDensity$CoulombPerCentimeterSquare(),
-  ),
-  abcoulombPerMeterSquare._(
-    SurfaceChargeDensity$AbcoulombPerMeterSquare(),
-  ),
-  abcoulombPerCentimeterSquare._(
-    SurfaceChargeDensity$AbcoulombPerCentimeterSquare(),
-  ),
-  abcoulombPerInchSquare._(
-    SurfaceChargeDensity$AbcoulombPerInchSquare(),
-  ),
-  ;
-
-  const SurfaceChargeDensityUnit._(this.construct);
-
-  final SurfaceChargeDensity construct;
-}
-
-const surfaceChargeDensityUnitValues = _EnumValues({
+const surfaceChargeDensityUnits = EnumValues({
   SurfaceChargeDensity$CoulombPerMeterSquare._minorName:
-      SurfaceChargeDensityUnit.coulombPerMeterSquare,
+      SurfaceChargeDensity.coulombPerMeterSquare,
   SurfaceChargeDensity$CoulombPerInchSquare._minorName:
-      SurfaceChargeDensityUnit.coulombPerInchSquare,
+      SurfaceChargeDensity.coulombPerInchSquare,
   SurfaceChargeDensity$CoulombPerCentimeterSquare._minorName:
-      SurfaceChargeDensityUnit.coulombPerCentimeterSquare,
+      SurfaceChargeDensity.coulombPerCentimeterSquare,
   SurfaceChargeDensity$AbcoulombPerMeterSquare._minorName:
-      SurfaceChargeDensityUnit.abcoulombPerMeterSquare,
+      SurfaceChargeDensity.abcoulombPerMeterSquare,
   SurfaceChargeDensity$AbcoulombPerCentimeterSquare._minorName:
-      SurfaceChargeDensityUnit.abcoulombPerCentimeterSquare,
+      SurfaceChargeDensity.abcoulombPerCentimeterSquare,
   SurfaceChargeDensity$AbcoulombPerInchSquare._minorName:
-      SurfaceChargeDensityUnit.abcoulombPerInchSquare,
+      SurfaceChargeDensity.abcoulombPerInchSquare,
 });

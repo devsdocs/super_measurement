@@ -33,10 +33,9 @@ sealed class Volume extends Unit<Volume> {
   factory Volume.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        volumeUnitValues,
+        volumeUnits,
       )
-          ? volumeUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? volumeUnits.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -495,6 +494,159 @@ sealed class Volume extends Unit<Volume> {
   String get majorName => _majorName;
 
   static const _majorName = 'volume';
+
+  static const meterCubic = Volume$MeterCubic();
+  static const centimeterCubic = Volume$CentimeterCubic();
+  static const millimeterCubic = Volume$MillimeterCubic();
+  static const exaliter = Volume$Exaliter();
+  static const petaliter = Volume$Petaliter();
+  static const teraliter = Volume$Teraliter();
+  static const gigaliter = Volume$Gigaliter();
+  static const megaliter = Volume$Megaliter();
+  static const kiloliter = Volume$Kiloliter();
+  static const hectoliter = Volume$Hectoliter();
+  static const dekaliter = Volume$Dekaliter();
+  static const liter = Volume$Liter();
+  static const deciliter = Volume$Deciliter();
+  static const centiliter = Volume$Centiliter();
+  static const milliliter = Volume$Milliliter();
+  static const microliter = Volume$Microliter();
+  static const nanoliter = Volume$Nanoliter();
+  static const picoliter = Volume$Picoliter();
+  static const femtoliter = Volume$Femtoliter();
+  static const attoliter = Volume$Attoliter();
+  static const cc = Volume$Cc();
+  static const drop = Volume$Drop();
+  static const barrel = Volume$Barrel();
+  static const barrelOil = Volume$BarrelOil();
+  static const bushelUK = Volume$BushelUK();
+  static const peckUK = Volume$PeckUK();
+  static const gallon = Volume$Gallon();
+  static const gallonUK = Volume$GallonUK();
+  static const quart = Volume$Quart();
+  static const quartUK = Volume$QuartUK();
+  static const pint = Volume$Pint();
+  static const pintUK = Volume$PintUK();
+  static const cup = Volume$Cup();
+  static const cupUK = Volume$CupUK();
+  static const gill = Volume$Gill();
+  static const gillUK = Volume$GillUK();
+  static const ounce = Volume$Ounce();
+  static const ounceUK = Volume$OunceUK();
+  static const dram = Volume$Dram();
+  static const dramUK = Volume$DramUK();
+  static const minim = Volume$Minim();
+  static const minimUK = Volume$MinimUK();
+  static const tablespoon = Volume$Tablespoon();
+  static const tablespoonUK = Volume$TablespoonUK();
+  static const dessertspoon = Volume$Dessertspoon();
+  static const dessertspoonUK = Volume$DessertspoonUK();
+  static const teaspoon = Volume$Teaspoon();
+  static const teaspoonUK = Volume$TeaspoonUK();
+  static const hogshead = Volume$Hogshead();
+  static const yardCubic = Volume$YardCubic();
+  static const footCubic = Volume$FootCubic();
+  static const inchCubic = Volume$InchCubic();
+  static const ccf = Volume$Ccf();
+  static const hundredFootCubic = Volume$HundredFootCubic();
+  static const acreFoot = Volume$AcreFoot();
+  static const acreInch = Volume$AcreInch();
+  static const dekastere = Volume$Dekastere();
+  static const stere = Volume$Stere();
+  static const decistere = Volume$Decistere();
+  static const cord = Volume$Cord();
+  static const boardFoot = Volume$BoardFoot();
+  static const tun = Volume$Tun();
+  static const corBiblical = Volume$CorBiblical();
+  static const homerBiblical = Volume$HomerBiblical();
+  static const bathBiblical = Volume$BathBiblical();
+  static const hinBiblical = Volume$HinBiblical();
+  static const cabBiblical = Volume$CabBiblical();
+  static const logBiblical = Volume$LogBiblical();
+  static const tazaSpanish = Volume$TazaSpanish();
+  static const bushel = Volume$Bushel();
+  static const peck = Volume$Peck();
+  static const dryPint = Volume$DryPint();
+  static const dryQuart = Volume$DryQuart();
+
+  @override
+  List<Volume> get units => values;
+
+  static const values = [
+    meterCubic,
+    centimeterCubic,
+    millimeterCubic,
+    exaliter,
+    petaliter,
+    teraliter,
+    gigaliter,
+    megaliter,
+    kiloliter,
+    hectoliter,
+    dekaliter,
+    liter,
+    deciliter,
+    centiliter,
+    milliliter,
+    microliter,
+    nanoliter,
+    picoliter,
+    femtoliter,
+    attoliter,
+    cc,
+    drop,
+    barrel,
+    barrelOil,
+    bushelUK,
+    peckUK,
+    gallon,
+    gallonUK,
+    quart,
+    quartUK,
+    pint,
+    pintUK,
+    cup,
+    cupUK,
+    gill,
+    gillUK,
+    ounce,
+    ounceUK,
+    dram,
+    dramUK,
+    minim,
+    minimUK,
+    tablespoon,
+    tablespoonUK,
+    dessertspoon,
+    dessertspoonUK,
+    teaspoon,
+    teaspoonUK,
+    hogshead,
+    yardCubic,
+    footCubic,
+    inchCubic,
+    ccf,
+    hundredFootCubic,
+    acreFoot,
+    acreInch,
+    dekastere,
+    stere,
+    decistere,
+    cord,
+    boardFoot,
+    tun,
+    corBiblical,
+    homerBiblical,
+    bathBiblical,
+    hinBiblical,
+    cabBiblical,
+    logBiblical,
+    tazaSpanish,
+    bushel,
+    peck,
+    dryPint,
+    dryQuart,
+  ];
 }
 
 /// Unit of [Volume]
@@ -5242,305 +5394,78 @@ final class Volume$DryQuart extends Volume {
       };
 }
 
-enum VolumeUnit {
-  meterCubic._(
-    Volume$MeterCubic(),
-  ),
-  centimeterCubic._(
-    Volume$CentimeterCubic(),
-  ),
-  millimeterCubic._(
-    Volume$MillimeterCubic(),
-  ),
-  exaliter._(
-    Volume$Exaliter(),
-  ),
-  petaliter._(
-    Volume$Petaliter(),
-  ),
-  teraliter._(
-    Volume$Teraliter(),
-  ),
-  gigaliter._(
-    Volume$Gigaliter(),
-  ),
-  megaliter._(
-    Volume$Megaliter(),
-  ),
-  kiloliter._(
-    Volume$Kiloliter(),
-  ),
-  hectoliter._(
-    Volume$Hectoliter(),
-  ),
-  dekaliter._(
-    Volume$Dekaliter(),
-  ),
-  liter._(
-    Volume$Liter(),
-  ),
-  deciliter._(
-    Volume$Deciliter(),
-  ),
-  centiliter._(
-    Volume$Centiliter(),
-  ),
-  milliliter._(
-    Volume$Milliliter(),
-  ),
-  microliter._(
-    Volume$Microliter(),
-  ),
-  nanoliter._(
-    Volume$Nanoliter(),
-  ),
-  picoliter._(
-    Volume$Picoliter(),
-  ),
-  femtoliter._(
-    Volume$Femtoliter(),
-  ),
-  attoliter._(
-    Volume$Attoliter(),
-  ),
-  cc._(
-    Volume$Cc(),
-  ),
-  drop._(
-    Volume$Drop(),
-  ),
-  barrel._(
-    Volume$Barrel(),
-  ),
-  barrelOil._(
-    Volume$BarrelOil(),
-  ),
-  bushelUK._(
-    Volume$BushelUK(),
-  ),
-  peckUK._(
-    Volume$PeckUK(),
-  ),
-  gallon._(
-    Volume$Gallon(),
-  ),
-  gallonUK._(
-    Volume$GallonUK(),
-  ),
-  quart._(
-    Volume$Quart(),
-  ),
-  quartUK._(
-    Volume$QuartUK(),
-  ),
-  pint._(
-    Volume$Pint(),
-  ),
-  pintUK._(
-    Volume$PintUK(),
-  ),
-  cup._(
-    Volume$Cup(),
-  ),
-  cupUK._(
-    Volume$CupUK(),
-  ),
-  gill._(
-    Volume$Gill(),
-  ),
-  gillUK._(
-    Volume$GillUK(),
-  ),
-  ounce._(
-    Volume$Ounce(),
-  ),
-  ounceUK._(
-    Volume$OunceUK(),
-  ),
-  dram._(
-    Volume$Dram(),
-  ),
-  dramUK._(
-    Volume$DramUK(),
-  ),
-  minim._(
-    Volume$Minim(),
-  ),
-  minimUK._(
-    Volume$MinimUK(),
-  ),
-  tablespoon._(
-    Volume$Tablespoon(),
-  ),
-  tablespoonUK._(
-    Volume$TablespoonUK(),
-  ),
-  dessertspoon._(
-    Volume$Dessertspoon(),
-  ),
-  dessertspoonUK._(
-    Volume$DessertspoonUK(),
-  ),
-  teaspoon._(
-    Volume$Teaspoon(),
-  ),
-  teaspoonUK._(
-    Volume$TeaspoonUK(),
-  ),
-  hogshead._(
-    Volume$Hogshead(),
-  ),
-  yardCubic._(
-    Volume$YardCubic(),
-  ),
-  footCubic._(
-    Volume$FootCubic(),
-  ),
-  inchCubic._(
-    Volume$InchCubic(),
-  ),
-  ccf._(
-    Volume$Ccf(),
-  ),
-  hundredFootCubic._(
-    Volume$HundredFootCubic(),
-  ),
-  acreFoot._(
-    Volume$AcreFoot(),
-  ),
-  acreInch._(
-    Volume$AcreInch(),
-  ),
-  dekastere._(
-    Volume$Dekastere(),
-  ),
-  stere._(
-    Volume$Stere(),
-  ),
-  decistere._(
-    Volume$Decistere(),
-  ),
-  cord._(
-    Volume$Cord(),
-  ),
-  boardFoot._(
-    Volume$BoardFoot(),
-  ),
-  tun._(
-    Volume$Tun(),
-  ),
-  corBiblical._(
-    Volume$CorBiblical(),
-  ),
-  homerBiblical._(
-    Volume$HomerBiblical(),
-  ),
-  bathBiblical._(
-    Volume$BathBiblical(),
-  ),
-  hinBiblical._(
-    Volume$HinBiblical(),
-  ),
-  cabBiblical._(
-    Volume$CabBiblical(),
-  ),
-  logBiblical._(
-    Volume$LogBiblical(),
-  ),
-  tazaSpanish._(
-    Volume$TazaSpanish(),
-  ),
-  bushel._(
-    Volume$Bushel(),
-  ),
-  peck._(
-    Volume$Peck(),
-  ),
-  dryPint._(
-    Volume$DryPint(),
-  ),
-  dryQuart._(
-    Volume$DryQuart(),
-  ),
-  ;
-
-  const VolumeUnit._(this.construct);
-
-  final Volume construct;
-}
-
-const volumeUnitValues = _EnumValues({
-  Volume$MeterCubic._minorName: VolumeUnit.meterCubic,
-  Volume$CentimeterCubic._minorName: VolumeUnit.centimeterCubic,
-  Volume$MillimeterCubic._minorName: VolumeUnit.millimeterCubic,
-  Volume$Exaliter._minorName: VolumeUnit.exaliter,
-  Volume$Petaliter._minorName: VolumeUnit.petaliter,
-  Volume$Teraliter._minorName: VolumeUnit.teraliter,
-  Volume$Gigaliter._minorName: VolumeUnit.gigaliter,
-  Volume$Megaliter._minorName: VolumeUnit.megaliter,
-  Volume$Kiloliter._minorName: VolumeUnit.kiloliter,
-  Volume$Hectoliter._minorName: VolumeUnit.hectoliter,
-  Volume$Dekaliter._minorName: VolumeUnit.dekaliter,
-  Volume$Liter._minorName: VolumeUnit.liter,
-  Volume$Deciliter._minorName: VolumeUnit.deciliter,
-  Volume$Centiliter._minorName: VolumeUnit.centiliter,
-  Volume$Milliliter._minorName: VolumeUnit.milliliter,
-  Volume$Microliter._minorName: VolumeUnit.microliter,
-  Volume$Nanoliter._minorName: VolumeUnit.nanoliter,
-  Volume$Picoliter._minorName: VolumeUnit.picoliter,
-  Volume$Femtoliter._minorName: VolumeUnit.femtoliter,
-  Volume$Attoliter._minorName: VolumeUnit.attoliter,
-  Volume$Cc._minorName: VolumeUnit.cc,
-  Volume$Drop._minorName: VolumeUnit.drop,
-  Volume$Barrel._minorName: VolumeUnit.barrel,
-  Volume$BarrelOil._minorName: VolumeUnit.barrelOil,
-  Volume$BushelUK._minorName: VolumeUnit.bushelUK,
-  Volume$PeckUK._minorName: VolumeUnit.peckUK,
-  Volume$Gallon._minorName: VolumeUnit.gallon,
-  Volume$GallonUK._minorName: VolumeUnit.gallonUK,
-  Volume$Quart._minorName: VolumeUnit.quart,
-  Volume$QuartUK._minorName: VolumeUnit.quartUK,
-  Volume$Pint._minorName: VolumeUnit.pint,
-  Volume$PintUK._minorName: VolumeUnit.pintUK,
-  Volume$Cup._minorName: VolumeUnit.cup,
-  Volume$CupUK._minorName: VolumeUnit.cupUK,
-  Volume$Gill._minorName: VolumeUnit.gill,
-  Volume$GillUK._minorName: VolumeUnit.gillUK,
-  Volume$Ounce._minorName: VolumeUnit.ounce,
-  Volume$OunceUK._minorName: VolumeUnit.ounceUK,
-  Volume$Dram._minorName: VolumeUnit.dram,
-  Volume$DramUK._minorName: VolumeUnit.dramUK,
-  Volume$Minim._minorName: VolumeUnit.minim,
-  Volume$MinimUK._minorName: VolumeUnit.minimUK,
-  Volume$Tablespoon._minorName: VolumeUnit.tablespoon,
-  Volume$TablespoonUK._minorName: VolumeUnit.tablespoonUK,
-  Volume$Dessertspoon._minorName: VolumeUnit.dessertspoon,
-  Volume$DessertspoonUK._minorName: VolumeUnit.dessertspoonUK,
-  Volume$Teaspoon._minorName: VolumeUnit.teaspoon,
-  Volume$TeaspoonUK._minorName: VolumeUnit.teaspoonUK,
-  Volume$Hogshead._minorName: VolumeUnit.hogshead,
-  Volume$YardCubic._minorName: VolumeUnit.yardCubic,
-  Volume$FootCubic._minorName: VolumeUnit.footCubic,
-  Volume$InchCubic._minorName: VolumeUnit.inchCubic,
-  Volume$Ccf._minorName: VolumeUnit.ccf,
-  Volume$HundredFootCubic._minorName: VolumeUnit.hundredFootCubic,
-  Volume$AcreFoot._minorName: VolumeUnit.acreFoot,
-  Volume$AcreInch._minorName: VolumeUnit.acreInch,
-  Volume$Dekastere._minorName: VolumeUnit.dekastere,
-  Volume$Stere._minorName: VolumeUnit.stere,
-  Volume$Decistere._minorName: VolumeUnit.decistere,
-  Volume$Cord._minorName: VolumeUnit.cord,
-  Volume$BoardFoot._minorName: VolumeUnit.boardFoot,
-  Volume$Tun._minorName: VolumeUnit.tun,
-  Volume$CorBiblical._minorName: VolumeUnit.corBiblical,
-  Volume$HomerBiblical._minorName: VolumeUnit.homerBiblical,
-  Volume$BathBiblical._minorName: VolumeUnit.bathBiblical,
-  Volume$HinBiblical._minorName: VolumeUnit.hinBiblical,
-  Volume$CabBiblical._minorName: VolumeUnit.cabBiblical,
-  Volume$LogBiblical._minorName: VolumeUnit.logBiblical,
-  Volume$TazaSpanish._minorName: VolumeUnit.tazaSpanish,
-  Volume$Bushel._minorName: VolumeUnit.bushel,
-  Volume$Peck._minorName: VolumeUnit.peck,
-  Volume$DryPint._minorName: VolumeUnit.dryPint,
-  Volume$DryQuart._minorName: VolumeUnit.dryQuart,
+const volumeUnits = EnumValues({
+  Volume$MeterCubic._minorName: Volume.meterCubic,
+  Volume$CentimeterCubic._minorName: Volume.centimeterCubic,
+  Volume$MillimeterCubic._minorName: Volume.millimeterCubic,
+  Volume$Exaliter._minorName: Volume.exaliter,
+  Volume$Petaliter._minorName: Volume.petaliter,
+  Volume$Teraliter._minorName: Volume.teraliter,
+  Volume$Gigaliter._minorName: Volume.gigaliter,
+  Volume$Megaliter._minorName: Volume.megaliter,
+  Volume$Kiloliter._minorName: Volume.kiloliter,
+  Volume$Hectoliter._minorName: Volume.hectoliter,
+  Volume$Dekaliter._minorName: Volume.dekaliter,
+  Volume$Liter._minorName: Volume.liter,
+  Volume$Deciliter._minorName: Volume.deciliter,
+  Volume$Centiliter._minorName: Volume.centiliter,
+  Volume$Milliliter._minorName: Volume.milliliter,
+  Volume$Microliter._minorName: Volume.microliter,
+  Volume$Nanoliter._minorName: Volume.nanoliter,
+  Volume$Picoliter._minorName: Volume.picoliter,
+  Volume$Femtoliter._minorName: Volume.femtoliter,
+  Volume$Attoliter._minorName: Volume.attoliter,
+  Volume$Cc._minorName: Volume.cc,
+  Volume$Drop._minorName: Volume.drop,
+  Volume$Barrel._minorName: Volume.barrel,
+  Volume$BarrelOil._minorName: Volume.barrelOil,
+  Volume$BushelUK._minorName: Volume.bushelUK,
+  Volume$PeckUK._minorName: Volume.peckUK,
+  Volume$Gallon._minorName: Volume.gallon,
+  Volume$GallonUK._minorName: Volume.gallonUK,
+  Volume$Quart._minorName: Volume.quart,
+  Volume$QuartUK._minorName: Volume.quartUK,
+  Volume$Pint._minorName: Volume.pint,
+  Volume$PintUK._minorName: Volume.pintUK,
+  Volume$Cup._minorName: Volume.cup,
+  Volume$CupUK._minorName: Volume.cupUK,
+  Volume$Gill._minorName: Volume.gill,
+  Volume$GillUK._minorName: Volume.gillUK,
+  Volume$Ounce._minorName: Volume.ounce,
+  Volume$OunceUK._minorName: Volume.ounceUK,
+  Volume$Dram._minorName: Volume.dram,
+  Volume$DramUK._minorName: Volume.dramUK,
+  Volume$Minim._minorName: Volume.minim,
+  Volume$MinimUK._minorName: Volume.minimUK,
+  Volume$Tablespoon._minorName: Volume.tablespoon,
+  Volume$TablespoonUK._minorName: Volume.tablespoonUK,
+  Volume$Dessertspoon._minorName: Volume.dessertspoon,
+  Volume$DessertspoonUK._minorName: Volume.dessertspoonUK,
+  Volume$Teaspoon._minorName: Volume.teaspoon,
+  Volume$TeaspoonUK._minorName: Volume.teaspoonUK,
+  Volume$Hogshead._minorName: Volume.hogshead,
+  Volume$YardCubic._minorName: Volume.yardCubic,
+  Volume$FootCubic._minorName: Volume.footCubic,
+  Volume$InchCubic._minorName: Volume.inchCubic,
+  Volume$Ccf._minorName: Volume.ccf,
+  Volume$HundredFootCubic._minorName: Volume.hundredFootCubic,
+  Volume$AcreFoot._minorName: Volume.acreFoot,
+  Volume$AcreInch._minorName: Volume.acreInch,
+  Volume$Dekastere._minorName: Volume.dekastere,
+  Volume$Stere._minorName: Volume.stere,
+  Volume$Decistere._minorName: Volume.decistere,
+  Volume$Cord._minorName: Volume.cord,
+  Volume$BoardFoot._minorName: Volume.boardFoot,
+  Volume$Tun._minorName: Volume.tun,
+  Volume$CorBiblical._minorName: Volume.corBiblical,
+  Volume$HomerBiblical._minorName: Volume.homerBiblical,
+  Volume$BathBiblical._minorName: Volume.bathBiblical,
+  Volume$HinBiblical._minorName: Volume.hinBiblical,
+  Volume$CabBiblical._minorName: Volume.cabBiblical,
+  Volume$LogBiblical._minorName: Volume.logBiblical,
+  Volume$TazaSpanish._minorName: Volume.tazaSpanish,
+  Volume$Bushel._minorName: Volume.bushel,
+  Volume$Peck._minorName: Volume.peck,
+  Volume$DryPint._minorName: Volume.dryPint,
+  Volume$DryQuart._minorName: Volume.dryQuart,
 });

@@ -14,10 +14,10 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
   factory RadiationExposure.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        radiationExposureUnitValues,
+        radiationExposureUnits,
       )
-          ? radiationExposureUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? radiationExposureUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -66,6 +66,23 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
   String get majorName => _majorName;
 
   static const _majorName = 'radiationExposure';
+
+  static const roentgen = RadiationExposure$Roentgen();
+  static const coulombPerKilogram = RadiationExposure$CoulombPerKilogram();
+  static const millicoulombPerKilogram =
+      RadiationExposure$MillicoulombPerKilogram();
+  static const microcoulombPerKilogram =
+      RadiationExposure$MicrocoulombPerKilogram();
+
+  @override
+  List<RadiationExposure> get units => values;
+
+  static const values = [
+    roentgen,
+    coulombPerKilogram,
+    millicoulombPerKilogram,
+    microcoulombPerKilogram,
+  ];
 }
 
 /// Unit of [RadiationExposure]
@@ -333,32 +350,12 @@ final class RadiationExposure$MicrocoulombPerKilogram
       };
 }
 
-enum RadiationExposureUnit {
-  roentgen._(
-    RadiationExposure$Roentgen(),
-  ),
-  coulombPerKilogram._(
-    RadiationExposure$CoulombPerKilogram(),
-  ),
-  millicoulombPerKilogram._(
-    RadiationExposure$MillicoulombPerKilogram(),
-  ),
-  microcoulombPerKilogram._(
-    RadiationExposure$MicrocoulombPerKilogram(),
-  ),
-  ;
-
-  const RadiationExposureUnit._(this.construct);
-
-  final RadiationExposure construct;
-}
-
-const radiationExposureUnitValues = _EnumValues({
-  RadiationExposure$Roentgen._minorName: RadiationExposureUnit.roentgen,
+const radiationExposureUnits = EnumValues({
+  RadiationExposure$Roentgen._minorName: RadiationExposure.roentgen,
   RadiationExposure$CoulombPerKilogram._minorName:
-      RadiationExposureUnit.coulombPerKilogram,
+      RadiationExposure.coulombPerKilogram,
   RadiationExposure$MillicoulombPerKilogram._minorName:
-      RadiationExposureUnit.millicoulombPerKilogram,
+      RadiationExposure.millicoulombPerKilogram,
   RadiationExposure$MicrocoulombPerKilogram._minorName:
-      RadiationExposureUnit.microcoulombPerKilogram,
+      RadiationExposure.microcoulombPerKilogram,
 });

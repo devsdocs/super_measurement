@@ -20,10 +20,10 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
   factory ThermalConductivity.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
-        thermalConductivityUnitValues,
+        thermalConductivityUnits,
       )
-          ? thermalConductivityUnitValues
-              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.construct
+          ? thermalConductivityUnits
+              .map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
               (json[_majorName] as Map<String, dynamic>)[_value] as num,
             )
@@ -111,6 +111,38 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
   String get majorName => _majorName;
 
   static const _majorName = 'thermalConductivity';
+
+  static const bTUThermochemInchPerHourFootSquareDegreeF =
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
+  static const bTUIntInchPerHourFootSquareDegreeF =
+      ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF();
+  static const bTUThermochemPerHourFootDegreeF =
+      ThermalConductivity$BTUThermochemPerHourFootDegreeF();
+  static const bTUIntPerHourFootDegreeF =
+      ThermalConductivity$BTUIntPerHourFootDegreeF();
+  static const calorieThermochemPerSecondCentimeterDegreeC =
+      ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC();
+  static const calorieIntPerSecondCentimeterDegreeC =
+      ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC();
+  static const kilowattPerMeterK = ThermalConductivity$KilowattPerMeterK();
+  static const wattPerMeterK = ThermalConductivity$WattPerMeterK();
+  static const wattPerCentimeterDegreeC =
+      ThermalConductivity$WattPerCentimeterDegreeC();
+
+  @override
+  List<ThermalConductivity> get units => values;
+
+  static const values = [
+    bTUThermochemInchPerHourFootSquareDegreeF,
+    bTUIntInchPerHourFootSquareDegreeF,
+    bTUThermochemPerHourFootDegreeF,
+    bTUIntPerHourFootDegreeF,
+    calorieThermochemPerSecondCentimeterDegreeC,
+    calorieIntPerSecondCentimeterDegreeC,
+    kilowattPerMeterK,
+    wattPerMeterK,
+    wattPerCentimeterDegreeC,
+  ];
 }
 
 /// Unit of [ThermalConductivity]
@@ -714,58 +746,23 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
       };
 }
 
-enum ThermalConductivityUnit {
-  bTUThermochemInchPerHourFootSquareDegreeF._(
-    ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(),
-  ),
-  bTUIntInchPerHourFootSquareDegreeF._(
-    ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF(),
-  ),
-  bTUThermochemPerHourFootDegreeF._(
-    ThermalConductivity$BTUThermochemPerHourFootDegreeF(),
-  ),
-  bTUIntPerHourFootDegreeF._(
-    ThermalConductivity$BTUIntPerHourFootDegreeF(),
-  ),
-  calorieThermochemPerSecondCentimeterDegreeC._(
-    ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC(),
-  ),
-  calorieIntPerSecondCentimeterDegreeC._(
-    ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC(),
-  ),
-  kilowattPerMeterK._(
-    ThermalConductivity$KilowattPerMeterK(),
-  ),
-  wattPerMeterK._(
-    ThermalConductivity$WattPerMeterK(),
-  ),
-  wattPerCentimeterDegreeC._(
-    ThermalConductivity$WattPerCentimeterDegreeC(),
-  ),
-  ;
-
-  const ThermalConductivityUnit._(this.construct);
-
-  final ThermalConductivity construct;
-}
-
-const thermalConductivityUnitValues = _EnumValues({
+const thermalConductivityUnits = EnumValues({
   ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF._minorName:
-      ThermalConductivityUnit.bTUThermochemInchPerHourFootSquareDegreeF,
+      ThermalConductivity.bTUThermochemInchPerHourFootSquareDegreeF,
   ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF._minorName:
-      ThermalConductivityUnit.bTUIntInchPerHourFootSquareDegreeF,
+      ThermalConductivity.bTUIntInchPerHourFootSquareDegreeF,
   ThermalConductivity$BTUThermochemPerHourFootDegreeF._minorName:
-      ThermalConductivityUnit.bTUThermochemPerHourFootDegreeF,
+      ThermalConductivity.bTUThermochemPerHourFootDegreeF,
   ThermalConductivity$BTUIntPerHourFootDegreeF._minorName:
-      ThermalConductivityUnit.bTUIntPerHourFootDegreeF,
+      ThermalConductivity.bTUIntPerHourFootDegreeF,
   ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC._minorName:
-      ThermalConductivityUnit.calorieThermochemPerSecondCentimeterDegreeC,
+      ThermalConductivity.calorieThermochemPerSecondCentimeterDegreeC,
   ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC._minorName:
-      ThermalConductivityUnit.calorieIntPerSecondCentimeterDegreeC,
+      ThermalConductivity.calorieIntPerSecondCentimeterDegreeC,
   ThermalConductivity$KilowattPerMeterK._minorName:
-      ThermalConductivityUnit.kilowattPerMeterK,
+      ThermalConductivity.kilowattPerMeterK,
   ThermalConductivity$WattPerMeterK._minorName:
-      ThermalConductivityUnit.wattPerMeterK,
+      ThermalConductivity.wattPerMeterK,
   ThermalConductivity$WattPerCentimeterDegreeC._minorName:
-      ThermalConductivityUnit.wattPerCentimeterDegreeC,
+      ThermalConductivity.wattPerCentimeterDegreeC,
 });
