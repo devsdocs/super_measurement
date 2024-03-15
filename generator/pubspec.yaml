@@ -1,12 +1,13 @@
 name: super_measurement
 description: Dart package for converting various unit measurement with ease
-version: 2.0.2
+version: 2.0.1
 repository: https://github.com/devsdocs/super_measurement
 
 environment:
   sdk: ^3.1.1
 
 dependencies:
+  reusable_tools: ^1.0.17
 
 dev_dependencies:
   lint: ^2.1.2

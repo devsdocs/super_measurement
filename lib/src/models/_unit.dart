@@ -64,9 +64,9 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T _convertAndCombine(String operator, T other) {
     if (_isShiftedValue || other._isShiftedValue) {
-      final convToThis = other.convertTo(this);
+      final convertToThis = other.convertTo(this);
 
-      return operator == '+' ? this + convToThis : this - convToThis;
+      return operator == '+' ? this + convertToThis : this - convertToThis;
     } else {
       final otherValue = other.convertTo(anchor);
       final currentValue = convertTo(anchor);
@@ -177,7 +177,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     return '$value $runtimeType ($symbol)';
   }
 
-  /// Get the exact presicion on value calculation
+  /// Get the exact precision on value calculation
   T withPrecision([Precision precision = Precision.two]) => withValue(
         value == 0 ? 0 : value.toDouble().toPrecision(precision.value),
       );
@@ -220,3 +220,16 @@ bool _checkJson<T>(
 
 const _unit = 'unit';
 const _value = 'value';
+
+extension DoubleExt on double {
+  num toPrecision(int fractionDigits) {
+    if (_canBeInt) return toInt();
+    final mod = pow(10, fractionDigits.toDouble()).toDouble();
+    final calculation = (this * mod).round().toDouble() / mod;
+    return calculation._canBeInt ? calculation.toInt() : calculation;
+  }
+
+  bool get _canBeInt => this % 1 == 0;
+
+  num get toIntIfTrue => _canBeInt ? toInt() : this;
+}

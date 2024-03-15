@@ -1,7 +1,7 @@
 /// Dart library for doing various unit conversion with ease
 library super_measurement;
 
-import 'package:reusable_tools/reusable_tools.dart';
+import 'dart:math';
 
 part 'src/extension/iterable.dart';
 part 'src/extension/iterable_generic.dart';

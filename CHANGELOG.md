@@ -1,3 +1,6 @@
+## 2.0.2
+- Remove unnecessary dependency
+
 ## 2.0.1
 - Some minor API changes
 

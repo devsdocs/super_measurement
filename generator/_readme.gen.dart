@@ -17,7 +17,7 @@ void generateReadme() {
     readmeBuff.writeln('### $name');
     for (final e in unit.values.first) {
       readmeBuff.writeln(
-        '   - `${e.keys.first}` => ${name}Unit.${e.keys.first.split(r'$').last.snakeCase}',
+        '   - `${e.keys.first}` => $name.${e.keys.first.split(r'$').last.snakeCase}',
       );
     }
     readmeBuff.writeln();
