@@ -1,3 +1,6 @@
+## 2.0.3
+- Bump SDK
+
 ## 2.0.2
 - Remove unnecessary dependency
 
