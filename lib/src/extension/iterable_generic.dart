@@ -3,26 +3,18 @@ part of '../../super_measurement.dart';
 extension IterableOfTExtendsUnit<T extends Unit<T>> on Iterable<T> {
   /// Combine all element in this to [unit],
   /// value of [unit] is ignored
-  T combineTo<E extends Unit<T>>(E unit) {
-    if (isEmpty) {
-      return (unit as T).withValue(0);
-    }
-
-    // For shifted values like temperature, we need special handling
-    if (any((e) => e._isShiftedValue) || unit._isShiftedValue) {
-      // Convert each unit to the target unit type first, then sum the values
-      final targetUnit = unit as T;
-      final sum =
-          map((e) => e.convertTo(targetUnit).value).reduce((a, b) => a + b);
-      return targetUnit.withValue(sum);
-    } else {
-      // For regular units, we can use fold
-      return fold(
-        unit.withValue(0),
-        (a, e) => a + e,
-      );
-    }
-  }
+  T combineTo<E extends Unit<T>>(E unit) => isEmpty
+      ? (unit as T).withValue(0)
+      : any((e) => e._isShiftedValue) || unit._isShiftedValue
+          ? first
+              .withValue(
+                map((e) => e.convertTo(first).value).reduce((a, b) => a + b),
+              )
+              .convertTo(unit)
+          : fold(
+              unit.withValue(0),
+              (a, e) => a + e,
+            );
 
   /// Unit with the relatively lowest value
   T get lowest => _sort.first;
