@@ -1,5 +1,5 @@
 /// Dart library for doing various unit conversion with ease
-library super_measurement;
+library;
 
 import 'dart:math';
 
