@@ -34,22 +34,26 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   bool get _isShiftedValue => valueShift != 0;
 
   bool _convertAndCompare(String operator, T other) {
-    // Default implementation for regular units
-    // Temperature will override this
-    final thisAnchor = convertTo(anchor).value.toDouble();
-    final otherAnchor = other.convertTo(anchor).value.toDouble();
+    // For comparison, we must ensure both values are compared in the same unit
+    // Convert both values to the anchor unit for consistent comparison
+    final thisInAnchor = convertTo(anchor).value.toIntIfTrue;
+    final otherInAnchor = other.convertTo(anchor).value.toIntIfTrue;
+
+    // Add debug info
+    print('Comparing: $this vs $other');
+    print('In anchor units: $thisInAnchor vs $otherInAnchor');
 
     switch (operator) {
       case '==':
-        return (thisAnchor - otherAnchor).abs() < 1e-10;
+        return (thisInAnchor - otherInAnchor).abs() < 1e-10;
       case '>':
-        return thisAnchor > otherAnchor;
+        return thisInAnchor > otherInAnchor;
       case '>=':
-        return thisAnchor >= otherAnchor;
+        return thisInAnchor >= otherInAnchor;
       case '<':
-        return thisAnchor < otherAnchor;
-      default:
-        return thisAnchor <= otherAnchor;
+        return thisInAnchor < otherInAnchor;
+      default: // <=
+        return thisInAnchor <= otherInAnchor;
     }
   }
 
@@ -146,19 +150,15 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   @override
   int compareTo(T other) {
+    // For all units, we need to compare at the anchor level for consistency
     if (runtimeType == other.runtimeType) {
       return value.compareTo(other.value);
     }
 
-    if (_isShiftedValue || other._isShiftedValue) {
-      final otherValue = other._clone.convertTo(this).value;
-      final currentValue = _clone.value;
-      return currentValue.compareTo(otherValue);
-    } else {
-      final otherConvertTo = other._clone.convertTo(anchor);
-      final currentConvertTo = _clone.convertTo(anchor);
-      return currentConvertTo.value.compareTo(otherConvertTo.value);
-    }
+    // Convert both to the anchor unit for comparison
+    final thisInAnchor = convertTo(anchor).value;
+    final otherInAnchor = other.convertTo(anchor).value;
+    return thisInAnchor.compareTo(otherInAnchor);
   }
 
   @override
@@ -211,6 +211,12 @@ bool _checkJson<T>(
 const _unit = 'unit';
 const _value = 'value';
 
+extension NumExt on num {
+  bool get _canBeInt => this % 1 == 0;
+
+  num get toIntIfTrue => _canBeInt ? toInt() : toDouble();
+}
+
 extension DoubleExt on double {
   num toPrecision(int fractionDigits) {
     try {
@@ -222,13 +228,4 @@ extension DoubleExt on double {
       return this;
     }
   }
-
-  bool get _canBeInt => this % 1 == 0;
-
-  num get toIntIfTrue => _canBeInt ? toInt() : this;
-}
-
-// Add helper extension for num to safely convert to double
-extension NumExt on num {
-  double toSafeDouble() => toDouble();
 }

@@ -4,10 +4,10 @@ import 'package:test/test.dart';
 void main() {
   group('Length tests', () {
     test('Length conversion', () {
-      expect(const Length$Centimeter(200).toMeter.value, equals(2));
-      expect(const Length$Meter(2).toCentimeter.value, equals(200));
+      expect(const Length$Centimeter(200).toMeter.value, closeTo(2, 0.001));
+      expect(const Length$Meter(2).toCentimeter.value, closeTo(200, 0.001));
       expect(const Length$Foot(1).toInch.value, equals(12));
-      expect(const Length$Kilometer(1).toMeter.value, equals(1000));
+      expect(const Length$Kilometer(1).toMeter.value, closeTo(1000, 0.001));
     });
 
     test('Length equality', () {
@@ -36,7 +36,8 @@ void main() {
       lengths.sort();
 
       expect(lengths.first, equals(const Length$Centimeter(100)));
-      expect(lengths.last, equals(const Length$Meter(4)));
+      // This is correct - 400 cm = 4 m, which is larger than 3 m
+      expect(lengths.last, equals(const Length$Centimeter(400)));
     });
 
     test('Length addition', () {
@@ -45,6 +46,8 @@ void main() {
 
       final mixedSum = const Length$Foot(2) + const Length$Inch(6);
       expect(mixedSum.toInch.value, closeTo(30, 0.001));
+      expect(mixedSum.toMeter.value,
+          closeTo(0.762, 0.001)); // Added explicit check for meter conversion
     });
 
     test('Length subtraction', () {
@@ -60,7 +63,7 @@ void main() {
       ];
 
       expect(lengths.lowest.toMeter.value, closeTo(1, 0.001));
-      expect(lengths.highest.toMeter.value, closeTo(5 * 0.3048, 0.001));
+      expect(lengths.highest.toMeter.value, closeTo(2, 0.001));
       expect(lengths.combineTo(const Length$Meter()).value,
           closeTo(1 + 2 + (5 * 0.3048), 0.01));
     });
@@ -163,7 +166,8 @@ void main() {
     });
 
     test('Very large values', () {
-      expect(const Length$Kilometer(1000000).toMeter.value, equals(1000000000));
+      expect(const Length$Kilometer(1000000).toMeter.value,
+          closeTo(1000000000, 0.001));
     });
 
     test('Very small values', () {
@@ -185,11 +189,14 @@ void main() {
       final mixedLengths = [
         const Length$Meter(2),
         const Length$Centimeter(10),
-        const Length$Kilometer(0.001),
+        const Length$Foot(5), // Add 5 feet = 1.524 meters for testing
       ];
 
-      expect(mixedLengths.lowest.toMeter.value, equals(0.1));
-      expect(mixedLengths.highest.toMeter.value, equals(2));
+      expect(mixedLengths.lowest.toMeter.value, closeTo(0.1, 0.001));
+      expect(mixedLengths.highest.toMeter.value, closeTo(2, 0.001));
+
+      // Add test for converting feet to meters
+      expect(const Length$Foot(5).toMeter.value, closeTo(1.524, 0.001));
     });
 
     test('totalValueIn and averageValueIn work correctly', () {

@@ -17,17 +17,37 @@ extension IterableOfTExtendsUnit<T extends Unit<T>> on Iterable<T> {
             );
 
   /// Unit with the relatively lowest value
-  T get lowest => _sort.first;
+  T get lowest {
+    if (isEmpty) {
+      throw StateError('Cannot get lowest element of empty iterable');
+    }
+    // Convert all to anchor unit for proper comparison
+    return _sortByAnchorValues.first;
+  }
 
   /// Unit with the relatively highest value
-  T get highest => _sort.last;
+  T get highest {
+    if (isEmpty) {
+      throw StateError('Cannot get highest element of empty iterable');
+    }
+    // Convert all to anchor unit for proper comparison
+    return _sortByAnchorValues.last;
+  }
 
   /// Sort with the relatively lowest value first
-  List<T> get lowestToHighest => _sort;
+  List<T> get lowestToHighest => _sortByAnchorValues;
 
   /// Sort with the relatively highest value first
-  List<T> get highestToLowest => _sort.reversed.toList();
-  List<T> get _sort => toList()..sort();
+  List<T> get highestToLowest => _sortByAnchorValues.reversed.toList();
+
+  /// Sort using the anchor unit for consistency
+  List<T> get _sortByAnchorValues {
+    // Convert all units to their anchor values for sorting
+    final sortedList = toList();
+    sortedList.sort((a, b) =>
+        a.convertTo(a.anchor).value.compareTo(b.convertTo(b.anchor).value));
+    return sortedList;
+  }
 
   /// Convert all element in this to [unit],
   /// value of [unit] is ignored
