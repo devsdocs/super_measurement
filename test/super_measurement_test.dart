@@ -151,9 +151,7 @@ void main() {
     test('Area equality', () {
       expect(const Area$MeterSquare(1) == const Area$CentimeterSquare(10000),
           isTrue);
-      final actual = const Area$Hectare(1) == const Area$MeterSquare(10000);
-      print(actual);
-      expect(actual, isTrue);
+      expect(const Area$Hectare(1) == const Area$MeterSquare(10000), isTrue);
     });
   });
 
