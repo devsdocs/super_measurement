@@ -159,17 +159,19 @@ sealed class Temperature extends Unit<Temperature> {
     final thisKelvin = convertTo(Temperature.kelvin).value;
     final otherKelvin = other.convertTo(Temperature.kelvin).value;
 
+    const epsilon = 1e-10;
+
     switch (operator) {
       case '==':
-        return thisKelvin == otherKelvin;
+        return (thisKelvin - otherKelvin).abs() < epsilon;
       case '>':
-        return thisKelvin > otherKelvin;
+        return thisKelvin > otherKelvin + epsilon;
       case '>=':
-        return thisKelvin >= otherKelvin;
+        return thisKelvin >= otherKelvin - epsilon;
       case '<':
-        return thisKelvin < otherKelvin;
+        return thisKelvin < otherKelvin - epsilon;
       default:
-        return thisKelvin <= otherKelvin;
+        return thisKelvin <= otherKelvin + epsilon;
     }
   }
 

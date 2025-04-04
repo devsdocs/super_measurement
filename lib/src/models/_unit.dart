@@ -36,8 +36,8 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   bool _convertAndCompare(String operator, T other) {
     // Instead of converting to anchor (which might overflow),
     // convert other to this unit's type for comparison
-    final otherConverted = other.convertTo(this._clone).value;
-    final thisValue = this.value;
+    final otherConverted = other.convertTo(this._clone).value.toIntIfTrue;
+    final thisValue = this.value.toIntIfTrue;
 
     // Add debug info
     print('Comparing: $this vs $other');

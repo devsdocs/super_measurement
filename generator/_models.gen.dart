@@ -219,12 +219,19 @@ void generateModels() {
       typeBuff.writeln(
           '    final otherKelvin = other.convertTo(Temperature.kelvin).value;');
       typeBuff.writeln();
+      typeBuff.writeln('const epsilon = 1e-10;');
+      typeBuff.writeln();
       typeBuff.writeln('    switch (operator) {');
-      typeBuff.writeln('      case "==": return thisKelvin == otherKelvin;');
-      typeBuff.writeln('      case ">": return thisKelvin > otherKelvin;');
-      typeBuff.writeln('      case ">=": return thisKelvin >= otherKelvin;');
-      typeBuff.writeln('      case "<": return thisKelvin < otherKelvin;');
-      typeBuff.writeln('      default: return thisKelvin <= otherKelvin;');
+      typeBuff.writeln(
+          '      case "==": return (thisKelvin - otherKelvin).abs() < epsilon;');
+      typeBuff.writeln(
+          '      case ">": return thisKelvin > otherKelvin + epsilon;');
+      typeBuff.writeln(
+          '      case ">=": return thisKelvin >= otherKelvin - epsilon;');
+      typeBuff.writeln(
+          '      case "<": return thisKelvin < otherKelvin - epsilon;');
+      typeBuff.writeln(
+          '      default: return thisKelvin <= otherKelvin + epsilon;');
       typeBuff.writeln('    }');
       typeBuff.writeln('  }');
       typeBuff.writeln();
