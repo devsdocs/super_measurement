@@ -1,3 +1,7 @@
+## 2.1.0
+
+- Fix numerous conversion bugs
+
 ## 2.0.3
 - Bump SDK
 
