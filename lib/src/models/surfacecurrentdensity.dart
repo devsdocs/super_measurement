@@ -29,10 +29,6 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
   factory SurfaceCurrentDensity.anchor() =>
       const SurfaceCurrentDensity$AmperePerMeterSquare();
 
-  @override
-  SurfaceCurrentDensity get anchor =>
-      const SurfaceCurrentDensity$AmperePerMeterSquare();
-
   /// Convert to [SurfaceCurrentDensity$AmperePerMeterSquare]
   SurfaceCurrentDensity get toAmperePerMeterSquare => convertTo(
         const SurfaceCurrentDensity$AmperePerMeterSquare(),
@@ -140,6 +136,10 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
 
   static const _ratio = 1.0;
 
+  @override
+  SurfaceCurrentDensity get anchor =>
+      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+
   /// Default (anchor) unit of [SurfaceCurrentDensity]
   @override
   num get ratio => _ratio;
@@ -206,6 +206,10 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
   String get displayName => 'ampere/centimeter²';
 
   static const _ratio = 10000.0;
+
+  @override
+  SurfaceCurrentDensity get anchor =>
+      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
   /// 1 [SurfaceCurrentDensity$AmperePerCentimeterSquare] = 10000.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
@@ -274,6 +278,10 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
 
   static const _ratio = 1550.0031;
 
+  @override
+  SurfaceCurrentDensity get anchor =>
+      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+
   /// 1 [SurfaceCurrentDensity$AmperePerInchSquare] ≈ 1550.0031 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -340,6 +348,10 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
   String get displayName => 'ampere/mil²';
 
   static const _ratio = 1550003100.0;
+
+  @override
+  SurfaceCurrentDensity get anchor =>
+      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
   /// 1 [SurfaceCurrentDensity$AmperePerMilSquare] = 1550003100.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
@@ -408,6 +420,10 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
 
   static const _ratio = 1973525240.990759;
 
+  @override
+  SurfaceCurrentDensity get anchor =>
+      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+
   /// 1 [SurfaceCurrentDensity$AmperePerCicularMil] ≈ 1973525240.990759 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -474,6 +490,10 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
   String get displayName => 'Abampere/centimeter²';
 
   static const _ratio = 100000.0;
+
+  @override
+  SurfaceCurrentDensity get anchor =>
+      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
   /// 1 [SurfaceCurrentDensity$AbamperePerCentimeterSquare] = 100000.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override

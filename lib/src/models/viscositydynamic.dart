@@ -40,10 +40,6 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
   factory ViscosityDynamic.anchor() =>
       const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
 
-  @override
-  ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
-
   /// Convert to [ViscosityDynamic$NewtonSecondPerMeterSquare]
   ViscosityDynamic get toNewtonSecondPerMeterSquare => convertTo(
         const ViscosityDynamic$NewtonSecondPerMeterSquare(),
@@ -326,6 +322,10 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
 
   static const _ratio = 1000.0;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$NewtonSecondPerMeterSquare] = 1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -392,6 +392,10 @@ final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
   String get displayName => 'millinewton-second/meter²';
 
   static const _ratio = 1.0;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// Default (anchor) unit of [ViscosityDynamic]
   @override
@@ -460,6 +464,10 @@ final class ViscosityDynamic$DyneSecondPerCentimeterSquare
 
   static const _ratio = 100.0;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$DyneSecondPerCentimeterSquare] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -526,6 +534,10 @@ final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
 
   static const _ratio = 100000000000000000000.0;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Exapoise] = 100000000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -590,6 +602,10 @@ final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
   String get displayName => _minorName;
 
   static const _ratio = 100000000000000000.0;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$Petapoise] = 100000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -656,6 +672,10 @@ final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
 
   static const _ratio = 100000000000000.0;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Terapoise] = 100000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -720,6 +740,10 @@ final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
   String get displayName => _minorName;
 
   static const _ratio = 100000000000.0;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$Gigapoise] = 100000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -786,6 +810,10 @@ final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
 
   static const _ratio = 100000000.0;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Megapoise] = 100000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -850,6 +878,10 @@ final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
   String get displayName => _minorName;
 
   static const _ratio = 100000.0;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$Kilopoise] = 100000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -916,6 +948,10 @@ final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
 
   static const _ratio = 10000.0;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Hectopoise] = 10000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -980,6 +1016,10 @@ final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$Dekapoise] = 1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -1046,6 +1086,10 @@ final class ViscosityDynamic$Poise extends ViscosityDynamic {
 
   static const _ratio = 100.0;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Poise] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -1110,6 +1154,10 @@ final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$Decipoise] = 10.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -1176,6 +1224,10 @@ final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
 
   static const _ratio = 1.0;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Centipoise] = 1.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -1240,6 +1292,10 @@ final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$Millipoise] ≈ 0.1 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -1306,6 +1362,10 @@ final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
 
   static const _ratio = 0.0001;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Micropoise] ≈ 0.0001 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -1370,6 +1430,10 @@ final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
   String get displayName => _minorName;
 
   static const _ratio = 1e-7;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$Nanopoise] ≈ 1e-7 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -1436,6 +1500,10 @@ final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
 
   static const _ratio = 1e-10;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Picopoise] ≈ 1e-10 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -1500,6 +1568,10 @@ final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
   String get displayName => _minorName;
 
   static const _ratio = 1e-13;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$Femtopoise] ≈ 1e-13 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -1566,6 +1638,10 @@ final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
 
   static const _ratio = 1e-16;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$Attopoise] ≈ 1e-16 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -1631,6 +1707,10 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
   String get displayName => 'pound force-second/inch²';
 
   static const _ratio = 6894757.0;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$PoundForceSecondPerInchSquare] = 6894757.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -1699,6 +1779,10 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
 
   static const _ratio = 47880.25898022151;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$PoundForceSecondPerFootSquare] ≈ 47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -1766,6 +1850,10 @@ final class ViscosityDynamic$PoundalSecondPerFootSquare
 
   static const _ratio = 1488.1639435684617;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$PoundalSecondPerFootSquare] ≈ 1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -1831,6 +1919,10 @@ final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
   String get displayName => 'gram/centimeter-second';
 
   static const _ratio = 100.0;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$GramPerCentimeterSecond] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
@@ -1898,6 +1990,10 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
 
   static const _ratio = 47880.25898022151;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$SlugPerFootSecond] ≈ 47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -1964,6 +2060,10 @@ final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
 
   static const _ratio = 1488.1639435684617;
 
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+
   /// 1 [ViscosityDynamic$PoundPerFootSecond] ≈ 1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -2029,6 +2129,10 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
   String get displayName => 'pound/foot-hour';
 
   static const _ratio = 0.4133789;
+
+  @override
+  ViscosityDynamic get anchor =>
+      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// 1 [ViscosityDynamic$PoundPerFootHour] ≈ 0.4133789 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override

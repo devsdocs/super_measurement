@@ -23,9 +23,6 @@ sealed class Temperature extends Unit<Temperature> {
 
   factory Temperature.anchor() => const Temperature$Kelvin();
 
-  @override
-  Temperature get anchor => const Temperature$Kelvin();
-
   /// Convert to [Temperature$Kelvin]
   Temperature get toKelvin => convertTo(
         const Temperature$Kelvin(),
@@ -92,7 +89,7 @@ sealed class Temperature extends Unit<Temperature> {
 
     // Handle specific temperature conversion formulas
     switch (runtimeType) {
-      case Temperature$Kelvin :
+      case Temperature$Kelvin:
         // From Kelvin to others
         if (to is Temperature$Celsius) return to.withValue(value - 273.15);
         if (to is Temperature$Fahrenheit) {
@@ -102,7 +99,8 @@ sealed class Temperature extends Unit<Temperature> {
         if (to is Temperature$Reaumur) {
           return to.withValue((value - 273.15) * 4 / 5);
         }
-      case Temperature$Celsius :
+
+      case Temperature$Celsius:
         // From Celsius to others
         if (to is Temperature$Kelvin) return to.withValue(value + 273.15);
         if (to is Temperature$Fahrenheit) {
@@ -113,7 +111,7 @@ sealed class Temperature extends Unit<Temperature> {
         }
         if (to is Temperature$Reaumur) return to.withValue(value * 4 / 5);
 
-      case Temperature$Fahrenheit :
+      case Temperature$Fahrenheit:
         // From Fahrenheit to others
         if (to is Temperature$Kelvin) {
           return to.withValue((value + 459.67) * 5 / 9);
@@ -126,7 +124,7 @@ sealed class Temperature extends Unit<Temperature> {
           return to.withValue((value - 32) * 4 / 9);
         }
 
-      case Temperature$Rankine :
+      case Temperature$Rankine:
         // From Rankine to others
         if (to is Temperature$Kelvin) return to.withValue(value * 5 / 9);
         if (to is Temperature$Celsius) {
@@ -137,7 +135,7 @@ sealed class Temperature extends Unit<Temperature> {
           return to.withValue((value - 491.67) * 4 / 9);
         }
 
-      case Temperature$Reaumur :
+      case Temperature$Reaumur:
         // From Réaumur to others
         if (to is Temperature$Kelvin) {
           return to.withValue((value * 5 / 4) + 273.15);
@@ -217,6 +215,9 @@ final class Temperature$Kelvin extends Temperature {
 
   static const _ratio = 1.8;
 
+  @override
+  Temperature get anchor => const Temperature$Kelvin(_ratio);
+
   /// Default (anchor) unit of [Temperature]
   @override
   num get ratio => _ratio;
@@ -281,6 +282,9 @@ final class Temperature$Celsius extends Temperature {
   String get displayName => 'Celsius';
 
   static const _ratio = 1.8;
+
+  @override
+  Temperature get anchor => const Temperature$Kelvin(_ratio);
 
   /// 1 [Temperature$Celsius] ≈ 1.8 [Temperature$Kelvin]
   ///
@@ -349,6 +353,9 @@ final class Temperature$Fahrenheit extends Temperature {
 
   static const _ratio = 1.0;
 
+  @override
+  Temperature get anchor => const Temperature$Kelvin(_ratio);
+
   /// 1 [Temperature$Fahrenheit] = 1.0 [Temperature$Kelvin]
   ///
   /// See [valueShift]
@@ -416,6 +423,9 @@ final class Temperature$Rankine extends Temperature {
 
   static const _ratio = 1.0;
 
+  @override
+  Temperature get anchor => const Temperature$Kelvin(_ratio);
+
   /// 1 [Temperature$Rankine] = 1.0 [Temperature$Kelvin]
   @override
   num get ratio => _ratio;
@@ -480,6 +490,9 @@ final class Temperature$Reaumur extends Temperature {
   String get displayName => 'Réaumur';
 
   static const _ratio = 2.25;
+
+  @override
+  Temperature get anchor => const Temperature$Kelvin(_ratio);
 
   /// 1 [Temperature$Reaumur] ≈ 2.25 [Temperature$Kelvin]
   ///

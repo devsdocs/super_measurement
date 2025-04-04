@@ -40,9 +40,6 @@ sealed class Energy extends Unit<Energy> {
 
   factory Energy.anchor() => const Energy$ElectronVolt();
 
-  @override
-  Energy get anchor => const Energy$ElectronVolt();
-
   /// Convert to [Energy$Gigajoule]
   Energy get toGigajoule => convertTo(
         const Energy$Gigajoule(),
@@ -494,6 +491,9 @@ final class Energy$Gigajoule extends Energy {
 
   static const _ratio = 6.241807627e+27;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$Gigajoule] = 6.241807627e+27 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -558,6 +558,9 @@ final class Energy$Megajoule extends Energy {
   String get displayName => _minorName;
 
   static const _ratio = 6.241807627e+24;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$Megajoule] = 6.241807627e+24 [Energy$ElectronVolt]
   @override
@@ -624,6 +627,9 @@ final class Energy$Kilojoule extends Energy {
 
   static const _ratio = 6.241807627e+21;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$Kilojoule] = 6.241807627e+21 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -688,6 +694,9 @@ final class Energy$Joule extends Energy {
   String get displayName => _minorName;
 
   static const _ratio = 6241807627000000000.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$Joule] = 6241807627000000000.0 [Energy$ElectronVolt]
   @override
@@ -754,6 +763,9 @@ final class Energy$Millijoule extends Energy {
 
   static const _ratio = 6241807627000000.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$Millijoule] = 6241807627000000.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -818,6 +830,9 @@ final class Energy$Microjoule extends Energy {
   String get displayName => _minorName;
 
   static const _ratio = 6241807627000.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$Microjoule] = 6241807627000.0 [Energy$ElectronVolt]
   @override
@@ -884,6 +899,9 @@ final class Energy$Nanojoule extends Energy {
 
   static const _ratio = 6241807627.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$Nanojoule] = 6241807627.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -948,6 +966,9 @@ final class Energy$Attojoule extends Energy {
   String get displayName => _minorName;
 
   static const _ratio = 6.241807627;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$Attojoule] ≈ 6.241807627 [Energy$ElectronVolt]
   @override
@@ -1014,6 +1035,9 @@ final class Energy$Erg extends Energy {
 
   static const _ratio = 624180762700.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$Erg] = 624180762700.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1078,6 +1102,9 @@ final class Energy$GigawattHour extends Energy {
   String get displayName => 'gigawatt-hour';
 
   static const _ratio = 2.24705074572e+31;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$GigawattHour] = 2.24705074572e+31 [Energy$ElectronVolt]
   @override
@@ -1144,6 +1171,9 @@ final class Energy$MegawattHour extends Energy {
 
   static const _ratio = 2.24705074572e+28;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$MegawattHour] = 2.24705074572e+28 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1208,6 +1238,9 @@ final class Energy$KilowattHour extends Energy {
   String get displayName => 'kilowatt-hour';
 
   static const _ratio = 2.24705074572e+25;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$KilowattHour] = 2.24705074572e+25 [Energy$ElectronVolt]
   @override
@@ -1274,6 +1307,9 @@ final class Energy$KilowattSecond extends Energy {
 
   static const _ratio = 6.241807627e+21;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$KilowattSecond] = 6.241807627e+21 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1338,6 +1374,9 @@ final class Energy$WattHour extends Energy {
   String get displayName => 'watt-hour';
 
   static const _ratio = 2.24705074572e+22;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$WattHour] = 2.24705074572e+22 [Energy$ElectronVolt]
   @override
@@ -1404,6 +1443,9 @@ final class Energy$WattSecond extends Energy {
 
   static const _ratio = 6241807627000000000.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$WattSecond] = 6241807627000000000.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1469,6 +1511,9 @@ final class Energy$HorsepowerHour extends Energy {
 
   static const _ratio = 1.6756254520162804e+25;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$HorsepowerHour] = 1.6756254520162804e+25 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1533,6 +1578,9 @@ final class Energy$KilocalorieInternational extends Energy {
   String get displayName => 'kilocalorie (international)';
 
   static const _ratio = 2.61332001727236e+22;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$KilocalorieInternational] = 2.61332001727236e+22 [Energy$ElectronVolt]
   @override
@@ -1600,6 +1648,9 @@ final class Energy$KilocalorieThermochemical extends Energy {
 
   static const _ratio = 2.6115723111368e+22;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$KilocalorieThermochemical] = 2.6115723111368e+22 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1666,6 +1717,9 @@ final class Energy$CalorieInternational extends Energy {
 
   static const _ratio = 26133200172723600000.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$CalorieInternational] = 26133200172723600000.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1730,6 +1784,9 @@ final class Energy$CalorieThermochemical extends Energy {
   String get displayName => 'calorie (thermochemical)';
 
   static const _ratio = 26115723111368000000.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$CalorieThermochemical] = 26115723111368000000.0 [Energy$ElectronVolt]
   @override
@@ -1797,6 +1854,9 @@ final class Energy$CalorieNutritional extends Energy {
 
   static const _ratio = 2.61332001727236e+22;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$CalorieNutritional] = 2.61332001727236e+22 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1861,6 +1921,9 @@ final class Energy$BTUInternational extends Energy {
   String get displayName => 'BTU (international)';
 
   static const _ratio = 6.58545566779451e+21;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$BTUInternational] = 6.58545566779451e+21 [Energy$ElectronVolt]
   @override
@@ -1927,6 +1990,9 @@ final class Energy$BTUThermochemical extends Energy {
 
   static const _ratio = 6.581049871367892e+21;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$BTUThermochemical] = 6.581049871367892e+21 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -1991,6 +2057,9 @@ final class Energy$MBTU extends Energy {
   String get displayName => 'MBTU';
 
   static const _ratio = 6.585455667794505e+24;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$MBTU] = 6.585455667794505e+24 [Energy$ElectronVolt]
   @override
@@ -2057,6 +2126,9 @@ final class Energy$TonHourRefrigeration extends Energy {
 
   static const _ratio = 7.902546801353412e+25;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$TonHourRefrigeration] = 7.902546801353412e+25 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -2121,6 +2193,9 @@ final class Energy$Gigaton extends Energy {
   String get displayName => _minorName;
 
   static const _ratio = 2.6115723111368e+37;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$Gigaton] = 2.6115723111368e+37 [Energy$ElectronVolt]
   @override
@@ -2187,6 +2262,9 @@ final class Energy$Megaton extends Energy {
 
   static const _ratio = 2.6115723111368e+34;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$Megaton] = 2.6115723111368e+34 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -2251,6 +2329,9 @@ final class Energy$Kiloton extends Energy {
   String get displayName => _minorName;
 
   static const _ratio = 2.6115723111368e+31;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$Kiloton] = 2.6115723111368e+31 [Energy$ElectronVolt]
   @override
@@ -2317,6 +2398,9 @@ final class Energy$TonExplosives extends Energy {
 
   static const _ratio = 2.6115723111368e+28;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$TonExplosives] = 2.6115723111368e+28 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -2381,6 +2465,9 @@ final class Energy$NewtonMeter extends Energy {
   String get displayName => 'newton-meter';
 
   static const _ratio = 6241807627000000000.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$NewtonMeter] = 6241807627000000000.0 [Energy$ElectronVolt]
   @override
@@ -2447,6 +2534,9 @@ final class Energy$DyneCentimeter extends Energy {
 
   static const _ratio = 624180762700.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$DyneCentimeter] = 624180762700.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -2511,6 +2601,9 @@ final class Energy$GramForceMeter extends Energy {
   String get displayName => 'gram force-meter';
 
   static const _ratio = 61211222763432776.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$GramForceMeter] = 61211222763432776.0 [Energy$ElectronVolt]
   @override
@@ -2577,6 +2670,9 @@ final class Energy$GramForceCentimeter extends Energy {
 
   static const _ratio = 612112227634327.8;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$GramForceCentimeter] ≈ 612112227634327.8 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -2642,6 +2738,9 @@ final class Energy$KilogramForceMeter extends Energy {
 
   static const _ratio = 61211222763432770000.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$KilogramForceMeter] = 61211222763432770000.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -2706,6 +2805,9 @@ final class Energy$KilogramForceCentimeter extends Energy {
   String get displayName => 'kilogram force-centimeter';
 
   static const _ratio = 612112227634327700.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$KilogramForceCentimeter] = 612112227634327700.0 [Energy$ElectronVolt]
   @override
@@ -2773,6 +2875,9 @@ final class Energy$MeterKilopond extends Energy {
 
   static const _ratio = 61211222763432770000.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$MeterKilopond] = 61211222763432770000.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -2837,6 +2942,9 @@ final class Energy$PoundForceFoot extends Energy {
   String get displayName => 'pound force-foot';
 
   static const _ratio = 8462754810457570000.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$PoundForceFoot] = 8462754810457570000.0 [Energy$ElectronVolt]
   @override
@@ -2903,6 +3011,9 @@ final class Energy$PoundForceInch extends Energy {
 
   static const _ratio = 705229567538131000.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$PoundForceInch] = 705229567538131000.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -2967,6 +3078,9 @@ final class Energy$OunceForceInch extends Energy {
   String get displayName => 'ounce force-inch';
 
   static const _ratio = 44076847971133180.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$OunceForceInch] = 44076847971133180.0 [Energy$ElectronVolt]
   @override
@@ -3033,6 +3147,9 @@ final class Energy$FootPound extends Energy {
 
   static const _ratio = 8462754810457570000.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$FootPound] = 8462754810457570000.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -3097,6 +3214,9 @@ final class Energy$InchPound extends Energy {
   String get displayName => 'inch-pound';
 
   static const _ratio = 705229567538131000.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$InchPound] = 705229567538131000.0 [Energy$ElectronVolt]
   @override
@@ -3163,6 +3283,9 @@ final class Energy$InchOunce extends Energy {
 
   static const _ratio = 44076847971133180.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$InchOunce] = 44076847971133180.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -3227,6 +3350,9 @@ final class Energy$PoundalFoot extends Energy {
   String get displayName => 'poundal-foot';
 
   static const _ratio = 263030460000133860.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$PoundalFoot] = 263030460000133860.0 [Energy$ElectronVolt]
   @override
@@ -3293,6 +3419,9 @@ final class Energy$MegaelectronVolt extends Energy {
 
   static const _ratio = 1000000.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$MegaelectronVolt] = 1000000.0 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -3357,6 +3486,9 @@ final class Energy$KiloelectronVolt extends Energy {
   String get displayName => 'kiloelectron volt';
 
   static const _ratio = 1000.0;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$KiloelectronVolt] = 1000.0 [Energy$ElectronVolt]
   @override
@@ -3423,6 +3555,9 @@ final class Energy$ElectronVolt extends Energy {
 
   static const _ratio = 1.0;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// Default (anchor) unit of [Energy]
   @override
   num get ratio => _ratio;
@@ -3487,6 +3622,9 @@ final class Energy$Therm extends Energy {
   String get displayName => _minorName;
 
   static const _ratio = 6.585456587712112e+26;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$Therm] = 6.585456587712112e+26 [Energy$ElectronVolt]
   @override
@@ -3553,6 +3691,9 @@ final class Energy$ThermEC extends Energy {
 
   static const _ratio = 6.585456587712e+26;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$ThermEC] = 6.585456587712e+26 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -3618,6 +3759,9 @@ final class Energy$ThermUS extends Energy {
 
   static const _ratio = 6.58388365219e+26;
 
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
+
   /// 1 [Energy$ThermUS] = 6.58388365219e+26 [Energy$ElectronVolt]
   @override
   num get ratio => _ratio;
@@ -3682,6 +3826,9 @@ final class Energy$Hartree extends Energy {
   String get displayName => _minorName;
 
   static const _ratio = 27.21268547318208;
+
+  @override
+  Energy get anchor => const Energy$ElectronVolt(_ratio);
 
   /// 1 [Energy$Hartree] ≈ 27.21268547318208 [Energy$ElectronVolt]
   @override

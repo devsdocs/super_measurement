@@ -35,10 +35,6 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
   factory RadiationRadioactivity.anchor() =>
       const RadiationRadioactivity$Millibecquerel();
 
-  @override
-  RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel();
-
   /// Convert to [RadiationRadioactivity$Terabecquerel]
   RadiationRadioactivity get toTerabecquerel => convertTo(
         const RadiationRadioactivity$Terabecquerel(),
@@ -215,6 +211,10 @@ final class RadiationRadioactivity$Terabecquerel
 
   static const _ratio = 1000000000000000.0;
 
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
+
   /// 1 [RadiationRadioactivity$Terabecquerel] = 1000000000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
@@ -281,6 +281,10 @@ final class RadiationRadioactivity$Gigabecquerel
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000.0;
+
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
 
   /// 1 [RadiationRadioactivity$Gigabecquerel] = 1000000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
@@ -349,6 +353,10 @@ final class RadiationRadioactivity$Megabecquerel
 
   static const _ratio = 1000000000.0;
 
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
+
   /// 1 [RadiationRadioactivity$Megabecquerel] = 1000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
@@ -416,6 +424,10 @@ final class RadiationRadioactivity$Kilobecquerel
 
   static const _ratio = 1000000.0;
 
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
+
   /// 1 [RadiationRadioactivity$Kilobecquerel] = 1000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
@@ -481,6 +493,10 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
 
   /// 1 [RadiationRadioactivity$Becquerel] = 1000.0 [RadiationRadioactivity$Millibecquerel]
   @override
@@ -549,6 +565,10 @@ final class RadiationRadioactivity$Millibecquerel
 
   static const _ratio = 1.0;
 
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
+
   /// Default (anchor) unit of [RadiationRadioactivity]
   @override
   num get ratio => _ratio;
@@ -614,6 +634,10 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
   String get displayName => _minorName;
 
   static const _ratio = 37000000000000000.0;
+
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
 
   /// 1 [RadiationRadioactivity$Kilocurie] = 37000000000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
@@ -681,6 +705,10 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
 
   static const _ratio = 37000000000000.0;
 
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
+
   /// 1 [RadiationRadioactivity$Curie] = 37000000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
@@ -746,6 +774,10 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
   String get displayName => _minorName;
 
   static const _ratio = 37000000000.0;
+
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
 
   /// 1 [RadiationRadioactivity$Millicurie] = 37000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
@@ -813,6 +845,10 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
 
   static const _ratio = 37000000.0;
 
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
+
   /// 1 [RadiationRadioactivity$Microcurie] = 37000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
@@ -878,6 +914,10 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
   String get displayName => _minorName;
 
   static const _ratio = 37000.0;
+
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
 
   /// 1 [RadiationRadioactivity$Nanocurie] = 37000.0 [RadiationRadioactivity$Millibecquerel]
   @override
@@ -945,6 +985,10 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
 
   static const _ratio = 37.0;
 
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
+
   /// 1 [RadiationRadioactivity$Picocurie] = 37.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
@@ -1010,6 +1054,10 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
+
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
 
   /// 1 [RadiationRadioactivity$Rutherford] = 1000000000.0 [RadiationRadioactivity$Millibecquerel]
   @override
@@ -1078,6 +1126,10 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
 
   static const _ratio = 1000.0;
 
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
+
   /// 1 [RadiationRadioactivity$DisintegrationsPerSecond] = 1000.0 [RadiationRadioactivity$Millibecquerel]
   @override
   num get ratio => _ratio;
@@ -1144,6 +1196,10 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
   String get displayName => 'disintegrations/minute';
 
   static const _ratio = 16.666666666666668;
+
+  @override
+  RadiationRadioactivity get anchor =>
+      const RadiationRadioactivity$Millibecquerel(_ratio);
 
   /// 1 [RadiationRadioactivity$DisintegrationsPerMinute] ≈ 16.666666666666668 [RadiationRadioactivity$Millibecquerel]
   @override

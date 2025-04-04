@@ -38,9 +38,6 @@ sealed class Density extends Unit<Density> {
 
   factory Density.anchor() => const Density$NanogramPerLiter();
 
-  @override
-  Density get anchor => const Density$NanogramPerLiter();
-
   /// Convert to [Density$KilogramPerMeterCubic]
   Density get toKilogramPerMeterCubic => convertTo(
         const Density$KilogramPerMeterCubic(),
@@ -359,6 +356,9 @@ final class Density$KilogramPerMeterCubic extends Density {
 
   static const _ratio = 1000000000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$KilogramPerMeterCubic] = 1000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -424,6 +424,9 @@ final class Density$KilogramPerCentimeterCubic extends Density {
   String get displayName => 'kilogram/centimeter³';
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$KilogramPerCentimeterCubic] = 1000000000000000.0 [Density$NanogramPerLiter]
   @override
@@ -491,6 +494,9 @@ final class Density$GramPerMeterCubic extends Density {
 
   static const _ratio = 1000000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$GramPerMeterCubic] = 1000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -555,6 +561,9 @@ final class Density$GramPerCentimeterCubic extends Density {
   String get displayName => 'gram/centimeter³';
 
   static const _ratio = 1000000000000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$GramPerCentimeterCubic] = 1000000000000.0 [Density$NanogramPerLiter]
   @override
@@ -622,6 +631,9 @@ final class Density$GramPerMillimeterCubic extends Density {
 
   static const _ratio = 1000000000000000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$GramPerMillimeterCubic] = 1000000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -687,6 +699,9 @@ final class Density$MilligramPerMeterCubic extends Density {
   String get displayName => 'milligram/meter³';
 
   static const _ratio = 1000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$MilligramPerMeterCubic] = 1000.0 [Density$NanogramPerLiter]
   @override
@@ -754,6 +769,9 @@ final class Density$MilligramPerCentimeterCubic extends Density {
 
   static const _ratio = 1000000000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$MilligramPerCentimeterCubic] = 1000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -819,6 +837,9 @@ final class Density$MilligramPerMillimeterCubic extends Density {
   String get displayName => 'milligram/millimeter³';
 
   static const _ratio = 1000000000000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$MilligramPerMillimeterCubic] = 1000000000000.0 [Density$NanogramPerLiter]
   @override
@@ -886,6 +907,9 @@ final class Density$ExagramPerLiter extends Density {
 
   static const _ratio = 1e+27;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$ExagramPerLiter] = 1e+27 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -950,6 +974,9 @@ final class Density$PetagramPerLiter extends Density {
   String get displayName => 'petagram/liter';
 
   static const _ratio = 1e+24;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$PetagramPerLiter] = 1e+24 [Density$NanogramPerLiter]
   @override
@@ -1016,6 +1043,9 @@ final class Density$TeragramPerLiter extends Density {
 
   static const _ratio = 1e+21;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$TeragramPerLiter] = 1e+21 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -1080,6 +1110,9 @@ final class Density$GigagramPerLiter extends Density {
   String get displayName => 'gigagram/liter';
 
   static const _ratio = 1000000000000000000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$GigagramPerLiter] = 1000000000000000000.0 [Density$NanogramPerLiter]
   @override
@@ -1146,6 +1179,9 @@ final class Density$MegagramPerLiter extends Density {
 
   static const _ratio = 1000000000000000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$MegagramPerLiter] = 1000000000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -1210,6 +1246,9 @@ final class Density$KilogramPerLiter extends Density {
   String get displayName => 'kilogram/liter';
 
   static const _ratio = 1000000000000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$KilogramPerLiter] = 1000000000000.0 [Density$NanogramPerLiter]
   @override
@@ -1276,6 +1315,9 @@ final class Density$HectogramPerLiter extends Density {
 
   static const _ratio = 100000000000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$HectogramPerLiter] = 100000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -1340,6 +1382,9 @@ final class Density$DekagramPerLiter extends Density {
   String get displayName => 'dekagram/liter';
 
   static const _ratio = 10000000000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$DekagramPerLiter] = 10000000000.0 [Density$NanogramPerLiter]
   @override
@@ -1406,6 +1451,9 @@ final class Density$GramPerLiter extends Density {
 
   static const _ratio = 1000000000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$GramPerLiter] = 1000000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -1470,6 +1518,9 @@ final class Density$DecigramPerLiter extends Density {
   String get displayName => 'decigram/liter';
 
   static const _ratio = 100000000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$DecigramPerLiter] = 100000000.0 [Density$NanogramPerLiter]
   @override
@@ -1536,6 +1587,9 @@ final class Density$CentigramPerLiter extends Density {
 
   static const _ratio = 10000000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$CentigramPerLiter] = 10000000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -1600,6 +1654,9 @@ final class Density$MilligramPerLiter extends Density {
   String get displayName => 'milligram/liter';
 
   static const _ratio = 1000000.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$MilligramPerLiter] = 1000000.0 [Density$NanogramPerLiter]
   @override
@@ -1666,6 +1723,9 @@ final class Density$MicrogramPerLiter extends Density {
 
   static const _ratio = 1000.0;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$MicrogramPerLiter] = 1000.0 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -1730,6 +1790,9 @@ final class Density$NanogramPerLiter extends Density {
   String get displayName => 'nanogram/liter';
 
   static const _ratio = 1.0;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// Default (anchor) unit of [Density]
   @override
@@ -1796,6 +1859,9 @@ final class Density$PicogramPerLiter extends Density {
 
   static const _ratio = 0.001;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$PicogramPerLiter] ≈ 0.001 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -1860,6 +1926,9 @@ final class Density$FemtogramPerLiter extends Density {
   String get displayName => 'femtogram/liter';
 
   static const _ratio = 0.000001;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$FemtogramPerLiter] ≈ 0.000001 [Density$NanogramPerLiter]
   @override
@@ -1926,6 +1995,9 @@ final class Density$AttogramPerLiter extends Density {
 
   static const _ratio = 1e-9;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$AttogramPerLiter] ≈ 1e-9 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -1990,6 +2062,9 @@ final class Density$PoundPerInchCubic extends Density {
   String get displayName => 'pound/inch³';
 
   static const _ratio = 27679904710190.62;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$PoundPerInchCubic] ≈ 27679904710190.62 [Density$NanogramPerLiter]
   @override
@@ -2056,6 +2131,9 @@ final class Density$PoundPerFootCubic extends Density {
 
   static const _ratio = 16018463373.952908;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$PoundPerFootCubic] ≈ 16018463373.952908 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -2120,6 +2198,9 @@ final class Density$PoundPerGallon extends Density {
   String get displayName => 'pound/gallon';
 
   static const _ratio = 119826427316.7227;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$PoundPerGallon] ≈ 119826427316.7227 [Density$NanogramPerLiter]
   @override
@@ -2186,6 +2267,9 @@ final class Density$OuncePerInchCubic extends Density {
 
   static const _ratio = 1729994044386.9138;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$OuncePerInchCubic] ≈ 1729994044386.9138 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -2250,6 +2334,9 @@ final class Density$OuncePerFootCubic extends Density {
   String get displayName => 'ounce/foot³';
 
   static const _ratio = 1001153960.8720567;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$OuncePerFootCubic] ≈ 1001153960.8720567 [Density$NanogramPerLiter]
   @override
@@ -2316,6 +2403,9 @@ final class Density$OuncePerGallon extends Density {
 
   static const _ratio = 7489151707.295169;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$OuncePerGallon] ≈ 7489151707.295169 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -2381,6 +2471,9 @@ final class Density$TonPerYardCubic extends Density {
 
   static const _ratio = 1186552842515.03;
 
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
+
   /// 1 [Density$TonPerYardCubic] ≈ 1186552842515.03 [Density$NanogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -2445,6 +2538,9 @@ final class Density$PsiPer1000Feet extends Density {
   String get displayName => 'psi/1000 feet';
 
   static const _ratio = 2306658725.8492184;
+
+  @override
+  Density get anchor => const Density$NanogramPerLiter(_ratio);
 
   /// 1 [Density$PsiPer1000Feet] ≈ 2306658725.8492184 [Density$NanogramPerLiter]
   @override

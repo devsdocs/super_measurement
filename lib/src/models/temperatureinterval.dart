@@ -25,9 +25,6 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
   factory TemperatureInterval.anchor() =>
       const TemperatureInterval$Fahrenheit();
 
-  @override
-  TemperatureInterval get anchor => const TemperatureInterval$Fahrenheit();
-
   /// Convert to [TemperatureInterval$Kelvin]
   TemperatureInterval get toKelvin => convertTo(
         const TemperatureInterval$Kelvin(),
@@ -119,6 +116,10 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
 
   static const _ratio = 1.8;
 
+  @override
+  TemperatureInterval get anchor =>
+      const TemperatureInterval$Fahrenheit(_ratio);
+
   /// 1 [TemperatureInterval$Kelvin] ≈ 1.8 [TemperatureInterval$Fahrenheit]
   @override
   num get ratio => _ratio;
@@ -184,6 +185,10 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
 
   static const _ratio = 1.8;
 
+  @override
+  TemperatureInterval get anchor =>
+      const TemperatureInterval$Fahrenheit(_ratio);
+
   /// 1 [TemperatureInterval$Celsius] ≈ 1.8 [TemperatureInterval$Fahrenheit]
   @override
   num get ratio => _ratio;
@@ -248,6 +253,10 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
   String get displayName => 'Fahrenheit';
 
   static const _ratio = 1.0;
+
+  @override
+  TemperatureInterval get anchor =>
+      const TemperatureInterval$Fahrenheit(_ratio);
 
   /// Default (anchor) unit of [TemperatureInterval]
   @override
@@ -315,6 +324,10 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
 
   static const _ratio = 1.0;
 
+  @override
+  TemperatureInterval get anchor =>
+      const TemperatureInterval$Fahrenheit(_ratio);
+
   /// 1 [TemperatureInterval$Rankine] = 1.0 [TemperatureInterval$Fahrenheit]
   @override
   num get ratio => _ratio;
@@ -379,6 +392,10 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
   String get displayName => 'Réaumur';
 
   static const _ratio = 2.25;
+
+  @override
+  TemperatureInterval get anchor =>
+      const TemperatureInterval$Fahrenheit(_ratio);
 
   /// 1 [TemperatureInterval$Reaumur] ≈ 2.25 [TemperatureInterval$Fahrenheit]
   @override

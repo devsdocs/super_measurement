@@ -32,9 +32,6 @@ sealed class Velocity extends Unit<Velocity> {
 
   factory Velocity.anchor() => const Velocity$CentimeterPerHour();
 
-  @override
-  Velocity get anchor => const Velocity$CentimeterPerHour();
-
   /// Convert to [Velocity$KilometerPerHour]
   Velocity get toKilometerPerHour => convertTo(
         const Velocity$KilometerPerHour(),
@@ -262,6 +259,9 @@ final class Velocity$KilometerPerHour extends Velocity {
 
   static const _ratio = 100000.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$KilometerPerHour] = 100000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -326,6 +326,9 @@ final class Velocity$KilometerPerMinute extends Velocity {
   String get displayName => 'kilometer/minute';
 
   static const _ratio = 6000000.0;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$KilometerPerMinute] = 6000000.0 [Velocity$CentimeterPerHour]
   @override
@@ -392,6 +395,9 @@ final class Velocity$KilometerPerSecond extends Velocity {
 
   static const _ratio = 360000000.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$KilometerPerSecond] = 360000000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -456,6 +462,9 @@ final class Velocity$MeterPerHour extends Velocity {
   String get displayName => 'meter/hour';
 
   static const _ratio = 100.0;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$MeterPerHour] = 100.0 [Velocity$CentimeterPerHour]
   @override
@@ -522,6 +531,9 @@ final class Velocity$MeterPerMinute extends Velocity {
 
   static const _ratio = 6000.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$MeterPerMinute] = 6000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -586,6 +598,9 @@ final class Velocity$MeterPerSecond extends Velocity {
   String get displayName => 'meter/second';
 
   static const _ratio = 360000.0;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$MeterPerSecond] = 360000.0 [Velocity$CentimeterPerHour]
   @override
@@ -652,6 +667,9 @@ final class Velocity$CentimeterPerHour extends Velocity {
 
   static const _ratio = 1.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// Default (anchor) unit of [Velocity]
   @override
   num get ratio => _ratio;
@@ -716,6 +734,9 @@ final class Velocity$CentimeterPerMinute extends Velocity {
   String get displayName => 'centimeter/minute';
 
   static const _ratio = 60.0;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$CentimeterPerMinute] = 60.0 [Velocity$CentimeterPerHour]
   @override
@@ -783,6 +804,9 @@ final class Velocity$CentimeterPerSecond extends Velocity {
 
   static const _ratio = 3600.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$CentimeterPerSecond] = 3600.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -849,6 +873,9 @@ final class Velocity$MilePerHour extends Velocity {
 
   static const _ratio = 160934.4;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$MilePerHour] ≈ 160934.4 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -913,6 +940,9 @@ final class Velocity$MilePerMinute extends Velocity {
   String get displayName => 'mile/minute';
 
   static const _ratio = 9656064.0;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$MilePerMinute] = 9656064.0 [Velocity$CentimeterPerHour]
   @override
@@ -979,6 +1009,9 @@ final class Velocity$MilePerSecond extends Velocity {
 
   static const _ratio = 579363840.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$MilePerSecond] = 579363840.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -1043,6 +1076,9 @@ final class Velocity$YardPerHour extends Velocity {
   String get displayName => 'yard/hour';
 
   static const _ratio = 91.44;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$YardPerHour] ≈ 91.44 [Velocity$CentimeterPerHour]
   @override
@@ -1109,6 +1145,9 @@ final class Velocity$YardPerMinute extends Velocity {
 
   static const _ratio = 5486.4;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$YardPerMinute] ≈ 5486.4 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -1173,6 +1212,9 @@ final class Velocity$YardPerSecond extends Velocity {
   String get displayName => 'yard/second';
 
   static const _ratio = 329184.0;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$YardPerSecond] = 329184.0 [Velocity$CentimeterPerHour]
   @override
@@ -1239,6 +1281,9 @@ final class Velocity$FootPerHour extends Velocity {
 
   static const _ratio = 30.48;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$FootPerHour] ≈ 30.48 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -1303,6 +1348,9 @@ final class Velocity$FootPerMinute extends Velocity {
   String get displayName => 'foot/minute';
 
   static const _ratio = 1828.8;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$FootPerMinute] ≈ 1828.8 [Velocity$CentimeterPerHour]
   @override
@@ -1369,6 +1417,9 @@ final class Velocity$FootPerSecond extends Velocity {
 
   static const _ratio = 109728.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$FootPerSecond] = 109728.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -1433,6 +1484,9 @@ final class Velocity$MachSIStandard extends Velocity {
   String get displayName => 'mach (SI standard)';
 
   static const _ratio = 106216704.00010112;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$MachSIStandard] ≈ 106216704.00010112 [Velocity$CentimeterPerHour]
   @override
@@ -1499,6 +1553,9 @@ final class Velocity$MachAtSeaLevel extends Velocity {
 
   static const _ratio = 119325600.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$MachAtSeaLevel] = 119325600.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -1564,6 +1621,9 @@ final class Velocity$Light extends Velocity {
 
   static const _ratio = 107925284880000.0;
 
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+
   /// 1 [Velocity$Light] = 107925284880000.0 [Velocity$CentimeterPerHour]
   @override
   num get ratio => _ratio;
@@ -1628,6 +1688,9 @@ final class Velocity$Knot extends Velocity {
   String get displayName => _minorName;
 
   static const _ratio = 185200.0;
+
+  @override
+  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
 
   /// 1 [Velocity$Knot] = 185200.0 [Velocity$CentimeterPerHour]
   @override

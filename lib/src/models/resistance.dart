@@ -23,9 +23,6 @@ sealed class Resistance extends Unit<Resistance> {
 
   factory Resistance.anchor() => const Resistance$Ohm();
 
-  @override
-  Resistance get anchor => const Resistance$Ohm();
-
   /// Convert to [Resistance$Megohm]
   Resistance get toMegohm => convertTo(
         const Resistance$Megohm(),
@@ -125,6 +122,9 @@ final class Resistance$Megohm extends Resistance {
 
   static const _ratio = 1000000.0;
 
+  @override
+  Resistance get anchor => const Resistance$Ohm(_ratio);
+
   /// 1 [Resistance$Megohm] = 1000000.0 [Resistance$Ohm]
   @override
   num get ratio => _ratio;
@@ -189,6 +189,9 @@ final class Resistance$Ohm extends Resistance {
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
+
+  @override
+  Resistance get anchor => const Resistance$Ohm(_ratio);
 
   /// Default (anchor) unit of [Resistance]
   @override
@@ -255,6 +258,9 @@ final class Resistance$OhmInternational extends Resistance {
 
   static const _ratio = 1.0004949999036774;
 
+  @override
+  Resistance get anchor => const Resistance$Ohm(_ratio);
+
   /// 1 [Resistance$OhmInternational] ≈ 1.0004949999036774 [Resistance$Ohm]
   @override
   num get ratio => _ratio;
@@ -319,6 +325,9 @@ final class Resistance$Microhm extends Resistance {
   String get displayName => _minorName;
 
   static const _ratio = 0.000001;
+
+  @override
+  Resistance get anchor => const Resistance$Ohm(_ratio);
 
   /// 1 [Resistance$Microhm] ≈ 0.000001 [Resistance$Ohm]
   @override
@@ -385,6 +394,9 @@ final class Resistance$Abohm extends Resistance {
 
   static const _ratio = 1e-9;
 
+  @override
+  Resistance get anchor => const Resistance$Ohm(_ratio);
+
   /// 1 [Resistance$Abohm] ≈ 1e-9 [Resistance$Ohm]
   @override
   num get ratio => _ratio;
@@ -449,6 +461,9 @@ final class Resistance$Statohm extends Resistance {
   String get displayName => 'Statohm';
 
   static const _ratio = 898752432400.0;
+
+  @override
+  Resistance get anchor => const Resistance$Ohm(_ratio);
 
   /// 1 [Resistance$Statohm] = 898752432400.0 [Resistance$Ohm]
   @override

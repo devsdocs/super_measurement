@@ -31,10 +31,6 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
   factory HeatTransferCoefficient.anchor() =>
       const HeatTransferCoefficient$WattPerMeterSquareK();
 
-  @override
-  HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK();
-
   /// Convert to [HeatTransferCoefficient$WattPerMeterSquareK]
   HeatTransferCoefficient get toWattPerMeterSquareK => convertTo(
         const HeatTransferCoefficient$WattPerMeterSquareK(),
@@ -169,6 +165,10 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
 
   static const _ratio = 1.0;
 
+  @override
+  HeatTransferCoefficient get anchor =>
+      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+
   /// Default (anchor) unit of [HeatTransferCoefficient]
   @override
   num get ratio => _ratio;
@@ -235,6 +235,10 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
   String get displayName => 'watt/meter² °C';
 
   static const _ratio = 1.0;
+
+  @override
+  HeatTransferCoefficient get anchor =>
+      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
   /// 1 [HeatTransferCoefficient$WattPerMeterSquareDegreeC] = 1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
@@ -303,6 +307,10 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
 
   static const _ratio = 1.0;
 
+  @override
+  HeatTransferCoefficient get anchor =>
+      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+
   /// 1 [HeatTransferCoefficient$JoulePerSecondMeterSquareK] = 1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
@@ -369,6 +377,10 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
   String get displayName => 'kilocalorie/hour meter² °C';
 
   static const _ratio = 1.163;
+
+  @override
+  HeatTransferCoefficient get anchor =>
+      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
   /// 1 [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] ≈ 1.163 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
@@ -437,6 +449,10 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
 
   static const _ratio = 12.51842782;
 
+  @override
+  HeatTransferCoefficient get anchor =>
+      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+
   /// 1 [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] ≈ 12.51842782 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
@@ -503,6 +519,10 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
   String get displayName => 'calorie/second centimeter² °C';
 
   static const _ratio = 41868.0;
+
+  @override
+  HeatTransferCoefficient get anchor =>
+      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
   /// 1 [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] = 41868.0 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
@@ -571,6 +591,10 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
 
   static const _ratio = 5.678263398;
 
+  @override
+  HeatTransferCoefficient get anchor =>
+      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+
   /// 1 [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] ≈ 5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
   num get ratio => _ratio;
@@ -637,6 +661,10 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
   String get displayName => 'CHU/hour foot² °C';
 
   static const _ratio = 5.678263398;
+
+  @override
+  HeatTransferCoefficient get anchor =>
+      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
   /// 1 [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] ≈ 5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override

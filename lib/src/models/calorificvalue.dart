@@ -28,9 +28,6 @@ sealed class CalorificValue extends Unit<CalorificValue> {
 
   factory CalorificValue.anchor() => const CalorificValue$BTUPerFootCubic();
 
-  @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic();
-
   /// Convert to [CalorificValue$MegajoulePerMeterCubic]
   CalorificValue get toMegajoulePerMeterCubic => convertTo(
         const CalorificValue$MegajoulePerMeterCubic(),
@@ -158,6 +155,9 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
 
   static const _ratio = 26.839191732297994;
 
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+
   /// 1 [CalorificValue$MegajoulePerMeterCubic] ≈ 26.839191732297994 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
@@ -223,6 +223,9 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
   String get displayName => 'kilojoule/meter³';
 
   static const _ratio = 0.026839191732297995;
+
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
 
   /// 1 [CalorificValue$KilojoulePerMeterCubic] ≈ 0.026839191732297995 [CalorificValue$BTUPerFootCubic]
   @override
@@ -290,6 +293,9 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
 
   static const _ratio = 0.000026839191732297995;
 
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+
   /// 1 [CalorificValue$JoulePerMeterCubic] ≈ 0.000026839191732297995 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
@@ -355,6 +361,9 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
   String get displayName => 'kilocalorie/meter³';
 
   static const _ratio = 0.11237032794478524;
+
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
 
   /// 1 [CalorificValue$KilocaloriePerMeterCubic] ≈ 0.11237032794478524 [CalorificValue$BTUPerFootCubic]
   @override
@@ -422,6 +431,9 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
 
   static const _ratio = 112.37032794478525;
 
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+
   /// 1 [CalorificValue$CaloriePerCentimeterCubic] ≈ 112.37032794478525 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
@@ -487,6 +499,9 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
   String get displayName => 'therm/foot³';
 
   static const _ratio = 100000.0;
+
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
 
   /// 1 [CalorificValue$ThermPerFootCubic] = 100000.0 [CalorificValue$BTUPerFootCubic]
   @override
@@ -554,6 +569,9 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
 
   static const _ratio = 622883.5459840919;
 
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+
   /// 1 [CalorificValue$ThermPerGallonUK] ≈ 622883.5459840919 [CalorificValue$BTUPerFootCubic]
   @override
   num get ratio => _ratio;
@@ -620,6 +638,9 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
 
   static const _ratio = 1.0;
 
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+
   /// Default (anchor) unit of [CalorificValue]
   @override
   num get ratio => _ratio;
@@ -685,6 +706,9 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
   String get displayName => 'CHU/foot³';
 
   static const _ratio = 1.7999999998389649;
+
+  @override
+  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
 
   /// 1 [CalorificValue$CHUPerFootCubic] ≈ 1.7999999998389649 [CalorificValue$BTUPerFootCubic]
   @override

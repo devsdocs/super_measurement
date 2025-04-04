@@ -26,10 +26,6 @@ sealed class Permeability extends Unit<Permeability> {
   factory Permeability.anchor() =>
       const Permeability$KilogramPerPascalSecondMeterSquare();
 
-  @override
-  Permeability get anchor =>
-      const Permeability$KilogramPerPascalSecondMeterSquare();
-
   /// Convert to [Permeability$KilogramPerPascalSecondMeterSquare]
   Permeability get toKilogramPerPascalSecondMeterSquare => convertTo(
         const Permeability$KilogramPerPascalSecondMeterSquare(),
@@ -128,6 +124,10 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
 
   static const _ratio = 1.0;
 
+  @override
+  Permeability get anchor =>
+      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
+
   /// Default (anchor) unit of [Permeability]
   @override
   num get ratio => _ratio;
@@ -193,6 +193,10 @@ final class Permeability$Permeability0DegreeC extends Permeability {
   String get displayName => 'permeability (0°C)';
 
   static const _ratio = 5.72135e-11;
+
+  @override
+  Permeability get anchor =>
+      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
 
   /// 1 [Permeability$Permeability0DegreeC] ≈ 5.72135e-11 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
@@ -260,6 +264,10 @@ final class Permeability$Permeability23DegreeC extends Permeability {
 
   static const _ratio = 5.74525e-11;
 
+  @override
+  Permeability get anchor =>
+      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
+
   /// 1 [Permeability$Permeability23DegreeC] ≈ 5.74525e-11 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
   num get ratio => _ratio;
@@ -326,6 +334,10 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
 
   static const _ratio = 1.45322e-12;
 
+  @override
+  Permeability get anchor =>
+      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
+
   /// 1 [Permeability$PermeabilityInches0DegreeC] ≈ 1.45322e-12 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
   num get ratio => _ratio;
@@ -391,6 +403,10 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
   String get displayName => 'permeability inches (23°C)';
 
   static const _ratio = 1.45929e-12;
+
+  @override
+  Permeability get anchor =>
+      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
 
   /// 1 [Permeability$PermeabilityInches23DegreeC] ≈ 1.45929e-12 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override

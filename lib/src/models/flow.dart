@@ -50,9 +50,6 @@ sealed class Flow extends Unit<Flow> {
 
   factory Flow.anchor() => const Flow$MilliliterPerDay();
 
-  @override
-  Flow get anchor => const Flow$MilliliterPerDay();
-
   /// Convert to [Flow$GallonPerDay]
   Flow get toGallonPerDay => convertTo(
         const Flow$GallonPerDay(),
@@ -576,6 +573,9 @@ final class Flow$GallonPerDay extends Flow {
 
   static const _ratio = 3785.411784;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$GallonPerDay] ≈ 3785.411784 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -640,6 +640,9 @@ final class Flow$GallonPerHour extends Flow {
   String get displayName => 'gallon/hour';
 
   static const _ratio = 90849.882816;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$GallonPerHour] ≈ 90849.882816 [Flow$MilliliterPerDay]
   @override
@@ -706,6 +709,9 @@ final class Flow$GallonPerMinute extends Flow {
 
   static const _ratio = 5450992.96896;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$GallonPerMinute] ≈ 5450992.96896 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -770,6 +776,9 @@ final class Flow$GallonPerSecond extends Flow {
   String get displayName => 'gallon/second';
 
   static const _ratio = 327059578.1376;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$GallonPerSecond] ≈ 327059578.1376 [Flow$MilliliterPerDay]
   @override
@@ -836,6 +845,9 @@ final class Flow$GallonUKPerDay extends Flow {
 
   static const _ratio = 4546.09028187501;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$GallonUKPerDay] ≈ 4546.09028187501 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -900,6 +912,9 @@ final class Flow$GallonUKPerHour extends Flow {
   String get displayName => 'gallon (UK)/hour';
 
   static const _ratio = 109106.16676500025;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$GallonUKPerHour] ≈ 109106.16676500025 [Flow$MilliliterPerDay]
   @override
@@ -966,6 +981,9 @@ final class Flow$GallonUKPerMinute extends Flow {
 
   static const _ratio = 6546370.005900015;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$GallonUKPerMinute] ≈ 6546370.005900015 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1030,6 +1048,9 @@ final class Flow$GallonUKPerSecond extends Flow {
   String get displayName => 'gallon (UK)/second';
 
   static const _ratio = 392782200.3540009;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$GallonUKPerSecond] ≈ 392782200.3540009 [Flow$MilliliterPerDay]
   @override
@@ -1096,6 +1117,9 @@ final class Flow$BarrelOilPerDay extends Flow {
 
   static const _ratio = 158987.294928;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$BarrelOilPerDay] ≈ 158987.294928 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1160,6 +1184,9 @@ final class Flow$BarrelOilPerHour extends Flow {
   String get displayName => 'barrel (oil)/hour';
 
   static const _ratio = 3815695.078272;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$BarrelOilPerHour] ≈ 3815695.078272 [Flow$MilliliterPerDay]
   @override
@@ -1226,6 +1253,9 @@ final class Flow$BarrelOilPerMinute extends Flow {
 
   static const _ratio = 228941704.69632;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$BarrelOilPerMinute] ≈ 228941704.69632 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1290,6 +1320,9 @@ final class Flow$BarrelOilPerSecond extends Flow {
   String get displayName => 'barrel (oil)/second';
 
   static const _ratio = 13736502281.7792;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$BarrelOilPerSecond] ≈ 13736502281.7792 [Flow$MilliliterPerDay]
   @override
@@ -1356,6 +1389,9 @@ final class Flow$AcreFootPerYear extends Flow {
 
   static const _ratio = 3379415.812314174;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$AcreFootPerYear] ≈ 3379415.812314174 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1420,6 +1456,9 @@ final class Flow$AcreFootPerDay extends Flow {
   String get displayName => 'acre-foot/day';
 
   static const _ratio = 1233486771.4946737;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$AcreFootPerDay] ≈ 1233486771.4946737 [Flow$MilliliterPerDay]
   @override
@@ -1486,6 +1525,9 @@ final class Flow$AcreFootPerHour extends Flow {
 
   static const _ratio = 29603682515.872166;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$AcreFootPerHour] ≈ 29603682515.872166 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1551,6 +1593,9 @@ final class Flow$HundredFootCubicPerDay extends Flow {
 
   static const _ratio = 2831684.659211768;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$HundredFootCubicPerDay] ≈ 2831684.659211768 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1615,6 +1660,9 @@ final class Flow$HundredFootCubicPerHour extends Flow {
   String get displayName => 'hundred-foot³/hour';
 
   static const _ratio = 67960431.82108243;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$HundredFootCubicPerHour] ≈ 67960431.82108243 [Flow$MilliliterPerDay]
   @override
@@ -1682,6 +1730,9 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
 
   static const _ratio = 4077625909.264946;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$HundredFootCubicPerMinute] ≈ 4077625909.264946 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1748,6 +1799,9 @@ final class Flow$OuncePerHour extends Flow {
 
   static const _ratio = 709.7647095;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$OuncePerHour] ≈ 709.7647095 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1812,6 +1866,9 @@ final class Flow$OuncePerMinute extends Flow {
   String get displayName => 'ounce/minute';
 
   static const _ratio = 42585.88257;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$OuncePerMinute] ≈ 42585.88257 [Flow$MilliliterPerDay]
   @override
@@ -1878,6 +1935,9 @@ final class Flow$OuncePerSecond extends Flow {
 
   static const _ratio = 2555152.9542;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$OuncePerSecond] ≈ 2555152.9542 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -1942,6 +2002,9 @@ final class Flow$OunceUKPerHour extends Flow {
   String get displayName => 'ounce (UK)/hour';
 
   static const _ratio = 681.9135422812516;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$OunceUKPerHour] ≈ 681.9135422812516 [Flow$MilliliterPerDay]
   @override
@@ -2008,6 +2071,9 @@ final class Flow$OunceUKPerMinute extends Flow {
 
   static const _ratio = 40914.81253687509;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$OunceUKPerMinute] ≈ 40914.81253687509 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -2072,6 +2138,9 @@ final class Flow$OunceUKPerSecond extends Flow {
   String get displayName => 'ounce (UK)/second';
 
   static const _ratio = 2454888.752212506;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$OunceUKPerSecond] ≈ 2454888.752212506 [Flow$MilliliterPerDay]
   @override
@@ -2138,6 +2207,9 @@ final class Flow$LiterPerDay extends Flow {
 
   static const _ratio = 1000.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$LiterPerDay] = 1000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -2202,6 +2274,9 @@ final class Flow$LiterPerHour extends Flow {
   String get displayName => 'liter/hour';
 
   static const _ratio = 24000.0;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$LiterPerHour] = 24000.0 [Flow$MilliliterPerDay]
   @override
@@ -2268,6 +2343,9 @@ final class Flow$LiterPerMinute extends Flow {
 
   static const _ratio = 1440000.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$LiterPerMinute] = 1440000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -2332,6 +2410,9 @@ final class Flow$LiterPerSecond extends Flow {
   String get displayName => 'liter/second';
 
   static const _ratio = 86400000.0;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$LiterPerSecond] = 86400000.0 [Flow$MilliliterPerDay]
   @override
@@ -2398,6 +2479,9 @@ final class Flow$MilliliterPerDay extends Flow {
 
   static const _ratio = 1.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// Default (anchor) unit of [Flow]
   @override
   num get ratio => _ratio;
@@ -2462,6 +2546,9 @@ final class Flow$MilliliterPerHour extends Flow {
   String get displayName => 'milliliter/hour';
 
   static const _ratio = 24.0;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$MilliliterPerHour] = 24.0 [Flow$MilliliterPerDay]
   @override
@@ -2528,6 +2615,9 @@ final class Flow$MilliliterPerMinute extends Flow {
 
   static const _ratio = 1440.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$MilliliterPerMinute] = 1440.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -2592,6 +2682,9 @@ final class Flow$MilliliterPerSecond extends Flow {
   String get displayName => 'milliliter/second';
 
   static const _ratio = 86400.0;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$MilliliterPerSecond] = 86400.0 [Flow$MilliliterPerDay]
   @override
@@ -2658,6 +2751,9 @@ final class Flow$MeterCubicPerDay extends Flow {
 
   static const _ratio = 1000000.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$MeterCubicPerDay] = 1000000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -2722,6 +2818,9 @@ final class Flow$MeterCubicPerHour extends Flow {
   String get displayName => 'meter³/hour';
 
   static const _ratio = 24000000.0;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$MeterCubicPerHour] = 24000000.0 [Flow$MilliliterPerDay]
   @override
@@ -2788,6 +2887,9 @@ final class Flow$MeterCubicPerMinute extends Flow {
 
   static const _ratio = 1440000000.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$MeterCubicPerMinute] = 1440000000.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -2852,6 +2954,9 @@ final class Flow$MeterCubicPerSecond extends Flow {
   String get displayName => 'meter³/second';
 
   static const _ratio = 86400000000.0;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$MeterCubicPerSecond] = 86400000000.0 [Flow$MilliliterPerDay]
   @override
@@ -2918,6 +3023,9 @@ final class Flow$CentimeterCubicPerDay extends Flow {
 
   static const _ratio = 1.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$CentimeterCubicPerDay] = 1.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -2983,6 +3091,9 @@ final class Flow$CentimeterCubicPerHour extends Flow {
 
   static const _ratio = 24.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$CentimeterCubicPerHour] = 24.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -3047,6 +3158,9 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
   String get displayName => 'centimeter³/minute';
 
   static const _ratio = 1440.0;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$CentimeterCubicPerMinute] = 1440.0 [Flow$MilliliterPerDay]
   @override
@@ -3114,6 +3228,9 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
 
   static const _ratio = 86400.0;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$CentimeterCubicPerSecond] = 86400.0 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -3180,6 +3297,9 @@ final class Flow$YardCubicPerHour extends Flow {
 
   static const _ratio = 18349316.59251583;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$YardCubicPerHour] ≈ 18349316.59251583 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -3244,6 +3364,9 @@ final class Flow$YardCubicPerMinute extends Flow {
   String get displayName => 'yard³/minute';
 
   static const _ratio = 1100958995.5509498;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$YardCubicPerMinute] ≈ 1100958995.5509498 [Flow$MilliliterPerDay]
   @override
@@ -3310,6 +3433,9 @@ final class Flow$YardCubicPerSecond extends Flow {
 
   static const _ratio = 66057539733.05699;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$YardCubicPerSecond] ≈ 66057539733.05699 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -3374,6 +3500,9 @@ final class Flow$FootCubicPerHour extends Flow {
   String get displayName => 'foot³/hour';
 
   static const _ratio = 679604.3182413271;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$FootCubicPerHour] ≈ 679604.3182413271 [Flow$MilliliterPerDay]
   @override
@@ -3440,6 +3569,9 @@ final class Flow$FootCubicPerMinute extends Flow {
 
   static const _ratio = 40776259.09447963;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$FootCubicPerMinute] ≈ 40776259.09447963 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -3504,6 +3636,9 @@ final class Flow$FootCubicPerSecond extends Flow {
   String get displayName => 'foot³/second';
 
   static const _ratio = 2446575545.6687775;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$FootCubicPerSecond] ≈ 2446575545.6687775 [Flow$MilliliterPerDay]
   @override
@@ -3570,6 +3705,9 @@ final class Flow$InchCubicPerHour extends Flow {
 
   static const _ratio = 393.2895360192865;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$InchCubicPerHour] ≈ 393.2895360192865 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -3634,6 +3772,9 @@ final class Flow$InchCubicPerMinute extends Flow {
   String get displayName => 'inch³/minute';
 
   static const _ratio = 23597.37216115719;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$InchCubicPerMinute] ≈ 23597.37216115719 [Flow$MilliliterPerDay]
   @override
@@ -3700,6 +3841,9 @@ final class Flow$InchCubicPerSecond extends Flow {
 
   static const _ratio = 1415842.3296694316;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$InchCubicPerSecond] ≈ 1415842.3296694316 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -3764,6 +3908,9 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
   String get displayName => 'pound/second (Gasoline at 15.5°C)';
 
   static const _ratio = 53008035.35;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$PoundPerSecondGasolineAt155DegreeC] ≈ 53008035.35 [Flow$MilliliterPerDay]
   @override
@@ -3831,6 +3978,9 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 883467.2559;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$PoundPerMinuteGasolineAt155DegreeC] ≈ 883467.2559 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -3896,6 +4046,9 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
   String get displayName => 'pound/hour (Gasoline at 15.5°C)';
 
   static const _ratio = 14724.45427;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$PoundPerHourGasolineAt155DegreeC] ≈ 14724.45427 [Flow$MilliliterPerDay]
   @override
@@ -3963,6 +4116,9 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 613.5189277;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$PoundPerDayGasolineAt155DegreeC] ≈ 613.5189277 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -4028,6 +4184,9 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
   String get displayName => 'kilogram/second (Gasoline at 15.5°C)';
 
   static const _ratio = 116862713.9;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$KilogramPerSecondGasolineAt155DegreeC] ≈ 116862713.9 [Flow$MilliliterPerDay]
   @override
@@ -4095,6 +4254,9 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 1947711.898;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$KilogramPerMinuteGasolineAt155DegreeC] ≈ 1947711.898 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -4161,6 +4323,9 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
 
   static const _ratio = 32461.86497;
 
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+
   /// 1 [Flow$KilogramPerHourGasolineAt155DegreeC] ≈ 32461.86497 [Flow$MilliliterPerDay]
   @override
   num get ratio => _ratio;
@@ -4226,6 +4391,9 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
   String get displayName => 'kilogram/day (Gasoline at 15.5°C)';
 
   static const _ratio = 1352.577707;
+
+  @override
+  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
 
   /// 1 [Flow$KilogramPerDayGasolineAt155DegreeC] ≈ 1352.577707 [Flow$MilliliterPerDay]
   @override

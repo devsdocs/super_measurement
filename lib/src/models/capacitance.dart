@@ -29,9 +29,6 @@ sealed class Capacitance extends Unit<Capacitance> {
 
   factory Capacitance.anchor() => const Capacitance$Farad();
 
-  @override
-  Capacitance get anchor => const Capacitance$Farad();
-
   /// Convert to [Capacitance$Exafarad]
   Capacitance get toExafarad => convertTo(
         const Capacitance$Exafarad(),
@@ -235,6 +232,9 @@ final class Capacitance$Exafarad extends Capacitance {
 
   static const _ratio = 1000000000000000000.0;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Exafarad] = 1000000000000000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -299,6 +299,9 @@ final class Capacitance$Petafarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Petafarad] = 1000000000000000.0 [Capacitance$Farad]
   @override
@@ -365,6 +368,9 @@ final class Capacitance$Terafarad extends Capacitance {
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Terafarad] = 1000000000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -429,6 +435,9 @@ final class Capacitance$Gigafarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Gigafarad] = 1000000000.0 [Capacitance$Farad]
   @override
@@ -495,6 +504,9 @@ final class Capacitance$Megafarad extends Capacitance {
 
   static const _ratio = 1000000.0;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Megafarad] = 1000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -559,6 +571,9 @@ final class Capacitance$Kilofarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Kilofarad] = 1000.0 [Capacitance$Farad]
   @override
@@ -625,6 +640,9 @@ final class Capacitance$Hectofarad extends Capacitance {
 
   static const _ratio = 100.0;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Hectofarad] = 100.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -689,6 +707,9 @@ final class Capacitance$Dekafarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Dekafarad] = 10.0 [Capacitance$Farad]
   @override
@@ -755,6 +776,9 @@ final class Capacitance$Farad extends Capacitance {
 
   static const _ratio = 1.0;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// Default (anchor) unit of [Capacitance]
   @override
   num get ratio => _ratio;
@@ -819,6 +843,9 @@ final class Capacitance$Decifarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Decifarad] ≈ 0.1 [Capacitance$Farad]
   @override
@@ -885,6 +912,9 @@ final class Capacitance$Centifarad extends Capacitance {
 
   static const _ratio = 0.01;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Centifarad] ≈ 0.01 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -949,6 +979,9 @@ final class Capacitance$Millifarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 0.001;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Millifarad] ≈ 0.001 [Capacitance$Farad]
   @override
@@ -1015,6 +1048,9 @@ final class Capacitance$Microfarad extends Capacitance {
 
   static const _ratio = 0.000001;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Microfarad] ≈ 0.000001 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -1079,6 +1115,9 @@ final class Capacitance$Nanofarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 1e-9;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Nanofarad] ≈ 1e-9 [Capacitance$Farad]
   @override
@@ -1145,6 +1184,9 @@ final class Capacitance$Picofarad extends Capacitance {
 
   static const _ratio = 1e-12;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Picofarad] ≈ 1e-12 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -1209,6 +1251,9 @@ final class Capacitance$Femtofarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 1e-15;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Femtofarad] ≈ 1e-15 [Capacitance$Farad]
   @override
@@ -1275,6 +1320,9 @@ final class Capacitance$Attofarad extends Capacitance {
 
   static const _ratio = 1e-18;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Attofarad] ≈ 1e-18 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -1340,6 +1388,9 @@ final class Capacitance$Abfarad extends Capacitance {
 
   static const _ratio = 1000000000.0;
 
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
+
   /// 1 [Capacitance$Abfarad] = 1000000000.0 [Capacitance$Farad]
   @override
   num get ratio => _ratio;
@@ -1404,6 +1455,9 @@ final class Capacitance$Statfarad extends Capacitance {
   String get displayName => _minorName;
 
   static const _ratio = 1.11265e-12;
+
+  @override
+  Capacitance get anchor => const Capacitance$Farad(_ratio);
 
   /// 1 [Capacitance$Statfarad] ≈ 1.11265e-12 [Capacitance$Farad]
   @override

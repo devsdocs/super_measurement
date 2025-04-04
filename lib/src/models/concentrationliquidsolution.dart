@@ -35,10 +35,6 @@ sealed class ConcentrationLiquidSolution
   factory ConcentrationLiquidSolution.anchor() =>
       const ConcentrationLiquidSolution$KilogramPerLiter();
 
-  @override
-  ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter();
-
   /// Convert to [ConcentrationLiquidSolution$KilogramPerLiter]
   ConcentrationLiquidSolution get toKilogramPerLiter => convertTo(
         const ConcentrationLiquidSolution$KilogramPerLiter(),
@@ -191,6 +187,10 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
 
   static const _ratio = 1.0;
 
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+
   /// Default (anchor) unit of [ConcentrationLiquidSolution]
   @override
   num get ratio => _ratio;
@@ -257,6 +257,10 @@ final class ConcentrationLiquidSolution$GramPerLiter
   String get displayName => 'gram/liter';
 
   static const _ratio = 0.001;
+
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
   /// 1 [ConcentrationLiquidSolution$GramPerLiter] ≈ 0.001 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
@@ -325,6 +329,10 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
 
   static const _ratio = 0.000001;
 
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+
   /// 1 [ConcentrationLiquidSolution$MilligramPerLiter] ≈ 0.000001 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -391,6 +399,10 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
   String get displayName => 'part/million (ppm)';
 
   static const _ratio = 0.000001;
+
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
   /// 1 [ConcentrationLiquidSolution$PartPerMillionPpm] ≈ 0.000001 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
@@ -459,6 +471,10 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
 
   static const _ratio = 0.000014253767523300243;
 
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+
   /// 1 [ConcentrationLiquidSolution$GrainPerGallonUK] ≈ 0.000014253767523300243 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -525,6 +541,10 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
   String get displayName => 'grain/gallon (US)';
 
   static const _ratio = 0.000017118061045270948;
+
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
   /// 1 [ConcentrationLiquidSolution$GrainPerGallonUS] ≈ 0.000017118061045270948 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
@@ -593,6 +613,10 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
 
   static const _ratio = 0.01601846337396014;
 
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+
   /// 1 [ConcentrationLiquidSolution$PoundPerFootCubic] ≈ 0.01601846337396014 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -659,6 +683,10 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
   String get displayName => 'pound/gallon (UK)';
 
   static const _ratio = 0.0997763726631017;
+
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
   /// 1 [ConcentrationLiquidSolution$PoundPerGallonUK] ≈ 0.0997763726631017 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
@@ -727,6 +755,10 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
 
   static const _ratio = 0.11982642731689663;
 
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+
   /// 1 [ConcentrationLiquidSolution$PoundPerGallonUS] ≈ 0.11982642731689663 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -794,6 +826,10 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
 
   static const _ratio = 9.97763726631017e-8;
 
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+
   /// 1 [ConcentrationLiquidSolution$PoundPerMillionUKGallon] ≈ 9.97763726631017e-8 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
   num get ratio => _ratio;
@@ -860,6 +896,10 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
   String get displayName => 'pound/million US gallon';
 
   static const _ratio = 1.1982642731689662e-7;
+
+  @override
+  ConcentrationLiquidSolution get anchor =>
+      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
   /// 1 [ConcentrationLiquidSolution$PoundPerMillionUSGallon] ≈ 1.1982642731689662e-7 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override

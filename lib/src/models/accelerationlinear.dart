@@ -38,10 +38,6 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
   factory AccelerationLinear.anchor() =>
       const AccelerationLinear$MeterPerSecondSquare();
 
-  @override
-  AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare();
-
   /// Convert to [AccelerationLinear$KilometerPerSecondSquare]
   AccelerationLinear get toKilometerPerSecondSquare => convertTo(
         const AccelerationLinear$KilometerPerSecondSquare(),
@@ -260,6 +256,10 @@ final class AccelerationLinear$KilometerPerSecondSquare
 
   static const _ratio = 1000.0;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$KilometerPerSecondSquare] = 1000.0 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -326,6 +326,10 @@ final class AccelerationLinear$HectometerPerSecondSquare
   String get displayName => 'hectometer/second²';
 
   static const _ratio = 100.0;
+
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
 
   /// 1 [AccelerationLinear$HectometerPerSecondSquare] = 100.0 [AccelerationLinear$MeterPerSecondSquare]
   @override
@@ -394,6 +398,10 @@ final class AccelerationLinear$DekameterPerSecondSquare
 
   static const _ratio = 10.0;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$DekameterPerSecondSquare] = 10.0 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -459,6 +467,10 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
   String get displayName => 'meter/second²';
 
   static const _ratio = 1.0;
+
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
 
   /// Default (anchor) unit of [AccelerationLinear]
   @override
@@ -527,6 +539,10 @@ final class AccelerationLinear$DecimeterPerSecondSquare
 
   static const _ratio = 0.1;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$DecimeterPerSecondSquare] ≈ 0.1 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -593,6 +609,10 @@ final class AccelerationLinear$CentimeterPerSecondSquare
   String get displayName => 'centimeter/second²';
 
   static const _ratio = 0.01;
+
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
 
   /// 1 [AccelerationLinear$CentimeterPerSecondSquare] ≈ 0.01 [AccelerationLinear$MeterPerSecondSquare]
   @override
@@ -661,6 +681,10 @@ final class AccelerationLinear$MillimeterPerSecondSquare
 
   static const _ratio = 0.001;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$MillimeterPerSecondSquare] ≈ 0.001 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -727,6 +751,10 @@ final class AccelerationLinear$MicrometerPerSecondSquare
   String get displayName => 'micrometer/second²';
 
   static const _ratio = 0.000001;
+
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
 
   /// 1 [AccelerationLinear$MicrometerPerSecondSquare] ≈ 0.000001 [AccelerationLinear$MeterPerSecondSquare]
   @override
@@ -795,6 +823,10 @@ final class AccelerationLinear$NanometerPerSecondSquare
 
   static const _ratio = 1e-9;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$NanometerPerSecondSquare] ≈ 1e-9 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -861,6 +893,10 @@ final class AccelerationLinear$PicometerPerSecondSquare
   String get displayName => 'picometer/second²';
 
   static const _ratio = 1e-12;
+
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
 
   /// 1 [AccelerationLinear$PicometerPerSecondSquare] ≈ 1e-12 [AccelerationLinear$MeterPerSecondSquare]
   @override
@@ -929,6 +965,10 @@ final class AccelerationLinear$FemtometerPerSecondSquare
 
   static const _ratio = 1e-15;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$FemtometerPerSecondSquare] ≈ 1e-15 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -996,6 +1036,10 @@ final class AccelerationLinear$AttometerPerSecondSquare
 
   static const _ratio = 1e-18;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$AttometerPerSecondSquare] ≈ 1e-18 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -1062,6 +1106,10 @@ final class AccelerationLinear$G extends AccelerationLinear {
 
   static const _ratio = 9.80665;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$G] ≈ 9.80665 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -1127,6 +1175,10 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
 
   static const _ratio = 0.01;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$Gal] ≈ 0.01 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -1191,6 +1243,10 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
   String get displayName => 'mile/second²';
 
   static const _ratio = 1609.344;
+
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
 
   /// 1 [AccelerationLinear$MilePerSecondSquare] ≈ 1609.344 [AccelerationLinear$MeterPerSecondSquare]
   @override
@@ -1258,6 +1314,10 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
 
   static const _ratio = 0.9144;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$YardPerSecondSquare] ≈ 0.9144 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -1324,6 +1384,10 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
 
   static const _ratio = 0.3048;
 
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+
   /// 1 [AccelerationLinear$FootPerSecondSquare] ≈ 0.3048 [AccelerationLinear$MeterPerSecondSquare]
   @override
   num get ratio => _ratio;
@@ -1389,6 +1453,10 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
   String get displayName => 'inch/second²';
 
   static const _ratio = 0.0254;
+
+  @override
+  AccelerationLinear get anchor =>
+      const AccelerationLinear$MeterPerSecondSquare(_ratio);
 
   /// 1 [AccelerationLinear$InchPerSecondSquare] ≈ 0.0254 [AccelerationLinear$MeterPerSecondSquare]
   @override

@@ -25,10 +25,6 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
   factory RadiationExposure.anchor() =>
       const RadiationExposure$MicrocoulombPerKilogram();
 
-  @override
-  RadiationExposure get anchor =>
-      const RadiationExposure$MicrocoulombPerKilogram();
-
   /// Convert to [RadiationExposure$Roentgen]
   RadiationExposure get toRoentgen => convertTo(
         const RadiationExposure$Roentgen(),
@@ -116,6 +112,10 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
 
   static const _ratio = 258.0;
 
+  @override
+  RadiationExposure get anchor =>
+      const RadiationExposure$MicrocoulombPerKilogram(_ratio);
+
   /// 1 [RadiationExposure$Roentgen] = 258.0 [RadiationExposure$MicrocoulombPerKilogram]
   @override
   num get ratio => _ratio;
@@ -180,6 +180,10 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
   String get displayName => 'coulomb/kilogram';
 
   static const _ratio = 1000000.0;
+
+  @override
+  RadiationExposure get anchor =>
+      const RadiationExposure$MicrocoulombPerKilogram(_ratio);
 
   /// 1 [RadiationExposure$CoulombPerKilogram] = 1000000.0 [RadiationExposure$MicrocoulombPerKilogram]
   @override
@@ -248,6 +252,10 @@ final class RadiationExposure$MillicoulombPerKilogram
 
   static const _ratio = 1000.0;
 
+  @override
+  RadiationExposure get anchor =>
+      const RadiationExposure$MicrocoulombPerKilogram(_ratio);
+
   /// 1 [RadiationExposure$MillicoulombPerKilogram] = 1000.0 [RadiationExposure$MicrocoulombPerKilogram]
   @override
   num get ratio => _ratio;
@@ -314,6 +322,10 @@ final class RadiationExposure$MicrocoulombPerKilogram
   String get displayName => 'microcoulomb/kilogram';
 
   static const _ratio = 1.0;
+
+  @override
+  RadiationExposure get anchor =>
+      const RadiationExposure$MicrocoulombPerKilogram(_ratio);
 
   /// Default (anchor) unit of [RadiationExposure]
   @override

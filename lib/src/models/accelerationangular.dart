@@ -27,10 +27,6 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
   factory AccelerationAngular.anchor() =>
       const AccelerationAngular$RevolutionPerMinuteSecond();
 
-  @override
-  AccelerationAngular get anchor =>
-      const AccelerationAngular$RevolutionPerMinuteSecond();
-
   /// Convert to [AccelerationAngular$RadianPerSecondSquare]
   AccelerationAngular get toRadianPerSecondSquare => convertTo(
         const AccelerationAngular$RadianPerSecondSquare(),
@@ -131,6 +127,10 @@ final class AccelerationAngular$RadianPerSecondSquare
 
   static const _ratio = 9.549296587;
 
+  @override
+  AccelerationAngular get anchor =>
+      const AccelerationAngular$RevolutionPerMinuteSecond(_ratio);
+
   /// 1 [AccelerationAngular$RadianPerSecondSquare] ≈ 9.549296587 [AccelerationAngular$RevolutionPerMinuteSecond]
   @override
   num get ratio => _ratio;
@@ -197,6 +197,10 @@ final class AccelerationAngular$RadianPerMinuteSquare
   String get displayName => 'radian/minute²';
 
   static const _ratio = 0.0026525823852777777;
+
+  @override
+  AccelerationAngular get anchor =>
+      const AccelerationAngular$RevolutionPerMinuteSecond(_ratio);
 
   /// 1 [AccelerationAngular$RadianPerMinuteSquare] ≈ 0.0026525823852777777 [AccelerationAngular$RevolutionPerMinuteSecond]
   @override
@@ -265,6 +269,10 @@ final class AccelerationAngular$RevolutionPerSecondSquare
 
   static const _ratio = 60.0;
 
+  @override
+  AccelerationAngular get anchor =>
+      const AccelerationAngular$RevolutionPerMinuteSecond(_ratio);
+
   /// 1 [AccelerationAngular$RevolutionPerSecondSquare] = 60.0 [AccelerationAngular$RevolutionPerMinuteSecond]
   @override
   num get ratio => _ratio;
@@ -332,6 +340,10 @@ final class AccelerationAngular$RevolutionPerMinuteSecond
 
   static const _ratio = 1.000000000074009;
 
+  @override
+  AccelerationAngular get anchor =>
+      const AccelerationAngular$RevolutionPerMinuteSecond(_ratio);
+
   /// Default (anchor) unit of [AccelerationAngular]
   @override
   num get ratio => _ratio;
@@ -398,6 +410,10 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
   String get displayName => 'revolution/minute²';
 
   static const _ratio = 0.016666666666666666;
+
+  @override
+  AccelerationAngular get anchor =>
+      const AccelerationAngular$RevolutionPerMinuteSecond(_ratio);
 
   /// 1 [AccelerationAngular$RevolutionPerMinuteSquare] ≈ 0.016666666666666666 [AccelerationAngular$RevolutionPerMinuteSecond]
   @override

@@ -79,9 +79,7 @@ void generateModels() {
     // typeBuff.writeln('        })');
     // typeBuff.writeln('      );');
     typeBuff.writeln();
-    typeBuff.writeln('  @override');
-    typeBuff.writeln('  $name get anchor => const ${anchor.keys.first}();');
-    typeBuff.writeln();
+
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln('/// Convert to [$unitType]');
@@ -263,6 +261,7 @@ void generateModels() {
       );
 
       typeBuff.writeln();
+      typeBuff.writeln();
       typeBuff.writeln(
         '/// Construct [$unitType] from other [$name]',
       );
@@ -291,6 +290,11 @@ void generateModels() {
       typeBuff.writeln("  static const _ratio = ${unitProps['ratio']};");
       typeBuff.writeln();
       final isShiftedValue = unitProps['valueshift']! as double != 0.0;
+      typeBuff.writeln();
+      typeBuff.writeln('  @override');
+      typeBuff
+          .writeln('  $name get anchor => const ${anchor.keys.first}(_ratio);');
+      typeBuff.writeln();
       if (unitType == anchor.keys.first) {
         typeBuff.writeln('/// Default (anchor) unit of [$name]');
       } else {

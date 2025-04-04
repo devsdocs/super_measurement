@@ -31,10 +31,6 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
   factory ThermalConductivity.anchor() =>
       const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
 
-  @override
-  ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
-
   /// Convert to [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   ThermalConductivity get toBTUThermochemInchPerHourFootSquareDegreeF =>
       convertTo(
@@ -175,6 +171,11 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
 
   static const _ratio = 1.0;
 
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
+
   /// Default (anchor) unit of [ThermalConductivity]
   @override
   num get ratio => _ratio;
@@ -241,6 +242,11 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
   String get displayName => 'BTU (int)-inch/hour-foot²-°F';
 
   static const _ratio = 1.0006692161075852;
+
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
 
   /// 1 [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF] ≈ 1.0006692161075852 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
@@ -309,6 +315,11 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
 
   static const _ratio = 12.0;
 
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
+
   /// 1 [ThermalConductivity$BTUThermochemPerHourFootDegreeF] = 12.0 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
@@ -375,6 +386,11 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
   String get displayName => 'BTU (int)/hour-foot-°F';
 
   static const _ratio = 12.008030593291023;
+
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
 
   /// 1 [ThermalConductivity$BTUIntPerHourFootDegreeF] ≈ 12.008030593291023 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
@@ -443,6 +459,11 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
 
   static const _ratio = 2902.9059727372737;
 
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
+
   /// 1 [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC] ≈ 2902.9059727372737 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
@@ -510,6 +531,11 @@ final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
 
   static const _ratio = 2904.848644038341;
 
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
+
   /// 1 [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC] ≈ 2904.848644038341 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
@@ -575,6 +601,11 @@ final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
   String get displayName => 'kilowatt/meter-K';
 
   static const _ratio = 6938.111789525033;
+
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
 
   /// 1 [ThermalConductivity$KilowattPerMeterK] ≈ 6938.111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
@@ -642,6 +673,11 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
 
   static const _ratio = 6.938111789525033;
 
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
+
   /// 1 [ThermalConductivity$WattPerMeterK] ≈ 6.938111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
   num get ratio => _ratio;
@@ -708,6 +744,11 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
   String get displayName => 'watt/centimeter-°C';
 
   static const _ratio = 693.8111789525033;
+
+  @override
+  ThermalConductivity get anchor =>
+      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
+          _ratio);
 
   /// 1 [ThermalConductivity$WattPerCentimeterDegreeC] ≈ 693.8111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override

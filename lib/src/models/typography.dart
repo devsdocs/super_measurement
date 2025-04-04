@@ -25,9 +25,6 @@ sealed class Typography extends Unit<Typography> {
 
   factory Typography.anchor() => const Typography$Inch();
 
-  @override
-  Typography get anchor => const Typography$Inch();
-
   /// Convert to [Typography$PostScriptPointDTP]
   Typography get toPostScriptPointDTP => convertTo(
         const Typography$PostScriptPointDTP(),
@@ -152,6 +149,9 @@ final class Typography$PostScriptPointDTP extends Typography {
 
   static const _ratio = 0.013888888888888888;
 
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
+
   /// 1 [Typography$PostScriptPointDTP] ≈ 0.013888888888888888 [Typography$Inch]
   @override
   num get ratio => _ratio;
@@ -217,6 +217,9 @@ final class Typography$PrintersPointAmerican extends Typography {
   String get displayName => 'printer"s point (American)';
 
   static const _ratio = 0.013837000138370002;
+
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
 
   /// 1 [Typography$PrintersPointAmerican] ≈ 0.013837000138370002 [Typography$Inch]
   @override
@@ -284,6 +287,9 @@ final class Typography$DidotsPoint extends Typography {
 
   static const _ratio = 0.014803149606299212;
 
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
+
   /// 1 [Typography$DidotsPoint] ≈ 0.014803149606299212 [Typography$Inch]
   @override
   num get ratio => _ratio;
@@ -348,6 +354,9 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
   String get displayName => 'pica (PostScript, DTP, computer)';
 
   static const _ratio = 0.16666666666666666;
+
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
 
   /// 1 [Typography$PicaPostScriptDTPComputer] ≈ 0.16666666666666666 [Typography$Inch]
   @override
@@ -415,6 +424,9 @@ final class Typography$PicaPrinters extends Typography {
 
   static const _ratio = 0.16604400166044;
 
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
+
   /// 1 [Typography$PicaPrinters] ≈ 0.16604400166044 [Typography$Inch]
   @override
   num get ratio => _ratio;
@@ -479,6 +491,9 @@ final class Typography$Ciceros extends Typography {
   String get displayName => 'Ciceros';
 
   static const _ratio = 0.17763779527559054;
+
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
 
   /// 1 [Typography$Ciceros] ≈ 0.17763779527559054 [Typography$Inch]
   @override
@@ -545,6 +560,9 @@ final class Typography$Inch extends Typography {
 
   static const _ratio = 1.0;
 
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
+
   /// Default (anchor) unit of [Typography]
   @override
   num get ratio => _ratio;
@@ -610,6 +628,9 @@ final class Typography$Millimeter extends Typography {
 
   static const _ratio = 0.03937007874015748;
 
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
+
   /// 1 [Typography$Millimeter] ≈ 0.03937007874015748 [Typography$Inch]
   @override
   num get ratio => _ratio;
@@ -674,6 +695,9 @@ final class Typography$Centimeter extends Typography {
   String get displayName => _minorName;
 
   static const _ratio = 0.3937007874015748;
+
+  @override
+  Typography get anchor => const Typography$Inch(_ratio);
 
   /// 1 [Typography$Centimeter] ≈ 0.3937007874015748 [Typography$Inch]
   @override

@@ -31,9 +31,6 @@ sealed class Area extends Unit<Area> {
 
   factory Area.anchor() => const Area$Barn();
 
-  @override
-  Area get anchor => const Area$Barn();
-
   /// Convert to [Area$KilometerSquare]
   Area get toKilometerSquare => convertTo(
         const Area$KilometerSquare(),
@@ -349,6 +346,9 @@ final class Area$KilometerSquare extends Area {
 
   static const _ratio = 1e+34;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$KilometerSquare] = 1e+34 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -413,6 +413,9 @@ final class Area$HectometerSquare extends Area {
   String get displayName => 'hectometer²';
 
   static const _ratio = 1e+32;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$HectometerSquare] = 1e+32 [Area$Barn]
   @override
@@ -479,6 +482,9 @@ final class Area$DekameterSquare extends Area {
 
   static const _ratio = 1e+30;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$DekameterSquare] = 1e+30 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -543,6 +549,9 @@ final class Area$MeterSquare extends Area {
   String get displayName => 'meter²';
 
   static const _ratio = 1e+28;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$MeterSquare] = 1e+28 [Area$Barn]
   @override
@@ -609,6 +618,9 @@ final class Area$DecimeterSquare extends Area {
 
   static const _ratio = 1e+26;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$DecimeterSquare] = 1e+26 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -673,6 +685,9 @@ final class Area$CentimeterSquare extends Area {
   String get displayName => 'centimeter²';
 
   static const _ratio = 1e+24;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$CentimeterSquare] = 1e+24 [Area$Barn]
   @override
@@ -739,6 +754,9 @@ final class Area$MillimeterSquare extends Area {
 
   static const _ratio = 1e+22;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$MillimeterSquare] = 1e+22 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -803,6 +821,9 @@ final class Area$MicrometerSquare extends Area {
   String get displayName => 'micrometer²';
 
   static const _ratio = 10000000000000000.0;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$MicrometerSquare] = 10000000000000000.0 [Area$Barn]
   @override
@@ -869,6 +890,9 @@ final class Area$NanometerSquare extends Area {
 
   static const _ratio = 10000000000.0;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$NanometerSquare] = 10000000000.0 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -933,6 +957,9 @@ final class Area$Hectare extends Area {
   String get displayName => _minorName;
 
   static const _ratio = 1e+32;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$Hectare] = 1e+32 [Area$Barn]
   @override
@@ -999,6 +1026,9 @@ final class Area$Are extends Area {
 
   static const _ratio = 1e+30;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$Are] = 1e+30 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -1063,6 +1093,9 @@ final class Area$Barn extends Area {
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// Default (anchor) unit of [Area]
   @override
@@ -1129,6 +1162,9 @@ final class Area$MileSquare extends Area {
 
   static const _ratio = 2.5899881103389906e+34;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$MileSquare] = 2.5899881103389906e+34 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -1193,6 +1229,9 @@ final class Area$YardSquare extends Area {
   String get displayName => 'yard²';
 
   static const _ratio = 8.361273600009655e+27;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$YardSquare] = 8.361273600009655e+27 [Area$Barn]
   @override
@@ -1259,6 +1298,9 @@ final class Area$FootSquare extends Area {
 
   static const _ratio = 9.290304000010727e+26;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$FootSquare] = 9.290304000010727e+26 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -1323,6 +1365,9 @@ final class Area$InchSquare extends Area {
   String get displayName => 'inch²';
 
   static const _ratio = 6.451600000007449e+24;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$InchSquare] = 6.451600000007449e+24 [Area$Barn]
   @override
@@ -1389,6 +1434,9 @@ final class Area$Township extends Area {
 
   static const _ratio = 9.323957197220366e+35;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$Township] = 9.323957197220366e+35 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -1453,6 +1501,9 @@ final class Area$Section extends Area {
   String get displayName => _minorName;
 
   static const _ratio = 2.5899881103389906e+34;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$Section] = 2.5899881103389906e+34 [Area$Barn]
   @override
@@ -1519,6 +1570,9 @@ final class Area$Acre extends Area {
 
   static const _ratio = 4.046856422404673e+31;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$Acre] = 4.046856422404673e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -1583,6 +1637,9 @@ final class Area$Rood extends Area {
   String get displayName => _minorName;
 
   static const _ratio = 1.0117141056011683e+31;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$Rood] = 1.0117141056011683e+31 [Area$Barn]
   @override
@@ -1649,6 +1706,9 @@ final class Area$ChainSquare extends Area {
 
   static const _ratio = 4.046856422404673e+30;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$ChainSquare] = 4.046856422404673e+30 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -1713,6 +1773,9 @@ final class Area$RodSquare extends Area {
   String get displayName => 'rod²';
 
   static const _ratio = 2.5292852640029207e+29;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$RodSquare] = 2.5292852640029207e+29 [Area$Barn]
   @override
@@ -1779,6 +1842,9 @@ final class Area$PerchSquare extends Area {
 
   static const _ratio = 2.5292852640029207e+29;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$PerchSquare] = 2.5292852640029207e+29 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -1843,6 +1909,9 @@ final class Area$PoleSquare extends Area {
   String get displayName => 'pole²';
 
   static const _ratio = 2.5292852640029207e+29;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$PoleSquare] = 2.5292852640029207e+29 [Area$Barn]
   @override
@@ -1909,6 +1978,9 @@ final class Area$Arpent extends Area {
 
   static const _ratio = 4.041282240004667e+31;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$Arpent] = 4.041282240004667e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -1973,6 +2045,9 @@ final class Area$Cuerda extends Area {
   String get displayName => _minorName;
 
   static const _ratio = 3.930395625e+31;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$Cuerda] = 3.930395625e+31 [Area$Barn]
   @override
@@ -2039,6 +2114,9 @@ final class Area$Plaza extends Area {
 
   static const _ratio = 6.4e+31;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$Plaza] = 6.4e+31 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -2103,6 +2181,9 @@ final class Area$VarasCastellanasCuad extends Area {
   String get displayName => 'varas castellanas cuad';
 
   static const _ratio = 6.98737e+27;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$VarasCastellanasCuad] = 6.98737e+27 [Area$Barn]
   @override
@@ -2169,6 +2250,9 @@ final class Area$VarasConuquerasCuad extends Area {
 
   static const _ratio = 6.288633e+28;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$VarasConuquerasCuad] = 6.288633e+28 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -2233,6 +2317,9 @@ final class Area$Strema extends Area {
   String get displayName => _minorName;
 
   static const _ratio = 1e+31;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$Strema] = 1e+31 [Area$Barn]
   @override
@@ -2299,6 +2386,9 @@ final class Area$CircularInch extends Area {
 
   static const _ratio = 5.06707479098e+24;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$CircularInch] = 5.06707479098e+24 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -2364,6 +2454,9 @@ final class Area$CircularMil extends Area {
 
   static const _ratio = 5067074790980000000.0;
 
+  @override
+  Area get anchor => const Area$Barn(_ratio);
+
   /// 1 [Area$CircularMil] = 5067074790980000000.0 [Area$Barn]
   @override
   num get ratio => _ratio;
@@ -2428,6 +2521,9 @@ final class Area$Tahulla extends Area {
   String get displayName => _minorName;
 
   static const _ratio = 1.118e+31;
+
+  @override
+  Area get anchor => const Area$Barn(_ratio);
 
   /// 1 [Area$Tahulla] = 1.118e+31 [Area$Barn]
   @override

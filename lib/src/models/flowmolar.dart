@@ -34,9 +34,6 @@ sealed class FlowMolar extends Unit<FlowMolar> {
 
   factory FlowMolar.anchor() => const FlowMolar$MolPerDay();
 
-  @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay();
-
   /// Convert to [FlowMolar$ExamolPerSecond]
   FlowMolar get toExamolPerSecond => convertTo(
         const FlowMolar$ExamolPerSecond(),
@@ -296,6 +293,9 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
 
   static const _ratio = 8.64e+22;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$ExamolPerSecond] = 8.64e+22 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -360,6 +360,9 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
   String get displayName => 'petamol/second';
 
   static const _ratio = 86400000000000000000.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$PetamolPerSecond] = 86400000000000000000.0 [FlowMolar$MolPerDay]
   @override
@@ -426,6 +429,9 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
 
   static const _ratio = 86400000000000000.0;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$TeramolPerSecond] = 86400000000000000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -490,6 +496,9 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
   String get displayName => 'gigamol/second';
 
   static const _ratio = 86400000000000.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$GigamolPerSecond] = 86400000000000.0 [FlowMolar$MolPerDay]
   @override
@@ -556,6 +565,9 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
 
   static const _ratio = 86400000000.0;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$MegamolPerSecond] = 86400000000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -620,6 +632,9 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
   String get displayName => 'kilomol/second';
 
   static const _ratio = 86400000.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$KilomolPerSecond] = 86400000.0 [FlowMolar$MolPerDay]
   @override
@@ -686,6 +701,9 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
 
   static const _ratio = 8640000.0;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$HectomolPerSecond] = 8640000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -750,6 +768,9 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
   String get displayName => 'dekamol/second';
 
   static const _ratio = 864000.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$DekamolPerSecond] = 864000.0 [FlowMolar$MolPerDay]
   @override
@@ -816,6 +837,9 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
 
   static const _ratio = 86400.0;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$MolPerSecond] = 86400.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -880,6 +904,9 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
   String get displayName => 'decimol/second';
 
   static const _ratio = 8640.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$DecimolPerSecond] = 8640.0 [FlowMolar$MolPerDay]
   @override
@@ -946,6 +973,9 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
 
   static const _ratio = 864.0;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$CentimolPerSecond] = 864.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -1010,6 +1040,9 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
   String get displayName => 'millimol/second';
 
   static const _ratio = 86.4;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$MillimolPerSecond] ≈ 86.4 [FlowMolar$MolPerDay]
   @override
@@ -1076,6 +1109,9 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
 
   static const _ratio = 0.0864;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$MicromolPerSecond] ≈ 0.0864 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -1140,6 +1176,9 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
   String get displayName => 'nanomol/second';
 
   static const _ratio = 0.0000864;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$NanomolPerSecond] ≈ 0.0000864 [FlowMolar$MolPerDay]
   @override
@@ -1206,6 +1245,9 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
 
   static const _ratio = 8.64e-8;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$PicomolPerSecond] ≈ 8.64e-8 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -1270,6 +1312,9 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
   String get displayName => 'femtomol/second';
 
   static const _ratio = 8.64e-11;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$FemtomolPerSecond] ≈ 8.64e-11 [FlowMolar$MolPerDay]
   @override
@@ -1336,6 +1381,9 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
 
   static const _ratio = 8.64e-14;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$AttomolPerSecond] ≈ 8.64e-14 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -1400,6 +1448,9 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
   String get displayName => 'mol/minute';
 
   static const _ratio = 1440.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$MolPerMinute] = 1440.0 [FlowMolar$MolPerDay]
   @override
@@ -1466,6 +1517,9 @@ final class FlowMolar$MolPerHour extends FlowMolar {
 
   static const _ratio = 24.0;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$MolPerHour] = 24.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -1530,6 +1584,9 @@ final class FlowMolar$MolPerDay extends FlowMolar {
   String get displayName => 'mol/day';
 
   static const _ratio = 1.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// Default (anchor) unit of [FlowMolar]
   @override
@@ -1596,6 +1653,9 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
 
   static const _ratio = 1.44;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$MillimolPerMinute] ≈ 1.44 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -1660,6 +1720,9 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
   String get displayName => 'millimol/hour';
 
   static const _ratio = 0.024;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$MillimolPerHour] ≈ 0.024 [FlowMolar$MolPerDay]
   @override
@@ -1726,6 +1789,9 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
 
   static const _ratio = 0.001;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$MillimolPerDay] ≈ 0.001 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -1790,6 +1856,9 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
   String get displayName => 'kilomol/minute';
 
   static const _ratio = 1440000.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$KilomolPerMinute] = 1440000.0 [FlowMolar$MolPerDay]
   @override
@@ -1856,6 +1925,9 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
 
   static const _ratio = 24000.0;
 
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+
   /// 1 [FlowMolar$KilomolPerHour] = 24000.0 [FlowMolar$MolPerDay]
   @override
   num get ratio => _ratio;
@@ -1920,6 +1992,9 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
   String get displayName => 'kilomol/day';
 
   static const _ratio = 1000.0;
+
+  @override
+  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
 
   /// 1 [FlowMolar$KilomolPerDay] = 1000.0 [FlowMolar$MolPerDay]
   @override

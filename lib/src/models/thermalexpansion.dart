@@ -27,10 +27,6 @@ sealed class ThermalExpansion extends Unit<ThermalExpansion> {
   factory ThermalExpansion.anchor() =>
       const ThermalExpansion$LengthPerLengthPerKelvin();
 
-  @override
-  ThermalExpansion get anchor =>
-      const ThermalExpansion$LengthPerLengthPerKelvin();
-
   /// Convert to [ThermalExpansion$LengthPerLengthPerKelvin]
   ThermalExpansion get toLengthPerLengthPerKelvin => convertTo(
         const ThermalExpansion$LengthPerLengthPerKelvin(),
@@ -132,6 +128,10 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
 
   static const _ratio = 1.0;
 
+  @override
+  ThermalExpansion get anchor =>
+      const ThermalExpansion$LengthPerLengthPerKelvin(_ratio);
+
   /// Default (anchor) unit of [ThermalExpansion]
   @override
   num get ratio => _ratio;
@@ -198,6 +198,10 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
   String get displayName => 'length/length/Celsius';
 
   static const _ratio = 1.0;
+
+  @override
+  ThermalExpansion get anchor =>
+      const ThermalExpansion$LengthPerLengthPerKelvin(_ratio);
 
   /// 1 [ThermalExpansion$LengthPerLengthPerCelsius] = 1.0 [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
@@ -266,6 +270,10 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
 
   static const _ratio = 1.8;
 
+  @override
+  ThermalExpansion get anchor =>
+      const ThermalExpansion$LengthPerLengthPerKelvin(_ratio);
+
   /// 1 [ThermalExpansion$LengthPerLengthPerFahrenheit] ≈ 1.8 [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
   num get ratio => _ratio;
@@ -333,6 +341,10 @@ final class ThermalExpansion$LengthPerLengthPerRankine
 
   static const _ratio = 1.8;
 
+  @override
+  ThermalExpansion get anchor =>
+      const ThermalExpansion$LengthPerLengthPerKelvin(_ratio);
+
   /// 1 [ThermalExpansion$LengthPerLengthPerRankine] ≈ 1.8 [ThermalExpansion$LengthPerLengthPerKelvin]
   @override
   num get ratio => _ratio;
@@ -399,6 +411,10 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
   String get displayName => 'length/length/Réaumur';
 
   static const _ratio = 0.8;
+
+  @override
+  ThermalExpansion get anchor =>
+      const ThermalExpansion$LengthPerLengthPerKelvin(_ratio);
 
   /// 1 [ThermalExpansion$LengthPerLengthPerReaumur] ≈ 0.8 [ThermalExpansion$LengthPerLengthPerKelvin]
   @override

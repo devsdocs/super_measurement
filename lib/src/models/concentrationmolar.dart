@@ -32,9 +32,6 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
 
   factory ConcentrationMolar.anchor() => const ConcentrationMolar$MolPerLiter();
 
-  @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter();
-
   /// Convert to [ConcentrationMolar$MolPerMeterCubic]
   ConcentrationMolar get toMolPerMeterCubic => convertTo(
         const ConcentrationMolar$MolPerMeterCubic(),
@@ -193,6 +190,9 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
 
   static const _ratio = 0.001;
 
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+
   /// 1 [ConcentrationMolar$MolPerMeterCubic] ≈ 0.001 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
@@ -258,6 +258,9 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
   String get displayName => 'mol/liter';
 
   static const _ratio = 1.0;
+
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
 
   /// Default (anchor) unit of [ConcentrationMolar]
   @override
@@ -326,6 +329,9 @@ final class ConcentrationMolar$MolPerCentimeterCubic
 
   static const _ratio = 1000.0;
 
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+
   /// 1 [ConcentrationMolar$MolPerCentimeterCubic] = 1000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
@@ -393,6 +399,9 @@ final class ConcentrationMolar$MolPerMillimeterCubic
 
   static const _ratio = 1000000.0;
 
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+
   /// 1 [ConcentrationMolar$MolPerMillimeterCubic] = 1000000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
@@ -459,6 +468,9 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
 
   static const _ratio = 1.0;
 
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+
   /// 1 [ConcentrationMolar$KilomolPerMeterCubic] = 1.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
@@ -524,6 +536,9 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
   String get displayName => 'kilomol/liter';
 
   static const _ratio = 1000.0;
+
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
 
   /// 1 [ConcentrationMolar$KilomolPerLiter] = 1000.0 [ConcentrationMolar$MolPerLiter]
   @override
@@ -592,6 +607,9 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
 
   static const _ratio = 1000000.0;
 
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+
   /// 1 [ConcentrationMolar$KilomolPerCentimeterCubic] = 1000000.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
@@ -658,6 +676,9 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
   String get displayName => 'kilomol/millimeter³';
 
   static const _ratio = 1000000000.0;
+
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
 
   /// 1 [ConcentrationMolar$KilomolPerMillimeterCubic] = 1000000000.0 [ConcentrationMolar$MolPerLiter]
   @override
@@ -726,6 +747,9 @@ final class ConcentrationMolar$MillimolPerMeterCubic
 
   static const _ratio = 0.000001;
 
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+
   /// 1 [ConcentrationMolar$MillimolPerMeterCubic] ≈ 0.000001 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
@@ -791,6 +815,9 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
   String get displayName => 'millimol/liter';
 
   static const _ratio = 0.001;
+
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
 
   /// 1 [ConcentrationMolar$MillimolPerLiter] ≈ 0.001 [ConcentrationMolar$MolPerLiter]
   @override
@@ -859,6 +886,9 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
 
   static const _ratio = 1.0;
 
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+
   /// 1 [ConcentrationMolar$MillimolPerCentimeterCubic] = 1.0 [ConcentrationMolar$MolPerLiter]
   @override
   num get ratio => _ratio;
@@ -925,6 +955,9 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
   String get displayName => 'millimol/millimeter³';
 
   static const _ratio = 1000.0;
+
+  @override
+  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
 
   /// 1 [ConcentrationMolar$MillimolPerMillimeterCubic] = 1000.0 [ConcentrationMolar$MolPerLiter]
   @override

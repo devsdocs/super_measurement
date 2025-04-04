@@ -33,9 +33,6 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
 
   factory ViscosityKinematic.anchor() => const ViscosityKinematic$Centistoke();
 
-  @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke();
-
   /// Convert to [ViscosityKinematic$Exastoke]
   ViscosityKinematic get toExastoke => convertTo(
         const ViscosityKinematic$Exastoke(),
@@ -259,6 +256,9 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
 
   static const _ratio = 100000000000000000000.0;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$Exastoke] = 100000000000000000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -323,6 +323,9 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
   String get displayName => _minorName;
 
   static const _ratio = 100000000000000000.0;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$Petastoke] = 100000000000000000.0 [ViscosityKinematic$Centistoke]
   @override
@@ -390,6 +393,9 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
 
   static const _ratio = 100000000000000.0;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$Terastoke] = 100000000000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -455,6 +461,9 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
   String get displayName => _minorName;
 
   static const _ratio = 100000000000.0;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$Gigastoke] = 100000000000.0 [ViscosityKinematic$Centistoke]
   @override
@@ -522,6 +531,9 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
 
   static const _ratio = 100000000.0;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$Megastoke] = 100000000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -587,6 +599,9 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
   String get displayName => _minorName;
 
   static const _ratio = 100000.0;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$Kilostoke] = 100000.0 [ViscosityKinematic$Centistoke]
   @override
@@ -654,6 +669,9 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
 
   static const _ratio = 10000.0;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$Hectostoke] = 10000.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -719,6 +737,9 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$Dekastoke] = 1000.0 [ViscosityKinematic$Centistoke]
   @override
@@ -786,6 +807,9 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
 
   static const _ratio = 100.0;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$Stoke] = 100.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -850,6 +874,9 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$Decistoke] = 10.0 [ViscosityKinematic$Centistoke]
   @override
@@ -917,6 +944,9 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
 
   static const _ratio = 1.0;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// Default (anchor) unit of [ViscosityKinematic]
   @override
   num get ratio => _ratio;
@@ -982,6 +1012,9 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$Millistoke] ≈ 0.1 [ViscosityKinematic$Centistoke]
   @override
@@ -1049,6 +1082,9 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
 
   static const _ratio = 0.0001;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$Microstoke] ≈ 0.0001 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -1114,6 +1150,9 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
   String get displayName => _minorName;
 
   static const _ratio = 1e-7;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$Nanostoke] ≈ 1e-7 [ViscosityKinematic$Centistoke]
   @override
@@ -1181,6 +1220,9 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
 
   static const _ratio = 1e-10;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$Picostoke] ≈ 1e-10 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -1246,6 +1288,9 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
   String get displayName => _minorName;
 
   static const _ratio = 1e-13;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$Femtostoke] ≈ 1e-13 [ViscosityKinematic$Centistoke]
   @override
@@ -1313,6 +1358,9 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
 
   static const _ratio = 1e-16;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$Attostoke] ≈ 1e-16 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -1378,6 +1426,9 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
   String get displayName => 'meter²/second';
 
   static const _ratio = 1000000.0;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$MeterSquarePerSecond] = 1000000.0 [ViscosityKinematic$Centistoke]
   @override
@@ -1446,6 +1497,9 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
 
   static const _ratio = 100.0;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$CentimeterSquarePerSecond] = 100.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -1513,6 +1567,9 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
 
   static const _ratio = 1.0;
 
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+
   /// 1 [ViscosityKinematic$MillimeterSquarePerSecond] = 1.0 [ViscosityKinematic$Centistoke]
   @override
   num get ratio => _ratio;
@@ -1578,6 +1635,9 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
   String get displayName => 'foot²/second';
 
   static const _ratio = 92903.04000008391;
+
+  @override
+  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
 
   /// 1 [ViscosityKinematic$FootSquarePerSecond] ≈ 92903.04000008391 [ViscosityKinematic$Centistoke]
   @override

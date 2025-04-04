@@ -34,34 +34,34 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   bool get _isShiftedValue => valueShift != 0;
 
   bool _convertAndCompare(String operator, T other) {
-    // For comparison, we must ensure both values are compared in the same unit
-    // Convert both values to the anchor unit for consistent comparison
-    final thisInAnchor = convertTo(anchor).value.toIntIfTrue;
-    final otherInAnchor = other.convertTo(anchor).value.toIntIfTrue;
+    // Instead of converting to anchor (which might overflow),
+    // convert other to this unit's type for comparison
+    final otherConverted = other.convertTo(this._clone).value;
+    final thisValue = this.value;
 
     // Add debug info
     print('Comparing: $this vs $other');
-    print('In anchor units: $thisInAnchor vs $otherInAnchor');
+    print('Using direct conversion: $thisValue vs $otherConverted');
 
     switch (operator) {
       case '==':
-        return (thisInAnchor - otherInAnchor).abs() < 1e-10;
+        return (thisValue - otherConverted).abs() < 1e-10;
       case '>':
-        return thisInAnchor > otherInAnchor;
+        return thisValue > otherConverted;
       case '>=':
-        return thisInAnchor >= otherInAnchor;
+        return thisValue >= otherConverted;
       case '<':
-        return thisInAnchor < otherInAnchor;
-      default: // <=
-        return thisInAnchor <= otherInAnchor;
+        return thisValue < otherConverted;
+      default:
+        return thisValue <= otherConverted;
     }
   }
 
   T _convertAndCombine(String operator, T other) {
     // Default implementation for regular units
     // Temperature will override this
-    final thisAnchor = convertTo(anchor);
-    final otherAnchor = other.convertTo(anchor);
+    final thisAnchor = _clone.convertTo(anchor);
+    final otherAnchor = other._clone.convertTo(anchor);
 
     final result = operator == '+'
         ? thisAnchor.value + otherAnchor.value
@@ -71,11 +71,9 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   }
 
   /// Convert this unit to another unit under same category
-  T convertTo<E extends Unit<T>>(E to) {
-    final result = to as T;
-
+  T convertTo<E extends Unit<T>>(E result) {
     // Same unit type - just transfer the value
-    if (runtimeType == to.runtimeType) {
+    if (runtimeType == result.runtimeType) {
       return result.withValue(value);
     }
 
@@ -150,15 +148,14 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   @override
   int compareTo(T other) {
-    // For all units, we need to compare at the anchor level for consistency
+    // For all units, compare directly without going through anchor
     if (runtimeType == other.runtimeType) {
       return value.compareTo(other.value);
     }
 
-    // Convert both to the anchor unit for comparison
-    final thisInAnchor = convertTo(anchor).value;
-    final otherInAnchor = other.convertTo(anchor).value;
-    return thisInAnchor.compareTo(otherInAnchor);
+    // Convert other unit to this unit's type for comparison
+    final otherConverted = other.convertTo(this._clone).value;
+    return value.compareTo(otherConverted);
   }
 
   @override

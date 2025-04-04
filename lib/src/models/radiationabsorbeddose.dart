@@ -39,9 +39,6 @@ sealed class RadiationAbsorbedDose extends Unit<RadiationAbsorbedDose> {
   factory RadiationAbsorbedDose.anchor() =>
       const RadiationAbsorbedDose$Microgray();
 
-  @override
-  RadiationAbsorbedDose get anchor => const RadiationAbsorbedDose$Microgray();
-
   /// Convert to [RadiationAbsorbedDose$Rad]
   RadiationAbsorbedDose get toRad => convertTo(
         const RadiationAbsorbedDose$Rad(),
@@ -303,6 +300,10 @@ final class RadiationAbsorbedDose$Rad extends RadiationAbsorbedDose {
 
   static const _ratio = 10000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Rad] = 10000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -367,6 +368,10 @@ final class RadiationAbsorbedDose$Millirad extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Millirad] = 10.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -435,6 +440,10 @@ final class RadiationAbsorbedDose$JoulePerKilogram
 
   static const _ratio = 1000000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$JoulePerKilogram] = 1000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -500,6 +509,10 @@ final class RadiationAbsorbedDose$JoulePerGram extends RadiationAbsorbedDose {
   String get displayName => 'joule/gram';
 
   static const _ratio = 1000000000.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$JoulePerGram] = 1000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -568,6 +581,10 @@ final class RadiationAbsorbedDose$JoulePerCentigram
 
   static const _ratio = 100000000000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$JoulePerCentigram] = 100000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -635,6 +652,10 @@ final class RadiationAbsorbedDose$JoulePerMilligram
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$JoulePerMilligram] = 1000000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -700,6 +721,10 @@ final class RadiationAbsorbedDose$ErgPerGram extends RadiationAbsorbedDose {
   String get displayName => 'erg/gram';
 
   static const _ratio = 100.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$ErgPerGram] = 100.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -768,6 +793,10 @@ final class RadiationAbsorbedDose$RepRoentgenEqPhysical
 
   static const _ratio = 9300.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$RepRoentgenEqPhysical] = 9300.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -833,6 +862,10 @@ final class RadiationAbsorbedDose$Parker extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 9300.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Parker] = 9300.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -900,6 +933,10 @@ final class RadiationAbsorbedDose$Exagray extends RadiationAbsorbedDose {
 
   static const _ratio = 1e+24;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Exagray] = 1e+24 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -965,6 +1002,10 @@ final class RadiationAbsorbedDose$Petagray extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 1e+21;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Petagray] = 1e+21 [RadiationAbsorbedDose$Microgray]
   @override
@@ -1032,6 +1073,10 @@ final class RadiationAbsorbedDose$Teragray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000000000000000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Teragray] = 1000000000000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -1097,6 +1142,10 @@ final class RadiationAbsorbedDose$Gigagray extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Gigagray] = 1000000000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -1164,6 +1213,10 @@ final class RadiationAbsorbedDose$Megagray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Megagray] = 1000000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -1229,6 +1282,10 @@ final class RadiationAbsorbedDose$Kilogray extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Kilogray] = 1000000000.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -1296,6 +1353,10 @@ final class RadiationAbsorbedDose$Hectogray extends RadiationAbsorbedDose {
 
   static const _ratio = 100000000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Hectogray] = 100000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -1361,6 +1422,10 @@ final class RadiationAbsorbedDose$Dekagray extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 10000000.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Dekagray] = 10000000.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -1428,6 +1493,10 @@ final class RadiationAbsorbedDose$Gray extends RadiationAbsorbedDose {
 
   static const _ratio = 1000000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Gray] = 1000000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -1492,6 +1561,10 @@ final class RadiationAbsorbedDose$Decigray extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 100000.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Decigray] = 100000.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -1559,6 +1632,10 @@ final class RadiationAbsorbedDose$Centigray extends RadiationAbsorbedDose {
 
   static const _ratio = 10000.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Centigray] = 10000.0 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -1624,6 +1701,10 @@ final class RadiationAbsorbedDose$Milligray extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Milligray] = 1000.0 [RadiationAbsorbedDose$Microgray]
   @override
@@ -1691,6 +1772,10 @@ final class RadiationAbsorbedDose$Microgray extends RadiationAbsorbedDose {
 
   static const _ratio = 1.0;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// Default (anchor) unit of [RadiationAbsorbedDose]
   @override
   num get ratio => _ratio;
@@ -1756,6 +1841,10 @@ final class RadiationAbsorbedDose$Nanogray extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 0.001;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Nanogray] ≈ 0.001 [RadiationAbsorbedDose$Microgray]
   @override
@@ -1823,6 +1912,10 @@ final class RadiationAbsorbedDose$Picogray extends RadiationAbsorbedDose {
 
   static const _ratio = 0.000001;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Picogray] ≈ 0.000001 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -1889,6 +1982,10 @@ final class RadiationAbsorbedDose$Femtogray extends RadiationAbsorbedDose {
 
   static const _ratio = 1e-9;
 
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
+
   /// 1 [RadiationAbsorbedDose$Femtogray] ≈ 1e-9 [RadiationAbsorbedDose$Microgray]
   @override
   num get ratio => _ratio;
@@ -1954,6 +2051,10 @@ final class RadiationAbsorbedDose$Attogray extends RadiationAbsorbedDose {
   String get displayName => _minorName;
 
   static const _ratio = 1e-12;
+
+  @override
+  RadiationAbsorbedDose get anchor =>
+      const RadiationAbsorbedDose$Microgray(_ratio);
 
   /// 1 [RadiationAbsorbedDose$Attogray] ≈ 1e-12 [RadiationAbsorbedDose$Microgray]
   @override

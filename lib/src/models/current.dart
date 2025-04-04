@@ -25,9 +25,6 @@ sealed class Current extends Unit<Current> {
 
   factory Current.anchor() => const Current$Milliampere();
 
-  @override
-  Current get anchor => const Current$Milliampere();
-
   /// Convert to [Current$Kiloampere]
   Current get toKiloampere => convertTo(
         const Current$Kiloampere(),
@@ -159,6 +156,9 @@ final class Current$Kiloampere extends Current {
 
   static const _ratio = 1000000.0;
 
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
+
   /// 1 [Current$Kiloampere] = 1000000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
@@ -223,6 +223,9 @@ final class Current$Ampere extends Current {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
 
   /// 1 [Current$Ampere] = 1000.0 [Current$Milliampere]
   @override
@@ -289,6 +292,9 @@ final class Current$Milliampere extends Current {
 
   static const _ratio = 1.0;
 
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
+
   /// Default (anchor) unit of [Current]
   @override
   num get ratio => _ratio;
@@ -353,6 +359,9 @@ final class Current$Biot extends Current {
   String get displayName => _minorName;
 
   static const _ratio = 10000.0;
+
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
 
   /// 1 [Current$Biot] = 10000.0 [Current$Milliampere]
   @override
@@ -419,6 +428,9 @@ final class Current$Abampere extends Current {
 
   static const _ratio = 10000.0;
 
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
+
   /// 1 [Current$Abampere] = 10000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
@@ -483,6 +495,9 @@ final class Current$Statampere extends Current {
   String get displayName => _minorName;
 
   static const _ratio = 3.335641e-7;
+
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
 
   /// 1 [Current$Statampere] ≈ 3.335641e-7 [Current$Milliampere]
   @override
@@ -549,6 +564,9 @@ final class Current$EMUOfCurrent extends Current {
 
   static const _ratio = 10000.0;
 
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
+
   /// 1 [Current$EMUOfCurrent] = 10000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
@@ -613,6 +631,9 @@ final class Current$ESUOfCurrent extends Current {
   String get displayName => 'ESU of current';
 
   static const _ratio = 3.335641e-7;
+
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
 
   /// 1 [Current$ESUOfCurrent] ≈ 3.335641e-7 [Current$Milliampere]
   @override
@@ -679,6 +700,9 @@ final class Current$CGSEMUnit extends Current {
 
   static const _ratio = 10000.0;
 
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
+
   /// 1 [Current$CGSEMUnit] = 10000.0 [Current$Milliampere]
   @override
   num get ratio => _ratio;
@@ -743,6 +767,9 @@ final class Current$CGSESUnit extends Current {
   String get displayName => 'CGS e.s. unit';
 
   static const _ratio = 3.335641e-7;
+
+  @override
+  Current get anchor => const Current$Milliampere(_ratio);
 
   /// 1 [Current$CGSESUnit] ≈ 3.335641e-7 [Current$Milliampere]
   @override

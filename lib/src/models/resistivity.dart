@@ -25,9 +25,6 @@ sealed class Resistivity extends Unit<Resistivity> {
 
   factory Resistivity.anchor() => const Resistivity$OhmMeter();
 
-  @override
-  Resistivity get anchor => const Resistivity$OhmMeter();
-
   /// Convert to [Resistivity$OhmMeter]
   Resistivity get toOhmMeter => convertTo(
         const Resistivity$OhmMeter(),
@@ -143,6 +140,9 @@ final class Resistivity$OhmMeter extends Resistivity {
 
   static const _ratio = 1.0;
 
+  @override
+  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+
   /// Default (anchor) unit of [Resistivity]
   @override
   num get ratio => _ratio;
@@ -207,6 +207,9 @@ final class Resistivity$OhmCentimeter extends Resistivity {
   String get displayName => 'ohm centimeter';
 
   static const _ratio = 0.01;
+
+  @override
+  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
 
   /// 1 [Resistivity$OhmCentimeter] ≈ 0.01 [Resistivity$OhmMeter]
   @override
@@ -273,6 +276,9 @@ final class Resistivity$OhmInch extends Resistivity {
 
   static const _ratio = 0.0254;
 
+  @override
+  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+
   /// 1 [Resistivity$OhmInch] ≈ 0.0254 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
@@ -337,6 +343,9 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
   String get displayName => 'microhm centimeter';
 
   static const _ratio = 1e-8;
+
+  @override
+  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
 
   /// 1 [Resistivity$MicrohmCentimeter] ≈ 1e-8 [Resistivity$OhmMeter]
   @override
@@ -404,6 +413,9 @@ final class Resistivity$MicrohmInch extends Resistivity {
 
   static const _ratio = 2.54e-8;
 
+  @override
+  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+
   /// 1 [Resistivity$MicrohmInch] ≈ 2.54e-8 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
@@ -468,6 +480,9 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
   String get displayName => 'Abohm centimeter';
 
   static const _ratio = 1e-11;
+
+  @override
+  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
 
   /// 1 [Resistivity$AbohmCentimeter] ≈ 1e-11 [Resistivity$OhmMeter]
   @override
@@ -534,6 +549,9 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
 
   static const _ratio = 8987524324.0;
 
+  @override
+  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+
   /// 1 [Resistivity$StatohmCentimeter] = 8987524324.0 [Resistivity$OhmMeter]
   @override
   num get ratio => _ratio;
@@ -599,6 +617,9 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
   String get displayName => 'circular mil ohm/foot';
 
   static const _ratio = 1.662426113e-9;
+
+  @override
+  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
 
   /// 1 [Resistivity$CircularMilOhmPerFoot] ≈ 1.662426113e-9 [Resistivity$OhmMeter]
   @override

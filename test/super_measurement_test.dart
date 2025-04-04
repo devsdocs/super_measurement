@@ -100,6 +100,7 @@ void main() {
           isTrue);
       expect(const Temperature$Kelvin() < const Temperature$Celsius(), isTrue);
     });
+    print(const Temperature$Celsius(100).toFahrenheit.value);
 
     test('Temperature addition', () {
       // Testing the adjusted conversion for shifted units

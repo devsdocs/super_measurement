@@ -31,9 +31,6 @@ sealed class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
 
   factory MagneticFluxDensity.anchor() => const MagneticFluxDensity$Tesla();
 
-  @override
-  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla();
-
   /// Convert to [MagneticFluxDensity$Tesla]
   MagneticFluxDensity get toTesla => convertTo(
         const MagneticFluxDensity$Tesla(),
@@ -181,6 +178,9 @@ final class MagneticFluxDensity$Tesla extends MagneticFluxDensity {
 
   static const _ratio = 1.0;
 
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
+
   /// Default (anchor) unit of [MagneticFluxDensity]
   @override
   num get ratio => _ratio;
@@ -246,6 +246,9 @@ final class MagneticFluxDensity$Gauss extends MagneticFluxDensity {
 
   static const _ratio = 0.0001;
 
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
+
   /// 1 [MagneticFluxDensity$Gauss] ≈ 0.0001 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
@@ -310,6 +313,9 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
   String get displayName => 'gauss (International)';
 
   static const _ratio = 0.0001000331;
+
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
 
   /// 1 [MagneticFluxDensity$GaussInternational] ≈ 0.0001000331 [MagneticFluxDensity$Tesla]
   @override
@@ -378,6 +384,9 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
 
   static const _ratio = 0.0001;
 
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
+
   /// 1 [MagneticFluxDensity$LinePerCentimeterSquare] ≈ 0.0001 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
@@ -443,6 +452,9 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
   String get displayName => 'line/inch²';
 
   static const _ratio = 0.000015500031;
+
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
 
   /// 1 [MagneticFluxDensity$LinePerInchSquare] ≈ 0.000015500031 [MagneticFluxDensity$Tesla]
   @override
@@ -511,6 +523,9 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
 
   static const _ratio = 1.0;
 
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
+
   /// 1 [MagneticFluxDensity$MaxwellPerMeterSquare] = 1.0 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
@@ -577,6 +592,9 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
   String get displayName => 'maxwell/centimeter²';
 
   static const _ratio = 0.0001;
+
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
 
   /// 1 [MagneticFluxDensity$MaxwellPerCentimeterSquare] ≈ 0.0001 [MagneticFluxDensity$Tesla]
   @override
@@ -645,6 +663,9 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
 
   static const _ratio = 0.000015500031;
 
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
+
   /// 1 [MagneticFluxDensity$MaxwellPerInchSquare] ≈ 0.000015500031 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
@@ -711,6 +732,9 @@ final class MagneticFluxDensity$WeberPerMeterSquare
   String get displayName => 'weber/meter²';
 
   static const _ratio = 1.0;
+
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
 
   /// 1 [MagneticFluxDensity$WeberPerMeterSquare] = 1.0 [MagneticFluxDensity$Tesla]
   @override
@@ -779,6 +803,9 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
 
   static const _ratio = 10000.0;
 
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
+
   /// 1 [MagneticFluxDensity$WeberPerCentimeterSquare] = 10000.0 [MagneticFluxDensity$Tesla]
   @override
   num get ratio => _ratio;
@@ -844,6 +871,9 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
   String get displayName => 'weber/inch²';
 
   static const _ratio = 1550.0031;
+
+  @override
+  MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla(_ratio);
 
   /// 1 [MagneticFluxDensity$WeberPerInchSquare] ≈ 1550.0031 [MagneticFluxDensity$Tesla]
   @override

@@ -34,10 +34,6 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
   factory SpecificHeatCapacity.anchor() =>
       const SpecificHeatCapacity$JoulePerKilogramK();
 
-  @override
-  SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK();
-
   /// Convert to [SpecificHeatCapacity$KilojoulePerKilogramK]
   SpecificHeatCapacity get toKilojoulePerKilogramK => convertTo(
         const SpecificHeatCapacity$KilojoulePerKilogramK(),
@@ -188,6 +184,10 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
 
   static const _ratio = 1000.0;
 
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+
   /// 1 [SpecificHeatCapacity$KilojoulePerKilogramK] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -254,6 +254,10 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
   String get displayName => 'kilojoule/kilogram °C';
 
   static const _ratio = 1000.0;
+
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
   /// 1 [SpecificHeatCapacity$KilojoulePerKilogramDegreeC] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
@@ -322,6 +326,10 @@ final class SpecificHeatCapacity$JoulePerKilogramK
 
   static const _ratio = 1.0;
 
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+
   /// Default (anchor) unit of [SpecificHeatCapacity]
   @override
   num get ratio => _ratio;
@@ -388,6 +396,10 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
   String get displayName => 'joule/kilogram °C';
 
   static const _ratio = 1.0;
+
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
   /// 1 [SpecificHeatCapacity$JoulePerKilogramDegreeC] = 1.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
@@ -456,6 +468,10 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
 
   static const _ratio = 1000.0;
 
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+
   /// 1 [SpecificHeatCapacity$JoulePerGramDegreeC] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -522,6 +538,10 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
   String get displayName => 'kilocalorie/kilogram °C';
 
   static const _ratio = 4186.8;
+
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
   /// 1 [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
@@ -590,6 +610,10 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
 
   static const _ratio = 4186.8;
 
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+
   /// 1 [SpecificHeatCapacity$CaloriePerGramDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -656,6 +680,10 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
   String get displayName => 'BTU/pound °C';
 
   static const _ratio = 2326.0;
+
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
   /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeC] = 2326.0 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
@@ -724,6 +752,10 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
 
   static const _ratio = 4186.8;
 
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+
   /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeF] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -791,6 +823,10 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
 
   static const _ratio = 4186.8;
 
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+
   /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeR] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -857,6 +893,10 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
   String get displayName => 'CHU/pound °C';
 
   static const _ratio = 4186.8;
+
+  @override
+  SpecificHeatCapacity get anchor =>
+      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
   /// 1 [SpecificHeatCapacity$CHUPerPoundDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
   @override

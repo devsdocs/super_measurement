@@ -24,9 +24,6 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
 
   factory MagnetomotiveForce.anchor() => const MagnetomotiveForce$AmpereTurn();
 
-  @override
-  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn();
-
   /// Convert to [MagnetomotiveForce$KiloampereTurn]
   MagnetomotiveForce get toKiloampereTurn => convertTo(
         const MagnetomotiveForce$KiloampereTurn(),
@@ -118,6 +115,9 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
 
   static const _ratio = 1000.0;
 
+  @override
+  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
+
   /// 1 [MagnetomotiveForce$KiloampereTurn] = 1000.0 [MagnetomotiveForce$AmpereTurn]
   @override
   num get ratio => _ratio;
@@ -183,6 +183,9 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
   String get displayName => 'ampere turn';
 
   static const _ratio = 1.0;
+
+  @override
+  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
 
   /// Default (anchor) unit of [MagnetomotiveForce]
   @override
@@ -250,6 +253,9 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
 
   static const _ratio = 0.001;
 
+  @override
+  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
+
   /// 1 [MagnetomotiveForce$MilliampereTurn] ≈ 0.001 [MagnetomotiveForce$AmpereTurn]
   @override
   num get ratio => _ratio;
@@ -316,6 +322,9 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
 
   static const _ratio = 10.0;
 
+  @override
+  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
+
   /// 1 [MagnetomotiveForce$AbampereTurn] = 10.0 [MagnetomotiveForce$AmpereTurn]
   @override
   num get ratio => _ratio;
@@ -381,6 +390,9 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
   String get displayName => _minorName;
 
   static const _ratio = 0.7957747151;
+
+  @override
+  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
 
   /// 1 [MagnetomotiveForce$Gilbert] ≈ 0.7957747151 [MagnetomotiveForce$AmpereTurn]
   @override

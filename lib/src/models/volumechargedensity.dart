@@ -28,10 +28,6 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
   factory VolumeChargeDensity.anchor() =>
       const VolumeChargeDensity$CoulombPerMeterCubic();
 
-  @override
-  VolumeChargeDensity get anchor =>
-      const VolumeChargeDensity$CoulombPerMeterCubic();
-
   /// Convert to [VolumeChargeDensity$CoulombPerMeterCubic]
   VolumeChargeDensity get toCoulombPerMeterCubic => convertTo(
         const VolumeChargeDensity$CoulombPerMeterCubic(),
@@ -140,6 +136,10 @@ final class VolumeChargeDensity$CoulombPerMeterCubic
 
   static const _ratio = 1.0;
 
+  @override
+  VolumeChargeDensity get anchor =>
+      const VolumeChargeDensity$CoulombPerMeterCubic(_ratio);
+
   /// Default (anchor) unit of [VolumeChargeDensity]
   @override
   num get ratio => _ratio;
@@ -206,6 +206,10 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
   String get displayName => 'coulomb/centimeter³';
 
   static const _ratio = 1000000.0;
+
+  @override
+  VolumeChargeDensity get anchor =>
+      const VolumeChargeDensity$CoulombPerMeterCubic(_ratio);
 
   /// 1 [VolumeChargeDensity$CoulombPerCentimeterCubic] = 1000000.0 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
@@ -274,6 +278,10 @@ final class VolumeChargeDensity$CoulombPerInchCubic
 
   static const _ratio = 61023.74409;
 
+  @override
+  VolumeChargeDensity get anchor =>
+      const VolumeChargeDensity$CoulombPerMeterCubic(_ratio);
+
   /// 1 [VolumeChargeDensity$CoulombPerInchCubic] ≈ 61023.74409 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
   num get ratio => _ratio;
@@ -340,6 +348,10 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
   String get displayName => 'Abcoulomb/meter³';
 
   static const _ratio = 10.0;
+
+  @override
+  VolumeChargeDensity get anchor =>
+      const VolumeChargeDensity$CoulombPerMeterCubic(_ratio);
 
   /// 1 [VolumeChargeDensity$AbcoulombPerMeterCubic] = 10.0 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
@@ -408,6 +420,10 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
 
   static const _ratio = 10000000.0;
 
+  @override
+  VolumeChargeDensity get anchor =>
+      const VolumeChargeDensity$CoulombPerMeterCubic(_ratio);
+
   /// 1 [VolumeChargeDensity$AbcoulombPerCentimeterCubic] = 10000000.0 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override
   num get ratio => _ratio;
@@ -474,6 +490,10 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
   String get displayName => 'Abcoulomb/inch³';
 
   static const _ratio = 610237.4409;
+
+  @override
+  VolumeChargeDensity get anchor =>
+      const VolumeChargeDensity$CoulombPerMeterCubic(_ratio);
 
   /// 1 [VolumeChargeDensity$AbcoulombPerInchCubic] ≈ 610237.4409 [VolumeChargeDensity$CoulombPerMeterCubic]
   @override

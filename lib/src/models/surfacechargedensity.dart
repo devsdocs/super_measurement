@@ -29,10 +29,6 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
   factory SurfaceChargeDensity.anchor() =>
       const SurfaceChargeDensity$CoulombPerMeterSquare();
 
-  @override
-  SurfaceChargeDensity get anchor =>
-      const SurfaceChargeDensity$CoulombPerMeterSquare();
-
   /// Convert to [SurfaceChargeDensity$CoulombPerMeterSquare]
   SurfaceChargeDensity get toCoulombPerMeterSquare => convertTo(
         const SurfaceChargeDensity$CoulombPerMeterSquare(),
@@ -144,6 +140,10 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
 
   static const _ratio = 1.0;
 
+  @override
+  SurfaceChargeDensity get anchor =>
+      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+
   /// Default (anchor) unit of [SurfaceChargeDensity]
   @override
   num get ratio => _ratio;
@@ -210,6 +210,10 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
   String get displayName => 'coulomb/inch²';
 
   static const _ratio = 1550.0031;
+
+  @override
+  SurfaceChargeDensity get anchor =>
+      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
   /// 1 [SurfaceChargeDensity$CoulombPerInchSquare] ≈ 1550.0031 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
@@ -278,6 +282,10 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
 
   static const _ratio = 10000.0;
 
+  @override
+  SurfaceChargeDensity get anchor =>
+      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+
   /// 1 [SurfaceChargeDensity$CoulombPerCentimeterSquare] = 10000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -344,6 +352,10 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
   String get displayName => 'Abcoulomb/meter²';
 
   static const _ratio = 10.0;
+
+  @override
+  SurfaceChargeDensity get anchor =>
+      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
   /// 1 [SurfaceChargeDensity$AbcoulombPerMeterSquare] = 10.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
@@ -412,6 +424,10 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
 
   static const _ratio = 100000.0;
 
+  @override
+  SurfaceChargeDensity get anchor =>
+      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+
   /// 1 [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] = 100000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
   num get ratio => _ratio;
@@ -478,6 +494,10 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
   String get displayName => 'Abcoulomb/inch²';
 
   static const _ratio = 15500.031;
+
+  @override
+  SurfaceChargeDensity get anchor =>
+      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
   /// 1 [SurfaceChargeDensity$AbcoulombPerInchSquare] ≈ 15500.031 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override

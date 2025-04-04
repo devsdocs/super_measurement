@@ -25,9 +25,6 @@ sealed class Angle extends Unit<Angle> {
 
   factory Angle.anchor() => const Angle$Second();
 
-  @override
-  Angle get anchor => const Angle$Second();
-
   /// Convert to [Angle$Degree]
   Angle get toDegree => convertTo(
         const Angle$Degree(),
@@ -199,6 +196,9 @@ final class Angle$Degree extends Angle {
 
   static const _ratio = 3600.0;
 
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
+
   /// 1 [Angle$Degree] = 3600.0 [Angle$Second]
   @override
   num get ratio => _ratio;
@@ -263,6 +263,9 @@ final class Angle$Radian extends Angle {
   String get displayName => _minorName;
 
   static const _ratio = 206264.80624709636;
+
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
 
   /// 1 [Angle$Radian] ≈ 206264.80624709636 [Angle$Second]
   @override
@@ -329,6 +332,9 @@ final class Angle$Grad extends Angle {
 
   static const _ratio = 3240.0;
 
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
+
   /// 1 [Angle$Grad] = 3240.0 [Angle$Second]
   @override
   num get ratio => _ratio;
@@ -393,6 +399,9 @@ final class Angle$Minute extends Angle {
   String get displayName => _minorName;
 
   static const _ratio = 60.0;
+
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
 
   /// 1 [Angle$Minute] = 60.0 [Angle$Second]
   @override
@@ -459,6 +468,9 @@ final class Angle$Second extends Angle {
 
   static const _ratio = 1.0;
 
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
+
   /// Default (anchor) unit of [Angle]
   @override
   num get ratio => _ratio;
@@ -523,6 +535,9 @@ final class Angle$Sign extends Angle {
   String get displayName => _minorName;
 
   static const _ratio = 108000.0;
+
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
 
   /// 1 [Angle$Sign] = 108000.0 [Angle$Second]
   @override
@@ -589,6 +604,9 @@ final class Angle$Mil extends Angle {
 
   static const _ratio = 202.5;
 
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
+
   /// 1 [Angle$Mil] ≈ 202.5 [Angle$Second]
   @override
   num get ratio => _ratio;
@@ -653,6 +671,9 @@ final class Angle$Revolution extends Angle {
   String get displayName => _minorName;
 
   static const _ratio = 1296000.0;
+
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
 
   /// 1 [Angle$Revolution] = 1296000.0 [Angle$Second]
   @override
@@ -719,6 +740,9 @@ final class Angle$Circle extends Angle {
 
   static const _ratio = 1296000.0;
 
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
+
   /// 1 [Angle$Circle] = 1296000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
@@ -783,6 +807,9 @@ final class Angle$Turn extends Angle {
   String get displayName => _minorName;
 
   static const _ratio = 1296000.0;
+
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
 
   /// 1 [Angle$Turn] = 1296000.0 [Angle$Second]
   @override
@@ -849,6 +876,9 @@ final class Angle$Quadrant extends Angle {
 
   static const _ratio = 324000.0;
 
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
+
   /// 1 [Angle$Quadrant] = 324000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
@@ -913,6 +943,9 @@ final class Angle$RightAngle extends Angle {
   String get displayName => 'right angle';
 
   static const _ratio = 324000.0;
+
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
 
   /// 1 [Angle$RightAngle] = 324000.0 [Angle$Second]
   @override
@@ -979,6 +1012,9 @@ final class Angle$Sextant extends Angle {
 
   static const _ratio = 216000.0;
 
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
+
   /// 1 [Angle$Sextant] = 216000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
@@ -1044,6 +1080,9 @@ final class Angle$Octant extends Angle {
 
   static const _ratio = 162000.0;
 
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
+
   /// 1 [Angle$Octant] = 162000.0 [Angle$Second]
   @override
   num get ratio => _ratio;
@@ -1108,6 +1147,9 @@ final class Angle$PercentOfFullCircle extends Angle {
   String get displayName => 'percent of full circle';
 
   static const _ratio = 12960.0;
+
+  @override
+  Angle get anchor => const Angle$Second(_ratio);
 
   /// 1 [Angle$PercentOfFullCircle] = 12960.0 [Angle$Second]
   @override

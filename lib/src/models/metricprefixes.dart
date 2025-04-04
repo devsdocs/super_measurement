@@ -28,9 +28,6 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
 
   factory MetricPrefixes.anchor() => const MetricPrefixes$MetricUnit();
 
-  @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit();
-
   /// Convert to [MetricPrefixes$Yotta]
   MetricPrefixes get toYotta => convertTo(
         const MetricPrefixes$Yotta(),
@@ -250,6 +247,9 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
 
   static const _ratio = 1e+24;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Yotta] = 1e+24 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -314,6 +314,9 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 1e+21;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Zetta] = 1e+21 [MetricPrefixes$MetricUnit]
   @override
@@ -380,6 +383,9 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
 
   static const _ratio = 1000000000000000000.0;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Exa] = 1000000000000000000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -444,6 +450,9 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Peta] = 1000000000000000.0 [MetricPrefixes$MetricUnit]
   @override
@@ -510,6 +519,9 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Tera] = 1000000000000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -574,6 +586,9 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Giga] = 1000000000.0 [MetricPrefixes$MetricUnit]
   @override
@@ -640,6 +655,9 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
 
   static const _ratio = 1000000.0;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Mega] = 1000000.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -704,6 +722,9 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Kilo] = 1000.0 [MetricPrefixes$MetricUnit]
   @override
@@ -770,6 +791,9 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
 
   static const _ratio = 100.0;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Hecto] = 100.0 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -834,6 +858,9 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Deka] = 10.0 [MetricPrefixes$MetricUnit]
   @override
@@ -900,6 +927,9 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
 
   static const _ratio = 1.0;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// Default (anchor) unit of [MetricPrefixes]
   @override
   num get ratio => _ratio;
@@ -964,6 +994,9 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Deci] ≈ 0.1 [MetricPrefixes$MetricUnit]
   @override
@@ -1030,6 +1063,9 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
 
   static const _ratio = 0.01;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Centi] ≈ 0.01 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -1094,6 +1130,9 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 0.001;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Milli] ≈ 0.001 [MetricPrefixes$MetricUnit]
   @override
@@ -1160,6 +1199,9 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
 
   static const _ratio = 0.000001;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Micro] ≈ 0.000001 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -1224,6 +1266,9 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 1e-9;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Nano] ≈ 1e-9 [MetricPrefixes$MetricUnit]
   @override
@@ -1290,6 +1335,9 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
 
   static const _ratio = 1e-12;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Pico] ≈ 1e-12 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -1354,6 +1402,9 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 1e-15;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Femto] ≈ 1e-15 [MetricPrefixes$MetricUnit]
   @override
@@ -1420,6 +1471,9 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
 
   static const _ratio = 1e-18;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Atto] ≈ 1e-18 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -1485,6 +1539,9 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
 
   static const _ratio = 1e-21;
 
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+
   /// 1 [MetricPrefixes$Zepto] ≈ 1e-21 [MetricPrefixes$MetricUnit]
   @override
   num get ratio => _ratio;
@@ -1549,6 +1606,9 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
   String get displayName => _minorName;
 
   static const _ratio = 1e-24;
+
+  @override
+  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
 
   /// 1 [MetricPrefixes$Yocto] ≈ 1e-24 [MetricPrefixes$MetricUnit]
   @override

@@ -28,9 +28,6 @@ sealed class EUCurrency extends Unit<EUCurrency> {
 
   factory EUCurrency.anchor() => const EUCurrency$EuroEUR();
 
-  @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR();
-
   /// Convert to [EUCurrency$EuroEUR]
   EUCurrency get toEuroEUR => convertTo(
         const EUCurrency$EuroEUR(),
@@ -186,6 +183,9 @@ final class EUCurrency$EuroEUR extends EUCurrency {
 
   static const _ratio = 1.0;
 
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+
   /// Default (anchor) unit of [EUCurrency]
   @override
   num get ratio => _ratio;
@@ -250,6 +250,9 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
   String get displayName => 'Irish Pound (IEP)';
 
   static const _ratio = 1.269738078;
+
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
 
   /// 1 [EUCurrency$IrishPoundIEP] ≈ 1.269738078 [EUCurrency$EuroEUR]
   @override
@@ -316,6 +319,9 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
 
   static const _ratio = 0.5112918812;
 
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+
   /// 1 [EUCurrency$DeutschMarkDEM] ≈ 0.5112918812 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
@@ -380,6 +386,9 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
   String get displayName => 'Dutch Guilden (NLG)';
 
   static const _ratio = 0.4537802161;
+
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
 
   /// 1 [EUCurrency$DutchGuildenNLG] ≈ 0.4537802161 [EUCurrency$EuroEUR]
   @override
@@ -446,6 +455,9 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
 
   static const _ratio = 0.1681879265;
 
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+
   /// 1 [EUCurrency$FinnishMarkFIM] ≈ 0.1681879265 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
@@ -511,6 +523,9 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
 
   static const _ratio = 0.1524490172;
 
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+
   /// 1 [EUCurrency$FrenchFrancFRF] ≈ 0.1524490172 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
@@ -575,6 +590,9 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
   String get displayName => 'Austrian Schilling (ATS)';
 
   static const _ratio = 0.07267283417;
+
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
 
   /// 1 [EUCurrency$AustrianSchillingATS] ≈ 0.07267283417 [EUCurrency$EuroEUR]
   @override
@@ -642,6 +660,9 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
 
   static const _ratio = 0.02478935248;
 
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+
   /// 1 [EUCurrency$BelgianFrancBEF] ≈ 0.02478935248 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
@@ -706,6 +727,9 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
   String get displayName => 'Luxembourg Franc (LUF)';
 
   static const _ratio = 0.02478935248;
+
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
 
   /// 1 [EUCurrency$LuxembourgFrancLUF] ≈ 0.02478935248 [EUCurrency$EuroEUR]
   @override
@@ -773,6 +797,9 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
 
   static const _ratio = 0.006010121044;
 
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+
   /// 1 [EUCurrency$SpanishPesetaESP] ≈ 0.006010121044 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
@@ -837,6 +864,9 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
   String get displayName => 'Portuguese Escudo (PTE)';
 
   static const _ratio = 0.004987978971;
+
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
 
   /// 1 [EUCurrency$PortugueseEscudoPTE] ≈ 0.004987978971 [EUCurrency$EuroEUR]
   @override
@@ -904,6 +934,9 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
 
   static const _ratio = 0.0005164568991;
 
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+
   /// 1 [EUCurrency$ItalianLireITL] ≈ 0.0005164568991 [EUCurrency$EuroEUR]
   @override
   num get ratio => _ratio;
@@ -968,6 +1001,9 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
   String get displayName => 'Greek Drachma (GRD)';
 
   static const _ratio = 0.00293470286133529;
+
+  @override
+  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
 
   /// 1 [EUCurrency$GreekDrachmaGRD] ≈ 0.00293470286133529 [EUCurrency$EuroEUR]
   @override

@@ -43,9 +43,6 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
 
   factory FrequencyWavelength.anchor() => const FrequencyWavelength$Hertz();
 
-  @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz();
-
   /// Convert to [FrequencyWavelength$Exahertz]
   FrequencyWavelength get toExahertz => convertTo(
         const FrequencyWavelength$Exahertz(),
@@ -368,6 +365,9 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
 
   static const _ratio = 1000000000000000000.0;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$Exahertz] = 1000000000000000000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -433,6 +433,9 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$Petahertz] = 1000000000000000.0 [FrequencyWavelength$Hertz]
   @override
@@ -500,6 +503,9 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$Terahertz] = 1000000000000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -565,6 +571,9 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$Gigahertz] = 1000000000.0 [FrequencyWavelength$Hertz]
   @override
@@ -632,6 +641,9 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
 
   static const _ratio = 1000000.0;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$Megahertz] = 1000000.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -697,6 +709,9 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$Kilohertz] = 1000.0 [FrequencyWavelength$Hertz]
   @override
@@ -764,6 +779,9 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
 
   static const _ratio = 100.0;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$Hectohertz] = 100.0 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -829,6 +847,9 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$Dekahertz] = 10.0 [FrequencyWavelength$Hertz]
   @override
@@ -896,6 +917,9 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
 
   static const _ratio = 1.0;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// Default (anchor) unit of [FrequencyWavelength]
   @override
   num get ratio => _ratio;
@@ -960,6 +984,9 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$Decihertz] ≈ 0.1 [FrequencyWavelength$Hertz]
   @override
@@ -1027,6 +1054,9 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
 
   static const _ratio = 0.01;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$Centihertz] ≈ 0.01 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -1092,6 +1122,9 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
   String get displayName => _minorName;
 
   static const _ratio = 0.001;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$Millihertz] ≈ 0.001 [FrequencyWavelength$Hertz]
   @override
@@ -1159,6 +1192,9 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
 
   static const _ratio = 0.000001;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$Microhertz] ≈ 0.000001 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -1224,6 +1260,9 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
   String get displayName => _minorName;
 
   static const _ratio = 1e-9;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$Nanohertz] ≈ 1e-9 [FrequencyWavelength$Hertz]
   @override
@@ -1291,6 +1330,9 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
 
   static const _ratio = 1e-12;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$Picohertz] ≈ 1e-12 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -1356,6 +1398,9 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
   String get displayName => _minorName;
 
   static const _ratio = 1e-15;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$Femtohertz] ≈ 1e-15 [FrequencyWavelength$Hertz]
   @override
@@ -1423,6 +1468,9 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
 
   static const _ratio = 1e-18;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$Attohertz] ≈ 1e-18 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -1488,6 +1536,9 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
   String get displayName => 'cycle/second';
 
   static const _ratio = 1.0;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$CyclePerSecond] = 1.0 [FrequencyWavelength$Hertz]
   @override
@@ -1556,6 +1607,9 @@ final class FrequencyWavelength$WavelengthInExametres
 
   static const _ratio = 3335640951.9815207;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$WavelengthInExametres] ≈ 3335640951.9815207 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -1622,6 +1676,9 @@ final class FrequencyWavelength$WavelengthInPetametres
   String get displayName => 'wavelength in petametres';
 
   static const _ratio = 3335640.9519815203;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$WavelengthInPetametres] ≈ 3335640.9519815203 [FrequencyWavelength$Hertz]
   @override
@@ -1690,6 +1747,9 @@ final class FrequencyWavelength$WavelengthInTerametres
 
   static const _ratio = 3335.6409519815206;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$WavelengthInTerametres] ≈ 3335.6409519815206 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -1756,6 +1816,9 @@ final class FrequencyWavelength$WavelengthInGigametres
   String get displayName => 'wavelength in gigametres';
 
   static const _ratio = 3.3356409519815204;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$WavelengthInGigametres] ≈ 3.3356409519815204 [FrequencyWavelength$Hertz]
   @override
@@ -1824,6 +1887,9 @@ final class FrequencyWavelength$WavelengthInMegametres
 
   static const _ratio = 0.0033356409519815205;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$WavelengthInMegametres] ≈ 0.0033356409519815205 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -1890,6 +1956,9 @@ final class FrequencyWavelength$WavelengthInKilometres
   String get displayName => 'wavelength in kilometres';
 
   static const _ratio = 0.0000033356409519815205;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$WavelengthInKilometres] ≈ 0.0000033356409519815205 [FrequencyWavelength$Hertz]
   @override
@@ -1958,6 +2027,9 @@ final class FrequencyWavelength$WavelengthInHectometres
 
   static const _ratio = 3.3356409519815204e-7;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$WavelengthInHectometres] ≈ 3.3356409519815204e-7 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -2025,6 +2097,9 @@ final class FrequencyWavelength$WavelengthInDecametres
 
   static const _ratio = 3.3356409519815205e-8;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$WavelengthInDecametres] ≈ 3.3356409519815205e-8 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -2090,6 +2165,9 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
   String get displayName => 'wavelength in metres';
 
   static const _ratio = 3.3356409519815204e-9;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$WavelengthInMetres] ≈ 3.3356409519815204e-9 [FrequencyWavelength$Hertz]
   @override
@@ -2158,6 +2236,9 @@ final class FrequencyWavelength$WavelengthInDecimetres
 
   static const _ratio = 3.3356409519815207e-10;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$WavelengthInDecimetres] ≈ 3.3356409519815207e-10 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -2224,6 +2305,9 @@ final class FrequencyWavelength$WavelengthInCentimetres
   String get displayName => 'wavelength in centimetres';
 
   static const _ratio = 3.33564095198152e-11;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$WavelengthInCentimetres] ≈ 3.33564095198152e-11 [FrequencyWavelength$Hertz]
   @override
@@ -2292,6 +2376,9 @@ final class FrequencyWavelength$WavelengthInMillimetres
 
   static const _ratio = 3.3356409519815203e-12;
 
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+
   /// 1 [FrequencyWavelength$WavelengthInMillimetres] ≈ 3.3356409519815203e-12 [FrequencyWavelength$Hertz]
   @override
   num get ratio => _ratio;
@@ -2358,6 +2445,9 @@ final class FrequencyWavelength$WavelengthInMicrometres
   String get displayName => 'wavelength in micrometres';
 
   static const _ratio = 3.3356409519815205e-15;
+
+  @override
+  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
 
   /// 1 [FrequencyWavelength$WavelengthInMicrometres] ≈ 3.3356409519815205e-15 [FrequencyWavelength$Hertz]
   @override

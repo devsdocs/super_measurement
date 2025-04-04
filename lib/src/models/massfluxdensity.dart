@@ -29,10 +29,6 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
   factory MassFluxDensity.anchor() =>
       const MassFluxDensity$KilogramPerSecondMeterSquare();
 
-  @override
-  MassFluxDensity get anchor =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare();
-
   /// Convert to [MassFluxDensity$KilogramPerHourMeterSquare]
   MassFluxDensity get toKilogramPerHourMeterSquare => convertTo(
         const MassFluxDensity$KilogramPerHourMeterSquare(),
@@ -153,6 +149,10 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
 
   static const _ratio = 0.0002777777777777778;
 
+  @override
+  MassFluxDensity get anchor =>
+      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+
   /// 1 [MassFluxDensity$KilogramPerHourMeterSquare] ≈ 0.0002777777777777778 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
@@ -218,6 +218,10 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
   String get displayName => 'kilogram/hour foot²';
 
   static const _ratio = 0.002989975117;
+
+  @override
+  MassFluxDensity get anchor =>
+      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
   /// 1 [MassFluxDensity$KilogramPerHourFootSquare] ≈ 0.002989975117 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
@@ -286,6 +290,10 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
 
   static const _ratio = 1.0;
 
+  @override
+  MassFluxDensity get anchor =>
+      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+
   /// Default (anchor) unit of [MassFluxDensity]
   @override
   num get ratio => _ratio;
@@ -351,6 +359,10 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
   String get displayName => 'gram/second meter²';
 
   static const _ratio = 0.001;
+
+  @override
+  MassFluxDensity get anchor =>
+      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
   /// 1 [MassFluxDensity$GramPerSecondMeterSquare] ≈ 0.001 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
@@ -419,6 +431,10 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
 
   static const _ratio = 10.0;
 
+  @override
+  MassFluxDensity get anchor =>
+      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+
   /// 1 [MassFluxDensity$GramPerSecondCentimeterSquare] = 10.0 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
@@ -485,6 +501,10 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
 
   static const _ratio = 0.001356229913;
 
+  @override
+  MassFluxDensity get anchor =>
+      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+
   /// 1 [MassFluxDensity$PoundPerHourFootSquare] ≈ 0.001356229913 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
   num get ratio => _ratio;
@@ -550,6 +570,10 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
   String get displayName => 'pound/second foot²';
 
   static const _ratio = 4.882427687;
+
+  @override
+  MassFluxDensity get anchor =>
+      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
   /// 1 [MassFluxDensity$PoundPerSecondFootSquare] ≈ 4.882427687 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override

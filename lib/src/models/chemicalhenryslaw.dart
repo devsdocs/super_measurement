@@ -28,10 +28,6 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
   factory ChemicalHenrysLaw.anchor() =>
       const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic();
 
-  @override
-  ChemicalHenrysLaw get anchor =>
-      const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic();
-
   /// Convert to [ChemicalHenrysLaw$NewtonMeterPerKilogram]
   ChemicalHenrysLaw get toNewtonMeterPerKilogram => convertTo(
         const ChemicalHenrysLaw$NewtonMeterPerKilogram(),
@@ -142,6 +138,10 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
 
   static const _ratio = 0.00001;
 
+  @override
+  ChemicalHenrysLaw get anchor =>
+      const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(_ratio);
+
   /// 1 [ChemicalHenrysLaw$NewtonMeterPerKilogram] ≈ 0.00001 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
   num get ratio => _ratio;
@@ -208,6 +208,10 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
   String get displayName => 'bar/(kilogram/meter³)';
 
   static const _ratio = 1.0;
+
+  @override
+  ChemicalHenrysLaw get anchor =>
+      const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(_ratio);
 
   /// Default (anchor) unit of [ChemicalHenrysLaw]
   @override
@@ -276,6 +280,10 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
 
   static const _ratio = 1.01325;
 
+  @override
+  ChemicalHenrysLaw get anchor =>
+      const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(_ratio);
+
   /// 1 [ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic] ≈ 1.01325 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
   num get ratio => _ratio;
@@ -342,6 +350,10 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
   String get displayName => 'atmosphere/(kilogram/foot³)';
 
   static const _ratio = 0.02869204481;
+
+  @override
+  ChemicalHenrysLaw get anchor =>
+      const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(_ratio);
 
   /// 1 [ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic] ≈ 0.02869204481 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
@@ -410,6 +422,10 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
 
   static const _ratio = 0.00101325;
 
+  @override
+  ChemicalHenrysLaw get anchor =>
+      const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(_ratio);
+
   /// 1 [ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic] ≈ 0.00101325 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override
   num get ratio => _ratio;
@@ -476,6 +492,10 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
   String get displayName => 'atmosphere/(pound/foot³)';
 
   static const _ratio = 0.06325513043;
+
+  @override
+  ChemicalHenrysLaw get anchor =>
+      const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic(_ratio);
 
   /// 1 [ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic] ≈ 0.06325513043 [ChemicalHenrysLaw$BarPerKilogramPerMeterCubic]
   @override

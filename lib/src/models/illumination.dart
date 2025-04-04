@@ -28,9 +28,6 @@ sealed class Illumination extends Unit<Illumination> {
 
   factory Illumination.anchor() => const Illumination$Nox();
 
-  @override
-  Illumination get anchor => const Illumination$Nox();
-
   /// Convert to [Illumination$MeterCandle]
   Illumination get toMeterCandle => convertTo(
         const Illumination$MeterCandle(),
@@ -173,6 +170,9 @@ final class Illumination$MeterCandle extends Illumination {
 
   static const _ratio = 1000.0;
 
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
+
   /// 1 [Illumination$MeterCandle] = 1000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
@@ -237,6 +237,9 @@ final class Illumination$CentimeterCandle extends Illumination {
   String get displayName => 'centimeter-candle';
 
   static const _ratio = 10000000.0;
+
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
 
   /// 1 [Illumination$CentimeterCandle] = 10000000.0 [Illumination$Nox]
   @override
@@ -304,6 +307,9 @@ final class Illumination$FootCandle extends Illumination {
 
   static const _ratio = 10763.9104167;
 
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
+
   /// 1 [Illumination$FootCandle] ≈ 10763.9104167 [Illumination$Nox]
   @override
   num get ratio => _ratio;
@@ -368,6 +374,9 @@ final class Illumination$Flame extends Illumination {
   String get displayName => _minorName;
 
   static const _ratio = 43055.6416668;
+
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
 
   /// 1 [Illumination$Flame] ≈ 43055.6416668 [Illumination$Nox]
   @override
@@ -434,6 +443,9 @@ final class Illumination$Phot extends Illumination {
 
   static const _ratio = 10000000.0;
 
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
+
   /// 1 [Illumination$Phot] = 10000000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
@@ -498,6 +510,9 @@ final class Illumination$Nox extends Illumination {
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
+
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
 
   /// Default (anchor) unit of [Illumination]
   @override
@@ -564,6 +579,9 @@ final class Illumination$Lux extends Illumination {
 
   static const _ratio = 1000.0;
 
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
+
   /// 1 [Illumination$Lux] = 1000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
@@ -628,6 +646,9 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
   String get displayName => 'lumen/meter²';
 
   static const _ratio = 1000.0;
+
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
 
   /// 1 [Illumination$LumenPerMeterSquare] = 1000.0 [Illumination$Nox]
   @override
@@ -695,6 +716,9 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
 
   static const _ratio = 10000000.0;
 
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
+
   /// 1 [Illumination$LumenPerCentimeterSquare] = 10000000.0 [Illumination$Nox]
   @override
   num get ratio => _ratio;
@@ -761,6 +785,9 @@ final class Illumination$LumenPerFootSquare extends Illumination {
 
   static const _ratio = 10763.9104167;
 
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
+
   /// 1 [Illumination$LumenPerFootSquare] ≈ 10763.9104167 [Illumination$Nox]
   @override
   num get ratio => _ratio;
@@ -826,6 +853,9 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
   String get displayName => 'watt/centimeter² (at 555nm)';
 
   static const _ratio = 6830000000.0;
+
+  @override
+  Illumination get anchor => const Illumination$Nox(_ratio);
 
   /// 1 [Illumination$WattPerCentimeterSquareAt555nm] = 6830000000.0 [Illumination$Nox]
   @override

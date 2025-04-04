@@ -26,9 +26,6 @@ sealed class Entropy extends Unit<Entropy> {
 
   factory Entropy.anchor() => const Entropy$JoulePerKilogramK();
 
-  @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK();
-
   /// Convert to [Entropy$KilojoulePerKilogramK]
   Entropy get toKilojoulePerKilogramK => convertTo(
         const Entropy$KilojoulePerKilogramK(),
@@ -155,6 +152,9 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
 
   static const _ratio = 1000.0;
 
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+
   /// 1 [Entropy$KilojoulePerKilogramK] = 1000.0 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -220,6 +220,9 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
   String get displayName => 'kilojoule/kilogram °C';
 
   static const _ratio = 1000.0;
+
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
 
   /// 1 [Entropy$KilojoulePerKilogramDegreeC] = 1000.0 [Entropy$JoulePerKilogramK]
   @override
@@ -287,6 +290,9 @@ final class Entropy$JoulePerKilogramK extends Entropy {
 
   static const _ratio = 1.0;
 
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+
   /// Default (anchor) unit of [Entropy]
   @override
   num get ratio => _ratio;
@@ -351,6 +357,9 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
   String get displayName => 'joule/kilogram °C';
 
   static const _ratio = 1.0;
+
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
 
   /// 1 [Entropy$JoulePerKilogramDegreeC] = 1.0 [Entropy$JoulePerKilogramK]
   @override
@@ -418,6 +427,9 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
 
   static const _ratio = 4186.8;
 
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+
   /// 1 [Entropy$KilocaloriePerKilogramDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -483,6 +495,9 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
   String get displayName => 'calorie/gram °C';
 
   static const _ratio = 4186.8;
+
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
 
   /// 1 [Entropy$CaloriePerGramDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
@@ -550,6 +565,9 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
 
   static const _ratio = 4186.8;
 
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+
   /// 1 [Entropy$BTUPerPoundDegreeF] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -615,6 +633,9 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
 
   static const _ratio = 4186.8;
 
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+
   /// 1 [Entropy$BTUPerPoundDegreeR] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override
   num get ratio => _ratio;
@@ -679,6 +700,9 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
   String get displayName => 'CHU/pound °C';
 
   static const _ratio = 4186.8;
+
+  @override
+  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
 
   /// 1 [Entropy$CHUPerPoundDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
   @override

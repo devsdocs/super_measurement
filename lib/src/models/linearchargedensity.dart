@@ -28,9 +28,6 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
   factory LinearChargeDensity.anchor() =>
       const LinearChargeDensity$CoulombPerMeter();
 
-  @override
-  LinearChargeDensity get anchor => const LinearChargeDensity$CoulombPerMeter();
-
   /// Convert to [LinearChargeDensity$CoulombPerMeter]
   LinearChargeDensity get toCoulombPerMeter => convertTo(
         const LinearChargeDensity$CoulombPerMeter(),
@@ -133,6 +130,10 @@ final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
 
   static const _ratio = 1.0;
 
+  @override
+  LinearChargeDensity get anchor =>
+      const LinearChargeDensity$CoulombPerMeter(_ratio);
+
   /// Default (anchor) unit of [LinearChargeDensity]
   @override
   num get ratio => _ratio;
@@ -200,6 +201,10 @@ final class LinearChargeDensity$CoulombPerCentimeter
 
   static const _ratio = 100.0;
 
+  @override
+  LinearChargeDensity get anchor =>
+      const LinearChargeDensity$CoulombPerMeter(_ratio);
+
   /// 1 [LinearChargeDensity$CoulombPerCentimeter] = 100.0 [LinearChargeDensity$CoulombPerMeter]
   @override
   num get ratio => _ratio;
@@ -266,6 +271,10 @@ final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
 
   static const _ratio = 39.37007874;
 
+  @override
+  LinearChargeDensity get anchor =>
+      const LinearChargeDensity$CoulombPerMeter(_ratio);
+
   /// 1 [LinearChargeDensity$CoulombPerInch] ≈ 39.37007874 [LinearChargeDensity$CoulombPerMeter]
   @override
   num get ratio => _ratio;
@@ -331,6 +340,10 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
   String get displayName => 'Abcoulomb/meter';
 
   static const _ratio = 10.0;
+
+  @override
+  LinearChargeDensity get anchor =>
+      const LinearChargeDensity$CoulombPerMeter(_ratio);
 
   /// 1 [LinearChargeDensity$AbcoulombPerMeter] = 10.0 [LinearChargeDensity$CoulombPerMeter]
   @override
@@ -399,6 +412,10 @@ final class LinearChargeDensity$AbcoulombPerCentimeter
 
   static const _ratio = 1000.0;
 
+  @override
+  LinearChargeDensity get anchor =>
+      const LinearChargeDensity$CoulombPerMeter(_ratio);
+
   /// 1 [LinearChargeDensity$AbcoulombPerCentimeter] = 1000.0 [LinearChargeDensity$CoulombPerMeter]
   @override
   num get ratio => _ratio;
@@ -464,6 +481,10 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
   String get displayName => 'Abcoulomb/inch';
 
   static const _ratio = 393.7007874;
+
+  @override
+  LinearChargeDensity get anchor =>
+      const LinearChargeDensity$CoulombPerMeter(_ratio);
 
   /// 1 [LinearChargeDensity$AbcoulombPerInch] ≈ 393.7007874 [LinearChargeDensity$CoulombPerMeter]
   @override

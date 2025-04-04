@@ -28,9 +28,6 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
 
   factory VelocityAngular.anchor() => const VelocityAngular$DegreePerDay();
 
-  @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay();
-
   /// Convert to [VelocityAngular$DegreePerDay]
   VelocityAngular get toDegreePerDay => convertTo(
         const VelocityAngular$DegreePerDay(),
@@ -178,6 +175,9 @@ final class VelocityAngular$DegreePerDay extends VelocityAngular {
 
   static const _ratio = 1.0;
 
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+
   /// Default (anchor) unit of [VelocityAngular]
   @override
   num get ratio => _ratio;
@@ -243,6 +243,9 @@ final class VelocityAngular$DegreePerHour extends VelocityAngular {
   String get displayName => 'degree/hour';
 
   static const _ratio = 24.0;
+
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
 
   /// 1 [VelocityAngular$DegreePerHour] = 24.0 [VelocityAngular$DegreePerDay]
   @override
@@ -310,6 +313,9 @@ final class VelocityAngular$DegreePerMinute extends VelocityAngular {
 
   static const _ratio = 1440.0;
 
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+
   /// 1 [VelocityAngular$DegreePerMinute] = 1440.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
@@ -375,6 +381,9 @@ final class VelocityAngular$DegreePerSecond extends VelocityAngular {
   String get displayName => 'degree/second';
 
   static const _ratio = 86400.0;
+
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
 
   /// 1 [VelocityAngular$DegreePerSecond] = 86400.0 [VelocityAngular$DegreePerDay]
   @override
@@ -442,6 +451,9 @@ final class VelocityAngular$RadianPerDay extends VelocityAngular {
 
   static const _ratio = 57.29577951308232;
 
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+
   /// 1 [VelocityAngular$RadianPerDay] ≈ 57.29577951308232 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
@@ -507,6 +519,9 @@ final class VelocityAngular$RadianPerHour extends VelocityAngular {
   String get displayName => 'radian/hour';
 
   static const _ratio = 1375.0987083139757;
+
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
 
   /// 1 [VelocityAngular$RadianPerHour] ≈ 1375.0987083139757 [VelocityAngular$DegreePerDay]
   @override
@@ -574,6 +589,9 @@ final class VelocityAngular$RadianPerMinute extends VelocityAngular {
 
   static const _ratio = 82505.92249883854;
 
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+
   /// 1 [VelocityAngular$RadianPerMinute] ≈ 82505.92249883854 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
@@ -639,6 +657,9 @@ final class VelocityAngular$RadianPerSecond extends VelocityAngular {
   String get displayName => 'radian/second';
 
   static const _ratio = 4950355.3499303125;
+
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
 
   /// 1 [VelocityAngular$RadianPerSecond] ≈ 4950355.3499303125 [VelocityAngular$DegreePerDay]
   @override
@@ -706,6 +727,9 @@ final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
 
   static const _ratio = 360.0;
 
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+
   /// 1 [VelocityAngular$RevolutionPerDay] = 360.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
@@ -771,6 +795,9 @@ final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
   String get displayName => 'revolution/hour';
 
   static const _ratio = 8640.0;
+
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
 
   /// 1 [VelocityAngular$RevolutionPerHour] = 8640.0 [VelocityAngular$DegreePerDay]
   @override
@@ -838,6 +865,9 @@ final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
 
   static const _ratio = 518400.0;
 
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+
   /// 1 [VelocityAngular$RevolutionPerMinute] = 518400.0 [VelocityAngular$DegreePerDay]
   @override
   num get ratio => _ratio;
@@ -903,6 +933,9 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
   String get displayName => 'revolution/second';
 
   static const _ratio = 31104000.0;
+
+  @override
+  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
 
   /// 1 [VelocityAngular$RevolutionPerSecond] = 31104000.0 [VelocityAngular$DegreePerDay]
   @override

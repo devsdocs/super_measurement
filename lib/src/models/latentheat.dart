@@ -23,9 +23,6 @@ sealed class LatentHeat extends Unit<LatentHeat> {
 
   factory LatentHeat.anchor() => const LatentHeat$KilojoulePerKilogram();
 
-  @override
-  LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram();
-
   /// Convert to [LatentHeat$CaloriePerGram]
   LatentHeat get toCaloriePerGram => convertTo(
         const LatentHeat$CaloriePerGram(),
@@ -101,6 +98,9 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
 
   static const _ratio = 4.1868;
 
+  @override
+  LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram(_ratio);
+
   /// 1 [LatentHeat$CaloriePerGram] ≈ 4.1868 [LatentHeat$KilojoulePerKilogram]
   @override
   num get ratio => _ratio;
@@ -165,6 +165,9 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
   String get displayName => 'kilojoule/kilogram';
 
   static const _ratio = 1.0;
+
+  @override
+  LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram(_ratio);
 
   /// Default (anchor) unit of [LatentHeat]
   @override
@@ -231,6 +234,9 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
   String get displayName => 'BTU/pound';
 
   static const _ratio = 2.326;
+
+  @override
+  LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram(_ratio);
 
   /// 1 [LatentHeat$BTUPerPound] ≈ 2.326 [LatentHeat$KilojoulePerKilogram]
   @override

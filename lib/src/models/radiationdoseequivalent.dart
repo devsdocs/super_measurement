@@ -32,9 +32,6 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
   factory RadiationDoseEquivalent.anchor() =>
       const RadiationDoseEquivalent$Sievert();
 
-  @override
-  RadiationDoseEquivalent get anchor => const RadiationDoseEquivalent$Sievert();
-
   /// Convert to [RadiationDoseEquivalent$Sievert]
   RadiationDoseEquivalent get toSievert => convertTo(
         const RadiationDoseEquivalent$Sievert(),
@@ -173,6 +170,10 @@ final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
 
   static const _ratio = 1.0;
 
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
+
   /// Default (anchor) unit of [RadiationDoseEquivalent]
   @override
   num get ratio => _ratio;
@@ -239,6 +240,10 @@ final class RadiationDoseEquivalent$Millisievert
   String get displayName => _minorName;
 
   static const _ratio = 0.001;
+
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
 
   /// 1 [RadiationDoseEquivalent$Millisievert] ≈ 0.001 [RadiationDoseEquivalent$Sievert]
   @override
@@ -307,6 +312,10 @@ final class RadiationDoseEquivalent$Microsievert
 
   static const _ratio = 0.000001;
 
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
+
   /// 1 [RadiationDoseEquivalent$Microsievert] ≈ 0.000001 [RadiationDoseEquivalent$Sievert]
   @override
   num get ratio => _ratio;
@@ -373,6 +382,10 @@ final class RadiationDoseEquivalent$JoulePerKilogram
   String get displayName => 'joule/kilogram';
 
   static const _ratio = 1.0;
+
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
 
   /// 1 [RadiationDoseEquivalent$JoulePerKilogram] = 1.0 [RadiationDoseEquivalent$Sievert]
   @override
@@ -441,6 +454,10 @@ final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
 
   static const _ratio = 1.0;
 
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
+
   /// 1 [RadiationDoseEquivalent$MeterSquarePerSecondSquare] = 1.0 [RadiationDoseEquivalent$Sievert]
   @override
   num get ratio => _ratio;
@@ -508,6 +525,10 @@ final class RadiationDoseEquivalent$RemRoentgenEqMan
 
   static const _ratio = 0.01;
 
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
+
   /// 1 [RadiationDoseEquivalent$RemRoentgenEqMan] ≈ 0.01 [RadiationDoseEquivalent$Sievert]
   @override
   num get ratio => _ratio;
@@ -573,6 +594,10 @@ final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
   String get displayName => _minorName;
 
   static const _ratio = 0.00001;
+
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
 
   /// 1 [RadiationDoseEquivalent$Millirem] ≈ 0.00001 [RadiationDoseEquivalent$Sievert]
   @override
@@ -641,6 +666,10 @@ final class RadiationDoseEquivalent$IntensityMillicurie
 
   static const _ratio = 1.0;
 
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
+
   /// 1 [RadiationDoseEquivalent$IntensityMillicurie] = 1.0 [RadiationDoseEquivalent$Sievert]
   @override
   num get ratio => _ratio;
@@ -708,6 +737,10 @@ final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
 
   static const _ratio = 1.0;
 
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
+
   /// 1 [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons] = 1.0 [RadiationDoseEquivalent$Sievert]
   @override
   num get ratio => _ratio;
@@ -774,6 +807,10 @@ final class RadiationDoseEquivalent$GrayWr20AlphaParticles
   String get displayName => 'gray (Wr=20, alpha particles)';
 
   static const _ratio = 20.0;
+
+  @override
+  RadiationDoseEquivalent get anchor =>
+      const RadiationDoseEquivalent$Sievert(_ratio);
 
   /// 1 [RadiationDoseEquivalent$GrayWr20AlphaParticles] = 20.0 [RadiationDoseEquivalent$Sievert]
   @override

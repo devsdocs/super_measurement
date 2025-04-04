@@ -34,9 +34,6 @@ sealed class FlowMass extends Unit<FlowMass> {
 
   factory FlowMass.anchor() => const FlowMass$KilogramPerDay();
 
-  @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay();
-
   /// Convert to [FlowMass$GramPerSecond]
   FlowMass get toGramPerSecond => convertTo(
         const FlowMass$GramPerSecond(),
@@ -296,6 +293,9 @@ final class FlowMass$GramPerSecond extends FlowMass {
 
   static const _ratio = 86.4;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$GramPerSecond] ≈ 86.4 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -360,6 +360,9 @@ final class FlowMass$GramPerMinute extends FlowMass {
   String get displayName => 'gram/minute';
 
   static const _ratio = 1.44;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$GramPerMinute] ≈ 1.44 [FlowMass$KilogramPerDay]
   @override
@@ -426,6 +429,9 @@ final class FlowMass$GramPerHour extends FlowMass {
 
   static const _ratio = 0.024;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$GramPerHour] ≈ 0.024 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -490,6 +496,9 @@ final class FlowMass$GramPerDay extends FlowMass {
   String get displayName => 'gram/day';
 
   static const _ratio = 0.001;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$GramPerDay] ≈ 0.001 [FlowMass$KilogramPerDay]
   @override
@@ -556,6 +565,9 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
 
   static const _ratio = 0.00144;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$MilligramPerMinute] ≈ 0.00144 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -620,6 +632,9 @@ final class FlowMass$MilligramPerHour extends FlowMass {
   String get displayName => 'milligram/hour';
 
   static const _ratio = 0.000024;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$MilligramPerHour] ≈ 0.000024 [FlowMass$KilogramPerDay]
   @override
@@ -686,6 +701,9 @@ final class FlowMass$MilligramPerDay extends FlowMass {
 
   static const _ratio = 0.000001;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$MilligramPerDay] ≈ 0.000001 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -750,6 +768,9 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
   String get displayName => 'kilogram/minute';
 
   static const _ratio = 1440.0;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$KilogramPerMinute] = 1440.0 [FlowMass$KilogramPerDay]
   @override
@@ -816,6 +837,9 @@ final class FlowMass$KilogramPerHour extends FlowMass {
 
   static const _ratio = 24.0;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$KilogramPerHour] = 24.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -880,6 +904,9 @@ final class FlowMass$KilogramPerDay extends FlowMass {
   String get displayName => 'kilogram/day';
 
   static const _ratio = 1.0;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// Default (anchor) unit of [FlowMass]
   @override
@@ -946,6 +973,9 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
 
   static const _ratio = 86400000000000000000.0;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$ExagramPerSecond] = 86400000000000000000.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -1010,6 +1040,9 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
   String get displayName => 'petagram/second';
 
   static const _ratio = 86400000000000000.0;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$PetagramPerSecond] = 86400000000000000.0 [FlowMass$KilogramPerDay]
   @override
@@ -1076,6 +1109,9 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
 
   static const _ratio = 86400000000000.0;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$TeragramPerSecond] = 86400000000000.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -1140,6 +1176,9 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
   String get displayName => 'gigagram/second';
 
   static const _ratio = 86400000000.0;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$GigagramPerSecond] = 86400000000.0 [FlowMass$KilogramPerDay]
   @override
@@ -1206,6 +1245,9 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
 
   static const _ratio = 86400000.0;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$MegagramPerSecond] = 86400000.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -1270,6 +1312,9 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
   String get displayName => 'kilogram/second';
 
   static const _ratio = 86400.0;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$KilogramPerSecond] = 86400.0 [FlowMass$KilogramPerDay]
   @override
@@ -1336,6 +1381,9 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
 
   static const _ratio = 8640.0;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$HectogramPerSecond] = 8640.0 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -1400,6 +1448,9 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
   String get displayName => 'dekagram/second';
 
   static const _ratio = 864.0;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$DekagramPerSecond] = 864.0 [FlowMass$KilogramPerDay]
   @override
@@ -1466,6 +1517,9 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
 
   static const _ratio = 8.64;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$DecigramPerSecond] ≈ 8.64 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -1530,6 +1584,9 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
   String get displayName => 'centigram/second';
 
   static const _ratio = 0.864;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$CentigramPerSecond] ≈ 0.864 [FlowMass$KilogramPerDay]
   @override
@@ -1596,6 +1653,9 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
 
   static const _ratio = 0.0864;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$MilligramPerSecond] ≈ 0.0864 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -1660,6 +1720,9 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
   String get displayName => 'microgram/second';
 
   static const _ratio = 0.0000864;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$MicrogramPerSecond] ≈ 0.0000864 [FlowMass$KilogramPerDay]
   @override
@@ -1726,6 +1789,9 @@ final class FlowMass$PoundPerSecond extends FlowMass {
 
   static const _ratio = 39190.38077;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$PoundPerSecond] ≈ 39190.38077 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -1790,6 +1856,9 @@ final class FlowMass$PoundPerMinute extends FlowMass {
   String get displayName => 'pound/minute';
 
   static const _ratio = 653.1730128;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$PoundPerMinute] ≈ 653.1730128 [FlowMass$KilogramPerDay]
   @override
@@ -1856,6 +1925,9 @@ final class FlowMass$PoundPerHour extends FlowMass {
 
   static const _ratio = 10.88621688;
 
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+
   /// 1 [FlowMass$PoundPerHour] ≈ 10.88621688 [FlowMass$KilogramPerDay]
   @override
   num get ratio => _ratio;
@@ -1920,6 +1992,9 @@ final class FlowMass$PoundPerDay extends FlowMass {
   String get displayName => 'pound/day';
 
   static const _ratio = 0.45359237;
+
+  @override
+  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
 
   /// 1 [FlowMass$PoundPerDay] ≈ 0.45359237 [FlowMass$KilogramPerDay]
   @override

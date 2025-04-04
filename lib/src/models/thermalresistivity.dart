@@ -40,10 +40,6 @@ sealed class ThermalResistivity extends Unit<ThermalResistivity> {
   factory ThermalResistivity.anchor() =>
       const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch();
 
-  @override
-  ThermalResistivity get anchor =>
-      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch();
-
   /// Convert to [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   ThermalResistivity get toHourFootSquareDegreeFPerBTUThermochemInch =>
       convertTo(
@@ -272,6 +268,11 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch
 
   static const _ratio = 1.0;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// Default (anchor) unit of [ThermalResistivity]
   @override
   num get ratio => _ratio;
@@ -338,6 +339,11 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch
   String get displayName => 'hour-foot²-°F/BTU (int)-inch';
 
   static const _ratio = 0.9993312314431053;
+
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
 
   /// 1 [ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch] ≈ 0.9993312314431053 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
@@ -406,6 +412,11 @@ final class ThermalResistivity$HourFootDegreeFPerBTUThemochem
 
   static const _ratio = 0.08333333333333333;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$HourFootDegreeFPerBTUThemochem] ≈ 0.08333333333333333 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -472,6 +483,11 @@ final class ThermalResistivity$HourFootDegreeFPerBTUInt
   String get displayName => 'hour-foot-°F/BTU (int)';
 
   static const _ratio = 0.08327760262025877;
+
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
 
   /// 1 [ThermalResistivity$HourFootDegreeFPerBTUInt] ≈ 0.08327760262025877 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
@@ -540,6 +556,11 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem
 
   static const _ratio = 0.0003444823943288309;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem] ≈ 0.0003444823943288309 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -607,6 +628,11 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt
 
   static const _ratio = 0.0003442520153510625;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt] ≈ 0.0003442520153510625 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -673,6 +699,11 @@ final class ThermalResistivity$MeterKPerKilowatt extends ThermalResistivity {
 
   static const _ratio = 0.00014413143378718286;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$MeterKPerKilowatt] ≈ 0.00014413143378718286 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -738,6 +769,11 @@ final class ThermalResistivity$MeterKPerWatt extends ThermalResistivity {
   String get displayName => 'meter-K/watt';
 
   static const _ratio = 0.14413143378718285;
+
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
 
   /// 1 [ThermalResistivity$MeterKPerWatt] ≈ 0.14413143378718285 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
@@ -806,6 +842,11 @@ final class ThermalResistivity$CentimeterDegreeCPerWatt
 
   static const _ratio = 0.0014413143378718286;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$CentimeterDegreeCPerWatt] ≈ 0.0014413143378718286 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -872,6 +913,11 @@ final class ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF
   String get displayName => 'BTU (thermochem)-inch/hour-foot²-°F';
 
   static const _ratio = 1.0;
+
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
 
   /// 1 [ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF] = 1.0 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
@@ -940,6 +986,11 @@ final class ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF
 
   static const _ratio = 1.0006692161075852;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF] ≈ 1.0006692161075852 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -1006,6 +1057,11 @@ final class ThermalResistivity$BTUThemochemPerHourFootDegreeF
   String get displayName => 'BTU (themochem)/hour-foot-°F';
 
   static const _ratio = 12.0;
+
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
 
   /// 1 [ThermalResistivity$BTUThemochemPerHourFootDegreeF] = 12.0 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
@@ -1074,6 +1130,11 @@ final class ThermalResistivity$BTUIntPerHourFootDegreeF
 
   static const _ratio = 12.008030593291023;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$BTUIntPerHourFootDegreeF] ≈ 12.008030593291023 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -1140,6 +1201,11 @@ final class ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC
   String get displayName => 'calorie (thermoch.)/second-centimeter-°C';
 
   static const _ratio = 2902.9059727372737;
+
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
 
   /// 1 [ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC] ≈ 2902.9059727372737 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
@@ -1208,6 +1274,11 @@ final class ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC
 
   static const _ratio = 2904.848644038341;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC] ≈ 2904.848644038341 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -1273,6 +1344,11 @@ final class ThermalResistivity$KilowattPerMeterK extends ThermalResistivity {
   String get displayName => 'kilowatt/meter-K';
 
   static const _ratio = 6938.111789525033;
+
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
 
   /// 1 [ThermalResistivity$KilowattPerMeterK] ≈ 6938.111789525033 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
@@ -1340,6 +1416,11 @@ final class ThermalResistivity$WattPerMeterK extends ThermalResistivity {
 
   static const _ratio = 6.938111789525033;
 
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
+
   /// 1 [ThermalResistivity$WattPerMeterK] ≈ 6.938111789525033 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override
   num get ratio => _ratio;
@@ -1406,6 +1487,11 @@ final class ThermalResistivity$WattPerCentimeterDegreeC
   String get displayName => 'watt/centimeter-°C';
 
   static const _ratio = 693.8111789525033;
+
+  @override
+  ThermalResistivity get anchor =>
+      const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch(
+          _ratio);
 
   /// 1 [ThermalResistivity$WattPerCentimeterDegreeC] ≈ 693.8111789525033 [ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch]
   @override

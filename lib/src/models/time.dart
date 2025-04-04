@@ -30,9 +30,6 @@ sealed class Time extends Unit<Time> {
 
   factory Time.anchor() => const Time$Attosecond();
 
-  @override
-  Time get anchor => const Time$Attosecond();
-
   /// Convert to [Time$Millennium]
   Time get toMillennium => convertTo(
         const Time$Millennium(),
@@ -324,6 +321,9 @@ final class Time$Millennium extends Time {
 
   static const _ratio = 3.1536e+28;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Millennium] = 3.1536e+28 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -388,6 +388,9 @@ final class Time$Century extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 3.1536e+27;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Century] = 3.1536e+27 [Time$Attosecond]
   @override
@@ -454,6 +457,9 @@ final class Time$Decade extends Time {
 
   static const _ratio = 3.1536e+26;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Decade] = 3.1536e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -518,6 +524,9 @@ final class Time$Year extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 3.1536e+25;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Year] = 3.1536e+25 [Time$Attosecond]
   @override
@@ -584,6 +593,9 @@ final class Time$LeapYear extends Time {
 
   static const _ratio = 3.16224e+25;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$LeapYear] = 3.16224e+25 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -648,6 +660,9 @@ final class Time$MeanYear extends Time {
   String get displayName => 'mean year';
 
   static const _ratio = 3.15576e+25;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$MeanYear] = 3.15576e+25 [Time$Attosecond]
   @override
@@ -714,6 +729,9 @@ final class Time$SiderealYear extends Time {
 
   static const _ratio = 3.1558149504e+25;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$SiderealYear] = 3.1558149504e+25 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -778,6 +796,9 @@ final class Time$TropicalYear extends Time {
   String get displayName => 'tropical year';
 
   static const _ratio = 3.155692608e+25;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$TropicalYear] = 3.155692608e+25 [Time$Attosecond]
   @override
@@ -844,6 +865,9 @@ final class Time$Month extends Time {
 
   static const _ratio = 2.592e+24;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Month] = 2.592e+24 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -908,6 +932,9 @@ final class Time$SynodicMonth extends Time {
   String get displayName => 'synodic month';
 
   static const _ratio = 2.55144384e+24;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$SynodicMonth] = 2.55144384e+24 [Time$Attosecond]
   @override
@@ -974,6 +1001,9 @@ final class Time$Fortnight extends Time {
 
   static const _ratio = 1.2096e+24;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Fortnight] = 1.2096e+24 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -1038,6 +1068,9 @@ final class Time$Week extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 6.048e+23;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Week] = 6.048e+23 [Time$Attosecond]
   @override
@@ -1104,6 +1137,9 @@ final class Time$Day extends Time {
 
   static const _ratio = 8.64e+22;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Day] = 8.64e+22 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -1168,6 +1204,9 @@ final class Time$SiderealDay extends Time {
   String get displayName => 'sidereal day';
 
   static const _ratio = 8.6164091e+22;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$SiderealDay] = 8.6164091e+22 [Time$Attosecond]
   @override
@@ -1234,6 +1273,9 @@ final class Time$Hour extends Time {
 
   static const _ratio = 3.6e+21;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Hour] = 3.6e+21 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -1298,6 +1340,9 @@ final class Time$SiderealHour extends Time {
   String get displayName => 'sidereal hour';
 
   static const _ratio = 3.59017e+21;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$SiderealHour] = 3.59017e+21 [Time$Attosecond]
   @override
@@ -1364,6 +1409,9 @@ final class Time$Minute extends Time {
 
   static const _ratio = 60000000000000000000.0;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Minute] = 60000000000000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -1428,6 +1476,9 @@ final class Time$Second extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000000.0;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Second] = 1000000000000000000.0 [Time$Attosecond]
   @override
@@ -1494,6 +1545,9 @@ final class Time$Millisecond extends Time {
 
   static const _ratio = 1000000000000000.0;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Millisecond] = 1000000000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -1558,6 +1612,9 @@ final class Time$Microsecond extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000.0;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Microsecond] = 1000000000000.0 [Time$Attosecond]
   @override
@@ -1624,6 +1681,9 @@ final class Time$Nanosecond extends Time {
 
   static const _ratio = 1000000000.0;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Nanosecond] = 1000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -1688,6 +1748,9 @@ final class Time$Picosecond extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Picosecond] = 1000000.0 [Time$Attosecond]
   @override
@@ -1754,6 +1817,9 @@ final class Time$Femtosecond extends Time {
 
   static const _ratio = 1000.0;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Femtosecond] = 1000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -1818,6 +1884,9 @@ final class Time$Attosecond extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// Default (anchor) unit of [Time]
   @override
@@ -1884,6 +1953,9 @@ final class Time$Shake extends Time {
 
   static const _ratio = 10000000000.0;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Shake] = 10000000000.0 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -1948,6 +2020,9 @@ final class Time$Septennial extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 2.20752e+26;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Septennial] = 2.20752e+26 [Time$Attosecond]
   @override
@@ -2014,6 +2089,9 @@ final class Time$Octennial extends Time {
 
   static const _ratio = 2.52288e+26;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Octennial] = 2.52288e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -2078,6 +2156,9 @@ final class Time$Novennial extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 2.83824e+26;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Novennial] = 2.83824e+26 [Time$Attosecond]
   @override
@@ -2144,6 +2225,9 @@ final class Time$Quindecennial extends Time {
 
   static const _ratio = 4.7304e+26;
 
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
+
   /// 1 [Time$Quindecennial] = 4.7304e+26 [Time$Attosecond]
   @override
   num get ratio => _ratio;
@@ -2208,6 +2292,9 @@ final class Time$Quinquennial extends Time {
   String get displayName => _minorName;
 
   static const _ratio = 1.5768e+26;
+
+  @override
+  Time get anchor => const Time$Attosecond(_ratio);
 
   /// 1 [Time$Quinquennial] = 1.5768e+26 [Time$Attosecond]
   @override

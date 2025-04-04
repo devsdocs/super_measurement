@@ -43,9 +43,6 @@ sealed class Volume extends Unit<Volume> {
 
   factory Volume.anchor() => const Volume$MeterCubic();
 
-  @override
-  Volume get anchor => const Volume$MeterCubic();
-
   /// Convert to [Volume$MeterCubic]
   Volume get toMeterCubic => convertTo(
         const Volume$MeterCubic(),
@@ -681,6 +678,9 @@ final class Volume$MeterCubic extends Volume {
 
   static const _ratio = 1.0;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// Default (anchor) unit of [Volume]
   @override
   num get ratio => _ratio;
@@ -745,6 +745,9 @@ final class Volume$CentimeterCubic extends Volume {
   String get displayName => 'centimeter³';
 
   static const _ratio = 0.000001;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$CentimeterCubic] ≈ 0.000001 [Volume$MeterCubic]
   @override
@@ -811,6 +814,9 @@ final class Volume$MillimeterCubic extends Volume {
 
   static const _ratio = 1e-9;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$MillimeterCubic] ≈ 1e-9 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -875,6 +881,9 @@ final class Volume$Exaliter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Exaliter] = 1000000000000000.0 [Volume$MeterCubic]
   @override
@@ -941,6 +950,9 @@ final class Volume$Petaliter extends Volume {
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Petaliter] = 1000000000000.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -1005,6 +1017,9 @@ final class Volume$Teraliter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Teraliter] = 1000000000.0 [Volume$MeterCubic]
   @override
@@ -1071,6 +1086,9 @@ final class Volume$Gigaliter extends Volume {
 
   static const _ratio = 1000000.0;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Gigaliter] = 1000000.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -1135,6 +1153,9 @@ final class Volume$Megaliter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Megaliter] = 1000.0 [Volume$MeterCubic]
   @override
@@ -1201,6 +1222,9 @@ final class Volume$Kiloliter extends Volume {
 
   static const _ratio = 1.0;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Kiloliter] = 1.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -1265,6 +1289,9 @@ final class Volume$Hectoliter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Hectoliter] ≈ 0.1 [Volume$MeterCubic]
   @override
@@ -1331,6 +1358,9 @@ final class Volume$Dekaliter extends Volume {
 
   static const _ratio = 0.01;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Dekaliter] ≈ 0.01 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -1395,6 +1425,9 @@ final class Volume$Liter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 0.001;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Liter] ≈ 0.001 [Volume$MeterCubic]
   @override
@@ -1461,6 +1494,9 @@ final class Volume$Deciliter extends Volume {
 
   static const _ratio = 0.0001;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Deciliter] ≈ 0.0001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -1525,6 +1561,9 @@ final class Volume$Centiliter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 0.00001;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Centiliter] ≈ 0.00001 [Volume$MeterCubic]
   @override
@@ -1591,6 +1630,9 @@ final class Volume$Milliliter extends Volume {
 
   static const _ratio = 0.000001;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Milliliter] ≈ 0.000001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -1655,6 +1697,9 @@ final class Volume$Microliter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 1e-9;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Microliter] ≈ 1e-9 [Volume$MeterCubic]
   @override
@@ -1721,6 +1766,9 @@ final class Volume$Nanoliter extends Volume {
 
   static const _ratio = 1e-12;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Nanoliter] ≈ 1e-12 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -1785,6 +1833,9 @@ final class Volume$Picoliter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 1e-15;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Picoliter] ≈ 1e-15 [Volume$MeterCubic]
   @override
@@ -1851,6 +1902,9 @@ final class Volume$Femtoliter extends Volume {
 
   static const _ratio = 1e-18;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Femtoliter] ≈ 1e-18 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -1915,6 +1969,9 @@ final class Volume$Attoliter extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 1e-21;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Attoliter] ≈ 1e-21 [Volume$MeterCubic]
   @override
@@ -1981,6 +2038,9 @@ final class Volume$Cc extends Volume {
 
   static const _ratio = 0.000001;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Cc] ≈ 0.000001 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -2045,6 +2105,9 @@ final class Volume$Drop extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 5e-8;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Drop] ≈ 5e-8 [Volume$MeterCubic]
   @override
@@ -2111,6 +2174,9 @@ final class Volume$Barrel extends Volume {
 
   static const _ratio = 0.119240471196;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Barrel] ≈ 0.119240471196 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -2175,6 +2241,9 @@ final class Volume$BarrelOil extends Volume {
   String get displayName => 'barrel (oil)';
 
   static const _ratio = 0.158987294928;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$BarrelOil] ≈ 0.158987294928 [Volume$MeterCubic]
   @override
@@ -2241,6 +2310,9 @@ final class Volume$BushelUK extends Volume {
 
   static const _ratio = 0.03636872;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$BushelUK] ≈ 0.03636872 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -2305,6 +2377,9 @@ final class Volume$PeckUK extends Volume {
   String get displayName => 'peck (UK)';
 
   static const _ratio = 0.00909218;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$PeckUK] ≈ 0.00909218 [Volume$MeterCubic]
   @override
@@ -2371,6 +2446,9 @@ final class Volume$Gallon extends Volume {
 
   static const _ratio = 0.003785411784;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Gallon] ≈ 0.003785411784 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -2435,6 +2513,9 @@ final class Volume$GallonUK extends Volume {
   String get displayName => 'gallon (UK)';
 
   static const _ratio = 0.00454609;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$GallonUK] ≈ 0.00454609 [Volume$MeterCubic]
   @override
@@ -2501,6 +2582,9 @@ final class Volume$Quart extends Volume {
 
   static const _ratio = 0.000946352946;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Quart] ≈ 0.000946352946 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -2565,6 +2649,9 @@ final class Volume$QuartUK extends Volume {
   String get displayName => 'quart (UK)';
 
   static const _ratio = 0.0011365225;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$QuartUK] ≈ 0.0011365225 [Volume$MeterCubic]
   @override
@@ -2631,6 +2718,9 @@ final class Volume$Pint extends Volume {
 
   static const _ratio = 0.000473176473;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Pint] ≈ 0.000473176473 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -2695,6 +2785,9 @@ final class Volume$PintUK extends Volume {
   String get displayName => 'pint (UK)';
 
   static const _ratio = 0.00056826125;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$PintUK] ≈ 0.00056826125 [Volume$MeterCubic]
   @override
@@ -2761,6 +2854,9 @@ final class Volume$Cup extends Volume {
 
   static const _ratio = 0.0002365882365;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Cup] ≈ 0.0002365882365 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -2825,6 +2921,9 @@ final class Volume$CupUK extends Volume {
   String get displayName => 'cup (UK)';
 
   static const _ratio = 0.000284130625;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$CupUK] ≈ 0.000284130625 [Volume$MeterCubic]
   @override
@@ -2891,6 +2990,9 @@ final class Volume$Gill extends Volume {
 
   static const _ratio = 0.00011829411825;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Gill] ≈ 0.00011829411825 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -2955,6 +3057,9 @@ final class Volume$GillUK extends Volume {
   String get displayName => 'gill (UK)';
 
   static const _ratio = 0.0001420653125;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$GillUK] ≈ 0.0001420653125 [Volume$MeterCubic]
   @override
@@ -3021,6 +3126,9 @@ final class Volume$Ounce extends Volume {
 
   static const _ratio = 0.0000295735295625;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Ounce] ≈ 0.0000295735295625 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -3085,6 +3193,9 @@ final class Volume$OunceUK extends Volume {
   String get displayName => 'ounce (UK)';
 
   static const _ratio = 0.0000284130625;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$OunceUK] ≈ 0.0000284130625 [Volume$MeterCubic]
   @override
@@ -3151,6 +3262,9 @@ final class Volume$Dram extends Volume {
 
   static const _ratio = 0.0000036966911953125;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Dram] ≈ 0.0000036966911953125 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -3215,6 +3329,9 @@ final class Volume$DramUK extends Volume {
   String get displayName => 'dram (UK)';
 
   static const _ratio = 0.0000035516328125;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$DramUK] ≈ 0.0000035516328125 [Volume$MeterCubic]
   @override
@@ -3281,6 +3398,9 @@ final class Volume$Minim extends Volume {
 
   static const _ratio = 6.1611519921875e-8;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Minim] ≈ 6.1611519921875e-8 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -3345,6 +3465,9 @@ final class Volume$MinimUK extends Volume {
   String get displayName => 'minim (UK)';
 
   static const _ratio = 5.9193880208333334e-8;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$MinimUK] ≈ 5.9193880208333334e-8 [Volume$MeterCubic]
   @override
@@ -3411,6 +3534,9 @@ final class Volume$Tablespoon extends Volume {
 
   static const _ratio = 0.00001478676478125;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Tablespoon] ≈ 0.00001478676478125 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -3475,6 +3601,9 @@ final class Volume$TablespoonUK extends Volume {
   String get displayName => 'tablespoon (UK)';
 
   static const _ratio = 0.0000177581640625;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$TablespoonUK] ≈ 0.0000177581640625 [Volume$MeterCubic]
   @override
@@ -3541,6 +3670,9 @@ final class Volume$Dessertspoon extends Volume {
 
   static const _ratio = 0.0000098578431875;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Dessertspoon] ≈ 0.0000098578431875 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -3605,6 +3737,9 @@ final class Volume$DessertspoonUK extends Volume {
   String get displayName => 'dessertspoon (UK)';
 
   static const _ratio = 0.000011838776041666667;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$DessertspoonUK] ≈ 0.000011838776041666667 [Volume$MeterCubic]
   @override
@@ -3671,6 +3806,9 @@ final class Volume$Teaspoon extends Volume {
 
   static const _ratio = 0.00000492892159375;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Teaspoon] ≈ 0.00000492892159375 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -3735,6 +3873,9 @@ final class Volume$TeaspoonUK extends Volume {
   String get displayName => 'teaspoon (UK)';
 
   static const _ratio = 0.000005919388020833334;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$TeaspoonUK] ≈ 0.000005919388020833334 [Volume$MeterCubic]
   @override
@@ -3801,6 +3942,9 @@ final class Volume$Hogshead extends Volume {
 
   static const _ratio = 0.238480942392;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Hogshead] ≈ 0.238480942392 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -3865,6 +4009,9 @@ final class Volume$YardCubic extends Volume {
   String get displayName => 'yard³';
 
   static const _ratio = 0.764554857984;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$YardCubic] ≈ 0.764554857984 [Volume$MeterCubic]
   @override
@@ -3931,6 +4078,9 @@ final class Volume$FootCubic extends Volume {
 
   static const _ratio = 0.028316846592;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$FootCubic] ≈ 0.028316846592 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -3995,6 +4145,9 @@ final class Volume$InchCubic extends Volume {
   String get displayName => 'inch³';
 
   static const _ratio = 0.000016387064;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$InchCubic] ≈ 0.000016387064 [Volume$MeterCubic]
   @override
@@ -4061,6 +4214,9 @@ final class Volume$Ccf extends Volume {
 
   static const _ratio = 2.8316846592;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Ccf] ≈ 2.8316846592 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -4125,6 +4281,9 @@ final class Volume$HundredFootCubic extends Volume {
   String get displayName => 'hundred-foot³';
 
   static const _ratio = 2.8316846592;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$HundredFootCubic] ≈ 2.8316846592 [Volume$MeterCubic]
   @override
@@ -4191,6 +4350,9 @@ final class Volume$AcreFoot extends Volume {
 
   static const _ratio = 1233.48183754752;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$AcreFoot] ≈ 1233.48183754752 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -4255,6 +4417,9 @@ final class Volume$AcreInch extends Volume {
   String get displayName => 'acre-inch';
 
   static const _ratio = 102.79015312896;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$AcreInch] ≈ 102.79015312896 [Volume$MeterCubic]
   @override
@@ -4321,6 +4486,9 @@ final class Volume$Dekastere extends Volume {
 
   static const _ratio = 10.0;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Dekastere] = 10.0 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -4385,6 +4553,9 @@ final class Volume$Stere extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Stere] = 1.0 [Volume$MeterCubic]
   @override
@@ -4451,6 +4622,9 @@ final class Volume$Decistere extends Volume {
 
   static const _ratio = 0.1;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Decistere] ≈ 0.1 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -4515,6 +4689,9 @@ final class Volume$Cord extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 3.624556363776;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Cord] ≈ 3.624556363776 [Volume$MeterCubic]
   @override
@@ -4581,6 +4758,9 @@ final class Volume$BoardFoot extends Volume {
 
   static const _ratio = 0.002359737216;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$BoardFoot] ≈ 0.002359737216 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -4645,6 +4825,9 @@ final class Volume$Tun extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 0.953923769568;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Tun] ≈ 0.953923769568 [Volume$MeterCubic]
   @override
@@ -4711,6 +4894,9 @@ final class Volume$CorBiblical extends Volume {
 
   static const _ratio = 0.22;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$CorBiblical] ≈ 0.22 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -4775,6 +4961,9 @@ final class Volume$HomerBiblical extends Volume {
   String get displayName => 'homer (Biblical)';
 
   static const _ratio = 0.22;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$HomerBiblical] ≈ 0.22 [Volume$MeterCubic]
   @override
@@ -4841,6 +5030,9 @@ final class Volume$BathBiblical extends Volume {
 
   static const _ratio = 0.022;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$BathBiblical] ≈ 0.022 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -4905,6 +5097,9 @@ final class Volume$HinBiblical extends Volume {
   String get displayName => 'hin (Biblical)';
 
   static const _ratio = 0.0036666666666666666;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$HinBiblical] ≈ 0.0036666666666666666 [Volume$MeterCubic]
   @override
@@ -4971,6 +5166,9 @@ final class Volume$CabBiblical extends Volume {
 
   static const _ratio = 0.0012222222222222222;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$CabBiblical] ≈ 0.0012222222222222222 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -5035,6 +5233,9 @@ final class Volume$LogBiblical extends Volume {
   String get displayName => 'log (Biblical)';
 
   static const _ratio = 0.00030555555555555555;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$LogBiblical] ≈ 0.00030555555555555555 [Volume$MeterCubic]
   @override
@@ -5101,6 +5302,9 @@ final class Volume$TazaSpanish extends Volume {
 
   static const _ratio = 0.0002365882365;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$TazaSpanish] ≈ 0.0002365882365 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -5165,6 +5369,9 @@ final class Volume$Bushel extends Volume {
   String get displayName => _minorName;
 
   static const _ratio = 0.03523907016688;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$Bushel] ≈ 0.03523907016688 [Volume$MeterCubic]
   @override
@@ -5231,6 +5438,9 @@ final class Volume$Peck extends Volume {
 
   static const _ratio = 0.00880976754172;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$Peck] ≈ 0.00880976754172 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -5296,6 +5506,9 @@ final class Volume$DryPint extends Volume {
 
   static const _ratio = 0.0005506104713575;
 
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
+
   /// 1 [Volume$DryPint] ≈ 0.0005506104713575 [Volume$MeterCubic]
   @override
   num get ratio => _ratio;
@@ -5360,6 +5573,9 @@ final class Volume$DryQuart extends Volume {
   String get displayName => 'dry quart';
 
   static const _ratio = 0.001101220942715;
+
+  @override
+  Volume get anchor => const Volume$MeterCubic(_ratio);
 
   /// 1 [Volume$DryQuart] ≈ 0.001101220942715 [Volume$MeterCubic]
   @override

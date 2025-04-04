@@ -26,9 +26,6 @@ sealed class VolumeDry extends Unit<VolumeDry> {
 
   factory VolumeDry.anchor() => const VolumeDry$LogBiblical();
 
-  @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical();
-
   /// Convert to [VolumeDry$Barrel]
   VolumeDry get toBarrel => convertTo(
         const VolumeDry$Barrel(),
@@ -184,6 +181,9 @@ final class VolumeDry$Barrel extends VolumeDry {
 
   static const _ratio = 378.41605930454045;
 
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+
   /// 1 [VolumeDry$Barrel] ≈ 378.41605930454045 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
@@ -248,6 +248,9 @@ final class VolumeDry$Liter extends VolumeDry {
   String get displayName => _minorName;
 
   static const _ratio = 3.27272743202319;
+
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
 
   /// 1 [VolumeDry$Liter] ≈ 3.27272743202319 [VolumeDry$LogBiblical]
   @override
@@ -314,6 +317,9 @@ final class VolumeDry$Pint extends VolumeDry {
 
   static const _ratio = 1.80199799411;
 
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+
   /// 1 [VolumeDry$Pint] ≈ 1.80199799411 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
@@ -378,6 +384,9 @@ final class VolumeDry$Quart extends VolumeDry {
   String get displayName => _minorName;
 
   static const _ratio = 3.60399598822;
+
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
 
   /// 1 [VolumeDry$Quart] ≈ 3.60399598822 [VolumeDry$LogBiblical]
   @override
@@ -444,6 +453,9 @@ final class VolumeDry$Peck extends VolumeDry {
 
   static const _ratio = 28.83196790576;
 
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+
   /// 1 [VolumeDry$Peck] ≈ 28.83196790576 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
@@ -508,6 +520,9 @@ final class VolumeDry$Bushel extends VolumeDry {
   String get displayName => _minorName;
 
   static const _ratio = 115.32787162304;
+
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
 
   /// 1 [VolumeDry$Bushel] ≈ 115.32787162304 [VolumeDry$LogBiblical]
   @override
@@ -574,6 +589,9 @@ final class VolumeDry$CorBiblical extends VolumeDry {
 
   static const _ratio = 720.0;
 
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+
   /// 1 [VolumeDry$CorBiblical] = 720.0 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
@@ -638,6 +656,9 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
   String get displayName => 'homer (Biblical)';
 
   static const _ratio = 720.0;
+
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
 
   /// 1 [VolumeDry$HomerBiblical] = 720.0 [VolumeDry$LogBiblical]
   @override
@@ -704,6 +725,9 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
 
   static const _ratio = 72.0;
 
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+
   /// 1 [VolumeDry$EphahBiblical] = 72.0 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
@@ -768,6 +792,9 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
   String get displayName => 'seah (Biblical)';
 
   static const _ratio = 24.0;
+
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
 
   /// 1 [VolumeDry$SeahBiblical] = 24.0 [VolumeDry$LogBiblical]
   @override
@@ -834,6 +861,9 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
 
   static const _ratio = 7.2;
 
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+
   /// 1 [VolumeDry$OmerBiblical] ≈ 7.2 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
@@ -899,6 +929,9 @@ final class VolumeDry$CabBiblical extends VolumeDry {
 
   static const _ratio = 4.0;
 
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+
   /// 1 [VolumeDry$CabBiblical] = 4.0 [VolumeDry$LogBiblical]
   @override
   num get ratio => _ratio;
@@ -963,6 +996,9 @@ final class VolumeDry$LogBiblical extends VolumeDry {
   String get displayName => 'log (Biblical)';
 
   static const _ratio = 1.0;
+
+  @override
+  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
 
   /// Default (anchor) unit of [VolumeDry]
   @override

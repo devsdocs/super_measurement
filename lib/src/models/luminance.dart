@@ -30,9 +30,6 @@ sealed class Luminance extends Unit<Luminance> {
 
   factory Luminance.anchor() => const Luminance$Bril();
 
-  @override
-  Luminance get anchor => const Luminance$Bril();
-
   /// Convert to [Luminance$Stilb]
   Luminance get toStilb => convertTo(
         const Luminance$Stilb(),
@@ -229,6 +226,9 @@ final class Luminance$Stilb extends Luminance {
 
   static const _ratio = 314159265358.9793;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$Stilb] ≈ 314159265358.9793 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -293,6 +293,9 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
   String get displayName => 'candela/meter²';
 
   static const _ratio = 31415926.535897933;
+
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
 
   /// 1 [Luminance$CandelaPerMeterSquare] ≈ 31415926.535897933 [Luminance$Bril]
   @override
@@ -360,6 +363,9 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
 
   static const _ratio = 314159265358.9793;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$CandelaPerCentimeterSquare] ≈ 314159265358.9793 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -425,6 +431,9 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
   String get displayName => 'candela/foot²';
 
   static const _ratio = 338158218.8900337;
+
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
 
   /// 1 [Luminance$CandelaPerFootSquare] ≈ 338158218.8900337 [Luminance$Bril]
   @override
@@ -492,6 +501,9 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
 
   static const _ratio = 31415926.535897933;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$LumenPerMeterSquarePerSteradian] ≈ 31415926.535897933 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -558,6 +570,9 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
 
   static const _ratio = 314159265358.9793;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$LumenPerCentimeterSquarePerSteradian] ≈ 314159265358.9793 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -623,6 +638,9 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
   String get displayName => 'lumen/foot²/steradian';
 
   static const _ratio = 338158218.8900337;
+
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
 
   /// 1 [Luminance$LumenPerFootSquarePerSteradian] ≈ 338158218.8900337 [Luminance$Bril]
   @override
@@ -691,6 +709,9 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
 
   static const _ratio = 214570778240182.88;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$WattPerCentimeterSquarePerSteradianAt555nm] ≈ 214570778240182.88 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -757,6 +778,9 @@ final class Luminance$Nit extends Luminance {
 
   static const _ratio = 31415926.535897933;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$Nit] ≈ 31415926.535897933 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -821,6 +845,9 @@ final class Luminance$Millinit extends Luminance {
   String get displayName => _minorName;
 
   static const _ratio = 31415.926535897932;
+
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
 
   /// 1 [Luminance$Millinit] ≈ 31415.926535897932 [Luminance$Bril]
   @override
@@ -887,6 +914,9 @@ final class Luminance$FootLambert extends Luminance {
 
   static const _ratio = 107639104.167;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$FootLambert] ≈ 107639104.167 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -951,6 +981,9 @@ final class Luminance$Lambert extends Luminance {
   String get displayName => _minorName;
 
   static const _ratio = 100000000000.0;
+
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
 
   /// 1 [Luminance$Lambert] = 100000000000.0 [Luminance$Bril]
   @override
@@ -1017,6 +1050,9 @@ final class Luminance$Millilambert extends Luminance {
 
   static const _ratio = 100000000.0;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$Millilambert] = 100000000.0 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -1081,6 +1117,9 @@ final class Luminance$Apostilb extends Luminance {
   String get displayName => _minorName;
 
   static const _ratio = 10000000.0;
+
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
 
   /// 1 [Luminance$Apostilb] = 10000000.0 [Luminance$Bril]
   @override
@@ -1147,6 +1186,9 @@ final class Luminance$Blondel extends Luminance {
 
   static const _ratio = 10000000.0;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// 1 [Luminance$Blondel] = 10000000.0 [Luminance$Bril]
   @override
   num get ratio => _ratio;
@@ -1212,6 +1254,9 @@ final class Luminance$Bril extends Luminance {
 
   static const _ratio = 1.0;
 
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
+
   /// Default (anchor) unit of [Luminance]
   @override
   num get ratio => _ratio;
@@ -1276,6 +1321,9 @@ final class Luminance$Skot extends Luminance {
   String get displayName => _minorName;
 
   static const _ratio = 10000.0;
+
+  @override
+  Luminance get anchor => const Luminance$Bril(_ratio);
 
   /// 1 [Luminance$Skot] = 10000.0 [Luminance$Bril]
   @override

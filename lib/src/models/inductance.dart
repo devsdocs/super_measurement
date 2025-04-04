@@ -29,9 +29,6 @@ sealed class Inductance extends Unit<Inductance> {
 
   factory Inductance.anchor() => const Inductance$Attohenry();
 
-  @override
-  Inductance get anchor => const Inductance$Attohenry();
-
   /// Convert to [Inductance$Exahenry]
   Inductance get toExahenry => convertTo(
         const Inductance$Exahenry(),
@@ -251,6 +248,9 @@ final class Inductance$Exahenry extends Inductance {
 
   static const _ratio = 1e+36;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Exahenry] = 1e+36 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -315,6 +315,9 @@ final class Inductance$Petahenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 1e+33;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Petahenry] = 1e+33 [Inductance$Attohenry]
   @override
@@ -381,6 +384,9 @@ final class Inductance$Terahenry extends Inductance {
 
   static const _ratio = 1e+30;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Terahenry] = 1e+30 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -445,6 +451,9 @@ final class Inductance$Gigahenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 1e+27;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Gigahenry] = 1e+27 [Inductance$Attohenry]
   @override
@@ -511,6 +520,9 @@ final class Inductance$Megahenry extends Inductance {
 
   static const _ratio = 1e+24;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Megahenry] = 1e+24 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -575,6 +587,9 @@ final class Inductance$Kilohenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 1e+21;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Kilohenry] = 1e+21 [Inductance$Attohenry]
   @override
@@ -641,6 +656,9 @@ final class Inductance$Hectohenry extends Inductance {
 
   static const _ratio = 100000000000000000000.0;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Hectohenry] = 100000000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -705,6 +723,9 @@ final class Inductance$Dekahenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 10000000000000000000.0;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Dekahenry] = 10000000000000000000.0 [Inductance$Attohenry]
   @override
@@ -771,6 +792,9 @@ final class Inductance$Henry extends Inductance {
 
   static const _ratio = 1000000000000000000.0;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Henry] = 1000000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -835,6 +859,9 @@ final class Inductance$Decihenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 100000000000000000.0;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Decihenry] = 100000000000000000.0 [Inductance$Attohenry]
   @override
@@ -901,6 +928,9 @@ final class Inductance$Centihenry extends Inductance {
 
   static const _ratio = 10000000000000000.0;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Centihenry] = 10000000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -965,6 +995,9 @@ final class Inductance$Millihenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Millihenry] = 1000000000000000.0 [Inductance$Attohenry]
   @override
@@ -1031,6 +1064,9 @@ final class Inductance$Microhenry extends Inductance {
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Microhenry] = 1000000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -1095,6 +1131,9 @@ final class Inductance$Nanohenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Nanohenry] = 1000000000.0 [Inductance$Attohenry]
   @override
@@ -1161,6 +1200,9 @@ final class Inductance$Picohenry extends Inductance {
 
   static const _ratio = 1000000.0;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Picohenry] = 1000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -1225,6 +1267,9 @@ final class Inductance$Femtohenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Femtohenry] = 1000.0 [Inductance$Attohenry]
   @override
@@ -1291,6 +1336,9 @@ final class Inductance$Attohenry extends Inductance {
 
   static const _ratio = 1.0;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// Default (anchor) unit of [Inductance]
   @override
   num get ratio => _ratio;
@@ -1355,6 +1403,9 @@ final class Inductance$Abhenry extends Inductance {
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$Abhenry] = 1000000000.0 [Inductance$Attohenry]
   @override
@@ -1421,6 +1472,9 @@ final class Inductance$Stathenry extends Inductance {
 
   static const _ratio = 8.987552e+29;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$Stathenry] = 8.987552e+29 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -1486,6 +1540,9 @@ final class Inductance$EMUOfInductance extends Inductance {
 
   static const _ratio = 1000000000.0;
 
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
+
   /// 1 [Inductance$EMUOfInductance] = 1000000000.0 [Inductance$Attohenry]
   @override
   num get ratio => _ratio;
@@ -1550,6 +1607,9 @@ final class Inductance$ESUOfInductance extends Inductance {
   String get displayName => 'ESU of inductance';
 
   static const _ratio = 8.987552e+29;
+
+  @override
+  Inductance get anchor => const Inductance$Attohenry(_ratio);
 
   /// 1 [Inductance$ESUOfInductance] = 8.987552e+29 [Inductance$Attohenry]
   @override

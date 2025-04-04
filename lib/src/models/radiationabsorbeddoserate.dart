@@ -42,10 +42,6 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
   factory RadiationAbsorbedDoseRate.anchor() =>
       const RadiationAbsorbedDoseRate$AttograyPerSecond();
 
-  @override
-  RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond();
-
   /// Convert to [RadiationAbsorbedDoseRate$RadPerSecond]
   RadiationAbsorbedDoseRate get toRadPerSecond => convertTo(
         const RadiationAbsorbedDoseRate$RadPerSecond(),
@@ -267,6 +263,10 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
 
   static const _ratio = 10000000000000000.0;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$RadPerSecond] = 10000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -333,6 +333,10 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
   String get displayName => 'joule/kilogram/second';
 
   static const _ratio = 1000000000000000000.0;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// 1 [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond] = 1000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
@@ -401,6 +405,10 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
 
   static const _ratio = 1e+36;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$ExagrayPerSecond] = 1e+36 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -467,6 +475,10 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
   String get displayName => 'petagray/second';
 
   static const _ratio = 1e+33;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// 1 [RadiationAbsorbedDoseRate$PetagrayPerSecond] = 1e+33 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
@@ -535,6 +547,10 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
 
   static const _ratio = 1e+30;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$TeragrayPerSecond] = 1e+30 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -601,6 +617,10 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
   String get displayName => 'gigagray/second';
 
   static const _ratio = 1e+27;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// 1 [RadiationAbsorbedDoseRate$GigagrayPerSecond] = 1e+27 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
@@ -669,6 +689,10 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
 
   static const _ratio = 1e+24;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$MegagrayPerSecond] = 1e+24 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -735,6 +759,10 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
   String get displayName => 'kilogray/second';
 
   static const _ratio = 1e+21;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// 1 [RadiationAbsorbedDoseRate$KilograyPerSecond] = 1e+21 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
@@ -803,6 +831,10 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
 
   static const _ratio = 100000000000000000000.0;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$HectograyPerSecond] = 100000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -869,6 +901,10 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
   String get displayName => 'dekagray/second';
 
   static const _ratio = 10000000000000000000.0;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// 1 [RadiationAbsorbedDoseRate$DekagrayPerSecond] = 10000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
@@ -937,6 +973,10 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
 
   static const _ratio = 1000000000000000000.0;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$GrayPerSecond] = 1000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -1003,6 +1043,10 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
   String get displayName => 'decigray/second';
 
   static const _ratio = 100000000000000000.0;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// 1 [RadiationAbsorbedDoseRate$DecigrayPerSecond] = 100000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
@@ -1071,6 +1115,10 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
 
   static const _ratio = 10000000000000000.0;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$CentigrayPerSecond] = 10000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -1137,6 +1185,10 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
   String get displayName => 'milligray/second';
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// 1 [RadiationAbsorbedDoseRate$MilligrayPerSecond] = 1000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
@@ -1205,6 +1257,10 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$MicrograyPerSecond] = 1000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -1271,6 +1327,10 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
   String get displayName => 'nanogray/second';
 
   static const _ratio = 1000000000.0;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// 1 [RadiationAbsorbedDoseRate$NanograyPerSecond] = 1000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
@@ -1339,6 +1399,10 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
 
   static const _ratio = 1000000.0;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$PicograyPerSecond] = 1000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -1406,6 +1470,10 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
 
   static const _ratio = 1000.0;
 
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+
   /// 1 [RadiationAbsorbedDoseRate$FemtograyPerSecond] = 1000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
   num get ratio => _ratio;
@@ -1472,6 +1540,10 @@ final class RadiationAbsorbedDoseRate$AttograyPerSecond
   String get displayName => 'attogray/second';
 
   static const _ratio = 1.0;
+
+  @override
+  RadiationAbsorbedDoseRate get anchor =>
+      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// Default (anchor) unit of [RadiationAbsorbedDoseRate]
   @override

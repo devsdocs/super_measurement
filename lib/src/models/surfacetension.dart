@@ -27,9 +27,6 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
 
   factory SurfaceTension.anchor() => const SurfaceTension$MillinewtonPerMeter();
 
-  @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter();
-
   /// Convert to [SurfaceTension$NewtonPerMeter]
   SurfaceTension get toNewtonPerMeter => convertTo(
         const SurfaceTension$NewtonPerMeter(),
@@ -145,6 +142,9 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
 
   static const _ratio = 1000.0;
 
+  @override
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+
   /// 1 [SurfaceTension$NewtonPerMeter] = 1000.0 [SurfaceTension$MillinewtonPerMeter]
   @override
   num get ratio => _ratio;
@@ -210,6 +210,9 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
   String get displayName => 'millinewton/meter';
 
   static const _ratio = 1.0;
+
+  @override
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
 
   /// Default (anchor) unit of [SurfaceTension]
   @override
@@ -277,6 +280,9 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
 
   static const _ratio = 980.6649999787735;
 
+  @override
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+
   /// 1 [SurfaceTension$GramForcePerCentimeter] ≈ 980.6649999787735 [SurfaceTension$MillinewtonPerMeter]
   @override
   num get ratio => _ratio;
@@ -342,6 +348,9 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
   String get displayName => 'dyne/centimeter';
 
   static const _ratio = 1.0;
+
+  @override
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
 
   /// 1 [SurfaceTension$DynePerCentimeter] = 1.0 [SurfaceTension$MillinewtonPerMeter]
   @override
@@ -409,6 +418,9 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
 
   static const _ratio = 1.0;
 
+  @override
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+
   /// 1 [SurfaceTension$ErgPerCentimeterSquare] = 1.0 [SurfaceTension$MillinewtonPerMeter]
   @override
   num get ratio => _ratio;
@@ -474,6 +486,9 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
   String get displayName => 'erg/millimeter²';
 
   static const _ratio = 100.0;
+
+  @override
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
 
   /// 1 [SurfaceTension$ErgPerMillimeterSquare] = 100.0 [SurfaceTension$MillinewtonPerMeter]
   @override
@@ -541,6 +556,9 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
 
   static const _ratio = 5443.108492;
 
+  @override
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+
   /// 1 [SurfaceTension$PoundalPerInch] ≈ 5443.108492 [SurfaceTension$MillinewtonPerMeter]
   @override
   num get ratio => _ratio;
@@ -606,6 +624,9 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
   String get displayName => 'pound force/inch';
 
   static const _ratio = 175126.837;
+
+  @override
+  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
 
   /// 1 [SurfaceTension$PoundForcePerInch] ≈ 175126.837 [SurfaceTension$MillinewtonPerMeter]
   @override

@@ -104,9 +104,6 @@ sealed class DataTransfer extends Unit<DataTransfer> {
 
   factory DataTransfer.anchor() => const DataTransfer$BitPerSecond();
 
-  @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond();
-
   /// Convert to [DataTransfer$BitPerSecond]
   DataTransfer get toBitPerSecond => convertTo(
         const DataTransfer$BitPerSecond(),
@@ -1577,6 +1574,9 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
 
   static const _ratio = 1.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// Default (anchor) unit of [DataTransfer]
   @override
   num get ratio => _ratio;
@@ -1642,6 +1642,9 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
 
   static const _ratio = 8.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$BytePerSecond] = 8.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -1706,6 +1709,9 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
   String get displayName => 'kilobit/second';
 
   static const _ratio = 1000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$KilobitPerSecond] = 1000.0 [DataTransfer$BitPerSecond]
   @override
@@ -1773,6 +1779,9 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
 
   static const _ratio = 8000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$KilobytePerSecond] = 8000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -1838,6 +1847,9 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
   String get displayName => 'megabit/second';
 
   static const _ratio = 1000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$MegabitPerSecond] = 1000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -1905,6 +1917,9 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
 
   static const _ratio = 8000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$MegabytePerSecond] = 8000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -1970,6 +1985,9 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
   String get displayName => 'gigabit/second';
 
   static const _ratio = 1000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$GigabitPerSecond] = 1000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -2037,6 +2055,9 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
 
   static const _ratio = 8000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$GigabytePerSecond] = 8000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -2102,6 +2123,9 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
   String get displayName => 'terabit/second';
 
   static const _ratio = 1000000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$TerabitPerSecond] = 1000000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -2169,6 +2193,9 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
 
   static const _ratio = 8000000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$TerabytePerSecond] = 8000000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -2234,6 +2261,9 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
   String get displayName => 'kibibit/second';
 
   static const _ratio = 1024.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$KibibitPerSecond] = 1024.0 [DataTransfer$BitPerSecond]
   @override
@@ -2301,6 +2331,9 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
 
   static const _ratio = 8192.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$KibibytePerSecond] = 8192.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -2366,6 +2399,9 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
   String get displayName => 'mebibit/second';
 
   static const _ratio = 1048576.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$MebibitPerSecond] = 1048576.0 [DataTransfer$BitPerSecond]
   @override
@@ -2433,6 +2469,9 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
 
   static const _ratio = 8388608.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$MebibytePerSecond] = 8388608.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -2498,6 +2537,9 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
   String get displayName => 'gibibit/second';
 
   static const _ratio = 1073741824.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$GibibitPerSecond] = 1073741824.0 [DataTransfer$BitPerSecond]
   @override
@@ -2565,6 +2607,9 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
 
   static const _ratio = 8589934592.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$GibibytePerSecond] = 8589934592.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -2630,6 +2675,9 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
   String get displayName => 'tebibit/second';
 
   static const _ratio = 1099511627776.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$TebibitPerSecond] = 1099511627776.0 [DataTransfer$BitPerSecond]
   @override
@@ -2697,6 +2745,9 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
 
   static const _ratio = 8796093022208.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$TebibytePerSecond] = 8796093022208.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -2763,6 +2814,9 @@ final class DataTransfer$Ethernet extends DataTransfer {
 
   static const _ratio = 10000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$Ethernet] = 10000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -2828,6 +2882,9 @@ final class DataTransfer$EthernetFast extends DataTransfer {
 
   static const _ratio = 100000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$EthernetFast] = 100000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -2892,6 +2949,9 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
   String get displayName => 'ethernet (gigabit)';
 
   static const _ratio = 1000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$EthernetGigabit] = 1000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -2959,6 +3019,9 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
 
   static const _ratio = 10000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$Ethernet10Gigabit] = 10000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3025,6 +3088,9 @@ final class DataTransfer$OC1 extends DataTransfer {
 
   static const _ratio = 51840000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$OC1] = 51840000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3089,6 +3155,9 @@ final class DataTransfer$OC3 extends DataTransfer {
   String get displayName => 'OC3';
 
   static const _ratio = 155520000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$OC3] = 155520000.0 [DataTransfer$BitPerSecond]
   @override
@@ -3155,6 +3224,9 @@ final class DataTransfer$OC12 extends DataTransfer {
 
   static const _ratio = 622080000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$OC12] = 622080000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3219,6 +3291,9 @@ final class DataTransfer$OC24 extends DataTransfer {
   String get displayName => 'OC24';
 
   static const _ratio = 1244160000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$OC24] = 1244160000.0 [DataTransfer$BitPerSecond]
   @override
@@ -3285,6 +3360,9 @@ final class DataTransfer$OC48 extends DataTransfer {
 
   static const _ratio = 2488320000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$OC48] = 2488320000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3349,6 +3427,9 @@ final class DataTransfer$OC192 extends DataTransfer {
   String get displayName => 'OC192';
 
   static const _ratio = 9953280000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$OC192] = 9953280000.0 [DataTransfer$BitPerSecond]
   @override
@@ -3415,6 +3496,9 @@ final class DataTransfer$OC768 extends DataTransfer {
 
   static const _ratio = 39813120000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$OC768] = 39813120000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3479,6 +3563,9 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
   String get displayName => 'ISDN (single channel)';
 
   static const _ratio = 64000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$ISDNSingleChannel] = 64000.0 [DataTransfer$BitPerSecond]
   @override
@@ -3546,6 +3633,9 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
 
   static const _ratio = 128000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$ISDNDualChannel] = 128000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3612,6 +3702,9 @@ final class DataTransfer$Modem110 extends DataTransfer {
 
   static const _ratio = 110.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$Modem110] = 110.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3676,6 +3769,9 @@ final class DataTransfer$Modem300 extends DataTransfer {
   String get displayName => 'modem (300)';
 
   static const _ratio = 300.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$Modem300] = 300.0 [DataTransfer$BitPerSecond]
   @override
@@ -3742,6 +3838,9 @@ final class DataTransfer$Modem1200 extends DataTransfer {
 
   static const _ratio = 1200.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$Modem1200] = 1200.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3806,6 +3905,9 @@ final class DataTransfer$Modem2400 extends DataTransfer {
   String get displayName => 'modem (2400)';
 
   static const _ratio = 2400.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$Modem2400] = 2400.0 [DataTransfer$BitPerSecond]
   @override
@@ -3872,6 +3974,9 @@ final class DataTransfer$Modem9600 extends DataTransfer {
 
   static const _ratio = 9600.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$Modem9600] = 9600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -3936,6 +4041,9 @@ final class DataTransfer$Modem144k extends DataTransfer {
   String get displayName => 'modem (14.4k)';
 
   static const _ratio = 14400.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$Modem144k] = 14400.0 [DataTransfer$BitPerSecond]
   @override
@@ -4002,6 +4110,9 @@ final class DataTransfer$Modem288k extends DataTransfer {
 
   static const _ratio = 28800.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$Modem288k] = 28800.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4066,6 +4177,9 @@ final class DataTransfer$Modem336k extends DataTransfer {
   String get displayName => 'modem (33.6k)';
 
   static const _ratio = 33600.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$Modem336k] = 33600.0 [DataTransfer$BitPerSecond]
   @override
@@ -4132,6 +4246,9 @@ final class DataTransfer$Modem56k extends DataTransfer {
 
   static const _ratio = 56000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$Modem56k] = 56000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4196,6 +4313,9 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
   String get displayName => 'SCSI (Async)';
 
   static const _ratio = 12000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$SCSIAsync] = 12000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -4262,6 +4382,9 @@ final class DataTransfer$SCSISync extends DataTransfer {
 
   static const _ratio = 40000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$SCSISync] = 40000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4326,6 +4449,9 @@ final class DataTransfer$SCSIFast extends DataTransfer {
   String get displayName => 'SCSI (Fast)';
 
   static const _ratio = 80000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$SCSIFast] = 80000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -4392,6 +4518,9 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
 
   static const _ratio = 160000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$SCSIFastUltra] = 160000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4457,6 +4586,9 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
 
   static const _ratio = 160000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$SCSIFastWide] = 160000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4521,6 +4653,9 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
   String get displayName => 'SCSI (Fast Ultra Wide)';
 
   static const _ratio = 320000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$SCSIFastUltraWide] = 320000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -4588,6 +4723,9 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
 
   static const _ratio = 640000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$SCSIUltra2] = 640000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4652,6 +4790,9 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
   String get displayName => 'SCSI (Ultra-3)';
 
   static const _ratio = 1280000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$SCSIUltra3] = 1280000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -4718,6 +4859,9 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
 
   static const _ratio = 640000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$SCSILVDUltra80] = 640000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4782,6 +4926,9 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
   String get displayName => 'SCSI (LVD Ultra160)';
 
   static const _ratio = 1280000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$SCSILVDUltra160] = 1280000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -4849,6 +4996,9 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
 
   static const _ratio = 2560000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$SCSILVDUltra320] = 2560000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4915,6 +5065,9 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
 
   static const _ratio = 26400000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEPIOMode0] = 26400000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -4979,6 +5132,9 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
   String get displayName => 'IDE (PIO mode 1)';
 
   static const _ratio = 41600000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEPIOMode1] = 41600000.0 [DataTransfer$BitPerSecond]
   @override
@@ -5045,6 +5201,9 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
 
   static const _ratio = 66400000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEPIOMode2] = 66400000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -5109,6 +5268,9 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
   String get displayName => 'IDE (PIO mode 3)';
 
   static const _ratio = 88800000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEPIOMode3] = 88800000.0 [DataTransfer$BitPerSecond]
   @override
@@ -5175,6 +5337,9 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
 
   static const _ratio = 132800000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEPIOMode4] = 132800000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -5239,6 +5404,9 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
   String get displayName => 'IDE (DMA mode 0)';
 
   static const _ratio = 33600000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEDMAMode0] = 33600000.0 [DataTransfer$BitPerSecond]
   @override
@@ -5305,6 +5473,9 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
 
   static const _ratio = 106400000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEDMAMode1] = 106400000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -5369,6 +5540,9 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
   String get displayName => 'IDE (DMA mode 2)';
 
   static const _ratio = 132800000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEDMAMode2] = 132800000.0 [DataTransfer$BitPerSecond]
   @override
@@ -5435,6 +5609,9 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
 
   static const _ratio = 132800000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEUDMAMode0] = 132800000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -5499,6 +5676,9 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
   String get displayName => 'IDE (UDMA mode 1)';
 
   static const _ratio = 200000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEUDMAMode1] = 200000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -5565,6 +5745,9 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
 
   static const _ratio = 264000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEUDMAMode2] = 264000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -5629,6 +5812,9 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
   String get displayName => 'IDE (UDMA mode 3)';
 
   static const _ratio = 400000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEUDMAMode3] = 400000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -5695,6 +5881,9 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
 
   static const _ratio = 528000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEUDMAMode4] = 528000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -5759,6 +5948,9 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
   String get displayName => 'IDE (UDMA mode 5)';
 
   static const _ratio = 800000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEUDMAMode5] = 800000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -5825,6 +6017,9 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
 
   static const _ratio = 1066666666.6666666;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEUDMAMode6] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -5889,6 +6084,9 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
   String get displayName => 'IDE (UDMA-33)';
 
   static const _ratio = 264000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEUDMA33] = 264000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -5955,6 +6153,9 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
 
   static const _ratio = 528000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEUDMA66] = 528000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6019,6 +6220,9 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
   String get displayName => 'IDE (UDMA-100)';
 
   static const _ratio = 800000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IDEUDMA100] = 800000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -6085,6 +6289,9 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
 
   static const _ratio = 1066666666.6666666;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IDEUDMA133] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6149,6 +6356,9 @@ final class DataTransfer$SATA10 extends DataTransfer {
   String get displayName => 'SATA 1.0';
 
   static const _ratio = 1500000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$SATA10] = 1500000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -6215,6 +6425,9 @@ final class DataTransfer$SATA20 extends DataTransfer {
 
   static const _ratio = 3000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$SATA20] = 3000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6279,6 +6492,9 @@ final class DataTransfer$SATA30 extends DataTransfer {
   String get displayName => 'SATA 3.0';
 
   static const _ratio = 6000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$SATA30] = 6000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -6345,6 +6561,9 @@ final class DataTransfer$USB extends DataTransfer {
 
   static const _ratio = 12000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$USB] = 12000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6409,6 +6628,9 @@ final class DataTransfer$USB20 extends DataTransfer {
   String get displayName => 'USB 2.0';
 
   static const _ratio = 480000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$USB20] = 480000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -6475,6 +6697,9 @@ final class DataTransfer$USB30 extends DataTransfer {
 
   static const _ratio = 5000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$USB30] = 5000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6539,6 +6764,9 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
   String get displayName => 'FireWire 400 (IEEE-1394)';
 
   static const _ratio = 400000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$FireWire400IEEE1394] = 400000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -6606,6 +6834,9 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
 
   static const _ratio = 800000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$FireWire800IEEE1394b] = 800000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6672,6 +6903,9 @@ final class DataTransfer$IrDA extends DataTransfer {
 
   static const _ratio = 115200.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$IrDA] = 115200.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6736,6 +6970,9 @@ final class DataTransfer$IrDA2 extends DataTransfer {
   String get displayName => 'IrDA-2';
 
   static const _ratio = 4000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$IrDA2] = 4000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -6802,6 +7039,9 @@ final class DataTransfer$ATM extends DataTransfer {
 
   static const _ratio = 155000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$ATM] = 155000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6866,6 +7106,9 @@ final class DataTransfer$T0Payload extends DataTransfer {
   String get displayName => 'T0 (payload)';
 
   static const _ratio = 56000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$T0Payload] = 56000.0 [DataTransfer$BitPerSecond]
   @override
@@ -6932,6 +7175,9 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
 
   static const _ratio = 64000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$T0B8ZSPayload] = 64000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -6996,6 +7242,9 @@ final class DataTransfer$T1Signal extends DataTransfer {
   String get displayName => 'T1 (signal)';
 
   static const _ratio = 1544000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$T1Signal] = 1544000.0 [DataTransfer$BitPerSecond]
   @override
@@ -7062,6 +7311,9 @@ final class DataTransfer$T1Payload extends DataTransfer {
 
   static const _ratio = 1344000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$T1Payload] = 1344000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -7126,6 +7378,9 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
   String get displayName => 'T1Z (payload)';
 
   static const _ratio = 1544000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$T1ZPayload] = 1544000.0 [DataTransfer$BitPerSecond]
   @override
@@ -7192,6 +7447,9 @@ final class DataTransfer$T1CSignal extends DataTransfer {
 
   static const _ratio = 3152000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$T1CSignal] = 3152000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -7256,6 +7514,9 @@ final class DataTransfer$T1CPayload extends DataTransfer {
   String get displayName => 'T1C (payload)';
 
   static const _ratio = 2688000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$T1CPayload] = 2688000.0 [DataTransfer$BitPerSecond]
   @override
@@ -7322,6 +7583,9 @@ final class DataTransfer$T2Signal extends DataTransfer {
 
   static const _ratio = 6312000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$T2Signal] = 6312000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -7386,6 +7650,9 @@ final class DataTransfer$T3Signal extends DataTransfer {
   String get displayName => 'T3 (signal)';
 
   static const _ratio = 44736000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$T3Signal] = 44736000.0 [DataTransfer$BitPerSecond]
   @override
@@ -7452,6 +7719,9 @@ final class DataTransfer$T3Payload extends DataTransfer {
 
   static const _ratio = 37632000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$T3Payload] = 37632000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -7516,6 +7786,9 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
   String get displayName => 'T3Z (payload)';
 
   static const _ratio = 43008000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$T3ZPayload] = 43008000.0 [DataTransfer$BitPerSecond]
   @override
@@ -7582,6 +7855,9 @@ final class DataTransfer$T4Signal extends DataTransfer {
 
   static const _ratio = 274176000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$T4Signal] = 274176000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -7646,6 +7922,9 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
   String get displayName => 'E.P.T.A. 1 (signal)';
 
   static const _ratio = 2048000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$EPTA1Signal] = 2048000.0 [DataTransfer$BitPerSecond]
   @override
@@ -7712,6 +7991,9 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
 
   static const _ratio = 1920000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$EPTA1Payload] = 1920000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -7776,6 +8058,9 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
   String get displayName => 'E.P.T.A. 2 (signal)';
 
   static const _ratio = 8448000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$EPTA2Signal] = 8448000.0 [DataTransfer$BitPerSecond]
   @override
@@ -7842,6 +8127,9 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
 
   static const _ratio = 7680000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$EPTA2Payload] = 7680000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -7906,6 +8194,9 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
   String get displayName => 'E.P.T.A. 3 (signal)';
 
   static const _ratio = 34368000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$EPTA3Signal] = 34368000.0 [DataTransfer$BitPerSecond]
   @override
@@ -7972,6 +8263,9 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
 
   static const _ratio = 30720000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$EPTA3Payload] = 30720000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8036,6 +8330,9 @@ final class DataTransfer$H0 extends DataTransfer {
   String get displayName => 'H0';
 
   static const _ratio = 384000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$H0] = 384000.0 [DataTransfer$BitPerSecond]
   @override
@@ -8102,6 +8399,9 @@ final class DataTransfer$H11 extends DataTransfer {
 
   static const _ratio = 1536000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$H11] = 1536000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8167,6 +8467,9 @@ final class DataTransfer$H12 extends DataTransfer {
 
   static const _ratio = 1920000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$H12] = 1920000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8231,6 +8534,9 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
   String get displayName => 'Virtual Tributary 1 (signal)';
 
   static const _ratio = 1728000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$VirtualTributary1Signal] = 1728000.0 [DataTransfer$BitPerSecond]
   @override
@@ -8298,6 +8604,9 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
 
   static const _ratio = 1544000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$VirtualTributary1Payload] = 1544000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8363,6 +8672,9 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
   String get displayName => 'Virtual Tributary 2 (signal)';
 
   static const _ratio = 2304000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$VirtualTributary2Signal] = 2304000.0 [DataTransfer$BitPerSecond]
   @override
@@ -8430,6 +8742,9 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
 
   static const _ratio = 2048000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$VirtualTributary2Payload] = 2048000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8495,6 +8810,9 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
   String get displayName => 'Virtual Tributary 6 (signal)';
 
   static const _ratio = 6312000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$VirtualTributary6Signal] = 6312000.0 [DataTransfer$BitPerSecond]
   @override
@@ -8562,6 +8880,9 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
 
   static const _ratio = 6000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$VirtualTributary6Payload] = 6000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8628,6 +8949,9 @@ final class DataTransfer$STS1Signal extends DataTransfer {
 
   static const _ratio = 51840000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$STS1Signal] = 51840000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8692,6 +9016,9 @@ final class DataTransfer$STS1Payload extends DataTransfer {
   String get displayName => 'STS1 (payload)';
 
   static const _ratio = 49500000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$STS1Payload] = 49500000.0 [DataTransfer$BitPerSecond]
   @override
@@ -8758,6 +9085,9 @@ final class DataTransfer$STS3Signal extends DataTransfer {
 
   static const _ratio = 155520000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$STS3Signal] = 155520000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8822,6 +9152,9 @@ final class DataTransfer$STS3Payload extends DataTransfer {
   String get displayName => 'STS3 (payload)';
 
   static const _ratio = 150336000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$STS3Payload] = 150336000.0 [DataTransfer$BitPerSecond]
   @override
@@ -8888,6 +9221,9 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
 
   static const _ratio = 155520000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$STS3cSignal] = 155520000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -8952,6 +9288,9 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
   String get displayName => 'STS3c (payload)';
 
   static const _ratio = 150336000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$STS3cPayload] = 150336000.0 [DataTransfer$BitPerSecond]
   @override
@@ -9018,6 +9357,9 @@ final class DataTransfer$STS12Signal extends DataTransfer {
 
   static const _ratio = 622080000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$STS12Signal] = 622080000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -9082,6 +9424,9 @@ final class DataTransfer$STS24Signal extends DataTransfer {
   String get displayName => 'STS24 (signal)';
 
   static const _ratio = 1244160000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$STS24Signal] = 1244160000.0 [DataTransfer$BitPerSecond]
   @override
@@ -9148,6 +9493,9 @@ final class DataTransfer$STS48Signal extends DataTransfer {
 
   static const _ratio = 2488320000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$STS48Signal] = 2488320000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -9212,6 +9560,9 @@ final class DataTransfer$STS192Signal extends DataTransfer {
   String get displayName => 'STS192 (signal)';
 
   static const _ratio = 9953280000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$STS192Signal] = 9953280000.0 [DataTransfer$BitPerSecond]
   @override
@@ -9278,6 +9629,9 @@ final class DataTransfer$STM1Signal extends DataTransfer {
 
   static const _ratio = 155520000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$STM1Signal] = 155520000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -9342,6 +9696,9 @@ final class DataTransfer$STM4Signal extends DataTransfer {
   String get displayName => 'STM-4 (signal)';
 
   static const _ratio = 622080000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$STM4Signal] = 622080000.0 [DataTransfer$BitPerSecond]
   @override
@@ -9408,6 +9765,9 @@ final class DataTransfer$STM16Signal extends DataTransfer {
 
   static const _ratio = 2488320000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$STM16Signal] = 2488320000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -9473,6 +9833,9 @@ final class DataTransfer$STM64Signal extends DataTransfer {
 
   static const _ratio = 9953280000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$STM64Signal] = 9953280000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -9537,6 +9900,9 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
   String get displayName => 'character/second';
 
   static const _ratio = 8.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$CharacterPerSecond] = 8.0 [DataTransfer$BitPerSecond]
   @override
@@ -9604,6 +9970,9 @@ final class DataTransfer$TokenRing extends DataTransfer {
 
   static const _ratio = 4000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$TokenRing] = 4000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -9668,6 +10037,9 @@ final class DataTransfer$FiberChannel extends DataTransfer {
   String get displayName => 'fiber channel';
 
   static const _ratio = 3200000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$FiberChannel] = 3200000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -9734,6 +10106,9 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
 
   static const _ratio = 66666666.666666664;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$ISA8Bit] ≈ 66666666.666666664 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -9798,6 +10173,9 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
   String get displayName => 'ISA (16-bit)';
 
   static const _ratio = 133333333.33333333;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$ISA16Bit] ≈ 133333333.33333333 [DataTransfer$BitPerSecond]
   @override
@@ -9864,6 +10242,9 @@ final class DataTransfer$VLB extends DataTransfer {
 
   static const _ratio = 533333333.3333333;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$VLB] ≈ 533333333.3333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -9928,6 +10309,9 @@ final class DataTransfer$PCI extends DataTransfer {
   String get displayName => 'PCI';
 
   static const _ratio = 1066666666.6666666;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$PCI] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
   @override
@@ -9994,6 +10378,9 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
 
   static const _ratio = 2133333333.3333333;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$PCI64Bit] ≈ 2133333333.3333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -10058,6 +10445,9 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
   String get displayName => 'PCI (64-bit 66MHz)';
 
   static const _ratio = 4266666666.6666665;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$PCI64Bit66MHz] ≈ 4266666666.6666665 [DataTransfer$BitPerSecond]
   @override
@@ -10124,6 +10514,9 @@ final class DataTransfer$PCIX extends DataTransfer {
 
   static const _ratio = 8533333333.333333;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$PCIX] ≈ 8533333333.333333 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -10188,6 +10581,9 @@ final class DataTransfer$AGP extends DataTransfer {
   String get displayName => 'AGP';
 
   static const _ratio = 2133333333.3333333;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$AGP] ≈ 2133333333.3333333 [DataTransfer$BitPerSecond]
   @override
@@ -10254,6 +10650,9 @@ final class DataTransfer$AGP2X extends DataTransfer {
 
   static const _ratio = 4266666666.6666665;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$AGP2X] ≈ 4266666666.6666665 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -10318,6 +10717,9 @@ final class DataTransfer$AGP4X extends DataTransfer {
   String get displayName => 'AGP 4X';
 
   static const _ratio = 8533333333.333333;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$AGP4X] ≈ 8533333333.333333 [DataTransfer$BitPerSecond]
   @override
@@ -10384,6 +10786,9 @@ final class DataTransfer$AGP8X extends DataTransfer {
 
   static const _ratio = 17066666666.666666;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$AGP8X] ≈ 17066666666.666666 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -10448,6 +10853,9 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
   String get displayName => 'PCI Express 1.0 (x1)';
 
   static const _ratio = 2000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$PCIExpress10X1] = 2000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -10514,6 +10922,9 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
 
   static const _ratio = 8000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$PCIExpress10X4] = 8000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -10579,6 +10990,9 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
 
   static const _ratio = 16000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$PCIExpress10X8] = 16000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -10643,6 +11057,9 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
   String get displayName => 'PCI Express 1.0 (x16)';
 
   static const _ratio = 32000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$PCIExpress10X16] = 32000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -10710,6 +11127,9 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
 
   static const _ratio = 4000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$PCIExpress20X1] = 4000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -10774,6 +11194,9 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
   String get displayName => 'PCI Express 2.0 (x4)';
 
   static const _ratio = 16000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$PCIExpress20X4] = 16000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -10840,6 +11263,9 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
 
   static const _ratio = 32000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$PCIExpress20X8] = 32000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -10904,6 +11330,9 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
   String get displayName => 'PCI Express 2.0 (x16)';
 
   static const _ratio = 64000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$PCIExpress20X16] = 64000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -10971,6 +11400,9 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
 
   static const _ratio = 8000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$PCIExpress30X1] = 8000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -11035,6 +11467,9 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
   String get displayName => 'PCI Express 3.0 (x4)';
 
   static const _ratio = 32000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$PCIExpress30X4] = 32000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -11101,6 +11536,9 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
 
   static const _ratio = 64000000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$PCIExpress30X8] = 64000000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -11165,6 +11603,9 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
   String get displayName => 'PCI Express 3.0 (x16)';
 
   static const _ratio = 128000000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$PCIExpress30X16] = 128000000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -11232,6 +11673,9 @@ final class DataTransfer$CDROM1X extends DataTransfer {
 
   static const _ratio = 1228800.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$CDROM1X] = 1228800.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -11296,6 +11740,9 @@ final class DataTransfer$CDROM2X extends DataTransfer {
   String get displayName => 'CD-ROM 2X';
 
   static const _ratio = 2457600.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$CDROM2X] = 2457600.0 [DataTransfer$BitPerSecond]
   @override
@@ -11362,6 +11809,9 @@ final class DataTransfer$CDROM3X extends DataTransfer {
 
   static const _ratio = 3686400.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$CDROM3X] = 3686400.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -11426,6 +11876,9 @@ final class DataTransfer$CDROM4X extends DataTransfer {
   String get displayName => 'CD-ROM 4X';
 
   static const _ratio = 4915200.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$CDROM4X] = 4915200.0 [DataTransfer$BitPerSecond]
   @override
@@ -11492,6 +11945,9 @@ final class DataTransfer$CDROM6X extends DataTransfer {
 
   static const _ratio = 7372800.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$CDROM6X] = 7372800.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -11556,6 +12012,9 @@ final class DataTransfer$CDROM8X extends DataTransfer {
   String get displayName => 'CD-ROM 8X';
 
   static const _ratio = 9830400.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$CDROM8X] = 9830400.0 [DataTransfer$BitPerSecond]
   @override
@@ -11622,6 +12081,9 @@ final class DataTransfer$CDROM12X extends DataTransfer {
 
   static const _ratio = 14745600.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$CDROM12X] = 14745600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -11686,6 +12148,9 @@ final class DataTransfer$CDROM16X extends DataTransfer {
   String get displayName => 'CD-ROM 16X';
 
   static const _ratio = 19660800.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$CDROM16X] = 19660800.0 [DataTransfer$BitPerSecond]
   @override
@@ -11752,6 +12217,9 @@ final class DataTransfer$CDROM24X extends DataTransfer {
 
   static const _ratio = 29491200.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$CDROM24X] = 29491200.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -11816,6 +12284,9 @@ final class DataTransfer$CDROM32X extends DataTransfer {
   String get displayName => 'CD-ROM 32X';
 
   static const _ratio = 39321600.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$CDROM32X] = 39321600.0 [DataTransfer$BitPerSecond]
   @override
@@ -11882,6 +12353,9 @@ final class DataTransfer$CDROM40X extends DataTransfer {
 
   static const _ratio = 49152000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$CDROM40X] = 49152000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -11946,6 +12420,9 @@ final class DataTransfer$CDROM48X extends DataTransfer {
   String get displayName => 'CD-ROM 48X';
 
   static const _ratio = 58982400.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$CDROM48X] = 58982400.0 [DataTransfer$BitPerSecond]
   @override
@@ -12012,6 +12489,9 @@ final class DataTransfer$CDROM52X extends DataTransfer {
 
   static const _ratio = 63897600.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$CDROM52X] = 63897600.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -12076,6 +12556,9 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
   String get displayName => 'DVD-ROM 1X';
 
   static const _ratio = 11080000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$DVDROM1X] = 11080000.0 [DataTransfer$BitPerSecond]
   @override
@@ -12142,6 +12625,9 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
 
   static const _ratio = 22160000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$DVDROM2X] = 22160000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -12206,6 +12692,9 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
   String get displayName => 'DVD-ROM 3X';
 
   static const _ratio = 33240000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$DVDROM3X] = 33240000.0 [DataTransfer$BitPerSecond]
   @override
@@ -12272,6 +12761,9 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
 
   static const _ratio = 44320000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$DVDROM4X] = 44320000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -12336,6 +12828,9 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
   String get displayName => 'DVD-ROM 6X';
 
   static const _ratio = 66480000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$DVDROM6X] = 66480000.0 [DataTransfer$BitPerSecond]
   @override
@@ -12402,6 +12897,9 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
 
   static const _ratio = 88640000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$DVDROM8X] = 88640000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -12466,6 +12964,9 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
   String get displayName => 'DVD-ROM 10X';
 
   static const _ratio = 110800000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$DVDROM10X] = 110800000.0 [DataTransfer$BitPerSecond]
   @override
@@ -12532,6 +13033,9 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
 
   static const _ratio = 132960000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$DVDROM12X] = 132960000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -12596,6 +13100,9 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
   String get displayName => 'DVD-ROM 16X';
 
   static const _ratio = 177280000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$DVDROM16X] = 177280000.0 [DataTransfer$BitPerSecond]
   @override
@@ -12662,6 +13169,9 @@ final class DataTransfer$BluRay1X extends DataTransfer {
 
   static const _ratio = 36000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$BluRay1X] = 36000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -12726,6 +13236,9 @@ final class DataTransfer$BluRay2X extends DataTransfer {
   String get displayName => 'Blu-ray 2X';
 
   static const _ratio = 72000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$BluRay2X] = 72000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -12792,6 +13305,9 @@ final class DataTransfer$BluRay4X extends DataTransfer {
 
   static const _ratio = 144000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$BluRay4X] = 144000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -12856,6 +13372,9 @@ final class DataTransfer$BluRay6X extends DataTransfer {
   String get displayName => 'Blu-ray 6X';
 
   static const _ratio = 216000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$BluRay6X] = 216000000.0 [DataTransfer$BitPerSecond]
   @override
@@ -12922,6 +13441,9 @@ final class DataTransfer$BluRay8X extends DataTransfer {
 
   static const _ratio = 288000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$BluRay8X] = 288000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -12987,6 +13509,9 @@ final class DataTransfer$BluRay10X extends DataTransfer {
 
   static const _ratio = 360000000.0;
 
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+
   /// 1 [DataTransfer$BluRay10X] = 360000000.0 [DataTransfer$BitPerSecond]
   @override
   num get ratio => _ratio;
@@ -13051,6 +13576,9 @@ final class DataTransfer$BluRay12X extends DataTransfer {
   String get displayName => 'Blu-ray 12X';
 
   static const _ratio = 432000000.0;
+
+  @override
+  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
 
   /// 1 [DataTransfer$BluRay12X] = 432000000.0 [DataTransfer$BitPerSecond]
   @override

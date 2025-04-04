@@ -28,9 +28,6 @@ sealed class Torque extends Unit<Torque> {
 
   factory Torque.anchor() => const Torque$NewtonMeter();
 
-  @override
-  Torque get anchor => const Torque$NewtonMeter();
-
   /// Convert to [Torque$KilonewtonMeter]
   Torque get toKilonewtonMeter => convertTo(
         const Torque$KilonewtonMeter(),
@@ -218,6 +215,9 @@ final class Torque$KilonewtonMeter extends Torque {
 
   static const _ratio = 1000.0;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$KilonewtonMeter] = 1000.0 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -282,6 +282,9 @@ final class Torque$NewtonMeter extends Torque {
   String get displayName => 'newton meter';
 
   static const _ratio = 1.0;
+
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
 
   /// Default (anchor) unit of [Torque]
   @override
@@ -348,6 +351,9 @@ final class Torque$NewtonCentimeter extends Torque {
 
   static const _ratio = 0.01;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$NewtonCentimeter] ≈ 0.01 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -412,6 +418,9 @@ final class Torque$NewtonMillimeter extends Torque {
   String get displayName => 'newton millimeter';
 
   static const _ratio = 0.001;
+
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
 
   /// 1 [Torque$NewtonMillimeter] ≈ 0.001 [Torque$NewtonMeter]
   @override
@@ -478,6 +487,9 @@ final class Torque$DyneMeter extends Torque {
 
   static const _ratio = 0.00001;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$DyneMeter] ≈ 0.00001 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -542,6 +554,9 @@ final class Torque$DyneCentimeter extends Torque {
   String get displayName => 'dyne centimeter';
 
   static const _ratio = 1e-7;
+
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
 
   /// 1 [Torque$DyneCentimeter] ≈ 1e-7 [Torque$NewtonMeter]
   @override
@@ -608,6 +623,9 @@ final class Torque$DyneMillimeter extends Torque {
 
   static const _ratio = 1e-8;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$DyneMillimeter] ≈ 1e-8 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -673,6 +691,9 @@ final class Torque$KilogramForceMeter extends Torque {
 
   static const _ratio = 9.80665;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$KilogramForceMeter] ≈ 9.80665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -737,6 +758,9 @@ final class Torque$KilogramForceCentimeter extends Torque {
   String get displayName => 'kilogram force centimeter';
 
   static const _ratio = 0.0980665;
+
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
 
   /// 1 [Torque$KilogramForceCentimeter] ≈ 0.0980665 [Torque$NewtonMeter]
   @override
@@ -804,6 +828,9 @@ final class Torque$KilogramForceMillimeter extends Torque {
 
   static const _ratio = 0.00980665;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$KilogramForceMillimeter] ≈ 0.00980665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -870,6 +897,9 @@ final class Torque$GramForceMeter extends Torque {
 
   static const _ratio = 0.00980665;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$GramForceMeter] ≈ 0.00980665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -934,6 +964,9 @@ final class Torque$GramForceCentimeter extends Torque {
   String get displayName => 'gram force centimeter';
 
   static const _ratio = 0.0000980665;
+
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
 
   /// 1 [Torque$GramForceCentimeter] ≈ 0.0000980665 [Torque$NewtonMeter]
   @override
@@ -1000,6 +1033,9 @@ final class Torque$GramForceMillimeter extends Torque {
 
   static const _ratio = 0.00000980665;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$GramForceMillimeter] ≈ 0.00000980665 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -1064,6 +1100,9 @@ final class Torque$OunceForceFoot extends Torque {
   String get displayName => 'ounce force foot';
 
   static const _ratio = 0.084738624;
+
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
 
   /// 1 [Torque$OunceForceFoot] ≈ 0.084738624 [Torque$NewtonMeter]
   @override
@@ -1130,6 +1169,9 @@ final class Torque$OunceForceInch extends Torque {
 
   static const _ratio = 0.007061552;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$OunceForceInch] ≈ 0.007061552 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -1195,6 +1237,9 @@ final class Torque$PoundForceFoot extends Torque {
 
   static const _ratio = 1.355818;
 
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
+
   /// 1 [Torque$PoundForceFoot] ≈ 1.355818 [Torque$NewtonMeter]
   @override
   num get ratio => _ratio;
@@ -1259,6 +1304,9 @@ final class Torque$PoundForceInch extends Torque {
   String get displayName => 'pound force inch';
 
   static const _ratio = 0.11298483333333334;
+
+  @override
+  Torque get anchor => const Torque$NewtonMeter(_ratio);
 
   /// 1 [Torque$PoundForceInch] ≈ 0.11298483333333334 [Torque$NewtonMeter]
   @override

@@ -25,10 +25,6 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
   factory HVACEfficiency.anchor() =>
       const HVACEfficiency$COPCoefficientOfPerformace();
 
-  @override
-  HVACEfficiency get anchor =>
-      const HVACEfficiency$COPCoefficientOfPerformace();
-
   /// Convert to [HVACEfficiency$EEREnergyEfficiencyRatio]
   HVACEfficiency get toEEREnergyEfficiencyRatio => convertTo(
         const HVACEfficiency$EEREnergyEfficiencyRatio(),
@@ -108,6 +104,10 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
 
   static const _ratio = 0.2928;
 
+  @override
+  HVACEfficiency get anchor =>
+      const HVACEfficiency$COPCoefficientOfPerformace(_ratio);
+
   /// 1 [HVACEfficiency$EEREnergyEfficiencyRatio] ≈ 0.2928 [HVACEfficiency$COPCoefficientOfPerformace]
   @override
   num get ratio => _ratio;
@@ -174,6 +174,10 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
 
   static const _ratio = 1.0;
 
+  @override
+  HVACEfficiency get anchor =>
+      const HVACEfficiency$COPCoefficientOfPerformace(_ratio);
+
   /// Default (anchor) unit of [HVACEfficiency]
   @override
   num get ratio => _ratio;
@@ -239,6 +243,10 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
   String get displayName => 'kilowatt/ton';
 
   static const _ratio = 0.284608378870674;
+
+  @override
+  HVACEfficiency get anchor =>
+      const HVACEfficiency$COPCoefficientOfPerformace(_ratio);
 
   /// 1 [HVACEfficiency$KilowattPerTon] ≈ 0.284608378870674 [HVACEfficiency$COPCoefficientOfPerformace]
   @override

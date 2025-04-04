@@ -32,9 +32,6 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
 
   factory VolumeLumber.anchor() => const VolumeLumber$CubicInch();
 
-  @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch();
-
   /// Convert to [VolumeLumber$MeterCubic]
   VolumeLumber get toMeterCubic => convertTo(
         const VolumeLumber$MeterCubic(),
@@ -232,6 +229,9 @@ final class VolumeLumber$MeterCubic extends VolumeLumber {
 
   static const _ratio = 61023.74409473228;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// 1 [VolumeLumber$MeterCubic] ≈ 61023.74409473228 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
@@ -296,6 +296,9 @@ final class VolumeLumber$CubicFeet extends VolumeLumber {
   String get displayName => 'cubic feet';
 
   static const _ratio = 1728.0;
+
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
 
   /// 1 [VolumeLumber$CubicFeet] = 1728.0 [VolumeLumber$CubicInch]
   @override
@@ -362,6 +365,9 @@ final class VolumeLumber$CubicInch extends VolumeLumber {
 
   static const _ratio = 1.0;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// Default (anchor) unit of [VolumeLumber]
   @override
   num get ratio => _ratio;
@@ -427,6 +433,9 @@ final class VolumeLumber$BoardFeet extends VolumeLumber {
 
   static const _ratio = 144.0;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// 1 [VolumeLumber$BoardFeet] = 144.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
@@ -491,6 +500,9 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
   String get displayName => '1000 board feet';
 
   static const _ratio = 144000.0;
+
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
 
   /// 1 [VolumeLumber$ThousandBoardFeet] = 144000.0 [VolumeLumber$CubicInch]
   @override
@@ -558,6 +570,9 @@ final class VolumeLumber$Cord extends VolumeLumber {
 
   static const _ratio = 221184.0;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// 1 [VolumeLumber$Cord] = 221184.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
@@ -622,6 +637,9 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
   String get displayName => 'cord (80 ft³)';
 
   static const _ratio = 138240.0;
+
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
 
   /// 1 [VolumeLumber$Cord80FtCubic] = 138240.0 [VolumeLumber$CubicInch]
   @override
@@ -688,6 +706,9 @@ final class VolumeLumber$CordFeet extends VolumeLumber {
 
   static const _ratio = 27648.0;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// 1 [VolumeLumber$CordFeet] = 27648.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
@@ -752,6 +773,9 @@ final class VolumeLumber$Cunit extends VolumeLumber {
   String get displayName => _minorName;
 
   static const _ratio = 172800.0;
+
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
 
   /// 1 [VolumeLumber$Cunit] = 172800.0 [VolumeLumber$CubicInch]
   @override
@@ -818,6 +842,9 @@ final class VolumeLumber$Pallet extends VolumeLumber {
 
   static const _ratio = 2448.0;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// 1 [VolumeLumber$Pallet] = 2448.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
@@ -882,6 +909,9 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
   String get displayName => 'cross tie';
 
   static const _ratio = 5760.0;
+
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
 
   /// 1 [VolumeLumber$CrossTie] = 5760.0 [VolumeLumber$CubicInch]
   @override
@@ -948,6 +978,9 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
 
   static const _ratio = 9072.0;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// 1 [VolumeLumber$SwitchTie] = 9072.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
@@ -1013,6 +1046,9 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
   String get displayName => '1000 square feet (1/8-inch panels)';
 
   static const _ratio = 18000.0;
+
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
 
   /// 1 [VolumeLumber$ThousandSquareFeet1Per8InchPanels] = 18000.0 [VolumeLumber$CubicInch]
   @override
@@ -1081,6 +1117,9 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
 
   static const _ratio = 36000.0;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// 1 [VolumeLumber$ThousandSquareFeet1Per4InchPanels] = 36000.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
@@ -1147,6 +1186,9 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
   String get displayName => '1000 square feet (3/8-inch panels)';
 
   static const _ratio = 54000.0;
+
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
 
   /// 1 [VolumeLumber$ThousandSquareFeet3Per8InchPanels] = 54000.0 [VolumeLumber$CubicInch]
   @override
@@ -1215,6 +1257,9 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
 
   static const _ratio = 72000.0;
 
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+
   /// 1 [VolumeLumber$ThousandSquareFeet1Per2InchPanels] = 72000.0 [VolumeLumber$CubicInch]
   @override
   num get ratio => _ratio;
@@ -1281,6 +1326,9 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
   String get displayName => '1000 square feet (3/4-inch panels)';
 
   static const _ratio = 108000.0;
+
+  @override
+  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
 
   /// 1 [VolumeLumber$ThousandSquareFeet3Per4InchPanels] = 108000.0 [VolumeLumber$CubicInch]
   @override

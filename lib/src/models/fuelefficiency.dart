@@ -41,9 +41,6 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
 
   factory FuelEfficiency.anchor() => const FuelEfficiency$MeterPerLiter();
 
-  @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter();
-
   /// Convert to [FuelEfficiency$ExameterPerLiter]
   FuelEfficiency get toExameterPerLiter => convertTo(
         const FuelEfficiency$ExameterPerLiter(),
@@ -402,6 +399,9 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000000000000000000.0;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$ExameterPerLiter] = 1000000000000000000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -467,6 +467,9 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
   String get displayName => 'petameter/liter';
 
   static const _ratio = 1000000000000000.0;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$PetameterPerLiter] = 1000000000000000.0 [FuelEfficiency$MeterPerLiter]
   @override
@@ -534,6 +537,9 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000000000000.0;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$TerameterPerLiter] = 1000000000000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -599,6 +605,9 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
   String get displayName => 'gigameter/liter';
 
   static const _ratio = 1000000000.0;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$GigameterPerLiter] = 1000000000.0 [FuelEfficiency$MeterPerLiter]
   @override
@@ -666,6 +675,9 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1000000.0;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MegameterPerLiter] = 1000000.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -731,6 +743,9 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
   String get displayName => 'kilometer/liter';
 
   static const _ratio = 1000.0;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$KilometerPerLiter] = 1000.0 [FuelEfficiency$MeterPerLiter]
   @override
@@ -798,6 +813,9 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
 
   static const _ratio = 100.0;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$HectometerPerLiter] = 100.0 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -863,6 +881,9 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
   String get displayName => 'dekameter/liter';
 
   static const _ratio = 10.0;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$DekameterPerLiter] = 10.0 [FuelEfficiency$MeterPerLiter]
   @override
@@ -930,6 +951,9 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
 
   static const _ratio = 1.0;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// Default (anchor) unit of [FuelEfficiency]
   @override
   num get ratio => _ratio;
@@ -995,6 +1019,9 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
   String get displayName => 'centimeter/liter';
 
   static const _ratio = 0.01;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$CentimeterPerLiter] ≈ 0.01 [FuelEfficiency$MeterPerLiter]
   @override
@@ -1062,6 +1089,9 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
 
   static const _ratio = 1609.344;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MileUSPerLiter] ≈ 1609.344 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -1127,6 +1157,9 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
   String get displayName => 'liter/meter';
 
   static const _ratio = 1.0;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$LiterPerMeter] = 1.0 [FuelEfficiency$MeterPerLiter]
   @override
@@ -1194,6 +1227,9 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
 
   static const _ratio = 0.00001;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$LiterPer100Km] ≈ 0.00001 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -1259,6 +1295,9 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
   String get displayName => 'gallons (US)/mile';
 
   static const _ratio = 0.0023521458329606934;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$GallonsUSPerMile] ≈ 0.0023521458329606934 [FuelEfficiency$MeterPerLiter]
   @override
@@ -1326,6 +1365,9 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
 
   static const _ratio = 0.000023521458329606913;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$GallonsUSPer100mi] ≈ 0.000023521458329606913 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -1391,6 +1433,9 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
   String get displayName => 'gallons (UK)/mile';
 
   static const _ratio = 0.002824809363148498;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$GallonsUKPerMile] ≈ 0.002824809363148498 [FuelEfficiency$MeterPerLiter]
   @override
@@ -1458,6 +1503,9 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
 
   static const _ratio = 0.000028248093631484976;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$GallonsUKPer100mi] ≈ 0.000028248093631484976 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -1523,6 +1571,9 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
   String get displayName => 'nautical mile/liter';
 
   static const _ratio = 1853.24496;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$NauticalMilePerLiter] ≈ 1853.24496 [FuelEfficiency$MeterPerLiter]
   @override
@@ -1590,6 +1641,9 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
 
   static const _ratio = 489.5755247;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$NauticalMilePerGallonUS] ≈ 489.5755247 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -1655,6 +1709,9 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
   String get displayName => 'kilometer/gallon (US)';
 
   static const _ratio = 264.1720524;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$KilometerPerGallonUS] ≈ 264.1720524 [FuelEfficiency$MeterPerLiter]
   @override
@@ -1722,6 +1779,9 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
 
   static const _ratio = 0.2641720524;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MeterPerGallonUS] ≈ 0.2641720524 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -1787,6 +1847,9 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
   String get displayName => 'meter/gallon (UK)';
 
   static const _ratio = 0.2199687986;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MeterPerGallonUK] ≈ 0.2199687986 [FuelEfficiency$MeterPerLiter]
   @override
@@ -1854,6 +1917,9 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
 
   static const _ratio = 425.1437075;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MilePerGallonUS] ≈ 425.1437075 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -1919,6 +1985,9 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
   String get displayName => 'mile/gallon (UK)';
 
   static const _ratio = 354.00619;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MilePerGallonUK] ≈ 354.00619 [FuelEfficiency$MeterPerLiter]
   @override
@@ -1986,6 +2055,9 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
 
   static const _ratio = 0.001;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MeterPerMeterSquare] ≈ 0.001 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -2051,6 +2123,9 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
   String get displayName => 'meter/centimeter²';
 
   static const _ratio = 1000.0;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MeterPerCentimeterSquare] = 1000.0 [FuelEfficiency$MeterPerLiter]
   @override
@@ -2118,6 +2193,9 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
 
   static const _ratio = 0.001307950619;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MeterPerYardSquare] ≈ 0.001307950619 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -2183,6 +2261,9 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
   String get displayName => 'meter/feet²';
 
   static const _ratio = 0.03531466672;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MeterPerFeetSquare] ≈ 0.03531466672 [FuelEfficiency$MeterPerLiter]
   @override
@@ -2250,6 +2331,9 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
 
   static const _ratio = 61.02374409;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MeterPerInchSquare] ≈ 61.02374409 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -2315,6 +2399,9 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
   String get displayName => 'meter/gallon';
 
   static const _ratio = 0.2641720524;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MeterPerGallon] ≈ 0.2641720524 [FuelEfficiency$MeterPerLiter]
   @override
@@ -2382,6 +2469,9 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
 
   static const _ratio = 1.056688209;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MeterPerQuart] ≈ 1.056688209 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -2447,6 +2537,9 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
   String get displayName => 'meter/quart (UK)';
 
   static const _ratio = 0.8798751948;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MeterPerQuartUK] ≈ 0.8798751948 [FuelEfficiency$MeterPerLiter]
   @override
@@ -2514,6 +2607,9 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
 
   static const _ratio = 2.113376419;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MeterPerPint] ≈ 2.113376419 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -2578,6 +2674,9 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
   String get displayName => 'meter/pint (UK)';
 
   static const _ratio = 1.759750389;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MeterPerPintUK] ≈ 1.759750389 [FuelEfficiency$MeterPerLiter]
   @override
@@ -2645,6 +2744,9 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
 
   static const _ratio = 4.226752838;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MeterPerCup] ≈ 4.226752838 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -2709,6 +2811,9 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
   String get displayName => 'meter/cup (UK)';
 
   static const _ratio = 3.519500777;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MeterPerCupUK] ≈ 3.519500777 [FuelEfficiency$MeterPerLiter]
   @override
@@ -2776,6 +2881,9 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
 
   static const _ratio = 33.8140227;
 
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+
   /// 1 [FuelEfficiency$MeterPerFluidOunce] ≈ 33.8140227 [FuelEfficiency$MeterPerLiter]
   @override
   num get ratio => _ratio;
@@ -2841,6 +2949,9 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
   String get displayName => 'meter/fluid ounce (UK)';
 
   static const _ratio = 35.19500777;
+
+  @override
+  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
 
   /// 1 [FuelEfficiency$MeterPerFluidOunceUK] ≈ 35.19500777 [FuelEfficiency$MeterPerLiter]
   @override

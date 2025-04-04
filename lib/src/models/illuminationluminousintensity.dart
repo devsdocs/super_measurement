@@ -34,10 +34,6 @@ sealed class IlluminationLuminousIntensity
   factory IlluminationLuminousIntensity.anchor() =>
       const IlluminationLuminousIntensity$CandleInternational();
 
-  @override
-  IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational();
-
   /// Convert to [IlluminationLuminousIntensity$CandleInternational]
   IlluminationLuminousIntensity get toCandleInternational => convertTo(
         const IlluminationLuminousIntensity$CandleInternational(),
@@ -177,6 +173,10 @@ final class IlluminationLuminousIntensity$CandleInternational
 
   static const _ratio = 1.0;
 
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+
   /// Default (anchor) unit of [IlluminationLuminousIntensity]
   @override
   num get ratio => _ratio;
@@ -243,6 +243,10 @@ final class IlluminationLuminousIntensity$CandleGerman
   String get displayName => 'candle (German)';
 
   static const _ratio = 1.0526315789473684;
+
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
 
   /// 1 [IlluminationLuminousIntensity$CandleGerman] ≈ 1.0526315789473684 [IlluminationLuminousIntensity$CandleInternational]
   @override
@@ -311,6 +315,10 @@ final class IlluminationLuminousIntensity$CandlePentane
 
   static const _ratio = 1.0;
 
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+
   /// 1 [IlluminationLuminousIntensity$CandlePentane] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
@@ -377,6 +385,10 @@ final class IlluminationLuminousIntensity$CandleUK
   String get displayName => 'candle (UK)';
 
   static const _ratio = 1.0416666666666667;
+
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
 
   /// 1 [IlluminationLuminousIntensity$CandleUK] ≈ 1.0416666666666667 [IlluminationLuminousIntensity$CandleInternational]
   @override
@@ -445,6 +457,10 @@ final class IlluminationLuminousIntensity$DecimalCandle
 
   static const _ratio = 1.0;
 
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+
   /// 1 [IlluminationLuminousIntensity$DecimalCandle] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
@@ -511,6 +527,10 @@ final class IlluminationLuminousIntensity$HefnerCandle
   String get displayName => 'hefner candle';
 
   static const _ratio = 0.9;
+
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
 
   /// 1 [IlluminationLuminousIntensity$HefnerCandle] ≈ 0.9 [IlluminationLuminousIntensity$CandleInternational]
   @override
@@ -579,6 +599,10 @@ final class IlluminationLuminousIntensity$CarcelUnit
 
   static const _ratio = 9.61;
 
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+
   /// 1 [IlluminationLuminousIntensity$CarcelUnit] ≈ 9.61 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
@@ -645,6 +669,10 @@ final class IlluminationLuminousIntensity$BougieDecimal
   String get displayName => 'bougie decimal';
 
   static const _ratio = 1.0;
+
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
 
   /// 1 [IlluminationLuminousIntensity$BougieDecimal] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
@@ -713,6 +741,10 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
 
   static const _ratio = 1.0;
 
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+
   /// 1 [IlluminationLuminousIntensity$LumenInternationalPerSteradian] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
   @override
   num get ratio => _ratio;
@@ -779,6 +811,10 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
   String get displayName => 'pentane candle (10 candle power)';
 
   static const _ratio = 10.0;
+
+  @override
+  IlluminationLuminousIntensity get anchor =>
+      const IlluminationLuminousIntensity$CandleInternational(_ratio);
 
   /// 1 [IlluminationLuminousIntensity$PentaneCandle10CandlePower] = 10.0 [IlluminationLuminousIntensity$CandleInternational]
   @override

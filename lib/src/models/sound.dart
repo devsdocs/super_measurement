@@ -22,9 +22,6 @@ sealed class Sound extends Unit<Sound> {
 
   factory Sound.anchor() => const Sound$Decibel();
 
-  @override
-  Sound get anchor => const Sound$Decibel();
-
   /// Convert to [Sound$Bel]
   Sound get toBel => convertTo(
         const Sound$Bel(),
@@ -100,6 +97,9 @@ final class Sound$Bel extends Sound {
 
   static const _ratio = 10.0;
 
+  @override
+  Sound get anchor => const Sound$Decibel(_ratio);
+
   /// 1 [Sound$Bel] = 10.0 [Sound$Decibel]
   @override
   num get ratio => _ratio;
@@ -165,6 +165,9 @@ final class Sound$Decibel extends Sound {
 
   static const _ratio = 1.0;
 
+  @override
+  Sound get anchor => const Sound$Decibel(_ratio);
+
   /// Default (anchor) unit of [Sound]
   @override
   num get ratio => _ratio;
@@ -229,6 +232,9 @@ final class Sound$Neper extends Sound {
   String get displayName => _minorName;
 
   static const _ratio = 8.686;
+
+  @override
+  Sound get anchor => const Sound$Decibel(_ratio);
 
   /// 1 [Sound$Neper] ≈ 8.686 [Sound$Decibel]
   @override
