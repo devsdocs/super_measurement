@@ -24,18 +24,6 @@ sealed class Resistance extends Unit<Resistance> {
   factory Resistance.anchor() => const Resistance$Ohm();
 
   @override
-  AnchorRatio<Resistance> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Resistance>({
-          Resistance$Megohm: Resistance$Megohm._ratio,
-          Resistance$OhmInternational: Resistance$OhmInternational._ratio,
-          Resistance$Microhm: Resistance$Microhm._ratio,
-          Resistance$Abohm: Resistance$Abohm._ratio,
-          Resistance$Statohm: Resistance$Statohm._ratio,
-        })
-      );
-
-  @override
   Resistance get anchor => const Resistance$Ohm();
 
   /// Convert to [Resistance$Megohm]

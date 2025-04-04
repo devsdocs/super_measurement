@@ -30,33 +30,6 @@ sealed class Inductance extends Unit<Inductance> {
   factory Inductance.anchor() => const Inductance$Attohenry();
 
   @override
-  AnchorRatio<Inductance> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Inductance>({
-          Inductance$Exahenry: Inductance$Exahenry._ratio,
-          Inductance$Petahenry: Inductance$Petahenry._ratio,
-          Inductance$Terahenry: Inductance$Terahenry._ratio,
-          Inductance$Gigahenry: Inductance$Gigahenry._ratio,
-          Inductance$Megahenry: Inductance$Megahenry._ratio,
-          Inductance$Kilohenry: Inductance$Kilohenry._ratio,
-          Inductance$Hectohenry: Inductance$Hectohenry._ratio,
-          Inductance$Dekahenry: Inductance$Dekahenry._ratio,
-          Inductance$Henry: Inductance$Henry._ratio,
-          Inductance$Decihenry: Inductance$Decihenry._ratio,
-          Inductance$Centihenry: Inductance$Centihenry._ratio,
-          Inductance$Millihenry: Inductance$Millihenry._ratio,
-          Inductance$Microhenry: Inductance$Microhenry._ratio,
-          Inductance$Nanohenry: Inductance$Nanohenry._ratio,
-          Inductance$Picohenry: Inductance$Picohenry._ratio,
-          Inductance$Femtohenry: Inductance$Femtohenry._ratio,
-          Inductance$Abhenry: Inductance$Abhenry._ratio,
-          Inductance$Stathenry: Inductance$Stathenry._ratio,
-          Inductance$EMUOfInductance: Inductance$EMUOfInductance._ratio,
-          Inductance$ESUOfInductance: Inductance$ESUOfInductance._ratio,
-        })
-      );
-
-  @override
   Inductance get anchor => const Inductance$Attohenry();
 
   /// Convert to [Inductance$Exahenry]

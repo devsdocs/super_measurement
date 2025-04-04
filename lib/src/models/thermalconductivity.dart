@@ -32,30 +32,6 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
       const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
 
   @override
-  AnchorRatio<ThermalConductivity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ThermalConductivity>({
-          ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF:
-              ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF._ratio,
-          ThermalConductivity$BTUThermochemPerHourFootDegreeF:
-              ThermalConductivity$BTUThermochemPerHourFootDegreeF._ratio,
-          ThermalConductivity$BTUIntPerHourFootDegreeF:
-              ThermalConductivity$BTUIntPerHourFootDegreeF._ratio,
-          ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC:
-              ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
-                  ._ratio,
-          ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC:
-              ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC._ratio,
-          ThermalConductivity$KilowattPerMeterK:
-              ThermalConductivity$KilowattPerMeterK._ratio,
-          ThermalConductivity$WattPerMeterK:
-              ThermalConductivity$WattPerMeterK._ratio,
-          ThermalConductivity$WattPerCentimeterDegreeC:
-              ThermalConductivity$WattPerCentimeterDegreeC._ratio,
-        })
-      );
-
-  @override
   ThermalConductivity get anchor =>
       const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
 

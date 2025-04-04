@@ -26,21 +26,6 @@ sealed class Resistivity extends Unit<Resistivity> {
   factory Resistivity.anchor() => const Resistivity$OhmMeter();
 
   @override
-  AnchorRatio<Resistivity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Resistivity>({
-          Resistivity$OhmCentimeter: Resistivity$OhmCentimeter._ratio,
-          Resistivity$OhmInch: Resistivity$OhmInch._ratio,
-          Resistivity$MicrohmCentimeter: Resistivity$MicrohmCentimeter._ratio,
-          Resistivity$MicrohmInch: Resistivity$MicrohmInch._ratio,
-          Resistivity$AbohmCentimeter: Resistivity$AbohmCentimeter._ratio,
-          Resistivity$StatohmCentimeter: Resistivity$StatohmCentimeter._ratio,
-          Resistivity$CircularMilOhmPerFoot:
-              Resistivity$CircularMilOhmPerFoot._ratio,
-        })
-      );
-
-  @override
   Resistivity get anchor => const Resistivity$OhmMeter();
 
   /// Convert to [Resistivity$OhmMeter]

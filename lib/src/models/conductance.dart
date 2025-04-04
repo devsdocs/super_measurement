@@ -26,22 +26,6 @@ sealed class Conductance extends Unit<Conductance> {
   factory Conductance.anchor() => const Conductance$Statmho();
 
   @override
-  AnchorRatio<Conductance> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Conductance>({
-          Conductance$Mho: Conductance$Mho._ratio,
-          Conductance$Gemmho: Conductance$Gemmho._ratio,
-          Conductance$Micromho: Conductance$Micromho._ratio,
-          Conductance$Megasiemens: Conductance$Megasiemens._ratio,
-          Conductance$Kilosiemens: Conductance$Kilosiemens._ratio,
-          Conductance$Siemens: Conductance$Siemens._ratio,
-          Conductance$Millisiemens: Conductance$Millisiemens._ratio,
-          Conductance$Microsiemens: Conductance$Microsiemens._ratio,
-          Conductance$Abmho: Conductance$Abmho._ratio,
-        })
-      );
-
-  @override
   Conductance get anchor => const Conductance$Statmho();
 
   /// Convert to [Conductance$Mho]

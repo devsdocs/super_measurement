@@ -26,18 +26,6 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
       const RadiationExposure$MicrocoulombPerKilogram();
 
   @override
-  AnchorRatio<RadiationExposure> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<RadiationExposure>({
-          RadiationExposure$Roentgen: RadiationExposure$Roentgen._ratio,
-          RadiationExposure$CoulombPerKilogram:
-              RadiationExposure$CoulombPerKilogram._ratio,
-          RadiationExposure$MillicoulombPerKilogram:
-              RadiationExposure$MillicoulombPerKilogram._ratio,
-        })
-      );
-
-  @override
   RadiationExposure get anchor =>
       const RadiationExposure$MicrocoulombPerKilogram();
 

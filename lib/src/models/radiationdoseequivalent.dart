@@ -33,31 +33,6 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
       const RadiationDoseEquivalent$Sievert();
 
   @override
-  AnchorRatio<RadiationDoseEquivalent> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<RadiationDoseEquivalent>({
-          RadiationDoseEquivalent$Millisievert:
-              RadiationDoseEquivalent$Millisievert._ratio,
-          RadiationDoseEquivalent$Microsievert:
-              RadiationDoseEquivalent$Microsievert._ratio,
-          RadiationDoseEquivalent$JoulePerKilogram:
-              RadiationDoseEquivalent$JoulePerKilogram._ratio,
-          RadiationDoseEquivalent$MeterSquarePerSecondSquare:
-              RadiationDoseEquivalent$MeterSquarePerSecondSquare._ratio,
-          RadiationDoseEquivalent$RemRoentgenEqMan:
-              RadiationDoseEquivalent$RemRoentgenEqMan._ratio,
-          RadiationDoseEquivalent$Millirem:
-              RadiationDoseEquivalent$Millirem._ratio,
-          RadiationDoseEquivalent$IntensityMillicurie:
-              RadiationDoseEquivalent$IntensityMillicurie._ratio,
-          RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons:
-              RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons._ratio,
-          RadiationDoseEquivalent$GrayWr20AlphaParticles:
-              RadiationDoseEquivalent$GrayWr20AlphaParticles._ratio,
-        })
-      );
-
-  @override
   RadiationDoseEquivalent get anchor => const RadiationDoseEquivalent$Sievert();
 
   /// Convert to [RadiationDoseEquivalent$Sievert]

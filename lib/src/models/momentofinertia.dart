@@ -34,34 +34,6 @@ sealed class MomentofInertia extends Unit<MomentofInertia> {
       const MomentofInertia$KilogramCentimeterSquare();
 
   @override
-  AnchorRatio<MomentofInertia> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<MomentofInertia>({
-          MomentofInertia$KilogramMeterSquare:
-              MomentofInertia$KilogramMeterSquare._ratio,
-          MomentofInertia$GramCentimeterSquare:
-              MomentofInertia$GramCentimeterSquare._ratio,
-          MomentofInertia$KilogramForceMeterSecondSquare:
-              MomentofInertia$KilogramForceMeterSecondSquare._ratio,
-          MomentofInertia$KilogramForceCentimeterSecondSquare:
-              MomentofInertia$KilogramForceCentimeterSecondSquare._ratio,
-          MomentofInertia$OunceInchSquare:
-              MomentofInertia$OunceInchSquare._ratio,
-          MomentofInertia$OunceInchSecondSquare:
-              MomentofInertia$OunceInchSecondSquare._ratio,
-          MomentofInertia$PoundFootSquare:
-              MomentofInertia$PoundFootSquare._ratio,
-          MomentofInertia$PoundFootSecondSquare:
-              MomentofInertia$PoundFootSecondSquare._ratio,
-          MomentofInertia$PoundInchSquare:
-              MomentofInertia$PoundInchSquare._ratio,
-          MomentofInertia$PoundInchSecondSquare:
-              MomentofInertia$PoundInchSecondSquare._ratio,
-          MomentofInertia$SlugFootSquare: MomentofInertia$SlugFootSquare._ratio,
-        })
-      );
-
-  @override
   MomentofInertia get anchor =>
       const MomentofInertia$KilogramCentimeterSquare();
 

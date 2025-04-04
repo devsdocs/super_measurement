@@ -30,23 +30,6 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
       const SurfaceCurrentDensity$AmperePerMeterSquare();
 
   @override
-  AnchorRatio<SurfaceCurrentDensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<SurfaceCurrentDensity>({
-          SurfaceCurrentDensity$AmperePerCentimeterSquare:
-              SurfaceCurrentDensity$AmperePerCentimeterSquare._ratio,
-          SurfaceCurrentDensity$AmperePerInchSquare:
-              SurfaceCurrentDensity$AmperePerInchSquare._ratio,
-          SurfaceCurrentDensity$AmperePerMilSquare:
-              SurfaceCurrentDensity$AmperePerMilSquare._ratio,
-          SurfaceCurrentDensity$AmperePerCicularMil:
-              SurfaceCurrentDensity$AmperePerCicularMil._ratio,
-          SurfaceCurrentDensity$AbamperePerCentimeterSquare:
-              SurfaceCurrentDensity$AbamperePerCentimeterSquare._ratio,
-        })
-      );
-
-  @override
   SurfaceCurrentDensity get anchor =>
       const SurfaceCurrentDensity$AmperePerMeterSquare();
 

@@ -30,31 +30,6 @@ sealed class Capacitance extends Unit<Capacitance> {
   factory Capacitance.anchor() => const Capacitance$Farad();
 
   @override
-  AnchorRatio<Capacitance> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Capacitance>({
-          Capacitance$Exafarad: Capacitance$Exafarad._ratio,
-          Capacitance$Petafarad: Capacitance$Petafarad._ratio,
-          Capacitance$Terafarad: Capacitance$Terafarad._ratio,
-          Capacitance$Gigafarad: Capacitance$Gigafarad._ratio,
-          Capacitance$Megafarad: Capacitance$Megafarad._ratio,
-          Capacitance$Kilofarad: Capacitance$Kilofarad._ratio,
-          Capacitance$Hectofarad: Capacitance$Hectofarad._ratio,
-          Capacitance$Dekafarad: Capacitance$Dekafarad._ratio,
-          Capacitance$Decifarad: Capacitance$Decifarad._ratio,
-          Capacitance$Centifarad: Capacitance$Centifarad._ratio,
-          Capacitance$Millifarad: Capacitance$Millifarad._ratio,
-          Capacitance$Microfarad: Capacitance$Microfarad._ratio,
-          Capacitance$Nanofarad: Capacitance$Nanofarad._ratio,
-          Capacitance$Picofarad: Capacitance$Picofarad._ratio,
-          Capacitance$Femtofarad: Capacitance$Femtofarad._ratio,
-          Capacitance$Attofarad: Capacitance$Attofarad._ratio,
-          Capacitance$Abfarad: Capacitance$Abfarad._ratio,
-          Capacitance$Statfarad: Capacitance$Statfarad._ratio,
-        })
-      );
-
-  @override
   Capacitance get anchor => const Capacitance$Farad();
 
   /// Convert to [Capacitance$Exafarad]

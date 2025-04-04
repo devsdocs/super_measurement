@@ -32,45 +32,6 @@ sealed class Area extends Unit<Area> {
   factory Area.anchor() => const Area$Barn();
 
   @override
-  AnchorRatio<Area> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Area>({
-          Area$KilometerSquare: Area$KilometerSquare._ratio,
-          Area$HectometerSquare: Area$HectometerSquare._ratio,
-          Area$DekameterSquare: Area$DekameterSquare._ratio,
-          Area$MeterSquare: Area$MeterSquare._ratio,
-          Area$DecimeterSquare: Area$DecimeterSquare._ratio,
-          Area$CentimeterSquare: Area$CentimeterSquare._ratio,
-          Area$MillimeterSquare: Area$MillimeterSquare._ratio,
-          Area$MicrometerSquare: Area$MicrometerSquare._ratio,
-          Area$NanometerSquare: Area$NanometerSquare._ratio,
-          Area$Hectare: Area$Hectare._ratio,
-          Area$Are: Area$Are._ratio,
-          Area$MileSquare: Area$MileSquare._ratio,
-          Area$YardSquare: Area$YardSquare._ratio,
-          Area$FootSquare: Area$FootSquare._ratio,
-          Area$InchSquare: Area$InchSquare._ratio,
-          Area$Township: Area$Township._ratio,
-          Area$Section: Area$Section._ratio,
-          Area$Acre: Area$Acre._ratio,
-          Area$Rood: Area$Rood._ratio,
-          Area$ChainSquare: Area$ChainSquare._ratio,
-          Area$RodSquare: Area$RodSquare._ratio,
-          Area$PerchSquare: Area$PerchSquare._ratio,
-          Area$PoleSquare: Area$PoleSquare._ratio,
-          Area$Arpent: Area$Arpent._ratio,
-          Area$Cuerda: Area$Cuerda._ratio,
-          Area$Plaza: Area$Plaza._ratio,
-          Area$VarasCastellanasCuad: Area$VarasCastellanasCuad._ratio,
-          Area$VarasConuquerasCuad: Area$VarasConuquerasCuad._ratio,
-          Area$Strema: Area$Strema._ratio,
-          Area$CircularInch: Area$CircularInch._ratio,
-          Area$CircularMil: Area$CircularMil._ratio,
-          Area$Tahulla: Area$Tahulla._ratio,
-        })
-      );
-
-  @override
   Area get anchor => const Area$Barn();
 
   /// Convert to [Area$KilometerSquare]

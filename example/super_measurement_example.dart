@@ -1,855 +1,474 @@
 import 'package:super_measurement/super_measurement.dart';
 
 void main() {
-  exampleOfCharge();
-  exampleOfConductance();
-  exampleOfEUCurrency();
-  exampleOfFlowMolar();
-  exampleOfFrequencyWavelength();
-  exampleOfIlluminationLuminousIntensity();
-  exampleOfMetricPrefixes();
-  exampleOfMomentofInertia();
+  exampleOfDataTransfer();
+  exampleOfForce();
+  exampleOfHeatCapacity();
   exampleOfRadiationAbsorbedDose();
   exampleOfTemperature();
-  exampleOfThermalConductivity();
-  exampleOfTorque();
-  exampleOfVolumeLumber();
+  exampleOfVolumeDry();
+  exampleOfVolumeChargeDensity();
 }
 
-/// [Charge] example
-void exampleOfCharge() {
-  print('~Start of Randomly Generated Charge Example~');
-  print(
-    '1 Megacoulomb to CoulombInternational ${const Charge$Megacoulomb(1).toCoulombInternational}',
-  );
-  print(
-    '1 Megacoulomb to Picocoulomb with Presision ${const Charge$Megacoulomb(1).toPicocoulomb.withPrecision()}',
-  );
-  print(
-    '1 Coulomb + 1 Picocoulomb = ${const Charge$Coulomb(1) + const Charge$Picocoulomb(1)}',
-  );
-  print(
-    '3 Coulomb + 3 AmpereSecond with Precision ${(3.charge$Coulomb + 3.charge$AmpereSecond).withPrecision()}',
-  );
-  print(
-    '1 Coulomb + 1 ElectronicCharge with Precision = ${(const Charge$Coulomb(1) + const Charge$ElectronicCharge(1)).withPrecision()}',
-  );
-  print(
-    '1 CoulombInternational + 1 Megacoulomb with Precision = ${(const Charge$CoulombInternational(1) + const Charge$Megacoulomb(1)).withPrecision()}',
-  );
-  print(
-    '1 CoulombInternational to Nanocoulomb ${const Charge$CoulombInternational(1).toNanocoulomb}',
-  );
-  print(
-    '1 CoulombInternational + 1 Statcoulomb with Precision = ${(const Charge$CoulombInternational(1) + const Charge$Statcoulomb(1)).withPrecision()}',
-  );
-  print(
-    '1 CoulombInternational + 1 ElectronicCharge = ${const Charge$CoulombInternational(1) + const Charge$ElectronicCharge(1)}',
-  );
-  print(
-    '2 AmpereHour + 2 Abcoulomb ${2.charge$AmpereHour + 2.charge$Abcoulomb}',
-  );
-  print('3 AmpereHour + 3 Faraday ${3.charge$AmpereHour + 3.charge$Faraday}');
-  const listOfChargeByEnum = Charge.values;
-  for (final e in listOfChargeByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
-  print('~End of Randomly Generated Charge Example~');
-  print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
-  print('======================');
-}
-
-/// [Conductance] example
-void exampleOfConductance() {
-  print('~Start of Randomly Generated Conductance Example~');
-  const listOfConductanceByEnum = Conductance.values;
-  for (final e in listOfConductanceByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
-  print('~End of Randomly Generated Conductance Example~');
-  print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
-  print('======================');
-}
-
-/// [EUCurrency] example
-void exampleOfEUCurrency() {
-  print('~Start of Randomly Generated EUCurrency Example~');
-  const listOfEucurrencyByEnum = EUCurrency.values;
-  for (final e in listOfEucurrencyByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
-  print('~End of Randomly Generated EUCurrency Example~');
-  print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
-  print('======================');
-}
-
-/// [FlowMolar] example
-void exampleOfFlowMolar() {
-  print('~Start of Randomly Generated FlowMolar Example~');
-  print(
-    '1 ExamolPerSecond + 1 KilomolPerSecond = ${const FlowMolar$ExamolPerSecond(1) + const FlowMolar$KilomolPerSecond(1)}',
-  );
-  print(
-    '1 PetamolPerSecond + 1 MegamolPerSecond = ${const FlowMolar$PetamolPerSecond(1) + const FlowMolar$MegamolPerSecond(1)}',
-  );
-  print(
-    '2 PetamolPerSecond + 1 MolPerSecond with Precision ${(2.flowMolar$PetamolPerSecond + 1.flowMolar$MolPerSecond).withPrecision()}',
-  );
-  print(
-    '2 PetamolPerSecond + 1 MolPerHour ${2.flowMolar$PetamolPerSecond + 1.flowMolar$MolPerHour}',
-  );
-  print(
-    '3 GigamolPerSecond + 3 FemtomolPerSecond with Precision ${(3.flowMolar$GigamolPerSecond + 3.flowMolar$FemtomolPerSecond).withPrecision()}',
-  );
-  print(
-    '1 GigamolPerSecond to MillimolPerHour ${const FlowMolar$GigamolPerSecond(1).toMillimolPerHour}',
-  );
-  print(
-    '1 GigamolPerSecond + 1 KilomolPerDay = ${const FlowMolar$GigamolPerSecond(1) + const FlowMolar$KilomolPerDay(1)}',
-  );
-  print(
-    '1 KilomolPerSecond + 1 PetamolPerSecond with Precision = ${(const FlowMolar$KilomolPerSecond(1) + const FlowMolar$PetamolPerSecond(1)).withPrecision()}',
-  );
-  print(
-    '1 KilomolPerSecond to HectomolPerSecond ${const FlowMolar$KilomolPerSecond(1).toHectomolPerSecond}',
-  );
-  print(
-    '1 KilomolPerSecond + 1 PicomolPerSecond = ${const FlowMolar$KilomolPerSecond(1) + const FlowMolar$PicomolPerSecond(1)}',
-  );
-  print(
-    '1 HectomolPerSecond to PetamolPerSecond ${const FlowMolar$HectomolPerSecond(1).toPetamolPerSecond}',
-  );
-  print(
-    '1 HectomolPerSecond + 1 TeramolPerSecond = ${const FlowMolar$HectomolPerSecond(1) + const FlowMolar$TeramolPerSecond(1)}',
-  );
-  print(
-    '1 HectomolPerSecond + 2 MillimolPerDay with Precision ${(1.flowMolar$HectomolPerSecond + 2.flowMolar$MillimolPerDay).withPrecision()}',
-  );
-  print(
-    '1 MolPerSecond + 1 ExamolPerSecond = ${const FlowMolar$MolPerSecond(1) + const FlowMolar$ExamolPerSecond(1)}',
-  );
-  print(
-    '1 MolPerSecond + 1 NanomolPerSecond with Precision = ${(const FlowMolar$MolPerSecond(1) + const FlowMolar$NanomolPerSecond(1)).withPrecision()}',
-  );
-  print(
-    '1 MolPerSecond + 1 AttomolPerSecond = ${const FlowMolar$MolPerSecond(1) + const FlowMolar$AttomolPerSecond(1)}',
-  );
-  print(
-    '1 DecimolPerSecond to HectomolPerSecond with Presision ${const FlowMolar$DecimolPerSecond(1).toHectomolPerSecond.withPrecision()}',
-  );
-  print(
-    '1 DecimolPerSecond + 1 MolPerDay with Precision = ${(const FlowMolar$DecimolPerSecond(1) + const FlowMolar$MolPerDay(1)).withPrecision()}',
-  );
-  print(
-    '1 DecimolPerSecond + 1 KilomolPerMinute with Precision = ${(const FlowMolar$DecimolPerSecond(1) + const FlowMolar$KilomolPerMinute(1)).withPrecision()}',
-  );
-  print(
-    '2 DecimolPerSecond + 3 KilomolPerDay with Precision ${(2.flowMolar$DecimolPerSecond + 3.flowMolar$KilomolPerDay).withPrecision()}',
-  );
-  print(
-    '1 CentimolPerSecond + 1 PetamolPerSecond = ${const FlowMolar$CentimolPerSecond(1) + const FlowMolar$PetamolPerSecond(1)}',
-  );
-  print(
-    '1 CentimolPerSecond + 1 NanomolPerSecond = ${const FlowMolar$CentimolPerSecond(1) + const FlowMolar$NanomolPerSecond(1)}',
-  );
-  print(
-    '1 CentimolPerSecond + 1 MolPerMinute with Precision = ${(const FlowMolar$CentimolPerSecond(1) + const FlowMolar$MolPerMinute(1)).withPrecision()}',
-  );
-  print(
-    '3 CentimolPerSecond + 2 MolPerHour ${3.flowMolar$CentimolPerSecond + 2.flowMolar$MolPerHour}',
-  );
-  print(
-    '1 CentimolPerSecond + 2 MillimolPerMinute with Precision ${(1.flowMolar$CentimolPerSecond + 2.flowMolar$MillimolPerMinute).withPrecision()}',
-  );
-  print(
-    '1 MillimolPerSecond + 1 ExamolPerSecond = ${const FlowMolar$MillimolPerSecond(1) + const FlowMolar$ExamolPerSecond(1)}',
-  );
-  print(
-    '1 MillimolPerSecond + 1 PetamolPerSecond = ${const FlowMolar$MillimolPerSecond(1) + const FlowMolar$PetamolPerSecond(1)}',
-  );
-  print(
-    '1 MillimolPerSecond + 1 MolPerSecond = ${const FlowMolar$MillimolPerSecond(1) + const FlowMolar$MolPerSecond(1)}',
-  );
-  print(
-    '3 MillimolPerSecond + 2 MillimolPerMinute with Precision ${(3.flowMolar$MillimolPerSecond + 2.flowMolar$MillimolPerMinute).withPrecision()}',
-  );
-  print(
-    '1 MillimolPerSecond to KilomolPerHour ${const FlowMolar$MillimolPerSecond(1).toKilomolPerHour}',
-  );
-  print(
-    '1 MicromolPerSecond + 1 ExamolPerSecond with Precision = ${(const FlowMolar$MicromolPerSecond(1) + const FlowMolar$ExamolPerSecond(1)).withPrecision()}',
-  );
-  print(
-    '1 MicromolPerSecond + 2 FemtomolPerSecond with Precision ${(1.flowMolar$MicromolPerSecond + 2.flowMolar$FemtomolPerSecond).withPrecision()}',
-  );
-  print(
-    '1 NanomolPerSecond + 1 MolPerSecond with Precision = ${(const FlowMolar$NanomolPerSecond(1) + const FlowMolar$MolPerSecond(1)).withPrecision()}',
-  );
-  print(
-    '1 NanomolPerSecond + 1 FemtomolPerSecond with Precision = ${(const FlowMolar$NanomolPerSecond(1) + const FlowMolar$FemtomolPerSecond(1)).withPrecision()}',
-  );
-  print(
-    '1 NanomolPerSecond + 2 KilomolPerHour ${1.flowMolar$NanomolPerSecond + 2.flowMolar$KilomolPerHour}',
-  );
-  print(
-    '1 PicomolPerSecond + 2 DekamolPerSecond ${1.flowMolar$PicomolPerSecond + 2.flowMolar$DekamolPerSecond}',
-  );
-  print(
-    '1 PicomolPerSecond + 1 FemtomolPerSecond = ${const FlowMolar$PicomolPerSecond(1) + const FlowMolar$FemtomolPerSecond(1)}',
-  );
-  print(
-    '1 MillimolPerMinute + 1 GigamolPerSecond with Precision = ${(const FlowMolar$MillimolPerMinute(1) + const FlowMolar$GigamolPerSecond(1)).withPrecision()}',
-  );
-  print(
-    '1 MillimolPerMinute + 1 MolPerSecond = ${const FlowMolar$MillimolPerMinute(1) + const FlowMolar$MolPerSecond(1)}',
-  );
-  print(
-    '1 MillimolPerMinute + 1 NanomolPerSecond = ${const FlowMolar$MillimolPerMinute(1) + const FlowMolar$NanomolPerSecond(1)}',
-  );
-  print(
-    '3 MillimolPerMinute + 2 MolPerMinute ${3.flowMolar$MillimolPerMinute + 2.flowMolar$MolPerMinute}',
-  );
-  print(
-    '2 MillimolPerDay + 1 TeramolPerSecond with Precision ${(2.flowMolar$MillimolPerDay + 1.flowMolar$TeramolPerSecond).withPrecision()}',
-  );
-  print(
-    '1 MillimolPerDay to KilomolPerSecond ${const FlowMolar$MillimolPerDay(1).toKilomolPerSecond}',
-  );
-  print(
-    '1 KilomolPerDay + 2 KilomolPerSecond ${1.flowMolar$KilomolPerDay + 2.flowMolar$KilomolPerSecond}',
-  );
-  print(
-    '1 KilomolPerDay to MillimolPerSecond with Presision ${const FlowMolar$KilomolPerDay(1).toMillimolPerSecond.withPrecision()}',
-  );
-  print(
-    '1 KilomolPerDay + 1 MicromolPerSecond with Precision = ${(const FlowMolar$KilomolPerDay(1) + const FlowMolar$MicromolPerSecond(1)).withPrecision()}',
-  );
-  final listOfFlowmolar = [
-    const FlowMolar$PetamolPerSecond(1),
-    const FlowMolar$TeramolPerSecond(3),
-    const FlowMolar$GigamolPerSecond(3),
-    const FlowMolar$MegamolPerSecond(2),
-    const FlowMolar$KilomolPerSecond(1),
-    const FlowMolar$HectomolPerSecond(3),
-    const FlowMolar$DekamolPerSecond(2),
-    const FlowMolar$MolPerSecond(2),
-    const FlowMolar$DecimolPerSecond(1),
-    const FlowMolar$CentimolPerSecond(3),
-    const FlowMolar$FemtomolPerSecond(3),
-    const FlowMolar$MolPerHour(2),
-    const FlowMolar$KilomolPerMinute(3),
-    const FlowMolar$KilomolPerHour(3),
-    const FlowMolar$KilomolPerDay(2),
+/// [DataTransfer] example
+void exampleOfDataTransfer() {
+  print('~Start of Randomly Generated DataTransfer Example~');
+  final listOfDatatransfer = [
+    const DataTransfer$BytePerSecond(2),
+    const DataTransfer$KilobitPerSecond(2),
+    const DataTransfer$KilobytePerSecond(3),
+    const DataTransfer$GigabitPerSecond(2),
+    const DataTransfer$TerabitPerSecond(2),
+    const DataTransfer$MebibitPerSecond(2),
+    const DataTransfer$MebibytePerSecond(3),
+    const DataTransfer$GibibitPerSecond(3),
+    const DataTransfer$TebibitPerSecond(1),
+    const DataTransfer$TebibytePerSecond(1),
+    const DataTransfer$EthernetFast(3),
+    const DataTransfer$OC12(3),
+    const DataTransfer$OC24(2),
+    const DataTransfer$OC48(1),
+    const DataTransfer$OC192(1),
+    const DataTransfer$ISDNSingleChannel(1),
+    const DataTransfer$ISDNDualChannel(1),
+    const DataTransfer$Modem1200(1),
+    const DataTransfer$Modem2400(2),
+    const DataTransfer$Modem9600(2),
+    const DataTransfer$Modem336k(3),
+    const DataTransfer$Modem56k(3),
+    const DataTransfer$SCSISync(2),
+    const DataTransfer$SCSIFast(2),
+    const DataTransfer$SCSIUltra2(3),
+    const DataTransfer$SCSILVDUltra80(3),
+    const DataTransfer$SCSILVDUltra320(2),
+    const DataTransfer$IDEPIOMode1(1),
+    const DataTransfer$IDEPIOMode3(1),
+    const DataTransfer$IDEPIOMode4(1),
+    const DataTransfer$IDEDMAMode2(1),
+    const DataTransfer$IDEUDMAMode3(1),
+    const DataTransfer$IDEUDMAMode6(1),
+    const DataTransfer$IDEUDMA66(1),
+    const DataTransfer$IDEUDMA133(2),
+    const DataTransfer$SATA10(1),
+    const DataTransfer$SATA30(3),
+    const DataTransfer$USB(2),
+    const DataTransfer$USB20(3),
+    const DataTransfer$FireWire400IEEE1394(2),
+    const DataTransfer$FireWire800IEEE1394b(3),
+    const DataTransfer$T0B8ZSPayload(1),
+    const DataTransfer$T1ZPayload(2),
+    const DataTransfer$T1CPayload(3),
+    const DataTransfer$T2Signal(2),
+    const DataTransfer$T3Signal(1),
+    const DataTransfer$T3Payload(1),
+    const DataTransfer$T3ZPayload(3),
+    const DataTransfer$T4Signal(3),
+    const DataTransfer$EPTA1Signal(2),
+    const DataTransfer$EPTA2Payload(1),
+    const DataTransfer$EPTA3Signal(3),
+    const DataTransfer$H0(3),
+    const DataTransfer$H11(3),
+    const DataTransfer$VirtualTributary6Signal(2),
+    const DataTransfer$VirtualTributary6Payload(2),
+    const DataTransfer$STS1Signal(1),
+    const DataTransfer$STS3Payload(2),
+    const DataTransfer$STS12Signal(2),
+    const DataTransfer$STM64Signal(2),
+    const DataTransfer$CharacterPerSecond(3),
+    const DataTransfer$TokenRing(1),
+    const DataTransfer$ISA8Bit(3),
+    const DataTransfer$VLB(3),
+    const DataTransfer$PCI64Bit(2),
+    const DataTransfer$PCI64Bit66MHz(3),
+    const DataTransfer$AGP2X(3),
+    const DataTransfer$AGP4X(1),
+    const DataTransfer$PCIExpress10X1(1),
+    const DataTransfer$PCIExpress10X8(2),
+    const DataTransfer$PCIExpress10X16(1),
+    const DataTransfer$PCIExpress20X4(3),
+    const DataTransfer$PCIExpress20X8(3),
+    const DataTransfer$PCIExpress30X1(2),
+    const DataTransfer$PCIExpress30X8(2),
+    const DataTransfer$CDROM1X(2),
+    const DataTransfer$CDROM6X(1),
+    const DataTransfer$CDROM8X(2),
+    const DataTransfer$CDROM12X(2),
+    const DataTransfer$CDROM16X(3),
+    const DataTransfer$CDROM48X(1),
+    const DataTransfer$CDROM52X(3),
+    const DataTransfer$DVDROM2X(3),
+    const DataTransfer$DVDROM4X(3),
+    const DataTransfer$DVDROM6X(3),
+    const DataTransfer$DVDROM8X(2),
+    const DataTransfer$DVDROM10X(1),
+    const DataTransfer$DVDROM16X(1),
+    const DataTransfer$BluRay1X(3),
+    const DataTransfer$BluRay2X(1),
+    const DataTransfer$BluRay4X(3),
+    const DataTransfer$BluRay6X(2),
+    const DataTransfer$BluRay8X(3),
   ]..shuffle();
-  print('Random FlowMolar List => $listOfFlowmolar');
-  listOfFlowmolar.sort();
+  print('Random DataTransfer List => $listOfDatatransfer');
+  listOfDatatransfer.sort();
   print(
-    'Largest to Smallest FlowMolar List => ${listOfFlowmolar.reversed.toList()}',
-  );
+      'Largest to Smallest DataTransfer List => ${listOfDatatransfer.reversed.toList()}');
   print(
-    'FlowMolar List to GigamolPerSecond with Precision => ${listOfFlowmolar.toGigamolPerSecond.withPrecision()}',
-  );
+      'DataTransfer List to KilobytePerSecond => ${listOfDatatransfer.toKilobytePerSecond}');
   print(
-    'FlowMolar List to KilomolPerSecond => ${listOfFlowmolar.toKilomolPerSecond}',
-  );
+      'DataTransfer List to MegabitPerSecond with Precision => ${listOfDatatransfer.toMegabitPerSecond.withPrecision()}');
   print(
-    'FlowMolar List to HectomolPerSecond => ${listOfFlowmolar.toHectomolPerSecond}',
-  );
+      'DataTransfer List to GigabytePerSecond => ${listOfDatatransfer.toGigabytePerSecond}');
   print(
-    'FlowMolar List to CentimolPerSecond => ${listOfFlowmolar.toCentimolPerSecond}',
-  );
+      'DataTransfer List to TerabytePerSecond with Precision => ${listOfDatatransfer.toTerabytePerSecond.withPrecision()}');
   print(
-    'FlowMolar List to PicomolPerSecond with Precision => ${listOfFlowmolar.toPicomolPerSecond.withPrecision()}',
-  );
-  print('FlowMolar List to MolPerDay => ${listOfFlowmolar.toMolPerDay}');
+      'DataTransfer List to KibibytePerSecond with Precision => ${listOfDatatransfer.toKibibytePerSecond.withPrecision()}');
   print(
-    'FlowMolar List to MillimolPerMinute with Precision => ${listOfFlowmolar.toMillimolPerMinute.withPrecision()}',
-  );
+      'DataTransfer List to MebibytePerSecond => ${listOfDatatransfer.toMebibytePerSecond}');
   print(
-    'FlowMolar List to KilomolPerMinute => ${listOfFlowmolar.toKilomolPerMinute}',
-  );
+      'DataTransfer List to Ethernet with Precision => ${listOfDatatransfer.toEthernet.withPrecision()}');
+  print('DataTransfer List to OC1 => ${listOfDatatransfer.toOC1}');
+  print('DataTransfer List to OC192 => ${listOfDatatransfer.toOC192}');
   print(
-    'FlowMolar List to KilomolPerHour => ${listOfFlowmolar.toKilomolPerHour}',
-  );
-  const listOfFlowmolarByEnum = FlowMolar.values;
-  for (final e in listOfFlowmolarByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
-  print('~End of Randomly Generated FlowMolar Example~');
+      'DataTransfer List to ISDNDualChannel with Precision => ${listOfDatatransfer.toISDNDualChannel.withPrecision()}');
+  print('DataTransfer List to Modem336k => ${listOfDatatransfer.toModem336k}');
   print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
+      'DataTransfer List to SCSIAsync with Precision => ${listOfDatatransfer.toSCSIAsync.withPrecision()}');
+  print('DataTransfer List to SCSIFast => ${listOfDatatransfer.toSCSIFast}');
+  print(
+      'DataTransfer List to SCSIFastWide => ${listOfDatatransfer.toSCSIFastWide}');
+  print(
+      'DataTransfer List to SCSIUltra2 => ${listOfDatatransfer.toSCSIUltra2}');
+  print(
+      'DataTransfer List to SCSILVDUltra160 with Precision => ${listOfDatatransfer.toSCSILVDUltra160.withPrecision()}');
+  print(
+      'DataTransfer List to SCSILVDUltra320 with Precision => ${listOfDatatransfer.toSCSILVDUltra320.withPrecision()}');
+  print(
+      'DataTransfer List to IDEPIOMode3 with Precision => ${listOfDatatransfer.toIDEPIOMode3.withPrecision()}');
+  print(
+      'DataTransfer List to IDEPIOMode4 with Precision => ${listOfDatatransfer.toIDEPIOMode4.withPrecision()}');
+  print(
+      'DataTransfer List to IDEDMAMode2 with Precision => ${listOfDatatransfer.toIDEDMAMode2.withPrecision()}');
+  print(
+      'DataTransfer List to IDEUDMAMode6 with Precision => ${listOfDatatransfer.toIDEUDMAMode6.withPrecision()}');
+  print(
+      'DataTransfer List to IDEUDMA33 with Precision => ${listOfDatatransfer.toIDEUDMA33.withPrecision()}');
+  print(
+      'DataTransfer List to IDEUDMA100 with Precision => ${listOfDatatransfer.toIDEUDMA100.withPrecision()}');
+  print(
+      'DataTransfer List to IDEUDMA133 => ${listOfDatatransfer.toIDEUDMA133}');
+  print('DataTransfer List to USB => ${listOfDatatransfer.toUSB}');
+  print('DataTransfer List to USB30 => ${listOfDatatransfer.toUSB30}');
+  print('DataTransfer List to IrDA => ${listOfDatatransfer.toIrDA}');
+  print(
+      'DataTransfer List to T0B8ZSPayload => ${listOfDatatransfer.toT0B8ZSPayload}');
+  print(
+      'DataTransfer List to T1CSignal with Precision => ${listOfDatatransfer.toT1CSignal.withPrecision()}');
+  print(
+      'DataTransfer List to T2Signal with Precision => ${listOfDatatransfer.toT2Signal.withPrecision()}');
+  print('DataTransfer List to T3Signal => ${listOfDatatransfer.toT3Signal}');
+  print(
+      'DataTransfer List to T3Payload with Precision => ${listOfDatatransfer.toT3Payload.withPrecision()}');
+  print(
+      'DataTransfer List to T3ZPayload => ${listOfDatatransfer.toT3ZPayload}');
+  print(
+      'DataTransfer List to EPTA1Signal with Precision => ${listOfDatatransfer.toEPTA1Signal.withPrecision()}');
+  print(
+      'DataTransfer List to EPTA2Payload => ${listOfDatatransfer.toEPTA2Payload}');
+  print('DataTransfer List to H0 => ${listOfDatatransfer.toH0}');
+  print('DataTransfer List to H11 => ${listOfDatatransfer.toH11}');
+  print(
+      'DataTransfer List to VirtualTributary1Signal with Precision => ${listOfDatatransfer.toVirtualTributary1Signal.withPrecision()}');
+  print(
+      'DataTransfer List to VirtualTributary1Payload => ${listOfDatatransfer.toVirtualTributary1Payload}');
+  print(
+      'DataTransfer List to VirtualTributary2Payload with Precision => ${listOfDatatransfer.toVirtualTributary2Payload.withPrecision()}');
+  print(
+      'DataTransfer List to VirtualTributary6Payload with Precision => ${listOfDatatransfer.toVirtualTributary6Payload.withPrecision()}');
+  print(
+      'DataTransfer List to STS3Payload with Precision => ${listOfDatatransfer.toSTS3Payload.withPrecision()}');
+  print(
+      'DataTransfer List to STS3cSignal with Precision => ${listOfDatatransfer.toSTS3cSignal.withPrecision()}');
+  print(
+      'DataTransfer List to STS12Signal => ${listOfDatatransfer.toSTS12Signal}');
+  print(
+      'DataTransfer List to STS24Signal => ${listOfDatatransfer.toSTS24Signal}');
+  print(
+      'DataTransfer List to STS192Signal with Precision => ${listOfDatatransfer.toSTS192Signal.withPrecision()}');
+  print(
+      'DataTransfer List to STM4Signal => ${listOfDatatransfer.toSTM4Signal}');
+  print(
+      'DataTransfer List to STM64Signal => ${listOfDatatransfer.toSTM64Signal}');
+  print(
+      'DataTransfer List to TokenRing with Precision => ${listOfDatatransfer.toTokenRing.withPrecision()}');
+  print(
+      'DataTransfer List to FiberChannel with Precision => ${listOfDatatransfer.toFiberChannel.withPrecision()}');
+  print(
+      'DataTransfer List to ISA8Bit with Precision => ${listOfDatatransfer.toISA8Bit.withPrecision()}');
+  print(
+      'DataTransfer List to ISA16Bit with Precision => ${listOfDatatransfer.toISA16Bit.withPrecision()}');
+  print('DataTransfer List to VLB => ${listOfDatatransfer.toVLB}');
+  print(
+      'DataTransfer List to PCI64Bit66MHz => ${listOfDatatransfer.toPCI64Bit66MHz}');
+  print(
+      'DataTransfer List to AGP with Precision => ${listOfDatatransfer.toAGP.withPrecision()}');
+  print(
+      'DataTransfer List to AGP2X with Precision => ${listOfDatatransfer.toAGP2X.withPrecision()}');
+  print(
+      'DataTransfer List to AGP4X with Precision => ${listOfDatatransfer.toAGP4X.withPrecision()}');
+  print('DataTransfer List to AGP8X => ${listOfDatatransfer.toAGP8X}');
+  print(
+      'DataTransfer List to PCIExpress10X4 with Precision => ${listOfDatatransfer.toPCIExpress10X4.withPrecision()}');
+  print(
+      'DataTransfer List to PCIExpress10X16 with Precision => ${listOfDatatransfer.toPCIExpress10X16.withPrecision()}');
+  print(
+      'DataTransfer List to PCIExpress20X4 with Precision => ${listOfDatatransfer.toPCIExpress20X4.withPrecision()}');
+  print(
+      'DataTransfer List to PCIExpress20X8 => ${listOfDatatransfer.toPCIExpress20X8}');
+  print(
+      'DataTransfer List to PCIExpress30X4 => ${listOfDatatransfer.toPCIExpress30X4}');
+  print(
+      'DataTransfer List to PCIExpress30X8 with Precision => ${listOfDatatransfer.toPCIExpress30X8.withPrecision()}');
+  print(
+      'DataTransfer List to PCIExpress30X16 => ${listOfDatatransfer.toPCIExpress30X16}');
+  print('DataTransfer List to CDROM2X => ${listOfDatatransfer.toCDROM2X}');
+  print(
+      'DataTransfer List to CDROM4X with Precision => ${listOfDatatransfer.toCDROM4X.withPrecision()}');
+  print('DataTransfer List to CDROM6X => ${listOfDatatransfer.toCDROM6X}');
+  print('DataTransfer List to CDROM8X => ${listOfDatatransfer.toCDROM8X}');
+  print(
+      'DataTransfer List to CDROM12X with Precision => ${listOfDatatransfer.toCDROM12X.withPrecision()}');
+  print('DataTransfer List to CDROM16X => ${listOfDatatransfer.toCDROM16X}');
+  print('DataTransfer List to CDROM32X => ${listOfDatatransfer.toCDROM32X}');
+  print('DataTransfer List to CDROM40X => ${listOfDatatransfer.toCDROM40X}');
+  print(
+      'DataTransfer List to CDROM52X with Precision => ${listOfDatatransfer.toCDROM52X.withPrecision()}');
+  print(
+      'DataTransfer List to DVDROM2X with Precision => ${listOfDatatransfer.toDVDROM2X.withPrecision()}');
+  print('DataTransfer List to DVDROM6X => ${listOfDatatransfer.toDVDROM6X}');
+  print('DataTransfer List to DVDROM8X => ${listOfDatatransfer.toDVDROM8X}');
+  print(
+      'DataTransfer List to DVDROM10X with Precision => ${listOfDatatransfer.toDVDROM10X.withPrecision()}');
+  print('DataTransfer List to DVDROM16X => ${listOfDatatransfer.toDVDROM16X}');
+  print('DataTransfer List to BluRay1X => ${listOfDatatransfer.toBluRay1X}');
+  print(
+      'DataTransfer List to BluRay4X with Precision => ${listOfDatatransfer.toBluRay4X.withPrecision()}');
+  print('DataTransfer List to BluRay6X => ${listOfDatatransfer.toBluRay6X}');
+  print('DataTransfer List to BluRay8X => ${listOfDatatransfer.toBluRay8X}');
+  print('~End of Randomly Generated DataTransfer Example~');
+  print(
+      'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake');
   print('======================');
 }
 
-/// [FrequencyWavelength] example
-void exampleOfFrequencyWavelength() {
-  print('~Start of Randomly Generated FrequencyWavelength Example~');
-  final listOfFrequencywavelength = [
-    const FrequencyWavelength$Petahertz(1),
-    const FrequencyWavelength$Megahertz(2),
-    const FrequencyWavelength$Kilohertz(1),
-    const FrequencyWavelength$Hectohertz(1),
-    const FrequencyWavelength$Hertz(3),
-    const FrequencyWavelength$Microhertz(2),
-    const FrequencyWavelength$CyclePerSecond(1),
-    const FrequencyWavelength$WavelengthInPetametres(2),
-    const FrequencyWavelength$WavelengthInTerametres(3),
-    const FrequencyWavelength$WavelengthInDecametres(1),
-    const FrequencyWavelength$WavelengthInDecimetres(3),
-    const FrequencyWavelength$WavelengthInCentimetres(3),
-    const FrequencyWavelength$WavelengthInMillimetres(1),
+/// [Force] example
+void exampleOfForce() {
+  print('~Start of Randomly Generated Force Example~');
+  print(
+      '1 Exanewton + 3 JoulePerCentimeter ${1.force$Exanewton + 3.force$JoulePerCentimeter}');
+  print(
+      '1 Teranewton + 1 Decinewton = ${const Force$Teranewton(1) + const Force$Decinewton(1)}');
+  print(
+      '1 Teranewton + 1 Centinewton = ${const Force$Teranewton(1) + const Force$Centinewton(1)}');
+  print(
+      '1 Teranewton + 1 Piconewton with Precision ${(1.force$Teranewton + 1.force$Piconewton).withPrecision()}');
+  print(
+      '1 Teranewton to JoulePerMeter with Presision ${const Force$Teranewton(1).toJoulePerMeter.withPrecision()}');
+  print(
+      '1 Teranewton + 1 GramForce with Precision ${(1.force$Teranewton + 1.force$GramForce).withPrecision()}');
+  print(
+      '1 Giganewton + 1 Exanewton with Precision = ${(const Force$Giganewton(1) + const Force$Exanewton(1)).withPrecision()}');
+  print(
+      '1 Giganewton + 1 Hectonewton = ${const Force$Giganewton(1) + const Force$Hectonewton(1)}');
+  print(
+      '1 Giganewton + 1 Nanonewton with Precision = ${(const Force$Giganewton(1) + const Force$Nanonewton(1)).withPrecision()}');
+  print(
+      '3 Giganewton + 1 Femtonewton with Precision ${(3.force$Giganewton + 1.force$Femtonewton).withPrecision()}');
+  print('3 Giganewton + 2 KipForce ${3.force$Giganewton + 2.force$KipForce}');
+  print(
+      '1 Hectonewton + 1 Petanewton with Precision = ${(const Force$Hectonewton(1) + const Force$Petanewton(1)).withPrecision()}');
+  print(
+      '1 Hectonewton to Meganewton with Presision ${const Force$Hectonewton(1).toMeganewton.withPrecision()}');
+  print(
+      '1 Dekanewton + 1 Petanewton = ${const Force$Dekanewton(1) + const Force$Petanewton(1)}');
+  print('1 Dekanewton + 1 Newton ${1.force$Dekanewton + 1.force$Newton}');
+  print(
+      '1 Dekanewton + 1 Dyne with Precision = ${(const Force$Dekanewton(1) + const Force$Dyne(1)).withPrecision()}');
+  print(
+      '1 Millinewton + 1 Teranewton = ${const Force$Millinewton(1) + const Force$Teranewton(1)}');
+  print(
+      '1 Millinewton + 3 Kilonewton ${1.force$Millinewton + 3.force$Kilonewton}');
+  print(
+      '1 Millinewton + 1 Attonewton with Precision = ${(const Force$Millinewton(1) + const Force$Attonewton(1)).withPrecision()}');
+  print(
+      '1 Micronewton + 1 Attonewton with Precision = ${(const Force$Micronewton(1) + const Force$Attonewton(1)).withPrecision()}');
+  print(
+      '1 Micronewton + 1 Dyne = ${const Force$Micronewton(1) + const Force$Dyne(1)}');
+  print('1 Piconewton to Dekanewton ${const Force$Piconewton(1).toDekanewton}');
+  print(
+      '1 Piconewton + 1 Femtonewton = ${const Force$Piconewton(1) + const Force$Femtonewton(1)}');
+  print(
+      '1 Piconewton + 1 Dyne = ${const Force$Piconewton(1) + const Force$Dyne(1)}');
+  print(
+      '1 Piconewton + 1 JoulePerCentimeter with Precision = ${(const Force$Piconewton(1) + const Force$JoulePerCentimeter(1)).withPrecision()}');
+  print('2 Piconewton + 2 Poundal ${2.force$Piconewton + 2.force$Poundal}');
+  print(
+      '2 Femtonewton + 2 Dekanewton ${2.force$Femtonewton + 2.force$Dekanewton}');
+  print(
+      '1 Attonewton + 1 Poundal with Precision = ${(const Force$Attonewton(1) + const Force$Poundal(1)).withPrecision()}');
+  print(
+      '1 JoulePerMeter to Attonewton with Presision ${const Force$JoulePerMeter(1).toAttonewton.withPrecision()}');
+  print(
+      '1 JoulePerMeter to Dyne with Presision ${const Force$JoulePerMeter(1).toDyne.withPrecision()}');
+  print(
+      '1 JoulePerMeter to JoulePerCentimeter ${const Force$JoulePerMeter(1).toJoulePerCentimeter}');
+  print(
+      '1 JoulePerMeter + 1 GramForce = ${const Force$JoulePerMeter(1) + const Force$GramForce(1)}');
+  print(
+      '3 KilogramForce + 2 Giganewton with Precision ${(3.force$KilogramForce + 2.force$Giganewton).withPrecision()}');
+  print(
+      '1 KilogramForce + 1 Centinewton = ${const Force$KilogramForce(1) + const Force$Centinewton(1)}');
+  print('1 KilogramForce to Dyne ${const Force$KilogramForce(1).toDyne}');
+  print('1 GramForce to Hectonewton ${const Force$GramForce(1).toHectonewton}');
+  print(
+      '1 GramForce + 1 Dekanewton with Precision = ${(const Force$GramForce(1) + const Force$Dekanewton(1)).withPrecision()}');
+  print('1 GramForce to Decinewton ${const Force$GramForce(1).toDecinewton}');
+  print(
+      '2 GramForce + 1 Millinewton with Precision ${(2.force$GramForce + 1.force$Millinewton).withPrecision()}');
+  print(
+      '1 GramForce + 1 KilogramForce with Precision = ${(const Force$GramForce(1) + const Force$KilogramForce(1)).withPrecision()}');
+  final listOfForce = [
+    const Force$Exanewton(1),
+    const Force$Petanewton(2),
+    const Force$Teranewton(3),
+    const Force$Giganewton(1),
+    const Force$Meganewton(2),
+    const Force$Kilonewton(2),
+    const Force$Dekanewton(2),
+    const Force$Newton(1),
+    const Force$Decinewton(3),
+    const Force$Millinewton(2),
+    const Force$Piconewton(3),
+    const Force$Femtonewton(2),
+    const Force$JoulePerCentimeter(2),
+    const Force$KilogramForce(3),
+    const Force$KipForce(3),
+    const Force$PoundForce(1),
+    const Force$OunceForce(2),
   ]..shuffle();
-  print('Random FrequencyWavelength List => $listOfFrequencywavelength');
-  listOfFrequencywavelength.sort();
+  print('Random Force List => $listOfForce');
+  listOfForce.sort();
+  print('Largest to Smallest Force List => ${listOfForce.reversed.toList()}');
   print(
-    'Largest to Smallest FrequencyWavelength List => ${listOfFrequencywavelength.reversed.toList()}',
-  );
+      'Force List to Exanewton with Precision => ${listOfForce.toExanewton.withPrecision()}');
   print(
-    'FrequencyWavelength List to Gigahertz with Precision => ${listOfFrequencywavelength.toGigahertz.withPrecision()}',
-  );
+      'Force List to Meganewton with Precision => ${listOfForce.toMeganewton.withPrecision()}');
   print(
-    'FrequencyWavelength List to Hectohertz with Precision => ${listOfFrequencywavelength.toHectohertz.withPrecision()}',
-  );
+      'Force List to Hectonewton with Precision => ${listOfForce.toHectonewton.withPrecision()}');
+  print('Force List to Centinewton => ${listOfForce.toCentinewton}');
   print(
-    'FrequencyWavelength List to Centihertz => ${listOfFrequencywavelength.toCentihertz}',
-  );
+      'Force List to Micronewton with Precision => ${listOfForce.toMicronewton.withPrecision()}');
+  print('Force List to JoulePerMeter => ${listOfForce.toJoulePerMeter}');
   print(
-    'FrequencyWavelength List to Millihertz => ${listOfFrequencywavelength.toMillihertz}',
-  );
+      'Force List to JoulePerCentimeter with Precision => ${listOfForce.toJoulePerCentimeter.withPrecision()}');
+  print('Force List to KipForce => ${listOfForce.toKipForce}');
+  print('Force List to PoundForce => ${listOfForce.toPoundForce}');
   print(
-    'FrequencyWavelength List to Nanohertz => ${listOfFrequencywavelength.toNanohertz}',
-  );
+      'Force List to OunceForce with Precision => ${listOfForce.toOunceForce.withPrecision()}');
   print(
-    'FrequencyWavelength List to Picohertz with Precision => ${listOfFrequencywavelength.toPicohertz.withPrecision()}',
-  );
+      'Force List to Poundal with Precision => ${listOfForce.toPoundal.withPrecision()}');
+  const listOfForceByEnum = Force.values;
+  for (final e in listOfForceByEnum) {
+    print('Access ${e.runtimeType} with $e');
+  }
+  print('~End of Randomly Generated Force Example~');
   print(
-    'FrequencyWavelength List to Attohertz with Precision => ${listOfFrequencywavelength.toAttohertz.withPrecision()}',
-  );
-  print(
-    'FrequencyWavelength List to WavelengthInTerametres with Precision => ${listOfFrequencywavelength.toWavelengthInTerametres.withPrecision()}',
-  );
-  print(
-    'FrequencyWavelength List to WavelengthInGigametres => ${listOfFrequencywavelength.toWavelengthInGigametres}',
-  );
-  print(
-    'FrequencyWavelength List to WavelengthInMegametres with Precision => ${listOfFrequencywavelength.toWavelengthInMegametres.withPrecision()}',
-  );
-  print(
-    'FrequencyWavelength List to WavelengthInHectometres with Precision => ${listOfFrequencywavelength.toWavelengthInHectometres.withPrecision()}',
-  );
-  print(
-    'FrequencyWavelength List to WavelengthInDecametres => ${listOfFrequencywavelength.toWavelengthInDecametres}',
-  );
-  print(
-    'FrequencyWavelength List to WavelengthInMetres with Precision => ${listOfFrequencywavelength.toWavelengthInMetres.withPrecision()}',
-  );
-  print(
-    'FrequencyWavelength List to WavelengthInMicrometres => ${listOfFrequencywavelength.toWavelengthInMicrometres}',
-  );
-  print('~End of Randomly Generated FrequencyWavelength Example~');
-  print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
+      'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake');
   print('======================');
 }
 
-/// [IlluminationLuminousIntensity] example
-void exampleOfIlluminationLuminousIntensity() {
-  print('~Start of Randomly Generated IlluminationLuminousIntensity Example~');
-  print(
-    '1 CandleGerman to CandleInternational with Presision ${const IlluminationLuminousIntensity$CandleGerman(1).toCandleInternational.withPrecision()}',
-  );
-  print(
-    '1 CandleGerman to LumenInternationalPerSteradian with Presision ${const IlluminationLuminousIntensity$CandleGerman(1).toLumenInternationalPerSteradian.withPrecision()}',
-  );
-  print(
-    '1 DecimalCandle + 1 CandleGerman with Precision = ${(const IlluminationLuminousIntensity$DecimalCandle(1) + const IlluminationLuminousIntensity$CandleGerman(1)).withPrecision()}',
-  );
-  print(
-    '1 DecimalCandle + 1 CarcelUnit = ${const IlluminationLuminousIntensity$DecimalCandle(1) + const IlluminationLuminousIntensity$CarcelUnit(1)}',
-  );
-  const listOfIlluminationluminousintensityByEnum =
-      IlluminationLuminousIntensity.values;
-  for (final e in listOfIlluminationluminousintensityByEnum) {
+/// [HeatCapacity] example
+void exampleOfHeatCapacity() {
+  print('~Start of Randomly Generated HeatCapacity Example~');
+  const listOfHeatcapacityByEnum = HeatCapacity.values;
+  for (final e in listOfHeatcapacityByEnum) {
     print('Access ${e.runtimeType} with $e');
   }
-  print('~End of Randomly Generated IlluminationLuminousIntensity Example~');
+  print('~End of Randomly Generated HeatCapacity Example~');
   print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
-  print('======================');
-}
-
-/// [MetricPrefixes] example
-void exampleOfMetricPrefixes() {
-  print('~Start of Randomly Generated MetricPrefixes Example~');
-  print(
-    '1 Exa + 1 Peta with Precision = ${(const MetricPrefixes$Exa(1) + const MetricPrefixes$Peta(1)).withPrecision()}',
-  );
-  print('2 Giga + 3 Zetta ${2.metricPrefixes$Giga + 3.metricPrefixes$Zetta}');
-  print('1 Giga to Hecto ${const MetricPrefixes$Giga(1).toHecto}');
-  print(
-    '1 Giga + 1 Milli = ${const MetricPrefixes$Giga(1) + const MetricPrefixes$Milli(1)}',
-  );
-  print('1 Giga to Femto ${const MetricPrefixes$Giga(1).toFemto}');
-  print(
-    '1 MetricUnit + 1 Zepto with Precision = ${(const MetricPrefixes$MetricUnit(1) + const MetricPrefixes$Zepto(1)).withPrecision()}',
-  );
-  print(
-    '1 Deci to Exa with Presision ${const MetricPrefixes$Deci(1).toExa.withPrecision()}',
-  );
-  print(
-    '1 Deci to Giga with Presision ${const MetricPrefixes$Deci(1).toGiga.withPrecision()}',
-  );
-  print(
-    '1 Deci to Micro with Presision ${const MetricPrefixes$Deci(1).toMicro.withPrecision()}',
-  );
-  print(
-    '1 Milli + 1 Mega with Precision = ${(const MetricPrefixes$Milli(1) + const MetricPrefixes$Mega(1)).withPrecision()}',
-  );
-  print(
-    '1 Milli to Centi with Presision ${const MetricPrefixes$Milli(1).toCenti.withPrecision()}',
-  );
-  print(
-    '1 Milli + 1 Nano = ${const MetricPrefixes$Milli(1) + const MetricPrefixes$Nano(1)}',
-  );
-  print(
-    '1 Pico + 1 Deka with Precision = ${(const MetricPrefixes$Pico(1) + const MetricPrefixes$Deka(1)).withPrecision()}',
-  );
-  print('1 Pico to Yocto ${const MetricPrefixes$Pico(1).toYocto}');
-  print(
-    '1 Femto + 1 Peta = ${const MetricPrefixes$Femto(1) + const MetricPrefixes$Peta(1)}',
-  );
-  final listOfMetricprefixes = [
-    const MetricPrefixes$Yotta(1),
-    const MetricPrefixes$Zetta(3),
-    const MetricPrefixes$Mega(3),
-    const MetricPrefixes$Hecto(2),
-    const MetricPrefixes$Deka(2),
-    const MetricPrefixes$Centi(2),
-    const MetricPrefixes$Pico(1),
-    const MetricPrefixes$Femto(2),
-    const MetricPrefixes$Zepto(3),
-    const MetricPrefixes$Yocto(2),
-  ]..shuffle();
-  print('Random MetricPrefixes List => $listOfMetricprefixes');
-  listOfMetricprefixes.sort();
-  print('Smallest to Largest MetricPrefixes List => $listOfMetricprefixes');
-  print('MetricPrefixes List to Zetta => ${listOfMetricprefixes.toZetta}');
-  print('MetricPrefixes List to Exa => ${listOfMetricprefixes.toExa}');
-  print('MetricPrefixes List to Peta => ${listOfMetricprefixes.toPeta}');
-  print('MetricPrefixes List to Mega => ${listOfMetricprefixes.toMega}');
-  print('MetricPrefixes List to Hecto => ${listOfMetricprefixes.toHecto}');
-  print('MetricPrefixes List to Deci => ${listOfMetricprefixes.toDeci}');
-  print(
-    'MetricPrefixes List to Centi with Precision => ${listOfMetricprefixes.toCenti.withPrecision()}',
-  );
-  print('MetricPrefixes List to Milli => ${listOfMetricprefixes.toMilli}');
-  print('MetricPrefixes List to Nano => ${listOfMetricprefixes.toNano}');
-  print(
-    'MetricPrefixes List to Pico with Precision => ${listOfMetricprefixes.toPico.withPrecision()}',
-  );
-  print('MetricPrefixes List to Femto => ${listOfMetricprefixes.toFemto}');
-  print('MetricPrefixes List to Atto => ${listOfMetricprefixes.toAtto}');
-  print('MetricPrefixes List to Zepto => ${listOfMetricprefixes.toZepto}');
-  print(
-    'MetricPrefixes List to Yocto with Precision => ${listOfMetricprefixes.toYocto.withPrecision()}',
-  );
-  const listOfMetricprefixesByEnum = MetricPrefixes.values;
-  for (final e in listOfMetricprefixesByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
-  print('~End of Randomly Generated MetricPrefixes Example~');
-  print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
-  print('======================');
-}
-
-/// [MomentofInertia] example
-void exampleOfMomentofInertia() {
-  print('~Start of Randomly Generated MomentofInertia Example~');
-  final listOfMomentofinertia = [
-    const MomentofInertia$KilogramMeterSquare(2),
-    const MomentofInertia$GramCentimeterSquare(1),
-    const MomentofInertia$KilogramForceMeterSecondSquare(3),
-    const MomentofInertia$KilogramForceCentimeterSecondSquare(2),
-    const MomentofInertia$PoundFootSquare(1),
-    const MomentofInertia$PoundInchSquare(2),
-    const MomentofInertia$SlugFootSquare(3),
-  ]..shuffle();
-  print('Random MomentofInertia List => $listOfMomentofinertia');
-  listOfMomentofinertia.sort();
-  print(
-    'Largest to Smallest MomentofInertia List => ${listOfMomentofinertia.reversed.toList()}',
-  );
-  print(
-    'MomentofInertia List to GramCentimeterSquare => ${listOfMomentofinertia.toGramCentimeterSquare}',
-  );
-  print(
-    'MomentofInertia List to OunceInchSquare with Precision => ${listOfMomentofinertia.toOunceInchSquare.withPrecision()}',
-  );
-  print(
-    'MomentofInertia List to OunceInchSecondSquare => ${listOfMomentofinertia.toOunceInchSecondSquare}',
-  );
-  print(
-    'MomentofInertia List to PoundFootSquare with Precision => ${listOfMomentofinertia.toPoundFootSquare.withPrecision()}',
-  );
-  print(
-    'MomentofInertia List to PoundFootSecondSquare with Precision => ${listOfMomentofinertia.toPoundFootSecondSquare.withPrecision()}',
-  );
-  print(
-    'MomentofInertia List to PoundInchSecondSquare with Precision => ${listOfMomentofinertia.toPoundInchSecondSquare.withPrecision()}',
-  );
-  print(
-    'MomentofInertia List to SlugFootSquare with Precision => ${listOfMomentofinertia.toSlugFootSquare.withPrecision()}',
-  );
-  const listOfMomentofinertiaByEnum = MomentofInertia.values;
-  for (final e in listOfMomentofinertiaByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
-  print('~End of Randomly Generated MomentofInertia Example~');
-  print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
+      'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake');
   print('======================');
 }
 
 /// [RadiationAbsorbedDose] example
 void exampleOfRadiationAbsorbedDose() {
   print('~Start of Randomly Generated RadiationAbsorbedDose Example~');
-  print(
-    '1 Millirad + 1 Parker with Precision = ${(const RadiationAbsorbedDose$Millirad(1) + const RadiationAbsorbedDose$Parker(1)).withPrecision()}',
-  );
-  print(
-    '1 Millirad to Petagray ${const RadiationAbsorbedDose$Millirad(1).toPetagray}',
-  );
-  print(
-    '1 Millirad + 1 Megagray = ${const RadiationAbsorbedDose$Millirad(1) + const RadiationAbsorbedDose$Megagray(1)}',
-  );
-  print(
-    '2 JoulePerKilogram + 3 JoulePerGram with Precision ${(2.radiationAbsorbedDose$JoulePerKilogram + 3.radiationAbsorbedDose$JoulePerGram).withPrecision()}',
-  );
-  print(
-    '1 JoulePerKilogram + 1 JoulePerMilligram = ${const RadiationAbsorbedDose$JoulePerKilogram(1) + const RadiationAbsorbedDose$JoulePerMilligram(1)}',
-  );
-  print(
-    '1 JoulePerKilogram to Microgray ${const RadiationAbsorbedDose$JoulePerKilogram(1).toMicrogray}',
-  );
-  print(
-    '1 JoulePerCentigram + 1 Millirad = ${const RadiationAbsorbedDose$JoulePerCentigram(1) + const RadiationAbsorbedDose$Millirad(1)}',
-  );
-  print(
-    '2 JoulePerCentigram + 3 JoulePerKilogram ${2.radiationAbsorbedDose$JoulePerCentigram + 3.radiationAbsorbedDose$JoulePerKilogram}',
-  );
-  print(
-    '1 JoulePerCentigram to ErgPerGram ${const RadiationAbsorbedDose$JoulePerCentigram(1).toErgPerGram}',
-  );
-  print(
-    '1 JoulePerCentigram to RepRoentgenEqPhysical with Presision ${const RadiationAbsorbedDose$JoulePerCentigram(1).toRepRoentgenEqPhysical.withPrecision()}',
-  );
-  print(
-    '1 JoulePerCentigram to Megagray with Presision ${const RadiationAbsorbedDose$JoulePerCentigram(1).toMegagray.withPrecision()}',
-  );
-  print(
-    '1 JoulePerCentigram + 1 Milligray = ${const RadiationAbsorbedDose$JoulePerCentigram(1) + const RadiationAbsorbedDose$Milligray(1)}',
-  );
-  print(
-    '1 JoulePerCentigram to Microgray with Presision ${const RadiationAbsorbedDose$JoulePerCentigram(1).toMicrogray.withPrecision()}',
-  );
-  print(
-    '1 JoulePerMilligram + 1 Milligray with Precision = ${(const RadiationAbsorbedDose$JoulePerMilligram(1) + const RadiationAbsorbedDose$Milligray(1)).withPrecision()}',
-  );
-  print(
-    '1 ErgPerGram to Milligray ${const RadiationAbsorbedDose$ErgPerGram(1).toMilligray}',
-  );
-  print(
-    '1 RepRoentgenEqPhysical + 1 Hectogray with Precision = ${(const RadiationAbsorbedDose$RepRoentgenEqPhysical(1) + const RadiationAbsorbedDose$Hectogray(1)).withPrecision()}',
-  );
-  print(
-    '1 RepRoentgenEqPhysical + 1 Femtogray with Precision = ${(const RadiationAbsorbedDose$RepRoentgenEqPhysical(1) + const RadiationAbsorbedDose$Femtogray(1)).withPrecision()}',
-  );
-  print(
-    '1 Parker + 1 JoulePerCentigram = ${const RadiationAbsorbedDose$Parker(1) + const RadiationAbsorbedDose$JoulePerCentigram(1)}',
-  );
-  print(
-    '2 Teragray + 3 Rad ${2.radiationAbsorbedDose$Teragray + 3.radiationAbsorbedDose$Rad}',
-  );
-  print(
-    '1 Teragray to ErgPerGram ${const RadiationAbsorbedDose$Teragray(1).toErgPerGram}',
-  );
-  print(
-    '2 Teragray + 1 Hectogray ${2.radiationAbsorbedDose$Teragray + 1.radiationAbsorbedDose$Hectogray}',
-  );
-  print(
-    '1 Megagray to Millirad ${const RadiationAbsorbedDose$Megagray(1).toMillirad}',
-  );
-  print(
-    '2 Megagray + 1 Gigagray ${2.radiationAbsorbedDose$Megagray + 1.radiationAbsorbedDose$Gigagray}',
-  );
-  print(
-    '1 Megagray to Decigray with Presision ${const RadiationAbsorbedDose$Megagray(1).toDecigray.withPrecision()}',
-  );
-  print(
-    '1 Megagray + 1 Nanogray = ${const RadiationAbsorbedDose$Megagray(1) + const RadiationAbsorbedDose$Nanogray(1)}',
-  );
-  print(
-    '1 Kilogray + 1 JoulePerGram = ${const RadiationAbsorbedDose$Kilogray(1) + const RadiationAbsorbedDose$JoulePerGram(1)}',
-  );
-  print(
-    '1 Kilogray + 3 Parker ${1.radiationAbsorbedDose$Kilogray + 3.radiationAbsorbedDose$Parker}',
-  );
-  print(
-    '1 Kilogray + 1 Exagray = ${const RadiationAbsorbedDose$Kilogray(1) + const RadiationAbsorbedDose$Exagray(1)}',
-  );
-  print(
-    '3 Kilogray + 2 Gray ${3.radiationAbsorbedDose$Kilogray + 2.radiationAbsorbedDose$Gray}',
-  );
-  print(
-    '1 Kilogray + 1 Nanogray with Precision = ${(const RadiationAbsorbedDose$Kilogray(1) + const RadiationAbsorbedDose$Nanogray(1)).withPrecision()}',
-  );
-  print(
-    '2 Kilogray + 1 Attogray ${2.radiationAbsorbedDose$Kilogray + 1.radiationAbsorbedDose$Attogray}',
-  );
-  print(
-    '1 Hectogray to Millirad with Presision ${const RadiationAbsorbedDose$Hectogray(1).toMillirad.withPrecision()}',
-  );
-  print(
-    '2 Hectogray + 1 JoulePerGram ${2.radiationAbsorbedDose$Hectogray + 1.radiationAbsorbedDose$JoulePerGram}',
-  );
-  print(
-    '2 Hectogray + 1 Megagray ${2.radiationAbsorbedDose$Hectogray + 1.radiationAbsorbedDose$Megagray}',
-  );
-  print(
-    '1 Hectogray + 3 Picogray with Precision ${(1.radiationAbsorbedDose$Hectogray + 3.radiationAbsorbedDose$Picogray).withPrecision()}',
-  );
-  print(
-    '1 Dekagray + 1 JoulePerKilogram with Precision = ${(const RadiationAbsorbedDose$Dekagray(1) + const RadiationAbsorbedDose$JoulePerKilogram(1)).withPrecision()}',
-  );
-  print(
-    '1 Dekagray + 1 Gray = ${const RadiationAbsorbedDose$Dekagray(1) + const RadiationAbsorbedDose$Gray(1)}',
-  );
-  print(
-    '1 Dekagray to Femtogray with Presision ${const RadiationAbsorbedDose$Dekagray(1).toFemtogray.withPrecision()}',
-  );
-  print(
-    '1 Centigray + 2 Nanogray ${1.radiationAbsorbedDose$Centigray + 2.radiationAbsorbedDose$Nanogray}',
-  );
-  print(
-    '3 Centigray + 3 Picogray ${3.radiationAbsorbedDose$Centigray + 3.radiationAbsorbedDose$Picogray}',
-  );
-  print(
-    '3 Microgray + 1 Gigagray ${3.radiationAbsorbedDose$Microgray + 1.radiationAbsorbedDose$Gigagray}',
-  );
-  print(
-    '3 Nanogray + 3 JoulePerGram ${3.radiationAbsorbedDose$Nanogray + 3.radiationAbsorbedDose$JoulePerGram}',
-  );
-  print(
-    '3 Nanogray + 3 JoulePerMilligram with Precision ${(3.radiationAbsorbedDose$Nanogray + 3.radiationAbsorbedDose$JoulePerMilligram).withPrecision()}',
-  );
-  print(
-    '1 Nanogray + 1 Exagray = ${const RadiationAbsorbedDose$Nanogray(1) + const RadiationAbsorbedDose$Exagray(1)}',
-  );
-  print(
-    '1 Nanogray + 1 Femtogray = ${const RadiationAbsorbedDose$Nanogray(1) + const RadiationAbsorbedDose$Femtogray(1)}',
-  );
-  const listOfRadiationabsorbeddoseByEnum = RadiationAbsorbedDose.values;
-  for (final e in listOfRadiationabsorbeddoseByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
   print('~End of Randomly Generated RadiationAbsorbedDose Example~');
   print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
+      'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake');
   print('======================');
 }
 
 /// [Temperature] example
 void exampleOfTemperature() {
   print('~Start of Randomly Generated Temperature Example~');
-  const listOfTemperatureByEnum = Temperature.values;
-  for (final e in listOfTemperatureByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
   print('~End of Randomly Generated Temperature Example~');
   print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
+      'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake');
   print('======================');
 }
 
-/// [ThermalConductivity] example
-void exampleOfThermalConductivity() {
-  print('~Start of Randomly Generated ThermalConductivity Example~');
-  const listOfThermalconductivityByEnum = ThermalConductivity.values;
-  for (final e in listOfThermalconductivityByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
-  print('~End of Randomly Generated ThermalConductivity Example~');
-  print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
-  print('======================');
-}
-
-/// [Torque] example
-void exampleOfTorque() {
-  print('~Start of Randomly Generated Torque Example~');
-  const listOfTorqueByEnum = Torque.values;
-  for (final e in listOfTorqueByEnum) {
-    print('Access ${e.runtimeType} with $e');
-  }
-  print('~End of Randomly Generated Torque Example~');
-  print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
-  print('======================');
-}
-
-/// [VolumeLumber] example
-void exampleOfVolumeLumber() {
-  print('~Start of Randomly Generated VolumeLumber Example~');
-  print(
-    '1 MeterCubic + 1 Cord with Precision = ${(const VolumeLumber$MeterCubic(1) + const VolumeLumber$Cord(1)).withPrecision()}',
-  );
-  print(
-    '1 MeterCubic to Cord80FtCubic ${const VolumeLumber$MeterCubic(1).toCord80FtCubic}',
-  );
-  print(
-    '1 MeterCubic + 1 ThousandSquareFeet1Per4InchPanels = ${const VolumeLumber$MeterCubic(1) + const VolumeLumber$ThousandSquareFeet1Per4InchPanels(1)}',
-  );
-  print(
-    '3 MeterCubic + 2 ThousandSquareFeet1Per2InchPanels ${3.volumeLumber$MeterCubic + 2.volumeLumber$ThousandSquareFeet1Per2InchPanels}',
-  );
-  print(
-    '2 CubicInch + 3 Pallet with Precision ${(2.volumeLumber$CubicInch + 3.volumeLumber$Pallet).withPrecision()}',
-  );
-  print(
-    '1 CubicInch + 1 CrossTie = ${const VolumeLumber$CubicInch(1) + const VolumeLumber$CrossTie(1)}',
-  );
-  print(
-    '1 CubicInch + 1 ThousandSquareFeet3Per8InchPanels = ${const VolumeLumber$CubicInch(1) + const VolumeLumber$ThousandSquareFeet3Per8InchPanels(1)}',
-  );
-  print(
-    '1 CubicInch + 1 ThousandSquareFeet1Per2InchPanels = ${const VolumeLumber$CubicInch(1) + const VolumeLumber$ThousandSquareFeet1Per2InchPanels(1)}',
-  );
-  print(
-    '1 ThousandBoardFeet + 2 ThousandSquareFeet1Per8InchPanels ${1.volumeLumber$ThousandBoardFeet + 2.volumeLumber$ThousandSquareFeet1Per8InchPanels}',
-  );
-  print(
-    '3 ThousandBoardFeet + 1 ThousandSquareFeet3Per4InchPanels ${3.volumeLumber$ThousandBoardFeet + 1.volumeLumber$ThousandSquareFeet3Per4InchPanels}',
-  );
-  print(
-    '1 Cord + 1 SwitchTie with Precision = ${(const VolumeLumber$Cord(1) + const VolumeLumber$SwitchTie(1)).withPrecision()}',
-  );
-  print(
-    '2 Cord80FtCubic + 3 ThousandBoardFeet ${2.volumeLumber$Cord80FtCubic + 3.volumeLumber$ThousandBoardFeet}',
-  );
-  print(
-    '1 CordFeet + 1 Cord80FtCubic with Precision = ${(const VolumeLumber$CordFeet(1) + const VolumeLumber$Cord80FtCubic(1)).withPrecision()}',
-  );
-  print(
-    '1 CordFeet + 1 Pallet = ${const VolumeLumber$CordFeet(1) + const VolumeLumber$Pallet(1)}',
-  );
-  print(
-    '3 CordFeet + 3 ThousandSquareFeet1Per8InchPanels ${3.volumeLumber$CordFeet + 3.volumeLumber$ThousandSquareFeet1Per8InchPanels}',
-  );
-  print(
-    '1 CordFeet + 1 ThousandSquareFeet3Per8InchPanels with Precision = ${(const VolumeLumber$CordFeet(1) + const VolumeLumber$ThousandSquareFeet3Per8InchPanels(1)).withPrecision()}',
-  );
-  print(
-    '1 CordFeet + 1 ThousandSquareFeet3Per4InchPanels = ${const VolumeLumber$CordFeet(1) + const VolumeLumber$ThousandSquareFeet3Per4InchPanels(1)}',
-  );
-  print(
-    '1 Cunit + 1 ThousandSquareFeet1Per4InchPanels = ${const VolumeLumber$Cunit(1) + const VolumeLumber$ThousandSquareFeet1Per4InchPanels(1)}',
-  );
-  print(
-    '1 Pallet + 1 ThousandBoardFeet with Precision = ${(const VolumeLumber$Pallet(1) + const VolumeLumber$ThousandBoardFeet(1)).withPrecision()}',
-  );
-  print(
-    '1 Pallet to Cord with Presision ${const VolumeLumber$Pallet(1).toCord.withPrecision()}',
-  );
-  print(
-    '3 Pallet + 2 Cord80FtCubic with Precision ${(3.volumeLumber$Pallet + 2.volumeLumber$Cord80FtCubic).withPrecision()}',
-  );
-  print(
-    '1 Pallet + 1 Cunit = ${const VolumeLumber$Pallet(1) + const VolumeLumber$Cunit(1)}',
-  );
-  print(
-    '1 Pallet + 1 CrossTie = ${const VolumeLumber$Pallet(1) + const VolumeLumber$CrossTie(1)}',
-  );
-  print(
-    '1 ThousandSquareFeet1Per8InchPanels to CubicFeet ${const VolumeLumber$ThousandSquareFeet1Per8InchPanels(1).toCubicFeet}',
-  );
-  print(
-    '1 ThousandSquareFeet1Per8InchPanels + 1 CubicInch with Precision = ${(const VolumeLumber$ThousandSquareFeet1Per8InchPanels(1) + const VolumeLumber$CubicInch(1)).withPrecision()}',
-  );
-  print(
-    '1 ThousandSquareFeet1Per8InchPanels + 1 CordFeet with Precision = ${(const VolumeLumber$ThousandSquareFeet1Per8InchPanels(1) + const VolumeLumber$CordFeet(1)).withPrecision()}',
-  );
-  print(
-    '1 ThousandSquareFeet1Per8InchPanels + 1 ThousandSquareFeet3Per4InchPanels with Precision = ${(const VolumeLumber$ThousandSquareFeet1Per8InchPanels(1) + const VolumeLumber$ThousandSquareFeet3Per4InchPanels(1)).withPrecision()}',
-  );
-  print(
-    '1 ThousandSquareFeet3Per8InchPanels + 1 CubicFeet ${1.volumeLumber$ThousandSquareFeet3Per8InchPanels + 1.volumeLumber$CubicFeet}',
-  );
-  print(
-    '1 ThousandSquareFeet3Per8InchPanels + 1 ThousandSquareFeet3Per4InchPanels with Precision = ${(const VolumeLumber$ThousandSquareFeet3Per8InchPanels(1) + const VolumeLumber$ThousandSquareFeet3Per4InchPanels(1)).withPrecision()}',
-  );
-  print(
-    '1 ThousandSquareFeet1Per2InchPanels + 1 BoardFeet with Precision ${(1.volumeLumber$ThousandSquareFeet1Per2InchPanels + 1.volumeLumber$BoardFeet).withPrecision()}',
-  );
-  print(
-    '1 ThousandSquareFeet1Per2InchPanels to CordFeet with Presision ${const VolumeLumber$ThousandSquareFeet1Per2InchPanels(1).toCordFeet.withPrecision()}',
-  );
-  print(
-    '1 ThousandSquareFeet1Per2InchPanels + 1 ThousandSquareFeet3Per4InchPanels = ${const VolumeLumber$ThousandSquareFeet1Per2InchPanels(1) + const VolumeLumber$ThousandSquareFeet3Per4InchPanels(1)}',
-  );
-  final listOfVolumelumber = [
-    const VolumeLumber$MeterCubic(2),
-    const VolumeLumber$CubicFeet(2),
-    const VolumeLumber$CubicInch(1),
-    const VolumeLumber$BoardFeet(3),
-    const VolumeLumber$ThousandBoardFeet(3),
-    const VolumeLumber$Cord(3),
-    const VolumeLumber$CordFeet(1),
-    const VolumeLumber$Cunit(3),
-    const VolumeLumber$Pallet(1),
-    const VolumeLumber$CrossTie(2),
-    const VolumeLumber$SwitchTie(1),
-    const VolumeLumber$ThousandSquareFeet1Per4InchPanels(1),
-    const VolumeLumber$ThousandSquareFeet3Per4InchPanels(2),
+/// [VolumeDry] example
+void exampleOfVolumeDry() {
+  print('~Start of Randomly Generated VolumeDry Example~');
+  final listOfVolumedry = [
+    const VolumeDry$Barrel(3),
+    const VolumeDry$Quart(3),
+    const VolumeDry$Bushel(3),
+    const VolumeDry$EphahBiblical(3),
+    const VolumeDry$SeahBiblical(3),
+    const VolumeDry$OmerBiblical(1),
   ]..shuffle();
-  print('Random VolumeLumber List => $listOfVolumelumber');
-  listOfVolumelumber.sort();
-  print('Smallest to Largest VolumeLumber List => $listOfVolumelumber');
+  print('Random VolumeDry List => $listOfVolumedry');
+  listOfVolumedry.sort();
   print(
-    'VolumeLumber List to CubicFeet with Precision => ${listOfVolumelumber.toCubicFeet.withPrecision()}',
-  );
+      'Largest to Smallest VolumeDry List => ${listOfVolumedry.reversed.toList()}');
+  print('VolumeDry List to Liter => ${listOfVolumedry.toLiter}');
+  print('VolumeDry List to Peck => ${listOfVolumedry.toPeck}');
+  print('VolumeDry List to Bushel => ${listOfVolumedry.toBushel}');
   print(
-    'VolumeLumber List to CubicInch with Precision => ${listOfVolumelumber.toCubicInch.withPrecision()}',
-  );
-  print('VolumeLumber List to BoardFeet => ${listOfVolumelumber.toBoardFeet}');
+      'VolumeDry List to CorBiblical with Precision => ${listOfVolumedry.toCorBiblical.withPrecision()}');
   print(
-    'VolumeLumber List to CrossTie with Precision => ${listOfVolumelumber.toCrossTie.withPrecision()}',
-  );
-  print('VolumeLumber List to SwitchTie => ${listOfVolumelumber.toSwitchTie}');
+      'VolumeDry List to HomerBiblical with Precision => ${listOfVolumedry.toHomerBiblical.withPrecision()}');
   print(
-    'VolumeLumber List to ThousandSquareFeet3Per8InchPanels with Precision => ${listOfVolumelumber.toThousandSquareFeet3Per8InchPanels.withPrecision()}',
-  );
+      'VolumeDry List to SeahBiblical with Precision => ${listOfVolumedry.toSeahBiblical.withPrecision()}');
+  const listOfVolumedryByEnum = VolumeDry.values;
+  for (final e in listOfVolumedryByEnum) {
+    print('Access ${e.runtimeType} with $e');
+  }
+  print('~End of Randomly Generated VolumeDry Example~');
   print(
-    'VolumeLumber List to ThousandSquareFeet3Per4InchPanels with Precision => ${listOfVolumelumber.toThousandSquareFeet3Per4InchPanels.withPrecision()}',
-  );
-  print('~End of Randomly Generated VolumeLumber Example~');
+      'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake');
+  print('======================');
+}
+
+/// [VolumeChargeDensity] example
+void exampleOfVolumeChargeDensity() {
+  print('~Start of Randomly Generated VolumeChargeDensity Example~');
+  final listOfVolumechargedensity = [
+    const VolumeChargeDensity$CoulombPerMeterCubic(1),
+    const VolumeChargeDensity$CoulombPerCentimeterCubic(1),
+    const VolumeChargeDensity$AbcoulombPerMeterCubic(1),
+  ]..shuffle();
+  print('Random VolumeChargeDensity List => $listOfVolumechargedensity');
+  listOfVolumechargedensity.sort();
   print(
-    'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake',
-  );
+      'Smallest to Largest VolumeChargeDensity List => $listOfVolumechargedensity');
+  print(
+      'VolumeChargeDensity List to CoulombPerCentimeterCubic with Precision => ${listOfVolumechargedensity.toCoulombPerCentimeterCubic.withPrecision()}');
+  print(
+      'VolumeChargeDensity List to CoulombPerInchCubic => ${listOfVolumechargedensity.toCoulombPerInchCubic}');
+  print('~End of Randomly Generated VolumeChargeDensity Example~');
+  print(
+      'Please open an issue or raise a PR on https://github.com/devsdocs/super_measurement if you find any mistake');
   print('======================');
 }

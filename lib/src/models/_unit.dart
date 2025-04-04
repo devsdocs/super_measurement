@@ -29,88 +29,78 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
 
   Map<String, dynamic> toJson();
 
-  AnchorRatio<T> get _anchorRatio;
+  // AnchorRatio<T> get _anchorRatio;
 
   bool get _isShiftedValue => valueShift != 0;
 
   bool _convertAndCompare(String operator, T other) {
-    num otherValue;
-    num currentValue;
-    if (_isShiftedValue || other._isShiftedValue) {
-      otherValue =
-          other._clone.convertTo(this).withPrecision(Precision.ten).value;
-      currentValue = _clone.withPrecision(Precision.ten).value;
-    } else {
-      otherValue =
-          other._clone.convertTo(anchor).withPrecision(Precision.ten).value;
-      currentValue =
-          _clone.convertTo(anchor).withPrecision(Precision.ten).value;
-    }
+    // Default implementation for regular units
+    // Temperature will override this
+    final thisAnchor = convertTo(anchor).value.toDouble();
+    final otherAnchor = other.convertTo(anchor).value.toDouble();
 
-    if (operator == '==') {
-      return currentValue == otherValue;
+    switch (operator) {
+      case '==':
+        return (thisAnchor - otherAnchor).abs() < 1e-10;
+      case '>':
+        return thisAnchor > otherAnchor;
+      case '>=':
+        return thisAnchor >= otherAnchor;
+      case '<':
+        return thisAnchor < otherAnchor;
+      default:
+        return thisAnchor <= otherAnchor;
     }
-    if (operator == '>') {
-      return currentValue > otherValue;
-    }
-    if (operator == '>=') {
-      return currentValue >= otherValue;
-    }
-    if (operator == '<') {
-      return currentValue < otherValue;
-    }
-    return currentValue <= otherValue;
   }
 
   T _convertAndCombine(String operator, T other) {
-    if (_isShiftedValue || other._isShiftedValue) {
-      final convertToThis = other.convertTo(this);
+    // Default implementation for regular units
+    // Temperature will override this
+    final thisAnchor = convertTo(anchor);
+    final otherAnchor = other.convertTo(anchor);
 
-      return operator == '+' ? this + convertToThis : this - convertToThis;
-    } else {
-      final otherValue = other.convertTo(anchor);
-      final currentValue = convertTo(anchor);
+    final result = operator == '+'
+        ? thisAnchor.value + otherAnchor.value
+        : thisAnchor.value - otherAnchor.value;
 
-      final combine = operator == '+'
-          ? currentValue + otherValue
-          : currentValue - otherValue;
-
-      return combine.convertTo(this);
-    }
+    return anchor.withValue(result).convertTo(this);
   }
 
-  /// Convert this unit to another unit under same category, the value
-  /// of [to] is ignored
+  /// Convert this unit to another unit under same category
   T convertTo<E extends Unit<T>>(E to) {
     final result = to as T;
+
+    // Same unit type - just transfer the value
     if (runtimeType == to.runtimeType) {
       return result.withValue(value);
     }
-    if (_isShiftedValue || result._isShiftedValue) {
-      if (runtimeType == _anchorRatio.anchor) {
-        return result.withValue(
-          (value - result.valueShift) /
-              _anchorRatio.ratio.getRatio(result.runtimeType),
-        );
-      } else {
-        return anchor
-            .withValue(
-              (value * _anchorRatio.ratio.getRatio(runtimeType)) + valueShift,
-            )
-            .convertTo(result);
-      }
-    } else {
-      if (value == 0) {
-        return result.withValue(0);
-      }
-      if (runtimeType == _anchorRatio.anchor) {
-        return result
-            .withValue(value / _anchorRatio.ratio.getRatio(result.runtimeType));
-      }
-      return anchor
-          .withValue(value * _anchorRatio.ratio.getRatio(runtimeType))
-          .convertTo(result);
+
+    // Zero value is always zero (except for shifted values like temperature)
+    if (value == 0 && !_isShiftedValue && !result._isShiftedValue) {
+      return result.withValue(0);
     }
+
+    // Handle units with value shifts (like temperature)
+    if (_isShiftedValue || result._isShiftedValue) {
+      // If this is the anchor unit
+      if (runtimeType == anchor.runtimeType) {
+        return result.withValue((value * result.ratio) + result.valueShift);
+      }
+      // If target is the anchor unit
+      else if (result.runtimeType == anchor.runtimeType) {
+        return result.withValue((value - valueShift) / ratio);
+      }
+      // Converting between two non-anchor units
+      else {
+        // Go through anchor: this -> anchor -> result
+        final valueInAnchor = (value - valueShift) / ratio;
+        return result
+            .withValue((valueInAnchor * result.ratio) + result.valueShift);
+      }
+    }
+
+    // Regular ratio-based conversion for non-shifted units
+    return result.withValue(value * ratio / result.ratio);
   }
 
   T operator +(T other) {
@@ -223,13 +213,22 @@ const _value = 'value';
 
 extension DoubleExt on double {
   num toPrecision(int fractionDigits) {
-    if (_canBeInt) return toInt();
-    final mod = pow(10, fractionDigits.toDouble()).toDouble();
-    final calculation = (this * mod).round().toDouble() / mod;
-    return calculation._canBeInt ? calculation.toInt() : calculation;
+    try {
+      if (_canBeInt) return toInt();
+      final mod = pow(10, fractionDigits.toDouble()).toDouble();
+      final calculation = (this * mod).round().toDouble() / mod;
+      return calculation._canBeInt ? calculation.toInt() : calculation;
+    } catch (e) {
+      return this;
+    }
   }
 
   bool get _canBeInt => this % 1 == 0;
 
   num get toIntIfTrue => _canBeInt ? toInt() : this;
+}
+
+// Add helper extension for num to safely convert to double
+extension NumExt on num {
+  double toSafeDouble() => toDouble();
 }

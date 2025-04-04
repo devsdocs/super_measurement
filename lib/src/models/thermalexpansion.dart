@@ -28,21 +28,6 @@ sealed class ThermalExpansion extends Unit<ThermalExpansion> {
       const ThermalExpansion$LengthPerLengthPerKelvin();
 
   @override
-  AnchorRatio<ThermalExpansion> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ThermalExpansion>({
-          ThermalExpansion$LengthPerLengthPerCelsius:
-              ThermalExpansion$LengthPerLengthPerCelsius._ratio,
-          ThermalExpansion$LengthPerLengthPerFahrenheit:
-              ThermalExpansion$LengthPerLengthPerFahrenheit._ratio,
-          ThermalExpansion$LengthPerLengthPerRankine:
-              ThermalExpansion$LengthPerLengthPerRankine._ratio,
-          ThermalExpansion$LengthPerLengthPerReaumur:
-              ThermalExpansion$LengthPerLengthPerReaumur._ratio,
-        })
-      );
-
-  @override
   ThermalExpansion get anchor =>
       const ThermalExpansion$LengthPerLengthPerKelvin();
 

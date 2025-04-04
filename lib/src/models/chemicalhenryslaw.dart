@@ -29,23 +29,6 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
       const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic();
 
   @override
-  AnchorRatio<ChemicalHenrysLaw> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ChemicalHenrysLaw>({
-          ChemicalHenrysLaw$NewtonMeterPerKilogram:
-              ChemicalHenrysLaw$NewtonMeterPerKilogram._ratio,
-          ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic:
-              ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic._ratio,
-          ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic:
-              ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic._ratio,
-          ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic:
-              ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic._ratio,
-          ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic:
-              ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic._ratio,
-        })
-      );
-
-  @override
   ChemicalHenrysLaw get anchor =>
       const ChemicalHenrysLaw$BarPerKilogramPerMeterCubic();
 

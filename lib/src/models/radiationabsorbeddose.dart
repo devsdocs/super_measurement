@@ -40,48 +40,6 @@ sealed class RadiationAbsorbedDose extends Unit<RadiationAbsorbedDose> {
       const RadiationAbsorbedDose$Microgray();
 
   @override
-  AnchorRatio<RadiationAbsorbedDose> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<RadiationAbsorbedDose>({
-          RadiationAbsorbedDose$Rad: RadiationAbsorbedDose$Rad._ratio,
-          RadiationAbsorbedDose$Millirad: RadiationAbsorbedDose$Millirad._ratio,
-          RadiationAbsorbedDose$JoulePerKilogram:
-              RadiationAbsorbedDose$JoulePerKilogram._ratio,
-          RadiationAbsorbedDose$JoulePerGram:
-              RadiationAbsorbedDose$JoulePerGram._ratio,
-          RadiationAbsorbedDose$JoulePerCentigram:
-              RadiationAbsorbedDose$JoulePerCentigram._ratio,
-          RadiationAbsorbedDose$JoulePerMilligram:
-              RadiationAbsorbedDose$JoulePerMilligram._ratio,
-          RadiationAbsorbedDose$ErgPerGram:
-              RadiationAbsorbedDose$ErgPerGram._ratio,
-          RadiationAbsorbedDose$RepRoentgenEqPhysical:
-              RadiationAbsorbedDose$RepRoentgenEqPhysical._ratio,
-          RadiationAbsorbedDose$Parker: RadiationAbsorbedDose$Parker._ratio,
-          RadiationAbsorbedDose$Exagray: RadiationAbsorbedDose$Exagray._ratio,
-          RadiationAbsorbedDose$Petagray: RadiationAbsorbedDose$Petagray._ratio,
-          RadiationAbsorbedDose$Teragray: RadiationAbsorbedDose$Teragray._ratio,
-          RadiationAbsorbedDose$Gigagray: RadiationAbsorbedDose$Gigagray._ratio,
-          RadiationAbsorbedDose$Megagray: RadiationAbsorbedDose$Megagray._ratio,
-          RadiationAbsorbedDose$Kilogray: RadiationAbsorbedDose$Kilogray._ratio,
-          RadiationAbsorbedDose$Hectogray:
-              RadiationAbsorbedDose$Hectogray._ratio,
-          RadiationAbsorbedDose$Dekagray: RadiationAbsorbedDose$Dekagray._ratio,
-          RadiationAbsorbedDose$Gray: RadiationAbsorbedDose$Gray._ratio,
-          RadiationAbsorbedDose$Decigray: RadiationAbsorbedDose$Decigray._ratio,
-          RadiationAbsorbedDose$Centigray:
-              RadiationAbsorbedDose$Centigray._ratio,
-          RadiationAbsorbedDose$Milligray:
-              RadiationAbsorbedDose$Milligray._ratio,
-          RadiationAbsorbedDose$Nanogray: RadiationAbsorbedDose$Nanogray._ratio,
-          RadiationAbsorbedDose$Picogray: RadiationAbsorbedDose$Picogray._ratio,
-          RadiationAbsorbedDose$Femtogray:
-              RadiationAbsorbedDose$Femtogray._ratio,
-          RadiationAbsorbedDose$Attogray: RadiationAbsorbedDose$Attogray._ratio,
-        })
-      );
-
-  @override
   RadiationAbsorbedDose get anchor => const RadiationAbsorbedDose$Microgray();
 
   /// Convert to [RadiationAbsorbedDose$Rad]

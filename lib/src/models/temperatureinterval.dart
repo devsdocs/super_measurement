@@ -26,17 +26,6 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
       const TemperatureInterval$Fahrenheit();
 
   @override
-  AnchorRatio<TemperatureInterval> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<TemperatureInterval>({
-          TemperatureInterval$Kelvin: TemperatureInterval$Kelvin._ratio,
-          TemperatureInterval$Celsius: TemperatureInterval$Celsius._ratio,
-          TemperatureInterval$Rankine: TemperatureInterval$Rankine._ratio,
-          TemperatureInterval$Reaumur: TemperatureInterval$Reaumur._ratio,
-        })
-      );
-
-  @override
   TemperatureInterval get anchor => const TemperatureInterval$Fahrenheit();
 
   /// Convert to [TemperatureInterval$Kelvin]

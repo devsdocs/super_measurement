@@ -27,19 +27,6 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
       const DigitalImageResolution$DotPerInch();
 
   @override
-  AnchorRatio<DigitalImageResolution> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<DigitalImageResolution>({
-          DigitalImageResolution$DotPerMeter:
-              DigitalImageResolution$DotPerMeter._ratio,
-          DigitalImageResolution$DotPerMillimeter:
-              DigitalImageResolution$DotPerMillimeter._ratio,
-          DigitalImageResolution$PixelPerInch:
-              DigitalImageResolution$PixelPerInch._ratio,
-        })
-      );
-
-  @override
   DigitalImageResolution get anchor =>
       const DigitalImageResolution$DotPerInch();
 

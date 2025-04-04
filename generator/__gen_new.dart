@@ -47,13 +47,14 @@ Future<void> main() async {
         e as Map<String, dynamic>;
         final newMap = e.map(
           (k, v) => k == 'Value'
-              ? MapEntry('ratio', double.parse(v))
+              ? MapEntry('ratio', double.parse(v.toString()))
               : k == 'Abbreviation'
                   ? MapEntry('symbol', v)
                   : k == 'ValueShift'
-                      ? (v as String).isNotEmpty
-                          ? MapEntry(k.toLowerCase(), double.parse(v))
-                          : MapEntry(k.toLowerCase(), 0.0)
+                      ? MapEntry(
+                          'valueshift',
+                          (v as String).isNotEmpty ? double.parse(v) : 0.0,
+                        )
                       : MapEntry(k.toLowerCase(), v),
         )
           ..remove('hidden')
@@ -246,3 +247,33 @@ class NewRes {
   @override
   String toString() => '$name $ratio';
 }
+
+// // Robust scientific notation parser
+// double parseScientificNotation(String value) {
+//   try {
+//     value = value.trim();
+
+//     // Handle standard scientific notation (e.g. 6.25E+052)
+//     if (value.toUpperCase().contains('E')) {
+//       final parts = value.toUpperCase().split('E');
+//       if (parts.length != 2) return double.parse(value);
+
+//       final mantissa = double.parse(parts[0]);
+//       final exponent = int.parse(parts[1]);
+
+//       // Use precise calculation to avoid floating point errors
+//       if (exponent >= 0) {
+//         return mantissa * pow(10, exponent);
+//       } else {
+//         return mantissa / pow(10, -exponent);
+//       }
+//     }
+
+//     // Handle standard decimal notation
+//     return double.parse(value);
+//   } catch (e) {
+//     print('Error parsing value: "$value", error: $e');
+//     // Return a safe default
+//     return 0.0;
+//   }
+// }

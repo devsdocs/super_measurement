@@ -30,25 +30,6 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
       const MassFluxDensity$KilogramPerSecondMeterSquare();
 
   @override
-  AnchorRatio<MassFluxDensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<MassFluxDensity>({
-          MassFluxDensity$KilogramPerHourMeterSquare:
-              MassFluxDensity$KilogramPerHourMeterSquare._ratio,
-          MassFluxDensity$KilogramPerHourFootSquare:
-              MassFluxDensity$KilogramPerHourFootSquare._ratio,
-          MassFluxDensity$GramPerSecondMeterSquare:
-              MassFluxDensity$GramPerSecondMeterSquare._ratio,
-          MassFluxDensity$GramPerSecondCentimeterSquare:
-              MassFluxDensity$GramPerSecondCentimeterSquare._ratio,
-          MassFluxDensity$PoundPerHourFootSquare:
-              MassFluxDensity$PoundPerHourFootSquare._ratio,
-          MassFluxDensity$PoundPerSecondFootSquare:
-              MassFluxDensity$PoundPerSecondFootSquare._ratio,
-        })
-      );
-
-  @override
   MassFluxDensity get anchor =>
       const MassFluxDensity$KilogramPerSecondMeterSquare();
 

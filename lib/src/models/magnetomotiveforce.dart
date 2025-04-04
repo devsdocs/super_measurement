@@ -25,20 +25,6 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
   factory MagnetomotiveForce.anchor() => const MagnetomotiveForce$AmpereTurn();
 
   @override
-  AnchorRatio<MagnetomotiveForce> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<MagnetomotiveForce>({
-          MagnetomotiveForce$KiloampereTurn:
-              MagnetomotiveForce$KiloampereTurn._ratio,
-          MagnetomotiveForce$MilliampereTurn:
-              MagnetomotiveForce$MilliampereTurn._ratio,
-          MagnetomotiveForce$AbampereTurn:
-              MagnetomotiveForce$AbampereTurn._ratio,
-          MagnetomotiveForce$Gilbert: MagnetomotiveForce$Gilbert._ratio,
-        })
-      );
-
-  @override
   MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn();
 
   /// Convert to [MagnetomotiveForce$KiloampereTurn]

@@ -28,28 +28,6 @@ sealed class Charge extends Unit<Charge> {
   factory Charge.anchor() => const Charge$Coulomb();
 
   @override
-  AnchorRatio<Charge> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Charge>({
-          Charge$Megacoulomb: Charge$Megacoulomb._ratio,
-          Charge$Kilocoulomb: Charge$Kilocoulomb._ratio,
-          Charge$CoulombInternational: Charge$CoulombInternational._ratio,
-          Charge$Millicoulomb: Charge$Millicoulomb._ratio,
-          Charge$Microcoulomb: Charge$Microcoulomb._ratio,
-          Charge$Nanocoulomb: Charge$Nanocoulomb._ratio,
-          Charge$Picocoulomb: Charge$Picocoulomb._ratio,
-          Charge$Abcoulomb: Charge$Abcoulomb._ratio,
-          Charge$Statcoulomb: Charge$Statcoulomb._ratio,
-          Charge$Franklin: Charge$Franklin._ratio,
-          Charge$AmpereHour: Charge$AmpereHour._ratio,
-          Charge$AmpereMinute: Charge$AmpereMinute._ratio,
-          Charge$AmpereSecond: Charge$AmpereSecond._ratio,
-          Charge$Faraday: Charge$Faraday._ratio,
-          Charge$ElectronicCharge: Charge$ElectronicCharge._ratio,
-        })
-      );
-
-  @override
   Charge get anchor => const Charge$Coulomb();
 
   /// Convert to [Charge$Megacoulomb]

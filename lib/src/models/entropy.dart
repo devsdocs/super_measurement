@@ -27,24 +27,6 @@ sealed class Entropy extends Unit<Entropy> {
   factory Entropy.anchor() => const Entropy$JoulePerKilogramK();
 
   @override
-  AnchorRatio<Entropy> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Entropy>({
-          Entropy$KilojoulePerKilogramK: Entropy$KilojoulePerKilogramK._ratio,
-          Entropy$KilojoulePerKilogramDegreeC:
-              Entropy$KilojoulePerKilogramDegreeC._ratio,
-          Entropy$JoulePerKilogramDegreeC:
-              Entropy$JoulePerKilogramDegreeC._ratio,
-          Entropy$KilocaloriePerKilogramDegreeC:
-              Entropy$KilocaloriePerKilogramDegreeC._ratio,
-          Entropy$CaloriePerGramDegreeC: Entropy$CaloriePerGramDegreeC._ratio,
-          Entropy$BTUPerPoundDegreeF: Entropy$BTUPerPoundDegreeF._ratio,
-          Entropy$BTUPerPoundDegreeR: Entropy$BTUPerPoundDegreeR._ratio,
-          Entropy$CHUPerPoundDegreeC: Entropy$CHUPerPoundDegreeC._ratio,
-        })
-      );
-
-  @override
   Entropy get anchor => const Entropy$JoulePerKilogramK();
 
   /// Convert to [Entropy$KilojoulePerKilogramK]

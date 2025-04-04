@@ -9,7 +9,7 @@ sealed class Temperature extends Unit<Temperature> {
     super.value,
   ]);
 
-  /// If there is no matched key, returning [Temperature$Rankine] with 0 value
+  /// If there is no matched key, returning [Temperature$Kelvin] with 0 value
   factory Temperature.fromJson(Map<String, dynamic> json) => _checkJson(
         _majorName,
         json,
@@ -21,21 +21,10 @@ sealed class Temperature extends Unit<Temperature> {
             )
           : Temperature.anchor();
 
-  factory Temperature.anchor() => const Temperature$Rankine();
+  factory Temperature.anchor() => const Temperature$Kelvin();
 
   @override
-  AnchorRatio<Temperature> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Temperature>({
-          Temperature$Kelvin: Temperature$Kelvin._ratio,
-          Temperature$Celsius: Temperature$Celsius._ratio,
-          Temperature$Fahrenheit: Temperature$Fahrenheit._ratio,
-          Temperature$Reaumur: Temperature$Reaumur._ratio,
-        })
-      );
-
-  @override
-  Temperature get anchor => const Temperature$Rankine();
+  Temperature get anchor => const Temperature$Kelvin();
 
   /// Convert to [Temperature$Kelvin]
   Temperature get toKelvin => convertTo(
@@ -94,6 +83,107 @@ sealed class Temperature extends Unit<Temperature> {
     Temperature$Rankine._minorName: rankine,
     Temperature$Reaumur._minorName: reaumur,
   });
+
+  /// Special conversion logic for temperature units
+  @override
+  Temperature convertTo<E extends Unit<Temperature>>(E to) {
+    final result = to as Temperature;
+    if (runtimeType == to.runtimeType) return result.withValue(value);
+
+    // Handle specific temperature conversion formulas
+    switch (runtimeType) {
+      case Temperature$Kelvin:
+        // From Kelvin to others
+        if (to is Temperature$Celsius) return to.withValue(value - 273.15);
+        if (to is Temperature$Fahrenheit) {
+          return to.withValue((value * 9 / 5) - 459.67);
+        }
+        if (to is Temperature$Rankine) return to.withValue(value * 9 / 5);
+        if (to is Temperature$Reaumur) {
+          return to.withValue((value - 273.15) * 4 / 5);
+        }
+
+      case Temperature$Celsius:
+        // From Celsius to others
+        if (to is Temperature$Kelvin) return to.withValue(value + 273.15);
+        if (to is Temperature$Fahrenheit) {
+          return to.withValue((value * 9 / 5) + 32);
+        }
+        if (to is Temperature$Rankine) {
+          return to.withValue((value + 273.15) * 9 / 5);
+        }
+        if (to is Temperature$Reaumur) return to.withValue(value * 4 / 5);
+
+      case Temperature$Fahrenheit:
+        // From Fahrenheit to others
+        if (to is Temperature$Kelvin) {
+          return to.withValue((value + 459.67) * 5 / 9);
+        }
+        if (to is Temperature$Celsius) {
+          return to.withValue((value - 32) * 5 / 9);
+        }
+        if (to is Temperature$Rankine) return to.withValue(value + 459.67);
+        if (to is Temperature$Reaumur) {
+          return to.withValue((value - 32) * 4 / 9);
+        }
+
+      case Temperature$Rankine:
+        // From Rankine to others
+        if (to is Temperature$Kelvin) return to.withValue(value * 5 / 9);
+        if (to is Temperature$Celsius) {
+          return to.withValue((value - 491.67) * 5 / 9);
+        }
+        if (to is Temperature$Fahrenheit) return to.withValue(value - 459.67);
+        if (to is Temperature$Reaumur) {
+          return to.withValue((value - 491.67) * 4 / 9);
+        }
+
+      case Temperature$Reaumur:
+        // From Réaumur to others
+        if (to is Temperature$Kelvin) {
+          return to.withValue((value * 5 / 4) + 273.15);
+        }
+        if (to is Temperature$Celsius) return to.withValue(value * 5 / 4);
+        if (to is Temperature$Fahrenheit) {
+          return to.withValue((value * 9 / 4) + 32);
+        }
+        if (to is Temperature$Rankine) {
+          return to.withValue((value * 9 / 4) + 491.67);
+        }
+    }
+
+    // Fallback: use the standard conversion method through the anchor unit
+    return super.convertTo(to);
+  }
+
+  @override
+  bool _convertAndCompare(String operator, Temperature other) {
+    // Always convert to Kelvin for comparison
+    final thisKelvin = convertTo(Temperature.kelvin).value;
+    final otherKelvin = other.convertTo(Temperature.kelvin).value;
+
+    switch (operator) {
+      case '==':
+        return thisKelvin == otherKelvin;
+      case '>':
+        return thisKelvin > otherKelvin;
+      case '>=':
+        return thisKelvin >= otherKelvin;
+      case '<':
+        return thisKelvin < otherKelvin;
+      default:
+        return thisKelvin <= otherKelvin;
+    }
+  }
+
+  @override
+  Temperature _convertAndCombine(String operator, Temperature other) {
+    // Convert other to this type first
+    final otherConverted = other.convertTo(this);
+    return operator == '+'
+        ? withValue(value + otherConverted.value)
+        : withValue(value - otherConverted.value);
+  }
 }
 
 /// Unit of [Temperature]
@@ -128,7 +218,7 @@ final class Temperature$Kelvin extends Temperature {
 
   static const _ratio = 1.8;
 
-  /// 1 [Temperature$Kelvin] ≈ 1.8 [Temperature$Rankine]
+  /// Default (anchor) unit of [Temperature]
   @override
   num get ratio => _ratio;
 
@@ -193,7 +283,7 @@ final class Temperature$Celsius extends Temperature {
 
   static const _ratio = 1.8;
 
-  /// 1 [Temperature$Celsius] ≈ 1.8 [Temperature$Rankine]
+  /// 1 [Temperature$Celsius] ≈ 1.8 [Temperature$Kelvin]
   ///
   /// See [valueShift]
   @override
@@ -203,7 +293,7 @@ final class Temperature$Celsius extends Temperature {
   @override
   Temperature$Celsius get _clone => Temperature$Celsius(value);
 
-  /// 1 [Temperature$Celsius] = ((1 * [ratio]) + 491.67) [Temperature$Rankine]
+  /// 1 [Temperature$Celsius] = ((1 * [ratio]) + 491.67) [Temperature$Kelvin]
   @override
   num get valueShift => 491.67;
 
@@ -260,7 +350,7 @@ final class Temperature$Fahrenheit extends Temperature {
 
   static const _ratio = 1.0;
 
-  /// 1 [Temperature$Fahrenheit] = 1.0 [Temperature$Rankine]
+  /// 1 [Temperature$Fahrenheit] = 1.0 [Temperature$Kelvin]
   ///
   /// See [valueShift]
   @override
@@ -270,7 +360,7 @@ final class Temperature$Fahrenheit extends Temperature {
   @override
   Temperature$Fahrenheit get _clone => Temperature$Fahrenheit(value);
 
-  /// 1 [Temperature$Fahrenheit] = ((1 * [ratio]) + 459.67) [Temperature$Rankine]
+  /// 1 [Temperature$Fahrenheit] = ((1 * [ratio]) + 459.67) [Temperature$Kelvin]
   @override
   num get valueShift => 459.67;
 
@@ -327,7 +417,7 @@ final class Temperature$Rankine extends Temperature {
 
   static const _ratio = 1.0;
 
-  /// Default (anchor) unit of [Temperature]
+  /// 1 [Temperature$Rankine] = 1.0 [Temperature$Kelvin]
   @override
   num get ratio => _ratio;
 
@@ -392,7 +482,7 @@ final class Temperature$Reaumur extends Temperature {
 
   static const _ratio = 2.25;
 
-  /// 1 [Temperature$Reaumur] ≈ 2.25 [Temperature$Rankine]
+  /// 1 [Temperature$Reaumur] ≈ 2.25 [Temperature$Kelvin]
   ///
   /// See [valueShift]
   @override
@@ -402,7 +492,7 @@ final class Temperature$Reaumur extends Temperature {
   @override
   Temperature$Reaumur get _clone => Temperature$Reaumur(value);
 
-  /// 1 [Temperature$Reaumur] = ((1 * [ratio]) + 491.67) [Temperature$Rankine]
+  /// 1 [Temperature$Reaumur] = ((1 * [ratio]) + 491.67) [Temperature$Kelvin]
   @override
   num get valueShift => 491.67;
 

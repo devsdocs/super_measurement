@@ -28,21 +28,6 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
       const AccelerationAngular$RevolutionPerMinuteSecond();
 
   @override
-  AnchorRatio<AccelerationAngular> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<AccelerationAngular>({
-          AccelerationAngular$RadianPerSecondSquare:
-              AccelerationAngular$RadianPerSecondSquare._ratio,
-          AccelerationAngular$RadianPerMinuteSquare:
-              AccelerationAngular$RadianPerMinuteSquare._ratio,
-          AccelerationAngular$RevolutionPerSecondSquare:
-              AccelerationAngular$RevolutionPerSecondSquare._ratio,
-          AccelerationAngular$RevolutionPerMinuteSquare:
-              AccelerationAngular$RevolutionPerMinuteSquare._ratio,
-        })
-      );
-
-  @override
   AccelerationAngular get anchor =>
       const AccelerationAngular$RevolutionPerMinuteSecond();
 

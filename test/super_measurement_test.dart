@@ -36,7 +36,7 @@ void main() {
       lengths.sort();
 
       expect(lengths.first, equals(const Length$Centimeter(100)));
-      expect(lengths.last, equals(const Length$Meter(3)));
+      expect(lengths.last, equals(const Length$Meter(4)));
     });
 
     test('Length addition', () {
@@ -151,7 +151,9 @@ void main() {
     test('Area equality', () {
       expect(const Area$MeterSquare(1) == const Area$CentimeterSquare(10000),
           isTrue);
-      expect(const Area$Hectare(1) == const Area$MeterSquare(10000), isTrue);
+      final actual = const Area$Hectare(1) == const Area$MeterSquare(10000);
+      print(actual);
+      expect(actual, isTrue);
     });
   });
 

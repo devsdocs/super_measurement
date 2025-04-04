@@ -35,32 +35,6 @@ sealed class IlluminationLuminousIntensity
       const IlluminationLuminousIntensity$CandleInternational();
 
   @override
-  AnchorRatio<IlluminationLuminousIntensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<IlluminationLuminousIntensity>({
-          IlluminationLuminousIntensity$CandleGerman:
-              IlluminationLuminousIntensity$CandleGerman._ratio,
-          IlluminationLuminousIntensity$CandlePentane:
-              IlluminationLuminousIntensity$CandlePentane._ratio,
-          IlluminationLuminousIntensity$CandleUK:
-              IlluminationLuminousIntensity$CandleUK._ratio,
-          IlluminationLuminousIntensity$DecimalCandle:
-              IlluminationLuminousIntensity$DecimalCandle._ratio,
-          IlluminationLuminousIntensity$HefnerCandle:
-              IlluminationLuminousIntensity$HefnerCandle._ratio,
-          IlluminationLuminousIntensity$CarcelUnit:
-              IlluminationLuminousIntensity$CarcelUnit._ratio,
-          IlluminationLuminousIntensity$BougieDecimal:
-              IlluminationLuminousIntensity$BougieDecimal._ratio,
-          IlluminationLuminousIntensity$LumenInternationalPerSteradian:
-              IlluminationLuminousIntensity$LumenInternationalPerSteradian
-                  ._ratio,
-          IlluminationLuminousIntensity$PentaneCandle10CandlePower:
-              IlluminationLuminousIntensity$PentaneCandle10CandlePower._ratio,
-        })
-      );
-
-  @override
   IlluminationLuminousIntensity get anchor =>
       const IlluminationLuminousIntensity$CandleInternational();
 

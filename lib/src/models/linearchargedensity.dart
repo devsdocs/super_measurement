@@ -29,23 +29,6 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
       const LinearChargeDensity$CoulombPerMeter();
 
   @override
-  AnchorRatio<LinearChargeDensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<LinearChargeDensity>({
-          LinearChargeDensity$CoulombPerCentimeter:
-              LinearChargeDensity$CoulombPerCentimeter._ratio,
-          LinearChargeDensity$CoulombPerInch:
-              LinearChargeDensity$CoulombPerInch._ratio,
-          LinearChargeDensity$AbcoulombPerMeter:
-              LinearChargeDensity$AbcoulombPerMeter._ratio,
-          LinearChargeDensity$AbcoulombPerCentimeter:
-              LinearChargeDensity$AbcoulombPerCentimeter._ratio,
-          LinearChargeDensity$AbcoulombPerInch:
-              LinearChargeDensity$AbcoulombPerInch._ratio,
-        })
-      );
-
-  @override
   LinearChargeDensity get anchor => const LinearChargeDensity$CoulombPerMeter();
 
   /// Convert to [LinearChargeDensity$CoulombPerMeter]

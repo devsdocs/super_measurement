@@ -26,27 +26,6 @@ sealed class Angle extends Unit<Angle> {
   factory Angle.anchor() => const Angle$Second();
 
   @override
-  AnchorRatio<Angle> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Angle>({
-          Angle$Degree: Angle$Degree._ratio,
-          Angle$Radian: Angle$Radian._ratio,
-          Angle$Grad: Angle$Grad._ratio,
-          Angle$Minute: Angle$Minute._ratio,
-          Angle$Sign: Angle$Sign._ratio,
-          Angle$Mil: Angle$Mil._ratio,
-          Angle$Revolution: Angle$Revolution._ratio,
-          Angle$Circle: Angle$Circle._ratio,
-          Angle$Turn: Angle$Turn._ratio,
-          Angle$Quadrant: Angle$Quadrant._ratio,
-          Angle$RightAngle: Angle$RightAngle._ratio,
-          Angle$Sextant: Angle$Sextant._ratio,
-          Angle$Octant: Angle$Octant._ratio,
-          Angle$PercentOfFullCircle: Angle$PercentOfFullCircle._ratio,
-        })
-      );
-
-  @override
   Angle get anchor => const Angle$Second();
 
   /// Convert to [Angle$Degree]

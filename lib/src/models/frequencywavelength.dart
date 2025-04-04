@@ -44,57 +44,6 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
   factory FrequencyWavelength.anchor() => const FrequencyWavelength$Hertz();
 
   @override
-  AnchorRatio<FrequencyWavelength> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<FrequencyWavelength>({
-          FrequencyWavelength$Exahertz: FrequencyWavelength$Exahertz._ratio,
-          FrequencyWavelength$Petahertz: FrequencyWavelength$Petahertz._ratio,
-          FrequencyWavelength$Terahertz: FrequencyWavelength$Terahertz._ratio,
-          FrequencyWavelength$Gigahertz: FrequencyWavelength$Gigahertz._ratio,
-          FrequencyWavelength$Megahertz: FrequencyWavelength$Megahertz._ratio,
-          FrequencyWavelength$Kilohertz: FrequencyWavelength$Kilohertz._ratio,
-          FrequencyWavelength$Hectohertz: FrequencyWavelength$Hectohertz._ratio,
-          FrequencyWavelength$Dekahertz: FrequencyWavelength$Dekahertz._ratio,
-          FrequencyWavelength$Decihertz: FrequencyWavelength$Decihertz._ratio,
-          FrequencyWavelength$Centihertz: FrequencyWavelength$Centihertz._ratio,
-          FrequencyWavelength$Millihertz: FrequencyWavelength$Millihertz._ratio,
-          FrequencyWavelength$Microhertz: FrequencyWavelength$Microhertz._ratio,
-          FrequencyWavelength$Nanohertz: FrequencyWavelength$Nanohertz._ratio,
-          FrequencyWavelength$Picohertz: FrequencyWavelength$Picohertz._ratio,
-          FrequencyWavelength$Femtohertz: FrequencyWavelength$Femtohertz._ratio,
-          FrequencyWavelength$Attohertz: FrequencyWavelength$Attohertz._ratio,
-          FrequencyWavelength$CyclePerSecond:
-              FrequencyWavelength$CyclePerSecond._ratio,
-          FrequencyWavelength$WavelengthInExametres:
-              FrequencyWavelength$WavelengthInExametres._ratio,
-          FrequencyWavelength$WavelengthInPetametres:
-              FrequencyWavelength$WavelengthInPetametres._ratio,
-          FrequencyWavelength$WavelengthInTerametres:
-              FrequencyWavelength$WavelengthInTerametres._ratio,
-          FrequencyWavelength$WavelengthInGigametres:
-              FrequencyWavelength$WavelengthInGigametres._ratio,
-          FrequencyWavelength$WavelengthInMegametres:
-              FrequencyWavelength$WavelengthInMegametres._ratio,
-          FrequencyWavelength$WavelengthInKilometres:
-              FrequencyWavelength$WavelengthInKilometres._ratio,
-          FrequencyWavelength$WavelengthInHectometres:
-              FrequencyWavelength$WavelengthInHectometres._ratio,
-          FrequencyWavelength$WavelengthInDecametres:
-              FrequencyWavelength$WavelengthInDecametres._ratio,
-          FrequencyWavelength$WavelengthInMetres:
-              FrequencyWavelength$WavelengthInMetres._ratio,
-          FrequencyWavelength$WavelengthInDecimetres:
-              FrequencyWavelength$WavelengthInDecimetres._ratio,
-          FrequencyWavelength$WavelengthInCentimetres:
-              FrequencyWavelength$WavelengthInCentimetres._ratio,
-          FrequencyWavelength$WavelengthInMillimetres:
-              FrequencyWavelength$WavelengthInMillimetres._ratio,
-          FrequencyWavelength$WavelengthInMicrometres:
-              FrequencyWavelength$WavelengthInMicrometres._ratio,
-        })
-      );
-
-  @override
   FrequencyWavelength get anchor => const FrequencyWavelength$Hertz();
 
   /// Convert to [FrequencyWavelength$Exahertz]

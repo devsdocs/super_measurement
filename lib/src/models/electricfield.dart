@@ -27,26 +27,6 @@ sealed class ElectricField extends Unit<ElectricField> {
   factory ElectricField.anchor() => const ElectricField$KilovoltPerCentimeter();
 
   @override
-  AnchorRatio<ElectricField> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ElectricField>({
-          ElectricField$VoltPerMeter: ElectricField$VoltPerMeter._ratio,
-          ElectricField$VoltPerCentimeter:
-              ElectricField$VoltPerCentimeter._ratio,
-          ElectricField$VoltPerInch: ElectricField$VoltPerInch._ratio,
-          ElectricField$MillivoltPerMeter:
-              ElectricField$MillivoltPerMeter._ratio,
-          ElectricField$MicrovoltPerMeter:
-              ElectricField$MicrovoltPerMeter._ratio,
-          ElectricField$AbvoltPerCentimeter:
-              ElectricField$AbvoltPerCentimeter._ratio,
-          ElectricField$StatvoltPerCentimeter:
-              ElectricField$StatvoltPerCentimeter._ratio,
-          ElectricField$StatvoltPerInch: ElectricField$StatvoltPerInch._ratio,
-        })
-      );
-
-  @override
   ElectricField get anchor => const ElectricField$KilovoltPerCentimeter();
 
   /// Convert to [ElectricField$KilovoltPerCentimeter]

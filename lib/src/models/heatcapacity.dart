@@ -27,24 +27,6 @@ sealed class HeatCapacity extends Unit<HeatCapacity> {
   factory HeatCapacity.anchor() => const HeatCapacity$KilojoulePerK();
 
   @override
-  AnchorRatio<HeatCapacity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<HeatCapacity>({
-          HeatCapacity$KilojoulePerDegreeC:
-              HeatCapacity$KilojoulePerDegreeC._ratio,
-          HeatCapacity$JoulePerK: HeatCapacity$JoulePerK._ratio,
-          HeatCapacity$JoulePerDegreeC: HeatCapacity$JoulePerDegreeC._ratio,
-          HeatCapacity$KilocaloriePerDegreeC:
-              HeatCapacity$KilocaloriePerDegreeC._ratio,
-          HeatCapacity$CaloriePerDegreeC: HeatCapacity$CaloriePerDegreeC._ratio,
-          HeatCapacity$BTUPerDegreeC: HeatCapacity$BTUPerDegreeC._ratio,
-          HeatCapacity$BTUPerDegreeF: HeatCapacity$BTUPerDegreeF._ratio,
-          HeatCapacity$BTUPerDegreeR: HeatCapacity$BTUPerDegreeR._ratio,
-          HeatCapacity$CHUPerDegreeC: HeatCapacity$CHUPerDegreeC._ratio,
-        })
-      );
-
-  @override
   HeatCapacity get anchor => const HeatCapacity$KilojoulePerK();
 
   /// Convert to [HeatCapacity$KilojoulePerK]

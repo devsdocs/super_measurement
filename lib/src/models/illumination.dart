@@ -29,27 +29,6 @@ sealed class Illumination extends Unit<Illumination> {
   factory Illumination.anchor() => const Illumination$Nox();
 
   @override
-  AnchorRatio<Illumination> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Illumination>({
-          Illumination$MeterCandle: Illumination$MeterCandle._ratio,
-          Illumination$CentimeterCandle: Illumination$CentimeterCandle._ratio,
-          Illumination$FootCandle: Illumination$FootCandle._ratio,
-          Illumination$Flame: Illumination$Flame._ratio,
-          Illumination$Phot: Illumination$Phot._ratio,
-          Illumination$Lux: Illumination$Lux._ratio,
-          Illumination$LumenPerMeterSquare:
-              Illumination$LumenPerMeterSquare._ratio,
-          Illumination$LumenPerCentimeterSquare:
-              Illumination$LumenPerCentimeterSquare._ratio,
-          Illumination$LumenPerFootSquare:
-              Illumination$LumenPerFootSquare._ratio,
-          Illumination$WattPerCentimeterSquareAt555nm:
-              Illumination$WattPerCentimeterSquareAt555nm._ratio,
-        })
-      );
-
-  @override
   Illumination get anchor => const Illumination$Nox();
 
   /// Convert to [Illumination$MeterCandle]

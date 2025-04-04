@@ -23,15 +23,6 @@ sealed class Sound extends Unit<Sound> {
   factory Sound.anchor() => const Sound$Decibel();
 
   @override
-  AnchorRatio<Sound> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Sound>({
-          Sound$Bel: Sound$Bel._ratio,
-          Sound$Neper: Sound$Neper._ratio,
-        })
-      );
-
-  @override
   Sound get anchor => const Sound$Decibel();
 
   /// Convert to [Sound$Bel]

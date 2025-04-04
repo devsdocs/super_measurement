@@ -36,40 +36,6 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
       const RadiationRadioactivity$Millibecquerel();
 
   @override
-  AnchorRatio<RadiationRadioactivity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<RadiationRadioactivity>({
-          RadiationRadioactivity$Terabecquerel:
-              RadiationRadioactivity$Terabecquerel._ratio,
-          RadiationRadioactivity$Gigabecquerel:
-              RadiationRadioactivity$Gigabecquerel._ratio,
-          RadiationRadioactivity$Megabecquerel:
-              RadiationRadioactivity$Megabecquerel._ratio,
-          RadiationRadioactivity$Kilobecquerel:
-              RadiationRadioactivity$Kilobecquerel._ratio,
-          RadiationRadioactivity$Becquerel:
-              RadiationRadioactivity$Becquerel._ratio,
-          RadiationRadioactivity$Kilocurie:
-              RadiationRadioactivity$Kilocurie._ratio,
-          RadiationRadioactivity$Curie: RadiationRadioactivity$Curie._ratio,
-          RadiationRadioactivity$Millicurie:
-              RadiationRadioactivity$Millicurie._ratio,
-          RadiationRadioactivity$Microcurie:
-              RadiationRadioactivity$Microcurie._ratio,
-          RadiationRadioactivity$Nanocurie:
-              RadiationRadioactivity$Nanocurie._ratio,
-          RadiationRadioactivity$Picocurie:
-              RadiationRadioactivity$Picocurie._ratio,
-          RadiationRadioactivity$Rutherford:
-              RadiationRadioactivity$Rutherford._ratio,
-          RadiationRadioactivity$DisintegrationsPerSecond:
-              RadiationRadioactivity$DisintegrationsPerSecond._ratio,
-          RadiationRadioactivity$DisintegrationsPerMinute:
-              RadiationRadioactivity$DisintegrationsPerMinute._ratio,
-        })
-      );
-
-  @override
   RadiationRadioactivity get anchor =>
       const RadiationRadioactivity$Millibecquerel();
 

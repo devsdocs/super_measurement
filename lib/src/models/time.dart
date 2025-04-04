@@ -31,42 +31,6 @@ sealed class Time extends Unit<Time> {
   factory Time.anchor() => const Time$Attosecond();
 
   @override
-  AnchorRatio<Time> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Time>({
-          Time$Millennium: Time$Millennium._ratio,
-          Time$Century: Time$Century._ratio,
-          Time$Decade: Time$Decade._ratio,
-          Time$Year: Time$Year._ratio,
-          Time$LeapYear: Time$LeapYear._ratio,
-          Time$MeanYear: Time$MeanYear._ratio,
-          Time$SiderealYear: Time$SiderealYear._ratio,
-          Time$TropicalYear: Time$TropicalYear._ratio,
-          Time$Month: Time$Month._ratio,
-          Time$SynodicMonth: Time$SynodicMonth._ratio,
-          Time$Fortnight: Time$Fortnight._ratio,
-          Time$Week: Time$Week._ratio,
-          Time$Day: Time$Day._ratio,
-          Time$SiderealDay: Time$SiderealDay._ratio,
-          Time$Hour: Time$Hour._ratio,
-          Time$SiderealHour: Time$SiderealHour._ratio,
-          Time$Minute: Time$Minute._ratio,
-          Time$Second: Time$Second._ratio,
-          Time$Millisecond: Time$Millisecond._ratio,
-          Time$Microsecond: Time$Microsecond._ratio,
-          Time$Nanosecond: Time$Nanosecond._ratio,
-          Time$Picosecond: Time$Picosecond._ratio,
-          Time$Femtosecond: Time$Femtosecond._ratio,
-          Time$Shake: Time$Shake._ratio,
-          Time$Septennial: Time$Septennial._ratio,
-          Time$Octennial: Time$Octennial._ratio,
-          Time$Novennial: Time$Novennial._ratio,
-          Time$Quindecennial: Time$Quindecennial._ratio,
-          Time$Quinquennial: Time$Quinquennial._ratio,
-        })
-      );
-
-  @override
   Time get anchor => const Time$Attosecond();
 
   /// Convert to [Time$Millennium]

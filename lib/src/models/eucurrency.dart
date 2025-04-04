@@ -29,26 +29,6 @@ sealed class EUCurrency extends Unit<EUCurrency> {
   factory EUCurrency.anchor() => const EUCurrency$EuroEUR();
 
   @override
-  AnchorRatio<EUCurrency> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<EUCurrency>({
-          EUCurrency$IrishPoundIEP: EUCurrency$IrishPoundIEP._ratio,
-          EUCurrency$DeutschMarkDEM: EUCurrency$DeutschMarkDEM._ratio,
-          EUCurrency$DutchGuildenNLG: EUCurrency$DutchGuildenNLG._ratio,
-          EUCurrency$FinnishMarkFIM: EUCurrency$FinnishMarkFIM._ratio,
-          EUCurrency$FrenchFrancFRF: EUCurrency$FrenchFrancFRF._ratio,
-          EUCurrency$AustrianSchillingATS:
-              EUCurrency$AustrianSchillingATS._ratio,
-          EUCurrency$BelgianFrancBEF: EUCurrency$BelgianFrancBEF._ratio,
-          EUCurrency$LuxembourgFrancLUF: EUCurrency$LuxembourgFrancLUF._ratio,
-          EUCurrency$SpanishPesetaESP: EUCurrency$SpanishPesetaESP._ratio,
-          EUCurrency$PortugueseEscudoPTE: EUCurrency$PortugueseEscudoPTE._ratio,
-          EUCurrency$ItalianLireITL: EUCurrency$ItalianLireITL._ratio,
-          EUCurrency$GreekDrachmaGRD: EUCurrency$GreekDrachmaGRD._ratio,
-        })
-      );
-
-  @override
   EUCurrency get anchor => const EUCurrency$EuroEUR();
 
   /// Convert to [EUCurrency$EuroEUR]

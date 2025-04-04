@@ -32,30 +32,6 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
       const HeatTransferCoefficient$WattPerMeterSquareK();
 
   @override
-  AnchorRatio<HeatTransferCoefficient> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<HeatTransferCoefficient>({
-          HeatTransferCoefficient$WattPerMeterSquareDegreeC:
-              HeatTransferCoefficient$WattPerMeterSquareDegreeC._ratio,
-          HeatTransferCoefficient$JoulePerSecondMeterSquareK:
-              HeatTransferCoefficient$JoulePerSecondMeterSquareK._ratio,
-          HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC:
-              HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
-                  ._ratio,
-          HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC:
-              HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
-                  ._ratio,
-          HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC:
-              HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
-                  ._ratio,
-          HeatTransferCoefficient$BTUPerHourFootSquareDegreeF:
-              HeatTransferCoefficient$BTUPerHourFootSquareDegreeF._ratio,
-          HeatTransferCoefficient$CHUPerHourFootSquareDegreeC:
-              HeatTransferCoefficient$CHUPerHourFootSquareDegreeC._ratio,
-        })
-      );
-
-  @override
   HeatTransferCoefficient get anchor =>
       const HeatTransferCoefficient$WattPerMeterSquareK();
 

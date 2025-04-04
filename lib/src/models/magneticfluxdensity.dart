@@ -32,32 +32,6 @@ sealed class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
   factory MagneticFluxDensity.anchor() => const MagneticFluxDensity$Tesla();
 
   @override
-  AnchorRatio<MagneticFluxDensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<MagneticFluxDensity>({
-          MagneticFluxDensity$Gauss: MagneticFluxDensity$Gauss._ratio,
-          MagneticFluxDensity$GaussInternational:
-              MagneticFluxDensity$GaussInternational._ratio,
-          MagneticFluxDensity$LinePerCentimeterSquare:
-              MagneticFluxDensity$LinePerCentimeterSquare._ratio,
-          MagneticFluxDensity$LinePerInchSquare:
-              MagneticFluxDensity$LinePerInchSquare._ratio,
-          MagneticFluxDensity$MaxwellPerMeterSquare:
-              MagneticFluxDensity$MaxwellPerMeterSquare._ratio,
-          MagneticFluxDensity$MaxwellPerCentimeterSquare:
-              MagneticFluxDensity$MaxwellPerCentimeterSquare._ratio,
-          MagneticFluxDensity$MaxwellPerInchSquare:
-              MagneticFluxDensity$MaxwellPerInchSquare._ratio,
-          MagneticFluxDensity$WeberPerMeterSquare:
-              MagneticFluxDensity$WeberPerMeterSquare._ratio,
-          MagneticFluxDensity$WeberPerCentimeterSquare:
-              MagneticFluxDensity$WeberPerCentimeterSquare._ratio,
-          MagneticFluxDensity$WeberPerInchSquare:
-              MagneticFluxDensity$WeberPerInchSquare._ratio,
-        })
-      );
-
-  @override
   MagneticFluxDensity get anchor => const MagneticFluxDensity$Tesla();
 
   /// Convert to [MagneticFluxDensity$Tesla]

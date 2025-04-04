@@ -39,48 +39,6 @@ sealed class Density extends Unit<Density> {
   factory Density.anchor() => const Density$NanogramPerLiter();
 
   @override
-  AnchorRatio<Density> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Density>({
-          Density$KilogramPerMeterCubic: Density$KilogramPerMeterCubic._ratio,
-          Density$KilogramPerCentimeterCubic:
-              Density$KilogramPerCentimeterCubic._ratio,
-          Density$GramPerMeterCubic: Density$GramPerMeterCubic._ratio,
-          Density$GramPerCentimeterCubic: Density$GramPerCentimeterCubic._ratio,
-          Density$GramPerMillimeterCubic: Density$GramPerMillimeterCubic._ratio,
-          Density$MilligramPerMeterCubic: Density$MilligramPerMeterCubic._ratio,
-          Density$MilligramPerCentimeterCubic:
-              Density$MilligramPerCentimeterCubic._ratio,
-          Density$MilligramPerMillimeterCubic:
-              Density$MilligramPerMillimeterCubic._ratio,
-          Density$ExagramPerLiter: Density$ExagramPerLiter._ratio,
-          Density$PetagramPerLiter: Density$PetagramPerLiter._ratio,
-          Density$TeragramPerLiter: Density$TeragramPerLiter._ratio,
-          Density$GigagramPerLiter: Density$GigagramPerLiter._ratio,
-          Density$MegagramPerLiter: Density$MegagramPerLiter._ratio,
-          Density$KilogramPerLiter: Density$KilogramPerLiter._ratio,
-          Density$HectogramPerLiter: Density$HectogramPerLiter._ratio,
-          Density$DekagramPerLiter: Density$DekagramPerLiter._ratio,
-          Density$GramPerLiter: Density$GramPerLiter._ratio,
-          Density$DecigramPerLiter: Density$DecigramPerLiter._ratio,
-          Density$CentigramPerLiter: Density$CentigramPerLiter._ratio,
-          Density$MilligramPerLiter: Density$MilligramPerLiter._ratio,
-          Density$MicrogramPerLiter: Density$MicrogramPerLiter._ratio,
-          Density$PicogramPerLiter: Density$PicogramPerLiter._ratio,
-          Density$FemtogramPerLiter: Density$FemtogramPerLiter._ratio,
-          Density$AttogramPerLiter: Density$AttogramPerLiter._ratio,
-          Density$PoundPerInchCubic: Density$PoundPerInchCubic._ratio,
-          Density$PoundPerFootCubic: Density$PoundPerFootCubic._ratio,
-          Density$PoundPerGallon: Density$PoundPerGallon._ratio,
-          Density$OuncePerInchCubic: Density$OuncePerInchCubic._ratio,
-          Density$OuncePerFootCubic: Density$OuncePerFootCubic._ratio,
-          Density$OuncePerGallon: Density$OuncePerGallon._ratio,
-          Density$TonPerYardCubic: Density$TonPerYardCubic._ratio,
-          Density$PsiPer1000Feet: Density$PsiPer1000Feet._ratio,
-        })
-      );
-
-  @override
   Density get anchor => const Density$NanogramPerLiter();
 
   /// Convert to [Density$KilogramPerMeterCubic]

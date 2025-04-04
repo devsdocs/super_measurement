@@ -26,22 +26,6 @@ sealed class Current extends Unit<Current> {
   factory Current.anchor() => const Current$Milliampere();
 
   @override
-  AnchorRatio<Current> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Current>({
-          Current$Kiloampere: Current$Kiloampere._ratio,
-          Current$Ampere: Current$Ampere._ratio,
-          Current$Biot: Current$Biot._ratio,
-          Current$Abampere: Current$Abampere._ratio,
-          Current$Statampere: Current$Statampere._ratio,
-          Current$EMUOfCurrent: Current$EMUOfCurrent._ratio,
-          Current$ESUOfCurrent: Current$ESUOfCurrent._ratio,
-          Current$CGSEMUnit: Current$CGSEMUnit._ratio,
-          Current$CGSESUnit: Current$CGSESUnit._ratio,
-        })
-      );
-
-  @override
   Current get anchor => const Current$Milliampere();
 
   /// Convert to [Current$Kiloampere]

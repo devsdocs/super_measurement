@@ -39,45 +39,6 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
       const AccelerationLinear$MeterPerSecondSquare();
 
   @override
-  AnchorRatio<AccelerationLinear> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<AccelerationLinear>({
-          AccelerationLinear$KilometerPerSecondSquare:
-              AccelerationLinear$KilometerPerSecondSquare._ratio,
-          AccelerationLinear$HectometerPerSecondSquare:
-              AccelerationLinear$HectometerPerSecondSquare._ratio,
-          AccelerationLinear$DekameterPerSecondSquare:
-              AccelerationLinear$DekameterPerSecondSquare._ratio,
-          AccelerationLinear$DecimeterPerSecondSquare:
-              AccelerationLinear$DecimeterPerSecondSquare._ratio,
-          AccelerationLinear$CentimeterPerSecondSquare:
-              AccelerationLinear$CentimeterPerSecondSquare._ratio,
-          AccelerationLinear$MillimeterPerSecondSquare:
-              AccelerationLinear$MillimeterPerSecondSquare._ratio,
-          AccelerationLinear$MicrometerPerSecondSquare:
-              AccelerationLinear$MicrometerPerSecondSquare._ratio,
-          AccelerationLinear$NanometerPerSecondSquare:
-              AccelerationLinear$NanometerPerSecondSquare._ratio,
-          AccelerationLinear$PicometerPerSecondSquare:
-              AccelerationLinear$PicometerPerSecondSquare._ratio,
-          AccelerationLinear$FemtometerPerSecondSquare:
-              AccelerationLinear$FemtometerPerSecondSquare._ratio,
-          AccelerationLinear$AttometerPerSecondSquare:
-              AccelerationLinear$AttometerPerSecondSquare._ratio,
-          AccelerationLinear$G: AccelerationLinear$G._ratio,
-          AccelerationLinear$Gal: AccelerationLinear$Gal._ratio,
-          AccelerationLinear$MilePerSecondSquare:
-              AccelerationLinear$MilePerSecondSquare._ratio,
-          AccelerationLinear$YardPerSecondSquare:
-              AccelerationLinear$YardPerSecondSquare._ratio,
-          AccelerationLinear$FootPerSecondSquare:
-              AccelerationLinear$FootPerSecondSquare._ratio,
-          AccelerationLinear$InchPerSecondSquare:
-              AccelerationLinear$InchPerSecondSquare._ratio,
-        })
-      );
-
-  @override
   AccelerationLinear get anchor =>
       const AccelerationLinear$MeterPerSecondSquare();
 

@@ -27,25 +27,6 @@ sealed class VolumeDry extends Unit<VolumeDry> {
   factory VolumeDry.anchor() => const VolumeDry$LogBiblical();
 
   @override
-  AnchorRatio<VolumeDry> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<VolumeDry>({
-          VolumeDry$Barrel: VolumeDry$Barrel._ratio,
-          VolumeDry$Liter: VolumeDry$Liter._ratio,
-          VolumeDry$Pint: VolumeDry$Pint._ratio,
-          VolumeDry$Quart: VolumeDry$Quart._ratio,
-          VolumeDry$Peck: VolumeDry$Peck._ratio,
-          VolumeDry$Bushel: VolumeDry$Bushel._ratio,
-          VolumeDry$CorBiblical: VolumeDry$CorBiblical._ratio,
-          VolumeDry$HomerBiblical: VolumeDry$HomerBiblical._ratio,
-          VolumeDry$EphahBiblical: VolumeDry$EphahBiblical._ratio,
-          VolumeDry$SeahBiblical: VolumeDry$SeahBiblical._ratio,
-          VolumeDry$OmerBiblical: VolumeDry$OmerBiblical._ratio,
-          VolumeDry$CabBiblical: VolumeDry$CabBiblical._ratio,
-        })
-      );
-
-  @override
   VolumeDry get anchor => const VolumeDry$LogBiblical();
 
   /// Convert to [VolumeDry$Barrel]

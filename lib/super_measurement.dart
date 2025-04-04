@@ -88,3 +88,6 @@ part 'src/models/surfacetension.dart';
 part 'src/models/time.dart';
 part 'src/models/torque.dart';
 part 'src/models/volume.dart';
+part 'src/temperature_helper.dart';
+part 'src/anchor_ratio.dart';
+part 'src/precision.dart';

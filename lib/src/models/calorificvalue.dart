@@ -29,28 +29,6 @@ sealed class CalorificValue extends Unit<CalorificValue> {
   factory CalorificValue.anchor() => const CalorificValue$BTUPerFootCubic();
 
   @override
-  AnchorRatio<CalorificValue> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<CalorificValue>({
-          CalorificValue$MegajoulePerMeterCubic:
-              CalorificValue$MegajoulePerMeterCubic._ratio,
-          CalorificValue$KilojoulePerMeterCubic:
-              CalorificValue$KilojoulePerMeterCubic._ratio,
-          CalorificValue$JoulePerMeterCubic:
-              CalorificValue$JoulePerMeterCubic._ratio,
-          CalorificValue$KilocaloriePerMeterCubic:
-              CalorificValue$KilocaloriePerMeterCubic._ratio,
-          CalorificValue$CaloriePerCentimeterCubic:
-              CalorificValue$CaloriePerCentimeterCubic._ratio,
-          CalorificValue$ThermPerFootCubic:
-              CalorificValue$ThermPerFootCubic._ratio,
-          CalorificValue$ThermPerGallonUK:
-              CalorificValue$ThermPerGallonUK._ratio,
-          CalorificValue$CHUPerFootCubic: CalorificValue$CHUPerFootCubic._ratio,
-        })
-      );
-
-  @override
   CalorificValue get anchor => const CalorificValue$BTUPerFootCubic();
 
   /// Convert to [CalorificValue$MegajoulePerMeterCubic]

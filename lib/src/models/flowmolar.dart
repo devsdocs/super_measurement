@@ -35,38 +35,6 @@ sealed class FlowMolar extends Unit<FlowMolar> {
   factory FlowMolar.anchor() => const FlowMolar$MolPerDay();
 
   @override
-  AnchorRatio<FlowMolar> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<FlowMolar>({
-          FlowMolar$ExamolPerSecond: FlowMolar$ExamolPerSecond._ratio,
-          FlowMolar$PetamolPerSecond: FlowMolar$PetamolPerSecond._ratio,
-          FlowMolar$TeramolPerSecond: FlowMolar$TeramolPerSecond._ratio,
-          FlowMolar$GigamolPerSecond: FlowMolar$GigamolPerSecond._ratio,
-          FlowMolar$MegamolPerSecond: FlowMolar$MegamolPerSecond._ratio,
-          FlowMolar$KilomolPerSecond: FlowMolar$KilomolPerSecond._ratio,
-          FlowMolar$HectomolPerSecond: FlowMolar$HectomolPerSecond._ratio,
-          FlowMolar$DekamolPerSecond: FlowMolar$DekamolPerSecond._ratio,
-          FlowMolar$MolPerSecond: FlowMolar$MolPerSecond._ratio,
-          FlowMolar$DecimolPerSecond: FlowMolar$DecimolPerSecond._ratio,
-          FlowMolar$CentimolPerSecond: FlowMolar$CentimolPerSecond._ratio,
-          FlowMolar$MillimolPerSecond: FlowMolar$MillimolPerSecond._ratio,
-          FlowMolar$MicromolPerSecond: FlowMolar$MicromolPerSecond._ratio,
-          FlowMolar$NanomolPerSecond: FlowMolar$NanomolPerSecond._ratio,
-          FlowMolar$PicomolPerSecond: FlowMolar$PicomolPerSecond._ratio,
-          FlowMolar$FemtomolPerSecond: FlowMolar$FemtomolPerSecond._ratio,
-          FlowMolar$AttomolPerSecond: FlowMolar$AttomolPerSecond._ratio,
-          FlowMolar$MolPerMinute: FlowMolar$MolPerMinute._ratio,
-          FlowMolar$MolPerHour: FlowMolar$MolPerHour._ratio,
-          FlowMolar$MillimolPerMinute: FlowMolar$MillimolPerMinute._ratio,
-          FlowMolar$MillimolPerHour: FlowMolar$MillimolPerHour._ratio,
-          FlowMolar$MillimolPerDay: FlowMolar$MillimolPerDay._ratio,
-          FlowMolar$KilomolPerMinute: FlowMolar$KilomolPerMinute._ratio,
-          FlowMolar$KilomolPerHour: FlowMolar$KilomolPerHour._ratio,
-          FlowMolar$KilomolPerDay: FlowMolar$KilomolPerDay._ratio,
-        })
-      );
-
-  @override
   FlowMolar get anchor => const FlowMolar$MolPerDay();
 
   /// Convert to [FlowMolar$ExamolPerSecond]

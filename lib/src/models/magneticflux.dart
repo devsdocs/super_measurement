@@ -26,25 +26,6 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
   factory MagneticFlux.anchor() => const MagneticFlux$Weber();
 
   @override
-  AnchorRatio<MagneticFlux> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<MagneticFlux>({
-          MagneticFlux$VoltSecond: MagneticFlux$VoltSecond._ratio,
-          MagneticFlux$Megaline: MagneticFlux$Megaline._ratio,
-          MagneticFlux$Kiloline: MagneticFlux$Kiloline._ratio,
-          MagneticFlux$Line: MagneticFlux$Line._ratio,
-          MagneticFlux$Maxwell: MagneticFlux$Maxwell._ratio,
-          MagneticFlux$MaxwellInternational:
-              MagneticFlux$MaxwellInternational._ratio,
-          MagneticFlux$TeslaMeterSquare: MagneticFlux$TeslaMeterSquare._ratio,
-          MagneticFlux$TeslaCentimeterSquare:
-              MagneticFlux$TeslaCentimeterSquare._ratio,
-          MagneticFlux$GaussCentimeterSquare:
-              MagneticFlux$GaussCentimeterSquare._ratio,
-        })
-      );
-
-  @override
   MagneticFlux get anchor => const MagneticFlux$Weber();
 
   /// Convert to [MagneticFlux$Weber]

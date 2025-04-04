@@ -26,16 +26,6 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
       const HVACEfficiency$COPCoefficientOfPerformace();
 
   @override
-  AnchorRatio<HVACEfficiency> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<HVACEfficiency>({
-          HVACEfficiency$EEREnergyEfficiencyRatio:
-              HVACEfficiency$EEREnergyEfficiencyRatio._ratio,
-          HVACEfficiency$KilowattPerTon: HVACEfficiency$KilowattPerTon._ratio,
-        })
-      );
-
-  @override
   HVACEfficiency get anchor =>
       const HVACEfficiency$COPCoefficientOfPerformace();
 

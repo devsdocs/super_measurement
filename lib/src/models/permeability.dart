@@ -27,21 +27,6 @@ sealed class Permeability extends Unit<Permeability> {
       const Permeability$KilogramPerPascalSecondMeterSquare();
 
   @override
-  AnchorRatio<Permeability> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Permeability>({
-          Permeability$Permeability0DegreeC:
-              Permeability$Permeability0DegreeC._ratio,
-          Permeability$Permeability23DegreeC:
-              Permeability$Permeability23DegreeC._ratio,
-          Permeability$PermeabilityInches0DegreeC:
-              Permeability$PermeabilityInches0DegreeC._ratio,
-          Permeability$PermeabilityInches23DegreeC:
-              Permeability$PermeabilityInches23DegreeC._ratio,
-        })
-      );
-
-  @override
   Permeability get anchor =>
       const Permeability$KilogramPerPascalSecondMeterSquare();
 

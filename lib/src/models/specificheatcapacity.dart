@@ -35,33 +35,6 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
       const SpecificHeatCapacity$JoulePerKilogramK();
 
   @override
-  AnchorRatio<SpecificHeatCapacity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<SpecificHeatCapacity>({
-          SpecificHeatCapacity$KilojoulePerKilogramK:
-              SpecificHeatCapacity$KilojoulePerKilogramK._ratio,
-          SpecificHeatCapacity$KilojoulePerKilogramDegreeC:
-              SpecificHeatCapacity$KilojoulePerKilogramDegreeC._ratio,
-          SpecificHeatCapacity$JoulePerKilogramDegreeC:
-              SpecificHeatCapacity$JoulePerKilogramDegreeC._ratio,
-          SpecificHeatCapacity$JoulePerGramDegreeC:
-              SpecificHeatCapacity$JoulePerGramDegreeC._ratio,
-          SpecificHeatCapacity$KilocaloriePerKilogramDegreeC:
-              SpecificHeatCapacity$KilocaloriePerKilogramDegreeC._ratio,
-          SpecificHeatCapacity$CaloriePerGramDegreeC:
-              SpecificHeatCapacity$CaloriePerGramDegreeC._ratio,
-          SpecificHeatCapacity$BTUPerPoundDegreeC:
-              SpecificHeatCapacity$BTUPerPoundDegreeC._ratio,
-          SpecificHeatCapacity$BTUPerPoundDegreeF:
-              SpecificHeatCapacity$BTUPerPoundDegreeF._ratio,
-          SpecificHeatCapacity$BTUPerPoundDegreeR:
-              SpecificHeatCapacity$BTUPerPoundDegreeR._ratio,
-          SpecificHeatCapacity$CHUPerPoundDegreeC:
-              SpecificHeatCapacity$CHUPerPoundDegreeC._ratio,
-        })
-      );
-
-  @override
   SpecificHeatCapacity get anchor =>
       const SpecificHeatCapacity$JoulePerKilogramK();
 

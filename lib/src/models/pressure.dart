@@ -41,64 +41,6 @@ sealed class Pressure extends Unit<Pressure> {
   factory Pressure.anchor() => const Pressure$Decipascal();
 
   @override
-  AnchorRatio<Pressure> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Pressure>({
-          Pressure$Exapascal: Pressure$Exapascal._ratio,
-          Pressure$Petapascal: Pressure$Petapascal._ratio,
-          Pressure$Terapascal: Pressure$Terapascal._ratio,
-          Pressure$Gigapascal: Pressure$Gigapascal._ratio,
-          Pressure$Megapascal: Pressure$Megapascal._ratio,
-          Pressure$Kilopascal: Pressure$Kilopascal._ratio,
-          Pressure$Hectopascal: Pressure$Hectopascal._ratio,
-          Pressure$Dekapascal: Pressure$Dekapascal._ratio,
-          Pressure$Pascal: Pressure$Pascal._ratio,
-          Pressure$Centipascal: Pressure$Centipascal._ratio,
-          Pressure$Millipascal: Pressure$Millipascal._ratio,
-          Pressure$Micropascal: Pressure$Micropascal._ratio,
-          Pressure$Nanopascal: Pressure$Nanopascal._ratio,
-          Pressure$Picopascal: Pressure$Picopascal._ratio,
-          Pressure$Femtopascal: Pressure$Femtopascal._ratio,
-          Pressure$Attopascal: Pressure$Attopascal._ratio,
-          Pressure$KilonewtonPerMeterSquare:
-              Pressure$KilonewtonPerMeterSquare._ratio,
-          Pressure$NewtonPerMeterSquare: Pressure$NewtonPerMeterSquare._ratio,
-          Pressure$NewtonPerCentimeterSquare:
-              Pressure$NewtonPerCentimeterSquare._ratio,
-          Pressure$NewtonPerMillimeterSquare:
-              Pressure$NewtonPerMillimeterSquare._ratio,
-          Pressure$Bar: Pressure$Bar._ratio,
-          Pressure$Millibar: Pressure$Millibar._ratio,
-          Pressure$Microbar: Pressure$Microbar._ratio,
-          Pressure$Atmosphere: Pressure$Atmosphere._ratio,
-          Pressure$Psi: Pressure$Psi._ratio,
-          Pressure$DynePerCentimeterSquare:
-              Pressure$DynePerCentimeterSquare._ratio,
-          Pressure$KilogramPerMeterSquare:
-              Pressure$KilogramPerMeterSquare._ratio,
-          Pressure$KilogramPerCentimeterSquare:
-              Pressure$KilogramPerCentimeterSquare._ratio,
-          Pressure$KilogramPerMillimeterSquare:
-              Pressure$KilogramPerMillimeterSquare._ratio,
-          Pressure$TonPerFootSquare: Pressure$TonPerFootSquare._ratio,
-          Pressure$TonPerInchSquare: Pressure$TonPerInchSquare._ratio,
-          Pressure$PoundPerFootSquare: Pressure$PoundPerFootSquare._ratio,
-          Pressure$PoundPerInchSquare: Pressure$PoundPerInchSquare._ratio,
-          Pressure$KipPerInchSquare: Pressure$KipPerInchSquare._ratio,
-          Pressure$Torr: Pressure$Torr._ratio,
-          Pressure$CentimeterMercury0DegreeC:
-              Pressure$CentimeterMercury0DegreeC._ratio,
-          Pressure$MillimeterMercury0DegreeC:
-              Pressure$MillimeterMercury0DegreeC._ratio,
-          Pressure$InchMercury32DegreeF: Pressure$InchMercury32DegreeF._ratio,
-          Pressure$CentimeterWater4DegreeC:
-              Pressure$CentimeterWater4DegreeC._ratio,
-          Pressure$InchWater60DegreeF: Pressure$InchWater60DegreeF._ratio,
-          Pressure$FootWater60DegreeF: Pressure$FootWater60DegreeF._ratio,
-        })
-      );
-
-  @override
   Pressure get anchor => const Pressure$Decipascal();
 
   /// Convert to [Pressure$Exapascal]

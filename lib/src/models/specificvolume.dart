@@ -28,24 +28,6 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
       const SpecificVolume$MeterCubicPerKilogram();
 
   @override
-  AnchorRatio<SpecificVolume> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<SpecificVolume>({
-          SpecificVolume$CentimeterCubicPerGram:
-              SpecificVolume$CentimeterCubicPerGram._ratio,
-          SpecificVolume$LiterPerKilogram:
-              SpecificVolume$LiterPerKilogram._ratio,
-          SpecificVolume$LiterPerGram: SpecificVolume$LiterPerGram._ratio,
-          SpecificVolume$FeetCubicPerKilogram:
-              SpecificVolume$FeetCubicPerKilogram._ratio,
-          SpecificVolume$FeetCubicPerPound:
-              SpecificVolume$FeetCubicPerPound._ratio,
-          SpecificVolume$GallonUKPerPound:
-              SpecificVolume$GallonUKPerPound._ratio,
-        })
-      );
-
-  @override
   SpecificVolume get anchor => const SpecificVolume$MeterCubicPerKilogram();
 
   /// Convert to [SpecificVolume$MeterCubicPerKilogram]

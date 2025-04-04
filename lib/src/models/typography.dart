@@ -26,23 +26,6 @@ sealed class Typography extends Unit<Typography> {
   factory Typography.anchor() => const Typography$Inch();
 
   @override
-  AnchorRatio<Typography> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Typography>({
-          Typography$PostScriptPointDTP: Typography$PostScriptPointDTP._ratio,
-          Typography$PrintersPointAmerican:
-              Typography$PrintersPointAmerican._ratio,
-          Typography$DidotsPoint: Typography$DidotsPoint._ratio,
-          Typography$PicaPostScriptDTPComputer:
-              Typography$PicaPostScriptDTPComputer._ratio,
-          Typography$PicaPrinters: Typography$PicaPrinters._ratio,
-          Typography$Ciceros: Typography$Ciceros._ratio,
-          Typography$Millimeter: Typography$Millimeter._ratio,
-          Typography$Centimeter: Typography$Centimeter._ratio,
-        })
-      );
-
-  @override
   Typography get anchor => const Typography$Inch();
 
   /// Convert to [Typography$PostScriptPointDTP]

@@ -33,34 +33,6 @@ sealed class Velocity extends Unit<Velocity> {
   factory Velocity.anchor() => const Velocity$CentimeterPerHour();
 
   @override
-  AnchorRatio<Velocity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Velocity>({
-          Velocity$KilometerPerHour: Velocity$KilometerPerHour._ratio,
-          Velocity$KilometerPerMinute: Velocity$KilometerPerMinute._ratio,
-          Velocity$KilometerPerSecond: Velocity$KilometerPerSecond._ratio,
-          Velocity$MeterPerHour: Velocity$MeterPerHour._ratio,
-          Velocity$MeterPerMinute: Velocity$MeterPerMinute._ratio,
-          Velocity$MeterPerSecond: Velocity$MeterPerSecond._ratio,
-          Velocity$CentimeterPerMinute: Velocity$CentimeterPerMinute._ratio,
-          Velocity$CentimeterPerSecond: Velocity$CentimeterPerSecond._ratio,
-          Velocity$MilePerHour: Velocity$MilePerHour._ratio,
-          Velocity$MilePerMinute: Velocity$MilePerMinute._ratio,
-          Velocity$MilePerSecond: Velocity$MilePerSecond._ratio,
-          Velocity$YardPerHour: Velocity$YardPerHour._ratio,
-          Velocity$YardPerMinute: Velocity$YardPerMinute._ratio,
-          Velocity$YardPerSecond: Velocity$YardPerSecond._ratio,
-          Velocity$FootPerHour: Velocity$FootPerHour._ratio,
-          Velocity$FootPerMinute: Velocity$FootPerMinute._ratio,
-          Velocity$FootPerSecond: Velocity$FootPerSecond._ratio,
-          Velocity$MachSIStandard: Velocity$MachSIStandard._ratio,
-          Velocity$MachAtSeaLevel: Velocity$MachAtSeaLevel._ratio,
-          Velocity$Light: Velocity$Light._ratio,
-          Velocity$Knot: Velocity$Knot._ratio,
-        })
-      );
-
-  @override
   Velocity get anchor => const Velocity$CentimeterPerHour();
 
   /// Convert to [Velocity$KilometerPerHour]

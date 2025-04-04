@@ -29,32 +29,6 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
   factory VelocityAngular.anchor() => const VelocityAngular$DegreePerDay();
 
   @override
-  AnchorRatio<VelocityAngular> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<VelocityAngular>({
-          VelocityAngular$DegreePerHour: VelocityAngular$DegreePerHour._ratio,
-          VelocityAngular$DegreePerMinute:
-              VelocityAngular$DegreePerMinute._ratio,
-          VelocityAngular$DegreePerSecond:
-              VelocityAngular$DegreePerSecond._ratio,
-          VelocityAngular$RadianPerDay: VelocityAngular$RadianPerDay._ratio,
-          VelocityAngular$RadianPerHour: VelocityAngular$RadianPerHour._ratio,
-          VelocityAngular$RadianPerMinute:
-              VelocityAngular$RadianPerMinute._ratio,
-          VelocityAngular$RadianPerSecond:
-              VelocityAngular$RadianPerSecond._ratio,
-          VelocityAngular$RevolutionPerDay:
-              VelocityAngular$RevolutionPerDay._ratio,
-          VelocityAngular$RevolutionPerHour:
-              VelocityAngular$RevolutionPerHour._ratio,
-          VelocityAngular$RevolutionPerMinute:
-              VelocityAngular$RevolutionPerMinute._ratio,
-          VelocityAngular$RevolutionPerSecond:
-              VelocityAngular$RevolutionPerSecond._ratio,
-        })
-      );
-
-  @override
   VelocityAngular get anchor => const VelocityAngular$DegreePerDay();
 
   /// Convert to [VelocityAngular$DegreePerDay]

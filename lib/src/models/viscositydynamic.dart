@@ -41,48 +41,6 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
       const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
 
   @override
-  AnchorRatio<ViscosityDynamic> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ViscosityDynamic>({
-          ViscosityDynamic$NewtonSecondPerMeterSquare:
-              ViscosityDynamic$NewtonSecondPerMeterSquare._ratio,
-          ViscosityDynamic$DyneSecondPerCentimeterSquare:
-              ViscosityDynamic$DyneSecondPerCentimeterSquare._ratio,
-          ViscosityDynamic$Exapoise: ViscosityDynamic$Exapoise._ratio,
-          ViscosityDynamic$Petapoise: ViscosityDynamic$Petapoise._ratio,
-          ViscosityDynamic$Terapoise: ViscosityDynamic$Terapoise._ratio,
-          ViscosityDynamic$Gigapoise: ViscosityDynamic$Gigapoise._ratio,
-          ViscosityDynamic$Megapoise: ViscosityDynamic$Megapoise._ratio,
-          ViscosityDynamic$Kilopoise: ViscosityDynamic$Kilopoise._ratio,
-          ViscosityDynamic$Hectopoise: ViscosityDynamic$Hectopoise._ratio,
-          ViscosityDynamic$Dekapoise: ViscosityDynamic$Dekapoise._ratio,
-          ViscosityDynamic$Poise: ViscosityDynamic$Poise._ratio,
-          ViscosityDynamic$Decipoise: ViscosityDynamic$Decipoise._ratio,
-          ViscosityDynamic$Centipoise: ViscosityDynamic$Centipoise._ratio,
-          ViscosityDynamic$Millipoise: ViscosityDynamic$Millipoise._ratio,
-          ViscosityDynamic$Micropoise: ViscosityDynamic$Micropoise._ratio,
-          ViscosityDynamic$Nanopoise: ViscosityDynamic$Nanopoise._ratio,
-          ViscosityDynamic$Picopoise: ViscosityDynamic$Picopoise._ratio,
-          ViscosityDynamic$Femtopoise: ViscosityDynamic$Femtopoise._ratio,
-          ViscosityDynamic$Attopoise: ViscosityDynamic$Attopoise._ratio,
-          ViscosityDynamic$PoundForceSecondPerInchSquare:
-              ViscosityDynamic$PoundForceSecondPerInchSquare._ratio,
-          ViscosityDynamic$PoundForceSecondPerFootSquare:
-              ViscosityDynamic$PoundForceSecondPerFootSquare._ratio,
-          ViscosityDynamic$PoundalSecondPerFootSquare:
-              ViscosityDynamic$PoundalSecondPerFootSquare._ratio,
-          ViscosityDynamic$GramPerCentimeterSecond:
-              ViscosityDynamic$GramPerCentimeterSecond._ratio,
-          ViscosityDynamic$SlugPerFootSecond:
-              ViscosityDynamic$SlugPerFootSecond._ratio,
-          ViscosityDynamic$PoundPerFootSecond:
-              ViscosityDynamic$PoundPerFootSecond._ratio,
-          ViscosityDynamic$PoundPerFootHour:
-              ViscosityDynamic$PoundPerFootHour._ratio,
-        })
-      );
-
-  @override
   ViscosityDynamic get anchor =>
       const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
 

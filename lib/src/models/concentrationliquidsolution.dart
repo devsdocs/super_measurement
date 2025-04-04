@@ -36,33 +36,6 @@ sealed class ConcentrationLiquidSolution
       const ConcentrationLiquidSolution$KilogramPerLiter();
 
   @override
-  AnchorRatio<ConcentrationLiquidSolution> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ConcentrationLiquidSolution>({
-          ConcentrationLiquidSolution$GramPerLiter:
-              ConcentrationLiquidSolution$GramPerLiter._ratio,
-          ConcentrationLiquidSolution$MilligramPerLiter:
-              ConcentrationLiquidSolution$MilligramPerLiter._ratio,
-          ConcentrationLiquidSolution$PartPerMillionPpm:
-              ConcentrationLiquidSolution$PartPerMillionPpm._ratio,
-          ConcentrationLiquidSolution$GrainPerGallonUK:
-              ConcentrationLiquidSolution$GrainPerGallonUK._ratio,
-          ConcentrationLiquidSolution$GrainPerGallonUS:
-              ConcentrationLiquidSolution$GrainPerGallonUS._ratio,
-          ConcentrationLiquidSolution$PoundPerFootCubic:
-              ConcentrationLiquidSolution$PoundPerFootCubic._ratio,
-          ConcentrationLiquidSolution$PoundPerGallonUK:
-              ConcentrationLiquidSolution$PoundPerGallonUK._ratio,
-          ConcentrationLiquidSolution$PoundPerGallonUS:
-              ConcentrationLiquidSolution$PoundPerGallonUS._ratio,
-          ConcentrationLiquidSolution$PoundPerMillionUKGallon:
-              ConcentrationLiquidSolution$PoundPerMillionUKGallon._ratio,
-          ConcentrationLiquidSolution$PoundPerMillionUSGallon:
-              ConcentrationLiquidSolution$PoundPerMillionUSGallon._ratio,
-        })
-      );
-
-  @override
   ConcentrationLiquidSolution get anchor =>
       const ConcentrationLiquidSolution$KilogramPerLiter();
 

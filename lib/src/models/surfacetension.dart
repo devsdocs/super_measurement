@@ -28,25 +28,6 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
   factory SurfaceTension.anchor() => const SurfaceTension$MillinewtonPerMeter();
 
   @override
-  AnchorRatio<SurfaceTension> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<SurfaceTension>({
-          SurfaceTension$NewtonPerMeter: SurfaceTension$NewtonPerMeter._ratio,
-          SurfaceTension$GramForcePerCentimeter:
-              SurfaceTension$GramForcePerCentimeter._ratio,
-          SurfaceTension$DynePerCentimeter:
-              SurfaceTension$DynePerCentimeter._ratio,
-          SurfaceTension$ErgPerCentimeterSquare:
-              SurfaceTension$ErgPerCentimeterSquare._ratio,
-          SurfaceTension$ErgPerMillimeterSquare:
-              SurfaceTension$ErgPerMillimeterSquare._ratio,
-          SurfaceTension$PoundalPerInch: SurfaceTension$PoundalPerInch._ratio,
-          SurfaceTension$PoundForcePerInch:
-              SurfaceTension$PoundForcePerInch._ratio,
-        })
-      );
-
-  @override
   SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter();
 
   /// Convert to [SurfaceTension$NewtonPerMeter]

@@ -40,68 +40,6 @@ sealed class Mass extends Unit<Mass> {
   factory Mass.anchor() => const Mass$Dalton();
 
   @override
-  AnchorRatio<Mass> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Mass>({
-          Mass$Exagram: Mass$Exagram._ratio,
-          Mass$Petagram: Mass$Petagram._ratio,
-          Mass$Teragram: Mass$Teragram._ratio,
-          Mass$Gigagram: Mass$Gigagram._ratio,
-          Mass$Megagram: Mass$Megagram._ratio,
-          Mass$Kilogram: Mass$Kilogram._ratio,
-          Mass$Hectogram: Mass$Hectogram._ratio,
-          Mass$Dekagram: Mass$Dekagram._ratio,
-          Mass$Gram: Mass$Gram._ratio,
-          Mass$Decigram: Mass$Decigram._ratio,
-          Mass$Centigram: Mass$Centigram._ratio,
-          Mass$Milligram: Mass$Milligram._ratio,
-          Mass$Microgram: Mass$Microgram._ratio,
-          Mass$Nanogram: Mass$Nanogram._ratio,
-          Mass$Picogram: Mass$Picogram._ratio,
-          Mass$Femtogram: Mass$Femtogram._ratio,
-          Mass$Attogram: Mass$Attogram._ratio,
-          Mass$Quintal: Mass$Quintal._ratio,
-          Mass$Dyne: Mass$Dyne._ratio,
-          Mass$Kip: Mass$Kip._ratio,
-          Mass$Pound: Mass$Pound._ratio,
-          Mass$Ounce: Mass$Ounce._ratio,
-          Mass$Poundal: Mass$Poundal._ratio,
-          Mass$Slug: Mass$Slug._ratio,
-          Mass$Ton: Mass$Ton._ratio,
-          Mass$TonLong: Mass$TonLong._ratio,
-          Mass$TonMetric: Mass$TonMetric._ratio,
-          Mass$Hundredweight: Mass$Hundredweight._ratio,
-          Mass$HundredweightUK: Mass$HundredweightUK._ratio,
-          Mass$Quarter: Mass$Quarter._ratio,
-          Mass$QuarterUK: Mass$QuarterUK._ratio,
-          Mass$Stone: Mass$Stone._ratio,
-          Mass$StoneUK: Mass$StoneUK._ratio,
-          Mass$Tonne: Mass$Tonne._ratio,
-          Mass$TroyPound: Mass$TroyPound._ratio,
-          Mass$TroyOunce: Mass$TroyOunce._ratio,
-          Mass$Carat: Mass$Carat._ratio,
-          Mass$Grain: Mass$Grain._ratio,
-          Mass$Pennyweight: Mass$Pennyweight._ratio,
-          Mass$Scruple: Mass$Scruple._ratio,
-          Mass$TalentBiblicalHebrew: Mass$TalentBiblicalHebrew._ratio,
-          Mass$MinaBiblicalHebrew: Mass$MinaBiblicalHebrew._ratio,
-          Mass$ShekelBiblicalHebrew: Mass$ShekelBiblicalHebrew._ratio,
-          Mass$BekahBiblicalHebrew: Mass$BekahBiblicalHebrew._ratio,
-          Mass$GerahBiblicalHebrew: Mass$GerahBiblicalHebrew._ratio,
-          Mass$TalentBiblicalGreek: Mass$TalentBiblicalGreek._ratio,
-          Mass$MinaBiblicalGreek: Mass$MinaBiblicalGreek._ratio,
-          Mass$TetradrachmaBiblicalGreek: Mass$TetradrachmaBiblicalGreek._ratio,
-          Mass$DidrachmaBiblicalGreek: Mass$DidrachmaBiblicalGreek._ratio,
-          Mass$DrachmaBiblicalGreek: Mass$DrachmaBiblicalGreek._ratio,
-          Mass$DenariusBiblicalRoman: Mass$DenariusBiblicalRoman._ratio,
-          Mass$AssarionBiblicalRoman: Mass$AssarionBiblicalRoman._ratio,
-          Mass$QuadransBiblicalRoman: Mass$QuadransBiblicalRoman._ratio,
-          Mass$LeptonBiblicalRoman: Mass$LeptonBiblicalRoman._ratio,
-          Mass$AtomicMassUnit: Mass$AtomicMassUnit._ratio,
-        })
-      );
-
-  @override
   Mass get anchor => const Mass$Dalton();
 
   /// Convert to [Mass$Exagram]

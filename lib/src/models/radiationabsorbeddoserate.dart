@@ -43,49 +43,6 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
       const RadiationAbsorbedDoseRate$AttograyPerSecond();
 
   @override
-  AnchorRatio<RadiationAbsorbedDoseRate> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<RadiationAbsorbedDoseRate>({
-          RadiationAbsorbedDoseRate$RadPerSecond:
-              RadiationAbsorbedDoseRate$RadPerSecond._ratio,
-          RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond:
-              RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond._ratio,
-          RadiationAbsorbedDoseRate$ExagrayPerSecond:
-              RadiationAbsorbedDoseRate$ExagrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$PetagrayPerSecond:
-              RadiationAbsorbedDoseRate$PetagrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$TeragrayPerSecond:
-              RadiationAbsorbedDoseRate$TeragrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$GigagrayPerSecond:
-              RadiationAbsorbedDoseRate$GigagrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$MegagrayPerSecond:
-              RadiationAbsorbedDoseRate$MegagrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$KilograyPerSecond:
-              RadiationAbsorbedDoseRate$KilograyPerSecond._ratio,
-          RadiationAbsorbedDoseRate$HectograyPerSecond:
-              RadiationAbsorbedDoseRate$HectograyPerSecond._ratio,
-          RadiationAbsorbedDoseRate$DekagrayPerSecond:
-              RadiationAbsorbedDoseRate$DekagrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$GrayPerSecond:
-              RadiationAbsorbedDoseRate$GrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$DecigrayPerSecond:
-              RadiationAbsorbedDoseRate$DecigrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$CentigrayPerSecond:
-              RadiationAbsorbedDoseRate$CentigrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$MilligrayPerSecond:
-              RadiationAbsorbedDoseRate$MilligrayPerSecond._ratio,
-          RadiationAbsorbedDoseRate$MicrograyPerSecond:
-              RadiationAbsorbedDoseRate$MicrograyPerSecond._ratio,
-          RadiationAbsorbedDoseRate$NanograyPerSecond:
-              RadiationAbsorbedDoseRate$NanograyPerSecond._ratio,
-          RadiationAbsorbedDoseRate$PicograyPerSecond:
-              RadiationAbsorbedDoseRate$PicograyPerSecond._ratio,
-          RadiationAbsorbedDoseRate$FemtograyPerSecond:
-              RadiationAbsorbedDoseRate$FemtograyPerSecond._ratio,
-        })
-      );
-
-  @override
   RadiationAbsorbedDoseRate get anchor =>
       const RadiationAbsorbedDoseRate$AttograyPerSecond();
 

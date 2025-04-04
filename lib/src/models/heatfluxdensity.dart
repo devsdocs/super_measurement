@@ -40,45 +40,6 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
       const HeatFluxDensity$WattPerMeterSquare();
 
   @override
-  AnchorRatio<HeatFluxDensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<HeatFluxDensity>({
-          HeatFluxDensity$KilowattPerMeterSquare:
-              HeatFluxDensity$KilowattPerMeterSquare._ratio,
-          HeatFluxDensity$WattPerCentimeterSquare:
-              HeatFluxDensity$WattPerCentimeterSquare._ratio,
-          HeatFluxDensity$WattPerInchSquare:
-              HeatFluxDensity$WattPerInchSquare._ratio,
-          HeatFluxDensity$JoulePerSecondMeterSquare:
-              HeatFluxDensity$JoulePerSecondMeterSquare._ratio,
-          HeatFluxDensity$KilocaloriePerHourMeterSquare:
-              HeatFluxDensity$KilocaloriePerHourMeterSquare._ratio,
-          HeatFluxDensity$KilocaloriePerHourFootSquare:
-              HeatFluxDensity$KilocaloriePerHourFootSquare._ratio,
-          HeatFluxDensity$CaloriePerSecondCentimeterSquare:
-              HeatFluxDensity$CaloriePerSecondCentimeterSquare._ratio,
-          HeatFluxDensity$GramCaloriePerHourCentimeterSquare:
-              HeatFluxDensity$GramCaloriePerHourCentimeterSquare._ratio,
-          HeatFluxDensity$DynePerHourCentimeter:
-              HeatFluxDensity$DynePerHourCentimeter._ratio,
-          HeatFluxDensity$ErgPerHourMillimeterSquare:
-              HeatFluxDensity$ErgPerHourMillimeterSquare._ratio,
-          HeatFluxDensity$FootPoundPerMinuteFootSquare:
-              HeatFluxDensity$FootPoundPerMinuteFootSquare._ratio,
-          HeatFluxDensity$HorsepowerMetricPerFootSquare:
-              HeatFluxDensity$HorsepowerMetricPerFootSquare._ratio,
-          HeatFluxDensity$HorsepowerUKPerFootSquare:
-              HeatFluxDensity$HorsepowerUKPerFootSquare._ratio,
-          HeatFluxDensity$BTUPerHourFootSquare:
-              HeatFluxDensity$BTUPerHourFootSquare._ratio,
-          HeatFluxDensity$BTUPerMinuteFootSquare:
-              HeatFluxDensity$BTUPerMinuteFootSquare._ratio,
-          HeatFluxDensity$CHUPerHourFootSquare:
-              HeatFluxDensity$CHUPerHourFootSquare._ratio,
-        })
-      );
-
-  @override
   HeatFluxDensity get anchor => const HeatFluxDensity$WattPerMeterSquare();
 
   /// Convert to [HeatFluxDensity$KilowattPerMeterSquare]

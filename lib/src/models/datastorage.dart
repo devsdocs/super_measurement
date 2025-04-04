@@ -41,60 +41,6 @@ sealed class DataStorage extends Unit<DataStorage> {
   factory DataStorage.anchor() => const DataStorage$Bit();
 
   @override
-  AnchorRatio<DataStorage> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<DataStorage>({
-          DataStorage$Nibble: DataStorage$Nibble._ratio,
-          DataStorage$Byte: DataStorage$Byte._ratio,
-          DataStorage$Word: DataStorage$Word._ratio,
-          DataStorage$DoubleWord: DataStorage$DoubleWord._ratio,
-          DataStorage$QuadrupleWord: DataStorage$QuadrupleWord._ratio,
-          DataStorage$Block: DataStorage$Block._ratio,
-          DataStorage$Kilobit: DataStorage$Kilobit._ratio,
-          DataStorage$Kilobyte: DataStorage$Kilobyte._ratio,
-          DataStorage$Kilobyte10PowerOf3Bytes:
-              DataStorage$Kilobyte10PowerOf3Bytes._ratio,
-          DataStorage$Megabit: DataStorage$Megabit._ratio,
-          DataStorage$Megabyte: DataStorage$Megabyte._ratio,
-          DataStorage$Megabyte10PowerOf6Bytes:
-              DataStorage$Megabyte10PowerOf6Bytes._ratio,
-          DataStorage$Gigabit: DataStorage$Gigabit._ratio,
-          DataStorage$Gigabyte: DataStorage$Gigabyte._ratio,
-          DataStorage$Gigabyte10PowerOf9Bytes:
-              DataStorage$Gigabyte10PowerOf9Bytes._ratio,
-          DataStorage$Terabit: DataStorage$Terabit._ratio,
-          DataStorage$Terabyte: DataStorage$Terabyte._ratio,
-          DataStorage$Terabyte10PowerOf12Bytes:
-              DataStorage$Terabyte10PowerOf12Bytes._ratio,
-          DataStorage$Petabit: DataStorage$Petabit._ratio,
-          DataStorage$Petabyte: DataStorage$Petabyte._ratio,
-          DataStorage$Petabyte10PowerOf15Bytes:
-              DataStorage$Petabyte10PowerOf15Bytes._ratio,
-          DataStorage$Exabit: DataStorage$Exabit._ratio,
-          DataStorage$Exabyte: DataStorage$Exabyte._ratio,
-          DataStorage$Exabyte10PowerOf18Bytes:
-              DataStorage$Exabyte10PowerOf18Bytes._ratio,
-          DataStorage$FloppyDisk35DD: DataStorage$FloppyDisk35DD._ratio,
-          DataStorage$FloppyDisk35HD: DataStorage$FloppyDisk35HD._ratio,
-          DataStorage$FloppyDisk35ED: DataStorage$FloppyDisk35ED._ratio,
-          DataStorage$FloppyDisk525DD: DataStorage$FloppyDisk525DD._ratio,
-          DataStorage$FloppyDisk525HD: DataStorage$FloppyDisk525HD._ratio,
-          DataStorage$Zip100: DataStorage$Zip100._ratio,
-          DataStorage$Zip250: DataStorage$Zip250._ratio,
-          DataStorage$Jaz1GB: DataStorage$Jaz1GB._ratio,
-          DataStorage$Jaz2GB: DataStorage$Jaz2GB._ratio,
-          DataStorage$CD74Minute: DataStorage$CD74Minute._ratio,
-          DataStorage$CD80Minute: DataStorage$CD80Minute._ratio,
-          DataStorage$DVD1Layer1Side: DataStorage$DVD1Layer1Side._ratio,
-          DataStorage$DVD2Layers1Side: DataStorage$DVD2Layers1Side._ratio,
-          DataStorage$DVD1Layer2Sides: DataStorage$DVD1Layer2Sides._ratio,
-          DataStorage$DVD2Layers2Sides: DataStorage$DVD2Layers2Sides._ratio,
-          DataStorage$BluRay1Layer: DataStorage$BluRay1Layer._ratio,
-          DataStorage$BluRay2Layer: DataStorage$BluRay2Layer._ratio,
-        })
-      );
-
-  @override
   DataStorage get anchor => const DataStorage$Bit();
 
   /// Convert to [DataStorage$Bit]

@@ -24,15 +24,6 @@ sealed class LatentHeat extends Unit<LatentHeat> {
   factory LatentHeat.anchor() => const LatentHeat$KilojoulePerKilogram();
 
   @override
-  AnchorRatio<LatentHeat> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<LatentHeat>({
-          LatentHeat$CaloriePerGram: LatentHeat$CaloriePerGram._ratio,
-          LatentHeat$BTUPerPound: LatentHeat$BTUPerPound._ratio,
-        })
-      );
-
-  @override
   LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram();
 
   /// Convert to [LatentHeat$CaloriePerGram]

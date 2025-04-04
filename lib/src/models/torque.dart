@@ -29,29 +29,6 @@ sealed class Torque extends Unit<Torque> {
   factory Torque.anchor() => const Torque$NewtonMeter();
 
   @override
-  AnchorRatio<Torque> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Torque>({
-          Torque$KilonewtonMeter: Torque$KilonewtonMeter._ratio,
-          Torque$NewtonCentimeter: Torque$NewtonCentimeter._ratio,
-          Torque$NewtonMillimeter: Torque$NewtonMillimeter._ratio,
-          Torque$DyneMeter: Torque$DyneMeter._ratio,
-          Torque$DyneCentimeter: Torque$DyneCentimeter._ratio,
-          Torque$DyneMillimeter: Torque$DyneMillimeter._ratio,
-          Torque$KilogramForceMeter: Torque$KilogramForceMeter._ratio,
-          Torque$KilogramForceCentimeter: Torque$KilogramForceCentimeter._ratio,
-          Torque$KilogramForceMillimeter: Torque$KilogramForceMillimeter._ratio,
-          Torque$GramForceMeter: Torque$GramForceMeter._ratio,
-          Torque$GramForceCentimeter: Torque$GramForceCentimeter._ratio,
-          Torque$GramForceMillimeter: Torque$GramForceMillimeter._ratio,
-          Torque$OunceForceFoot: Torque$OunceForceFoot._ratio,
-          Torque$OunceForceInch: Torque$OunceForceInch._ratio,
-          Torque$PoundForceFoot: Torque$PoundForceFoot._ratio,
-          Torque$PoundForceInch: Torque$PoundForceInch._ratio,
-        })
-      );
-
-  @override
   Torque get anchor => const Torque$NewtonMeter();
 
   /// Convert to [Torque$KilonewtonMeter]

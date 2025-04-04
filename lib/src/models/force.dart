@@ -31,38 +31,6 @@ sealed class Force extends Unit<Force> {
   factory Force.anchor() => const Force$Dyne();
 
   @override
-  AnchorRatio<Force> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Force>({
-          Force$Exanewton: Force$Exanewton._ratio,
-          Force$Petanewton: Force$Petanewton._ratio,
-          Force$Teranewton: Force$Teranewton._ratio,
-          Force$Giganewton: Force$Giganewton._ratio,
-          Force$Meganewton: Force$Meganewton._ratio,
-          Force$Kilonewton: Force$Kilonewton._ratio,
-          Force$Hectonewton: Force$Hectonewton._ratio,
-          Force$Dekanewton: Force$Dekanewton._ratio,
-          Force$Newton: Force$Newton._ratio,
-          Force$Decinewton: Force$Decinewton._ratio,
-          Force$Centinewton: Force$Centinewton._ratio,
-          Force$Millinewton: Force$Millinewton._ratio,
-          Force$Micronewton: Force$Micronewton._ratio,
-          Force$Nanonewton: Force$Nanonewton._ratio,
-          Force$Piconewton: Force$Piconewton._ratio,
-          Force$Femtonewton: Force$Femtonewton._ratio,
-          Force$Attonewton: Force$Attonewton._ratio,
-          Force$JoulePerMeter: Force$JoulePerMeter._ratio,
-          Force$JoulePerCentimeter: Force$JoulePerCentimeter._ratio,
-          Force$KilogramForce: Force$KilogramForce._ratio,
-          Force$GramForce: Force$GramForce._ratio,
-          Force$KipForce: Force$KipForce._ratio,
-          Force$PoundForce: Force$PoundForce._ratio,
-          Force$OunceForce: Force$OunceForce._ratio,
-          Force$Poundal: Force$Poundal._ratio,
-        })
-      );
-
-  @override
   Force get anchor => const Force$Dyne();
 
   /// Convert to [Force$Exanewton]

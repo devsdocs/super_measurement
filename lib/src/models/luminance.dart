@@ -31,35 +31,6 @@ sealed class Luminance extends Unit<Luminance> {
   factory Luminance.anchor() => const Luminance$Bril();
 
   @override
-  AnchorRatio<Luminance> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Luminance>({
-          Luminance$Stilb: Luminance$Stilb._ratio,
-          Luminance$CandelaPerMeterSquare:
-              Luminance$CandelaPerMeterSquare._ratio,
-          Luminance$CandelaPerCentimeterSquare:
-              Luminance$CandelaPerCentimeterSquare._ratio,
-          Luminance$CandelaPerFootSquare: Luminance$CandelaPerFootSquare._ratio,
-          Luminance$LumenPerMeterSquarePerSteradian:
-              Luminance$LumenPerMeterSquarePerSteradian._ratio,
-          Luminance$LumenPerCentimeterSquarePerSteradian:
-              Luminance$LumenPerCentimeterSquarePerSteradian._ratio,
-          Luminance$LumenPerFootSquarePerSteradian:
-              Luminance$LumenPerFootSquarePerSteradian._ratio,
-          Luminance$WattPerCentimeterSquarePerSteradianAt555nm:
-              Luminance$WattPerCentimeterSquarePerSteradianAt555nm._ratio,
-          Luminance$Nit: Luminance$Nit._ratio,
-          Luminance$Millinit: Luminance$Millinit._ratio,
-          Luminance$FootLambert: Luminance$FootLambert._ratio,
-          Luminance$Lambert: Luminance$Lambert._ratio,
-          Luminance$Millilambert: Luminance$Millilambert._ratio,
-          Luminance$Apostilb: Luminance$Apostilb._ratio,
-          Luminance$Blondel: Luminance$Blondel._ratio,
-          Luminance$Skot: Luminance$Skot._ratio,
-        })
-      );
-
-  @override
   Luminance get anchor => const Luminance$Bril();
 
   /// Convert to [Luminance$Stilb]

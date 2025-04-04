@@ -41,50 +41,6 @@ sealed class ThermalResistivity extends Unit<ThermalResistivity> {
       const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch();
 
   @override
-  AnchorRatio<ThermalResistivity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ThermalResistivity>({
-          ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch:
-              ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch._ratio,
-          ThermalResistivity$HourFootDegreeFPerBTUThemochem:
-              ThermalResistivity$HourFootDegreeFPerBTUThemochem._ratio,
-          ThermalResistivity$HourFootDegreeFPerBTUInt:
-              ThermalResistivity$HourFootDegreeFPerBTUInt._ratio,
-          ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem:
-              ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem
-                  ._ratio,
-          ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt:
-              ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt._ratio,
-          ThermalResistivity$MeterKPerKilowatt:
-              ThermalResistivity$MeterKPerKilowatt._ratio,
-          ThermalResistivity$MeterKPerWatt:
-              ThermalResistivity$MeterKPerWatt._ratio,
-          ThermalResistivity$CentimeterDegreeCPerWatt:
-              ThermalResistivity$CentimeterDegreeCPerWatt._ratio,
-          ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF:
-              ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF
-                  ._ratio,
-          ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF:
-              ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF._ratio,
-          ThermalResistivity$BTUThemochemPerHourFootDegreeF:
-              ThermalResistivity$BTUThemochemPerHourFootDegreeF._ratio,
-          ThermalResistivity$BTUIntPerHourFootDegreeF:
-              ThermalResistivity$BTUIntPerHourFootDegreeF._ratio,
-          ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC:
-              ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC
-                  ._ratio,
-          ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC:
-              ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC._ratio,
-          ThermalResistivity$KilowattPerMeterK:
-              ThermalResistivity$KilowattPerMeterK._ratio,
-          ThermalResistivity$WattPerMeterK:
-              ThermalResistivity$WattPerMeterK._ratio,
-          ThermalResistivity$WattPerCentimeterDegreeC:
-              ThermalResistivity$WattPerCentimeterDegreeC._ratio,
-        })
-      );
-
-  @override
   ThermalResistivity get anchor =>
       const ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch();
 

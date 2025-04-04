@@ -33,34 +33,6 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
   factory VolumeLumber.anchor() => const VolumeLumber$CubicInch();
 
   @override
-  AnchorRatio<VolumeLumber> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<VolumeLumber>({
-          VolumeLumber$MeterCubic: VolumeLumber$MeterCubic._ratio,
-          VolumeLumber$CubicFeet: VolumeLumber$CubicFeet._ratio,
-          VolumeLumber$BoardFeet: VolumeLumber$BoardFeet._ratio,
-          VolumeLumber$ThousandBoardFeet: VolumeLumber$ThousandBoardFeet._ratio,
-          VolumeLumber$Cord: VolumeLumber$Cord._ratio,
-          VolumeLumber$Cord80FtCubic: VolumeLumber$Cord80FtCubic._ratio,
-          VolumeLumber$CordFeet: VolumeLumber$CordFeet._ratio,
-          VolumeLumber$Cunit: VolumeLumber$Cunit._ratio,
-          VolumeLumber$Pallet: VolumeLumber$Pallet._ratio,
-          VolumeLumber$CrossTie: VolumeLumber$CrossTie._ratio,
-          VolumeLumber$SwitchTie: VolumeLumber$SwitchTie._ratio,
-          VolumeLumber$ThousandSquareFeet1Per8InchPanels:
-              VolumeLumber$ThousandSquareFeet1Per8InchPanels._ratio,
-          VolumeLumber$ThousandSquareFeet1Per4InchPanels:
-              VolumeLumber$ThousandSquareFeet1Per4InchPanels._ratio,
-          VolumeLumber$ThousandSquareFeet3Per8InchPanels:
-              VolumeLumber$ThousandSquareFeet3Per8InchPanels._ratio,
-          VolumeLumber$ThousandSquareFeet1Per2InchPanels:
-              VolumeLumber$ThousandSquareFeet1Per2InchPanels._ratio,
-          VolumeLumber$ThousandSquareFeet3Per4InchPanels:
-              VolumeLumber$ThousandSquareFeet3Per4InchPanels._ratio,
-        })
-      );
-
-  @override
   VolumeLumber get anchor => const VolumeLumber$CubicInch();
 
   /// Convert to [VolumeLumber$MeterCubic]

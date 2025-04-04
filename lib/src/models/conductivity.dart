@@ -26,23 +26,6 @@ sealed class Conductivity extends Unit<Conductivity> {
   factory Conductivity.anchor() => const Conductivity$MhoPerMeter();
 
   @override
-  AnchorRatio<Conductivity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Conductivity>({
-          Conductivity$MhoPerCentimeter: Conductivity$MhoPerCentimeter._ratio,
-          Conductivity$AbmhoPerMeter: Conductivity$AbmhoPerMeter._ratio,
-          Conductivity$AbmhoPerCentimeter:
-              Conductivity$AbmhoPerCentimeter._ratio,
-          Conductivity$StatmhoPerMeter: Conductivity$StatmhoPerMeter._ratio,
-          Conductivity$StatmhoPerCentimeter:
-              Conductivity$StatmhoPerCentimeter._ratio,
-          Conductivity$SiemensPerMeter: Conductivity$SiemensPerMeter._ratio,
-          Conductivity$PicosiemensPerMeter:
-              Conductivity$PicosiemensPerMeter._ratio,
-        })
-      );
-
-  @override
   Conductivity get anchor => const Conductivity$MhoPerMeter();
 
   /// Convert to [Conductivity$MhoPerMeter]

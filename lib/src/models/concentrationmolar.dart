@@ -33,35 +33,6 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
   factory ConcentrationMolar.anchor() => const ConcentrationMolar$MolPerLiter();
 
   @override
-  AnchorRatio<ConcentrationMolar> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ConcentrationMolar>({
-          ConcentrationMolar$MolPerMeterCubic:
-              ConcentrationMolar$MolPerMeterCubic._ratio,
-          ConcentrationMolar$MolPerCentimeterCubic:
-              ConcentrationMolar$MolPerCentimeterCubic._ratio,
-          ConcentrationMolar$MolPerMillimeterCubic:
-              ConcentrationMolar$MolPerMillimeterCubic._ratio,
-          ConcentrationMolar$KilomolPerMeterCubic:
-              ConcentrationMolar$KilomolPerMeterCubic._ratio,
-          ConcentrationMolar$KilomolPerLiter:
-              ConcentrationMolar$KilomolPerLiter._ratio,
-          ConcentrationMolar$KilomolPerCentimeterCubic:
-              ConcentrationMolar$KilomolPerCentimeterCubic._ratio,
-          ConcentrationMolar$KilomolPerMillimeterCubic:
-              ConcentrationMolar$KilomolPerMillimeterCubic._ratio,
-          ConcentrationMolar$MillimolPerMeterCubic:
-              ConcentrationMolar$MillimolPerMeterCubic._ratio,
-          ConcentrationMolar$MillimolPerLiter:
-              ConcentrationMolar$MillimolPerLiter._ratio,
-          ConcentrationMolar$MillimolPerCentimeterCubic:
-              ConcentrationMolar$MillimolPerCentimeterCubic._ratio,
-          ConcentrationMolar$MillimolPerMillimeterCubic:
-              ConcentrationMolar$MillimolPerMillimeterCubic._ratio,
-        })
-      );
-
-  @override
   ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter();
 
   /// Convert to [ConcentrationMolar$MolPerMeterCubic]

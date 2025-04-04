@@ -34,37 +34,6 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
   factory ViscosityKinematic.anchor() => const ViscosityKinematic$Centistoke();
 
   @override
-  AnchorRatio<ViscosityKinematic> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<ViscosityKinematic>({
-          ViscosityKinematic$Exastoke: ViscosityKinematic$Exastoke._ratio,
-          ViscosityKinematic$Petastoke: ViscosityKinematic$Petastoke._ratio,
-          ViscosityKinematic$Terastoke: ViscosityKinematic$Terastoke._ratio,
-          ViscosityKinematic$Gigastoke: ViscosityKinematic$Gigastoke._ratio,
-          ViscosityKinematic$Megastoke: ViscosityKinematic$Megastoke._ratio,
-          ViscosityKinematic$Kilostoke: ViscosityKinematic$Kilostoke._ratio,
-          ViscosityKinematic$Hectostoke: ViscosityKinematic$Hectostoke._ratio,
-          ViscosityKinematic$Dekastoke: ViscosityKinematic$Dekastoke._ratio,
-          ViscosityKinematic$Stoke: ViscosityKinematic$Stoke._ratio,
-          ViscosityKinematic$Decistoke: ViscosityKinematic$Decistoke._ratio,
-          ViscosityKinematic$Millistoke: ViscosityKinematic$Millistoke._ratio,
-          ViscosityKinematic$Microstoke: ViscosityKinematic$Microstoke._ratio,
-          ViscosityKinematic$Nanostoke: ViscosityKinematic$Nanostoke._ratio,
-          ViscosityKinematic$Picostoke: ViscosityKinematic$Picostoke._ratio,
-          ViscosityKinematic$Femtostoke: ViscosityKinematic$Femtostoke._ratio,
-          ViscosityKinematic$Attostoke: ViscosityKinematic$Attostoke._ratio,
-          ViscosityKinematic$MeterSquarePerSecond:
-              ViscosityKinematic$MeterSquarePerSecond._ratio,
-          ViscosityKinematic$CentimeterSquarePerSecond:
-              ViscosityKinematic$CentimeterSquarePerSecond._ratio,
-          ViscosityKinematic$MillimeterSquarePerSecond:
-              ViscosityKinematic$MillimeterSquarePerSecond._ratio,
-          ViscosityKinematic$FootSquarePerSecond:
-              ViscosityKinematic$FootSquarePerSecond._ratio,
-        })
-      );
-
-  @override
   ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke();
 
   /// Convert to [ViscosityKinematic$Exastoke]

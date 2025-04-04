@@ -30,23 +30,6 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
       const SurfaceChargeDensity$CoulombPerMeterSquare();
 
   @override
-  AnchorRatio<SurfaceChargeDensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<SurfaceChargeDensity>({
-          SurfaceChargeDensity$CoulombPerInchSquare:
-              SurfaceChargeDensity$CoulombPerInchSquare._ratio,
-          SurfaceChargeDensity$CoulombPerCentimeterSquare:
-              SurfaceChargeDensity$CoulombPerCentimeterSquare._ratio,
-          SurfaceChargeDensity$AbcoulombPerMeterSquare:
-              SurfaceChargeDensity$AbcoulombPerMeterSquare._ratio,
-          SurfaceChargeDensity$AbcoulombPerCentimeterSquare:
-              SurfaceChargeDensity$AbcoulombPerCentimeterSquare._ratio,
-          SurfaceChargeDensity$AbcoulombPerInchSquare:
-              SurfaceChargeDensity$AbcoulombPerInchSquare._ratio,
-        })
-      );
-
-  @override
   SurfaceChargeDensity get anchor =>
       const SurfaceChargeDensity$CoulombPerMeterSquare();
 

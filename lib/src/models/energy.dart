@@ -41,64 +41,6 @@ sealed class Energy extends Unit<Energy> {
   factory Energy.anchor() => const Energy$ElectronVolt();
 
   @override
-  AnchorRatio<Energy> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<Energy>({
-          Energy$Gigajoule: Energy$Gigajoule._ratio,
-          Energy$Megajoule: Energy$Megajoule._ratio,
-          Energy$Kilojoule: Energy$Kilojoule._ratio,
-          Energy$Joule: Energy$Joule._ratio,
-          Energy$Millijoule: Energy$Millijoule._ratio,
-          Energy$Microjoule: Energy$Microjoule._ratio,
-          Energy$Nanojoule: Energy$Nanojoule._ratio,
-          Energy$Attojoule: Energy$Attojoule._ratio,
-          Energy$Erg: Energy$Erg._ratio,
-          Energy$GigawattHour: Energy$GigawattHour._ratio,
-          Energy$MegawattHour: Energy$MegawattHour._ratio,
-          Energy$KilowattHour: Energy$KilowattHour._ratio,
-          Energy$KilowattSecond: Energy$KilowattSecond._ratio,
-          Energy$WattHour: Energy$WattHour._ratio,
-          Energy$WattSecond: Energy$WattSecond._ratio,
-          Energy$HorsepowerHour: Energy$HorsepowerHour._ratio,
-          Energy$KilocalorieInternational:
-              Energy$KilocalorieInternational._ratio,
-          Energy$KilocalorieThermochemical:
-              Energy$KilocalorieThermochemical._ratio,
-          Energy$CalorieInternational: Energy$CalorieInternational._ratio,
-          Energy$CalorieThermochemical: Energy$CalorieThermochemical._ratio,
-          Energy$CalorieNutritional: Energy$CalorieNutritional._ratio,
-          Energy$BTUInternational: Energy$BTUInternational._ratio,
-          Energy$BTUThermochemical: Energy$BTUThermochemical._ratio,
-          Energy$MBTU: Energy$MBTU._ratio,
-          Energy$TonHourRefrigeration: Energy$TonHourRefrigeration._ratio,
-          Energy$Gigaton: Energy$Gigaton._ratio,
-          Energy$Megaton: Energy$Megaton._ratio,
-          Energy$Kiloton: Energy$Kiloton._ratio,
-          Energy$TonExplosives: Energy$TonExplosives._ratio,
-          Energy$NewtonMeter: Energy$NewtonMeter._ratio,
-          Energy$DyneCentimeter: Energy$DyneCentimeter._ratio,
-          Energy$GramForceMeter: Energy$GramForceMeter._ratio,
-          Energy$GramForceCentimeter: Energy$GramForceCentimeter._ratio,
-          Energy$KilogramForceMeter: Energy$KilogramForceMeter._ratio,
-          Energy$KilogramForceCentimeter: Energy$KilogramForceCentimeter._ratio,
-          Energy$MeterKilopond: Energy$MeterKilopond._ratio,
-          Energy$PoundForceFoot: Energy$PoundForceFoot._ratio,
-          Energy$PoundForceInch: Energy$PoundForceInch._ratio,
-          Energy$OunceForceInch: Energy$OunceForceInch._ratio,
-          Energy$FootPound: Energy$FootPound._ratio,
-          Energy$InchPound: Energy$InchPound._ratio,
-          Energy$InchOunce: Energy$InchOunce._ratio,
-          Energy$PoundalFoot: Energy$PoundalFoot._ratio,
-          Energy$MegaelectronVolt: Energy$MegaelectronVolt._ratio,
-          Energy$KiloelectronVolt: Energy$KiloelectronVolt._ratio,
-          Energy$Therm: Energy$Therm._ratio,
-          Energy$ThermEC: Energy$ThermEC._ratio,
-          Energy$ThermUS: Energy$ThermUS._ratio,
-          Energy$Hartree: Energy$Hartree._ratio,
-        })
-      );
-
-  @override
   Energy get anchor => const Energy$ElectronVolt();
 
   /// Convert to [Energy$Gigajoule]

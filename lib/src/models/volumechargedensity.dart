@@ -29,23 +29,6 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
       const VolumeChargeDensity$CoulombPerMeterCubic();
 
   @override
-  AnchorRatio<VolumeChargeDensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<VolumeChargeDensity>({
-          VolumeChargeDensity$CoulombPerCentimeterCubic:
-              VolumeChargeDensity$CoulombPerCentimeterCubic._ratio,
-          VolumeChargeDensity$CoulombPerInchCubic:
-              VolumeChargeDensity$CoulombPerInchCubic._ratio,
-          VolumeChargeDensity$AbcoulombPerMeterCubic:
-              VolumeChargeDensity$AbcoulombPerMeterCubic._ratio,
-          VolumeChargeDensity$AbcoulombPerCentimeterCubic:
-              VolumeChargeDensity$AbcoulombPerCentimeterCubic._ratio,
-          VolumeChargeDensity$AbcoulombPerInchCubic:
-              VolumeChargeDensity$AbcoulombPerInchCubic._ratio,
-        })
-      );
-
-  @override
   VolumeChargeDensity get anchor =>
       const VolumeChargeDensity$CoulombPerMeterCubic();
 

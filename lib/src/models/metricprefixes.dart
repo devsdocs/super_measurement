@@ -29,33 +29,6 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
   factory MetricPrefixes.anchor() => const MetricPrefixes$MetricUnit();
 
   @override
-  AnchorRatio<MetricPrefixes> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<MetricPrefixes>({
-          MetricPrefixes$Yotta: MetricPrefixes$Yotta._ratio,
-          MetricPrefixes$Zetta: MetricPrefixes$Zetta._ratio,
-          MetricPrefixes$Exa: MetricPrefixes$Exa._ratio,
-          MetricPrefixes$Peta: MetricPrefixes$Peta._ratio,
-          MetricPrefixes$Tera: MetricPrefixes$Tera._ratio,
-          MetricPrefixes$Giga: MetricPrefixes$Giga._ratio,
-          MetricPrefixes$Mega: MetricPrefixes$Mega._ratio,
-          MetricPrefixes$Kilo: MetricPrefixes$Kilo._ratio,
-          MetricPrefixes$Hecto: MetricPrefixes$Hecto._ratio,
-          MetricPrefixes$Deka: MetricPrefixes$Deka._ratio,
-          MetricPrefixes$Deci: MetricPrefixes$Deci._ratio,
-          MetricPrefixes$Centi: MetricPrefixes$Centi._ratio,
-          MetricPrefixes$Milli: MetricPrefixes$Milli._ratio,
-          MetricPrefixes$Micro: MetricPrefixes$Micro._ratio,
-          MetricPrefixes$Nano: MetricPrefixes$Nano._ratio,
-          MetricPrefixes$Pico: MetricPrefixes$Pico._ratio,
-          MetricPrefixes$Femto: MetricPrefixes$Femto._ratio,
-          MetricPrefixes$Atto: MetricPrefixes$Atto._ratio,
-          MetricPrefixes$Zepto: MetricPrefixes$Zepto._ratio,
-          MetricPrefixes$Yocto: MetricPrefixes$Yocto._ratio,
-        })
-      );
-
-  @override
   MetricPrefixes get anchor => const MetricPrefixes$MetricUnit();
 
   /// Convert to [MetricPrefixes$Yotta]

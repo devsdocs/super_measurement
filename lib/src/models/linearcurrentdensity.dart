@@ -32,28 +32,6 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
       const LinearCurrentDensity$AmperePerMeter();
 
   @override
-  AnchorRatio<LinearCurrentDensity> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<LinearCurrentDensity>({
-          LinearCurrentDensity$AmperePerCentimeter:
-              LinearCurrentDensity$AmperePerCentimeter._ratio,
-          LinearCurrentDensity$AmperePerInch:
-              LinearCurrentDensity$AmperePerInch._ratio,
-          LinearCurrentDensity$AbamperePerMeter:
-              LinearCurrentDensity$AbamperePerMeter._ratio,
-          LinearCurrentDensity$AbamperePerCentimeter:
-              LinearCurrentDensity$AbamperePerCentimeter._ratio,
-          LinearCurrentDensity$AbamperePerInch:
-              LinearCurrentDensity$AbamperePerInch._ratio,
-          LinearCurrentDensity$Oersted: LinearCurrentDensity$Oersted._ratio,
-          LinearCurrentDensity$OerstedInternational:
-              LinearCurrentDensity$OerstedInternational._ratio,
-          LinearCurrentDensity$GilbertPerCentimeter:
-              LinearCurrentDensity$GilbertPerCentimeter._ratio,
-        })
-      );
-
-  @override
   LinearCurrentDensity get anchor =>
       const LinearCurrentDensity$AmperePerMeter();
 

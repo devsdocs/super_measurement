@@ -35,38 +35,6 @@ sealed class FlowMass extends Unit<FlowMass> {
   factory FlowMass.anchor() => const FlowMass$KilogramPerDay();
 
   @override
-  AnchorRatio<FlowMass> get _anchorRatio => (
-        anchor: anchor.runtimeType,
-        ratio: const _ConversionRatio<FlowMass>({
-          FlowMass$GramPerSecond: FlowMass$GramPerSecond._ratio,
-          FlowMass$GramPerMinute: FlowMass$GramPerMinute._ratio,
-          FlowMass$GramPerHour: FlowMass$GramPerHour._ratio,
-          FlowMass$GramPerDay: FlowMass$GramPerDay._ratio,
-          FlowMass$MilligramPerMinute: FlowMass$MilligramPerMinute._ratio,
-          FlowMass$MilligramPerHour: FlowMass$MilligramPerHour._ratio,
-          FlowMass$MilligramPerDay: FlowMass$MilligramPerDay._ratio,
-          FlowMass$KilogramPerMinute: FlowMass$KilogramPerMinute._ratio,
-          FlowMass$KilogramPerHour: FlowMass$KilogramPerHour._ratio,
-          FlowMass$ExagramPerSecond: FlowMass$ExagramPerSecond._ratio,
-          FlowMass$PetagramPerSecond: FlowMass$PetagramPerSecond._ratio,
-          FlowMass$TeragramPerSecond: FlowMass$TeragramPerSecond._ratio,
-          FlowMass$GigagramPerSecond: FlowMass$GigagramPerSecond._ratio,
-          FlowMass$MegagramPerSecond: FlowMass$MegagramPerSecond._ratio,
-          FlowMass$KilogramPerSecond: FlowMass$KilogramPerSecond._ratio,
-          FlowMass$HectogramPerSecond: FlowMass$HectogramPerSecond._ratio,
-          FlowMass$DekagramPerSecond: FlowMass$DekagramPerSecond._ratio,
-          FlowMass$DecigramPerSecond: FlowMass$DecigramPerSecond._ratio,
-          FlowMass$CentigramPerSecond: FlowMass$CentigramPerSecond._ratio,
-          FlowMass$MilligramPerSecond: FlowMass$MilligramPerSecond._ratio,
-          FlowMass$MicrogramPerSecond: FlowMass$MicrogramPerSecond._ratio,
-          FlowMass$PoundPerSecond: FlowMass$PoundPerSecond._ratio,
-          FlowMass$PoundPerMinute: FlowMass$PoundPerMinute._ratio,
-          FlowMass$PoundPerHour: FlowMass$PoundPerHour._ratio,
-          FlowMass$PoundPerDay: FlowMass$PoundPerDay._ratio,
-        })
-      );
-
-  @override
   FlowMass get anchor => const FlowMass$KilogramPerDay();
 
   /// Convert to [FlowMass$GramPerSecond]
