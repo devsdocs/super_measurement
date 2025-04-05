@@ -1,4 +1,4 @@
-name: super_measurement
+name: super_measurement_generator
 description: Dart package for converting various unit measurement with ease
 version: 2.0.1
 repository: https://github.com/devsdocs/super_measurement
