@@ -39,10 +39,6 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
     final otherConverted = other.convertTo(this._clone).value.toIntIfTrue;
     final thisValue = this.value.toIntIfTrue;
 
-    // Add debug info
-    print('Comparing: $this vs $other');
-    print('Using direct conversion: $thisValue vs $otherConverted');
-
     switch (operator) {
       case '==':
         return (thisValue - otherConverted).abs() < 1e-10;
