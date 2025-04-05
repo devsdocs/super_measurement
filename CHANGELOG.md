@@ -1,3 +1,7 @@
+## 2.1.2
+
+- Fix pub repo issue
+
 ## 2.1.1
 
 - Removed debug prints
