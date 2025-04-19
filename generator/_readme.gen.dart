@@ -4,6 +4,9 @@ part of '__gen_new.dart';
 void generateReadme() {
   final readmeBuff = StringBuffer();
   readmeBuff.writeln('# Dart package for converting unit measurement');
+  readmeBuff.writeln();
+  readmeBuff.writeln(pub);
+  readmeBuff.writeln();
   readmeBuff.writeln('## Available Unit');
   readmeBuff.writeln('### Can be accessed using enum');
   readmeBuff.writeln();
@@ -49,3 +52,6 @@ Use `withPrecision()` for more precision''',
   );
   readmeFile.writeAsStringSync(readmeBuff.toString());
 }
+
+const pub =
+    '[![pub package](https://img.shields.io/pub/v/super_measurement)](https://pub.dev/packages/super_measurement)';

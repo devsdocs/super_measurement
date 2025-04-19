@@ -1,4 +1,7 @@
 # Dart package for converting unit measurement
+
+[![pub package](https://img.shields.io/pub/v/super_measurement)](https://pub.dev/packages/super_measurement)
+
 ## Available Unit
 ### Can be accessed using enum
 
