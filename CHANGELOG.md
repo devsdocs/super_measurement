@@ -1,3 +1,6 @@
+## 2.1.3
+- optimize `toPrecision()` method
+
 ## 2.1.2
 
 - Fix pub repo issue

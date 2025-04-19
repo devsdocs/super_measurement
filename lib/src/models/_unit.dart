@@ -211,11 +211,25 @@ extension NumExt on num {
 }
 
 extension DoubleExt on double {
+  static const _powersOf10 = <int, num>{
+    0: 1,
+    1: 10,
+    2: 100,
+    3: 1000,
+    4: 10000,
+    5: 100000,
+    6: 1000000,
+    7: 10000000,
+    8: 100000000,
+    9: 1000000000,
+    10: 10000000000,
+  };
+
   num toPrecision(int fractionDigits) {
     try {
       if (_canBeInt) return toInt();
-      final mod = pow(10, fractionDigits.toDouble()).toDouble();
-      final calculation = (this * mod).round().toDouble() / mod;
+      final mod = _powersOf10[fractionDigits] ?? pow(10, fractionDigits);
+      final calculation = (this * mod).round() / mod;
       return calculation._canBeInt ? calculation.toInt() : calculation;
     } catch (e) {
       return this;
