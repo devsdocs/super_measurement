@@ -67,6 +67,9 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Mass Flux Density';
+
   static const _majorName = 'massFluxDensity';
 
   static const kilogramPerHourMeterSquare =
@@ -145,6 +148,9 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Per Hour Meter Square';
+
+  @override
   String get displayName => 'kilogram/hour meter²';
 
   static const _ratio = 0.0002777777777777778;
@@ -213,6 +219,9 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Per Hour Foot Square';
 
   @override
   String get displayName => 'kilogram/hour foot²';
@@ -286,6 +295,9 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Per Second Meter Square';
+
+  @override
   String get displayName => 'kilogram/second meter²';
 
   static const _ratio = 1.0;
@@ -354,6 +366,9 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Per Second Meter Square';
 
   @override
   String get displayName => 'gram/second meter²';
@@ -427,6 +442,9 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Per Second Centimeter Square';
+
+  @override
   String get displayName => 'gram/second centimeter²';
 
   static const _ratio = 10.0;
@@ -497,6 +515,9 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Hour Foot Square';
+
+  @override
   String get displayName => 'pound/hour foot²';
 
   static const _ratio = 0.001356229913;
@@ -565,6 +586,9 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Second Foot Square';
 
   @override
   String get displayName => 'pound/second foot²';

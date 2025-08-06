@@ -163,6 +163,9 @@ sealed class Force extends Unit<Force> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Force';
+
   static const _majorName = 'force';
 
   static const exanewton = Force$Exanewton();
@@ -285,6 +288,9 @@ final class Force$Exanewton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exanewton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e+23;
@@ -351,6 +357,9 @@ final class Force$Petanewton extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petanewton';
 
   @override
   String get displayName => _minorName;
@@ -421,6 +430,9 @@ final class Force$Teranewton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Teranewton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100000000000000000.0;
@@ -487,6 +499,9 @@ final class Force$Giganewton extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Giganewton';
 
   @override
   String get displayName => _minorName;
@@ -557,6 +572,9 @@ final class Force$Meganewton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meganewton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100000000000.0;
@@ -623,6 +641,9 @@ final class Force$Kilonewton extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilonewton';
 
   @override
   String get displayName => _minorName;
@@ -693,6 +714,9 @@ final class Force$Hectonewton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectonewton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10000000.0;
@@ -759,6 +783,9 @@ final class Force$Dekanewton extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekanewton';
 
   @override
   String get displayName => _minorName;
@@ -829,6 +856,9 @@ final class Force$Newton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Newton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100000.0;
@@ -895,6 +925,9 @@ final class Force$Decinewton extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Decinewton';
 
   @override
   String get displayName => _minorName;
@@ -965,6 +998,9 @@ final class Force$Centinewton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centinewton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
@@ -1031,6 +1067,9 @@ final class Force$Millinewton extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millinewton';
 
   @override
   String get displayName => _minorName;
@@ -1101,6 +1140,9 @@ final class Force$Micronewton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Micronewton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
@@ -1167,6 +1209,9 @@ final class Force$Nanonewton extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nanonewton';
 
   @override
   String get displayName => _minorName;
@@ -1237,6 +1282,9 @@ final class Force$Piconewton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Piconewton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-7;
@@ -1303,6 +1351,9 @@ final class Force$Femtonewton extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Femtonewton';
 
   @override
   String get displayName => _minorName;
@@ -1373,6 +1424,9 @@ final class Force$Attonewton extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Attonewton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-13;
@@ -1439,6 +1493,9 @@ final class Force$Dyne extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dyne';
 
   @override
   String get displayName => _minorName;
@@ -1509,6 +1566,9 @@ final class Force$JoulePerMeter extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Joule Per Meter';
+
+  @override
   String get displayName => 'joule/meter';
 
   static const _ratio = 100000.0;
@@ -1575,6 +1635,9 @@ final class Force$JoulePerCentimeter extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Joule Per Centimeter';
 
   @override
   String get displayName => 'joule/centimeter';
@@ -1645,6 +1708,9 @@ final class Force$KilogramForce extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Force';
+
+  @override
   String get displayName => 'kilogram force';
 
   static const _ratio = 980664.9999980076;
@@ -1711,6 +1777,9 @@ final class Force$GramForce extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Force';
 
   @override
   String get displayName => 'gram force';
@@ -1781,6 +1850,9 @@ final class Force$KipForce extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kip Force';
+
+  @override
   String get displayName => 'kip force';
 
   static const _ratio = 444822161.5254772;
@@ -1847,6 +1919,9 @@ final class Force$PoundForce extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Force';
 
   @override
   String get displayName => 'pound force';
@@ -1917,6 +1992,9 @@ final class Force$OunceForce extends Force {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ounce Force';
+
+  @override
   String get displayName => 'ounce force';
 
   static const _ratio = 27801.38509534232;
@@ -1983,6 +2061,9 @@ final class Force$Poundal extends Force {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Poundal';
 
   @override
   String get displayName => _minorName;

@@ -178,6 +178,9 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Viscosity Dynamic';
+
   static const _majorName = 'viscosityDynamic';
 
   static const newtonSecondPerMeterSquare =
@@ -318,6 +321,9 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Newton Second Per Meter Square';
+
+  @override
   String get displayName => 'newton-second/meter²';
 
   static const _ratio = 1000.0;
@@ -387,6 +393,9 @@ final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millinewton Second Per Meter Square';
 
   @override
   String get displayName => 'millinewton-second/meter²';
@@ -460,6 +469,9 @@ final class ViscosityDynamic$DyneSecondPerCentimeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dyne Second Per Centimeter Square';
+
+  @override
   String get displayName => 'dyne-second/centimeter²';
 
   static const _ratio = 100.0;
@@ -528,6 +540,9 @@ final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Exapoise';
 
   @override
   String get displayName => _minorName;
@@ -599,6 +614,9 @@ final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Petapoise';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100000000000000000.0;
@@ -666,6 +684,9 @@ final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Terapoise';
 
   @override
   String get displayName => _minorName;
@@ -737,6 +758,9 @@ final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gigapoise';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100000000000.0;
@@ -804,6 +828,9 @@ final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Megapoise';
 
   @override
   String get displayName => _minorName;
@@ -875,6 +902,9 @@ final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilopoise';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100000.0;
@@ -942,6 +972,9 @@ final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hectopoise';
 
   @override
   String get displayName => _minorName;
@@ -1013,6 +1046,9 @@ final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dekapoise';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
@@ -1080,6 +1116,9 @@ final class ViscosityDynamic$Poise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Poise';
 
   @override
   String get displayName => _minorName;
@@ -1151,6 +1190,9 @@ final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Decipoise';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
@@ -1218,6 +1260,9 @@ final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centipoise';
 
   @override
   String get displayName => _minorName;
@@ -1289,6 +1334,9 @@ final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millipoise';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
@@ -1356,6 +1404,9 @@ final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Micropoise';
 
   @override
   String get displayName => _minorName;
@@ -1427,6 +1478,9 @@ final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nanopoise';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-7;
@@ -1494,6 +1548,9 @@ final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Picopoise';
 
   @override
   String get displayName => _minorName;
@@ -1565,6 +1622,9 @@ final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Femtopoise';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-13;
@@ -1632,6 +1692,9 @@ final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Attopoise';
 
   @override
   String get displayName => _minorName;
@@ -1702,6 +1765,9 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Force Second Per Inch Square';
 
   @override
   String get displayName => 'pound force-second/inch²';
@@ -1775,6 +1841,9 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Force Second Per Foot Square';
+
+  @override
   String get displayName => 'pound force-second/foot²';
 
   static const _ratio = 47880.25898022151;
@@ -1844,6 +1913,9 @@ final class ViscosityDynamic$PoundalSecondPerFootSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Poundal Second Per Foot Square';
 
   @override
   String get displayName => 'poundal-second/foot²';
@@ -1916,6 +1988,9 @@ final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Per Centimeter Second';
+
+  @override
   String get displayName => 'gram/centimeter-second';
 
   static const _ratio = 100.0;
@@ -1984,6 +2059,9 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Slug Per Foot Second';
 
   @override
   String get displayName => 'slug/foot-second';
@@ -2056,6 +2134,9 @@ final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Foot Second';
+
+  @override
   String get displayName => 'pound/foot-second';
 
   static const _ratio = 1488.1639435684617;
@@ -2124,6 +2205,9 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Foot Hour';
 
   @override
   String get displayName => 'pound/foot-hour';

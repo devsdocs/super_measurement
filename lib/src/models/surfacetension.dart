@@ -70,6 +70,9 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Surface Tension';
+
   static const _majorName = 'surfaceTension';
 
   static const newtonPerMeter = SurfaceTension$NewtonPerMeter();
@@ -136,6 +139,9 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Newton Per Meter';
 
   @override
   String get displayName => 'newton/meter';
@@ -207,6 +213,9 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millinewton Per Meter';
+
+  @override
   String get displayName => 'millinewton/meter';
 
   static const _ratio = 1.0;
@@ -274,6 +283,9 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Force Per Centimeter';
 
   @override
   String get displayName => 'gram force/centimeter';
@@ -345,6 +357,9 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dyne Per Centimeter';
+
+  @override
   String get displayName => 'dyne/centimeter';
 
   static const _ratio = 1.0;
@@ -412,6 +427,9 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Erg Per Centimeter Square';
 
   @override
   String get displayName => 'erg/centimeter²';
@@ -483,6 +501,9 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Erg Per Millimeter Square';
+
+  @override
   String get displayName => 'erg/millimeter²';
 
   static const _ratio = 100.0;
@@ -552,6 +573,9 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Poundal Per Inch';
+
+  @override
   String get displayName => 'poundal/inch';
 
   static const _ratio = 5443.108492;
@@ -619,6 +643,9 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Force Per Inch';
 
   @override
   String get displayName => 'pound force/inch';

@@ -127,6 +127,9 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Heat Flux Density';
+
   static const _majorName = 'heatFluxDensity';
 
   static const kilowattPerMeterSquare =
@@ -243,6 +246,9 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilowatt Per Meter Square';
+
+  @override
   String get displayName => 'kilowatt/meter²';
 
   static const _ratio = 1000.0;
@@ -311,6 +317,9 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Watt Per Meter Square';
 
   @override
   String get displayName => 'watt/meter²';
@@ -383,6 +392,9 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Watt Per Centimeter Square';
+
+  @override
   String get displayName => 'watt/centimeter²';
 
   static const _ratio = 10000.0;
@@ -453,6 +465,9 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Watt Per Inch Square';
+
+  @override
   String get displayName => 'watt/inch²';
 
   static const _ratio = 1550.0031011409837;
@@ -521,6 +536,9 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Joule Per Second Meter Square';
 
   @override
   String get displayName => 'joule/second meter²';
@@ -594,6 +612,9 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilocalorie Per Hour Meter Square';
+
+  @override
   String get displayName => 'kilocalorie/hour meter²';
 
   static const _ratio = 1.163;
@@ -663,6 +684,9 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilocalorie Per Hour Foot Square';
 
   @override
   String get displayName => 'kilocalorie/hour foot²';
@@ -736,6 +760,9 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Calorie Per Second Centimeter Square';
+
+  @override
   String get displayName => 'calorie/second centimeter²';
 
   static const _ratio = 41868.0;
@@ -805,6 +832,9 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Calorie Per Hour Centimeter Square';
 
   @override
   String get displayName => 'gram calorie/hour centimeter²';
@@ -877,6 +907,9 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dyne Per Hour Centimeter';
+
+  @override
   String get displayName => 'dyne/hour centimeter';
 
   static const _ratio = 2.7777777777777776e-7;
@@ -945,6 +978,9 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Erg Per Hour Millimeter Square';
 
   @override
   String get displayName => 'erg/hour millimeter²';
@@ -1018,6 +1054,9 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Foot Pound Per Minute Foot Square';
+
+  @override
   String get displayName => 'foot pound/minute foot²';
 
   static const _ratio = 0.2432317155850531;
@@ -1087,6 +1126,9 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Horsepower Metric Per Foot Square';
 
   @override
   String get displayName => 'horsepower (metric)/foot²';
@@ -1159,6 +1201,9 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Horsepower U K Per Foot Square';
+
+  @override
   String get displayName => 'horsepower (UK)/foot²';
 
   static const _ratio = 8026.646617253367;
@@ -1227,6 +1272,9 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'B T U Per Hour Foot Square';
 
   @override
   String get displayName => 'BTU/hour foot²';
@@ -1299,6 +1347,9 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Minute Foot Square';
+
+  @override
   String get displayName => 'BTU/minute foot²';
 
   static const _ratio = 189.27544653946458;
@@ -1367,6 +1418,9 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C H U Per Hour Foot Square';
 
   @override
   String get displayName => 'CHU/hour foot²';

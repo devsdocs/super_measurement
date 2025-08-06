@@ -78,6 +78,9 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Magnetic Flux';
+
   static const _majorName = 'magneticFlux';
 
   static const weber = MagneticFlux$Weber();
@@ -152,6 +155,9 @@ final class MagneticFlux$Weber extends MagneticFlux {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Weber';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -218,6 +224,9 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Volt Second';
 
   @override
   String get displayName => 'volt second';
@@ -288,6 +297,9 @@ final class MagneticFlux$Megaline extends MagneticFlux {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megaline';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.01;
@@ -354,6 +366,9 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kiloline';
 
   @override
   String get displayName => _minorName;
@@ -424,6 +439,9 @@ final class MagneticFlux$Line extends MagneticFlux {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Line';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-8;
@@ -492,6 +510,9 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Maxwell';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-8;
@@ -558,6 +579,9 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Maxwell International';
 
   @override
   String get displayName => 'maxwell (International)';
@@ -629,6 +653,9 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Tesla Meter Square';
+
+  @override
   String get displayName => 'tesla meter²';
 
   static const _ratio = 1.0;
@@ -698,6 +725,9 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Tesla Centimeter Square';
+
+  @override
   String get displayName => 'tesla centimeter²';
 
   static const _ratio = 0.0001;
@@ -765,6 +795,9 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gauss Centimeter Square';
 
   @override
   String get displayName => 'gauss centimeter²';

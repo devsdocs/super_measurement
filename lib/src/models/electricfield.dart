@@ -74,6 +74,9 @@ sealed class ElectricField extends Unit<ElectricField> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Electric Field';
+
   static const _majorName = 'electricField';
 
   static const kilovoltPerCentimeter = ElectricField$KilovoltPerCentimeter();
@@ -145,6 +148,9 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilovolt Per Centimeter';
+
+  @override
   String get displayName => 'kilovolt/centimeter';
 
   static const _ratio = 1.0;
@@ -214,6 +220,9 @@ final class ElectricField$VoltPerMeter extends ElectricField {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Volt Per Meter';
+
+  @override
   String get displayName => 'volt/meter';
 
   static const _ratio = 0.00001;
@@ -280,6 +289,9 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Volt Per Centimeter';
 
   @override
   String get displayName => 'volt/centimeter';
@@ -351,6 +363,9 @@ final class ElectricField$VoltPerInch extends ElectricField {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Volt Per Inch';
+
+  @override
   String get displayName => 'volt/inch';
 
   static const _ratio = 0.0003937007874015748;
@@ -417,6 +432,9 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millivolt Per Meter';
 
   @override
   String get displayName => 'millivolt/meter';
@@ -488,6 +506,9 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Microvolt Per Meter';
+
+  @override
   String get displayName => 'microvolt/meter';
 
   static const _ratio = 1e-11;
@@ -555,6 +576,9 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abvolt Per Centimeter';
 
   @override
   String get displayName => 'Abvolt/centimeter';
@@ -626,6 +650,9 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Statvolt Per Centimeter';
+
+  @override
   String get displayName => 'Statvolt/centimeter';
 
   static const _ratio = 0.2997919999933998;
@@ -693,6 +720,9 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Statvolt Per Inch';
 
   @override
   String get displayName => 'Statvolt/inch';

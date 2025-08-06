@@ -55,6 +55,9 @@ sealed class ThermalExpansion extends Unit<ThermalExpansion> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Thermal Expansion';
+
   static const _majorName = 'thermalExpansion';
 
   static const lengthPerLengthPerKelvin =
@@ -122,6 +125,9 @@ final class ThermalExpansion$LengthPerLengthPerKelvin extends ThermalExpansion {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Length Per Length Per Kelvin';
 
   @override
   String get displayName => 'length/length/Kelvin';
@@ -195,6 +201,9 @@ final class ThermalExpansion$LengthPerLengthPerCelsius
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Length Per Length Per Celsius';
+
+  @override
   String get displayName => 'length/length/Celsius';
 
   static const _ratio = 1.0;
@@ -264,6 +273,9 @@ final class ThermalExpansion$LengthPerLengthPerFahrenheit
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Length Per Length Per Fahrenheit';
 
   @override
   String get displayName => 'length/length/Fahrenheit';
@@ -337,6 +349,9 @@ final class ThermalExpansion$LengthPerLengthPerRankine
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Length Per Length Per Rankine';
+
+  @override
   String get displayName => 'length/length/Rankine';
 
   static const _ratio = 1.8;
@@ -406,6 +421,9 @@ final class ThermalExpansion$LengthPerLengthPerReaumur
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Length Per Length Per Reaumur';
 
   @override
   String get displayName => 'length/length/Réaumur';

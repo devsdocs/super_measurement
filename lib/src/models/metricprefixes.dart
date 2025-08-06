@@ -136,6 +136,9 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Metric Prefixes';
+
   static const _majorName = 'metricPrefixes';
 
   static const yotta = MetricPrefixes$Yotta();
@@ -243,6 +246,9 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Yotta';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e+24;
@@ -309,6 +315,9 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Zetta';
 
   @override
   String get displayName => _minorName;
@@ -379,6 +388,9 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exa';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000000.0;
@@ -445,6 +457,9 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Peta';
 
   @override
   String get displayName => _minorName;
@@ -515,6 +530,9 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Tera';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000.0;
@@ -581,6 +599,9 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Giga';
 
   @override
   String get displayName => _minorName;
@@ -651,6 +672,9 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mega';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
@@ -717,6 +741,9 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilo';
 
   @override
   String get displayName => _minorName;
@@ -787,6 +814,9 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hecto';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100.0;
@@ -853,6 +883,9 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Deka';
 
   @override
   String get displayName => _minorName;
@@ -923,6 +956,9 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Metric Unit';
+
+  @override
   String get displayName => '-';
 
   static const _ratio = 1.0;
@@ -989,6 +1025,9 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Deci';
 
   @override
   String get displayName => _minorName;
@@ -1059,6 +1098,9 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centi';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.01;
@@ -1125,6 +1167,9 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Milli';
 
   @override
   String get displayName => _minorName;
@@ -1195,6 +1240,9 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Micro';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.000001;
@@ -1261,6 +1309,9 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nano';
 
   @override
   String get displayName => _minorName;
@@ -1331,6 +1382,9 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pico';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-12;
@@ -1397,6 +1451,9 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Femto';
 
   @override
   String get displayName => _minorName;
@@ -1467,6 +1524,9 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Atto';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-18;
@@ -1535,6 +1595,9 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Zepto';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-21;
@@ -1601,6 +1664,9 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Yocto';
 
   @override
   String get displayName => _minorName;

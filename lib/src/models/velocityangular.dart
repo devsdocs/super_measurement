@@ -91,6 +91,9 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Velocity Angular';
+
   static const _majorName = 'velocityAngular';
 
   static const degreePerDay = VelocityAngular$DegreePerDay();
@@ -171,6 +174,9 @@ final class VelocityAngular$DegreePerDay extends VelocityAngular {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Degree Per Day';
+
+  @override
   String get displayName => 'degree/day';
 
   static const _ratio = 1.0;
@@ -238,6 +244,9 @@ final class VelocityAngular$DegreePerHour extends VelocityAngular {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Degree Per Hour';
 
   @override
   String get displayName => 'degree/hour';
@@ -309,6 +318,9 @@ final class VelocityAngular$DegreePerMinute extends VelocityAngular {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Degree Per Minute';
+
+  @override
   String get displayName => 'degree/minute';
 
   static const _ratio = 1440.0;
@@ -376,6 +388,9 @@ final class VelocityAngular$DegreePerSecond extends VelocityAngular {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Degree Per Second';
 
   @override
   String get displayName => 'degree/second';
@@ -447,6 +462,9 @@ final class VelocityAngular$RadianPerDay extends VelocityAngular {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Radian Per Day';
+
+  @override
   String get displayName => 'radian/day';
 
   static const _ratio = 57.29577951308232;
@@ -514,6 +532,9 @@ final class VelocityAngular$RadianPerHour extends VelocityAngular {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Radian Per Hour';
 
   @override
   String get displayName => 'radian/hour';
@@ -585,6 +606,9 @@ final class VelocityAngular$RadianPerMinute extends VelocityAngular {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Radian Per Minute';
+
+  @override
   String get displayName => 'radian/minute';
 
   static const _ratio = 82505.92249883854;
@@ -652,6 +676,9 @@ final class VelocityAngular$RadianPerSecond extends VelocityAngular {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Radian Per Second';
 
   @override
   String get displayName => 'radian/second';
@@ -723,6 +750,9 @@ final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Revolution Per Day';
+
+  @override
   String get displayName => 'revolution/day';
 
   static const _ratio = 360.0;
@@ -790,6 +820,9 @@ final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Revolution Per Hour';
 
   @override
   String get displayName => 'revolution/hour';
@@ -861,6 +894,9 @@ final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Revolution Per Minute';
+
+  @override
   String get displayName => 'revolution/minute';
 
   static const _ratio = 518400.0;
@@ -928,6 +964,9 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Revolution Per Second';
 
   @override
   String get displayName => 'revolution/second';

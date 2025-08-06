@@ -140,6 +140,9 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Radiation Absorbed Dose Rate';
+
   static const _majorName = 'radiationAbsorbedDoseRate';
 
   static const radPerSecond = RadiationAbsorbedDoseRate$RadPerSecond();
@@ -259,6 +262,9 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Rad Per Second';
+
+  @override
   String get displayName => 'rad/second';
 
   static const _ratio = 10000000000000000.0;
@@ -328,6 +334,9 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Joule Per Kilogram Per Second';
 
   @override
   String get displayName => 'joule/kilogram/second';
@@ -401,6 +410,9 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exagray Per Second';
+
+  @override
   String get displayName => 'exagray/second';
 
   static const _ratio = 1e+36;
@@ -470,6 +482,9 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petagray Per Second';
 
   @override
   String get displayName => 'petagray/second';
@@ -543,6 +558,9 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Teragray Per Second';
+
+  @override
   String get displayName => 'teragray/second';
 
   static const _ratio = 1e+30;
@@ -612,6 +630,9 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigagray Per Second';
 
   @override
   String get displayName => 'gigagray/second';
@@ -685,6 +706,9 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megagray Per Second';
+
+  @override
   String get displayName => 'megagray/second';
 
   static const _ratio = 1e+24;
@@ -754,6 +778,9 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogray Per Second';
 
   @override
   String get displayName => 'kilogray/second';
@@ -827,6 +854,9 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectogray Per Second';
+
+  @override
   String get displayName => 'hectogray/second';
 
   static const _ratio = 100000000000000000000.0;
@@ -896,6 +926,9 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekagray Per Second';
 
   @override
   String get displayName => 'dekagray/second';
@@ -969,6 +1002,9 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gray Per Second';
+
+  @override
   String get displayName => 'gray/second';
 
   static const _ratio = 1000000000000000000.0;
@@ -1038,6 +1074,9 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Decigray Per Second';
 
   @override
   String get displayName => 'decigray/second';
@@ -1111,6 +1150,9 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centigray Per Second';
+
+  @override
   String get displayName => 'centigray/second';
 
   static const _ratio = 10000000000000000.0;
@@ -1180,6 +1222,9 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Milligray Per Second';
 
   @override
   String get displayName => 'milligray/second';
@@ -1253,6 +1298,9 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Microgray Per Second';
+
+  @override
   String get displayName => 'microgray/second';
 
   static const _ratio = 1000000000000.0;
@@ -1322,6 +1370,9 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nanogray Per Second';
 
   @override
   String get displayName => 'nanogray/second';
@@ -1395,6 +1446,9 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Picogray Per Second';
+
+  @override
   String get displayName => 'picogray/second';
 
   static const _ratio = 1000000.0;
@@ -1466,6 +1520,9 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Femtogray Per Second';
+
+  @override
   String get displayName => 'femtogray/second';
 
   static const _ratio = 1000.0;
@@ -1535,6 +1592,9 @@ final class RadiationAbsorbedDoseRate$AttograyPerSecond
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Attogray Per Second';
 
   @override
   String get displayName => 'attogray/second';

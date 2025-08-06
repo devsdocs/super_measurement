@@ -43,6 +43,9 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'H V A C Efficiency';
+
   static const _majorName = 'hVACEfficiency';
 
   static const eEREnergyEfficiencyRatio =
@@ -98,6 +101,9 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'E E R Energy Efficiency Ratio';
 
   @override
   String get displayName => 'EER (energy efficiency ratio)';
@@ -170,6 +176,9 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C O P Coefficient Of Performace';
+
+  @override
   String get displayName => 'COP (coefficient of performace)';
 
   static const _ratio = 1.0;
@@ -238,6 +247,9 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilowatt Per Ton';
 
   @override
   String get displayName => 'kilowatt/ton';

@@ -68,6 +68,9 @@ sealed class Conductivity extends Unit<Conductivity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Conductivity';
+
   static const _majorName = 'conductivity';
 
   static const mhoPerMeter = Conductivity$MhoPerMeter();
@@ -136,6 +139,9 @@ final class Conductivity$MhoPerMeter extends Conductivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mho Per Meter';
+
+  @override
   String get displayName => 'mho/meter';
 
   static const _ratio = 1.0;
@@ -202,6 +208,9 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mho Per Centimeter';
 
   @override
   String get displayName => 'mho/centimeter';
@@ -273,6 +282,9 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abmho Per Meter';
+
+  @override
   String get displayName => 'Abmho/meter';
 
   static const _ratio = 1000000000.0;
@@ -339,6 +351,9 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abmho Per Centimeter';
 
   @override
   String get displayName => 'Abmho/centimeter';
@@ -410,6 +425,9 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Statmho Per Meter';
+
+  @override
   String get displayName => 'Statmho/meter';
 
   static const _ratio = 1.112653456e-12;
@@ -477,6 +495,9 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Statmho Per Centimeter';
 
   @override
   String get displayName => 'Statmho/centimeter';
@@ -548,6 +569,9 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Siemens Per Meter';
+
+  @override
   String get displayName => 'siemens/meter';
 
   static const _ratio = 1.0;
@@ -615,6 +639,9 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Picosiemens Per Meter';
 
   @override
   String get displayName => 'picosiemens/meter';

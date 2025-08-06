@@ -183,6 +183,9 @@ sealed class Time extends Unit<Time> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Time';
+
   static const _majorName = 'time';
 
   static const millennium = Time$Millennium();
@@ -317,6 +320,9 @@ final class Time$Millennium extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millennium';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 3.1536e+28;
@@ -383,6 +389,9 @@ final class Time$Century extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Century';
 
   @override
   String get displayName => _minorName;
@@ -453,6 +462,9 @@ final class Time$Decade extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Decade';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 3.1536e+26;
@@ -519,6 +531,9 @@ final class Time$Year extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Year';
 
   @override
   String get displayName => _minorName;
@@ -589,6 +604,9 @@ final class Time$LeapYear extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Leap Year';
+
+  @override
   String get displayName => 'leap year';
 
   static const _ratio = 3.16224e+25;
@@ -655,6 +673,9 @@ final class Time$MeanYear extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mean Year';
 
   @override
   String get displayName => 'mean year';
@@ -725,6 +746,9 @@ final class Time$SiderealYear extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Sidereal Year';
+
+  @override
   String get displayName => 'sidereal year';
 
   static const _ratio = 3.1558149504e+25;
@@ -791,6 +815,9 @@ final class Time$TropicalYear extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Tropical Year';
 
   @override
   String get displayName => 'tropical year';
@@ -861,6 +888,9 @@ final class Time$Month extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Month';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 2.592e+24;
@@ -927,6 +957,9 @@ final class Time$SynodicMonth extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Synodic Month';
 
   @override
   String get displayName => 'synodic month';
@@ -997,6 +1030,9 @@ final class Time$Fortnight extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Fortnight';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.2096e+24;
@@ -1063,6 +1099,9 @@ final class Time$Week extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Week';
 
   @override
   String get displayName => _minorName;
@@ -1133,6 +1172,9 @@ final class Time$Day extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Day';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 8.64e+22;
@@ -1199,6 +1241,9 @@ final class Time$SiderealDay extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Sidereal Day';
 
   @override
   String get displayName => 'sidereal day';
@@ -1269,6 +1314,9 @@ final class Time$Hour extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hour';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 3.6e+21;
@@ -1335,6 +1383,9 @@ final class Time$SiderealHour extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Sidereal Hour';
 
   @override
   String get displayName => 'sidereal hour';
@@ -1405,6 +1456,9 @@ final class Time$Minute extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Minute';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 60000000000000000000.0;
@@ -1471,6 +1525,9 @@ final class Time$Second extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Second';
 
   @override
   String get displayName => _minorName;
@@ -1541,6 +1598,9 @@ final class Time$Millisecond extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millisecond';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
@@ -1607,6 +1667,9 @@ final class Time$Microsecond extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microsecond';
 
   @override
   String get displayName => _minorName;
@@ -1677,6 +1740,9 @@ final class Time$Nanosecond extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nanosecond';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
@@ -1743,6 +1809,9 @@ final class Time$Picosecond extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Picosecond';
 
   @override
   String get displayName => _minorName;
@@ -1813,6 +1882,9 @@ final class Time$Femtosecond extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Femtosecond';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
@@ -1879,6 +1951,9 @@ final class Time$Attosecond extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Attosecond';
 
   @override
   String get displayName => _minorName;
@@ -1949,6 +2024,9 @@ final class Time$Shake extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Shake';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10000000000.0;
@@ -2015,6 +2093,9 @@ final class Time$Septennial extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Septennial';
 
   @override
   String get displayName => _minorName;
@@ -2085,6 +2166,9 @@ final class Time$Octennial extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Octennial';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 2.52288e+26;
@@ -2151,6 +2235,9 @@ final class Time$Novennial extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Novennial';
 
   @override
   String get displayName => _minorName;
@@ -2221,6 +2308,9 @@ final class Time$Quindecennial extends Time {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Quindecennial';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 4.7304e+26;
@@ -2287,6 +2377,9 @@ final class Time$Quinquennial extends Time {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Quinquennial';
 
   @override
   String get displayName => _minorName;

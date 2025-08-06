@@ -49,6 +49,9 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Digital Image Resolution';
+
   static const _majorName = 'digitalImageResolution';
 
   static const dotPerInch = DigitalImageResolution$DotPerInch();
@@ -103,6 +106,9 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dot Per Inch';
 
   @override
   String get displayName => 'dot/inch';
@@ -173,6 +179,9 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dot Per Meter';
 
   @override
   String get displayName => 'dot/meter';
@@ -246,6 +255,9 @@ final class DigitalImageResolution$DotPerMillimeter
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dot Per Millimeter';
+
+  @override
   String get displayName => 'dot/millimeter';
 
   static const _ratio = 25.4;
@@ -314,6 +326,9 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pixel Per Inch';
 
   @override
   String get displayName => 'pixel/inch';

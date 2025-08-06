@@ -76,6 +76,9 @@ sealed class CalorificValue extends Unit<CalorificValue> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Calorific Value';
+
   static const _majorName = 'calorificValue';
 
   static const megajoulePerMeterCubic = CalorificValue$MegajoulePerMeterCubic();
@@ -151,6 +154,9 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megajoule Per Meter Cubic';
+
+  @override
   String get displayName => 'megajoule/meter³';
 
   static const _ratio = 26.839191732297994;
@@ -218,6 +224,9 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilojoule Per Meter Cubic';
 
   @override
   String get displayName => 'kilojoule/meter³';
@@ -289,6 +298,9 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Joule Per Meter Cubic';
+
+  @override
   String get displayName => 'joule/meter³';
 
   static const _ratio = 0.000026839191732297995;
@@ -356,6 +368,9 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilocalorie Per Meter Cubic';
 
   @override
   String get displayName => 'kilocalorie/meter³';
@@ -427,6 +442,9 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Calorie Per Centimeter Cubic';
+
+  @override
   String get displayName => 'calorie/centimeter³';
 
   static const _ratio = 112.37032794478525;
@@ -494,6 +512,9 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Therm Per Foot Cubic';
 
   @override
   String get displayName => 'therm/foot³';
@@ -565,6 +586,9 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Therm Per Gallon U K';
+
+  @override
   String get displayName => 'therm/gallon (UK)';
 
   static const _ratio = 622883.5459840919;
@@ -634,6 +658,9 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Foot Cubic';
+
+  @override
   String get displayName => 'BTU/foot³';
 
   static const _ratio = 1.0;
@@ -701,6 +728,9 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C H U Per Foot Cubic';
 
   @override
   String get displayName => 'CHU/foot³';

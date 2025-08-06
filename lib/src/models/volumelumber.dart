@@ -120,6 +120,9 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Volume Lumber';
+
   static const _majorName = 'volumeLumber';
 
   static const meterCubic = VolumeLumber$MeterCubic();
@@ -225,6 +228,9 @@ final class VolumeLumber$MeterCubic extends VolumeLumber {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Cubic';
+
+  @override
   String get displayName => 'meter³';
 
   static const _ratio = 61023.74409473228;
@@ -291,6 +297,9 @@ final class VolumeLumber$CubicFeet extends VolumeLumber {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cubic Feet';
 
   @override
   String get displayName => 'cubic feet';
@@ -361,6 +370,9 @@ final class VolumeLumber$CubicInch extends VolumeLumber {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cubic Inch';
+
+  @override
   String get displayName => 'cubic inch';
 
   static const _ratio = 1.0;
@@ -429,6 +441,9 @@ final class VolumeLumber$BoardFeet extends VolumeLumber {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Board Feet';
+
+  @override
   String get displayName => 'board feet';
 
   static const _ratio = 144.0;
@@ -495,6 +510,9 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Thousand Board Feet';
 
   @override
   String get displayName => '1000 board feet';
@@ -566,6 +584,9 @@ final class VolumeLumber$Cord extends VolumeLumber {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cord';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 221184.0;
@@ -632,6 +653,9 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cord80 Ft Cubic';
 
   @override
   String get displayName => 'cord (80 ft³)';
@@ -702,6 +726,9 @@ final class VolumeLumber$CordFeet extends VolumeLumber {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cord Feet';
+
+  @override
   String get displayName => 'cord feet';
 
   static const _ratio = 27648.0;
@@ -768,6 +795,9 @@ final class VolumeLumber$Cunit extends VolumeLumber {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cunit';
 
   @override
   String get displayName => _minorName;
@@ -838,6 +868,9 @@ final class VolumeLumber$Pallet extends VolumeLumber {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pallet';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 2448.0;
@@ -904,6 +937,9 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cross Tie';
 
   @override
   String get displayName => 'cross tie';
@@ -974,6 +1010,9 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Switch Tie';
+
+  @override
   String get displayName => 'switch tie';
 
   static const _ratio = 9072.0;
@@ -1041,6 +1080,9 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Thousand Square Feet1 Per8 Inch Panels';
 
   @override
   String get displayName => '1000 square feet (1/8-inch panels)';
@@ -1113,6 +1155,9 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Thousand Square Feet1 Per4 Inch Panels';
+
+  @override
   String get displayName => '1000 square feet (1/4-inch panels)';
 
   static const _ratio = 36000.0;
@@ -1181,6 +1226,9 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Thousand Square Feet3 Per8 Inch Panels';
 
   @override
   String get displayName => '1000 square feet (3/8-inch panels)';
@@ -1253,6 +1301,9 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Thousand Square Feet1 Per2 Inch Panels';
+
+  @override
   String get displayName => '1000 square feet (1/2-inch panels)';
 
   static const _ratio = 72000.0;
@@ -1321,6 +1372,9 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Thousand Square Feet3 Per4 Inch Panels';
 
   @override
   String get displayName => '1000 square feet (3/4-inch panels)';

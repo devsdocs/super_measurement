@@ -61,6 +61,9 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Linear Charge Density';
+
   static const _majorName = 'linearChargeDensity';
 
   static const coulombPerMeter = LinearChargeDensity$CoulombPerMeter();
@@ -124,6 +127,9 @@ final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Coulomb Per Meter';
 
   @override
   String get displayName => 'coulomb/meter';
@@ -197,6 +203,9 @@ final class LinearChargeDensity$CoulombPerCentimeter
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Coulomb Per Centimeter';
+
+  @override
   String get displayName => 'coulomb/centimeter';
 
   static const _ratio = 100.0;
@@ -267,6 +276,9 @@ final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Coulomb Per Inch';
+
+  @override
   String get displayName => 'coulomb/inch';
 
   static const _ratio = 39.37007874;
@@ -335,6 +347,9 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abcoulomb Per Meter';
 
   @override
   String get displayName => 'Abcoulomb/meter';
@@ -408,6 +423,9 @@ final class LinearChargeDensity$AbcoulombPerCentimeter
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abcoulomb Per Centimeter';
+
+  @override
   String get displayName => 'Abcoulomb/centimeter';
 
   static const _ratio = 1000.0;
@@ -476,6 +494,9 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abcoulomb Per Inch';
 
   @override
   String get displayName => 'Abcoulomb/inch';

@@ -61,6 +61,9 @@ sealed class VolumeChargeDensity extends Unit<VolumeChargeDensity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Volume Charge Density';
+
   static const _majorName = 'volumeChargeDensity';
 
   static const coulombPerMeterCubic =
@@ -130,6 +133,9 @@ final class VolumeChargeDensity$CoulombPerMeterCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Coulomb Per Meter Cubic';
 
   @override
   String get displayName => 'coulomb/meter³';
@@ -203,6 +209,9 @@ final class VolumeChargeDensity$CoulombPerCentimeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Coulomb Per Centimeter Cubic';
+
+  @override
   String get displayName => 'coulomb/centimeter³';
 
   static const _ratio = 1000000.0;
@@ -272,6 +281,9 @@ final class VolumeChargeDensity$CoulombPerInchCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Coulomb Per Inch Cubic';
 
   @override
   String get displayName => 'coulomb/inch³';
@@ -345,6 +357,9 @@ final class VolumeChargeDensity$AbcoulombPerMeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abcoulomb Per Meter Cubic';
+
+  @override
   String get displayName => 'Abcoulomb/meter³';
 
   static const _ratio = 10.0;
@@ -416,6 +431,9 @@ final class VolumeChargeDensity$AbcoulombPerCentimeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abcoulomb Per Centimeter Cubic';
+
+  @override
   String get displayName => 'Abcoulomb/centimeter³';
 
   static const _ratio = 10000000.0;
@@ -485,6 +503,9 @@ final class VolumeChargeDensity$AbcoulombPerInchCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abcoulomb Per Inch Cubic';
 
   @override
   String get displayName => 'Abcoulomb/inch³';

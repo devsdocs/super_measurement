@@ -92,6 +92,9 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Specific Heat Capacity';
+
   static const _majorName = 'specificHeatCapacity';
 
   static const kilojoulePerKilogramK =
@@ -180,6 +183,9 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilojoule Per Kilogram K';
+
+  @override
   String get displayName => 'kilojoule/kilogram K';
 
   static const _ratio = 1000.0;
@@ -249,6 +255,9 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilojoule Per Kilogram Degree C';
 
   @override
   String get displayName => 'kilojoule/kilogram °C';
@@ -322,6 +331,9 @@ final class SpecificHeatCapacity$JoulePerKilogramK
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Joule Per Kilogram K';
+
+  @override
   String get displayName => 'joule/kilogram K';
 
   static const _ratio = 1.0;
@@ -391,6 +403,9 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Joule Per Kilogram Degree C';
 
   @override
   String get displayName => 'joule/kilogram °C';
@@ -464,6 +479,9 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Joule Per Gram Degree C';
+
+  @override
   String get displayName => 'joule/gram °C';
 
   static const _ratio = 1000.0;
@@ -533,6 +551,9 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilocalorie Per Kilogram Degree C';
 
   @override
   String get displayName => 'kilocalorie/kilogram °C';
@@ -606,6 +627,9 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Calorie Per Gram Degree C';
+
+  @override
   String get displayName => 'calorie/gram °C';
 
   static const _ratio = 4186.8;
@@ -675,6 +699,9 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'B T U Per Pound Degree C';
 
   @override
   String get displayName => 'BTU/pound °C';
@@ -748,6 +775,9 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Pound Degree F';
+
+  @override
   String get displayName => 'BTU/pound °F';
 
   static const _ratio = 4186.8;
@@ -819,6 +849,9 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Pound Degree R';
+
+  @override
   String get displayName => 'BTU/pound °R';
 
   static const _ratio = 4186.8;
@@ -888,6 +921,9 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C H U Per Pound Degree C';
 
   @override
   String get displayName => 'CHU/pound °C';

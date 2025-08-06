@@ -78,6 +78,9 @@ sealed class Current extends Unit<Current> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Current';
+
   static const _majorName = 'current';
 
   static const kiloampere = Current$Kiloampere();
@@ -152,6 +155,9 @@ final class Current$Kiloampere extends Current {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kiloampere';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
@@ -218,6 +224,9 @@ final class Current$Ampere extends Current {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ampere';
 
   @override
   String get displayName => _minorName;
@@ -288,6 +297,9 @@ final class Current$Milliampere extends Current {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Milliampere';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -354,6 +366,9 @@ final class Current$Biot extends Current {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Biot';
 
   @override
   String get displayName => _minorName;
@@ -424,6 +439,9 @@ final class Current$Abampere extends Current {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abampere';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10000.0;
@@ -490,6 +508,9 @@ final class Current$Statampere extends Current {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Statampere';
 
   @override
   String get displayName => _minorName;
@@ -560,6 +581,9 @@ final class Current$EMUOfCurrent extends Current {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'E M U Of Current';
+
+  @override
   String get displayName => 'EMU of current';
 
   static const _ratio = 10000.0;
@@ -626,6 +650,9 @@ final class Current$ESUOfCurrent extends Current {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'E S U Of Current';
 
   @override
   String get displayName => 'ESU of current';
@@ -696,6 +723,9 @@ final class Current$CGSEMUnit extends Current {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C G S E M Unit';
+
+  @override
   String get displayName => 'CGS e.m. unit';
 
   static const _ratio = 10000.0;
@@ -762,6 +792,9 @@ final class Current$CGSESUnit extends Current {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C G S E S Unit';
 
   @override
   String get displayName => 'CGS e.s. unit';

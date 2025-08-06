@@ -992,6 +992,9 @@ sealed class DataTransfer extends Unit<DataTransfer> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Data Transfer';
+
   static const _majorName = 'dataTransfer';
 
   static const bitPerSecond = DataTransfer$BitPerSecond();
@@ -1570,6 +1573,9 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Bit Per Second';
+
+  @override
   String get displayName => 'bit/second';
 
   static const _ratio = 1.0;
@@ -1638,6 +1644,9 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Byte Per Second';
+
+  @override
   String get displayName => 'byte/second';
 
   static const _ratio = 8.0;
@@ -1704,6 +1713,9 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilobit Per Second';
 
   @override
   String get displayName => 'kilobit/second';
@@ -1775,6 +1787,9 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilobyte Per Second';
+
+  @override
   String get displayName => 'kilobyte/second';
 
   static const _ratio = 8000.0;
@@ -1842,6 +1857,9 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Megabit Per Second';
 
   @override
   String get displayName => 'megabit/second';
@@ -1913,6 +1931,9 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megabyte Per Second';
+
+  @override
   String get displayName => 'megabyte/second';
 
   static const _ratio = 8000000.0;
@@ -1980,6 +2001,9 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigabit Per Second';
 
   @override
   String get displayName => 'gigabit/second';
@@ -2051,6 +2075,9 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gigabyte Per Second';
+
+  @override
   String get displayName => 'gigabyte/second';
 
   static const _ratio = 8000000000.0;
@@ -2118,6 +2145,9 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Terabit Per Second';
 
   @override
   String get displayName => 'terabit/second';
@@ -2189,6 +2219,9 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Terabyte Per Second';
+
+  @override
   String get displayName => 'terabyte/second';
 
   static const _ratio = 8000000000000.0;
@@ -2256,6 +2289,9 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kibibit Per Second';
 
   @override
   String get displayName => 'kibibit/second';
@@ -2327,6 +2363,9 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kibibyte Per Second';
+
+  @override
   String get displayName => 'kibibyte/second';
 
   static const _ratio = 8192.0;
@@ -2394,6 +2433,9 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mebibit Per Second';
 
   @override
   String get displayName => 'mebibit/second';
@@ -2465,6 +2507,9 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mebibyte Per Second';
+
+  @override
   String get displayName => 'mebibyte/second';
 
   static const _ratio = 8388608.0;
@@ -2532,6 +2577,9 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gibibit Per Second';
 
   @override
   String get displayName => 'gibibit/second';
@@ -2603,6 +2651,9 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gibibyte Per Second';
+
+  @override
   String get displayName => 'gibibyte/second';
 
   static const _ratio = 8589934592.0;
@@ -2670,6 +2721,9 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Tebibit Per Second';
 
   @override
   String get displayName => 'tebibit/second';
@@ -2741,6 +2795,9 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Tebibyte Per Second';
+
+  @override
   String get displayName => 'tebibyte/second';
 
   static const _ratio = 8796093022208.0;
@@ -2808,6 +2865,9 @@ final class DataTransfer$Ethernet extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ethernet';
 
   @override
   String get displayName => _minorName;
@@ -2878,6 +2938,9 @@ final class DataTransfer$EthernetFast extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ethernet Fast';
+
+  @override
   String get displayName => 'ethernet (fast)';
 
   static const _ratio = 100000000.0;
@@ -2944,6 +3007,9 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ethernet Gigabit';
 
   @override
   String get displayName => 'ethernet (gigabit)';
@@ -3015,6 +3081,9 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ethernet10 Gigabit';
+
+  @override
   String get displayName => 'ethernet (10 gigabit)';
 
   static const _ratio = 10000000000.0;
@@ -3082,6 +3151,9 @@ final class DataTransfer$OC1 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'O C1';
 
   @override
   String get displayName => 'OC1';
@@ -3152,6 +3224,9 @@ final class DataTransfer$OC3 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'O C3';
+
+  @override
   String get displayName => 'OC3';
 
   static const _ratio = 155520000.0;
@@ -3218,6 +3293,9 @@ final class DataTransfer$OC12 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'O C12';
 
   @override
   String get displayName => 'OC12';
@@ -3288,6 +3366,9 @@ final class DataTransfer$OC24 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'O C24';
+
+  @override
   String get displayName => 'OC24';
 
   static const _ratio = 1244160000.0;
@@ -3354,6 +3435,9 @@ final class DataTransfer$OC48 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'O C48';
 
   @override
   String get displayName => 'OC48';
@@ -3424,6 +3508,9 @@ final class DataTransfer$OC192 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'O C192';
+
+  @override
   String get displayName => 'OC192';
 
   static const _ratio = 9953280000.0;
@@ -3492,6 +3579,9 @@ final class DataTransfer$OC768 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'O C768';
+
+  @override
   String get displayName => 'OC768';
 
   static const _ratio = 39813120000.0;
@@ -3558,6 +3648,9 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I S D N Single Channel';
 
   @override
   String get displayName => 'ISDN (single channel)';
@@ -3629,6 +3722,9 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I S D N Dual Channel';
+
+  @override
   String get displayName => 'ISDN (dual channel)';
 
   static const _ratio = 128000.0;
@@ -3696,6 +3792,9 @@ final class DataTransfer$Modem110 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Modem110';
 
   @override
   String get displayName => 'modem (110)';
@@ -3766,6 +3865,9 @@ final class DataTransfer$Modem300 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Modem300';
+
+  @override
   String get displayName => 'modem (300)';
 
   static const _ratio = 300.0;
@@ -3832,6 +3934,9 @@ final class DataTransfer$Modem1200 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Modem1200';
 
   @override
   String get displayName => 'modem (1200)';
@@ -3902,6 +4007,9 @@ final class DataTransfer$Modem2400 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Modem2400';
+
+  @override
   String get displayName => 'modem (2400)';
 
   static const _ratio = 2400.0;
@@ -3968,6 +4076,9 @@ final class DataTransfer$Modem9600 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Modem9600';
 
   @override
   String get displayName => 'modem (9600)';
@@ -4038,6 +4149,9 @@ final class DataTransfer$Modem144k extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Modem144k';
+
+  @override
   String get displayName => 'modem (14.4k)';
 
   static const _ratio = 14400.0;
@@ -4104,6 +4218,9 @@ final class DataTransfer$Modem288k extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Modem288k';
 
   @override
   String get displayName => 'modem (28.8k)';
@@ -4174,6 +4291,9 @@ final class DataTransfer$Modem336k extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Modem336k';
+
+  @override
   String get displayName => 'modem (33.6k)';
 
   static const _ratio = 33600.0;
@@ -4240,6 +4360,9 @@ final class DataTransfer$Modem56k extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Modem56k';
 
   @override
   String get displayName => 'modem (56k)';
@@ -4310,6 +4433,9 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S C S I Async';
+
+  @override
   String get displayName => 'SCSI (Async)';
 
   static const _ratio = 12000000.0;
@@ -4376,6 +4502,9 @@ final class DataTransfer$SCSISync extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S C S I Sync';
 
   @override
   String get displayName => 'SCSI (Sync)';
@@ -4446,6 +4575,9 @@ final class DataTransfer$SCSIFast extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S C S I Fast';
+
+  @override
   String get displayName => 'SCSI (Fast)';
 
   static const _ratio = 80000000.0;
@@ -4512,6 +4644,9 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S C S I Fast Ultra';
 
   @override
   String get displayName => 'SCSI (Fast Ultra)';
@@ -4582,6 +4717,9 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S C S I Fast Wide';
+
+  @override
   String get displayName => 'SCSI (Fast Wide)';
 
   static const _ratio = 160000000.0;
@@ -4648,6 +4786,9 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S C S I Fast Ultra Wide';
 
   @override
   String get displayName => 'SCSI (Fast Ultra Wide)';
@@ -4719,6 +4860,9 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S C S I Ultra2';
+
+  @override
   String get displayName => 'SCSI (Ultra-2)';
 
   static const _ratio = 640000000.0;
@@ -4785,6 +4929,9 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S C S I Ultra3';
 
   @override
   String get displayName => 'SCSI (Ultra-3)';
@@ -4855,6 +5002,9 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S C S I L V D Ultra80';
+
+  @override
   String get displayName => 'SCSI (LVD Ultra80)';
 
   static const _ratio = 640000000.0;
@@ -4921,6 +5071,9 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S C S I L V D Ultra160';
 
   @override
   String get displayName => 'SCSI (LVD Ultra160)';
@@ -4992,6 +5145,9 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S C S I L V D Ultra320';
+
+  @override
   String get displayName => 'SCSI (LVD Ultra320)';
 
   static const _ratio = 2560000000.0;
@@ -5059,6 +5215,9 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E P I O Mode0';
 
   @override
   String get displayName => 'IDE (PIO mode 0)';
@@ -5129,6 +5288,9 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E P I O Mode1';
+
+  @override
   String get displayName => 'IDE (PIO mode 1)';
 
   static const _ratio = 41600000.0;
@@ -5195,6 +5357,9 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E P I O Mode2';
 
   @override
   String get displayName => 'IDE (PIO mode 2)';
@@ -5265,6 +5430,9 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E P I O Mode3';
+
+  @override
   String get displayName => 'IDE (PIO mode 3)';
 
   static const _ratio = 88800000.0;
@@ -5331,6 +5499,9 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E P I O Mode4';
 
   @override
   String get displayName => 'IDE (PIO mode 4)';
@@ -5401,6 +5572,9 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E D M A Mode0';
+
+  @override
   String get displayName => 'IDE (DMA mode 0)';
 
   static const _ratio = 33600000.0;
@@ -5467,6 +5641,9 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E D M A Mode1';
 
   @override
   String get displayName => 'IDE (DMA mode 1)';
@@ -5537,6 +5714,9 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E D M A Mode2';
+
+  @override
   String get displayName => 'IDE (DMA mode 2)';
 
   static const _ratio = 132800000.0;
@@ -5603,6 +5783,9 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E U D M A Mode0';
 
   @override
   String get displayName => 'IDE (UDMA mode 0)';
@@ -5673,6 +5856,9 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E U D M A Mode1';
+
+  @override
   String get displayName => 'IDE (UDMA mode 1)';
 
   static const _ratio = 200000000.0;
@@ -5739,6 +5925,9 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E U D M A Mode2';
 
   @override
   String get displayName => 'IDE (UDMA mode 2)';
@@ -5809,6 +5998,9 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E U D M A Mode3';
+
+  @override
   String get displayName => 'IDE (UDMA mode 3)';
 
   static const _ratio = 400000000.0;
@@ -5875,6 +6067,9 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E U D M A Mode4';
 
   @override
   String get displayName => 'IDE (UDMA mode 4)';
@@ -5945,6 +6140,9 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E U D M A Mode5';
+
+  @override
   String get displayName => 'IDE (UDMA mode 5)';
 
   static const _ratio = 800000000.0;
@@ -6011,6 +6209,9 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E U D M A Mode6';
 
   @override
   String get displayName => 'IDE (UDMA mode 6)';
@@ -6081,6 +6282,9 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E U D M A33';
+
+  @override
   String get displayName => 'IDE (UDMA-33)';
 
   static const _ratio = 264000000.0;
@@ -6147,6 +6351,9 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E U D M A66';
 
   @override
   String get displayName => 'IDE (UDMA-66)';
@@ -6217,6 +6424,9 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I D E U D M A100';
+
+  @override
   String get displayName => 'IDE (UDMA-100)';
 
   static const _ratio = 800000000.0;
@@ -6283,6 +6493,9 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I D E U D M A133';
 
   @override
   String get displayName => 'IDE (UDMA-133)';
@@ -6353,6 +6566,9 @@ final class DataTransfer$SATA10 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S A T A10';
+
+  @override
   String get displayName => 'SATA 1.0';
 
   static const _ratio = 1500000000.0;
@@ -6419,6 +6635,9 @@ final class DataTransfer$SATA20 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S A T A20';
 
   @override
   String get displayName => 'SATA 2.0';
@@ -6489,6 +6708,9 @@ final class DataTransfer$SATA30 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S A T A30';
+
+  @override
   String get displayName => 'SATA 3.0';
 
   static const _ratio = 6000000000.0;
@@ -6555,6 +6777,9 @@ final class DataTransfer$USB extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'U S B';
 
   @override
   String get displayName => 'USB';
@@ -6625,6 +6850,9 @@ final class DataTransfer$USB20 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'U S B20';
+
+  @override
   String get displayName => 'USB 2.0';
 
   static const _ratio = 480000000.0;
@@ -6693,6 +6921,9 @@ final class DataTransfer$USB30 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'U S B30';
+
+  @override
   String get displayName => 'USB 3.0';
 
   static const _ratio = 5000000000.0;
@@ -6759,6 +6990,9 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Fire Wire400 I E E E1394';
 
   @override
   String get displayName => 'FireWire 400 (IEEE-1394)';
@@ -6830,6 +7064,9 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Fire Wire800 I E E E1394b';
+
+  @override
   String get displayName => 'FireWire 800 (IEEE-1394b)';
 
   static const _ratio = 800000000.0;
@@ -6897,6 +7134,9 @@ final class DataTransfer$IrDA extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ir D A';
 
   @override
   String get displayName => 'IrDA';
@@ -6967,6 +7207,9 @@ final class DataTransfer$IrDA2 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ir D A2';
+
+  @override
   String get displayName => 'IrDA-2';
 
   static const _ratio = 4000000.0;
@@ -7033,6 +7276,9 @@ final class DataTransfer$ATM extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'A T M';
 
   @override
   String get displayName => 'ATM';
@@ -7103,6 +7349,9 @@ final class DataTransfer$T0Payload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'T0 Payload';
+
+  @override
   String get displayName => 'T0 (payload)';
 
   static const _ratio = 56000.0;
@@ -7169,6 +7418,9 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'T0 B8 Z S Payload';
 
   @override
   String get displayName => 'T0 (B8ZS payload)';
@@ -7239,6 +7491,9 @@ final class DataTransfer$T1Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'T1 Signal';
+
+  @override
   String get displayName => 'T1 (signal)';
 
   static const _ratio = 1544000.0;
@@ -7305,6 +7560,9 @@ final class DataTransfer$T1Payload extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'T1 Payload';
 
   @override
   String get displayName => 'T1 (payload)';
@@ -7375,6 +7633,9 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'T1 Z Payload';
+
+  @override
   String get displayName => 'T1Z (payload)';
 
   static const _ratio = 1544000.0;
@@ -7441,6 +7702,9 @@ final class DataTransfer$T1CSignal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'T1 C Signal';
 
   @override
   String get displayName => 'T1C (signal)';
@@ -7511,6 +7775,9 @@ final class DataTransfer$T1CPayload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'T1 C Payload';
+
+  @override
   String get displayName => 'T1C (payload)';
 
   static const _ratio = 2688000.0;
@@ -7577,6 +7844,9 @@ final class DataTransfer$T2Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'T2 Signal';
 
   @override
   String get displayName => 'T2 (signal)';
@@ -7647,6 +7917,9 @@ final class DataTransfer$T3Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'T3 Signal';
+
+  @override
   String get displayName => 'T3 (signal)';
 
   static const _ratio = 44736000.0;
@@ -7713,6 +7986,9 @@ final class DataTransfer$T3Payload extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'T3 Payload';
 
   @override
   String get displayName => 'T3 (payload)';
@@ -7783,6 +8059,9 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'T3 Z Payload';
+
+  @override
   String get displayName => 'T3Z (payload)';
 
   static const _ratio = 43008000.0;
@@ -7849,6 +8128,9 @@ final class DataTransfer$T4Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'T4 Signal';
 
   @override
   String get displayName => 'T4 (signal)';
@@ -7919,6 +8201,9 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'E P T A1 Signal';
+
+  @override
   String get displayName => 'E.P.T.A. 1 (signal)';
 
   static const _ratio = 2048000.0;
@@ -7985,6 +8270,9 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'E P T A1 Payload';
 
   @override
   String get displayName => 'E.P.T.A. 1 (payload)';
@@ -8055,6 +8343,9 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'E P T A2 Signal';
+
+  @override
   String get displayName => 'E.P.T.A. 2 (signal)';
 
   static const _ratio = 8448000.0;
@@ -8121,6 +8412,9 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'E P T A2 Payload';
 
   @override
   String get displayName => 'E.P.T.A. 2 (payload)';
@@ -8191,6 +8485,9 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'E P T A3 Signal';
+
+  @override
   String get displayName => 'E.P.T.A. 3 (signal)';
 
   static const _ratio = 34368000.0;
@@ -8257,6 +8554,9 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'E P T A3 Payload';
 
   @override
   String get displayName => 'E.P.T.A. 3 (payload)';
@@ -8327,6 +8627,9 @@ final class DataTransfer$H0 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'H0';
+
+  @override
   String get displayName => 'H0';
 
   static const _ratio = 384000.0;
@@ -8393,6 +8696,9 @@ final class DataTransfer$H11 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'H11';
 
   @override
   String get displayName => 'H11';
@@ -8463,6 +8769,9 @@ final class DataTransfer$H12 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'H12';
+
+  @override
   String get displayName => 'H12';
 
   static const _ratio = 1920000.0;
@@ -8529,6 +8838,9 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Virtual Tributary1 Signal';
 
   @override
   String get displayName => 'Virtual Tributary 1 (signal)';
@@ -8600,6 +8912,9 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Virtual Tributary1 Payload';
+
+  @override
   String get displayName => 'Virtual Tributary 1 (payload)';
 
   static const _ratio = 1544000.0;
@@ -8667,6 +8982,9 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Virtual Tributary2 Signal';
 
   @override
   String get displayName => 'Virtual Tributary 2 (signal)';
@@ -8738,6 +9056,9 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Virtual Tributary2 Payload';
+
+  @override
   String get displayName => 'Virtual Tributary 2 (payload)';
 
   static const _ratio = 2048000.0;
@@ -8805,6 +9126,9 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Virtual Tributary6 Signal';
 
   @override
   String get displayName => 'Virtual Tributary 6 (signal)';
@@ -8876,6 +9200,9 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Virtual Tributary6 Payload';
+
+  @override
   String get displayName => 'Virtual Tributary 6 (payload)';
 
   static const _ratio = 6000000.0;
@@ -8943,6 +9270,9 @@ final class DataTransfer$STS1Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S T S1 Signal';
 
   @override
   String get displayName => 'STS1 (signal)';
@@ -9013,6 +9343,9 @@ final class DataTransfer$STS1Payload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S T S1 Payload';
+
+  @override
   String get displayName => 'STS1 (payload)';
 
   static const _ratio = 49500000.0;
@@ -9079,6 +9412,9 @@ final class DataTransfer$STS3Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S T S3 Signal';
 
   @override
   String get displayName => 'STS3 (signal)';
@@ -9149,6 +9485,9 @@ final class DataTransfer$STS3Payload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S T S3 Payload';
+
+  @override
   String get displayName => 'STS3 (payload)';
 
   static const _ratio = 150336000.0;
@@ -9215,6 +9554,9 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S T S3c Signal';
 
   @override
   String get displayName => 'STS3c (signal)';
@@ -9285,6 +9627,9 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S T S3c Payload';
+
+  @override
   String get displayName => 'STS3c (payload)';
 
   static const _ratio = 150336000.0;
@@ -9351,6 +9696,9 @@ final class DataTransfer$STS12Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S T S12 Signal';
 
   @override
   String get displayName => 'STS12 (signal)';
@@ -9421,6 +9769,9 @@ final class DataTransfer$STS24Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S T S24 Signal';
+
+  @override
   String get displayName => 'STS24 (signal)';
 
   static const _ratio = 1244160000.0;
@@ -9487,6 +9838,9 @@ final class DataTransfer$STS48Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S T S48 Signal';
 
   @override
   String get displayName => 'STS48 (signal)';
@@ -9557,6 +9911,9 @@ final class DataTransfer$STS192Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S T S192 Signal';
+
+  @override
   String get displayName => 'STS192 (signal)';
 
   static const _ratio = 9953280000.0;
@@ -9623,6 +9980,9 @@ final class DataTransfer$STM1Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S T M1 Signal';
 
   @override
   String get displayName => 'STM-1 (signal)';
@@ -9693,6 +10053,9 @@ final class DataTransfer$STM4Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S T M4 Signal';
+
+  @override
   String get displayName => 'STM-4 (signal)';
 
   static const _ratio = 622080000.0;
@@ -9759,6 +10122,9 @@ final class DataTransfer$STM16Signal extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'S T M16 Signal';
 
   @override
   String get displayName => 'STM-16 (signal)';
@@ -9829,6 +10195,9 @@ final class DataTransfer$STM64Signal extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'S T M64 Signal';
+
+  @override
   String get displayName => 'STM-64 (signal)';
 
   static const _ratio = 9953280000.0;
@@ -9895,6 +10264,9 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Character Per Second';
 
   @override
   String get displayName => 'character/second';
@@ -9966,6 +10338,9 @@ final class DataTransfer$TokenRing extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Token Ring';
+
+  @override
   String get displayName => 'token ring';
 
   static const _ratio = 4000000.0;
@@ -10032,6 +10407,9 @@ final class DataTransfer$FiberChannel extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Fiber Channel';
 
   @override
   String get displayName => 'fiber channel';
@@ -10102,6 +10480,9 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'I S A8 Bit';
+
+  @override
   String get displayName => 'ISA (8-bit)';
 
   static const _ratio = 66666666.666666664;
@@ -10168,6 +10549,9 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'I S A16 Bit';
 
   @override
   String get displayName => 'ISA (16-bit)';
@@ -10238,6 +10622,9 @@ final class DataTransfer$VLB extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'V L B';
+
+  @override
   String get displayName => 'VLB';
 
   static const _ratio = 533333333.3333333;
@@ -10304,6 +10691,9 @@ final class DataTransfer$PCI extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'P C I';
 
   @override
   String get displayName => 'PCI';
@@ -10374,6 +10764,9 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'P C I64 Bit';
+
+  @override
   String get displayName => 'PCI (64-bit)';
 
   static const _ratio = 2133333333.3333333;
@@ -10440,6 +10833,9 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'P C I64 Bit66 M Hz';
 
   @override
   String get displayName => 'PCI (64-bit 66MHz)';
@@ -10510,6 +10906,9 @@ final class DataTransfer$PCIX extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'P C I X';
+
+  @override
   String get displayName => 'PCI-X';
 
   static const _ratio = 8533333333.333333;
@@ -10576,6 +10975,9 @@ final class DataTransfer$AGP extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'A G P';
 
   @override
   String get displayName => 'AGP';
@@ -10646,6 +11048,9 @@ final class DataTransfer$AGP2X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'A G P2 X';
+
+  @override
   String get displayName => 'AGP 2X';
 
   static const _ratio = 4266666666.6666665;
@@ -10712,6 +11117,9 @@ final class DataTransfer$AGP4X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'A G P4 X';
 
   @override
   String get displayName => 'AGP 4X';
@@ -10782,6 +11190,9 @@ final class DataTransfer$AGP8X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'A G P8 X';
+
+  @override
   String get displayName => 'AGP 8X';
 
   static const _ratio = 17066666666.666666;
@@ -10848,6 +11259,9 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'P C I Express10 X1';
 
   @override
   String get displayName => 'PCI Express 1.0 (x1)';
@@ -10918,6 +11332,9 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'P C I Express10 X4';
+
+  @override
   String get displayName => 'PCI Express 1.0 (x4)';
 
   static const _ratio = 8000000000.0;
@@ -10986,6 +11403,9 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'P C I Express10 X8';
+
+  @override
   String get displayName => 'PCI Express 1.0 (x8)';
 
   static const _ratio = 16000000000.0;
@@ -11052,6 +11472,9 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'P C I Express10 X16';
 
   @override
   String get displayName => 'PCI Express 1.0 (x16)';
@@ -11123,6 +11546,9 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'P C I Express20 X1';
+
+  @override
   String get displayName => 'PCI Express 2.0 (x1)';
 
   static const _ratio = 4000000000.0;
@@ -11189,6 +11615,9 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'P C I Express20 X4';
 
   @override
   String get displayName => 'PCI Express 2.0 (x4)';
@@ -11259,6 +11688,9 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'P C I Express20 X8';
+
+  @override
   String get displayName => 'PCI Express 2.0 (x8)';
 
   static const _ratio = 32000000000.0;
@@ -11325,6 +11757,9 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'P C I Express20 X16';
 
   @override
   String get displayName => 'PCI Express 2.0 (x16)';
@@ -11396,6 +11831,9 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'P C I Express30 X1';
+
+  @override
   String get displayName => 'PCI Express 3.0 (x1)';
 
   static const _ratio = 8000000000.0;
@@ -11462,6 +11900,9 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'P C I Express30 X4';
 
   @override
   String get displayName => 'PCI Express 3.0 (x4)';
@@ -11532,6 +11973,9 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'P C I Express30 X8';
+
+  @override
   String get displayName => 'PCI Express 3.0 (x8)';
 
   static const _ratio = 64000000000.0;
@@ -11598,6 +12042,9 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'P C I Express30 X16';
 
   @override
   String get displayName => 'PCI Express 3.0 (x16)';
@@ -11669,6 +12116,9 @@ final class DataTransfer$CDROM1X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C D R O M1 X';
+
+  @override
   String get displayName => 'CD-ROM 1X';
 
   static const _ratio = 1228800.0;
@@ -11735,6 +12185,9 @@ final class DataTransfer$CDROM2X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C D R O M2 X';
 
   @override
   String get displayName => 'CD-ROM 2X';
@@ -11805,6 +12258,9 @@ final class DataTransfer$CDROM3X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C D R O M3 X';
+
+  @override
   String get displayName => 'CD-ROM 3X';
 
   static const _ratio = 3686400.0;
@@ -11871,6 +12327,9 @@ final class DataTransfer$CDROM4X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C D R O M4 X';
 
   @override
   String get displayName => 'CD-ROM 4X';
@@ -11941,6 +12400,9 @@ final class DataTransfer$CDROM6X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C D R O M6 X';
+
+  @override
   String get displayName => 'CD-ROM 6X';
 
   static const _ratio = 7372800.0;
@@ -12007,6 +12469,9 @@ final class DataTransfer$CDROM8X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C D R O M8 X';
 
   @override
   String get displayName => 'CD-ROM 8X';
@@ -12077,6 +12542,9 @@ final class DataTransfer$CDROM12X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C D R O M12 X';
+
+  @override
   String get displayName => 'CD-ROM 12X';
 
   static const _ratio = 14745600.0;
@@ -12143,6 +12611,9 @@ final class DataTransfer$CDROM16X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C D R O M16 X';
 
   @override
   String get displayName => 'CD-ROM 16X';
@@ -12213,6 +12684,9 @@ final class DataTransfer$CDROM24X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C D R O M24 X';
+
+  @override
   String get displayName => 'CD-ROM 24X';
 
   static const _ratio = 29491200.0;
@@ -12279,6 +12753,9 @@ final class DataTransfer$CDROM32X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C D R O M32 X';
 
   @override
   String get displayName => 'CD-ROM 32X';
@@ -12349,6 +12826,9 @@ final class DataTransfer$CDROM40X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C D R O M40 X';
+
+  @override
   String get displayName => 'CD-ROM 40X';
 
   static const _ratio = 49152000.0;
@@ -12415,6 +12895,9 @@ final class DataTransfer$CDROM48X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C D R O M48 X';
 
   @override
   String get displayName => 'CD-ROM 48X';
@@ -12485,6 +12968,9 @@ final class DataTransfer$CDROM52X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C D R O M52 X';
+
+  @override
   String get displayName => 'CD-ROM 52X';
 
   static const _ratio = 63897600.0;
@@ -12551,6 +13037,9 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'D V D R O M1 X';
 
   @override
   String get displayName => 'DVD-ROM 1X';
@@ -12621,6 +13110,9 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'D V D R O M2 X';
+
+  @override
   String get displayName => 'DVD-ROM 2X';
 
   static const _ratio = 22160000.0;
@@ -12687,6 +13179,9 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'D V D R O M3 X';
 
   @override
   String get displayName => 'DVD-ROM 3X';
@@ -12757,6 +13252,9 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'D V D R O M4 X';
+
+  @override
   String get displayName => 'DVD-ROM 4X';
 
   static const _ratio = 44320000.0;
@@ -12823,6 +13321,9 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'D V D R O M6 X';
 
   @override
   String get displayName => 'DVD-ROM 6X';
@@ -12893,6 +13394,9 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'D V D R O M8 X';
+
+  @override
   String get displayName => 'DVD-ROM 8X';
 
   static const _ratio = 88640000.0;
@@ -12959,6 +13463,9 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'D V D R O M10 X';
 
   @override
   String get displayName => 'DVD-ROM 10X';
@@ -13029,6 +13536,9 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'D V D R O M12 X';
+
+  @override
   String get displayName => 'DVD-ROM 12X';
 
   static const _ratio = 132960000.0;
@@ -13095,6 +13605,9 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'D V D R O M16 X';
 
   @override
   String get displayName => 'DVD-ROM 16X';
@@ -13165,6 +13678,9 @@ final class DataTransfer$BluRay1X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Blu Ray1 X';
+
+  @override
   String get displayName => 'Blu-ray 1X';
 
   static const _ratio = 36000000.0;
@@ -13231,6 +13747,9 @@ final class DataTransfer$BluRay2X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Blu Ray2 X';
 
   @override
   String get displayName => 'Blu-ray 2X';
@@ -13301,6 +13820,9 @@ final class DataTransfer$BluRay4X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Blu Ray4 X';
+
+  @override
   String get displayName => 'Blu-ray 4X';
 
   static const _ratio = 144000000.0;
@@ -13367,6 +13889,9 @@ final class DataTransfer$BluRay6X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Blu Ray6 X';
 
   @override
   String get displayName => 'Blu-ray 6X';
@@ -13437,6 +13962,9 @@ final class DataTransfer$BluRay8X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Blu Ray8 X';
+
+  @override
   String get displayName => 'Blu-ray 8X';
 
   static const _ratio = 288000000.0;
@@ -13505,6 +14033,9 @@ final class DataTransfer$BluRay10X extends DataTransfer {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Blu Ray10 X';
+
+  @override
   String get displayName => 'Blu-ray 10X';
 
   static const _ratio = 360000000.0;
@@ -13571,6 +14102,9 @@ final class DataTransfer$BluRay12X extends DataTransfer {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Blu Ray12 X';
 
   @override
   String get displayName => 'Blu-ray 12X';

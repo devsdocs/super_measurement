@@ -253,6 +253,9 @@ sealed class Pressure extends Unit<Pressure> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Pressure';
+
   static const _majorName = 'pressure';
 
   static const exapascal = Pressure$Exapascal();
@@ -427,6 +430,9 @@ final class Pressure$Exapascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exapascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10000000000000000000.0;
@@ -493,6 +499,9 @@ final class Pressure$Petapascal extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petapascal';
 
   @override
   String get displayName => _minorName;
@@ -563,6 +572,9 @@ final class Pressure$Terapascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Terapascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10000000000000.0;
@@ -629,6 +641,9 @@ final class Pressure$Gigapascal extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigapascal';
 
   @override
   String get displayName => _minorName;
@@ -699,6 +714,9 @@ final class Pressure$Megapascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megapascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10000000.0;
@@ -765,6 +783,9 @@ final class Pressure$Kilopascal extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilopascal';
 
   @override
   String get displayName => _minorName;
@@ -835,6 +856,9 @@ final class Pressure$Hectopascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectopascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
@@ -901,6 +925,9 @@ final class Pressure$Dekapascal extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekapascal';
 
   @override
   String get displayName => _minorName;
@@ -971,6 +998,9 @@ final class Pressure$Pascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
@@ -1037,6 +1067,9 @@ final class Pressure$Decipascal extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Decipascal';
 
   @override
   String get displayName => _minorName;
@@ -1107,6 +1140,9 @@ final class Pressure$Centipascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centipascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
@@ -1173,6 +1209,9 @@ final class Pressure$Millipascal extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millipascal';
 
   @override
   String get displayName => _minorName;
@@ -1243,6 +1282,9 @@ final class Pressure$Micropascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Micropascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.00001;
@@ -1309,6 +1351,9 @@ final class Pressure$Nanopascal extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nanopascal';
 
   @override
   String get displayName => _minorName;
@@ -1379,6 +1424,9 @@ final class Pressure$Picopascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Picopascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-11;
@@ -1445,6 +1493,9 @@ final class Pressure$Femtopascal extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Femtopascal';
 
   @override
   String get displayName => _minorName;
@@ -1515,6 +1566,9 @@ final class Pressure$Attopascal extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Attopascal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-17;
@@ -1581,6 +1635,9 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilonewton Per Meter Square';
 
   @override
   String get displayName => 'kilonewton/meter²';
@@ -1652,6 +1709,9 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Newton Per Meter Square';
+
+  @override
   String get displayName => 'newton/meter²';
 
   static const _ratio = 10.0;
@@ -1719,6 +1779,9 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Newton Per Centimeter Square';
 
   @override
   String get displayName => 'newton/centimeter²';
@@ -1790,6 +1853,9 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Newton Per Millimeter Square';
+
+  @override
   String get displayName => 'newton/millimeter²';
 
   static const _ratio = 10000000.0;
@@ -1857,6 +1923,9 @@ final class Pressure$Bar extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Bar';
 
   @override
   String get displayName => _minorName;
@@ -1927,6 +1996,9 @@ final class Pressure$Millibar extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millibar';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
@@ -1993,6 +2065,9 @@ final class Pressure$Microbar extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microbar';
 
   @override
   String get displayName => _minorName;
@@ -2063,6 +2138,9 @@ final class Pressure$Atmosphere extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Atmosphere';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1013250.0;
@@ -2131,6 +2209,9 @@ final class Pressure$Psi extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Psi';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 68947.57293178307;
@@ -2197,6 +2278,9 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dyne Per Centimeter Square';
 
   @override
   String get displayName => 'dyne/centimeter²';
@@ -2268,6 +2352,9 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Per Meter Square';
+
+  @override
   String get displayName => 'kilogram/meter²';
 
   static const _ratio = 98.0665;
@@ -2335,6 +2422,9 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Per Centimeter Square';
 
   @override
   String get displayName => 'kilogram/centimeter²';
@@ -2406,6 +2496,9 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Per Millimeter Square';
+
+  @override
   String get displayName => 'kilogram/millimeter²';
 
   static const _ratio = 98066500.0;
@@ -2473,6 +2566,9 @@ final class Pressure$TonPerFootSquare extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ton Per Foot Square';
 
   @override
   String get displayName => 'ton/foot²';
@@ -2543,6 +2639,9 @@ final class Pressure$TonPerInchSquare extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ton Per Inch Square';
+
+  @override
   String get displayName => 'ton/inch²';
 
   static const _ratio = 137895145.86356613;
@@ -2609,6 +2708,9 @@ final class Pressure$PoundPerFootSquare extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Foot Square';
 
   @override
   String get displayName => 'pound/foot²';
@@ -2679,6 +2781,9 @@ final class Pressure$PoundPerInchSquare extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Inch Square';
+
+  @override
   String get displayName => 'pound/inch²';
 
   static const _ratio = 68947.57293178307;
@@ -2745,6 +2850,9 @@ final class Pressure$KipPerInchSquare extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kip Per Inch Square';
 
   @override
   String get displayName => 'kip/inch²';
@@ -2815,6 +2923,9 @@ final class Pressure$Torr extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Torr';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1333.223684210828;
@@ -2881,6 +2992,9 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centimeter Mercury0 Degree C';
 
   @override
   String get displayName => 'centimeter mercury (0°C)';
@@ -2952,6 +3066,9 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimeter Mercury0 Degree C';
+
+  @override
   String get displayName => 'millimeter mercury (0°C)';
 
   static const _ratio = 1333.223684210828;
@@ -3019,6 +3136,9 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Inch Mercury32 Degree F';
 
   @override
   String get displayName => 'inch mercury (32°F)';
@@ -3090,6 +3210,9 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centimeter Water4 Degree C';
+
+  @override
   String get displayName => 'centimeter water (4°C)';
 
   static const _ratio = 980.638;
@@ -3159,6 +3282,9 @@ final class Pressure$InchWater60DegreeF extends Pressure {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Inch Water60 Degree F';
+
+  @override
   String get displayName => 'inch water (60°F)';
 
   static const _ratio = 2488.4;
@@ -3225,6 +3351,9 @@ final class Pressure$FootWater60DegreeF extends Pressure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Foot Water60 Degree F';
 
   @override
   String get displayName => 'foot water (60°F)';

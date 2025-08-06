@@ -54,6 +54,9 @@ sealed class Permeability extends Unit<Permeability> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Permeability';
+
   static const _majorName = 'permeability';
 
   static const kilogramPerPascalSecondMeterSquare =
@@ -118,6 +121,9 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Per Pascal Second Meter Square';
 
   @override
   String get displayName => 'kilogram/(pascal-second-meter²)';
@@ -190,6 +196,9 @@ final class Permeability$Permeability0DegreeC extends Permeability {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Permeability0 Degree C';
+
+  @override
   String get displayName => 'permeability (0°C)';
 
   static const _ratio = 5.72135e-11;
@@ -258,6 +267,9 @@ final class Permeability$Permeability23DegreeC extends Permeability {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Permeability23 Degree C';
 
   @override
   String get displayName => 'permeability (23°C)';
@@ -330,6 +342,9 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Permeability Inches0 Degree C';
+
+  @override
   String get displayName => 'permeability inches (0°C)';
 
   static const _ratio = 1.45322e-12;
@@ -398,6 +413,9 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Permeability Inches23 Degree C';
 
   @override
   String get displayName => 'permeability inches (23°C)';

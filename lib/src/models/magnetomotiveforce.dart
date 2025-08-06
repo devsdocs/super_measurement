@@ -52,6 +52,9 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Magnetomotive Force';
+
   static const _majorName = 'magnetomotiveForce';
 
   static const kiloampereTurn = MagnetomotiveForce$KiloampereTurn();
@@ -109,6 +112,9 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kiloampere Turn';
 
   @override
   String get displayName => 'kiloampere turn';
@@ -180,6 +186,9 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ampere Turn';
+
+  @override
   String get displayName => 'ampere turn';
 
   static const _ratio = 1.0;
@@ -247,6 +256,9 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Milliampere Turn';
 
   @override
   String get displayName => 'milliampere turn';
@@ -318,6 +330,9 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abampere Turn';
+
+  @override
   String get displayName => 'Abampere turn';
 
   static const _ratio = 10.0;
@@ -385,6 +400,9 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gilbert';
 
   @override
   String get displayName => _minorName;

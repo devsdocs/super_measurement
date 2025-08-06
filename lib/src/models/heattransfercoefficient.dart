@@ -77,6 +77,9 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Heat Transfer Coefficient';
+
   static const _majorName = 'heatTransferCoefficient';
 
   static const wattPerMeterSquareK =
@@ -161,6 +164,9 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Watt Per Meter Square K';
+
+  @override
   String get displayName => 'watt/meter² K';
 
   static const _ratio = 1.0;
@@ -230,6 +236,9 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Watt Per Meter Square Degree C';
 
   @override
   String get displayName => 'watt/meter² °C';
@@ -303,6 +312,9 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Joule Per Second Meter Square K';
+
+  @override
   String get displayName => 'joule/second meter² K';
 
   static const _ratio = 1.0;
@@ -372,6 +384,9 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilocalorie Per Hour Meter Square Degree C';
 
   @override
   String get displayName => 'kilocalorie/hour meter² °C';
@@ -445,6 +460,9 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilocalorie Per Hour Foot Square Degree C';
+
+  @override
   String get displayName => 'kilocalorie/hour foot² °C';
 
   static const _ratio = 12.51842782;
@@ -514,6 +532,9 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Calorie Per Second Centimeter Square Degree C';
 
   @override
   String get displayName => 'calorie/second centimeter² °C';
@@ -587,6 +608,9 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Hour Foot Square Degree F';
+
+  @override
   String get displayName => 'BTU/hour foot² °F';
 
   static const _ratio = 5.678263398;
@@ -656,6 +680,9 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C H U Per Hour Foot Square Degree C';
 
   @override
   String get displayName => 'CHU/hour foot² °C';

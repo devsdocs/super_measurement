@@ -73,6 +73,9 @@ sealed class Typography extends Unit<Typography> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Typography';
+
   static const _majorName = 'typography';
 
   static const postScriptPointDTP = Typography$PostScriptPointDTP();
@@ -145,6 +148,9 @@ final class Typography$PostScriptPointDTP extends Typography {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Post Script Point D T P';
+
+  @override
   String get displayName => 'PostScript point (DTP)';
 
   static const _ratio = 0.013888888888888888;
@@ -212,6 +218,9 @@ final class Typography$PrintersPointAmerican extends Typography {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Printers Point American';
 
   @override
   String get displayName => 'printer"s point (American)';
@@ -283,6 +292,9 @@ final class Typography$DidotsPoint extends Typography {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Didots Point';
+
+  @override
   String get displayName => 'Didot"s point';
 
   static const _ratio = 0.014803149606299212;
@@ -349,6 +361,9 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pica Post Script D T P Computer';
 
   @override
   String get displayName => 'pica (PostScript, DTP, computer)';
@@ -420,6 +435,9 @@ final class Typography$PicaPrinters extends Typography {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pica Printers';
+
+  @override
   String get displayName => 'pica (printer"s)';
 
   static const _ratio = 0.16604400166044;
@@ -486,6 +504,9 @@ final class Typography$Ciceros extends Typography {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ciceros';
 
   @override
   String get displayName => 'Ciceros';
@@ -556,6 +577,9 @@ final class Typography$Inch extends Typography {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Inch';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -624,6 +648,9 @@ final class Typography$Millimeter extends Typography {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimeter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.03937007874015748;
@@ -690,6 +717,9 @@ final class Typography$Centimeter extends Typography {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centimeter';
 
   @override
   String get displayName => _minorName;

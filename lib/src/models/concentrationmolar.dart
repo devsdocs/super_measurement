@@ -95,6 +95,9 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Concentration Molar';
+
   static const _majorName = 'concentrationMolar';
 
   static const molPerMeterCubic = ConcentrationMolar$MolPerMeterCubic();
@@ -186,6 +189,9 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mol Per Meter Cubic';
+
+  @override
   String get displayName => 'mol/meter³';
 
   static const _ratio = 0.001;
@@ -253,6 +259,9 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mol Per Liter';
 
   @override
   String get displayName => 'mol/liter';
@@ -325,6 +334,9 @@ final class ConcentrationMolar$MolPerCentimeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mol Per Centimeter Cubic';
+
+  @override
   String get displayName => 'mol/centimeter³';
 
   static const _ratio = 1000.0;
@@ -393,6 +405,9 @@ final class ConcentrationMolar$MolPerMillimeterCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mol Per Millimeter Cubic';
 
   @override
   String get displayName => 'mol/millimeter³';
@@ -464,6 +479,9 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilomol Per Meter Cubic';
+
+  @override
   String get displayName => 'kilomol/meter³';
 
   static const _ratio = 1.0;
@@ -531,6 +549,9 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilomol Per Liter';
 
   @override
   String get displayName => 'kilomol/liter';
@@ -603,6 +624,9 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilomol Per Centimeter Cubic';
+
+  @override
   String get displayName => 'kilomol/centimeter³';
 
   static const _ratio = 1000000.0;
@@ -671,6 +695,9 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilomol Per Millimeter Cubic';
 
   @override
   String get displayName => 'kilomol/millimeter³';
@@ -743,6 +770,9 @@ final class ConcentrationMolar$MillimolPerMeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimol Per Meter Cubic';
+
+  @override
   String get displayName => 'millimol/meter³';
 
   static const _ratio = 0.000001;
@@ -810,6 +840,9 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millimol Per Liter';
 
   @override
   String get displayName => 'millimol/liter';
@@ -882,6 +915,9 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimol Per Centimeter Cubic';
+
+  @override
   String get displayName => 'millimol/centimeter³';
 
   static const _ratio = 1.0;
@@ -950,6 +986,9 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millimol Per Millimeter Cubic';
 
   @override
   String get displayName => 'millimol/millimeter³';

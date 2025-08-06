@@ -293,6 +293,9 @@ sealed class Energy extends Unit<Energy> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Energy';
+
   static const _majorName = 'energy';
 
   static const gigajoule = Energy$Gigajoule();
@@ -487,6 +490,9 @@ final class Energy$Gigajoule extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gigajoule';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.241807627e+27;
@@ -553,6 +559,9 @@ final class Energy$Megajoule extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Megajoule';
 
   @override
   String get displayName => _minorName;
@@ -623,6 +632,9 @@ final class Energy$Kilojoule extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilojoule';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.241807627e+21;
@@ -689,6 +701,9 @@ final class Energy$Joule extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Joule';
 
   @override
   String get displayName => _minorName;
@@ -759,6 +774,9 @@ final class Energy$Millijoule extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millijoule';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6241807627000000.0;
@@ -825,6 +843,9 @@ final class Energy$Microjoule extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microjoule';
 
   @override
   String get displayName => _minorName;
@@ -895,6 +916,9 @@ final class Energy$Nanojoule extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nanojoule';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6241807627.0;
@@ -961,6 +985,9 @@ final class Energy$Attojoule extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Attojoule';
 
   @override
   String get displayName => _minorName;
@@ -1031,6 +1058,9 @@ final class Energy$Erg extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Erg';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 624180762700.0;
@@ -1097,6 +1127,9 @@ final class Energy$GigawattHour extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigawatt Hour';
 
   @override
   String get displayName => 'gigawatt-hour';
@@ -1167,6 +1200,9 @@ final class Energy$MegawattHour extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megawatt Hour';
+
+  @override
   String get displayName => 'megawatt-hour';
 
   static const _ratio = 2.24705074572e+28;
@@ -1233,6 +1269,9 @@ final class Energy$KilowattHour extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilowatt Hour';
 
   @override
   String get displayName => 'kilowatt-hour';
@@ -1303,6 +1342,9 @@ final class Energy$KilowattSecond extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilowatt Second';
+
+  @override
   String get displayName => 'kilowatt-second';
 
   static const _ratio = 6.241807627e+21;
@@ -1369,6 +1411,9 @@ final class Energy$WattHour extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Watt Hour';
 
   @override
   String get displayName => 'watt-hour';
@@ -1439,6 +1484,9 @@ final class Energy$WattSecond extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Watt Second';
+
+  @override
   String get displayName => 'watt-second';
 
   static const _ratio = 6241807627000000000.0;
@@ -1507,6 +1555,9 @@ final class Energy$HorsepowerHour extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Horsepower Hour';
+
+  @override
   String get displayName => 'horsepower-hour';
 
   static const _ratio = 1.6756254520162804e+25;
@@ -1573,6 +1624,9 @@ final class Energy$KilocalorieInternational extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilocalorie International';
 
   @override
   String get displayName => 'kilocalorie (international)';
@@ -1644,6 +1698,9 @@ final class Energy$KilocalorieThermochemical extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilocalorie Thermochemical';
+
+  @override
   String get displayName => 'kilocalorie (thermochemical)';
 
   static const _ratio = 2.6115723111368e+22;
@@ -1713,6 +1770,9 @@ final class Energy$CalorieInternational extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Calorie International';
+
+  @override
   String get displayName => 'calorie (international)';
 
   static const _ratio = 26133200172723600000.0;
@@ -1779,6 +1839,9 @@ final class Energy$CalorieThermochemical extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Calorie Thermochemical';
 
   @override
   String get displayName => 'calorie (thermochemical)';
@@ -1850,6 +1913,9 @@ final class Energy$CalorieNutritional extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Calorie Nutritional';
+
+  @override
   String get displayName => 'calorie (nutritional)';
 
   static const _ratio = 2.61332001727236e+22;
@@ -1916,6 +1982,9 @@ final class Energy$BTUInternational extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'B T U International';
 
   @override
   String get displayName => 'BTU (international)';
@@ -1986,6 +2055,9 @@ final class Energy$BTUThermochemical extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Thermochemical';
+
+  @override
   String get displayName => 'BTU (thermochemical)';
 
   static const _ratio = 6.581049871367892e+21;
@@ -2052,6 +2124,9 @@ final class Energy$MBTU extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'M B T U';
 
   @override
   String get displayName => 'MBTU';
@@ -2122,6 +2197,9 @@ final class Energy$TonHourRefrigeration extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ton Hour Refrigeration';
+
+  @override
   String get displayName => 'ton-hour (refrigeration)';
 
   static const _ratio = 7.902546801353412e+25;
@@ -2188,6 +2266,9 @@ final class Energy$Gigaton extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigaton';
 
   @override
   String get displayName => _minorName;
@@ -2258,6 +2339,9 @@ final class Energy$Megaton extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megaton';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 2.6115723111368e+34;
@@ -2324,6 +2408,9 @@ final class Energy$Kiloton extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kiloton';
 
   @override
   String get displayName => _minorName;
@@ -2394,6 +2481,9 @@ final class Energy$TonExplosives extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ton Explosives';
+
+  @override
   String get displayName => 'ton (explosives)';
 
   static const _ratio = 2.6115723111368e+28;
@@ -2460,6 +2550,9 @@ final class Energy$NewtonMeter extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Newton Meter';
 
   @override
   String get displayName => 'newton-meter';
@@ -2530,6 +2623,9 @@ final class Energy$DyneCentimeter extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dyne Centimeter';
+
+  @override
   String get displayName => 'dyne-centimeter';
 
   static const _ratio = 624180762700.0;
@@ -2596,6 +2692,9 @@ final class Energy$GramForceMeter extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Force Meter';
 
   @override
   String get displayName => 'gram force-meter';
@@ -2666,6 +2765,9 @@ final class Energy$GramForceCentimeter extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Force Centimeter';
+
+  @override
   String get displayName => 'gram force-centimeter';
 
   static const _ratio = 612112227634327.8;
@@ -2734,6 +2836,9 @@ final class Energy$KilogramForceMeter extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Force Meter';
+
+  @override
   String get displayName => 'kilogram force-meter';
 
   static const _ratio = 61211222763432770000.0;
@@ -2800,6 +2905,9 @@ final class Energy$KilogramForceCentimeter extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Force Centimeter';
 
   @override
   String get displayName => 'kilogram force-centimeter';
@@ -2871,6 +2979,9 @@ final class Energy$MeterKilopond extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Kilopond';
+
+  @override
   String get displayName => 'meter-kilopond';
 
   static const _ratio = 61211222763432770000.0;
@@ -2937,6 +3048,9 @@ final class Energy$PoundForceFoot extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Force Foot';
 
   @override
   String get displayName => 'pound force-foot';
@@ -3007,6 +3121,9 @@ final class Energy$PoundForceInch extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Force Inch';
+
+  @override
   String get displayName => 'pound force-inch';
 
   static const _ratio = 705229567538131000.0;
@@ -3073,6 +3190,9 @@ final class Energy$OunceForceInch extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ounce Force Inch';
 
   @override
   String get displayName => 'ounce force-inch';
@@ -3143,6 +3263,9 @@ final class Energy$FootPound extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Foot Pound';
+
+  @override
   String get displayName => 'foot-pound';
 
   static const _ratio = 8462754810457570000.0;
@@ -3209,6 +3332,9 @@ final class Energy$InchPound extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Inch Pound';
 
   @override
   String get displayName => 'inch-pound';
@@ -3279,6 +3405,9 @@ final class Energy$InchOunce extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Inch Ounce';
+
+  @override
   String get displayName => 'inch-ounce';
 
   static const _ratio = 44076847971133180.0;
@@ -3345,6 +3474,9 @@ final class Energy$PoundalFoot extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Poundal Foot';
 
   @override
   String get displayName => 'poundal-foot';
@@ -3415,6 +3547,9 @@ final class Energy$MegaelectronVolt extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megaelectron Volt';
+
+  @override
   String get displayName => 'megaelectron volt';
 
   static const _ratio = 1000000.0;
@@ -3481,6 +3616,9 @@ final class Energy$KiloelectronVolt extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kiloelectron Volt';
 
   @override
   String get displayName => 'kiloelectron volt';
@@ -3551,6 +3689,9 @@ final class Energy$ElectronVolt extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Electron Volt';
+
+  @override
   String get displayName => 'electron volt';
 
   static const _ratio = 1.0;
@@ -3617,6 +3758,9 @@ final class Energy$Therm extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Therm';
 
   @override
   String get displayName => _minorName;
@@ -3687,6 +3831,9 @@ final class Energy$ThermEC extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Therm E C';
+
+  @override
   String get displayName => 'therm (EC)';
 
   static const _ratio = 6.585456587712e+26;
@@ -3755,6 +3902,9 @@ final class Energy$ThermUS extends Energy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Therm U S';
+
+  @override
   String get displayName => 'therm (US)';
 
   static const _ratio = 6.58388365219e+26;
@@ -3821,6 +3971,9 @@ final class Energy$Hartree extends Energy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hartree';
 
   @override
   String get displayName => _minorName;

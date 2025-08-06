@@ -253,6 +253,9 @@ sealed class DataStorage extends Unit<DataStorage> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Data Storage';
+
   static const _majorName = 'dataStorage';
 
   static const bit = DataStorage$Bit();
@@ -425,6 +428,9 @@ final class DataStorage$Bit extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Bit';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -491,6 +497,9 @@ final class DataStorage$Nibble extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nibble';
 
   @override
   String get displayName => _minorName;
@@ -561,6 +570,9 @@ final class DataStorage$Byte extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Byte';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 8.0;
@@ -627,6 +639,9 @@ final class DataStorage$Word extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Word';
 
   @override
   String get displayName => _minorName;
@@ -697,6 +712,9 @@ final class DataStorage$DoubleWord extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Double Word';
+
+  @override
   String get displayName => 'double-word';
 
   static const _ratio = 32.0;
@@ -763,6 +781,9 @@ final class DataStorage$QuadrupleWord extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Quadruple Word';
 
   @override
   String get displayName => 'quadruple-word';
@@ -833,6 +854,9 @@ final class DataStorage$Block extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Block';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 4096.0;
@@ -899,6 +923,9 @@ final class DataStorage$Kilobit extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilobit';
 
   @override
   String get displayName => _minorName;
@@ -969,6 +996,9 @@ final class DataStorage$Kilobyte extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilobyte';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 8192.0;
@@ -1035,6 +1065,9 @@ final class DataStorage$Kilobyte10PowerOf3Bytes extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilobyte10 Power Of3 Bytes';
 
   @override
   String get displayName => 'kilobyte (10^3 bytes)';
@@ -1106,6 +1139,9 @@ final class DataStorage$Megabit extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megabit';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1048576.0;
@@ -1174,6 +1210,9 @@ final class DataStorage$Megabyte extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megabyte';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 8388608.0;
@@ -1240,6 +1279,9 @@ final class DataStorage$Megabyte10PowerOf6Bytes extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Megabyte10 Power Of6 Bytes';
 
   @override
   String get displayName => 'megabyte (10^6 bytes)';
@@ -1311,6 +1353,9 @@ final class DataStorage$Gigabit extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gigabit';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1073741824.0;
@@ -1379,6 +1424,9 @@ final class DataStorage$Gigabyte extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gigabyte';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 8589934592.0;
@@ -1445,6 +1493,9 @@ final class DataStorage$Gigabyte10PowerOf9Bytes extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigabyte10 Power Of9 Bytes';
 
   @override
   String get displayName => 'gigabyte (10^9 bytes)';
@@ -1516,6 +1567,9 @@ final class DataStorage$Terabit extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Terabit';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1099511627776.0;
@@ -1584,6 +1638,9 @@ final class DataStorage$Terabyte extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Terabyte';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 8796093022208.0;
@@ -1650,6 +1707,9 @@ final class DataStorage$Terabyte10PowerOf12Bytes extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Terabyte10 Power Of12 Bytes';
 
   @override
   String get displayName => 'terabyte (10^12 bytes)';
@@ -1721,6 +1781,9 @@ final class DataStorage$Petabit extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Petabit';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1125899906842624.0;
@@ -1789,6 +1852,9 @@ final class DataStorage$Petabyte extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Petabyte';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 9007199254740992.0;
@@ -1855,6 +1921,9 @@ final class DataStorage$Petabyte10PowerOf15Bytes extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petabyte10 Power Of15 Bytes';
 
   @override
   String get displayName => 'petabyte (10^15 bytes)';
@@ -1926,6 +1995,9 @@ final class DataStorage$Exabit extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exabit';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1152921504606847000.0;
@@ -1994,6 +2066,9 @@ final class DataStorage$Exabyte extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exabyte';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 9223372036854776000.0;
@@ -2060,6 +2135,9 @@ final class DataStorage$Exabyte10PowerOf18Bytes extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Exabyte10 Power Of18 Bytes';
 
   @override
   String get displayName => 'exabyte (10^18 bytes)';
@@ -2131,6 +2209,9 @@ final class DataStorage$FloppyDisk35DD extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Floppy Disk35 D D';
+
+  @override
   String get displayName => 'floppy disk (3.5", DD)';
 
   static const _ratio = 5830656.0;
@@ -2197,6 +2278,9 @@ final class DataStorage$FloppyDisk35HD extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Floppy Disk35 H D';
 
   @override
   String get displayName => 'floppy disk (3.5", HD)';
@@ -2267,6 +2351,9 @@ final class DataStorage$FloppyDisk35ED extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Floppy Disk35 E D';
+
+  @override
   String get displayName => 'floppy disk (3.5", ED)';
 
   static const _ratio = 23322624.0;
@@ -2333,6 +2420,9 @@ final class DataStorage$FloppyDisk525DD extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Floppy Disk525 D D';
 
   @override
   String get displayName => 'floppy disk (5.25", DD)';
@@ -2403,6 +2493,9 @@ final class DataStorage$FloppyDisk525HD extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Floppy Disk525 H D';
+
+  @override
   String get displayName => 'floppy disk (5.25", HD)';
 
   static const _ratio = 9711616.0;
@@ -2469,6 +2562,9 @@ final class DataStorage$Zip100 extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Zip100';
 
   @override
   String get displayName => 'Zip 100';
@@ -2539,6 +2635,9 @@ final class DataStorage$Zip250 extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Zip250';
+
+  @override
   String get displayName => 'Zip 250';
 
   static const _ratio = 2008637440.0;
@@ -2605,6 +2704,9 @@ final class DataStorage$Jaz1GB extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Jaz1 G B';
 
   @override
   String get displayName => 'Jaz 1GB';
@@ -2675,6 +2777,9 @@ final class DataStorage$Jaz2GB extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Jaz2 G B';
+
+  @override
   String get displayName => 'Jaz 2GB';
 
   static const _ratio = 17179869184.0;
@@ -2741,6 +2846,9 @@ final class DataStorage$CD74Minute extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C D74 Minute';
 
   @override
   String get displayName => 'CD (74 minute)';
@@ -2811,6 +2919,9 @@ final class DataStorage$CD80Minute extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'C D80 Minute';
+
+  @override
   String get displayName => 'CD (80 minute)';
 
   static const _ratio = 5898240000.0;
@@ -2877,6 +2988,9 @@ final class DataStorage$DVD1Layer1Side extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'D V D1 Layer1 Side';
 
   @override
   String get displayName => 'DVD (1 layer, 1 side)';
@@ -2947,6 +3061,9 @@ final class DataStorage$DVD2Layers1Side extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'D V D2 Layers1 Side';
+
+  @override
   String get displayName => 'DVD (2 layers, 1 side)';
 
   static const _ratio = 68320000000.0;
@@ -3015,6 +3132,9 @@ final class DataStorage$DVD1Layer2Sides extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'D V D1 Layer2 Sides';
+
+  @override
   String get displayName => 'DVD (1 layer, 2 sides)';
 
   static const _ratio = 75200000000.0;
@@ -3081,6 +3201,9 @@ final class DataStorage$DVD2Layers2Sides extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'D V D2 Layers2 Sides';
 
   @override
   String get displayName => 'DVD (2 layers, 2 sides)';
@@ -3152,6 +3275,9 @@ final class DataStorage$BluRay1Layer extends DataStorage {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Blu Ray1 Layer';
+
+  @override
   String get displayName => 'Blu-ray (1 layer)';
 
   static const _ratio = 200202518528.0;
@@ -3218,6 +3344,9 @@ final class DataStorage$BluRay2Layer extends DataStorage {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Blu Ray2 Layer';
 
   @override
   String get displayName => 'Blu-ray (2 layer)';

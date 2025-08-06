@@ -206,6 +206,9 @@ sealed class Density extends Unit<Density> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Density';
+
   static const _majorName = 'density';
 
   static const kilogramPerMeterCubic = Density$KilogramPerMeterCubic();
@@ -352,6 +355,9 @@ final class Density$KilogramPerMeterCubic extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Per Meter Cubic';
+
+  @override
   String get displayName => 'kilogram/meter³';
 
   static const _ratio = 1000000000.0;
@@ -419,6 +425,9 @@ final class Density$KilogramPerCentimeterCubic extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Per Centimeter Cubic';
 
   @override
   String get displayName => 'kilogram/centimeter³';
@@ -490,6 +499,9 @@ final class Density$GramPerMeterCubic extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Per Meter Cubic';
+
+  @override
   String get displayName => 'gram/meter³';
 
   static const _ratio = 1000000.0;
@@ -556,6 +568,9 @@ final class Density$GramPerCentimeterCubic extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Per Centimeter Cubic';
 
   @override
   String get displayName => 'gram/centimeter³';
@@ -627,6 +642,9 @@ final class Density$GramPerMillimeterCubic extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Per Millimeter Cubic';
+
+  @override
   String get displayName => 'gram/millimeter³';
 
   static const _ratio = 1000000000000000.0;
@@ -694,6 +712,9 @@ final class Density$MilligramPerMeterCubic extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Milligram Per Meter Cubic';
 
   @override
   String get displayName => 'milligram/meter³';
@@ -765,6 +786,9 @@ final class Density$MilligramPerCentimeterCubic extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Milligram Per Centimeter Cubic';
+
+  @override
   String get displayName => 'milligram/centimeter³';
 
   static const _ratio = 1000000000.0;
@@ -832,6 +856,9 @@ final class Density$MilligramPerMillimeterCubic extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Milligram Per Millimeter Cubic';
 
   @override
   String get displayName => 'milligram/millimeter³';
@@ -903,6 +930,9 @@ final class Density$ExagramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exagram Per Liter';
+
+  @override
   String get displayName => 'exagram/liter';
 
   static const _ratio = 1e+27;
@@ -969,6 +999,9 @@ final class Density$PetagramPerLiter extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petagram Per Liter';
 
   @override
   String get displayName => 'petagram/liter';
@@ -1039,6 +1072,9 @@ final class Density$TeragramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Teragram Per Liter';
+
+  @override
   String get displayName => 'teragram/liter';
 
   static const _ratio = 1e+21;
@@ -1105,6 +1141,9 @@ final class Density$GigagramPerLiter extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigagram Per Liter';
 
   @override
   String get displayName => 'gigagram/liter';
@@ -1175,6 +1214,9 @@ final class Density$MegagramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megagram Per Liter';
+
+  @override
   String get displayName => 'megagram/liter';
 
   static const _ratio = 1000000000000000.0;
@@ -1241,6 +1283,9 @@ final class Density$KilogramPerLiter extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Per Liter';
 
   @override
   String get displayName => 'kilogram/liter';
@@ -1311,6 +1356,9 @@ final class Density$HectogramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectogram Per Liter';
+
+  @override
   String get displayName => 'hectogram/liter';
 
   static const _ratio = 100000000000.0;
@@ -1377,6 +1425,9 @@ final class Density$DekagramPerLiter extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekagram Per Liter';
 
   @override
   String get displayName => 'dekagram/liter';
@@ -1447,6 +1498,9 @@ final class Density$GramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Per Liter';
+
+  @override
   String get displayName => 'gram/liter';
 
   static const _ratio = 1000000000.0;
@@ -1513,6 +1567,9 @@ final class Density$DecigramPerLiter extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Decigram Per Liter';
 
   @override
   String get displayName => 'decigram/liter';
@@ -1583,6 +1640,9 @@ final class Density$CentigramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centigram Per Liter';
+
+  @override
   String get displayName => 'centigram/liter';
 
   static const _ratio = 10000000.0;
@@ -1649,6 +1709,9 @@ final class Density$MilligramPerLiter extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Milligram Per Liter';
 
   @override
   String get displayName => 'milligram/liter';
@@ -1719,6 +1782,9 @@ final class Density$MicrogramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Microgram Per Liter';
+
+  @override
   String get displayName => 'microgram/liter';
 
   static const _ratio = 1000.0;
@@ -1785,6 +1851,9 @@ final class Density$NanogramPerLiter extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nanogram Per Liter';
 
   @override
   String get displayName => 'nanogram/liter';
@@ -1855,6 +1924,9 @@ final class Density$PicogramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Picogram Per Liter';
+
+  @override
   String get displayName => 'picogram/liter';
 
   static const _ratio = 0.001;
@@ -1921,6 +1993,9 @@ final class Density$FemtogramPerLiter extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Femtogram Per Liter';
 
   @override
   String get displayName => 'femtogram/liter';
@@ -1991,6 +2066,9 @@ final class Density$AttogramPerLiter extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Attogram Per Liter';
+
+  @override
   String get displayName => 'attogram/liter';
 
   static const _ratio = 1e-9;
@@ -2057,6 +2135,9 @@ final class Density$PoundPerInchCubic extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Inch Cubic';
 
   @override
   String get displayName => 'pound/inch³';
@@ -2127,6 +2208,9 @@ final class Density$PoundPerFootCubic extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Foot Cubic';
+
+  @override
   String get displayName => 'pound/foot³';
 
   static const _ratio = 16018463373.952908;
@@ -2193,6 +2277,9 @@ final class Density$PoundPerGallon extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Gallon';
 
   @override
   String get displayName => 'pound/gallon';
@@ -2263,6 +2350,9 @@ final class Density$OuncePerInchCubic extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ounce Per Inch Cubic';
+
+  @override
   String get displayName => 'ounce/inch³';
 
   static const _ratio = 1729994044386.9138;
@@ -2329,6 +2419,9 @@ final class Density$OuncePerFootCubic extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ounce Per Foot Cubic';
 
   @override
   String get displayName => 'ounce/foot³';
@@ -2399,6 +2492,9 @@ final class Density$OuncePerGallon extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ounce Per Gallon';
+
+  @override
   String get displayName => 'ounce/gallon';
 
   static const _ratio = 7489151707.295169;
@@ -2467,6 +2563,9 @@ final class Density$TonPerYardCubic extends Density {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ton Per Yard Cubic';
+
+  @override
   String get displayName => 'ton/yard³';
 
   static const _ratio = 1186552842515.03;
@@ -2533,6 +2632,9 @@ final class Density$PsiPer1000Feet extends Density {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Psi Per1000 Feet';
 
   @override
   String get displayName => 'psi/1000 feet';

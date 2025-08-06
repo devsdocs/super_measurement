@@ -411,6 +411,9 @@ sealed class Volume extends Unit<Volume> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Volume';
+
   static const _majorName = 'volume';
 
   static const meterCubic = Volume$MeterCubic();
@@ -674,6 +677,9 @@ final class Volume$MeterCubic extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Cubic';
+
+  @override
   String get displayName => 'meter³';
 
   static const _ratio = 1.0;
@@ -740,6 +746,9 @@ final class Volume$CentimeterCubic extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centimeter Cubic';
 
   @override
   String get displayName => 'centimeter³';
@@ -810,6 +819,9 @@ final class Volume$MillimeterCubic extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimeter Cubic';
+
+  @override
   String get displayName => 'millimeter³';
 
   static const _ratio = 1e-9;
@@ -876,6 +888,9 @@ final class Volume$Exaliter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Exaliter';
 
   @override
   String get displayName => _minorName;
@@ -946,6 +961,9 @@ final class Volume$Petaliter extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Petaliter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000.0;
@@ -1012,6 +1030,9 @@ final class Volume$Teraliter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Teraliter';
 
   @override
   String get displayName => _minorName;
@@ -1082,6 +1103,9 @@ final class Volume$Gigaliter extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gigaliter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
@@ -1148,6 +1172,9 @@ final class Volume$Megaliter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Megaliter';
 
   @override
   String get displayName => _minorName;
@@ -1218,6 +1245,9 @@ final class Volume$Kiloliter extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kiloliter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -1284,6 +1314,9 @@ final class Volume$Hectoliter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hectoliter';
 
   @override
   String get displayName => _minorName;
@@ -1354,6 +1387,9 @@ final class Volume$Dekaliter extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dekaliter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.01;
@@ -1420,6 +1456,9 @@ final class Volume$Liter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Liter';
 
   @override
   String get displayName => _minorName;
@@ -1490,6 +1529,9 @@ final class Volume$Deciliter extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Deciliter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.0001;
@@ -1556,6 +1598,9 @@ final class Volume$Centiliter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centiliter';
 
   @override
   String get displayName => _minorName;
@@ -1626,6 +1671,9 @@ final class Volume$Milliliter extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Milliliter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.000001;
@@ -1692,6 +1740,9 @@ final class Volume$Microliter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microliter';
 
   @override
   String get displayName => _minorName;
@@ -1762,6 +1813,9 @@ final class Volume$Nanoliter extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nanoliter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-12;
@@ -1828,6 +1882,9 @@ final class Volume$Picoliter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Picoliter';
 
   @override
   String get displayName => _minorName;
@@ -1898,6 +1955,9 @@ final class Volume$Femtoliter extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Femtoliter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-18;
@@ -1964,6 +2024,9 @@ final class Volume$Attoliter extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Attoliter';
 
   @override
   String get displayName => _minorName;
@@ -2034,6 +2097,9 @@ final class Volume$Cc extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cc';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.000001;
@@ -2100,6 +2166,9 @@ final class Volume$Drop extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Drop';
 
   @override
   String get displayName => _minorName;
@@ -2170,6 +2239,9 @@ final class Volume$Barrel extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Barrel';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.119240471196;
@@ -2236,6 +2308,9 @@ final class Volume$BarrelOil extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Barrel Oil';
 
   @override
   String get displayName => 'barrel (oil)';
@@ -2306,6 +2381,9 @@ final class Volume$BushelUK extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Bushel U K';
+
+  @override
   String get displayName => 'bushel (UK)';
 
   static const _ratio = 0.03636872;
@@ -2372,6 +2450,9 @@ final class Volume$PeckUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Peck U K';
 
   @override
   String get displayName => 'peck (UK)';
@@ -2442,6 +2523,9 @@ final class Volume$Gallon extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gallon';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.003785411784;
@@ -2508,6 +2592,9 @@ final class Volume$GallonUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gallon U K';
 
   @override
   String get displayName => 'gallon (UK)';
@@ -2578,6 +2665,9 @@ final class Volume$Quart extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Quart';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.000946352946;
@@ -2644,6 +2734,9 @@ final class Volume$QuartUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Quart U K';
 
   @override
   String get displayName => 'quart (UK)';
@@ -2714,6 +2807,9 @@ final class Volume$Pint extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pint';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.000473176473;
@@ -2780,6 +2876,9 @@ final class Volume$PintUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pint U K';
 
   @override
   String get displayName => 'pint (UK)';
@@ -2850,6 +2949,9 @@ final class Volume$Cup extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cup';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.0002365882365;
@@ -2916,6 +3018,9 @@ final class Volume$CupUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cup U K';
 
   @override
   String get displayName => 'cup (UK)';
@@ -2986,6 +3091,9 @@ final class Volume$Gill extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gill';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.00011829411825;
@@ -3052,6 +3160,9 @@ final class Volume$GillUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gill U K';
 
   @override
   String get displayName => 'gill (UK)';
@@ -3122,6 +3233,9 @@ final class Volume$Ounce extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ounce';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.0000295735295625;
@@ -3188,6 +3302,9 @@ final class Volume$OunceUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ounce U K';
 
   @override
   String get displayName => 'ounce (UK)';
@@ -3258,6 +3375,9 @@ final class Volume$Dram extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dram';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.0000036966911953125;
@@ -3324,6 +3444,9 @@ final class Volume$DramUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dram U K';
 
   @override
   String get displayName => 'dram (UK)';
@@ -3394,6 +3517,9 @@ final class Volume$Minim extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Minim';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.1611519921875e-8;
@@ -3460,6 +3586,9 @@ final class Volume$MinimUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Minim U K';
 
   @override
   String get displayName => 'minim (UK)';
@@ -3530,6 +3659,9 @@ final class Volume$Tablespoon extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Tablespoon';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.00001478676478125;
@@ -3596,6 +3728,9 @@ final class Volume$TablespoonUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Tablespoon U K';
 
   @override
   String get displayName => 'tablespoon (UK)';
@@ -3666,6 +3801,9 @@ final class Volume$Dessertspoon extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dessertspoon';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.0000098578431875;
@@ -3732,6 +3870,9 @@ final class Volume$DessertspoonUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dessertspoon U K';
 
   @override
   String get displayName => 'dessertspoon (UK)';
@@ -3802,6 +3943,9 @@ final class Volume$Teaspoon extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Teaspoon';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.00000492892159375;
@@ -3868,6 +4012,9 @@ final class Volume$TeaspoonUK extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Teaspoon U K';
 
   @override
   String get displayName => 'teaspoon (UK)';
@@ -3938,6 +4085,9 @@ final class Volume$Hogshead extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hogshead';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.238480942392;
@@ -4004,6 +4154,9 @@ final class Volume$YardCubic extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Yard Cubic';
 
   @override
   String get displayName => 'yard³';
@@ -4074,6 +4227,9 @@ final class Volume$FootCubic extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Foot Cubic';
+
+  @override
   String get displayName => 'foot³';
 
   static const _ratio = 0.028316846592;
@@ -4140,6 +4296,9 @@ final class Volume$InchCubic extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Inch Cubic';
 
   @override
   String get displayName => 'inch³';
@@ -4210,6 +4369,9 @@ final class Volume$Ccf extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ccf';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 2.8316846592;
@@ -4276,6 +4438,9 @@ final class Volume$HundredFootCubic extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hundred Foot Cubic';
 
   @override
   String get displayName => 'hundred-foot³';
@@ -4346,6 +4511,9 @@ final class Volume$AcreFoot extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Acre Foot';
+
+  @override
   String get displayName => 'acre-foot';
 
   static const _ratio = 1233.48183754752;
@@ -4412,6 +4580,9 @@ final class Volume$AcreInch extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Acre Inch';
 
   @override
   String get displayName => 'acre-inch';
@@ -4482,6 +4653,9 @@ final class Volume$Dekastere extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dekastere';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
@@ -4548,6 +4722,9 @@ final class Volume$Stere extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Stere';
 
   @override
   String get displayName => _minorName;
@@ -4618,6 +4795,9 @@ final class Volume$Decistere extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Decistere';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.1;
@@ -4684,6 +4864,9 @@ final class Volume$Cord extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cord';
 
   @override
   String get displayName => _minorName;
@@ -4754,6 +4937,9 @@ final class Volume$BoardFoot extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Board Foot';
+
+  @override
   String get displayName => 'board foot';
 
   static const _ratio = 0.002359737216;
@@ -4820,6 +5006,9 @@ final class Volume$Tun extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Tun';
 
   @override
   String get displayName => _minorName;
@@ -4890,6 +5079,9 @@ final class Volume$CorBiblical extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cor Biblical';
+
+  @override
   String get displayName => 'cor (Biblical)';
 
   static const _ratio = 0.22;
@@ -4956,6 +5148,9 @@ final class Volume$HomerBiblical extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Homer Biblical';
 
   @override
   String get displayName => 'homer (Biblical)';
@@ -5026,6 +5221,9 @@ final class Volume$BathBiblical extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Bath Biblical';
+
+  @override
   String get displayName => 'bath (Biblical)';
 
   static const _ratio = 0.022;
@@ -5092,6 +5290,9 @@ final class Volume$HinBiblical extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hin Biblical';
 
   @override
   String get displayName => 'hin (Biblical)';
@@ -5162,6 +5363,9 @@ final class Volume$CabBiblical extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cab Biblical';
+
+  @override
   String get displayName => 'cab (Biblical)';
 
   static const _ratio = 0.0012222222222222222;
@@ -5228,6 +5432,9 @@ final class Volume$LogBiblical extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Log Biblical';
 
   @override
   String get displayName => 'log (Biblical)';
@@ -5298,6 +5505,9 @@ final class Volume$TazaSpanish extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Taza Spanish';
+
+  @override
   String get displayName => 'Taza (Spanish)';
 
   static const _ratio = 0.0002365882365;
@@ -5364,6 +5574,9 @@ final class Volume$Bushel extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Bushel';
 
   @override
   String get displayName => _minorName;
@@ -5434,6 +5647,9 @@ final class Volume$Peck extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Peck';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.00880976754172;
@@ -5502,6 +5718,9 @@ final class Volume$DryPint extends Volume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dry Pint';
+
+  @override
   String get displayName => 'dry pint';
 
   static const _ratio = 0.0005506104713575;
@@ -5568,6 +5787,9 @@ final class Volume$DryQuart extends Volume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dry Quart';
 
   @override
   String get displayName => 'dry quart';

@@ -1,6 +1,6 @@
 part of '../../super_measurement.dart';
 
-abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
+sealed class Unit<T extends Unit<T>> implements Comparable<T> {
   const Unit([this.value = 0]);
 
   final num value;
@@ -24,6 +24,10 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   String get minorName;
 
   String get displayName;
+
+  String get unitLabel;
+
+  String get label;
 
   T withValue(num val);
 
@@ -157,7 +161,7 @@ abstract final class Unit<T extends Unit<T>> implements Comparable<T> {
   @override
   String toString() {
     final value = this.value.toDouble().toIntIfTrue;
-    return '$value $runtimeType ($symbol)';
+    return '$value $label ($symbol)';
   }
 
   /// Get the exact precision on value calculation

@@ -74,6 +74,9 @@ sealed class Entropy extends Unit<Entropy> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Entropy';
+
   static const _majorName = 'entropy';
 
   static const kilojoulePerKilogramK = Entropy$KilojoulePerKilogramK();
@@ -148,6 +151,9 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilojoule Per Kilogram K';
+
+  @override
   String get displayName => 'kilojoule/kilogram K';
 
   static const _ratio = 1000.0;
@@ -215,6 +221,9 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilojoule Per Kilogram Degree C';
 
   @override
   String get displayName => 'kilojoule/kilogram °C';
@@ -286,6 +295,9 @@ final class Entropy$JoulePerKilogramK extends Entropy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Joule Per Kilogram K';
+
+  @override
   String get displayName => 'joule/kilogram K';
 
   static const _ratio = 1.0;
@@ -352,6 +364,9 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Joule Per Kilogram Degree C';
 
   @override
   String get displayName => 'joule/kilogram °C';
@@ -423,6 +438,9 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilocalorie Per Kilogram Degree C';
+
+  @override
   String get displayName => 'kilocalorie/kilogram °C';
 
   static const _ratio = 4186.8;
@@ -490,6 +508,9 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Calorie Per Gram Degree C';
 
   @override
   String get displayName => 'calorie/gram °C';
@@ -561,6 +582,9 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Pound Degree F';
+
+  @override
   String get displayName => 'BTU/pound °F';
 
   static const _ratio = 4186.8;
@@ -629,6 +653,9 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Pound Degree R';
+
+  @override
   String get displayName => 'BTU/pound °R';
 
   static const _ratio = 4186.8;
@@ -695,6 +722,9 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C H U Per Pound Degree C';
 
   @override
   String get displayName => 'CHU/pound °C';

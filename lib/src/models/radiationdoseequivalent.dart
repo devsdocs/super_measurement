@@ -85,6 +85,9 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Radiation Dose Equivalent';
+
   static const _majorName = 'radiationDoseEquivalent';
 
   static const sievert = RadiationDoseEquivalent$Sievert();
@@ -166,6 +169,9 @@ final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Sievert';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -235,6 +241,9 @@ final class RadiationDoseEquivalent$Millisievert
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millisievert';
 
   @override
   String get displayName => _minorName;
@@ -308,6 +317,9 @@ final class RadiationDoseEquivalent$Microsievert
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Microsievert';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.000001;
@@ -377,6 +389,9 @@ final class RadiationDoseEquivalent$JoulePerKilogram
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Joule Per Kilogram';
 
   @override
   String get displayName => 'joule/kilogram';
@@ -450,6 +465,9 @@ final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Square Per Second Square';
+
+  @override
   String get displayName => 'meter²/second²';
 
   static const _ratio = 1.0;
@@ -521,6 +539,9 @@ final class RadiationDoseEquivalent$RemRoentgenEqMan
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Rem Roentgen Eq Man';
+
+  @override
   String get displayName => 'rem (Roentgen eq. man)';
 
   static const _ratio = 0.01;
@@ -589,6 +610,9 @@ final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millirem';
 
   @override
   String get displayName => _minorName;
@@ -662,6 +686,9 @@ final class RadiationDoseEquivalent$IntensityMillicurie
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Intensity Millicurie';
+
+  @override
   String get displayName => 'intensity millicurie';
 
   static const _ratio = 1.0;
@@ -733,6 +760,9 @@ final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gray Wr1 X Ray Gamma Ray Electrons';
+
+  @override
   String get displayName => 'gray (Wr=1, X-ray, gamma ray, electrons)';
 
   static const _ratio = 1.0;
@@ -802,6 +832,9 @@ final class RadiationDoseEquivalent$GrayWr20AlphaParticles
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gray Wr20 Alpha Particles';
 
   @override
   String get displayName => 'gray (Wr=20, alpha particles)';

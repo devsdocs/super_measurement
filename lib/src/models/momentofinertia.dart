@@ -96,6 +96,9 @@ sealed class MomentofInertia extends Unit<MomentofInertia> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Momentof Inertia';
+
   static const _majorName = 'momentofInertia';
 
   static const kilogramMeterSquare = MomentofInertia$KilogramMeterSquare();
@@ -182,6 +185,9 @@ final class MomentofInertia$KilogramMeterSquare extends MomentofInertia {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Meter Square';
+
+  @override
   String get displayName => 'kilogram meter²';
 
   static const _ratio = 10000.0;
@@ -252,6 +258,9 @@ final class MomentofInertia$KilogramCentimeterSquare extends MomentofInertia {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Centimeter Square';
+
+  @override
   String get displayName => 'kilogram centimeter²';
 
   static const _ratio = 1.0;
@@ -320,6 +329,9 @@ final class MomentofInertia$GramCentimeterSquare extends MomentofInertia {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Centimeter Square';
 
   @override
   String get displayName => 'gram centimeter²';
@@ -393,6 +405,9 @@ final class MomentofInertia$KilogramForceMeterSecondSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Force Meter Second Square';
+
+  @override
   String get displayName => 'kilogram force meter second²';
 
   static const _ratio = 98066.5;
@@ -462,6 +477,9 @@ final class MomentofInertia$KilogramForceCentimeterSecondSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Force Centimeter Second Square';
 
   @override
   String get displayName => 'kilogram force centimeter second²';
@@ -534,6 +552,9 @@ final class MomentofInertia$OunceInchSquare extends MomentofInertia {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ounce Inch Square';
+
+  @override
   String get displayName => 'ounce inch²';
 
   static const _ratio = 0.1828997851875;
@@ -602,6 +623,9 @@ final class MomentofInertia$OunceInchSecondSquare extends MomentofInertia {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ounce Inch Second Square';
 
   @override
   String get displayName => 'ounce inch second²';
@@ -674,6 +698,9 @@ final class MomentofInertia$PoundFootSquare extends MomentofInertia {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Foot Square';
+
+  @override
   String get displayName => 'pound foot²';
 
   static const _ratio = 421.401105;
@@ -742,6 +769,9 @@ final class MomentofInertia$PoundFootSecondSquare extends MomentofInertia {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Foot Second Square';
 
   @override
   String get displayName => 'pound foot second²';
@@ -814,6 +844,9 @@ final class MomentofInertia$PoundInchSquare extends MomentofInertia {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Inch Square';
+
+  @override
   String get displayName => 'pound inch²';
 
   static const _ratio = 2.926396563;
@@ -884,6 +917,9 @@ final class MomentofInertia$PoundInchSecondSquare extends MomentofInertia {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Inch Second Square';
+
+  @override
   String get displayName => 'pound inch second²';
 
   static const _ratio = 1129.8483016;
@@ -952,6 +988,9 @@ final class MomentofInertia$SlugFootSquare extends MomentofInertia {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Slug Foot Square';
 
   @override
   String get displayName => 'slug foot²';

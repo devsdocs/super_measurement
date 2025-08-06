@@ -61,6 +61,9 @@ sealed class ChemicalHenrysLaw extends Unit<ChemicalHenrysLaw> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Chemical Henrys Law';
+
   static const _majorName = 'chemicalHenrysLaw';
 
   static const newtonMeterPerKilogram =
@@ -134,6 +137,9 @@ final class ChemicalHenrysLaw$NewtonMeterPerKilogram extends ChemicalHenrysLaw {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Newton Meter Per Kilogram';
+
+  @override
   String get displayName => 'newton meter/kilogram';
 
   static const _ratio = 0.00001;
@@ -203,6 +209,9 @@ final class ChemicalHenrysLaw$BarPerKilogramPerMeterCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Bar Per Kilogram Per Meter Cubic';
 
   @override
   String get displayName => 'bar/(kilogram/meter³)';
@@ -276,6 +285,9 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerMeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Atmosphere Per Kilogram Per Meter Cubic';
+
+  @override
   String get displayName => 'atmosphere/(kilogram/meter³)';
 
   static const _ratio = 1.01325;
@@ -345,6 +357,9 @@ final class ChemicalHenrysLaw$AtmospherePerKilogramPerFootCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Atmosphere Per Kilogram Per Foot Cubic';
 
   @override
   String get displayName => 'atmosphere/(kilogram/foot³)';
@@ -418,6 +433,9 @@ final class ChemicalHenrysLaw$AtmospherePerGramPerCentimeterCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Atmosphere Per Gram Per Centimeter Cubic';
+
+  @override
   String get displayName => 'atmosphere/(gram/centimeter³)';
 
   static const _ratio = 0.00101325;
@@ -487,6 +505,9 @@ final class ChemicalHenrysLaw$AtmospherePerPoundPerFootCubic
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Atmosphere Per Pound Per Foot Cubic';
 
   @override
   String get displayName => 'atmosphere/(pound/foot³)';

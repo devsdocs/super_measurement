@@ -55,6 +55,9 @@ sealed class AccelerationAngular extends Unit<AccelerationAngular> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Acceleration Angular';
+
   static const _majorName = 'accelerationAngular';
 
   static const radianPerSecondSquare =
@@ -121,6 +124,9 @@ final class AccelerationAngular$RadianPerSecondSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Radian Per Second Square';
 
   @override
   String get displayName => 'radian/second²';
@@ -194,6 +200,9 @@ final class AccelerationAngular$RadianPerMinuteSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Radian Per Minute Square';
+
+  @override
   String get displayName => 'radian/minute²';
 
   static const _ratio = 0.0026525823852777777;
@@ -263,6 +272,9 @@ final class AccelerationAngular$RevolutionPerSecondSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Revolution Per Second Square';
 
   @override
   String get displayName => 'revolution/second²';
@@ -336,6 +348,9 @@ final class AccelerationAngular$RevolutionPerMinuteSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Revolution Per Minute Second';
+
+  @override
   String get displayName => 'revolution/minute second';
 
   static const _ratio = 1.000000000074009;
@@ -405,6 +420,9 @@ final class AccelerationAngular$RevolutionPerMinuteSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Revolution Per Minute Square';
 
   @override
   String get displayName => 'revolution/minute²';

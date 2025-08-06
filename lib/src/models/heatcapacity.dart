@@ -79,6 +79,9 @@ sealed class HeatCapacity extends Unit<HeatCapacity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Heat Capacity';
+
   static const _majorName = 'heatCapacity';
 
   static const kilojoulePerK = HeatCapacity$KilojoulePerK();
@@ -153,6 +156,9 @@ final class HeatCapacity$KilojoulePerK extends HeatCapacity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilojoule Per K';
+
+  @override
   String get displayName => 'kilojoule/K';
 
   static const _ratio = 1.0;
@@ -219,6 +225,9 @@ final class HeatCapacity$KilojoulePerDegreeC extends HeatCapacity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilojoule Per Degree C';
 
   @override
   String get displayName => 'kilojoule/°C';
@@ -290,6 +299,9 @@ final class HeatCapacity$JoulePerK extends HeatCapacity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Joule Per K';
+
+  @override
   String get displayName => 'joule/K';
 
   static const _ratio = 0.001;
@@ -356,6 +368,9 @@ final class HeatCapacity$JoulePerDegreeC extends HeatCapacity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Joule Per Degree C';
 
   @override
   String get displayName => 'joule/°C';
@@ -427,6 +442,9 @@ final class HeatCapacity$KilocaloriePerDegreeC extends HeatCapacity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilocalorie Per Degree C';
+
+  @override
   String get displayName => 'kilocalorie/°C';
 
   static const _ratio = 4.1868;
@@ -494,6 +512,9 @@ final class HeatCapacity$CaloriePerDegreeC extends HeatCapacity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Calorie Per Degree C';
 
   @override
   String get displayName => 'calorie/°C';
@@ -565,6 +586,9 @@ final class HeatCapacity$BTUPerDegreeC extends HeatCapacity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Degree C';
+
+  @override
   String get displayName => 'BTU/°C';
 
   static const _ratio = 1.05505585262;
@@ -631,6 +655,9 @@ final class HeatCapacity$BTUPerDegreeF extends HeatCapacity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'B T U Per Degree F';
 
   @override
   String get displayName => 'BTU/°F';
@@ -701,6 +728,9 @@ final class HeatCapacity$BTUPerDegreeR extends HeatCapacity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Per Degree R';
+
+  @override
   String get displayName => 'BTU/°R';
 
   static const _ratio = 1.899100534716;
@@ -767,6 +797,9 @@ final class HeatCapacity$CHUPerDegreeC extends HeatCapacity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'C H U Per Degree C';
 
   @override
   String get displayName => 'CHU/°C';

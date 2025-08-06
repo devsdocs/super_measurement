@@ -199,6 +199,9 @@ sealed class Area extends Unit<Area> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Area';
+
   static const _majorName = 'area';
 
   static const kilometerSquare = Area$KilometerSquare();
@@ -342,6 +345,9 @@ final class Area$KilometerSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilometer Square';
+
+  @override
   String get displayName => 'kilometer²';
 
   static const _ratio = 1e+34;
@@ -408,6 +414,9 @@ final class Area$HectometerSquare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hectometer Square';
 
   @override
   String get displayName => 'hectometer²';
@@ -478,6 +487,9 @@ final class Area$DekameterSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dekameter Square';
+
+  @override
   String get displayName => 'dekameter²';
 
   static const _ratio = 1e+30;
@@ -544,6 +556,9 @@ final class Area$MeterSquare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Square';
 
   @override
   String get displayName => 'meter²';
@@ -614,6 +629,9 @@ final class Area$DecimeterSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Decimeter Square';
+
+  @override
   String get displayName => 'decimeter²';
 
   static const _ratio = 1e+26;
@@ -680,6 +698,9 @@ final class Area$CentimeterSquare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centimeter Square';
 
   @override
   String get displayName => 'centimeter²';
@@ -750,6 +771,9 @@ final class Area$MillimeterSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimeter Square';
+
+  @override
   String get displayName => 'millimeter²';
 
   static const _ratio = 1e+22;
@@ -816,6 +840,9 @@ final class Area$MicrometerSquare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Micrometer Square';
 
   @override
   String get displayName => 'micrometer²';
@@ -886,6 +913,9 @@ final class Area$NanometerSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nanometer Square';
+
+  @override
   String get displayName => 'nanometer²';
 
   static const _ratio = 10000000000.0;
@@ -952,6 +982,9 @@ final class Area$Hectare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hectare';
 
   @override
   String get displayName => _minorName;
@@ -1022,6 +1055,9 @@ final class Area$Are extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Are';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e+30;
@@ -1088,6 +1124,9 @@ final class Area$Barn extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Barn';
 
   @override
   String get displayName => _minorName;
@@ -1158,6 +1197,9 @@ final class Area$MileSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mile Square';
+
+  @override
   String get displayName => 'mile²';
 
   static const _ratio = 2.5899881103389906e+34;
@@ -1224,6 +1266,9 @@ final class Area$YardSquare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Yard Square';
 
   @override
   String get displayName => 'yard²';
@@ -1294,6 +1339,9 @@ final class Area$FootSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Foot Square';
+
+  @override
   String get displayName => 'foot²';
 
   static const _ratio = 9.290304000010727e+26;
@@ -1360,6 +1408,9 @@ final class Area$InchSquare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Inch Square';
 
   @override
   String get displayName => 'inch²';
@@ -1430,6 +1481,9 @@ final class Area$Township extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Township';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 9.323957197220366e+35;
@@ -1496,6 +1550,9 @@ final class Area$Section extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Section';
 
   @override
   String get displayName => _minorName;
@@ -1566,6 +1623,9 @@ final class Area$Acre extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Acre';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 4.046856422404673e+31;
@@ -1632,6 +1692,9 @@ final class Area$Rood extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Rood';
 
   @override
   String get displayName => _minorName;
@@ -1702,6 +1765,9 @@ final class Area$ChainSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Chain Square';
+
+  @override
   String get displayName => 'chain²';
 
   static const _ratio = 4.046856422404673e+30;
@@ -1768,6 +1834,9 @@ final class Area$RodSquare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Rod Square';
 
   @override
   String get displayName => 'rod²';
@@ -1838,6 +1907,9 @@ final class Area$PerchSquare extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Perch Square';
+
+  @override
   String get displayName => 'perch²';
 
   static const _ratio = 2.5292852640029207e+29;
@@ -1904,6 +1976,9 @@ final class Area$PoleSquare extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pole Square';
 
   @override
   String get displayName => 'pole²';
@@ -1974,6 +2049,9 @@ final class Area$Arpent extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Arpent';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 4.041282240004667e+31;
@@ -2040,6 +2118,9 @@ final class Area$Cuerda extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cuerda';
 
   @override
   String get displayName => _minorName;
@@ -2110,6 +2191,9 @@ final class Area$Plaza extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Plaza';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.4e+31;
@@ -2176,6 +2260,9 @@ final class Area$VarasCastellanasCuad extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Varas Castellanas Cuad';
 
   @override
   String get displayName => 'varas castellanas cuad';
@@ -2246,6 +2333,9 @@ final class Area$VarasConuquerasCuad extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Varas Conuqueras Cuad';
+
+  @override
   String get displayName => 'varas conuqueras cuad';
 
   static const _ratio = 6.288633e+28;
@@ -2312,6 +2402,9 @@ final class Area$Strema extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Strema';
 
   @override
   String get displayName => _minorName;
@@ -2382,6 +2475,9 @@ final class Area$CircularInch extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Circular Inch';
+
+  @override
   String get displayName => 'circular inch';
 
   static const _ratio = 5.06707479098e+24;
@@ -2450,6 +2546,9 @@ final class Area$CircularMil extends Area {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Circular Mil';
+
+  @override
   String get displayName => 'circular mil';
 
   static const _ratio = 5067074790980000000.0;
@@ -2516,6 +2615,9 @@ final class Area$Tahulla extends Area {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Tahulla';
 
   @override
   String get displayName => _minorName;

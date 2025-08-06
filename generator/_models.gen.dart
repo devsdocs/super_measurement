@@ -92,6 +92,10 @@ void generateModels() {
     typeBuff.writeln('  @override');
     typeBuff.writeln('  String get majorName => _majorName;');
     typeBuff.writeln();
+    final capitalCase = name.splitAtCapitals.join(' ');
+    typeBuff.writeln('  @override');
+    typeBuff.writeln("  String get label => '$capitalCase';");
+    typeBuff.writeln();
     typeBuff.writeln("  static const _majorName = '${name.snakeCase}';");
     typeBuff.writeln();
     for (final e in unit.values.first) {
@@ -281,12 +285,17 @@ void generateModels() {
 
       typeBuff.writeln();
       final snakeCaseName = unitType.split(r'$').last.snakeCase;
+      final capitalCaseUnit =
+          unitType.split(r'$').last.splitAtCapitals.join(' ');
       typeBuff.writeln(
         "  static const _minorName = '$snakeCaseName';",
       );
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       typeBuff.writeln('  String get minorName => _minorName;');
+      typeBuff.writeln();
+      typeBuff.writeln('  @override');
+      typeBuff.writeln("  String get unitLabel => '$capitalCaseUnit';");
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       final displayName = unitProps['name'].toString().replaceAll("'", '"');
@@ -376,5 +385,11 @@ void generateModels() {
         mode: FileMode.append,
       );
     }
+  }
+}
+
+extension StringExtension on String {
+  List<String> get splitAtCapitals {
+    return split(RegExp('(?=[A-Z])')).where((s) => s.isNotEmpty).toList();
   }
 }

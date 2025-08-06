@@ -56,6 +56,9 @@ sealed class Resistance extends Unit<Resistance> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Resistance';
+
   static const _majorName = 'resistance';
 
   static const megohm = Resistance$Megohm();
@@ -116,6 +119,9 @@ final class Resistance$Megohm extends Resistance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Megohm';
 
   @override
   String get displayName => _minorName;
@@ -186,6 +192,9 @@ final class Resistance$Ohm extends Resistance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ohm';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -252,6 +261,9 @@ final class Resistance$OhmInternational extends Resistance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ohm International';
 
   @override
   String get displayName => 'ohm (International)';
@@ -322,6 +334,9 @@ final class Resistance$Microhm extends Resistance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Microhm';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.000001;
@@ -390,6 +405,9 @@ final class Resistance$Abohm extends Resistance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abohm';
+
+  @override
   String get displayName => 'Abohm';
 
   static const _ratio = 1e-9;
@@ -456,6 +474,9 @@ final class Resistance$Statohm extends Resistance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Statohm';
 
   @override
   String get displayName => 'Statohm';

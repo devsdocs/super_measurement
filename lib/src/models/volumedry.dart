@@ -94,6 +94,9 @@ sealed class VolumeDry extends Unit<VolumeDry> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Volume Dry';
+
   static const _majorName = 'volumeDry';
 
   static const barrel = VolumeDry$Barrel();
@@ -177,6 +180,9 @@ final class VolumeDry$Barrel extends VolumeDry {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Barrel';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 378.41605930454045;
@@ -243,6 +249,9 @@ final class VolumeDry$Liter extends VolumeDry {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Liter';
 
   @override
   String get displayName => _minorName;
@@ -313,6 +322,9 @@ final class VolumeDry$Pint extends VolumeDry {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pint';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.80199799411;
@@ -379,6 +391,9 @@ final class VolumeDry$Quart extends VolumeDry {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Quart';
 
   @override
   String get displayName => _minorName;
@@ -449,6 +464,9 @@ final class VolumeDry$Peck extends VolumeDry {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Peck';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 28.83196790576;
@@ -515,6 +533,9 @@ final class VolumeDry$Bushel extends VolumeDry {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Bushel';
 
   @override
   String get displayName => _minorName;
@@ -585,6 +606,9 @@ final class VolumeDry$CorBiblical extends VolumeDry {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cor Biblical';
+
+  @override
   String get displayName => 'cor (Biblical)';
 
   static const _ratio = 720.0;
@@ -651,6 +675,9 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Homer Biblical';
 
   @override
   String get displayName => 'homer (Biblical)';
@@ -721,6 +748,9 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ephah Biblical';
+
+  @override
   String get displayName => 'ephah (Biblical)';
 
   static const _ratio = 72.0;
@@ -787,6 +817,9 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Seah Biblical';
 
   @override
   String get displayName => 'seah (Biblical)';
@@ -857,6 +890,9 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Omer Biblical';
+
+  @override
   String get displayName => 'omer (Biblical)';
 
   static const _ratio = 7.2;
@@ -925,6 +961,9 @@ final class VolumeDry$CabBiblical extends VolumeDry {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cab Biblical';
+
+  @override
   String get displayName => 'cab (Biblical)';
 
   static const _ratio = 4.0;
@@ -991,6 +1030,9 @@ final class VolumeDry$LogBiblical extends VolumeDry {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Log Biblical';
 
   @override
   String get displayName => 'log (Biblical)';

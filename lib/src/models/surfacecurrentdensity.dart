@@ -62,6 +62,9 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Surface Current Density';
+
   static const _majorName = 'surfaceCurrentDensity';
 
   static const amperePerMeterSquare =
@@ -130,6 +133,9 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ampere Per Meter Square';
 
   @override
   String get displayName => 'ampere/meter²';
@@ -203,6 +209,9 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ampere Per Centimeter Square';
+
+  @override
   String get displayName => 'ampere/centimeter²';
 
   static const _ratio = 10000.0;
@@ -272,6 +281,9 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ampere Per Inch Square';
 
   @override
   String get displayName => 'ampere/inch²';
@@ -345,6 +357,9 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ampere Per Mil Square';
+
+  @override
   String get displayName => 'ampere/mil²';
 
   static const _ratio = 1550003100.0;
@@ -416,6 +431,9 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ampere Per Cicular Mil';
+
+  @override
   String get displayName => 'ampere/cicular mil';
 
   static const _ratio = 1973525240.990759;
@@ -485,6 +503,9 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abampere Per Centimeter Square';
 
   @override
   String get displayName => 'Abampere/centimeter²';

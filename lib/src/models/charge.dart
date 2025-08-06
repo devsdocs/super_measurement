@@ -110,6 +110,9 @@ sealed class Charge extends Unit<Charge> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Charge';
+
   static const _majorName = 'charge';
 
   static const megacoulomb = Charge$Megacoulomb();
@@ -202,6 +205,9 @@ final class Charge$Megacoulomb extends Charge {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megacoulomb';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
@@ -268,6 +274,9 @@ final class Charge$Kilocoulomb extends Charge {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilocoulomb';
 
   @override
   String get displayName => _minorName;
@@ -338,6 +347,9 @@ final class Charge$Coulomb extends Charge {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Coulomb';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -404,6 +416,9 @@ final class Charge$CoulombInternational extends Charge {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Coulomb International';
 
   @override
   String get displayName => 'coulomb (international)';
@@ -474,6 +489,9 @@ final class Charge$Millicoulomb extends Charge {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millicoulomb';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.001;
@@ -540,6 +558,9 @@ final class Charge$Microcoulomb extends Charge {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microcoulomb';
 
   @override
   String get displayName => _minorName;
@@ -610,6 +631,9 @@ final class Charge$Nanocoulomb extends Charge {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nanocoulomb';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-9;
@@ -676,6 +700,9 @@ final class Charge$Picocoulomb extends Charge {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Picocoulomb';
 
   @override
   String get displayName => _minorName;
@@ -746,6 +773,9 @@ final class Charge$Abcoulomb extends Charge {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abcoulomb';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10.0;
@@ -812,6 +842,9 @@ final class Charge$Statcoulomb extends Charge {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Statcoulomb';
 
   @override
   String get displayName => _minorName;
@@ -882,6 +915,9 @@ final class Charge$Franklin extends Charge {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Franklin';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 3.335646048e-10;
@@ -948,6 +984,9 @@ final class Charge$AmpereHour extends Charge {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ampere Hour';
 
   @override
   String get displayName => 'ampere-hour';
@@ -1018,6 +1057,9 @@ final class Charge$AmpereMinute extends Charge {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ampere Minute';
+
+  @override
   String get displayName => 'ampere-minute';
 
   static const _ratio = 60.0;
@@ -1084,6 +1126,9 @@ final class Charge$AmpereSecond extends Charge {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ampere Second';
 
   @override
   String get displayName => 'ampere-second';
@@ -1154,6 +1199,9 @@ final class Charge$Faraday extends Charge {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Faraday';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 96485.3365;
@@ -1220,6 +1268,9 @@ final class Charge$ElectronicCharge extends Charge {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Electronic Charge';
 
   @override
   String get displayName => 'electronic charge';

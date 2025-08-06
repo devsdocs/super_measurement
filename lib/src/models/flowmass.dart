@@ -167,6 +167,9 @@ sealed class FlowMass extends Unit<FlowMass> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Flow Mass';
+
   static const _majorName = 'flowMass';
 
   static const gramPerSecond = FlowMass$GramPerSecond();
@@ -289,6 +292,9 @@ final class FlowMass$GramPerSecond extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Per Second';
+
+  @override
   String get displayName => 'gram/second';
 
   static const _ratio = 86.4;
@@ -355,6 +361,9 @@ final class FlowMass$GramPerMinute extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Per Minute';
 
   @override
   String get displayName => 'gram/minute';
@@ -425,6 +434,9 @@ final class FlowMass$GramPerHour extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Per Hour';
+
+  @override
   String get displayName => 'gram/hour';
 
   static const _ratio = 0.024;
@@ -491,6 +503,9 @@ final class FlowMass$GramPerDay extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Per Day';
 
   @override
   String get displayName => 'gram/day';
@@ -561,6 +576,9 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Milligram Per Minute';
+
+  @override
   String get displayName => 'milligram/minute';
 
   static const _ratio = 0.00144;
@@ -627,6 +645,9 @@ final class FlowMass$MilligramPerHour extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Milligram Per Hour';
 
   @override
   String get displayName => 'milligram/hour';
@@ -697,6 +718,9 @@ final class FlowMass$MilligramPerDay extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Milligram Per Day';
+
+  @override
   String get displayName => 'milligram/day';
 
   static const _ratio = 0.000001;
@@ -763,6 +787,9 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Per Minute';
 
   @override
   String get displayName => 'kilogram/minute';
@@ -833,6 +860,9 @@ final class FlowMass$KilogramPerHour extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Per Hour';
+
+  @override
   String get displayName => 'kilogram/hour';
 
   static const _ratio = 24.0;
@@ -899,6 +929,9 @@ final class FlowMass$KilogramPerDay extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Per Day';
 
   @override
   String get displayName => 'kilogram/day';
@@ -969,6 +1002,9 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exagram Per Second';
+
+  @override
   String get displayName => 'exagram/second';
 
   static const _ratio = 86400000000000000000.0;
@@ -1035,6 +1071,9 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petagram Per Second';
 
   @override
   String get displayName => 'petagram/second';
@@ -1105,6 +1144,9 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Teragram Per Second';
+
+  @override
   String get displayName => 'teragram/second';
 
   static const _ratio = 86400000000000.0;
@@ -1171,6 +1213,9 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigagram Per Second';
 
   @override
   String get displayName => 'gigagram/second';
@@ -1241,6 +1286,9 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megagram Per Second';
+
+  @override
   String get displayName => 'megagram/second';
 
   static const _ratio = 86400000.0;
@@ -1307,6 +1355,9 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Per Second';
 
   @override
   String get displayName => 'kilogram/second';
@@ -1377,6 +1428,9 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectogram Per Second';
+
+  @override
   String get displayName => 'hectogram/second';
 
   static const _ratio = 8640.0;
@@ -1443,6 +1497,9 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekagram Per Second';
 
   @override
   String get displayName => 'dekagram/second';
@@ -1513,6 +1570,9 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Decigram Per Second';
+
+  @override
   String get displayName => 'decigram/second';
 
   static const _ratio = 8.64;
@@ -1579,6 +1639,9 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centigram Per Second';
 
   @override
   String get displayName => 'centigram/second';
@@ -1649,6 +1712,9 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Milligram Per Second';
+
+  @override
   String get displayName => 'milligram/second';
 
   static const _ratio = 0.0864;
@@ -1715,6 +1781,9 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microgram Per Second';
 
   @override
   String get displayName => 'microgram/second';
@@ -1785,6 +1854,9 @@ final class FlowMass$PoundPerSecond extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Second';
+
+  @override
   String get displayName => 'pound/second';
 
   static const _ratio = 39190.38077;
@@ -1851,6 +1923,9 @@ final class FlowMass$PoundPerMinute extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Minute';
 
   @override
   String get displayName => 'pound/minute';
@@ -1921,6 +1996,9 @@ final class FlowMass$PoundPerHour extends FlowMass {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Hour';
+
+  @override
   String get displayName => 'pound/hour';
 
   static const _ratio = 10.88621688;
@@ -1987,6 +2065,9 @@ final class FlowMass$PoundPerDay extends FlowMass {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Day';
 
   @override
   String get displayName => 'pound/day';

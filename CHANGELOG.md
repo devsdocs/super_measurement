@@ -1,3 +1,7 @@
+## 3.0.0
+- Change `Unit` to `sealed` class
+- Add `label` and `unitLabel` for more clarity
+
 ## 2.1.3
 - optimize `toPrecision()` method
 

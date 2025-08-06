@@ -113,6 +113,9 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Radiation Radioactivity';
+
   static const _majorName = 'radiationRadioactivity';
 
   static const terabecquerel = RadiationRadioactivity$Terabecquerel();
@@ -207,6 +210,9 @@ final class RadiationRadioactivity$Terabecquerel
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Terabecquerel';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000.0;
@@ -276,6 +282,9 @@ final class RadiationRadioactivity$Gigabecquerel
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigabecquerel';
 
   @override
   String get displayName => _minorName;
@@ -349,6 +358,9 @@ final class RadiationRadioactivity$Megabecquerel
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megabecquerel';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
@@ -420,6 +432,9 @@ final class RadiationRadioactivity$Kilobecquerel
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilobecquerel';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
@@ -488,6 +503,9 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Becquerel';
 
   @override
   String get displayName => _minorName;
@@ -561,6 +579,9 @@ final class RadiationRadioactivity$Millibecquerel
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millibecquerel';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -629,6 +650,9 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilocurie';
 
   @override
   String get displayName => _minorName;
@@ -701,6 +725,9 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Curie';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 37000000000000.0;
@@ -769,6 +796,9 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millicurie';
 
   @override
   String get displayName => _minorName;
@@ -841,6 +871,9 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Microcurie';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 37000000.0;
@@ -909,6 +942,9 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nanocurie';
 
   @override
   String get displayName => _minorName;
@@ -981,6 +1017,9 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Picocurie';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 37.0;
@@ -1049,6 +1088,9 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Rutherford';
 
   @override
   String get displayName => _minorName;
@@ -1122,6 +1164,9 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Disintegrations Per Second';
+
+  @override
   String get displayName => 'disintegrations/second';
 
   static const _ratio = 1000.0;
@@ -1191,6 +1236,9 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Disintegrations Per Minute';
 
   @override
   String get displayName => 'disintegrations/minute';

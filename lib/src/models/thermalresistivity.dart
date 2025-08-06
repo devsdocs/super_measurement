@@ -137,6 +137,9 @@ sealed class ThermalResistivity extends Unit<ThermalResistivity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Thermal Resistivity';
+
   static const _majorName = 'thermalResistivity';
 
   static const hourFootSquareDegreeFPerBTUThermochemInch =
@@ -264,6 +267,9 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUThermochemInch
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hour Foot Square Degree F Per B T U Thermochem Inch';
+
+  @override
   String get displayName => 'hour-foot²-°F/BTU (thermochem)-inch';
 
   static const _ratio = 1.0;
@@ -334,6 +340,9 @@ final class ThermalResistivity$HourFootSquareDegreeFPerBTUIntInch
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hour Foot Square Degree F Per B T U Int Inch';
 
   @override
   String get displayName => 'hour-foot²-°F/BTU (int)-inch';
@@ -408,6 +417,9 @@ final class ThermalResistivity$HourFootDegreeFPerBTUThemochem
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hour Foot Degree F Per B T U Themochem';
+
+  @override
   String get displayName => 'hour-foot-°F/BTU (themochem)';
 
   static const _ratio = 0.08333333333333333;
@@ -478,6 +490,9 @@ final class ThermalResistivity$HourFootDegreeFPerBTUInt
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hour Foot Degree F Per B T U Int';
 
   @override
   String get displayName => 'hour-foot-°F/BTU (int)';
@@ -552,6 +567,9 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieThermochem
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Second Centimeter Degree C Per Calorie Thermochem';
+
+  @override
   String get displayName => 'second-centimeter-°C/calorie (thermochem)';
 
   static const _ratio = 0.0003444823943288309;
@@ -622,6 +640,9 @@ final class ThermalResistivity$SecondCentimeterDegreeCPerCalorieInt
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Second Centimeter Degree C Per Calorie Int';
 
   @override
   String get displayName => 'second-centimeter-°C/calorie (int)';
@@ -695,6 +716,9 @@ final class ThermalResistivity$MeterKPerKilowatt extends ThermalResistivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter K Per Kilowatt';
+
+  @override
   String get displayName => 'meter-K/kilowatt';
 
   static const _ratio = 0.00014413143378718286;
@@ -764,6 +788,9 @@ final class ThermalResistivity$MeterKPerWatt extends ThermalResistivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter K Per Watt';
 
   @override
   String get displayName => 'meter-K/watt';
@@ -838,6 +865,9 @@ final class ThermalResistivity$CentimeterDegreeCPerWatt
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centimeter Degree C Per Watt';
+
+  @override
   String get displayName => 'centimeter-°C/watt';
 
   static const _ratio = 0.0014413143378718286;
@@ -908,6 +938,9 @@ final class ThermalResistivity$BTUThermochemInchPerHourFootSquareDegreeF
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'B T U Thermochem Inch Per Hour Foot Square Degree F';
 
   @override
   String get displayName => 'BTU (thermochem)-inch/hour-foot²-°F';
@@ -982,6 +1015,9 @@ final class ThermalResistivity$BTUIntInchPerHourFootSquareDegreeF
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Int Inch Per Hour Foot Square Degree F';
+
+  @override
   String get displayName => 'BTU (int)-inch/hour-foot²-°F';
 
   static const _ratio = 1.0006692161075852;
@@ -1052,6 +1088,9 @@ final class ThermalResistivity$BTUThemochemPerHourFootDegreeF
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'B T U Themochem Per Hour Foot Degree F';
 
   @override
   String get displayName => 'BTU (themochem)/hour-foot-°F';
@@ -1126,6 +1165,9 @@ final class ThermalResistivity$BTUIntPerHourFootDegreeF
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'B T U Int Per Hour Foot Degree F';
+
+  @override
   String get displayName => 'BTU (int)/hour-foot-°F';
 
   static const _ratio = 12.008030593291023;
@@ -1196,6 +1238,9 @@ final class ThermalResistivity$CalorieThermochPerSecondCentimeterDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Calorie Thermoch Per Second Centimeter Degree C';
 
   @override
   String get displayName => 'calorie (thermoch.)/second-centimeter-°C';
@@ -1270,6 +1315,9 @@ final class ThermalResistivity$CalorieIntPerSecondCentimeterDegreeC
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Calorie Int Per Second Centimeter Degree C';
+
+  @override
   String get displayName => 'calorie (int)/second-centimeter-°C';
 
   static const _ratio = 2904.848644038341;
@@ -1339,6 +1387,9 @@ final class ThermalResistivity$KilowattPerMeterK extends ThermalResistivity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilowatt Per Meter K';
 
   @override
   String get displayName => 'kilowatt/meter-K';
@@ -1412,6 +1463,9 @@ final class ThermalResistivity$WattPerMeterK extends ThermalResistivity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Watt Per Meter K';
+
+  @override
   String get displayName => 'watt/meter-K';
 
   static const _ratio = 6.938111789525033;
@@ -1482,6 +1536,9 @@ final class ThermalResistivity$WattPerCentimeterDegreeC
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Watt Per Centimeter Degree C';
 
   @override
   String get displayName => 'watt/centimeter-°C';

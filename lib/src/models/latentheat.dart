@@ -41,6 +41,9 @@ sealed class LatentHeat extends Unit<LatentHeat> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Latent Heat';
+
   static const _majorName = 'latentHeat';
 
   static const caloriePerGram = LatentHeat$CaloriePerGram();
@@ -92,6 +95,9 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Calorie Per Gram';
 
   @override
   String get displayName => 'calorie/gram';
@@ -162,6 +168,9 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilojoule Per Kilogram';
+
+  @override
   String get displayName => 'kilojoule/kilogram';
 
   static const _ratio = 1.0;
@@ -229,6 +238,9 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'B T U Per Pound';
 
   @override
   String get displayName => 'BTU/pound';

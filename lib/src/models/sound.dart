@@ -40,6 +40,9 @@ sealed class Sound extends Unit<Sound> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Sound';
+
   static const _majorName = 'sound';
 
   static const bel = Sound$Bel();
@@ -91,6 +94,9 @@ final class Sound$Bel extends Sound {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Bel';
 
   @override
   String get displayName => _minorName;
@@ -161,6 +167,9 @@ final class Sound$Decibel extends Sound {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Decibel';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -227,6 +236,9 @@ final class Sound$Neper extends Sound {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Neper';
 
   @override
   String get displayName => _minorName;

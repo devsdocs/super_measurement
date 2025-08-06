@@ -127,6 +127,9 @@ sealed class Capacitance extends Unit<Capacitance> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Capacitance';
+
   static const _majorName = 'capacitance';
 
   static const exafarad = Capacitance$Exafarad();
@@ -228,6 +231,9 @@ final class Capacitance$Exafarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exafarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000000000.0;
@@ -294,6 +300,9 @@ final class Capacitance$Petafarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petafarad';
 
   @override
   String get displayName => _minorName;
@@ -364,6 +373,9 @@ final class Capacitance$Terafarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Terafarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000000.0;
@@ -430,6 +442,9 @@ final class Capacitance$Gigafarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigafarad';
 
   @override
   String get displayName => _minorName;
@@ -500,6 +515,9 @@ final class Capacitance$Megafarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megafarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000.0;
@@ -566,6 +584,9 @@ final class Capacitance$Kilofarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilofarad';
 
   @override
   String get displayName => _minorName;
@@ -636,6 +657,9 @@ final class Capacitance$Hectofarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectofarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100.0;
@@ -702,6 +726,9 @@ final class Capacitance$Dekafarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekafarad';
 
   @override
   String get displayName => _minorName;
@@ -772,6 +799,9 @@ final class Capacitance$Farad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Farad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -838,6 +868,9 @@ final class Capacitance$Decifarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Decifarad';
 
   @override
   String get displayName => _minorName;
@@ -908,6 +941,9 @@ final class Capacitance$Centifarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centifarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.01;
@@ -974,6 +1010,9 @@ final class Capacitance$Millifarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millifarad';
 
   @override
   String get displayName => _minorName;
@@ -1044,6 +1083,9 @@ final class Capacitance$Microfarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Microfarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.000001;
@@ -1110,6 +1152,9 @@ final class Capacitance$Nanofarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nanofarad';
 
   @override
   String get displayName => _minorName;
@@ -1180,6 +1225,9 @@ final class Capacitance$Picofarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Picofarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-12;
@@ -1246,6 +1294,9 @@ final class Capacitance$Femtofarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Femtofarad';
 
   @override
   String get displayName => _minorName;
@@ -1316,6 +1367,9 @@ final class Capacitance$Attofarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Attofarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1e-18;
@@ -1384,6 +1438,9 @@ final class Capacitance$Abfarad extends Capacitance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abfarad';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000000000.0;
@@ -1450,6 +1507,9 @@ final class Capacitance$Statfarad extends Capacitance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Statfarad';
 
   @override
   String get displayName => _minorName;

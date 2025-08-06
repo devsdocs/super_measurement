@@ -391,6 +391,9 @@ sealed class Length extends Unit<Length> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Length';
+
   static const _majorName = 'length';
 
   static const exameter = Length$Exameter();
@@ -642,6 +645,9 @@ final class Length$Exameter extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exameter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.25e+52;
@@ -708,6 +714,9 @@ final class Length$Petameter extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petameter';
 
   @override
   String get displayName => _minorName;
@@ -778,6 +787,9 @@ final class Length$Terameter extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Terameter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.25e+46;
@@ -844,6 +856,9 @@ final class Length$Gigameter extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigameter';
 
   @override
   String get displayName => _minorName;
@@ -914,6 +929,9 @@ final class Length$Megameter extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megameter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.25e+40;
@@ -980,6 +998,9 @@ final class Length$Kilometer extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilometer';
 
   @override
   String get displayName => _minorName;
@@ -1050,6 +1071,9 @@ final class Length$Hectometer extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectometer';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.25e+36;
@@ -1116,6 +1140,9 @@ final class Length$Dekameter extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekameter';
 
   @override
   String get displayName => _minorName;
@@ -1186,6 +1213,9 @@ final class Length$Meter extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.25e+34;
@@ -1252,6 +1282,9 @@ final class Length$Decimeter extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Decimeter';
 
   @override
   String get displayName => _minorName;
@@ -1322,6 +1355,9 @@ final class Length$Centimeter extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centimeter';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.25e+32;
@@ -1388,6 +1424,9 @@ final class Length$Millimeter extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millimeter';
 
   @override
   String get displayName => _minorName;
@@ -1458,6 +1497,9 @@ final class Length$Micrometer extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Micrometer';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.25e+28;
@@ -1524,6 +1566,9 @@ final class Length$Nanometer extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nanometer';
 
   @override
   String get displayName => _minorName;
@@ -1594,6 +1639,9 @@ final class Length$Picometer extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Picometer';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.25e+22;
@@ -1660,6 +1708,9 @@ final class Length$Femtometer extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Femtometer';
 
   @override
   String get displayName => _minorName;
@@ -1730,6 +1781,9 @@ final class Length$Attometer extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Attometer';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 62500000000000000.0;
@@ -1796,6 +1850,9 @@ final class Length$Angstrom extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Angstrom';
 
   @override
   String get displayName => _minorName;
@@ -1866,6 +1923,9 @@ final class Length$Fermi extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Fermi';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 62500000000000000000.0;
@@ -1932,6 +1992,9 @@ final class Length$Planck extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Planck';
 
   @override
   String get displayName => _minorName;
@@ -2002,6 +2065,9 @@ final class Length$MileUS extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mile U S';
+
+  @override
   String get displayName => 'mile (US)';
 
   static const _ratio = 1.00584e+38;
@@ -2068,6 +2134,9 @@ final class Length$MileUSSurveyFoot extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mile U S Survey Foot';
 
   @override
   String get displayName => 'mile (US survey foot)';
@@ -2138,6 +2207,9 @@ final class Length$MileRoman extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mile Roman';
+
+  @override
   String get displayName => 'mile (Roman)';
 
   static const _ratio = 9.248775e+37;
@@ -2204,6 +2276,9 @@ final class Length$Furlong extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Furlong';
 
   @override
   String get displayName => _minorName;
@@ -2274,6 +2349,9 @@ final class Length$Chain extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Chain';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.2573e+36;
@@ -2340,6 +2418,9 @@ final class Length$Rod extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Rod';
 
   @override
   String get displayName => _minorName;
@@ -2410,6 +2491,9 @@ final class Length$Perch extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Perch';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 3.14325e+35;
@@ -2476,6 +2560,9 @@ final class Length$Pole extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pole';
 
   @override
   String get displayName => _minorName;
@@ -2546,6 +2633,9 @@ final class Length$Fathom extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Fathom';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.143e+35;
@@ -2612,6 +2702,9 @@ final class Length$Yard extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Yard';
 
   @override
   String get displayName => _minorName;
@@ -2682,6 +2775,9 @@ final class Length$Foot extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Foot';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.905e+34;
@@ -2748,6 +2844,9 @@ final class Length$FootUSSurvey extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Foot U S Survey';
 
   @override
   String get displayName => 'foot (US survey)';
@@ -2818,6 +2917,9 @@ final class Length$Link extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Link';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.2573e+34;
@@ -2884,6 +2986,9 @@ final class Length$Inch extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Inch';
 
   @override
   String get displayName => _minorName;
@@ -2954,6 +3059,9 @@ final class Length$Hand extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hand';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 6.35e+33;
@@ -3020,6 +3128,9 @@ final class Length$Mil extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mil';
 
   @override
   String get displayName => _minorName;
@@ -3090,6 +3201,9 @@ final class Length$MilSweden extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mil Sweden';
+
+  @override
   String get displayName => 'mil (Sweden)';
 
   static const _ratio = 6.25e+38;
@@ -3156,6 +3270,9 @@ final class Length$Microinch extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microinch';
 
   @override
   String get displayName => _minorName;
@@ -3226,6 +3343,9 @@ final class Length$Megaparsec extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megaparsec';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.9285807902221097e+57;
@@ -3292,6 +3412,9 @@ final class Length$Kiloparsec extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kiloparsec';
 
   @override
   String get displayName => _minorName;
@@ -3362,6 +3485,9 @@ final class Length$Parsec extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Parsec';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.9285807902221097e+51;
@@ -3428,6 +3554,9 @@ final class Length$LightYear extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Light Year';
 
   @override
   String get displayName => 'light year';
@@ -3498,6 +3627,9 @@ final class Length$AstronomicalUnit extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Astronomical Unit';
+
+  @override
   String get displayName => 'astronomical unit';
 
   static const _ratio = 9.35e+45;
@@ -3564,6 +3696,9 @@ final class Length$League extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'League';
 
   @override
   String get displayName => _minorName;
@@ -3634,6 +3769,9 @@ final class Length$NauticalMile extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nautical Mile';
+
+  @override
   String get displayName => 'nautical mile';
 
   static const _ratio = 1.1575e+38;
@@ -3700,6 +3838,9 @@ final class Length$Arpent extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Arpent';
 
   @override
   String get displayName => _minorName;
@@ -3770,6 +3911,9 @@ final class Length$Pica extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pica';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 2.6458333333333332e+32;
@@ -3836,6 +3980,9 @@ final class Length$Point extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Point';
 
   @override
   String get displayName => _minorName;
@@ -3906,6 +4053,9 @@ final class Length$Twip extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Twip';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.1024305555555556e+30;
@@ -3972,6 +4122,9 @@ final class Length$Aln extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Aln';
 
   @override
   String get displayName => _minorName;
@@ -4042,6 +4195,9 @@ final class Length$Famn extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Famn';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.1133333333333333e+35;
@@ -4108,6 +4264,9 @@ final class Length$Caliber extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Caliber';
 
   @override
   String get displayName => _minorName;
@@ -4178,6 +4337,9 @@ final class Length$Ken extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ken';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.323975e+35;
@@ -4244,6 +4406,9 @@ final class Length$Barleycorn extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Barleycorn';
 
   @override
   String get displayName => _minorName;
@@ -4314,6 +4479,9 @@ final class Length$RussianArchin extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Russian Archin';
+
+  @override
   String get displayName => 'Russian archin';
 
   static const _ratio = 4.445e+34;
@@ -4380,6 +4548,9 @@ final class Length$RomanActus extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Roman Actus';
 
   @override
   String get displayName => 'Roman actus';
@@ -4450,6 +4621,9 @@ final class Length$ClothNail extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cloth Nail';
+
+  @override
   String get displayName => 'cloth nail';
 
   static const _ratio = 3.571875e+33;
@@ -4516,6 +4690,9 @@ final class Length$ClothSpan extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cloth Span';
 
   @override
   String get displayName => 'cloth span';
@@ -4586,6 +4763,9 @@ final class Length$VaraDeTarea extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Vara De Tarea';
+
+  @override
   String get displayName => 'vara de tarea';
 
   static const _ratio = 1.56591e+35;
@@ -4652,6 +4832,9 @@ final class Length$VaraConuquera extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Vara Conuquera';
 
   @override
   String get displayName => 'vara conuquera';
@@ -4722,6 +4905,9 @@ final class Length$VaraCastellana extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Vara Castellana';
+
+  @override
   String get displayName => 'vara castellana';
 
   static const _ratio = 5.2197e+34;
@@ -4788,6 +4974,9 @@ final class Length$CubitGreek extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Cubit Greek';
 
   @override
   String get displayName => 'cubit (Greek)';
@@ -4858,6 +5047,9 @@ final class Length$LongReedBiblical extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Long Reed Biblical';
+
+  @override
   String get displayName => 'long reed (Biblical)';
 
   static const _ratio = 2.00025e+35;
@@ -4924,6 +5116,9 @@ final class Length$ReedBiblical extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Reed Biblical';
 
   @override
   String get displayName => 'reed (Biblical)';
@@ -4994,6 +5189,9 @@ final class Length$CubitBiblical extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Cubit Biblical';
+
+  @override
   String get displayName => 'cubit (Biblical)';
 
   static const _ratio = 2.8575e+34;
@@ -5060,6 +5258,9 @@ final class Length$LongCubitBiblical extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Long Cubit Biblical';
 
   @override
   String get displayName => 'long cubit (Biblical)';
@@ -5130,6 +5331,9 @@ final class Length$SpanBiblical extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Span Biblical';
+
+  @override
   String get displayName => 'span (Biblical)';
 
   static const _ratio = 1.42875e+34;
@@ -5198,6 +5402,9 @@ final class Length$HandbreadthBiblical extends Length {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Handbreadth Biblical';
+
+  @override
   String get displayName => 'handbreadth (Biblical)';
 
   static const _ratio = 4.7625e+33;
@@ -5264,6 +5471,9 @@ final class Length$FingerbreadthBiblical extends Length {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Fingerbreadth Biblical';
 
   @override
   String get displayName => 'fingerbreadth (Biblical)';

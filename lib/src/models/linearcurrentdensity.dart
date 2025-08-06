@@ -79,6 +79,9 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Linear Current Density';
+
   static const _majorName = 'linearCurrentDensity';
 
   static const amperePerMeter = LinearCurrentDensity$AmperePerMeter();
@@ -154,6 +157,9 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ampere Per Meter';
+
+  @override
   String get displayName => 'ampere/meter';
 
   static const _ratio = 1.0;
@@ -223,6 +229,9 @@ final class LinearCurrentDensity$AmperePerCentimeter
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ampere Per Centimeter';
 
   @override
   String get displayName => 'ampere/centimeter';
@@ -295,6 +304,9 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ampere Per Inch';
+
+  @override
   String get displayName => 'ampere/inch';
 
   static const _ratio = 39.37007874;
@@ -363,6 +375,9 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abampere Per Meter';
 
   @override
   String get displayName => 'Abampere/meter';
@@ -436,6 +451,9 @@ final class LinearCurrentDensity$AbamperePerCentimeter
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abampere Per Centimeter';
+
+  @override
   String get displayName => 'Abampere/centimeter';
 
   static const _ratio = 1000.0;
@@ -506,6 +524,9 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abampere Per Inch';
+
+  @override
   String get displayName => 'Abampere/inch';
 
   static const _ratio = 393.7007874;
@@ -574,6 +595,9 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Oersted';
 
   @override
   String get displayName => _minorName;
@@ -647,6 +671,9 @@ final class LinearCurrentDensity$OerstedInternational
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Oersted International';
+
+  @override
   String get displayName => 'oersted (International)';
 
   static const _ratio = 79.56434337579257;
@@ -716,6 +743,9 @@ final class LinearCurrentDensity$GilbertPerCentimeter
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gilbert Per Centimeter';
 
   @override
   String get displayName => 'gilbert/centimeter';

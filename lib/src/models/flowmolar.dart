@@ -167,6 +167,9 @@ sealed class FlowMolar extends Unit<FlowMolar> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Flow Molar';
+
   static const _majorName = 'flowMolar';
 
   static const examolPerSecond = FlowMolar$ExamolPerSecond();
@@ -289,6 +292,9 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Examol Per Second';
+
+  @override
   String get displayName => 'examol/second';
 
   static const _ratio = 8.64e+22;
@@ -355,6 +361,9 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petamol Per Second';
 
   @override
   String get displayName => 'petamol/second';
@@ -425,6 +434,9 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Teramol Per Second';
+
+  @override
   String get displayName => 'teramol/second';
 
   static const _ratio = 86400000000000000.0;
@@ -491,6 +503,9 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigamol Per Second';
 
   @override
   String get displayName => 'gigamol/second';
@@ -561,6 +576,9 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megamol Per Second';
+
+  @override
   String get displayName => 'megamol/second';
 
   static const _ratio = 86400000000.0;
@@ -627,6 +645,9 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilomol Per Second';
 
   @override
   String get displayName => 'kilomol/second';
@@ -697,6 +718,9 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectomol Per Second';
+
+  @override
   String get displayName => 'hectomol/second';
 
   static const _ratio = 8640000.0;
@@ -763,6 +787,9 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekamol Per Second';
 
   @override
   String get displayName => 'dekamol/second';
@@ -833,6 +860,9 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mol Per Second';
+
+  @override
   String get displayName => 'mol/second';
 
   static const _ratio = 86400.0;
@@ -899,6 +929,9 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Decimol Per Second';
 
   @override
   String get displayName => 'decimol/second';
@@ -969,6 +1002,9 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centimol Per Second';
+
+  @override
   String get displayName => 'centimol/second';
 
   static const _ratio = 864.0;
@@ -1035,6 +1071,9 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millimol Per Second';
 
   @override
   String get displayName => 'millimol/second';
@@ -1105,6 +1144,9 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Micromol Per Second';
+
+  @override
   String get displayName => 'micromol/second';
 
   static const _ratio = 0.0864;
@@ -1171,6 +1213,9 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nanomol Per Second';
 
   @override
   String get displayName => 'nanomol/second';
@@ -1241,6 +1286,9 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Picomol Per Second';
+
+  @override
   String get displayName => 'picomol/second';
 
   static const _ratio = 8.64e-8;
@@ -1307,6 +1355,9 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Femtomol Per Second';
 
   @override
   String get displayName => 'femtomol/second';
@@ -1377,6 +1428,9 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Attomol Per Second';
+
+  @override
   String get displayName => 'attomol/second';
 
   static const _ratio = 8.64e-14;
@@ -1443,6 +1497,9 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mol Per Minute';
 
   @override
   String get displayName => 'mol/minute';
@@ -1513,6 +1570,9 @@ final class FlowMolar$MolPerHour extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mol Per Hour';
+
+  @override
   String get displayName => 'mol/hour';
 
   static const _ratio = 24.0;
@@ -1579,6 +1639,9 @@ final class FlowMolar$MolPerDay extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mol Per Day';
 
   @override
   String get displayName => 'mol/day';
@@ -1649,6 +1712,9 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimol Per Minute';
+
+  @override
   String get displayName => 'millimol/minute';
 
   static const _ratio = 1.44;
@@ -1715,6 +1781,9 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millimol Per Hour';
 
   @override
   String get displayName => 'millimol/hour';
@@ -1785,6 +1854,9 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimol Per Day';
+
+  @override
   String get displayName => 'millimol/day';
 
   static const _ratio = 0.001;
@@ -1851,6 +1923,9 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilomol Per Minute';
 
   @override
   String get displayName => 'kilomol/minute';
@@ -1921,6 +1996,9 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilomol Per Hour';
+
+  @override
   String get displayName => 'kilomol/hour';
 
   static const _ratio = 24000.0;
@@ -1987,6 +2065,9 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilomol Per Day';
 
   @override
   String get displayName => 'kilomol/day';

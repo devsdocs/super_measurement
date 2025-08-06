@@ -89,6 +89,9 @@ sealed class MagneticFluxDensity extends Unit<MagneticFluxDensity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Magnetic Flux Density';
+
   static const _majorName = 'magneticFluxDensity';
 
   static const tesla = MagneticFluxDensity$Tesla();
@@ -174,6 +177,9 @@ final class MagneticFluxDensity$Tesla extends MagneticFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Tesla';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -242,6 +248,9 @@ final class MagneticFluxDensity$Gauss extends MagneticFluxDensity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gauss';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.0001;
@@ -308,6 +317,9 @@ final class MagneticFluxDensity$GaussInternational extends MagneticFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gauss International';
 
   @override
   String get displayName => 'gauss (International)';
@@ -380,6 +392,9 @@ final class MagneticFluxDensity$LinePerCentimeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Line Per Centimeter Square';
+
+  @override
   String get displayName => 'line/centimeter²';
 
   static const _ratio = 0.0001;
@@ -447,6 +462,9 @@ final class MagneticFluxDensity$LinePerInchSquare extends MagneticFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Line Per Inch Square';
 
   @override
   String get displayName => 'line/inch²';
@@ -519,6 +537,9 @@ final class MagneticFluxDensity$MaxwellPerMeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Maxwell Per Meter Square';
+
+  @override
   String get displayName => 'maxwell/meter²';
 
   static const _ratio = 1.0;
@@ -587,6 +608,9 @@ final class MagneticFluxDensity$MaxwellPerCentimeterSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Maxwell Per Centimeter Square';
 
   @override
   String get displayName => 'maxwell/centimeter²';
@@ -659,6 +683,9 @@ final class MagneticFluxDensity$MaxwellPerInchSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Maxwell Per Inch Square';
+
+  @override
   String get displayName => 'maxwell/inch²';
 
   static const _ratio = 0.000015500031;
@@ -727,6 +754,9 @@ final class MagneticFluxDensity$WeberPerMeterSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Weber Per Meter Square';
 
   @override
   String get displayName => 'weber/meter²';
@@ -799,6 +829,9 @@ final class MagneticFluxDensity$WeberPerCentimeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Weber Per Centimeter Square';
+
+  @override
   String get displayName => 'weber/centimeter²';
 
   static const _ratio = 10000.0;
@@ -866,6 +899,9 @@ final class MagneticFluxDensity$WeberPerInchSquare extends MagneticFluxDensity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Weber Per Inch Square';
 
   @override
   String get displayName => 'weber/inch²';

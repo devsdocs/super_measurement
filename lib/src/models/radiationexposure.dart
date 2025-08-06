@@ -48,6 +48,9 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Radiation Exposure';
+
   static const _majorName = 'radiationExposure';
 
   static const roentgen = RadiationExposure$Roentgen();
@@ -106,6 +109,9 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Roentgen';
 
   @override
   String get displayName => _minorName;
@@ -175,6 +181,9 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Coulomb Per Kilogram';
 
   @override
   String get displayName => 'coulomb/kilogram';
@@ -248,6 +257,9 @@ final class RadiationExposure$MillicoulombPerKilogram
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millicoulomb Per Kilogram';
+
+  @override
   String get displayName => 'millicoulomb/kilogram';
 
   static const _ratio = 1000.0;
@@ -317,6 +329,9 @@ final class RadiationExposure$MicrocoulombPerKilogram
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microcoulomb Per Kilogram';
 
   @override
   String get displayName => 'microcoulomb/kilogram';

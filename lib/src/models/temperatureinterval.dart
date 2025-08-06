@@ -53,6 +53,9 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Temperature Interval';
+
   static const _majorName = 'temperatureInterval';
 
   static const kelvin = TemperatureInterval$Kelvin();
@@ -110,6 +113,9 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kelvin';
 
   @override
   String get displayName => 'Kelvin';
@@ -181,6 +187,9 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Celsius';
+
+  @override
   String get displayName => 'Celsius';
 
   static const _ratio = 1.8;
@@ -248,6 +257,9 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Fahrenheit';
 
   @override
   String get displayName => 'Fahrenheit';
@@ -320,6 +332,9 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Rankine';
+
+  @override
   String get displayName => 'Rankine';
 
   static const _ratio = 1.0;
@@ -387,6 +402,9 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Reaumur';
 
   @override
   String get displayName => 'Réaumur';

@@ -86,6 +86,9 @@ sealed class Illumination extends Unit<Illumination> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Illumination';
+
   static const _majorName = 'illumination';
 
   static const meterCandle = Illumination$MeterCandle();
@@ -166,6 +169,9 @@ final class Illumination$MeterCandle extends Illumination {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Candle';
+
+  @override
   String get displayName => 'meter-candle';
 
   static const _ratio = 1000.0;
@@ -232,6 +238,9 @@ final class Illumination$CentimeterCandle extends Illumination {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centimeter Candle';
 
   @override
   String get displayName => 'centimeter-candle';
@@ -303,6 +312,9 @@ final class Illumination$FootCandle extends Illumination {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Foot Candle';
+
+  @override
   String get displayName => 'foot-candle';
 
   static const _ratio = 10763.9104167;
@@ -369,6 +381,9 @@ final class Illumination$Flame extends Illumination {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Flame';
 
   @override
   String get displayName => _minorName;
@@ -439,6 +454,9 @@ final class Illumination$Phot extends Illumination {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Phot';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10000000.0;
@@ -505,6 +523,9 @@ final class Illumination$Nox extends Illumination {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nox';
 
   @override
   String get displayName => _minorName;
@@ -575,6 +596,9 @@ final class Illumination$Lux extends Illumination {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Lux';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1000.0;
@@ -641,6 +665,9 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Lumen Per Meter Square';
 
   @override
   String get displayName => 'lumen/meter²';
@@ -712,6 +739,9 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Lumen Per Centimeter Square';
+
+  @override
   String get displayName => 'lumen/centimeter²';
 
   static const _ratio = 10000000.0;
@@ -781,6 +811,9 @@ final class Illumination$LumenPerFootSquare extends Illumination {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Lumen Per Foot Square';
+
+  @override
   String get displayName => 'lumen/foot²';
 
   static const _ratio = 10763.9104167;
@@ -848,6 +881,9 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Watt Per Centimeter Square At555nm';
 
   @override
   String get displayName => 'watt/centimeter² (at 555nm)';

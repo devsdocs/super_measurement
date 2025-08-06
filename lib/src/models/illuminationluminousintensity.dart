@@ -88,6 +88,9 @@ sealed class IlluminationLuminousIntensity
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Illumination Luminous Intensity';
+
   static const _majorName = 'illuminationLuminousIntensity';
 
   static const candleInternational =
@@ -169,6 +172,9 @@ final class IlluminationLuminousIntensity$CandleInternational
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Candle International';
+
+  @override
   String get displayName => 'candle (International)';
 
   static const _ratio = 1.0;
@@ -238,6 +244,9 @@ final class IlluminationLuminousIntensity$CandleGerman
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Candle German';
 
   @override
   String get displayName => 'candle (German)';
@@ -311,6 +320,9 @@ final class IlluminationLuminousIntensity$CandlePentane
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Candle Pentane';
+
+  @override
   String get displayName => 'candle (pentane)';
 
   static const _ratio = 1.0;
@@ -380,6 +392,9 @@ final class IlluminationLuminousIntensity$CandleUK
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Candle U K';
 
   @override
   String get displayName => 'candle (UK)';
@@ -453,6 +468,9 @@ final class IlluminationLuminousIntensity$DecimalCandle
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Decimal Candle';
+
+  @override
   String get displayName => 'decimal candle';
 
   static const _ratio = 1.0;
@@ -522,6 +540,9 @@ final class IlluminationLuminousIntensity$HefnerCandle
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hefner Candle';
 
   @override
   String get displayName => 'hefner candle';
@@ -595,6 +616,9 @@ final class IlluminationLuminousIntensity$CarcelUnit
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Carcel Unit';
+
+  @override
   String get displayName => 'carcel unit';
 
   static const _ratio = 9.61;
@@ -664,6 +688,9 @@ final class IlluminationLuminousIntensity$BougieDecimal
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Bougie Decimal';
 
   @override
   String get displayName => 'bougie decimal';
@@ -737,6 +764,9 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Lumen International Per Steradian';
+
+  @override
   String get displayName => 'lumen (International)/steradian';
 
   static const _ratio = 1.0;
@@ -806,6 +836,9 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pentane Candle10 Candle Power';
 
   @override
   String get displayName => 'pentane candle (10 candle power)';

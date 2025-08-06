@@ -116,6 +116,9 @@ sealed class Torque extends Unit<Torque> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Torque';
+
   static const _majorName = 'torque';
 
   static const kilonewtonMeter = Torque$KilonewtonMeter();
@@ -211,6 +214,9 @@ final class Torque$KilonewtonMeter extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilonewton Meter';
+
+  @override
   String get displayName => 'kilonewton meter';
 
   static const _ratio = 1000.0;
@@ -277,6 +283,9 @@ final class Torque$NewtonMeter extends Torque {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Newton Meter';
 
   @override
   String get displayName => 'newton meter';
@@ -347,6 +356,9 @@ final class Torque$NewtonCentimeter extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Newton Centimeter';
+
+  @override
   String get displayName => 'newton centimeter';
 
   static const _ratio = 0.01;
@@ -413,6 +425,9 @@ final class Torque$NewtonMillimeter extends Torque {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Newton Millimeter';
 
   @override
   String get displayName => 'newton millimeter';
@@ -483,6 +498,9 @@ final class Torque$DyneMeter extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dyne Meter';
+
+  @override
   String get displayName => 'dyne meter';
 
   static const _ratio = 0.00001;
@@ -549,6 +567,9 @@ final class Torque$DyneCentimeter extends Torque {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dyne Centimeter';
 
   @override
   String get displayName => 'dyne centimeter';
@@ -619,6 +640,9 @@ final class Torque$DyneMillimeter extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dyne Millimeter';
+
+  @override
   String get displayName => 'dyne millimeter';
 
   static const _ratio = 1e-8;
@@ -687,6 +711,9 @@ final class Torque$KilogramForceMeter extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Force Meter';
+
+  @override
   String get displayName => 'kilogram force meter';
 
   static const _ratio = 9.80665;
@@ -753,6 +780,9 @@ final class Torque$KilogramForceCentimeter extends Torque {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilogram Force Centimeter';
 
   @override
   String get displayName => 'kilogram force centimeter';
@@ -824,6 +854,9 @@ final class Torque$KilogramForceMillimeter extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Force Millimeter';
+
+  @override
   String get displayName => 'kilogram force millimeter';
 
   static const _ratio = 0.00980665;
@@ -891,6 +924,9 @@ final class Torque$GramForceMeter extends Torque {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Force Meter';
 
   @override
   String get displayName => 'gram force meter';
@@ -961,6 +997,9 @@ final class Torque$GramForceCentimeter extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gram Force Centimeter';
+
+  @override
   String get displayName => 'gram force centimeter';
 
   static const _ratio = 0.0000980665;
@@ -1027,6 +1066,9 @@ final class Torque$GramForceMillimeter extends Torque {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Force Millimeter';
 
   @override
   String get displayName => 'gram force millimeter';
@@ -1097,6 +1139,9 @@ final class Torque$OunceForceFoot extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Ounce Force Foot';
+
+  @override
   String get displayName => 'ounce force foot';
 
   static const _ratio = 0.084738624;
@@ -1163,6 +1208,9 @@ final class Torque$OunceForceInch extends Torque {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Ounce Force Inch';
 
   @override
   String get displayName => 'ounce force inch';
@@ -1233,6 +1281,9 @@ final class Torque$PoundForceFoot extends Torque {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Force Foot';
+
+  @override
   String get displayName => 'pound force foot';
 
   static const _ratio = 1.355818;
@@ -1299,6 +1350,9 @@ final class Torque$PoundForceInch extends Torque {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Force Inch';
 
   @override
   String get displayName => 'pound force inch';

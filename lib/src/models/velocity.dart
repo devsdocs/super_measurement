@@ -145,6 +145,9 @@ sealed class Velocity extends Unit<Velocity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Velocity';
+
   static const _majorName = 'velocity';
 
   static const kilometerPerHour = Velocity$KilometerPerHour();
@@ -255,6 +258,9 @@ final class Velocity$KilometerPerHour extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilometer Per Hour';
+
+  @override
   String get displayName => 'kilometer/hour';
 
   static const _ratio = 100000.0;
@@ -321,6 +327,9 @@ final class Velocity$KilometerPerMinute extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilometer Per Minute';
 
   @override
   String get displayName => 'kilometer/minute';
@@ -391,6 +400,9 @@ final class Velocity$KilometerPerSecond extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilometer Per Second';
+
+  @override
   String get displayName => 'kilometer/second';
 
   static const _ratio = 360000000.0;
@@ -457,6 +469,9 @@ final class Velocity$MeterPerHour extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Hour';
 
   @override
   String get displayName => 'meter/hour';
@@ -527,6 +542,9 @@ final class Velocity$MeterPerMinute extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Minute';
+
+  @override
   String get displayName => 'meter/minute';
 
   static const _ratio = 6000.0;
@@ -593,6 +611,9 @@ final class Velocity$MeterPerSecond extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Second';
 
   @override
   String get displayName => 'meter/second';
@@ -663,6 +684,9 @@ final class Velocity$CentimeterPerHour extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centimeter Per Hour';
+
+  @override
   String get displayName => 'centimeter/hour';
 
   static const _ratio = 1.0;
@@ -729,6 +753,9 @@ final class Velocity$CentimeterPerMinute extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centimeter Per Minute';
 
   @override
   String get displayName => 'centimeter/minute';
@@ -800,6 +827,9 @@ final class Velocity$CentimeterPerSecond extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centimeter Per Second';
+
+  @override
   String get displayName => 'centimeter/second';
 
   static const _ratio = 3600.0;
@@ -867,6 +897,9 @@ final class Velocity$MilePerHour extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mile Per Hour';
 
   @override
   String get displayName => 'mile/hour';
@@ -937,6 +970,9 @@ final class Velocity$MilePerMinute extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mile Per Minute';
+
+  @override
   String get displayName => 'mile/minute';
 
   static const _ratio = 9656064.0;
@@ -1003,6 +1039,9 @@ final class Velocity$MilePerSecond extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mile Per Second';
 
   @override
   String get displayName => 'mile/second';
@@ -1073,6 +1112,9 @@ final class Velocity$YardPerHour extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Yard Per Hour';
+
+  @override
   String get displayName => 'yard/hour';
 
   static const _ratio = 91.44;
@@ -1139,6 +1181,9 @@ final class Velocity$YardPerMinute extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Yard Per Minute';
 
   @override
   String get displayName => 'yard/minute';
@@ -1209,6 +1254,9 @@ final class Velocity$YardPerSecond extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Yard Per Second';
+
+  @override
   String get displayName => 'yard/second';
 
   static const _ratio = 329184.0;
@@ -1275,6 +1323,9 @@ final class Velocity$FootPerHour extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Foot Per Hour';
 
   @override
   String get displayName => 'foot/hour';
@@ -1345,6 +1396,9 @@ final class Velocity$FootPerMinute extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Foot Per Minute';
+
+  @override
   String get displayName => 'foot/minute';
 
   static const _ratio = 1828.8;
@@ -1411,6 +1465,9 @@ final class Velocity$FootPerSecond extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Foot Per Second';
 
   @override
   String get displayName => 'foot/second';
@@ -1481,6 +1538,9 @@ final class Velocity$MachSIStandard extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mach S I Standard';
+
+  @override
   String get displayName => 'mach (SI standard)';
 
   static const _ratio = 106216704.00010112;
@@ -1547,6 +1607,9 @@ final class Velocity$MachAtSeaLevel extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mach At Sea Level';
 
   @override
   String get displayName => 'mach (at sea level)';
@@ -1617,6 +1680,9 @@ final class Velocity$Light extends Velocity {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Light';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 107925284880000.0;
@@ -1683,6 +1749,9 @@ final class Velocity$Knot extends Velocity {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Knot';
 
   @override
   String get displayName => _minorName;

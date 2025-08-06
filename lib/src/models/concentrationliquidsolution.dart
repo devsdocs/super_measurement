@@ -93,6 +93,9 @@ sealed class ConcentrationLiquidSolution
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Concentration Liquid Solution';
+
   static const _majorName = 'concentrationLiquidSolution';
 
   static const kilogramPerLiter =
@@ -183,6 +186,9 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilogram Per Liter';
+
+  @override
   String get displayName => 'kilogram/liter';
 
   static const _ratio = 1.0;
@@ -252,6 +258,9 @@ final class ConcentrationLiquidSolution$GramPerLiter
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gram Per Liter';
 
   @override
   String get displayName => 'gram/liter';
@@ -325,6 +334,9 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Milligram Per Liter';
+
+  @override
   String get displayName => 'milligram/liter';
 
   static const _ratio = 0.000001;
@@ -394,6 +406,9 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Part Per Million Ppm';
 
   @override
   String get displayName => 'part/million (ppm)';
@@ -467,6 +482,9 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Grain Per Gallon U K';
+
+  @override
   String get displayName => 'grain/gallon (UK)';
 
   static const _ratio = 0.000014253767523300243;
@@ -536,6 +554,9 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Grain Per Gallon U S';
 
   @override
   String get displayName => 'grain/gallon (US)';
@@ -609,6 +630,9 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Foot Cubic';
+
+  @override
   String get displayName => 'pound/foot³';
 
   static const _ratio = 0.01601846337396014;
@@ -678,6 +702,9 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Gallon U K';
 
   @override
   String get displayName => 'pound/gallon (UK)';
@@ -751,6 +778,9 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Gallon U S';
+
+  @override
   String get displayName => 'pound/gallon (US)';
 
   static const _ratio = 0.11982642731689663;
@@ -822,6 +852,9 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Pound Per Million U K Gallon';
+
+  @override
   String get displayName => 'pound/million UK gallon';
 
   static const _ratio = 9.97763726631017e-8;
@@ -891,6 +924,9 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Pound Per Million U S Gallon';
 
   @override
   String get displayName => 'pound/million US gallon';

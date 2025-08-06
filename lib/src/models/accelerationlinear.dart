@@ -131,6 +131,9 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Acceleration Linear';
+
   static const _majorName = 'accelerationLinear';
 
   static const kilometerPerSecondSquare =
@@ -252,6 +255,9 @@ final class AccelerationLinear$KilometerPerSecondSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilometer Per Second Square';
+
+  @override
   String get displayName => 'kilometer/second²';
 
   static const _ratio = 1000.0;
@@ -321,6 +327,9 @@ final class AccelerationLinear$HectometerPerSecondSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Hectometer Per Second Square';
 
   @override
   String get displayName => 'hectometer/second²';
@@ -394,6 +403,9 @@ final class AccelerationLinear$DekameterPerSecondSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Dekameter Per Second Square';
+
+  @override
   String get displayName => 'dekameter/second²';
 
   static const _ratio = 10.0;
@@ -462,6 +474,9 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Second Square';
 
   @override
   String get displayName => 'meter/second²';
@@ -535,6 +550,9 @@ final class AccelerationLinear$DecimeterPerSecondSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Decimeter Per Second Square';
+
+  @override
   String get displayName => 'decimeter/second²';
 
   static const _ratio = 0.1;
@@ -604,6 +622,9 @@ final class AccelerationLinear$CentimeterPerSecondSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centimeter Per Second Square';
 
   @override
   String get displayName => 'centimeter/second²';
@@ -677,6 +698,9 @@ final class AccelerationLinear$MillimeterPerSecondSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millimeter Per Second Square';
+
+  @override
   String get displayName => 'millimeter/second²';
 
   static const _ratio = 0.001;
@@ -746,6 +770,9 @@ final class AccelerationLinear$MicrometerPerSecondSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Micrometer Per Second Square';
 
   @override
   String get displayName => 'micrometer/second²';
@@ -819,6 +846,9 @@ final class AccelerationLinear$NanometerPerSecondSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nanometer Per Second Square';
+
+  @override
   String get displayName => 'nanometer/second²';
 
   static const _ratio = 1e-9;
@@ -888,6 +918,9 @@ final class AccelerationLinear$PicometerPerSecondSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Picometer Per Second Square';
 
   @override
   String get displayName => 'picometer/second²';
@@ -961,6 +994,9 @@ final class AccelerationLinear$FemtometerPerSecondSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Femtometer Per Second Square';
+
+  @override
   String get displayName => 'femtometer/second²';
 
   static const _ratio = 1e-15;
@@ -1030,6 +1066,9 @@ final class AccelerationLinear$AttometerPerSecondSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Attometer Per Second Square';
 
   @override
   String get displayName => 'attometer/second²';
@@ -1102,6 +1141,9 @@ final class AccelerationLinear$G extends AccelerationLinear {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'G';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 9.80665;
@@ -1171,6 +1213,9 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gal';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 0.01;
@@ -1238,6 +1283,9 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mile Per Second Square';
 
   @override
   String get displayName => 'mile/second²';
@@ -1310,6 +1358,9 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Yard Per Second Square';
+
+  @override
   String get displayName => 'yard/second²';
 
   static const _ratio = 0.9144;
@@ -1380,6 +1431,9 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Foot Per Second Square';
+
+  @override
   String get displayName => 'foot/second²';
 
   static const _ratio = 0.3048;
@@ -1448,6 +1502,9 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Inch Per Second Square';
 
   @override
   String get displayName => 'inch/second²';

@@ -234,6 +234,9 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Fuel Efficiency';
+
   static const _majorName = 'fuelEfficiency';
 
   static const exameterPerLiter = FuelEfficiency$ExameterPerLiter();
@@ -395,6 +398,9 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Exameter Per Liter';
+
+  @override
   String get displayName => 'exameter/liter';
 
   static const _ratio = 1000000000000000000.0;
@@ -462,6 +468,9 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Petameter Per Liter';
 
   @override
   String get displayName => 'petameter/liter';
@@ -533,6 +542,9 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Terameter Per Liter';
+
+  @override
   String get displayName => 'terameter/liter';
 
   static const _ratio = 1000000000000.0;
@@ -600,6 +612,9 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gigameter Per Liter';
 
   @override
   String get displayName => 'gigameter/liter';
@@ -671,6 +686,9 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Megameter Per Liter';
+
+  @override
   String get displayName => 'megameter/liter';
 
   static const _ratio = 1000000.0;
@@ -738,6 +756,9 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilometer Per Liter';
 
   @override
   String get displayName => 'kilometer/liter';
@@ -809,6 +830,9 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Hectometer Per Liter';
+
+  @override
   String get displayName => 'hectometer/liter';
 
   static const _ratio = 100.0;
@@ -876,6 +900,9 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Dekameter Per Liter';
 
   @override
   String get displayName => 'dekameter/liter';
@@ -947,6 +974,9 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Liter';
+
+  @override
   String get displayName => 'meter/liter';
 
   static const _ratio = 1.0;
@@ -1014,6 +1044,9 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Centimeter Per Liter';
 
   @override
   String get displayName => 'centimeter/liter';
@@ -1085,6 +1118,9 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mile U S Per Liter';
+
+  @override
   String get displayName => 'mile (US)/liter';
 
   static const _ratio = 1609.344;
@@ -1152,6 +1188,9 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Liter Per Meter';
 
   @override
   String get displayName => 'liter/meter';
@@ -1223,6 +1262,9 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Liter Per100 Km';
+
+  @override
   String get displayName => 'liter/100 km';
 
   static const _ratio = 0.00001;
@@ -1290,6 +1332,9 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gallons U S Per Mile';
 
   @override
   String get displayName => 'gallons (US)/mile';
@@ -1361,6 +1406,9 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gallons U S Per100mi';
+
+  @override
   String get displayName => 'gallons (US)/100mi';
 
   static const _ratio = 0.000023521458329606913;
@@ -1428,6 +1476,9 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gallons U K Per Mile';
 
   @override
   String get displayName => 'gallons (UK)/mile';
@@ -1499,6 +1550,9 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Gallons U K Per100mi';
+
+  @override
   String get displayName => 'gallons (UK)/100mi';
 
   static const _ratio = 0.000028248093631484976;
@@ -1566,6 +1620,9 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nautical Mile Per Liter';
 
   @override
   String get displayName => 'nautical mile/liter';
@@ -1637,6 +1694,9 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Nautical Mile Per Gallon U S';
+
+  @override
   String get displayName => 'nautical mile/gallon (US)';
 
   static const _ratio = 489.5755247;
@@ -1704,6 +1764,9 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Kilometer Per Gallon U S';
 
   @override
   String get displayName => 'kilometer/gallon (US)';
@@ -1775,6 +1838,9 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Gallon U S';
+
+  @override
   String get displayName => 'meter/gallon (US)';
 
   static const _ratio = 0.2641720524;
@@ -1842,6 +1908,9 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Gallon U K';
 
   @override
   String get displayName => 'meter/gallon (UK)';
@@ -1913,6 +1982,9 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mile Per Gallon U S';
+
+  @override
   String get displayName => 'mile/gallon (US)';
 
   static const _ratio = 425.1437075;
@@ -1980,6 +2052,9 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Mile Per Gallon U K';
 
   @override
   String get displayName => 'mile/gallon (UK)';
@@ -2051,6 +2126,9 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Meter Square';
+
+  @override
   String get displayName => 'meter/meter²';
 
   static const _ratio = 0.001;
@@ -2118,6 +2196,9 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Centimeter Square';
 
   @override
   String get displayName => 'meter/centimeter²';
@@ -2189,6 +2270,9 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Yard Square';
+
+  @override
   String get displayName => 'meter/yard²';
 
   static const _ratio = 0.001307950619;
@@ -2256,6 +2340,9 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Feet Square';
 
   @override
   String get displayName => 'meter/feet²';
@@ -2327,6 +2414,9 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Inch Square';
+
+  @override
   String get displayName => 'meter/inch²';
 
   static const _ratio = 61.02374409;
@@ -2394,6 +2484,9 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Gallon';
 
   @override
   String get displayName => 'meter/gallon';
@@ -2465,6 +2558,9 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Quart';
+
+  @override
   String get displayName => 'meter/quart';
 
   static const _ratio = 1.056688209;
@@ -2532,6 +2628,9 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Quart U K';
 
   @override
   String get displayName => 'meter/quart (UK)';
@@ -2603,6 +2702,9 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Pint';
+
+  @override
   String get displayName => 'meter/pint';
 
   static const _ratio = 2.113376419;
@@ -2669,6 +2771,9 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Pint U K';
 
   @override
   String get displayName => 'meter/pint (UK)';
@@ -2740,6 +2845,9 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Cup';
+
+  @override
   String get displayName => 'meter/cup';
 
   static const _ratio = 4.226752838;
@@ -2806,6 +2914,9 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Cup U K';
 
   @override
   String get displayName => 'meter/cup (UK)';
@@ -2877,6 +2988,9 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Meter Per Fluid Ounce';
+
+  @override
   String get displayName => 'meter/fluid ounce';
 
   static const _ratio = 33.8140227;
@@ -2944,6 +3058,9 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Per Fluid Ounce U K';
 
   @override
   String get displayName => 'meter/fluid ounce (UK)';

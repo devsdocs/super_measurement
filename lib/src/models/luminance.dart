@@ -118,6 +118,9 @@ sealed class Luminance extends Unit<Luminance> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Luminance';
+
   static const _majorName = 'luminance';
 
   static const stilb = Luminance$Stilb();
@@ -222,6 +225,9 @@ final class Luminance$Stilb extends Luminance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Stilb';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 314159265358.9793;
@@ -288,6 +294,9 @@ final class Luminance$CandelaPerMeterSquare extends Luminance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Candela Per Meter Square';
 
   @override
   String get displayName => 'candela/meter²';
@@ -359,6 +368,9 @@ final class Luminance$CandelaPerCentimeterSquare extends Luminance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Candela Per Centimeter Square';
+
+  @override
   String get displayName => 'candela/centimeter²';
 
   static const _ratio = 314159265358.9793;
@@ -426,6 +438,9 @@ final class Luminance$CandelaPerFootSquare extends Luminance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Candela Per Foot Square';
 
   @override
   String get displayName => 'candela/foot²';
@@ -497,6 +512,9 @@ final class Luminance$LumenPerMeterSquarePerSteradian extends Luminance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Lumen Per Meter Square Per Steradian';
+
+  @override
   String get displayName => 'lumen/meter²/steradian';
 
   static const _ratio = 31415926.535897933;
@@ -566,6 +584,9 @@ final class Luminance$LumenPerCentimeterSquarePerSteradian extends Luminance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Lumen Per Centimeter Square Per Steradian';
+
+  @override
   String get displayName => 'lumen/centimeter²/steradian';
 
   static const _ratio = 314159265358.9793;
@@ -633,6 +654,9 @@ final class Luminance$LumenPerFootSquarePerSteradian extends Luminance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Lumen Per Foot Square Per Steradian';
 
   @override
   String get displayName => 'lumen/foot²/steradian';
@@ -705,6 +729,9 @@ final class Luminance$WattPerCentimeterSquarePerSteradianAt555nm
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Watt Per Centimeter Square Per Steradian At555nm';
+
+  @override
   String get displayName => 'watt/centimeter²/steradian (at 555nm)';
 
   static const _ratio = 214570778240182.88;
@@ -772,6 +799,9 @@ final class Luminance$Nit extends Luminance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Nit';
 
   @override
   String get displayName => _minorName;
@@ -842,6 +872,9 @@ final class Luminance$Millinit extends Luminance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millinit';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 31415.926535897932;
@@ -908,6 +941,9 @@ final class Luminance$FootLambert extends Luminance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Foot Lambert';
 
   @override
   String get displayName => 'foot-lambert';
@@ -978,6 +1014,9 @@ final class Luminance$Lambert extends Luminance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Lambert';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 100000000000.0;
@@ -1044,6 +1083,9 @@ final class Luminance$Millilambert extends Luminance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Millilambert';
 
   @override
   String get displayName => _minorName;
@@ -1114,6 +1156,9 @@ final class Luminance$Apostilb extends Luminance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Apostilb';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 10000000.0;
@@ -1180,6 +1225,9 @@ final class Luminance$Blondel extends Luminance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Blondel';
 
   @override
   String get displayName => _minorName;
@@ -1250,6 +1298,9 @@ final class Luminance$Bril extends Luminance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Bril';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 1.0;
@@ -1316,6 +1367,9 @@ final class Luminance$Skot extends Luminance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Skot';
 
   @override
   String get displayName => _minorName;

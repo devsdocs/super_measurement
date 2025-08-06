@@ -62,6 +62,9 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Surface Charge Density';
+
   static const _majorName = 'surfaceChargeDensity';
 
   static const coulombPerMeterSquare =
@@ -136,6 +139,9 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Coulomb Per Meter Square';
+
+  @override
   String get displayName => 'coulomb/meter²';
 
   static const _ratio = 1.0;
@@ -205,6 +211,9 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Coulomb Per Inch Square';
 
   @override
   String get displayName => 'coulomb/inch²';
@@ -278,6 +287,9 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Coulomb Per Centimeter Square';
+
+  @override
   String get displayName => 'coulomb/centimeter²';
 
   static const _ratio = 10000.0;
@@ -347,6 +359,9 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abcoulomb Per Meter Square';
 
   @override
   String get displayName => 'Abcoulomb/meter²';
@@ -420,6 +435,9 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abcoulomb Per Centimeter Square';
+
+  @override
   String get displayName => 'Abcoulomb/centimeter²';
 
   static const _ratio = 100000.0;
@@ -489,6 +507,9 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Abcoulomb Per Inch Square';
 
   @override
   String get displayName => 'Abcoulomb/inch²';

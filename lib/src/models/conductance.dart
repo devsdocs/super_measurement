@@ -78,6 +78,9 @@ sealed class Conductance extends Unit<Conductance> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Conductance';
+
   static const _majorName = 'conductance';
 
   static const mho = Conductance$Mho();
@@ -152,6 +155,9 @@ final class Conductance$Mho extends Conductance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Mho';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 899000000000.0;
@@ -218,6 +224,9 @@ final class Conductance$Gemmho extends Conductance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gemmho';
 
   @override
   String get displayName => _minorName;
@@ -288,6 +297,9 @@ final class Conductance$Micromho extends Conductance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Micromho';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 899000.0;
@@ -354,6 +366,9 @@ final class Conductance$Megasiemens extends Conductance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Megasiemens';
 
   @override
   String get displayName => _minorName;
@@ -424,6 +439,9 @@ final class Conductance$Kilosiemens extends Conductance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Kilosiemens';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 899000000000000.0;
@@ -490,6 +508,9 @@ final class Conductance$Siemens extends Conductance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Siemens';
 
   @override
   String get displayName => _minorName;
@@ -560,6 +581,9 @@ final class Conductance$Millisiemens extends Conductance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Millisiemens';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 899000000.0;
@@ -626,6 +650,9 @@ final class Conductance$Microsiemens extends Conductance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Microsiemens';
 
   @override
   String get displayName => _minorName;
@@ -696,6 +723,9 @@ final class Conductance$Abmho extends Conductance {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Abmho';
+
+  @override
   String get displayName => _minorName;
 
   static const _ratio = 899000000000000000000.0;
@@ -762,6 +792,9 @@ final class Conductance$Statmho extends Conductance {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Statmho';
 
   @override
   String get displayName => _minorName;

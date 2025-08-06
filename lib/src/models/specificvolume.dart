@@ -65,6 +65,9 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
   @override
   String get majorName => _majorName;
 
+  @override
+  String get label => 'Specific Volume';
+
   static const _majorName = 'specificVolume';
 
   static const meterCubicPerKilogram = SpecificVolume$MeterCubicPerKilogram();
@@ -128,6 +131,9 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Meter Cubic Per Kilogram';
 
   @override
   String get displayName => 'meter³/kilogram';
@@ -200,6 +206,9 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Centimeter Cubic Per Gram';
+
+  @override
   String get displayName => 'centimeter³/gram';
 
   static const _ratio = 0.001;
@@ -268,6 +277,9 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Liter Per Kilogram';
 
   @override
   String get displayName => 'liter/kilogram';
@@ -340,6 +352,9 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Liter Per Gram';
+
+  @override
   String get displayName => 'liter/gram';
 
   static const _ratio = 1.0;
@@ -407,6 +422,9 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Feet Cubic Per Kilogram';
 
   @override
   String get displayName => 'feet³/kilogram';
@@ -479,6 +497,9 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
   String get minorName => _minorName;
 
   @override
+  String get unitLabel => 'Feet Cubic Per Pound';
+
+  @override
   String get displayName => 'feet³/pound';
 
   static const _ratio = 0.06242795995;
@@ -547,6 +568,9 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
 
   @override
   String get minorName => _minorName;
+
+  @override
+  String get unitLabel => 'Gallon U K Per Pound';
 
   @override
   String get displayName => 'gallon (UK)/pound';
