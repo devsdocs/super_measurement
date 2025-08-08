@@ -96,12 +96,81 @@ Future<void> main() async {
   generateExtension();
   generateExample();
   generateReadme();
+  // generateForApp();
 
   await Process.run('dart', ['format', '.']);
   await Process.run('dart', ['fix', '--apply']);
 }
 
 List<Map<String, List<Map<String, Map<String, dynamic>>>>> allData = [];
+
+void generateForApp() {
+  const convert = '''
+ConversionType.{a} =>
+        (fromUnit as Unit<{b}>)
+            .withValue(value)
+            .convertTo(toUnit as Unit<{b}>)
+            .value,
+''';
+
+  const config = '''
+final _{a} = ConversionTypeConfig(
+  type: ConversionType.{a},
+  displayName: '{b}',
+  icon: Icons.sync,
+  units:
+      {c}.valuesAsMap.map.entries
+          .map(
+            (unit) => UnitConfig(
+              key: unit.key,
+              unit: unit.value,
+              displayName: unit.value.unitLabel,
+              symbol: unit.value.symbol,
+            ),
+          )
+          .toList()
+        ..sort((a, b) => a.key.compareTo(b.key)),
+);
+''';
+
+  final allNameForEnum = <String>[];
+  final allConvert = <String>[];
+  final allConfig = <String>[];
+
+  for (final unit in allData) {
+    allNameForEnum.add(unit.keys.first.snakeCase);
+    allConvert.add(convert
+        .replaceAll('{a}', unit.keys.first.snakeCase)
+        .replaceAll('{b}', unit.keys.first));
+    allConfig.add(config
+        .replaceAll('{a}', unit.keys.first.snakeCase)
+        .replaceAll(
+            '{b}',
+            unit.keys.first.splitAtCapitals
+                .map((e) => e.toUpperCase())
+                .join(' '))
+        .replaceAll('{c}', unit.keys.first));
+  }
+
+  File('generator/conversion_type.dart')
+    ..createSync(recursive: true)
+    ..writeAsStringSync('''
+enum ConversionType {
+  ${allNameForEnum.join(',\n  ')},
+  ;
+}
+
+${allConfig.join('\n\n')}
+
+{
+  ${allConvert.join('\n\n')}
+}
+
+{
+${allNameForEnum.map((e) => 'ConversionType.$e => _$e').join(',\n')}
+}
+''');
+}
 
 const charMap = {
   '²': 'Square',
