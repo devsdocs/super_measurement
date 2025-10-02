@@ -40,8 +40,8 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
   bool _convertAndCompare(String operator, T other) {
     // Instead of converting to anchor (which might overflow),
     // convert other to this unit's type for comparison
-    final otherConverted = other.convertTo(this._clone).value.toIntIfTrue;
-    final thisValue = this.value.toIntIfTrue;
+    final otherConverted = other.convertTo(_clone).value.toIntIfTrue;
+    final thisValue = value.toIntIfTrue;
 
     switch (operator) {
       case '==':
@@ -107,7 +107,7 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T operator +(T other) {
     if (other.runtimeType == runtimeType) {
-      return _clone.withValue(this.value + other.value);
+      return _clone.withValue(value + other.value);
     } else {
       return _convertAndCombine('+', other);
     }
@@ -115,26 +115,26 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
 
   T operator -(T other) {
     if (other.runtimeType == runtimeType) {
-      return _clone.withValue(this.value - other.value);
+      return _clone.withValue(value - other.value);
     } else {
       return _convertAndCombine('-', other);
     }
   }
 
   bool operator >=(T other) => runtimeType == other.runtimeType
-      ? this.value >= other.value
+      ? value >= other.value
       : _convertAndCompare('>=', other);
 
   bool operator >(T other) => runtimeType == other.runtimeType
-      ? this.value > other.value
+      ? value > other.value
       : _convertAndCompare('>', other);
 
   bool operator <=(T other) => runtimeType == other.runtimeType
-      ? this.value <= other.value
+      ? value <= other.value
       : _convertAndCompare('<=', other);
 
   bool operator <(T other) => runtimeType == other.runtimeType
-      ? this.value < other.value
+      ? value < other.value
       : _convertAndCompare('<', other);
 
   @override
@@ -154,7 +154,7 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
     }
 
     // Convert other unit to this unit's type for comparison
-    final otherConverted = other.convertTo(this._clone).value;
+    final otherConverted = other.convertTo(_clone).value;
     return value.compareTo(otherConverted);
   }
 

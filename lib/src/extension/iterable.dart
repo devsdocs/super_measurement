@@ -5132,65 +5132,65 @@ extension IterableOfMetricPrefixes on Iterable<MetricPrefixes> {
       );
 }
 
-extension IterableOfMomentofInertia on Iterable<MomentofInertia> {
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$KilogramMeterSquare]
-  MomentofInertia get toKilogramMeterSquare => combineTo(
-        const MomentofInertia$KilogramMeterSquare(),
+extension IterableOfMomentOfInertia on Iterable<MomentOfInertia> {
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$KilogramMeterSquare]
+  MomentOfInertia get toKilogramMeterSquare => combineTo(
+        const MomentOfInertia$KilogramMeterSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$KilogramCentimeterSquare]
-  MomentofInertia get toKilogramCentimeterSquare => combineTo(
-        const MomentofInertia$KilogramCentimeterSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$KilogramCentimeterSquare]
+  MomentOfInertia get toKilogramCentimeterSquare => combineTo(
+        const MomentOfInertia$KilogramCentimeterSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$GramCentimeterSquare]
-  MomentofInertia get toGramCentimeterSquare => combineTo(
-        const MomentofInertia$GramCentimeterSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$GramCentimeterSquare]
+  MomentOfInertia get toGramCentimeterSquare => combineTo(
+        const MomentOfInertia$GramCentimeterSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$KilogramForceMeterSecondSquare]
-  MomentofInertia get toKilogramForceMeterSecondSquare => combineTo(
-        const MomentofInertia$KilogramForceMeterSecondSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$KilogramForceMeterSecondSquare]
+  MomentOfInertia get toKilogramForceMeterSecondSquare => combineTo(
+        const MomentOfInertia$KilogramForceMeterSecondSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$KilogramForceCentimeterSecondSquare]
-  MomentofInertia get toKilogramForceCentimeterSecondSquare => combineTo(
-        const MomentofInertia$KilogramForceCentimeterSecondSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$KilogramForceCentimeterSecondSquare]
+  MomentOfInertia get toKilogramForceCentimeterSecondSquare => combineTo(
+        const MomentOfInertia$KilogramForceCentimeterSecondSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$OunceInchSquare]
-  MomentofInertia get toOunceInchSquare => combineTo(
-        const MomentofInertia$OunceInchSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$OunceInchSquare]
+  MomentOfInertia get toOunceInchSquare => combineTo(
+        const MomentOfInertia$OunceInchSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$OunceInchSecondSquare]
-  MomentofInertia get toOunceInchSecondSquare => combineTo(
-        const MomentofInertia$OunceInchSecondSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$OunceInchSecondSquare]
+  MomentOfInertia get toOunceInchSecondSquare => combineTo(
+        const MomentOfInertia$OunceInchSecondSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$PoundFootSquare]
-  MomentofInertia get toPoundFootSquare => combineTo(
-        const MomentofInertia$PoundFootSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$PoundFootSquare]
+  MomentOfInertia get toPoundFootSquare => combineTo(
+        const MomentOfInertia$PoundFootSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$PoundFootSecondSquare]
-  MomentofInertia get toPoundFootSecondSquare => combineTo(
-        const MomentofInertia$PoundFootSecondSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$PoundFootSecondSquare]
+  MomentOfInertia get toPoundFootSecondSquare => combineTo(
+        const MomentOfInertia$PoundFootSecondSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$PoundInchSquare]
-  MomentofInertia get toPoundInchSquare => combineTo(
-        const MomentofInertia$PoundInchSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$PoundInchSquare]
+  MomentOfInertia get toPoundInchSquare => combineTo(
+        const MomentOfInertia$PoundInchSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$PoundInchSecondSquare]
-  MomentofInertia get toPoundInchSecondSquare => combineTo(
-        const MomentofInertia$PoundInchSecondSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$PoundInchSecondSquare]
+  MomentOfInertia get toPoundInchSecondSquare => combineTo(
+        const MomentOfInertia$PoundInchSecondSquare(),
       );
 
-  /// Combine all [MomentofInertia] in [Iterable] to [MomentofInertia$SlugFootSquare]
-  MomentofInertia get toSlugFootSquare => combineTo(
-        const MomentofInertia$SlugFootSquare(),
+  /// Combine all [MomentOfInertia] in [Iterable] to [MomentOfInertia$SlugFootSquare]
+  MomentOfInertia get toSlugFootSquare => combineTo(
+        const MomentOfInertia$SlugFootSquare(),
       );
 }
 

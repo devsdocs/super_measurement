@@ -50,7 +50,7 @@
   + [Mass](#mass)
   + [MassFluxDensity](#massfluxdensity)
   + [MetricPrefixes](#metricprefixes)
-  + [MomentofInertia](#momentofinertia)
+  + [MomentOfInertia](#momentofinertia)
   + [Permeability](#permeability)
   + [Power](#power)
   + [Pressure](#pressure)
@@ -1181,19 +1181,19 @@
    - `MetricPrefixes$Zepto` => MetricPrefixes.zepto
    - `MetricPrefixes$Yocto` => MetricPrefixes.yocto
 
-### MomentofInertia
-   - `MomentofInertia$KilogramMeterSquare` => MomentofInertia.kilogramMeterSquare
-   - `MomentofInertia$KilogramCentimeterSquare` => MomentofInertia.kilogramCentimeterSquare
-   - `MomentofInertia$GramCentimeterSquare` => MomentofInertia.gramCentimeterSquare
-   - `MomentofInertia$KilogramForceMeterSecondSquare` => MomentofInertia.kilogramForceMeterSecondSquare
-   - `MomentofInertia$KilogramForceCentimeterSecondSquare` => MomentofInertia.kilogramForceCentimeterSecondSquare
-   - `MomentofInertia$OunceInchSquare` => MomentofInertia.ounceInchSquare
-   - `MomentofInertia$OunceInchSecondSquare` => MomentofInertia.ounceInchSecondSquare
-   - `MomentofInertia$PoundFootSquare` => MomentofInertia.poundFootSquare
-   - `MomentofInertia$PoundFootSecondSquare` => MomentofInertia.poundFootSecondSquare
-   - `MomentofInertia$PoundInchSquare` => MomentofInertia.poundInchSquare
-   - `MomentofInertia$PoundInchSecondSquare` => MomentofInertia.poundInchSecondSquare
-   - `MomentofInertia$SlugFootSquare` => MomentofInertia.slugFootSquare
+### MomentOfInertia
+   - `MomentOfInertia$KilogramMeterSquare` => MomentOfInertia.kilogramMeterSquare
+   - `MomentOfInertia$KilogramCentimeterSquare` => MomentOfInertia.kilogramCentimeterSquare
+   - `MomentOfInertia$GramCentimeterSquare` => MomentOfInertia.gramCentimeterSquare
+   - `MomentOfInertia$KilogramForceMeterSecondSquare` => MomentOfInertia.kilogramForceMeterSecondSquare
+   - `MomentOfInertia$KilogramForceCentimeterSecondSquare` => MomentOfInertia.kilogramForceCentimeterSecondSquare
+   - `MomentOfInertia$OunceInchSquare` => MomentOfInertia.ounceInchSquare
+   - `MomentOfInertia$OunceInchSecondSquare` => MomentOfInertia.ounceInchSecondSquare
+   - `MomentOfInertia$PoundFootSquare` => MomentOfInertia.poundFootSquare
+   - `MomentOfInertia$PoundFootSecondSquare` => MomentOfInertia.poundFootSecondSquare
+   - `MomentOfInertia$PoundInchSquare` => MomentOfInertia.poundInchSquare
+   - `MomentOfInertia$PoundInchSecondSquare` => MomentOfInertia.poundInchSecondSquare
+   - `MomentOfInertia$SlugFootSquare` => MomentOfInertia.slugFootSquare
 
 ### Permeability
    - `Permeability$KilogramPerPascalSecondMeterSquare` => Permeability.kilogramPerPascalSecondMeterSquare

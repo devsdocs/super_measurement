@@ -3907,61 +3907,61 @@ extension NumOfMetricPrefixes on num {
   MetricPrefixes$Yocto get metricPrefixes$Yocto => MetricPrefixes$Yocto(this);
 }
 
-extension NumOfMomentofInertia on num {
-  /// Get [MomentofInertia$KilogramMeterSquare] using [num]
-  MomentofInertia$KilogramMeterSquare get momentofInertia$KilogramMeterSquare =>
-      MomentofInertia$KilogramMeterSquare(this);
+extension NumOfMomentOfInertia on num {
+  /// Get [MomentOfInertia$KilogramMeterSquare] using [num]
+  MomentOfInertia$KilogramMeterSquare get momentOfInertia$KilogramMeterSquare =>
+      MomentOfInertia$KilogramMeterSquare(this);
 
-  /// Get [MomentofInertia$KilogramCentimeterSquare] using [num]
-  MomentofInertia$KilogramCentimeterSquare
-      get momentofInertia$KilogramCentimeterSquare =>
-          MomentofInertia$KilogramCentimeterSquare(this);
+  /// Get [MomentOfInertia$KilogramCentimeterSquare] using [num]
+  MomentOfInertia$KilogramCentimeterSquare
+      get momentOfInertia$KilogramCentimeterSquare =>
+          MomentOfInertia$KilogramCentimeterSquare(this);
 
-  /// Get [MomentofInertia$GramCentimeterSquare] using [num]
-  MomentofInertia$GramCentimeterSquare
-      get momentofInertia$GramCentimeterSquare =>
-          MomentofInertia$GramCentimeterSquare(this);
+  /// Get [MomentOfInertia$GramCentimeterSquare] using [num]
+  MomentOfInertia$GramCentimeterSquare
+      get momentOfInertia$GramCentimeterSquare =>
+          MomentOfInertia$GramCentimeterSquare(this);
 
-  /// Get [MomentofInertia$KilogramForceMeterSecondSquare] using [num]
-  MomentofInertia$KilogramForceMeterSecondSquare
-      get momentofInertia$KilogramForceMeterSecondSquare =>
-          MomentofInertia$KilogramForceMeterSecondSquare(this);
+  /// Get [MomentOfInertia$KilogramForceMeterSecondSquare] using [num]
+  MomentOfInertia$KilogramForceMeterSecondSquare
+      get momentOfInertia$KilogramForceMeterSecondSquare =>
+          MomentOfInertia$KilogramForceMeterSecondSquare(this);
 
-  /// Get [MomentofInertia$KilogramForceCentimeterSecondSquare] using [num]
-  MomentofInertia$KilogramForceCentimeterSecondSquare
-      get momentofInertia$KilogramForceCentimeterSecondSquare =>
-          MomentofInertia$KilogramForceCentimeterSecondSquare(this);
+  /// Get [MomentOfInertia$KilogramForceCentimeterSecondSquare] using [num]
+  MomentOfInertia$KilogramForceCentimeterSecondSquare
+      get momentOfInertia$KilogramForceCentimeterSecondSquare =>
+          MomentOfInertia$KilogramForceCentimeterSecondSquare(this);
 
-  /// Get [MomentofInertia$OunceInchSquare] using [num]
-  MomentofInertia$OunceInchSquare get momentofInertia$OunceInchSquare =>
-      MomentofInertia$OunceInchSquare(this);
+  /// Get [MomentOfInertia$OunceInchSquare] using [num]
+  MomentOfInertia$OunceInchSquare get momentOfInertia$OunceInchSquare =>
+      MomentOfInertia$OunceInchSquare(this);
 
-  /// Get [MomentofInertia$OunceInchSecondSquare] using [num]
-  MomentofInertia$OunceInchSecondSquare
-      get momentofInertia$OunceInchSecondSquare =>
-          MomentofInertia$OunceInchSecondSquare(this);
+  /// Get [MomentOfInertia$OunceInchSecondSquare] using [num]
+  MomentOfInertia$OunceInchSecondSquare
+      get momentOfInertia$OunceInchSecondSquare =>
+          MomentOfInertia$OunceInchSecondSquare(this);
 
-  /// Get [MomentofInertia$PoundFootSquare] using [num]
-  MomentofInertia$PoundFootSquare get momentofInertia$PoundFootSquare =>
-      MomentofInertia$PoundFootSquare(this);
+  /// Get [MomentOfInertia$PoundFootSquare] using [num]
+  MomentOfInertia$PoundFootSquare get momentOfInertia$PoundFootSquare =>
+      MomentOfInertia$PoundFootSquare(this);
 
-  /// Get [MomentofInertia$PoundFootSecondSquare] using [num]
-  MomentofInertia$PoundFootSecondSquare
-      get momentofInertia$PoundFootSecondSquare =>
-          MomentofInertia$PoundFootSecondSquare(this);
+  /// Get [MomentOfInertia$PoundFootSecondSquare] using [num]
+  MomentOfInertia$PoundFootSecondSquare
+      get momentOfInertia$PoundFootSecondSquare =>
+          MomentOfInertia$PoundFootSecondSquare(this);
 
-  /// Get [MomentofInertia$PoundInchSquare] using [num]
-  MomentofInertia$PoundInchSquare get momentofInertia$PoundInchSquare =>
-      MomentofInertia$PoundInchSquare(this);
+  /// Get [MomentOfInertia$PoundInchSquare] using [num]
+  MomentOfInertia$PoundInchSquare get momentOfInertia$PoundInchSquare =>
+      MomentOfInertia$PoundInchSquare(this);
 
-  /// Get [MomentofInertia$PoundInchSecondSquare] using [num]
-  MomentofInertia$PoundInchSecondSquare
-      get momentofInertia$PoundInchSecondSquare =>
-          MomentofInertia$PoundInchSecondSquare(this);
+  /// Get [MomentOfInertia$PoundInchSecondSquare] using [num]
+  MomentOfInertia$PoundInchSecondSquare
+      get momentOfInertia$PoundInchSecondSquare =>
+          MomentOfInertia$PoundInchSecondSquare(this);
 
-  /// Get [MomentofInertia$SlugFootSquare] using [num]
-  MomentofInertia$SlugFootSquare get momentofInertia$SlugFootSquare =>
-      MomentofInertia$SlugFootSquare(this);
+  /// Get [MomentOfInertia$SlugFootSquare] using [num]
+  MomentOfInertia$SlugFootSquare get momentOfInertia$SlugFootSquare =>
+      MomentOfInertia$SlugFootSquare(this);
 }
 
 extension NumOfPermeability on num {
