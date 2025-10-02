@@ -1,3 +1,6 @@
+## 4.0.0
+- Change `MomentofInertia` to `MomentOfInertia`
+
 ## 3.0.0
 - Change `Unit` to `sealed` class
 - Add `label` and `unitLabel` for more clarity
