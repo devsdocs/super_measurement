@@ -146,7 +146,7 @@ void generateModels() {
       typeBuff
           .writeln('    // Handle specific temperature conversion formulas');
       typeBuff.writeln('    switch (runtimeType) {');
-      typeBuff.writeln('      case Temperature\$Kelvin:');
+      typeBuff.writeln('      case const (Temperature\$Kelvin):');
       typeBuff.writeln('        // From Kelvin to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Celsius) return to.withValue(value - 273.15);');
@@ -158,7 +158,7 @@ void generateModels() {
           '        if (to is Temperature\$Reaumur) return to.withValue((value - 273.15) * 4/5);');
       typeBuff.writeln('        break;');
       typeBuff.writeln();
-      typeBuff.writeln('      case Temperature\$Celsius:');
+      typeBuff.writeln('      case const (Temperature\$Celsius):');
       typeBuff.writeln('        // From Celsius to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Kelvin) return to.withValue(value + 273.15);');
@@ -170,7 +170,7 @@ void generateModels() {
           '        if (to is Temperature\$Reaumur) return to.withValue(value * 4/5);');
       typeBuff.writeln('        break;');
       typeBuff.writeln();
-      typeBuff.writeln('      case Temperature\$Fahrenheit:');
+      typeBuff.writeln('      case const (Temperature\$Fahrenheit):');
       typeBuff.writeln('        // From Fahrenheit to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Kelvin) return to.withValue((value + 459.67) * 5/9);');
@@ -182,7 +182,7 @@ void generateModels() {
           '        if (to is Temperature\$Reaumur) return to.withValue((value - 32) * 4/9);');
       typeBuff.writeln('        break;');
       typeBuff.writeln();
-      typeBuff.writeln('      case Temperature\$Rankine:');
+      typeBuff.writeln('      case const (Temperature\$Rankine):');
       typeBuff.writeln('        // From Rankine to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Kelvin) return to.withValue(value * 5/9);');
@@ -194,7 +194,7 @@ void generateModels() {
           '        if (to is Temperature\$Reaumur) return to.withValue((value - 491.67) * 4/9);');
       typeBuff.writeln('        break;');
       typeBuff.writeln();
-      typeBuff.writeln('      case Temperature\$Reaumur:');
+      typeBuff.writeln('      case const (Temperature\$Reaumur):');
       typeBuff.writeln('        // From Réaumur to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Kelvin) return to.withValue((value * 5/4) + 273.15);');

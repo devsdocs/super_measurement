@@ -92,7 +92,7 @@ sealed class Temperature extends Unit<Temperature> {
 
     // Handle specific temperature conversion formulas
     switch (runtimeType) {
-      case Temperature$Kelvin:
+      case const (Temperature$Kelvin):
         // From Kelvin to others
         if (to is Temperature$Celsius) return to.withValue(value - 273.15);
         if (to is Temperature$Fahrenheit) {
@@ -103,7 +103,7 @@ sealed class Temperature extends Unit<Temperature> {
           return to.withValue((value - 273.15) * 4 / 5);
         }
 
-      case Temperature$Celsius:
+      case const (Temperature$Celsius):
         // From Celsius to others
         if (to is Temperature$Kelvin) return to.withValue(value + 273.15);
         if (to is Temperature$Fahrenheit) {
@@ -114,7 +114,7 @@ sealed class Temperature extends Unit<Temperature> {
         }
         if (to is Temperature$Reaumur) return to.withValue(value * 4 / 5);
 
-      case Temperature$Fahrenheit:
+      case const (Temperature$Fahrenheit):
         // From Fahrenheit to others
         if (to is Temperature$Kelvin) {
           return to.withValue((value + 459.67) * 5 / 9);
@@ -127,7 +127,7 @@ sealed class Temperature extends Unit<Temperature> {
           return to.withValue((value - 32) * 4 / 9);
         }
 
-      case Temperature$Rankine:
+      case const (Temperature$Rankine):
         // From Rankine to others
         if (to is Temperature$Kelvin) return to.withValue(value * 5 / 9);
         if (to is Temperature$Celsius) {
@@ -138,7 +138,7 @@ sealed class Temperature extends Unit<Temperature> {
           return to.withValue((value - 491.67) * 4 / 9);
         }
 
-      case Temperature$Reaumur:
+      case const (Temperature$Reaumur):
         // From Réaumur to others
         if (to is Temperature$Kelvin) {
           return to.withValue((value * 5 / 4) + 273.15);
