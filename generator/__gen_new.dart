@@ -205,24 +205,29 @@ String formatName(String s) {
 
   if (spl.contains('/')) {
     indexOfs(spl, '/').forEach((element) {
-      spl[element + 1] = spl[element + 1].toUpperCase();
+      if (element + 1 < spl.length) {
+        spl[element + 1] = spl[element + 1].toUpperCase();
+      }
     });
   }
   if (spl.contains(' ')) {
     indexOfs(spl, ' ').forEach((element) {
-      spl[element + 1] = spl[element + 1].toUpperCase();
+      if (element + 1 < spl.length) {
+        spl[element + 1] = spl[element + 1].toUpperCase();
+      }
     });
   }
   if (spl.contains('.')) {
     indexOfs(spl, '.').forEach((element) {
-      spl[element + 1] = spl[element + 1].toUpperCase();
+      if (element + 1 < spl.length) {
+        spl[element + 1] = spl[element + 1].toUpperCase();
+      }
     });
   }
   if (spl.contains('-')) {
     final indexOfs2 = indexOfs(spl, '-');
-    if (indexOfs2.length > 1 ||
-        (indexOfs2.length == 1 && indexOfs2.first < spl.length - 1)) {
-      for (final element in indexOfs2) {
+    for (final element in indexOfs2) {
+      if (element + 1 < spl.length) {
         spl[element + 1] = spl[element + 1].toUpperCase();
       }
     }
@@ -231,16 +236,20 @@ String formatName(String s) {
   final ixsS = indexOfs(spl, '(').reversed.toList();
   final ixsE = indexOfs(spl, ')');
 
-  for (var a = 0; a < ixsS.length; a++) {
+  for (var a = 0; a < ixsS.length && a < ixsE.length; a++) {
     final start = ixsS[a] + 1;
     final end = ixsE[a] + 1;
-    final clone = List<String>.from(spl);
-    final subStr = clone.join().substring(start, end - 1);
-    spl.replaceRange(
-      start - 1,
-      end,
-      (subStr[0].toUpperCase() + subStr.substring(1)).split(''),
-    );
+    if (start < end - 1) {
+      final clone = List<String>.from(spl);
+      final subStr = clone.join().substring(start, end - 1);
+      if (subStr.isNotEmpty) {
+        spl.replaceRange(
+          start - 1,
+          end,
+          (subStr[0].toUpperCase() + subStr.substring(1)).split(''),
+        );
+      }
+    }
   }
 
   final mapStr = spl

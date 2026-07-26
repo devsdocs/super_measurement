@@ -2,6 +2,8 @@
 
 [![pub package](https://img.shields.io/pub/v/super_measurement)](https://pub.dev/packages/super_measurement)
 
+Comprehensive Dart unit conversion library built with Dart 3 pattern matching, sealed class exhaustiveness, and robust floating-point epsilon precision. Fully verified against NIST (SP 330 / 811), SI, ITS-90, ISO 80000-3, and JEDEC international standards.
+
 ## Available Unit
 ### Can be accessed using enum
 

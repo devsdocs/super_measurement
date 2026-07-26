@@ -1,3 +1,12 @@
+## 4.0.1
+- Fix `hashCode` contract violation for set/map lookups of equivalent unit values
+- Fix non-commutative order dependence in `Iterable.combineTo` for shifted units
+- Fix inequality comparison operator (`<`, `>`, `<=`, `>=`) floating-point epsilon inconsistencies
+- Fix unsafe `fromJson` deserialization type casts to handle invalid payload shapes without throwing `TypeError`
+- Fix Dart 3 `type_literal_in_constant_pattern` linter diagnostic warnings in `Temperature` model and generator
+- Fix generator string formatting edge cases (boundary checks, empty substring indices, safe double casting)
+- Add comprehensive SI/NIST international standards compliance unit test suite across 20 measurement categories
+
 ## 4.0.0
 - Change `MomentofInertia` to `MomentOfInertia`
 

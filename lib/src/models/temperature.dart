@@ -91,8 +91,8 @@ sealed class Temperature extends Unit<Temperature> {
     if (runtimeType == to.runtimeType) return result.withValue(value);
 
     // Handle specific temperature conversion formulas
-    switch (runtimeType) {
-      case const (Temperature$Kelvin):
+    switch (this) {
+      case Temperature$Kelvin _:
         // From Kelvin to others
         if (to is Temperature$Celsius) return to.withValue(value - 273.15);
         if (to is Temperature$Fahrenheit) {
@@ -103,7 +103,7 @@ sealed class Temperature extends Unit<Temperature> {
           return to.withValue((value - 273.15) * 4 / 5);
         }
 
-      case const (Temperature$Celsius):
+      case Temperature$Celsius _:
         // From Celsius to others
         if (to is Temperature$Kelvin) return to.withValue(value + 273.15);
         if (to is Temperature$Fahrenheit) {
@@ -114,7 +114,7 @@ sealed class Temperature extends Unit<Temperature> {
         }
         if (to is Temperature$Reaumur) return to.withValue(value * 4 / 5);
 
-      case const (Temperature$Fahrenheit):
+      case Temperature$Fahrenheit _:
         // From Fahrenheit to others
         if (to is Temperature$Kelvin) {
           return to.withValue((value + 459.67) * 5 / 9);
@@ -127,7 +127,7 @@ sealed class Temperature extends Unit<Temperature> {
           return to.withValue((value - 32) * 4 / 9);
         }
 
-      case const (Temperature$Rankine):
+      case Temperature$Rankine _:
         // From Rankine to others
         if (to is Temperature$Kelvin) return to.withValue(value * 5 / 9);
         if (to is Temperature$Celsius) {
@@ -138,7 +138,7 @@ sealed class Temperature extends Unit<Temperature> {
           return to.withValue((value - 491.67) * 4 / 9);
         }
 
-      case const (Temperature$Reaumur):
+      case Temperature$Reaumur _:
         // From Réaumur to others
         if (to is Temperature$Kelvin) {
           return to.withValue((value * 5 / 4) + 273.15);
@@ -161,7 +161,6 @@ sealed class Temperature extends Unit<Temperature> {
     // Always convert to Kelvin for comparison
     final thisKelvin = convertTo(Temperature.kelvin).value;
     final otherKelvin = other.convertTo(Temperature.kelvin).value;
-
     const epsilon = 1e-10;
 
     switch (operator) {

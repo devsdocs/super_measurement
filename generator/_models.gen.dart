@@ -14,9 +14,11 @@ void generateModels() {
             (e) =>
                 (e.values.single['ratio'] == 1 ||
                     e.values.single['ratio'] == 1.0 ||
-                    (e.values.single['ratio'] as double).toPrecision(1) ==
-                        1.0) &&
-                (e.values.single['valueshift'] == 0.0 ||
+                    ((e.values.single['ratio'] as num)
+                            .toDouble()
+                            .toPrecision(1) ==
+                        1.0)) &&
+                ((e.values.single['valueshift'] as num?)?.toDouble() == 0.0 ||
                     e.values.single['valueshift'] == 0),
             orElse: () => unit.values.first.first,
           );
@@ -145,8 +147,8 @@ void generateModels() {
       typeBuff.writeln();
       typeBuff
           .writeln('    // Handle specific temperature conversion formulas');
-      typeBuff.writeln('    switch (runtimeType) {');
-      typeBuff.writeln('      case const (Temperature\$Kelvin):');
+      typeBuff.writeln('    switch (this) {');
+      typeBuff.writeln('      case Temperature\$Kelvin _:');
       typeBuff.writeln('        // From Kelvin to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Celsius) return to.withValue(value - 273.15);');
@@ -156,9 +158,8 @@ void generateModels() {
           '        if (to is Temperature\$Rankine) return to.withValue(value * 9/5);');
       typeBuff.writeln(
           '        if (to is Temperature\$Reaumur) return to.withValue((value - 273.15) * 4/5);');
-      typeBuff.writeln('        break;');
       typeBuff.writeln();
-      typeBuff.writeln('      case const (Temperature\$Celsius):');
+      typeBuff.writeln('      case Temperature\$Celsius _:');
       typeBuff.writeln('        // From Celsius to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Kelvin) return to.withValue(value + 273.15);');
@@ -168,9 +169,8 @@ void generateModels() {
           '        if (to is Temperature\$Rankine) return to.withValue((value + 273.15) * 9/5);');
       typeBuff.writeln(
           '        if (to is Temperature\$Reaumur) return to.withValue(value * 4/5);');
-      typeBuff.writeln('        break;');
       typeBuff.writeln();
-      typeBuff.writeln('      case const (Temperature\$Fahrenheit):');
+      typeBuff.writeln('      case Temperature\$Fahrenheit _:');
       typeBuff.writeln('        // From Fahrenheit to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Kelvin) return to.withValue((value + 459.67) * 5/9);');
@@ -180,9 +180,8 @@ void generateModels() {
           '        if (to is Temperature\$Rankine) return to.withValue(value + 459.67);');
       typeBuff.writeln(
           '        if (to is Temperature\$Reaumur) return to.withValue((value - 32) * 4/9);');
-      typeBuff.writeln('        break;');
       typeBuff.writeln();
-      typeBuff.writeln('      case const (Temperature\$Rankine):');
+      typeBuff.writeln('      case Temperature\$Rankine _:');
       typeBuff.writeln('        // From Rankine to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Kelvin) return to.withValue(value * 5/9);');
@@ -192,9 +191,8 @@ void generateModels() {
           '        if (to is Temperature\$Fahrenheit) return to.withValue(value - 459.67);');
       typeBuff.writeln(
           '        if (to is Temperature\$Reaumur) return to.withValue((value - 491.67) * 4/9);');
-      typeBuff.writeln('        break;');
       typeBuff.writeln();
-      typeBuff.writeln('      case const (Temperature\$Reaumur):');
+      typeBuff.writeln('      case Temperature\$Reaumur _:');
       typeBuff.writeln('        // From Réaumur to others');
       typeBuff.writeln(
           '        if (to is Temperature\$Kelvin) return to.withValue((value * 5/4) + 273.15);');
@@ -204,7 +202,6 @@ void generateModels() {
           '        if (to is Temperature\$Fahrenheit) return to.withValue((value * 9/4) + 32);');
       typeBuff.writeln(
           '        if (to is Temperature\$Rankine) return to.withValue((value * 9/4) + 491.67);');
-      typeBuff.writeln('        break;');
       typeBuff.writeln('    }');
       typeBuff.writeln();
       typeBuff.writeln(
@@ -222,18 +219,17 @@ void generateModels() {
           '    final thisKelvin = convertTo(Temperature.kelvin).value;');
       typeBuff.writeln(
           '    final otherKelvin = other.convertTo(Temperature.kelvin).value;');
-      typeBuff.writeln();
-      typeBuff.writeln('const epsilon = 1e-10;');
+      typeBuff.writeln('    const epsilon = 1e-10;');
       typeBuff.writeln();
       typeBuff.writeln('    switch (operator) {');
       typeBuff.writeln(
-          '      case "==": return (thisKelvin - otherKelvin).abs() < epsilon;');
+          "      case '==': return (thisKelvin - otherKelvin).abs() < epsilon;");
       typeBuff.writeln(
-          '      case ">": return thisKelvin > otherKelvin + epsilon;');
+          "      case '>': return thisKelvin > otherKelvin + epsilon;");
       typeBuff.writeln(
-          '      case ">=": return thisKelvin >= otherKelvin - epsilon;');
+          "      case '>=': return thisKelvin >= otherKelvin - epsilon;");
       typeBuff.writeln(
-          '      case "<": return thisKelvin < otherKelvin - epsilon;');
+          "      case '<': return thisKelvin < otherKelvin - epsilon;");
       typeBuff.writeln(
           '      default: return thisKelvin <= otherKelvin + epsilon;');
       typeBuff.writeln('    }');
@@ -305,7 +301,8 @@ void generateModels() {
       typeBuff.writeln();
       typeBuff.writeln("  static const _ratio = ${unitProps['ratio']};");
       typeBuff.writeln();
-      final isShiftedValue = unitProps['valueshift']! as double != 0.0;
+      final isShiftedValue =
+          (unitProps['valueshift'] as num?)?.toDouble() != 0.0;
       typeBuff.writeln();
       typeBuff.writeln('  @override');
       typeBuff
@@ -315,7 +312,7 @@ void generateModels() {
         typeBuff.writeln('/// Default (anchor) unit of [$name]');
       } else {
         typeBuff.writeln(
-          "/// 1 [$unitType] ${(unitProps['ratio']! as num) % 1 == 0 ? '=' : '≈'} ${unitProps['ratio']} [${anchor.keys.first}]",
+          "/// 1 [$unitType] ${((unitProps['ratio'] ?? 1.0) as num) % 1 == 0 ? '=' : '≈'} ${unitProps['ratio']} [${anchor.keys.first}]",
         );
         if (isShiftedValue) {
           typeBuff.writeln('///');
@@ -381,7 +378,7 @@ void generateModels() {
     final contents = "part 'src/models/$fileName';";
     if (!libFile.readAsLinesSync().contains(contents)) {
       libFile.writeAsStringSync(
-        contents,
+        '\n$contents\n',
         mode: FileMode.append,
       );
     }

@@ -6,11 +6,9 @@ extension IterableOfTExtendsUnit<T extends Unit<T>> on Iterable<T> {
   T combineTo<E extends Unit<T>>(E unit) => isEmpty
       ? (unit as T).withValue(0)
       : any((e) => e._isShiftedValue) || unit._isShiftedValue
-          ? first
-              .withValue(
-                map((e) => e.convertTo(first).value).reduce((a, b) => a + b),
-              )
-              .convertTo(unit)
+          ? (unit as T).withValue(
+              map((e) => e.convertTo(unit).value).reduce((a, b) => a + b),
+            )
           : fold(
               unit.withValue(0),
               (a, e) => a + e,

@@ -42,18 +42,19 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
     // convert other to this unit's type for comparison
     final otherConverted = other.convertTo(_clone).value.toIntIfTrue;
     final thisValue = value.toIntIfTrue;
+    const epsilon = 1e-10;
 
     switch (operator) {
       case '==':
-        return (thisValue - otherConverted).abs() < 1e-10;
+        return (thisValue - otherConverted).abs() < epsilon;
       case '>':
-        return thisValue > otherConverted;
+        return thisValue > otherConverted + epsilon;
       case '>=':
-        return thisValue >= otherConverted;
+        return thisValue >= otherConverted - epsilon;
       case '<':
-        return thisValue < otherConverted;
+        return thisValue < otherConverted - epsilon;
       default:
-        return thisValue <= otherConverted;
+        return thisValue <= otherConverted + epsilon;
     }
   }
 
@@ -144,7 +145,11 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
       other is T && _convertAndCompare('==', other);
 
   @override
-  int get hashCode => Object.hash(runtimeType, value);
+  int get hashCode {
+    final normalized = convertTo(anchor).value;
+    final rounded = (normalized * 1e8).round();
+    return Object.hash(T, rounded);
+  }
 
   @override
   int compareTo(T other) {
@@ -193,16 +198,13 @@ bool _checkJson<T>(
   Map<String, dynamic> json,
   EnumValues<T> enumV,
 ) {
-  final map = json[key] as Map<String, dynamic>?;
+  final map = json[key];
+  if (map is! Map<String, dynamic>) return false;
 
-  if (map != null &&
-      map[_unit] != null &&
-      map[_value] != null &&
-      enumV.map[map[_unit]] != null) {
-    return true;
-  }
+  final unitKey = map[_unit];
+  final val = map[_value];
 
-  return false;
+  return unitKey is String && val is num && enumV.map[unitKey] != null;
 }
 
 const _unit = 'unit';
