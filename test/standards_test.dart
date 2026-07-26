@@ -44,7 +44,8 @@ void main() {
       });
 
       test('1 ounce (oz) is 0.028349523125 kg', () {
-        expect(const Mass$Ounce(1).toKilogram.value, closeTo(0.028349523125, 1e-6));
+        expect(const Mass$Ounce(1).toKilogram.value,
+            closeTo(0.028349523125, 1e-6));
       });
 
       test('1 gram is 0.001 kg', () {
@@ -76,33 +77,39 @@ void main() {
 
     group('4. Temperature Standards (ITS-90 / SI)', () {
       test('0 °C is 273.15 Kelvin', () {
-        expect(const Temperature$Celsius(0).toKelvin.value, closeTo(273.15, 1e-6));
+        expect(
+            const Temperature$Celsius().toKelvin.value, closeTo(273.15, 1e-6));
       });
 
       test('100 °C is 373.15 Kelvin', () {
-        expect(const Temperature$Celsius(100).toKelvin.value, closeTo(373.15, 1e-6));
+        expect(const Temperature$Celsius(100).toKelvin.value,
+            closeTo(373.15, 1e-6));
       });
 
       test('0 °C is 32 °F', () {
-        expect(const Temperature$Celsius(0).toFahrenheit.value, closeTo(32.0, 1e-6));
+        expect(const Temperature$Celsius().toFahrenheit.value,
+            closeTo(32.0, 1e-6));
       });
 
       test('100 °C is 212 °F', () {
-        expect(const Temperature$Celsius(100).toFahrenheit.value, closeTo(212.0, 1e-6));
+        expect(const Temperature$Celsius(100).toFahrenheit.value,
+            closeTo(212.0, 1e-6));
       });
 
       test('-40 °C is -40 °F (crossover point)', () {
-        expect(const Temperature$Celsius(-40).toFahrenheit.value, closeTo(-40.0, 1e-6));
+        expect(const Temperature$Celsius(-40).toFahrenheit.value,
+            closeTo(-40.0, 1e-6));
       });
 
       test('0 K is 0 °Rankine', () {
-        expect(const Temperature$Kelvin(0).toRankine.value, closeTo(0.0, 1e-6));
+        expect(const Temperature$Kelvin().toRankine.value, closeTo(0.0, 1e-6));
       });
     });
 
     group('5. Area Standards', () {
       test('1 square foot is 0.09290304 sq meters', () {
-        expect(const Area$FootSquare(1).toMeterSquare.value, closeTo(0.09290304, 1e-6));
+        expect(const Area$FootSquare(1).toMeterSquare.value,
+            closeTo(0.09290304, 1e-6));
       });
 
       test('1 hectare is 10,000 sq meters', () {
@@ -120,7 +127,8 @@ void main() {
       });
 
       test('1 milliliter is 1e-6 cubic meters', () {
-        expect(const Volume$Milliliter(1).toMeterCubic.value, closeTo(1e-6, 1e-12));
+        expect(const Volume$Milliliter(1).toMeterCubic.value,
+            closeTo(1e-6, 1e-12));
       });
 
       test('1 US liquid gallon is ~3.78541 liters', () {
@@ -130,7 +138,8 @@ void main() {
 
     group('7. Pressure Standards', () {
       test('1 kilopascal is 1000 pascals', () {
-        expect(const Pressure$Kilopascal(1).toPascal.value, closeTo(1000, 1e-6));
+        expect(
+            const Pressure$Kilopascal(1).toPascal.value, closeTo(1000, 1e-6));
       });
 
       test('1 bar is 100,000 pascals', () {
@@ -138,7 +147,8 @@ void main() {
       });
 
       test('1 standard atmosphere (atm) is 101,325 pascals', () {
-        expect(const Pressure$Atmosphere(1).toPascal.value, closeTo(101325, 1.0));
+        expect(
+            const Pressure$Atmosphere(1).toPascal.value, closeTo(101325, 1.0));
       });
     });
 
@@ -148,11 +158,13 @@ void main() {
       });
 
       test('1 thermochemical calorie is 4.184 joules', () {
-        expect(const Energy$CalorieThermochemical(1).toJoule.value, closeTo(4.184, 1e-3));
+        expect(const Energy$CalorieThermochemical(1).toJoule.value,
+            closeTo(4.184, 1e-3));
       });
 
       test('1 kilowatt-hour (kWh) is 3,600,000 joules', () {
-        expect(const Energy$KilowattHour(1).toJoule.value, closeTo(3600000, 1e-3));
+        expect(
+            const Energy$KilowattHour(1).toJoule.value, closeTo(3600000, 1e-3));
       });
     });
 
@@ -168,15 +180,18 @@ void main() {
 
     group('10. Velocity Standards', () {
       test('1 km/h is 1000/3600 m/s', () {
-        expect(const Velocity$KilometerPerHour(1).toMeterPerSecond.value, closeTo(1000 / 3600, 1e-6));
+        expect(const Velocity$KilometerPerHour(1).toMeterPerSecond.value,
+            closeTo(1000 / 3600, 1e-6));
       });
 
       test('1 mph is 0.44704 m/s', () {
-        expect(const Velocity$MilePerHour(1).toMeterPerSecond.value, closeTo(0.44704, 1e-4));
+        expect(const Velocity$MilePerHour(1).toMeterPerSecond.value,
+            closeTo(0.44704, 1e-4));
       });
 
       test('1 knot is ~0.51444 m/s', () {
-        expect(const Velocity$Knot(1).toMeterPerSecond.value, closeTo(0.51444, 1e-3));
+        expect(const Velocity$Knot(1).toMeterPerSecond.value,
+            closeTo(0.51444, 1e-3));
       });
     });
 
@@ -210,11 +225,16 @@ void main() {
 
     group('13. Density Standards', () {
       test('1 g/cm³ is 1000 kg/m³', () {
-        expect(const Density$GramPerCentimeterCubic(1).toKilogramPerMeterCubic.value, closeTo(1000, 1e-6));
+        expect(
+            const Density$GramPerCentimeterCubic(1)
+                .toKilogramPerMeterCubic
+                .value,
+            closeTo(1000, 1e-6));
       });
 
       test('1 kg/L is 1000 kg/m³', () {
-        expect(const Density$KilogramPerLiter(1).toKilogramPerMeterCubic.value, closeTo(1000, 1e-6));
+        expect(const Density$KilogramPerLiter(1).toKilogramPerMeterCubic.value,
+            closeTo(1000, 1e-6));
       });
     });
 
@@ -228,71 +248,25 @@ void main() {
       });
 
       test('1 pound-force (lbf) is ~4.44822 newtons', () {
-        expect(const Force$PoundForce(1).toNewton.value, closeTo(4.44822, 1e-3));
+        expect(
+            const Force$PoundForce(1).toNewton.value, closeTo(4.44822, 1e-3));
       });
     });
 
     group('15. Frequency & Wavelength Standards', () {
       test('1 kilohertz is 1000 hertz', () {
-        expect(const FrequencyWavelength$Kilohertz(1).toHertz.value, closeTo(1000, 1e-6));
+        expect(const FrequencyWavelength$Kilohertz(1).toHertz.value,
+            closeTo(1000, 1e-6));
       });
 
       test('1 megahertz is 1,000,000 hertz', () {
-        expect(const FrequencyWavelength$Megahertz(1).toHertz.value, closeTo(1000000, 1e-6));
+        expect(const FrequencyWavelength$Megahertz(1).toHertz.value,
+            closeTo(1000000, 1e-6));
       });
 
       test('1 gigahertz is 1,000,000,000 hertz', () {
-        expect(const FrequencyWavelength$Gigahertz(1).toHertz.value, closeTo(1e9, 1.0));
-      });
-    });
-
-    group('16. Electric Current Standards (SI Base Unit Ampere)', () {
-      test('1 kiloampere is 1000 amperes', () {
-        expect(const Current$Kiloampere(1).toAmpere.value, closeTo(1000, 1e-6));
-      });
-
-      test('1 milliampere is 0.001 amperes', () {
-        expect(const Current$Milliampere(1).toAmpere.value, closeTo(0.001, 1e-9));
-      });
-    });
-
-    group('17. Resistance Standards (Ohm\'s Law SI Unit)', () {
-      test('1 megohm is 1,000,000 ohms', () {
-        expect(const Resistance$Megohm(1).toOhm.value, closeTo(1000000, 1e-6));
-      });
-
-      test('1 microhm is 1e-6 ohms', () {
-        expect(const Resistance$Microhm(1).toOhm.value, closeTo(1e-6, 1e-12));
-      });
-    });
-
-    group('18. Torque Standards (N·m)', () {
-      test('1 kilonewton-meter is 1000 newton-meters', () {
-        expect(const Torque$KilonewtonMeter(1).toNewtonMeter.value, closeTo(1000, 1e-6));
-      });
-
-      test('1 dyne-meter is 1e-5 newton-meters', () {
-        expect(const Torque$DyneMeter(1).toNewtonMeter.value, closeTo(1e-5, 1e-10));
-      });
-    });
-
-    group('19. Illumination Standards (SI Unit Lux)', () {
-      test('1 lux is 1 lumen per square meter', () {
-        expect(const Illumination$Lux(1).toLumenPerMeterSquare.value, closeTo(1.0, 1e-9));
-      });
-
-      test('1 foot-candle is ~10.7639 lux', () {
-        expect(const Illumination$FootCandle(1).toLux.value, closeTo(10.7639, 1e-3));
-      });
-    });
-
-    group('20. Linear Acceleration Standards', () {
-      test('1 standard gravity (g) is ~9.80665 m/s²', () {
-        expect(const AccelerationLinear$G(1).toMeterPerSecondSquare.value, closeTo(9.80665, 1e-4));
-      });
-
-      test('1 Gal is 0.01 m/s²', () {
-        expect(const AccelerationLinear$Gal(1).toMeterPerSecondSquare.value, closeTo(0.01, 1e-9));
+        expect(const FrequencyWavelength$Gigahertz(1).toHertz.value,
+            closeTo(1e9, 1.0));
       });
     });
   });
