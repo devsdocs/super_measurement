@@ -1,6 +1,7 @@
 # Dart package for converting unit measurement
 
 [![pub package](https://img.shields.io/pub/v/super_measurement)](https://pub.dev/packages/super_measurement)
+[![codecov](https://codecov.io/gh/devsdocs/super_measurement/branch/main/graph/badge.svg)](https://codecov.io/gh/devsdocs/super_measurement)
 
 Comprehensive Dart unit conversion library built with Dart 3 pattern matching, sealed class exhaustiveness, and robust floating-point epsilon precision. Fully verified against NIST (SP 330 / 811), SI, ITS-90, ISO 80000-3, and JEDEC international standards.
 
