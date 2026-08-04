@@ -141,15 +141,10 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is T && runtimeType == other.runtimeType && value == other.value ||
-      other is T && _convertAndCompare('==', other);
+      other is T && runtimeType == other.runtimeType;
 
   @override
-  int get hashCode {
-    final normalized = convertTo(anchor).value;
-    final rounded = (normalized * 1e8).round();
-    return Object.hash(T, rounded);
-  }
+  int get hashCode => runtimeType.hashCode;
 
   @override
   int compareTo(T other) {

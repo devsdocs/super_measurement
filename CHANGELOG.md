@@ -1,3 +1,7 @@
+## 4.0.2
+- Fix Unit equality operator to compare by runtime type only, not by value
+- This allows proper unit type matching in converters where Unit objects may have different values but represent the same unit type
+
 ## 4.0.1
 - Fix `hashCode` contract violation for set/map lookups of equivalent unit values
 - Fix non-commutative order dependence in `Iterable.combineTo` for shifted units
