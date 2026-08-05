@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [TemperatureInterval$Fahrenheit], [TemperatureInterval$Rankine],
 /// [TemperatureInterval$Reaumur]
 sealed class TemperatureInterval extends Unit<TemperatureInterval> {
-  const TemperatureInterval([
+  TemperatureInterval([
     super.value,
   ]);
 
@@ -18,36 +18,36 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : TemperatureInterval.anchor();
 
-  factory TemperatureInterval.anchor() =>
-      const TemperatureInterval$Fahrenheit();
+  factory TemperatureInterval.anchor() => TemperatureInterval$Fahrenheit();
 
   /// Convert to [TemperatureInterval$Kelvin]
   TemperatureInterval get toKelvin => convertTo(
-        const TemperatureInterval$Kelvin(),
+        TemperatureInterval$Kelvin(),
       );
 
   /// Convert to [TemperatureInterval$Celsius]
   TemperatureInterval get toCelsius => convertTo(
-        const TemperatureInterval$Celsius(),
+        TemperatureInterval$Celsius(),
       );
 
   /// Convert to [TemperatureInterval$Fahrenheit]
   TemperatureInterval get toFahrenheit => convertTo(
-        const TemperatureInterval$Fahrenheit(),
+        TemperatureInterval$Fahrenheit(),
       );
 
   /// Convert to [TemperatureInterval$Rankine]
   TemperatureInterval get toRankine => convertTo(
-        const TemperatureInterval$Rankine(),
+        TemperatureInterval$Rankine(),
       );
 
   /// Convert to [TemperatureInterval$Reaumur]
   TemperatureInterval get toReaumur => convertTo(
-        const TemperatureInterval$Reaumur(),
+        TemperatureInterval$Reaumur(),
       );
 
   @override
@@ -58,11 +58,11 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
 
   static const _majorName = 'temperatureInterval';
 
-  static const kelvin = TemperatureInterval$Kelvin();
-  static const celsius = TemperatureInterval$Celsius();
-  static const fahrenheit = TemperatureInterval$Fahrenheit();
-  static const rankine = TemperatureInterval$Rankine();
-  static const reaumur = TemperatureInterval$Reaumur();
+  static final kelvin = TemperatureInterval$Kelvin();
+  static final celsius = TemperatureInterval$Celsius();
+  static final fahrenheit = TemperatureInterval$Fahrenheit();
+  static final rankine = TemperatureInterval$Rankine();
+  static final reaumur = TemperatureInterval$Reaumur();
 
   @override
   List<TemperatureInterval> get units => values;
@@ -70,7 +70,7 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
   @override
   EnumValues<TemperatureInterval> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <TemperatureInterval>[
     kelvin,
     celsius,
     fahrenheit,
@@ -78,7 +78,7 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
     reaumur,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, TemperatureInterval>{
     TemperatureInterval$Kelvin._minorName: kelvin,
     TemperatureInterval$Celsius._minorName: celsius,
     TemperatureInterval$Fahrenheit._minorName: fahrenheit,
@@ -89,7 +89,7 @@ sealed class TemperatureInterval extends Unit<TemperatureInterval> {
 
 /// Unit of [TemperatureInterval]
 final class TemperatureInterval$Kelvin extends TemperatureInterval {
-  const TemperatureInterval$Kelvin([
+  TemperatureInterval$Kelvin([
     super.value,
   ]);
 
@@ -120,15 +120,14 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
   @override
   String get displayName => 'Kelvin';
 
-  static const _ratio = 1.8;
+  static final _ratio = Rational.parse('1.80000000000000000E+000');
 
   @override
-  TemperatureInterval get anchor =>
-      const TemperatureInterval$Fahrenheit(_ratio);
+  TemperatureInterval get anchor => TemperatureInterval$Fahrenheit(_ratio);
 
-  /// 1 [TemperatureInterval$Kelvin] ≈ 1.8 [TemperatureInterval$Fahrenheit]
+  /// 1 [TemperatureInterval$Kelvin] ≈ 1.80000000000000000E+000 [TemperatureInterval$Fahrenheit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -136,12 +135,12 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [TemperatureInterval$Kelvin] with new value
   @override
   TemperatureInterval$Kelvin withValue(
-    num val,
+    Rational val,
   ) =>
       TemperatureInterval$Kelvin(val);
 
@@ -154,14 +153,14 @@ final class TemperatureInterval$Kelvin extends TemperatureInterval {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [TemperatureInterval]
 final class TemperatureInterval$Celsius extends TemperatureInterval {
-  const TemperatureInterval$Celsius([
+  TemperatureInterval$Celsius([
     super.value,
   ]);
 
@@ -192,15 +191,14 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
   @override
   String get displayName => 'Celsius';
 
-  static const _ratio = 1.8;
+  static final _ratio = Rational.parse('1.80000000000000000E+000');
 
   @override
-  TemperatureInterval get anchor =>
-      const TemperatureInterval$Fahrenheit(_ratio);
+  TemperatureInterval get anchor => TemperatureInterval$Fahrenheit(_ratio);
 
-  /// 1 [TemperatureInterval$Celsius] ≈ 1.8 [TemperatureInterval$Fahrenheit]
+  /// 1 [TemperatureInterval$Celsius] ≈ 1.80000000000000000E+000 [TemperatureInterval$Fahrenheit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -208,12 +206,12 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [TemperatureInterval$Celsius] with new value
   @override
   TemperatureInterval$Celsius withValue(
-    num val,
+    Rational val,
   ) =>
       TemperatureInterval$Celsius(val);
 
@@ -226,14 +224,14 @@ final class TemperatureInterval$Celsius extends TemperatureInterval {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [TemperatureInterval]
 final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
-  const TemperatureInterval$Fahrenheit([
+  TemperatureInterval$Fahrenheit([
     super.value,
   ]);
 
@@ -264,15 +262,14 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
   @override
   String get displayName => 'Fahrenheit';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  TemperatureInterval get anchor =>
-      const TemperatureInterval$Fahrenheit(_ratio);
+  TemperatureInterval get anchor => TemperatureInterval$Fahrenheit(_ratio);
 
   /// Default (anchor) unit of [TemperatureInterval]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -281,12 +278,12 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [TemperatureInterval$Fahrenheit] with new value
   @override
   TemperatureInterval$Fahrenheit withValue(
-    num val,
+    Rational val,
   ) =>
       TemperatureInterval$Fahrenheit(val);
 
@@ -299,14 +296,14 @@ final class TemperatureInterval$Fahrenheit extends TemperatureInterval {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [TemperatureInterval]
 final class TemperatureInterval$Rankine extends TemperatureInterval {
-  const TemperatureInterval$Rankine([
+  TemperatureInterval$Rankine([
     super.value,
   ]);
 
@@ -337,15 +334,14 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
   @override
   String get displayName => 'Rankine';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  TemperatureInterval get anchor =>
-      const TemperatureInterval$Fahrenheit(_ratio);
+  TemperatureInterval get anchor => TemperatureInterval$Fahrenheit(_ratio);
 
-  /// 1 [TemperatureInterval$Rankine] = 1.0 [TemperatureInterval$Fahrenheit]
+  /// 1 [TemperatureInterval$Rankine] = 1.00000000000000000E+000 [TemperatureInterval$Fahrenheit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -353,12 +349,12 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [TemperatureInterval$Rankine] with new value
   @override
   TemperatureInterval$Rankine withValue(
-    num val,
+    Rational val,
   ) =>
       TemperatureInterval$Rankine(val);
 
@@ -371,14 +367,14 @@ final class TemperatureInterval$Rankine extends TemperatureInterval {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [TemperatureInterval]
 final class TemperatureInterval$Reaumur extends TemperatureInterval {
-  const TemperatureInterval$Reaumur([
+  TemperatureInterval$Reaumur([
     super.value,
   ]);
 
@@ -409,15 +405,14 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
   @override
   String get displayName => 'Réaumur';
 
-  static const _ratio = 2.25;
+  static final _ratio = Rational.parse('2.25000000000000000E+000');
 
   @override
-  TemperatureInterval get anchor =>
-      const TemperatureInterval$Fahrenheit(_ratio);
+  TemperatureInterval get anchor => TemperatureInterval$Fahrenheit(_ratio);
 
-  /// 1 [TemperatureInterval$Reaumur] ≈ 2.25 [TemperatureInterval$Fahrenheit]
+  /// 1 [TemperatureInterval$Reaumur] ≈ 2.25000000000000000E+000 [TemperatureInterval$Fahrenheit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -425,12 +420,12 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [TemperatureInterval$Reaumur] with new value
   @override
   TemperatureInterval$Reaumur withValue(
-    num val,
+    Rational val,
   ) =>
       TemperatureInterval$Reaumur(val);
 
@@ -443,7 +438,7 @@ final class TemperatureInterval$Reaumur extends TemperatureInterval {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [Typography$PicaPrinters], [Typography$Ciceros], [Typography$Inch],
 /// [Typography$Millimeter], [Typography$Centimeter]
 sealed class Typography extends Unit<Typography> {
-  const Typography([
+  Typography([
     super.value,
   ]);
 
@@ -19,55 +19,56 @@ sealed class Typography extends Unit<Typography> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Typography.anchor();
 
-  factory Typography.anchor() => const Typography$Inch();
+  factory Typography.anchor() => Typography$Inch();
 
   /// Convert to [Typography$PostScriptPointDTP]
   Typography get toPostScriptPointDTP => convertTo(
-        const Typography$PostScriptPointDTP(),
+        Typography$PostScriptPointDTP(),
       );
 
   /// Convert to [Typography$PrintersPointAmerican]
   Typography get toPrintersPointAmerican => convertTo(
-        const Typography$PrintersPointAmerican(),
+        Typography$PrintersPointAmerican(),
       );
 
   /// Convert to [Typography$DidotsPoint]
   Typography get toDidotsPoint => convertTo(
-        const Typography$DidotsPoint(),
+        Typography$DidotsPoint(),
       );
 
   /// Convert to [Typography$PicaPostScriptDTPComputer]
   Typography get toPicaPostScriptDTPComputer => convertTo(
-        const Typography$PicaPostScriptDTPComputer(),
+        Typography$PicaPostScriptDTPComputer(),
       );
 
   /// Convert to [Typography$PicaPrinters]
   Typography get toPicaPrinters => convertTo(
-        const Typography$PicaPrinters(),
+        Typography$PicaPrinters(),
       );
 
   /// Convert to [Typography$Ciceros]
   Typography get toCiceros => convertTo(
-        const Typography$Ciceros(),
+        Typography$Ciceros(),
       );
 
   /// Convert to [Typography$Inch]
   Typography get toInch => convertTo(
-        const Typography$Inch(),
+        Typography$Inch(),
       );
 
   /// Convert to [Typography$Millimeter]
   Typography get toMillimeter => convertTo(
-        const Typography$Millimeter(),
+        Typography$Millimeter(),
       );
 
   /// Convert to [Typography$Centimeter]
   Typography get toCentimeter => convertTo(
-        const Typography$Centimeter(),
+        Typography$Centimeter(),
       );
 
   @override
@@ -78,16 +79,16 @@ sealed class Typography extends Unit<Typography> {
 
   static const _majorName = 'typography';
 
-  static const postScriptPointDTP = Typography$PostScriptPointDTP();
-  static const printersPointAmerican = Typography$PrintersPointAmerican();
-  static const didotsPoint = Typography$DidotsPoint();
-  static const picaPostScriptDTPComputer =
+  static final postScriptPointDTP = Typography$PostScriptPointDTP();
+  static final printersPointAmerican = Typography$PrintersPointAmerican();
+  static final didotsPoint = Typography$DidotsPoint();
+  static final picaPostScriptDTPComputer =
       Typography$PicaPostScriptDTPComputer();
-  static const picaPrinters = Typography$PicaPrinters();
-  static const ciceros = Typography$Ciceros();
-  static const inch = Typography$Inch();
-  static const millimeter = Typography$Millimeter();
-  static const centimeter = Typography$Centimeter();
+  static final picaPrinters = Typography$PicaPrinters();
+  static final ciceros = Typography$Ciceros();
+  static final inch = Typography$Inch();
+  static final millimeter = Typography$Millimeter();
+  static final centimeter = Typography$Centimeter();
 
   @override
   List<Typography> get units => values;
@@ -95,7 +96,7 @@ sealed class Typography extends Unit<Typography> {
   @override
   EnumValues<Typography> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Typography>[
     postScriptPointDTP,
     printersPointAmerican,
     didotsPoint,
@@ -107,7 +108,7 @@ sealed class Typography extends Unit<Typography> {
     centimeter,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Typography>{
     Typography$PostScriptPointDTP._minorName: postScriptPointDTP,
     Typography$PrintersPointAmerican._minorName: printersPointAmerican,
     Typography$DidotsPoint._minorName: didotsPoint,
@@ -122,7 +123,7 @@ sealed class Typography extends Unit<Typography> {
 
 /// Unit of [Typography]
 final class Typography$PostScriptPointDTP extends Typography {
-  const Typography$PostScriptPointDTP([
+  Typography$PostScriptPointDTP([
     super.value,
   ]);
 
@@ -153,14 +154,14 @@ final class Typography$PostScriptPointDTP extends Typography {
   @override
   String get displayName => 'PostScript point (DTP)';
 
-  static const _ratio = 0.013888888888888888;
+  static final _ratio = Rational.parse('1.38888888888888889E-002');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
-  /// 1 [Typography$PostScriptPointDTP] ≈ 0.013888888888888888 [Typography$Inch]
+  /// 1 [Typography$PostScriptPointDTP] ≈ 1.38888888888888889E-002 [Typography$Inch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -169,12 +170,12 @@ final class Typography$PostScriptPointDTP extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$PostScriptPointDTP] with new value
   @override
   Typography$PostScriptPointDTP withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$PostScriptPointDTP(val);
 
@@ -187,14 +188,14 @@ final class Typography$PostScriptPointDTP extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Typography]
 final class Typography$PrintersPointAmerican extends Typography {
-  const Typography$PrintersPointAmerican([
+  Typography$PrintersPointAmerican([
     super.value,
   ]);
 
@@ -225,14 +226,14 @@ final class Typography$PrintersPointAmerican extends Typography {
   @override
   String get displayName => 'printer"s point (American)';
 
-  static const _ratio = 0.013837000138370002;
+  static final _ratio = Rational.parse('1.38370001383700014E-002');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
-  /// 1 [Typography$PrintersPointAmerican] ≈ 0.013837000138370002 [Typography$Inch]
+  /// 1 [Typography$PrintersPointAmerican] ≈ 1.38370001383700014E-002 [Typography$Inch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -241,12 +242,12 @@ final class Typography$PrintersPointAmerican extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$PrintersPointAmerican] with new value
   @override
   Typography$PrintersPointAmerican withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$PrintersPointAmerican(val);
 
@@ -259,14 +260,14 @@ final class Typography$PrintersPointAmerican extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Typography]
 final class Typography$DidotsPoint extends Typography {
-  const Typography$DidotsPoint([
+  Typography$DidotsPoint([
     super.value,
   ]);
 
@@ -297,14 +298,14 @@ final class Typography$DidotsPoint extends Typography {
   @override
   String get displayName => 'Didot"s point';
 
-  static const _ratio = 0.014803149606299212;
+  static final _ratio = Rational.parse('1.48031496062992126E-002');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
-  /// 1 [Typography$DidotsPoint] ≈ 0.014803149606299212 [Typography$Inch]
+  /// 1 [Typography$DidotsPoint] ≈ 1.48031496062992126E-002 [Typography$Inch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -312,12 +313,12 @@ final class Typography$DidotsPoint extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$DidotsPoint] with new value
   @override
   Typography$DidotsPoint withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$DidotsPoint(val);
 
@@ -330,14 +331,14 @@ final class Typography$DidotsPoint extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Typography]
 final class Typography$PicaPostScriptDTPComputer extends Typography {
-  const Typography$PicaPostScriptDTPComputer([
+  Typography$PicaPostScriptDTPComputer([
     super.value,
   ]);
 
@@ -368,14 +369,14 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
   @override
   String get displayName => 'pica (PostScript, DTP, computer)';
 
-  static const _ratio = 0.16666666666666666;
+  static final _ratio = Rational.parse('1.66666666666666667E-001');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
-  /// 1 [Typography$PicaPostScriptDTPComputer] ≈ 0.16666666666666666 [Typography$Inch]
+  /// 1 [Typography$PicaPostScriptDTPComputer] ≈ 1.66666666666666667E-001 [Typography$Inch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -384,12 +385,12 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$PicaPostScriptDTPComputer] with new value
   @override
   Typography$PicaPostScriptDTPComputer withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$PicaPostScriptDTPComputer(val);
 
@@ -402,14 +403,14 @@ final class Typography$PicaPostScriptDTPComputer extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Typography]
 final class Typography$PicaPrinters extends Typography {
-  const Typography$PicaPrinters([
+  Typography$PicaPrinters([
     super.value,
   ]);
 
@@ -440,14 +441,14 @@ final class Typography$PicaPrinters extends Typography {
   @override
   String get displayName => 'pica (printer"s)';
 
-  static const _ratio = 0.16604400166044;
+  static final _ratio = Rational.parse('1.66044001660440017E-001');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
-  /// 1 [Typography$PicaPrinters] ≈ 0.16604400166044 [Typography$Inch]
+  /// 1 [Typography$PicaPrinters] ≈ 1.66044001660440017E-001 [Typography$Inch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -455,12 +456,12 @@ final class Typography$PicaPrinters extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$PicaPrinters] with new value
   @override
   Typography$PicaPrinters withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$PicaPrinters(val);
 
@@ -473,14 +474,14 @@ final class Typography$PicaPrinters extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Typography]
 final class Typography$Ciceros extends Typography {
-  const Typography$Ciceros([
+  Typography$Ciceros([
     super.value,
   ]);
 
@@ -511,14 +512,14 @@ final class Typography$Ciceros extends Typography {
   @override
   String get displayName => 'Ciceros';
 
-  static const _ratio = 0.17763779527559054;
+  static final _ratio = Rational.parse('1.77637795275590551E-001');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
-  /// 1 [Typography$Ciceros] ≈ 0.17763779527559054 [Typography$Inch]
+  /// 1 [Typography$Ciceros] ≈ 1.77637795275590551E-001 [Typography$Inch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -526,12 +527,12 @@ final class Typography$Ciceros extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$Ciceros] with new value
   @override
   Typography$Ciceros withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$Ciceros(val);
 
@@ -544,14 +545,14 @@ final class Typography$Ciceros extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Typography]
 final class Typography$Inch extends Typography {
-  const Typography$Inch([
+  Typography$Inch([
     super.value,
   ]);
 
@@ -582,14 +583,14 @@ final class Typography$Inch extends Typography {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
   /// Default (anchor) unit of [Typography]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -597,12 +598,12 @@ final class Typography$Inch extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$Inch] with new value
   @override
   Typography$Inch withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$Inch(val);
 
@@ -615,14 +616,14 @@ final class Typography$Inch extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Typography]
 final class Typography$Millimeter extends Typography {
-  const Typography$Millimeter([
+  Typography$Millimeter([
     super.value,
   ]);
 
@@ -653,14 +654,14 @@ final class Typography$Millimeter extends Typography {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.03937007874015748;
+  static final _ratio = Rational.parse('3.93700787401574803E-002');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
-  /// 1 [Typography$Millimeter] ≈ 0.03937007874015748 [Typography$Inch]
+  /// 1 [Typography$Millimeter] ≈ 3.93700787401574803E-002 [Typography$Inch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -668,12 +669,12 @@ final class Typography$Millimeter extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$Millimeter] with new value
   @override
   Typography$Millimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$Millimeter(val);
 
@@ -686,14 +687,14 @@ final class Typography$Millimeter extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Typography]
 final class Typography$Centimeter extends Typography {
-  const Typography$Centimeter([
+  Typography$Centimeter([
     super.value,
   ]);
 
@@ -724,14 +725,14 @@ final class Typography$Centimeter extends Typography {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.3937007874015748;
+  static final _ratio = Rational.parse('3.93700787401574803E-001');
 
   @override
-  Typography get anchor => const Typography$Inch(_ratio);
+  Typography get anchor => Typography$Inch(_ratio);
 
-  /// 1 [Typography$Centimeter] ≈ 0.3937007874015748 [Typography$Inch]
+  /// 1 [Typography$Centimeter] ≈ 3.93700787401574803E-001 [Typography$Inch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -739,12 +740,12 @@ final class Typography$Centimeter extends Typography {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Typography$Centimeter] with new value
   @override
   Typography$Centimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Typography$Centimeter(val);
 
@@ -757,7 +758,7 @@ final class Typography$Centimeter extends Typography {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

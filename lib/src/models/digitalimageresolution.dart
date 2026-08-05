@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [DigitalImageResolution$DotPerMillimeter],
 /// [DigitalImageResolution$PixelPerInch]
 sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
-  const DigitalImageResolution([
+  DigitalImageResolution([
     super.value,
   ]);
 
@@ -19,31 +19,32 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : DigitalImageResolution.anchor();
 
   factory DigitalImageResolution.anchor() =>
-      const DigitalImageResolution$DotPerInch();
+      DigitalImageResolution$DotPerInch();
 
   /// Convert to [DigitalImageResolution$DotPerInch]
   DigitalImageResolution get toDotPerInch => convertTo(
-        const DigitalImageResolution$DotPerInch(),
+        DigitalImageResolution$DotPerInch(),
       );
 
   /// Convert to [DigitalImageResolution$DotPerMeter]
   DigitalImageResolution get toDotPerMeter => convertTo(
-        const DigitalImageResolution$DotPerMeter(),
+        DigitalImageResolution$DotPerMeter(),
       );
 
   /// Convert to [DigitalImageResolution$DotPerMillimeter]
   DigitalImageResolution get toDotPerMillimeter => convertTo(
-        const DigitalImageResolution$DotPerMillimeter(),
+        DigitalImageResolution$DotPerMillimeter(),
       );
 
   /// Convert to [DigitalImageResolution$PixelPerInch]
   DigitalImageResolution get toPixelPerInch => convertTo(
-        const DigitalImageResolution$PixelPerInch(),
+        DigitalImageResolution$PixelPerInch(),
       );
 
   @override
@@ -54,10 +55,10 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
 
   static const _majorName = 'digitalImageResolution';
 
-  static const dotPerInch = DigitalImageResolution$DotPerInch();
-  static const dotPerMeter = DigitalImageResolution$DotPerMeter();
-  static const dotPerMillimeter = DigitalImageResolution$DotPerMillimeter();
-  static const pixelPerInch = DigitalImageResolution$PixelPerInch();
+  static final dotPerInch = DigitalImageResolution$DotPerInch();
+  static final dotPerMeter = DigitalImageResolution$DotPerMeter();
+  static final dotPerMillimeter = DigitalImageResolution$DotPerMillimeter();
+  static final pixelPerInch = DigitalImageResolution$PixelPerInch();
 
   @override
   List<DigitalImageResolution> get units => values;
@@ -65,14 +66,14 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
   @override
   EnumValues<DigitalImageResolution> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <DigitalImageResolution>[
     dotPerInch,
     dotPerMeter,
     dotPerMillimeter,
     pixelPerInch,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, DigitalImageResolution>{
     DigitalImageResolution$DotPerInch._minorName: dotPerInch,
     DigitalImageResolution$DotPerMeter._minorName: dotPerMeter,
     DigitalImageResolution$DotPerMillimeter._minorName: dotPerMillimeter,
@@ -82,7 +83,7 @@ sealed class DigitalImageResolution extends Unit<DigitalImageResolution> {
 
 /// Unit of [DigitalImageResolution]
 final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
-  const DigitalImageResolution$DotPerInch([
+  DigitalImageResolution$DotPerInch([
     super.value,
   ]);
 
@@ -113,15 +114,15 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
   @override
   String get displayName => 'dot/inch';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   DigitalImageResolution get anchor =>
-      const DigitalImageResolution$DotPerInch(_ratio);
+      DigitalImageResolution$DotPerInch(_ratio);
 
   /// Default (anchor) unit of [DigitalImageResolution]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -130,12 +131,12 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DigitalImageResolution$DotPerInch] with new value
   @override
   DigitalImageResolution$DotPerInch withValue(
-    num val,
+    Rational val,
   ) =>
       DigitalImageResolution$DotPerInch(val);
 
@@ -148,14 +149,14 @@ final class DigitalImageResolution$DotPerInch extends DigitalImageResolution {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DigitalImageResolution]
 final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
-  const DigitalImageResolution$DotPerMeter([
+  DigitalImageResolution$DotPerMeter([
     super.value,
   ]);
 
@@ -186,15 +187,15 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
   @override
   String get displayName => 'dot/meter';
 
-  static const _ratio = 0.0254;
+  static final _ratio = Rational.parse('2.54000000000000000E-002');
 
   @override
   DigitalImageResolution get anchor =>
-      const DigitalImageResolution$DotPerInch(_ratio);
+      DigitalImageResolution$DotPerInch(_ratio);
 
-  /// 1 [DigitalImageResolution$DotPerMeter] ≈ 0.0254 [DigitalImageResolution$DotPerInch]
+  /// 1 [DigitalImageResolution$DotPerMeter] ≈ 2.54000000000000000E-002 [DigitalImageResolution$DotPerInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -203,12 +204,12 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DigitalImageResolution$DotPerMeter] with new value
   @override
   DigitalImageResolution$DotPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       DigitalImageResolution$DotPerMeter(val);
 
@@ -221,7 +222,7 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -229,7 +230,7 @@ final class DigitalImageResolution$DotPerMeter extends DigitalImageResolution {
 /// Unit of [DigitalImageResolution]
 final class DigitalImageResolution$DotPerMillimeter
     extends DigitalImageResolution {
-  const DigitalImageResolution$DotPerMillimeter([
+  DigitalImageResolution$DotPerMillimeter([
     super.value,
   ]);
 
@@ -260,15 +261,15 @@ final class DigitalImageResolution$DotPerMillimeter
   @override
   String get displayName => 'dot/millimeter';
 
-  static const _ratio = 25.4;
+  static final _ratio = Rational.parse('2.54000000000000000E+001');
 
   @override
   DigitalImageResolution get anchor =>
-      const DigitalImageResolution$DotPerInch(_ratio);
+      DigitalImageResolution$DotPerInch(_ratio);
 
-  /// 1 [DigitalImageResolution$DotPerMillimeter] ≈ 25.4 [DigitalImageResolution$DotPerInch]
+  /// 1 [DigitalImageResolution$DotPerMillimeter] ≈ 2.54000000000000000E+001 [DigitalImageResolution$DotPerInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -277,12 +278,12 @@ final class DigitalImageResolution$DotPerMillimeter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DigitalImageResolution$DotPerMillimeter] with new value
   @override
   DigitalImageResolution$DotPerMillimeter withValue(
-    num val,
+    Rational val,
   ) =>
       DigitalImageResolution$DotPerMillimeter(val);
 
@@ -295,14 +296,14 @@ final class DigitalImageResolution$DotPerMillimeter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DigitalImageResolution]
 final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
-  const DigitalImageResolution$PixelPerInch([
+  DigitalImageResolution$PixelPerInch([
     super.value,
   ]);
 
@@ -333,15 +334,15 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
   @override
   String get displayName => 'pixel/inch';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   DigitalImageResolution get anchor =>
-      const DigitalImageResolution$DotPerInch(_ratio);
+      DigitalImageResolution$DotPerInch(_ratio);
 
-  /// 1 [DigitalImageResolution$PixelPerInch] = 1.0 [DigitalImageResolution$DotPerInch]
+  /// 1 [DigitalImageResolution$PixelPerInch] = 1.00000000000000000E+000 [DigitalImageResolution$DotPerInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -350,12 +351,12 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DigitalImageResolution$PixelPerInch] with new value
   @override
   DigitalImageResolution$PixelPerInch withValue(
-    num val,
+    Rational val,
   ) =>
       DigitalImageResolution$PixelPerInch(val);
 
@@ -368,7 +369,7 @@ final class DigitalImageResolution$PixelPerInch extends DigitalImageResolution {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

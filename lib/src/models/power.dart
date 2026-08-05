@@ -38,7 +38,7 @@ part of '../../super_measurement.dart';
 /// [Power$JoulePerHour], [Power$JoulePerMinute], [Power$KilojoulePerHour],
 /// [Power$KilojoulePerMinute]
 sealed class Power extends Unit<Power> {
-  const Power([
+  Power([
     super.value,
   ]);
 
@@ -50,360 +50,361 @@ sealed class Power extends Unit<Power> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Power.anchor();
 
-  factory Power.anchor() => const Power$Milliwatt();
+  factory Power.anchor() => Power$Milliwatt();
 
   /// Convert to [Power$Exawatt]
   Power get toExawatt => convertTo(
-        const Power$Exawatt(),
+        Power$Exawatt(),
       );
 
   /// Convert to [Power$Petawatt]
   Power get toPetawatt => convertTo(
-        const Power$Petawatt(),
+        Power$Petawatt(),
       );
 
   /// Convert to [Power$Terawatt]
   Power get toTerawatt => convertTo(
-        const Power$Terawatt(),
+        Power$Terawatt(),
       );
 
   /// Convert to [Power$Gigawatt]
   Power get toGigawatt => convertTo(
-        const Power$Gigawatt(),
+        Power$Gigawatt(),
       );
 
   /// Convert to [Power$Megawatt]
   Power get toMegawatt => convertTo(
-        const Power$Megawatt(),
+        Power$Megawatt(),
       );
 
   /// Convert to [Power$Kilowatt]
   Power get toKilowatt => convertTo(
-        const Power$Kilowatt(),
+        Power$Kilowatt(),
       );
 
   /// Convert to [Power$Hectowatt]
   Power get toHectowatt => convertTo(
-        const Power$Hectowatt(),
+        Power$Hectowatt(),
       );
 
   /// Convert to [Power$Dekawatt]
   Power get toDekawatt => convertTo(
-        const Power$Dekawatt(),
+        Power$Dekawatt(),
       );
 
   /// Convert to [Power$Watt]
   Power get toWatt => convertTo(
-        const Power$Watt(),
+        Power$Watt(),
       );
 
   /// Convert to [Power$Deciwatt]
   Power get toDeciwatt => convertTo(
-        const Power$Deciwatt(),
+        Power$Deciwatt(),
       );
 
   /// Convert to [Power$Centiwatt]
   Power get toCentiwatt => convertTo(
-        const Power$Centiwatt(),
+        Power$Centiwatt(),
       );
 
   /// Convert to [Power$Milliwatt]
   Power get toMilliwatt => convertTo(
-        const Power$Milliwatt(),
+        Power$Milliwatt(),
       );
 
   /// Convert to [Power$Microwatt]
   Power get toMicrowatt => convertTo(
-        const Power$Microwatt(),
+        Power$Microwatt(),
       );
 
   /// Convert to [Power$Nanowatt]
   Power get toNanowatt => convertTo(
-        const Power$Nanowatt(),
+        Power$Nanowatt(),
       );
 
   /// Convert to [Power$Picowatt]
   Power get toPicowatt => convertTo(
-        const Power$Picowatt(),
+        Power$Picowatt(),
       );
 
   /// Convert to [Power$Femtowatt]
   Power get toFemtowatt => convertTo(
-        const Power$Femtowatt(),
+        Power$Femtowatt(),
       );
 
   /// Convert to [Power$Attowatt]
   Power get toAttowatt => convertTo(
-        const Power$Attowatt(),
+        Power$Attowatt(),
       );
 
   /// Convert to [Power$Horsepower]
   Power get toHorsepower => convertTo(
-        const Power$Horsepower(),
+        Power$Horsepower(),
       );
 
   /// Convert to [Power$HorsepowerBoiler]
   Power get toHorsepowerBoiler => convertTo(
-        const Power$HorsepowerBoiler(),
+        Power$HorsepowerBoiler(),
       );
 
   /// Convert to [Power$HorsepowerMetric]
   Power get toHorsepowerMetric => convertTo(
-        const Power$HorsepowerMetric(),
+        Power$HorsepowerMetric(),
       );
 
   /// Convert to [Power$HorsepowerElectric]
   Power get toHorsepowerElectric => convertTo(
-        const Power$HorsepowerElectric(),
+        Power$HorsepowerElectric(),
       );
 
   /// Convert to [Power$HorsepowerUK]
   Power get toHorsepowerUK => convertTo(
-        const Power$HorsepowerUK(),
+        Power$HorsepowerUK(),
       );
 
   /// Convert to [Power$HorsepowerWater]
   Power get toHorsepowerWater => convertTo(
-        const Power$HorsepowerWater(),
+        Power$HorsepowerWater(),
       );
 
   /// Convert to [Power$PferdestarkePs]
   Power get toPferdestarkePs => convertTo(
-        const Power$PferdestarkePs(),
+        Power$PferdestarkePs(),
       );
 
   /// Convert to [Power$BTUPerHourInternational]
   Power get toBTUPerHourInternational => convertTo(
-        const Power$BTUPerHourInternational(),
+        Power$BTUPerHourInternational(),
       );
 
   /// Convert to [Power$BTUPerMinuteInternational]
   Power get toBTUPerMinuteInternational => convertTo(
-        const Power$BTUPerMinuteInternational(),
+        Power$BTUPerMinuteInternational(),
       );
 
   /// Convert to [Power$BTUPerSecondInternational]
   Power get toBTUPerSecondInternational => convertTo(
-        const Power$BTUPerSecondInternational(),
+        Power$BTUPerSecondInternational(),
       );
 
   /// Convert to [Power$BTUPerHourThermochemical]
   Power get toBTUPerHourThermochemical => convertTo(
-        const Power$BTUPerHourThermochemical(),
+        Power$BTUPerHourThermochemical(),
       );
 
   /// Convert to [Power$BTUPerMinuteThermochemical]
   Power get toBTUPerMinuteThermochemical => convertTo(
-        const Power$BTUPerMinuteThermochemical(),
+        Power$BTUPerMinuteThermochemical(),
       );
 
   /// Convert to [Power$BTUPerSecondThermochemical]
   Power get toBTUPerSecondThermochemical => convertTo(
-        const Power$BTUPerSecondThermochemical(),
+        Power$BTUPerSecondThermochemical(),
       );
 
   /// Convert to [Power$MBTUPerHour]
   Power get toMBTUPerHour => convertTo(
-        const Power$MBTUPerHour(),
+        Power$MBTUPerHour(),
       );
 
   /// Convert to [Power$MBH]
   Power get toMBH => convertTo(
-        const Power$MBH(),
+        Power$MBH(),
       );
 
   /// Convert to [Power$TonRefrigeration]
   Power get toTonRefrigeration => convertTo(
-        const Power$TonRefrigeration(),
+        Power$TonRefrigeration(),
       );
 
   /// Convert to [Power$KilocaloriePerHourInternational]
   Power get toKilocaloriePerHourInternational => convertTo(
-        const Power$KilocaloriePerHourInternational(),
+        Power$KilocaloriePerHourInternational(),
       );
 
   /// Convert to [Power$KilocaloriePerMinuteInternational]
   Power get toKilocaloriePerMinuteInternational => convertTo(
-        const Power$KilocaloriePerMinuteInternational(),
+        Power$KilocaloriePerMinuteInternational(),
       );
 
   /// Convert to [Power$KilocaloriePerSecondInternational]
   Power get toKilocaloriePerSecondInternational => convertTo(
-        const Power$KilocaloriePerSecondInternational(),
+        Power$KilocaloriePerSecondInternational(),
       );
 
   /// Convert to [Power$CaloriePerHourInternational]
   Power get toCaloriePerHourInternational => convertTo(
-        const Power$CaloriePerHourInternational(),
+        Power$CaloriePerHourInternational(),
       );
 
   /// Convert to [Power$CaloriePerMinuteInternational]
   Power get toCaloriePerMinuteInternational => convertTo(
-        const Power$CaloriePerMinuteInternational(),
+        Power$CaloriePerMinuteInternational(),
       );
 
   /// Convert to [Power$CaloriePerSecondInternational]
   Power get toCaloriePerSecondInternational => convertTo(
-        const Power$CaloriePerSecondInternational(),
+        Power$CaloriePerSecondInternational(),
       );
 
   /// Convert to [Power$KilocaloriePerHourThermochemical]
   Power get toKilocaloriePerHourThermochemical => convertTo(
-        const Power$KilocaloriePerHourThermochemical(),
+        Power$KilocaloriePerHourThermochemical(),
       );
 
   /// Convert to [Power$KilocaloriePerMinuteThermochemical]
   Power get toKilocaloriePerMinuteThermochemical => convertTo(
-        const Power$KilocaloriePerMinuteThermochemical(),
+        Power$KilocaloriePerMinuteThermochemical(),
       );
 
   /// Convert to [Power$KilocaloriePerSecondThermochemical]
   Power get toKilocaloriePerSecondThermochemical => convertTo(
-        const Power$KilocaloriePerSecondThermochemical(),
+        Power$KilocaloriePerSecondThermochemical(),
       );
 
   /// Convert to [Power$CaloriePerHourThermochemical]
   Power get toCaloriePerHourThermochemical => convertTo(
-        const Power$CaloriePerHourThermochemical(),
+        Power$CaloriePerHourThermochemical(),
       );
 
   /// Convert to [Power$CaloriePerMinuteThermochemical]
   Power get toCaloriePerMinuteThermochemical => convertTo(
-        const Power$CaloriePerMinuteThermochemical(),
+        Power$CaloriePerMinuteThermochemical(),
       );
 
   /// Convert to [Power$CaloriePerSecondThermochemical]
   Power get toCaloriePerSecondThermochemical => convertTo(
-        const Power$CaloriePerSecondThermochemical(),
+        Power$CaloriePerSecondThermochemical(),
       );
 
   /// Convert to [Power$PoundFootPerHour]
   Power get toPoundFootPerHour => convertTo(
-        const Power$PoundFootPerHour(),
+        Power$PoundFootPerHour(),
       );
 
   /// Convert to [Power$PoundFootPerMinute]
   Power get toPoundFootPerMinute => convertTo(
-        const Power$PoundFootPerMinute(),
+        Power$PoundFootPerMinute(),
       );
 
   /// Convert to [Power$PoundFootPerSecond]
   Power get toPoundFootPerSecond => convertTo(
-        const Power$PoundFootPerSecond(),
+        Power$PoundFootPerSecond(),
       );
 
   /// Convert to [Power$ErgPerSecond]
   Power get toErgPerSecond => convertTo(
-        const Power$ErgPerSecond(),
+        Power$ErgPerSecond(),
       );
 
   /// Convert to [Power$ExajoulePerSecond]
   Power get toExajoulePerSecond => convertTo(
-        const Power$ExajoulePerSecond(),
+        Power$ExajoulePerSecond(),
       );
 
   /// Convert to [Power$PetajoulePerSecond]
   Power get toPetajoulePerSecond => convertTo(
-        const Power$PetajoulePerSecond(),
+        Power$PetajoulePerSecond(),
       );
 
   /// Convert to [Power$TerajoulePerSecond]
   Power get toTerajoulePerSecond => convertTo(
-        const Power$TerajoulePerSecond(),
+        Power$TerajoulePerSecond(),
       );
 
   /// Convert to [Power$GigajoulePerSecond]
   Power get toGigajoulePerSecond => convertTo(
-        const Power$GigajoulePerSecond(),
+        Power$GigajoulePerSecond(),
       );
 
   /// Convert to [Power$MegajoulePerSecond]
   Power get toMegajoulePerSecond => convertTo(
-        const Power$MegajoulePerSecond(),
+        Power$MegajoulePerSecond(),
       );
 
   /// Convert to [Power$KilojoulePerSecond]
   Power get toKilojoulePerSecond => convertTo(
-        const Power$KilojoulePerSecond(),
+        Power$KilojoulePerSecond(),
       );
 
   /// Convert to [Power$HectojoulePerSecond]
   Power get toHectojoulePerSecond => convertTo(
-        const Power$HectojoulePerSecond(),
+        Power$HectojoulePerSecond(),
       );
 
   /// Convert to [Power$DekajoulePerSecond]
   Power get toDekajoulePerSecond => convertTo(
-        const Power$DekajoulePerSecond(),
+        Power$DekajoulePerSecond(),
       );
 
   /// Convert to [Power$JoulePerSecond]
   Power get toJoulePerSecond => convertTo(
-        const Power$JoulePerSecond(),
+        Power$JoulePerSecond(),
       );
 
   /// Convert to [Power$DecijoulePerSecond]
   Power get toDecijoulePerSecond => convertTo(
-        const Power$DecijoulePerSecond(),
+        Power$DecijoulePerSecond(),
       );
 
   /// Convert to [Power$CentijoulePerSecond]
   Power get toCentijoulePerSecond => convertTo(
-        const Power$CentijoulePerSecond(),
+        Power$CentijoulePerSecond(),
       );
 
   /// Convert to [Power$MillijoulePerSecond]
   Power get toMillijoulePerSecond => convertTo(
-        const Power$MillijoulePerSecond(),
+        Power$MillijoulePerSecond(),
       );
 
   /// Convert to [Power$MicrojoulePerSecond]
   Power get toMicrojoulePerSecond => convertTo(
-        const Power$MicrojoulePerSecond(),
+        Power$MicrojoulePerSecond(),
       );
 
   /// Convert to [Power$NanojoulePerSecond]
   Power get toNanojoulePerSecond => convertTo(
-        const Power$NanojoulePerSecond(),
+        Power$NanojoulePerSecond(),
       );
 
   /// Convert to [Power$PicojoulePerSecond]
   Power get toPicojoulePerSecond => convertTo(
-        const Power$PicojoulePerSecond(),
+        Power$PicojoulePerSecond(),
       );
 
   /// Convert to [Power$FemtojoulePerSecond]
   Power get toFemtojoulePerSecond => convertTo(
-        const Power$FemtojoulePerSecond(),
+        Power$FemtojoulePerSecond(),
       );
 
   /// Convert to [Power$AttojoulePerSecond]
   Power get toAttojoulePerSecond => convertTo(
-        const Power$AttojoulePerSecond(),
+        Power$AttojoulePerSecond(),
       );
 
   /// Convert to [Power$JoulePerHour]
   Power get toJoulePerHour => convertTo(
-        const Power$JoulePerHour(),
+        Power$JoulePerHour(),
       );
 
   /// Convert to [Power$JoulePerMinute]
   Power get toJoulePerMinute => convertTo(
-        const Power$JoulePerMinute(),
+        Power$JoulePerMinute(),
       );
 
   /// Convert to [Power$KilojoulePerHour]
   Power get toKilojoulePerHour => convertTo(
-        const Power$KilojoulePerHour(),
+        Power$KilojoulePerHour(),
       );
 
   /// Convert to [Power$KilojoulePerMinute]
   Power get toKilojoulePerMinute => convertTo(
-        const Power$KilojoulePerMinute(),
+        Power$KilojoulePerMinute(),
       );
 
   @override
@@ -414,88 +415,88 @@ sealed class Power extends Unit<Power> {
 
   static const _majorName = 'power';
 
-  static const exawatt = Power$Exawatt();
-  static const petawatt = Power$Petawatt();
-  static const terawatt = Power$Terawatt();
-  static const gigawatt = Power$Gigawatt();
-  static const megawatt = Power$Megawatt();
-  static const kilowatt = Power$Kilowatt();
-  static const hectowatt = Power$Hectowatt();
-  static const dekawatt = Power$Dekawatt();
-  static const watt = Power$Watt();
-  static const deciwatt = Power$Deciwatt();
-  static const centiwatt = Power$Centiwatt();
-  static const milliwatt = Power$Milliwatt();
-  static const microwatt = Power$Microwatt();
-  static const nanowatt = Power$Nanowatt();
-  static const picowatt = Power$Picowatt();
-  static const femtowatt = Power$Femtowatt();
-  static const attowatt = Power$Attowatt();
-  static const horsepower = Power$Horsepower();
-  static const horsepowerBoiler = Power$HorsepowerBoiler();
-  static const horsepowerMetric = Power$HorsepowerMetric();
-  static const horsepowerElectric = Power$HorsepowerElectric();
-  static const horsepowerUK = Power$HorsepowerUK();
-  static const horsepowerWater = Power$HorsepowerWater();
-  static const pferdestarkePs = Power$PferdestarkePs();
-  static const bTUPerHourInternational = Power$BTUPerHourInternational();
-  static const bTUPerMinuteInternational = Power$BTUPerMinuteInternational();
-  static const bTUPerSecondInternational = Power$BTUPerSecondInternational();
-  static const bTUPerHourThermochemical = Power$BTUPerHourThermochemical();
-  static const bTUPerMinuteThermochemical = Power$BTUPerMinuteThermochemical();
-  static const bTUPerSecondThermochemical = Power$BTUPerSecondThermochemical();
-  static const mBTUPerHour = Power$MBTUPerHour();
-  static const mBH = Power$MBH();
-  static const tonRefrigeration = Power$TonRefrigeration();
-  static const kilocaloriePerHourInternational =
+  static final exawatt = Power$Exawatt();
+  static final petawatt = Power$Petawatt();
+  static final terawatt = Power$Terawatt();
+  static final gigawatt = Power$Gigawatt();
+  static final megawatt = Power$Megawatt();
+  static final kilowatt = Power$Kilowatt();
+  static final hectowatt = Power$Hectowatt();
+  static final dekawatt = Power$Dekawatt();
+  static final watt = Power$Watt();
+  static final deciwatt = Power$Deciwatt();
+  static final centiwatt = Power$Centiwatt();
+  static final milliwatt = Power$Milliwatt();
+  static final microwatt = Power$Microwatt();
+  static final nanowatt = Power$Nanowatt();
+  static final picowatt = Power$Picowatt();
+  static final femtowatt = Power$Femtowatt();
+  static final attowatt = Power$Attowatt();
+  static final horsepower = Power$Horsepower();
+  static final horsepowerBoiler = Power$HorsepowerBoiler();
+  static final horsepowerMetric = Power$HorsepowerMetric();
+  static final horsepowerElectric = Power$HorsepowerElectric();
+  static final horsepowerUK = Power$HorsepowerUK();
+  static final horsepowerWater = Power$HorsepowerWater();
+  static final pferdestarkePs = Power$PferdestarkePs();
+  static final bTUPerHourInternational = Power$BTUPerHourInternational();
+  static final bTUPerMinuteInternational = Power$BTUPerMinuteInternational();
+  static final bTUPerSecondInternational = Power$BTUPerSecondInternational();
+  static final bTUPerHourThermochemical = Power$BTUPerHourThermochemical();
+  static final bTUPerMinuteThermochemical = Power$BTUPerMinuteThermochemical();
+  static final bTUPerSecondThermochemical = Power$BTUPerSecondThermochemical();
+  static final mBTUPerHour = Power$MBTUPerHour();
+  static final mBH = Power$MBH();
+  static final tonRefrigeration = Power$TonRefrigeration();
+  static final kilocaloriePerHourInternational =
       Power$KilocaloriePerHourInternational();
-  static const kilocaloriePerMinuteInternational =
+  static final kilocaloriePerMinuteInternational =
       Power$KilocaloriePerMinuteInternational();
-  static const kilocaloriePerSecondInternational =
+  static final kilocaloriePerSecondInternational =
       Power$KilocaloriePerSecondInternational();
-  static const caloriePerHourInternational =
+  static final caloriePerHourInternational =
       Power$CaloriePerHourInternational();
-  static const caloriePerMinuteInternational =
+  static final caloriePerMinuteInternational =
       Power$CaloriePerMinuteInternational();
-  static const caloriePerSecondInternational =
+  static final caloriePerSecondInternational =
       Power$CaloriePerSecondInternational();
-  static const kilocaloriePerHourThermochemical =
+  static final kilocaloriePerHourThermochemical =
       Power$KilocaloriePerHourThermochemical();
-  static const kilocaloriePerMinuteThermochemical =
+  static final kilocaloriePerMinuteThermochemical =
       Power$KilocaloriePerMinuteThermochemical();
-  static const kilocaloriePerSecondThermochemical =
+  static final kilocaloriePerSecondThermochemical =
       Power$KilocaloriePerSecondThermochemical();
-  static const caloriePerHourThermochemical =
+  static final caloriePerHourThermochemical =
       Power$CaloriePerHourThermochemical();
-  static const caloriePerMinuteThermochemical =
+  static final caloriePerMinuteThermochemical =
       Power$CaloriePerMinuteThermochemical();
-  static const caloriePerSecondThermochemical =
+  static final caloriePerSecondThermochemical =
       Power$CaloriePerSecondThermochemical();
-  static const poundFootPerHour = Power$PoundFootPerHour();
-  static const poundFootPerMinute = Power$PoundFootPerMinute();
-  static const poundFootPerSecond = Power$PoundFootPerSecond();
-  static const ergPerSecond = Power$ErgPerSecond();
-  static const exajoulePerSecond = Power$ExajoulePerSecond();
-  static const petajoulePerSecond = Power$PetajoulePerSecond();
-  static const terajoulePerSecond = Power$TerajoulePerSecond();
-  static const gigajoulePerSecond = Power$GigajoulePerSecond();
-  static const megajoulePerSecond = Power$MegajoulePerSecond();
-  static const kilojoulePerSecond = Power$KilojoulePerSecond();
-  static const hectojoulePerSecond = Power$HectojoulePerSecond();
-  static const dekajoulePerSecond = Power$DekajoulePerSecond();
-  static const joulePerSecond = Power$JoulePerSecond();
-  static const decijoulePerSecond = Power$DecijoulePerSecond();
-  static const centijoulePerSecond = Power$CentijoulePerSecond();
-  static const millijoulePerSecond = Power$MillijoulePerSecond();
-  static const microjoulePerSecond = Power$MicrojoulePerSecond();
-  static const nanojoulePerSecond = Power$NanojoulePerSecond();
-  static const picojoulePerSecond = Power$PicojoulePerSecond();
-  static const femtojoulePerSecond = Power$FemtojoulePerSecond();
-  static const attojoulePerSecond = Power$AttojoulePerSecond();
-  static const joulePerHour = Power$JoulePerHour();
-  static const joulePerMinute = Power$JoulePerMinute();
-  static const kilojoulePerHour = Power$KilojoulePerHour();
-  static const kilojoulePerMinute = Power$KilojoulePerMinute();
+  static final poundFootPerHour = Power$PoundFootPerHour();
+  static final poundFootPerMinute = Power$PoundFootPerMinute();
+  static final poundFootPerSecond = Power$PoundFootPerSecond();
+  static final ergPerSecond = Power$ErgPerSecond();
+  static final exajoulePerSecond = Power$ExajoulePerSecond();
+  static final petajoulePerSecond = Power$PetajoulePerSecond();
+  static final terajoulePerSecond = Power$TerajoulePerSecond();
+  static final gigajoulePerSecond = Power$GigajoulePerSecond();
+  static final megajoulePerSecond = Power$MegajoulePerSecond();
+  static final kilojoulePerSecond = Power$KilojoulePerSecond();
+  static final hectojoulePerSecond = Power$HectojoulePerSecond();
+  static final dekajoulePerSecond = Power$DekajoulePerSecond();
+  static final joulePerSecond = Power$JoulePerSecond();
+  static final decijoulePerSecond = Power$DecijoulePerSecond();
+  static final centijoulePerSecond = Power$CentijoulePerSecond();
+  static final millijoulePerSecond = Power$MillijoulePerSecond();
+  static final microjoulePerSecond = Power$MicrojoulePerSecond();
+  static final nanojoulePerSecond = Power$NanojoulePerSecond();
+  static final picojoulePerSecond = Power$PicojoulePerSecond();
+  static final femtojoulePerSecond = Power$FemtojoulePerSecond();
+  static final attojoulePerSecond = Power$AttojoulePerSecond();
+  static final joulePerHour = Power$JoulePerHour();
+  static final joulePerMinute = Power$JoulePerMinute();
+  static final kilojoulePerHour = Power$KilojoulePerHour();
+  static final kilojoulePerMinute = Power$KilojoulePerMinute();
 
   @override
   List<Power> get units => values;
@@ -503,7 +504,7 @@ sealed class Power extends Unit<Power> {
   @override
   EnumValues<Power> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Power>[
     exawatt,
     petawatt,
     terawatt,
@@ -576,7 +577,7 @@ sealed class Power extends Unit<Power> {
     kilojoulePerMinute,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Power>{
     Power$Exawatt._minorName: exawatt,
     Power$Petawatt._minorName: petawatt,
     Power$Terawatt._minorName: terawatt,
@@ -662,7 +663,7 @@ sealed class Power extends Unit<Power> {
 
 /// Unit of [Power]
 final class Power$Exawatt extends Power {
-  const Power$Exawatt([
+  Power$Exawatt([
     super.value,
   ]);
 
@@ -693,14 +694,14 @@ final class Power$Exawatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+21;
+  static final _ratio = Rational.parse('1.00000000000000000E+021');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Exawatt] = 1e+21 [Power$Milliwatt]
+  /// 1 [Power$Exawatt] = 1.00000000000000000E+021 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -708,12 +709,12 @@ final class Power$Exawatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Exawatt] with new value
   @override
   Power$Exawatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Exawatt(val);
 
@@ -726,14 +727,14 @@ final class Power$Exawatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Petawatt extends Power {
-  const Power$Petawatt([
+  Power$Petawatt([
     super.value,
   ]);
 
@@ -764,14 +765,14 @@ final class Power$Petawatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Petawatt] = 1000000000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$Petawatt] = 1.00000000000000000E+018 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -779,12 +780,12 @@ final class Power$Petawatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Petawatt] with new value
   @override
   Power$Petawatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Petawatt(val);
 
@@ -797,14 +798,14 @@ final class Power$Petawatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Terawatt extends Power {
-  const Power$Terawatt([
+  Power$Terawatt([
     super.value,
   ]);
 
@@ -835,14 +836,14 @@ final class Power$Terawatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Terawatt] = 1000000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$Terawatt] = 1.00000000000000000E+015 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -850,12 +851,12 @@ final class Power$Terawatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Terawatt] with new value
   @override
   Power$Terawatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Terawatt(val);
 
@@ -868,14 +869,14 @@ final class Power$Terawatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Gigawatt extends Power {
-  const Power$Gigawatt([
+  Power$Gigawatt([
     super.value,
   ]);
 
@@ -906,14 +907,14 @@ final class Power$Gigawatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Gigawatt] = 1000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$Gigawatt] = 1.00000000000000000E+012 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -921,12 +922,12 @@ final class Power$Gigawatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Gigawatt] with new value
   @override
   Power$Gigawatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Gigawatt(val);
 
@@ -939,14 +940,14 @@ final class Power$Gigawatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Megawatt extends Power {
-  const Power$Megawatt([
+  Power$Megawatt([
     super.value,
   ]);
 
@@ -977,14 +978,14 @@ final class Power$Megawatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Megawatt] = 1000000000.0 [Power$Milliwatt]
+  /// 1 [Power$Megawatt] = 1.00000000000000000E+009 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -992,12 +993,12 @@ final class Power$Megawatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Megawatt] with new value
   @override
   Power$Megawatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Megawatt(val);
 
@@ -1010,14 +1011,14 @@ final class Power$Megawatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Kilowatt extends Power {
-  const Power$Kilowatt([
+  Power$Kilowatt([
     super.value,
   ]);
 
@@ -1048,14 +1049,14 @@ final class Power$Kilowatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Kilowatt] = 1000000.0 [Power$Milliwatt]
+  /// 1 [Power$Kilowatt] = 1.00000000000000000E+006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1063,12 +1064,12 @@ final class Power$Kilowatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Kilowatt] with new value
   @override
   Power$Kilowatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Kilowatt(val);
 
@@ -1081,14 +1082,14 @@ final class Power$Kilowatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Hectowatt extends Power {
-  const Power$Hectowatt([
+  Power$Hectowatt([
     super.value,
   ]);
 
@@ -1119,14 +1120,14 @@ final class Power$Hectowatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Hectowatt] = 100000.0 [Power$Milliwatt]
+  /// 1 [Power$Hectowatt] = 1.00000000000000000E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1134,12 +1135,12 @@ final class Power$Hectowatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Hectowatt] with new value
   @override
   Power$Hectowatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Hectowatt(val);
 
@@ -1152,14 +1153,14 @@ final class Power$Hectowatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Dekawatt extends Power {
-  const Power$Dekawatt([
+  Power$Dekawatt([
     super.value,
   ]);
 
@@ -1190,14 +1191,14 @@ final class Power$Dekawatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Dekawatt] = 10000.0 [Power$Milliwatt]
+  /// 1 [Power$Dekawatt] = 1.00000000000000000E+004 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1205,12 +1206,12 @@ final class Power$Dekawatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Dekawatt] with new value
   @override
   Power$Dekawatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Dekawatt(val);
 
@@ -1223,14 +1224,14 @@ final class Power$Dekawatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Watt extends Power {
-  const Power$Watt([
+  Power$Watt([
     super.value,
   ]);
 
@@ -1261,14 +1262,14 @@ final class Power$Watt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Watt] = 1000.0 [Power$Milliwatt]
+  /// 1 [Power$Watt] = 1.00000000000000000E+003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1276,12 +1277,12 @@ final class Power$Watt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Watt] with new value
   @override
   Power$Watt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Watt(val);
 
@@ -1294,14 +1295,14 @@ final class Power$Watt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Deciwatt extends Power {
-  const Power$Deciwatt([
+  Power$Deciwatt([
     super.value,
   ]);
 
@@ -1332,14 +1333,14 @@ final class Power$Deciwatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Deciwatt] = 100.0 [Power$Milliwatt]
+  /// 1 [Power$Deciwatt] = 1.00000000000000000E+002 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1347,12 +1348,12 @@ final class Power$Deciwatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Deciwatt] with new value
   @override
   Power$Deciwatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Deciwatt(val);
 
@@ -1365,14 +1366,14 @@ final class Power$Deciwatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Centiwatt extends Power {
-  const Power$Centiwatt([
+  Power$Centiwatt([
     super.value,
   ]);
 
@@ -1403,14 +1404,14 @@ final class Power$Centiwatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Centiwatt] = 10.0 [Power$Milliwatt]
+  /// 1 [Power$Centiwatt] = 1.00000000000000000E+001 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1418,12 +1419,12 @@ final class Power$Centiwatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Centiwatt] with new value
   @override
   Power$Centiwatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Centiwatt(val);
 
@@ -1436,14 +1437,14 @@ final class Power$Centiwatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Milliwatt extends Power {
-  const Power$Milliwatt([
+  Power$Milliwatt([
     super.value,
   ]);
 
@@ -1474,14 +1475,14 @@ final class Power$Milliwatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
   /// Default (anchor) unit of [Power]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1489,12 +1490,12 @@ final class Power$Milliwatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Milliwatt] with new value
   @override
   Power$Milliwatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Milliwatt(val);
 
@@ -1507,14 +1508,14 @@ final class Power$Milliwatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Microwatt extends Power {
-  const Power$Microwatt([
+  Power$Microwatt([
     super.value,
   ]);
 
@@ -1545,14 +1546,14 @@ final class Power$Microwatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Microwatt] ≈ 0.001 [Power$Milliwatt]
+  /// 1 [Power$Microwatt] ≈ 1.00000000000000000E-003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1560,12 +1561,12 @@ final class Power$Microwatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Microwatt] with new value
   @override
   Power$Microwatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Microwatt(val);
 
@@ -1578,14 +1579,14 @@ final class Power$Microwatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Nanowatt extends Power {
-  const Power$Nanowatt([
+  Power$Nanowatt([
     super.value,
   ]);
 
@@ -1616,14 +1617,14 @@ final class Power$Nanowatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Nanowatt] ≈ 0.000001 [Power$Milliwatt]
+  /// 1 [Power$Nanowatt] ≈ 1.00000000000000000E-006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1631,12 +1632,12 @@ final class Power$Nanowatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Nanowatt] with new value
   @override
   Power$Nanowatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Nanowatt(val);
 
@@ -1649,14 +1650,14 @@ final class Power$Nanowatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Picowatt extends Power {
-  const Power$Picowatt([
+  Power$Picowatt([
     super.value,
   ]);
 
@@ -1687,14 +1688,14 @@ final class Power$Picowatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Picowatt] ≈ 1e-9 [Power$Milliwatt]
+  /// 1 [Power$Picowatt] ≈ 1.00000000000000000E-009 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1702,12 +1703,12 @@ final class Power$Picowatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Picowatt] with new value
   @override
   Power$Picowatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Picowatt(val);
 
@@ -1720,14 +1721,14 @@ final class Power$Picowatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Femtowatt extends Power {
-  const Power$Femtowatt([
+  Power$Femtowatt([
     super.value,
   ]);
 
@@ -1758,14 +1759,14 @@ final class Power$Femtowatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Femtowatt] ≈ 1e-12 [Power$Milliwatt]
+  /// 1 [Power$Femtowatt] ≈ 1.00000000000000000E-012 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1773,12 +1774,12 @@ final class Power$Femtowatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Femtowatt] with new value
   @override
   Power$Femtowatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Femtowatt(val);
 
@@ -1791,14 +1792,14 @@ final class Power$Femtowatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Attowatt extends Power {
-  const Power$Attowatt([
+  Power$Attowatt([
     super.value,
   ]);
 
@@ -1829,14 +1830,14 @@ final class Power$Attowatt extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-15;
+  static final _ratio = Rational.parse('1.00000000000000000E-015');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Attowatt] ≈ 1e-15 [Power$Milliwatt]
+  /// 1 [Power$Attowatt] ≈ 1.00000000000000000E-015 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1844,12 +1845,12 @@ final class Power$Attowatt extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Attowatt] with new value
   @override
   Power$Attowatt withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Attowatt(val);
 
@@ -1862,14 +1863,14 @@ final class Power$Attowatt extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$Horsepower extends Power {
-  const Power$Horsepower([
+  Power$Horsepower([
     super.value,
   ]);
 
@@ -1900,14 +1901,14 @@ final class Power$Horsepower extends Power {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 745699.8715795054;
+  static final _ratio = Rational.parse('7.45699871579505412E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$Horsepower] ≈ 745699.8715795054 [Power$Milliwatt]
+  /// 1 [Power$Horsepower] ≈ 7.45699871579505412E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1915,12 +1916,12 @@ final class Power$Horsepower extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$Horsepower] with new value
   @override
   Power$Horsepower withValue(
-    num val,
+    Rational val,
   ) =>
       Power$Horsepower(val);
 
@@ -1933,14 +1934,14 @@ final class Power$Horsepower extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$HorsepowerBoiler extends Power {
-  const Power$HorsepowerBoiler([
+  Power$HorsepowerBoiler([
     super.value,
   ]);
 
@@ -1971,14 +1972,14 @@ final class Power$HorsepowerBoiler extends Power {
   @override
   String get displayName => 'horsepower (boiler)';
 
-  static const _ratio = 9809709.99;
+  static final _ratio = Rational.parse('9.80970999000000000E+006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$HorsepowerBoiler] ≈ 9809709.99 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerBoiler] ≈ 9.80970999000000000E+006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1986,12 +1987,12 @@ final class Power$HorsepowerBoiler extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$HorsepowerBoiler] with new value
   @override
   Power$HorsepowerBoiler withValue(
-    num val,
+    Rational val,
   ) =>
       Power$HorsepowerBoiler(val);
 
@@ -2004,14 +2005,14 @@ final class Power$HorsepowerBoiler extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$HorsepowerMetric extends Power {
-  const Power$HorsepowerMetric([
+  Power$HorsepowerMetric([
     super.value,
   ]);
 
@@ -2042,14 +2043,14 @@ final class Power$HorsepowerMetric extends Power {
   @override
   String get displayName => 'horsepower (metric)';
 
-  static const _ratio = 735498.8;
+  static final _ratio = Rational.parse('7.35498800000000000E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$HorsepowerMetric] ≈ 735498.8 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerMetric] ≈ 7.35498800000000000E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2057,12 +2058,12 @@ final class Power$HorsepowerMetric extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$HorsepowerMetric] with new value
   @override
   Power$HorsepowerMetric withValue(
-    num val,
+    Rational val,
   ) =>
       Power$HorsepowerMetric(val);
 
@@ -2075,14 +2076,14 @@ final class Power$HorsepowerMetric extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$HorsepowerElectric extends Power {
-  const Power$HorsepowerElectric([
+  Power$HorsepowerElectric([
     super.value,
   ]);
 
@@ -2113,14 +2114,14 @@ final class Power$HorsepowerElectric extends Power {
   @override
   String get displayName => 'horsepower (electric)';
 
-  static const _ratio = 746000.0;
+  static final _ratio = Rational.parse('7.46000000000000000E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$HorsepowerElectric] = 746000.0 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerElectric] = 7.46000000000000000E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2128,12 +2129,12 @@ final class Power$HorsepowerElectric extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$HorsepowerElectric] with new value
   @override
   Power$HorsepowerElectric withValue(
-    num val,
+    Rational val,
   ) =>
       Power$HorsepowerElectric(val);
 
@@ -2146,14 +2147,14 @@ final class Power$HorsepowerElectric extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$HorsepowerUK extends Power {
-  const Power$HorsepowerUK([
+  Power$HorsepowerUK([
     super.value,
   ]);
 
@@ -2184,14 +2185,14 @@ final class Power$HorsepowerUK extends Power {
   @override
   String get displayName => 'horsepower (UK)';
 
-  static const _ratio = 745700.0;
+  static final _ratio = Rational.parse('7.45700000000000000E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$HorsepowerUK] = 745700.0 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerUK] = 7.45700000000000000E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2199,12 +2200,12 @@ final class Power$HorsepowerUK extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$HorsepowerUK] with new value
   @override
   Power$HorsepowerUK withValue(
-    num val,
+    Rational val,
   ) =>
       Power$HorsepowerUK(val);
 
@@ -2217,14 +2218,14 @@ final class Power$HorsepowerUK extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$HorsepowerWater extends Power {
-  const Power$HorsepowerWater([
+  Power$HorsepowerWater([
     super.value,
   ]);
 
@@ -2255,14 +2256,14 @@ final class Power$HorsepowerWater extends Power {
   @override
   String get displayName => 'horsepower (water)';
 
-  static const _ratio = 746043.0;
+  static final _ratio = Rational.parse('7.46043000000000000E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$HorsepowerWater] = 746043.0 [Power$Milliwatt]
+  /// 1 [Power$HorsepowerWater] = 7.46043000000000000E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2270,12 +2271,12 @@ final class Power$HorsepowerWater extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$HorsepowerWater] with new value
   @override
   Power$HorsepowerWater withValue(
-    num val,
+    Rational val,
   ) =>
       Power$HorsepowerWater(val);
 
@@ -2288,14 +2289,14 @@ final class Power$HorsepowerWater extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$PferdestarkePs extends Power {
-  const Power$PferdestarkePs([
+  Power$PferdestarkePs([
     super.value,
   ]);
 
@@ -2326,14 +2327,14 @@ final class Power$PferdestarkePs extends Power {
   @override
   String get displayName => 'pferdestärke (ps)';
 
-  static const _ratio = 735498.75;
+  static final _ratio = Rational.parse('7.35498750000000000E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$PferdestarkePs] ≈ 735498.75 [Power$Milliwatt]
+  /// 1 [Power$PferdestarkePs] ≈ 7.35498750000000000E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2341,12 +2342,12 @@ final class Power$PferdestarkePs extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$PferdestarkePs] with new value
   @override
   Power$PferdestarkePs withValue(
-    num val,
+    Rational val,
   ) =>
       Power$PferdestarkePs(val);
 
@@ -2359,14 +2360,14 @@ final class Power$PferdestarkePs extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$BTUPerHourInternational extends Power {
-  const Power$BTUPerHourInternational([
+  Power$BTUPerHourInternational([
     super.value,
   ]);
 
@@ -2397,14 +2398,14 @@ final class Power$BTUPerHourInternational extends Power {
   @override
   String get displayName => 'BTU/hour (international)';
 
-  static const _ratio = 293.071070172222;
+  static final _ratio = Rational.parse('2.93071070172222000E+002');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$BTUPerHourInternational] ≈ 293.071070172222 [Power$Milliwatt]
+  /// 1 [Power$BTUPerHourInternational] ≈ 2.93071070172222000E+002 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2413,12 +2414,12 @@ final class Power$BTUPerHourInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$BTUPerHourInternational] with new value
   @override
   Power$BTUPerHourInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$BTUPerHourInternational(val);
 
@@ -2431,14 +2432,14 @@ final class Power$BTUPerHourInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$BTUPerMinuteInternational extends Power {
-  const Power$BTUPerMinuteInternational([
+  Power$BTUPerMinuteInternational([
     super.value,
   ]);
 
@@ -2469,14 +2470,14 @@ final class Power$BTUPerMinuteInternational extends Power {
   @override
   String get displayName => 'BTU/minute (international)';
 
-  static const _ratio = 17584.2642103333;
+  static final _ratio = Rational.parse('1.75842642103333000E+004');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$BTUPerMinuteInternational] ≈ 17584.2642103333 [Power$Milliwatt]
+  /// 1 [Power$BTUPerMinuteInternational] ≈ 1.75842642103333000E+004 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2485,12 +2486,12 @@ final class Power$BTUPerMinuteInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$BTUPerMinuteInternational] with new value
   @override
   Power$BTUPerMinuteInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$BTUPerMinuteInternational(val);
 
@@ -2503,14 +2504,14 @@ final class Power$BTUPerMinuteInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$BTUPerSecondInternational extends Power {
-  const Power$BTUPerSecondInternational([
+  Power$BTUPerSecondInternational([
     super.value,
   ]);
 
@@ -2541,14 +2542,14 @@ final class Power$BTUPerSecondInternational extends Power {
   @override
   String get displayName => 'BTU/second (international)';
 
-  static const _ratio = 1055055.85262;
+  static final _ratio = Rational.parse('1.05505585262000000E+006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$BTUPerSecondInternational] ≈ 1055055.85262 [Power$Milliwatt]
+  /// 1 [Power$BTUPerSecondInternational] ≈ 1.05505585262000000E+006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2557,12 +2558,12 @@ final class Power$BTUPerSecondInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$BTUPerSecondInternational] with new value
   @override
   Power$BTUPerSecondInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$BTUPerSecondInternational(val);
 
@@ -2575,14 +2576,14 @@ final class Power$BTUPerSecondInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$BTUPerHourThermochemical extends Power {
-  const Power$BTUPerHourThermochemical([
+  Power$BTUPerHourThermochemical([
     super.value,
   ]);
 
@@ -2613,14 +2614,14 @@ final class Power$BTUPerHourThermochemical extends Power {
   @override
   String get displayName => 'BTU/hour (thermochemical)';
 
-  static const _ratio = 292.87499999289923;
+  static final _ratio = Rational.parse('2.92874999992899246E+002');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$BTUPerHourThermochemical] ≈ 292.87499999289923 [Power$Milliwatt]
+  /// 1 [Power$BTUPerHourThermochemical] ≈ 2.92874999992899246E+002 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2629,12 +2630,12 @@ final class Power$BTUPerHourThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$BTUPerHourThermochemical] with new value
   @override
   Power$BTUPerHourThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$BTUPerHourThermochemical(val);
 
@@ -2647,14 +2648,14 @@ final class Power$BTUPerHourThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$BTUPerMinuteThermochemical extends Power {
-  const Power$BTUPerMinuteThermochemical([
+  Power$BTUPerMinuteThermochemical([
     super.value,
   ]);
 
@@ -2685,14 +2686,14 @@ final class Power$BTUPerMinuteThermochemical extends Power {
   @override
   String get displayName => 'BTU/minute (thermochemical)';
 
-  static const _ratio = 17572.499999573956;
+  static final _ratio = Rational.parse('1.75724999995739547E+004');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$BTUPerMinuteThermochemical] ≈ 17572.499999573956 [Power$Milliwatt]
+  /// 1 [Power$BTUPerMinuteThermochemical] ≈ 1.75724999995739547E+004 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2701,12 +2702,12 @@ final class Power$BTUPerMinuteThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$BTUPerMinuteThermochemical] with new value
   @override
   Power$BTUPerMinuteThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$BTUPerMinuteThermochemical(val);
 
@@ -2719,14 +2720,14 @@ final class Power$BTUPerMinuteThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$BTUPerSecondThermochemical extends Power {
-  const Power$BTUPerSecondThermochemical([
+  Power$BTUPerSecondThermochemical([
     super.value,
   ]);
 
@@ -2757,14 +2758,14 @@ final class Power$BTUPerSecondThermochemical extends Power {
   @override
   String get displayName => 'BTU/second (thermochemical)';
 
-  static const _ratio = 1054349.9999744373;
+  static final _ratio = Rational.parse('1.05434999997443728E+006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$BTUPerSecondThermochemical] ≈ 1054349.9999744373 [Power$Milliwatt]
+  /// 1 [Power$BTUPerSecondThermochemical] ≈ 1.05434999997443728E+006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2773,12 +2774,12 @@ final class Power$BTUPerSecondThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$BTUPerSecondThermochemical] with new value
   @override
   Power$BTUPerSecondThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$BTUPerSecondThermochemical(val);
 
@@ -2791,14 +2792,14 @@ final class Power$BTUPerSecondThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$MBTUPerHour extends Power {
-  const Power$MBTUPerHour([
+  Power$MBTUPerHour([
     super.value,
   ]);
 
@@ -2829,14 +2830,14 @@ final class Power$MBTUPerHour extends Power {
   @override
   String get displayName => 'MBTU/hour';
 
-  static const _ratio = 293071.0701722223;
+  static final _ratio = Rational.parse('2.93071070172222284E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$MBTUPerHour] ≈ 293071.0701722223 [Power$Milliwatt]
+  /// 1 [Power$MBTUPerHour] ≈ 2.93071070172222284E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2844,12 +2845,12 @@ final class Power$MBTUPerHour extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$MBTUPerHour] with new value
   @override
   Power$MBTUPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Power$MBTUPerHour(val);
 
@@ -2862,14 +2863,14 @@ final class Power$MBTUPerHour extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$MBH extends Power {
-  const Power$MBH([
+  Power$MBH([
     super.value,
   ]);
 
@@ -2900,14 +2901,14 @@ final class Power$MBH extends Power {
   @override
   String get displayName => 'MBH';
 
-  static const _ratio = 293071.0701722223;
+  static final _ratio = Rational.parse('2.93071070172222284E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$MBH] ≈ 293071.0701722223 [Power$Milliwatt]
+  /// 1 [Power$MBH] ≈ 2.93071070172222284E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2915,12 +2916,12 @@ final class Power$MBH extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$MBH] with new value
   @override
   Power$MBH withValue(
-    num val,
+    Rational val,
   ) =>
       Power$MBH(val);
 
@@ -2933,14 +2934,14 @@ final class Power$MBH extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$TonRefrigeration extends Power {
-  const Power$TonRefrigeration([
+  Power$TonRefrigeration([
     super.value,
   ]);
 
@@ -2971,14 +2972,14 @@ final class Power$TonRefrigeration extends Power {
   @override
   String get displayName => 'ton (refrigeration)';
 
-  static const _ratio = 3516852.8420666675;
+  static final _ratio = Rational.parse('3.51685284206666741E+006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$TonRefrigeration] ≈ 3516852.8420666675 [Power$Milliwatt]
+  /// 1 [Power$TonRefrigeration] ≈ 3.51685284206666741E+006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2986,12 +2987,12 @@ final class Power$TonRefrigeration extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$TonRefrigeration] with new value
   @override
   Power$TonRefrigeration withValue(
-    num val,
+    Rational val,
   ) =>
       Power$TonRefrigeration(val);
 
@@ -3004,14 +3005,14 @@ final class Power$TonRefrigeration extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilocaloriePerHourInternational extends Power {
-  const Power$KilocaloriePerHourInternational([
+  Power$KilocaloriePerHourInternational([
     super.value,
   ]);
 
@@ -3042,14 +3043,14 @@ final class Power$KilocaloriePerHourInternational extends Power {
   @override
   String get displayName => 'kilocalorie/hour (international)';
 
-  static const _ratio = 1163.0;
+  static final _ratio = Rational.parse('1.16300000000000000E+003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilocaloriePerHourInternational] = 1163.0 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerHourInternational] = 1.16300000000000000E+003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3058,12 +3059,12 @@ final class Power$KilocaloriePerHourInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilocaloriePerHourInternational] with new value
   @override
   Power$KilocaloriePerHourInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilocaloriePerHourInternational(val);
 
@@ -3076,14 +3077,14 @@ final class Power$KilocaloriePerHourInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilocaloriePerMinuteInternational extends Power {
-  const Power$KilocaloriePerMinuteInternational([
+  Power$KilocaloriePerMinuteInternational([
     super.value,
   ]);
 
@@ -3114,14 +3115,14 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
   @override
   String get displayName => 'kilocalorie/minute (international)';
 
-  static const _ratio = 69780.0;
+  static final _ratio = Rational.parse('6.97800000000000000E+004');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilocaloriePerMinuteInternational] = 69780.0 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerMinuteInternational] = 6.97800000000000000E+004 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3130,12 +3131,12 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilocaloriePerMinuteInternational] with new value
   @override
   Power$KilocaloriePerMinuteInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilocaloriePerMinuteInternational(val);
 
@@ -3148,14 +3149,14 @@ final class Power$KilocaloriePerMinuteInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilocaloriePerSecondInternational extends Power {
-  const Power$KilocaloriePerSecondInternational([
+  Power$KilocaloriePerSecondInternational([
     super.value,
   ]);
 
@@ -3186,14 +3187,14 @@ final class Power$KilocaloriePerSecondInternational extends Power {
   @override
   String get displayName => 'kilocalorie/second (international)';
 
-  static const _ratio = 4186800.0;
+  static final _ratio = Rational.parse('4.18680000000000000E+006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilocaloriePerSecondInternational] = 4186800.0 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerSecondInternational] = 4.18680000000000000E+006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3202,12 +3203,12 @@ final class Power$KilocaloriePerSecondInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilocaloriePerSecondInternational] with new value
   @override
   Power$KilocaloriePerSecondInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilocaloriePerSecondInternational(val);
 
@@ -3220,14 +3221,14 @@ final class Power$KilocaloriePerSecondInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$CaloriePerHourInternational extends Power {
-  const Power$CaloriePerHourInternational([
+  Power$CaloriePerHourInternational([
     super.value,
   ]);
 
@@ -3258,14 +3259,14 @@ final class Power$CaloriePerHourInternational extends Power {
   @override
   String get displayName => 'calorie/hour (international)';
 
-  static const _ratio = 1.163;
+  static final _ratio = Rational.parse('1.16300000000000000E+000');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$CaloriePerHourInternational] ≈ 1.163 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerHourInternational] ≈ 1.16300000000000000E+000 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3274,12 +3275,12 @@ final class Power$CaloriePerHourInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$CaloriePerHourInternational] with new value
   @override
   Power$CaloriePerHourInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$CaloriePerHourInternational(val);
 
@@ -3292,14 +3293,14 @@ final class Power$CaloriePerHourInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$CaloriePerMinuteInternational extends Power {
-  const Power$CaloriePerMinuteInternational([
+  Power$CaloriePerMinuteInternational([
     super.value,
   ]);
 
@@ -3330,14 +3331,14 @@ final class Power$CaloriePerMinuteInternational extends Power {
   @override
   String get displayName => 'calorie/minute (international)';
 
-  static const _ratio = 69.78;
+  static final _ratio = Rational.parse('6.97800000000000000E+001');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$CaloriePerMinuteInternational] ≈ 69.78 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerMinuteInternational] ≈ 6.97800000000000000E+001 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3346,12 +3347,12 @@ final class Power$CaloriePerMinuteInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$CaloriePerMinuteInternational] with new value
   @override
   Power$CaloriePerMinuteInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$CaloriePerMinuteInternational(val);
 
@@ -3364,14 +3365,14 @@ final class Power$CaloriePerMinuteInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$CaloriePerSecondInternational extends Power {
-  const Power$CaloriePerSecondInternational([
+  Power$CaloriePerSecondInternational([
     super.value,
   ]);
 
@@ -3402,14 +3403,14 @@ final class Power$CaloriePerSecondInternational extends Power {
   @override
   String get displayName => 'calorie/second (international)';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$CaloriePerSecondInternational] ≈ 4186.8 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerSecondInternational] ≈ 4.18680000000000000E+003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3418,12 +3419,12 @@ final class Power$CaloriePerSecondInternational extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$CaloriePerSecondInternational] with new value
   @override
   Power$CaloriePerSecondInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Power$CaloriePerSecondInternational(val);
 
@@ -3436,14 +3437,14 @@ final class Power$CaloriePerSecondInternational extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilocaloriePerHourThermochemical extends Power {
-  const Power$KilocaloriePerHourThermochemical([
+  Power$KilocaloriePerHourThermochemical([
     super.value,
   ]);
 
@@ -3474,14 +3475,14 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
   @override
   String get displayName => 'kilocalorie/hour (thermochemical)';
 
-  static const _ratio = 1162.2222222222222;
+  static final _ratio = Rational.parse('1.16222222222222222E+003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilocaloriePerHourThermochemical] ≈ 1162.2222222222222 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerHourThermochemical] ≈ 1.16222222222222222E+003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3490,12 +3491,12 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilocaloriePerHourThermochemical] with new value
   @override
   Power$KilocaloriePerHourThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilocaloriePerHourThermochemical(val);
 
@@ -3508,14 +3509,14 @@ final class Power$KilocaloriePerHourThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilocaloriePerMinuteThermochemical extends Power {
-  const Power$KilocaloriePerMinuteThermochemical([
+  Power$KilocaloriePerMinuteThermochemical([
     super.value,
   ]);
 
@@ -3546,14 +3547,14 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
   @override
   String get displayName => 'kilocalorie/minute (thermochemical)';
 
-  static const _ratio = 69733.33333333333;
+  static final _ratio = Rational.parse('6.97333333333333333E+004');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilocaloriePerMinuteThermochemical] ≈ 69733.33333333333 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerMinuteThermochemical] ≈ 6.97333333333333333E+004 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3562,12 +3563,12 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilocaloriePerMinuteThermochemical] with new value
   @override
   Power$KilocaloriePerMinuteThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilocaloriePerMinuteThermochemical(val);
 
@@ -3580,14 +3581,14 @@ final class Power$KilocaloriePerMinuteThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilocaloriePerSecondThermochemical extends Power {
-  const Power$KilocaloriePerSecondThermochemical([
+  Power$KilocaloriePerSecondThermochemical([
     super.value,
   ]);
 
@@ -3618,14 +3619,14 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
   @override
   String get displayName => 'kilocalorie/second (thermochemical)';
 
-  static const _ratio = 4184000.0;
+  static final _ratio = Rational.parse('4.18400000000000000E+006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilocaloriePerSecondThermochemical] = 4184000.0 [Power$Milliwatt]
+  /// 1 [Power$KilocaloriePerSecondThermochemical] = 4.18400000000000000E+006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3634,12 +3635,12 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilocaloriePerSecondThermochemical] with new value
   @override
   Power$KilocaloriePerSecondThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilocaloriePerSecondThermochemical(val);
 
@@ -3652,14 +3653,14 @@ final class Power$KilocaloriePerSecondThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$CaloriePerHourThermochemical extends Power {
-  const Power$CaloriePerHourThermochemical([
+  Power$CaloriePerHourThermochemical([
     super.value,
   ]);
 
@@ -3690,14 +3691,14 @@ final class Power$CaloriePerHourThermochemical extends Power {
   @override
   String get displayName => 'calorie/hour (thermochemical)';
 
-  static const _ratio = 1.1622222222222223;
+  static final _ratio = Rational.parse('1.16222222222222222E+000');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$CaloriePerHourThermochemical] ≈ 1.1622222222222223 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerHourThermochemical] ≈ 1.16222222222222222E+000 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3706,12 +3707,12 @@ final class Power$CaloriePerHourThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$CaloriePerHourThermochemical] with new value
   @override
   Power$CaloriePerHourThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$CaloriePerHourThermochemical(val);
 
@@ -3724,14 +3725,14 @@ final class Power$CaloriePerHourThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$CaloriePerMinuteThermochemical extends Power {
-  const Power$CaloriePerMinuteThermochemical([
+  Power$CaloriePerMinuteThermochemical([
     super.value,
   ]);
 
@@ -3762,14 +3763,14 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
   @override
   String get displayName => 'calorie/minute (thermochemical)';
 
-  static const _ratio = 69.73333333333333;
+  static final _ratio = Rational.parse('6.97333333333333333E+001');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$CaloriePerMinuteThermochemical] ≈ 69.73333333333333 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerMinuteThermochemical] ≈ 6.97333333333333333E+001 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3778,12 +3779,12 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$CaloriePerMinuteThermochemical] with new value
   @override
   Power$CaloriePerMinuteThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$CaloriePerMinuteThermochemical(val);
 
@@ -3796,14 +3797,14 @@ final class Power$CaloriePerMinuteThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$CaloriePerSecondThermochemical extends Power {
-  const Power$CaloriePerSecondThermochemical([
+  Power$CaloriePerSecondThermochemical([
     super.value,
   ]);
 
@@ -3834,14 +3835,14 @@ final class Power$CaloriePerSecondThermochemical extends Power {
   @override
   String get displayName => 'calorie/second (thermochemical)';
 
-  static const _ratio = 4184.0;
+  static final _ratio = Rational.parse('4.18400000000000000E+003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$CaloriePerSecondThermochemical] = 4184.0 [Power$Milliwatt]
+  /// 1 [Power$CaloriePerSecondThermochemical] = 4.18400000000000000E+003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3850,12 +3851,12 @@ final class Power$CaloriePerSecondThermochemical extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$CaloriePerSecondThermochemical] with new value
   @override
   Power$CaloriePerSecondThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Power$CaloriePerSecondThermochemical(val);
 
@@ -3868,14 +3869,14 @@ final class Power$CaloriePerSecondThermochemical extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$PoundFootPerHour extends Power {
-  const Power$PoundFootPerHour([
+  Power$PoundFootPerHour([
     super.value,
   ]);
 
@@ -3906,14 +3907,14 @@ final class Power$PoundFootPerHour extends Power {
   @override
   String get displayName => 'pound-foot/hour';
 
-  static const _ratio = 0.376616096758177;
+  static final _ratio = Rational.parse('3.76616096758177004E-001');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$PoundFootPerHour] ≈ 0.376616096758177 [Power$Milliwatt]
+  /// 1 [Power$PoundFootPerHour] ≈ 3.76616096758177004E-001 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3921,12 +3922,12 @@ final class Power$PoundFootPerHour extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$PoundFootPerHour] with new value
   @override
   Power$PoundFootPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Power$PoundFootPerHour(val);
 
@@ -3939,14 +3940,14 @@ final class Power$PoundFootPerHour extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$PoundFootPerMinute extends Power {
-  const Power$PoundFootPerMinute([
+  Power$PoundFootPerMinute([
     super.value,
   ]);
 
@@ -3977,14 +3978,14 @@ final class Power$PoundFootPerMinute extends Power {
   @override
   String get displayName => 'pound-foot/minute';
 
-  static const _ratio = 22.59696580549062;
+  static final _ratio = Rational.parse('2.25969658054906202E+001');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$PoundFootPerMinute] ≈ 22.59696580549062 [Power$Milliwatt]
+  /// 1 [Power$PoundFootPerMinute] ≈ 2.25969658054906202E+001 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3992,12 +3993,12 @@ final class Power$PoundFootPerMinute extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$PoundFootPerMinute] with new value
   @override
   Power$PoundFootPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Power$PoundFootPerMinute(val);
 
@@ -4010,14 +4011,14 @@ final class Power$PoundFootPerMinute extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$PoundFootPerSecond extends Power {
-  const Power$PoundFootPerSecond([
+  Power$PoundFootPerSecond([
     super.value,
   ]);
 
@@ -4048,14 +4049,14 @@ final class Power$PoundFootPerSecond extends Power {
   @override
   String get displayName => 'pound-foot/second';
 
-  static const _ratio = 1355.8179483294373;
+  static final _ratio = Rational.parse('1.35581794832943721E+003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$PoundFootPerSecond] ≈ 1355.8179483294373 [Power$Milliwatt]
+  /// 1 [Power$PoundFootPerSecond] ≈ 1.35581794832943721E+003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4063,12 +4064,12 @@ final class Power$PoundFootPerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$PoundFootPerSecond] with new value
   @override
   Power$PoundFootPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$PoundFootPerSecond(val);
 
@@ -4081,14 +4082,14 @@ final class Power$PoundFootPerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$ErgPerSecond extends Power {
-  const Power$ErgPerSecond([
+  Power$ErgPerSecond([
     super.value,
   ]);
 
@@ -4119,14 +4120,14 @@ final class Power$ErgPerSecond extends Power {
   @override
   String get displayName => 'erg/second';
 
-  static const _ratio = 0.0001;
+  static final _ratio = Rational.parse('1.00000000000000000E-004');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$ErgPerSecond] ≈ 0.0001 [Power$Milliwatt]
+  /// 1 [Power$ErgPerSecond] ≈ 1.00000000000000000E-004 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4134,12 +4135,12 @@ final class Power$ErgPerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$ErgPerSecond] with new value
   @override
   Power$ErgPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$ErgPerSecond(val);
 
@@ -4152,14 +4153,14 @@ final class Power$ErgPerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$ExajoulePerSecond extends Power {
-  const Power$ExajoulePerSecond([
+  Power$ExajoulePerSecond([
     super.value,
   ]);
 
@@ -4190,14 +4191,14 @@ final class Power$ExajoulePerSecond extends Power {
   @override
   String get displayName => 'exajoule/second';
 
-  static const _ratio = 1e+21;
+  static final _ratio = Rational.parse('1.00000000000000000E+021');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$ExajoulePerSecond] = 1e+21 [Power$Milliwatt]
+  /// 1 [Power$ExajoulePerSecond] = 1.00000000000000000E+021 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4205,12 +4206,12 @@ final class Power$ExajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$ExajoulePerSecond] with new value
   @override
   Power$ExajoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$ExajoulePerSecond(val);
 
@@ -4223,14 +4224,14 @@ final class Power$ExajoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$PetajoulePerSecond extends Power {
-  const Power$PetajoulePerSecond([
+  Power$PetajoulePerSecond([
     super.value,
   ]);
 
@@ -4261,14 +4262,14 @@ final class Power$PetajoulePerSecond extends Power {
   @override
   String get displayName => 'petajoule/second';
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$PetajoulePerSecond] = 1000000000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$PetajoulePerSecond] = 1.00000000000000000E+018 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4276,12 +4277,12 @@ final class Power$PetajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$PetajoulePerSecond] with new value
   @override
   Power$PetajoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$PetajoulePerSecond(val);
 
@@ -4294,14 +4295,14 @@ final class Power$PetajoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$TerajoulePerSecond extends Power {
-  const Power$TerajoulePerSecond([
+  Power$TerajoulePerSecond([
     super.value,
   ]);
 
@@ -4332,14 +4333,14 @@ final class Power$TerajoulePerSecond extends Power {
   @override
   String get displayName => 'terajoule/second';
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$TerajoulePerSecond] = 1000000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$TerajoulePerSecond] = 1.00000000000000000E+015 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4347,12 +4348,12 @@ final class Power$TerajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$TerajoulePerSecond] with new value
   @override
   Power$TerajoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$TerajoulePerSecond(val);
 
@@ -4365,14 +4366,14 @@ final class Power$TerajoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$GigajoulePerSecond extends Power {
-  const Power$GigajoulePerSecond([
+  Power$GigajoulePerSecond([
     super.value,
   ]);
 
@@ -4403,14 +4404,14 @@ final class Power$GigajoulePerSecond extends Power {
   @override
   String get displayName => 'gigajoule/second';
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$GigajoulePerSecond] = 1000000000000.0 [Power$Milliwatt]
+  /// 1 [Power$GigajoulePerSecond] = 1.00000000000000000E+012 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4418,12 +4419,12 @@ final class Power$GigajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$GigajoulePerSecond] with new value
   @override
   Power$GigajoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$GigajoulePerSecond(val);
 
@@ -4436,14 +4437,14 @@ final class Power$GigajoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$MegajoulePerSecond extends Power {
-  const Power$MegajoulePerSecond([
+  Power$MegajoulePerSecond([
     super.value,
   ]);
 
@@ -4474,14 +4475,14 @@ final class Power$MegajoulePerSecond extends Power {
   @override
   String get displayName => 'megajoule/second';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$MegajoulePerSecond] = 1000000000.0 [Power$Milliwatt]
+  /// 1 [Power$MegajoulePerSecond] = 1.00000000000000000E+009 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4489,12 +4490,12 @@ final class Power$MegajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$MegajoulePerSecond] with new value
   @override
   Power$MegajoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$MegajoulePerSecond(val);
 
@@ -4507,14 +4508,14 @@ final class Power$MegajoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilojoulePerSecond extends Power {
-  const Power$KilojoulePerSecond([
+  Power$KilojoulePerSecond([
     super.value,
   ]);
 
@@ -4545,14 +4546,14 @@ final class Power$KilojoulePerSecond extends Power {
   @override
   String get displayName => 'kilojoule/second';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilojoulePerSecond] = 1000000.0 [Power$Milliwatt]
+  /// 1 [Power$KilojoulePerSecond] = 1.00000000000000000E+006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4560,12 +4561,12 @@ final class Power$KilojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilojoulePerSecond] with new value
   @override
   Power$KilojoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilojoulePerSecond(val);
 
@@ -4578,14 +4579,14 @@ final class Power$KilojoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$HectojoulePerSecond extends Power {
-  const Power$HectojoulePerSecond([
+  Power$HectojoulePerSecond([
     super.value,
   ]);
 
@@ -4616,14 +4617,14 @@ final class Power$HectojoulePerSecond extends Power {
   @override
   String get displayName => 'hectojoule/second';
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$HectojoulePerSecond] = 100000.0 [Power$Milliwatt]
+  /// 1 [Power$HectojoulePerSecond] = 1.00000000000000000E+005 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4631,12 +4632,12 @@ final class Power$HectojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$HectojoulePerSecond] with new value
   @override
   Power$HectojoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$HectojoulePerSecond(val);
 
@@ -4649,14 +4650,14 @@ final class Power$HectojoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$DekajoulePerSecond extends Power {
-  const Power$DekajoulePerSecond([
+  Power$DekajoulePerSecond([
     super.value,
   ]);
 
@@ -4687,14 +4688,14 @@ final class Power$DekajoulePerSecond extends Power {
   @override
   String get displayName => 'dekajoule/second';
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$DekajoulePerSecond] = 10000.0 [Power$Milliwatt]
+  /// 1 [Power$DekajoulePerSecond] = 1.00000000000000000E+004 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4702,12 +4703,12 @@ final class Power$DekajoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$DekajoulePerSecond] with new value
   @override
   Power$DekajoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$DekajoulePerSecond(val);
 
@@ -4720,14 +4721,14 @@ final class Power$DekajoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$JoulePerSecond extends Power {
-  const Power$JoulePerSecond([
+  Power$JoulePerSecond([
     super.value,
   ]);
 
@@ -4758,14 +4759,14 @@ final class Power$JoulePerSecond extends Power {
   @override
   String get displayName => 'joule/second';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$JoulePerSecond] = 1000.0 [Power$Milliwatt]
+  /// 1 [Power$JoulePerSecond] = 1.00000000000000000E+003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4773,12 +4774,12 @@ final class Power$JoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$JoulePerSecond] with new value
   @override
   Power$JoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$JoulePerSecond(val);
 
@@ -4791,14 +4792,14 @@ final class Power$JoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$DecijoulePerSecond extends Power {
-  const Power$DecijoulePerSecond([
+  Power$DecijoulePerSecond([
     super.value,
   ]);
 
@@ -4829,14 +4830,14 @@ final class Power$DecijoulePerSecond extends Power {
   @override
   String get displayName => 'decijoule/second';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$DecijoulePerSecond] = 100.0 [Power$Milliwatt]
+  /// 1 [Power$DecijoulePerSecond] = 1.00000000000000000E+002 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4844,12 +4845,12 @@ final class Power$DecijoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$DecijoulePerSecond] with new value
   @override
   Power$DecijoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$DecijoulePerSecond(val);
 
@@ -4862,14 +4863,14 @@ final class Power$DecijoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$CentijoulePerSecond extends Power {
-  const Power$CentijoulePerSecond([
+  Power$CentijoulePerSecond([
     super.value,
   ]);
 
@@ -4900,14 +4901,14 @@ final class Power$CentijoulePerSecond extends Power {
   @override
   String get displayName => 'centijoule/second';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$CentijoulePerSecond] = 10.0 [Power$Milliwatt]
+  /// 1 [Power$CentijoulePerSecond] = 1.00000000000000000E+001 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4915,12 +4916,12 @@ final class Power$CentijoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$CentijoulePerSecond] with new value
   @override
   Power$CentijoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$CentijoulePerSecond(val);
 
@@ -4933,14 +4934,14 @@ final class Power$CentijoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$MillijoulePerSecond extends Power {
-  const Power$MillijoulePerSecond([
+  Power$MillijoulePerSecond([
     super.value,
   ]);
 
@@ -4971,14 +4972,14 @@ final class Power$MillijoulePerSecond extends Power {
   @override
   String get displayName => 'millijoule/second';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$MillijoulePerSecond] = 1.0 [Power$Milliwatt]
+  /// 1 [Power$MillijoulePerSecond] = 1.00000000000000000E+000 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4986,12 +4987,12 @@ final class Power$MillijoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$MillijoulePerSecond] with new value
   @override
   Power$MillijoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$MillijoulePerSecond(val);
 
@@ -5004,14 +5005,14 @@ final class Power$MillijoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$MicrojoulePerSecond extends Power {
-  const Power$MicrojoulePerSecond([
+  Power$MicrojoulePerSecond([
     super.value,
   ]);
 
@@ -5042,14 +5043,14 @@ final class Power$MicrojoulePerSecond extends Power {
   @override
   String get displayName => 'microjoule/second';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$MicrojoulePerSecond] ≈ 0.001 [Power$Milliwatt]
+  /// 1 [Power$MicrojoulePerSecond] ≈ 1.00000000000000000E-003 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5057,12 +5058,12 @@ final class Power$MicrojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$MicrojoulePerSecond] with new value
   @override
   Power$MicrojoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$MicrojoulePerSecond(val);
 
@@ -5075,14 +5076,14 @@ final class Power$MicrojoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$NanojoulePerSecond extends Power {
-  const Power$NanojoulePerSecond([
+  Power$NanojoulePerSecond([
     super.value,
   ]);
 
@@ -5113,14 +5114,14 @@ final class Power$NanojoulePerSecond extends Power {
   @override
   String get displayName => 'nanojoule/second';
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$NanojoulePerSecond] ≈ 0.000001 [Power$Milliwatt]
+  /// 1 [Power$NanojoulePerSecond] ≈ 1.00000000000000000E-006 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5128,12 +5129,12 @@ final class Power$NanojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$NanojoulePerSecond] with new value
   @override
   Power$NanojoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$NanojoulePerSecond(val);
 
@@ -5146,14 +5147,14 @@ final class Power$NanojoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$PicojoulePerSecond extends Power {
-  const Power$PicojoulePerSecond([
+  Power$PicojoulePerSecond([
     super.value,
   ]);
 
@@ -5184,14 +5185,14 @@ final class Power$PicojoulePerSecond extends Power {
   @override
   String get displayName => 'picojoule/second';
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$PicojoulePerSecond] ≈ 1e-9 [Power$Milliwatt]
+  /// 1 [Power$PicojoulePerSecond] ≈ 1.00000000000000000E-009 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5199,12 +5200,12 @@ final class Power$PicojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$PicojoulePerSecond] with new value
   @override
   Power$PicojoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$PicojoulePerSecond(val);
 
@@ -5217,14 +5218,14 @@ final class Power$PicojoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$FemtojoulePerSecond extends Power {
-  const Power$FemtojoulePerSecond([
+  Power$FemtojoulePerSecond([
     super.value,
   ]);
 
@@ -5255,14 +5256,14 @@ final class Power$FemtojoulePerSecond extends Power {
   @override
   String get displayName => 'femtojoule/second';
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$FemtojoulePerSecond] ≈ 1e-12 [Power$Milliwatt]
+  /// 1 [Power$FemtojoulePerSecond] ≈ 1.00000000000000000E-012 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5270,12 +5271,12 @@ final class Power$FemtojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$FemtojoulePerSecond] with new value
   @override
   Power$FemtojoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$FemtojoulePerSecond(val);
 
@@ -5288,14 +5289,14 @@ final class Power$FemtojoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$AttojoulePerSecond extends Power {
-  const Power$AttojoulePerSecond([
+  Power$AttojoulePerSecond([
     super.value,
   ]);
 
@@ -5326,14 +5327,14 @@ final class Power$AttojoulePerSecond extends Power {
   @override
   String get displayName => 'attojoule/second';
 
-  static const _ratio = 1e-15;
+  static final _ratio = Rational.parse('1.00000000000000000E-015');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$AttojoulePerSecond] ≈ 1e-15 [Power$Milliwatt]
+  /// 1 [Power$AttojoulePerSecond] ≈ 1.00000000000000000E-015 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5341,12 +5342,12 @@ final class Power$AttojoulePerSecond extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$AttojoulePerSecond] with new value
   @override
   Power$AttojoulePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Power$AttojoulePerSecond(val);
 
@@ -5359,14 +5360,14 @@ final class Power$AttojoulePerSecond extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$JoulePerHour extends Power {
-  const Power$JoulePerHour([
+  Power$JoulePerHour([
     super.value,
   ]);
 
@@ -5397,14 +5398,14 @@ final class Power$JoulePerHour extends Power {
   @override
   String get displayName => 'joule/hour';
 
-  static const _ratio = 0.2777777777777778;
+  static final _ratio = Rational.parse('2.77777777777777778E-001');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$JoulePerHour] ≈ 0.2777777777777778 [Power$Milliwatt]
+  /// 1 [Power$JoulePerHour] ≈ 2.77777777777777778E-001 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5412,12 +5413,12 @@ final class Power$JoulePerHour extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$JoulePerHour] with new value
   @override
   Power$JoulePerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Power$JoulePerHour(val);
 
@@ -5430,14 +5431,14 @@ final class Power$JoulePerHour extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$JoulePerMinute extends Power {
-  const Power$JoulePerMinute([
+  Power$JoulePerMinute([
     super.value,
   ]);
 
@@ -5468,14 +5469,14 @@ final class Power$JoulePerMinute extends Power {
   @override
   String get displayName => 'joule/minute';
 
-  static const _ratio = 16.666666666666668;
+  static final _ratio = Rational.parse('1.66666666666666667E+001');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$JoulePerMinute] ≈ 16.666666666666668 [Power$Milliwatt]
+  /// 1 [Power$JoulePerMinute] ≈ 1.66666666666666667E+001 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5483,12 +5484,12 @@ final class Power$JoulePerMinute extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$JoulePerMinute] with new value
   @override
   Power$JoulePerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Power$JoulePerMinute(val);
 
@@ -5501,14 +5502,14 @@ final class Power$JoulePerMinute extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilojoulePerHour extends Power {
-  const Power$KilojoulePerHour([
+  Power$KilojoulePerHour([
     super.value,
   ]);
 
@@ -5539,14 +5540,14 @@ final class Power$KilojoulePerHour extends Power {
   @override
   String get displayName => 'kilojoule/hour';
 
-  static const _ratio = 277.77777777777777;
+  static final _ratio = Rational.parse('2.77777777777777778E+002');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilojoulePerHour] ≈ 277.77777777777777 [Power$Milliwatt]
+  /// 1 [Power$KilojoulePerHour] ≈ 2.77777777777777778E+002 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5554,12 +5555,12 @@ final class Power$KilojoulePerHour extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilojoulePerHour] with new value
   @override
   Power$KilojoulePerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilojoulePerHour(val);
 
@@ -5572,14 +5573,14 @@ final class Power$KilojoulePerHour extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Power]
 final class Power$KilojoulePerMinute extends Power {
-  const Power$KilojoulePerMinute([
+  Power$KilojoulePerMinute([
     super.value,
   ]);
 
@@ -5610,14 +5611,14 @@ final class Power$KilojoulePerMinute extends Power {
   @override
   String get displayName => 'kilojoule/minute';
 
-  static const _ratio = 16666.666666666668;
+  static final _ratio = Rational.parse('1.66666666666666667E+004');
 
   @override
-  Power get anchor => const Power$Milliwatt(_ratio);
+  Power get anchor => Power$Milliwatt(_ratio);
 
-  /// 1 [Power$KilojoulePerMinute] ≈ 16666.666666666668 [Power$Milliwatt]
+  /// 1 [Power$KilojoulePerMinute] ≈ 1.66666666666666667E+004 [Power$Milliwatt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5625,12 +5626,12 @@ final class Power$KilojoulePerMinute extends Power {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Power$KilojoulePerMinute] with new value
   @override
   Power$KilojoulePerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Power$KilojoulePerMinute(val);
 
@@ -5643,7 +5644,7 @@ final class Power$KilojoulePerMinute extends Power {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

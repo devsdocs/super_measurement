@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [Conductivity$StatmhoPerMeter], [Conductivity$StatmhoPerCentimeter],
 /// [Conductivity$SiemensPerMeter], [Conductivity$PicosiemensPerMeter]
 sealed class Conductivity extends Unit<Conductivity> {
-  const Conductivity([
+  Conductivity([
     super.value,
   ]);
 
@@ -19,50 +19,51 @@ sealed class Conductivity extends Unit<Conductivity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Conductivity.anchor();
 
-  factory Conductivity.anchor() => const Conductivity$MhoPerMeter();
+  factory Conductivity.anchor() => Conductivity$MhoPerMeter();
 
   /// Convert to [Conductivity$MhoPerMeter]
   Conductivity get toMhoPerMeter => convertTo(
-        const Conductivity$MhoPerMeter(),
+        Conductivity$MhoPerMeter(),
       );
 
   /// Convert to [Conductivity$MhoPerCentimeter]
   Conductivity get toMhoPerCentimeter => convertTo(
-        const Conductivity$MhoPerCentimeter(),
+        Conductivity$MhoPerCentimeter(),
       );
 
   /// Convert to [Conductivity$AbmhoPerMeter]
   Conductivity get toAbmhoPerMeter => convertTo(
-        const Conductivity$AbmhoPerMeter(),
+        Conductivity$AbmhoPerMeter(),
       );
 
   /// Convert to [Conductivity$AbmhoPerCentimeter]
   Conductivity get toAbmhoPerCentimeter => convertTo(
-        const Conductivity$AbmhoPerCentimeter(),
+        Conductivity$AbmhoPerCentimeter(),
       );
 
   /// Convert to [Conductivity$StatmhoPerMeter]
   Conductivity get toStatmhoPerMeter => convertTo(
-        const Conductivity$StatmhoPerMeter(),
+        Conductivity$StatmhoPerMeter(),
       );
 
   /// Convert to [Conductivity$StatmhoPerCentimeter]
   Conductivity get toStatmhoPerCentimeter => convertTo(
-        const Conductivity$StatmhoPerCentimeter(),
+        Conductivity$StatmhoPerCentimeter(),
       );
 
   /// Convert to [Conductivity$SiemensPerMeter]
   Conductivity get toSiemensPerMeter => convertTo(
-        const Conductivity$SiemensPerMeter(),
+        Conductivity$SiemensPerMeter(),
       );
 
   /// Convert to [Conductivity$PicosiemensPerMeter]
   Conductivity get toPicosiemensPerMeter => convertTo(
-        const Conductivity$PicosiemensPerMeter(),
+        Conductivity$PicosiemensPerMeter(),
       );
 
   @override
@@ -73,14 +74,14 @@ sealed class Conductivity extends Unit<Conductivity> {
 
   static const _majorName = 'conductivity';
 
-  static const mhoPerMeter = Conductivity$MhoPerMeter();
-  static const mhoPerCentimeter = Conductivity$MhoPerCentimeter();
-  static const abmhoPerMeter = Conductivity$AbmhoPerMeter();
-  static const abmhoPerCentimeter = Conductivity$AbmhoPerCentimeter();
-  static const statmhoPerMeter = Conductivity$StatmhoPerMeter();
-  static const statmhoPerCentimeter = Conductivity$StatmhoPerCentimeter();
-  static const siemensPerMeter = Conductivity$SiemensPerMeter();
-  static const picosiemensPerMeter = Conductivity$PicosiemensPerMeter();
+  static final mhoPerMeter = Conductivity$MhoPerMeter();
+  static final mhoPerCentimeter = Conductivity$MhoPerCentimeter();
+  static final abmhoPerMeter = Conductivity$AbmhoPerMeter();
+  static final abmhoPerCentimeter = Conductivity$AbmhoPerCentimeter();
+  static final statmhoPerMeter = Conductivity$StatmhoPerMeter();
+  static final statmhoPerCentimeter = Conductivity$StatmhoPerCentimeter();
+  static final siemensPerMeter = Conductivity$SiemensPerMeter();
+  static final picosiemensPerMeter = Conductivity$PicosiemensPerMeter();
 
   @override
   List<Conductivity> get units => values;
@@ -88,7 +89,7 @@ sealed class Conductivity extends Unit<Conductivity> {
   @override
   EnumValues<Conductivity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Conductivity>[
     mhoPerMeter,
     mhoPerCentimeter,
     abmhoPerMeter,
@@ -99,7 +100,7 @@ sealed class Conductivity extends Unit<Conductivity> {
     picosiemensPerMeter,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Conductivity>{
     Conductivity$MhoPerMeter._minorName: mhoPerMeter,
     Conductivity$MhoPerCentimeter._minorName: mhoPerCentimeter,
     Conductivity$AbmhoPerMeter._minorName: abmhoPerMeter,
@@ -113,7 +114,7 @@ sealed class Conductivity extends Unit<Conductivity> {
 
 /// Unit of [Conductivity]
 final class Conductivity$MhoPerMeter extends Conductivity {
-  const Conductivity$MhoPerMeter([
+  Conductivity$MhoPerMeter([
     super.value,
   ]);
 
@@ -144,14 +145,14 @@ final class Conductivity$MhoPerMeter extends Conductivity {
   @override
   String get displayName => 'mho/meter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Conductivity get anchor => const Conductivity$MhoPerMeter(_ratio);
+  Conductivity get anchor => Conductivity$MhoPerMeter(_ratio);
 
   /// Default (anchor) unit of [Conductivity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -159,12 +160,12 @@ final class Conductivity$MhoPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductivity$MhoPerMeter] with new value
   @override
   Conductivity$MhoPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Conductivity$MhoPerMeter(val);
 
@@ -177,14 +178,14 @@ final class Conductivity$MhoPerMeter extends Conductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductivity]
 final class Conductivity$MhoPerCentimeter extends Conductivity {
-  const Conductivity$MhoPerCentimeter([
+  Conductivity$MhoPerCentimeter([
     super.value,
   ]);
 
@@ -215,14 +216,14 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
   @override
   String get displayName => 'mho/centimeter';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  Conductivity get anchor => const Conductivity$MhoPerMeter(_ratio);
+  Conductivity get anchor => Conductivity$MhoPerMeter(_ratio);
 
-  /// 1 [Conductivity$MhoPerCentimeter] = 100.0 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$MhoPerCentimeter] = 1.00000000000000000E+002 [Conductivity$MhoPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -231,12 +232,12 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductivity$MhoPerCentimeter] with new value
   @override
   Conductivity$MhoPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Conductivity$MhoPerCentimeter(val);
 
@@ -249,14 +250,14 @@ final class Conductivity$MhoPerCentimeter extends Conductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductivity]
 final class Conductivity$AbmhoPerMeter extends Conductivity {
-  const Conductivity$AbmhoPerMeter([
+  Conductivity$AbmhoPerMeter([
     super.value,
   ]);
 
@@ -287,14 +288,14 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
   @override
   String get displayName => 'Abmho/meter';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Conductivity get anchor => const Conductivity$MhoPerMeter(_ratio);
+  Conductivity get anchor => Conductivity$MhoPerMeter(_ratio);
 
-  /// 1 [Conductivity$AbmhoPerMeter] = 1000000000.0 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$AbmhoPerMeter] = 1.00000000000000000E+009 [Conductivity$MhoPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -302,12 +303,12 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductivity$AbmhoPerMeter] with new value
   @override
   Conductivity$AbmhoPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Conductivity$AbmhoPerMeter(val);
 
@@ -320,14 +321,14 @@ final class Conductivity$AbmhoPerMeter extends Conductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductivity]
 final class Conductivity$AbmhoPerCentimeter extends Conductivity {
-  const Conductivity$AbmhoPerCentimeter([
+  Conductivity$AbmhoPerCentimeter([
     super.value,
   ]);
 
@@ -358,14 +359,14 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
   @override
   String get displayName => 'Abmho/centimeter';
 
-  static const _ratio = 100000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+011');
 
   @override
-  Conductivity get anchor => const Conductivity$MhoPerMeter(_ratio);
+  Conductivity get anchor => Conductivity$MhoPerMeter(_ratio);
 
-  /// 1 [Conductivity$AbmhoPerCentimeter] = 100000000000.0 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$AbmhoPerCentimeter] = 1.00000000000000000E+011 [Conductivity$MhoPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -374,12 +375,12 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductivity$AbmhoPerCentimeter] with new value
   @override
   Conductivity$AbmhoPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Conductivity$AbmhoPerCentimeter(val);
 
@@ -392,14 +393,14 @@ final class Conductivity$AbmhoPerCentimeter extends Conductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductivity]
 final class Conductivity$StatmhoPerMeter extends Conductivity {
-  const Conductivity$StatmhoPerMeter([
+  Conductivity$StatmhoPerMeter([
     super.value,
   ]);
 
@@ -430,14 +431,14 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
   @override
   String get displayName => 'Statmho/meter';
 
-  static const _ratio = 1.112653456e-12;
+  static final _ratio = Rational.parse('1.11265345600000000E-012');
 
   @override
-  Conductivity get anchor => const Conductivity$MhoPerMeter(_ratio);
+  Conductivity get anchor => Conductivity$MhoPerMeter(_ratio);
 
-  /// 1 [Conductivity$StatmhoPerMeter] ≈ 1.112653456e-12 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$StatmhoPerMeter] ≈ 1.11265345600000000E-012 [Conductivity$MhoPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -446,12 +447,12 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductivity$StatmhoPerMeter] with new value
   @override
   Conductivity$StatmhoPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Conductivity$StatmhoPerMeter(val);
 
@@ -464,14 +465,14 @@ final class Conductivity$StatmhoPerMeter extends Conductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductivity]
 final class Conductivity$StatmhoPerCentimeter extends Conductivity {
-  const Conductivity$StatmhoPerCentimeter([
+  Conductivity$StatmhoPerCentimeter([
     super.value,
   ]);
 
@@ -502,14 +503,14 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
   @override
   String get displayName => 'Statmho/centimeter';
 
-  static const _ratio = 1.112653456e-10;
+  static final _ratio = Rational.parse('1.11265345600000000E-010');
 
   @override
-  Conductivity get anchor => const Conductivity$MhoPerMeter(_ratio);
+  Conductivity get anchor => Conductivity$MhoPerMeter(_ratio);
 
-  /// 1 [Conductivity$StatmhoPerCentimeter] ≈ 1.112653456e-10 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$StatmhoPerCentimeter] ≈ 1.11265345600000000E-010 [Conductivity$MhoPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -518,12 +519,12 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductivity$StatmhoPerCentimeter] with new value
   @override
   Conductivity$StatmhoPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Conductivity$StatmhoPerCentimeter(val);
 
@@ -536,14 +537,14 @@ final class Conductivity$StatmhoPerCentimeter extends Conductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductivity]
 final class Conductivity$SiemensPerMeter extends Conductivity {
-  const Conductivity$SiemensPerMeter([
+  Conductivity$SiemensPerMeter([
     super.value,
   ]);
 
@@ -574,14 +575,14 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
   @override
   String get displayName => 'siemens/meter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Conductivity get anchor => const Conductivity$MhoPerMeter(_ratio);
+  Conductivity get anchor => Conductivity$MhoPerMeter(_ratio);
 
-  /// 1 [Conductivity$SiemensPerMeter] = 1.0 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$SiemensPerMeter] = 1.00000000000000000E+000 [Conductivity$MhoPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -590,12 +591,12 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductivity$SiemensPerMeter] with new value
   @override
   Conductivity$SiemensPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Conductivity$SiemensPerMeter(val);
 
@@ -608,14 +609,14 @@ final class Conductivity$SiemensPerMeter extends Conductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductivity]
 final class Conductivity$PicosiemensPerMeter extends Conductivity {
-  const Conductivity$PicosiemensPerMeter([
+  Conductivity$PicosiemensPerMeter([
     super.value,
   ]);
 
@@ -646,14 +647,14 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
   @override
   String get displayName => 'picosiemens/meter';
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
-  Conductivity get anchor => const Conductivity$MhoPerMeter(_ratio);
+  Conductivity get anchor => Conductivity$MhoPerMeter(_ratio);
 
-  /// 1 [Conductivity$PicosiemensPerMeter] ≈ 1e-12 [Conductivity$MhoPerMeter]
+  /// 1 [Conductivity$PicosiemensPerMeter] ≈ 1.00000000000000000E-012 [Conductivity$MhoPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -662,12 +663,12 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductivity$PicosiemensPerMeter] with new value
   @override
   Conductivity$PicosiemensPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Conductivity$PicosiemensPerMeter(val);
 
@@ -680,7 +681,7 @@ final class Conductivity$PicosiemensPerMeter extends Conductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

@@ -25,7 +25,7 @@ part of '../../super_measurement.dart';
 /// [FrequencyWavelength$WavelengthInMillimetres],
 /// [FrequencyWavelength$WavelengthInMicrometres]
 sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
-  const FrequencyWavelength([
+  FrequencyWavelength([
     super.value,
   ]);
 
@@ -37,165 +37,166 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : FrequencyWavelength.anchor();
 
-  factory FrequencyWavelength.anchor() => const FrequencyWavelength$Hertz();
+  factory FrequencyWavelength.anchor() => FrequencyWavelength$Hertz();
 
   /// Convert to [FrequencyWavelength$Exahertz]
   FrequencyWavelength get toExahertz => convertTo(
-        const FrequencyWavelength$Exahertz(),
+        FrequencyWavelength$Exahertz(),
       );
 
   /// Convert to [FrequencyWavelength$Petahertz]
   FrequencyWavelength get toPetahertz => convertTo(
-        const FrequencyWavelength$Petahertz(),
+        FrequencyWavelength$Petahertz(),
       );
 
   /// Convert to [FrequencyWavelength$Terahertz]
   FrequencyWavelength get toTerahertz => convertTo(
-        const FrequencyWavelength$Terahertz(),
+        FrequencyWavelength$Terahertz(),
       );
 
   /// Convert to [FrequencyWavelength$Gigahertz]
   FrequencyWavelength get toGigahertz => convertTo(
-        const FrequencyWavelength$Gigahertz(),
+        FrequencyWavelength$Gigahertz(),
       );
 
   /// Convert to [FrequencyWavelength$Megahertz]
   FrequencyWavelength get toMegahertz => convertTo(
-        const FrequencyWavelength$Megahertz(),
+        FrequencyWavelength$Megahertz(),
       );
 
   /// Convert to [FrequencyWavelength$Kilohertz]
   FrequencyWavelength get toKilohertz => convertTo(
-        const FrequencyWavelength$Kilohertz(),
+        FrequencyWavelength$Kilohertz(),
       );
 
   /// Convert to [FrequencyWavelength$Hectohertz]
   FrequencyWavelength get toHectohertz => convertTo(
-        const FrequencyWavelength$Hectohertz(),
+        FrequencyWavelength$Hectohertz(),
       );
 
   /// Convert to [FrequencyWavelength$Dekahertz]
   FrequencyWavelength get toDekahertz => convertTo(
-        const FrequencyWavelength$Dekahertz(),
+        FrequencyWavelength$Dekahertz(),
       );
 
   /// Convert to [FrequencyWavelength$Hertz]
   FrequencyWavelength get toHertz => convertTo(
-        const FrequencyWavelength$Hertz(),
+        FrequencyWavelength$Hertz(),
       );
 
   /// Convert to [FrequencyWavelength$Decihertz]
   FrequencyWavelength get toDecihertz => convertTo(
-        const FrequencyWavelength$Decihertz(),
+        FrequencyWavelength$Decihertz(),
       );
 
   /// Convert to [FrequencyWavelength$Centihertz]
   FrequencyWavelength get toCentihertz => convertTo(
-        const FrequencyWavelength$Centihertz(),
+        FrequencyWavelength$Centihertz(),
       );
 
   /// Convert to [FrequencyWavelength$Millihertz]
   FrequencyWavelength get toMillihertz => convertTo(
-        const FrequencyWavelength$Millihertz(),
+        FrequencyWavelength$Millihertz(),
       );
 
   /// Convert to [FrequencyWavelength$Microhertz]
   FrequencyWavelength get toMicrohertz => convertTo(
-        const FrequencyWavelength$Microhertz(),
+        FrequencyWavelength$Microhertz(),
       );
 
   /// Convert to [FrequencyWavelength$Nanohertz]
   FrequencyWavelength get toNanohertz => convertTo(
-        const FrequencyWavelength$Nanohertz(),
+        FrequencyWavelength$Nanohertz(),
       );
 
   /// Convert to [FrequencyWavelength$Picohertz]
   FrequencyWavelength get toPicohertz => convertTo(
-        const FrequencyWavelength$Picohertz(),
+        FrequencyWavelength$Picohertz(),
       );
 
   /// Convert to [FrequencyWavelength$Femtohertz]
   FrequencyWavelength get toFemtohertz => convertTo(
-        const FrequencyWavelength$Femtohertz(),
+        FrequencyWavelength$Femtohertz(),
       );
 
   /// Convert to [FrequencyWavelength$Attohertz]
   FrequencyWavelength get toAttohertz => convertTo(
-        const FrequencyWavelength$Attohertz(),
+        FrequencyWavelength$Attohertz(),
       );
 
   /// Convert to [FrequencyWavelength$CyclePerSecond]
   FrequencyWavelength get toCyclePerSecond => convertTo(
-        const FrequencyWavelength$CyclePerSecond(),
+        FrequencyWavelength$CyclePerSecond(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInExametres]
   FrequencyWavelength get toWavelengthInExametres => convertTo(
-        const FrequencyWavelength$WavelengthInExametres(),
+        FrequencyWavelength$WavelengthInExametres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInPetametres]
   FrequencyWavelength get toWavelengthInPetametres => convertTo(
-        const FrequencyWavelength$WavelengthInPetametres(),
+        FrequencyWavelength$WavelengthInPetametres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInTerametres]
   FrequencyWavelength get toWavelengthInTerametres => convertTo(
-        const FrequencyWavelength$WavelengthInTerametres(),
+        FrequencyWavelength$WavelengthInTerametres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInGigametres]
   FrequencyWavelength get toWavelengthInGigametres => convertTo(
-        const FrequencyWavelength$WavelengthInGigametres(),
+        FrequencyWavelength$WavelengthInGigametres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInMegametres]
   FrequencyWavelength get toWavelengthInMegametres => convertTo(
-        const FrequencyWavelength$WavelengthInMegametres(),
+        FrequencyWavelength$WavelengthInMegametres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInKilometres]
   FrequencyWavelength get toWavelengthInKilometres => convertTo(
-        const FrequencyWavelength$WavelengthInKilometres(),
+        FrequencyWavelength$WavelengthInKilometres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInHectometres]
   FrequencyWavelength get toWavelengthInHectometres => convertTo(
-        const FrequencyWavelength$WavelengthInHectometres(),
+        FrequencyWavelength$WavelengthInHectometres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInDecametres]
   FrequencyWavelength get toWavelengthInDecametres => convertTo(
-        const FrequencyWavelength$WavelengthInDecametres(),
+        FrequencyWavelength$WavelengthInDecametres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInMetres]
   FrequencyWavelength get toWavelengthInMetres => convertTo(
-        const FrequencyWavelength$WavelengthInMetres(),
+        FrequencyWavelength$WavelengthInMetres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInDecimetres]
   FrequencyWavelength get toWavelengthInDecimetres => convertTo(
-        const FrequencyWavelength$WavelengthInDecimetres(),
+        FrequencyWavelength$WavelengthInDecimetres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInCentimetres]
   FrequencyWavelength get toWavelengthInCentimetres => convertTo(
-        const FrequencyWavelength$WavelengthInCentimetres(),
+        FrequencyWavelength$WavelengthInCentimetres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInMillimetres]
   FrequencyWavelength get toWavelengthInMillimetres => convertTo(
-        const FrequencyWavelength$WavelengthInMillimetres(),
+        FrequencyWavelength$WavelengthInMillimetres(),
       );
 
   /// Convert to [FrequencyWavelength$WavelengthInMicrometres]
   FrequencyWavelength get toWavelengthInMicrometres => convertTo(
-        const FrequencyWavelength$WavelengthInMicrometres(),
+        FrequencyWavelength$WavelengthInMicrometres(),
       );
 
   @override
@@ -206,48 +207,48 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
 
   static const _majorName = 'frequencyWavelength';
 
-  static const exahertz = FrequencyWavelength$Exahertz();
-  static const petahertz = FrequencyWavelength$Petahertz();
-  static const terahertz = FrequencyWavelength$Terahertz();
-  static const gigahertz = FrequencyWavelength$Gigahertz();
-  static const megahertz = FrequencyWavelength$Megahertz();
-  static const kilohertz = FrequencyWavelength$Kilohertz();
-  static const hectohertz = FrequencyWavelength$Hectohertz();
-  static const dekahertz = FrequencyWavelength$Dekahertz();
-  static const hertz = FrequencyWavelength$Hertz();
-  static const decihertz = FrequencyWavelength$Decihertz();
-  static const centihertz = FrequencyWavelength$Centihertz();
-  static const millihertz = FrequencyWavelength$Millihertz();
-  static const microhertz = FrequencyWavelength$Microhertz();
-  static const nanohertz = FrequencyWavelength$Nanohertz();
-  static const picohertz = FrequencyWavelength$Picohertz();
-  static const femtohertz = FrequencyWavelength$Femtohertz();
-  static const attohertz = FrequencyWavelength$Attohertz();
-  static const cyclePerSecond = FrequencyWavelength$CyclePerSecond();
-  static const wavelengthInExametres =
+  static final exahertz = FrequencyWavelength$Exahertz();
+  static final petahertz = FrequencyWavelength$Petahertz();
+  static final terahertz = FrequencyWavelength$Terahertz();
+  static final gigahertz = FrequencyWavelength$Gigahertz();
+  static final megahertz = FrequencyWavelength$Megahertz();
+  static final kilohertz = FrequencyWavelength$Kilohertz();
+  static final hectohertz = FrequencyWavelength$Hectohertz();
+  static final dekahertz = FrequencyWavelength$Dekahertz();
+  static final hertz = FrequencyWavelength$Hertz();
+  static final decihertz = FrequencyWavelength$Decihertz();
+  static final centihertz = FrequencyWavelength$Centihertz();
+  static final millihertz = FrequencyWavelength$Millihertz();
+  static final microhertz = FrequencyWavelength$Microhertz();
+  static final nanohertz = FrequencyWavelength$Nanohertz();
+  static final picohertz = FrequencyWavelength$Picohertz();
+  static final femtohertz = FrequencyWavelength$Femtohertz();
+  static final attohertz = FrequencyWavelength$Attohertz();
+  static final cyclePerSecond = FrequencyWavelength$CyclePerSecond();
+  static final wavelengthInExametres =
       FrequencyWavelength$WavelengthInExametres();
-  static const wavelengthInPetametres =
+  static final wavelengthInPetametres =
       FrequencyWavelength$WavelengthInPetametres();
-  static const wavelengthInTerametres =
+  static final wavelengthInTerametres =
       FrequencyWavelength$WavelengthInTerametres();
-  static const wavelengthInGigametres =
+  static final wavelengthInGigametres =
       FrequencyWavelength$WavelengthInGigametres();
-  static const wavelengthInMegametres =
+  static final wavelengthInMegametres =
       FrequencyWavelength$WavelengthInMegametres();
-  static const wavelengthInKilometres =
+  static final wavelengthInKilometres =
       FrequencyWavelength$WavelengthInKilometres();
-  static const wavelengthInHectometres =
+  static final wavelengthInHectometres =
       FrequencyWavelength$WavelengthInHectometres();
-  static const wavelengthInDecametres =
+  static final wavelengthInDecametres =
       FrequencyWavelength$WavelengthInDecametres();
-  static const wavelengthInMetres = FrequencyWavelength$WavelengthInMetres();
-  static const wavelengthInDecimetres =
+  static final wavelengthInMetres = FrequencyWavelength$WavelengthInMetres();
+  static final wavelengthInDecimetres =
       FrequencyWavelength$WavelengthInDecimetres();
-  static const wavelengthInCentimetres =
+  static final wavelengthInCentimetres =
       FrequencyWavelength$WavelengthInCentimetres();
-  static const wavelengthInMillimetres =
+  static final wavelengthInMillimetres =
       FrequencyWavelength$WavelengthInMillimetres();
-  static const wavelengthInMicrometres =
+  static final wavelengthInMicrometres =
       FrequencyWavelength$WavelengthInMicrometres();
 
   @override
@@ -256,7 +257,7 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
   @override
   EnumValues<FrequencyWavelength> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <FrequencyWavelength>[
     exahertz,
     petahertz,
     terahertz,
@@ -290,7 +291,7 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
     wavelengthInMicrometres,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, FrequencyWavelength>{
     FrequencyWavelength$Exahertz._minorName: exahertz,
     FrequencyWavelength$Petahertz._minorName: petahertz,
     FrequencyWavelength$Terahertz._minorName: terahertz,
@@ -338,7 +339,7 @@ sealed class FrequencyWavelength extends Unit<FrequencyWavelength> {
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
-  const FrequencyWavelength$Exahertz([
+  FrequencyWavelength$Exahertz([
     super.value,
   ]);
 
@@ -369,14 +370,14 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Exahertz] = 1000000000000000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Exahertz] = 1.00000000000000000E+018 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -385,12 +386,12 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Exahertz] with new value
   @override
   FrequencyWavelength$Exahertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Exahertz(val);
 
@@ -403,14 +404,14 @@ final class FrequencyWavelength$Exahertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
-  const FrequencyWavelength$Petahertz([
+  FrequencyWavelength$Petahertz([
     super.value,
   ]);
 
@@ -441,14 +442,14 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Petahertz] = 1000000000000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Petahertz] = 1.00000000000000000E+015 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -457,12 +458,12 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Petahertz] with new value
   @override
   FrequencyWavelength$Petahertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Petahertz(val);
 
@@ -475,14 +476,14 @@ final class FrequencyWavelength$Petahertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
-  const FrequencyWavelength$Terahertz([
+  FrequencyWavelength$Terahertz([
     super.value,
   ]);
 
@@ -513,14 +514,14 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Terahertz] = 1000000000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Terahertz] = 1.00000000000000000E+012 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -529,12 +530,12 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Terahertz] with new value
   @override
   FrequencyWavelength$Terahertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Terahertz(val);
 
@@ -547,14 +548,14 @@ final class FrequencyWavelength$Terahertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
-  const FrequencyWavelength$Gigahertz([
+  FrequencyWavelength$Gigahertz([
     super.value,
   ]);
 
@@ -585,14 +586,14 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Gigahertz] = 1000000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Gigahertz] = 1.00000000000000000E+009 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -601,12 +602,12 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Gigahertz] with new value
   @override
   FrequencyWavelength$Gigahertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Gigahertz(val);
 
@@ -619,14 +620,14 @@ final class FrequencyWavelength$Gigahertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
-  const FrequencyWavelength$Megahertz([
+  FrequencyWavelength$Megahertz([
     super.value,
   ]);
 
@@ -657,14 +658,14 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Megahertz] = 1000000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Megahertz] = 1.00000000000000000E+006 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -673,12 +674,12 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Megahertz] with new value
   @override
   FrequencyWavelength$Megahertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Megahertz(val);
 
@@ -691,14 +692,14 @@ final class FrequencyWavelength$Megahertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
-  const FrequencyWavelength$Kilohertz([
+  FrequencyWavelength$Kilohertz([
     super.value,
   ]);
 
@@ -729,14 +730,14 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Kilohertz] = 1000.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Kilohertz] = 1.00000000000000000E+003 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -745,12 +746,12 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Kilohertz] with new value
   @override
   FrequencyWavelength$Kilohertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Kilohertz(val);
 
@@ -763,14 +764,14 @@ final class FrequencyWavelength$Kilohertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
-  const FrequencyWavelength$Hectohertz([
+  FrequencyWavelength$Hectohertz([
     super.value,
   ]);
 
@@ -801,14 +802,14 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Hectohertz] = 100.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Hectohertz] = 1.00000000000000000E+002 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -817,12 +818,12 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Hectohertz] with new value
   @override
   FrequencyWavelength$Hectohertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Hectohertz(val);
 
@@ -835,14 +836,14 @@ final class FrequencyWavelength$Hectohertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
-  const FrequencyWavelength$Dekahertz([
+  FrequencyWavelength$Dekahertz([
     super.value,
   ]);
 
@@ -873,14 +874,14 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Dekahertz] = 10.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Dekahertz] = 1.00000000000000000E+001 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -889,12 +890,12 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Dekahertz] with new value
   @override
   FrequencyWavelength$Dekahertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Dekahertz(val);
 
@@ -907,14 +908,14 @@ final class FrequencyWavelength$Dekahertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Hertz extends FrequencyWavelength {
-  const FrequencyWavelength$Hertz([
+  FrequencyWavelength$Hertz([
     super.value,
   ]);
 
@@ -945,14 +946,14 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
   /// Default (anchor) unit of [FrequencyWavelength]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -960,12 +961,12 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Hertz] with new value
   @override
   FrequencyWavelength$Hertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Hertz(val);
 
@@ -978,14 +979,14 @@ final class FrequencyWavelength$Hertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
-  const FrequencyWavelength$Decihertz([
+  FrequencyWavelength$Decihertz([
     super.value,
   ]);
 
@@ -1016,14 +1017,14 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Decihertz] ≈ 0.1 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Decihertz] ≈ 1.00000000000000000E-001 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1032,12 +1033,12 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Decihertz] with new value
   @override
   FrequencyWavelength$Decihertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Decihertz(val);
 
@@ -1050,14 +1051,14 @@ final class FrequencyWavelength$Decihertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
-  const FrequencyWavelength$Centihertz([
+  FrequencyWavelength$Centihertz([
     super.value,
   ]);
 
@@ -1088,14 +1089,14 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Centihertz] ≈ 0.01 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Centihertz] ≈ 1.00000000000000000E-002 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1104,12 +1105,12 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Centihertz] with new value
   @override
   FrequencyWavelength$Centihertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Centihertz(val);
 
@@ -1122,14 +1123,14 @@ final class FrequencyWavelength$Centihertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
-  const FrequencyWavelength$Millihertz([
+  FrequencyWavelength$Millihertz([
     super.value,
   ]);
 
@@ -1160,14 +1161,14 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Millihertz] ≈ 0.001 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Millihertz] ≈ 1.00000000000000000E-003 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1176,12 +1177,12 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Millihertz] with new value
   @override
   FrequencyWavelength$Millihertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Millihertz(val);
 
@@ -1194,14 +1195,14 @@ final class FrequencyWavelength$Millihertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
-  const FrequencyWavelength$Microhertz([
+  FrequencyWavelength$Microhertz([
     super.value,
   ]);
 
@@ -1232,14 +1233,14 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Microhertz] ≈ 0.000001 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Microhertz] ≈ 1.00000000000000000E-006 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1248,12 +1249,12 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Microhertz] with new value
   @override
   FrequencyWavelength$Microhertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Microhertz(val);
 
@@ -1266,14 +1267,14 @@ final class FrequencyWavelength$Microhertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
-  const FrequencyWavelength$Nanohertz([
+  FrequencyWavelength$Nanohertz([
     super.value,
   ]);
 
@@ -1304,14 +1305,14 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Nanohertz] ≈ 1e-9 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Nanohertz] ≈ 1.00000000000000000E-009 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1320,12 +1321,12 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Nanohertz] with new value
   @override
   FrequencyWavelength$Nanohertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Nanohertz(val);
 
@@ -1338,14 +1339,14 @@ final class FrequencyWavelength$Nanohertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
-  const FrequencyWavelength$Picohertz([
+  FrequencyWavelength$Picohertz([
     super.value,
   ]);
 
@@ -1376,14 +1377,14 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Picohertz] ≈ 1e-12 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Picohertz] ≈ 1.00000000000000000E-012 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1392,12 +1393,12 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Picohertz] with new value
   @override
   FrequencyWavelength$Picohertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Picohertz(val);
 
@@ -1410,14 +1411,14 @@ final class FrequencyWavelength$Picohertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
-  const FrequencyWavelength$Femtohertz([
+  FrequencyWavelength$Femtohertz([
     super.value,
   ]);
 
@@ -1448,14 +1449,14 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-15;
+  static final _ratio = Rational.parse('1.00000000000000000E-015');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Femtohertz] ≈ 1e-15 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Femtohertz] ≈ 1.00000000000000000E-015 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1464,12 +1465,12 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Femtohertz] with new value
   @override
   FrequencyWavelength$Femtohertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Femtohertz(val);
 
@@ -1482,14 +1483,14 @@ final class FrequencyWavelength$Femtohertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
-  const FrequencyWavelength$Attohertz([
+  FrequencyWavelength$Attohertz([
     super.value,
   ]);
 
@@ -1520,14 +1521,14 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-18;
+  static final _ratio = Rational.parse('1.00000000000000000E-018');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$Attohertz] ≈ 1e-18 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$Attohertz] ≈ 1.00000000000000000E-018 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1536,12 +1537,12 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$Attohertz] with new value
   @override
   FrequencyWavelength$Attohertz withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$Attohertz(val);
 
@@ -1554,14 +1555,14 @@ final class FrequencyWavelength$Attohertz extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
-  const FrequencyWavelength$CyclePerSecond([
+  FrequencyWavelength$CyclePerSecond([
     super.value,
   ]);
 
@@ -1592,14 +1593,14 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
   @override
   String get displayName => 'cycle/second';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$CyclePerSecond] = 1.0 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$CyclePerSecond] = 1.00000000000000000E+000 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1608,12 +1609,12 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$CyclePerSecond] with new value
   @override
   FrequencyWavelength$CyclePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$CyclePerSecond(val);
 
@@ -1626,7 +1627,7 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1634,7 +1635,7 @@ final class FrequencyWavelength$CyclePerSecond extends FrequencyWavelength {
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInExametres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInExametres([
+  FrequencyWavelength$WavelengthInExametres([
     super.value,
   ]);
 
@@ -1665,14 +1666,14 @@ final class FrequencyWavelength$WavelengthInExametres
   @override
   String get displayName => 'wavelength in exametres';
 
-  static const _ratio = 3335640951.9815207;
+  static final _ratio = Rational.parse('3.33564095198152050E+009');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInExametres] ≈ 3335640951.9815207 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInExametres] ≈ 3.33564095198152050E+009 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1681,12 +1682,12 @@ final class FrequencyWavelength$WavelengthInExametres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInExametres] with new value
   @override
   FrequencyWavelength$WavelengthInExametres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInExametres(val);
 
@@ -1699,7 +1700,7 @@ final class FrequencyWavelength$WavelengthInExametres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1707,7 +1708,7 @@ final class FrequencyWavelength$WavelengthInExametres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInPetametres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInPetametres([
+  FrequencyWavelength$WavelengthInPetametres([
     super.value,
   ]);
 
@@ -1738,14 +1739,14 @@ final class FrequencyWavelength$WavelengthInPetametres
   @override
   String get displayName => 'wavelength in petametres';
 
-  static const _ratio = 3335640.9519815203;
+  static final _ratio = Rational.parse('3.33564095198152050E+006');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInPetametres] ≈ 3335640.9519815203 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInPetametres] ≈ 3.33564095198152050E+006 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1754,12 +1755,12 @@ final class FrequencyWavelength$WavelengthInPetametres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInPetametres] with new value
   @override
   FrequencyWavelength$WavelengthInPetametres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInPetametres(val);
 
@@ -1772,7 +1773,7 @@ final class FrequencyWavelength$WavelengthInPetametres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1780,7 +1781,7 @@ final class FrequencyWavelength$WavelengthInPetametres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInTerametres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInTerametres([
+  FrequencyWavelength$WavelengthInTerametres([
     super.value,
   ]);
 
@@ -1811,14 +1812,14 @@ final class FrequencyWavelength$WavelengthInTerametres
   @override
   String get displayName => 'wavelength in terametres';
 
-  static const _ratio = 3335.6409519815206;
+  static final _ratio = Rational.parse('3.33564095198152050E+003');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInTerametres] ≈ 3335.6409519815206 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInTerametres] ≈ 3.33564095198152050E+003 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1827,12 +1828,12 @@ final class FrequencyWavelength$WavelengthInTerametres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInTerametres] with new value
   @override
   FrequencyWavelength$WavelengthInTerametres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInTerametres(val);
 
@@ -1845,7 +1846,7 @@ final class FrequencyWavelength$WavelengthInTerametres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1853,7 +1854,7 @@ final class FrequencyWavelength$WavelengthInTerametres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInGigametres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInGigametres([
+  FrequencyWavelength$WavelengthInGigametres([
     super.value,
   ]);
 
@@ -1884,14 +1885,14 @@ final class FrequencyWavelength$WavelengthInGigametres
   @override
   String get displayName => 'wavelength in gigametres';
 
-  static const _ratio = 3.3356409519815204;
+  static final _ratio = Rational.parse('3.33564095198152050E+000');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInGigametres] ≈ 3.3356409519815204 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInGigametres] ≈ 3.33564095198152050E+000 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1900,12 +1901,12 @@ final class FrequencyWavelength$WavelengthInGigametres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInGigametres] with new value
   @override
   FrequencyWavelength$WavelengthInGigametres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInGigametres(val);
 
@@ -1918,7 +1919,7 @@ final class FrequencyWavelength$WavelengthInGigametres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1926,7 +1927,7 @@ final class FrequencyWavelength$WavelengthInGigametres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInMegametres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInMegametres([
+  FrequencyWavelength$WavelengthInMegametres([
     super.value,
   ]);
 
@@ -1957,14 +1958,14 @@ final class FrequencyWavelength$WavelengthInMegametres
   @override
   String get displayName => 'wavelength in megametres';
 
-  static const _ratio = 0.0033356409519815205;
+  static final _ratio = Rational.parse('3.33564095198152050E-003');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInMegametres] ≈ 0.0033356409519815205 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInMegametres] ≈ 3.33564095198152050E-003 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1973,12 +1974,12 @@ final class FrequencyWavelength$WavelengthInMegametres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInMegametres] with new value
   @override
   FrequencyWavelength$WavelengthInMegametres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInMegametres(val);
 
@@ -1991,7 +1992,7 @@ final class FrequencyWavelength$WavelengthInMegametres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1999,7 +2000,7 @@ final class FrequencyWavelength$WavelengthInMegametres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInKilometres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInKilometres([
+  FrequencyWavelength$WavelengthInKilometres([
     super.value,
   ]);
 
@@ -2030,14 +2031,14 @@ final class FrequencyWavelength$WavelengthInKilometres
   @override
   String get displayName => 'wavelength in kilometres';
 
-  static const _ratio = 0.0000033356409519815205;
+  static final _ratio = Rational.parse('3.33564095198152050E-006');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInKilometres] ≈ 0.0000033356409519815205 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInKilometres] ≈ 3.33564095198152050E-006 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2046,12 +2047,12 @@ final class FrequencyWavelength$WavelengthInKilometres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInKilometres] with new value
   @override
   FrequencyWavelength$WavelengthInKilometres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInKilometres(val);
 
@@ -2064,7 +2065,7 @@ final class FrequencyWavelength$WavelengthInKilometres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -2072,7 +2073,7 @@ final class FrequencyWavelength$WavelengthInKilometres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInHectometres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInHectometres([
+  FrequencyWavelength$WavelengthInHectometres([
     super.value,
   ]);
 
@@ -2103,14 +2104,14 @@ final class FrequencyWavelength$WavelengthInHectometres
   @override
   String get displayName => 'wavelength in hectometres';
 
-  static const _ratio = 3.3356409519815204e-7;
+  static final _ratio = Rational.parse('3.33564095198152050E-007');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInHectometres] ≈ 3.3356409519815204e-7 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInHectometres] ≈ 3.33564095198152050E-007 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2119,12 +2120,12 @@ final class FrequencyWavelength$WavelengthInHectometres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInHectometres] with new value
   @override
   FrequencyWavelength$WavelengthInHectometres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInHectometres(val);
 
@@ -2137,7 +2138,7 @@ final class FrequencyWavelength$WavelengthInHectometres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -2145,7 +2146,7 @@ final class FrequencyWavelength$WavelengthInHectometres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInDecametres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInDecametres([
+  FrequencyWavelength$WavelengthInDecametres([
     super.value,
   ]);
 
@@ -2176,14 +2177,14 @@ final class FrequencyWavelength$WavelengthInDecametres
   @override
   String get displayName => 'wavelength in decametres';
 
-  static const _ratio = 3.3356409519815205e-8;
+  static final _ratio = Rational.parse('3.33564095198152050E-008');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInDecametres] ≈ 3.3356409519815205e-8 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInDecametres] ≈ 3.33564095198152050E-008 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2192,12 +2193,12 @@ final class FrequencyWavelength$WavelengthInDecametres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInDecametres] with new value
   @override
   FrequencyWavelength$WavelengthInDecametres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInDecametres(val);
 
@@ -2210,14 +2211,14 @@ final class FrequencyWavelength$WavelengthInDecametres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInMetres([
+  FrequencyWavelength$WavelengthInMetres([
     super.value,
   ]);
 
@@ -2248,14 +2249,14 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
   @override
   String get displayName => 'wavelength in metres';
 
-  static const _ratio = 3.3356409519815204e-9;
+  static final _ratio = Rational.parse('3.33564095198152050E-009');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInMetres] ≈ 3.3356409519815204e-9 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInMetres] ≈ 3.33564095198152050E-009 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2264,12 +2265,12 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInMetres] with new value
   @override
   FrequencyWavelength$WavelengthInMetres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInMetres(val);
 
@@ -2282,7 +2283,7 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -2290,7 +2291,7 @@ final class FrequencyWavelength$WavelengthInMetres extends FrequencyWavelength {
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInDecimetres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInDecimetres([
+  FrequencyWavelength$WavelengthInDecimetres([
     super.value,
   ]);
 
@@ -2321,14 +2322,14 @@ final class FrequencyWavelength$WavelengthInDecimetres
   @override
   String get displayName => 'wavelength in decimetres';
 
-  static const _ratio = 3.3356409519815207e-10;
+  static final _ratio = Rational.parse('3.33564095198152050E-010');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInDecimetres] ≈ 3.3356409519815207e-10 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInDecimetres] ≈ 3.33564095198152050E-010 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2337,12 +2338,12 @@ final class FrequencyWavelength$WavelengthInDecimetres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInDecimetres] with new value
   @override
   FrequencyWavelength$WavelengthInDecimetres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInDecimetres(val);
 
@@ -2355,7 +2356,7 @@ final class FrequencyWavelength$WavelengthInDecimetres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -2363,7 +2364,7 @@ final class FrequencyWavelength$WavelengthInDecimetres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInCentimetres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInCentimetres([
+  FrequencyWavelength$WavelengthInCentimetres([
     super.value,
   ]);
 
@@ -2394,14 +2395,14 @@ final class FrequencyWavelength$WavelengthInCentimetres
   @override
   String get displayName => 'wavelength in centimetres';
 
-  static const _ratio = 3.33564095198152e-11;
+  static final _ratio = Rational.parse('3.33564095198152050E-011');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInCentimetres] ≈ 3.33564095198152e-11 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInCentimetres] ≈ 3.33564095198152050E-011 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2410,12 +2411,12 @@ final class FrequencyWavelength$WavelengthInCentimetres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInCentimetres] with new value
   @override
   FrequencyWavelength$WavelengthInCentimetres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInCentimetres(val);
 
@@ -2428,7 +2429,7 @@ final class FrequencyWavelength$WavelengthInCentimetres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -2436,7 +2437,7 @@ final class FrequencyWavelength$WavelengthInCentimetres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInMillimetres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInMillimetres([
+  FrequencyWavelength$WavelengthInMillimetres([
     super.value,
   ]);
 
@@ -2467,14 +2468,14 @@ final class FrequencyWavelength$WavelengthInMillimetres
   @override
   String get displayName => 'wavelength in millimetres';
 
-  static const _ratio = 3.3356409519815203e-12;
+  static final _ratio = Rational.parse('3.33564095198152050E-012');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInMillimetres] ≈ 3.3356409519815203e-12 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInMillimetres] ≈ 3.33564095198152050E-012 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2483,12 +2484,12 @@ final class FrequencyWavelength$WavelengthInMillimetres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInMillimetres] with new value
   @override
   FrequencyWavelength$WavelengthInMillimetres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInMillimetres(val);
 
@@ -2501,7 +2502,7 @@ final class FrequencyWavelength$WavelengthInMillimetres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -2509,7 +2510,7 @@ final class FrequencyWavelength$WavelengthInMillimetres
 /// Unit of [FrequencyWavelength]
 final class FrequencyWavelength$WavelengthInMicrometres
     extends FrequencyWavelength {
-  const FrequencyWavelength$WavelengthInMicrometres([
+  FrequencyWavelength$WavelengthInMicrometres([
     super.value,
   ]);
 
@@ -2540,14 +2541,14 @@ final class FrequencyWavelength$WavelengthInMicrometres
   @override
   String get displayName => 'wavelength in micrometres';
 
-  static const _ratio = 3.3356409519815205e-15;
+  static final _ratio = Rational.parse('3.33564095198152050E-015');
 
   @override
-  FrequencyWavelength get anchor => const FrequencyWavelength$Hertz(_ratio);
+  FrequencyWavelength get anchor => FrequencyWavelength$Hertz(_ratio);
 
-  /// 1 [FrequencyWavelength$WavelengthInMicrometres] ≈ 3.3356409519815205e-15 [FrequencyWavelength$Hertz]
+  /// 1 [FrequencyWavelength$WavelengthInMicrometres] ≈ 3.33564095198152050E-015 [FrequencyWavelength$Hertz]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2556,12 +2557,12 @@ final class FrequencyWavelength$WavelengthInMicrometres
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FrequencyWavelength$WavelengthInMicrometres] with new value
   @override
   FrequencyWavelength$WavelengthInMicrometres withValue(
-    num val,
+    Rational val,
   ) =>
       FrequencyWavelength$WavelengthInMicrometres(val);
 
@@ -2574,7 +2575,7 @@ final class FrequencyWavelength$WavelengthInMicrometres
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

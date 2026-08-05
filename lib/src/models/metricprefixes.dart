@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [MetricPrefixes$Nano], [MetricPrefixes$Pico], [MetricPrefixes$Femto],
 /// [MetricPrefixes$Atto], [MetricPrefixes$Zepto], [MetricPrefixes$Yocto]
 sealed class MetricPrefixes extends Unit<MetricPrefixes> {
-  const MetricPrefixes([
+  MetricPrefixes([
     super.value,
   ]);
 
@@ -22,115 +22,116 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : MetricPrefixes.anchor();
 
-  factory MetricPrefixes.anchor() => const MetricPrefixes$MetricUnit();
+  factory MetricPrefixes.anchor() => MetricPrefixes$MetricUnit();
 
   /// Convert to [MetricPrefixes$Yotta]
   MetricPrefixes get toYotta => convertTo(
-        const MetricPrefixes$Yotta(),
+        MetricPrefixes$Yotta(),
       );
 
   /// Convert to [MetricPrefixes$Zetta]
   MetricPrefixes get toZetta => convertTo(
-        const MetricPrefixes$Zetta(),
+        MetricPrefixes$Zetta(),
       );
 
   /// Convert to [MetricPrefixes$Exa]
   MetricPrefixes get toExa => convertTo(
-        const MetricPrefixes$Exa(),
+        MetricPrefixes$Exa(),
       );
 
   /// Convert to [MetricPrefixes$Peta]
   MetricPrefixes get toPeta => convertTo(
-        const MetricPrefixes$Peta(),
+        MetricPrefixes$Peta(),
       );
 
   /// Convert to [MetricPrefixes$Tera]
   MetricPrefixes get toTera => convertTo(
-        const MetricPrefixes$Tera(),
+        MetricPrefixes$Tera(),
       );
 
   /// Convert to [MetricPrefixes$Giga]
   MetricPrefixes get toGiga => convertTo(
-        const MetricPrefixes$Giga(),
+        MetricPrefixes$Giga(),
       );
 
   /// Convert to [MetricPrefixes$Mega]
   MetricPrefixes get toMega => convertTo(
-        const MetricPrefixes$Mega(),
+        MetricPrefixes$Mega(),
       );
 
   /// Convert to [MetricPrefixes$Kilo]
   MetricPrefixes get toKilo => convertTo(
-        const MetricPrefixes$Kilo(),
+        MetricPrefixes$Kilo(),
       );
 
   /// Convert to [MetricPrefixes$Hecto]
   MetricPrefixes get toHecto => convertTo(
-        const MetricPrefixes$Hecto(),
+        MetricPrefixes$Hecto(),
       );
 
   /// Convert to [MetricPrefixes$Deka]
   MetricPrefixes get toDeka => convertTo(
-        const MetricPrefixes$Deka(),
+        MetricPrefixes$Deka(),
       );
 
   /// Convert to [MetricPrefixes$MetricUnit]
   MetricPrefixes get toMetricUnit => convertTo(
-        const MetricPrefixes$MetricUnit(),
+        MetricPrefixes$MetricUnit(),
       );
 
   /// Convert to [MetricPrefixes$Deci]
   MetricPrefixes get toDeci => convertTo(
-        const MetricPrefixes$Deci(),
+        MetricPrefixes$Deci(),
       );
 
   /// Convert to [MetricPrefixes$Centi]
   MetricPrefixes get toCenti => convertTo(
-        const MetricPrefixes$Centi(),
+        MetricPrefixes$Centi(),
       );
 
   /// Convert to [MetricPrefixes$Milli]
   MetricPrefixes get toMilli => convertTo(
-        const MetricPrefixes$Milli(),
+        MetricPrefixes$Milli(),
       );
 
   /// Convert to [MetricPrefixes$Micro]
   MetricPrefixes get toMicro => convertTo(
-        const MetricPrefixes$Micro(),
+        MetricPrefixes$Micro(),
       );
 
   /// Convert to [MetricPrefixes$Nano]
   MetricPrefixes get toNano => convertTo(
-        const MetricPrefixes$Nano(),
+        MetricPrefixes$Nano(),
       );
 
   /// Convert to [MetricPrefixes$Pico]
   MetricPrefixes get toPico => convertTo(
-        const MetricPrefixes$Pico(),
+        MetricPrefixes$Pico(),
       );
 
   /// Convert to [MetricPrefixes$Femto]
   MetricPrefixes get toFemto => convertTo(
-        const MetricPrefixes$Femto(),
+        MetricPrefixes$Femto(),
       );
 
   /// Convert to [MetricPrefixes$Atto]
   MetricPrefixes get toAtto => convertTo(
-        const MetricPrefixes$Atto(),
+        MetricPrefixes$Atto(),
       );
 
   /// Convert to [MetricPrefixes$Zepto]
   MetricPrefixes get toZepto => convertTo(
-        const MetricPrefixes$Zepto(),
+        MetricPrefixes$Zepto(),
       );
 
   /// Convert to [MetricPrefixes$Yocto]
   MetricPrefixes get toYocto => convertTo(
-        const MetricPrefixes$Yocto(),
+        MetricPrefixes$Yocto(),
       );
 
   @override
@@ -141,27 +142,27 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
 
   static const _majorName = 'metricPrefixes';
 
-  static const yotta = MetricPrefixes$Yotta();
-  static const zetta = MetricPrefixes$Zetta();
-  static const exa = MetricPrefixes$Exa();
-  static const peta = MetricPrefixes$Peta();
-  static const tera = MetricPrefixes$Tera();
-  static const giga = MetricPrefixes$Giga();
-  static const mega = MetricPrefixes$Mega();
-  static const kilo = MetricPrefixes$Kilo();
-  static const hecto = MetricPrefixes$Hecto();
-  static const deka = MetricPrefixes$Deka();
-  static const metricUnit = MetricPrefixes$MetricUnit();
-  static const deci = MetricPrefixes$Deci();
-  static const centi = MetricPrefixes$Centi();
-  static const milli = MetricPrefixes$Milli();
-  static const micro = MetricPrefixes$Micro();
-  static const nano = MetricPrefixes$Nano();
-  static const pico = MetricPrefixes$Pico();
-  static const femto = MetricPrefixes$Femto();
-  static const atto = MetricPrefixes$Atto();
-  static const zepto = MetricPrefixes$Zepto();
-  static const yocto = MetricPrefixes$Yocto();
+  static final yotta = MetricPrefixes$Yotta();
+  static final zetta = MetricPrefixes$Zetta();
+  static final exa = MetricPrefixes$Exa();
+  static final peta = MetricPrefixes$Peta();
+  static final tera = MetricPrefixes$Tera();
+  static final giga = MetricPrefixes$Giga();
+  static final mega = MetricPrefixes$Mega();
+  static final kilo = MetricPrefixes$Kilo();
+  static final hecto = MetricPrefixes$Hecto();
+  static final deka = MetricPrefixes$Deka();
+  static final metricUnit = MetricPrefixes$MetricUnit();
+  static final deci = MetricPrefixes$Deci();
+  static final centi = MetricPrefixes$Centi();
+  static final milli = MetricPrefixes$Milli();
+  static final micro = MetricPrefixes$Micro();
+  static final nano = MetricPrefixes$Nano();
+  static final pico = MetricPrefixes$Pico();
+  static final femto = MetricPrefixes$Femto();
+  static final atto = MetricPrefixes$Atto();
+  static final zepto = MetricPrefixes$Zepto();
+  static final yocto = MetricPrefixes$Yocto();
 
   @override
   List<MetricPrefixes> get units => values;
@@ -169,7 +170,7 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
   @override
   EnumValues<MetricPrefixes> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <MetricPrefixes>[
     yotta,
     zetta,
     exa,
@@ -193,7 +194,7 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
     yocto,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, MetricPrefixes>{
     MetricPrefixes$Yotta._minorName: yotta,
     MetricPrefixes$Zetta._minorName: zetta,
     MetricPrefixes$Exa._minorName: exa,
@@ -220,7 +221,7 @@ sealed class MetricPrefixes extends Unit<MetricPrefixes> {
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Yotta extends MetricPrefixes {
-  const MetricPrefixes$Yotta([
+  MetricPrefixes$Yotta([
     super.value,
   ]);
 
@@ -251,14 +252,14 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+24;
+  static final _ratio = Rational.parse('1.00000000000000000E+024');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Yotta] = 1e+24 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Yotta] = 1.00000000000000000E+024 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -266,12 +267,12 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Yotta] with new value
   @override
   MetricPrefixes$Yotta withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Yotta(val);
 
@@ -284,14 +285,14 @@ final class MetricPrefixes$Yotta extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Zetta extends MetricPrefixes {
-  const MetricPrefixes$Zetta([
+  MetricPrefixes$Zetta([
     super.value,
   ]);
 
@@ -322,14 +323,14 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+21;
+  static final _ratio = Rational.parse('1.00000000000000000E+021');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Zetta] = 1e+21 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Zetta] = 1.00000000000000000E+021 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -337,12 +338,12 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Zetta] with new value
   @override
   MetricPrefixes$Zetta withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Zetta(val);
 
@@ -355,14 +356,14 @@ final class MetricPrefixes$Zetta extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Exa extends MetricPrefixes {
-  const MetricPrefixes$Exa([
+  MetricPrefixes$Exa([
     super.value,
   ]);
 
@@ -393,14 +394,14 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Exa] = 1000000000000000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Exa] = 1.00000000000000000E+018 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -408,12 +409,12 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Exa] with new value
   @override
   MetricPrefixes$Exa withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Exa(val);
 
@@ -426,14 +427,14 @@ final class MetricPrefixes$Exa extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Peta extends MetricPrefixes {
-  const MetricPrefixes$Peta([
+  MetricPrefixes$Peta([
     super.value,
   ]);
 
@@ -464,14 +465,14 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Peta] = 1000000000000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Peta] = 1.00000000000000000E+015 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -479,12 +480,12 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Peta] with new value
   @override
   MetricPrefixes$Peta withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Peta(val);
 
@@ -497,14 +498,14 @@ final class MetricPrefixes$Peta extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Tera extends MetricPrefixes {
-  const MetricPrefixes$Tera([
+  MetricPrefixes$Tera([
     super.value,
   ]);
 
@@ -535,14 +536,14 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Tera] = 1000000000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Tera] = 1.00000000000000000E+012 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -550,12 +551,12 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Tera] with new value
   @override
   MetricPrefixes$Tera withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Tera(val);
 
@@ -568,14 +569,14 @@ final class MetricPrefixes$Tera extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Giga extends MetricPrefixes {
-  const MetricPrefixes$Giga([
+  MetricPrefixes$Giga([
     super.value,
   ]);
 
@@ -606,14 +607,14 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Giga] = 1000000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Giga] = 1.00000000000000000E+009 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -621,12 +622,12 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Giga] with new value
   @override
   MetricPrefixes$Giga withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Giga(val);
 
@@ -639,14 +640,14 @@ final class MetricPrefixes$Giga extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Mega extends MetricPrefixes {
-  const MetricPrefixes$Mega([
+  MetricPrefixes$Mega([
     super.value,
   ]);
 
@@ -677,14 +678,14 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Mega] = 1000000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Mega] = 1.00000000000000000E+006 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -692,12 +693,12 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Mega] with new value
   @override
   MetricPrefixes$Mega withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Mega(val);
 
@@ -710,14 +711,14 @@ final class MetricPrefixes$Mega extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Kilo extends MetricPrefixes {
-  const MetricPrefixes$Kilo([
+  MetricPrefixes$Kilo([
     super.value,
   ]);
 
@@ -748,14 +749,14 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Kilo] = 1000.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Kilo] = 1.00000000000000000E+003 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -763,12 +764,12 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Kilo] with new value
   @override
   MetricPrefixes$Kilo withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Kilo(val);
 
@@ -781,14 +782,14 @@ final class MetricPrefixes$Kilo extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Hecto extends MetricPrefixes {
-  const MetricPrefixes$Hecto([
+  MetricPrefixes$Hecto([
     super.value,
   ]);
 
@@ -819,14 +820,14 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Hecto] = 100.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Hecto] = 1.00000000000000000E+002 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -834,12 +835,12 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Hecto] with new value
   @override
   MetricPrefixes$Hecto withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Hecto(val);
 
@@ -852,14 +853,14 @@ final class MetricPrefixes$Hecto extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Deka extends MetricPrefixes {
-  const MetricPrefixes$Deka([
+  MetricPrefixes$Deka([
     super.value,
   ]);
 
@@ -890,14 +891,14 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Deka] = 10.0 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Deka] = 1.00000000000000000E+001 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -905,12 +906,12 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Deka] with new value
   @override
   MetricPrefixes$Deka withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Deka(val);
 
@@ -923,14 +924,14 @@ final class MetricPrefixes$Deka extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$MetricUnit extends MetricPrefixes {
-  const MetricPrefixes$MetricUnit([
+  MetricPrefixes$MetricUnit([
     super.value,
   ]);
 
@@ -961,14 +962,14 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
   @override
   String get displayName => '-';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
   /// Default (anchor) unit of [MetricPrefixes]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -976,12 +977,12 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$MetricUnit] with new value
   @override
   MetricPrefixes$MetricUnit withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$MetricUnit(val);
 
@@ -994,14 +995,14 @@ final class MetricPrefixes$MetricUnit extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Deci extends MetricPrefixes {
-  const MetricPrefixes$Deci([
+  MetricPrefixes$Deci([
     super.value,
   ]);
 
@@ -1032,14 +1033,14 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Deci] ≈ 0.1 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Deci] ≈ 1.00000000000000000E-001 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1047,12 +1048,12 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Deci] with new value
   @override
   MetricPrefixes$Deci withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Deci(val);
 
@@ -1065,14 +1066,14 @@ final class MetricPrefixes$Deci extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Centi extends MetricPrefixes {
-  const MetricPrefixes$Centi([
+  MetricPrefixes$Centi([
     super.value,
   ]);
 
@@ -1103,14 +1104,14 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Centi] ≈ 0.01 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Centi] ≈ 1.00000000000000000E-002 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1118,12 +1119,12 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Centi] with new value
   @override
   MetricPrefixes$Centi withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Centi(val);
 
@@ -1136,14 +1137,14 @@ final class MetricPrefixes$Centi extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Milli extends MetricPrefixes {
-  const MetricPrefixes$Milli([
+  MetricPrefixes$Milli([
     super.value,
   ]);
 
@@ -1174,14 +1175,14 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Milli] ≈ 0.001 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Milli] ≈ 1.00000000000000000E-003 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1189,12 +1190,12 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Milli] with new value
   @override
   MetricPrefixes$Milli withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Milli(val);
 
@@ -1207,14 +1208,14 @@ final class MetricPrefixes$Milli extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Micro extends MetricPrefixes {
-  const MetricPrefixes$Micro([
+  MetricPrefixes$Micro([
     super.value,
   ]);
 
@@ -1245,14 +1246,14 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Micro] ≈ 0.000001 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Micro] ≈ 1.00000000000000000E-006 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1260,12 +1261,12 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Micro] with new value
   @override
   MetricPrefixes$Micro withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Micro(val);
 
@@ -1278,14 +1279,14 @@ final class MetricPrefixes$Micro extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Nano extends MetricPrefixes {
-  const MetricPrefixes$Nano([
+  MetricPrefixes$Nano([
     super.value,
   ]);
 
@@ -1316,14 +1317,14 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Nano] ≈ 1e-9 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Nano] ≈ 1.00000000000000000E-009 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1331,12 +1332,12 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Nano] with new value
   @override
   MetricPrefixes$Nano withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Nano(val);
 
@@ -1349,14 +1350,14 @@ final class MetricPrefixes$Nano extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Pico extends MetricPrefixes {
-  const MetricPrefixes$Pico([
+  MetricPrefixes$Pico([
     super.value,
   ]);
 
@@ -1387,14 +1388,14 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Pico] ≈ 1e-12 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Pico] ≈ 1.00000000000000000E-012 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1402,12 +1403,12 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Pico] with new value
   @override
   MetricPrefixes$Pico withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Pico(val);
 
@@ -1420,14 +1421,14 @@ final class MetricPrefixes$Pico extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Femto extends MetricPrefixes {
-  const MetricPrefixes$Femto([
+  MetricPrefixes$Femto([
     super.value,
   ]);
 
@@ -1458,14 +1459,14 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-15;
+  static final _ratio = Rational.parse('1.00000000000000000E-015');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Femto] ≈ 1e-15 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Femto] ≈ 1.00000000000000000E-015 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1473,12 +1474,12 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Femto] with new value
   @override
   MetricPrefixes$Femto withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Femto(val);
 
@@ -1491,14 +1492,14 @@ final class MetricPrefixes$Femto extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Atto extends MetricPrefixes {
-  const MetricPrefixes$Atto([
+  MetricPrefixes$Atto([
     super.value,
   ]);
 
@@ -1529,14 +1530,14 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-18;
+  static final _ratio = Rational.parse('1.00000000000000000E-018');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Atto] ≈ 1e-18 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Atto] ≈ 1.00000000000000000E-018 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1544,12 +1545,12 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Atto] with new value
   @override
   MetricPrefixes$Atto withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Atto(val);
 
@@ -1562,14 +1563,14 @@ final class MetricPrefixes$Atto extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Zepto extends MetricPrefixes {
-  const MetricPrefixes$Zepto([
+  MetricPrefixes$Zepto([
     super.value,
   ]);
 
@@ -1600,14 +1601,14 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-21;
+  static final _ratio = Rational.parse('1.00000000000000000E-021');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Zepto] ≈ 1e-21 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Zepto] ≈ 1.00000000000000000E-021 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1615,12 +1616,12 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Zepto] with new value
   @override
   MetricPrefixes$Zepto withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Zepto(val);
 
@@ -1633,14 +1634,14 @@ final class MetricPrefixes$Zepto extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MetricPrefixes]
 final class MetricPrefixes$Yocto extends MetricPrefixes {
-  const MetricPrefixes$Yocto([
+  MetricPrefixes$Yocto([
     super.value,
   ]);
 
@@ -1671,14 +1672,14 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-24;
+  static final _ratio = Rational.parse('1.00000000000000000E-024');
 
   @override
-  MetricPrefixes get anchor => const MetricPrefixes$MetricUnit(_ratio);
+  MetricPrefixes get anchor => MetricPrefixes$MetricUnit(_ratio);
 
-  /// 1 [MetricPrefixes$Yocto] ≈ 1e-24 [MetricPrefixes$MetricUnit]
+  /// 1 [MetricPrefixes$Yocto] ≈ 1.00000000000000000E-024 [MetricPrefixes$MetricUnit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1686,12 +1687,12 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MetricPrefixes$Yocto] with new value
   @override
   MetricPrefixes$Yocto withValue(
-    num val,
+    Rational val,
   ) =>
       MetricPrefixes$Yocto(val);
 
@@ -1704,7 +1705,7 @@ final class MetricPrefixes$Yocto extends MetricPrefixes {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

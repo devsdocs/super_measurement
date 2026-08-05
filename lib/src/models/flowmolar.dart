@@ -16,7 +16,7 @@ part of '../../super_measurement.dart';
 /// [FlowMolar$MillimolPerDay], [FlowMolar$KilomolPerMinute],
 /// [FlowMolar$KilomolPerHour], [FlowMolar$KilomolPerDay]
 sealed class FlowMolar extends Unit<FlowMolar> {
-  const FlowMolar([
+  FlowMolar([
     super.value,
   ]);
 
@@ -28,140 +28,141 @@ sealed class FlowMolar extends Unit<FlowMolar> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : FlowMolar.anchor();
 
-  factory FlowMolar.anchor() => const FlowMolar$MolPerDay();
+  factory FlowMolar.anchor() => FlowMolar$MolPerDay();
 
   /// Convert to [FlowMolar$ExamolPerSecond]
   FlowMolar get toExamolPerSecond => convertTo(
-        const FlowMolar$ExamolPerSecond(),
+        FlowMolar$ExamolPerSecond(),
       );
 
   /// Convert to [FlowMolar$PetamolPerSecond]
   FlowMolar get toPetamolPerSecond => convertTo(
-        const FlowMolar$PetamolPerSecond(),
+        FlowMolar$PetamolPerSecond(),
       );
 
   /// Convert to [FlowMolar$TeramolPerSecond]
   FlowMolar get toTeramolPerSecond => convertTo(
-        const FlowMolar$TeramolPerSecond(),
+        FlowMolar$TeramolPerSecond(),
       );
 
   /// Convert to [FlowMolar$GigamolPerSecond]
   FlowMolar get toGigamolPerSecond => convertTo(
-        const FlowMolar$GigamolPerSecond(),
+        FlowMolar$GigamolPerSecond(),
       );
 
   /// Convert to [FlowMolar$MegamolPerSecond]
   FlowMolar get toMegamolPerSecond => convertTo(
-        const FlowMolar$MegamolPerSecond(),
+        FlowMolar$MegamolPerSecond(),
       );
 
   /// Convert to [FlowMolar$KilomolPerSecond]
   FlowMolar get toKilomolPerSecond => convertTo(
-        const FlowMolar$KilomolPerSecond(),
+        FlowMolar$KilomolPerSecond(),
       );
 
   /// Convert to [FlowMolar$HectomolPerSecond]
   FlowMolar get toHectomolPerSecond => convertTo(
-        const FlowMolar$HectomolPerSecond(),
+        FlowMolar$HectomolPerSecond(),
       );
 
   /// Convert to [FlowMolar$DekamolPerSecond]
   FlowMolar get toDekamolPerSecond => convertTo(
-        const FlowMolar$DekamolPerSecond(),
+        FlowMolar$DekamolPerSecond(),
       );
 
   /// Convert to [FlowMolar$MolPerSecond]
   FlowMolar get toMolPerSecond => convertTo(
-        const FlowMolar$MolPerSecond(),
+        FlowMolar$MolPerSecond(),
       );
 
   /// Convert to [FlowMolar$DecimolPerSecond]
   FlowMolar get toDecimolPerSecond => convertTo(
-        const FlowMolar$DecimolPerSecond(),
+        FlowMolar$DecimolPerSecond(),
       );
 
   /// Convert to [FlowMolar$CentimolPerSecond]
   FlowMolar get toCentimolPerSecond => convertTo(
-        const FlowMolar$CentimolPerSecond(),
+        FlowMolar$CentimolPerSecond(),
       );
 
   /// Convert to [FlowMolar$MillimolPerSecond]
   FlowMolar get toMillimolPerSecond => convertTo(
-        const FlowMolar$MillimolPerSecond(),
+        FlowMolar$MillimolPerSecond(),
       );
 
   /// Convert to [FlowMolar$MicromolPerSecond]
   FlowMolar get toMicromolPerSecond => convertTo(
-        const FlowMolar$MicromolPerSecond(),
+        FlowMolar$MicromolPerSecond(),
       );
 
   /// Convert to [FlowMolar$NanomolPerSecond]
   FlowMolar get toNanomolPerSecond => convertTo(
-        const FlowMolar$NanomolPerSecond(),
+        FlowMolar$NanomolPerSecond(),
       );
 
   /// Convert to [FlowMolar$PicomolPerSecond]
   FlowMolar get toPicomolPerSecond => convertTo(
-        const FlowMolar$PicomolPerSecond(),
+        FlowMolar$PicomolPerSecond(),
       );
 
   /// Convert to [FlowMolar$FemtomolPerSecond]
   FlowMolar get toFemtomolPerSecond => convertTo(
-        const FlowMolar$FemtomolPerSecond(),
+        FlowMolar$FemtomolPerSecond(),
       );
 
   /// Convert to [FlowMolar$AttomolPerSecond]
   FlowMolar get toAttomolPerSecond => convertTo(
-        const FlowMolar$AttomolPerSecond(),
+        FlowMolar$AttomolPerSecond(),
       );
 
   /// Convert to [FlowMolar$MolPerMinute]
   FlowMolar get toMolPerMinute => convertTo(
-        const FlowMolar$MolPerMinute(),
+        FlowMolar$MolPerMinute(),
       );
 
   /// Convert to [FlowMolar$MolPerHour]
   FlowMolar get toMolPerHour => convertTo(
-        const FlowMolar$MolPerHour(),
+        FlowMolar$MolPerHour(),
       );
 
   /// Convert to [FlowMolar$MolPerDay]
   FlowMolar get toMolPerDay => convertTo(
-        const FlowMolar$MolPerDay(),
+        FlowMolar$MolPerDay(),
       );
 
   /// Convert to [FlowMolar$MillimolPerMinute]
   FlowMolar get toMillimolPerMinute => convertTo(
-        const FlowMolar$MillimolPerMinute(),
+        FlowMolar$MillimolPerMinute(),
       );
 
   /// Convert to [FlowMolar$MillimolPerHour]
   FlowMolar get toMillimolPerHour => convertTo(
-        const FlowMolar$MillimolPerHour(),
+        FlowMolar$MillimolPerHour(),
       );
 
   /// Convert to [FlowMolar$MillimolPerDay]
   FlowMolar get toMillimolPerDay => convertTo(
-        const FlowMolar$MillimolPerDay(),
+        FlowMolar$MillimolPerDay(),
       );
 
   /// Convert to [FlowMolar$KilomolPerMinute]
   FlowMolar get toKilomolPerMinute => convertTo(
-        const FlowMolar$KilomolPerMinute(),
+        FlowMolar$KilomolPerMinute(),
       );
 
   /// Convert to [FlowMolar$KilomolPerHour]
   FlowMolar get toKilomolPerHour => convertTo(
-        const FlowMolar$KilomolPerHour(),
+        FlowMolar$KilomolPerHour(),
       );
 
   /// Convert to [FlowMolar$KilomolPerDay]
   FlowMolar get toKilomolPerDay => convertTo(
-        const FlowMolar$KilomolPerDay(),
+        FlowMolar$KilomolPerDay(),
       );
 
   @override
@@ -172,32 +173,32 @@ sealed class FlowMolar extends Unit<FlowMolar> {
 
   static const _majorName = 'flowMolar';
 
-  static const examolPerSecond = FlowMolar$ExamolPerSecond();
-  static const petamolPerSecond = FlowMolar$PetamolPerSecond();
-  static const teramolPerSecond = FlowMolar$TeramolPerSecond();
-  static const gigamolPerSecond = FlowMolar$GigamolPerSecond();
-  static const megamolPerSecond = FlowMolar$MegamolPerSecond();
-  static const kilomolPerSecond = FlowMolar$KilomolPerSecond();
-  static const hectomolPerSecond = FlowMolar$HectomolPerSecond();
-  static const dekamolPerSecond = FlowMolar$DekamolPerSecond();
-  static const molPerSecond = FlowMolar$MolPerSecond();
-  static const decimolPerSecond = FlowMolar$DecimolPerSecond();
-  static const centimolPerSecond = FlowMolar$CentimolPerSecond();
-  static const millimolPerSecond = FlowMolar$MillimolPerSecond();
-  static const micromolPerSecond = FlowMolar$MicromolPerSecond();
-  static const nanomolPerSecond = FlowMolar$NanomolPerSecond();
-  static const picomolPerSecond = FlowMolar$PicomolPerSecond();
-  static const femtomolPerSecond = FlowMolar$FemtomolPerSecond();
-  static const attomolPerSecond = FlowMolar$AttomolPerSecond();
-  static const molPerMinute = FlowMolar$MolPerMinute();
-  static const molPerHour = FlowMolar$MolPerHour();
-  static const molPerDay = FlowMolar$MolPerDay();
-  static const millimolPerMinute = FlowMolar$MillimolPerMinute();
-  static const millimolPerHour = FlowMolar$MillimolPerHour();
-  static const millimolPerDay = FlowMolar$MillimolPerDay();
-  static const kilomolPerMinute = FlowMolar$KilomolPerMinute();
-  static const kilomolPerHour = FlowMolar$KilomolPerHour();
-  static const kilomolPerDay = FlowMolar$KilomolPerDay();
+  static final examolPerSecond = FlowMolar$ExamolPerSecond();
+  static final petamolPerSecond = FlowMolar$PetamolPerSecond();
+  static final teramolPerSecond = FlowMolar$TeramolPerSecond();
+  static final gigamolPerSecond = FlowMolar$GigamolPerSecond();
+  static final megamolPerSecond = FlowMolar$MegamolPerSecond();
+  static final kilomolPerSecond = FlowMolar$KilomolPerSecond();
+  static final hectomolPerSecond = FlowMolar$HectomolPerSecond();
+  static final dekamolPerSecond = FlowMolar$DekamolPerSecond();
+  static final molPerSecond = FlowMolar$MolPerSecond();
+  static final decimolPerSecond = FlowMolar$DecimolPerSecond();
+  static final centimolPerSecond = FlowMolar$CentimolPerSecond();
+  static final millimolPerSecond = FlowMolar$MillimolPerSecond();
+  static final micromolPerSecond = FlowMolar$MicromolPerSecond();
+  static final nanomolPerSecond = FlowMolar$NanomolPerSecond();
+  static final picomolPerSecond = FlowMolar$PicomolPerSecond();
+  static final femtomolPerSecond = FlowMolar$FemtomolPerSecond();
+  static final attomolPerSecond = FlowMolar$AttomolPerSecond();
+  static final molPerMinute = FlowMolar$MolPerMinute();
+  static final molPerHour = FlowMolar$MolPerHour();
+  static final molPerDay = FlowMolar$MolPerDay();
+  static final millimolPerMinute = FlowMolar$MillimolPerMinute();
+  static final millimolPerHour = FlowMolar$MillimolPerHour();
+  static final millimolPerDay = FlowMolar$MillimolPerDay();
+  static final kilomolPerMinute = FlowMolar$KilomolPerMinute();
+  static final kilomolPerHour = FlowMolar$KilomolPerHour();
+  static final kilomolPerDay = FlowMolar$KilomolPerDay();
 
   @override
   List<FlowMolar> get units => values;
@@ -205,7 +206,7 @@ sealed class FlowMolar extends Unit<FlowMolar> {
   @override
   EnumValues<FlowMolar> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <FlowMolar>[
     examolPerSecond,
     petamolPerSecond,
     teramolPerSecond,
@@ -234,7 +235,7 @@ sealed class FlowMolar extends Unit<FlowMolar> {
     kilomolPerDay,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, FlowMolar>{
     FlowMolar$ExamolPerSecond._minorName: examolPerSecond,
     FlowMolar$PetamolPerSecond._minorName: petamolPerSecond,
     FlowMolar$TeramolPerSecond._minorName: teramolPerSecond,
@@ -266,7 +267,7 @@ sealed class FlowMolar extends Unit<FlowMolar> {
 
 /// Unit of [FlowMolar]
 final class FlowMolar$ExamolPerSecond extends FlowMolar {
-  const FlowMolar$ExamolPerSecond([
+  FlowMolar$ExamolPerSecond([
     super.value,
   ]);
 
@@ -297,14 +298,14 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
   @override
   String get displayName => 'examol/second';
 
-  static const _ratio = 8.64e+22;
+  static final _ratio = Rational.parse('8.64000000000000000E+022');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$ExamolPerSecond] = 8.64e+22 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$ExamolPerSecond] = 8.64000000000000000E+022 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -312,12 +313,12 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$ExamolPerSecond] with new value
   @override
   FlowMolar$ExamolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$ExamolPerSecond(val);
 
@@ -330,14 +331,14 @@ final class FlowMolar$ExamolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$PetamolPerSecond extends FlowMolar {
-  const FlowMolar$PetamolPerSecond([
+  FlowMolar$PetamolPerSecond([
     super.value,
   ]);
 
@@ -368,14 +369,14 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
   @override
   String get displayName => 'petamol/second';
 
-  static const _ratio = 86400000000000000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+019');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$PetamolPerSecond] = 86400000000000000000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$PetamolPerSecond] = 8.64000000000000000E+019 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -383,12 +384,12 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$PetamolPerSecond] with new value
   @override
   FlowMolar$PetamolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$PetamolPerSecond(val);
 
@@ -401,14 +402,14 @@ final class FlowMolar$PetamolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$TeramolPerSecond extends FlowMolar {
-  const FlowMolar$TeramolPerSecond([
+  FlowMolar$TeramolPerSecond([
     super.value,
   ]);
 
@@ -439,14 +440,14 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
   @override
   String get displayName => 'teramol/second';
 
-  static const _ratio = 86400000000000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+016');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$TeramolPerSecond] = 86400000000000000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$TeramolPerSecond] = 8.64000000000000000E+016 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -454,12 +455,12 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$TeramolPerSecond] with new value
   @override
   FlowMolar$TeramolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$TeramolPerSecond(val);
 
@@ -472,14 +473,14 @@ final class FlowMolar$TeramolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$GigamolPerSecond extends FlowMolar {
-  const FlowMolar$GigamolPerSecond([
+  FlowMolar$GigamolPerSecond([
     super.value,
   ]);
 
@@ -510,14 +511,14 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
   @override
   String get displayName => 'gigamol/second';
 
-  static const _ratio = 86400000000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+013');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$GigamolPerSecond] = 86400000000000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$GigamolPerSecond] = 8.64000000000000000E+013 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -525,12 +526,12 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$GigamolPerSecond] with new value
   @override
   FlowMolar$GigamolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$GigamolPerSecond(val);
 
@@ -543,14 +544,14 @@ final class FlowMolar$GigamolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MegamolPerSecond extends FlowMolar {
-  const FlowMolar$MegamolPerSecond([
+  FlowMolar$MegamolPerSecond([
     super.value,
   ]);
 
@@ -581,14 +582,14 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
   @override
   String get displayName => 'megamol/second';
 
-  static const _ratio = 86400000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+010');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MegamolPerSecond] = 86400000000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MegamolPerSecond] = 8.64000000000000000E+010 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -596,12 +597,12 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MegamolPerSecond] with new value
   @override
   FlowMolar$MegamolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MegamolPerSecond(val);
 
@@ -614,14 +615,14 @@ final class FlowMolar$MegamolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$KilomolPerSecond extends FlowMolar {
-  const FlowMolar$KilomolPerSecond([
+  FlowMolar$KilomolPerSecond([
     super.value,
   ]);
 
@@ -652,14 +653,14 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
   @override
   String get displayName => 'kilomol/second';
 
-  static const _ratio = 86400000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+007');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$KilomolPerSecond] = 86400000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$KilomolPerSecond] = 8.64000000000000000E+007 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -667,12 +668,12 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$KilomolPerSecond] with new value
   @override
   FlowMolar$KilomolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$KilomolPerSecond(val);
 
@@ -685,14 +686,14 @@ final class FlowMolar$KilomolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$HectomolPerSecond extends FlowMolar {
-  const FlowMolar$HectomolPerSecond([
+  FlowMolar$HectomolPerSecond([
     super.value,
   ]);
 
@@ -723,14 +724,14 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
   @override
   String get displayName => 'hectomol/second';
 
-  static const _ratio = 8640000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+006');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$HectomolPerSecond] = 8640000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$HectomolPerSecond] = 8.64000000000000000E+006 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -738,12 +739,12 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$HectomolPerSecond] with new value
   @override
   FlowMolar$HectomolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$HectomolPerSecond(val);
 
@@ -756,14 +757,14 @@ final class FlowMolar$HectomolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$DekamolPerSecond extends FlowMolar {
-  const FlowMolar$DekamolPerSecond([
+  FlowMolar$DekamolPerSecond([
     super.value,
   ]);
 
@@ -794,14 +795,14 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
   @override
   String get displayName => 'dekamol/second';
 
-  static const _ratio = 864000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+005');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$DekamolPerSecond] = 864000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$DekamolPerSecond] = 8.64000000000000000E+005 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -809,12 +810,12 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$DekamolPerSecond] with new value
   @override
   FlowMolar$DekamolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$DekamolPerSecond(val);
 
@@ -827,14 +828,14 @@ final class FlowMolar$DekamolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MolPerSecond extends FlowMolar {
-  const FlowMolar$MolPerSecond([
+  FlowMolar$MolPerSecond([
     super.value,
   ]);
 
@@ -865,14 +866,14 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
   @override
   String get displayName => 'mol/second';
 
-  static const _ratio = 86400.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+004');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MolPerSecond] = 86400.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MolPerSecond] = 8.64000000000000000E+004 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -880,12 +881,12 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MolPerSecond] with new value
   @override
   FlowMolar$MolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MolPerSecond(val);
 
@@ -898,14 +899,14 @@ final class FlowMolar$MolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$DecimolPerSecond extends FlowMolar {
-  const FlowMolar$DecimolPerSecond([
+  FlowMolar$DecimolPerSecond([
     super.value,
   ]);
 
@@ -936,14 +937,14 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
   @override
   String get displayName => 'decimol/second';
 
-  static const _ratio = 8640.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+003');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$DecimolPerSecond] = 8640.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$DecimolPerSecond] = 8.64000000000000000E+003 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -951,12 +952,12 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$DecimolPerSecond] with new value
   @override
   FlowMolar$DecimolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$DecimolPerSecond(val);
 
@@ -969,14 +970,14 @@ final class FlowMolar$DecimolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$CentimolPerSecond extends FlowMolar {
-  const FlowMolar$CentimolPerSecond([
+  FlowMolar$CentimolPerSecond([
     super.value,
   ]);
 
@@ -1007,14 +1008,14 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
   @override
   String get displayName => 'centimol/second';
 
-  static const _ratio = 864.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+002');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$CentimolPerSecond] = 864.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$CentimolPerSecond] = 8.64000000000000000E+002 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1022,12 +1023,12 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$CentimolPerSecond] with new value
   @override
   FlowMolar$CentimolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$CentimolPerSecond(val);
 
@@ -1040,14 +1041,14 @@ final class FlowMolar$CentimolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MillimolPerSecond extends FlowMolar {
-  const FlowMolar$MillimolPerSecond([
+  FlowMolar$MillimolPerSecond([
     super.value,
   ]);
 
@@ -1078,14 +1079,14 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
   @override
   String get displayName => 'millimol/second';
 
-  static const _ratio = 86.4;
+  static final _ratio = Rational.parse('8.64000000000000000E+001');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MillimolPerSecond] ≈ 86.4 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MillimolPerSecond] ≈ 8.64000000000000000E+001 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1093,12 +1094,12 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MillimolPerSecond] with new value
   @override
   FlowMolar$MillimolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MillimolPerSecond(val);
 
@@ -1111,14 +1112,14 @@ final class FlowMolar$MillimolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MicromolPerSecond extends FlowMolar {
-  const FlowMolar$MicromolPerSecond([
+  FlowMolar$MicromolPerSecond([
     super.value,
   ]);
 
@@ -1149,14 +1150,14 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
   @override
   String get displayName => 'micromol/second';
 
-  static const _ratio = 0.0864;
+  static final _ratio = Rational.parse('8.64000000000000000E-002');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MicromolPerSecond] ≈ 0.0864 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MicromolPerSecond] ≈ 8.64000000000000000E-002 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1164,12 +1165,12 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MicromolPerSecond] with new value
   @override
   FlowMolar$MicromolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MicromolPerSecond(val);
 
@@ -1182,14 +1183,14 @@ final class FlowMolar$MicromolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$NanomolPerSecond extends FlowMolar {
-  const FlowMolar$NanomolPerSecond([
+  FlowMolar$NanomolPerSecond([
     super.value,
   ]);
 
@@ -1220,14 +1221,14 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
   @override
   String get displayName => 'nanomol/second';
 
-  static const _ratio = 0.0000864;
+  static final _ratio = Rational.parse('8.64000000000000000E-005');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$NanomolPerSecond] ≈ 0.0000864 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$NanomolPerSecond] ≈ 8.64000000000000000E-005 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1235,12 +1236,12 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$NanomolPerSecond] with new value
   @override
   FlowMolar$NanomolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$NanomolPerSecond(val);
 
@@ -1253,14 +1254,14 @@ final class FlowMolar$NanomolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$PicomolPerSecond extends FlowMolar {
-  const FlowMolar$PicomolPerSecond([
+  FlowMolar$PicomolPerSecond([
     super.value,
   ]);
 
@@ -1291,14 +1292,14 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
   @override
   String get displayName => 'picomol/second';
 
-  static const _ratio = 8.64e-8;
+  static final _ratio = Rational.parse('8.64000000000000000E-008');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$PicomolPerSecond] ≈ 8.64e-8 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$PicomolPerSecond] ≈ 8.64000000000000000E-008 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1306,12 +1307,12 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$PicomolPerSecond] with new value
   @override
   FlowMolar$PicomolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$PicomolPerSecond(val);
 
@@ -1324,14 +1325,14 @@ final class FlowMolar$PicomolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$FemtomolPerSecond extends FlowMolar {
-  const FlowMolar$FemtomolPerSecond([
+  FlowMolar$FemtomolPerSecond([
     super.value,
   ]);
 
@@ -1362,14 +1363,14 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
   @override
   String get displayName => 'femtomol/second';
 
-  static const _ratio = 8.64e-11;
+  static final _ratio = Rational.parse('8.64000000000000000E-011');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$FemtomolPerSecond] ≈ 8.64e-11 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$FemtomolPerSecond] ≈ 8.64000000000000000E-011 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1377,12 +1378,12 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$FemtomolPerSecond] with new value
   @override
   FlowMolar$FemtomolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$FemtomolPerSecond(val);
 
@@ -1395,14 +1396,14 @@ final class FlowMolar$FemtomolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$AttomolPerSecond extends FlowMolar {
-  const FlowMolar$AttomolPerSecond([
+  FlowMolar$AttomolPerSecond([
     super.value,
   ]);
 
@@ -1433,14 +1434,14 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
   @override
   String get displayName => 'attomol/second';
 
-  static const _ratio = 8.64e-14;
+  static final _ratio = Rational.parse('8.64000000000000000E-014');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$AttomolPerSecond] ≈ 8.64e-14 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$AttomolPerSecond] ≈ 8.64000000000000000E-014 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1448,12 +1449,12 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$AttomolPerSecond] with new value
   @override
   FlowMolar$AttomolPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$AttomolPerSecond(val);
 
@@ -1466,14 +1467,14 @@ final class FlowMolar$AttomolPerSecond extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MolPerMinute extends FlowMolar {
-  const FlowMolar$MolPerMinute([
+  FlowMolar$MolPerMinute([
     super.value,
   ]);
 
@@ -1504,14 +1505,14 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
   @override
   String get displayName => 'mol/minute';
 
-  static const _ratio = 1440.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+003');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MolPerMinute] = 1440.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MolPerMinute] = 1.44000000000000000E+003 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1519,12 +1520,12 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MolPerMinute] with new value
   @override
   FlowMolar$MolPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MolPerMinute(val);
 
@@ -1537,14 +1538,14 @@ final class FlowMolar$MolPerMinute extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MolPerHour extends FlowMolar {
-  const FlowMolar$MolPerHour([
+  FlowMolar$MolPerHour([
     super.value,
   ]);
 
@@ -1575,14 +1576,14 @@ final class FlowMolar$MolPerHour extends FlowMolar {
   @override
   String get displayName => 'mol/hour';
 
-  static const _ratio = 24.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+001');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MolPerHour] = 24.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MolPerHour] = 2.40000000000000000E+001 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1590,12 +1591,12 @@ final class FlowMolar$MolPerHour extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MolPerHour] with new value
   @override
   FlowMolar$MolPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MolPerHour(val);
 
@@ -1608,14 +1609,14 @@ final class FlowMolar$MolPerHour extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MolPerDay extends FlowMolar {
-  const FlowMolar$MolPerDay([
+  FlowMolar$MolPerDay([
     super.value,
   ]);
 
@@ -1646,14 +1647,14 @@ final class FlowMolar$MolPerDay extends FlowMolar {
   @override
   String get displayName => 'mol/day';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
   /// Default (anchor) unit of [FlowMolar]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1661,12 +1662,12 @@ final class FlowMolar$MolPerDay extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MolPerDay] with new value
   @override
   FlowMolar$MolPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MolPerDay(val);
 
@@ -1679,14 +1680,14 @@ final class FlowMolar$MolPerDay extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MillimolPerMinute extends FlowMolar {
-  const FlowMolar$MillimolPerMinute([
+  FlowMolar$MillimolPerMinute([
     super.value,
   ]);
 
@@ -1717,14 +1718,14 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
   @override
   String get displayName => 'millimol/minute';
 
-  static const _ratio = 1.44;
+  static final _ratio = Rational.parse('1.44000000000000000E+000');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MillimolPerMinute] ≈ 1.44 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MillimolPerMinute] ≈ 1.44000000000000000E+000 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1732,12 +1733,12 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MillimolPerMinute] with new value
   @override
   FlowMolar$MillimolPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MillimolPerMinute(val);
 
@@ -1750,14 +1751,14 @@ final class FlowMolar$MillimolPerMinute extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MillimolPerHour extends FlowMolar {
-  const FlowMolar$MillimolPerHour([
+  FlowMolar$MillimolPerHour([
     super.value,
   ]);
 
@@ -1788,14 +1789,14 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
   @override
   String get displayName => 'millimol/hour';
 
-  static const _ratio = 0.024;
+  static final _ratio = Rational.parse('2.40000000000000000E-002');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MillimolPerHour] ≈ 0.024 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MillimolPerHour] ≈ 2.40000000000000000E-002 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1803,12 +1804,12 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MillimolPerHour] with new value
   @override
   FlowMolar$MillimolPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MillimolPerHour(val);
 
@@ -1821,14 +1822,14 @@ final class FlowMolar$MillimolPerHour extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$MillimolPerDay extends FlowMolar {
-  const FlowMolar$MillimolPerDay([
+  FlowMolar$MillimolPerDay([
     super.value,
   ]);
 
@@ -1859,14 +1860,14 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
   @override
   String get displayName => 'millimol/day';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$MillimolPerDay] ≈ 0.001 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$MillimolPerDay] ≈ 1.00000000000000000E-003 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1874,12 +1875,12 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$MillimolPerDay] with new value
   @override
   FlowMolar$MillimolPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$MillimolPerDay(val);
 
@@ -1892,14 +1893,14 @@ final class FlowMolar$MillimolPerDay extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$KilomolPerMinute extends FlowMolar {
-  const FlowMolar$KilomolPerMinute([
+  FlowMolar$KilomolPerMinute([
     super.value,
   ]);
 
@@ -1930,14 +1931,14 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
   @override
   String get displayName => 'kilomol/minute';
 
-  static const _ratio = 1440000.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+006');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$KilomolPerMinute] = 1440000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$KilomolPerMinute] = 1.44000000000000000E+006 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1945,12 +1946,12 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$KilomolPerMinute] with new value
   @override
   FlowMolar$KilomolPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$KilomolPerMinute(val);
 
@@ -1963,14 +1964,14 @@ final class FlowMolar$KilomolPerMinute extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$KilomolPerHour extends FlowMolar {
-  const FlowMolar$KilomolPerHour([
+  FlowMolar$KilomolPerHour([
     super.value,
   ]);
 
@@ -2001,14 +2002,14 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
   @override
   String get displayName => 'kilomol/hour';
 
-  static const _ratio = 24000.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+004');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$KilomolPerHour] = 24000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$KilomolPerHour] = 2.40000000000000000E+004 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2016,12 +2017,12 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$KilomolPerHour] with new value
   @override
   FlowMolar$KilomolPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$KilomolPerHour(val);
 
@@ -2034,14 +2035,14 @@ final class FlowMolar$KilomolPerHour extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMolar]
 final class FlowMolar$KilomolPerDay extends FlowMolar {
-  const FlowMolar$KilomolPerDay([
+  FlowMolar$KilomolPerDay([
     super.value,
   ]);
 
@@ -2072,14 +2073,14 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
   @override
   String get displayName => 'kilomol/day';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  FlowMolar get anchor => const FlowMolar$MolPerDay(_ratio);
+  FlowMolar get anchor => FlowMolar$MolPerDay(_ratio);
 
-  /// 1 [FlowMolar$KilomolPerDay] = 1000.0 [FlowMolar$MolPerDay]
+  /// 1 [FlowMolar$KilomolPerDay] = 1.00000000000000000E+003 [FlowMolar$MolPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2087,12 +2088,12 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMolar$KilomolPerDay] with new value
   @override
   FlowMolar$KilomolPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMolar$KilomolPerDay(val);
 
@@ -2105,7 +2106,7 @@ final class FlowMolar$KilomolPerDay extends FlowMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

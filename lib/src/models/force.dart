@@ -12,7 +12,7 @@ part of '../../super_measurement.dart';
 /// [Force$GramForce], [Force$KipForce], [Force$PoundForce],
 /// [Force$OunceForce], [Force$Poundal]
 sealed class Force extends Unit<Force> {
-  const Force([
+  Force([
     super.value,
   ]);
 
@@ -24,140 +24,141 @@ sealed class Force extends Unit<Force> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Force.anchor();
 
-  factory Force.anchor() => const Force$Dyne();
+  factory Force.anchor() => Force$Dyne();
 
   /// Convert to [Force$Exanewton]
   Force get toExanewton => convertTo(
-        const Force$Exanewton(),
+        Force$Exanewton(),
       );
 
   /// Convert to [Force$Petanewton]
   Force get toPetanewton => convertTo(
-        const Force$Petanewton(),
+        Force$Petanewton(),
       );
 
   /// Convert to [Force$Teranewton]
   Force get toTeranewton => convertTo(
-        const Force$Teranewton(),
+        Force$Teranewton(),
       );
 
   /// Convert to [Force$Giganewton]
   Force get toGiganewton => convertTo(
-        const Force$Giganewton(),
+        Force$Giganewton(),
       );
 
   /// Convert to [Force$Meganewton]
   Force get toMeganewton => convertTo(
-        const Force$Meganewton(),
+        Force$Meganewton(),
       );
 
   /// Convert to [Force$Kilonewton]
   Force get toKilonewton => convertTo(
-        const Force$Kilonewton(),
+        Force$Kilonewton(),
       );
 
   /// Convert to [Force$Hectonewton]
   Force get toHectonewton => convertTo(
-        const Force$Hectonewton(),
+        Force$Hectonewton(),
       );
 
   /// Convert to [Force$Dekanewton]
   Force get toDekanewton => convertTo(
-        const Force$Dekanewton(),
+        Force$Dekanewton(),
       );
 
   /// Convert to [Force$Newton]
   Force get toNewton => convertTo(
-        const Force$Newton(),
+        Force$Newton(),
       );
 
   /// Convert to [Force$Decinewton]
   Force get toDecinewton => convertTo(
-        const Force$Decinewton(),
+        Force$Decinewton(),
       );
 
   /// Convert to [Force$Centinewton]
   Force get toCentinewton => convertTo(
-        const Force$Centinewton(),
+        Force$Centinewton(),
       );
 
   /// Convert to [Force$Millinewton]
   Force get toMillinewton => convertTo(
-        const Force$Millinewton(),
+        Force$Millinewton(),
       );
 
   /// Convert to [Force$Micronewton]
   Force get toMicronewton => convertTo(
-        const Force$Micronewton(),
+        Force$Micronewton(),
       );
 
   /// Convert to [Force$Nanonewton]
   Force get toNanonewton => convertTo(
-        const Force$Nanonewton(),
+        Force$Nanonewton(),
       );
 
   /// Convert to [Force$Piconewton]
   Force get toPiconewton => convertTo(
-        const Force$Piconewton(),
+        Force$Piconewton(),
       );
 
   /// Convert to [Force$Femtonewton]
   Force get toFemtonewton => convertTo(
-        const Force$Femtonewton(),
+        Force$Femtonewton(),
       );
 
   /// Convert to [Force$Attonewton]
   Force get toAttonewton => convertTo(
-        const Force$Attonewton(),
+        Force$Attonewton(),
       );
 
   /// Convert to [Force$Dyne]
   Force get toDyne => convertTo(
-        const Force$Dyne(),
+        Force$Dyne(),
       );
 
   /// Convert to [Force$JoulePerMeter]
   Force get toJoulePerMeter => convertTo(
-        const Force$JoulePerMeter(),
+        Force$JoulePerMeter(),
       );
 
   /// Convert to [Force$JoulePerCentimeter]
   Force get toJoulePerCentimeter => convertTo(
-        const Force$JoulePerCentimeter(),
+        Force$JoulePerCentimeter(),
       );
 
   /// Convert to [Force$KilogramForce]
   Force get toKilogramForce => convertTo(
-        const Force$KilogramForce(),
+        Force$KilogramForce(),
       );
 
   /// Convert to [Force$GramForce]
   Force get toGramForce => convertTo(
-        const Force$GramForce(),
+        Force$GramForce(),
       );
 
   /// Convert to [Force$KipForce]
   Force get toKipForce => convertTo(
-        const Force$KipForce(),
+        Force$KipForce(),
       );
 
   /// Convert to [Force$PoundForce]
   Force get toPoundForce => convertTo(
-        const Force$PoundForce(),
+        Force$PoundForce(),
       );
 
   /// Convert to [Force$OunceForce]
   Force get toOunceForce => convertTo(
-        const Force$OunceForce(),
+        Force$OunceForce(),
       );
 
   /// Convert to [Force$Poundal]
   Force get toPoundal => convertTo(
-        const Force$Poundal(),
+        Force$Poundal(),
       );
 
   @override
@@ -168,32 +169,32 @@ sealed class Force extends Unit<Force> {
 
   static const _majorName = 'force';
 
-  static const exanewton = Force$Exanewton();
-  static const petanewton = Force$Petanewton();
-  static const teranewton = Force$Teranewton();
-  static const giganewton = Force$Giganewton();
-  static const meganewton = Force$Meganewton();
-  static const kilonewton = Force$Kilonewton();
-  static const hectonewton = Force$Hectonewton();
-  static const dekanewton = Force$Dekanewton();
-  static const newton = Force$Newton();
-  static const decinewton = Force$Decinewton();
-  static const centinewton = Force$Centinewton();
-  static const millinewton = Force$Millinewton();
-  static const micronewton = Force$Micronewton();
-  static const nanonewton = Force$Nanonewton();
-  static const piconewton = Force$Piconewton();
-  static const femtonewton = Force$Femtonewton();
-  static const attonewton = Force$Attonewton();
-  static const dyne = Force$Dyne();
-  static const joulePerMeter = Force$JoulePerMeter();
-  static const joulePerCentimeter = Force$JoulePerCentimeter();
-  static const kilogramForce = Force$KilogramForce();
-  static const gramForce = Force$GramForce();
-  static const kipForce = Force$KipForce();
-  static const poundForce = Force$PoundForce();
-  static const ounceForce = Force$OunceForce();
-  static const poundal = Force$Poundal();
+  static final exanewton = Force$Exanewton();
+  static final petanewton = Force$Petanewton();
+  static final teranewton = Force$Teranewton();
+  static final giganewton = Force$Giganewton();
+  static final meganewton = Force$Meganewton();
+  static final kilonewton = Force$Kilonewton();
+  static final hectonewton = Force$Hectonewton();
+  static final dekanewton = Force$Dekanewton();
+  static final newton = Force$Newton();
+  static final decinewton = Force$Decinewton();
+  static final centinewton = Force$Centinewton();
+  static final millinewton = Force$Millinewton();
+  static final micronewton = Force$Micronewton();
+  static final nanonewton = Force$Nanonewton();
+  static final piconewton = Force$Piconewton();
+  static final femtonewton = Force$Femtonewton();
+  static final attonewton = Force$Attonewton();
+  static final dyne = Force$Dyne();
+  static final joulePerMeter = Force$JoulePerMeter();
+  static final joulePerCentimeter = Force$JoulePerCentimeter();
+  static final kilogramForce = Force$KilogramForce();
+  static final gramForce = Force$GramForce();
+  static final kipForce = Force$KipForce();
+  static final poundForce = Force$PoundForce();
+  static final ounceForce = Force$OunceForce();
+  static final poundal = Force$Poundal();
 
   @override
   List<Force> get units => values;
@@ -201,7 +202,7 @@ sealed class Force extends Unit<Force> {
   @override
   EnumValues<Force> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Force>[
     exanewton,
     petanewton,
     teranewton,
@@ -230,7 +231,7 @@ sealed class Force extends Unit<Force> {
     poundal,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Force>{
     Force$Exanewton._minorName: exanewton,
     Force$Petanewton._minorName: petanewton,
     Force$Teranewton._minorName: teranewton,
@@ -262,7 +263,7 @@ sealed class Force extends Unit<Force> {
 
 /// Unit of [Force]
 final class Force$Exanewton extends Force {
-  const Force$Exanewton([
+  Force$Exanewton([
     super.value,
   ]);
 
@@ -293,14 +294,14 @@ final class Force$Exanewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+23;
+  static final _ratio = Rational.parse('1.00000000000000000E+023');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Exanewton] = 1e+23 [Force$Dyne]
+  /// 1 [Force$Exanewton] = 1.00000000000000000E+023 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -308,12 +309,12 @@ final class Force$Exanewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Exanewton] with new value
   @override
   Force$Exanewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Exanewton(val);
 
@@ -326,14 +327,14 @@ final class Force$Exanewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Petanewton extends Force {
-  const Force$Petanewton([
+  Force$Petanewton([
     super.value,
   ]);
 
@@ -364,14 +365,14 @@ final class Force$Petanewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+020');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Petanewton] = 100000000000000000000.0 [Force$Dyne]
+  /// 1 [Force$Petanewton] = 1.00000000000000000E+020 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -379,12 +380,12 @@ final class Force$Petanewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Petanewton] with new value
   @override
   Force$Petanewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Petanewton(val);
 
@@ -397,14 +398,14 @@ final class Force$Petanewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Teranewton extends Force {
-  const Force$Teranewton([
+  Force$Teranewton([
     super.value,
   ]);
 
@@ -435,14 +436,14 @@ final class Force$Teranewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+017');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Teranewton] = 100000000000000000.0 [Force$Dyne]
+  /// 1 [Force$Teranewton] = 1.00000000000000000E+017 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -450,12 +451,12 @@ final class Force$Teranewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Teranewton] with new value
   @override
   Force$Teranewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Teranewton(val);
 
@@ -468,14 +469,14 @@ final class Force$Teranewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Giganewton extends Force {
-  const Force$Giganewton([
+  Force$Giganewton([
     super.value,
   ]);
 
@@ -506,14 +507,14 @@ final class Force$Giganewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+014');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Giganewton] = 100000000000000.0 [Force$Dyne]
+  /// 1 [Force$Giganewton] = 1.00000000000000000E+014 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -521,12 +522,12 @@ final class Force$Giganewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Giganewton] with new value
   @override
   Force$Giganewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Giganewton(val);
 
@@ -539,14 +540,14 @@ final class Force$Giganewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Meganewton extends Force {
-  const Force$Meganewton([
+  Force$Meganewton([
     super.value,
   ]);
 
@@ -577,14 +578,14 @@ final class Force$Meganewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+011');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Meganewton] = 100000000000.0 [Force$Dyne]
+  /// 1 [Force$Meganewton] = 1.00000000000000000E+011 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -592,12 +593,12 @@ final class Force$Meganewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Meganewton] with new value
   @override
   Force$Meganewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Meganewton(val);
 
@@ -610,14 +611,14 @@ final class Force$Meganewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Kilonewton extends Force {
-  const Force$Kilonewton([
+  Force$Kilonewton([
     super.value,
   ]);
 
@@ -648,14 +649,14 @@ final class Force$Kilonewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+008');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Kilonewton] = 100000000.0 [Force$Dyne]
+  /// 1 [Force$Kilonewton] = 1.00000000000000000E+008 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -663,12 +664,12 @@ final class Force$Kilonewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Kilonewton] with new value
   @override
   Force$Kilonewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Kilonewton(val);
 
@@ -681,14 +682,14 @@ final class Force$Kilonewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Hectonewton extends Force {
-  const Force$Hectonewton([
+  Force$Hectonewton([
     super.value,
   ]);
 
@@ -719,14 +720,14 @@ final class Force$Hectonewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+007');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Hectonewton] = 10000000.0 [Force$Dyne]
+  /// 1 [Force$Hectonewton] = 1.00000000000000000E+007 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -734,12 +735,12 @@ final class Force$Hectonewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Hectonewton] with new value
   @override
   Force$Hectonewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Hectonewton(val);
 
@@ -752,14 +753,14 @@ final class Force$Hectonewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Dekanewton extends Force {
-  const Force$Dekanewton([
+  Force$Dekanewton([
     super.value,
   ]);
 
@@ -790,14 +791,14 @@ final class Force$Dekanewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Dekanewton] = 1000000.0 [Force$Dyne]
+  /// 1 [Force$Dekanewton] = 1.00000000000000000E+006 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -805,12 +806,12 @@ final class Force$Dekanewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Dekanewton] with new value
   @override
   Force$Dekanewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Dekanewton(val);
 
@@ -823,14 +824,14 @@ final class Force$Dekanewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Newton extends Force {
-  const Force$Newton([
+  Force$Newton([
     super.value,
   ]);
 
@@ -861,14 +862,14 @@ final class Force$Newton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Newton] = 100000.0 [Force$Dyne]
+  /// 1 [Force$Newton] = 1.00000000000000000E+005 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -876,12 +877,12 @@ final class Force$Newton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Newton] with new value
   @override
   Force$Newton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Newton(val);
 
@@ -894,14 +895,14 @@ final class Force$Newton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Decinewton extends Force {
-  const Force$Decinewton([
+  Force$Decinewton([
     super.value,
   ]);
 
@@ -932,14 +933,14 @@ final class Force$Decinewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Decinewton] = 10000.0 [Force$Dyne]
+  /// 1 [Force$Decinewton] = 1.00000000000000000E+004 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -947,12 +948,12 @@ final class Force$Decinewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Decinewton] with new value
   @override
   Force$Decinewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Decinewton(val);
 
@@ -965,14 +966,14 @@ final class Force$Decinewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Centinewton extends Force {
-  const Force$Centinewton([
+  Force$Centinewton([
     super.value,
   ]);
 
@@ -1003,14 +1004,14 @@ final class Force$Centinewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Centinewton] = 1000.0 [Force$Dyne]
+  /// 1 [Force$Centinewton] = 1.00000000000000000E+003 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1018,12 +1019,12 @@ final class Force$Centinewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Centinewton] with new value
   @override
   Force$Centinewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Centinewton(val);
 
@@ -1036,14 +1037,14 @@ final class Force$Centinewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Millinewton extends Force {
-  const Force$Millinewton([
+  Force$Millinewton([
     super.value,
   ]);
 
@@ -1074,14 +1075,14 @@ final class Force$Millinewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Millinewton] = 100.0 [Force$Dyne]
+  /// 1 [Force$Millinewton] = 1.00000000000000000E+002 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1089,12 +1090,12 @@ final class Force$Millinewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Millinewton] with new value
   @override
   Force$Millinewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Millinewton(val);
 
@@ -1107,14 +1108,14 @@ final class Force$Millinewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Micronewton extends Force {
-  const Force$Micronewton([
+  Force$Micronewton([
     super.value,
   ]);
 
@@ -1145,14 +1146,14 @@ final class Force$Micronewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Micronewton] ≈ 0.1 [Force$Dyne]
+  /// 1 [Force$Micronewton] ≈ 1.00000000000000000E-001 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1160,12 +1161,12 @@ final class Force$Micronewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Micronewton] with new value
   @override
   Force$Micronewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Micronewton(val);
 
@@ -1178,14 +1179,14 @@ final class Force$Micronewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Nanonewton extends Force {
-  const Force$Nanonewton([
+  Force$Nanonewton([
     super.value,
   ]);
 
@@ -1216,14 +1217,14 @@ final class Force$Nanonewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.0001;
+  static final _ratio = Rational.parse('1.00000000000000000E-004');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Nanonewton] ≈ 0.0001 [Force$Dyne]
+  /// 1 [Force$Nanonewton] ≈ 1.00000000000000000E-004 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1231,12 +1232,12 @@ final class Force$Nanonewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Nanonewton] with new value
   @override
   Force$Nanonewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Nanonewton(val);
 
@@ -1249,14 +1250,14 @@ final class Force$Nanonewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Piconewton extends Force {
-  const Force$Piconewton([
+  Force$Piconewton([
     super.value,
   ]);
 
@@ -1287,14 +1288,14 @@ final class Force$Piconewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-7;
+  static final _ratio = Rational.parse('1.00000000000000000E-007');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Piconewton] ≈ 1e-7 [Force$Dyne]
+  /// 1 [Force$Piconewton] ≈ 1.00000000000000000E-007 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1302,12 +1303,12 @@ final class Force$Piconewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Piconewton] with new value
   @override
   Force$Piconewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Piconewton(val);
 
@@ -1320,14 +1321,14 @@ final class Force$Piconewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Femtonewton extends Force {
-  const Force$Femtonewton([
+  Force$Femtonewton([
     super.value,
   ]);
 
@@ -1358,14 +1359,14 @@ final class Force$Femtonewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-10;
+  static final _ratio = Rational.parse('1.00000000000000000E-010');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Femtonewton] ≈ 1e-10 [Force$Dyne]
+  /// 1 [Force$Femtonewton] ≈ 1.00000000000000000E-010 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1373,12 +1374,12 @@ final class Force$Femtonewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Femtonewton] with new value
   @override
   Force$Femtonewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Femtonewton(val);
 
@@ -1391,14 +1392,14 @@ final class Force$Femtonewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Attonewton extends Force {
-  const Force$Attonewton([
+  Force$Attonewton([
     super.value,
   ]);
 
@@ -1429,14 +1430,14 @@ final class Force$Attonewton extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-13;
+  static final _ratio = Rational.parse('1.00000000000000000E-013');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Attonewton] ≈ 1e-13 [Force$Dyne]
+  /// 1 [Force$Attonewton] ≈ 1.00000000000000000E-013 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1444,12 +1445,12 @@ final class Force$Attonewton extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Attonewton] with new value
   @override
   Force$Attonewton withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Attonewton(val);
 
@@ -1462,14 +1463,14 @@ final class Force$Attonewton extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Dyne extends Force {
-  const Force$Dyne([
+  Force$Dyne([
     super.value,
   ]);
 
@@ -1500,14 +1501,14 @@ final class Force$Dyne extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
   /// Default (anchor) unit of [Force]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1515,12 +1516,12 @@ final class Force$Dyne extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Dyne] with new value
   @override
   Force$Dyne withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Dyne(val);
 
@@ -1533,14 +1534,14 @@ final class Force$Dyne extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$JoulePerMeter extends Force {
-  const Force$JoulePerMeter([
+  Force$JoulePerMeter([
     super.value,
   ]);
 
@@ -1571,14 +1572,14 @@ final class Force$JoulePerMeter extends Force {
   @override
   String get displayName => 'joule/meter';
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$JoulePerMeter] = 100000.0 [Force$Dyne]
+  /// 1 [Force$JoulePerMeter] = 1.00000000000000000E+005 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1586,12 +1587,12 @@ final class Force$JoulePerMeter extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$JoulePerMeter] with new value
   @override
   Force$JoulePerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Force$JoulePerMeter(val);
 
@@ -1604,14 +1605,14 @@ final class Force$JoulePerMeter extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$JoulePerCentimeter extends Force {
-  const Force$JoulePerCentimeter([
+  Force$JoulePerCentimeter([
     super.value,
   ]);
 
@@ -1642,14 +1643,14 @@ final class Force$JoulePerCentimeter extends Force {
   @override
   String get displayName => 'joule/centimeter';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$JoulePerCentimeter] = 1000.0 [Force$Dyne]
+  /// 1 [Force$JoulePerCentimeter] = 1.00000000000000000E+003 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1657,12 +1658,12 @@ final class Force$JoulePerCentimeter extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$JoulePerCentimeter] with new value
   @override
   Force$JoulePerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Force$JoulePerCentimeter(val);
 
@@ -1675,14 +1676,14 @@ final class Force$JoulePerCentimeter extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$KilogramForce extends Force {
-  const Force$KilogramForce([
+  Force$KilogramForce([
     super.value,
   ]);
 
@@ -1713,14 +1714,14 @@ final class Force$KilogramForce extends Force {
   @override
   String get displayName => 'kilogram force';
 
-  static const _ratio = 980664.9999980076;
+  static final _ratio = Rational.parse('9.80664999998007583E+005');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$KilogramForce] ≈ 980664.9999980076 [Force$Dyne]
+  /// 1 [Force$KilogramForce] ≈ 9.80664999998007583E+005 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1728,12 +1729,12 @@ final class Force$KilogramForce extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$KilogramForce] with new value
   @override
   Force$KilogramForce withValue(
-    num val,
+    Rational val,
   ) =>
       Force$KilogramForce(val);
 
@@ -1746,14 +1747,14 @@ final class Force$KilogramForce extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$GramForce extends Force {
-  const Force$GramForce([
+  Force$GramForce([
     super.value,
   ]);
 
@@ -1784,14 +1785,14 @@ final class Force$GramForce extends Force {
   @override
   String get displayName => 'gram force';
 
-  static const _ratio = 980.6649999980076;
+  static final _ratio = Rational.parse('9.80664999998007583E+002');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$GramForce] ≈ 980.6649999980076 [Force$Dyne]
+  /// 1 [Force$GramForce] ≈ 9.80664999998007583E+002 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1799,12 +1800,12 @@ final class Force$GramForce extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$GramForce] with new value
   @override
   Force$GramForce withValue(
-    num val,
+    Rational val,
   ) =>
       Force$GramForce(val);
 
@@ -1817,14 +1818,14 @@ final class Force$GramForce extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$KipForce extends Force {
-  const Force$KipForce([
+  Force$KipForce([
     super.value,
   ]);
 
@@ -1855,14 +1856,14 @@ final class Force$KipForce extends Force {
   @override
   String get displayName => 'kip force';
 
-  static const _ratio = 444822161.5254772;
+  static final _ratio = Rational.parse('4.44822161525477142E+008');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$KipForce] ≈ 444822161.5254772 [Force$Dyne]
+  /// 1 [Force$KipForce] ≈ 4.44822161525477142E+008 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1870,12 +1871,12 @@ final class Force$KipForce extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$KipForce] with new value
   @override
   Force$KipForce withValue(
-    num val,
+    Rational val,
   ) =>
       Force$KipForce(val);
 
@@ -1888,14 +1889,14 @@ final class Force$KipForce extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$PoundForce extends Force {
-  const Force$PoundForce([
+  Force$PoundForce([
     super.value,
   ]);
 
@@ -1926,14 +1927,14 @@ final class Force$PoundForce extends Force {
   @override
   String get displayName => 'pound force';
 
-  static const _ratio = 444822.16152547713;
+  static final _ratio = Rational.parse('4.44822161525477142E+005');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$PoundForce] ≈ 444822.16152547713 [Force$Dyne]
+  /// 1 [Force$PoundForce] ≈ 4.44822161525477142E+005 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1941,12 +1942,12 @@ final class Force$PoundForce extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$PoundForce] with new value
   @override
   Force$PoundForce withValue(
-    num val,
+    Rational val,
   ) =>
       Force$PoundForce(val);
 
@@ -1959,14 +1960,14 @@ final class Force$PoundForce extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$OunceForce extends Force {
-  const Force$OunceForce([
+  Force$OunceForce([
     super.value,
   ]);
 
@@ -1997,14 +1998,14 @@ final class Force$OunceForce extends Force {
   @override
   String get displayName => 'ounce force';
 
-  static const _ratio = 27801.38509534232;
+  static final _ratio = Rational.parse('2.78013850953423214E+004');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$OunceForce] ≈ 27801.38509534232 [Force$Dyne]
+  /// 1 [Force$OunceForce] ≈ 2.78013850953423214E+004 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2012,12 +2013,12 @@ final class Force$OunceForce extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$OunceForce] with new value
   @override
   Force$OunceForce withValue(
-    num val,
+    Rational val,
   ) =>
       Force$OunceForce(val);
 
@@ -2030,14 +2031,14 @@ final class Force$OunceForce extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Force]
 final class Force$Poundal extends Force {
-  const Force$Poundal([
+  Force$Poundal([
     super.value,
   ]);
 
@@ -2068,14 +2069,14 @@ final class Force$Poundal extends Force {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 13825.495437599799;
+  static final _ratio = Rational.parse('1.38254954375997981E+004');
 
   @override
-  Force get anchor => const Force$Dyne(_ratio);
+  Force get anchor => Force$Dyne(_ratio);
 
-  /// 1 [Force$Poundal] ≈ 13825.495437599799 [Force$Dyne]
+  /// 1 [Force$Poundal] ≈ 1.38254954375997981E+004 [Force$Dyne]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2083,12 +2084,12 @@ final class Force$Poundal extends Force {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Force$Poundal] with new value
   @override
   Force$Poundal withValue(
-    num val,
+    Rational val,
   ) =>
       Force$Poundal(val);
 
@@ -2101,7 +2102,7 @@ final class Force$Poundal extends Force {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

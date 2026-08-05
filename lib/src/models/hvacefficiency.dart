@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [HVACEfficiency$COPCoefficientOfPerformace],
 /// [HVACEfficiency$KilowattPerTon]
 sealed class HVACEfficiency extends Unit<HVACEfficiency> {
-  const HVACEfficiency([
+  HVACEfficiency([
     super.value,
   ]);
 
@@ -18,26 +18,27 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : HVACEfficiency.anchor();
 
   factory HVACEfficiency.anchor() =>
-      const HVACEfficiency$COPCoefficientOfPerformace();
+      HVACEfficiency$COPCoefficientOfPerformace();
 
   /// Convert to [HVACEfficiency$EEREnergyEfficiencyRatio]
   HVACEfficiency get toEEREnergyEfficiencyRatio => convertTo(
-        const HVACEfficiency$EEREnergyEfficiencyRatio(),
+        HVACEfficiency$EEREnergyEfficiencyRatio(),
       );
 
   /// Convert to [HVACEfficiency$COPCoefficientOfPerformace]
   HVACEfficiency get toCOPCoefficientOfPerformace => convertTo(
-        const HVACEfficiency$COPCoefficientOfPerformace(),
+        HVACEfficiency$COPCoefficientOfPerformace(),
       );
 
   /// Convert to [HVACEfficiency$KilowattPerTon]
   HVACEfficiency get toKilowattPerTon => convertTo(
-        const HVACEfficiency$KilowattPerTon(),
+        HVACEfficiency$KilowattPerTon(),
       );
 
   @override
@@ -48,11 +49,11 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
 
   static const _majorName = 'hVACEfficiency';
 
-  static const eEREnergyEfficiencyRatio =
+  static final eEREnergyEfficiencyRatio =
       HVACEfficiency$EEREnergyEfficiencyRatio();
-  static const cOPCoefficientOfPerformace =
+  static final cOPCoefficientOfPerformace =
       HVACEfficiency$COPCoefficientOfPerformace();
-  static const kilowattPerTon = HVACEfficiency$KilowattPerTon();
+  static final kilowattPerTon = HVACEfficiency$KilowattPerTon();
 
   @override
   List<HVACEfficiency> get units => values;
@@ -60,13 +61,13 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
   @override
   EnumValues<HVACEfficiency> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <HVACEfficiency>[
     eEREnergyEfficiencyRatio,
     cOPCoefficientOfPerformace,
     kilowattPerTon,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, HVACEfficiency>{
     HVACEfficiency$EEREnergyEfficiencyRatio._minorName:
         eEREnergyEfficiencyRatio,
     HVACEfficiency$COPCoefficientOfPerformace._minorName:
@@ -77,7 +78,7 @@ sealed class HVACEfficiency extends Unit<HVACEfficiency> {
 
 /// Unit of [HVACEfficiency]
 final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
-  const HVACEfficiency$EEREnergyEfficiencyRatio([
+  HVACEfficiency$EEREnergyEfficiencyRatio([
     super.value,
   ]);
 
@@ -108,15 +109,15 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
   @override
   String get displayName => 'EER (energy efficiency ratio)';
 
-  static const _ratio = 0.2928;
+  static final _ratio = Rational.parse('2.92800000000000000E-001');
 
   @override
   HVACEfficiency get anchor =>
-      const HVACEfficiency$COPCoefficientOfPerformace(_ratio);
+      HVACEfficiency$COPCoefficientOfPerformace(_ratio);
 
-  /// 1 [HVACEfficiency$EEREnergyEfficiencyRatio] ≈ 0.2928 [HVACEfficiency$COPCoefficientOfPerformace]
+  /// 1 [HVACEfficiency$EEREnergyEfficiencyRatio] ≈ 2.92800000000000000E-001 [HVACEfficiency$COPCoefficientOfPerformace]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -125,12 +126,12 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HVACEfficiency$EEREnergyEfficiencyRatio] with new value
   @override
   HVACEfficiency$EEREnergyEfficiencyRatio withValue(
-    num val,
+    Rational val,
   ) =>
       HVACEfficiency$EEREnergyEfficiencyRatio(val);
 
@@ -143,14 +144,14 @@ final class HVACEfficiency$EEREnergyEfficiencyRatio extends HVACEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HVACEfficiency]
 final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
-  const HVACEfficiency$COPCoefficientOfPerformace([
+  HVACEfficiency$COPCoefficientOfPerformace([
     super.value,
   ]);
 
@@ -181,15 +182,15 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
   @override
   String get displayName => 'COP (coefficient of performace)';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   HVACEfficiency get anchor =>
-      const HVACEfficiency$COPCoefficientOfPerformace(_ratio);
+      HVACEfficiency$COPCoefficientOfPerformace(_ratio);
 
   /// Default (anchor) unit of [HVACEfficiency]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -198,12 +199,12 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HVACEfficiency$COPCoefficientOfPerformace] with new value
   @override
   HVACEfficiency$COPCoefficientOfPerformace withValue(
-    num val,
+    Rational val,
   ) =>
       HVACEfficiency$COPCoefficientOfPerformace(val);
 
@@ -216,14 +217,14 @@ final class HVACEfficiency$COPCoefficientOfPerformace extends HVACEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HVACEfficiency]
 final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
-  const HVACEfficiency$KilowattPerTon([
+  HVACEfficiency$KilowattPerTon([
     super.value,
   ]);
 
@@ -254,15 +255,15 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
   @override
   String get displayName => 'kilowatt/ton';
 
-  static const _ratio = 0.284608378870674;
+  static final _ratio = Rational.parse('2.84608378870673953E-001');
 
   @override
   HVACEfficiency get anchor =>
-      const HVACEfficiency$COPCoefficientOfPerformace(_ratio);
+      HVACEfficiency$COPCoefficientOfPerformace(_ratio);
 
-  /// 1 [HVACEfficiency$KilowattPerTon] ≈ 0.284608378870674 [HVACEfficiency$COPCoefficientOfPerformace]
+  /// 1 [HVACEfficiency$KilowattPerTon] ≈ 2.84608378870673953E-001 [HVACEfficiency$COPCoefficientOfPerformace]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -271,12 +272,12 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HVACEfficiency$KilowattPerTon] with new value
   @override
   HVACEfficiency$KilowattPerTon withValue(
-    num val,
+    Rational val,
   ) =>
       HVACEfficiency$KilowattPerTon(val);
 
@@ -289,7 +290,7 @@ final class HVACEfficiency$KilowattPerTon extends HVACEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

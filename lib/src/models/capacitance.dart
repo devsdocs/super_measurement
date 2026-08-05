@@ -11,7 +11,7 @@ part of '../../super_measurement.dart';
 /// [Capacitance$Femtofarad], [Capacitance$Attofarad], [Capacitance$Abfarad],
 /// [Capacitance$Statfarad]
 sealed class Capacitance extends Unit<Capacitance> {
-  const Capacitance([
+  Capacitance([
     super.value,
   ]);
 
@@ -23,105 +23,106 @@ sealed class Capacitance extends Unit<Capacitance> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Capacitance.anchor();
 
-  factory Capacitance.anchor() => const Capacitance$Farad();
+  factory Capacitance.anchor() => Capacitance$Farad();
 
   /// Convert to [Capacitance$Exafarad]
   Capacitance get toExafarad => convertTo(
-        const Capacitance$Exafarad(),
+        Capacitance$Exafarad(),
       );
 
   /// Convert to [Capacitance$Petafarad]
   Capacitance get toPetafarad => convertTo(
-        const Capacitance$Petafarad(),
+        Capacitance$Petafarad(),
       );
 
   /// Convert to [Capacitance$Terafarad]
   Capacitance get toTerafarad => convertTo(
-        const Capacitance$Terafarad(),
+        Capacitance$Terafarad(),
       );
 
   /// Convert to [Capacitance$Gigafarad]
   Capacitance get toGigafarad => convertTo(
-        const Capacitance$Gigafarad(),
+        Capacitance$Gigafarad(),
       );
 
   /// Convert to [Capacitance$Megafarad]
   Capacitance get toMegafarad => convertTo(
-        const Capacitance$Megafarad(),
+        Capacitance$Megafarad(),
       );
 
   /// Convert to [Capacitance$Kilofarad]
   Capacitance get toKilofarad => convertTo(
-        const Capacitance$Kilofarad(),
+        Capacitance$Kilofarad(),
       );
 
   /// Convert to [Capacitance$Hectofarad]
   Capacitance get toHectofarad => convertTo(
-        const Capacitance$Hectofarad(),
+        Capacitance$Hectofarad(),
       );
 
   /// Convert to [Capacitance$Dekafarad]
   Capacitance get toDekafarad => convertTo(
-        const Capacitance$Dekafarad(),
+        Capacitance$Dekafarad(),
       );
 
   /// Convert to [Capacitance$Farad]
   Capacitance get toFarad => convertTo(
-        const Capacitance$Farad(),
+        Capacitance$Farad(),
       );
 
   /// Convert to [Capacitance$Decifarad]
   Capacitance get toDecifarad => convertTo(
-        const Capacitance$Decifarad(),
+        Capacitance$Decifarad(),
       );
 
   /// Convert to [Capacitance$Centifarad]
   Capacitance get toCentifarad => convertTo(
-        const Capacitance$Centifarad(),
+        Capacitance$Centifarad(),
       );
 
   /// Convert to [Capacitance$Millifarad]
   Capacitance get toMillifarad => convertTo(
-        const Capacitance$Millifarad(),
+        Capacitance$Millifarad(),
       );
 
   /// Convert to [Capacitance$Microfarad]
   Capacitance get toMicrofarad => convertTo(
-        const Capacitance$Microfarad(),
+        Capacitance$Microfarad(),
       );
 
   /// Convert to [Capacitance$Nanofarad]
   Capacitance get toNanofarad => convertTo(
-        const Capacitance$Nanofarad(),
+        Capacitance$Nanofarad(),
       );
 
   /// Convert to [Capacitance$Picofarad]
   Capacitance get toPicofarad => convertTo(
-        const Capacitance$Picofarad(),
+        Capacitance$Picofarad(),
       );
 
   /// Convert to [Capacitance$Femtofarad]
   Capacitance get toFemtofarad => convertTo(
-        const Capacitance$Femtofarad(),
+        Capacitance$Femtofarad(),
       );
 
   /// Convert to [Capacitance$Attofarad]
   Capacitance get toAttofarad => convertTo(
-        const Capacitance$Attofarad(),
+        Capacitance$Attofarad(),
       );
 
   /// Convert to [Capacitance$Abfarad]
   Capacitance get toAbfarad => convertTo(
-        const Capacitance$Abfarad(),
+        Capacitance$Abfarad(),
       );
 
   /// Convert to [Capacitance$Statfarad]
   Capacitance get toStatfarad => convertTo(
-        const Capacitance$Statfarad(),
+        Capacitance$Statfarad(),
       );
 
   @override
@@ -132,25 +133,25 @@ sealed class Capacitance extends Unit<Capacitance> {
 
   static const _majorName = 'capacitance';
 
-  static const exafarad = Capacitance$Exafarad();
-  static const petafarad = Capacitance$Petafarad();
-  static const terafarad = Capacitance$Terafarad();
-  static const gigafarad = Capacitance$Gigafarad();
-  static const megafarad = Capacitance$Megafarad();
-  static const kilofarad = Capacitance$Kilofarad();
-  static const hectofarad = Capacitance$Hectofarad();
-  static const dekafarad = Capacitance$Dekafarad();
-  static const farad = Capacitance$Farad();
-  static const decifarad = Capacitance$Decifarad();
-  static const centifarad = Capacitance$Centifarad();
-  static const millifarad = Capacitance$Millifarad();
-  static const microfarad = Capacitance$Microfarad();
-  static const nanofarad = Capacitance$Nanofarad();
-  static const picofarad = Capacitance$Picofarad();
-  static const femtofarad = Capacitance$Femtofarad();
-  static const attofarad = Capacitance$Attofarad();
-  static const abfarad = Capacitance$Abfarad();
-  static const statfarad = Capacitance$Statfarad();
+  static final exafarad = Capacitance$Exafarad();
+  static final petafarad = Capacitance$Petafarad();
+  static final terafarad = Capacitance$Terafarad();
+  static final gigafarad = Capacitance$Gigafarad();
+  static final megafarad = Capacitance$Megafarad();
+  static final kilofarad = Capacitance$Kilofarad();
+  static final hectofarad = Capacitance$Hectofarad();
+  static final dekafarad = Capacitance$Dekafarad();
+  static final farad = Capacitance$Farad();
+  static final decifarad = Capacitance$Decifarad();
+  static final centifarad = Capacitance$Centifarad();
+  static final millifarad = Capacitance$Millifarad();
+  static final microfarad = Capacitance$Microfarad();
+  static final nanofarad = Capacitance$Nanofarad();
+  static final picofarad = Capacitance$Picofarad();
+  static final femtofarad = Capacitance$Femtofarad();
+  static final attofarad = Capacitance$Attofarad();
+  static final abfarad = Capacitance$Abfarad();
+  static final statfarad = Capacitance$Statfarad();
 
   @override
   List<Capacitance> get units => values;
@@ -158,7 +159,7 @@ sealed class Capacitance extends Unit<Capacitance> {
   @override
   EnumValues<Capacitance> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Capacitance>[
     exafarad,
     petafarad,
     terafarad,
@@ -180,7 +181,7 @@ sealed class Capacitance extends Unit<Capacitance> {
     statfarad,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Capacitance>{
     Capacitance$Exafarad._minorName: exafarad,
     Capacitance$Petafarad._minorName: petafarad,
     Capacitance$Terafarad._minorName: terafarad,
@@ -205,7 +206,7 @@ sealed class Capacitance extends Unit<Capacitance> {
 
 /// Unit of [Capacitance]
 final class Capacitance$Exafarad extends Capacitance {
-  const Capacitance$Exafarad([
+  Capacitance$Exafarad([
     super.value,
   ]);
 
@@ -236,14 +237,14 @@ final class Capacitance$Exafarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Exafarad] = 1000000000000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Exafarad] = 1.00000000000000000E+018 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -251,12 +252,12 @@ final class Capacitance$Exafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Exafarad] with new value
   @override
   Capacitance$Exafarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Exafarad(val);
 
@@ -269,14 +270,14 @@ final class Capacitance$Exafarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Petafarad extends Capacitance {
-  const Capacitance$Petafarad([
+  Capacitance$Petafarad([
     super.value,
   ]);
 
@@ -307,14 +308,14 @@ final class Capacitance$Petafarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Petafarad] = 1000000000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Petafarad] = 1.00000000000000000E+015 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -322,12 +323,12 @@ final class Capacitance$Petafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Petafarad] with new value
   @override
   Capacitance$Petafarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Petafarad(val);
 
@@ -340,14 +341,14 @@ final class Capacitance$Petafarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Terafarad extends Capacitance {
-  const Capacitance$Terafarad([
+  Capacitance$Terafarad([
     super.value,
   ]);
 
@@ -378,14 +379,14 @@ final class Capacitance$Terafarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Terafarad] = 1000000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Terafarad] = 1.00000000000000000E+012 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -393,12 +394,12 @@ final class Capacitance$Terafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Terafarad] with new value
   @override
   Capacitance$Terafarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Terafarad(val);
 
@@ -411,14 +412,14 @@ final class Capacitance$Terafarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Gigafarad extends Capacitance {
-  const Capacitance$Gigafarad([
+  Capacitance$Gigafarad([
     super.value,
   ]);
 
@@ -449,14 +450,14 @@ final class Capacitance$Gigafarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Gigafarad] = 1000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Gigafarad] = 1.00000000000000000E+009 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -464,12 +465,12 @@ final class Capacitance$Gigafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Gigafarad] with new value
   @override
   Capacitance$Gigafarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Gigafarad(val);
 
@@ -482,14 +483,14 @@ final class Capacitance$Gigafarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Megafarad extends Capacitance {
-  const Capacitance$Megafarad([
+  Capacitance$Megafarad([
     super.value,
   ]);
 
@@ -520,14 +521,14 @@ final class Capacitance$Megafarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Megafarad] = 1000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Megafarad] = 1.00000000000000000E+006 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -535,12 +536,12 @@ final class Capacitance$Megafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Megafarad] with new value
   @override
   Capacitance$Megafarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Megafarad(val);
 
@@ -553,14 +554,14 @@ final class Capacitance$Megafarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Kilofarad extends Capacitance {
-  const Capacitance$Kilofarad([
+  Capacitance$Kilofarad([
     super.value,
   ]);
 
@@ -591,14 +592,14 @@ final class Capacitance$Kilofarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Kilofarad] = 1000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Kilofarad] = 1.00000000000000000E+003 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -606,12 +607,12 @@ final class Capacitance$Kilofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Kilofarad] with new value
   @override
   Capacitance$Kilofarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Kilofarad(val);
 
@@ -624,14 +625,14 @@ final class Capacitance$Kilofarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Hectofarad extends Capacitance {
-  const Capacitance$Hectofarad([
+  Capacitance$Hectofarad([
     super.value,
   ]);
 
@@ -662,14 +663,14 @@ final class Capacitance$Hectofarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Hectofarad] = 100.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Hectofarad] = 1.00000000000000000E+002 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -677,12 +678,12 @@ final class Capacitance$Hectofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Hectofarad] with new value
   @override
   Capacitance$Hectofarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Hectofarad(val);
 
@@ -695,14 +696,14 @@ final class Capacitance$Hectofarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Dekafarad extends Capacitance {
-  const Capacitance$Dekafarad([
+  Capacitance$Dekafarad([
     super.value,
   ]);
 
@@ -733,14 +734,14 @@ final class Capacitance$Dekafarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Dekafarad] = 10.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Dekafarad] = 1.00000000000000000E+001 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -748,12 +749,12 @@ final class Capacitance$Dekafarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Dekafarad] with new value
   @override
   Capacitance$Dekafarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Dekafarad(val);
 
@@ -766,14 +767,14 @@ final class Capacitance$Dekafarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Farad extends Capacitance {
-  const Capacitance$Farad([
+  Capacitance$Farad([
     super.value,
   ]);
 
@@ -804,14 +805,14 @@ final class Capacitance$Farad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
   /// Default (anchor) unit of [Capacitance]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -819,12 +820,12 @@ final class Capacitance$Farad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Farad] with new value
   @override
   Capacitance$Farad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Farad(val);
 
@@ -837,14 +838,14 @@ final class Capacitance$Farad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Decifarad extends Capacitance {
-  const Capacitance$Decifarad([
+  Capacitance$Decifarad([
     super.value,
   ]);
 
@@ -875,14 +876,14 @@ final class Capacitance$Decifarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Decifarad] ≈ 0.1 [Capacitance$Farad]
+  /// 1 [Capacitance$Decifarad] ≈ 1.00000000000000000E-001 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -890,12 +891,12 @@ final class Capacitance$Decifarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Decifarad] with new value
   @override
   Capacitance$Decifarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Decifarad(val);
 
@@ -908,14 +909,14 @@ final class Capacitance$Decifarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Centifarad extends Capacitance {
-  const Capacitance$Centifarad([
+  Capacitance$Centifarad([
     super.value,
   ]);
 
@@ -946,14 +947,14 @@ final class Capacitance$Centifarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Centifarad] ≈ 0.01 [Capacitance$Farad]
+  /// 1 [Capacitance$Centifarad] ≈ 1.00000000000000000E-002 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -961,12 +962,12 @@ final class Capacitance$Centifarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Centifarad] with new value
   @override
   Capacitance$Centifarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Centifarad(val);
 
@@ -979,14 +980,14 @@ final class Capacitance$Centifarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Millifarad extends Capacitance {
-  const Capacitance$Millifarad([
+  Capacitance$Millifarad([
     super.value,
   ]);
 
@@ -1017,14 +1018,14 @@ final class Capacitance$Millifarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Millifarad] ≈ 0.001 [Capacitance$Farad]
+  /// 1 [Capacitance$Millifarad] ≈ 1.00000000000000000E-003 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1032,12 +1033,12 @@ final class Capacitance$Millifarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Millifarad] with new value
   @override
   Capacitance$Millifarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Millifarad(val);
 
@@ -1050,14 +1051,14 @@ final class Capacitance$Millifarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Microfarad extends Capacitance {
-  const Capacitance$Microfarad([
+  Capacitance$Microfarad([
     super.value,
   ]);
 
@@ -1088,14 +1089,14 @@ final class Capacitance$Microfarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Microfarad] ≈ 0.000001 [Capacitance$Farad]
+  /// 1 [Capacitance$Microfarad] ≈ 1.00000000000000000E-006 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1103,12 +1104,12 @@ final class Capacitance$Microfarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Microfarad] with new value
   @override
   Capacitance$Microfarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Microfarad(val);
 
@@ -1121,14 +1122,14 @@ final class Capacitance$Microfarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Nanofarad extends Capacitance {
-  const Capacitance$Nanofarad([
+  Capacitance$Nanofarad([
     super.value,
   ]);
 
@@ -1159,14 +1160,14 @@ final class Capacitance$Nanofarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Nanofarad] ≈ 1e-9 [Capacitance$Farad]
+  /// 1 [Capacitance$Nanofarad] ≈ 1.00000000000000000E-009 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1174,12 +1175,12 @@ final class Capacitance$Nanofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Nanofarad] with new value
   @override
   Capacitance$Nanofarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Nanofarad(val);
 
@@ -1192,14 +1193,14 @@ final class Capacitance$Nanofarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Picofarad extends Capacitance {
-  const Capacitance$Picofarad([
+  Capacitance$Picofarad([
     super.value,
   ]);
 
@@ -1230,14 +1231,14 @@ final class Capacitance$Picofarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Picofarad] ≈ 1e-12 [Capacitance$Farad]
+  /// 1 [Capacitance$Picofarad] ≈ 1.00000000000000000E-012 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1245,12 +1246,12 @@ final class Capacitance$Picofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Picofarad] with new value
   @override
   Capacitance$Picofarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Picofarad(val);
 
@@ -1263,14 +1264,14 @@ final class Capacitance$Picofarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Femtofarad extends Capacitance {
-  const Capacitance$Femtofarad([
+  Capacitance$Femtofarad([
     super.value,
   ]);
 
@@ -1301,14 +1302,14 @@ final class Capacitance$Femtofarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-15;
+  static final _ratio = Rational.parse('1.00000000000000000E-015');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Femtofarad] ≈ 1e-15 [Capacitance$Farad]
+  /// 1 [Capacitance$Femtofarad] ≈ 1.00000000000000000E-015 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1316,12 +1317,12 @@ final class Capacitance$Femtofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Femtofarad] with new value
   @override
   Capacitance$Femtofarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Femtofarad(val);
 
@@ -1334,14 +1335,14 @@ final class Capacitance$Femtofarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Attofarad extends Capacitance {
-  const Capacitance$Attofarad([
+  Capacitance$Attofarad([
     super.value,
   ]);
 
@@ -1372,14 +1373,14 @@ final class Capacitance$Attofarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-18;
+  static final _ratio = Rational.parse('1.00000000000000000E-018');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Attofarad] ≈ 1e-18 [Capacitance$Farad]
+  /// 1 [Capacitance$Attofarad] ≈ 1.00000000000000000E-018 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1387,12 +1388,12 @@ final class Capacitance$Attofarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Attofarad] with new value
   @override
   Capacitance$Attofarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Attofarad(val);
 
@@ -1405,14 +1406,14 @@ final class Capacitance$Attofarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Abfarad extends Capacitance {
-  const Capacitance$Abfarad([
+  Capacitance$Abfarad([
     super.value,
   ]);
 
@@ -1443,14 +1444,14 @@ final class Capacitance$Abfarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Abfarad] = 1000000000.0 [Capacitance$Farad]
+  /// 1 [Capacitance$Abfarad] = 1.00000000000000000E+009 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1458,12 +1459,12 @@ final class Capacitance$Abfarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Abfarad] with new value
   @override
   Capacitance$Abfarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Abfarad(val);
 
@@ -1476,14 +1477,14 @@ final class Capacitance$Abfarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Capacitance]
 final class Capacitance$Statfarad extends Capacitance {
-  const Capacitance$Statfarad([
+  Capacitance$Statfarad([
     super.value,
   ]);
 
@@ -1514,14 +1515,14 @@ final class Capacitance$Statfarad extends Capacitance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.11265e-12;
+  static final _ratio = Rational.parse('1.11265000000000000E-012');
 
   @override
-  Capacitance get anchor => const Capacitance$Farad(_ratio);
+  Capacitance get anchor => Capacitance$Farad(_ratio);
 
-  /// 1 [Capacitance$Statfarad] ≈ 1.11265e-12 [Capacitance$Farad]
+  /// 1 [Capacitance$Statfarad] ≈ 1.11265000000000000E-012 [Capacitance$Farad]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1529,12 +1530,12 @@ final class Capacitance$Statfarad extends Capacitance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Capacitance$Statfarad] with new value
   @override
   Capacitance$Statfarad withValue(
-    num val,
+    Rational val,
   ) =>
       Capacitance$Statfarad(val);
 
@@ -1547,7 +1548,7 @@ final class Capacitance$Statfarad extends Capacitance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

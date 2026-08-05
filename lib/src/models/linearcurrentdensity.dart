@@ -11,7 +11,7 @@ part of '../../super_measurement.dart';
 /// [LinearCurrentDensity$OerstedInternational],
 /// [LinearCurrentDensity$GilbertPerCentimeter]
 sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
-  const LinearCurrentDensity([
+  LinearCurrentDensity([
     super.value,
   ]);
 
@@ -24,56 +24,57 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : LinearCurrentDensity.anchor();
 
   factory LinearCurrentDensity.anchor() =>
-      const LinearCurrentDensity$AmperePerMeter();
+      LinearCurrentDensity$AmperePerMeter();
 
   /// Convert to [LinearCurrentDensity$AmperePerMeter]
   LinearCurrentDensity get toAmperePerMeter => convertTo(
-        const LinearCurrentDensity$AmperePerMeter(),
+        LinearCurrentDensity$AmperePerMeter(),
       );
 
   /// Convert to [LinearCurrentDensity$AmperePerCentimeter]
   LinearCurrentDensity get toAmperePerCentimeter => convertTo(
-        const LinearCurrentDensity$AmperePerCentimeter(),
+        LinearCurrentDensity$AmperePerCentimeter(),
       );
 
   /// Convert to [LinearCurrentDensity$AmperePerInch]
   LinearCurrentDensity get toAmperePerInch => convertTo(
-        const LinearCurrentDensity$AmperePerInch(),
+        LinearCurrentDensity$AmperePerInch(),
       );
 
   /// Convert to [LinearCurrentDensity$AbamperePerMeter]
   LinearCurrentDensity get toAbamperePerMeter => convertTo(
-        const LinearCurrentDensity$AbamperePerMeter(),
+        LinearCurrentDensity$AbamperePerMeter(),
       );
 
   /// Convert to [LinearCurrentDensity$AbamperePerCentimeter]
   LinearCurrentDensity get toAbamperePerCentimeter => convertTo(
-        const LinearCurrentDensity$AbamperePerCentimeter(),
+        LinearCurrentDensity$AbamperePerCentimeter(),
       );
 
   /// Convert to [LinearCurrentDensity$AbamperePerInch]
   LinearCurrentDensity get toAbamperePerInch => convertTo(
-        const LinearCurrentDensity$AbamperePerInch(),
+        LinearCurrentDensity$AbamperePerInch(),
       );
 
   /// Convert to [LinearCurrentDensity$Oersted]
   LinearCurrentDensity get toOersted => convertTo(
-        const LinearCurrentDensity$Oersted(),
+        LinearCurrentDensity$Oersted(),
       );
 
   /// Convert to [LinearCurrentDensity$OerstedInternational]
   LinearCurrentDensity get toOerstedInternational => convertTo(
-        const LinearCurrentDensity$OerstedInternational(),
+        LinearCurrentDensity$OerstedInternational(),
       );
 
   /// Convert to [LinearCurrentDensity$GilbertPerCentimeter]
   LinearCurrentDensity get toGilbertPerCentimeter => convertTo(
-        const LinearCurrentDensity$GilbertPerCentimeter(),
+        LinearCurrentDensity$GilbertPerCentimeter(),
       );
 
   @override
@@ -84,17 +85,17 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
 
   static const _majorName = 'linearCurrentDensity';
 
-  static const amperePerMeter = LinearCurrentDensity$AmperePerMeter();
-  static const amperePerCentimeter = LinearCurrentDensity$AmperePerCentimeter();
-  static const amperePerInch = LinearCurrentDensity$AmperePerInch();
-  static const abamperePerMeter = LinearCurrentDensity$AbamperePerMeter();
-  static const abamperePerCentimeter =
+  static final amperePerMeter = LinearCurrentDensity$AmperePerMeter();
+  static final amperePerCentimeter = LinearCurrentDensity$AmperePerCentimeter();
+  static final amperePerInch = LinearCurrentDensity$AmperePerInch();
+  static final abamperePerMeter = LinearCurrentDensity$AbamperePerMeter();
+  static final abamperePerCentimeter =
       LinearCurrentDensity$AbamperePerCentimeter();
-  static const abamperePerInch = LinearCurrentDensity$AbamperePerInch();
-  static const oersted = LinearCurrentDensity$Oersted();
-  static const oerstedInternational =
+  static final abamperePerInch = LinearCurrentDensity$AbamperePerInch();
+  static final oersted = LinearCurrentDensity$Oersted();
+  static final oerstedInternational =
       LinearCurrentDensity$OerstedInternational();
-  static const gilbertPerCentimeter =
+  static final gilbertPerCentimeter =
       LinearCurrentDensity$GilbertPerCentimeter();
 
   @override
@@ -103,7 +104,7 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
   @override
   EnumValues<LinearCurrentDensity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <LinearCurrentDensity>[
     amperePerMeter,
     amperePerCentimeter,
     amperePerInch,
@@ -115,7 +116,7 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
     gilbertPerCentimeter,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, LinearCurrentDensity>{
     LinearCurrentDensity$AmperePerMeter._minorName: amperePerMeter,
     LinearCurrentDensity$AmperePerCentimeter._minorName: amperePerCentimeter,
     LinearCurrentDensity$AmperePerInch._minorName: amperePerInch,
@@ -131,7 +132,7 @@ sealed class LinearCurrentDensity extends Unit<LinearCurrentDensity> {
 
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
-  const LinearCurrentDensity$AmperePerMeter([
+  LinearCurrentDensity$AmperePerMeter([
     super.value,
   ]);
 
@@ -162,15 +163,15 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
   @override
   String get displayName => 'ampere/meter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
   /// Default (anchor) unit of [LinearCurrentDensity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -179,12 +180,12 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$AmperePerMeter] with new value
   @override
   LinearCurrentDensity$AmperePerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$AmperePerMeter(val);
 
@@ -197,7 +198,7 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -205,7 +206,7 @@ final class LinearCurrentDensity$AmperePerMeter extends LinearCurrentDensity {
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$AmperePerCentimeter
     extends LinearCurrentDensity {
-  const LinearCurrentDensity$AmperePerCentimeter([
+  LinearCurrentDensity$AmperePerCentimeter([
     super.value,
   ]);
 
@@ -236,15 +237,15 @@ final class LinearCurrentDensity$AmperePerCentimeter
   @override
   String get displayName => 'ampere/centimeter';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
-  /// 1 [LinearCurrentDensity$AmperePerCentimeter] = 100.0 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AmperePerCentimeter] = 1.00000000000000000E+002 [LinearCurrentDensity$AmperePerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -253,12 +254,12 @@ final class LinearCurrentDensity$AmperePerCentimeter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$AmperePerCentimeter] with new value
   @override
   LinearCurrentDensity$AmperePerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$AmperePerCentimeter(val);
 
@@ -271,14 +272,14 @@ final class LinearCurrentDensity$AmperePerCentimeter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
-  const LinearCurrentDensity$AmperePerInch([
+  LinearCurrentDensity$AmperePerInch([
     super.value,
   ]);
 
@@ -309,15 +310,15 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
   @override
   String get displayName => 'ampere/inch';
 
-  static const _ratio = 39.37007874;
+  static final _ratio = Rational.parse('3.93700787400000000E+001');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
-  /// 1 [LinearCurrentDensity$AmperePerInch] ≈ 39.37007874 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AmperePerInch] ≈ 3.93700787400000000E+001 [LinearCurrentDensity$AmperePerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -326,12 +327,12 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$AmperePerInch] with new value
   @override
   LinearCurrentDensity$AmperePerInch withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$AmperePerInch(val);
 
@@ -344,14 +345,14 @@ final class LinearCurrentDensity$AmperePerInch extends LinearCurrentDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
-  const LinearCurrentDensity$AbamperePerMeter([
+  LinearCurrentDensity$AbamperePerMeter([
     super.value,
   ]);
 
@@ -382,15 +383,15 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
   @override
   String get displayName => 'Abampere/meter';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
-  /// 1 [LinearCurrentDensity$AbamperePerMeter] = 10.0 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AbamperePerMeter] = 1.00000000000000000E+001 [LinearCurrentDensity$AmperePerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -399,12 +400,12 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$AbamperePerMeter] with new value
   @override
   LinearCurrentDensity$AbamperePerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$AbamperePerMeter(val);
 
@@ -417,7 +418,7 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -425,7 +426,7 @@ final class LinearCurrentDensity$AbamperePerMeter extends LinearCurrentDensity {
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$AbamperePerCentimeter
     extends LinearCurrentDensity {
-  const LinearCurrentDensity$AbamperePerCentimeter([
+  LinearCurrentDensity$AbamperePerCentimeter([
     super.value,
   ]);
 
@@ -456,15 +457,15 @@ final class LinearCurrentDensity$AbamperePerCentimeter
   @override
   String get displayName => 'Abampere/centimeter';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
-  /// 1 [LinearCurrentDensity$AbamperePerCentimeter] = 1000.0 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AbamperePerCentimeter] = 1.00000000000000000E+003 [LinearCurrentDensity$AmperePerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -473,12 +474,12 @@ final class LinearCurrentDensity$AbamperePerCentimeter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$AbamperePerCentimeter] with new value
   @override
   LinearCurrentDensity$AbamperePerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$AbamperePerCentimeter(val);
 
@@ -491,14 +492,14 @@ final class LinearCurrentDensity$AbamperePerCentimeter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
-  const LinearCurrentDensity$AbamperePerInch([
+  LinearCurrentDensity$AbamperePerInch([
     super.value,
   ]);
 
@@ -529,15 +530,15 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
   @override
   String get displayName => 'Abampere/inch';
 
-  static const _ratio = 393.7007874;
+  static final _ratio = Rational.parse('3.93700787400000000E+002');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
-  /// 1 [LinearCurrentDensity$AbamperePerInch] ≈ 393.7007874 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$AbamperePerInch] ≈ 3.93700787400000000E+002 [LinearCurrentDensity$AmperePerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -546,12 +547,12 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$AbamperePerInch] with new value
   @override
   LinearCurrentDensity$AbamperePerInch withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$AbamperePerInch(val);
 
@@ -564,14 +565,14 @@ final class LinearCurrentDensity$AbamperePerInch extends LinearCurrentDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
-  const LinearCurrentDensity$Oersted([
+  LinearCurrentDensity$Oersted([
     super.value,
   ]);
 
@@ -602,15 +603,15 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 79.57747151;
+  static final _ratio = Rational.parse('7.95774715100000000E+001');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
-  /// 1 [LinearCurrentDensity$Oersted] ≈ 79.57747151 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$Oersted] ≈ 7.95774715100000000E+001 [LinearCurrentDensity$AmperePerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -619,12 +620,12 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$Oersted] with new value
   @override
   LinearCurrentDensity$Oersted withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$Oersted(val);
 
@@ -637,7 +638,7 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -645,7 +646,7 @@ final class LinearCurrentDensity$Oersted extends LinearCurrentDensity {
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$OerstedInternational
     extends LinearCurrentDensity {
-  const LinearCurrentDensity$OerstedInternational([
+  LinearCurrentDensity$OerstedInternational([
     super.value,
   ]);
 
@@ -676,15 +677,15 @@ final class LinearCurrentDensity$OerstedInternational
   @override
   String get displayName => 'oersted (International)';
 
-  static const _ratio = 79.56434337579257;
+  static final _ratio = Rational.parse('7.95643433757925808E+001');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
-  /// 1 [LinearCurrentDensity$OerstedInternational] ≈ 79.56434337579257 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$OerstedInternational] ≈ 7.95643433757925808E+001 [LinearCurrentDensity$AmperePerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -693,12 +694,12 @@ final class LinearCurrentDensity$OerstedInternational
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$OerstedInternational] with new value
   @override
   LinearCurrentDensity$OerstedInternational withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$OerstedInternational(val);
 
@@ -711,7 +712,7 @@ final class LinearCurrentDensity$OerstedInternational
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -719,7 +720,7 @@ final class LinearCurrentDensity$OerstedInternational
 /// Unit of [LinearCurrentDensity]
 final class LinearCurrentDensity$GilbertPerCentimeter
     extends LinearCurrentDensity {
-  const LinearCurrentDensity$GilbertPerCentimeter([
+  LinearCurrentDensity$GilbertPerCentimeter([
     super.value,
   ]);
 
@@ -750,15 +751,15 @@ final class LinearCurrentDensity$GilbertPerCentimeter
   @override
   String get displayName => 'gilbert/centimeter';
 
-  static const _ratio = 79.57747151;
+  static final _ratio = Rational.parse('7.95774715100000000E+001');
 
   @override
   LinearCurrentDensity get anchor =>
-      const LinearCurrentDensity$AmperePerMeter(_ratio);
+      LinearCurrentDensity$AmperePerMeter(_ratio);
 
-  /// 1 [LinearCurrentDensity$GilbertPerCentimeter] ≈ 79.57747151 [LinearCurrentDensity$AmperePerMeter]
+  /// 1 [LinearCurrentDensity$GilbertPerCentimeter] ≈ 7.95774715100000000E+001 [LinearCurrentDensity$AmperePerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -767,12 +768,12 @@ final class LinearCurrentDensity$GilbertPerCentimeter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearCurrentDensity$GilbertPerCentimeter] with new value
   @override
   LinearCurrentDensity$GilbertPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearCurrentDensity$GilbertPerCentimeter(val);
 
@@ -785,7 +786,7 @@ final class LinearCurrentDensity$GilbertPerCentimeter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

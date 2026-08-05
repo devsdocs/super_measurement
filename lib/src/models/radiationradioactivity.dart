@@ -15,7 +15,7 @@ part of '../../super_measurement.dart';
 /// [RadiationRadioactivity$DisintegrationsPerSecond],
 /// [RadiationRadioactivity$DisintegrationsPerMinute]
 sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
-  const RadiationRadioactivity([
+  RadiationRadioactivity([
     super.value,
   ]);
 
@@ -28,86 +28,87 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : RadiationRadioactivity.anchor();
 
   factory RadiationRadioactivity.anchor() =>
-      const RadiationRadioactivity$Millibecquerel();
+      RadiationRadioactivity$Millibecquerel();
 
   /// Convert to [RadiationRadioactivity$Terabecquerel]
   RadiationRadioactivity get toTerabecquerel => convertTo(
-        const RadiationRadioactivity$Terabecquerel(),
+        RadiationRadioactivity$Terabecquerel(),
       );
 
   /// Convert to [RadiationRadioactivity$Gigabecquerel]
   RadiationRadioactivity get toGigabecquerel => convertTo(
-        const RadiationRadioactivity$Gigabecquerel(),
+        RadiationRadioactivity$Gigabecquerel(),
       );
 
   /// Convert to [RadiationRadioactivity$Megabecquerel]
   RadiationRadioactivity get toMegabecquerel => convertTo(
-        const RadiationRadioactivity$Megabecquerel(),
+        RadiationRadioactivity$Megabecquerel(),
       );
 
   /// Convert to [RadiationRadioactivity$Kilobecquerel]
   RadiationRadioactivity get toKilobecquerel => convertTo(
-        const RadiationRadioactivity$Kilobecquerel(),
+        RadiationRadioactivity$Kilobecquerel(),
       );
 
   /// Convert to [RadiationRadioactivity$Becquerel]
   RadiationRadioactivity get toBecquerel => convertTo(
-        const RadiationRadioactivity$Becquerel(),
+        RadiationRadioactivity$Becquerel(),
       );
 
   /// Convert to [RadiationRadioactivity$Millibecquerel]
   RadiationRadioactivity get toMillibecquerel => convertTo(
-        const RadiationRadioactivity$Millibecquerel(),
+        RadiationRadioactivity$Millibecquerel(),
       );
 
   /// Convert to [RadiationRadioactivity$Kilocurie]
   RadiationRadioactivity get toKilocurie => convertTo(
-        const RadiationRadioactivity$Kilocurie(),
+        RadiationRadioactivity$Kilocurie(),
       );
 
   /// Convert to [RadiationRadioactivity$Curie]
   RadiationRadioactivity get toCurie => convertTo(
-        const RadiationRadioactivity$Curie(),
+        RadiationRadioactivity$Curie(),
       );
 
   /// Convert to [RadiationRadioactivity$Millicurie]
   RadiationRadioactivity get toMillicurie => convertTo(
-        const RadiationRadioactivity$Millicurie(),
+        RadiationRadioactivity$Millicurie(),
       );
 
   /// Convert to [RadiationRadioactivity$Microcurie]
   RadiationRadioactivity get toMicrocurie => convertTo(
-        const RadiationRadioactivity$Microcurie(),
+        RadiationRadioactivity$Microcurie(),
       );
 
   /// Convert to [RadiationRadioactivity$Nanocurie]
   RadiationRadioactivity get toNanocurie => convertTo(
-        const RadiationRadioactivity$Nanocurie(),
+        RadiationRadioactivity$Nanocurie(),
       );
 
   /// Convert to [RadiationRadioactivity$Picocurie]
   RadiationRadioactivity get toPicocurie => convertTo(
-        const RadiationRadioactivity$Picocurie(),
+        RadiationRadioactivity$Picocurie(),
       );
 
   /// Convert to [RadiationRadioactivity$Rutherford]
   RadiationRadioactivity get toRutherford => convertTo(
-        const RadiationRadioactivity$Rutherford(),
+        RadiationRadioactivity$Rutherford(),
       );
 
   /// Convert to [RadiationRadioactivity$DisintegrationsPerSecond]
   RadiationRadioactivity get toDisintegrationsPerSecond => convertTo(
-        const RadiationRadioactivity$DisintegrationsPerSecond(),
+        RadiationRadioactivity$DisintegrationsPerSecond(),
       );
 
   /// Convert to [RadiationRadioactivity$DisintegrationsPerMinute]
   RadiationRadioactivity get toDisintegrationsPerMinute => convertTo(
-        const RadiationRadioactivity$DisintegrationsPerMinute(),
+        RadiationRadioactivity$DisintegrationsPerMinute(),
       );
 
   @override
@@ -118,22 +119,22 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
 
   static const _majorName = 'radiationRadioactivity';
 
-  static const terabecquerel = RadiationRadioactivity$Terabecquerel();
-  static const gigabecquerel = RadiationRadioactivity$Gigabecquerel();
-  static const megabecquerel = RadiationRadioactivity$Megabecquerel();
-  static const kilobecquerel = RadiationRadioactivity$Kilobecquerel();
-  static const becquerel = RadiationRadioactivity$Becquerel();
-  static const millibecquerel = RadiationRadioactivity$Millibecquerel();
-  static const kilocurie = RadiationRadioactivity$Kilocurie();
-  static const curie = RadiationRadioactivity$Curie();
-  static const millicurie = RadiationRadioactivity$Millicurie();
-  static const microcurie = RadiationRadioactivity$Microcurie();
-  static const nanocurie = RadiationRadioactivity$Nanocurie();
-  static const picocurie = RadiationRadioactivity$Picocurie();
-  static const rutherford = RadiationRadioactivity$Rutherford();
-  static const disintegrationsPerSecond =
+  static final terabecquerel = RadiationRadioactivity$Terabecquerel();
+  static final gigabecquerel = RadiationRadioactivity$Gigabecquerel();
+  static final megabecquerel = RadiationRadioactivity$Megabecquerel();
+  static final kilobecquerel = RadiationRadioactivity$Kilobecquerel();
+  static final becquerel = RadiationRadioactivity$Becquerel();
+  static final millibecquerel = RadiationRadioactivity$Millibecquerel();
+  static final kilocurie = RadiationRadioactivity$Kilocurie();
+  static final curie = RadiationRadioactivity$Curie();
+  static final millicurie = RadiationRadioactivity$Millicurie();
+  static final microcurie = RadiationRadioactivity$Microcurie();
+  static final nanocurie = RadiationRadioactivity$Nanocurie();
+  static final picocurie = RadiationRadioactivity$Picocurie();
+  static final rutherford = RadiationRadioactivity$Rutherford();
+  static final disintegrationsPerSecond =
       RadiationRadioactivity$DisintegrationsPerSecond();
-  static const disintegrationsPerMinute =
+  static final disintegrationsPerMinute =
       RadiationRadioactivity$DisintegrationsPerMinute();
 
   @override
@@ -142,7 +143,7 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
   @override
   EnumValues<RadiationRadioactivity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <RadiationRadioactivity>[
     terabecquerel,
     gigabecquerel,
     megabecquerel,
@@ -160,7 +161,7 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
     disintegrationsPerMinute,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, RadiationRadioactivity>{
     RadiationRadioactivity$Terabecquerel._minorName: terabecquerel,
     RadiationRadioactivity$Gigabecquerel._minorName: gigabecquerel,
     RadiationRadioactivity$Megabecquerel._minorName: megabecquerel,
@@ -184,7 +185,7 @@ sealed class RadiationRadioactivity extends Unit<RadiationRadioactivity> {
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Terabecquerel
     extends RadiationRadioactivity {
-  const RadiationRadioactivity$Terabecquerel([
+  RadiationRadioactivity$Terabecquerel([
     super.value,
   ]);
 
@@ -215,15 +216,15 @@ final class RadiationRadioactivity$Terabecquerel
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Terabecquerel] = 1000000000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Terabecquerel] = 1.00000000000000000E+015 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -232,12 +233,12 @@ final class RadiationRadioactivity$Terabecquerel
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Terabecquerel] with new value
   @override
   RadiationRadioactivity$Terabecquerel withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Terabecquerel(val);
 
@@ -250,7 +251,7 @@ final class RadiationRadioactivity$Terabecquerel
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -258,7 +259,7 @@ final class RadiationRadioactivity$Terabecquerel
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Gigabecquerel
     extends RadiationRadioactivity {
-  const RadiationRadioactivity$Gigabecquerel([
+  RadiationRadioactivity$Gigabecquerel([
     super.value,
   ]);
 
@@ -289,15 +290,15 @@ final class RadiationRadioactivity$Gigabecquerel
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Gigabecquerel] = 1000000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Gigabecquerel] = 1.00000000000000000E+012 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -306,12 +307,12 @@ final class RadiationRadioactivity$Gigabecquerel
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Gigabecquerel] with new value
   @override
   RadiationRadioactivity$Gigabecquerel withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Gigabecquerel(val);
 
@@ -324,7 +325,7 @@ final class RadiationRadioactivity$Gigabecquerel
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -332,7 +333,7 @@ final class RadiationRadioactivity$Gigabecquerel
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Megabecquerel
     extends RadiationRadioactivity {
-  const RadiationRadioactivity$Megabecquerel([
+  RadiationRadioactivity$Megabecquerel([
     super.value,
   ]);
 
@@ -363,15 +364,15 @@ final class RadiationRadioactivity$Megabecquerel
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Megabecquerel] = 1000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Megabecquerel] = 1.00000000000000000E+009 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -380,12 +381,12 @@ final class RadiationRadioactivity$Megabecquerel
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Megabecquerel] with new value
   @override
   RadiationRadioactivity$Megabecquerel withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Megabecquerel(val);
 
@@ -398,7 +399,7 @@ final class RadiationRadioactivity$Megabecquerel
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -406,7 +407,7 @@ final class RadiationRadioactivity$Megabecquerel
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Kilobecquerel
     extends RadiationRadioactivity {
-  const RadiationRadioactivity$Kilobecquerel([
+  RadiationRadioactivity$Kilobecquerel([
     super.value,
   ]);
 
@@ -437,15 +438,15 @@ final class RadiationRadioactivity$Kilobecquerel
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Kilobecquerel] = 1000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Kilobecquerel] = 1.00000000000000000E+006 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -454,12 +455,12 @@ final class RadiationRadioactivity$Kilobecquerel
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Kilobecquerel] with new value
   @override
   RadiationRadioactivity$Kilobecquerel withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Kilobecquerel(val);
 
@@ -472,14 +473,14 @@ final class RadiationRadioactivity$Kilobecquerel
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
-  const RadiationRadioactivity$Becquerel([
+  RadiationRadioactivity$Becquerel([
     super.value,
   ]);
 
@@ -510,15 +511,15 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Becquerel] = 1000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Becquerel] = 1.00000000000000000E+003 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -527,12 +528,12 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Becquerel] with new value
   @override
   RadiationRadioactivity$Becquerel withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Becquerel(val);
 
@@ -545,7 +546,7 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -553,7 +554,7 @@ final class RadiationRadioactivity$Becquerel extends RadiationRadioactivity {
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Millibecquerel
     extends RadiationRadioactivity {
-  const RadiationRadioactivity$Millibecquerel([
+  RadiationRadioactivity$Millibecquerel([
     super.value,
   ]);
 
@@ -584,15 +585,15 @@ final class RadiationRadioactivity$Millibecquerel
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
   /// Default (anchor) unit of [RadiationRadioactivity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -601,12 +602,12 @@ final class RadiationRadioactivity$Millibecquerel
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Millibecquerel] with new value
   @override
   RadiationRadioactivity$Millibecquerel withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Millibecquerel(val);
 
@@ -619,14 +620,14 @@ final class RadiationRadioactivity$Millibecquerel
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
-  const RadiationRadioactivity$Kilocurie([
+  RadiationRadioactivity$Kilocurie([
     super.value,
   ]);
 
@@ -657,15 +658,15 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 37000000000000000.0;
+  static final _ratio = Rational.parse('3.70000000000000000E+016');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Kilocurie] = 37000000000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Kilocurie] = 3.70000000000000000E+016 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -674,12 +675,12 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Kilocurie] with new value
   @override
   RadiationRadioactivity$Kilocurie withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Kilocurie(val);
 
@@ -692,14 +693,14 @@ final class RadiationRadioactivity$Kilocurie extends RadiationRadioactivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
-  const RadiationRadioactivity$Curie([
+  RadiationRadioactivity$Curie([
     super.value,
   ]);
 
@@ -730,15 +731,15 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 37000000000000.0;
+  static final _ratio = Rational.parse('3.70000000000000000E+013');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Curie] = 37000000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Curie] = 3.70000000000000000E+013 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -747,12 +748,12 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Curie] with new value
   @override
   RadiationRadioactivity$Curie withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Curie(val);
 
@@ -765,14 +766,14 @@ final class RadiationRadioactivity$Curie extends RadiationRadioactivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
-  const RadiationRadioactivity$Millicurie([
+  RadiationRadioactivity$Millicurie([
     super.value,
   ]);
 
@@ -803,15 +804,15 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 37000000000.0;
+  static final _ratio = Rational.parse('3.70000000000000000E+010');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Millicurie] = 37000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Millicurie] = 3.70000000000000000E+010 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -820,12 +821,12 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Millicurie] with new value
   @override
   RadiationRadioactivity$Millicurie withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Millicurie(val);
 
@@ -838,14 +839,14 @@ final class RadiationRadioactivity$Millicurie extends RadiationRadioactivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
-  const RadiationRadioactivity$Microcurie([
+  RadiationRadioactivity$Microcurie([
     super.value,
   ]);
 
@@ -876,15 +877,15 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 37000000.0;
+  static final _ratio = Rational.parse('3.70000000000000000E+007');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Microcurie] = 37000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Microcurie] = 3.70000000000000000E+007 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -893,12 +894,12 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Microcurie] with new value
   @override
   RadiationRadioactivity$Microcurie withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Microcurie(val);
 
@@ -911,14 +912,14 @@ final class RadiationRadioactivity$Microcurie extends RadiationRadioactivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
-  const RadiationRadioactivity$Nanocurie([
+  RadiationRadioactivity$Nanocurie([
     super.value,
   ]);
 
@@ -949,15 +950,15 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 37000.0;
+  static final _ratio = Rational.parse('3.70000000000000000E+004');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Nanocurie] = 37000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Nanocurie] = 3.70000000000000000E+004 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -966,12 +967,12 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Nanocurie] with new value
   @override
   RadiationRadioactivity$Nanocurie withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Nanocurie(val);
 
@@ -984,14 +985,14 @@ final class RadiationRadioactivity$Nanocurie extends RadiationRadioactivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
-  const RadiationRadioactivity$Picocurie([
+  RadiationRadioactivity$Picocurie([
     super.value,
   ]);
 
@@ -1022,15 +1023,15 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 37.0;
+  static final _ratio = Rational.parse('3.70000000000000000E+001');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Picocurie] = 37.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Picocurie] = 3.70000000000000000E+001 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1039,12 +1040,12 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Picocurie] with new value
   @override
   RadiationRadioactivity$Picocurie withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Picocurie(val);
 
@@ -1057,14 +1058,14 @@ final class RadiationRadioactivity$Picocurie extends RadiationRadioactivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
-  const RadiationRadioactivity$Rutherford([
+  RadiationRadioactivity$Rutherford([
     super.value,
   ]);
 
@@ -1095,15 +1096,15 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$Rutherford] = 1000000000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$Rutherford] = 1.00000000000000000E+009 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1112,12 +1113,12 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$Rutherford] with new value
   @override
   RadiationRadioactivity$Rutherford withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$Rutherford(val);
 
@@ -1130,7 +1131,7 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1138,7 +1139,7 @@ final class RadiationRadioactivity$Rutherford extends RadiationRadioactivity {
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$DisintegrationsPerSecond
     extends RadiationRadioactivity {
-  const RadiationRadioactivity$DisintegrationsPerSecond([
+  RadiationRadioactivity$DisintegrationsPerSecond([
     super.value,
   ]);
 
@@ -1169,15 +1170,15 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
   @override
   String get displayName => 'disintegrations/second';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$DisintegrationsPerSecond] = 1000.0 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$DisintegrationsPerSecond] = 1.00000000000000000E+003 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1186,12 +1187,12 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$DisintegrationsPerSecond] with new value
   @override
   RadiationRadioactivity$DisintegrationsPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$DisintegrationsPerSecond(val);
 
@@ -1204,7 +1205,7 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1212,7 +1213,7 @@ final class RadiationRadioactivity$DisintegrationsPerSecond
 /// Unit of [RadiationRadioactivity]
 final class RadiationRadioactivity$DisintegrationsPerMinute
     extends RadiationRadioactivity {
-  const RadiationRadioactivity$DisintegrationsPerMinute([
+  RadiationRadioactivity$DisintegrationsPerMinute([
     super.value,
   ]);
 
@@ -1243,15 +1244,15 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
   @override
   String get displayName => 'disintegrations/minute';
 
-  static const _ratio = 16.666666666666668;
+  static final _ratio = Rational.parse('1.66666666666666667E+001');
 
   @override
   RadiationRadioactivity get anchor =>
-      const RadiationRadioactivity$Millibecquerel(_ratio);
+      RadiationRadioactivity$Millibecquerel(_ratio);
 
-  /// 1 [RadiationRadioactivity$DisintegrationsPerMinute] ≈ 16.666666666666668 [RadiationRadioactivity$Millibecquerel]
+  /// 1 [RadiationRadioactivity$DisintegrationsPerMinute] ≈ 1.66666666666666667E+001 [RadiationRadioactivity$Millibecquerel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1260,12 +1261,12 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationRadioactivity$DisintegrationsPerMinute] with new value
   @override
   RadiationRadioactivity$DisintegrationsPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationRadioactivity$DisintegrationsPerMinute(val);
 
@@ -1278,7 +1279,7 @@ final class RadiationRadioactivity$DisintegrationsPerMinute
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

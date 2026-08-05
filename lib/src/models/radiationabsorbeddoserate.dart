@@ -22,7 +22,7 @@ part of '../../super_measurement.dart';
 /// [RadiationAbsorbedDoseRate$FemtograyPerSecond],
 /// [RadiationAbsorbedDoseRate$AttograyPerSecond]
 sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
-  const RadiationAbsorbedDoseRate([
+  RadiationAbsorbedDoseRate([
     super.value,
   ]);
 
@@ -35,106 +35,107 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : RadiationAbsorbedDoseRate.anchor();
 
   factory RadiationAbsorbedDoseRate.anchor() =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond();
+      RadiationAbsorbedDoseRate$AttograyPerSecond();
 
   /// Convert to [RadiationAbsorbedDoseRate$RadPerSecond]
   RadiationAbsorbedDoseRate get toRadPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$RadPerSecond(),
+        RadiationAbsorbedDoseRate$RadPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond]
   RadiationAbsorbedDoseRate get toJoulePerKilogramPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond(),
+        RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$ExagrayPerSecond]
   RadiationAbsorbedDoseRate get toExagrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$ExagrayPerSecond(),
+        RadiationAbsorbedDoseRate$ExagrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$PetagrayPerSecond]
   RadiationAbsorbedDoseRate get toPetagrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$PetagrayPerSecond(),
+        RadiationAbsorbedDoseRate$PetagrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$TeragrayPerSecond]
   RadiationAbsorbedDoseRate get toTeragrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$TeragrayPerSecond(),
+        RadiationAbsorbedDoseRate$TeragrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$GigagrayPerSecond]
   RadiationAbsorbedDoseRate get toGigagrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$GigagrayPerSecond(),
+        RadiationAbsorbedDoseRate$GigagrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$MegagrayPerSecond]
   RadiationAbsorbedDoseRate get toMegagrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$MegagrayPerSecond(),
+        RadiationAbsorbedDoseRate$MegagrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$KilograyPerSecond]
   RadiationAbsorbedDoseRate get toKilograyPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$KilograyPerSecond(),
+        RadiationAbsorbedDoseRate$KilograyPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$HectograyPerSecond]
   RadiationAbsorbedDoseRate get toHectograyPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$HectograyPerSecond(),
+        RadiationAbsorbedDoseRate$HectograyPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$DekagrayPerSecond]
   RadiationAbsorbedDoseRate get toDekagrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$DekagrayPerSecond(),
+        RadiationAbsorbedDoseRate$DekagrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$GrayPerSecond]
   RadiationAbsorbedDoseRate get toGrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$GrayPerSecond(),
+        RadiationAbsorbedDoseRate$GrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$DecigrayPerSecond]
   RadiationAbsorbedDoseRate get toDecigrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$DecigrayPerSecond(),
+        RadiationAbsorbedDoseRate$DecigrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$CentigrayPerSecond]
   RadiationAbsorbedDoseRate get toCentigrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$CentigrayPerSecond(),
+        RadiationAbsorbedDoseRate$CentigrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$MilligrayPerSecond]
   RadiationAbsorbedDoseRate get toMilligrayPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$MilligrayPerSecond(),
+        RadiationAbsorbedDoseRate$MilligrayPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$MicrograyPerSecond]
   RadiationAbsorbedDoseRate get toMicrograyPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$MicrograyPerSecond(),
+        RadiationAbsorbedDoseRate$MicrograyPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$NanograyPerSecond]
   RadiationAbsorbedDoseRate get toNanograyPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$NanograyPerSecond(),
+        RadiationAbsorbedDoseRate$NanograyPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$PicograyPerSecond]
   RadiationAbsorbedDoseRate get toPicograyPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$PicograyPerSecond(),
+        RadiationAbsorbedDoseRate$PicograyPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$FemtograyPerSecond]
   RadiationAbsorbedDoseRate get toFemtograyPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$FemtograyPerSecond(),
+        RadiationAbsorbedDoseRate$FemtograyPerSecond(),
       );
 
   /// Convert to [RadiationAbsorbedDoseRate$AttograyPerSecond]
   RadiationAbsorbedDoseRate get toAttograyPerSecond => convertTo(
-        const RadiationAbsorbedDoseRate$AttograyPerSecond(),
+        RadiationAbsorbedDoseRate$AttograyPerSecond(),
       );
 
   @override
@@ -145,40 +146,40 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
 
   static const _majorName = 'radiationAbsorbedDoseRate';
 
-  static const radPerSecond = RadiationAbsorbedDoseRate$RadPerSecond();
-  static const joulePerKilogramPerSecond =
+  static final radPerSecond = RadiationAbsorbedDoseRate$RadPerSecond();
+  static final joulePerKilogramPerSecond =
       RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond();
-  static const exagrayPerSecond = RadiationAbsorbedDoseRate$ExagrayPerSecond();
-  static const petagrayPerSecond =
+  static final exagrayPerSecond = RadiationAbsorbedDoseRate$ExagrayPerSecond();
+  static final petagrayPerSecond =
       RadiationAbsorbedDoseRate$PetagrayPerSecond();
-  static const teragrayPerSecond =
+  static final teragrayPerSecond =
       RadiationAbsorbedDoseRate$TeragrayPerSecond();
-  static const gigagrayPerSecond =
+  static final gigagrayPerSecond =
       RadiationAbsorbedDoseRate$GigagrayPerSecond();
-  static const megagrayPerSecond =
+  static final megagrayPerSecond =
       RadiationAbsorbedDoseRate$MegagrayPerSecond();
-  static const kilograyPerSecond =
+  static final kilograyPerSecond =
       RadiationAbsorbedDoseRate$KilograyPerSecond();
-  static const hectograyPerSecond =
+  static final hectograyPerSecond =
       RadiationAbsorbedDoseRate$HectograyPerSecond();
-  static const dekagrayPerSecond =
+  static final dekagrayPerSecond =
       RadiationAbsorbedDoseRate$DekagrayPerSecond();
-  static const grayPerSecond = RadiationAbsorbedDoseRate$GrayPerSecond();
-  static const decigrayPerSecond =
+  static final grayPerSecond = RadiationAbsorbedDoseRate$GrayPerSecond();
+  static final decigrayPerSecond =
       RadiationAbsorbedDoseRate$DecigrayPerSecond();
-  static const centigrayPerSecond =
+  static final centigrayPerSecond =
       RadiationAbsorbedDoseRate$CentigrayPerSecond();
-  static const milligrayPerSecond =
+  static final milligrayPerSecond =
       RadiationAbsorbedDoseRate$MilligrayPerSecond();
-  static const micrograyPerSecond =
+  static final micrograyPerSecond =
       RadiationAbsorbedDoseRate$MicrograyPerSecond();
-  static const nanograyPerSecond =
+  static final nanograyPerSecond =
       RadiationAbsorbedDoseRate$NanograyPerSecond();
-  static const picograyPerSecond =
+  static final picograyPerSecond =
       RadiationAbsorbedDoseRate$PicograyPerSecond();
-  static const femtograyPerSecond =
+  static final femtograyPerSecond =
       RadiationAbsorbedDoseRate$FemtograyPerSecond();
-  static const attograyPerSecond =
+  static final attograyPerSecond =
       RadiationAbsorbedDoseRate$AttograyPerSecond();
 
   @override
@@ -187,7 +188,7 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
   @override
   EnumValues<RadiationAbsorbedDoseRate> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <RadiationAbsorbedDoseRate>[
     radPerSecond,
     joulePerKilogramPerSecond,
     exagrayPerSecond,
@@ -209,7 +210,7 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
     attograyPerSecond,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, RadiationAbsorbedDoseRate>{
     RadiationAbsorbedDoseRate$RadPerSecond._minorName: radPerSecond,
     RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond._minorName:
         joulePerKilogramPerSecond,
@@ -236,7 +237,7 @@ sealed class RadiationAbsorbedDoseRate extends Unit<RadiationAbsorbedDoseRate> {
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$RadPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$RadPerSecond([
+  RadiationAbsorbedDoseRate$RadPerSecond([
     super.value,
   ]);
 
@@ -267,15 +268,15 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
   @override
   String get displayName => 'rad/second';
 
-  static const _ratio = 10000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+016');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$RadPerSecond] = 10000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$RadPerSecond] = 1.00000000000000000E+016 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -284,12 +285,12 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$RadPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$RadPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$RadPerSecond(val);
 
@@ -302,7 +303,7 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -310,7 +311,7 @@ final class RadiationAbsorbedDoseRate$RadPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond([
+  RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond([
     super.value,
   ]);
 
@@ -341,15 +342,15 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
   @override
   String get displayName => 'joule/kilogram/second';
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond] = 1000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond] = 1.00000000000000000E+018 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -358,12 +359,12 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond(val);
 
@@ -376,7 +377,7 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -384,7 +385,7 @@ final class RadiationAbsorbedDoseRate$JoulePerKilogramPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$ExagrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$ExagrayPerSecond([
+  RadiationAbsorbedDoseRate$ExagrayPerSecond([
     super.value,
   ]);
 
@@ -415,15 +416,15 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
   @override
   String get displayName => 'exagray/second';
 
-  static const _ratio = 1e+36;
+  static final _ratio = Rational.parse('1.00000000000000000E+036');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$ExagrayPerSecond] = 1e+36 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$ExagrayPerSecond] = 1.00000000000000000E+036 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -432,12 +433,12 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$ExagrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$ExagrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$ExagrayPerSecond(val);
 
@@ -450,7 +451,7 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -458,7 +459,7 @@ final class RadiationAbsorbedDoseRate$ExagrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$PetagrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$PetagrayPerSecond([
+  RadiationAbsorbedDoseRate$PetagrayPerSecond([
     super.value,
   ]);
 
@@ -489,15 +490,15 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
   @override
   String get displayName => 'petagray/second';
 
-  static const _ratio = 1e+33;
+  static final _ratio = Rational.parse('1.00000000000000000E+033');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$PetagrayPerSecond] = 1e+33 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$PetagrayPerSecond] = 1.00000000000000000E+033 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -506,12 +507,12 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$PetagrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$PetagrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$PetagrayPerSecond(val);
 
@@ -524,7 +525,7 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -532,7 +533,7 @@ final class RadiationAbsorbedDoseRate$PetagrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$TeragrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$TeragrayPerSecond([
+  RadiationAbsorbedDoseRate$TeragrayPerSecond([
     super.value,
   ]);
 
@@ -563,15 +564,15 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
   @override
   String get displayName => 'teragray/second';
 
-  static const _ratio = 1e+30;
+  static final _ratio = Rational.parse('1.00000000000000000E+030');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$TeragrayPerSecond] = 1e+30 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$TeragrayPerSecond] = 1.00000000000000000E+030 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -580,12 +581,12 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$TeragrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$TeragrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$TeragrayPerSecond(val);
 
@@ -598,7 +599,7 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -606,7 +607,7 @@ final class RadiationAbsorbedDoseRate$TeragrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$GigagrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$GigagrayPerSecond([
+  RadiationAbsorbedDoseRate$GigagrayPerSecond([
     super.value,
   ]);
 
@@ -637,15 +638,15 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
   @override
   String get displayName => 'gigagray/second';
 
-  static const _ratio = 1e+27;
+  static final _ratio = Rational.parse('1.00000000000000000E+027');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$GigagrayPerSecond] = 1e+27 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$GigagrayPerSecond] = 1.00000000000000000E+027 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -654,12 +655,12 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$GigagrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$GigagrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$GigagrayPerSecond(val);
 
@@ -672,7 +673,7 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -680,7 +681,7 @@ final class RadiationAbsorbedDoseRate$GigagrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$MegagrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$MegagrayPerSecond([
+  RadiationAbsorbedDoseRate$MegagrayPerSecond([
     super.value,
   ]);
 
@@ -711,15 +712,15 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
   @override
   String get displayName => 'megagray/second';
 
-  static const _ratio = 1e+24;
+  static final _ratio = Rational.parse('1.00000000000000000E+024');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$MegagrayPerSecond] = 1e+24 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$MegagrayPerSecond] = 1.00000000000000000E+024 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -728,12 +729,12 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$MegagrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$MegagrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$MegagrayPerSecond(val);
 
@@ -746,7 +747,7 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -754,7 +755,7 @@ final class RadiationAbsorbedDoseRate$MegagrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$KilograyPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$KilograyPerSecond([
+  RadiationAbsorbedDoseRate$KilograyPerSecond([
     super.value,
   ]);
 
@@ -785,15 +786,15 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
   @override
   String get displayName => 'kilogray/second';
 
-  static const _ratio = 1e+21;
+  static final _ratio = Rational.parse('1.00000000000000000E+021');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$KilograyPerSecond] = 1e+21 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$KilograyPerSecond] = 1.00000000000000000E+021 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -802,12 +803,12 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$KilograyPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$KilograyPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$KilograyPerSecond(val);
 
@@ -820,7 +821,7 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -828,7 +829,7 @@ final class RadiationAbsorbedDoseRate$KilograyPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$HectograyPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$HectograyPerSecond([
+  RadiationAbsorbedDoseRate$HectograyPerSecond([
     super.value,
   ]);
 
@@ -859,15 +860,15 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
   @override
   String get displayName => 'hectogray/second';
 
-  static const _ratio = 100000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+020');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$HectograyPerSecond] = 100000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$HectograyPerSecond] = 1.00000000000000000E+020 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -876,12 +877,12 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$HectograyPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$HectograyPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$HectograyPerSecond(val);
 
@@ -894,7 +895,7 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -902,7 +903,7 @@ final class RadiationAbsorbedDoseRate$HectograyPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$DekagrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$DekagrayPerSecond([
+  RadiationAbsorbedDoseRate$DekagrayPerSecond([
     super.value,
   ]);
 
@@ -933,15 +934,15 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
   @override
   String get displayName => 'dekagray/second';
 
-  static const _ratio = 10000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+019');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$DekagrayPerSecond] = 10000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$DekagrayPerSecond] = 1.00000000000000000E+019 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -950,12 +951,12 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$DekagrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$DekagrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$DekagrayPerSecond(val);
 
@@ -968,7 +969,7 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -976,7 +977,7 @@ final class RadiationAbsorbedDoseRate$DekagrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$GrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$GrayPerSecond([
+  RadiationAbsorbedDoseRate$GrayPerSecond([
     super.value,
   ]);
 
@@ -1007,15 +1008,15 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
   @override
   String get displayName => 'gray/second';
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$GrayPerSecond] = 1000000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$GrayPerSecond] = 1.00000000000000000E+018 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1024,12 +1025,12 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$GrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$GrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$GrayPerSecond(val);
 
@@ -1042,7 +1043,7 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1050,7 +1051,7 @@ final class RadiationAbsorbedDoseRate$GrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$DecigrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$DecigrayPerSecond([
+  RadiationAbsorbedDoseRate$DecigrayPerSecond([
     super.value,
   ]);
 
@@ -1081,15 +1082,15 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
   @override
   String get displayName => 'decigray/second';
 
-  static const _ratio = 100000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+017');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$DecigrayPerSecond] = 100000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$DecigrayPerSecond] = 1.00000000000000000E+017 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1098,12 +1099,12 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$DecigrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$DecigrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$DecigrayPerSecond(val);
 
@@ -1116,7 +1117,7 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1124,7 +1125,7 @@ final class RadiationAbsorbedDoseRate$DecigrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$CentigrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$CentigrayPerSecond([
+  RadiationAbsorbedDoseRate$CentigrayPerSecond([
     super.value,
   ]);
 
@@ -1155,15 +1156,15 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
   @override
   String get displayName => 'centigray/second';
 
-  static const _ratio = 10000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+016');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$CentigrayPerSecond] = 10000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$CentigrayPerSecond] = 1.00000000000000000E+016 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1172,12 +1173,12 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$CentigrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$CentigrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$CentigrayPerSecond(val);
 
@@ -1190,7 +1191,7 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1198,7 +1199,7 @@ final class RadiationAbsorbedDoseRate$CentigrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$MilligrayPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$MilligrayPerSecond([
+  RadiationAbsorbedDoseRate$MilligrayPerSecond([
     super.value,
   ]);
 
@@ -1229,15 +1230,15 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
   @override
   String get displayName => 'milligray/second';
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$MilligrayPerSecond] = 1000000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$MilligrayPerSecond] = 1.00000000000000000E+015 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1246,12 +1247,12 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$MilligrayPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$MilligrayPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$MilligrayPerSecond(val);
 
@@ -1264,7 +1265,7 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1272,7 +1273,7 @@ final class RadiationAbsorbedDoseRate$MilligrayPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$MicrograyPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$MicrograyPerSecond([
+  RadiationAbsorbedDoseRate$MicrograyPerSecond([
     super.value,
   ]);
 
@@ -1303,15 +1304,15 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
   @override
   String get displayName => 'microgray/second';
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$MicrograyPerSecond] = 1000000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$MicrograyPerSecond] = 1.00000000000000000E+012 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1320,12 +1321,12 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$MicrograyPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$MicrograyPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$MicrograyPerSecond(val);
 
@@ -1338,7 +1339,7 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1346,7 +1347,7 @@ final class RadiationAbsorbedDoseRate$MicrograyPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$NanograyPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$NanograyPerSecond([
+  RadiationAbsorbedDoseRate$NanograyPerSecond([
     super.value,
   ]);
 
@@ -1377,15 +1378,15 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
   @override
   String get displayName => 'nanogray/second';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$NanograyPerSecond] = 1000000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$NanograyPerSecond] = 1.00000000000000000E+009 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1394,12 +1395,12 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$NanograyPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$NanograyPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$NanograyPerSecond(val);
 
@@ -1412,7 +1413,7 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1420,7 +1421,7 @@ final class RadiationAbsorbedDoseRate$NanograyPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$PicograyPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$PicograyPerSecond([
+  RadiationAbsorbedDoseRate$PicograyPerSecond([
     super.value,
   ]);
 
@@ -1451,15 +1452,15 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
   @override
   String get displayName => 'picogray/second';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$PicograyPerSecond] = 1000000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$PicograyPerSecond] = 1.00000000000000000E+006 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1468,12 +1469,12 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$PicograyPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$PicograyPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$PicograyPerSecond(val);
 
@@ -1486,7 +1487,7 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1494,7 +1495,7 @@ final class RadiationAbsorbedDoseRate$PicograyPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$FemtograyPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$FemtograyPerSecond([
+  RadiationAbsorbedDoseRate$FemtograyPerSecond([
     super.value,
   ]);
 
@@ -1525,15 +1526,15 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
   @override
   String get displayName => 'femtogray/second';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
-  /// 1 [RadiationAbsorbedDoseRate$FemtograyPerSecond] = 1000.0 [RadiationAbsorbedDoseRate$AttograyPerSecond]
+  /// 1 [RadiationAbsorbedDoseRate$FemtograyPerSecond] = 1.00000000000000000E+003 [RadiationAbsorbedDoseRate$AttograyPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1542,12 +1543,12 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$FemtograyPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$FemtograyPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$FemtograyPerSecond(val);
 
@@ -1560,7 +1561,7 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1568,7 +1569,7 @@ final class RadiationAbsorbedDoseRate$FemtograyPerSecond
 /// Unit of [RadiationAbsorbedDoseRate]
 final class RadiationAbsorbedDoseRate$AttograyPerSecond
     extends RadiationAbsorbedDoseRate {
-  const RadiationAbsorbedDoseRate$AttograyPerSecond([
+  RadiationAbsorbedDoseRate$AttograyPerSecond([
     super.value,
   ]);
 
@@ -1599,15 +1600,15 @@ final class RadiationAbsorbedDoseRate$AttograyPerSecond
   @override
   String get displayName => 'attogray/second';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   RadiationAbsorbedDoseRate get anchor =>
-      const RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
+      RadiationAbsorbedDoseRate$AttograyPerSecond(_ratio);
 
   /// Default (anchor) unit of [RadiationAbsorbedDoseRate]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1616,12 +1617,12 @@ final class RadiationAbsorbedDoseRate$AttograyPerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationAbsorbedDoseRate$AttograyPerSecond] with new value
   @override
   RadiationAbsorbedDoseRate$AttograyPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationAbsorbedDoseRate$AttograyPerSecond(val);
 
@@ -1634,7 +1635,7 @@ final class RadiationAbsorbedDoseRate$AttograyPerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

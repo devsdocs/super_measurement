@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [SurfaceCurrentDensity$AmperePerCicularMil],
 /// [SurfaceCurrentDensity$AbamperePerCentimeterSquare]
 sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
-  const SurfaceCurrentDensity([
+  SurfaceCurrentDensity([
     super.value,
   ]);
 
@@ -22,41 +22,42 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : SurfaceCurrentDensity.anchor();
 
   factory SurfaceCurrentDensity.anchor() =>
-      const SurfaceCurrentDensity$AmperePerMeterSquare();
+      SurfaceCurrentDensity$AmperePerMeterSquare();
 
   /// Convert to [SurfaceCurrentDensity$AmperePerMeterSquare]
   SurfaceCurrentDensity get toAmperePerMeterSquare => convertTo(
-        const SurfaceCurrentDensity$AmperePerMeterSquare(),
+        SurfaceCurrentDensity$AmperePerMeterSquare(),
       );
 
   /// Convert to [SurfaceCurrentDensity$AmperePerCentimeterSquare]
   SurfaceCurrentDensity get toAmperePerCentimeterSquare => convertTo(
-        const SurfaceCurrentDensity$AmperePerCentimeterSquare(),
+        SurfaceCurrentDensity$AmperePerCentimeterSquare(),
       );
 
   /// Convert to [SurfaceCurrentDensity$AmperePerInchSquare]
   SurfaceCurrentDensity get toAmperePerInchSquare => convertTo(
-        const SurfaceCurrentDensity$AmperePerInchSquare(),
+        SurfaceCurrentDensity$AmperePerInchSquare(),
       );
 
   /// Convert to [SurfaceCurrentDensity$AmperePerMilSquare]
   SurfaceCurrentDensity get toAmperePerMilSquare => convertTo(
-        const SurfaceCurrentDensity$AmperePerMilSquare(),
+        SurfaceCurrentDensity$AmperePerMilSquare(),
       );
 
   /// Convert to [SurfaceCurrentDensity$AmperePerCicularMil]
   SurfaceCurrentDensity get toAmperePerCicularMil => convertTo(
-        const SurfaceCurrentDensity$AmperePerCicularMil(),
+        SurfaceCurrentDensity$AmperePerCicularMil(),
       );
 
   /// Convert to [SurfaceCurrentDensity$AbamperePerCentimeterSquare]
   SurfaceCurrentDensity get toAbamperePerCentimeterSquare => convertTo(
-        const SurfaceCurrentDensity$AbamperePerCentimeterSquare(),
+        SurfaceCurrentDensity$AbamperePerCentimeterSquare(),
       );
 
   @override
@@ -67,16 +68,16 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
 
   static const _majorName = 'surfaceCurrentDensity';
 
-  static const amperePerMeterSquare =
+  static final amperePerMeterSquare =
       SurfaceCurrentDensity$AmperePerMeterSquare();
-  static const amperePerCentimeterSquare =
+  static final amperePerCentimeterSquare =
       SurfaceCurrentDensity$AmperePerCentimeterSquare();
-  static const amperePerInchSquare =
+  static final amperePerInchSquare =
       SurfaceCurrentDensity$AmperePerInchSquare();
-  static const amperePerMilSquare = SurfaceCurrentDensity$AmperePerMilSquare();
-  static const amperePerCicularMil =
+  static final amperePerMilSquare = SurfaceCurrentDensity$AmperePerMilSquare();
+  static final amperePerCicularMil =
       SurfaceCurrentDensity$AmperePerCicularMil();
-  static const abamperePerCentimeterSquare =
+  static final abamperePerCentimeterSquare =
       SurfaceCurrentDensity$AbamperePerCentimeterSquare();
 
   @override
@@ -85,7 +86,7 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
   @override
   EnumValues<SurfaceCurrentDensity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <SurfaceCurrentDensity>[
     amperePerMeterSquare,
     amperePerCentimeterSquare,
     amperePerInchSquare,
@@ -94,7 +95,7 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
     abamperePerCentimeterSquare,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, SurfaceCurrentDensity>{
     SurfaceCurrentDensity$AmperePerMeterSquare._minorName: amperePerMeterSquare,
     SurfaceCurrentDensity$AmperePerCentimeterSquare._minorName:
         amperePerCentimeterSquare,
@@ -109,7 +110,7 @@ sealed class SurfaceCurrentDensity extends Unit<SurfaceCurrentDensity> {
 /// Unit of [SurfaceCurrentDensity]
 final class SurfaceCurrentDensity$AmperePerMeterSquare
     extends SurfaceCurrentDensity {
-  const SurfaceCurrentDensity$AmperePerMeterSquare([
+  SurfaceCurrentDensity$AmperePerMeterSquare([
     super.value,
   ]);
 
@@ -140,15 +141,15 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
   @override
   String get displayName => 'ampere/meter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   SurfaceCurrentDensity get anchor =>
-      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+      SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
   /// Default (anchor) unit of [SurfaceCurrentDensity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -157,12 +158,12 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceCurrentDensity$AmperePerMeterSquare] with new value
   @override
   SurfaceCurrentDensity$AmperePerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceCurrentDensity$AmperePerMeterSquare(val);
 
@@ -175,7 +176,7 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -183,7 +184,7 @@ final class SurfaceCurrentDensity$AmperePerMeterSquare
 /// Unit of [SurfaceCurrentDensity]
 final class SurfaceCurrentDensity$AmperePerCentimeterSquare
     extends SurfaceCurrentDensity {
-  const SurfaceCurrentDensity$AmperePerCentimeterSquare([
+  SurfaceCurrentDensity$AmperePerCentimeterSquare([
     super.value,
   ]);
 
@@ -214,15 +215,15 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
   @override
   String get displayName => 'ampere/centimeter²';
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
   SurfaceCurrentDensity get anchor =>
-      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+      SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
-  /// 1 [SurfaceCurrentDensity$AmperePerCentimeterSquare] = 10000.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AmperePerCentimeterSquare] = 1.00000000000000000E+004 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -231,12 +232,12 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceCurrentDensity$AmperePerCentimeterSquare] with new value
   @override
   SurfaceCurrentDensity$AmperePerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceCurrentDensity$AmperePerCentimeterSquare(val);
 
@@ -249,7 +250,7 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -257,7 +258,7 @@ final class SurfaceCurrentDensity$AmperePerCentimeterSquare
 /// Unit of [SurfaceCurrentDensity]
 final class SurfaceCurrentDensity$AmperePerInchSquare
     extends SurfaceCurrentDensity {
-  const SurfaceCurrentDensity$AmperePerInchSquare([
+  SurfaceCurrentDensity$AmperePerInchSquare([
     super.value,
   ]);
 
@@ -288,15 +289,15 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
   @override
   String get displayName => 'ampere/inch²';
 
-  static const _ratio = 1550.0031;
+  static final _ratio = Rational.parse('1.55000310000000000E+003');
 
   @override
   SurfaceCurrentDensity get anchor =>
-      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+      SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
-  /// 1 [SurfaceCurrentDensity$AmperePerInchSquare] ≈ 1550.0031 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AmperePerInchSquare] ≈ 1.55000310000000000E+003 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -305,12 +306,12 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceCurrentDensity$AmperePerInchSquare] with new value
   @override
   SurfaceCurrentDensity$AmperePerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceCurrentDensity$AmperePerInchSquare(val);
 
@@ -323,7 +324,7 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -331,7 +332,7 @@ final class SurfaceCurrentDensity$AmperePerInchSquare
 /// Unit of [SurfaceCurrentDensity]
 final class SurfaceCurrentDensity$AmperePerMilSquare
     extends SurfaceCurrentDensity {
-  const SurfaceCurrentDensity$AmperePerMilSquare([
+  SurfaceCurrentDensity$AmperePerMilSquare([
     super.value,
   ]);
 
@@ -362,15 +363,15 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
   @override
   String get displayName => 'ampere/mil²';
 
-  static const _ratio = 1550003100.0;
+  static final _ratio = Rational.parse('1.55000310000000000E+009');
 
   @override
   SurfaceCurrentDensity get anchor =>
-      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+      SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
-  /// 1 [SurfaceCurrentDensity$AmperePerMilSquare] = 1550003100.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AmperePerMilSquare] = 1.55000310000000000E+009 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -379,12 +380,12 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceCurrentDensity$AmperePerMilSquare] with new value
   @override
   SurfaceCurrentDensity$AmperePerMilSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceCurrentDensity$AmperePerMilSquare(val);
 
@@ -397,7 +398,7 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -405,7 +406,7 @@ final class SurfaceCurrentDensity$AmperePerMilSquare
 /// Unit of [SurfaceCurrentDensity]
 final class SurfaceCurrentDensity$AmperePerCicularMil
     extends SurfaceCurrentDensity {
-  const SurfaceCurrentDensity$AmperePerCicularMil([
+  SurfaceCurrentDensity$AmperePerCicularMil([
     super.value,
   ]);
 
@@ -436,15 +437,15 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
   @override
   String get displayName => 'ampere/cicular mil';
 
-  static const _ratio = 1973525240.990759;
+  static final _ratio = Rational.parse('1.97352524099075899E+009');
 
   @override
   SurfaceCurrentDensity get anchor =>
-      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+      SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
-  /// 1 [SurfaceCurrentDensity$AmperePerCicularMil] ≈ 1973525240.990759 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AmperePerCicularMil] ≈ 1.97352524099075899E+009 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -453,12 +454,12 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceCurrentDensity$AmperePerCicularMil] with new value
   @override
   SurfaceCurrentDensity$AmperePerCicularMil withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceCurrentDensity$AmperePerCicularMil(val);
 
@@ -471,7 +472,7 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -479,7 +480,7 @@ final class SurfaceCurrentDensity$AmperePerCicularMil
 /// Unit of [SurfaceCurrentDensity]
 final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
     extends SurfaceCurrentDensity {
-  const SurfaceCurrentDensity$AbamperePerCentimeterSquare([
+  SurfaceCurrentDensity$AbamperePerCentimeterSquare([
     super.value,
   ]);
 
@@ -510,15 +511,15 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
   @override
   String get displayName => 'Abampere/centimeter²';
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
   SurfaceCurrentDensity get anchor =>
-      const SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
+      SurfaceCurrentDensity$AmperePerMeterSquare(_ratio);
 
-  /// 1 [SurfaceCurrentDensity$AbamperePerCentimeterSquare] = 100000.0 [SurfaceCurrentDensity$AmperePerMeterSquare]
+  /// 1 [SurfaceCurrentDensity$AbamperePerCentimeterSquare] = 1.00000000000000000E+005 [SurfaceCurrentDensity$AmperePerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -527,12 +528,12 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceCurrentDensity$AbamperePerCentimeterSquare] with new value
   @override
   SurfaceCurrentDensity$AbamperePerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceCurrentDensity$AbamperePerCentimeterSquare(val);
 
@@ -545,7 +546,7 @@ final class SurfaceCurrentDensity$AbamperePerCentimeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

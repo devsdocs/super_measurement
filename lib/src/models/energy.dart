@@ -22,7 +22,7 @@ part of '../../super_measurement.dart';
 /// [Energy$KiloelectronVolt], [Energy$ElectronVolt], [Energy$Therm],
 /// [Energy$ThermEC], [Energy$ThermUS], [Energy$Hartree]
 sealed class Energy extends Unit<Energy> {
-  const Energy([
+  Energy([
     super.value,
   ]);
 
@@ -34,260 +34,261 @@ sealed class Energy extends Unit<Energy> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Energy.anchor();
 
-  factory Energy.anchor() => const Energy$ElectronVolt();
+  factory Energy.anchor() => Energy$ElectronVolt();
 
   /// Convert to [Energy$Gigajoule]
   Energy get toGigajoule => convertTo(
-        const Energy$Gigajoule(),
+        Energy$Gigajoule(),
       );
 
   /// Convert to [Energy$Megajoule]
   Energy get toMegajoule => convertTo(
-        const Energy$Megajoule(),
+        Energy$Megajoule(),
       );
 
   /// Convert to [Energy$Kilojoule]
   Energy get toKilojoule => convertTo(
-        const Energy$Kilojoule(),
+        Energy$Kilojoule(),
       );
 
   /// Convert to [Energy$Joule]
   Energy get toJoule => convertTo(
-        const Energy$Joule(),
+        Energy$Joule(),
       );
 
   /// Convert to [Energy$Millijoule]
   Energy get toMillijoule => convertTo(
-        const Energy$Millijoule(),
+        Energy$Millijoule(),
       );
 
   /// Convert to [Energy$Microjoule]
   Energy get toMicrojoule => convertTo(
-        const Energy$Microjoule(),
+        Energy$Microjoule(),
       );
 
   /// Convert to [Energy$Nanojoule]
   Energy get toNanojoule => convertTo(
-        const Energy$Nanojoule(),
+        Energy$Nanojoule(),
       );
 
   /// Convert to [Energy$Attojoule]
   Energy get toAttojoule => convertTo(
-        const Energy$Attojoule(),
+        Energy$Attojoule(),
       );
 
   /// Convert to [Energy$Erg]
   Energy get toErg => convertTo(
-        const Energy$Erg(),
+        Energy$Erg(),
       );
 
   /// Convert to [Energy$GigawattHour]
   Energy get toGigawattHour => convertTo(
-        const Energy$GigawattHour(),
+        Energy$GigawattHour(),
       );
 
   /// Convert to [Energy$MegawattHour]
   Energy get toMegawattHour => convertTo(
-        const Energy$MegawattHour(),
+        Energy$MegawattHour(),
       );
 
   /// Convert to [Energy$KilowattHour]
   Energy get toKilowattHour => convertTo(
-        const Energy$KilowattHour(),
+        Energy$KilowattHour(),
       );
 
   /// Convert to [Energy$KilowattSecond]
   Energy get toKilowattSecond => convertTo(
-        const Energy$KilowattSecond(),
+        Energy$KilowattSecond(),
       );
 
   /// Convert to [Energy$WattHour]
   Energy get toWattHour => convertTo(
-        const Energy$WattHour(),
+        Energy$WattHour(),
       );
 
   /// Convert to [Energy$WattSecond]
   Energy get toWattSecond => convertTo(
-        const Energy$WattSecond(),
+        Energy$WattSecond(),
       );
 
   /// Convert to [Energy$HorsepowerHour]
   Energy get toHorsepowerHour => convertTo(
-        const Energy$HorsepowerHour(),
+        Energy$HorsepowerHour(),
       );
 
   /// Convert to [Energy$KilocalorieInternational]
   Energy get toKilocalorieInternational => convertTo(
-        const Energy$KilocalorieInternational(),
+        Energy$KilocalorieInternational(),
       );
 
   /// Convert to [Energy$KilocalorieThermochemical]
   Energy get toKilocalorieThermochemical => convertTo(
-        const Energy$KilocalorieThermochemical(),
+        Energy$KilocalorieThermochemical(),
       );
 
   /// Convert to [Energy$CalorieInternational]
   Energy get toCalorieInternational => convertTo(
-        const Energy$CalorieInternational(),
+        Energy$CalorieInternational(),
       );
 
   /// Convert to [Energy$CalorieThermochemical]
   Energy get toCalorieThermochemical => convertTo(
-        const Energy$CalorieThermochemical(),
+        Energy$CalorieThermochemical(),
       );
 
   /// Convert to [Energy$CalorieNutritional]
   Energy get toCalorieNutritional => convertTo(
-        const Energy$CalorieNutritional(),
+        Energy$CalorieNutritional(),
       );
 
   /// Convert to [Energy$BTUInternational]
   Energy get toBTUInternational => convertTo(
-        const Energy$BTUInternational(),
+        Energy$BTUInternational(),
       );
 
   /// Convert to [Energy$BTUThermochemical]
   Energy get toBTUThermochemical => convertTo(
-        const Energy$BTUThermochemical(),
+        Energy$BTUThermochemical(),
       );
 
   /// Convert to [Energy$MBTU]
   Energy get toMBTU => convertTo(
-        const Energy$MBTU(),
+        Energy$MBTU(),
       );
 
   /// Convert to [Energy$TonHourRefrigeration]
   Energy get toTonHourRefrigeration => convertTo(
-        const Energy$TonHourRefrigeration(),
+        Energy$TonHourRefrigeration(),
       );
 
   /// Convert to [Energy$Gigaton]
   Energy get toGigaton => convertTo(
-        const Energy$Gigaton(),
+        Energy$Gigaton(),
       );
 
   /// Convert to [Energy$Megaton]
   Energy get toMegaton => convertTo(
-        const Energy$Megaton(),
+        Energy$Megaton(),
       );
 
   /// Convert to [Energy$Kiloton]
   Energy get toKiloton => convertTo(
-        const Energy$Kiloton(),
+        Energy$Kiloton(),
       );
 
   /// Convert to [Energy$TonExplosives]
   Energy get toTonExplosives => convertTo(
-        const Energy$TonExplosives(),
+        Energy$TonExplosives(),
       );
 
   /// Convert to [Energy$NewtonMeter]
   Energy get toNewtonMeter => convertTo(
-        const Energy$NewtonMeter(),
+        Energy$NewtonMeter(),
       );
 
   /// Convert to [Energy$DyneCentimeter]
   Energy get toDyneCentimeter => convertTo(
-        const Energy$DyneCentimeter(),
+        Energy$DyneCentimeter(),
       );
 
   /// Convert to [Energy$GramForceMeter]
   Energy get toGramForceMeter => convertTo(
-        const Energy$GramForceMeter(),
+        Energy$GramForceMeter(),
       );
 
   /// Convert to [Energy$GramForceCentimeter]
   Energy get toGramForceCentimeter => convertTo(
-        const Energy$GramForceCentimeter(),
+        Energy$GramForceCentimeter(),
       );
 
   /// Convert to [Energy$KilogramForceMeter]
   Energy get toKilogramForceMeter => convertTo(
-        const Energy$KilogramForceMeter(),
+        Energy$KilogramForceMeter(),
       );
 
   /// Convert to [Energy$KilogramForceCentimeter]
   Energy get toKilogramForceCentimeter => convertTo(
-        const Energy$KilogramForceCentimeter(),
+        Energy$KilogramForceCentimeter(),
       );
 
   /// Convert to [Energy$MeterKilopond]
   Energy get toMeterKilopond => convertTo(
-        const Energy$MeterKilopond(),
+        Energy$MeterKilopond(),
       );
 
   /// Convert to [Energy$PoundForceFoot]
   Energy get toPoundForceFoot => convertTo(
-        const Energy$PoundForceFoot(),
+        Energy$PoundForceFoot(),
       );
 
   /// Convert to [Energy$PoundForceInch]
   Energy get toPoundForceInch => convertTo(
-        const Energy$PoundForceInch(),
+        Energy$PoundForceInch(),
       );
 
   /// Convert to [Energy$OunceForceInch]
   Energy get toOunceForceInch => convertTo(
-        const Energy$OunceForceInch(),
+        Energy$OunceForceInch(),
       );
 
   /// Convert to [Energy$FootPound]
   Energy get toFootPound => convertTo(
-        const Energy$FootPound(),
+        Energy$FootPound(),
       );
 
   /// Convert to [Energy$InchPound]
   Energy get toInchPound => convertTo(
-        const Energy$InchPound(),
+        Energy$InchPound(),
       );
 
   /// Convert to [Energy$InchOunce]
   Energy get toInchOunce => convertTo(
-        const Energy$InchOunce(),
+        Energy$InchOunce(),
       );
 
   /// Convert to [Energy$PoundalFoot]
   Energy get toPoundalFoot => convertTo(
-        const Energy$PoundalFoot(),
+        Energy$PoundalFoot(),
       );
 
   /// Convert to [Energy$MegaelectronVolt]
   Energy get toMegaelectronVolt => convertTo(
-        const Energy$MegaelectronVolt(),
+        Energy$MegaelectronVolt(),
       );
 
   /// Convert to [Energy$KiloelectronVolt]
   Energy get toKiloelectronVolt => convertTo(
-        const Energy$KiloelectronVolt(),
+        Energy$KiloelectronVolt(),
       );
 
   /// Convert to [Energy$ElectronVolt]
   Energy get toElectronVolt => convertTo(
-        const Energy$ElectronVolt(),
+        Energy$ElectronVolt(),
       );
 
   /// Convert to [Energy$Therm]
   Energy get toTherm => convertTo(
-        const Energy$Therm(),
+        Energy$Therm(),
       );
 
   /// Convert to [Energy$ThermEC]
   Energy get toThermEC => convertTo(
-        const Energy$ThermEC(),
+        Energy$ThermEC(),
       );
 
   /// Convert to [Energy$ThermUS]
   Energy get toThermUS => convertTo(
-        const Energy$ThermUS(),
+        Energy$ThermUS(),
       );
 
   /// Convert to [Energy$Hartree]
   Energy get toHartree => convertTo(
-        const Energy$Hartree(),
+        Energy$Hartree(),
       );
 
   @override
@@ -298,56 +299,56 @@ sealed class Energy extends Unit<Energy> {
 
   static const _majorName = 'energy';
 
-  static const gigajoule = Energy$Gigajoule();
-  static const megajoule = Energy$Megajoule();
-  static const kilojoule = Energy$Kilojoule();
-  static const joule = Energy$Joule();
-  static const millijoule = Energy$Millijoule();
-  static const microjoule = Energy$Microjoule();
-  static const nanojoule = Energy$Nanojoule();
-  static const attojoule = Energy$Attojoule();
-  static const erg = Energy$Erg();
-  static const gigawattHour = Energy$GigawattHour();
-  static const megawattHour = Energy$MegawattHour();
-  static const kilowattHour = Energy$KilowattHour();
-  static const kilowattSecond = Energy$KilowattSecond();
-  static const wattHour = Energy$WattHour();
-  static const wattSecond = Energy$WattSecond();
-  static const horsepowerHour = Energy$HorsepowerHour();
-  static const kilocalorieInternational = Energy$KilocalorieInternational();
-  static const kilocalorieThermochemical = Energy$KilocalorieThermochemical();
-  static const calorieInternational = Energy$CalorieInternational();
-  static const calorieThermochemical = Energy$CalorieThermochemical();
-  static const calorieNutritional = Energy$CalorieNutritional();
-  static const bTUInternational = Energy$BTUInternational();
-  static const bTUThermochemical = Energy$BTUThermochemical();
-  static const mBTU = Energy$MBTU();
-  static const tonHourRefrigeration = Energy$TonHourRefrigeration();
-  static const gigaton = Energy$Gigaton();
-  static const megaton = Energy$Megaton();
-  static const kiloton = Energy$Kiloton();
-  static const tonExplosives = Energy$TonExplosives();
-  static const newtonMeter = Energy$NewtonMeter();
-  static const dyneCentimeter = Energy$DyneCentimeter();
-  static const gramForceMeter = Energy$GramForceMeter();
-  static const gramForceCentimeter = Energy$GramForceCentimeter();
-  static const kilogramForceMeter = Energy$KilogramForceMeter();
-  static const kilogramForceCentimeter = Energy$KilogramForceCentimeter();
-  static const meterKilopond = Energy$MeterKilopond();
-  static const poundForceFoot = Energy$PoundForceFoot();
-  static const poundForceInch = Energy$PoundForceInch();
-  static const ounceForceInch = Energy$OunceForceInch();
-  static const footPound = Energy$FootPound();
-  static const inchPound = Energy$InchPound();
-  static const inchOunce = Energy$InchOunce();
-  static const poundalFoot = Energy$PoundalFoot();
-  static const megaelectronVolt = Energy$MegaelectronVolt();
-  static const kiloelectronVolt = Energy$KiloelectronVolt();
-  static const electronVolt = Energy$ElectronVolt();
-  static const therm = Energy$Therm();
-  static const thermEC = Energy$ThermEC();
-  static const thermUS = Energy$ThermUS();
-  static const hartree = Energy$Hartree();
+  static final gigajoule = Energy$Gigajoule();
+  static final megajoule = Energy$Megajoule();
+  static final kilojoule = Energy$Kilojoule();
+  static final joule = Energy$Joule();
+  static final millijoule = Energy$Millijoule();
+  static final microjoule = Energy$Microjoule();
+  static final nanojoule = Energy$Nanojoule();
+  static final attojoule = Energy$Attojoule();
+  static final erg = Energy$Erg();
+  static final gigawattHour = Energy$GigawattHour();
+  static final megawattHour = Energy$MegawattHour();
+  static final kilowattHour = Energy$KilowattHour();
+  static final kilowattSecond = Energy$KilowattSecond();
+  static final wattHour = Energy$WattHour();
+  static final wattSecond = Energy$WattSecond();
+  static final horsepowerHour = Energy$HorsepowerHour();
+  static final kilocalorieInternational = Energy$KilocalorieInternational();
+  static final kilocalorieThermochemical = Energy$KilocalorieThermochemical();
+  static final calorieInternational = Energy$CalorieInternational();
+  static final calorieThermochemical = Energy$CalorieThermochemical();
+  static final calorieNutritional = Energy$CalorieNutritional();
+  static final bTUInternational = Energy$BTUInternational();
+  static final bTUThermochemical = Energy$BTUThermochemical();
+  static final mBTU = Energy$MBTU();
+  static final tonHourRefrigeration = Energy$TonHourRefrigeration();
+  static final gigaton = Energy$Gigaton();
+  static final megaton = Energy$Megaton();
+  static final kiloton = Energy$Kiloton();
+  static final tonExplosives = Energy$TonExplosives();
+  static final newtonMeter = Energy$NewtonMeter();
+  static final dyneCentimeter = Energy$DyneCentimeter();
+  static final gramForceMeter = Energy$GramForceMeter();
+  static final gramForceCentimeter = Energy$GramForceCentimeter();
+  static final kilogramForceMeter = Energy$KilogramForceMeter();
+  static final kilogramForceCentimeter = Energy$KilogramForceCentimeter();
+  static final meterKilopond = Energy$MeterKilopond();
+  static final poundForceFoot = Energy$PoundForceFoot();
+  static final poundForceInch = Energy$PoundForceInch();
+  static final ounceForceInch = Energy$OunceForceInch();
+  static final footPound = Energy$FootPound();
+  static final inchPound = Energy$InchPound();
+  static final inchOunce = Energy$InchOunce();
+  static final poundalFoot = Energy$PoundalFoot();
+  static final megaelectronVolt = Energy$MegaelectronVolt();
+  static final kiloelectronVolt = Energy$KiloelectronVolt();
+  static final electronVolt = Energy$ElectronVolt();
+  static final therm = Energy$Therm();
+  static final thermEC = Energy$ThermEC();
+  static final thermUS = Energy$ThermUS();
+  static final hartree = Energy$Hartree();
 
   @override
   List<Energy> get units => values;
@@ -355,7 +356,7 @@ sealed class Energy extends Unit<Energy> {
   @override
   EnumValues<Energy> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Energy>[
     gigajoule,
     megajoule,
     kilojoule,
@@ -408,7 +409,7 @@ sealed class Energy extends Unit<Energy> {
     hartree,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Energy>{
     Energy$Gigajoule._minorName: gigajoule,
     Energy$Megajoule._minorName: megajoule,
     Energy$Kilojoule._minorName: kilojoule,
@@ -464,7 +465,7 @@ sealed class Energy extends Unit<Energy> {
 
 /// Unit of [Energy]
 final class Energy$Gigajoule extends Energy {
-  const Energy$Gigajoule([
+  Energy$Gigajoule([
     super.value,
   ]);
 
@@ -495,14 +496,14 @@ final class Energy$Gigajoule extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.241807627e+27;
+  static final _ratio = Rational.parse('6.24180762700000000E+027');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Gigajoule] = 6.241807627e+27 [Energy$ElectronVolt]
+  /// 1 [Energy$Gigajoule] = 6.24180762700000000E+027 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -510,12 +511,12 @@ final class Energy$Gigajoule extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Gigajoule] with new value
   @override
   Energy$Gigajoule withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Gigajoule(val);
 
@@ -528,14 +529,14 @@ final class Energy$Gigajoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Megajoule extends Energy {
-  const Energy$Megajoule([
+  Energy$Megajoule([
     super.value,
   ]);
 
@@ -566,14 +567,14 @@ final class Energy$Megajoule extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.241807627e+24;
+  static final _ratio = Rational.parse('6.24180762700000000E+024');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Megajoule] = 6.241807627e+24 [Energy$ElectronVolt]
+  /// 1 [Energy$Megajoule] = 6.24180762700000000E+024 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -581,12 +582,12 @@ final class Energy$Megajoule extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Megajoule] with new value
   @override
   Energy$Megajoule withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Megajoule(val);
 
@@ -599,14 +600,14 @@ final class Energy$Megajoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Kilojoule extends Energy {
-  const Energy$Kilojoule([
+  Energy$Kilojoule([
     super.value,
   ]);
 
@@ -637,14 +638,14 @@ final class Energy$Kilojoule extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.241807627e+21;
+  static final _ratio = Rational.parse('6.24180762700000000E+021');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Kilojoule] = 6.241807627e+21 [Energy$ElectronVolt]
+  /// 1 [Energy$Kilojoule] = 6.24180762700000000E+021 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -652,12 +653,12 @@ final class Energy$Kilojoule extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Kilojoule] with new value
   @override
   Energy$Kilojoule withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Kilojoule(val);
 
@@ -670,14 +671,14 @@ final class Energy$Kilojoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Joule extends Energy {
-  const Energy$Joule([
+  Energy$Joule([
     super.value,
   ]);
 
@@ -708,14 +709,14 @@ final class Energy$Joule extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6241807627000000000.0;
+  static final _ratio = Rational.parse('6.24180762700000000E+018');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Joule] = 6241807627000000000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$Joule] = 6.24180762700000000E+018 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -723,12 +724,12 @@ final class Energy$Joule extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Joule] with new value
   @override
   Energy$Joule withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Joule(val);
 
@@ -741,14 +742,14 @@ final class Energy$Joule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Millijoule extends Energy {
-  const Energy$Millijoule([
+  Energy$Millijoule([
     super.value,
   ]);
 
@@ -779,14 +780,14 @@ final class Energy$Millijoule extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6241807627000000.0;
+  static final _ratio = Rational.parse('6.24180762700000000E+015');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Millijoule] = 6241807627000000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$Millijoule] = 6.24180762700000000E+015 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -794,12 +795,12 @@ final class Energy$Millijoule extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Millijoule] with new value
   @override
   Energy$Millijoule withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Millijoule(val);
 
@@ -812,14 +813,14 @@ final class Energy$Millijoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Microjoule extends Energy {
-  const Energy$Microjoule([
+  Energy$Microjoule([
     super.value,
   ]);
 
@@ -850,14 +851,14 @@ final class Energy$Microjoule extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6241807627000.0;
+  static final _ratio = Rational.parse('6.24180762700000000E+012');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Microjoule] = 6241807627000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$Microjoule] = 6.24180762700000000E+012 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -865,12 +866,12 @@ final class Energy$Microjoule extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Microjoule] with new value
   @override
   Energy$Microjoule withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Microjoule(val);
 
@@ -883,14 +884,14 @@ final class Energy$Microjoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Nanojoule extends Energy {
-  const Energy$Nanojoule([
+  Energy$Nanojoule([
     super.value,
   ]);
 
@@ -921,14 +922,14 @@ final class Energy$Nanojoule extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6241807627.0;
+  static final _ratio = Rational.parse('6.24180762700000000E+009');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Nanojoule] = 6241807627.0 [Energy$ElectronVolt]
+  /// 1 [Energy$Nanojoule] = 6.24180762700000000E+009 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -936,12 +937,12 @@ final class Energy$Nanojoule extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Nanojoule] with new value
   @override
   Energy$Nanojoule withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Nanojoule(val);
 
@@ -954,14 +955,14 @@ final class Energy$Nanojoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Attojoule extends Energy {
-  const Energy$Attojoule([
+  Energy$Attojoule([
     super.value,
   ]);
 
@@ -992,14 +993,14 @@ final class Energy$Attojoule extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.241807627;
+  static final _ratio = Rational.parse('6.24180762700000000E+000');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Attojoule] ≈ 6.241807627 [Energy$ElectronVolt]
+  /// 1 [Energy$Attojoule] ≈ 6.24180762700000000E+000 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1007,12 +1008,12 @@ final class Energy$Attojoule extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Attojoule] with new value
   @override
   Energy$Attojoule withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Attojoule(val);
 
@@ -1025,14 +1026,14 @@ final class Energy$Attojoule extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Erg extends Energy {
-  const Energy$Erg([
+  Energy$Erg([
     super.value,
   ]);
 
@@ -1063,14 +1064,14 @@ final class Energy$Erg extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 624180762700.0;
+  static final _ratio = Rational.parse('6.24180762700000000E+011');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Erg] = 624180762700.0 [Energy$ElectronVolt]
+  /// 1 [Energy$Erg] = 6.24180762700000000E+011 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1078,12 +1079,12 @@ final class Energy$Erg extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Erg] with new value
   @override
   Energy$Erg withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Erg(val);
 
@@ -1096,14 +1097,14 @@ final class Energy$Erg extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$GigawattHour extends Energy {
-  const Energy$GigawattHour([
+  Energy$GigawattHour([
     super.value,
   ]);
 
@@ -1134,14 +1135,14 @@ final class Energy$GigawattHour extends Energy {
   @override
   String get displayName => 'gigawatt-hour';
 
-  static const _ratio = 2.24705074572e+31;
+  static final _ratio = Rational.parse('2.24705074572000000E+031');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$GigawattHour] = 2.24705074572e+31 [Energy$ElectronVolt]
+  /// 1 [Energy$GigawattHour] = 2.24705074572000000E+031 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1149,12 +1150,12 @@ final class Energy$GigawattHour extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$GigawattHour] with new value
   @override
   Energy$GigawattHour withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$GigawattHour(val);
 
@@ -1167,14 +1168,14 @@ final class Energy$GigawattHour extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$MegawattHour extends Energy {
-  const Energy$MegawattHour([
+  Energy$MegawattHour([
     super.value,
   ]);
 
@@ -1205,14 +1206,14 @@ final class Energy$MegawattHour extends Energy {
   @override
   String get displayName => 'megawatt-hour';
 
-  static const _ratio = 2.24705074572e+28;
+  static final _ratio = Rational.parse('2.24705074572000000E+028');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$MegawattHour] = 2.24705074572e+28 [Energy$ElectronVolt]
+  /// 1 [Energy$MegawattHour] = 2.24705074572000000E+028 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1220,12 +1221,12 @@ final class Energy$MegawattHour extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$MegawattHour] with new value
   @override
   Energy$MegawattHour withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$MegawattHour(val);
 
@@ -1238,14 +1239,14 @@ final class Energy$MegawattHour extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$KilowattHour extends Energy {
-  const Energy$KilowattHour([
+  Energy$KilowattHour([
     super.value,
   ]);
 
@@ -1276,14 +1277,14 @@ final class Energy$KilowattHour extends Energy {
   @override
   String get displayName => 'kilowatt-hour';
 
-  static const _ratio = 2.24705074572e+25;
+  static final _ratio = Rational.parse('2.24705074572000000E+025');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$KilowattHour] = 2.24705074572e+25 [Energy$ElectronVolt]
+  /// 1 [Energy$KilowattHour] = 2.24705074572000000E+025 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1291,12 +1292,12 @@ final class Energy$KilowattHour extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$KilowattHour] with new value
   @override
   Energy$KilowattHour withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$KilowattHour(val);
 
@@ -1309,14 +1310,14 @@ final class Energy$KilowattHour extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$KilowattSecond extends Energy {
-  const Energy$KilowattSecond([
+  Energy$KilowattSecond([
     super.value,
   ]);
 
@@ -1347,14 +1348,14 @@ final class Energy$KilowattSecond extends Energy {
   @override
   String get displayName => 'kilowatt-second';
 
-  static const _ratio = 6.241807627e+21;
+  static final _ratio = Rational.parse('6.24180762700000000E+021');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$KilowattSecond] = 6.241807627e+21 [Energy$ElectronVolt]
+  /// 1 [Energy$KilowattSecond] = 6.24180762700000000E+021 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1362,12 +1363,12 @@ final class Energy$KilowattSecond extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$KilowattSecond] with new value
   @override
   Energy$KilowattSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$KilowattSecond(val);
 
@@ -1380,14 +1381,14 @@ final class Energy$KilowattSecond extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$WattHour extends Energy {
-  const Energy$WattHour([
+  Energy$WattHour([
     super.value,
   ]);
 
@@ -1418,14 +1419,14 @@ final class Energy$WattHour extends Energy {
   @override
   String get displayName => 'watt-hour';
 
-  static const _ratio = 2.24705074572e+22;
+  static final _ratio = Rational.parse('2.24705074572000000E+022');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$WattHour] = 2.24705074572e+22 [Energy$ElectronVolt]
+  /// 1 [Energy$WattHour] = 2.24705074572000000E+022 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1433,12 +1434,12 @@ final class Energy$WattHour extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$WattHour] with new value
   @override
   Energy$WattHour withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$WattHour(val);
 
@@ -1451,14 +1452,14 @@ final class Energy$WattHour extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$WattSecond extends Energy {
-  const Energy$WattSecond([
+  Energy$WattSecond([
     super.value,
   ]);
 
@@ -1489,14 +1490,14 @@ final class Energy$WattSecond extends Energy {
   @override
   String get displayName => 'watt-second';
 
-  static const _ratio = 6241807627000000000.0;
+  static final _ratio = Rational.parse('6.24180762700000000E+018');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$WattSecond] = 6241807627000000000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$WattSecond] = 6.24180762700000000E+018 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1504,12 +1505,12 @@ final class Energy$WattSecond extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$WattSecond] with new value
   @override
   Energy$WattSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$WattSecond(val);
 
@@ -1522,14 +1523,14 @@ final class Energy$WattSecond extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$HorsepowerHour extends Energy {
-  const Energy$HorsepowerHour([
+  Energy$HorsepowerHour([
     super.value,
   ]);
 
@@ -1560,14 +1561,14 @@ final class Energy$HorsepowerHour extends Energy {
   @override
   String get displayName => 'horsepower-hour';
 
-  static const _ratio = 1.6756254520162804e+25;
+  static final _ratio = Rational.parse('1.67562545201628038E+025');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$HorsepowerHour] = 1.6756254520162804e+25 [Energy$ElectronVolt]
+  /// 1 [Energy$HorsepowerHour] = 1.67562545201628038E+025 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1575,12 +1576,12 @@ final class Energy$HorsepowerHour extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$HorsepowerHour] with new value
   @override
   Energy$HorsepowerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$HorsepowerHour(val);
 
@@ -1593,14 +1594,14 @@ final class Energy$HorsepowerHour extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$KilocalorieInternational extends Energy {
-  const Energy$KilocalorieInternational([
+  Energy$KilocalorieInternational([
     super.value,
   ]);
 
@@ -1631,14 +1632,14 @@ final class Energy$KilocalorieInternational extends Energy {
   @override
   String get displayName => 'kilocalorie (international)';
 
-  static const _ratio = 2.61332001727236e+22;
+  static final _ratio = Rational.parse('2.61332001727236000E+022');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$KilocalorieInternational] = 2.61332001727236e+22 [Energy$ElectronVolt]
+  /// 1 [Energy$KilocalorieInternational] = 2.61332001727236000E+022 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1647,12 +1648,12 @@ final class Energy$KilocalorieInternational extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$KilocalorieInternational] with new value
   @override
   Energy$KilocalorieInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$KilocalorieInternational(val);
 
@@ -1665,14 +1666,14 @@ final class Energy$KilocalorieInternational extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$KilocalorieThermochemical extends Energy {
-  const Energy$KilocalorieThermochemical([
+  Energy$KilocalorieThermochemical([
     super.value,
   ]);
 
@@ -1703,14 +1704,14 @@ final class Energy$KilocalorieThermochemical extends Energy {
   @override
   String get displayName => 'kilocalorie (thermochemical)';
 
-  static const _ratio = 2.6115723111368e+22;
+  static final _ratio = Rational.parse('2.61157231113680000E+022');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$KilocalorieThermochemical] = 2.6115723111368e+22 [Energy$ElectronVolt]
+  /// 1 [Energy$KilocalorieThermochemical] = 2.61157231113680000E+022 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1719,12 +1720,12 @@ final class Energy$KilocalorieThermochemical extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$KilocalorieThermochemical] with new value
   @override
   Energy$KilocalorieThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$KilocalorieThermochemical(val);
 
@@ -1737,14 +1738,14 @@ final class Energy$KilocalorieThermochemical extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$CalorieInternational extends Energy {
-  const Energy$CalorieInternational([
+  Energy$CalorieInternational([
     super.value,
   ]);
 
@@ -1775,14 +1776,14 @@ final class Energy$CalorieInternational extends Energy {
   @override
   String get displayName => 'calorie (international)';
 
-  static const _ratio = 26133200172723600000.0;
+  static final _ratio = Rational.parse('2.61332001727236000E+019');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$CalorieInternational] = 26133200172723600000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$CalorieInternational] = 2.61332001727236000E+019 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1790,12 +1791,12 @@ final class Energy$CalorieInternational extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$CalorieInternational] with new value
   @override
   Energy$CalorieInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$CalorieInternational(val);
 
@@ -1808,14 +1809,14 @@ final class Energy$CalorieInternational extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$CalorieThermochemical extends Energy {
-  const Energy$CalorieThermochemical([
+  Energy$CalorieThermochemical([
     super.value,
   ]);
 
@@ -1846,14 +1847,14 @@ final class Energy$CalorieThermochemical extends Energy {
   @override
   String get displayName => 'calorie (thermochemical)';
 
-  static const _ratio = 26115723111368000000.0;
+  static final _ratio = Rational.parse('2.61157231113680000E+019');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$CalorieThermochemical] = 26115723111368000000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$CalorieThermochemical] = 2.61157231113680000E+019 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1862,12 +1863,12 @@ final class Energy$CalorieThermochemical extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$CalorieThermochemical] with new value
   @override
   Energy$CalorieThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$CalorieThermochemical(val);
 
@@ -1880,14 +1881,14 @@ final class Energy$CalorieThermochemical extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$CalorieNutritional extends Energy {
-  const Energy$CalorieNutritional([
+  Energy$CalorieNutritional([
     super.value,
   ]);
 
@@ -1918,14 +1919,14 @@ final class Energy$CalorieNutritional extends Energy {
   @override
   String get displayName => 'calorie (nutritional)';
 
-  static const _ratio = 2.61332001727236e+22;
+  static final _ratio = Rational.parse('2.61332001727236000E+022');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$CalorieNutritional] = 2.61332001727236e+22 [Energy$ElectronVolt]
+  /// 1 [Energy$CalorieNutritional] = 2.61332001727236000E+022 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1933,12 +1934,12 @@ final class Energy$CalorieNutritional extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$CalorieNutritional] with new value
   @override
   Energy$CalorieNutritional withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$CalorieNutritional(val);
 
@@ -1951,14 +1952,14 @@ final class Energy$CalorieNutritional extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$BTUInternational extends Energy {
-  const Energy$BTUInternational([
+  Energy$BTUInternational([
     super.value,
   ]);
 
@@ -1989,14 +1990,14 @@ final class Energy$BTUInternational extends Energy {
   @override
   String get displayName => 'BTU (international)';
 
-  static const _ratio = 6.58545566779451e+21;
+  static final _ratio = Rational.parse('6.58545566779451000E+021');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$BTUInternational] = 6.58545566779451e+21 [Energy$ElectronVolt]
+  /// 1 [Energy$BTUInternational] = 6.58545566779451000E+021 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2004,12 +2005,12 @@ final class Energy$BTUInternational extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$BTUInternational] with new value
   @override
   Energy$BTUInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$BTUInternational(val);
 
@@ -2022,14 +2023,14 @@ final class Energy$BTUInternational extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$BTUThermochemical extends Energy {
-  const Energy$BTUThermochemical([
+  Energy$BTUThermochemical([
     super.value,
   ]);
 
@@ -2060,14 +2061,14 @@ final class Energy$BTUThermochemical extends Energy {
   @override
   String get displayName => 'BTU (thermochemical)';
 
-  static const _ratio = 6.581049871367892e+21;
+  static final _ratio = Rational.parse('6.58104987136789245E+021');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$BTUThermochemical] = 6.581049871367892e+21 [Energy$ElectronVolt]
+  /// 1 [Energy$BTUThermochemical] = 6.58104987136789245E+021 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2075,12 +2076,12 @@ final class Energy$BTUThermochemical extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$BTUThermochemical] with new value
   @override
   Energy$BTUThermochemical withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$BTUThermochemical(val);
 
@@ -2093,14 +2094,14 @@ final class Energy$BTUThermochemical extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$MBTU extends Energy {
-  const Energy$MBTU([
+  Energy$MBTU([
     super.value,
   ]);
 
@@ -2131,14 +2132,14 @@ final class Energy$MBTU extends Energy {
   @override
   String get displayName => 'MBTU';
 
-  static const _ratio = 6.585455667794505e+24;
+  static final _ratio = Rational.parse('6.58545566779450532E+024');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$MBTU] = 6.585455667794505e+24 [Energy$ElectronVolt]
+  /// 1 [Energy$MBTU] = 6.58545566779450532E+024 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2146,12 +2147,12 @@ final class Energy$MBTU extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$MBTU] with new value
   @override
   Energy$MBTU withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$MBTU(val);
 
@@ -2164,14 +2165,14 @@ final class Energy$MBTU extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$TonHourRefrigeration extends Energy {
-  const Energy$TonHourRefrigeration([
+  Energy$TonHourRefrigeration([
     super.value,
   ]);
 
@@ -2202,14 +2203,14 @@ final class Energy$TonHourRefrigeration extends Energy {
   @override
   String get displayName => 'ton-hour (refrigeration)';
 
-  static const _ratio = 7.902546801353412e+25;
+  static final _ratio = Rational.parse('7.90254680135341200E+025');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$TonHourRefrigeration] = 7.902546801353412e+25 [Energy$ElectronVolt]
+  /// 1 [Energy$TonHourRefrigeration] = 7.90254680135341200E+025 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2217,12 +2218,12 @@ final class Energy$TonHourRefrigeration extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$TonHourRefrigeration] with new value
   @override
   Energy$TonHourRefrigeration withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$TonHourRefrigeration(val);
 
@@ -2235,14 +2236,14 @@ final class Energy$TonHourRefrigeration extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Gigaton extends Energy {
-  const Energy$Gigaton([
+  Energy$Gigaton([
     super.value,
   ]);
 
@@ -2273,14 +2274,14 @@ final class Energy$Gigaton extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.6115723111368e+37;
+  static final _ratio = Rational.parse('2.61157231113680000E+037');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Gigaton] = 2.6115723111368e+37 [Energy$ElectronVolt]
+  /// 1 [Energy$Gigaton] = 2.61157231113680000E+037 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2288,12 +2289,12 @@ final class Energy$Gigaton extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Gigaton] with new value
   @override
   Energy$Gigaton withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Gigaton(val);
 
@@ -2306,14 +2307,14 @@ final class Energy$Gigaton extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Megaton extends Energy {
-  const Energy$Megaton([
+  Energy$Megaton([
     super.value,
   ]);
 
@@ -2344,14 +2345,14 @@ final class Energy$Megaton extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.6115723111368e+34;
+  static final _ratio = Rational.parse('2.61157231113680000E+034');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Megaton] = 2.6115723111368e+34 [Energy$ElectronVolt]
+  /// 1 [Energy$Megaton] = 2.61157231113680000E+034 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2359,12 +2360,12 @@ final class Energy$Megaton extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Megaton] with new value
   @override
   Energy$Megaton withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Megaton(val);
 
@@ -2377,14 +2378,14 @@ final class Energy$Megaton extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Kiloton extends Energy {
-  const Energy$Kiloton([
+  Energy$Kiloton([
     super.value,
   ]);
 
@@ -2415,14 +2416,14 @@ final class Energy$Kiloton extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.6115723111368e+31;
+  static final _ratio = Rational.parse('2.61157231113680000E+031');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Kiloton] = 2.6115723111368e+31 [Energy$ElectronVolt]
+  /// 1 [Energy$Kiloton] = 2.61157231113680000E+031 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2430,12 +2431,12 @@ final class Energy$Kiloton extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Kiloton] with new value
   @override
   Energy$Kiloton withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Kiloton(val);
 
@@ -2448,14 +2449,14 @@ final class Energy$Kiloton extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$TonExplosives extends Energy {
-  const Energy$TonExplosives([
+  Energy$TonExplosives([
     super.value,
   ]);
 
@@ -2486,14 +2487,14 @@ final class Energy$TonExplosives extends Energy {
   @override
   String get displayName => 'ton (explosives)';
 
-  static const _ratio = 2.6115723111368e+28;
+  static final _ratio = Rational.parse('2.61157231113680000E+028');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$TonExplosives] = 2.6115723111368e+28 [Energy$ElectronVolt]
+  /// 1 [Energy$TonExplosives] = 2.61157231113680000E+028 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2501,12 +2502,12 @@ final class Energy$TonExplosives extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$TonExplosives] with new value
   @override
   Energy$TonExplosives withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$TonExplosives(val);
 
@@ -2519,14 +2520,14 @@ final class Energy$TonExplosives extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$NewtonMeter extends Energy {
-  const Energy$NewtonMeter([
+  Energy$NewtonMeter([
     super.value,
   ]);
 
@@ -2557,14 +2558,14 @@ final class Energy$NewtonMeter extends Energy {
   @override
   String get displayName => 'newton-meter';
 
-  static const _ratio = 6241807627000000000.0;
+  static final _ratio = Rational.parse('6.24180762700000000E+018');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$NewtonMeter] = 6241807627000000000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$NewtonMeter] = 6.24180762700000000E+018 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2572,12 +2573,12 @@ final class Energy$NewtonMeter extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$NewtonMeter] with new value
   @override
   Energy$NewtonMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$NewtonMeter(val);
 
@@ -2590,14 +2591,14 @@ final class Energy$NewtonMeter extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$DyneCentimeter extends Energy {
-  const Energy$DyneCentimeter([
+  Energy$DyneCentimeter([
     super.value,
   ]);
 
@@ -2628,14 +2629,14 @@ final class Energy$DyneCentimeter extends Energy {
   @override
   String get displayName => 'dyne-centimeter';
 
-  static const _ratio = 624180762700.0;
+  static final _ratio = Rational.parse('6.24180762700000000E+011');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$DyneCentimeter] = 624180762700.0 [Energy$ElectronVolt]
+  /// 1 [Energy$DyneCentimeter] = 6.24180762700000000E+011 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2643,12 +2644,12 @@ final class Energy$DyneCentimeter extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$DyneCentimeter] with new value
   @override
   Energy$DyneCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$DyneCentimeter(val);
 
@@ -2661,14 +2662,14 @@ final class Energy$DyneCentimeter extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$GramForceMeter extends Energy {
-  const Energy$GramForceMeter([
+  Energy$GramForceMeter([
     super.value,
   ]);
 
@@ -2699,14 +2700,14 @@ final class Energy$GramForceMeter extends Energy {
   @override
   String get displayName => 'gram force-meter';
 
-  static const _ratio = 61211222763432776.0;
+  static final _ratio = Rational.parse('6.12112227634327736E+016');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$GramForceMeter] = 61211222763432776.0 [Energy$ElectronVolt]
+  /// 1 [Energy$GramForceMeter] = 6.12112227634327736E+016 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2714,12 +2715,12 @@ final class Energy$GramForceMeter extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$GramForceMeter] with new value
   @override
   Energy$GramForceMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$GramForceMeter(val);
 
@@ -2732,14 +2733,14 @@ final class Energy$GramForceMeter extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$GramForceCentimeter extends Energy {
-  const Energy$GramForceCentimeter([
+  Energy$GramForceCentimeter([
     super.value,
   ]);
 
@@ -2770,14 +2771,14 @@ final class Energy$GramForceCentimeter extends Energy {
   @override
   String get displayName => 'gram force-centimeter';
 
-  static const _ratio = 612112227634327.8;
+  static final _ratio = Rational.parse('6.12112227634327736E+014');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$GramForceCentimeter] ≈ 612112227634327.8 [Energy$ElectronVolt]
+  /// 1 [Energy$GramForceCentimeter] ≈ 6.12112227634327736E+014 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2785,12 +2786,12 @@ final class Energy$GramForceCentimeter extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$GramForceCentimeter] with new value
   @override
   Energy$GramForceCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$GramForceCentimeter(val);
 
@@ -2803,14 +2804,14 @@ final class Energy$GramForceCentimeter extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$KilogramForceMeter extends Energy {
-  const Energy$KilogramForceMeter([
+  Energy$KilogramForceMeter([
     super.value,
   ]);
 
@@ -2841,14 +2842,14 @@ final class Energy$KilogramForceMeter extends Energy {
   @override
   String get displayName => 'kilogram force-meter';
 
-  static const _ratio = 61211222763432770000.0;
+  static final _ratio = Rational.parse('6.12112227634327736E+019');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$KilogramForceMeter] = 61211222763432770000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$KilogramForceMeter] = 6.12112227634327736E+019 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2856,12 +2857,12 @@ final class Energy$KilogramForceMeter extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$KilogramForceMeter] with new value
   @override
   Energy$KilogramForceMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$KilogramForceMeter(val);
 
@@ -2874,14 +2875,14 @@ final class Energy$KilogramForceMeter extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$KilogramForceCentimeter extends Energy {
-  const Energy$KilogramForceCentimeter([
+  Energy$KilogramForceCentimeter([
     super.value,
   ]);
 
@@ -2912,14 +2913,14 @@ final class Energy$KilogramForceCentimeter extends Energy {
   @override
   String get displayName => 'kilogram force-centimeter';
 
-  static const _ratio = 612112227634327700.0;
+  static final _ratio = Rational.parse('6.12112227634327736E+017');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$KilogramForceCentimeter] = 612112227634327700.0 [Energy$ElectronVolt]
+  /// 1 [Energy$KilogramForceCentimeter] = 6.12112227634327736E+017 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2928,12 +2929,12 @@ final class Energy$KilogramForceCentimeter extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$KilogramForceCentimeter] with new value
   @override
   Energy$KilogramForceCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$KilogramForceCentimeter(val);
 
@@ -2946,14 +2947,14 @@ final class Energy$KilogramForceCentimeter extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$MeterKilopond extends Energy {
-  const Energy$MeterKilopond([
+  Energy$MeterKilopond([
     super.value,
   ]);
 
@@ -2984,14 +2985,14 @@ final class Energy$MeterKilopond extends Energy {
   @override
   String get displayName => 'meter-kilopond';
 
-  static const _ratio = 61211222763432770000.0;
+  static final _ratio = Rational.parse('6.12112227634327736E+019');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$MeterKilopond] = 61211222763432770000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$MeterKilopond] = 6.12112227634327736E+019 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2999,12 +3000,12 @@ final class Energy$MeterKilopond extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$MeterKilopond] with new value
   @override
   Energy$MeterKilopond withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$MeterKilopond(val);
 
@@ -3017,14 +3018,14 @@ final class Energy$MeterKilopond extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$PoundForceFoot extends Energy {
-  const Energy$PoundForceFoot([
+  Energy$PoundForceFoot([
     super.value,
   ]);
 
@@ -3055,14 +3056,14 @@ final class Energy$PoundForceFoot extends Energy {
   @override
   String get displayName => 'pound force-foot';
 
-  static const _ratio = 8462754810457570000.0;
+  static final _ratio = Rational.parse('8.46275481045757075E+018');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$PoundForceFoot] = 8462754810457570000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$PoundForceFoot] = 8.46275481045757075E+018 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3070,12 +3071,12 @@ final class Energy$PoundForceFoot extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$PoundForceFoot] with new value
   @override
   Energy$PoundForceFoot withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$PoundForceFoot(val);
 
@@ -3088,14 +3089,14 @@ final class Energy$PoundForceFoot extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$PoundForceInch extends Energy {
-  const Energy$PoundForceInch([
+  Energy$PoundForceInch([
     super.value,
   ]);
 
@@ -3126,14 +3127,14 @@ final class Energy$PoundForceInch extends Energy {
   @override
   String get displayName => 'pound force-inch';
 
-  static const _ratio = 705229567538131000.0;
+  static final _ratio = Rational.parse('7.05229567538130896E+017');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$PoundForceInch] = 705229567538131000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$PoundForceInch] = 7.05229567538130896E+017 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3141,12 +3142,12 @@ final class Energy$PoundForceInch extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$PoundForceInch] with new value
   @override
   Energy$PoundForceInch withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$PoundForceInch(val);
 
@@ -3159,14 +3160,14 @@ final class Energy$PoundForceInch extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$OunceForceInch extends Energy {
-  const Energy$OunceForceInch([
+  Energy$OunceForceInch([
     super.value,
   ]);
 
@@ -3197,14 +3198,14 @@ final class Energy$OunceForceInch extends Energy {
   @override
   String get displayName => 'ounce force-inch';
 
-  static const _ratio = 44076847971133180.0;
+  static final _ratio = Rational.parse('4.40768479711331810E+016');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$OunceForceInch] = 44076847971133180.0 [Energy$ElectronVolt]
+  /// 1 [Energy$OunceForceInch] = 4.40768479711331810E+016 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3212,12 +3213,12 @@ final class Energy$OunceForceInch extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$OunceForceInch] with new value
   @override
   Energy$OunceForceInch withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$OunceForceInch(val);
 
@@ -3230,14 +3231,14 @@ final class Energy$OunceForceInch extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$FootPound extends Energy {
-  const Energy$FootPound([
+  Energy$FootPound([
     super.value,
   ]);
 
@@ -3268,14 +3269,14 @@ final class Energy$FootPound extends Energy {
   @override
   String get displayName => 'foot-pound';
 
-  static const _ratio = 8462754810457570000.0;
+  static final _ratio = Rational.parse('8.46275481045757075E+018');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$FootPound] = 8462754810457570000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$FootPound] = 8.46275481045757075E+018 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3283,12 +3284,12 @@ final class Energy$FootPound extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$FootPound] with new value
   @override
   Energy$FootPound withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$FootPound(val);
 
@@ -3301,14 +3302,14 @@ final class Energy$FootPound extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$InchPound extends Energy {
-  const Energy$InchPound([
+  Energy$InchPound([
     super.value,
   ]);
 
@@ -3339,14 +3340,14 @@ final class Energy$InchPound extends Energy {
   @override
   String get displayName => 'inch-pound';
 
-  static const _ratio = 705229567538131000.0;
+  static final _ratio = Rational.parse('7.05229567538130896E+017');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$InchPound] = 705229567538131000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$InchPound] = 7.05229567538130896E+017 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3354,12 +3355,12 @@ final class Energy$InchPound extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$InchPound] with new value
   @override
   Energy$InchPound withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$InchPound(val);
 
@@ -3372,14 +3373,14 @@ final class Energy$InchPound extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$InchOunce extends Energy {
-  const Energy$InchOunce([
+  Energy$InchOunce([
     super.value,
   ]);
 
@@ -3410,14 +3411,14 @@ final class Energy$InchOunce extends Energy {
   @override
   String get displayName => 'inch-ounce';
 
-  static const _ratio = 44076847971133180.0;
+  static final _ratio = Rational.parse('4.40768479711331810E+016');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$InchOunce] = 44076847971133180.0 [Energy$ElectronVolt]
+  /// 1 [Energy$InchOunce] = 4.40768479711331810E+016 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3425,12 +3426,12 @@ final class Energy$InchOunce extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$InchOunce] with new value
   @override
   Energy$InchOunce withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$InchOunce(val);
 
@@ -3443,14 +3444,14 @@ final class Energy$InchOunce extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$PoundalFoot extends Energy {
-  const Energy$PoundalFoot([
+  Energy$PoundalFoot([
     super.value,
   ]);
 
@@ -3481,14 +3482,14 @@ final class Energy$PoundalFoot extends Energy {
   @override
   String get displayName => 'poundal-foot';
 
-  static const _ratio = 263030460000133860.0;
+  static final _ratio = Rational.parse('2.63030460000133868E+017');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$PoundalFoot] = 263030460000133860.0 [Energy$ElectronVolt]
+  /// 1 [Energy$PoundalFoot] = 2.63030460000133868E+017 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3496,12 +3497,12 @@ final class Energy$PoundalFoot extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$PoundalFoot] with new value
   @override
   Energy$PoundalFoot withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$PoundalFoot(val);
 
@@ -3514,14 +3515,14 @@ final class Energy$PoundalFoot extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$MegaelectronVolt extends Energy {
-  const Energy$MegaelectronVolt([
+  Energy$MegaelectronVolt([
     super.value,
   ]);
 
@@ -3552,14 +3553,14 @@ final class Energy$MegaelectronVolt extends Energy {
   @override
   String get displayName => 'megaelectron volt';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$MegaelectronVolt] = 1000000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$MegaelectronVolt] = 1.00000000000000000E+006 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3567,12 +3568,12 @@ final class Energy$MegaelectronVolt extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$MegaelectronVolt] with new value
   @override
   Energy$MegaelectronVolt withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$MegaelectronVolt(val);
 
@@ -3585,14 +3586,14 @@ final class Energy$MegaelectronVolt extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$KiloelectronVolt extends Energy {
-  const Energy$KiloelectronVolt([
+  Energy$KiloelectronVolt([
     super.value,
   ]);
 
@@ -3623,14 +3624,14 @@ final class Energy$KiloelectronVolt extends Energy {
   @override
   String get displayName => 'kiloelectron volt';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$KiloelectronVolt] = 1000.0 [Energy$ElectronVolt]
+  /// 1 [Energy$KiloelectronVolt] = 1.00000000000000000E+003 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3638,12 +3639,12 @@ final class Energy$KiloelectronVolt extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$KiloelectronVolt] with new value
   @override
   Energy$KiloelectronVolt withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$KiloelectronVolt(val);
 
@@ -3656,14 +3657,14 @@ final class Energy$KiloelectronVolt extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$ElectronVolt extends Energy {
-  const Energy$ElectronVolt([
+  Energy$ElectronVolt([
     super.value,
   ]);
 
@@ -3694,14 +3695,14 @@ final class Energy$ElectronVolt extends Energy {
   @override
   String get displayName => 'electron volt';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
   /// Default (anchor) unit of [Energy]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3709,12 +3710,12 @@ final class Energy$ElectronVolt extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$ElectronVolt] with new value
   @override
   Energy$ElectronVolt withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$ElectronVolt(val);
 
@@ -3727,14 +3728,14 @@ final class Energy$ElectronVolt extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Therm extends Energy {
-  const Energy$Therm([
+  Energy$Therm([
     super.value,
   ]);
 
@@ -3765,14 +3766,14 @@ final class Energy$Therm extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.585456587712112e+26;
+  static final _ratio = Rational.parse('6.58545658771211200E+026');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Therm] = 6.585456587712112e+26 [Energy$ElectronVolt]
+  /// 1 [Energy$Therm] = 6.58545658771211200E+026 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3780,12 +3781,12 @@ final class Energy$Therm extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Therm] with new value
   @override
   Energy$Therm withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Therm(val);
 
@@ -3798,14 +3799,14 @@ final class Energy$Therm extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$ThermEC extends Energy {
-  const Energy$ThermEC([
+  Energy$ThermEC([
     super.value,
   ]);
 
@@ -3836,14 +3837,14 @@ final class Energy$ThermEC extends Energy {
   @override
   String get displayName => 'therm (EC)';
 
-  static const _ratio = 6.585456587712e+26;
+  static final _ratio = Rational.parse('6.58545658771200000E+026');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$ThermEC] = 6.585456587712e+26 [Energy$ElectronVolt]
+  /// 1 [Energy$ThermEC] = 6.58545658771200000E+026 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3851,12 +3852,12 @@ final class Energy$ThermEC extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$ThermEC] with new value
   @override
   Energy$ThermEC withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$ThermEC(val);
 
@@ -3869,14 +3870,14 @@ final class Energy$ThermEC extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$ThermUS extends Energy {
-  const Energy$ThermUS([
+  Energy$ThermUS([
     super.value,
   ]);
 
@@ -3907,14 +3908,14 @@ final class Energy$ThermUS extends Energy {
   @override
   String get displayName => 'therm (US)';
 
-  static const _ratio = 6.58388365219e+26;
+  static final _ratio = Rational.parse('6.58388365219000000E+026');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$ThermUS] = 6.58388365219e+26 [Energy$ElectronVolt]
+  /// 1 [Energy$ThermUS] = 6.58388365219000000E+026 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3922,12 +3923,12 @@ final class Energy$ThermUS extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$ThermUS] with new value
   @override
   Energy$ThermUS withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$ThermUS(val);
 
@@ -3940,14 +3941,14 @@ final class Energy$ThermUS extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Energy]
 final class Energy$Hartree extends Energy {
-  const Energy$Hartree([
+  Energy$Hartree([
     super.value,
   ]);
 
@@ -3978,14 +3979,14 @@ final class Energy$Hartree extends Energy {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 27.21268547318208;
+  static final _ratio = Rational.parse('2.72126854731820812E+001');
 
   @override
-  Energy get anchor => const Energy$ElectronVolt(_ratio);
+  Energy get anchor => Energy$ElectronVolt(_ratio);
 
-  /// 1 [Energy$Hartree] ≈ 27.21268547318208 [Energy$ElectronVolt]
+  /// 1 [Energy$Hartree] ≈ 2.72126854731820812E+001 [Energy$ElectronVolt]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3993,12 +3994,12 @@ final class Energy$Hartree extends Energy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Energy$Hartree] with new value
   @override
   Energy$Hartree withValue(
-    num val,
+    Rational val,
   ) =>
       Energy$Hartree(val);
 
@@ -4011,7 +4012,7 @@ final class Energy$Hartree extends Energy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

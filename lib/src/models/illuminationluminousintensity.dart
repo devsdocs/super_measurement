@@ -14,7 +14,7 @@ part of '../../super_measurement.dart';
 /// [IlluminationLuminousIntensity$PentaneCandle10CandlePower]
 sealed class IlluminationLuminousIntensity
     extends Unit<IlluminationLuminousIntensity> {
-  const IlluminationLuminousIntensity([
+  IlluminationLuminousIntensity([
     super.value,
   ]);
 
@@ -27,62 +27,63 @@ sealed class IlluminationLuminousIntensity
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : IlluminationLuminousIntensity.anchor();
 
   factory IlluminationLuminousIntensity.anchor() =>
-      const IlluminationLuminousIntensity$CandleInternational();
+      IlluminationLuminousIntensity$CandleInternational();
 
   /// Convert to [IlluminationLuminousIntensity$CandleInternational]
   IlluminationLuminousIntensity get toCandleInternational => convertTo(
-        const IlluminationLuminousIntensity$CandleInternational(),
+        IlluminationLuminousIntensity$CandleInternational(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$CandleGerman]
   IlluminationLuminousIntensity get toCandleGerman => convertTo(
-        const IlluminationLuminousIntensity$CandleGerman(),
+        IlluminationLuminousIntensity$CandleGerman(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$CandlePentane]
   IlluminationLuminousIntensity get toCandlePentane => convertTo(
-        const IlluminationLuminousIntensity$CandlePentane(),
+        IlluminationLuminousIntensity$CandlePentane(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$CandleUK]
   IlluminationLuminousIntensity get toCandleUK => convertTo(
-        const IlluminationLuminousIntensity$CandleUK(),
+        IlluminationLuminousIntensity$CandleUK(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$DecimalCandle]
   IlluminationLuminousIntensity get toDecimalCandle => convertTo(
-        const IlluminationLuminousIntensity$DecimalCandle(),
+        IlluminationLuminousIntensity$DecimalCandle(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$HefnerCandle]
   IlluminationLuminousIntensity get toHefnerCandle => convertTo(
-        const IlluminationLuminousIntensity$HefnerCandle(),
+        IlluminationLuminousIntensity$HefnerCandle(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$CarcelUnit]
   IlluminationLuminousIntensity get toCarcelUnit => convertTo(
-        const IlluminationLuminousIntensity$CarcelUnit(),
+        IlluminationLuminousIntensity$CarcelUnit(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$BougieDecimal]
   IlluminationLuminousIntensity get toBougieDecimal => convertTo(
-        const IlluminationLuminousIntensity$BougieDecimal(),
+        IlluminationLuminousIntensity$BougieDecimal(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$LumenInternationalPerSteradian]
   IlluminationLuminousIntensity get toLumenInternationalPerSteradian =>
       convertTo(
-        const IlluminationLuminousIntensity$LumenInternationalPerSteradian(),
+        IlluminationLuminousIntensity$LumenInternationalPerSteradian(),
       );
 
   /// Convert to [IlluminationLuminousIntensity$PentaneCandle10CandlePower]
   IlluminationLuminousIntensity get toPentaneCandle10CandlePower => convertTo(
-        const IlluminationLuminousIntensity$PentaneCandle10CandlePower(),
+        IlluminationLuminousIntensity$PentaneCandle10CandlePower(),
       );
 
   @override
@@ -93,18 +94,18 @@ sealed class IlluminationLuminousIntensity
 
   static const _majorName = 'illuminationLuminousIntensity';
 
-  static const candleInternational =
+  static final candleInternational =
       IlluminationLuminousIntensity$CandleInternational();
-  static const candleGerman = IlluminationLuminousIntensity$CandleGerman();
-  static const candlePentane = IlluminationLuminousIntensity$CandlePentane();
-  static const candleUK = IlluminationLuminousIntensity$CandleUK();
-  static const decimalCandle = IlluminationLuminousIntensity$DecimalCandle();
-  static const hefnerCandle = IlluminationLuminousIntensity$HefnerCandle();
-  static const carcelUnit = IlluminationLuminousIntensity$CarcelUnit();
-  static const bougieDecimal = IlluminationLuminousIntensity$BougieDecimal();
-  static const lumenInternationalPerSteradian =
+  static final candleGerman = IlluminationLuminousIntensity$CandleGerman();
+  static final candlePentane = IlluminationLuminousIntensity$CandlePentane();
+  static final candleUK = IlluminationLuminousIntensity$CandleUK();
+  static final decimalCandle = IlluminationLuminousIntensity$DecimalCandle();
+  static final hefnerCandle = IlluminationLuminousIntensity$HefnerCandle();
+  static final carcelUnit = IlluminationLuminousIntensity$CarcelUnit();
+  static final bougieDecimal = IlluminationLuminousIntensity$BougieDecimal();
+  static final lumenInternationalPerSteradian =
       IlluminationLuminousIntensity$LumenInternationalPerSteradian();
-  static const pentaneCandle10CandlePower =
+  static final pentaneCandle10CandlePower =
       IlluminationLuminousIntensity$PentaneCandle10CandlePower();
 
   @override
@@ -113,7 +114,7 @@ sealed class IlluminationLuminousIntensity
   @override
   EnumValues<IlluminationLuminousIntensity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <IlluminationLuminousIntensity>[
     candleInternational,
     candleGerman,
     candlePentane,
@@ -126,7 +127,7 @@ sealed class IlluminationLuminousIntensity
     pentaneCandle10CandlePower,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, IlluminationLuminousIntensity>{
     IlluminationLuminousIntensity$CandleInternational._minorName:
         candleInternational,
     IlluminationLuminousIntensity$CandleGerman._minorName: candleGerman,
@@ -146,7 +147,7 @@ sealed class IlluminationLuminousIntensity
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$CandleInternational
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$CandleInternational([
+  IlluminationLuminousIntensity$CandleInternational([
     super.value,
   ]);
 
@@ -177,15 +178,15 @@ final class IlluminationLuminousIntensity$CandleInternational
   @override
   String get displayName => 'candle (International)';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
   /// Default (anchor) unit of [IlluminationLuminousIntensity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -194,12 +195,12 @@ final class IlluminationLuminousIntensity$CandleInternational
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$CandleInternational] with new value
   @override
   IlluminationLuminousIntensity$CandleInternational withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$CandleInternational(val);
 
@@ -212,7 +213,7 @@ final class IlluminationLuminousIntensity$CandleInternational
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -220,7 +221,7 @@ final class IlluminationLuminousIntensity$CandleInternational
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$CandleGerman
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$CandleGerman([
+  IlluminationLuminousIntensity$CandleGerman([
     super.value,
   ]);
 
@@ -251,15 +252,15 @@ final class IlluminationLuminousIntensity$CandleGerman
   @override
   String get displayName => 'candle (German)';
 
-  static const _ratio = 1.0526315789473684;
+  static final _ratio = Rational.parse('1.05263157894736842E+000');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$CandleGerman] ≈ 1.0526315789473684 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$CandleGerman] ≈ 1.05263157894736842E+000 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -268,12 +269,12 @@ final class IlluminationLuminousIntensity$CandleGerman
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$CandleGerman] with new value
   @override
   IlluminationLuminousIntensity$CandleGerman withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$CandleGerman(val);
 
@@ -286,7 +287,7 @@ final class IlluminationLuminousIntensity$CandleGerman
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -294,7 +295,7 @@ final class IlluminationLuminousIntensity$CandleGerman
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$CandlePentane
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$CandlePentane([
+  IlluminationLuminousIntensity$CandlePentane([
     super.value,
   ]);
 
@@ -325,15 +326,15 @@ final class IlluminationLuminousIntensity$CandlePentane
   @override
   String get displayName => 'candle (pentane)';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$CandlePentane] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$CandlePentane] = 1.00000000000000000E+000 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -342,12 +343,12 @@ final class IlluminationLuminousIntensity$CandlePentane
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$CandlePentane] with new value
   @override
   IlluminationLuminousIntensity$CandlePentane withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$CandlePentane(val);
 
@@ -360,7 +361,7 @@ final class IlluminationLuminousIntensity$CandlePentane
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -368,7 +369,7 @@ final class IlluminationLuminousIntensity$CandlePentane
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$CandleUK
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$CandleUK([
+  IlluminationLuminousIntensity$CandleUK([
     super.value,
   ]);
 
@@ -399,15 +400,15 @@ final class IlluminationLuminousIntensity$CandleUK
   @override
   String get displayName => 'candle (UK)';
 
-  static const _ratio = 1.0416666666666667;
+  static final _ratio = Rational.parse('1.04166666666666667E+000');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$CandleUK] ≈ 1.0416666666666667 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$CandleUK] ≈ 1.04166666666666667E+000 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -416,12 +417,12 @@ final class IlluminationLuminousIntensity$CandleUK
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$CandleUK] with new value
   @override
   IlluminationLuminousIntensity$CandleUK withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$CandleUK(val);
 
@@ -434,7 +435,7 @@ final class IlluminationLuminousIntensity$CandleUK
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -442,7 +443,7 @@ final class IlluminationLuminousIntensity$CandleUK
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$DecimalCandle
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$DecimalCandle([
+  IlluminationLuminousIntensity$DecimalCandle([
     super.value,
   ]);
 
@@ -473,15 +474,15 @@ final class IlluminationLuminousIntensity$DecimalCandle
   @override
   String get displayName => 'decimal candle';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$DecimalCandle] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$DecimalCandle] = 1.00000000000000000E+000 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -490,12 +491,12 @@ final class IlluminationLuminousIntensity$DecimalCandle
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$DecimalCandle] with new value
   @override
   IlluminationLuminousIntensity$DecimalCandle withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$DecimalCandle(val);
 
@@ -508,7 +509,7 @@ final class IlluminationLuminousIntensity$DecimalCandle
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -516,7 +517,7 @@ final class IlluminationLuminousIntensity$DecimalCandle
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$HefnerCandle
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$HefnerCandle([
+  IlluminationLuminousIntensity$HefnerCandle([
     super.value,
   ]);
 
@@ -547,15 +548,15 @@ final class IlluminationLuminousIntensity$HefnerCandle
   @override
   String get displayName => 'hefner candle';
 
-  static const _ratio = 0.9;
+  static final _ratio = Rational.parse('9.00000000000000000E-001');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$HefnerCandle] ≈ 0.9 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$HefnerCandle] ≈ 9.00000000000000000E-001 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -564,12 +565,12 @@ final class IlluminationLuminousIntensity$HefnerCandle
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$HefnerCandle] with new value
   @override
   IlluminationLuminousIntensity$HefnerCandle withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$HefnerCandle(val);
 
@@ -582,7 +583,7 @@ final class IlluminationLuminousIntensity$HefnerCandle
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -590,7 +591,7 @@ final class IlluminationLuminousIntensity$HefnerCandle
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$CarcelUnit
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$CarcelUnit([
+  IlluminationLuminousIntensity$CarcelUnit([
     super.value,
   ]);
 
@@ -621,15 +622,15 @@ final class IlluminationLuminousIntensity$CarcelUnit
   @override
   String get displayName => 'carcel unit';
 
-  static const _ratio = 9.61;
+  static final _ratio = Rational.parse('9.61000000000000000E+000');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$CarcelUnit] ≈ 9.61 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$CarcelUnit] ≈ 9.61000000000000000E+000 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -638,12 +639,12 @@ final class IlluminationLuminousIntensity$CarcelUnit
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$CarcelUnit] with new value
   @override
   IlluminationLuminousIntensity$CarcelUnit withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$CarcelUnit(val);
 
@@ -656,7 +657,7 @@ final class IlluminationLuminousIntensity$CarcelUnit
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -664,7 +665,7 @@ final class IlluminationLuminousIntensity$CarcelUnit
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$BougieDecimal
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$BougieDecimal([
+  IlluminationLuminousIntensity$BougieDecimal([
     super.value,
   ]);
 
@@ -695,15 +696,15 @@ final class IlluminationLuminousIntensity$BougieDecimal
   @override
   String get displayName => 'bougie decimal';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$BougieDecimal] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$BougieDecimal] = 1.00000000000000000E+000 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -712,12 +713,12 @@ final class IlluminationLuminousIntensity$BougieDecimal
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$BougieDecimal] with new value
   @override
   IlluminationLuminousIntensity$BougieDecimal withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$BougieDecimal(val);
 
@@ -730,7 +731,7 @@ final class IlluminationLuminousIntensity$BougieDecimal
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -738,7 +739,7 @@ final class IlluminationLuminousIntensity$BougieDecimal
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$LumenInternationalPerSteradian([
+  IlluminationLuminousIntensity$LumenInternationalPerSteradian([
     super.value,
   ]);
 
@@ -769,15 +770,15 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
   @override
   String get displayName => 'lumen (International)/steradian';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$LumenInternationalPerSteradian] = 1.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$LumenInternationalPerSteradian] = 1.00000000000000000E+000 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -786,12 +787,12 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$LumenInternationalPerSteradian] with new value
   @override
   IlluminationLuminousIntensity$LumenInternationalPerSteradian withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$LumenInternationalPerSteradian(val);
 
@@ -804,7 +805,7 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -812,7 +813,7 @@ final class IlluminationLuminousIntensity$LumenInternationalPerSteradian
 /// Unit of [IlluminationLuminousIntensity]
 final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
     extends IlluminationLuminousIntensity {
-  const IlluminationLuminousIntensity$PentaneCandle10CandlePower([
+  IlluminationLuminousIntensity$PentaneCandle10CandlePower([
     super.value,
   ]);
 
@@ -843,15 +844,15 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
   @override
   String get displayName => 'pentane candle (10 candle power)';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
   IlluminationLuminousIntensity get anchor =>
-      const IlluminationLuminousIntensity$CandleInternational(_ratio);
+      IlluminationLuminousIntensity$CandleInternational(_ratio);
 
-  /// 1 [IlluminationLuminousIntensity$PentaneCandle10CandlePower] = 10.0 [IlluminationLuminousIntensity$CandleInternational]
+  /// 1 [IlluminationLuminousIntensity$PentaneCandle10CandlePower] = 1.00000000000000000E+001 [IlluminationLuminousIntensity$CandleInternational]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -860,12 +861,12 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [IlluminationLuminousIntensity$PentaneCandle10CandlePower] with new value
   @override
   IlluminationLuminousIntensity$PentaneCandle10CandlePower withValue(
-    num val,
+    Rational val,
   ) =>
       IlluminationLuminousIntensity$PentaneCandle10CandlePower(val);
 
@@ -878,7 +879,7 @@ final class IlluminationLuminousIntensity$PentaneCandle10CandlePower
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [Entropy$BTUPerPoundDegreeF], [Entropy$BTUPerPoundDegreeR],
 /// [Entropy$CHUPerPoundDegreeC]
 sealed class Entropy extends Unit<Entropy> {
-  const Entropy([
+  Entropy([
     super.value,
   ]);
 
@@ -20,55 +20,56 @@ sealed class Entropy extends Unit<Entropy> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Entropy.anchor();
 
-  factory Entropy.anchor() => const Entropy$JoulePerKilogramK();
+  factory Entropy.anchor() => Entropy$JoulePerKilogramK();
 
   /// Convert to [Entropy$KilojoulePerKilogramK]
   Entropy get toKilojoulePerKilogramK => convertTo(
-        const Entropy$KilojoulePerKilogramK(),
+        Entropy$KilojoulePerKilogramK(),
       );
 
   /// Convert to [Entropy$KilojoulePerKilogramDegreeC]
   Entropy get toKilojoulePerKilogramDegreeC => convertTo(
-        const Entropy$KilojoulePerKilogramDegreeC(),
+        Entropy$KilojoulePerKilogramDegreeC(),
       );
 
   /// Convert to [Entropy$JoulePerKilogramK]
   Entropy get toJoulePerKilogramK => convertTo(
-        const Entropy$JoulePerKilogramK(),
+        Entropy$JoulePerKilogramK(),
       );
 
   /// Convert to [Entropy$JoulePerKilogramDegreeC]
   Entropy get toJoulePerKilogramDegreeC => convertTo(
-        const Entropy$JoulePerKilogramDegreeC(),
+        Entropy$JoulePerKilogramDegreeC(),
       );
 
   /// Convert to [Entropy$KilocaloriePerKilogramDegreeC]
   Entropy get toKilocaloriePerKilogramDegreeC => convertTo(
-        const Entropy$KilocaloriePerKilogramDegreeC(),
+        Entropy$KilocaloriePerKilogramDegreeC(),
       );
 
   /// Convert to [Entropy$CaloriePerGramDegreeC]
   Entropy get toCaloriePerGramDegreeC => convertTo(
-        const Entropy$CaloriePerGramDegreeC(),
+        Entropy$CaloriePerGramDegreeC(),
       );
 
   /// Convert to [Entropy$BTUPerPoundDegreeF]
   Entropy get toBTUPerPoundDegreeF => convertTo(
-        const Entropy$BTUPerPoundDegreeF(),
+        Entropy$BTUPerPoundDegreeF(),
       );
 
   /// Convert to [Entropy$BTUPerPoundDegreeR]
   Entropy get toBTUPerPoundDegreeR => convertTo(
-        const Entropy$BTUPerPoundDegreeR(),
+        Entropy$BTUPerPoundDegreeR(),
       );
 
   /// Convert to [Entropy$CHUPerPoundDegreeC]
   Entropy get toCHUPerPoundDegreeC => convertTo(
-        const Entropy$CHUPerPoundDegreeC(),
+        Entropy$CHUPerPoundDegreeC(),
       );
 
   @override
@@ -79,17 +80,17 @@ sealed class Entropy extends Unit<Entropy> {
 
   static const _majorName = 'entropy';
 
-  static const kilojoulePerKilogramK = Entropy$KilojoulePerKilogramK();
-  static const kilojoulePerKilogramDegreeC =
+  static final kilojoulePerKilogramK = Entropy$KilojoulePerKilogramK();
+  static final kilojoulePerKilogramDegreeC =
       Entropy$KilojoulePerKilogramDegreeC();
-  static const joulePerKilogramK = Entropy$JoulePerKilogramK();
-  static const joulePerKilogramDegreeC = Entropy$JoulePerKilogramDegreeC();
-  static const kilocaloriePerKilogramDegreeC =
+  static final joulePerKilogramK = Entropy$JoulePerKilogramK();
+  static final joulePerKilogramDegreeC = Entropy$JoulePerKilogramDegreeC();
+  static final kilocaloriePerKilogramDegreeC =
       Entropy$KilocaloriePerKilogramDegreeC();
-  static const caloriePerGramDegreeC = Entropy$CaloriePerGramDegreeC();
-  static const bTUPerPoundDegreeF = Entropy$BTUPerPoundDegreeF();
-  static const bTUPerPoundDegreeR = Entropy$BTUPerPoundDegreeR();
-  static const cHUPerPoundDegreeC = Entropy$CHUPerPoundDegreeC();
+  static final caloriePerGramDegreeC = Entropy$CaloriePerGramDegreeC();
+  static final bTUPerPoundDegreeF = Entropy$BTUPerPoundDegreeF();
+  static final bTUPerPoundDegreeR = Entropy$BTUPerPoundDegreeR();
+  static final cHUPerPoundDegreeC = Entropy$CHUPerPoundDegreeC();
 
   @override
   List<Entropy> get units => values;
@@ -97,7 +98,7 @@ sealed class Entropy extends Unit<Entropy> {
   @override
   EnumValues<Entropy> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Entropy>[
     kilojoulePerKilogramK,
     kilojoulePerKilogramDegreeC,
     joulePerKilogramK,
@@ -109,7 +110,7 @@ sealed class Entropy extends Unit<Entropy> {
     cHUPerPoundDegreeC,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Entropy>{
     Entropy$KilojoulePerKilogramK._minorName: kilojoulePerKilogramK,
     Entropy$KilojoulePerKilogramDegreeC._minorName: kilojoulePerKilogramDegreeC,
     Entropy$JoulePerKilogramK._minorName: joulePerKilogramK,
@@ -125,7 +126,7 @@ sealed class Entropy extends Unit<Entropy> {
 
 /// Unit of [Entropy]
 final class Entropy$KilojoulePerKilogramK extends Entropy {
-  const Entropy$KilojoulePerKilogramK([
+  Entropy$KilojoulePerKilogramK([
     super.value,
   ]);
 
@@ -156,14 +157,14 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
   @override
   String get displayName => 'kilojoule/kilogram K';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
-  /// 1 [Entropy$KilojoulePerKilogramK] = 1000.0 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$KilojoulePerKilogramK] = 1.00000000000000000E+003 [Entropy$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -172,12 +173,12 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$KilojoulePerKilogramK] with new value
   @override
   Entropy$KilojoulePerKilogramK withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$KilojoulePerKilogramK(val);
 
@@ -190,14 +191,14 @@ final class Entropy$KilojoulePerKilogramK extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Entropy]
 final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
-  const Entropy$KilojoulePerKilogramDegreeC([
+  Entropy$KilojoulePerKilogramDegreeC([
     super.value,
   ]);
 
@@ -228,14 +229,14 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
   @override
   String get displayName => 'kilojoule/kilogram °C';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
-  /// 1 [Entropy$KilojoulePerKilogramDegreeC] = 1000.0 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$KilojoulePerKilogramDegreeC] = 1.00000000000000000E+003 [Entropy$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -244,12 +245,12 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$KilojoulePerKilogramDegreeC] with new value
   @override
   Entropy$KilojoulePerKilogramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$KilojoulePerKilogramDegreeC(val);
 
@@ -262,14 +263,14 @@ final class Entropy$KilojoulePerKilogramDegreeC extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Entropy]
 final class Entropy$JoulePerKilogramK extends Entropy {
-  const Entropy$JoulePerKilogramK([
+  Entropy$JoulePerKilogramK([
     super.value,
   ]);
 
@@ -300,14 +301,14 @@ final class Entropy$JoulePerKilogramK extends Entropy {
   @override
   String get displayName => 'joule/kilogram K';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
   /// Default (anchor) unit of [Entropy]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -315,12 +316,12 @@ final class Entropy$JoulePerKilogramK extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$JoulePerKilogramK] with new value
   @override
   Entropy$JoulePerKilogramK withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$JoulePerKilogramK(val);
 
@@ -333,14 +334,14 @@ final class Entropy$JoulePerKilogramK extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Entropy]
 final class Entropy$JoulePerKilogramDegreeC extends Entropy {
-  const Entropy$JoulePerKilogramDegreeC([
+  Entropy$JoulePerKilogramDegreeC([
     super.value,
   ]);
 
@@ -371,14 +372,14 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
   @override
   String get displayName => 'joule/kilogram °C';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
-  /// 1 [Entropy$JoulePerKilogramDegreeC] = 1.0 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$JoulePerKilogramDegreeC] = 1.00000000000000000E+000 [Entropy$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -387,12 +388,12 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$JoulePerKilogramDegreeC] with new value
   @override
   Entropy$JoulePerKilogramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$JoulePerKilogramDegreeC(val);
 
@@ -405,14 +406,14 @@ final class Entropy$JoulePerKilogramDegreeC extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Entropy]
 final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
-  const Entropy$KilocaloriePerKilogramDegreeC([
+  Entropy$KilocaloriePerKilogramDegreeC([
     super.value,
   ]);
 
@@ -443,14 +444,14 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
   @override
   String get displayName => 'kilocalorie/kilogram °C';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
-  /// 1 [Entropy$KilocaloriePerKilogramDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$KilocaloriePerKilogramDegreeC] ≈ 4.18680000000000000E+003 [Entropy$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -459,12 +460,12 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$KilocaloriePerKilogramDegreeC] with new value
   @override
   Entropy$KilocaloriePerKilogramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$KilocaloriePerKilogramDegreeC(val);
 
@@ -477,14 +478,14 @@ final class Entropy$KilocaloriePerKilogramDegreeC extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Entropy]
 final class Entropy$CaloriePerGramDegreeC extends Entropy {
-  const Entropy$CaloriePerGramDegreeC([
+  Entropy$CaloriePerGramDegreeC([
     super.value,
   ]);
 
@@ -515,14 +516,14 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
   @override
   String get displayName => 'calorie/gram °C';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
-  /// 1 [Entropy$CaloriePerGramDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$CaloriePerGramDegreeC] ≈ 4.18680000000000000E+003 [Entropy$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -531,12 +532,12 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$CaloriePerGramDegreeC] with new value
   @override
   Entropy$CaloriePerGramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$CaloriePerGramDegreeC(val);
 
@@ -549,14 +550,14 @@ final class Entropy$CaloriePerGramDegreeC extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Entropy]
 final class Entropy$BTUPerPoundDegreeF extends Entropy {
-  const Entropy$BTUPerPoundDegreeF([
+  Entropy$BTUPerPoundDegreeF([
     super.value,
   ]);
 
@@ -587,14 +588,14 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
   @override
   String get displayName => 'BTU/pound °F';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
-  /// 1 [Entropy$BTUPerPoundDegreeF] ≈ 4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$BTUPerPoundDegreeF] ≈ 4.18680000000000000E+003 [Entropy$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -602,12 +603,12 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$BTUPerPoundDegreeF] with new value
   @override
   Entropy$BTUPerPoundDegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$BTUPerPoundDegreeF(val);
 
@@ -620,14 +621,14 @@ final class Entropy$BTUPerPoundDegreeF extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Entropy]
 final class Entropy$BTUPerPoundDegreeR extends Entropy {
-  const Entropy$BTUPerPoundDegreeR([
+  Entropy$BTUPerPoundDegreeR([
     super.value,
   ]);
 
@@ -658,14 +659,14 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
   @override
   String get displayName => 'BTU/pound °R';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
-  /// 1 [Entropy$BTUPerPoundDegreeR] ≈ 4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$BTUPerPoundDegreeR] ≈ 4.18680000000000000E+003 [Entropy$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -673,12 +674,12 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$BTUPerPoundDegreeR] with new value
   @override
   Entropy$BTUPerPoundDegreeR withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$BTUPerPoundDegreeR(val);
 
@@ -691,14 +692,14 @@ final class Entropy$BTUPerPoundDegreeR extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Entropy]
 final class Entropy$CHUPerPoundDegreeC extends Entropy {
-  const Entropy$CHUPerPoundDegreeC([
+  Entropy$CHUPerPoundDegreeC([
     super.value,
   ]);
 
@@ -729,14 +730,14 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
   @override
   String get displayName => 'CHU/pound °C';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
-  Entropy get anchor => const Entropy$JoulePerKilogramK(_ratio);
+  Entropy get anchor => Entropy$JoulePerKilogramK(_ratio);
 
-  /// 1 [Entropy$CHUPerPoundDegreeC] ≈ 4186.8 [Entropy$JoulePerKilogramK]
+  /// 1 [Entropy$CHUPerPoundDegreeC] ≈ 4.18680000000000000E+003 [Entropy$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -744,12 +745,12 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Entropy$CHUPerPoundDegreeC] with new value
   @override
   Entropy$CHUPerPoundDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Entropy$CHUPerPoundDegreeC(val);
 
@@ -762,7 +763,7 @@ final class Entropy$CHUPerPoundDegreeC extends Entropy {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

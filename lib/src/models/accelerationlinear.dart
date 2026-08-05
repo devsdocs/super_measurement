@@ -19,7 +19,7 @@ part of '../../super_measurement.dart';
 /// [AccelerationLinear$FootPerSecondSquare],
 /// [AccelerationLinear$InchPerSecondSquare]
 sealed class AccelerationLinear extends Unit<AccelerationLinear> {
-  const AccelerationLinear([
+  AccelerationLinear([
     super.value,
   ]);
 
@@ -31,101 +31,102 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : AccelerationLinear.anchor();
 
   factory AccelerationLinear.anchor() =>
-      const AccelerationLinear$MeterPerSecondSquare();
+      AccelerationLinear$MeterPerSecondSquare();
 
   /// Convert to [AccelerationLinear$KilometerPerSecondSquare]
   AccelerationLinear get toKilometerPerSecondSquare => convertTo(
-        const AccelerationLinear$KilometerPerSecondSquare(),
+        AccelerationLinear$KilometerPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$HectometerPerSecondSquare]
   AccelerationLinear get toHectometerPerSecondSquare => convertTo(
-        const AccelerationLinear$HectometerPerSecondSquare(),
+        AccelerationLinear$HectometerPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$DekameterPerSecondSquare]
   AccelerationLinear get toDekameterPerSecondSquare => convertTo(
-        const AccelerationLinear$DekameterPerSecondSquare(),
+        AccelerationLinear$DekameterPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$MeterPerSecondSquare]
   AccelerationLinear get toMeterPerSecondSquare => convertTo(
-        const AccelerationLinear$MeterPerSecondSquare(),
+        AccelerationLinear$MeterPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$DecimeterPerSecondSquare]
   AccelerationLinear get toDecimeterPerSecondSquare => convertTo(
-        const AccelerationLinear$DecimeterPerSecondSquare(),
+        AccelerationLinear$DecimeterPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$CentimeterPerSecondSquare]
   AccelerationLinear get toCentimeterPerSecondSquare => convertTo(
-        const AccelerationLinear$CentimeterPerSecondSquare(),
+        AccelerationLinear$CentimeterPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$MillimeterPerSecondSquare]
   AccelerationLinear get toMillimeterPerSecondSquare => convertTo(
-        const AccelerationLinear$MillimeterPerSecondSquare(),
+        AccelerationLinear$MillimeterPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$MicrometerPerSecondSquare]
   AccelerationLinear get toMicrometerPerSecondSquare => convertTo(
-        const AccelerationLinear$MicrometerPerSecondSquare(),
+        AccelerationLinear$MicrometerPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$NanometerPerSecondSquare]
   AccelerationLinear get toNanometerPerSecondSquare => convertTo(
-        const AccelerationLinear$NanometerPerSecondSquare(),
+        AccelerationLinear$NanometerPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$PicometerPerSecondSquare]
   AccelerationLinear get toPicometerPerSecondSquare => convertTo(
-        const AccelerationLinear$PicometerPerSecondSquare(),
+        AccelerationLinear$PicometerPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$FemtometerPerSecondSquare]
   AccelerationLinear get toFemtometerPerSecondSquare => convertTo(
-        const AccelerationLinear$FemtometerPerSecondSquare(),
+        AccelerationLinear$FemtometerPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$AttometerPerSecondSquare]
   AccelerationLinear get toAttometerPerSecondSquare => convertTo(
-        const AccelerationLinear$AttometerPerSecondSquare(),
+        AccelerationLinear$AttometerPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$G]
   AccelerationLinear get toG => convertTo(
-        const AccelerationLinear$G(),
+        AccelerationLinear$G(),
       );
 
   /// Convert to [AccelerationLinear$Gal]
   AccelerationLinear get toGal => convertTo(
-        const AccelerationLinear$Gal(),
+        AccelerationLinear$Gal(),
       );
 
   /// Convert to [AccelerationLinear$MilePerSecondSquare]
   AccelerationLinear get toMilePerSecondSquare => convertTo(
-        const AccelerationLinear$MilePerSecondSquare(),
+        AccelerationLinear$MilePerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$YardPerSecondSquare]
   AccelerationLinear get toYardPerSecondSquare => convertTo(
-        const AccelerationLinear$YardPerSecondSquare(),
+        AccelerationLinear$YardPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$FootPerSecondSquare]
   AccelerationLinear get toFootPerSecondSquare => convertTo(
-        const AccelerationLinear$FootPerSecondSquare(),
+        AccelerationLinear$FootPerSecondSquare(),
       );
 
   /// Convert to [AccelerationLinear$InchPerSecondSquare]
   AccelerationLinear get toInchPerSecondSquare => convertTo(
-        const AccelerationLinear$InchPerSecondSquare(),
+        AccelerationLinear$InchPerSecondSquare(),
       );
 
   @override
@@ -136,35 +137,35 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
 
   static const _majorName = 'accelerationLinear';
 
-  static const kilometerPerSecondSquare =
+  static final kilometerPerSecondSquare =
       AccelerationLinear$KilometerPerSecondSquare();
-  static const hectometerPerSecondSquare =
+  static final hectometerPerSecondSquare =
       AccelerationLinear$HectometerPerSecondSquare();
-  static const dekameterPerSecondSquare =
+  static final dekameterPerSecondSquare =
       AccelerationLinear$DekameterPerSecondSquare();
-  static const meterPerSecondSquare = AccelerationLinear$MeterPerSecondSquare();
-  static const decimeterPerSecondSquare =
+  static final meterPerSecondSquare = AccelerationLinear$MeterPerSecondSquare();
+  static final decimeterPerSecondSquare =
       AccelerationLinear$DecimeterPerSecondSquare();
-  static const centimeterPerSecondSquare =
+  static final centimeterPerSecondSquare =
       AccelerationLinear$CentimeterPerSecondSquare();
-  static const millimeterPerSecondSquare =
+  static final millimeterPerSecondSquare =
       AccelerationLinear$MillimeterPerSecondSquare();
-  static const micrometerPerSecondSquare =
+  static final micrometerPerSecondSquare =
       AccelerationLinear$MicrometerPerSecondSquare();
-  static const nanometerPerSecondSquare =
+  static final nanometerPerSecondSquare =
       AccelerationLinear$NanometerPerSecondSquare();
-  static const picometerPerSecondSquare =
+  static final picometerPerSecondSquare =
       AccelerationLinear$PicometerPerSecondSquare();
-  static const femtometerPerSecondSquare =
+  static final femtometerPerSecondSquare =
       AccelerationLinear$FemtometerPerSecondSquare();
-  static const attometerPerSecondSquare =
+  static final attometerPerSecondSquare =
       AccelerationLinear$AttometerPerSecondSquare();
-  static const g = AccelerationLinear$G();
-  static const gal = AccelerationLinear$Gal();
-  static const milePerSecondSquare = AccelerationLinear$MilePerSecondSquare();
-  static const yardPerSecondSquare = AccelerationLinear$YardPerSecondSquare();
-  static const footPerSecondSquare = AccelerationLinear$FootPerSecondSquare();
-  static const inchPerSecondSquare = AccelerationLinear$InchPerSecondSquare();
+  static final g = AccelerationLinear$G();
+  static final gal = AccelerationLinear$Gal();
+  static final milePerSecondSquare = AccelerationLinear$MilePerSecondSquare();
+  static final yardPerSecondSquare = AccelerationLinear$YardPerSecondSquare();
+  static final footPerSecondSquare = AccelerationLinear$FootPerSecondSquare();
+  static final inchPerSecondSquare = AccelerationLinear$InchPerSecondSquare();
 
   @override
   List<AccelerationLinear> get units => values;
@@ -172,7 +173,7 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
   @override
   EnumValues<AccelerationLinear> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <AccelerationLinear>[
     kilometerPerSecondSquare,
     hectometerPerSecondSquare,
     dekameterPerSecondSquare,
@@ -193,7 +194,7 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
     inchPerSecondSquare,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, AccelerationLinear>{
     AccelerationLinear$KilometerPerSecondSquare._minorName:
         kilometerPerSecondSquare,
     AccelerationLinear$HectometerPerSecondSquare._minorName:
@@ -229,7 +230,7 @@ sealed class AccelerationLinear extends Unit<AccelerationLinear> {
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$KilometerPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$KilometerPerSecondSquare([
+  AccelerationLinear$KilometerPerSecondSquare([
     super.value,
   ]);
 
@@ -260,15 +261,15 @@ final class AccelerationLinear$KilometerPerSecondSquare
   @override
   String get displayName => 'kilometer/second²';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$KilometerPerSecondSquare] = 1000.0 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$KilometerPerSecondSquare] = 1.00000000000000000E+003 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -277,12 +278,12 @@ final class AccelerationLinear$KilometerPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$KilometerPerSecondSquare] with new value
   @override
   AccelerationLinear$KilometerPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$KilometerPerSecondSquare(val);
 
@@ -295,7 +296,7 @@ final class AccelerationLinear$KilometerPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -303,7 +304,7 @@ final class AccelerationLinear$KilometerPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$HectometerPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$HectometerPerSecondSquare([
+  AccelerationLinear$HectometerPerSecondSquare([
     super.value,
   ]);
 
@@ -334,15 +335,15 @@ final class AccelerationLinear$HectometerPerSecondSquare
   @override
   String get displayName => 'hectometer/second²';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$HectometerPerSecondSquare] = 100.0 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$HectometerPerSecondSquare] = 1.00000000000000000E+002 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -351,12 +352,12 @@ final class AccelerationLinear$HectometerPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$HectometerPerSecondSquare] with new value
   @override
   AccelerationLinear$HectometerPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$HectometerPerSecondSquare(val);
 
@@ -369,7 +370,7 @@ final class AccelerationLinear$HectometerPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -377,7 +378,7 @@ final class AccelerationLinear$HectometerPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$DekameterPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$DekameterPerSecondSquare([
+  AccelerationLinear$DekameterPerSecondSquare([
     super.value,
   ]);
 
@@ -408,15 +409,15 @@ final class AccelerationLinear$DekameterPerSecondSquare
   @override
   String get displayName => 'dekameter/second²';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$DekameterPerSecondSquare] = 10.0 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$DekameterPerSecondSquare] = 1.00000000000000000E+001 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -425,12 +426,12 @@ final class AccelerationLinear$DekameterPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$DekameterPerSecondSquare] with new value
   @override
   AccelerationLinear$DekameterPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$DekameterPerSecondSquare(val);
 
@@ -443,14 +444,14 @@ final class AccelerationLinear$DekameterPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
-  const AccelerationLinear$MeterPerSecondSquare([
+  AccelerationLinear$MeterPerSecondSquare([
     super.value,
   ]);
 
@@ -481,15 +482,15 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
   @override
   String get displayName => 'meter/second²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
   /// Default (anchor) unit of [AccelerationLinear]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -498,12 +499,12 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$MeterPerSecondSquare] with new value
   @override
   AccelerationLinear$MeterPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$MeterPerSecondSquare(val);
 
@@ -516,7 +517,7 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -524,7 +525,7 @@ final class AccelerationLinear$MeterPerSecondSquare extends AccelerationLinear {
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$DecimeterPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$DecimeterPerSecondSquare([
+  AccelerationLinear$DecimeterPerSecondSquare([
     super.value,
   ]);
 
@@ -555,15 +556,15 @@ final class AccelerationLinear$DecimeterPerSecondSquare
   @override
   String get displayName => 'decimeter/second²';
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$DecimeterPerSecondSquare] ≈ 0.1 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$DecimeterPerSecondSquare] ≈ 1.00000000000000000E-001 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -572,12 +573,12 @@ final class AccelerationLinear$DecimeterPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$DecimeterPerSecondSquare] with new value
   @override
   AccelerationLinear$DecimeterPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$DecimeterPerSecondSquare(val);
 
@@ -590,7 +591,7 @@ final class AccelerationLinear$DecimeterPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -598,7 +599,7 @@ final class AccelerationLinear$DecimeterPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$CentimeterPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$CentimeterPerSecondSquare([
+  AccelerationLinear$CentimeterPerSecondSquare([
     super.value,
   ]);
 
@@ -629,15 +630,15 @@ final class AccelerationLinear$CentimeterPerSecondSquare
   @override
   String get displayName => 'centimeter/second²';
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$CentimeterPerSecondSquare] ≈ 0.01 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$CentimeterPerSecondSquare] ≈ 1.00000000000000000E-002 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -646,12 +647,12 @@ final class AccelerationLinear$CentimeterPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$CentimeterPerSecondSquare] with new value
   @override
   AccelerationLinear$CentimeterPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$CentimeterPerSecondSquare(val);
 
@@ -664,7 +665,7 @@ final class AccelerationLinear$CentimeterPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -672,7 +673,7 @@ final class AccelerationLinear$CentimeterPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$MillimeterPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$MillimeterPerSecondSquare([
+  AccelerationLinear$MillimeterPerSecondSquare([
     super.value,
   ]);
 
@@ -703,15 +704,15 @@ final class AccelerationLinear$MillimeterPerSecondSquare
   @override
   String get displayName => 'millimeter/second²';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$MillimeterPerSecondSquare] ≈ 0.001 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$MillimeterPerSecondSquare] ≈ 1.00000000000000000E-003 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -720,12 +721,12 @@ final class AccelerationLinear$MillimeterPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$MillimeterPerSecondSquare] with new value
   @override
   AccelerationLinear$MillimeterPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$MillimeterPerSecondSquare(val);
 
@@ -738,7 +739,7 @@ final class AccelerationLinear$MillimeterPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -746,7 +747,7 @@ final class AccelerationLinear$MillimeterPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$MicrometerPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$MicrometerPerSecondSquare([
+  AccelerationLinear$MicrometerPerSecondSquare([
     super.value,
   ]);
 
@@ -777,15 +778,15 @@ final class AccelerationLinear$MicrometerPerSecondSquare
   @override
   String get displayName => 'micrometer/second²';
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$MicrometerPerSecondSquare] ≈ 0.000001 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$MicrometerPerSecondSquare] ≈ 1.00000000000000000E-006 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -794,12 +795,12 @@ final class AccelerationLinear$MicrometerPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$MicrometerPerSecondSquare] with new value
   @override
   AccelerationLinear$MicrometerPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$MicrometerPerSecondSquare(val);
 
@@ -812,7 +813,7 @@ final class AccelerationLinear$MicrometerPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -820,7 +821,7 @@ final class AccelerationLinear$MicrometerPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$NanometerPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$NanometerPerSecondSquare([
+  AccelerationLinear$NanometerPerSecondSquare([
     super.value,
   ]);
 
@@ -851,15 +852,15 @@ final class AccelerationLinear$NanometerPerSecondSquare
   @override
   String get displayName => 'nanometer/second²';
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$NanometerPerSecondSquare] ≈ 1e-9 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$NanometerPerSecondSquare] ≈ 1.00000000000000000E-009 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -868,12 +869,12 @@ final class AccelerationLinear$NanometerPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$NanometerPerSecondSquare] with new value
   @override
   AccelerationLinear$NanometerPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$NanometerPerSecondSquare(val);
 
@@ -886,7 +887,7 @@ final class AccelerationLinear$NanometerPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -894,7 +895,7 @@ final class AccelerationLinear$NanometerPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$PicometerPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$PicometerPerSecondSquare([
+  AccelerationLinear$PicometerPerSecondSquare([
     super.value,
   ]);
 
@@ -925,15 +926,15 @@ final class AccelerationLinear$PicometerPerSecondSquare
   @override
   String get displayName => 'picometer/second²';
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$PicometerPerSecondSquare] ≈ 1e-12 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$PicometerPerSecondSquare] ≈ 1.00000000000000000E-012 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -942,12 +943,12 @@ final class AccelerationLinear$PicometerPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$PicometerPerSecondSquare] with new value
   @override
   AccelerationLinear$PicometerPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$PicometerPerSecondSquare(val);
 
@@ -960,7 +961,7 @@ final class AccelerationLinear$PicometerPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -968,7 +969,7 @@ final class AccelerationLinear$PicometerPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$FemtometerPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$FemtometerPerSecondSquare([
+  AccelerationLinear$FemtometerPerSecondSquare([
     super.value,
   ]);
 
@@ -999,15 +1000,15 @@ final class AccelerationLinear$FemtometerPerSecondSquare
   @override
   String get displayName => 'femtometer/second²';
 
-  static const _ratio = 1e-15;
+  static final _ratio = Rational.parse('1.00000000000000000E-015');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$FemtometerPerSecondSquare] ≈ 1e-15 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$FemtometerPerSecondSquare] ≈ 1.00000000000000000E-015 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1016,12 +1017,12 @@ final class AccelerationLinear$FemtometerPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$FemtometerPerSecondSquare] with new value
   @override
   AccelerationLinear$FemtometerPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$FemtometerPerSecondSquare(val);
 
@@ -1034,7 +1035,7 @@ final class AccelerationLinear$FemtometerPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1042,7 +1043,7 @@ final class AccelerationLinear$FemtometerPerSecondSquare
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$AttometerPerSecondSquare
     extends AccelerationLinear {
-  const AccelerationLinear$AttometerPerSecondSquare([
+  AccelerationLinear$AttometerPerSecondSquare([
     super.value,
   ]);
 
@@ -1073,15 +1074,15 @@ final class AccelerationLinear$AttometerPerSecondSquare
   @override
   String get displayName => 'attometer/second²';
 
-  static const _ratio = 1e-18;
+  static final _ratio = Rational.parse('1.00000000000000000E-018');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$AttometerPerSecondSquare] ≈ 1e-18 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$AttometerPerSecondSquare] ≈ 1.00000000000000000E-018 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1090,12 +1091,12 @@ final class AccelerationLinear$AttometerPerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$AttometerPerSecondSquare] with new value
   @override
   AccelerationLinear$AttometerPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$AttometerPerSecondSquare(val);
 
@@ -1108,14 +1109,14 @@ final class AccelerationLinear$AttometerPerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$G extends AccelerationLinear {
-  const AccelerationLinear$G([
+  AccelerationLinear$G([
     super.value,
   ]);
 
@@ -1146,15 +1147,15 @@ final class AccelerationLinear$G extends AccelerationLinear {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 9.80665;
+  static final _ratio = Rational.parse('9.80665000000000000E+000');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$G] ≈ 9.80665 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$G] ≈ 9.80665000000000000E+000 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1162,12 +1163,12 @@ final class AccelerationLinear$G extends AccelerationLinear {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$G] with new value
   @override
   AccelerationLinear$G withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$G(val);
 
@@ -1180,14 +1181,14 @@ final class AccelerationLinear$G extends AccelerationLinear {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$Gal extends AccelerationLinear {
-  const AccelerationLinear$Gal([
+  AccelerationLinear$Gal([
     super.value,
   ]);
 
@@ -1218,15 +1219,15 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$Gal] ≈ 0.01 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$Gal] ≈ 1.00000000000000000E-002 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1234,12 +1235,12 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$Gal] with new value
   @override
   AccelerationLinear$Gal withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$Gal(val);
 
@@ -1252,14 +1253,14 @@ final class AccelerationLinear$Gal extends AccelerationLinear {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
-  const AccelerationLinear$MilePerSecondSquare([
+  AccelerationLinear$MilePerSecondSquare([
     super.value,
   ]);
 
@@ -1290,15 +1291,15 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
   @override
   String get displayName => 'mile/second²';
 
-  static const _ratio = 1609.344;
+  static final _ratio = Rational.parse('1.60934400000000000E+003');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$MilePerSecondSquare] ≈ 1609.344 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$MilePerSecondSquare] ≈ 1.60934400000000000E+003 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1307,12 +1308,12 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$MilePerSecondSquare] with new value
   @override
   AccelerationLinear$MilePerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$MilePerSecondSquare(val);
 
@@ -1325,14 +1326,14 @@ final class AccelerationLinear$MilePerSecondSquare extends AccelerationLinear {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
-  const AccelerationLinear$YardPerSecondSquare([
+  AccelerationLinear$YardPerSecondSquare([
     super.value,
   ]);
 
@@ -1363,15 +1364,15 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
   @override
   String get displayName => 'yard/second²';
 
-  static const _ratio = 0.9144;
+  static final _ratio = Rational.parse('9.14400000000000000E-001');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$YardPerSecondSquare] ≈ 0.9144 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$YardPerSecondSquare] ≈ 9.14400000000000000E-001 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1380,12 +1381,12 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$YardPerSecondSquare] with new value
   @override
   AccelerationLinear$YardPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$YardPerSecondSquare(val);
 
@@ -1398,14 +1399,14 @@ final class AccelerationLinear$YardPerSecondSquare extends AccelerationLinear {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
-  const AccelerationLinear$FootPerSecondSquare([
+  AccelerationLinear$FootPerSecondSquare([
     super.value,
   ]);
 
@@ -1436,15 +1437,15 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
   @override
   String get displayName => 'foot/second²';
 
-  static const _ratio = 0.3048;
+  static final _ratio = Rational.parse('3.04800000000000000E-001');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$FootPerSecondSquare] ≈ 0.3048 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$FootPerSecondSquare] ≈ 3.04800000000000000E-001 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1453,12 +1454,12 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$FootPerSecondSquare] with new value
   @override
   AccelerationLinear$FootPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$FootPerSecondSquare(val);
 
@@ -1471,14 +1472,14 @@ final class AccelerationLinear$FootPerSecondSquare extends AccelerationLinear {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [AccelerationLinear]
 final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
-  const AccelerationLinear$InchPerSecondSquare([
+  AccelerationLinear$InchPerSecondSquare([
     super.value,
   ]);
 
@@ -1509,15 +1510,15 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
   @override
   String get displayName => 'inch/second²';
 
-  static const _ratio = 0.0254;
+  static final _ratio = Rational.parse('2.54000000000000000E-002');
 
   @override
   AccelerationLinear get anchor =>
-      const AccelerationLinear$MeterPerSecondSquare(_ratio);
+      AccelerationLinear$MeterPerSecondSquare(_ratio);
 
-  /// 1 [AccelerationLinear$InchPerSecondSquare] ≈ 0.0254 [AccelerationLinear$MeterPerSecondSquare]
+  /// 1 [AccelerationLinear$InchPerSecondSquare] ≈ 2.54000000000000000E-002 [AccelerationLinear$MeterPerSecondSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1526,12 +1527,12 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [AccelerationLinear$InchPerSecondSquare] with new value
   @override
   AccelerationLinear$InchPerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       AccelerationLinear$InchPerSecondSquare(val);
 
@@ -1544,7 +1545,7 @@ final class AccelerationLinear$InchPerSecondSquare extends AccelerationLinear {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [Resistance$Megohm], [Resistance$Ohm], [Resistance$OhmInternational],
 /// [Resistance$Microhm], [Resistance$Abohm], [Resistance$Statohm]
 sealed class Resistance extends Unit<Resistance> {
-  const Resistance([
+  Resistance([
     super.value,
   ]);
 
@@ -17,40 +17,41 @@ sealed class Resistance extends Unit<Resistance> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Resistance.anchor();
 
-  factory Resistance.anchor() => const Resistance$Ohm();
+  factory Resistance.anchor() => Resistance$Ohm();
 
   /// Convert to [Resistance$Megohm]
   Resistance get toMegohm => convertTo(
-        const Resistance$Megohm(),
+        Resistance$Megohm(),
       );
 
   /// Convert to [Resistance$Ohm]
   Resistance get toOhm => convertTo(
-        const Resistance$Ohm(),
+        Resistance$Ohm(),
       );
 
   /// Convert to [Resistance$OhmInternational]
   Resistance get toOhmInternational => convertTo(
-        const Resistance$OhmInternational(),
+        Resistance$OhmInternational(),
       );
 
   /// Convert to [Resistance$Microhm]
   Resistance get toMicrohm => convertTo(
-        const Resistance$Microhm(),
+        Resistance$Microhm(),
       );
 
   /// Convert to [Resistance$Abohm]
   Resistance get toAbohm => convertTo(
-        const Resistance$Abohm(),
+        Resistance$Abohm(),
       );
 
   /// Convert to [Resistance$Statohm]
   Resistance get toStatohm => convertTo(
-        const Resistance$Statohm(),
+        Resistance$Statohm(),
       );
 
   @override
@@ -61,12 +62,12 @@ sealed class Resistance extends Unit<Resistance> {
 
   static const _majorName = 'resistance';
 
-  static const megohm = Resistance$Megohm();
-  static const ohm = Resistance$Ohm();
-  static const ohmInternational = Resistance$OhmInternational();
-  static const microhm = Resistance$Microhm();
-  static const abohm = Resistance$Abohm();
-  static const statohm = Resistance$Statohm();
+  static final megohm = Resistance$Megohm();
+  static final ohm = Resistance$Ohm();
+  static final ohmInternational = Resistance$OhmInternational();
+  static final microhm = Resistance$Microhm();
+  static final abohm = Resistance$Abohm();
+  static final statohm = Resistance$Statohm();
 
   @override
   List<Resistance> get units => values;
@@ -74,7 +75,7 @@ sealed class Resistance extends Unit<Resistance> {
   @override
   EnumValues<Resistance> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Resistance>[
     megohm,
     ohm,
     ohmInternational,
@@ -83,7 +84,7 @@ sealed class Resistance extends Unit<Resistance> {
     statohm,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Resistance>{
     Resistance$Megohm._minorName: megohm,
     Resistance$Ohm._minorName: ohm,
     Resistance$OhmInternational._minorName: ohmInternational,
@@ -95,7 +96,7 @@ sealed class Resistance extends Unit<Resistance> {
 
 /// Unit of [Resistance]
 final class Resistance$Megohm extends Resistance {
-  const Resistance$Megohm([
+  Resistance$Megohm([
     super.value,
   ]);
 
@@ -126,14 +127,14 @@ final class Resistance$Megohm extends Resistance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Resistance get anchor => const Resistance$Ohm(_ratio);
+  Resistance get anchor => Resistance$Ohm(_ratio);
 
-  /// 1 [Resistance$Megohm] = 1000000.0 [Resistance$Ohm]
+  /// 1 [Resistance$Megohm] = 1.00000000000000000E+006 [Resistance$Ohm]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -141,12 +142,12 @@ final class Resistance$Megohm extends Resistance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistance$Megohm] with new value
   @override
   Resistance$Megohm withValue(
-    num val,
+    Rational val,
   ) =>
       Resistance$Megohm(val);
 
@@ -159,14 +160,14 @@ final class Resistance$Megohm extends Resistance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistance]
 final class Resistance$Ohm extends Resistance {
-  const Resistance$Ohm([
+  Resistance$Ohm([
     super.value,
   ]);
 
@@ -197,14 +198,14 @@ final class Resistance$Ohm extends Resistance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Resistance get anchor => const Resistance$Ohm(_ratio);
+  Resistance get anchor => Resistance$Ohm(_ratio);
 
   /// Default (anchor) unit of [Resistance]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -212,12 +213,12 @@ final class Resistance$Ohm extends Resistance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistance$Ohm] with new value
   @override
   Resistance$Ohm withValue(
-    num val,
+    Rational val,
   ) =>
       Resistance$Ohm(val);
 
@@ -230,14 +231,14 @@ final class Resistance$Ohm extends Resistance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistance]
 final class Resistance$OhmInternational extends Resistance {
-  const Resistance$OhmInternational([
+  Resistance$OhmInternational([
     super.value,
   ]);
 
@@ -268,14 +269,14 @@ final class Resistance$OhmInternational extends Resistance {
   @override
   String get displayName => 'ohm (International)';
 
-  static const _ratio = 1.0004949999036774;
+  static final _ratio = Rational.parse('1.00049499990367734E+000');
 
   @override
-  Resistance get anchor => const Resistance$Ohm(_ratio);
+  Resistance get anchor => Resistance$Ohm(_ratio);
 
-  /// 1 [Resistance$OhmInternational] ≈ 1.0004949999036774 [Resistance$Ohm]
+  /// 1 [Resistance$OhmInternational] ≈ 1.00049499990367734E+000 [Resistance$Ohm]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -283,12 +284,12 @@ final class Resistance$OhmInternational extends Resistance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistance$OhmInternational] with new value
   @override
   Resistance$OhmInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Resistance$OhmInternational(val);
 
@@ -301,14 +302,14 @@ final class Resistance$OhmInternational extends Resistance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistance]
 final class Resistance$Microhm extends Resistance {
-  const Resistance$Microhm([
+  Resistance$Microhm([
     super.value,
   ]);
 
@@ -339,14 +340,14 @@ final class Resistance$Microhm extends Resistance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Resistance get anchor => const Resistance$Ohm(_ratio);
+  Resistance get anchor => Resistance$Ohm(_ratio);
 
-  /// 1 [Resistance$Microhm] ≈ 0.000001 [Resistance$Ohm]
+  /// 1 [Resistance$Microhm] ≈ 1.00000000000000000E-006 [Resistance$Ohm]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -354,12 +355,12 @@ final class Resistance$Microhm extends Resistance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistance$Microhm] with new value
   @override
   Resistance$Microhm withValue(
-    num val,
+    Rational val,
   ) =>
       Resistance$Microhm(val);
 
@@ -372,14 +373,14 @@ final class Resistance$Microhm extends Resistance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistance]
 final class Resistance$Abohm extends Resistance {
-  const Resistance$Abohm([
+  Resistance$Abohm([
     super.value,
   ]);
 
@@ -410,14 +411,14 @@ final class Resistance$Abohm extends Resistance {
   @override
   String get displayName => 'Abohm';
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  Resistance get anchor => const Resistance$Ohm(_ratio);
+  Resistance get anchor => Resistance$Ohm(_ratio);
 
-  /// 1 [Resistance$Abohm] ≈ 1e-9 [Resistance$Ohm]
+  /// 1 [Resistance$Abohm] ≈ 1.00000000000000000E-009 [Resistance$Ohm]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -425,12 +426,12 @@ final class Resistance$Abohm extends Resistance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistance$Abohm] with new value
   @override
   Resistance$Abohm withValue(
-    num val,
+    Rational val,
   ) =>
       Resistance$Abohm(val);
 
@@ -443,14 +444,14 @@ final class Resistance$Abohm extends Resistance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistance]
 final class Resistance$Statohm extends Resistance {
-  const Resistance$Statohm([
+  Resistance$Statohm([
     super.value,
   ]);
 
@@ -481,14 +482,14 @@ final class Resistance$Statohm extends Resistance {
   @override
   String get displayName => 'Statohm';
 
-  static const _ratio = 898752432400.0;
+  static final _ratio = Rational.parse('8.98752432400000000E+011');
 
   @override
-  Resistance get anchor => const Resistance$Ohm(_ratio);
+  Resistance get anchor => Resistance$Ohm(_ratio);
 
-  /// 1 [Resistance$Statohm] = 898752432400.0 [Resistance$Ohm]
+  /// 1 [Resistance$Statohm] = 8.98752432400000000E+011 [Resistance$Ohm]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -496,12 +497,12 @@ final class Resistance$Statohm extends Resistance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistance$Statohm] with new value
   @override
   Resistance$Statohm withValue(
-    num val,
+    Rational val,
   ) =>
       Resistance$Statohm(val);
 
@@ -514,7 +515,7 @@ final class Resistance$Statohm extends Resistance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

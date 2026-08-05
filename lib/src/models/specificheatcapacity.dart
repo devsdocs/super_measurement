@@ -14,7 +14,7 @@ part of '../../super_measurement.dart';
 /// [SpecificHeatCapacity$BTUPerPoundDegreeR],
 /// [SpecificHeatCapacity$CHUPerPoundDegreeC]
 sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
-  const SpecificHeatCapacity([
+  SpecificHeatCapacity([
     super.value,
   ]);
 
@@ -27,66 +27,67 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : SpecificHeatCapacity.anchor();
 
   factory SpecificHeatCapacity.anchor() =>
-      const SpecificHeatCapacity$JoulePerKilogramK();
+      SpecificHeatCapacity$JoulePerKilogramK();
 
   /// Convert to [SpecificHeatCapacity$KilojoulePerKilogramK]
   SpecificHeatCapacity get toKilojoulePerKilogramK => convertTo(
-        const SpecificHeatCapacity$KilojoulePerKilogramK(),
+        SpecificHeatCapacity$KilojoulePerKilogramK(),
       );
 
   /// Convert to [SpecificHeatCapacity$KilojoulePerKilogramDegreeC]
   SpecificHeatCapacity get toKilojoulePerKilogramDegreeC => convertTo(
-        const SpecificHeatCapacity$KilojoulePerKilogramDegreeC(),
+        SpecificHeatCapacity$KilojoulePerKilogramDegreeC(),
       );
 
   /// Convert to [SpecificHeatCapacity$JoulePerKilogramK]
   SpecificHeatCapacity get toJoulePerKilogramK => convertTo(
-        const SpecificHeatCapacity$JoulePerKilogramK(),
+        SpecificHeatCapacity$JoulePerKilogramK(),
       );
 
   /// Convert to [SpecificHeatCapacity$JoulePerKilogramDegreeC]
   SpecificHeatCapacity get toJoulePerKilogramDegreeC => convertTo(
-        const SpecificHeatCapacity$JoulePerKilogramDegreeC(),
+        SpecificHeatCapacity$JoulePerKilogramDegreeC(),
       );
 
   /// Convert to [SpecificHeatCapacity$JoulePerGramDegreeC]
   SpecificHeatCapacity get toJoulePerGramDegreeC => convertTo(
-        const SpecificHeatCapacity$JoulePerGramDegreeC(),
+        SpecificHeatCapacity$JoulePerGramDegreeC(),
       );
 
   /// Convert to [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC]
   SpecificHeatCapacity get toKilocaloriePerKilogramDegreeC => convertTo(
-        const SpecificHeatCapacity$KilocaloriePerKilogramDegreeC(),
+        SpecificHeatCapacity$KilocaloriePerKilogramDegreeC(),
       );
 
   /// Convert to [SpecificHeatCapacity$CaloriePerGramDegreeC]
   SpecificHeatCapacity get toCaloriePerGramDegreeC => convertTo(
-        const SpecificHeatCapacity$CaloriePerGramDegreeC(),
+        SpecificHeatCapacity$CaloriePerGramDegreeC(),
       );
 
   /// Convert to [SpecificHeatCapacity$BTUPerPoundDegreeC]
   SpecificHeatCapacity get toBTUPerPoundDegreeC => convertTo(
-        const SpecificHeatCapacity$BTUPerPoundDegreeC(),
+        SpecificHeatCapacity$BTUPerPoundDegreeC(),
       );
 
   /// Convert to [SpecificHeatCapacity$BTUPerPoundDegreeF]
   SpecificHeatCapacity get toBTUPerPoundDegreeF => convertTo(
-        const SpecificHeatCapacity$BTUPerPoundDegreeF(),
+        SpecificHeatCapacity$BTUPerPoundDegreeF(),
       );
 
   /// Convert to [SpecificHeatCapacity$BTUPerPoundDegreeR]
   SpecificHeatCapacity get toBTUPerPoundDegreeR => convertTo(
-        const SpecificHeatCapacity$BTUPerPoundDegreeR(),
+        SpecificHeatCapacity$BTUPerPoundDegreeR(),
       );
 
   /// Convert to [SpecificHeatCapacity$CHUPerPoundDegreeC]
   SpecificHeatCapacity get toCHUPerPoundDegreeC => convertTo(
-        const SpecificHeatCapacity$CHUPerPoundDegreeC(),
+        SpecificHeatCapacity$CHUPerPoundDegreeC(),
       );
 
   @override
@@ -97,22 +98,22 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
 
   static const _majorName = 'specificHeatCapacity';
 
-  static const kilojoulePerKilogramK =
+  static final kilojoulePerKilogramK =
       SpecificHeatCapacity$KilojoulePerKilogramK();
-  static const kilojoulePerKilogramDegreeC =
+  static final kilojoulePerKilogramDegreeC =
       SpecificHeatCapacity$KilojoulePerKilogramDegreeC();
-  static const joulePerKilogramK = SpecificHeatCapacity$JoulePerKilogramK();
-  static const joulePerKilogramDegreeC =
+  static final joulePerKilogramK = SpecificHeatCapacity$JoulePerKilogramK();
+  static final joulePerKilogramDegreeC =
       SpecificHeatCapacity$JoulePerKilogramDegreeC();
-  static const joulePerGramDegreeC = SpecificHeatCapacity$JoulePerGramDegreeC();
-  static const kilocaloriePerKilogramDegreeC =
+  static final joulePerGramDegreeC = SpecificHeatCapacity$JoulePerGramDegreeC();
+  static final kilocaloriePerKilogramDegreeC =
       SpecificHeatCapacity$KilocaloriePerKilogramDegreeC();
-  static const caloriePerGramDegreeC =
+  static final caloriePerGramDegreeC =
       SpecificHeatCapacity$CaloriePerGramDegreeC();
-  static const bTUPerPoundDegreeC = SpecificHeatCapacity$BTUPerPoundDegreeC();
-  static const bTUPerPoundDegreeF = SpecificHeatCapacity$BTUPerPoundDegreeF();
-  static const bTUPerPoundDegreeR = SpecificHeatCapacity$BTUPerPoundDegreeR();
-  static const cHUPerPoundDegreeC = SpecificHeatCapacity$CHUPerPoundDegreeC();
+  static final bTUPerPoundDegreeC = SpecificHeatCapacity$BTUPerPoundDegreeC();
+  static final bTUPerPoundDegreeF = SpecificHeatCapacity$BTUPerPoundDegreeF();
+  static final bTUPerPoundDegreeR = SpecificHeatCapacity$BTUPerPoundDegreeR();
+  static final cHUPerPoundDegreeC = SpecificHeatCapacity$CHUPerPoundDegreeC();
 
   @override
   List<SpecificHeatCapacity> get units => values;
@@ -120,7 +121,7 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
   @override
   EnumValues<SpecificHeatCapacity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <SpecificHeatCapacity>[
     kilojoulePerKilogramK,
     kilojoulePerKilogramDegreeC,
     joulePerKilogramK,
@@ -134,7 +135,7 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
     cHUPerPoundDegreeC,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, SpecificHeatCapacity>{
     SpecificHeatCapacity$KilojoulePerKilogramK._minorName:
         kilojoulePerKilogramK,
     SpecificHeatCapacity$KilojoulePerKilogramDegreeC._minorName:
@@ -157,7 +158,7 @@ sealed class SpecificHeatCapacity extends Unit<SpecificHeatCapacity> {
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$KilojoulePerKilogramK
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$KilojoulePerKilogramK([
+  SpecificHeatCapacity$KilojoulePerKilogramK([
     super.value,
   ]);
 
@@ -188,15 +189,15 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
   @override
   String get displayName => 'kilojoule/kilogram K';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$KilojoulePerKilogramK] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$KilojoulePerKilogramK] = 1.00000000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -205,12 +206,12 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$KilojoulePerKilogramK] with new value
   @override
   SpecificHeatCapacity$KilojoulePerKilogramK withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$KilojoulePerKilogramK(val);
 
@@ -223,7 +224,7 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -231,7 +232,7 @@ final class SpecificHeatCapacity$KilojoulePerKilogramK
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$KilojoulePerKilogramDegreeC([
+  SpecificHeatCapacity$KilojoulePerKilogramDegreeC([
     super.value,
   ]);
 
@@ -262,15 +263,15 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
   @override
   String get displayName => 'kilojoule/kilogram °C';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$KilojoulePerKilogramDegreeC] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$KilojoulePerKilogramDegreeC] = 1.00000000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -279,12 +280,12 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$KilojoulePerKilogramDegreeC] with new value
   @override
   SpecificHeatCapacity$KilojoulePerKilogramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$KilojoulePerKilogramDegreeC(val);
 
@@ -297,7 +298,7 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -305,7 +306,7 @@ final class SpecificHeatCapacity$KilojoulePerKilogramDegreeC
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$JoulePerKilogramK
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$JoulePerKilogramK([
+  SpecificHeatCapacity$JoulePerKilogramK([
     super.value,
   ]);
 
@@ -336,15 +337,15 @@ final class SpecificHeatCapacity$JoulePerKilogramK
   @override
   String get displayName => 'joule/kilogram K';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
   /// Default (anchor) unit of [SpecificHeatCapacity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -353,12 +354,12 @@ final class SpecificHeatCapacity$JoulePerKilogramK
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$JoulePerKilogramK] with new value
   @override
   SpecificHeatCapacity$JoulePerKilogramK withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$JoulePerKilogramK(val);
 
@@ -371,7 +372,7 @@ final class SpecificHeatCapacity$JoulePerKilogramK
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -379,7 +380,7 @@ final class SpecificHeatCapacity$JoulePerKilogramK
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$JoulePerKilogramDegreeC
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$JoulePerKilogramDegreeC([
+  SpecificHeatCapacity$JoulePerKilogramDegreeC([
     super.value,
   ]);
 
@@ -410,15 +411,15 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
   @override
   String get displayName => 'joule/kilogram °C';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$JoulePerKilogramDegreeC] = 1.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$JoulePerKilogramDegreeC] = 1.00000000000000000E+000 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -427,12 +428,12 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$JoulePerKilogramDegreeC] with new value
   @override
   SpecificHeatCapacity$JoulePerKilogramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$JoulePerKilogramDegreeC(val);
 
@@ -445,7 +446,7 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -453,7 +454,7 @@ final class SpecificHeatCapacity$JoulePerKilogramDegreeC
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$JoulePerGramDegreeC
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$JoulePerGramDegreeC([
+  SpecificHeatCapacity$JoulePerGramDegreeC([
     super.value,
   ]);
 
@@ -484,15 +485,15 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
   @override
   String get displayName => 'joule/gram °C';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$JoulePerGramDegreeC] = 1000.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$JoulePerGramDegreeC] = 1.00000000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -501,12 +502,12 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$JoulePerGramDegreeC] with new value
   @override
   SpecificHeatCapacity$JoulePerGramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$JoulePerGramDegreeC(val);
 
@@ -519,7 +520,7 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -527,7 +528,7 @@ final class SpecificHeatCapacity$JoulePerGramDegreeC
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$KilocaloriePerKilogramDegreeC([
+  SpecificHeatCapacity$KilocaloriePerKilogramDegreeC([
     super.value,
   ]);
 
@@ -558,15 +559,15 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
   @override
   String get displayName => 'kilocalorie/kilogram °C';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC] ≈ 4.18680000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -575,12 +576,12 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$KilocaloriePerKilogramDegreeC] with new value
   @override
   SpecificHeatCapacity$KilocaloriePerKilogramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$KilocaloriePerKilogramDegreeC(val);
 
@@ -593,7 +594,7 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -601,7 +602,7 @@ final class SpecificHeatCapacity$KilocaloriePerKilogramDegreeC
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$CaloriePerGramDegreeC
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$CaloriePerGramDegreeC([
+  SpecificHeatCapacity$CaloriePerGramDegreeC([
     super.value,
   ]);
 
@@ -632,15 +633,15 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
   @override
   String get displayName => 'calorie/gram °C';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$CaloriePerGramDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$CaloriePerGramDegreeC] ≈ 4.18680000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -649,12 +650,12 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$CaloriePerGramDegreeC] with new value
   @override
   SpecificHeatCapacity$CaloriePerGramDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$CaloriePerGramDegreeC(val);
 
@@ -667,7 +668,7 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -675,7 +676,7 @@ final class SpecificHeatCapacity$CaloriePerGramDegreeC
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$BTUPerPoundDegreeC
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$BTUPerPoundDegreeC([
+  SpecificHeatCapacity$BTUPerPoundDegreeC([
     super.value,
   ]);
 
@@ -706,15 +707,15 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
   @override
   String get displayName => 'BTU/pound °C';
 
-  static const _ratio = 2326.0;
+  static final _ratio = Rational.parse('2.32600000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeC] = 2326.0 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeC] = 2.32600000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -723,12 +724,12 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeC] with new value
   @override
   SpecificHeatCapacity$BTUPerPoundDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$BTUPerPoundDegreeC(val);
 
@@ -741,7 +742,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -749,7 +750,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeC
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$BTUPerPoundDegreeF
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$BTUPerPoundDegreeF([
+  SpecificHeatCapacity$BTUPerPoundDegreeF([
     super.value,
   ]);
 
@@ -780,15 +781,15 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
   @override
   String get displayName => 'BTU/pound °F';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeF] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeF] ≈ 4.18680000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -797,12 +798,12 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeF] with new value
   @override
   SpecificHeatCapacity$BTUPerPoundDegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$BTUPerPoundDegreeF(val);
 
@@ -815,7 +816,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -823,7 +824,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeF
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$BTUPerPoundDegreeR
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$BTUPerPoundDegreeR([
+  SpecificHeatCapacity$BTUPerPoundDegreeR([
     super.value,
   ]);
 
@@ -854,15 +855,15 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
   @override
   String get displayName => 'BTU/pound °R';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeR] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$BTUPerPoundDegreeR] ≈ 4.18680000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -871,12 +872,12 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$BTUPerPoundDegreeR] with new value
   @override
   SpecificHeatCapacity$BTUPerPoundDegreeR withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$BTUPerPoundDegreeR(val);
 
@@ -889,7 +890,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -897,7 +898,7 @@ final class SpecificHeatCapacity$BTUPerPoundDegreeR
 /// Unit of [SpecificHeatCapacity]
 final class SpecificHeatCapacity$CHUPerPoundDegreeC
     extends SpecificHeatCapacity {
-  const SpecificHeatCapacity$CHUPerPoundDegreeC([
+  SpecificHeatCapacity$CHUPerPoundDegreeC([
     super.value,
   ]);
 
@@ -928,15 +929,15 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
   @override
   String get displayName => 'CHU/pound °C';
 
-  static const _ratio = 4186.8;
+  static final _ratio = Rational.parse('4.18680000000000000E+003');
 
   @override
   SpecificHeatCapacity get anchor =>
-      const SpecificHeatCapacity$JoulePerKilogramK(_ratio);
+      SpecificHeatCapacity$JoulePerKilogramK(_ratio);
 
-  /// 1 [SpecificHeatCapacity$CHUPerPoundDegreeC] ≈ 4186.8 [SpecificHeatCapacity$JoulePerKilogramK]
+  /// 1 [SpecificHeatCapacity$CHUPerPoundDegreeC] ≈ 4.18680000000000000E+003 [SpecificHeatCapacity$JoulePerKilogramK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -945,12 +946,12 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificHeatCapacity$CHUPerPoundDegreeC] with new value
   @override
   SpecificHeatCapacity$CHUPerPoundDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificHeatCapacity$CHUPerPoundDegreeC(val);
 
@@ -963,7 +964,7 @@ final class SpecificHeatCapacity$CHUPerPoundDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

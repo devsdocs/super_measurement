@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [Torque$GramForceMillimeter], [Torque$OunceForceFoot],
 /// [Torque$OunceForceInch], [Torque$PoundForceFoot], [Torque$PoundForceInch]
 sealed class Torque extends Unit<Torque> {
-  const Torque([
+  Torque([
     super.value,
   ]);
 
@@ -22,95 +22,96 @@ sealed class Torque extends Unit<Torque> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Torque.anchor();
 
-  factory Torque.anchor() => const Torque$NewtonMeter();
+  factory Torque.anchor() => Torque$NewtonMeter();
 
   /// Convert to [Torque$KilonewtonMeter]
   Torque get toKilonewtonMeter => convertTo(
-        const Torque$KilonewtonMeter(),
+        Torque$KilonewtonMeter(),
       );
 
   /// Convert to [Torque$NewtonMeter]
   Torque get toNewtonMeter => convertTo(
-        const Torque$NewtonMeter(),
+        Torque$NewtonMeter(),
       );
 
   /// Convert to [Torque$NewtonCentimeter]
   Torque get toNewtonCentimeter => convertTo(
-        const Torque$NewtonCentimeter(),
+        Torque$NewtonCentimeter(),
       );
 
   /// Convert to [Torque$NewtonMillimeter]
   Torque get toNewtonMillimeter => convertTo(
-        const Torque$NewtonMillimeter(),
+        Torque$NewtonMillimeter(),
       );
 
   /// Convert to [Torque$DyneMeter]
   Torque get toDyneMeter => convertTo(
-        const Torque$DyneMeter(),
+        Torque$DyneMeter(),
       );
 
   /// Convert to [Torque$DyneCentimeter]
   Torque get toDyneCentimeter => convertTo(
-        const Torque$DyneCentimeter(),
+        Torque$DyneCentimeter(),
       );
 
   /// Convert to [Torque$DyneMillimeter]
   Torque get toDyneMillimeter => convertTo(
-        const Torque$DyneMillimeter(),
+        Torque$DyneMillimeter(),
       );
 
   /// Convert to [Torque$KilogramForceMeter]
   Torque get toKilogramForceMeter => convertTo(
-        const Torque$KilogramForceMeter(),
+        Torque$KilogramForceMeter(),
       );
 
   /// Convert to [Torque$KilogramForceCentimeter]
   Torque get toKilogramForceCentimeter => convertTo(
-        const Torque$KilogramForceCentimeter(),
+        Torque$KilogramForceCentimeter(),
       );
 
   /// Convert to [Torque$KilogramForceMillimeter]
   Torque get toKilogramForceMillimeter => convertTo(
-        const Torque$KilogramForceMillimeter(),
+        Torque$KilogramForceMillimeter(),
       );
 
   /// Convert to [Torque$GramForceMeter]
   Torque get toGramForceMeter => convertTo(
-        const Torque$GramForceMeter(),
+        Torque$GramForceMeter(),
       );
 
   /// Convert to [Torque$GramForceCentimeter]
   Torque get toGramForceCentimeter => convertTo(
-        const Torque$GramForceCentimeter(),
+        Torque$GramForceCentimeter(),
       );
 
   /// Convert to [Torque$GramForceMillimeter]
   Torque get toGramForceMillimeter => convertTo(
-        const Torque$GramForceMillimeter(),
+        Torque$GramForceMillimeter(),
       );
 
   /// Convert to [Torque$OunceForceFoot]
   Torque get toOunceForceFoot => convertTo(
-        const Torque$OunceForceFoot(),
+        Torque$OunceForceFoot(),
       );
 
   /// Convert to [Torque$OunceForceInch]
   Torque get toOunceForceInch => convertTo(
-        const Torque$OunceForceInch(),
+        Torque$OunceForceInch(),
       );
 
   /// Convert to [Torque$PoundForceFoot]
   Torque get toPoundForceFoot => convertTo(
-        const Torque$PoundForceFoot(),
+        Torque$PoundForceFoot(),
       );
 
   /// Convert to [Torque$PoundForceInch]
   Torque get toPoundForceInch => convertTo(
-        const Torque$PoundForceInch(),
+        Torque$PoundForceInch(),
       );
 
   @override
@@ -121,23 +122,23 @@ sealed class Torque extends Unit<Torque> {
 
   static const _majorName = 'torque';
 
-  static const kilonewtonMeter = Torque$KilonewtonMeter();
-  static const newtonMeter = Torque$NewtonMeter();
-  static const newtonCentimeter = Torque$NewtonCentimeter();
-  static const newtonMillimeter = Torque$NewtonMillimeter();
-  static const dyneMeter = Torque$DyneMeter();
-  static const dyneCentimeter = Torque$DyneCentimeter();
-  static const dyneMillimeter = Torque$DyneMillimeter();
-  static const kilogramForceMeter = Torque$KilogramForceMeter();
-  static const kilogramForceCentimeter = Torque$KilogramForceCentimeter();
-  static const kilogramForceMillimeter = Torque$KilogramForceMillimeter();
-  static const gramForceMeter = Torque$GramForceMeter();
-  static const gramForceCentimeter = Torque$GramForceCentimeter();
-  static const gramForceMillimeter = Torque$GramForceMillimeter();
-  static const ounceForceFoot = Torque$OunceForceFoot();
-  static const ounceForceInch = Torque$OunceForceInch();
-  static const poundForceFoot = Torque$PoundForceFoot();
-  static const poundForceInch = Torque$PoundForceInch();
+  static final kilonewtonMeter = Torque$KilonewtonMeter();
+  static final newtonMeter = Torque$NewtonMeter();
+  static final newtonCentimeter = Torque$NewtonCentimeter();
+  static final newtonMillimeter = Torque$NewtonMillimeter();
+  static final dyneMeter = Torque$DyneMeter();
+  static final dyneCentimeter = Torque$DyneCentimeter();
+  static final dyneMillimeter = Torque$DyneMillimeter();
+  static final kilogramForceMeter = Torque$KilogramForceMeter();
+  static final kilogramForceCentimeter = Torque$KilogramForceCentimeter();
+  static final kilogramForceMillimeter = Torque$KilogramForceMillimeter();
+  static final gramForceMeter = Torque$GramForceMeter();
+  static final gramForceCentimeter = Torque$GramForceCentimeter();
+  static final gramForceMillimeter = Torque$GramForceMillimeter();
+  static final ounceForceFoot = Torque$OunceForceFoot();
+  static final ounceForceInch = Torque$OunceForceInch();
+  static final poundForceFoot = Torque$PoundForceFoot();
+  static final poundForceInch = Torque$PoundForceInch();
 
   @override
   List<Torque> get units => values;
@@ -145,7 +146,7 @@ sealed class Torque extends Unit<Torque> {
   @override
   EnumValues<Torque> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Torque>[
     kilonewtonMeter,
     newtonMeter,
     newtonCentimeter,
@@ -165,7 +166,7 @@ sealed class Torque extends Unit<Torque> {
     poundForceInch,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Torque>{
     Torque$KilonewtonMeter._minorName: kilonewtonMeter,
     Torque$NewtonMeter._minorName: newtonMeter,
     Torque$NewtonCentimeter._minorName: newtonCentimeter,
@@ -188,7 +189,7 @@ sealed class Torque extends Unit<Torque> {
 
 /// Unit of [Torque]
 final class Torque$KilonewtonMeter extends Torque {
-  const Torque$KilonewtonMeter([
+  Torque$KilonewtonMeter([
     super.value,
   ]);
 
@@ -219,14 +220,14 @@ final class Torque$KilonewtonMeter extends Torque {
   @override
   String get displayName => 'kilonewton meter';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$KilonewtonMeter] = 1000.0 [Torque$NewtonMeter]
+  /// 1 [Torque$KilonewtonMeter] = 1.00000000000000000E+003 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -234,12 +235,12 @@ final class Torque$KilonewtonMeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$KilonewtonMeter] with new value
   @override
   Torque$KilonewtonMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$KilonewtonMeter(val);
 
@@ -252,14 +253,14 @@ final class Torque$KilonewtonMeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$NewtonMeter extends Torque {
-  const Torque$NewtonMeter([
+  Torque$NewtonMeter([
     super.value,
   ]);
 
@@ -290,14 +291,14 @@ final class Torque$NewtonMeter extends Torque {
   @override
   String get displayName => 'newton meter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
   /// Default (anchor) unit of [Torque]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -305,12 +306,12 @@ final class Torque$NewtonMeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$NewtonMeter] with new value
   @override
   Torque$NewtonMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$NewtonMeter(val);
 
@@ -323,14 +324,14 @@ final class Torque$NewtonMeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$NewtonCentimeter extends Torque {
-  const Torque$NewtonCentimeter([
+  Torque$NewtonCentimeter([
     super.value,
   ]);
 
@@ -361,14 +362,14 @@ final class Torque$NewtonCentimeter extends Torque {
   @override
   String get displayName => 'newton centimeter';
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$NewtonCentimeter] ≈ 0.01 [Torque$NewtonMeter]
+  /// 1 [Torque$NewtonCentimeter] ≈ 1.00000000000000000E-002 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -376,12 +377,12 @@ final class Torque$NewtonCentimeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$NewtonCentimeter] with new value
   @override
   Torque$NewtonCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$NewtonCentimeter(val);
 
@@ -394,14 +395,14 @@ final class Torque$NewtonCentimeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$NewtonMillimeter extends Torque {
-  const Torque$NewtonMillimeter([
+  Torque$NewtonMillimeter([
     super.value,
   ]);
 
@@ -432,14 +433,14 @@ final class Torque$NewtonMillimeter extends Torque {
   @override
   String get displayName => 'newton millimeter';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$NewtonMillimeter] ≈ 0.001 [Torque$NewtonMeter]
+  /// 1 [Torque$NewtonMillimeter] ≈ 1.00000000000000000E-003 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -447,12 +448,12 @@ final class Torque$NewtonMillimeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$NewtonMillimeter] with new value
   @override
   Torque$NewtonMillimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$NewtonMillimeter(val);
 
@@ -465,14 +466,14 @@ final class Torque$NewtonMillimeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$DyneMeter extends Torque {
-  const Torque$DyneMeter([
+  Torque$DyneMeter([
     super.value,
   ]);
 
@@ -503,14 +504,14 @@ final class Torque$DyneMeter extends Torque {
   @override
   String get displayName => 'dyne meter';
 
-  static const _ratio = 0.00001;
+  static final _ratio = Rational.parse('1.00000000000000000E-005');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$DyneMeter] ≈ 0.00001 [Torque$NewtonMeter]
+  /// 1 [Torque$DyneMeter] ≈ 1.00000000000000000E-005 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -518,12 +519,12 @@ final class Torque$DyneMeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$DyneMeter] with new value
   @override
   Torque$DyneMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$DyneMeter(val);
 
@@ -536,14 +537,14 @@ final class Torque$DyneMeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$DyneCentimeter extends Torque {
-  const Torque$DyneCentimeter([
+  Torque$DyneCentimeter([
     super.value,
   ]);
 
@@ -574,14 +575,14 @@ final class Torque$DyneCentimeter extends Torque {
   @override
   String get displayName => 'dyne centimeter';
 
-  static const _ratio = 1e-7;
+  static final _ratio = Rational.parse('1.00000000000000000E-007');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$DyneCentimeter] ≈ 1e-7 [Torque$NewtonMeter]
+  /// 1 [Torque$DyneCentimeter] ≈ 1.00000000000000000E-007 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -589,12 +590,12 @@ final class Torque$DyneCentimeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$DyneCentimeter] with new value
   @override
   Torque$DyneCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$DyneCentimeter(val);
 
@@ -607,14 +608,14 @@ final class Torque$DyneCentimeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$DyneMillimeter extends Torque {
-  const Torque$DyneMillimeter([
+  Torque$DyneMillimeter([
     super.value,
   ]);
 
@@ -645,14 +646,14 @@ final class Torque$DyneMillimeter extends Torque {
   @override
   String get displayName => 'dyne millimeter';
 
-  static const _ratio = 1e-8;
+  static final _ratio = Rational.parse('1.00000000000000000E-008');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$DyneMillimeter] ≈ 1e-8 [Torque$NewtonMeter]
+  /// 1 [Torque$DyneMillimeter] ≈ 1.00000000000000000E-008 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -660,12 +661,12 @@ final class Torque$DyneMillimeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$DyneMillimeter] with new value
   @override
   Torque$DyneMillimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$DyneMillimeter(val);
 
@@ -678,14 +679,14 @@ final class Torque$DyneMillimeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$KilogramForceMeter extends Torque {
-  const Torque$KilogramForceMeter([
+  Torque$KilogramForceMeter([
     super.value,
   ]);
 
@@ -716,14 +717,14 @@ final class Torque$KilogramForceMeter extends Torque {
   @override
   String get displayName => 'kilogram force meter';
 
-  static const _ratio = 9.80665;
+  static final _ratio = Rational.parse('9.80665000000000000E+000');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$KilogramForceMeter] ≈ 9.80665 [Torque$NewtonMeter]
+  /// 1 [Torque$KilogramForceMeter] ≈ 9.80665000000000000E+000 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -731,12 +732,12 @@ final class Torque$KilogramForceMeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$KilogramForceMeter] with new value
   @override
   Torque$KilogramForceMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$KilogramForceMeter(val);
 
@@ -749,14 +750,14 @@ final class Torque$KilogramForceMeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$KilogramForceCentimeter extends Torque {
-  const Torque$KilogramForceCentimeter([
+  Torque$KilogramForceCentimeter([
     super.value,
   ]);
 
@@ -787,14 +788,14 @@ final class Torque$KilogramForceCentimeter extends Torque {
   @override
   String get displayName => 'kilogram force centimeter';
 
-  static const _ratio = 0.0980665;
+  static final _ratio = Rational.parse('9.80665000000000000E-002');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$KilogramForceCentimeter] ≈ 0.0980665 [Torque$NewtonMeter]
+  /// 1 [Torque$KilogramForceCentimeter] ≈ 9.80665000000000000E-002 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -803,12 +804,12 @@ final class Torque$KilogramForceCentimeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$KilogramForceCentimeter] with new value
   @override
   Torque$KilogramForceCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$KilogramForceCentimeter(val);
 
@@ -821,14 +822,14 @@ final class Torque$KilogramForceCentimeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$KilogramForceMillimeter extends Torque {
-  const Torque$KilogramForceMillimeter([
+  Torque$KilogramForceMillimeter([
     super.value,
   ]);
 
@@ -859,14 +860,14 @@ final class Torque$KilogramForceMillimeter extends Torque {
   @override
   String get displayName => 'kilogram force millimeter';
 
-  static const _ratio = 0.00980665;
+  static final _ratio = Rational.parse('9.80665000000000000E-003');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$KilogramForceMillimeter] ≈ 0.00980665 [Torque$NewtonMeter]
+  /// 1 [Torque$KilogramForceMillimeter] ≈ 9.80665000000000000E-003 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -875,12 +876,12 @@ final class Torque$KilogramForceMillimeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$KilogramForceMillimeter] with new value
   @override
   Torque$KilogramForceMillimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$KilogramForceMillimeter(val);
 
@@ -893,14 +894,14 @@ final class Torque$KilogramForceMillimeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$GramForceMeter extends Torque {
-  const Torque$GramForceMeter([
+  Torque$GramForceMeter([
     super.value,
   ]);
 
@@ -931,14 +932,14 @@ final class Torque$GramForceMeter extends Torque {
   @override
   String get displayName => 'gram force meter';
 
-  static const _ratio = 0.00980665;
+  static final _ratio = Rational.parse('9.80665000000000000E-003');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$GramForceMeter] ≈ 0.00980665 [Torque$NewtonMeter]
+  /// 1 [Torque$GramForceMeter] ≈ 9.80665000000000000E-003 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -946,12 +947,12 @@ final class Torque$GramForceMeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$GramForceMeter] with new value
   @override
   Torque$GramForceMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$GramForceMeter(val);
 
@@ -964,14 +965,14 @@ final class Torque$GramForceMeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$GramForceCentimeter extends Torque {
-  const Torque$GramForceCentimeter([
+  Torque$GramForceCentimeter([
     super.value,
   ]);
 
@@ -1002,14 +1003,14 @@ final class Torque$GramForceCentimeter extends Torque {
   @override
   String get displayName => 'gram force centimeter';
 
-  static const _ratio = 0.0000980665;
+  static final _ratio = Rational.parse('9.80665000000000000E-005');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$GramForceCentimeter] ≈ 0.0000980665 [Torque$NewtonMeter]
+  /// 1 [Torque$GramForceCentimeter] ≈ 9.80665000000000000E-005 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1017,12 +1018,12 @@ final class Torque$GramForceCentimeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$GramForceCentimeter] with new value
   @override
   Torque$GramForceCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$GramForceCentimeter(val);
 
@@ -1035,14 +1036,14 @@ final class Torque$GramForceCentimeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$GramForceMillimeter extends Torque {
-  const Torque$GramForceMillimeter([
+  Torque$GramForceMillimeter([
     super.value,
   ]);
 
@@ -1073,14 +1074,14 @@ final class Torque$GramForceMillimeter extends Torque {
   @override
   String get displayName => 'gram force millimeter';
 
-  static const _ratio = 0.00000980665;
+  static final _ratio = Rational.parse('9.80665000000000000E-006');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$GramForceMillimeter] ≈ 0.00000980665 [Torque$NewtonMeter]
+  /// 1 [Torque$GramForceMillimeter] ≈ 9.80665000000000000E-006 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1088,12 +1089,12 @@ final class Torque$GramForceMillimeter extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$GramForceMillimeter] with new value
   @override
   Torque$GramForceMillimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$GramForceMillimeter(val);
 
@@ -1106,14 +1107,14 @@ final class Torque$GramForceMillimeter extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$OunceForceFoot extends Torque {
-  const Torque$OunceForceFoot([
+  Torque$OunceForceFoot([
     super.value,
   ]);
 
@@ -1144,14 +1145,14 @@ final class Torque$OunceForceFoot extends Torque {
   @override
   String get displayName => 'ounce force foot';
 
-  static const _ratio = 0.084738624;
+  static final _ratio = Rational.parse('8.47386240000000000E-002');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$OunceForceFoot] ≈ 0.084738624 [Torque$NewtonMeter]
+  /// 1 [Torque$OunceForceFoot] ≈ 8.47386240000000000E-002 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1159,12 +1160,12 @@ final class Torque$OunceForceFoot extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$OunceForceFoot] with new value
   @override
   Torque$OunceForceFoot withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$OunceForceFoot(val);
 
@@ -1177,14 +1178,14 @@ final class Torque$OunceForceFoot extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$OunceForceInch extends Torque {
-  const Torque$OunceForceInch([
+  Torque$OunceForceInch([
     super.value,
   ]);
 
@@ -1215,14 +1216,14 @@ final class Torque$OunceForceInch extends Torque {
   @override
   String get displayName => 'ounce force inch';
 
-  static const _ratio = 0.007061552;
+  static final _ratio = Rational.parse('7.06155200000000000E-003');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$OunceForceInch] ≈ 0.007061552 [Torque$NewtonMeter]
+  /// 1 [Torque$OunceForceInch] ≈ 7.06155200000000000E-003 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1230,12 +1231,12 @@ final class Torque$OunceForceInch extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$OunceForceInch] with new value
   @override
   Torque$OunceForceInch withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$OunceForceInch(val);
 
@@ -1248,14 +1249,14 @@ final class Torque$OunceForceInch extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$PoundForceFoot extends Torque {
-  const Torque$PoundForceFoot([
+  Torque$PoundForceFoot([
     super.value,
   ]);
 
@@ -1286,14 +1287,14 @@ final class Torque$PoundForceFoot extends Torque {
   @override
   String get displayName => 'pound force foot';
 
-  static const _ratio = 1.355818;
+  static final _ratio = Rational.parse('1.35581800000000000E+000');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$PoundForceFoot] ≈ 1.355818 [Torque$NewtonMeter]
+  /// 1 [Torque$PoundForceFoot] ≈ 1.35581800000000000E+000 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1301,12 +1302,12 @@ final class Torque$PoundForceFoot extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$PoundForceFoot] with new value
   @override
   Torque$PoundForceFoot withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$PoundForceFoot(val);
 
@@ -1319,14 +1320,14 @@ final class Torque$PoundForceFoot extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Torque]
 final class Torque$PoundForceInch extends Torque {
-  const Torque$PoundForceInch([
+  Torque$PoundForceInch([
     super.value,
   ]);
 
@@ -1357,14 +1358,14 @@ final class Torque$PoundForceInch extends Torque {
   @override
   String get displayName => 'pound force inch';
 
-  static const _ratio = 0.11298483333333334;
+  static final _ratio = Rational.parse('1.12984833333333333E-001');
 
   @override
-  Torque get anchor => const Torque$NewtonMeter(_ratio);
+  Torque get anchor => Torque$NewtonMeter(_ratio);
 
-  /// 1 [Torque$PoundForceInch] ≈ 0.11298483333333334 [Torque$NewtonMeter]
+  /// 1 [Torque$PoundForceInch] ≈ 1.12984833333333333E-001 [Torque$NewtonMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1372,12 +1373,12 @@ final class Torque$PoundForceInch extends Torque {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Torque$PoundForceInch] with new value
   @override
   Torque$PoundForceInch withValue(
-    num val,
+    Rational val,
   ) =>
       Torque$PoundForceInch(val);
 
@@ -1390,7 +1391,7 @@ final class Torque$PoundForceInch extends Torque {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

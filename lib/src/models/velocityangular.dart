@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [VelocityAngular$RevolutionPerMinute],
 /// [VelocityAngular$RevolutionPerSecond]
 sealed class VelocityAngular extends Unit<VelocityAngular> {
-  const VelocityAngular([
+  VelocityAngular([
     super.value,
   ]);
 
@@ -22,70 +22,71 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : VelocityAngular.anchor();
 
-  factory VelocityAngular.anchor() => const VelocityAngular$DegreePerDay();
+  factory VelocityAngular.anchor() => VelocityAngular$DegreePerDay();
 
   /// Convert to [VelocityAngular$DegreePerDay]
   VelocityAngular get toDegreePerDay => convertTo(
-        const VelocityAngular$DegreePerDay(),
+        VelocityAngular$DegreePerDay(),
       );
 
   /// Convert to [VelocityAngular$DegreePerHour]
   VelocityAngular get toDegreePerHour => convertTo(
-        const VelocityAngular$DegreePerHour(),
+        VelocityAngular$DegreePerHour(),
       );
 
   /// Convert to [VelocityAngular$DegreePerMinute]
   VelocityAngular get toDegreePerMinute => convertTo(
-        const VelocityAngular$DegreePerMinute(),
+        VelocityAngular$DegreePerMinute(),
       );
 
   /// Convert to [VelocityAngular$DegreePerSecond]
   VelocityAngular get toDegreePerSecond => convertTo(
-        const VelocityAngular$DegreePerSecond(),
+        VelocityAngular$DegreePerSecond(),
       );
 
   /// Convert to [VelocityAngular$RadianPerDay]
   VelocityAngular get toRadianPerDay => convertTo(
-        const VelocityAngular$RadianPerDay(),
+        VelocityAngular$RadianPerDay(),
       );
 
   /// Convert to [VelocityAngular$RadianPerHour]
   VelocityAngular get toRadianPerHour => convertTo(
-        const VelocityAngular$RadianPerHour(),
+        VelocityAngular$RadianPerHour(),
       );
 
   /// Convert to [VelocityAngular$RadianPerMinute]
   VelocityAngular get toRadianPerMinute => convertTo(
-        const VelocityAngular$RadianPerMinute(),
+        VelocityAngular$RadianPerMinute(),
       );
 
   /// Convert to [VelocityAngular$RadianPerSecond]
   VelocityAngular get toRadianPerSecond => convertTo(
-        const VelocityAngular$RadianPerSecond(),
+        VelocityAngular$RadianPerSecond(),
       );
 
   /// Convert to [VelocityAngular$RevolutionPerDay]
   VelocityAngular get toRevolutionPerDay => convertTo(
-        const VelocityAngular$RevolutionPerDay(),
+        VelocityAngular$RevolutionPerDay(),
       );
 
   /// Convert to [VelocityAngular$RevolutionPerHour]
   VelocityAngular get toRevolutionPerHour => convertTo(
-        const VelocityAngular$RevolutionPerHour(),
+        VelocityAngular$RevolutionPerHour(),
       );
 
   /// Convert to [VelocityAngular$RevolutionPerMinute]
   VelocityAngular get toRevolutionPerMinute => convertTo(
-        const VelocityAngular$RevolutionPerMinute(),
+        VelocityAngular$RevolutionPerMinute(),
       );
 
   /// Convert to [VelocityAngular$RevolutionPerSecond]
   VelocityAngular get toRevolutionPerSecond => convertTo(
-        const VelocityAngular$RevolutionPerSecond(),
+        VelocityAngular$RevolutionPerSecond(),
       );
 
   @override
@@ -96,18 +97,18 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
 
   static const _majorName = 'velocityAngular';
 
-  static const degreePerDay = VelocityAngular$DegreePerDay();
-  static const degreePerHour = VelocityAngular$DegreePerHour();
-  static const degreePerMinute = VelocityAngular$DegreePerMinute();
-  static const degreePerSecond = VelocityAngular$DegreePerSecond();
-  static const radianPerDay = VelocityAngular$RadianPerDay();
-  static const radianPerHour = VelocityAngular$RadianPerHour();
-  static const radianPerMinute = VelocityAngular$RadianPerMinute();
-  static const radianPerSecond = VelocityAngular$RadianPerSecond();
-  static const revolutionPerDay = VelocityAngular$RevolutionPerDay();
-  static const revolutionPerHour = VelocityAngular$RevolutionPerHour();
-  static const revolutionPerMinute = VelocityAngular$RevolutionPerMinute();
-  static const revolutionPerSecond = VelocityAngular$RevolutionPerSecond();
+  static final degreePerDay = VelocityAngular$DegreePerDay();
+  static final degreePerHour = VelocityAngular$DegreePerHour();
+  static final degreePerMinute = VelocityAngular$DegreePerMinute();
+  static final degreePerSecond = VelocityAngular$DegreePerSecond();
+  static final radianPerDay = VelocityAngular$RadianPerDay();
+  static final radianPerHour = VelocityAngular$RadianPerHour();
+  static final radianPerMinute = VelocityAngular$RadianPerMinute();
+  static final radianPerSecond = VelocityAngular$RadianPerSecond();
+  static final revolutionPerDay = VelocityAngular$RevolutionPerDay();
+  static final revolutionPerHour = VelocityAngular$RevolutionPerHour();
+  static final revolutionPerMinute = VelocityAngular$RevolutionPerMinute();
+  static final revolutionPerSecond = VelocityAngular$RevolutionPerSecond();
 
   @override
   List<VelocityAngular> get units => values;
@@ -115,7 +116,7 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
   @override
   EnumValues<VelocityAngular> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <VelocityAngular>[
     degreePerDay,
     degreePerHour,
     degreePerMinute,
@@ -130,7 +131,7 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
     revolutionPerSecond,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, VelocityAngular>{
     VelocityAngular$DegreePerDay._minorName: degreePerDay,
     VelocityAngular$DegreePerHour._minorName: degreePerHour,
     VelocityAngular$DegreePerMinute._minorName: degreePerMinute,
@@ -148,7 +149,7 @@ sealed class VelocityAngular extends Unit<VelocityAngular> {
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$DegreePerDay extends VelocityAngular {
-  const VelocityAngular$DegreePerDay([
+  VelocityAngular$DegreePerDay([
     super.value,
   ]);
 
@@ -179,14 +180,14 @@ final class VelocityAngular$DegreePerDay extends VelocityAngular {
   @override
   String get displayName => 'degree/day';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
   /// Default (anchor) unit of [VelocityAngular]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -195,12 +196,12 @@ final class VelocityAngular$DegreePerDay extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$DegreePerDay] with new value
   @override
   VelocityAngular$DegreePerDay withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$DegreePerDay(val);
 
@@ -213,14 +214,14 @@ final class VelocityAngular$DegreePerDay extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$DegreePerHour extends VelocityAngular {
-  const VelocityAngular$DegreePerHour([
+  VelocityAngular$DegreePerHour([
     super.value,
   ]);
 
@@ -251,14 +252,14 @@ final class VelocityAngular$DegreePerHour extends VelocityAngular {
   @override
   String get displayName => 'degree/hour';
 
-  static const _ratio = 24.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+001');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$DegreePerHour] = 24.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$DegreePerHour] = 2.40000000000000000E+001 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -267,12 +268,12 @@ final class VelocityAngular$DegreePerHour extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$DegreePerHour] with new value
   @override
   VelocityAngular$DegreePerHour withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$DegreePerHour(val);
 
@@ -285,14 +286,14 @@ final class VelocityAngular$DegreePerHour extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$DegreePerMinute extends VelocityAngular {
-  const VelocityAngular$DegreePerMinute([
+  VelocityAngular$DegreePerMinute([
     super.value,
   ]);
 
@@ -323,14 +324,14 @@ final class VelocityAngular$DegreePerMinute extends VelocityAngular {
   @override
   String get displayName => 'degree/minute';
 
-  static const _ratio = 1440.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+003');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$DegreePerMinute] = 1440.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$DegreePerMinute] = 1.44000000000000000E+003 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -339,12 +340,12 @@ final class VelocityAngular$DegreePerMinute extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$DegreePerMinute] with new value
   @override
   VelocityAngular$DegreePerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$DegreePerMinute(val);
 
@@ -357,14 +358,14 @@ final class VelocityAngular$DegreePerMinute extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$DegreePerSecond extends VelocityAngular {
-  const VelocityAngular$DegreePerSecond([
+  VelocityAngular$DegreePerSecond([
     super.value,
   ]);
 
@@ -395,14 +396,14 @@ final class VelocityAngular$DegreePerSecond extends VelocityAngular {
   @override
   String get displayName => 'degree/second';
 
-  static const _ratio = 86400.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+004');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$DegreePerSecond] = 86400.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$DegreePerSecond] = 8.64000000000000000E+004 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -411,12 +412,12 @@ final class VelocityAngular$DegreePerSecond extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$DegreePerSecond] with new value
   @override
   VelocityAngular$DegreePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$DegreePerSecond(val);
 
@@ -429,14 +430,14 @@ final class VelocityAngular$DegreePerSecond extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$RadianPerDay extends VelocityAngular {
-  const VelocityAngular$RadianPerDay([
+  VelocityAngular$RadianPerDay([
     super.value,
   ]);
 
@@ -467,14 +468,14 @@ final class VelocityAngular$RadianPerDay extends VelocityAngular {
   @override
   String get displayName => 'radian/day';
 
-  static const _ratio = 57.29577951308232;
+  static final _ratio = Rational.parse('5.72957795130823209E+001');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$RadianPerDay] ≈ 57.29577951308232 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RadianPerDay] ≈ 5.72957795130823209E+001 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -483,12 +484,12 @@ final class VelocityAngular$RadianPerDay extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$RadianPerDay] with new value
   @override
   VelocityAngular$RadianPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$RadianPerDay(val);
 
@@ -501,14 +502,14 @@ final class VelocityAngular$RadianPerDay extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$RadianPerHour extends VelocityAngular {
-  const VelocityAngular$RadianPerHour([
+  VelocityAngular$RadianPerHour([
     super.value,
   ]);
 
@@ -539,14 +540,14 @@ final class VelocityAngular$RadianPerHour extends VelocityAngular {
   @override
   String get displayName => 'radian/hour';
 
-  static const _ratio = 1375.0987083139757;
+  static final _ratio = Rational.parse('1.37509870831397570E+003');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$RadianPerHour] ≈ 1375.0987083139757 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RadianPerHour] ≈ 1.37509870831397570E+003 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -555,12 +556,12 @@ final class VelocityAngular$RadianPerHour extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$RadianPerHour] with new value
   @override
   VelocityAngular$RadianPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$RadianPerHour(val);
 
@@ -573,14 +574,14 @@ final class VelocityAngular$RadianPerHour extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$RadianPerMinute extends VelocityAngular {
-  const VelocityAngular$RadianPerMinute([
+  VelocityAngular$RadianPerMinute([
     super.value,
   ]);
 
@@ -611,14 +612,14 @@ final class VelocityAngular$RadianPerMinute extends VelocityAngular {
   @override
   String get displayName => 'radian/minute';
 
-  static const _ratio = 82505.92249883854;
+  static final _ratio = Rational.parse('8.25059224988385421E+004');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$RadianPerMinute] ≈ 82505.92249883854 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RadianPerMinute] ≈ 8.25059224988385421E+004 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -627,12 +628,12 @@ final class VelocityAngular$RadianPerMinute extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$RadianPerMinute] with new value
   @override
   VelocityAngular$RadianPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$RadianPerMinute(val);
 
@@ -645,14 +646,14 @@ final class VelocityAngular$RadianPerMinute extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$RadianPerSecond extends VelocityAngular {
-  const VelocityAngular$RadianPerSecond([
+  VelocityAngular$RadianPerSecond([
     super.value,
   ]);
 
@@ -683,14 +684,14 @@ final class VelocityAngular$RadianPerSecond extends VelocityAngular {
   @override
   String get displayName => 'radian/second';
 
-  static const _ratio = 4950355.3499303125;
+  static final _ratio = Rational.parse('4.95035534993031252E+006');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$RadianPerSecond] ≈ 4950355.3499303125 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RadianPerSecond] ≈ 4.95035534993031252E+006 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -699,12 +700,12 @@ final class VelocityAngular$RadianPerSecond extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$RadianPerSecond] with new value
   @override
   VelocityAngular$RadianPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$RadianPerSecond(val);
 
@@ -717,14 +718,14 @@ final class VelocityAngular$RadianPerSecond extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
-  const VelocityAngular$RevolutionPerDay([
+  VelocityAngular$RevolutionPerDay([
     super.value,
   ]);
 
@@ -755,14 +756,14 @@ final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
   @override
   String get displayName => 'revolution/day';
 
-  static const _ratio = 360.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+002');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$RevolutionPerDay] = 360.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RevolutionPerDay] = 3.60000000000000000E+002 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -771,12 +772,12 @@ final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$RevolutionPerDay] with new value
   @override
   VelocityAngular$RevolutionPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$RevolutionPerDay(val);
 
@@ -789,14 +790,14 @@ final class VelocityAngular$RevolutionPerDay extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
-  const VelocityAngular$RevolutionPerHour([
+  VelocityAngular$RevolutionPerHour([
     super.value,
   ]);
 
@@ -827,14 +828,14 @@ final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
   @override
   String get displayName => 'revolution/hour';
 
-  static const _ratio = 8640.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+003');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$RevolutionPerHour] = 8640.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RevolutionPerHour] = 8.64000000000000000E+003 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -843,12 +844,12 @@ final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$RevolutionPerHour] with new value
   @override
   VelocityAngular$RevolutionPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$RevolutionPerHour(val);
 
@@ -861,14 +862,14 @@ final class VelocityAngular$RevolutionPerHour extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
-  const VelocityAngular$RevolutionPerMinute([
+  VelocityAngular$RevolutionPerMinute([
     super.value,
   ]);
 
@@ -899,14 +900,14 @@ final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
   @override
   String get displayName => 'revolution/minute';
 
-  static const _ratio = 518400.0;
+  static final _ratio = Rational.parse('5.18400000000000000E+005');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$RevolutionPerMinute] = 518400.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RevolutionPerMinute] = 5.18400000000000000E+005 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -915,12 +916,12 @@ final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$RevolutionPerMinute] with new value
   @override
   VelocityAngular$RevolutionPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$RevolutionPerMinute(val);
 
@@ -933,14 +934,14 @@ final class VelocityAngular$RevolutionPerMinute extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VelocityAngular]
 final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
-  const VelocityAngular$RevolutionPerSecond([
+  VelocityAngular$RevolutionPerSecond([
     super.value,
   ]);
 
@@ -971,14 +972,14 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
   @override
   String get displayName => 'revolution/second';
 
-  static const _ratio = 31104000.0;
+  static final _ratio = Rational.parse('3.11040000000000000E+007');
 
   @override
-  VelocityAngular get anchor => const VelocityAngular$DegreePerDay(_ratio);
+  VelocityAngular get anchor => VelocityAngular$DegreePerDay(_ratio);
 
-  /// 1 [VelocityAngular$RevolutionPerSecond] = 31104000.0 [VelocityAngular$DegreePerDay]
+  /// 1 [VelocityAngular$RevolutionPerSecond] = 3.11040000000000000E+007 [VelocityAngular$DegreePerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -987,12 +988,12 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VelocityAngular$RevolutionPerSecond] with new value
   @override
   VelocityAngular$RevolutionPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       VelocityAngular$RevolutionPerSecond(val);
 
@@ -1005,7 +1006,7 @@ final class VelocityAngular$RevolutionPerSecond extends VelocityAngular {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

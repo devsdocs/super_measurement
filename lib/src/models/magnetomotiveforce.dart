@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [MagnetomotiveForce$MilliampereTurn], [MagnetomotiveForce$AbampereTurn],
 /// [MagnetomotiveForce$Gilbert]
 sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
-  const MagnetomotiveForce([
+  MagnetomotiveForce([
     super.value,
   ]);
 
@@ -18,35 +18,36 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : MagnetomotiveForce.anchor();
 
-  factory MagnetomotiveForce.anchor() => const MagnetomotiveForce$AmpereTurn();
+  factory MagnetomotiveForce.anchor() => MagnetomotiveForce$AmpereTurn();
 
   /// Convert to [MagnetomotiveForce$KiloampereTurn]
   MagnetomotiveForce get toKiloampereTurn => convertTo(
-        const MagnetomotiveForce$KiloampereTurn(),
+        MagnetomotiveForce$KiloampereTurn(),
       );
 
   /// Convert to [MagnetomotiveForce$AmpereTurn]
   MagnetomotiveForce get toAmpereTurn => convertTo(
-        const MagnetomotiveForce$AmpereTurn(),
+        MagnetomotiveForce$AmpereTurn(),
       );
 
   /// Convert to [MagnetomotiveForce$MilliampereTurn]
   MagnetomotiveForce get toMilliampereTurn => convertTo(
-        const MagnetomotiveForce$MilliampereTurn(),
+        MagnetomotiveForce$MilliampereTurn(),
       );
 
   /// Convert to [MagnetomotiveForce$AbampereTurn]
   MagnetomotiveForce get toAbampereTurn => convertTo(
-        const MagnetomotiveForce$AbampereTurn(),
+        MagnetomotiveForce$AbampereTurn(),
       );
 
   /// Convert to [MagnetomotiveForce$Gilbert]
   MagnetomotiveForce get toGilbert => convertTo(
-        const MagnetomotiveForce$Gilbert(),
+        MagnetomotiveForce$Gilbert(),
       );
 
   @override
@@ -57,11 +58,11 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
 
   static const _majorName = 'magnetomotiveForce';
 
-  static const kiloampereTurn = MagnetomotiveForce$KiloampereTurn();
-  static const ampereTurn = MagnetomotiveForce$AmpereTurn();
-  static const milliampereTurn = MagnetomotiveForce$MilliampereTurn();
-  static const abampereTurn = MagnetomotiveForce$AbampereTurn();
-  static const gilbert = MagnetomotiveForce$Gilbert();
+  static final kiloampereTurn = MagnetomotiveForce$KiloampereTurn();
+  static final ampereTurn = MagnetomotiveForce$AmpereTurn();
+  static final milliampereTurn = MagnetomotiveForce$MilliampereTurn();
+  static final abampereTurn = MagnetomotiveForce$AbampereTurn();
+  static final gilbert = MagnetomotiveForce$Gilbert();
 
   @override
   List<MagnetomotiveForce> get units => values;
@@ -69,7 +70,7 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
   @override
   EnumValues<MagnetomotiveForce> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <MagnetomotiveForce>[
     kiloampereTurn,
     ampereTurn,
     milliampereTurn,
@@ -77,7 +78,7 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
     gilbert,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, MagnetomotiveForce>{
     MagnetomotiveForce$KiloampereTurn._minorName: kiloampereTurn,
     MagnetomotiveForce$AmpereTurn._minorName: ampereTurn,
     MagnetomotiveForce$MilliampereTurn._minorName: milliampereTurn,
@@ -88,7 +89,7 @@ sealed class MagnetomotiveForce extends Unit<MagnetomotiveForce> {
 
 /// Unit of [MagnetomotiveForce]
 final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
-  const MagnetomotiveForce$KiloampereTurn([
+  MagnetomotiveForce$KiloampereTurn([
     super.value,
   ]);
 
@@ -119,14 +120,14 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
   @override
   String get displayName => 'kiloampere turn';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
+  MagnetomotiveForce get anchor => MagnetomotiveForce$AmpereTurn(_ratio);
 
-  /// 1 [MagnetomotiveForce$KiloampereTurn] = 1000.0 [MagnetomotiveForce$AmpereTurn]
+  /// 1 [MagnetomotiveForce$KiloampereTurn] = 1.00000000000000000E+003 [MagnetomotiveForce$AmpereTurn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -135,12 +136,12 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagnetomotiveForce$KiloampereTurn] with new value
   @override
   MagnetomotiveForce$KiloampereTurn withValue(
-    num val,
+    Rational val,
   ) =>
       MagnetomotiveForce$KiloampereTurn(val);
 
@@ -153,14 +154,14 @@ final class MagnetomotiveForce$KiloampereTurn extends MagnetomotiveForce {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagnetomotiveForce]
 final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
-  const MagnetomotiveForce$AmpereTurn([
+  MagnetomotiveForce$AmpereTurn([
     super.value,
   ]);
 
@@ -191,14 +192,14 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
   @override
   String get displayName => 'ampere turn';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
+  MagnetomotiveForce get anchor => MagnetomotiveForce$AmpereTurn(_ratio);
 
   /// Default (anchor) unit of [MagnetomotiveForce]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -207,12 +208,12 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagnetomotiveForce$AmpereTurn] with new value
   @override
   MagnetomotiveForce$AmpereTurn withValue(
-    num val,
+    Rational val,
   ) =>
       MagnetomotiveForce$AmpereTurn(val);
 
@@ -225,14 +226,14 @@ final class MagnetomotiveForce$AmpereTurn extends MagnetomotiveForce {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagnetomotiveForce]
 final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
-  const MagnetomotiveForce$MilliampereTurn([
+  MagnetomotiveForce$MilliampereTurn([
     super.value,
   ]);
 
@@ -263,14 +264,14 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
   @override
   String get displayName => 'milliampere turn';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
+  MagnetomotiveForce get anchor => MagnetomotiveForce$AmpereTurn(_ratio);
 
-  /// 1 [MagnetomotiveForce$MilliampereTurn] ≈ 0.001 [MagnetomotiveForce$AmpereTurn]
+  /// 1 [MagnetomotiveForce$MilliampereTurn] ≈ 1.00000000000000000E-003 [MagnetomotiveForce$AmpereTurn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -279,12 +280,12 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagnetomotiveForce$MilliampereTurn] with new value
   @override
   MagnetomotiveForce$MilliampereTurn withValue(
-    num val,
+    Rational val,
   ) =>
       MagnetomotiveForce$MilliampereTurn(val);
 
@@ -297,14 +298,14 @@ final class MagnetomotiveForce$MilliampereTurn extends MagnetomotiveForce {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagnetomotiveForce]
 final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
-  const MagnetomotiveForce$AbampereTurn([
+  MagnetomotiveForce$AbampereTurn([
     super.value,
   ]);
 
@@ -335,14 +336,14 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
   @override
   String get displayName => 'Abampere turn';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
+  MagnetomotiveForce get anchor => MagnetomotiveForce$AmpereTurn(_ratio);
 
-  /// 1 [MagnetomotiveForce$AbampereTurn] = 10.0 [MagnetomotiveForce$AmpereTurn]
+  /// 1 [MagnetomotiveForce$AbampereTurn] = 1.00000000000000000E+001 [MagnetomotiveForce$AmpereTurn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -351,12 +352,12 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagnetomotiveForce$AbampereTurn] with new value
   @override
   MagnetomotiveForce$AbampereTurn withValue(
-    num val,
+    Rational val,
   ) =>
       MagnetomotiveForce$AbampereTurn(val);
 
@@ -369,14 +370,14 @@ final class MagnetomotiveForce$AbampereTurn extends MagnetomotiveForce {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagnetomotiveForce]
 final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
-  const MagnetomotiveForce$Gilbert([
+  MagnetomotiveForce$Gilbert([
     super.value,
   ]);
 
@@ -407,14 +408,14 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.7957747151;
+  static final _ratio = Rational.parse('7.95774715100000000E-001');
 
   @override
-  MagnetomotiveForce get anchor => const MagnetomotiveForce$AmpereTurn(_ratio);
+  MagnetomotiveForce get anchor => MagnetomotiveForce$AmpereTurn(_ratio);
 
-  /// 1 [MagnetomotiveForce$Gilbert] ≈ 0.7957747151 [MagnetomotiveForce$AmpereTurn]
+  /// 1 [MagnetomotiveForce$Gilbert] ≈ 7.95774715100000000E-001 [MagnetomotiveForce$AmpereTurn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -422,12 +423,12 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagnetomotiveForce$Gilbert] with new value
   @override
   MagnetomotiveForce$Gilbert withValue(
-    num val,
+    Rational val,
   ) =>
       MagnetomotiveForce$Gilbert(val);
 
@@ -440,7 +441,7 @@ final class MagnetomotiveForce$Gilbert extends MagnetomotiveForce {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

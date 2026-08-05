@@ -23,7 +23,7 @@ part of '../../super_measurement.dart';
 /// [FuelEfficiency$MeterPerCup], [FuelEfficiency$MeterPerCupUK],
 /// [FuelEfficiency$MeterPerFluidOunce], [FuelEfficiency$MeterPerFluidOunceUK]
 sealed class FuelEfficiency extends Unit<FuelEfficiency> {
-  const FuelEfficiency([
+  FuelEfficiency([
     super.value,
   ]);
 
@@ -35,200 +35,201 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : FuelEfficiency.anchor();
 
-  factory FuelEfficiency.anchor() => const FuelEfficiency$MeterPerLiter();
+  factory FuelEfficiency.anchor() => FuelEfficiency$MeterPerLiter();
 
   /// Convert to [FuelEfficiency$ExameterPerLiter]
   FuelEfficiency get toExameterPerLiter => convertTo(
-        const FuelEfficiency$ExameterPerLiter(),
+        FuelEfficiency$ExameterPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$PetameterPerLiter]
   FuelEfficiency get toPetameterPerLiter => convertTo(
-        const FuelEfficiency$PetameterPerLiter(),
+        FuelEfficiency$PetameterPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$TerameterPerLiter]
   FuelEfficiency get toTerameterPerLiter => convertTo(
-        const FuelEfficiency$TerameterPerLiter(),
+        FuelEfficiency$TerameterPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$GigameterPerLiter]
   FuelEfficiency get toGigameterPerLiter => convertTo(
-        const FuelEfficiency$GigameterPerLiter(),
+        FuelEfficiency$GigameterPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$MegameterPerLiter]
   FuelEfficiency get toMegameterPerLiter => convertTo(
-        const FuelEfficiency$MegameterPerLiter(),
+        FuelEfficiency$MegameterPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$KilometerPerLiter]
   FuelEfficiency get toKilometerPerLiter => convertTo(
-        const FuelEfficiency$KilometerPerLiter(),
+        FuelEfficiency$KilometerPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$HectometerPerLiter]
   FuelEfficiency get toHectometerPerLiter => convertTo(
-        const FuelEfficiency$HectometerPerLiter(),
+        FuelEfficiency$HectometerPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$DekameterPerLiter]
   FuelEfficiency get toDekameterPerLiter => convertTo(
-        const FuelEfficiency$DekameterPerLiter(),
+        FuelEfficiency$DekameterPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerLiter]
   FuelEfficiency get toMeterPerLiter => convertTo(
-        const FuelEfficiency$MeterPerLiter(),
+        FuelEfficiency$MeterPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$CentimeterPerLiter]
   FuelEfficiency get toCentimeterPerLiter => convertTo(
-        const FuelEfficiency$CentimeterPerLiter(),
+        FuelEfficiency$CentimeterPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$MileUSPerLiter]
   FuelEfficiency get toMileUSPerLiter => convertTo(
-        const FuelEfficiency$MileUSPerLiter(),
+        FuelEfficiency$MileUSPerLiter(),
       );
 
   /// Convert to [FuelEfficiency$LiterPerMeter]
   FuelEfficiency get toLiterPerMeter => convertTo(
-        const FuelEfficiency$LiterPerMeter(),
+        FuelEfficiency$LiterPerMeter(),
       );
 
   /// Convert to [FuelEfficiency$LiterPer100Km]
   FuelEfficiency get toLiterPer100Km => convertTo(
-        const FuelEfficiency$LiterPer100Km(),
+        FuelEfficiency$LiterPer100Km(),
       );
 
   /// Convert to [FuelEfficiency$GallonsUSPerMile]
   FuelEfficiency get toGallonsUSPerMile => convertTo(
-        const FuelEfficiency$GallonsUSPerMile(),
+        FuelEfficiency$GallonsUSPerMile(),
       );
 
   /// Convert to [FuelEfficiency$GallonsUSPer100mi]
   FuelEfficiency get toGallonsUSPer100mi => convertTo(
-        const FuelEfficiency$GallonsUSPer100mi(),
+        FuelEfficiency$GallonsUSPer100mi(),
       );
 
   /// Convert to [FuelEfficiency$GallonsUKPerMile]
   FuelEfficiency get toGallonsUKPerMile => convertTo(
-        const FuelEfficiency$GallonsUKPerMile(),
+        FuelEfficiency$GallonsUKPerMile(),
       );
 
   /// Convert to [FuelEfficiency$GallonsUKPer100mi]
   FuelEfficiency get toGallonsUKPer100mi => convertTo(
-        const FuelEfficiency$GallonsUKPer100mi(),
+        FuelEfficiency$GallonsUKPer100mi(),
       );
 
   /// Convert to [FuelEfficiency$NauticalMilePerLiter]
   FuelEfficiency get toNauticalMilePerLiter => convertTo(
-        const FuelEfficiency$NauticalMilePerLiter(),
+        FuelEfficiency$NauticalMilePerLiter(),
       );
 
   /// Convert to [FuelEfficiency$NauticalMilePerGallonUS]
   FuelEfficiency get toNauticalMilePerGallonUS => convertTo(
-        const FuelEfficiency$NauticalMilePerGallonUS(),
+        FuelEfficiency$NauticalMilePerGallonUS(),
       );
 
   /// Convert to [FuelEfficiency$KilometerPerGallonUS]
   FuelEfficiency get toKilometerPerGallonUS => convertTo(
-        const FuelEfficiency$KilometerPerGallonUS(),
+        FuelEfficiency$KilometerPerGallonUS(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerGallonUS]
   FuelEfficiency get toMeterPerGallonUS => convertTo(
-        const FuelEfficiency$MeterPerGallonUS(),
+        FuelEfficiency$MeterPerGallonUS(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerGallonUK]
   FuelEfficiency get toMeterPerGallonUK => convertTo(
-        const FuelEfficiency$MeterPerGallonUK(),
+        FuelEfficiency$MeterPerGallonUK(),
       );
 
   /// Convert to [FuelEfficiency$MilePerGallonUS]
   FuelEfficiency get toMilePerGallonUS => convertTo(
-        const FuelEfficiency$MilePerGallonUS(),
+        FuelEfficiency$MilePerGallonUS(),
       );
 
   /// Convert to [FuelEfficiency$MilePerGallonUK]
   FuelEfficiency get toMilePerGallonUK => convertTo(
-        const FuelEfficiency$MilePerGallonUK(),
+        FuelEfficiency$MilePerGallonUK(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerMeterSquare]
   FuelEfficiency get toMeterPerMeterSquare => convertTo(
-        const FuelEfficiency$MeterPerMeterSquare(),
+        FuelEfficiency$MeterPerMeterSquare(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerCentimeterSquare]
   FuelEfficiency get toMeterPerCentimeterSquare => convertTo(
-        const FuelEfficiency$MeterPerCentimeterSquare(),
+        FuelEfficiency$MeterPerCentimeterSquare(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerYardSquare]
   FuelEfficiency get toMeterPerYardSquare => convertTo(
-        const FuelEfficiency$MeterPerYardSquare(),
+        FuelEfficiency$MeterPerYardSquare(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerFeetSquare]
   FuelEfficiency get toMeterPerFeetSquare => convertTo(
-        const FuelEfficiency$MeterPerFeetSquare(),
+        FuelEfficiency$MeterPerFeetSquare(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerInchSquare]
   FuelEfficiency get toMeterPerInchSquare => convertTo(
-        const FuelEfficiency$MeterPerInchSquare(),
+        FuelEfficiency$MeterPerInchSquare(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerGallon]
   FuelEfficiency get toMeterPerGallon => convertTo(
-        const FuelEfficiency$MeterPerGallon(),
+        FuelEfficiency$MeterPerGallon(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerQuart]
   FuelEfficiency get toMeterPerQuart => convertTo(
-        const FuelEfficiency$MeterPerQuart(),
+        FuelEfficiency$MeterPerQuart(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerQuartUK]
   FuelEfficiency get toMeterPerQuartUK => convertTo(
-        const FuelEfficiency$MeterPerQuartUK(),
+        FuelEfficiency$MeterPerQuartUK(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerPint]
   FuelEfficiency get toMeterPerPint => convertTo(
-        const FuelEfficiency$MeterPerPint(),
+        FuelEfficiency$MeterPerPint(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerPintUK]
   FuelEfficiency get toMeterPerPintUK => convertTo(
-        const FuelEfficiency$MeterPerPintUK(),
+        FuelEfficiency$MeterPerPintUK(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerCup]
   FuelEfficiency get toMeterPerCup => convertTo(
-        const FuelEfficiency$MeterPerCup(),
+        FuelEfficiency$MeterPerCup(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerCupUK]
   FuelEfficiency get toMeterPerCupUK => convertTo(
-        const FuelEfficiency$MeterPerCupUK(),
+        FuelEfficiency$MeterPerCupUK(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerFluidOunce]
   FuelEfficiency get toMeterPerFluidOunce => convertTo(
-        const FuelEfficiency$MeterPerFluidOunce(),
+        FuelEfficiency$MeterPerFluidOunce(),
       );
 
   /// Convert to [FuelEfficiency$MeterPerFluidOunceUK]
   FuelEfficiency get toMeterPerFluidOunceUK => convertTo(
-        const FuelEfficiency$MeterPerFluidOunceUK(),
+        FuelEfficiency$MeterPerFluidOunceUK(),
       );
 
   @override
@@ -239,46 +240,46 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
 
   static const _majorName = 'fuelEfficiency';
 
-  static const exameterPerLiter = FuelEfficiency$ExameterPerLiter();
-  static const petameterPerLiter = FuelEfficiency$PetameterPerLiter();
-  static const terameterPerLiter = FuelEfficiency$TerameterPerLiter();
-  static const gigameterPerLiter = FuelEfficiency$GigameterPerLiter();
-  static const megameterPerLiter = FuelEfficiency$MegameterPerLiter();
-  static const kilometerPerLiter = FuelEfficiency$KilometerPerLiter();
-  static const hectometerPerLiter = FuelEfficiency$HectometerPerLiter();
-  static const dekameterPerLiter = FuelEfficiency$DekameterPerLiter();
-  static const meterPerLiter = FuelEfficiency$MeterPerLiter();
-  static const centimeterPerLiter = FuelEfficiency$CentimeterPerLiter();
-  static const mileUSPerLiter = FuelEfficiency$MileUSPerLiter();
-  static const literPerMeter = FuelEfficiency$LiterPerMeter();
-  static const literPer100Km = FuelEfficiency$LiterPer100Km();
-  static const gallonsUSPerMile = FuelEfficiency$GallonsUSPerMile();
-  static const gallonsUSPer100mi = FuelEfficiency$GallonsUSPer100mi();
-  static const gallonsUKPerMile = FuelEfficiency$GallonsUKPerMile();
-  static const gallonsUKPer100mi = FuelEfficiency$GallonsUKPer100mi();
-  static const nauticalMilePerLiter = FuelEfficiency$NauticalMilePerLiter();
-  static const nauticalMilePerGallonUS =
+  static final exameterPerLiter = FuelEfficiency$ExameterPerLiter();
+  static final petameterPerLiter = FuelEfficiency$PetameterPerLiter();
+  static final terameterPerLiter = FuelEfficiency$TerameterPerLiter();
+  static final gigameterPerLiter = FuelEfficiency$GigameterPerLiter();
+  static final megameterPerLiter = FuelEfficiency$MegameterPerLiter();
+  static final kilometerPerLiter = FuelEfficiency$KilometerPerLiter();
+  static final hectometerPerLiter = FuelEfficiency$HectometerPerLiter();
+  static final dekameterPerLiter = FuelEfficiency$DekameterPerLiter();
+  static final meterPerLiter = FuelEfficiency$MeterPerLiter();
+  static final centimeterPerLiter = FuelEfficiency$CentimeterPerLiter();
+  static final mileUSPerLiter = FuelEfficiency$MileUSPerLiter();
+  static final literPerMeter = FuelEfficiency$LiterPerMeter();
+  static final literPer100Km = FuelEfficiency$LiterPer100Km();
+  static final gallonsUSPerMile = FuelEfficiency$GallonsUSPerMile();
+  static final gallonsUSPer100mi = FuelEfficiency$GallonsUSPer100mi();
+  static final gallonsUKPerMile = FuelEfficiency$GallonsUKPerMile();
+  static final gallonsUKPer100mi = FuelEfficiency$GallonsUKPer100mi();
+  static final nauticalMilePerLiter = FuelEfficiency$NauticalMilePerLiter();
+  static final nauticalMilePerGallonUS =
       FuelEfficiency$NauticalMilePerGallonUS();
-  static const kilometerPerGallonUS = FuelEfficiency$KilometerPerGallonUS();
-  static const meterPerGallonUS = FuelEfficiency$MeterPerGallonUS();
-  static const meterPerGallonUK = FuelEfficiency$MeterPerGallonUK();
-  static const milePerGallonUS = FuelEfficiency$MilePerGallonUS();
-  static const milePerGallonUK = FuelEfficiency$MilePerGallonUK();
-  static const meterPerMeterSquare = FuelEfficiency$MeterPerMeterSquare();
-  static const meterPerCentimeterSquare =
+  static final kilometerPerGallonUS = FuelEfficiency$KilometerPerGallonUS();
+  static final meterPerGallonUS = FuelEfficiency$MeterPerGallonUS();
+  static final meterPerGallonUK = FuelEfficiency$MeterPerGallonUK();
+  static final milePerGallonUS = FuelEfficiency$MilePerGallonUS();
+  static final milePerGallonUK = FuelEfficiency$MilePerGallonUK();
+  static final meterPerMeterSquare = FuelEfficiency$MeterPerMeterSquare();
+  static final meterPerCentimeterSquare =
       FuelEfficiency$MeterPerCentimeterSquare();
-  static const meterPerYardSquare = FuelEfficiency$MeterPerYardSquare();
-  static const meterPerFeetSquare = FuelEfficiency$MeterPerFeetSquare();
-  static const meterPerInchSquare = FuelEfficiency$MeterPerInchSquare();
-  static const meterPerGallon = FuelEfficiency$MeterPerGallon();
-  static const meterPerQuart = FuelEfficiency$MeterPerQuart();
-  static const meterPerQuartUK = FuelEfficiency$MeterPerQuartUK();
-  static const meterPerPint = FuelEfficiency$MeterPerPint();
-  static const meterPerPintUK = FuelEfficiency$MeterPerPintUK();
-  static const meterPerCup = FuelEfficiency$MeterPerCup();
-  static const meterPerCupUK = FuelEfficiency$MeterPerCupUK();
-  static const meterPerFluidOunce = FuelEfficiency$MeterPerFluidOunce();
-  static const meterPerFluidOunceUK = FuelEfficiency$MeterPerFluidOunceUK();
+  static final meterPerYardSquare = FuelEfficiency$MeterPerYardSquare();
+  static final meterPerFeetSquare = FuelEfficiency$MeterPerFeetSquare();
+  static final meterPerInchSquare = FuelEfficiency$MeterPerInchSquare();
+  static final meterPerGallon = FuelEfficiency$MeterPerGallon();
+  static final meterPerQuart = FuelEfficiency$MeterPerQuart();
+  static final meterPerQuartUK = FuelEfficiency$MeterPerQuartUK();
+  static final meterPerPint = FuelEfficiency$MeterPerPint();
+  static final meterPerPintUK = FuelEfficiency$MeterPerPintUK();
+  static final meterPerCup = FuelEfficiency$MeterPerCup();
+  static final meterPerCupUK = FuelEfficiency$MeterPerCupUK();
+  static final meterPerFluidOunce = FuelEfficiency$MeterPerFluidOunce();
+  static final meterPerFluidOunceUK = FuelEfficiency$MeterPerFluidOunceUK();
 
   @override
   List<FuelEfficiency> get units => values;
@@ -286,7 +287,7 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
   @override
   EnumValues<FuelEfficiency> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <FuelEfficiency>[
     exameterPerLiter,
     petameterPerLiter,
     terameterPerLiter,
@@ -327,7 +328,7 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
     meterPerFluidOunceUK,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, FuelEfficiency>{
     FuelEfficiency$ExameterPerLiter._minorName: exameterPerLiter,
     FuelEfficiency$PetameterPerLiter._minorName: petameterPerLiter,
     FuelEfficiency$TerameterPerLiter._minorName: terameterPerLiter,
@@ -372,7 +373,7 @@ sealed class FuelEfficiency extends Unit<FuelEfficiency> {
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
-  const FuelEfficiency$ExameterPerLiter([
+  FuelEfficiency$ExameterPerLiter([
     super.value,
   ]);
 
@@ -403,14 +404,14 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'exameter/liter';
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$ExameterPerLiter] = 1000000000000000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$ExameterPerLiter] = 1.00000000000000000E+018 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -419,12 +420,12 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$ExameterPerLiter] with new value
   @override
   FuelEfficiency$ExameterPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$ExameterPerLiter(val);
 
@@ -437,14 +438,14 @@ final class FuelEfficiency$ExameterPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
-  const FuelEfficiency$PetameterPerLiter([
+  FuelEfficiency$PetameterPerLiter([
     super.value,
   ]);
 
@@ -475,14 +476,14 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'petameter/liter';
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$PetameterPerLiter] = 1000000000000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$PetameterPerLiter] = 1.00000000000000000E+015 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -491,12 +492,12 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$PetameterPerLiter] with new value
   @override
   FuelEfficiency$PetameterPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$PetameterPerLiter(val);
 
@@ -509,14 +510,14 @@ final class FuelEfficiency$PetameterPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
-  const FuelEfficiency$TerameterPerLiter([
+  FuelEfficiency$TerameterPerLiter([
     super.value,
   ]);
 
@@ -547,14 +548,14 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'terameter/liter';
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$TerameterPerLiter] = 1000000000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$TerameterPerLiter] = 1.00000000000000000E+012 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -563,12 +564,12 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$TerameterPerLiter] with new value
   @override
   FuelEfficiency$TerameterPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$TerameterPerLiter(val);
 
@@ -581,14 +582,14 @@ final class FuelEfficiency$TerameterPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
-  const FuelEfficiency$GigameterPerLiter([
+  FuelEfficiency$GigameterPerLiter([
     super.value,
   ]);
 
@@ -619,14 +620,14 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'gigameter/liter';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$GigameterPerLiter] = 1000000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GigameterPerLiter] = 1.00000000000000000E+009 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -635,12 +636,12 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$GigameterPerLiter] with new value
   @override
   FuelEfficiency$GigameterPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$GigameterPerLiter(val);
 
@@ -653,14 +654,14 @@ final class FuelEfficiency$GigameterPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
-  const FuelEfficiency$MegameterPerLiter([
+  FuelEfficiency$MegameterPerLiter([
     super.value,
   ]);
 
@@ -691,14 +692,14 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'megameter/liter';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MegameterPerLiter] = 1000000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MegameterPerLiter] = 1.00000000000000000E+006 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -707,12 +708,12 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MegameterPerLiter] with new value
   @override
   FuelEfficiency$MegameterPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MegameterPerLiter(val);
 
@@ -725,14 +726,14 @@ final class FuelEfficiency$MegameterPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
-  const FuelEfficiency$KilometerPerLiter([
+  FuelEfficiency$KilometerPerLiter([
     super.value,
   ]);
 
@@ -763,14 +764,14 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'kilometer/liter';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$KilometerPerLiter] = 1000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$KilometerPerLiter] = 1.00000000000000000E+003 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -779,12 +780,12 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$KilometerPerLiter] with new value
   @override
   FuelEfficiency$KilometerPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$KilometerPerLiter(val);
 
@@ -797,14 +798,14 @@ final class FuelEfficiency$KilometerPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
-  const FuelEfficiency$HectometerPerLiter([
+  FuelEfficiency$HectometerPerLiter([
     super.value,
   ]);
 
@@ -835,14 +836,14 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'hectometer/liter';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$HectometerPerLiter] = 100.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$HectometerPerLiter] = 1.00000000000000000E+002 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -851,12 +852,12 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$HectometerPerLiter] with new value
   @override
   FuelEfficiency$HectometerPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$HectometerPerLiter(val);
 
@@ -869,14 +870,14 @@ final class FuelEfficiency$HectometerPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
-  const FuelEfficiency$DekameterPerLiter([
+  FuelEfficiency$DekameterPerLiter([
     super.value,
   ]);
 
@@ -907,14 +908,14 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'dekameter/liter';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$DekameterPerLiter] = 10.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$DekameterPerLiter] = 1.00000000000000000E+001 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -923,12 +924,12 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$DekameterPerLiter] with new value
   @override
   FuelEfficiency$DekameterPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$DekameterPerLiter(val);
 
@@ -941,14 +942,14 @@ final class FuelEfficiency$DekameterPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
-  const FuelEfficiency$MeterPerLiter([
+  FuelEfficiency$MeterPerLiter([
     super.value,
   ]);
 
@@ -979,14 +980,14 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'meter/liter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
   /// Default (anchor) unit of [FuelEfficiency]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -995,12 +996,12 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerLiter] with new value
   @override
   FuelEfficiency$MeterPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerLiter(val);
 
@@ -1013,14 +1014,14 @@ final class FuelEfficiency$MeterPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
-  const FuelEfficiency$CentimeterPerLiter([
+  FuelEfficiency$CentimeterPerLiter([
     super.value,
   ]);
 
@@ -1051,14 +1052,14 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'centimeter/liter';
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$CentimeterPerLiter] ≈ 0.01 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$CentimeterPerLiter] ≈ 1.00000000000000000E-002 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1067,12 +1068,12 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$CentimeterPerLiter] with new value
   @override
   FuelEfficiency$CentimeterPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$CentimeterPerLiter(val);
 
@@ -1085,14 +1086,14 @@ final class FuelEfficiency$CentimeterPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
-  const FuelEfficiency$MileUSPerLiter([
+  FuelEfficiency$MileUSPerLiter([
     super.value,
   ]);
 
@@ -1123,14 +1124,14 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
   @override
   String get displayName => 'mile (US)/liter';
 
-  static const _ratio = 1609.344;
+  static final _ratio = Rational.parse('1.60934400000000000E+003');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MileUSPerLiter] ≈ 1609.344 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MileUSPerLiter] ≈ 1.60934400000000000E+003 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1139,12 +1140,12 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MileUSPerLiter] with new value
   @override
   FuelEfficiency$MileUSPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MileUSPerLiter(val);
 
@@ -1157,14 +1158,14 @@ final class FuelEfficiency$MileUSPerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
-  const FuelEfficiency$LiterPerMeter([
+  FuelEfficiency$LiterPerMeter([
     super.value,
   ]);
 
@@ -1195,14 +1196,14 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
   @override
   String get displayName => 'liter/meter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$LiterPerMeter] = 1.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$LiterPerMeter] = 1.00000000000000000E+000 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1211,12 +1212,12 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$LiterPerMeter] with new value
   @override
   FuelEfficiency$LiterPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$LiterPerMeter(val);
 
@@ -1229,14 +1230,14 @@ final class FuelEfficiency$LiterPerMeter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
-  const FuelEfficiency$LiterPer100Km([
+  FuelEfficiency$LiterPer100Km([
     super.value,
   ]);
 
@@ -1267,14 +1268,14 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
   @override
   String get displayName => 'liter/100 km';
 
-  static const _ratio = 0.00001;
+  static final _ratio = Rational.parse('1.00000000000000000E-005');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$LiterPer100Km] ≈ 0.00001 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$LiterPer100Km] ≈ 1.00000000000000000E-005 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1283,12 +1284,12 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$LiterPer100Km] with new value
   @override
   FuelEfficiency$LiterPer100Km withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$LiterPer100Km(val);
 
@@ -1301,14 +1302,14 @@ final class FuelEfficiency$LiterPer100Km extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
-  const FuelEfficiency$GallonsUSPerMile([
+  FuelEfficiency$GallonsUSPerMile([
     super.value,
   ]);
 
@@ -1339,14 +1340,14 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
   @override
   String get displayName => 'gallons (US)/mile';
 
-  static const _ratio = 0.0023521458329606934;
+  static final _ratio = Rational.parse('2.35214583296069350E-003');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$GallonsUSPerMile] ≈ 0.0023521458329606934 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GallonsUSPerMile] ≈ 2.35214583296069350E-003 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1355,12 +1356,12 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$GallonsUSPerMile] with new value
   @override
   FuelEfficiency$GallonsUSPerMile withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$GallonsUSPerMile(val);
 
@@ -1373,14 +1374,14 @@ final class FuelEfficiency$GallonsUSPerMile extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
-  const FuelEfficiency$GallonsUSPer100mi([
+  FuelEfficiency$GallonsUSPer100mi([
     super.value,
   ]);
 
@@ -1411,14 +1412,14 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
   @override
   String get displayName => 'gallons (US)/100mi';
 
-  static const _ratio = 0.000023521458329606913;
+  static final _ratio = Rational.parse('2.35214583296069128E-005');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$GallonsUSPer100mi] ≈ 0.000023521458329606913 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GallonsUSPer100mi] ≈ 2.35214583296069128E-005 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1427,12 +1428,12 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$GallonsUSPer100mi] with new value
   @override
   FuelEfficiency$GallonsUSPer100mi withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$GallonsUSPer100mi(val);
 
@@ -1445,14 +1446,14 @@ final class FuelEfficiency$GallonsUSPer100mi extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
-  const FuelEfficiency$GallonsUKPerMile([
+  FuelEfficiency$GallonsUKPerMile([
     super.value,
   ]);
 
@@ -1483,14 +1484,14 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
   @override
   String get displayName => 'gallons (UK)/mile';
 
-  static const _ratio = 0.002824809363148498;
+  static final _ratio = Rational.parse('2.82480936314849801E-003');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$GallonsUKPerMile] ≈ 0.002824809363148498 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GallonsUKPerMile] ≈ 2.82480936314849801E-003 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1499,12 +1500,12 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$GallonsUKPerMile] with new value
   @override
   FuelEfficiency$GallonsUKPerMile withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$GallonsUKPerMile(val);
 
@@ -1517,14 +1518,14 @@ final class FuelEfficiency$GallonsUKPerMile extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
-  const FuelEfficiency$GallonsUKPer100mi([
+  FuelEfficiency$GallonsUKPer100mi([
     super.value,
   ]);
 
@@ -1555,14 +1556,14 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
   @override
   String get displayName => 'gallons (UK)/100mi';
 
-  static const _ratio = 0.000028248093631484976;
+  static final _ratio = Rational.parse('2.82480936314849769E-005');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$GallonsUKPer100mi] ≈ 0.000028248093631484976 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$GallonsUKPer100mi] ≈ 2.82480936314849769E-005 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1571,12 +1572,12 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$GallonsUKPer100mi] with new value
   @override
   FuelEfficiency$GallonsUKPer100mi withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$GallonsUKPer100mi(val);
 
@@ -1589,14 +1590,14 @@ final class FuelEfficiency$GallonsUKPer100mi extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
-  const FuelEfficiency$NauticalMilePerLiter([
+  FuelEfficiency$NauticalMilePerLiter([
     super.value,
   ]);
 
@@ -1627,14 +1628,14 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
   @override
   String get displayName => 'nautical mile/liter';
 
-  static const _ratio = 1853.24496;
+  static final _ratio = Rational.parse('1.85324496000000000E+003');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$NauticalMilePerLiter] ≈ 1853.24496 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$NauticalMilePerLiter] ≈ 1.85324496000000000E+003 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1643,12 +1644,12 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$NauticalMilePerLiter] with new value
   @override
   FuelEfficiency$NauticalMilePerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$NauticalMilePerLiter(val);
 
@@ -1661,14 +1662,14 @@ final class FuelEfficiency$NauticalMilePerLiter extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
-  const FuelEfficiency$NauticalMilePerGallonUS([
+  FuelEfficiency$NauticalMilePerGallonUS([
     super.value,
   ]);
 
@@ -1699,14 +1700,14 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
   @override
   String get displayName => 'nautical mile/gallon (US)';
 
-  static const _ratio = 489.5755247;
+  static final _ratio = Rational.parse('4.89575524700000000E+002');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$NauticalMilePerGallonUS] ≈ 489.5755247 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$NauticalMilePerGallonUS] ≈ 4.89575524700000000E+002 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1715,12 +1716,12 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$NauticalMilePerGallonUS] with new value
   @override
   FuelEfficiency$NauticalMilePerGallonUS withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$NauticalMilePerGallonUS(val);
 
@@ -1733,14 +1734,14 @@ final class FuelEfficiency$NauticalMilePerGallonUS extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
-  const FuelEfficiency$KilometerPerGallonUS([
+  FuelEfficiency$KilometerPerGallonUS([
     super.value,
   ]);
 
@@ -1771,14 +1772,14 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
   @override
   String get displayName => 'kilometer/gallon (US)';
 
-  static const _ratio = 264.1720524;
+  static final _ratio = Rational.parse('2.64172052400000000E+002');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$KilometerPerGallonUS] ≈ 264.1720524 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$KilometerPerGallonUS] ≈ 2.64172052400000000E+002 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1787,12 +1788,12 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$KilometerPerGallonUS] with new value
   @override
   FuelEfficiency$KilometerPerGallonUS withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$KilometerPerGallonUS(val);
 
@@ -1805,14 +1806,14 @@ final class FuelEfficiency$KilometerPerGallonUS extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
-  const FuelEfficiency$MeterPerGallonUS([
+  FuelEfficiency$MeterPerGallonUS([
     super.value,
   ]);
 
@@ -1843,14 +1844,14 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
   @override
   String get displayName => 'meter/gallon (US)';
 
-  static const _ratio = 0.2641720524;
+  static final _ratio = Rational.parse('2.64172052400000000E-001');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerGallonUS] ≈ 0.2641720524 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerGallonUS] ≈ 2.64172052400000000E-001 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1859,12 +1860,12 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerGallonUS] with new value
   @override
   FuelEfficiency$MeterPerGallonUS withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerGallonUS(val);
 
@@ -1877,14 +1878,14 @@ final class FuelEfficiency$MeterPerGallonUS extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
-  const FuelEfficiency$MeterPerGallonUK([
+  FuelEfficiency$MeterPerGallonUK([
     super.value,
   ]);
 
@@ -1915,14 +1916,14 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
   @override
   String get displayName => 'meter/gallon (UK)';
 
-  static const _ratio = 0.2199687986;
+  static final _ratio = Rational.parse('2.19968798600000000E-001');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerGallonUK] ≈ 0.2199687986 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerGallonUK] ≈ 2.19968798600000000E-001 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1931,12 +1932,12 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerGallonUK] with new value
   @override
   FuelEfficiency$MeterPerGallonUK withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerGallonUK(val);
 
@@ -1949,14 +1950,14 @@ final class FuelEfficiency$MeterPerGallonUK extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
-  const FuelEfficiency$MilePerGallonUS([
+  FuelEfficiency$MilePerGallonUS([
     super.value,
   ]);
 
@@ -1987,14 +1988,14 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
   @override
   String get displayName => 'mile/gallon (US)';
 
-  static const _ratio = 425.1437075;
+  static final _ratio = Rational.parse('4.25143707500000000E+002');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MilePerGallonUS] ≈ 425.1437075 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MilePerGallonUS] ≈ 4.25143707500000000E+002 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2003,12 +2004,12 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MilePerGallonUS] with new value
   @override
   FuelEfficiency$MilePerGallonUS withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MilePerGallonUS(val);
 
@@ -2021,14 +2022,14 @@ final class FuelEfficiency$MilePerGallonUS extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
-  const FuelEfficiency$MilePerGallonUK([
+  FuelEfficiency$MilePerGallonUK([
     super.value,
   ]);
 
@@ -2059,14 +2060,14 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
   @override
   String get displayName => 'mile/gallon (UK)';
 
-  static const _ratio = 354.00619;
+  static final _ratio = Rational.parse('3.54006190000000000E+002');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MilePerGallonUK] ≈ 354.00619 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MilePerGallonUK] ≈ 3.54006190000000000E+002 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2075,12 +2076,12 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MilePerGallonUK] with new value
   @override
   FuelEfficiency$MilePerGallonUK withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MilePerGallonUK(val);
 
@@ -2093,14 +2094,14 @@ final class FuelEfficiency$MilePerGallonUK extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
-  const FuelEfficiency$MeterPerMeterSquare([
+  FuelEfficiency$MeterPerMeterSquare([
     super.value,
   ]);
 
@@ -2131,14 +2132,14 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
   @override
   String get displayName => 'meter/meter²';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerMeterSquare] ≈ 0.001 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerMeterSquare] ≈ 1.00000000000000000E-003 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2147,12 +2148,12 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerMeterSquare] with new value
   @override
   FuelEfficiency$MeterPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerMeterSquare(val);
 
@@ -2165,14 +2166,14 @@ final class FuelEfficiency$MeterPerMeterSquare extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
-  const FuelEfficiency$MeterPerCentimeterSquare([
+  FuelEfficiency$MeterPerCentimeterSquare([
     super.value,
   ]);
 
@@ -2203,14 +2204,14 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
   @override
   String get displayName => 'meter/centimeter²';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerCentimeterSquare] = 1000.0 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerCentimeterSquare] = 1.00000000000000000E+003 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2219,12 +2220,12 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerCentimeterSquare] with new value
   @override
   FuelEfficiency$MeterPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerCentimeterSquare(val);
 
@@ -2237,14 +2238,14 @@ final class FuelEfficiency$MeterPerCentimeterSquare extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
-  const FuelEfficiency$MeterPerYardSquare([
+  FuelEfficiency$MeterPerYardSquare([
     super.value,
   ]);
 
@@ -2275,14 +2276,14 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
   @override
   String get displayName => 'meter/yard²';
 
-  static const _ratio = 0.001307950619;
+  static final _ratio = Rational.parse('1.30795061900000000E-003');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerYardSquare] ≈ 0.001307950619 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerYardSquare] ≈ 1.30795061900000000E-003 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2291,12 +2292,12 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerYardSquare] with new value
   @override
   FuelEfficiency$MeterPerYardSquare withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerYardSquare(val);
 
@@ -2309,14 +2310,14 @@ final class FuelEfficiency$MeterPerYardSquare extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
-  const FuelEfficiency$MeterPerFeetSquare([
+  FuelEfficiency$MeterPerFeetSquare([
     super.value,
   ]);
 
@@ -2347,14 +2348,14 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
   @override
   String get displayName => 'meter/feet²';
 
-  static const _ratio = 0.03531466672;
+  static final _ratio = Rational.parse('3.53146667200000000E-002');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerFeetSquare] ≈ 0.03531466672 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerFeetSquare] ≈ 3.53146667200000000E-002 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2363,12 +2364,12 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerFeetSquare] with new value
   @override
   FuelEfficiency$MeterPerFeetSquare withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerFeetSquare(val);
 
@@ -2381,14 +2382,14 @@ final class FuelEfficiency$MeterPerFeetSquare extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
-  const FuelEfficiency$MeterPerInchSquare([
+  FuelEfficiency$MeterPerInchSquare([
     super.value,
   ]);
 
@@ -2419,14 +2420,14 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
   @override
   String get displayName => 'meter/inch²';
 
-  static const _ratio = 61.02374409;
+  static final _ratio = Rational.parse('6.10237440900000000E+001');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerInchSquare] ≈ 61.02374409 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerInchSquare] ≈ 6.10237440900000000E+001 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2435,12 +2436,12 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerInchSquare] with new value
   @override
   FuelEfficiency$MeterPerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerInchSquare(val);
 
@@ -2453,14 +2454,14 @@ final class FuelEfficiency$MeterPerInchSquare extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
-  const FuelEfficiency$MeterPerGallon([
+  FuelEfficiency$MeterPerGallon([
     super.value,
   ]);
 
@@ -2491,14 +2492,14 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
   @override
   String get displayName => 'meter/gallon';
 
-  static const _ratio = 0.2641720524;
+  static final _ratio = Rational.parse('2.64172052400000000E-001');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerGallon] ≈ 0.2641720524 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerGallon] ≈ 2.64172052400000000E-001 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2507,12 +2508,12 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerGallon] with new value
   @override
   FuelEfficiency$MeterPerGallon withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerGallon(val);
 
@@ -2525,14 +2526,14 @@ final class FuelEfficiency$MeterPerGallon extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
-  const FuelEfficiency$MeterPerQuart([
+  FuelEfficiency$MeterPerQuart([
     super.value,
   ]);
 
@@ -2563,14 +2564,14 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
   @override
   String get displayName => 'meter/quart';
 
-  static const _ratio = 1.056688209;
+  static final _ratio = Rational.parse('1.05668820900000000E+000');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerQuart] ≈ 1.056688209 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerQuart] ≈ 1.05668820900000000E+000 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2579,12 +2580,12 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerQuart] with new value
   @override
   FuelEfficiency$MeterPerQuart withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerQuart(val);
 
@@ -2597,14 +2598,14 @@ final class FuelEfficiency$MeterPerQuart extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
-  const FuelEfficiency$MeterPerQuartUK([
+  FuelEfficiency$MeterPerQuartUK([
     super.value,
   ]);
 
@@ -2635,14 +2636,14 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
   @override
   String get displayName => 'meter/quart (UK)';
 
-  static const _ratio = 0.8798751948;
+  static final _ratio = Rational.parse('8.79875194800000000E-001');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerQuartUK] ≈ 0.8798751948 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerQuartUK] ≈ 8.79875194800000000E-001 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2651,12 +2652,12 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerQuartUK] with new value
   @override
   FuelEfficiency$MeterPerQuartUK withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerQuartUK(val);
 
@@ -2669,14 +2670,14 @@ final class FuelEfficiency$MeterPerQuartUK extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
-  const FuelEfficiency$MeterPerPint([
+  FuelEfficiency$MeterPerPint([
     super.value,
   ]);
 
@@ -2707,14 +2708,14 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
   @override
   String get displayName => 'meter/pint';
 
-  static const _ratio = 2.113376419;
+  static final _ratio = Rational.parse('2.11337641900000000E+000');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerPint] ≈ 2.113376419 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerPint] ≈ 2.11337641900000000E+000 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2722,12 +2723,12 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerPint] with new value
   @override
   FuelEfficiency$MeterPerPint withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerPint(val);
 
@@ -2740,14 +2741,14 @@ final class FuelEfficiency$MeterPerPint extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
-  const FuelEfficiency$MeterPerPintUK([
+  FuelEfficiency$MeterPerPintUK([
     super.value,
   ]);
 
@@ -2778,14 +2779,14 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
   @override
   String get displayName => 'meter/pint (UK)';
 
-  static const _ratio = 1.759750389;
+  static final _ratio = Rational.parse('1.75975038900000000E+000');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerPintUK] ≈ 1.759750389 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerPintUK] ≈ 1.75975038900000000E+000 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2794,12 +2795,12 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerPintUK] with new value
   @override
   FuelEfficiency$MeterPerPintUK withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerPintUK(val);
 
@@ -2812,14 +2813,14 @@ final class FuelEfficiency$MeterPerPintUK extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
-  const FuelEfficiency$MeterPerCup([
+  FuelEfficiency$MeterPerCup([
     super.value,
   ]);
 
@@ -2850,14 +2851,14 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
   @override
   String get displayName => 'meter/cup';
 
-  static const _ratio = 4.226752838;
+  static final _ratio = Rational.parse('4.22675283800000000E+000');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerCup] ≈ 4.226752838 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerCup] ≈ 4.22675283800000000E+000 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2865,12 +2866,12 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerCup] with new value
   @override
   FuelEfficiency$MeterPerCup withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerCup(val);
 
@@ -2883,14 +2884,14 @@ final class FuelEfficiency$MeterPerCup extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
-  const FuelEfficiency$MeterPerCupUK([
+  FuelEfficiency$MeterPerCupUK([
     super.value,
   ]);
 
@@ -2921,14 +2922,14 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
   @override
   String get displayName => 'meter/cup (UK)';
 
-  static const _ratio = 3.519500777;
+  static final _ratio = Rational.parse('3.51950077700000000E+000');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerCupUK] ≈ 3.519500777 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerCupUK] ≈ 3.51950077700000000E+000 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2937,12 +2938,12 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerCupUK] with new value
   @override
   FuelEfficiency$MeterPerCupUK withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerCupUK(val);
 
@@ -2955,14 +2956,14 @@ final class FuelEfficiency$MeterPerCupUK extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
-  const FuelEfficiency$MeterPerFluidOunce([
+  FuelEfficiency$MeterPerFluidOunce([
     super.value,
   ]);
 
@@ -2993,14 +2994,14 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
   @override
   String get displayName => 'meter/fluid ounce';
 
-  static const _ratio = 33.8140227;
+  static final _ratio = Rational.parse('3.38140227000000000E+001');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerFluidOunce] ≈ 33.8140227 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerFluidOunce] ≈ 3.38140227000000000E+001 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3009,12 +3010,12 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerFluidOunce] with new value
   @override
   FuelEfficiency$MeterPerFluidOunce withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerFluidOunce(val);
 
@@ -3027,14 +3028,14 @@ final class FuelEfficiency$MeterPerFluidOunce extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FuelEfficiency]
 final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
-  const FuelEfficiency$MeterPerFluidOunceUK([
+  FuelEfficiency$MeterPerFluidOunceUK([
     super.value,
   ]);
 
@@ -3065,14 +3066,14 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
   @override
   String get displayName => 'meter/fluid ounce (UK)';
 
-  static const _ratio = 35.19500777;
+  static final _ratio = Rational.parse('3.51950077700000000E+001');
 
   @override
-  FuelEfficiency get anchor => const FuelEfficiency$MeterPerLiter(_ratio);
+  FuelEfficiency get anchor => FuelEfficiency$MeterPerLiter(_ratio);
 
-  /// 1 [FuelEfficiency$MeterPerFluidOunceUK] ≈ 35.19500777 [FuelEfficiency$MeterPerLiter]
+  /// 1 [FuelEfficiency$MeterPerFluidOunceUK] ≈ 3.51950077700000000E+001 [FuelEfficiency$MeterPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3081,12 +3082,12 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FuelEfficiency$MeterPerFluidOunceUK] with new value
   @override
   FuelEfficiency$MeterPerFluidOunceUK withValue(
-    num val,
+    Rational val,
   ) =>
       FuelEfficiency$MeterPerFluidOunceUK(val);
 
@@ -3099,7 +3100,7 @@ final class FuelEfficiency$MeterPerFluidOunceUK extends FuelEfficiency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

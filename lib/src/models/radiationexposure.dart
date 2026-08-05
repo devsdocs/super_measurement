@@ -6,7 +6,7 @@ part of '../../super_measurement.dart';
 /// [RadiationExposure$MillicoulombPerKilogram],
 /// [RadiationExposure$MicrocoulombPerKilogram]
 sealed class RadiationExposure extends Unit<RadiationExposure> {
-  const RadiationExposure([
+  RadiationExposure([
     super.value,
   ]);
 
@@ -18,31 +18,32 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : RadiationExposure.anchor();
 
   factory RadiationExposure.anchor() =>
-      const RadiationExposure$MicrocoulombPerKilogram();
+      RadiationExposure$MicrocoulombPerKilogram();
 
   /// Convert to [RadiationExposure$Roentgen]
   RadiationExposure get toRoentgen => convertTo(
-        const RadiationExposure$Roentgen(),
+        RadiationExposure$Roentgen(),
       );
 
   /// Convert to [RadiationExposure$CoulombPerKilogram]
   RadiationExposure get toCoulombPerKilogram => convertTo(
-        const RadiationExposure$CoulombPerKilogram(),
+        RadiationExposure$CoulombPerKilogram(),
       );
 
   /// Convert to [RadiationExposure$MillicoulombPerKilogram]
   RadiationExposure get toMillicoulombPerKilogram => convertTo(
-        const RadiationExposure$MillicoulombPerKilogram(),
+        RadiationExposure$MillicoulombPerKilogram(),
       );
 
   /// Convert to [RadiationExposure$MicrocoulombPerKilogram]
   RadiationExposure get toMicrocoulombPerKilogram => convertTo(
-        const RadiationExposure$MicrocoulombPerKilogram(),
+        RadiationExposure$MicrocoulombPerKilogram(),
       );
 
   @override
@@ -53,11 +54,11 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
 
   static const _majorName = 'radiationExposure';
 
-  static const roentgen = RadiationExposure$Roentgen();
-  static const coulombPerKilogram = RadiationExposure$CoulombPerKilogram();
-  static const millicoulombPerKilogram =
+  static final roentgen = RadiationExposure$Roentgen();
+  static final coulombPerKilogram = RadiationExposure$CoulombPerKilogram();
+  static final millicoulombPerKilogram =
       RadiationExposure$MillicoulombPerKilogram();
-  static const microcoulombPerKilogram =
+  static final microcoulombPerKilogram =
       RadiationExposure$MicrocoulombPerKilogram();
 
   @override
@@ -66,14 +67,14 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
   @override
   EnumValues<RadiationExposure> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <RadiationExposure>[
     roentgen,
     coulombPerKilogram,
     millicoulombPerKilogram,
     microcoulombPerKilogram,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, RadiationExposure>{
     RadiationExposure$Roentgen._minorName: roentgen,
     RadiationExposure$CoulombPerKilogram._minorName: coulombPerKilogram,
     RadiationExposure$MillicoulombPerKilogram._minorName:
@@ -85,7 +86,7 @@ sealed class RadiationExposure extends Unit<RadiationExposure> {
 
 /// Unit of [RadiationExposure]
 final class RadiationExposure$Roentgen extends RadiationExposure {
-  const RadiationExposure$Roentgen([
+  RadiationExposure$Roentgen([
     super.value,
   ]);
 
@@ -116,15 +117,15 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 258.0;
+  static final _ratio = Rational.parse('2.58000000000000000E+002');
 
   @override
   RadiationExposure get anchor =>
-      const RadiationExposure$MicrocoulombPerKilogram(_ratio);
+      RadiationExposure$MicrocoulombPerKilogram(_ratio);
 
-  /// 1 [RadiationExposure$Roentgen] = 258.0 [RadiationExposure$MicrocoulombPerKilogram]
+  /// 1 [RadiationExposure$Roentgen] = 2.58000000000000000E+002 [RadiationExposure$MicrocoulombPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -132,12 +133,12 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationExposure$Roentgen] with new value
   @override
   RadiationExposure$Roentgen withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationExposure$Roentgen(val);
 
@@ -150,14 +151,14 @@ final class RadiationExposure$Roentgen extends RadiationExposure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationExposure]
 final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
-  const RadiationExposure$CoulombPerKilogram([
+  RadiationExposure$CoulombPerKilogram([
     super.value,
   ]);
 
@@ -188,15 +189,15 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
   @override
   String get displayName => 'coulomb/kilogram';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
   RadiationExposure get anchor =>
-      const RadiationExposure$MicrocoulombPerKilogram(_ratio);
+      RadiationExposure$MicrocoulombPerKilogram(_ratio);
 
-  /// 1 [RadiationExposure$CoulombPerKilogram] = 1000000.0 [RadiationExposure$MicrocoulombPerKilogram]
+  /// 1 [RadiationExposure$CoulombPerKilogram] = 1.00000000000000000E+006 [RadiationExposure$MicrocoulombPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -205,12 +206,12 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationExposure$CoulombPerKilogram] with new value
   @override
   RadiationExposure$CoulombPerKilogram withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationExposure$CoulombPerKilogram(val);
 
@@ -223,7 +224,7 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -231,7 +232,7 @@ final class RadiationExposure$CoulombPerKilogram extends RadiationExposure {
 /// Unit of [RadiationExposure]
 final class RadiationExposure$MillicoulombPerKilogram
     extends RadiationExposure {
-  const RadiationExposure$MillicoulombPerKilogram([
+  RadiationExposure$MillicoulombPerKilogram([
     super.value,
   ]);
 
@@ -262,15 +263,15 @@ final class RadiationExposure$MillicoulombPerKilogram
   @override
   String get displayName => 'millicoulomb/kilogram';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   RadiationExposure get anchor =>
-      const RadiationExposure$MicrocoulombPerKilogram(_ratio);
+      RadiationExposure$MicrocoulombPerKilogram(_ratio);
 
-  /// 1 [RadiationExposure$MillicoulombPerKilogram] = 1000.0 [RadiationExposure$MicrocoulombPerKilogram]
+  /// 1 [RadiationExposure$MillicoulombPerKilogram] = 1.00000000000000000E+003 [RadiationExposure$MicrocoulombPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -279,12 +280,12 @@ final class RadiationExposure$MillicoulombPerKilogram
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationExposure$MillicoulombPerKilogram] with new value
   @override
   RadiationExposure$MillicoulombPerKilogram withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationExposure$MillicoulombPerKilogram(val);
 
@@ -297,7 +298,7 @@ final class RadiationExposure$MillicoulombPerKilogram
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -305,7 +306,7 @@ final class RadiationExposure$MillicoulombPerKilogram
 /// Unit of [RadiationExposure]
 final class RadiationExposure$MicrocoulombPerKilogram
     extends RadiationExposure {
-  const RadiationExposure$MicrocoulombPerKilogram([
+  RadiationExposure$MicrocoulombPerKilogram([
     super.value,
   ]);
 
@@ -336,15 +337,15 @@ final class RadiationExposure$MicrocoulombPerKilogram
   @override
   String get displayName => 'microcoulomb/kilogram';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   RadiationExposure get anchor =>
-      const RadiationExposure$MicrocoulombPerKilogram(_ratio);
+      RadiationExposure$MicrocoulombPerKilogram(_ratio);
 
   /// Default (anchor) unit of [RadiationExposure]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -353,12 +354,12 @@ final class RadiationExposure$MicrocoulombPerKilogram
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationExposure$MicrocoulombPerKilogram] with new value
   @override
   RadiationExposure$MicrocoulombPerKilogram withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationExposure$MicrocoulombPerKilogram(val);
 
@@ -371,7 +372,7 @@ final class RadiationExposure$MicrocoulombPerKilogram
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

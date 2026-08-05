@@ -25,7 +25,7 @@ part of '../../super_measurement.dart';
 /// [Length$LongCubitBiblical], [Length$SpanBiblical],
 /// [Length$HandbreadthBiblical], [Length$FingerbreadthBiblical]
 sealed class Length extends Unit<Length> {
-  const Length([
+  Length([
     super.value,
   ]);
 
@@ -37,355 +37,356 @@ sealed class Length extends Unit<Length> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Length.anchor();
 
-  factory Length.anchor() => const Length$Planck();
+  factory Length.anchor() => Length$Planck();
 
   /// Convert to [Length$Exameter]
   Length get toExameter => convertTo(
-        const Length$Exameter(),
+        Length$Exameter(),
       );
 
   /// Convert to [Length$Petameter]
   Length get toPetameter => convertTo(
-        const Length$Petameter(),
+        Length$Petameter(),
       );
 
   /// Convert to [Length$Terameter]
   Length get toTerameter => convertTo(
-        const Length$Terameter(),
+        Length$Terameter(),
       );
 
   /// Convert to [Length$Gigameter]
   Length get toGigameter => convertTo(
-        const Length$Gigameter(),
+        Length$Gigameter(),
       );
 
   /// Convert to [Length$Megameter]
   Length get toMegameter => convertTo(
-        const Length$Megameter(),
+        Length$Megameter(),
       );
 
   /// Convert to [Length$Kilometer]
   Length get toKilometer => convertTo(
-        const Length$Kilometer(),
+        Length$Kilometer(),
       );
 
   /// Convert to [Length$Hectometer]
   Length get toHectometer => convertTo(
-        const Length$Hectometer(),
+        Length$Hectometer(),
       );
 
   /// Convert to [Length$Dekameter]
   Length get toDekameter => convertTo(
-        const Length$Dekameter(),
+        Length$Dekameter(),
       );
 
   /// Convert to [Length$Meter]
   Length get toMeter => convertTo(
-        const Length$Meter(),
+        Length$Meter(),
       );
 
   /// Convert to [Length$Decimeter]
   Length get toDecimeter => convertTo(
-        const Length$Decimeter(),
+        Length$Decimeter(),
       );
 
   /// Convert to [Length$Centimeter]
   Length get toCentimeter => convertTo(
-        const Length$Centimeter(),
+        Length$Centimeter(),
       );
 
   /// Convert to [Length$Millimeter]
   Length get toMillimeter => convertTo(
-        const Length$Millimeter(),
+        Length$Millimeter(),
       );
 
   /// Convert to [Length$Micrometer]
   Length get toMicrometer => convertTo(
-        const Length$Micrometer(),
+        Length$Micrometer(),
       );
 
   /// Convert to [Length$Nanometer]
   Length get toNanometer => convertTo(
-        const Length$Nanometer(),
+        Length$Nanometer(),
       );
 
   /// Convert to [Length$Picometer]
   Length get toPicometer => convertTo(
-        const Length$Picometer(),
+        Length$Picometer(),
       );
 
   /// Convert to [Length$Femtometer]
   Length get toFemtometer => convertTo(
-        const Length$Femtometer(),
+        Length$Femtometer(),
       );
 
   /// Convert to [Length$Attometer]
   Length get toAttometer => convertTo(
-        const Length$Attometer(),
+        Length$Attometer(),
       );
 
   /// Convert to [Length$Angstrom]
   Length get toAngstrom => convertTo(
-        const Length$Angstrom(),
+        Length$Angstrom(),
       );
 
   /// Convert to [Length$Fermi]
   Length get toFermi => convertTo(
-        const Length$Fermi(),
+        Length$Fermi(),
       );
 
   /// Convert to [Length$Planck]
   Length get toPlanck => convertTo(
-        const Length$Planck(),
+        Length$Planck(),
       );
 
   /// Convert to [Length$MileUS]
   Length get toMileUS => convertTo(
-        const Length$MileUS(),
+        Length$MileUS(),
       );
 
   /// Convert to [Length$MileUSSurveyFoot]
   Length get toMileUSSurveyFoot => convertTo(
-        const Length$MileUSSurveyFoot(),
+        Length$MileUSSurveyFoot(),
       );
 
   /// Convert to [Length$MileRoman]
   Length get toMileRoman => convertTo(
-        const Length$MileRoman(),
+        Length$MileRoman(),
       );
 
   /// Convert to [Length$Furlong]
   Length get toFurlong => convertTo(
-        const Length$Furlong(),
+        Length$Furlong(),
       );
 
   /// Convert to [Length$Chain]
   Length get toChain => convertTo(
-        const Length$Chain(),
+        Length$Chain(),
       );
 
   /// Convert to [Length$Rod]
   Length get toRod => convertTo(
-        const Length$Rod(),
+        Length$Rod(),
       );
 
   /// Convert to [Length$Perch]
   Length get toPerch => convertTo(
-        const Length$Perch(),
+        Length$Perch(),
       );
 
   /// Convert to [Length$Pole]
   Length get toPole => convertTo(
-        const Length$Pole(),
+        Length$Pole(),
       );
 
   /// Convert to [Length$Fathom]
   Length get toFathom => convertTo(
-        const Length$Fathom(),
+        Length$Fathom(),
       );
 
   /// Convert to [Length$Yard]
   Length get toYard => convertTo(
-        const Length$Yard(),
+        Length$Yard(),
       );
 
   /// Convert to [Length$Foot]
   Length get toFoot => convertTo(
-        const Length$Foot(),
+        Length$Foot(),
       );
 
   /// Convert to [Length$FootUSSurvey]
   Length get toFootUSSurvey => convertTo(
-        const Length$FootUSSurvey(),
+        Length$FootUSSurvey(),
       );
 
   /// Convert to [Length$Link]
   Length get toLink => convertTo(
-        const Length$Link(),
+        Length$Link(),
       );
 
   /// Convert to [Length$Inch]
   Length get toInch => convertTo(
-        const Length$Inch(),
+        Length$Inch(),
       );
 
   /// Convert to [Length$Hand]
   Length get toHand => convertTo(
-        const Length$Hand(),
+        Length$Hand(),
       );
 
   /// Convert to [Length$Mil]
   Length get toMil => convertTo(
-        const Length$Mil(),
+        Length$Mil(),
       );
 
   /// Convert to [Length$MilSweden]
   Length get toMilSweden => convertTo(
-        const Length$MilSweden(),
+        Length$MilSweden(),
       );
 
   /// Convert to [Length$Microinch]
   Length get toMicroinch => convertTo(
-        const Length$Microinch(),
+        Length$Microinch(),
       );
 
   /// Convert to [Length$Megaparsec]
   Length get toMegaparsec => convertTo(
-        const Length$Megaparsec(),
+        Length$Megaparsec(),
       );
 
   /// Convert to [Length$Kiloparsec]
   Length get toKiloparsec => convertTo(
-        const Length$Kiloparsec(),
+        Length$Kiloparsec(),
       );
 
   /// Convert to [Length$Parsec]
   Length get toParsec => convertTo(
-        const Length$Parsec(),
+        Length$Parsec(),
       );
 
   /// Convert to [Length$LightYear]
   Length get toLightYear => convertTo(
-        const Length$LightYear(),
+        Length$LightYear(),
       );
 
   /// Convert to [Length$AstronomicalUnit]
   Length get toAstronomicalUnit => convertTo(
-        const Length$AstronomicalUnit(),
+        Length$AstronomicalUnit(),
       );
 
   /// Convert to [Length$League]
   Length get toLeague => convertTo(
-        const Length$League(),
+        Length$League(),
       );
 
   /// Convert to [Length$NauticalMile]
   Length get toNauticalMile => convertTo(
-        const Length$NauticalMile(),
+        Length$NauticalMile(),
       );
 
   /// Convert to [Length$Arpent]
   Length get toArpent => convertTo(
-        const Length$Arpent(),
+        Length$Arpent(),
       );
 
   /// Convert to [Length$Pica]
   Length get toPica => convertTo(
-        const Length$Pica(),
+        Length$Pica(),
       );
 
   /// Convert to [Length$Point]
   Length get toPoint => convertTo(
-        const Length$Point(),
+        Length$Point(),
       );
 
   /// Convert to [Length$Twip]
   Length get toTwip => convertTo(
-        const Length$Twip(),
+        Length$Twip(),
       );
 
   /// Convert to [Length$Aln]
   Length get toAln => convertTo(
-        const Length$Aln(),
+        Length$Aln(),
       );
 
   /// Convert to [Length$Famn]
   Length get toFamn => convertTo(
-        const Length$Famn(),
+        Length$Famn(),
       );
 
   /// Convert to [Length$Caliber]
   Length get toCaliber => convertTo(
-        const Length$Caliber(),
+        Length$Caliber(),
       );
 
   /// Convert to [Length$Ken]
   Length get toKen => convertTo(
-        const Length$Ken(),
+        Length$Ken(),
       );
 
   /// Convert to [Length$Barleycorn]
   Length get toBarleycorn => convertTo(
-        const Length$Barleycorn(),
+        Length$Barleycorn(),
       );
 
   /// Convert to [Length$RussianArchin]
   Length get toRussianArchin => convertTo(
-        const Length$RussianArchin(),
+        Length$RussianArchin(),
       );
 
   /// Convert to [Length$RomanActus]
   Length get toRomanActus => convertTo(
-        const Length$RomanActus(),
+        Length$RomanActus(),
       );
 
   /// Convert to [Length$ClothNail]
   Length get toClothNail => convertTo(
-        const Length$ClothNail(),
+        Length$ClothNail(),
       );
 
   /// Convert to [Length$ClothSpan]
   Length get toClothSpan => convertTo(
-        const Length$ClothSpan(),
+        Length$ClothSpan(),
       );
 
   /// Convert to [Length$VaraDeTarea]
   Length get toVaraDeTarea => convertTo(
-        const Length$VaraDeTarea(),
+        Length$VaraDeTarea(),
       );
 
   /// Convert to [Length$VaraConuquera]
   Length get toVaraConuquera => convertTo(
-        const Length$VaraConuquera(),
+        Length$VaraConuquera(),
       );
 
   /// Convert to [Length$VaraCastellana]
   Length get toVaraCastellana => convertTo(
-        const Length$VaraCastellana(),
+        Length$VaraCastellana(),
       );
 
   /// Convert to [Length$CubitGreek]
   Length get toCubitGreek => convertTo(
-        const Length$CubitGreek(),
+        Length$CubitGreek(),
       );
 
   /// Convert to [Length$LongReedBiblical]
   Length get toLongReedBiblical => convertTo(
-        const Length$LongReedBiblical(),
+        Length$LongReedBiblical(),
       );
 
   /// Convert to [Length$ReedBiblical]
   Length get toReedBiblical => convertTo(
-        const Length$ReedBiblical(),
+        Length$ReedBiblical(),
       );
 
   /// Convert to [Length$CubitBiblical]
   Length get toCubitBiblical => convertTo(
-        const Length$CubitBiblical(),
+        Length$CubitBiblical(),
       );
 
   /// Convert to [Length$LongCubitBiblical]
   Length get toLongCubitBiblical => convertTo(
-        const Length$LongCubitBiblical(),
+        Length$LongCubitBiblical(),
       );
 
   /// Convert to [Length$SpanBiblical]
   Length get toSpanBiblical => convertTo(
-        const Length$SpanBiblical(),
+        Length$SpanBiblical(),
       );
 
   /// Convert to [Length$HandbreadthBiblical]
   Length get toHandbreadthBiblical => convertTo(
-        const Length$HandbreadthBiblical(),
+        Length$HandbreadthBiblical(),
       );
 
   /// Convert to [Length$FingerbreadthBiblical]
   Length get toFingerbreadthBiblical => convertTo(
-        const Length$FingerbreadthBiblical(),
+        Length$FingerbreadthBiblical(),
       );
 
   @override
@@ -396,75 +397,75 @@ sealed class Length extends Unit<Length> {
 
   static const _majorName = 'length';
 
-  static const exameter = Length$Exameter();
-  static const petameter = Length$Petameter();
-  static const terameter = Length$Terameter();
-  static const gigameter = Length$Gigameter();
-  static const megameter = Length$Megameter();
-  static const kilometer = Length$Kilometer();
-  static const hectometer = Length$Hectometer();
-  static const dekameter = Length$Dekameter();
-  static const meter = Length$Meter();
-  static const decimeter = Length$Decimeter();
-  static const centimeter = Length$Centimeter();
-  static const millimeter = Length$Millimeter();
-  static const micrometer = Length$Micrometer();
-  static const nanometer = Length$Nanometer();
-  static const picometer = Length$Picometer();
-  static const femtometer = Length$Femtometer();
-  static const attometer = Length$Attometer();
-  static const angstrom = Length$Angstrom();
-  static const fermi = Length$Fermi();
-  static const planck = Length$Planck();
-  static const mileUS = Length$MileUS();
-  static const mileUSSurveyFoot = Length$MileUSSurveyFoot();
-  static const mileRoman = Length$MileRoman();
-  static const furlong = Length$Furlong();
-  static const chain = Length$Chain();
-  static const rod = Length$Rod();
-  static const perch = Length$Perch();
-  static const pole = Length$Pole();
-  static const fathom = Length$Fathom();
-  static const yard = Length$Yard();
-  static const foot = Length$Foot();
-  static const footUSSurvey = Length$FootUSSurvey();
-  static const link = Length$Link();
-  static const inch = Length$Inch();
-  static const hand = Length$Hand();
-  static const mil = Length$Mil();
-  static const milSweden = Length$MilSweden();
-  static const microinch = Length$Microinch();
-  static const megaparsec = Length$Megaparsec();
-  static const kiloparsec = Length$Kiloparsec();
-  static const parsec = Length$Parsec();
-  static const lightYear = Length$LightYear();
-  static const astronomicalUnit = Length$AstronomicalUnit();
-  static const league = Length$League();
-  static const nauticalMile = Length$NauticalMile();
-  static const arpent = Length$Arpent();
-  static const pica = Length$Pica();
-  static const point = Length$Point();
-  static const twip = Length$Twip();
-  static const aln = Length$Aln();
-  static const famn = Length$Famn();
-  static const caliber = Length$Caliber();
-  static const ken = Length$Ken();
-  static const barleycorn = Length$Barleycorn();
-  static const russianArchin = Length$RussianArchin();
-  static const romanActus = Length$RomanActus();
-  static const clothNail = Length$ClothNail();
-  static const clothSpan = Length$ClothSpan();
-  static const varaDeTarea = Length$VaraDeTarea();
-  static const varaConuquera = Length$VaraConuquera();
-  static const varaCastellana = Length$VaraCastellana();
-  static const cubitGreek = Length$CubitGreek();
-  static const longReedBiblical = Length$LongReedBiblical();
-  static const reedBiblical = Length$ReedBiblical();
-  static const cubitBiblical = Length$CubitBiblical();
-  static const longCubitBiblical = Length$LongCubitBiblical();
-  static const spanBiblical = Length$SpanBiblical();
-  static const handbreadthBiblical = Length$HandbreadthBiblical();
-  static const fingerbreadthBiblical = Length$FingerbreadthBiblical();
+  static final exameter = Length$Exameter();
+  static final petameter = Length$Petameter();
+  static final terameter = Length$Terameter();
+  static final gigameter = Length$Gigameter();
+  static final megameter = Length$Megameter();
+  static final kilometer = Length$Kilometer();
+  static final hectometer = Length$Hectometer();
+  static final dekameter = Length$Dekameter();
+  static final meter = Length$Meter();
+  static final decimeter = Length$Decimeter();
+  static final centimeter = Length$Centimeter();
+  static final millimeter = Length$Millimeter();
+  static final micrometer = Length$Micrometer();
+  static final nanometer = Length$Nanometer();
+  static final picometer = Length$Picometer();
+  static final femtometer = Length$Femtometer();
+  static final attometer = Length$Attometer();
+  static final angstrom = Length$Angstrom();
+  static final fermi = Length$Fermi();
+  static final planck = Length$Planck();
+  static final mileUS = Length$MileUS();
+  static final mileUSSurveyFoot = Length$MileUSSurveyFoot();
+  static final mileRoman = Length$MileRoman();
+  static final furlong = Length$Furlong();
+  static final chain = Length$Chain();
+  static final rod = Length$Rod();
+  static final perch = Length$Perch();
+  static final pole = Length$Pole();
+  static final fathom = Length$Fathom();
+  static final yard = Length$Yard();
+  static final foot = Length$Foot();
+  static final footUSSurvey = Length$FootUSSurvey();
+  static final link = Length$Link();
+  static final inch = Length$Inch();
+  static final hand = Length$Hand();
+  static final mil = Length$Mil();
+  static final milSweden = Length$MilSweden();
+  static final microinch = Length$Microinch();
+  static final megaparsec = Length$Megaparsec();
+  static final kiloparsec = Length$Kiloparsec();
+  static final parsec = Length$Parsec();
+  static final lightYear = Length$LightYear();
+  static final astronomicalUnit = Length$AstronomicalUnit();
+  static final league = Length$League();
+  static final nauticalMile = Length$NauticalMile();
+  static final arpent = Length$Arpent();
+  static final pica = Length$Pica();
+  static final point = Length$Point();
+  static final twip = Length$Twip();
+  static final aln = Length$Aln();
+  static final famn = Length$Famn();
+  static final caliber = Length$Caliber();
+  static final ken = Length$Ken();
+  static final barleycorn = Length$Barleycorn();
+  static final russianArchin = Length$RussianArchin();
+  static final romanActus = Length$RomanActus();
+  static final clothNail = Length$ClothNail();
+  static final clothSpan = Length$ClothSpan();
+  static final varaDeTarea = Length$VaraDeTarea();
+  static final varaConuquera = Length$VaraConuquera();
+  static final varaCastellana = Length$VaraCastellana();
+  static final cubitGreek = Length$CubitGreek();
+  static final longReedBiblical = Length$LongReedBiblical();
+  static final reedBiblical = Length$ReedBiblical();
+  static final cubitBiblical = Length$CubitBiblical();
+  static final longCubitBiblical = Length$LongCubitBiblical();
+  static final spanBiblical = Length$SpanBiblical();
+  static final handbreadthBiblical = Length$HandbreadthBiblical();
+  static final fingerbreadthBiblical = Length$FingerbreadthBiblical();
 
   @override
   List<Length> get units => values;
@@ -472,7 +473,7 @@ sealed class Length extends Unit<Length> {
   @override
   EnumValues<Length> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Length>[
     exameter,
     petameter,
     terameter,
@@ -544,7 +545,7 @@ sealed class Length extends Unit<Length> {
     fingerbreadthBiblical,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Length>{
     Length$Exameter._minorName: exameter,
     Length$Petameter._minorName: petameter,
     Length$Terameter._minorName: terameter,
@@ -619,7 +620,7 @@ sealed class Length extends Unit<Length> {
 
 /// Unit of [Length]
 final class Length$Exameter extends Length {
-  const Length$Exameter([
+  Length$Exameter([
     super.value,
   ]);
 
@@ -650,14 +651,14 @@ final class Length$Exameter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+52;
+  static final _ratio = Rational.parse('6.25000000000000000E+052');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Exameter] = 6.25e+52 [Length$Planck]
+  /// 1 [Length$Exameter] = 6.25000000000000000E+052 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -665,12 +666,12 @@ final class Length$Exameter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Exameter] with new value
   @override
   Length$Exameter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Exameter(val);
 
@@ -683,14 +684,14 @@ final class Length$Exameter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Petameter extends Length {
-  const Length$Petameter([
+  Length$Petameter([
     super.value,
   ]);
 
@@ -721,14 +722,14 @@ final class Length$Petameter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+49;
+  static final _ratio = Rational.parse('6.25000000000000000E+049');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Petameter] = 6.25e+49 [Length$Planck]
+  /// 1 [Length$Petameter] = 6.25000000000000000E+049 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -736,12 +737,12 @@ final class Length$Petameter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Petameter] with new value
   @override
   Length$Petameter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Petameter(val);
 
@@ -754,14 +755,14 @@ final class Length$Petameter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Terameter extends Length {
-  const Length$Terameter([
+  Length$Terameter([
     super.value,
   ]);
 
@@ -792,14 +793,14 @@ final class Length$Terameter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+46;
+  static final _ratio = Rational.parse('6.25000000000000000E+046');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Terameter] = 6.25e+46 [Length$Planck]
+  /// 1 [Length$Terameter] = 6.25000000000000000E+046 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -807,12 +808,12 @@ final class Length$Terameter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Terameter] with new value
   @override
   Length$Terameter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Terameter(val);
 
@@ -825,14 +826,14 @@ final class Length$Terameter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Gigameter extends Length {
-  const Length$Gigameter([
+  Length$Gigameter([
     super.value,
   ]);
 
@@ -863,14 +864,14 @@ final class Length$Gigameter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+43;
+  static final _ratio = Rational.parse('6.25000000000000000E+043');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Gigameter] = 6.25e+43 [Length$Planck]
+  /// 1 [Length$Gigameter] = 6.25000000000000000E+043 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -878,12 +879,12 @@ final class Length$Gigameter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Gigameter] with new value
   @override
   Length$Gigameter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Gigameter(val);
 
@@ -896,14 +897,14 @@ final class Length$Gigameter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Megameter extends Length {
-  const Length$Megameter([
+  Length$Megameter([
     super.value,
   ]);
 
@@ -934,14 +935,14 @@ final class Length$Megameter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+40;
+  static final _ratio = Rational.parse('6.25000000000000000E+040');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Megameter] = 6.25e+40 [Length$Planck]
+  /// 1 [Length$Megameter] = 6.25000000000000000E+040 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -949,12 +950,12 @@ final class Length$Megameter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Megameter] with new value
   @override
   Length$Megameter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Megameter(val);
 
@@ -967,14 +968,14 @@ final class Length$Megameter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Kilometer extends Length {
-  const Length$Kilometer([
+  Length$Kilometer([
     super.value,
   ]);
 
@@ -1005,14 +1006,14 @@ final class Length$Kilometer extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+37;
+  static final _ratio = Rational.parse('6.25000000000000000E+037');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Kilometer] = 6.25e+37 [Length$Planck]
+  /// 1 [Length$Kilometer] = 6.25000000000000000E+037 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1020,12 +1021,12 @@ final class Length$Kilometer extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Kilometer] with new value
   @override
   Length$Kilometer withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Kilometer(val);
 
@@ -1038,14 +1039,14 @@ final class Length$Kilometer extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Hectometer extends Length {
-  const Length$Hectometer([
+  Length$Hectometer([
     super.value,
   ]);
 
@@ -1076,14 +1077,14 @@ final class Length$Hectometer extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+36;
+  static final _ratio = Rational.parse('6.25000000000000000E+036');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Hectometer] = 6.25e+36 [Length$Planck]
+  /// 1 [Length$Hectometer] = 6.25000000000000000E+036 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1091,12 +1092,12 @@ final class Length$Hectometer extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Hectometer] with new value
   @override
   Length$Hectometer withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Hectometer(val);
 
@@ -1109,14 +1110,14 @@ final class Length$Hectometer extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Dekameter extends Length {
-  const Length$Dekameter([
+  Length$Dekameter([
     super.value,
   ]);
 
@@ -1147,14 +1148,14 @@ final class Length$Dekameter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+35;
+  static final _ratio = Rational.parse('6.25000000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Dekameter] = 6.25e+35 [Length$Planck]
+  /// 1 [Length$Dekameter] = 6.25000000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1162,12 +1163,12 @@ final class Length$Dekameter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Dekameter] with new value
   @override
   Length$Dekameter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Dekameter(val);
 
@@ -1180,14 +1181,14 @@ final class Length$Dekameter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Meter extends Length {
-  const Length$Meter([
+  Length$Meter([
     super.value,
   ]);
 
@@ -1218,14 +1219,14 @@ final class Length$Meter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+34;
+  static final _ratio = Rational.parse('6.25000000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Meter] = 6.25e+34 [Length$Planck]
+  /// 1 [Length$Meter] = 6.25000000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1233,12 +1234,12 @@ final class Length$Meter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Meter] with new value
   @override
   Length$Meter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Meter(val);
 
@@ -1251,14 +1252,14 @@ final class Length$Meter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Decimeter extends Length {
-  const Length$Decimeter([
+  Length$Decimeter([
     super.value,
   ]);
 
@@ -1289,14 +1290,14 @@ final class Length$Decimeter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+33;
+  static final _ratio = Rational.parse('6.25000000000000000E+033');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Decimeter] = 6.25e+33 [Length$Planck]
+  /// 1 [Length$Decimeter] = 6.25000000000000000E+033 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1304,12 +1305,12 @@ final class Length$Decimeter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Decimeter] with new value
   @override
   Length$Decimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Decimeter(val);
 
@@ -1322,14 +1323,14 @@ final class Length$Decimeter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Centimeter extends Length {
-  const Length$Centimeter([
+  Length$Centimeter([
     super.value,
   ]);
 
@@ -1360,14 +1361,14 @@ final class Length$Centimeter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+32;
+  static final _ratio = Rational.parse('6.25000000000000000E+032');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Centimeter] = 6.25e+32 [Length$Planck]
+  /// 1 [Length$Centimeter] = 6.25000000000000000E+032 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1375,12 +1376,12 @@ final class Length$Centimeter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Centimeter] with new value
   @override
   Length$Centimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Centimeter(val);
 
@@ -1393,14 +1394,14 @@ final class Length$Centimeter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Millimeter extends Length {
-  const Length$Millimeter([
+  Length$Millimeter([
     super.value,
   ]);
 
@@ -1431,14 +1432,14 @@ final class Length$Millimeter extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+31;
+  static final _ratio = Rational.parse('6.25000000000000000E+031');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Millimeter] = 6.25e+31 [Length$Planck]
+  /// 1 [Length$Millimeter] = 6.25000000000000000E+031 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1446,12 +1447,12 @@ final class Length$Millimeter extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Millimeter] with new value
   @override
   Length$Millimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Millimeter(val);
 
@@ -1464,14 +1465,14 @@ final class Length$Millimeter extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Micrometer extends Length {
-  const Length$Micrometer([
+  Length$Micrometer([
     super.value,
   ]);
 
@@ -1502,14 +1503,14 @@ final class Length$Micrometer extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+28;
+  static final _ratio = Rational.parse('6.25000000000000000E+028');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Micrometer] = 6.25e+28 [Length$Planck]
+  /// 1 [Length$Micrometer] = 6.25000000000000000E+028 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1517,12 +1518,12 @@ final class Length$Micrometer extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Micrometer] with new value
   @override
   Length$Micrometer withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Micrometer(val);
 
@@ -1535,14 +1536,14 @@ final class Length$Micrometer extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Nanometer extends Length {
-  const Length$Nanometer([
+  Length$Nanometer([
     super.value,
   ]);
 
@@ -1573,14 +1574,14 @@ final class Length$Nanometer extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+25;
+  static final _ratio = Rational.parse('6.25000000000000000E+025');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Nanometer] = 6.25e+25 [Length$Planck]
+  /// 1 [Length$Nanometer] = 6.25000000000000000E+025 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1588,12 +1589,12 @@ final class Length$Nanometer extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Nanometer] with new value
   @override
   Length$Nanometer withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Nanometer(val);
 
@@ -1606,14 +1607,14 @@ final class Length$Nanometer extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Picometer extends Length {
-  const Length$Picometer([
+  Length$Picometer([
     super.value,
   ]);
 
@@ -1644,14 +1645,14 @@ final class Length$Picometer extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+22;
+  static final _ratio = Rational.parse('6.25000000000000000E+022');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Picometer] = 6.25e+22 [Length$Planck]
+  /// 1 [Length$Picometer] = 6.25000000000000000E+022 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1659,12 +1660,12 @@ final class Length$Picometer extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Picometer] with new value
   @override
   Length$Picometer withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Picometer(val);
 
@@ -1677,14 +1678,14 @@ final class Length$Picometer extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Femtometer extends Length {
-  const Length$Femtometer([
+  Length$Femtometer([
     super.value,
   ]);
 
@@ -1715,14 +1716,14 @@ final class Length$Femtometer extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 62500000000000000000.0;
+  static final _ratio = Rational.parse('6.25000000000000000E+019');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Femtometer] = 62500000000000000000.0 [Length$Planck]
+  /// 1 [Length$Femtometer] = 6.25000000000000000E+019 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1730,12 +1731,12 @@ final class Length$Femtometer extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Femtometer] with new value
   @override
   Length$Femtometer withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Femtometer(val);
 
@@ -1748,14 +1749,14 @@ final class Length$Femtometer extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Attometer extends Length {
-  const Length$Attometer([
+  Length$Attometer([
     super.value,
   ]);
 
@@ -1786,14 +1787,14 @@ final class Length$Attometer extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 62500000000000000.0;
+  static final _ratio = Rational.parse('6.25000000000000000E+016');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Attometer] = 62500000000000000.0 [Length$Planck]
+  /// 1 [Length$Attometer] = 6.25000000000000000E+016 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1801,12 +1802,12 @@ final class Length$Attometer extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Attometer] with new value
   @override
   Length$Attometer withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Attometer(val);
 
@@ -1819,14 +1820,14 @@ final class Length$Attometer extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Angstrom extends Length {
-  const Length$Angstrom([
+  Length$Angstrom([
     super.value,
   ]);
 
@@ -1857,14 +1858,14 @@ final class Length$Angstrom extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.25e+24;
+  static final _ratio = Rational.parse('6.25000000000000000E+024');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Angstrom] = 6.25e+24 [Length$Planck]
+  /// 1 [Length$Angstrom] = 6.25000000000000000E+024 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1872,12 +1873,12 @@ final class Length$Angstrom extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Angstrom] with new value
   @override
   Length$Angstrom withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Angstrom(val);
 
@@ -1890,14 +1891,14 @@ final class Length$Angstrom extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Fermi extends Length {
-  const Length$Fermi([
+  Length$Fermi([
     super.value,
   ]);
 
@@ -1928,14 +1929,14 @@ final class Length$Fermi extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 62500000000000000000.0;
+  static final _ratio = Rational.parse('6.25000000000000000E+019');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Fermi] = 62500000000000000000.0 [Length$Planck]
+  /// 1 [Length$Fermi] = 6.25000000000000000E+019 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1943,12 +1944,12 @@ final class Length$Fermi extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Fermi] with new value
   @override
   Length$Fermi withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Fermi(val);
 
@@ -1961,14 +1962,14 @@ final class Length$Fermi extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Planck extends Length {
-  const Length$Planck([
+  Length$Planck([
     super.value,
   ]);
 
@@ -1999,14 +2000,14 @@ final class Length$Planck extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
   /// Default (anchor) unit of [Length]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2014,12 +2015,12 @@ final class Length$Planck extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Planck] with new value
   @override
   Length$Planck withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Planck(val);
 
@@ -2032,14 +2033,14 @@ final class Length$Planck extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$MileUS extends Length {
-  const Length$MileUS([
+  Length$MileUS([
     super.value,
   ]);
 
@@ -2070,14 +2071,14 @@ final class Length$MileUS extends Length {
   @override
   String get displayName => 'mile (US)';
 
-  static const _ratio = 1.00584e+38;
+  static final _ratio = Rational.parse('1.00584000000000000E+038');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$MileUS] = 1.00584e+38 [Length$Planck]
+  /// 1 [Length$MileUS] = 1.00584000000000000E+038 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2085,12 +2086,12 @@ final class Length$MileUS extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$MileUS] with new value
   @override
   Length$MileUS withValue(
-    num val,
+    Rational val,
   ) =>
       Length$MileUS(val);
 
@@ -2103,14 +2104,14 @@ final class Length$MileUS extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$MileUSSurveyFoot extends Length {
-  const Length$MileUSSurveyFoot([
+  Length$MileUSSurveyFoot([
     super.value,
   ]);
 
@@ -2141,14 +2142,14 @@ final class Length$MileUSSurveyFoot extends Length {
   @override
   String get displayName => 'mile (US survey foot)';
 
-  static const _ratio = 1.0058420116840233e+38;
+  static final _ratio = Rational.parse('1.00584201168402337E+038');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$MileUSSurveyFoot] = 1.0058420116840233e+38 [Length$Planck]
+  /// 1 [Length$MileUSSurveyFoot] = 1.00584201168402337E+038 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2156,12 +2157,12 @@ final class Length$MileUSSurveyFoot extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$MileUSSurveyFoot] with new value
   @override
   Length$MileUSSurveyFoot withValue(
-    num val,
+    Rational val,
   ) =>
       Length$MileUSSurveyFoot(val);
 
@@ -2174,14 +2175,14 @@ final class Length$MileUSSurveyFoot extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$MileRoman extends Length {
-  const Length$MileRoman([
+  Length$MileRoman([
     super.value,
   ]);
 
@@ -2212,14 +2213,14 @@ final class Length$MileRoman extends Length {
   @override
   String get displayName => 'mile (Roman)';
 
-  static const _ratio = 9.248775e+37;
+  static final _ratio = Rational.parse('9.24877500000000000E+037');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$MileRoman] = 9.248775e+37 [Length$Planck]
+  /// 1 [Length$MileRoman] = 9.24877500000000000E+037 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2227,12 +2228,12 @@ final class Length$MileRoman extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$MileRoman] with new value
   @override
   Length$MileRoman withValue(
-    num val,
+    Rational val,
   ) =>
       Length$MileRoman(val);
 
@@ -2245,14 +2246,14 @@ final class Length$MileRoman extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Furlong extends Length {
-  const Length$Furlong([
+  Length$Furlong([
     super.value,
   ]);
 
@@ -2283,14 +2284,14 @@ final class Length$Furlong extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.2573e+37;
+  static final _ratio = Rational.parse('1.25730000000000000E+037');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Furlong] = 1.2573e+37 [Length$Planck]
+  /// 1 [Length$Furlong] = 1.25730000000000000E+037 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2298,12 +2299,12 @@ final class Length$Furlong extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Furlong] with new value
   @override
   Length$Furlong withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Furlong(val);
 
@@ -2316,14 +2317,14 @@ final class Length$Furlong extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Chain extends Length {
-  const Length$Chain([
+  Length$Chain([
     super.value,
   ]);
 
@@ -2354,14 +2355,14 @@ final class Length$Chain extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.2573e+36;
+  static final _ratio = Rational.parse('1.25730000000000000E+036');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Chain] = 1.2573e+36 [Length$Planck]
+  /// 1 [Length$Chain] = 1.25730000000000000E+036 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2369,12 +2370,12 @@ final class Length$Chain extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Chain] with new value
   @override
   Length$Chain withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Chain(val);
 
@@ -2387,14 +2388,14 @@ final class Length$Chain extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Rod extends Length {
-  const Length$Rod([
+  Length$Rod([
     super.value,
   ]);
 
@@ -2425,14 +2426,14 @@ final class Length$Rod extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.14325e+35;
+  static final _ratio = Rational.parse('3.14325000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Rod] = 3.14325e+35 [Length$Planck]
+  /// 1 [Length$Rod] = 3.14325000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2440,12 +2441,12 @@ final class Length$Rod extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Rod] with new value
   @override
   Length$Rod withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Rod(val);
 
@@ -2458,14 +2459,14 @@ final class Length$Rod extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Perch extends Length {
-  const Length$Perch([
+  Length$Perch([
     super.value,
   ]);
 
@@ -2496,14 +2497,14 @@ final class Length$Perch extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.14325e+35;
+  static final _ratio = Rational.parse('3.14325000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Perch] = 3.14325e+35 [Length$Planck]
+  /// 1 [Length$Perch] = 3.14325000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2511,12 +2512,12 @@ final class Length$Perch extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Perch] with new value
   @override
   Length$Perch withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Perch(val);
 
@@ -2529,14 +2530,14 @@ final class Length$Perch extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Pole extends Length {
-  const Length$Pole([
+  Length$Pole([
     super.value,
   ]);
 
@@ -2567,14 +2568,14 @@ final class Length$Pole extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.14325e+35;
+  static final _ratio = Rational.parse('3.14325000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Pole] = 3.14325e+35 [Length$Planck]
+  /// 1 [Length$Pole] = 3.14325000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2582,12 +2583,12 @@ final class Length$Pole extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Pole] with new value
   @override
   Length$Pole withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Pole(val);
 
@@ -2600,14 +2601,14 @@ final class Length$Pole extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Fathom extends Length {
-  const Length$Fathom([
+  Length$Fathom([
     super.value,
   ]);
 
@@ -2638,14 +2639,14 @@ final class Length$Fathom extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.143e+35;
+  static final _ratio = Rational.parse('1.14300000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Fathom] = 1.143e+35 [Length$Planck]
+  /// 1 [Length$Fathom] = 1.14300000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2653,12 +2654,12 @@ final class Length$Fathom extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Fathom] with new value
   @override
   Length$Fathom withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Fathom(val);
 
@@ -2671,14 +2672,14 @@ final class Length$Fathom extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Yard extends Length {
-  const Length$Yard([
+  Length$Yard([
     super.value,
   ]);
 
@@ -2709,14 +2710,14 @@ final class Length$Yard extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 5.715e+34;
+  static final _ratio = Rational.parse('5.71500000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Yard] = 5.715e+34 [Length$Planck]
+  /// 1 [Length$Yard] = 5.71500000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2724,12 +2725,12 @@ final class Length$Yard extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Yard] with new value
   @override
   Length$Yard withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Yard(val);
 
@@ -2742,14 +2743,14 @@ final class Length$Yard extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Foot extends Length {
-  const Length$Foot([
+  Length$Foot([
     super.value,
   ]);
 
@@ -2780,14 +2781,14 @@ final class Length$Foot extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.905e+34;
+  static final _ratio = Rational.parse('1.90500000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Foot] = 1.905e+34 [Length$Planck]
+  /// 1 [Length$Foot] = 1.90500000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2795,12 +2796,12 @@ final class Length$Foot extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Foot] with new value
   @override
   Length$Foot withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Foot(val);
 
@@ -2813,14 +2814,14 @@ final class Length$Foot extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$FootUSSurvey extends Length {
-  const Length$FootUSSurvey([
+  Length$FootUSSurvey([
     super.value,
   ]);
 
@@ -2851,14 +2852,14 @@ final class Length$FootUSSurvey extends Length {
   @override
   String get displayName => 'foot (US survey)';
 
-  static const _ratio = 1.90500381000762e+34;
+  static final _ratio = Rational.parse('1.90500381000762002E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$FootUSSurvey] = 1.90500381000762e+34 [Length$Planck]
+  /// 1 [Length$FootUSSurvey] = 1.90500381000762002E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2866,12 +2867,12 @@ final class Length$FootUSSurvey extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$FootUSSurvey] with new value
   @override
   Length$FootUSSurvey withValue(
-    num val,
+    Rational val,
   ) =>
       Length$FootUSSurvey(val);
 
@@ -2884,14 +2885,14 @@ final class Length$FootUSSurvey extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Link extends Length {
-  const Length$Link([
+  Length$Link([
     super.value,
   ]);
 
@@ -2922,14 +2923,14 @@ final class Length$Link extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.2573e+34;
+  static final _ratio = Rational.parse('1.25730000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Link] = 1.2573e+34 [Length$Planck]
+  /// 1 [Length$Link] = 1.25730000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2937,12 +2938,12 @@ final class Length$Link extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Link] with new value
   @override
   Length$Link withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Link(val);
 
@@ -2955,14 +2956,14 @@ final class Length$Link extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Inch extends Length {
-  const Length$Inch([
+  Length$Inch([
     super.value,
   ]);
 
@@ -2993,14 +2994,14 @@ final class Length$Inch extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.5875e+33;
+  static final _ratio = Rational.parse('1.58750000000000000E+033');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Inch] = 1.5875e+33 [Length$Planck]
+  /// 1 [Length$Inch] = 1.58750000000000000E+033 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3008,12 +3009,12 @@ final class Length$Inch extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Inch] with new value
   @override
   Length$Inch withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Inch(val);
 
@@ -3026,14 +3027,14 @@ final class Length$Inch extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Hand extends Length {
-  const Length$Hand([
+  Length$Hand([
     super.value,
   ]);
 
@@ -3064,14 +3065,14 @@ final class Length$Hand extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.35e+33;
+  static final _ratio = Rational.parse('6.35000000000000000E+033');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Hand] = 6.35e+33 [Length$Planck]
+  /// 1 [Length$Hand] = 6.35000000000000000E+033 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3079,12 +3080,12 @@ final class Length$Hand extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Hand] with new value
   @override
   Length$Hand withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Hand(val);
 
@@ -3097,14 +3098,14 @@ final class Length$Hand extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Mil extends Length {
-  const Length$Mil([
+  Length$Mil([
     super.value,
   ]);
 
@@ -3135,14 +3136,14 @@ final class Length$Mil extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.5875e+30;
+  static final _ratio = Rational.parse('1.58750000000000000E+030');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Mil] = 1.5875e+30 [Length$Planck]
+  /// 1 [Length$Mil] = 1.58750000000000000E+030 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3150,12 +3151,12 @@ final class Length$Mil extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Mil] with new value
   @override
   Length$Mil withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Mil(val);
 
@@ -3168,14 +3169,14 @@ final class Length$Mil extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$MilSweden extends Length {
-  const Length$MilSweden([
+  Length$MilSweden([
     super.value,
   ]);
 
@@ -3206,14 +3207,14 @@ final class Length$MilSweden extends Length {
   @override
   String get displayName => 'mil (Sweden)';
 
-  static const _ratio = 6.25e+38;
+  static final _ratio = Rational.parse('6.25000000000000000E+038');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$MilSweden] = 6.25e+38 [Length$Planck]
+  /// 1 [Length$MilSweden] = 6.25000000000000000E+038 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3221,12 +3222,12 @@ final class Length$MilSweden extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$MilSweden] with new value
   @override
   Length$MilSweden withValue(
-    num val,
+    Rational val,
   ) =>
       Length$MilSweden(val);
 
@@ -3239,14 +3240,14 @@ final class Length$MilSweden extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Microinch extends Length {
-  const Length$Microinch([
+  Length$Microinch([
     super.value,
   ]);
 
@@ -3277,14 +3278,14 @@ final class Length$Microinch extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.5875e+27;
+  static final _ratio = Rational.parse('1.58750000000000000E+027');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Microinch] = 1.5875e+27 [Length$Planck]
+  /// 1 [Length$Microinch] = 1.58750000000000000E+027 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3292,12 +3293,12 @@ final class Length$Microinch extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Microinch] with new value
   @override
   Length$Microinch withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Microinch(val);
 
@@ -3310,14 +3311,14 @@ final class Length$Microinch extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Megaparsec extends Length {
-  const Length$Megaparsec([
+  Length$Megaparsec([
     super.value,
   ]);
 
@@ -3348,14 +3349,14 @@ final class Length$Megaparsec extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.9285807902221097e+57;
+  static final _ratio = Rational.parse('1.92858079022210964E+057');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Megaparsec] = 1.9285807902221097e+57 [Length$Planck]
+  /// 1 [Length$Megaparsec] = 1.92858079022210964E+057 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3363,12 +3364,12 @@ final class Length$Megaparsec extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Megaparsec] with new value
   @override
   Length$Megaparsec withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Megaparsec(val);
 
@@ -3381,14 +3382,14 @@ final class Length$Megaparsec extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Kiloparsec extends Length {
-  const Length$Kiloparsec([
+  Length$Kiloparsec([
     super.value,
   ]);
 
@@ -3419,14 +3420,14 @@ final class Length$Kiloparsec extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.9285807902221098e+54;
+  static final _ratio = Rational.parse('1.92858079022210964E+054');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Kiloparsec] = 1.9285807902221098e+54 [Length$Planck]
+  /// 1 [Length$Kiloparsec] = 1.92858079022210964E+054 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3434,12 +3435,12 @@ final class Length$Kiloparsec extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Kiloparsec] with new value
   @override
   Length$Kiloparsec withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Kiloparsec(val);
 
@@ -3452,14 +3453,14 @@ final class Length$Kiloparsec extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Parsec extends Length {
-  const Length$Parsec([
+  Length$Parsec([
     super.value,
   ]);
 
@@ -3490,14 +3491,14 @@ final class Length$Parsec extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.9285807902221097e+51;
+  static final _ratio = Rational.parse('1.92858079022210964E+051');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Parsec] = 1.9285807902221097e+51 [Length$Planck]
+  /// 1 [Length$Parsec] = 1.92858079022210964E+051 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3505,12 +3506,12 @@ final class Length$Parsec extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Parsec] with new value
   @override
   Length$Parsec withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Parsec(val);
 
@@ -3523,14 +3524,14 @@ final class Length$Parsec extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$LightYear extends Length {
-  const Length$LightYear([
+  Length$LightYear([
     super.value,
   ]);
 
@@ -3561,14 +3562,14 @@ final class Length$LightYear extends Length {
   @override
   String get displayName => 'light year';
 
-  static const _ratio = 5.91283025305e+50;
+  static final _ratio = Rational.parse('5.91283025305000000E+050');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$LightYear] = 5.91283025305e+50 [Length$Planck]
+  /// 1 [Length$LightYear] = 5.91283025305000000E+050 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3576,12 +3577,12 @@ final class Length$LightYear extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$LightYear] with new value
   @override
   Length$LightYear withValue(
-    num val,
+    Rational val,
   ) =>
       Length$LightYear(val);
 
@@ -3594,14 +3595,14 @@ final class Length$LightYear extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$AstronomicalUnit extends Length {
-  const Length$AstronomicalUnit([
+  Length$AstronomicalUnit([
     super.value,
   ]);
 
@@ -3632,14 +3633,14 @@ final class Length$AstronomicalUnit extends Length {
   @override
   String get displayName => 'astronomical unit';
 
-  static const _ratio = 9.35e+45;
+  static final _ratio = Rational.parse('9.35000000000000000E+045');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$AstronomicalUnit] = 9.35e+45 [Length$Planck]
+  /// 1 [Length$AstronomicalUnit] = 9.35000000000000000E+045 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3647,12 +3648,12 @@ final class Length$AstronomicalUnit extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$AstronomicalUnit] with new value
   @override
   Length$AstronomicalUnit withValue(
-    num val,
+    Rational val,
   ) =>
       Length$AstronomicalUnit(val);
 
@@ -3665,14 +3666,14 @@ final class Length$AstronomicalUnit extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$League extends Length {
-  const Length$League([
+  Length$League([
     super.value,
   ]);
 
@@ -3703,14 +3704,14 @@ final class Length$League extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.01752e+38;
+  static final _ratio = Rational.parse('3.01752000000000000E+038');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$League] = 3.01752e+38 [Length$Planck]
+  /// 1 [Length$League] = 3.01752000000000000E+038 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3718,12 +3719,12 @@ final class Length$League extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$League] with new value
   @override
   Length$League withValue(
-    num val,
+    Rational val,
   ) =>
       Length$League(val);
 
@@ -3736,14 +3737,14 @@ final class Length$League extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$NauticalMile extends Length {
-  const Length$NauticalMile([
+  Length$NauticalMile([
     super.value,
   ]);
 
@@ -3774,14 +3775,14 @@ final class Length$NauticalMile extends Length {
   @override
   String get displayName => 'nautical mile';
 
-  static const _ratio = 1.1575e+38;
+  static final _ratio = Rational.parse('1.15750000000000000E+038');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$NauticalMile] = 1.1575e+38 [Length$Planck]
+  /// 1 [Length$NauticalMile] = 1.15750000000000000E+038 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3789,12 +3790,12 @@ final class Length$NauticalMile extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$NauticalMile] with new value
   @override
   Length$NauticalMile withValue(
-    num val,
+    Rational val,
   ) =>
       Length$NauticalMile(val);
 
@@ -3807,14 +3808,14 @@ final class Length$NauticalMile extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Arpent extends Length {
-  const Length$Arpent([
+  Length$Arpent([
     super.value,
   ]);
 
@@ -3845,14 +3846,14 @@ final class Length$Arpent extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.6576e+36;
+  static final _ratio = Rational.parse('3.65760000000000000E+036');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Arpent] = 3.6576e+36 [Length$Planck]
+  /// 1 [Length$Arpent] = 3.65760000000000000E+036 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3860,12 +3861,12 @@ final class Length$Arpent extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Arpent] with new value
   @override
   Length$Arpent withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Arpent(val);
 
@@ -3878,14 +3879,14 @@ final class Length$Arpent extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Pica extends Length {
-  const Length$Pica([
+  Length$Pica([
     super.value,
   ]);
 
@@ -3916,14 +3917,14 @@ final class Length$Pica extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.6458333333333332e+32;
+  static final _ratio = Rational.parse('2.64583333333333333E+032');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Pica] = 2.6458333333333332e+32 [Length$Planck]
+  /// 1 [Length$Pica] = 2.64583333333333333E+032 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3931,12 +3932,12 @@ final class Length$Pica extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Pica] with new value
   @override
   Length$Pica withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Pica(val);
 
@@ -3949,14 +3950,14 @@ final class Length$Pica extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Point extends Length {
-  const Length$Point([
+  Length$Point([
     super.value,
   ]);
 
@@ -3987,14 +3988,14 @@ final class Length$Point extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.204861111111111e+31;
+  static final _ratio = Rational.parse('2.20486111111111111E+031');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Point] = 2.204861111111111e+31 [Length$Planck]
+  /// 1 [Length$Point] = 2.20486111111111111E+031 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4002,12 +4003,12 @@ final class Length$Point extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Point] with new value
   @override
   Length$Point withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Point(val);
 
@@ -4020,14 +4021,14 @@ final class Length$Point extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Twip extends Length {
-  const Length$Twip([
+  Length$Twip([
     super.value,
   ]);
 
@@ -4058,14 +4059,14 @@ final class Length$Twip extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.1024305555555556e+30;
+  static final _ratio = Rational.parse('1.10243055555555556E+030');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Twip] = 1.1024305555555556e+30 [Length$Planck]
+  /// 1 [Length$Twip] = 1.10243055555555556E+030 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4073,12 +4074,12 @@ final class Length$Twip extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Twip] with new value
   @override
   Length$Twip withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Twip(val);
 
@@ -4091,14 +4092,14 @@ final class Length$Twip extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Aln extends Length {
-  const Length$Aln([
+  Length$Aln([
     super.value,
   ]);
 
@@ -4129,14 +4130,14 @@ final class Length$Aln extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.711111111111111e+34;
+  static final _ratio = Rational.parse('3.71111111111111111E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Aln] = 3.711111111111111e+34 [Length$Planck]
+  /// 1 [Length$Aln] = 3.71111111111111111E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4144,12 +4145,12 @@ final class Length$Aln extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Aln] with new value
   @override
   Length$Aln withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Aln(val);
 
@@ -4162,14 +4163,14 @@ final class Length$Aln extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Famn extends Length {
-  const Length$Famn([
+  Length$Famn([
     super.value,
   ]);
 
@@ -4200,14 +4201,14 @@ final class Length$Famn extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.1133333333333333e+35;
+  static final _ratio = Rational.parse('1.11333333333333333E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Famn] = 1.1133333333333333e+35 [Length$Planck]
+  /// 1 [Length$Famn] = 1.11333333333333333E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4215,12 +4216,12 @@ final class Length$Famn extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Famn] with new value
   @override
   Length$Famn withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Famn(val);
 
@@ -4233,14 +4234,14 @@ final class Length$Famn extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Caliber extends Length {
-  const Length$Caliber([
+  Length$Caliber([
     super.value,
   ]);
 
@@ -4271,14 +4272,14 @@ final class Length$Caliber extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.5875e+31;
+  static final _ratio = Rational.parse('1.58750000000000000E+031');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Caliber] = 1.5875e+31 [Length$Planck]
+  /// 1 [Length$Caliber] = 1.58750000000000000E+031 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4286,12 +4287,12 @@ final class Length$Caliber extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Caliber] with new value
   @override
   Length$Caliber withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Caliber(val);
 
@@ -4304,14 +4305,14 @@ final class Length$Caliber extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Ken extends Length {
-  const Length$Ken([
+  Length$Ken([
     super.value,
   ]);
 
@@ -4342,14 +4343,14 @@ final class Length$Ken extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.323975e+35;
+  static final _ratio = Rational.parse('1.32397500000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Ken] = 1.323975e+35 [Length$Planck]
+  /// 1 [Length$Ken] = 1.32397500000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4357,12 +4358,12 @@ final class Length$Ken extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Ken] with new value
   @override
   Length$Ken withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Ken(val);
 
@@ -4375,14 +4376,14 @@ final class Length$Ken extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$Barleycorn extends Length {
-  const Length$Barleycorn([
+  Length$Barleycorn([
     super.value,
   ]);
 
@@ -4413,14 +4414,14 @@ final class Length$Barleycorn extends Length {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 5.2916666666666664e+32;
+  static final _ratio = Rational.parse('5.29166666666666667E+032');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$Barleycorn] = 5.2916666666666664e+32 [Length$Planck]
+  /// 1 [Length$Barleycorn] = 5.29166666666666667E+032 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4428,12 +4429,12 @@ final class Length$Barleycorn extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$Barleycorn] with new value
   @override
   Length$Barleycorn withValue(
-    num val,
+    Rational val,
   ) =>
       Length$Barleycorn(val);
 
@@ -4446,14 +4447,14 @@ final class Length$Barleycorn extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$RussianArchin extends Length {
-  const Length$RussianArchin([
+  Length$RussianArchin([
     super.value,
   ]);
 
@@ -4484,14 +4485,14 @@ final class Length$RussianArchin extends Length {
   @override
   String get displayName => 'Russian archin';
 
-  static const _ratio = 4.445e+34;
+  static final _ratio = Rational.parse('4.44500000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$RussianArchin] = 4.445e+34 [Length$Planck]
+  /// 1 [Length$RussianArchin] = 4.44500000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4499,12 +4500,12 @@ final class Length$RussianArchin extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$RussianArchin] with new value
   @override
   Length$RussianArchin withValue(
-    num val,
+    Rational val,
   ) =>
       Length$RussianArchin(val);
 
@@ -4517,14 +4518,14 @@ final class Length$RussianArchin extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$RomanActus extends Length {
-  const Length$RomanActus([
+  Length$RomanActus([
     super.value,
   ]);
 
@@ -4555,14 +4556,14 @@ final class Length$RomanActus extends Length {
   @override
   String get displayName => 'Roman actus';
 
-  static const _ratio = 2.21742e+36;
+  static final _ratio = Rational.parse('2.21742000000000000E+036');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$RomanActus] = 2.21742e+36 [Length$Planck]
+  /// 1 [Length$RomanActus] = 2.21742000000000000E+036 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4570,12 +4571,12 @@ final class Length$RomanActus extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$RomanActus] with new value
   @override
   Length$RomanActus withValue(
-    num val,
+    Rational val,
   ) =>
       Length$RomanActus(val);
 
@@ -4588,14 +4589,14 @@ final class Length$RomanActus extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$ClothNail extends Length {
-  const Length$ClothNail([
+  Length$ClothNail([
     super.value,
   ]);
 
@@ -4626,14 +4627,14 @@ final class Length$ClothNail extends Length {
   @override
   String get displayName => 'cloth nail';
 
-  static const _ratio = 3.571875e+33;
+  static final _ratio = Rational.parse('3.57187500000000000E+033');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$ClothNail] = 3.571875e+33 [Length$Planck]
+  /// 1 [Length$ClothNail] = 3.57187500000000000E+033 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4641,12 +4642,12 @@ final class Length$ClothNail extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$ClothNail] with new value
   @override
   Length$ClothNail withValue(
-    num val,
+    Rational val,
   ) =>
       Length$ClothNail(val);
 
@@ -4659,14 +4660,14 @@ final class Length$ClothNail extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$ClothSpan extends Length {
-  const Length$ClothSpan([
+  Length$ClothSpan([
     super.value,
   ]);
 
@@ -4697,14 +4698,14 @@ final class Length$ClothSpan extends Length {
   @override
   String get displayName => 'cloth span';
 
-  static const _ratio = 1.42875e+34;
+  static final _ratio = Rational.parse('1.42875000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$ClothSpan] = 1.42875e+34 [Length$Planck]
+  /// 1 [Length$ClothSpan] = 1.42875000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4712,12 +4713,12 @@ final class Length$ClothSpan extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$ClothSpan] with new value
   @override
   Length$ClothSpan withValue(
-    num val,
+    Rational val,
   ) =>
       Length$ClothSpan(val);
 
@@ -4730,14 +4731,14 @@ final class Length$ClothSpan extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$VaraDeTarea extends Length {
-  const Length$VaraDeTarea([
+  Length$VaraDeTarea([
     super.value,
   ]);
 
@@ -4768,14 +4769,14 @@ final class Length$VaraDeTarea extends Length {
   @override
   String get displayName => 'vara de tarea';
 
-  static const _ratio = 1.56591e+35;
+  static final _ratio = Rational.parse('1.56591000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$VaraDeTarea] = 1.56591e+35 [Length$Planck]
+  /// 1 [Length$VaraDeTarea] = 1.56591000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4783,12 +4784,12 @@ final class Length$VaraDeTarea extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$VaraDeTarea] with new value
   @override
   Length$VaraDeTarea withValue(
-    num val,
+    Rational val,
   ) =>
       Length$VaraDeTarea(val);
 
@@ -4801,14 +4802,14 @@ final class Length$VaraDeTarea extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$VaraConuquera extends Length {
-  const Length$VaraConuquera([
+  Length$VaraConuquera([
     super.value,
   ]);
 
@@ -4839,14 +4840,14 @@ final class Length$VaraConuquera extends Length {
   @override
   String get displayName => 'vara conuquera';
 
-  static const _ratio = 1.56591e+35;
+  static final _ratio = Rational.parse('1.56591000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$VaraConuquera] = 1.56591e+35 [Length$Planck]
+  /// 1 [Length$VaraConuquera] = 1.56591000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4854,12 +4855,12 @@ final class Length$VaraConuquera extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$VaraConuquera] with new value
   @override
   Length$VaraConuquera withValue(
-    num val,
+    Rational val,
   ) =>
       Length$VaraConuquera(val);
 
@@ -4872,14 +4873,14 @@ final class Length$VaraConuquera extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$VaraCastellana extends Length {
-  const Length$VaraCastellana([
+  Length$VaraCastellana([
     super.value,
   ]);
 
@@ -4910,14 +4911,14 @@ final class Length$VaraCastellana extends Length {
   @override
   String get displayName => 'vara castellana';
 
-  static const _ratio = 5.2197e+34;
+  static final _ratio = Rational.parse('5.21970000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$VaraCastellana] = 5.2197e+34 [Length$Planck]
+  /// 1 [Length$VaraCastellana] = 5.21970000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4925,12 +4926,12 @@ final class Length$VaraCastellana extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$VaraCastellana] with new value
   @override
   Length$VaraCastellana withValue(
-    num val,
+    Rational val,
   ) =>
       Length$VaraCastellana(val);
 
@@ -4943,14 +4944,14 @@ final class Length$VaraCastellana extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$CubitGreek extends Length {
-  const Length$CubitGreek([
+  Length$CubitGreek([
     super.value,
   ]);
 
@@ -4981,14 +4982,14 @@ final class Length$CubitGreek extends Length {
   @override
   String get displayName => 'cubit (Greek)';
 
-  static const _ratio = 2.892425e+34;
+  static final _ratio = Rational.parse('2.89242500000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$CubitGreek] = 2.892425e+34 [Length$Planck]
+  /// 1 [Length$CubitGreek] = 2.89242500000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4996,12 +4997,12 @@ final class Length$CubitGreek extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$CubitGreek] with new value
   @override
   Length$CubitGreek withValue(
-    num val,
+    Rational val,
   ) =>
       Length$CubitGreek(val);
 
@@ -5014,14 +5015,14 @@ final class Length$CubitGreek extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$LongReedBiblical extends Length {
-  const Length$LongReedBiblical([
+  Length$LongReedBiblical([
     super.value,
   ]);
 
@@ -5052,14 +5053,14 @@ final class Length$LongReedBiblical extends Length {
   @override
   String get displayName => 'long reed (Biblical)';
 
-  static const _ratio = 2.00025e+35;
+  static final _ratio = Rational.parse('2.00025000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$LongReedBiblical] = 2.00025e+35 [Length$Planck]
+  /// 1 [Length$LongReedBiblical] = 2.00025000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5067,12 +5068,12 @@ final class Length$LongReedBiblical extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$LongReedBiblical] with new value
   @override
   Length$LongReedBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Length$LongReedBiblical(val);
 
@@ -5085,14 +5086,14 @@ final class Length$LongReedBiblical extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$ReedBiblical extends Length {
-  const Length$ReedBiblical([
+  Length$ReedBiblical([
     super.value,
   ]);
 
@@ -5123,14 +5124,14 @@ final class Length$ReedBiblical extends Length {
   @override
   String get displayName => 'reed (Biblical)';
 
-  static const _ratio = 1.7145e+35;
+  static final _ratio = Rational.parse('1.71450000000000000E+035');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$ReedBiblical] = 1.7145e+35 [Length$Planck]
+  /// 1 [Length$ReedBiblical] = 1.71450000000000000E+035 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5138,12 +5139,12 @@ final class Length$ReedBiblical extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$ReedBiblical] with new value
   @override
   Length$ReedBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Length$ReedBiblical(val);
 
@@ -5156,14 +5157,14 @@ final class Length$ReedBiblical extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$CubitBiblical extends Length {
-  const Length$CubitBiblical([
+  Length$CubitBiblical([
     super.value,
   ]);
 
@@ -5194,14 +5195,14 @@ final class Length$CubitBiblical extends Length {
   @override
   String get displayName => 'cubit (Biblical)';
 
-  static const _ratio = 2.8575e+34;
+  static final _ratio = Rational.parse('2.85750000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$CubitBiblical] = 2.8575e+34 [Length$Planck]
+  /// 1 [Length$CubitBiblical] = 2.85750000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5209,12 +5210,12 @@ final class Length$CubitBiblical extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$CubitBiblical] with new value
   @override
   Length$CubitBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Length$CubitBiblical(val);
 
@@ -5227,14 +5228,14 @@ final class Length$CubitBiblical extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$LongCubitBiblical extends Length {
-  const Length$LongCubitBiblical([
+  Length$LongCubitBiblical([
     super.value,
   ]);
 
@@ -5265,14 +5266,14 @@ final class Length$LongCubitBiblical extends Length {
   @override
   String get displayName => 'long cubit (Biblical)';
 
-  static const _ratio = 3.33375e+34;
+  static final _ratio = Rational.parse('3.33375000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$LongCubitBiblical] = 3.33375e+34 [Length$Planck]
+  /// 1 [Length$LongCubitBiblical] = 3.33375000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5280,12 +5281,12 @@ final class Length$LongCubitBiblical extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$LongCubitBiblical] with new value
   @override
   Length$LongCubitBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Length$LongCubitBiblical(val);
 
@@ -5298,14 +5299,14 @@ final class Length$LongCubitBiblical extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$SpanBiblical extends Length {
-  const Length$SpanBiblical([
+  Length$SpanBiblical([
     super.value,
   ]);
 
@@ -5336,14 +5337,14 @@ final class Length$SpanBiblical extends Length {
   @override
   String get displayName => 'span (Biblical)';
 
-  static const _ratio = 1.42875e+34;
+  static final _ratio = Rational.parse('1.42875000000000000E+034');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$SpanBiblical] = 1.42875e+34 [Length$Planck]
+  /// 1 [Length$SpanBiblical] = 1.42875000000000000E+034 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5351,12 +5352,12 @@ final class Length$SpanBiblical extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$SpanBiblical] with new value
   @override
   Length$SpanBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Length$SpanBiblical(val);
 
@@ -5369,14 +5370,14 @@ final class Length$SpanBiblical extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$HandbreadthBiblical extends Length {
-  const Length$HandbreadthBiblical([
+  Length$HandbreadthBiblical([
     super.value,
   ]);
 
@@ -5407,14 +5408,14 @@ final class Length$HandbreadthBiblical extends Length {
   @override
   String get displayName => 'handbreadth (Biblical)';
 
-  static const _ratio = 4.7625e+33;
+  static final _ratio = Rational.parse('4.76250000000000000E+033');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$HandbreadthBiblical] = 4.7625e+33 [Length$Planck]
+  /// 1 [Length$HandbreadthBiblical] = 4.76250000000000000E+033 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5422,12 +5423,12 @@ final class Length$HandbreadthBiblical extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$HandbreadthBiblical] with new value
   @override
   Length$HandbreadthBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Length$HandbreadthBiblical(val);
 
@@ -5440,14 +5441,14 @@ final class Length$HandbreadthBiblical extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Length]
 final class Length$FingerbreadthBiblical extends Length {
-  const Length$FingerbreadthBiblical([
+  Length$FingerbreadthBiblical([
     super.value,
   ]);
 
@@ -5478,14 +5479,14 @@ final class Length$FingerbreadthBiblical extends Length {
   @override
   String get displayName => 'fingerbreadth (Biblical)';
 
-  static const _ratio = 1.190625e+33;
+  static final _ratio = Rational.parse('1.19062500000000000E+033');
 
   @override
-  Length get anchor => const Length$Planck(_ratio);
+  Length get anchor => Length$Planck(_ratio);
 
-  /// 1 [Length$FingerbreadthBiblical] = 1.190625e+33 [Length$Planck]
+  /// 1 [Length$FingerbreadthBiblical] = 1.19062500000000000E+033 [Length$Planck]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5494,12 +5495,12 @@ final class Length$FingerbreadthBiblical extends Length {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Length$FingerbreadthBiblical] with new value
   @override
   Length$FingerbreadthBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Length$FingerbreadthBiblical(val);
 
@@ -5512,7 +5513,7 @@ final class Length$FingerbreadthBiblical extends Length {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

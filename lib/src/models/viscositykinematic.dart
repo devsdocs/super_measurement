@@ -15,7 +15,7 @@ part of '../../super_measurement.dart';
 /// [ViscosityKinematic$MillimeterSquarePerSecond],
 /// [ViscosityKinematic$FootSquarePerSecond]
 sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
-  const ViscosityKinematic([
+  ViscosityKinematic([
     super.value,
   ]);
 
@@ -27,115 +27,116 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : ViscosityKinematic.anchor();
 
-  factory ViscosityKinematic.anchor() => const ViscosityKinematic$Centistoke();
+  factory ViscosityKinematic.anchor() => ViscosityKinematic$Centistoke();
 
   /// Convert to [ViscosityKinematic$Exastoke]
   ViscosityKinematic get toExastoke => convertTo(
-        const ViscosityKinematic$Exastoke(),
+        ViscosityKinematic$Exastoke(),
       );
 
   /// Convert to [ViscosityKinematic$Petastoke]
   ViscosityKinematic get toPetastoke => convertTo(
-        const ViscosityKinematic$Petastoke(),
+        ViscosityKinematic$Petastoke(),
       );
 
   /// Convert to [ViscosityKinematic$Terastoke]
   ViscosityKinematic get toTerastoke => convertTo(
-        const ViscosityKinematic$Terastoke(),
+        ViscosityKinematic$Terastoke(),
       );
 
   /// Convert to [ViscosityKinematic$Gigastoke]
   ViscosityKinematic get toGigastoke => convertTo(
-        const ViscosityKinematic$Gigastoke(),
+        ViscosityKinematic$Gigastoke(),
       );
 
   /// Convert to [ViscosityKinematic$Megastoke]
   ViscosityKinematic get toMegastoke => convertTo(
-        const ViscosityKinematic$Megastoke(),
+        ViscosityKinematic$Megastoke(),
       );
 
   /// Convert to [ViscosityKinematic$Kilostoke]
   ViscosityKinematic get toKilostoke => convertTo(
-        const ViscosityKinematic$Kilostoke(),
+        ViscosityKinematic$Kilostoke(),
       );
 
   /// Convert to [ViscosityKinematic$Hectostoke]
   ViscosityKinematic get toHectostoke => convertTo(
-        const ViscosityKinematic$Hectostoke(),
+        ViscosityKinematic$Hectostoke(),
       );
 
   /// Convert to [ViscosityKinematic$Dekastoke]
   ViscosityKinematic get toDekastoke => convertTo(
-        const ViscosityKinematic$Dekastoke(),
+        ViscosityKinematic$Dekastoke(),
       );
 
   /// Convert to [ViscosityKinematic$Stoke]
   ViscosityKinematic get toStoke => convertTo(
-        const ViscosityKinematic$Stoke(),
+        ViscosityKinematic$Stoke(),
       );
 
   /// Convert to [ViscosityKinematic$Decistoke]
   ViscosityKinematic get toDecistoke => convertTo(
-        const ViscosityKinematic$Decistoke(),
+        ViscosityKinematic$Decistoke(),
       );
 
   /// Convert to [ViscosityKinematic$Centistoke]
   ViscosityKinematic get toCentistoke => convertTo(
-        const ViscosityKinematic$Centistoke(),
+        ViscosityKinematic$Centistoke(),
       );
 
   /// Convert to [ViscosityKinematic$Millistoke]
   ViscosityKinematic get toMillistoke => convertTo(
-        const ViscosityKinematic$Millistoke(),
+        ViscosityKinematic$Millistoke(),
       );
 
   /// Convert to [ViscosityKinematic$Microstoke]
   ViscosityKinematic get toMicrostoke => convertTo(
-        const ViscosityKinematic$Microstoke(),
+        ViscosityKinematic$Microstoke(),
       );
 
   /// Convert to [ViscosityKinematic$Nanostoke]
   ViscosityKinematic get toNanostoke => convertTo(
-        const ViscosityKinematic$Nanostoke(),
+        ViscosityKinematic$Nanostoke(),
       );
 
   /// Convert to [ViscosityKinematic$Picostoke]
   ViscosityKinematic get toPicostoke => convertTo(
-        const ViscosityKinematic$Picostoke(),
+        ViscosityKinematic$Picostoke(),
       );
 
   /// Convert to [ViscosityKinematic$Femtostoke]
   ViscosityKinematic get toFemtostoke => convertTo(
-        const ViscosityKinematic$Femtostoke(),
+        ViscosityKinematic$Femtostoke(),
       );
 
   /// Convert to [ViscosityKinematic$Attostoke]
   ViscosityKinematic get toAttostoke => convertTo(
-        const ViscosityKinematic$Attostoke(),
+        ViscosityKinematic$Attostoke(),
       );
 
   /// Convert to [ViscosityKinematic$MeterSquarePerSecond]
   ViscosityKinematic get toMeterSquarePerSecond => convertTo(
-        const ViscosityKinematic$MeterSquarePerSecond(),
+        ViscosityKinematic$MeterSquarePerSecond(),
       );
 
   /// Convert to [ViscosityKinematic$CentimeterSquarePerSecond]
   ViscosityKinematic get toCentimeterSquarePerSecond => convertTo(
-        const ViscosityKinematic$CentimeterSquarePerSecond(),
+        ViscosityKinematic$CentimeterSquarePerSecond(),
       );
 
   /// Convert to [ViscosityKinematic$MillimeterSquarePerSecond]
   ViscosityKinematic get toMillimeterSquarePerSecond => convertTo(
-        const ViscosityKinematic$MillimeterSquarePerSecond(),
+        ViscosityKinematic$MillimeterSquarePerSecond(),
       );
 
   /// Convert to [ViscosityKinematic$FootSquarePerSecond]
   ViscosityKinematic get toFootSquarePerSecond => convertTo(
-        const ViscosityKinematic$FootSquarePerSecond(),
+        ViscosityKinematic$FootSquarePerSecond(),
       );
 
   @override
@@ -146,29 +147,29 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
 
   static const _majorName = 'viscosityKinematic';
 
-  static const exastoke = ViscosityKinematic$Exastoke();
-  static const petastoke = ViscosityKinematic$Petastoke();
-  static const terastoke = ViscosityKinematic$Terastoke();
-  static const gigastoke = ViscosityKinematic$Gigastoke();
-  static const megastoke = ViscosityKinematic$Megastoke();
-  static const kilostoke = ViscosityKinematic$Kilostoke();
-  static const hectostoke = ViscosityKinematic$Hectostoke();
-  static const dekastoke = ViscosityKinematic$Dekastoke();
-  static const stoke = ViscosityKinematic$Stoke();
-  static const decistoke = ViscosityKinematic$Decistoke();
-  static const centistoke = ViscosityKinematic$Centistoke();
-  static const millistoke = ViscosityKinematic$Millistoke();
-  static const microstoke = ViscosityKinematic$Microstoke();
-  static const nanostoke = ViscosityKinematic$Nanostoke();
-  static const picostoke = ViscosityKinematic$Picostoke();
-  static const femtostoke = ViscosityKinematic$Femtostoke();
-  static const attostoke = ViscosityKinematic$Attostoke();
-  static const meterSquarePerSecond = ViscosityKinematic$MeterSquarePerSecond();
-  static const centimeterSquarePerSecond =
+  static final exastoke = ViscosityKinematic$Exastoke();
+  static final petastoke = ViscosityKinematic$Petastoke();
+  static final terastoke = ViscosityKinematic$Terastoke();
+  static final gigastoke = ViscosityKinematic$Gigastoke();
+  static final megastoke = ViscosityKinematic$Megastoke();
+  static final kilostoke = ViscosityKinematic$Kilostoke();
+  static final hectostoke = ViscosityKinematic$Hectostoke();
+  static final dekastoke = ViscosityKinematic$Dekastoke();
+  static final stoke = ViscosityKinematic$Stoke();
+  static final decistoke = ViscosityKinematic$Decistoke();
+  static final centistoke = ViscosityKinematic$Centistoke();
+  static final millistoke = ViscosityKinematic$Millistoke();
+  static final microstoke = ViscosityKinematic$Microstoke();
+  static final nanostoke = ViscosityKinematic$Nanostoke();
+  static final picostoke = ViscosityKinematic$Picostoke();
+  static final femtostoke = ViscosityKinematic$Femtostoke();
+  static final attostoke = ViscosityKinematic$Attostoke();
+  static final meterSquarePerSecond = ViscosityKinematic$MeterSquarePerSecond();
+  static final centimeterSquarePerSecond =
       ViscosityKinematic$CentimeterSquarePerSecond();
-  static const millimeterSquarePerSecond =
+  static final millimeterSquarePerSecond =
       ViscosityKinematic$MillimeterSquarePerSecond();
-  static const footSquarePerSecond = ViscosityKinematic$FootSquarePerSecond();
+  static final footSquarePerSecond = ViscosityKinematic$FootSquarePerSecond();
 
   @override
   List<ViscosityKinematic> get units => values;
@@ -176,7 +177,7 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
   @override
   EnumValues<ViscosityKinematic> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <ViscosityKinematic>[
     exastoke,
     petastoke,
     terastoke,
@@ -200,7 +201,7 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
     footSquarePerSecond,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, ViscosityKinematic>{
     ViscosityKinematic$Exastoke._minorName: exastoke,
     ViscosityKinematic$Petastoke._minorName: petastoke,
     ViscosityKinematic$Terastoke._minorName: terastoke,
@@ -229,7 +230,7 @@ sealed class ViscosityKinematic extends Unit<ViscosityKinematic> {
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
-  const ViscosityKinematic$Exastoke([
+  ViscosityKinematic$Exastoke([
     super.value,
   ]);
 
@@ -260,14 +261,14 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+020');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Exastoke] = 100000000000000000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Exastoke] = 1.00000000000000000E+020 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -275,12 +276,12 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Exastoke] with new value
   @override
   ViscosityKinematic$Exastoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Exastoke(val);
 
@@ -293,14 +294,14 @@ final class ViscosityKinematic$Exastoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
-  const ViscosityKinematic$Petastoke([
+  ViscosityKinematic$Petastoke([
     super.value,
   ]);
 
@@ -331,14 +332,14 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+017');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Petastoke] = 100000000000000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Petastoke] = 1.00000000000000000E+017 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -347,12 +348,12 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Petastoke] with new value
   @override
   ViscosityKinematic$Petastoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Petastoke(val);
 
@@ -365,14 +366,14 @@ final class ViscosityKinematic$Petastoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
-  const ViscosityKinematic$Terastoke([
+  ViscosityKinematic$Terastoke([
     super.value,
   ]);
 
@@ -403,14 +404,14 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+014');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Terastoke] = 100000000000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Terastoke] = 1.00000000000000000E+014 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -419,12 +420,12 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Terastoke] with new value
   @override
   ViscosityKinematic$Terastoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Terastoke(val);
 
@@ -437,14 +438,14 @@ final class ViscosityKinematic$Terastoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
-  const ViscosityKinematic$Gigastoke([
+  ViscosityKinematic$Gigastoke([
     super.value,
   ]);
 
@@ -475,14 +476,14 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+011');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Gigastoke] = 100000000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Gigastoke] = 1.00000000000000000E+011 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -491,12 +492,12 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Gigastoke] with new value
   @override
   ViscosityKinematic$Gigastoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Gigastoke(val);
 
@@ -509,14 +510,14 @@ final class ViscosityKinematic$Gigastoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
-  const ViscosityKinematic$Megastoke([
+  ViscosityKinematic$Megastoke([
     super.value,
   ]);
 
@@ -547,14 +548,14 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+008');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Megastoke] = 100000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Megastoke] = 1.00000000000000000E+008 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -563,12 +564,12 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Megastoke] with new value
   @override
   ViscosityKinematic$Megastoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Megastoke(val);
 
@@ -581,14 +582,14 @@ final class ViscosityKinematic$Megastoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
-  const ViscosityKinematic$Kilostoke([
+  ViscosityKinematic$Kilostoke([
     super.value,
   ]);
 
@@ -619,14 +620,14 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Kilostoke] = 100000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Kilostoke] = 1.00000000000000000E+005 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -635,12 +636,12 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Kilostoke] with new value
   @override
   ViscosityKinematic$Kilostoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Kilostoke(val);
 
@@ -653,14 +654,14 @@ final class ViscosityKinematic$Kilostoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
-  const ViscosityKinematic$Hectostoke([
+  ViscosityKinematic$Hectostoke([
     super.value,
   ]);
 
@@ -691,14 +692,14 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Hectostoke] = 10000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Hectostoke] = 1.00000000000000000E+004 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -707,12 +708,12 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Hectostoke] with new value
   @override
   ViscosityKinematic$Hectostoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Hectostoke(val);
 
@@ -725,14 +726,14 @@ final class ViscosityKinematic$Hectostoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
-  const ViscosityKinematic$Dekastoke([
+  ViscosityKinematic$Dekastoke([
     super.value,
   ]);
 
@@ -763,14 +764,14 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Dekastoke] = 1000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Dekastoke] = 1.00000000000000000E+003 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -779,12 +780,12 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Dekastoke] with new value
   @override
   ViscosityKinematic$Dekastoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Dekastoke(val);
 
@@ -797,14 +798,14 @@ final class ViscosityKinematic$Dekastoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Stoke extends ViscosityKinematic {
-  const ViscosityKinematic$Stoke([
+  ViscosityKinematic$Stoke([
     super.value,
   ]);
 
@@ -835,14 +836,14 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Stoke] = 100.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Stoke] = 1.00000000000000000E+002 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -850,12 +851,12 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Stoke] with new value
   @override
   ViscosityKinematic$Stoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Stoke(val);
 
@@ -868,14 +869,14 @@ final class ViscosityKinematic$Stoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
-  const ViscosityKinematic$Decistoke([
+  ViscosityKinematic$Decistoke([
     super.value,
   ]);
 
@@ -906,14 +907,14 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Decistoke] = 10.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Decistoke] = 1.00000000000000000E+001 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -922,12 +923,12 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Decistoke] with new value
   @override
   ViscosityKinematic$Decistoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Decistoke(val);
 
@@ -940,14 +941,14 @@ final class ViscosityKinematic$Decistoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
-  const ViscosityKinematic$Centistoke([
+  ViscosityKinematic$Centistoke([
     super.value,
   ]);
 
@@ -978,14 +979,14 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
   /// Default (anchor) unit of [ViscosityKinematic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -994,12 +995,12 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Centistoke] with new value
   @override
   ViscosityKinematic$Centistoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Centistoke(val);
 
@@ -1012,14 +1013,14 @@ final class ViscosityKinematic$Centistoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
-  const ViscosityKinematic$Millistoke([
+  ViscosityKinematic$Millistoke([
     super.value,
   ]);
 
@@ -1050,14 +1051,14 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Millistoke] ≈ 0.1 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Millistoke] ≈ 1.00000000000000000E-001 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1066,12 +1067,12 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Millistoke] with new value
   @override
   ViscosityKinematic$Millistoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Millistoke(val);
 
@@ -1084,14 +1085,14 @@ final class ViscosityKinematic$Millistoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
-  const ViscosityKinematic$Microstoke([
+  ViscosityKinematic$Microstoke([
     super.value,
   ]);
 
@@ -1122,14 +1123,14 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.0001;
+  static final _ratio = Rational.parse('1.00000000000000000E-004');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Microstoke] ≈ 0.0001 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Microstoke] ≈ 1.00000000000000000E-004 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1138,12 +1139,12 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Microstoke] with new value
   @override
   ViscosityKinematic$Microstoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Microstoke(val);
 
@@ -1156,14 +1157,14 @@ final class ViscosityKinematic$Microstoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
-  const ViscosityKinematic$Nanostoke([
+  ViscosityKinematic$Nanostoke([
     super.value,
   ]);
 
@@ -1194,14 +1195,14 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-7;
+  static final _ratio = Rational.parse('1.00000000000000000E-007');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Nanostoke] ≈ 1e-7 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Nanostoke] ≈ 1.00000000000000000E-007 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1210,12 +1211,12 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Nanostoke] with new value
   @override
   ViscosityKinematic$Nanostoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Nanostoke(val);
 
@@ -1228,14 +1229,14 @@ final class ViscosityKinematic$Nanostoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
-  const ViscosityKinematic$Picostoke([
+  ViscosityKinematic$Picostoke([
     super.value,
   ]);
 
@@ -1266,14 +1267,14 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-10;
+  static final _ratio = Rational.parse('1.00000000000000000E-010');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Picostoke] ≈ 1e-10 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Picostoke] ≈ 1.00000000000000000E-010 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1282,12 +1283,12 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Picostoke] with new value
   @override
   ViscosityKinematic$Picostoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Picostoke(val);
 
@@ -1300,14 +1301,14 @@ final class ViscosityKinematic$Picostoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
-  const ViscosityKinematic$Femtostoke([
+  ViscosityKinematic$Femtostoke([
     super.value,
   ]);
 
@@ -1338,14 +1339,14 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-13;
+  static final _ratio = Rational.parse('1.00000000000000000E-013');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Femtostoke] ≈ 1e-13 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Femtostoke] ≈ 1.00000000000000000E-013 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1354,12 +1355,12 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Femtostoke] with new value
   @override
   ViscosityKinematic$Femtostoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Femtostoke(val);
 
@@ -1372,14 +1373,14 @@ final class ViscosityKinematic$Femtostoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
-  const ViscosityKinematic$Attostoke([
+  ViscosityKinematic$Attostoke([
     super.value,
   ]);
 
@@ -1410,14 +1411,14 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-16;
+  static final _ratio = Rational.parse('1.00000000000000000E-016');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$Attostoke] ≈ 1e-16 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$Attostoke] ≈ 1.00000000000000000E-016 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1426,12 +1427,12 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$Attostoke] with new value
   @override
   ViscosityKinematic$Attostoke withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$Attostoke(val);
 
@@ -1444,14 +1445,14 @@ final class ViscosityKinematic$Attostoke extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
-  const ViscosityKinematic$MeterSquarePerSecond([
+  ViscosityKinematic$MeterSquarePerSecond([
     super.value,
   ]);
 
@@ -1482,14 +1483,14 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
   @override
   String get displayName => 'meter²/second';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$MeterSquarePerSecond] = 1000000.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$MeterSquarePerSecond] = 1.00000000000000000E+006 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1498,12 +1499,12 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$MeterSquarePerSecond] with new value
   @override
   ViscosityKinematic$MeterSquarePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$MeterSquarePerSecond(val);
 
@@ -1516,7 +1517,7 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1524,7 +1525,7 @@ final class ViscosityKinematic$MeterSquarePerSecond extends ViscosityKinematic {
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$CentimeterSquarePerSecond
     extends ViscosityKinematic {
-  const ViscosityKinematic$CentimeterSquarePerSecond([
+  ViscosityKinematic$CentimeterSquarePerSecond([
     super.value,
   ]);
 
@@ -1555,14 +1556,14 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
   @override
   String get displayName => 'centimeter²/second';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$CentimeterSquarePerSecond] = 100.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$CentimeterSquarePerSecond] = 1.00000000000000000E+002 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1571,12 +1572,12 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$CentimeterSquarePerSecond] with new value
   @override
   ViscosityKinematic$CentimeterSquarePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$CentimeterSquarePerSecond(val);
 
@@ -1589,7 +1590,7 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1597,7 +1598,7 @@ final class ViscosityKinematic$CentimeterSquarePerSecond
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$MillimeterSquarePerSecond
     extends ViscosityKinematic {
-  const ViscosityKinematic$MillimeterSquarePerSecond([
+  ViscosityKinematic$MillimeterSquarePerSecond([
     super.value,
   ]);
 
@@ -1628,14 +1629,14 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
   @override
   String get displayName => 'millimeter²/second';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$MillimeterSquarePerSecond] = 1.0 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$MillimeterSquarePerSecond] = 1.00000000000000000E+000 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1644,12 +1645,12 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$MillimeterSquarePerSecond] with new value
   @override
   ViscosityKinematic$MillimeterSquarePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$MillimeterSquarePerSecond(val);
 
@@ -1662,14 +1663,14 @@ final class ViscosityKinematic$MillimeterSquarePerSecond
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityKinematic]
 final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
-  const ViscosityKinematic$FootSquarePerSecond([
+  ViscosityKinematic$FootSquarePerSecond([
     super.value,
   ]);
 
@@ -1700,14 +1701,14 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
   @override
   String get displayName => 'foot²/second';
 
-  static const _ratio = 92903.04000008391;
+  static final _ratio = Rational.parse('9.29030400000839130E+004');
 
   @override
-  ViscosityKinematic get anchor => const ViscosityKinematic$Centistoke(_ratio);
+  ViscosityKinematic get anchor => ViscosityKinematic$Centistoke(_ratio);
 
-  /// 1 [ViscosityKinematic$FootSquarePerSecond] ≈ 92903.04000008391 [ViscosityKinematic$Centistoke]
+  /// 1 [ViscosityKinematic$FootSquarePerSecond] ≈ 9.29030400000839130E+004 [ViscosityKinematic$Centistoke]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1716,12 +1717,12 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityKinematic$FootSquarePerSecond] with new value
   @override
   ViscosityKinematic$FootSquarePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityKinematic$FootSquarePerSecond(val);
 
@@ -1734,7 +1735,7 @@ final class ViscosityKinematic$FootSquarePerSecond extends ViscosityKinematic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

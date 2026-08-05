@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [ElectricField$AbvoltPerCentimeter],
 /// [ElectricField$StatvoltPerCentimeter], [ElectricField$StatvoltPerInch]
 sealed class ElectricField extends Unit<ElectricField> {
-  const ElectricField([
+  ElectricField([
     super.value,
   ]);
 
@@ -20,55 +20,56 @@ sealed class ElectricField extends Unit<ElectricField> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : ElectricField.anchor();
 
-  factory ElectricField.anchor() => const ElectricField$KilovoltPerCentimeter();
+  factory ElectricField.anchor() => ElectricField$KilovoltPerCentimeter();
 
   /// Convert to [ElectricField$KilovoltPerCentimeter]
   ElectricField get toKilovoltPerCentimeter => convertTo(
-        const ElectricField$KilovoltPerCentimeter(),
+        ElectricField$KilovoltPerCentimeter(),
       );
 
   /// Convert to [ElectricField$VoltPerMeter]
   ElectricField get toVoltPerMeter => convertTo(
-        const ElectricField$VoltPerMeter(),
+        ElectricField$VoltPerMeter(),
       );
 
   /// Convert to [ElectricField$VoltPerCentimeter]
   ElectricField get toVoltPerCentimeter => convertTo(
-        const ElectricField$VoltPerCentimeter(),
+        ElectricField$VoltPerCentimeter(),
       );
 
   /// Convert to [ElectricField$VoltPerInch]
   ElectricField get toVoltPerInch => convertTo(
-        const ElectricField$VoltPerInch(),
+        ElectricField$VoltPerInch(),
       );
 
   /// Convert to [ElectricField$MillivoltPerMeter]
   ElectricField get toMillivoltPerMeter => convertTo(
-        const ElectricField$MillivoltPerMeter(),
+        ElectricField$MillivoltPerMeter(),
       );
 
   /// Convert to [ElectricField$MicrovoltPerMeter]
   ElectricField get toMicrovoltPerMeter => convertTo(
-        const ElectricField$MicrovoltPerMeter(),
+        ElectricField$MicrovoltPerMeter(),
       );
 
   /// Convert to [ElectricField$AbvoltPerCentimeter]
   ElectricField get toAbvoltPerCentimeter => convertTo(
-        const ElectricField$AbvoltPerCentimeter(),
+        ElectricField$AbvoltPerCentimeter(),
       );
 
   /// Convert to [ElectricField$StatvoltPerCentimeter]
   ElectricField get toStatvoltPerCentimeter => convertTo(
-        const ElectricField$StatvoltPerCentimeter(),
+        ElectricField$StatvoltPerCentimeter(),
       );
 
   /// Convert to [ElectricField$StatvoltPerInch]
   ElectricField get toStatvoltPerInch => convertTo(
-        const ElectricField$StatvoltPerInch(),
+        ElectricField$StatvoltPerInch(),
       );
 
   @override
@@ -79,15 +80,15 @@ sealed class ElectricField extends Unit<ElectricField> {
 
   static const _majorName = 'electricField';
 
-  static const kilovoltPerCentimeter = ElectricField$KilovoltPerCentimeter();
-  static const voltPerMeter = ElectricField$VoltPerMeter();
-  static const voltPerCentimeter = ElectricField$VoltPerCentimeter();
-  static const voltPerInch = ElectricField$VoltPerInch();
-  static const millivoltPerMeter = ElectricField$MillivoltPerMeter();
-  static const microvoltPerMeter = ElectricField$MicrovoltPerMeter();
-  static const abvoltPerCentimeter = ElectricField$AbvoltPerCentimeter();
-  static const statvoltPerCentimeter = ElectricField$StatvoltPerCentimeter();
-  static const statvoltPerInch = ElectricField$StatvoltPerInch();
+  static final kilovoltPerCentimeter = ElectricField$KilovoltPerCentimeter();
+  static final voltPerMeter = ElectricField$VoltPerMeter();
+  static final voltPerCentimeter = ElectricField$VoltPerCentimeter();
+  static final voltPerInch = ElectricField$VoltPerInch();
+  static final millivoltPerMeter = ElectricField$MillivoltPerMeter();
+  static final microvoltPerMeter = ElectricField$MicrovoltPerMeter();
+  static final abvoltPerCentimeter = ElectricField$AbvoltPerCentimeter();
+  static final statvoltPerCentimeter = ElectricField$StatvoltPerCentimeter();
+  static final statvoltPerInch = ElectricField$StatvoltPerInch();
 
   @override
   List<ElectricField> get units => values;
@@ -95,7 +96,7 @@ sealed class ElectricField extends Unit<ElectricField> {
   @override
   EnumValues<ElectricField> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <ElectricField>[
     kilovoltPerCentimeter,
     voltPerMeter,
     voltPerCentimeter,
@@ -107,7 +108,7 @@ sealed class ElectricField extends Unit<ElectricField> {
     statvoltPerInch,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, ElectricField>{
     ElectricField$KilovoltPerCentimeter._minorName: kilovoltPerCentimeter,
     ElectricField$VoltPerMeter._minorName: voltPerMeter,
     ElectricField$VoltPerCentimeter._minorName: voltPerCentimeter,
@@ -122,7 +123,7 @@ sealed class ElectricField extends Unit<ElectricField> {
 
 /// Unit of [ElectricField]
 final class ElectricField$KilovoltPerCentimeter extends ElectricField {
-  const ElectricField$KilovoltPerCentimeter([
+  ElectricField$KilovoltPerCentimeter([
     super.value,
   ]);
 
@@ -153,14 +154,14 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
   @override
   String get displayName => 'kilovolt/centimeter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
   /// Default (anchor) unit of [ElectricField]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -169,12 +170,12 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$KilovoltPerCentimeter] with new value
   @override
   ElectricField$KilovoltPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$KilovoltPerCentimeter(val);
 
@@ -187,14 +188,14 @@ final class ElectricField$KilovoltPerCentimeter extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ElectricField]
 final class ElectricField$VoltPerMeter extends ElectricField {
-  const ElectricField$VoltPerMeter([
+  ElectricField$VoltPerMeter([
     super.value,
   ]);
 
@@ -225,14 +226,14 @@ final class ElectricField$VoltPerMeter extends ElectricField {
   @override
   String get displayName => 'volt/meter';
 
-  static const _ratio = 0.00001;
+  static final _ratio = Rational.parse('1.00000000000000000E-005');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
-  /// 1 [ElectricField$VoltPerMeter] ≈ 0.00001 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$VoltPerMeter] ≈ 1.00000000000000000E-005 [ElectricField$KilovoltPerCentimeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -240,12 +241,12 @@ final class ElectricField$VoltPerMeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$VoltPerMeter] with new value
   @override
   ElectricField$VoltPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$VoltPerMeter(val);
 
@@ -258,14 +259,14 @@ final class ElectricField$VoltPerMeter extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ElectricField]
 final class ElectricField$VoltPerCentimeter extends ElectricField {
-  const ElectricField$VoltPerCentimeter([
+  ElectricField$VoltPerCentimeter([
     super.value,
   ]);
 
@@ -296,14 +297,14 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
   @override
   String get displayName => 'volt/centimeter';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
-  /// 1 [ElectricField$VoltPerCentimeter] ≈ 0.001 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$VoltPerCentimeter] ≈ 1.00000000000000000E-003 [ElectricField$KilovoltPerCentimeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -312,12 +313,12 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$VoltPerCentimeter] with new value
   @override
   ElectricField$VoltPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$VoltPerCentimeter(val);
 
@@ -330,14 +331,14 @@ final class ElectricField$VoltPerCentimeter extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ElectricField]
 final class ElectricField$VoltPerInch extends ElectricField {
-  const ElectricField$VoltPerInch([
+  ElectricField$VoltPerInch([
     super.value,
   ]);
 
@@ -368,14 +369,14 @@ final class ElectricField$VoltPerInch extends ElectricField {
   @override
   String get displayName => 'volt/inch';
 
-  static const _ratio = 0.0003937007874015748;
+  static final _ratio = Rational.parse('3.93700787401574803E-004');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
-  /// 1 [ElectricField$VoltPerInch] ≈ 0.0003937007874015748 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$VoltPerInch] ≈ 3.93700787401574803E-004 [ElectricField$KilovoltPerCentimeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -383,12 +384,12 @@ final class ElectricField$VoltPerInch extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$VoltPerInch] with new value
   @override
   ElectricField$VoltPerInch withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$VoltPerInch(val);
 
@@ -401,14 +402,14 @@ final class ElectricField$VoltPerInch extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ElectricField]
 final class ElectricField$MillivoltPerMeter extends ElectricField {
-  const ElectricField$MillivoltPerMeter([
+  ElectricField$MillivoltPerMeter([
     super.value,
   ]);
 
@@ -439,14 +440,14 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
   @override
   String get displayName => 'millivolt/meter';
 
-  static const _ratio = 1e-8;
+  static final _ratio = Rational.parse('1.00000000000000000E-008');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
-  /// 1 [ElectricField$MillivoltPerMeter] ≈ 1e-8 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$MillivoltPerMeter] ≈ 1.00000000000000000E-008 [ElectricField$KilovoltPerCentimeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -455,12 +456,12 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$MillivoltPerMeter] with new value
   @override
   ElectricField$MillivoltPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$MillivoltPerMeter(val);
 
@@ -473,14 +474,14 @@ final class ElectricField$MillivoltPerMeter extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ElectricField]
 final class ElectricField$MicrovoltPerMeter extends ElectricField {
-  const ElectricField$MicrovoltPerMeter([
+  ElectricField$MicrovoltPerMeter([
     super.value,
   ]);
 
@@ -511,14 +512,14 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
   @override
   String get displayName => 'microvolt/meter';
 
-  static const _ratio = 1e-11;
+  static final _ratio = Rational.parse('1.00000000000000000E-011');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
-  /// 1 [ElectricField$MicrovoltPerMeter] ≈ 1e-11 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$MicrovoltPerMeter] ≈ 1.00000000000000000E-011 [ElectricField$KilovoltPerCentimeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -527,12 +528,12 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$MicrovoltPerMeter] with new value
   @override
   ElectricField$MicrovoltPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$MicrovoltPerMeter(val);
 
@@ -545,14 +546,14 @@ final class ElectricField$MicrovoltPerMeter extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ElectricField]
 final class ElectricField$AbvoltPerCentimeter extends ElectricField {
-  const ElectricField$AbvoltPerCentimeter([
+  ElectricField$AbvoltPerCentimeter([
     super.value,
   ]);
 
@@ -583,14 +584,14 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
   @override
   String get displayName => 'Abvolt/centimeter';
 
-  static const _ratio = 1e-11;
+  static final _ratio = Rational.parse('1.00000000000000000E-011');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
-  /// 1 [ElectricField$AbvoltPerCentimeter] ≈ 1e-11 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$AbvoltPerCentimeter] ≈ 1.00000000000000000E-011 [ElectricField$KilovoltPerCentimeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -599,12 +600,12 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$AbvoltPerCentimeter] with new value
   @override
   ElectricField$AbvoltPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$AbvoltPerCentimeter(val);
 
@@ -617,14 +618,14 @@ final class ElectricField$AbvoltPerCentimeter extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ElectricField]
 final class ElectricField$StatvoltPerCentimeter extends ElectricField {
-  const ElectricField$StatvoltPerCentimeter([
+  ElectricField$StatvoltPerCentimeter([
     super.value,
   ]);
 
@@ -655,14 +656,14 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
   @override
   String get displayName => 'Statvolt/centimeter';
 
-  static const _ratio = 0.2997919999933998;
+  static final _ratio = Rational.parse('2.99791999993399779E-001');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
-  /// 1 [ElectricField$StatvoltPerCentimeter] ≈ 0.2997919999933998 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$StatvoltPerCentimeter] ≈ 2.99791999993399779E-001 [ElectricField$KilovoltPerCentimeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -671,12 +672,12 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$StatvoltPerCentimeter] with new value
   @override
   ElectricField$StatvoltPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$StatvoltPerCentimeter(val);
 
@@ -689,14 +690,14 @@ final class ElectricField$StatvoltPerCentimeter extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ElectricField]
 final class ElectricField$StatvoltPerInch extends ElectricField {
-  const ElectricField$StatvoltPerInch([
+  ElectricField$StatvoltPerInch([
     super.value,
   ]);
 
@@ -727,14 +728,14 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
   @override
   String get displayName => 'Statvolt/inch';
 
-  static const _ratio = 0.11802834645669291;
+  static final _ratio = Rational.parse('1.18028346456692913E-001');
 
   @override
-  ElectricField get anchor => const ElectricField$KilovoltPerCentimeter(_ratio);
+  ElectricField get anchor => ElectricField$KilovoltPerCentimeter(_ratio);
 
-  /// 1 [ElectricField$StatvoltPerInch] ≈ 0.11802834645669291 [ElectricField$KilovoltPerCentimeter]
+  /// 1 [ElectricField$StatvoltPerInch] ≈ 1.18028346456692913E-001 [ElectricField$KilovoltPerCentimeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -743,12 +744,12 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ElectricField$StatvoltPerInch] with new value
   @override
   ElectricField$StatvoltPerInch withValue(
-    num val,
+    Rational val,
   ) =>
       ElectricField$StatvoltPerInch(val);
 
@@ -761,7 +762,7 @@ final class ElectricField$StatvoltPerInch extends ElectricField {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

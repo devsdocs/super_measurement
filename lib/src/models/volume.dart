@@ -25,7 +25,7 @@ part of '../../super_measurement.dart';
 /// [Volume$TazaSpanish], [Volume$Bushel], [Volume$Peck], [Volume$DryPint],
 /// [Volume$DryQuart]
 sealed class Volume extends Unit<Volume> {
-  const Volume([
+  Volume([
     super.value,
   ]);
 
@@ -37,375 +37,376 @@ sealed class Volume extends Unit<Volume> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Volume.anchor();
 
-  factory Volume.anchor() => const Volume$MeterCubic();
+  factory Volume.anchor() => Volume$MeterCubic();
 
   /// Convert to [Volume$MeterCubic]
   Volume get toMeterCubic => convertTo(
-        const Volume$MeterCubic(),
+        Volume$MeterCubic(),
       );
 
   /// Convert to [Volume$CentimeterCubic]
   Volume get toCentimeterCubic => convertTo(
-        const Volume$CentimeterCubic(),
+        Volume$CentimeterCubic(),
       );
 
   /// Convert to [Volume$MillimeterCubic]
   Volume get toMillimeterCubic => convertTo(
-        const Volume$MillimeterCubic(),
+        Volume$MillimeterCubic(),
       );
 
   /// Convert to [Volume$Exaliter]
   Volume get toExaliter => convertTo(
-        const Volume$Exaliter(),
+        Volume$Exaliter(),
       );
 
   /// Convert to [Volume$Petaliter]
   Volume get toPetaliter => convertTo(
-        const Volume$Petaliter(),
+        Volume$Petaliter(),
       );
 
   /// Convert to [Volume$Teraliter]
   Volume get toTeraliter => convertTo(
-        const Volume$Teraliter(),
+        Volume$Teraliter(),
       );
 
   /// Convert to [Volume$Gigaliter]
   Volume get toGigaliter => convertTo(
-        const Volume$Gigaliter(),
+        Volume$Gigaliter(),
       );
 
   /// Convert to [Volume$Megaliter]
   Volume get toMegaliter => convertTo(
-        const Volume$Megaliter(),
+        Volume$Megaliter(),
       );
 
   /// Convert to [Volume$Kiloliter]
   Volume get toKiloliter => convertTo(
-        const Volume$Kiloliter(),
+        Volume$Kiloliter(),
       );
 
   /// Convert to [Volume$Hectoliter]
   Volume get toHectoliter => convertTo(
-        const Volume$Hectoliter(),
+        Volume$Hectoliter(),
       );
 
   /// Convert to [Volume$Dekaliter]
   Volume get toDekaliter => convertTo(
-        const Volume$Dekaliter(),
+        Volume$Dekaliter(),
       );
 
   /// Convert to [Volume$Liter]
   Volume get toLiter => convertTo(
-        const Volume$Liter(),
+        Volume$Liter(),
       );
 
   /// Convert to [Volume$Deciliter]
   Volume get toDeciliter => convertTo(
-        const Volume$Deciliter(),
+        Volume$Deciliter(),
       );
 
   /// Convert to [Volume$Centiliter]
   Volume get toCentiliter => convertTo(
-        const Volume$Centiliter(),
+        Volume$Centiliter(),
       );
 
   /// Convert to [Volume$Milliliter]
   Volume get toMilliliter => convertTo(
-        const Volume$Milliliter(),
+        Volume$Milliliter(),
       );
 
   /// Convert to [Volume$Microliter]
   Volume get toMicroliter => convertTo(
-        const Volume$Microliter(),
+        Volume$Microliter(),
       );
 
   /// Convert to [Volume$Nanoliter]
   Volume get toNanoliter => convertTo(
-        const Volume$Nanoliter(),
+        Volume$Nanoliter(),
       );
 
   /// Convert to [Volume$Picoliter]
   Volume get toPicoliter => convertTo(
-        const Volume$Picoliter(),
+        Volume$Picoliter(),
       );
 
   /// Convert to [Volume$Femtoliter]
   Volume get toFemtoliter => convertTo(
-        const Volume$Femtoliter(),
+        Volume$Femtoliter(),
       );
 
   /// Convert to [Volume$Attoliter]
   Volume get toAttoliter => convertTo(
-        const Volume$Attoliter(),
+        Volume$Attoliter(),
       );
 
   /// Convert to [Volume$Cc]
   Volume get toCc => convertTo(
-        const Volume$Cc(),
+        Volume$Cc(),
       );
 
   /// Convert to [Volume$Drop]
   Volume get toDrop => convertTo(
-        const Volume$Drop(),
+        Volume$Drop(),
       );
 
   /// Convert to [Volume$Barrel]
   Volume get toBarrel => convertTo(
-        const Volume$Barrel(),
+        Volume$Barrel(),
       );
 
   /// Convert to [Volume$BarrelOil]
   Volume get toBarrelOil => convertTo(
-        const Volume$BarrelOil(),
+        Volume$BarrelOil(),
       );
 
   /// Convert to [Volume$BushelUK]
   Volume get toBushelUK => convertTo(
-        const Volume$BushelUK(),
+        Volume$BushelUK(),
       );
 
   /// Convert to [Volume$PeckUK]
   Volume get toPeckUK => convertTo(
-        const Volume$PeckUK(),
+        Volume$PeckUK(),
       );
 
   /// Convert to [Volume$Gallon]
   Volume get toGallon => convertTo(
-        const Volume$Gallon(),
+        Volume$Gallon(),
       );
 
   /// Convert to [Volume$GallonUK]
   Volume get toGallonUK => convertTo(
-        const Volume$GallonUK(),
+        Volume$GallonUK(),
       );
 
   /// Convert to [Volume$Quart]
   Volume get toQuart => convertTo(
-        const Volume$Quart(),
+        Volume$Quart(),
       );
 
   /// Convert to [Volume$QuartUK]
   Volume get toQuartUK => convertTo(
-        const Volume$QuartUK(),
+        Volume$QuartUK(),
       );
 
   /// Convert to [Volume$Pint]
   Volume get toPint => convertTo(
-        const Volume$Pint(),
+        Volume$Pint(),
       );
 
   /// Convert to [Volume$PintUK]
   Volume get toPintUK => convertTo(
-        const Volume$PintUK(),
+        Volume$PintUK(),
       );
 
   /// Convert to [Volume$Cup]
   Volume get toCup => convertTo(
-        const Volume$Cup(),
+        Volume$Cup(),
       );
 
   /// Convert to [Volume$CupUK]
   Volume get toCupUK => convertTo(
-        const Volume$CupUK(),
+        Volume$CupUK(),
       );
 
   /// Convert to [Volume$Gill]
   Volume get toGill => convertTo(
-        const Volume$Gill(),
+        Volume$Gill(),
       );
 
   /// Convert to [Volume$GillUK]
   Volume get toGillUK => convertTo(
-        const Volume$GillUK(),
+        Volume$GillUK(),
       );
 
   /// Convert to [Volume$Ounce]
   Volume get toOunce => convertTo(
-        const Volume$Ounce(),
+        Volume$Ounce(),
       );
 
   /// Convert to [Volume$OunceUK]
   Volume get toOunceUK => convertTo(
-        const Volume$OunceUK(),
+        Volume$OunceUK(),
       );
 
   /// Convert to [Volume$Dram]
   Volume get toDram => convertTo(
-        const Volume$Dram(),
+        Volume$Dram(),
       );
 
   /// Convert to [Volume$DramUK]
   Volume get toDramUK => convertTo(
-        const Volume$DramUK(),
+        Volume$DramUK(),
       );
 
   /// Convert to [Volume$Minim]
   Volume get toMinim => convertTo(
-        const Volume$Minim(),
+        Volume$Minim(),
       );
 
   /// Convert to [Volume$MinimUK]
   Volume get toMinimUK => convertTo(
-        const Volume$MinimUK(),
+        Volume$MinimUK(),
       );
 
   /// Convert to [Volume$Tablespoon]
   Volume get toTablespoon => convertTo(
-        const Volume$Tablespoon(),
+        Volume$Tablespoon(),
       );
 
   /// Convert to [Volume$TablespoonUK]
   Volume get toTablespoonUK => convertTo(
-        const Volume$TablespoonUK(),
+        Volume$TablespoonUK(),
       );
 
   /// Convert to [Volume$Dessertspoon]
   Volume get toDessertspoon => convertTo(
-        const Volume$Dessertspoon(),
+        Volume$Dessertspoon(),
       );
 
   /// Convert to [Volume$DessertspoonUK]
   Volume get toDessertspoonUK => convertTo(
-        const Volume$DessertspoonUK(),
+        Volume$DessertspoonUK(),
       );
 
   /// Convert to [Volume$Teaspoon]
   Volume get toTeaspoon => convertTo(
-        const Volume$Teaspoon(),
+        Volume$Teaspoon(),
       );
 
   /// Convert to [Volume$TeaspoonUK]
   Volume get toTeaspoonUK => convertTo(
-        const Volume$TeaspoonUK(),
+        Volume$TeaspoonUK(),
       );
 
   /// Convert to [Volume$Hogshead]
   Volume get toHogshead => convertTo(
-        const Volume$Hogshead(),
+        Volume$Hogshead(),
       );
 
   /// Convert to [Volume$YardCubic]
   Volume get toYardCubic => convertTo(
-        const Volume$YardCubic(),
+        Volume$YardCubic(),
       );
 
   /// Convert to [Volume$FootCubic]
   Volume get toFootCubic => convertTo(
-        const Volume$FootCubic(),
+        Volume$FootCubic(),
       );
 
   /// Convert to [Volume$InchCubic]
   Volume get toInchCubic => convertTo(
-        const Volume$InchCubic(),
+        Volume$InchCubic(),
       );
 
   /// Convert to [Volume$Ccf]
   Volume get toCcf => convertTo(
-        const Volume$Ccf(),
+        Volume$Ccf(),
       );
 
   /// Convert to [Volume$HundredFootCubic]
   Volume get toHundredFootCubic => convertTo(
-        const Volume$HundredFootCubic(),
+        Volume$HundredFootCubic(),
       );
 
   /// Convert to [Volume$AcreFoot]
   Volume get toAcreFoot => convertTo(
-        const Volume$AcreFoot(),
+        Volume$AcreFoot(),
       );
 
   /// Convert to [Volume$AcreInch]
   Volume get toAcreInch => convertTo(
-        const Volume$AcreInch(),
+        Volume$AcreInch(),
       );
 
   /// Convert to [Volume$Dekastere]
   Volume get toDekastere => convertTo(
-        const Volume$Dekastere(),
+        Volume$Dekastere(),
       );
 
   /// Convert to [Volume$Stere]
   Volume get toStere => convertTo(
-        const Volume$Stere(),
+        Volume$Stere(),
       );
 
   /// Convert to [Volume$Decistere]
   Volume get toDecistere => convertTo(
-        const Volume$Decistere(),
+        Volume$Decistere(),
       );
 
   /// Convert to [Volume$Cord]
   Volume get toCord => convertTo(
-        const Volume$Cord(),
+        Volume$Cord(),
       );
 
   /// Convert to [Volume$BoardFoot]
   Volume get toBoardFoot => convertTo(
-        const Volume$BoardFoot(),
+        Volume$BoardFoot(),
       );
 
   /// Convert to [Volume$Tun]
   Volume get toTun => convertTo(
-        const Volume$Tun(),
+        Volume$Tun(),
       );
 
   /// Convert to [Volume$CorBiblical]
   Volume get toCorBiblical => convertTo(
-        const Volume$CorBiblical(),
+        Volume$CorBiblical(),
       );
 
   /// Convert to [Volume$HomerBiblical]
   Volume get toHomerBiblical => convertTo(
-        const Volume$HomerBiblical(),
+        Volume$HomerBiblical(),
       );
 
   /// Convert to [Volume$BathBiblical]
   Volume get toBathBiblical => convertTo(
-        const Volume$BathBiblical(),
+        Volume$BathBiblical(),
       );
 
   /// Convert to [Volume$HinBiblical]
   Volume get toHinBiblical => convertTo(
-        const Volume$HinBiblical(),
+        Volume$HinBiblical(),
       );
 
   /// Convert to [Volume$CabBiblical]
   Volume get toCabBiblical => convertTo(
-        const Volume$CabBiblical(),
+        Volume$CabBiblical(),
       );
 
   /// Convert to [Volume$LogBiblical]
   Volume get toLogBiblical => convertTo(
-        const Volume$LogBiblical(),
+        Volume$LogBiblical(),
       );
 
   /// Convert to [Volume$TazaSpanish]
   Volume get toTazaSpanish => convertTo(
-        const Volume$TazaSpanish(),
+        Volume$TazaSpanish(),
       );
 
   /// Convert to [Volume$Bushel]
   Volume get toBushel => convertTo(
-        const Volume$Bushel(),
+        Volume$Bushel(),
       );
 
   /// Convert to [Volume$Peck]
   Volume get toPeck => convertTo(
-        const Volume$Peck(),
+        Volume$Peck(),
       );
 
   /// Convert to [Volume$DryPint]
   Volume get toDryPint => convertTo(
-        const Volume$DryPint(),
+        Volume$DryPint(),
       );
 
   /// Convert to [Volume$DryQuart]
   Volume get toDryQuart => convertTo(
-        const Volume$DryQuart(),
+        Volume$DryQuart(),
       );
 
   @override
@@ -416,79 +417,79 @@ sealed class Volume extends Unit<Volume> {
 
   static const _majorName = 'volume';
 
-  static const meterCubic = Volume$MeterCubic();
-  static const centimeterCubic = Volume$CentimeterCubic();
-  static const millimeterCubic = Volume$MillimeterCubic();
-  static const exaliter = Volume$Exaliter();
-  static const petaliter = Volume$Petaliter();
-  static const teraliter = Volume$Teraliter();
-  static const gigaliter = Volume$Gigaliter();
-  static const megaliter = Volume$Megaliter();
-  static const kiloliter = Volume$Kiloliter();
-  static const hectoliter = Volume$Hectoliter();
-  static const dekaliter = Volume$Dekaliter();
-  static const liter = Volume$Liter();
-  static const deciliter = Volume$Deciliter();
-  static const centiliter = Volume$Centiliter();
-  static const milliliter = Volume$Milliliter();
-  static const microliter = Volume$Microliter();
-  static const nanoliter = Volume$Nanoliter();
-  static const picoliter = Volume$Picoliter();
-  static const femtoliter = Volume$Femtoliter();
-  static const attoliter = Volume$Attoliter();
-  static const cc = Volume$Cc();
-  static const drop = Volume$Drop();
-  static const barrel = Volume$Barrel();
-  static const barrelOil = Volume$BarrelOil();
-  static const bushelUK = Volume$BushelUK();
-  static const peckUK = Volume$PeckUK();
-  static const gallon = Volume$Gallon();
-  static const gallonUK = Volume$GallonUK();
-  static const quart = Volume$Quart();
-  static const quartUK = Volume$QuartUK();
-  static const pint = Volume$Pint();
-  static const pintUK = Volume$PintUK();
-  static const cup = Volume$Cup();
-  static const cupUK = Volume$CupUK();
-  static const gill = Volume$Gill();
-  static const gillUK = Volume$GillUK();
-  static const ounce = Volume$Ounce();
-  static const ounceUK = Volume$OunceUK();
-  static const dram = Volume$Dram();
-  static const dramUK = Volume$DramUK();
-  static const minim = Volume$Minim();
-  static const minimUK = Volume$MinimUK();
-  static const tablespoon = Volume$Tablespoon();
-  static const tablespoonUK = Volume$TablespoonUK();
-  static const dessertspoon = Volume$Dessertspoon();
-  static const dessertspoonUK = Volume$DessertspoonUK();
-  static const teaspoon = Volume$Teaspoon();
-  static const teaspoonUK = Volume$TeaspoonUK();
-  static const hogshead = Volume$Hogshead();
-  static const yardCubic = Volume$YardCubic();
-  static const footCubic = Volume$FootCubic();
-  static const inchCubic = Volume$InchCubic();
-  static const ccf = Volume$Ccf();
-  static const hundredFootCubic = Volume$HundredFootCubic();
-  static const acreFoot = Volume$AcreFoot();
-  static const acreInch = Volume$AcreInch();
-  static const dekastere = Volume$Dekastere();
-  static const stere = Volume$Stere();
-  static const decistere = Volume$Decistere();
-  static const cord = Volume$Cord();
-  static const boardFoot = Volume$BoardFoot();
-  static const tun = Volume$Tun();
-  static const corBiblical = Volume$CorBiblical();
-  static const homerBiblical = Volume$HomerBiblical();
-  static const bathBiblical = Volume$BathBiblical();
-  static const hinBiblical = Volume$HinBiblical();
-  static const cabBiblical = Volume$CabBiblical();
-  static const logBiblical = Volume$LogBiblical();
-  static const tazaSpanish = Volume$TazaSpanish();
-  static const bushel = Volume$Bushel();
-  static const peck = Volume$Peck();
-  static const dryPint = Volume$DryPint();
-  static const dryQuart = Volume$DryQuart();
+  static final meterCubic = Volume$MeterCubic();
+  static final centimeterCubic = Volume$CentimeterCubic();
+  static final millimeterCubic = Volume$MillimeterCubic();
+  static final exaliter = Volume$Exaliter();
+  static final petaliter = Volume$Petaliter();
+  static final teraliter = Volume$Teraliter();
+  static final gigaliter = Volume$Gigaliter();
+  static final megaliter = Volume$Megaliter();
+  static final kiloliter = Volume$Kiloliter();
+  static final hectoliter = Volume$Hectoliter();
+  static final dekaliter = Volume$Dekaliter();
+  static final liter = Volume$Liter();
+  static final deciliter = Volume$Deciliter();
+  static final centiliter = Volume$Centiliter();
+  static final milliliter = Volume$Milliliter();
+  static final microliter = Volume$Microliter();
+  static final nanoliter = Volume$Nanoliter();
+  static final picoliter = Volume$Picoliter();
+  static final femtoliter = Volume$Femtoliter();
+  static final attoliter = Volume$Attoliter();
+  static final cc = Volume$Cc();
+  static final drop = Volume$Drop();
+  static final barrel = Volume$Barrel();
+  static final barrelOil = Volume$BarrelOil();
+  static final bushelUK = Volume$BushelUK();
+  static final peckUK = Volume$PeckUK();
+  static final gallon = Volume$Gallon();
+  static final gallonUK = Volume$GallonUK();
+  static final quart = Volume$Quart();
+  static final quartUK = Volume$QuartUK();
+  static final pint = Volume$Pint();
+  static final pintUK = Volume$PintUK();
+  static final cup = Volume$Cup();
+  static final cupUK = Volume$CupUK();
+  static final gill = Volume$Gill();
+  static final gillUK = Volume$GillUK();
+  static final ounce = Volume$Ounce();
+  static final ounceUK = Volume$OunceUK();
+  static final dram = Volume$Dram();
+  static final dramUK = Volume$DramUK();
+  static final minim = Volume$Minim();
+  static final minimUK = Volume$MinimUK();
+  static final tablespoon = Volume$Tablespoon();
+  static final tablespoonUK = Volume$TablespoonUK();
+  static final dessertspoon = Volume$Dessertspoon();
+  static final dessertspoonUK = Volume$DessertspoonUK();
+  static final teaspoon = Volume$Teaspoon();
+  static final teaspoonUK = Volume$TeaspoonUK();
+  static final hogshead = Volume$Hogshead();
+  static final yardCubic = Volume$YardCubic();
+  static final footCubic = Volume$FootCubic();
+  static final inchCubic = Volume$InchCubic();
+  static final ccf = Volume$Ccf();
+  static final hundredFootCubic = Volume$HundredFootCubic();
+  static final acreFoot = Volume$AcreFoot();
+  static final acreInch = Volume$AcreInch();
+  static final dekastere = Volume$Dekastere();
+  static final stere = Volume$Stere();
+  static final decistere = Volume$Decistere();
+  static final cord = Volume$Cord();
+  static final boardFoot = Volume$BoardFoot();
+  static final tun = Volume$Tun();
+  static final corBiblical = Volume$CorBiblical();
+  static final homerBiblical = Volume$HomerBiblical();
+  static final bathBiblical = Volume$BathBiblical();
+  static final hinBiblical = Volume$HinBiblical();
+  static final cabBiblical = Volume$CabBiblical();
+  static final logBiblical = Volume$LogBiblical();
+  static final tazaSpanish = Volume$TazaSpanish();
+  static final bushel = Volume$Bushel();
+  static final peck = Volume$Peck();
+  static final dryPint = Volume$DryPint();
+  static final dryQuart = Volume$DryQuart();
 
   @override
   List<Volume> get units => values;
@@ -496,7 +497,7 @@ sealed class Volume extends Unit<Volume> {
   @override
   EnumValues<Volume> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Volume>[
     meterCubic,
     centimeterCubic,
     millimeterCubic,
@@ -572,7 +573,7 @@ sealed class Volume extends Unit<Volume> {
     dryQuart,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Volume>{
     Volume$MeterCubic._minorName: meterCubic,
     Volume$CentimeterCubic._minorName: centimeterCubic,
     Volume$MillimeterCubic._minorName: millimeterCubic,
@@ -651,7 +652,7 @@ sealed class Volume extends Unit<Volume> {
 
 /// Unit of [Volume]
 final class Volume$MeterCubic extends Volume {
-  const Volume$MeterCubic([
+  Volume$MeterCubic([
     super.value,
   ]);
 
@@ -682,14 +683,14 @@ final class Volume$MeterCubic extends Volume {
   @override
   String get displayName => 'meter³';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
   /// Default (anchor) unit of [Volume]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -697,12 +698,12 @@ final class Volume$MeterCubic extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$MeterCubic] with new value
   @override
   Volume$MeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$MeterCubic(val);
 
@@ -715,14 +716,14 @@ final class Volume$MeterCubic extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$CentimeterCubic extends Volume {
-  const Volume$CentimeterCubic([
+  Volume$CentimeterCubic([
     super.value,
   ]);
 
@@ -753,14 +754,14 @@ final class Volume$CentimeterCubic extends Volume {
   @override
   String get displayName => 'centimeter³';
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$CentimeterCubic] ≈ 0.000001 [Volume$MeterCubic]
+  /// 1 [Volume$CentimeterCubic] ≈ 1.00000000000000000E-006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -768,12 +769,12 @@ final class Volume$CentimeterCubic extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$CentimeterCubic] with new value
   @override
   Volume$CentimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$CentimeterCubic(val);
 
@@ -786,14 +787,14 @@ final class Volume$CentimeterCubic extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$MillimeterCubic extends Volume {
-  const Volume$MillimeterCubic([
+  Volume$MillimeterCubic([
     super.value,
   ]);
 
@@ -824,14 +825,14 @@ final class Volume$MillimeterCubic extends Volume {
   @override
   String get displayName => 'millimeter³';
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$MillimeterCubic] ≈ 1e-9 [Volume$MeterCubic]
+  /// 1 [Volume$MillimeterCubic] ≈ 1.00000000000000000E-009 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -839,12 +840,12 @@ final class Volume$MillimeterCubic extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$MillimeterCubic] with new value
   @override
   Volume$MillimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$MillimeterCubic(val);
 
@@ -857,14 +858,14 @@ final class Volume$MillimeterCubic extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Exaliter extends Volume {
-  const Volume$Exaliter([
+  Volume$Exaliter([
     super.value,
   ]);
 
@@ -895,14 +896,14 @@ final class Volume$Exaliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Exaliter] = 1000000000000000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Exaliter] = 1.00000000000000000E+015 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -910,12 +911,12 @@ final class Volume$Exaliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Exaliter] with new value
   @override
   Volume$Exaliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Exaliter(val);
 
@@ -928,14 +929,14 @@ final class Volume$Exaliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Petaliter extends Volume {
-  const Volume$Petaliter([
+  Volume$Petaliter([
     super.value,
   ]);
 
@@ -966,14 +967,14 @@ final class Volume$Petaliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Petaliter] = 1000000000000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Petaliter] = 1.00000000000000000E+012 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -981,12 +982,12 @@ final class Volume$Petaliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Petaliter] with new value
   @override
   Volume$Petaliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Petaliter(val);
 
@@ -999,14 +1000,14 @@ final class Volume$Petaliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Teraliter extends Volume {
-  const Volume$Teraliter([
+  Volume$Teraliter([
     super.value,
   ]);
 
@@ -1037,14 +1038,14 @@ final class Volume$Teraliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Teraliter] = 1000000000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Teraliter] = 1.00000000000000000E+009 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1052,12 +1053,12 @@ final class Volume$Teraliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Teraliter] with new value
   @override
   Volume$Teraliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Teraliter(val);
 
@@ -1070,14 +1071,14 @@ final class Volume$Teraliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Gigaliter extends Volume {
-  const Volume$Gigaliter([
+  Volume$Gigaliter([
     super.value,
   ]);
 
@@ -1108,14 +1109,14 @@ final class Volume$Gigaliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Gigaliter] = 1000000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Gigaliter] = 1.00000000000000000E+006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1123,12 +1124,12 @@ final class Volume$Gigaliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Gigaliter] with new value
   @override
   Volume$Gigaliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Gigaliter(val);
 
@@ -1141,14 +1142,14 @@ final class Volume$Gigaliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Megaliter extends Volume {
-  const Volume$Megaliter([
+  Volume$Megaliter([
     super.value,
   ]);
 
@@ -1179,14 +1180,14 @@ final class Volume$Megaliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Megaliter] = 1000.0 [Volume$MeterCubic]
+  /// 1 [Volume$Megaliter] = 1.00000000000000000E+003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1194,12 +1195,12 @@ final class Volume$Megaliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Megaliter] with new value
   @override
   Volume$Megaliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Megaliter(val);
 
@@ -1212,14 +1213,14 @@ final class Volume$Megaliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Kiloliter extends Volume {
-  const Volume$Kiloliter([
+  Volume$Kiloliter([
     super.value,
   ]);
 
@@ -1250,14 +1251,14 @@ final class Volume$Kiloliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Kiloliter] = 1.0 [Volume$MeterCubic]
+  /// 1 [Volume$Kiloliter] = 1.00000000000000000E+000 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1265,12 +1266,12 @@ final class Volume$Kiloliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Kiloliter] with new value
   @override
   Volume$Kiloliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Kiloliter(val);
 
@@ -1283,14 +1284,14 @@ final class Volume$Kiloliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Hectoliter extends Volume {
-  const Volume$Hectoliter([
+  Volume$Hectoliter([
     super.value,
   ]);
 
@@ -1321,14 +1322,14 @@ final class Volume$Hectoliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Hectoliter] ≈ 0.1 [Volume$MeterCubic]
+  /// 1 [Volume$Hectoliter] ≈ 1.00000000000000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1336,12 +1337,12 @@ final class Volume$Hectoliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Hectoliter] with new value
   @override
   Volume$Hectoliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Hectoliter(val);
 
@@ -1354,14 +1355,14 @@ final class Volume$Hectoliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Dekaliter extends Volume {
-  const Volume$Dekaliter([
+  Volume$Dekaliter([
     super.value,
   ]);
 
@@ -1392,14 +1393,14 @@ final class Volume$Dekaliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Dekaliter] ≈ 0.01 [Volume$MeterCubic]
+  /// 1 [Volume$Dekaliter] ≈ 1.00000000000000000E-002 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1407,12 +1408,12 @@ final class Volume$Dekaliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Dekaliter] with new value
   @override
   Volume$Dekaliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Dekaliter(val);
 
@@ -1425,14 +1426,14 @@ final class Volume$Dekaliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Liter extends Volume {
-  const Volume$Liter([
+  Volume$Liter([
     super.value,
   ]);
 
@@ -1463,14 +1464,14 @@ final class Volume$Liter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Liter] ≈ 0.001 [Volume$MeterCubic]
+  /// 1 [Volume$Liter] ≈ 1.00000000000000000E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1478,12 +1479,12 @@ final class Volume$Liter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Liter] with new value
   @override
   Volume$Liter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Liter(val);
 
@@ -1496,14 +1497,14 @@ final class Volume$Liter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Deciliter extends Volume {
-  const Volume$Deciliter([
+  Volume$Deciliter([
     super.value,
   ]);
 
@@ -1534,14 +1535,14 @@ final class Volume$Deciliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.0001;
+  static final _ratio = Rational.parse('1.00000000000000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Deciliter] ≈ 0.0001 [Volume$MeterCubic]
+  /// 1 [Volume$Deciliter] ≈ 1.00000000000000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1549,12 +1550,12 @@ final class Volume$Deciliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Deciliter] with new value
   @override
   Volume$Deciliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Deciliter(val);
 
@@ -1567,14 +1568,14 @@ final class Volume$Deciliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Centiliter extends Volume {
-  const Volume$Centiliter([
+  Volume$Centiliter([
     super.value,
   ]);
 
@@ -1605,14 +1606,14 @@ final class Volume$Centiliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.00001;
+  static final _ratio = Rational.parse('1.00000000000000000E-005');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Centiliter] ≈ 0.00001 [Volume$MeterCubic]
+  /// 1 [Volume$Centiliter] ≈ 1.00000000000000000E-005 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1620,12 +1621,12 @@ final class Volume$Centiliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Centiliter] with new value
   @override
   Volume$Centiliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Centiliter(val);
 
@@ -1638,14 +1639,14 @@ final class Volume$Centiliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Milliliter extends Volume {
-  const Volume$Milliliter([
+  Volume$Milliliter([
     super.value,
   ]);
 
@@ -1676,14 +1677,14 @@ final class Volume$Milliliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Milliliter] ≈ 0.000001 [Volume$MeterCubic]
+  /// 1 [Volume$Milliliter] ≈ 1.00000000000000000E-006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1691,12 +1692,12 @@ final class Volume$Milliliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Milliliter] with new value
   @override
   Volume$Milliliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Milliliter(val);
 
@@ -1709,14 +1710,14 @@ final class Volume$Milliliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Microliter extends Volume {
-  const Volume$Microliter([
+  Volume$Microliter([
     super.value,
   ]);
 
@@ -1747,14 +1748,14 @@ final class Volume$Microliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Microliter] ≈ 1e-9 [Volume$MeterCubic]
+  /// 1 [Volume$Microliter] ≈ 1.00000000000000000E-009 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1762,12 +1763,12 @@ final class Volume$Microliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Microliter] with new value
   @override
   Volume$Microliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Microliter(val);
 
@@ -1780,14 +1781,14 @@ final class Volume$Microliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Nanoliter extends Volume {
-  const Volume$Nanoliter([
+  Volume$Nanoliter([
     super.value,
   ]);
 
@@ -1818,14 +1819,14 @@ final class Volume$Nanoliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Nanoliter] ≈ 1e-12 [Volume$MeterCubic]
+  /// 1 [Volume$Nanoliter] ≈ 1.00000000000000000E-012 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1833,12 +1834,12 @@ final class Volume$Nanoliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Nanoliter] with new value
   @override
   Volume$Nanoliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Nanoliter(val);
 
@@ -1851,14 +1852,14 @@ final class Volume$Nanoliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Picoliter extends Volume {
-  const Volume$Picoliter([
+  Volume$Picoliter([
     super.value,
   ]);
 
@@ -1889,14 +1890,14 @@ final class Volume$Picoliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-15;
+  static final _ratio = Rational.parse('1.00000000000000000E-015');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Picoliter] ≈ 1e-15 [Volume$MeterCubic]
+  /// 1 [Volume$Picoliter] ≈ 1.00000000000000000E-015 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1904,12 +1905,12 @@ final class Volume$Picoliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Picoliter] with new value
   @override
   Volume$Picoliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Picoliter(val);
 
@@ -1922,14 +1923,14 @@ final class Volume$Picoliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Femtoliter extends Volume {
-  const Volume$Femtoliter([
+  Volume$Femtoliter([
     super.value,
   ]);
 
@@ -1960,14 +1961,14 @@ final class Volume$Femtoliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-18;
+  static final _ratio = Rational.parse('1.00000000000000000E-018');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Femtoliter] ≈ 1e-18 [Volume$MeterCubic]
+  /// 1 [Volume$Femtoliter] ≈ 1.00000000000000000E-018 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1975,12 +1976,12 @@ final class Volume$Femtoliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Femtoliter] with new value
   @override
   Volume$Femtoliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Femtoliter(val);
 
@@ -1993,14 +1994,14 @@ final class Volume$Femtoliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Attoliter extends Volume {
-  const Volume$Attoliter([
+  Volume$Attoliter([
     super.value,
   ]);
 
@@ -2031,14 +2032,14 @@ final class Volume$Attoliter extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-21;
+  static final _ratio = Rational.parse('1.00000000000000000E-021');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Attoliter] ≈ 1e-21 [Volume$MeterCubic]
+  /// 1 [Volume$Attoliter] ≈ 1.00000000000000000E-021 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2046,12 +2047,12 @@ final class Volume$Attoliter extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Attoliter] with new value
   @override
   Volume$Attoliter withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Attoliter(val);
 
@@ -2064,14 +2065,14 @@ final class Volume$Attoliter extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Cc extends Volume {
-  const Volume$Cc([
+  Volume$Cc([
     super.value,
   ]);
 
@@ -2102,14 +2103,14 @@ final class Volume$Cc extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Cc] ≈ 0.000001 [Volume$MeterCubic]
+  /// 1 [Volume$Cc] ≈ 1.00000000000000000E-006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2117,12 +2118,12 @@ final class Volume$Cc extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Cc] with new value
   @override
   Volume$Cc withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Cc(val);
 
@@ -2135,14 +2136,14 @@ final class Volume$Cc extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Drop extends Volume {
-  const Volume$Drop([
+  Volume$Drop([
     super.value,
   ]);
 
@@ -2173,14 +2174,14 @@ final class Volume$Drop extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 5e-8;
+  static final _ratio = Rational.parse('5.00000000000000000E-008');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Drop] ≈ 5e-8 [Volume$MeterCubic]
+  /// 1 [Volume$Drop] ≈ 5.00000000000000000E-008 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2188,12 +2189,12 @@ final class Volume$Drop extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Drop] with new value
   @override
   Volume$Drop withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Drop(val);
 
@@ -2206,14 +2207,14 @@ final class Volume$Drop extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Barrel extends Volume {
-  const Volume$Barrel([
+  Volume$Barrel([
     super.value,
   ]);
 
@@ -2244,14 +2245,14 @@ final class Volume$Barrel extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.119240471196;
+  static final _ratio = Rational.parse('1.19240471196000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Barrel] ≈ 0.119240471196 [Volume$MeterCubic]
+  /// 1 [Volume$Barrel] ≈ 1.19240471196000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2259,12 +2260,12 @@ final class Volume$Barrel extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Barrel] with new value
   @override
   Volume$Barrel withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Barrel(val);
 
@@ -2277,14 +2278,14 @@ final class Volume$Barrel extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$BarrelOil extends Volume {
-  const Volume$BarrelOil([
+  Volume$BarrelOil([
     super.value,
   ]);
 
@@ -2315,14 +2316,14 @@ final class Volume$BarrelOil extends Volume {
   @override
   String get displayName => 'barrel (oil)';
 
-  static const _ratio = 0.158987294928;
+  static final _ratio = Rational.parse('1.58987294928000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$BarrelOil] ≈ 0.158987294928 [Volume$MeterCubic]
+  /// 1 [Volume$BarrelOil] ≈ 1.58987294928000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2330,12 +2331,12 @@ final class Volume$BarrelOil extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$BarrelOil] with new value
   @override
   Volume$BarrelOil withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$BarrelOil(val);
 
@@ -2348,14 +2349,14 @@ final class Volume$BarrelOil extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$BushelUK extends Volume {
-  const Volume$BushelUK([
+  Volume$BushelUK([
     super.value,
   ]);
 
@@ -2386,14 +2387,14 @@ final class Volume$BushelUK extends Volume {
   @override
   String get displayName => 'bushel (UK)';
 
-  static const _ratio = 0.03636872;
+  static final _ratio = Rational.parse('3.63687200000000000E-002');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$BushelUK] ≈ 0.03636872 [Volume$MeterCubic]
+  /// 1 [Volume$BushelUK] ≈ 3.63687200000000000E-002 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2401,12 +2402,12 @@ final class Volume$BushelUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$BushelUK] with new value
   @override
   Volume$BushelUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$BushelUK(val);
 
@@ -2419,14 +2420,14 @@ final class Volume$BushelUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$PeckUK extends Volume {
-  const Volume$PeckUK([
+  Volume$PeckUK([
     super.value,
   ]);
 
@@ -2457,14 +2458,14 @@ final class Volume$PeckUK extends Volume {
   @override
   String get displayName => 'peck (UK)';
 
-  static const _ratio = 0.00909218;
+  static final _ratio = Rational.parse('9.09218000000000000E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$PeckUK] ≈ 0.00909218 [Volume$MeterCubic]
+  /// 1 [Volume$PeckUK] ≈ 9.09218000000000000E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2472,12 +2473,12 @@ final class Volume$PeckUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$PeckUK] with new value
   @override
   Volume$PeckUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$PeckUK(val);
 
@@ -2490,14 +2491,14 @@ final class Volume$PeckUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Gallon extends Volume {
-  const Volume$Gallon([
+  Volume$Gallon([
     super.value,
   ]);
 
@@ -2528,14 +2529,14 @@ final class Volume$Gallon extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.003785411784;
+  static final _ratio = Rational.parse('3.78541178400000000E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Gallon] ≈ 0.003785411784 [Volume$MeterCubic]
+  /// 1 [Volume$Gallon] ≈ 3.78541178400000000E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2543,12 +2544,12 @@ final class Volume$Gallon extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Gallon] with new value
   @override
   Volume$Gallon withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Gallon(val);
 
@@ -2561,14 +2562,14 @@ final class Volume$Gallon extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$GallonUK extends Volume {
-  const Volume$GallonUK([
+  Volume$GallonUK([
     super.value,
   ]);
 
@@ -2599,14 +2600,14 @@ final class Volume$GallonUK extends Volume {
   @override
   String get displayName => 'gallon (UK)';
 
-  static const _ratio = 0.00454609;
+  static final _ratio = Rational.parse('4.54609000000000000E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$GallonUK] ≈ 0.00454609 [Volume$MeterCubic]
+  /// 1 [Volume$GallonUK] ≈ 4.54609000000000000E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2614,12 +2615,12 @@ final class Volume$GallonUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$GallonUK] with new value
   @override
   Volume$GallonUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$GallonUK(val);
 
@@ -2632,14 +2633,14 @@ final class Volume$GallonUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Quart extends Volume {
-  const Volume$Quart([
+  Volume$Quart([
     super.value,
   ]);
 
@@ -2670,14 +2671,14 @@ final class Volume$Quart extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000946352946;
+  static final _ratio = Rational.parse('9.46352946000000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Quart] ≈ 0.000946352946 [Volume$MeterCubic]
+  /// 1 [Volume$Quart] ≈ 9.46352946000000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2685,12 +2686,12 @@ final class Volume$Quart extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Quart] with new value
   @override
   Volume$Quart withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Quart(val);
 
@@ -2703,14 +2704,14 @@ final class Volume$Quart extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$QuartUK extends Volume {
-  const Volume$QuartUK([
+  Volume$QuartUK([
     super.value,
   ]);
 
@@ -2741,14 +2742,14 @@ final class Volume$QuartUK extends Volume {
   @override
   String get displayName => 'quart (UK)';
 
-  static const _ratio = 0.0011365225;
+  static final _ratio = Rational.parse('1.13652250000000000E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$QuartUK] ≈ 0.0011365225 [Volume$MeterCubic]
+  /// 1 [Volume$QuartUK] ≈ 1.13652250000000000E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2756,12 +2757,12 @@ final class Volume$QuartUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$QuartUK] with new value
   @override
   Volume$QuartUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$QuartUK(val);
 
@@ -2774,14 +2775,14 @@ final class Volume$QuartUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Pint extends Volume {
-  const Volume$Pint([
+  Volume$Pint([
     super.value,
   ]);
 
@@ -2812,14 +2813,14 @@ final class Volume$Pint extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000473176473;
+  static final _ratio = Rational.parse('4.73176473000000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Pint] ≈ 0.000473176473 [Volume$MeterCubic]
+  /// 1 [Volume$Pint] ≈ 4.73176473000000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2827,12 +2828,12 @@ final class Volume$Pint extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Pint] with new value
   @override
   Volume$Pint withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Pint(val);
 
@@ -2845,14 +2846,14 @@ final class Volume$Pint extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$PintUK extends Volume {
-  const Volume$PintUK([
+  Volume$PintUK([
     super.value,
   ]);
 
@@ -2883,14 +2884,14 @@ final class Volume$PintUK extends Volume {
   @override
   String get displayName => 'pint (UK)';
 
-  static const _ratio = 0.00056826125;
+  static final _ratio = Rational.parse('5.68261250000000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$PintUK] ≈ 0.00056826125 [Volume$MeterCubic]
+  /// 1 [Volume$PintUK] ≈ 5.68261250000000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2898,12 +2899,12 @@ final class Volume$PintUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$PintUK] with new value
   @override
   Volume$PintUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$PintUK(val);
 
@@ -2916,14 +2917,14 @@ final class Volume$PintUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Cup extends Volume {
-  const Volume$Cup([
+  Volume$Cup([
     super.value,
   ]);
 
@@ -2954,14 +2955,14 @@ final class Volume$Cup extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.0002365882365;
+  static final _ratio = Rational.parse('2.36588236500000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Cup] ≈ 0.0002365882365 [Volume$MeterCubic]
+  /// 1 [Volume$Cup] ≈ 2.36588236500000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2969,12 +2970,12 @@ final class Volume$Cup extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Cup] with new value
   @override
   Volume$Cup withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Cup(val);
 
@@ -2987,14 +2988,14 @@ final class Volume$Cup extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$CupUK extends Volume {
-  const Volume$CupUK([
+  Volume$CupUK([
     super.value,
   ]);
 
@@ -3025,14 +3026,14 @@ final class Volume$CupUK extends Volume {
   @override
   String get displayName => 'cup (UK)';
 
-  static const _ratio = 0.000284130625;
+  static final _ratio = Rational.parse('2.84130625000000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$CupUK] ≈ 0.000284130625 [Volume$MeterCubic]
+  /// 1 [Volume$CupUK] ≈ 2.84130625000000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3040,12 +3041,12 @@ final class Volume$CupUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$CupUK] with new value
   @override
   Volume$CupUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$CupUK(val);
 
@@ -3058,14 +3059,14 @@ final class Volume$CupUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Gill extends Volume {
-  const Volume$Gill([
+  Volume$Gill([
     super.value,
   ]);
 
@@ -3096,14 +3097,14 @@ final class Volume$Gill extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.00011829411825;
+  static final _ratio = Rational.parse('1.18294118250000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Gill] ≈ 0.00011829411825 [Volume$MeterCubic]
+  /// 1 [Volume$Gill] ≈ 1.18294118250000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3111,12 +3112,12 @@ final class Volume$Gill extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Gill] with new value
   @override
   Volume$Gill withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Gill(val);
 
@@ -3129,14 +3130,14 @@ final class Volume$Gill extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$GillUK extends Volume {
-  const Volume$GillUK([
+  Volume$GillUK([
     super.value,
   ]);
 
@@ -3167,14 +3168,14 @@ final class Volume$GillUK extends Volume {
   @override
   String get displayName => 'gill (UK)';
 
-  static const _ratio = 0.0001420653125;
+  static final _ratio = Rational.parse('1.42065312500000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$GillUK] ≈ 0.0001420653125 [Volume$MeterCubic]
+  /// 1 [Volume$GillUK] ≈ 1.42065312500000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3182,12 +3183,12 @@ final class Volume$GillUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$GillUK] with new value
   @override
   Volume$GillUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$GillUK(val);
 
@@ -3200,14 +3201,14 @@ final class Volume$GillUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Ounce extends Volume {
-  const Volume$Ounce([
+  Volume$Ounce([
     super.value,
   ]);
 
@@ -3238,14 +3239,14 @@ final class Volume$Ounce extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.0000295735295625;
+  static final _ratio = Rational.parse('2.95735295625000000E-005');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Ounce] ≈ 0.0000295735295625 [Volume$MeterCubic]
+  /// 1 [Volume$Ounce] ≈ 2.95735295625000000E-005 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3253,12 +3254,12 @@ final class Volume$Ounce extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Ounce] with new value
   @override
   Volume$Ounce withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Ounce(val);
 
@@ -3271,14 +3272,14 @@ final class Volume$Ounce extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$OunceUK extends Volume {
-  const Volume$OunceUK([
+  Volume$OunceUK([
     super.value,
   ]);
 
@@ -3309,14 +3310,14 @@ final class Volume$OunceUK extends Volume {
   @override
   String get displayName => 'ounce (UK)';
 
-  static const _ratio = 0.0000284130625;
+  static final _ratio = Rational.parse('2.84130625000000000E-005');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$OunceUK] ≈ 0.0000284130625 [Volume$MeterCubic]
+  /// 1 [Volume$OunceUK] ≈ 2.84130625000000000E-005 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3324,12 +3325,12 @@ final class Volume$OunceUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$OunceUK] with new value
   @override
   Volume$OunceUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$OunceUK(val);
 
@@ -3342,14 +3343,14 @@ final class Volume$OunceUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Dram extends Volume {
-  const Volume$Dram([
+  Volume$Dram([
     super.value,
   ]);
 
@@ -3380,14 +3381,14 @@ final class Volume$Dram extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.0000036966911953125;
+  static final _ratio = Rational.parse('3.69669119531250000E-006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Dram] ≈ 0.0000036966911953125 [Volume$MeterCubic]
+  /// 1 [Volume$Dram] ≈ 3.69669119531250000E-006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3395,12 +3396,12 @@ final class Volume$Dram extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Dram] with new value
   @override
   Volume$Dram withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Dram(val);
 
@@ -3413,14 +3414,14 @@ final class Volume$Dram extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$DramUK extends Volume {
-  const Volume$DramUK([
+  Volume$DramUK([
     super.value,
   ]);
 
@@ -3451,14 +3452,14 @@ final class Volume$DramUK extends Volume {
   @override
   String get displayName => 'dram (UK)';
 
-  static const _ratio = 0.0000035516328125;
+  static final _ratio = Rational.parse('3.55163281250000000E-006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$DramUK] ≈ 0.0000035516328125 [Volume$MeterCubic]
+  /// 1 [Volume$DramUK] ≈ 3.55163281250000000E-006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3466,12 +3467,12 @@ final class Volume$DramUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$DramUK] with new value
   @override
   Volume$DramUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$DramUK(val);
 
@@ -3484,14 +3485,14 @@ final class Volume$DramUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Minim extends Volume {
-  const Volume$Minim([
+  Volume$Minim([
     super.value,
   ]);
 
@@ -3522,14 +3523,14 @@ final class Volume$Minim extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.1611519921875e-8;
+  static final _ratio = Rational.parse('6.16115199218750000E-008');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Minim] ≈ 6.1611519921875e-8 [Volume$MeterCubic]
+  /// 1 [Volume$Minim] ≈ 6.16115199218750000E-008 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3537,12 +3538,12 @@ final class Volume$Minim extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Minim] with new value
   @override
   Volume$Minim withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Minim(val);
 
@@ -3555,14 +3556,14 @@ final class Volume$Minim extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$MinimUK extends Volume {
-  const Volume$MinimUK([
+  Volume$MinimUK([
     super.value,
   ]);
 
@@ -3593,14 +3594,14 @@ final class Volume$MinimUK extends Volume {
   @override
   String get displayName => 'minim (UK)';
 
-  static const _ratio = 5.9193880208333334e-8;
+  static final _ratio = Rational.parse('5.91938802083333333E-008');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$MinimUK] ≈ 5.9193880208333334e-8 [Volume$MeterCubic]
+  /// 1 [Volume$MinimUK] ≈ 5.91938802083333333E-008 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3608,12 +3609,12 @@ final class Volume$MinimUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$MinimUK] with new value
   @override
   Volume$MinimUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$MinimUK(val);
 
@@ -3626,14 +3627,14 @@ final class Volume$MinimUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Tablespoon extends Volume {
-  const Volume$Tablespoon([
+  Volume$Tablespoon([
     super.value,
   ]);
 
@@ -3664,14 +3665,14 @@ final class Volume$Tablespoon extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.00001478676478125;
+  static final _ratio = Rational.parse('1.47867647812500000E-005');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Tablespoon] ≈ 0.00001478676478125 [Volume$MeterCubic]
+  /// 1 [Volume$Tablespoon] ≈ 1.47867647812500000E-005 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3679,12 +3680,12 @@ final class Volume$Tablespoon extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Tablespoon] with new value
   @override
   Volume$Tablespoon withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Tablespoon(val);
 
@@ -3697,14 +3698,14 @@ final class Volume$Tablespoon extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$TablespoonUK extends Volume {
-  const Volume$TablespoonUK([
+  Volume$TablespoonUK([
     super.value,
   ]);
 
@@ -3735,14 +3736,14 @@ final class Volume$TablespoonUK extends Volume {
   @override
   String get displayName => 'tablespoon (UK)';
 
-  static const _ratio = 0.0000177581640625;
+  static final _ratio = Rational.parse('1.77581640625000000E-005');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$TablespoonUK] ≈ 0.0000177581640625 [Volume$MeterCubic]
+  /// 1 [Volume$TablespoonUK] ≈ 1.77581640625000000E-005 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3750,12 +3751,12 @@ final class Volume$TablespoonUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$TablespoonUK] with new value
   @override
   Volume$TablespoonUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$TablespoonUK(val);
 
@@ -3768,14 +3769,14 @@ final class Volume$TablespoonUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Dessertspoon extends Volume {
-  const Volume$Dessertspoon([
+  Volume$Dessertspoon([
     super.value,
   ]);
 
@@ -3806,14 +3807,14 @@ final class Volume$Dessertspoon extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.0000098578431875;
+  static final _ratio = Rational.parse('9.85784318750000000E-006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Dessertspoon] ≈ 0.0000098578431875 [Volume$MeterCubic]
+  /// 1 [Volume$Dessertspoon] ≈ 9.85784318750000000E-006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3821,12 +3822,12 @@ final class Volume$Dessertspoon extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Dessertspoon] with new value
   @override
   Volume$Dessertspoon withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Dessertspoon(val);
 
@@ -3839,14 +3840,14 @@ final class Volume$Dessertspoon extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$DessertspoonUK extends Volume {
-  const Volume$DessertspoonUK([
+  Volume$DessertspoonUK([
     super.value,
   ]);
 
@@ -3877,14 +3878,14 @@ final class Volume$DessertspoonUK extends Volume {
   @override
   String get displayName => 'dessertspoon (UK)';
 
-  static const _ratio = 0.000011838776041666667;
+  static final _ratio = Rational.parse('1.18387760416666667E-005');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$DessertspoonUK] ≈ 0.000011838776041666667 [Volume$MeterCubic]
+  /// 1 [Volume$DessertspoonUK] ≈ 1.18387760416666667E-005 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3892,12 +3893,12 @@ final class Volume$DessertspoonUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$DessertspoonUK] with new value
   @override
   Volume$DessertspoonUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$DessertspoonUK(val);
 
@@ -3910,14 +3911,14 @@ final class Volume$DessertspoonUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Teaspoon extends Volume {
-  const Volume$Teaspoon([
+  Volume$Teaspoon([
     super.value,
   ]);
 
@@ -3948,14 +3949,14 @@ final class Volume$Teaspoon extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.00000492892159375;
+  static final _ratio = Rational.parse('4.92892159375000000E-006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Teaspoon] ≈ 0.00000492892159375 [Volume$MeterCubic]
+  /// 1 [Volume$Teaspoon] ≈ 4.92892159375000000E-006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3963,12 +3964,12 @@ final class Volume$Teaspoon extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Teaspoon] with new value
   @override
   Volume$Teaspoon withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Teaspoon(val);
 
@@ -3981,14 +3982,14 @@ final class Volume$Teaspoon extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$TeaspoonUK extends Volume {
-  const Volume$TeaspoonUK([
+  Volume$TeaspoonUK([
     super.value,
   ]);
 
@@ -4019,14 +4020,14 @@ final class Volume$TeaspoonUK extends Volume {
   @override
   String get displayName => 'teaspoon (UK)';
 
-  static const _ratio = 0.000005919388020833334;
+  static final _ratio = Rational.parse('5.91938802083333333E-006');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$TeaspoonUK] ≈ 0.000005919388020833334 [Volume$MeterCubic]
+  /// 1 [Volume$TeaspoonUK] ≈ 5.91938802083333333E-006 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4034,12 +4035,12 @@ final class Volume$TeaspoonUK extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$TeaspoonUK] with new value
   @override
   Volume$TeaspoonUK withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$TeaspoonUK(val);
 
@@ -4052,14 +4053,14 @@ final class Volume$TeaspoonUK extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Hogshead extends Volume {
-  const Volume$Hogshead([
+  Volume$Hogshead([
     super.value,
   ]);
 
@@ -4090,14 +4091,14 @@ final class Volume$Hogshead extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.238480942392;
+  static final _ratio = Rational.parse('2.38480942392000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Hogshead] ≈ 0.238480942392 [Volume$MeterCubic]
+  /// 1 [Volume$Hogshead] ≈ 2.38480942392000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4105,12 +4106,12 @@ final class Volume$Hogshead extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Hogshead] with new value
   @override
   Volume$Hogshead withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Hogshead(val);
 
@@ -4123,14 +4124,14 @@ final class Volume$Hogshead extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$YardCubic extends Volume {
-  const Volume$YardCubic([
+  Volume$YardCubic([
     super.value,
   ]);
 
@@ -4161,14 +4162,14 @@ final class Volume$YardCubic extends Volume {
   @override
   String get displayName => 'yard³';
 
-  static const _ratio = 0.764554857984;
+  static final _ratio = Rational.parse('7.64554857984000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$YardCubic] ≈ 0.764554857984 [Volume$MeterCubic]
+  /// 1 [Volume$YardCubic] ≈ 7.64554857984000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4176,12 +4177,12 @@ final class Volume$YardCubic extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$YardCubic] with new value
   @override
   Volume$YardCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$YardCubic(val);
 
@@ -4194,14 +4195,14 @@ final class Volume$YardCubic extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$FootCubic extends Volume {
-  const Volume$FootCubic([
+  Volume$FootCubic([
     super.value,
   ]);
 
@@ -4232,14 +4233,14 @@ final class Volume$FootCubic extends Volume {
   @override
   String get displayName => 'foot³';
 
-  static const _ratio = 0.028316846592;
+  static final _ratio = Rational.parse('2.83168465920000000E-002');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$FootCubic] ≈ 0.028316846592 [Volume$MeterCubic]
+  /// 1 [Volume$FootCubic] ≈ 2.83168465920000000E-002 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4247,12 +4248,12 @@ final class Volume$FootCubic extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$FootCubic] with new value
   @override
   Volume$FootCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$FootCubic(val);
 
@@ -4265,14 +4266,14 @@ final class Volume$FootCubic extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$InchCubic extends Volume {
-  const Volume$InchCubic([
+  Volume$InchCubic([
     super.value,
   ]);
 
@@ -4303,14 +4304,14 @@ final class Volume$InchCubic extends Volume {
   @override
   String get displayName => 'inch³';
 
-  static const _ratio = 0.000016387064;
+  static final _ratio = Rational.parse('1.63870640000000000E-005');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$InchCubic] ≈ 0.000016387064 [Volume$MeterCubic]
+  /// 1 [Volume$InchCubic] ≈ 1.63870640000000000E-005 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4318,12 +4319,12 @@ final class Volume$InchCubic extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$InchCubic] with new value
   @override
   Volume$InchCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$InchCubic(val);
 
@@ -4336,14 +4337,14 @@ final class Volume$InchCubic extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Ccf extends Volume {
-  const Volume$Ccf([
+  Volume$Ccf([
     super.value,
   ]);
 
@@ -4374,14 +4375,14 @@ final class Volume$Ccf extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.8316846592;
+  static final _ratio = Rational.parse('2.83168465920000000E+000');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Ccf] ≈ 2.8316846592 [Volume$MeterCubic]
+  /// 1 [Volume$Ccf] ≈ 2.83168465920000000E+000 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4389,12 +4390,12 @@ final class Volume$Ccf extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Ccf] with new value
   @override
   Volume$Ccf withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Ccf(val);
 
@@ -4407,14 +4408,14 @@ final class Volume$Ccf extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$HundredFootCubic extends Volume {
-  const Volume$HundredFootCubic([
+  Volume$HundredFootCubic([
     super.value,
   ]);
 
@@ -4445,14 +4446,14 @@ final class Volume$HundredFootCubic extends Volume {
   @override
   String get displayName => 'hundred-foot³';
 
-  static const _ratio = 2.8316846592;
+  static final _ratio = Rational.parse('2.83168465920000000E+000');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$HundredFootCubic] ≈ 2.8316846592 [Volume$MeterCubic]
+  /// 1 [Volume$HundredFootCubic] ≈ 2.83168465920000000E+000 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4460,12 +4461,12 @@ final class Volume$HundredFootCubic extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$HundredFootCubic] with new value
   @override
   Volume$HundredFootCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$HundredFootCubic(val);
 
@@ -4478,14 +4479,14 @@ final class Volume$HundredFootCubic extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$AcreFoot extends Volume {
-  const Volume$AcreFoot([
+  Volume$AcreFoot([
     super.value,
   ]);
 
@@ -4516,14 +4517,14 @@ final class Volume$AcreFoot extends Volume {
   @override
   String get displayName => 'acre-foot';
 
-  static const _ratio = 1233.48183754752;
+  static final _ratio = Rational.parse('1.23348183754752000E+003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$AcreFoot] ≈ 1233.48183754752 [Volume$MeterCubic]
+  /// 1 [Volume$AcreFoot] ≈ 1.23348183754752000E+003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4531,12 +4532,12 @@ final class Volume$AcreFoot extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$AcreFoot] with new value
   @override
   Volume$AcreFoot withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$AcreFoot(val);
 
@@ -4549,14 +4550,14 @@ final class Volume$AcreFoot extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$AcreInch extends Volume {
-  const Volume$AcreInch([
+  Volume$AcreInch([
     super.value,
   ]);
 
@@ -4587,14 +4588,14 @@ final class Volume$AcreInch extends Volume {
   @override
   String get displayName => 'acre-inch';
 
-  static const _ratio = 102.79015312896;
+  static final _ratio = Rational.parse('1.02790153128960000E+002');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$AcreInch] ≈ 102.79015312896 [Volume$MeterCubic]
+  /// 1 [Volume$AcreInch] ≈ 1.02790153128960000E+002 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4602,12 +4603,12 @@ final class Volume$AcreInch extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$AcreInch] with new value
   @override
   Volume$AcreInch withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$AcreInch(val);
 
@@ -4620,14 +4621,14 @@ final class Volume$AcreInch extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Dekastere extends Volume {
-  const Volume$Dekastere([
+  Volume$Dekastere([
     super.value,
   ]);
 
@@ -4658,14 +4659,14 @@ final class Volume$Dekastere extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Dekastere] = 10.0 [Volume$MeterCubic]
+  /// 1 [Volume$Dekastere] = 1.00000000000000000E+001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4673,12 +4674,12 @@ final class Volume$Dekastere extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Dekastere] with new value
   @override
   Volume$Dekastere withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Dekastere(val);
 
@@ -4691,14 +4692,14 @@ final class Volume$Dekastere extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Stere extends Volume {
-  const Volume$Stere([
+  Volume$Stere([
     super.value,
   ]);
 
@@ -4729,14 +4730,14 @@ final class Volume$Stere extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Stere] = 1.0 [Volume$MeterCubic]
+  /// 1 [Volume$Stere] = 1.00000000000000000E+000 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4744,12 +4745,12 @@ final class Volume$Stere extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Stere] with new value
   @override
   Volume$Stere withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Stere(val);
 
@@ -4762,14 +4763,14 @@ final class Volume$Stere extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Decistere extends Volume {
-  const Volume$Decistere([
+  Volume$Decistere([
     super.value,
   ]);
 
@@ -4800,14 +4801,14 @@ final class Volume$Decistere extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Decistere] ≈ 0.1 [Volume$MeterCubic]
+  /// 1 [Volume$Decistere] ≈ 1.00000000000000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4815,12 +4816,12 @@ final class Volume$Decistere extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Decistere] with new value
   @override
   Volume$Decistere withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Decistere(val);
 
@@ -4833,14 +4834,14 @@ final class Volume$Decistere extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Cord extends Volume {
-  const Volume$Cord([
+  Volume$Cord([
     super.value,
   ]);
 
@@ -4871,14 +4872,14 @@ final class Volume$Cord extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.624556363776;
+  static final _ratio = Rational.parse('3.62455636377600000E+000');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Cord] ≈ 3.624556363776 [Volume$MeterCubic]
+  /// 1 [Volume$Cord] ≈ 3.62455636377600000E+000 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4886,12 +4887,12 @@ final class Volume$Cord extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Cord] with new value
   @override
   Volume$Cord withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Cord(val);
 
@@ -4904,14 +4905,14 @@ final class Volume$Cord extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$BoardFoot extends Volume {
-  const Volume$BoardFoot([
+  Volume$BoardFoot([
     super.value,
   ]);
 
@@ -4942,14 +4943,14 @@ final class Volume$BoardFoot extends Volume {
   @override
   String get displayName => 'board foot';
 
-  static const _ratio = 0.002359737216;
+  static final _ratio = Rational.parse('2.35973721600000000E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$BoardFoot] ≈ 0.002359737216 [Volume$MeterCubic]
+  /// 1 [Volume$BoardFoot] ≈ 2.35973721600000000E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4957,12 +4958,12 @@ final class Volume$BoardFoot extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$BoardFoot] with new value
   @override
   Volume$BoardFoot withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$BoardFoot(val);
 
@@ -4975,14 +4976,14 @@ final class Volume$BoardFoot extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Tun extends Volume {
-  const Volume$Tun([
+  Volume$Tun([
     super.value,
   ]);
 
@@ -5013,14 +5014,14 @@ final class Volume$Tun extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.953923769568;
+  static final _ratio = Rational.parse('9.53923769568000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Tun] ≈ 0.953923769568 [Volume$MeterCubic]
+  /// 1 [Volume$Tun] ≈ 9.53923769568000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5028,12 +5029,12 @@ final class Volume$Tun extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Tun] with new value
   @override
   Volume$Tun withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Tun(val);
 
@@ -5046,14 +5047,14 @@ final class Volume$Tun extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$CorBiblical extends Volume {
-  const Volume$CorBiblical([
+  Volume$CorBiblical([
     super.value,
   ]);
 
@@ -5084,14 +5085,14 @@ final class Volume$CorBiblical extends Volume {
   @override
   String get displayName => 'cor (Biblical)';
 
-  static const _ratio = 0.22;
+  static final _ratio = Rational.parse('2.20000000000000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$CorBiblical] ≈ 0.22 [Volume$MeterCubic]
+  /// 1 [Volume$CorBiblical] ≈ 2.20000000000000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5099,12 +5100,12 @@ final class Volume$CorBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$CorBiblical] with new value
   @override
   Volume$CorBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$CorBiblical(val);
 
@@ -5117,14 +5118,14 @@ final class Volume$CorBiblical extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$HomerBiblical extends Volume {
-  const Volume$HomerBiblical([
+  Volume$HomerBiblical([
     super.value,
   ]);
 
@@ -5155,14 +5156,14 @@ final class Volume$HomerBiblical extends Volume {
   @override
   String get displayName => 'homer (Biblical)';
 
-  static const _ratio = 0.22;
+  static final _ratio = Rational.parse('2.20000000000000000E-001');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$HomerBiblical] ≈ 0.22 [Volume$MeterCubic]
+  /// 1 [Volume$HomerBiblical] ≈ 2.20000000000000000E-001 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5170,12 +5171,12 @@ final class Volume$HomerBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$HomerBiblical] with new value
   @override
   Volume$HomerBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$HomerBiblical(val);
 
@@ -5188,14 +5189,14 @@ final class Volume$HomerBiblical extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$BathBiblical extends Volume {
-  const Volume$BathBiblical([
+  Volume$BathBiblical([
     super.value,
   ]);
 
@@ -5226,14 +5227,14 @@ final class Volume$BathBiblical extends Volume {
   @override
   String get displayName => 'bath (Biblical)';
 
-  static const _ratio = 0.022;
+  static final _ratio = Rational.parse('2.20000000000000000E-002');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$BathBiblical] ≈ 0.022 [Volume$MeterCubic]
+  /// 1 [Volume$BathBiblical] ≈ 2.20000000000000000E-002 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5241,12 +5242,12 @@ final class Volume$BathBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$BathBiblical] with new value
   @override
   Volume$BathBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$BathBiblical(val);
 
@@ -5259,14 +5260,14 @@ final class Volume$BathBiblical extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$HinBiblical extends Volume {
-  const Volume$HinBiblical([
+  Volume$HinBiblical([
     super.value,
   ]);
 
@@ -5297,14 +5298,14 @@ final class Volume$HinBiblical extends Volume {
   @override
   String get displayName => 'hin (Biblical)';
 
-  static const _ratio = 0.0036666666666666666;
+  static final _ratio = Rational.parse('3.66666666666666667E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$HinBiblical] ≈ 0.0036666666666666666 [Volume$MeterCubic]
+  /// 1 [Volume$HinBiblical] ≈ 3.66666666666666667E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5312,12 +5313,12 @@ final class Volume$HinBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$HinBiblical] with new value
   @override
   Volume$HinBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$HinBiblical(val);
 
@@ -5330,14 +5331,14 @@ final class Volume$HinBiblical extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$CabBiblical extends Volume {
-  const Volume$CabBiblical([
+  Volume$CabBiblical([
     super.value,
   ]);
 
@@ -5368,14 +5369,14 @@ final class Volume$CabBiblical extends Volume {
   @override
   String get displayName => 'cab (Biblical)';
 
-  static const _ratio = 0.0012222222222222222;
+  static final _ratio = Rational.parse('1.22222222222222222E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$CabBiblical] ≈ 0.0012222222222222222 [Volume$MeterCubic]
+  /// 1 [Volume$CabBiblical] ≈ 1.22222222222222222E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5383,12 +5384,12 @@ final class Volume$CabBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$CabBiblical] with new value
   @override
   Volume$CabBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$CabBiblical(val);
 
@@ -5401,14 +5402,14 @@ final class Volume$CabBiblical extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$LogBiblical extends Volume {
-  const Volume$LogBiblical([
+  Volume$LogBiblical([
     super.value,
   ]);
 
@@ -5439,14 +5440,14 @@ final class Volume$LogBiblical extends Volume {
   @override
   String get displayName => 'log (Biblical)';
 
-  static const _ratio = 0.00030555555555555555;
+  static final _ratio = Rational.parse('3.05555555555555556E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$LogBiblical] ≈ 0.00030555555555555555 [Volume$MeterCubic]
+  /// 1 [Volume$LogBiblical] ≈ 3.05555555555555556E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5454,12 +5455,12 @@ final class Volume$LogBiblical extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$LogBiblical] with new value
   @override
   Volume$LogBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$LogBiblical(val);
 
@@ -5472,14 +5473,14 @@ final class Volume$LogBiblical extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$TazaSpanish extends Volume {
-  const Volume$TazaSpanish([
+  Volume$TazaSpanish([
     super.value,
   ]);
 
@@ -5510,14 +5511,14 @@ final class Volume$TazaSpanish extends Volume {
   @override
   String get displayName => 'Taza (Spanish)';
 
-  static const _ratio = 0.0002365882365;
+  static final _ratio = Rational.parse('2.36588236500000000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$TazaSpanish] ≈ 0.0002365882365 [Volume$MeterCubic]
+  /// 1 [Volume$TazaSpanish] ≈ 2.36588236500000000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5525,12 +5526,12 @@ final class Volume$TazaSpanish extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$TazaSpanish] with new value
   @override
   Volume$TazaSpanish withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$TazaSpanish(val);
 
@@ -5543,14 +5544,14 @@ final class Volume$TazaSpanish extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Bushel extends Volume {
-  const Volume$Bushel([
+  Volume$Bushel([
     super.value,
   ]);
 
@@ -5581,14 +5582,14 @@ final class Volume$Bushel extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.03523907016688;
+  static final _ratio = Rational.parse('3.52390701668800000E-002');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Bushel] ≈ 0.03523907016688 [Volume$MeterCubic]
+  /// 1 [Volume$Bushel] ≈ 3.52390701668800000E-002 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5596,12 +5597,12 @@ final class Volume$Bushel extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Bushel] with new value
   @override
   Volume$Bushel withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Bushel(val);
 
@@ -5614,14 +5615,14 @@ final class Volume$Bushel extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$Peck extends Volume {
-  const Volume$Peck([
+  Volume$Peck([
     super.value,
   ]);
 
@@ -5652,14 +5653,14 @@ final class Volume$Peck extends Volume {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.00880976754172;
+  static final _ratio = Rational.parse('8.80976754172000000E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$Peck] ≈ 0.00880976754172 [Volume$MeterCubic]
+  /// 1 [Volume$Peck] ≈ 8.80976754172000000E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5667,12 +5668,12 @@ final class Volume$Peck extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$Peck] with new value
   @override
   Volume$Peck withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$Peck(val);
 
@@ -5685,14 +5686,14 @@ final class Volume$Peck extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$DryPint extends Volume {
-  const Volume$DryPint([
+  Volume$DryPint([
     super.value,
   ]);
 
@@ -5723,14 +5724,14 @@ final class Volume$DryPint extends Volume {
   @override
   String get displayName => 'dry pint';
 
-  static const _ratio = 0.0005506104713575;
+  static final _ratio = Rational.parse('5.50610471357500000E-004');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$DryPint] ≈ 0.0005506104713575 [Volume$MeterCubic]
+  /// 1 [Volume$DryPint] ≈ 5.50610471357500000E-004 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5738,12 +5739,12 @@ final class Volume$DryPint extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$DryPint] with new value
   @override
   Volume$DryPint withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$DryPint(val);
 
@@ -5756,14 +5757,14 @@ final class Volume$DryPint extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Volume]
 final class Volume$DryQuart extends Volume {
-  const Volume$DryQuart([
+  Volume$DryQuart([
     super.value,
   ]);
 
@@ -5794,14 +5795,14 @@ final class Volume$DryQuart extends Volume {
   @override
   String get displayName => 'dry quart';
 
-  static const _ratio = 0.001101220942715;
+  static final _ratio = Rational.parse('1.10122094271500000E-003');
 
   @override
-  Volume get anchor => const Volume$MeterCubic(_ratio);
+  Volume get anchor => Volume$MeterCubic(_ratio);
 
-  /// 1 [Volume$DryQuart] ≈ 0.001101220942715 [Volume$MeterCubic]
+  /// 1 [Volume$DryQuart] ≈ 1.10122094271500000E-003 [Volume$MeterCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5809,12 +5810,12 @@ final class Volume$DryQuart extends Volume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Volume$DryQuart] with new value
   @override
   Volume$DryQuart withValue(
-    num val,
+    Rational val,
   ) =>
       Volume$DryQuart(val);
 
@@ -5827,7 +5828,7 @@ final class Volume$DryQuart extends Volume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

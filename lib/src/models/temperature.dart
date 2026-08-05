@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [Temperature$Kelvin], [Temperature$Celsius], [Temperature$Fahrenheit],
 /// [Temperature$Rankine], [Temperature$Reaumur]
 sealed class Temperature extends Unit<Temperature> {
-  const Temperature([
+  Temperature([
     super.value,
   ]);
 
@@ -17,35 +17,36 @@ sealed class Temperature extends Unit<Temperature> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Temperature.anchor();
 
-  factory Temperature.anchor() => const Temperature$Kelvin();
+  factory Temperature.anchor() => Temperature$Kelvin();
 
   /// Convert to [Temperature$Kelvin]
   Temperature get toKelvin => convertTo(
-        const Temperature$Kelvin(),
+        Temperature$Kelvin(),
       );
 
   /// Convert to [Temperature$Celsius]
   Temperature get toCelsius => convertTo(
-        const Temperature$Celsius(),
+        Temperature$Celsius(),
       );
 
   /// Convert to [Temperature$Fahrenheit]
   Temperature get toFahrenheit => convertTo(
-        const Temperature$Fahrenheit(),
+        Temperature$Fahrenheit(),
       );
 
   /// Convert to [Temperature$Rankine]
   Temperature get toRankine => convertTo(
-        const Temperature$Rankine(),
+        Temperature$Rankine(),
       );
 
   /// Convert to [Temperature$Reaumur]
   Temperature get toReaumur => convertTo(
-        const Temperature$Reaumur(),
+        Temperature$Reaumur(),
       );
 
   @override
@@ -56,11 +57,11 @@ sealed class Temperature extends Unit<Temperature> {
 
   static const _majorName = 'temperature';
 
-  static const kelvin = Temperature$Kelvin();
-  static const celsius = Temperature$Celsius();
-  static const fahrenheit = Temperature$Fahrenheit();
-  static const rankine = Temperature$Rankine();
-  static const reaumur = Temperature$Reaumur();
+  static final kelvin = Temperature$Kelvin();
+  static final celsius = Temperature$Celsius();
+  static final fahrenheit = Temperature$Fahrenheit();
+  static final rankine = Temperature$Rankine();
+  static final reaumur = Temperature$Reaumur();
 
   @override
   List<Temperature> get units => values;
@@ -68,7 +69,7 @@ sealed class Temperature extends Unit<Temperature> {
   @override
   EnumValues<Temperature> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Temperature>[
     kelvin,
     celsius,
     fahrenheit,
@@ -76,7 +77,7 @@ sealed class Temperature extends Unit<Temperature> {
     reaumur,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Temperature>{
     Temperature$Kelvin._minorName: kelvin,
     Temperature$Celsius._minorName: celsius,
     Temperature$Fahrenheit._minorName: fahrenheit,
@@ -94,61 +95,98 @@ sealed class Temperature extends Unit<Temperature> {
     switch (this) {
       case Temperature$Kelvin _:
         // From Kelvin to others
-        if (to is Temperature$Celsius) return to.withValue(value - 273.15);
-        if (to is Temperature$Fahrenheit) {
-          return to.withValue((value * 9 / 5) - 459.67);
+        if (to is Temperature$Celsius) {
+          return to.withValue(value - Rational.parse('273.15'));
         }
-        if (to is Temperature$Rankine) return to.withValue(value * 9 / 5);
+        if (to is Temperature$Fahrenheit) {
+          return to.withValue(
+              (value * (Rational.fromInt(9) / Rational.fromInt(5))) -
+                  Rational.parse('459.67'));
+        }
+        if (to is Temperature$Rankine) {
+          return to
+              .withValue(value * (Rational.fromInt(9) / Rational.fromInt(5)));
+        }
         if (to is Temperature$Reaumur) {
-          return to.withValue((value - 273.15) * 4 / 5);
+          return to.withValue((value - Rational.parse('273.15')) *
+              (Rational.fromInt(4) / Rational.fromInt(5)));
         }
 
       case Temperature$Celsius _:
         // From Celsius to others
-        if (to is Temperature$Kelvin) return to.withValue(value + 273.15);
+        if (to is Temperature$Kelvin) {
+          return to.withValue(value + Rational.parse('273.15'));
+        }
         if (to is Temperature$Fahrenheit) {
-          return to.withValue((value * 9 / 5) + 32);
+          return to.withValue(
+              (value * (Rational.fromInt(9) / Rational.fromInt(5))) +
+                  Rational.fromInt(32));
         }
         if (to is Temperature$Rankine) {
-          return to.withValue((value + 273.15) * 9 / 5);
+          return to.withValue((value + Rational.parse('273.15')) *
+              (Rational.fromInt(9) / Rational.fromInt(5)));
         }
-        if (to is Temperature$Reaumur) return to.withValue(value * 4 / 5);
+        if (to is Temperature$Reaumur) {
+          return to
+              .withValue(value * (Rational.fromInt(4) / Rational.fromInt(5)));
+        }
 
       case Temperature$Fahrenheit _:
         // From Fahrenheit to others
         if (to is Temperature$Kelvin) {
-          return to.withValue((value + 459.67) * 5 / 9);
+          return to.withValue((value + Rational.parse('459.67')) *
+              (Rational.fromInt(5) / Rational.fromInt(9)));
         }
         if (to is Temperature$Celsius) {
-          return to.withValue((value - 32) * 5 / 9);
+          return to.withValue((value - Rational.fromInt(32)) *
+              (Rational.fromInt(5) / Rational.fromInt(9)));
         }
-        if (to is Temperature$Rankine) return to.withValue(value + 459.67);
+        if (to is Temperature$Rankine) {
+          return to.withValue(value + Rational.parse('459.67'));
+        }
         if (to is Temperature$Reaumur) {
-          return to.withValue((value - 32) * 4 / 9);
+          return to.withValue((value - Rational.fromInt(32)) *
+              (Rational.fromInt(4) / Rational.fromInt(9)));
         }
 
       case Temperature$Rankine _:
         // From Rankine to others
-        if (to is Temperature$Kelvin) return to.withValue(value * 5 / 9);
-        if (to is Temperature$Celsius) {
-          return to.withValue((value - 491.67) * 5 / 9);
+        if (to is Temperature$Kelvin) {
+          return to
+              .withValue(value * (Rational.fromInt(5) / Rational.fromInt(9)));
         }
-        if (to is Temperature$Fahrenheit) return to.withValue(value - 459.67);
+        if (to is Temperature$Celsius) {
+          return to.withValue((value - Rational.parse('491.67')) *
+              (Rational.fromInt(5) / Rational.fromInt(9)));
+        }
+        if (to is Temperature$Fahrenheit) {
+          return to.withValue(value - Rational.parse('459.67'));
+        }
         if (to is Temperature$Reaumur) {
-          return to.withValue((value - 491.67) * 4 / 9);
+          return to.withValue((value - Rational.parse('491.67')) *
+              (Rational.fromInt(4) / Rational.fromInt(9)));
         }
 
       case Temperature$Reaumur _:
         // From Réaumur to others
         if (to is Temperature$Kelvin) {
-          return to.withValue((value * 5 / 4) + 273.15);
+          return to.withValue(
+              (value * (Rational.fromInt(5) / Rational.fromInt(4))) +
+                  Rational.parse('273.15'));
         }
-        if (to is Temperature$Celsius) return to.withValue(value * 5 / 4);
+        if (to is Temperature$Celsius) {
+          return to
+              .withValue(value * (Rational.fromInt(5) / Rational.fromInt(4)));
+        }
         if (to is Temperature$Fahrenheit) {
-          return to.withValue((value * 9 / 4) + 32);
+          return to.withValue(
+              (value * (Rational.fromInt(9) / Rational.fromInt(4))) +
+                  Rational.fromInt(32));
         }
         if (to is Temperature$Rankine) {
-          return to.withValue((value * 9 / 4) + 491.67);
+          return to.withValue(
+              (value * (Rational.fromInt(9) / Rational.fromInt(4))) +
+                  Rational.parse('491.67'));
         }
     }
 
@@ -161,19 +199,18 @@ sealed class Temperature extends Unit<Temperature> {
     // Always convert to Kelvin for comparison
     final thisKelvin = convertTo(Temperature.kelvin).value;
     final otherKelvin = other.convertTo(Temperature.kelvin).value;
-    const epsilon = 1e-10;
 
     switch (operator) {
       case '==':
-        return (thisKelvin - otherKelvin).abs() < epsilon;
+        return thisKelvin == otherKelvin;
       case '>':
-        return thisKelvin > otherKelvin + epsilon;
+        return thisKelvin > otherKelvin;
       case '>=':
-        return thisKelvin >= otherKelvin - epsilon;
+        return thisKelvin >= otherKelvin;
       case '<':
-        return thisKelvin < otherKelvin - epsilon;
+        return thisKelvin < otherKelvin;
       default:
-        return thisKelvin <= otherKelvin + epsilon;
+        return thisKelvin <= otherKelvin;
     }
   }
 
@@ -189,7 +226,7 @@ sealed class Temperature extends Unit<Temperature> {
 
 /// Unit of [Temperature]
 final class Temperature$Kelvin extends Temperature {
-  const Temperature$Kelvin([
+  Temperature$Kelvin([
     super.value,
   ]);
 
@@ -220,14 +257,14 @@ final class Temperature$Kelvin extends Temperature {
   @override
   String get displayName => 'Kelvin';
 
-  static const _ratio = 1.8;
+  static final _ratio = Rational.parse('1.80000000000000000E+000');
 
   @override
-  Temperature get anchor => const Temperature$Kelvin(_ratio);
+  Temperature get anchor => Temperature$Kelvin(_ratio);
 
   /// Default (anchor) unit of [Temperature]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -235,12 +272,12 @@ final class Temperature$Kelvin extends Temperature {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Temperature$Kelvin] with new value
   @override
   Temperature$Kelvin withValue(
-    num val,
+    Rational val,
   ) =>
       Temperature$Kelvin(val);
 
@@ -253,14 +290,14 @@ final class Temperature$Kelvin extends Temperature {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Temperature]
 final class Temperature$Celsius extends Temperature {
-  const Temperature$Celsius([
+  Temperature$Celsius([
     super.value,
   ]);
 
@@ -291,29 +328,29 @@ final class Temperature$Celsius extends Temperature {
   @override
   String get displayName => 'Celsius';
 
-  static const _ratio = 1.8;
+  static final _ratio = Rational.parse('1.80000000000000000E+000');
 
   @override
-  Temperature get anchor => const Temperature$Kelvin(_ratio);
+  Temperature get anchor => Temperature$Kelvin(_ratio);
 
-  /// 1 [Temperature$Celsius] ≈ 1.8 [Temperature$Kelvin]
+  /// 1 [Temperature$Celsius] ≈ 1.80000000000000000E+000 [Temperature$Kelvin]
   ///
   /// See [valueShift]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Temperature$Celsius get _clone => Temperature$Celsius(value);
 
-  /// 1 [Temperature$Celsius] = ((1 * [ratio]) + 491.67) [Temperature$Kelvin]
+  /// 1 [Temperature$Celsius] = ((1 * [ratio]) + 4.91670000000000000E+002) [Temperature$Kelvin]
   @override
-  num get valueShift => 491.67;
+  Rational get valueShift => Rational.parse('4.91670000000000000E+002');
 
   /// Creating [Temperature$Celsius] with new value
   @override
   Temperature$Celsius withValue(
-    num val,
+    Rational val,
   ) =>
       Temperature$Celsius(val);
 
@@ -326,14 +363,14 @@ final class Temperature$Celsius extends Temperature {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Temperature]
 final class Temperature$Fahrenheit extends Temperature {
-  const Temperature$Fahrenheit([
+  Temperature$Fahrenheit([
     super.value,
   ]);
 
@@ -364,29 +401,29 @@ final class Temperature$Fahrenheit extends Temperature {
   @override
   String get displayName => 'Fahrenheit';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Temperature get anchor => const Temperature$Kelvin(_ratio);
+  Temperature get anchor => Temperature$Kelvin(_ratio);
 
-  /// 1 [Temperature$Fahrenheit] = 1.0 [Temperature$Kelvin]
+  /// 1 [Temperature$Fahrenheit] = 1.00000000000000000E+000 [Temperature$Kelvin]
   ///
   /// See [valueShift]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Temperature$Fahrenheit get _clone => Temperature$Fahrenheit(value);
 
-  /// 1 [Temperature$Fahrenheit] = ((1 * [ratio]) + 459.67) [Temperature$Kelvin]
+  /// 1 [Temperature$Fahrenheit] = ((1 * [ratio]) + 4.59670000000000000E+002) [Temperature$Kelvin]
   @override
-  num get valueShift => 459.67;
+  Rational get valueShift => Rational.parse('4.59670000000000000E+002');
 
   /// Creating [Temperature$Fahrenheit] with new value
   @override
   Temperature$Fahrenheit withValue(
-    num val,
+    Rational val,
   ) =>
       Temperature$Fahrenheit(val);
 
@@ -399,14 +436,14 @@ final class Temperature$Fahrenheit extends Temperature {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Temperature]
 final class Temperature$Rankine extends Temperature {
-  const Temperature$Rankine([
+  Temperature$Rankine([
     super.value,
   ]);
 
@@ -437,14 +474,14 @@ final class Temperature$Rankine extends Temperature {
   @override
   String get displayName => 'Rankine';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Temperature get anchor => const Temperature$Kelvin(_ratio);
+  Temperature get anchor => Temperature$Kelvin(_ratio);
 
-  /// 1 [Temperature$Rankine] = 1.0 [Temperature$Kelvin]
+  /// 1 [Temperature$Rankine] = 1.00000000000000000E+000 [Temperature$Kelvin]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -452,12 +489,12 @@ final class Temperature$Rankine extends Temperature {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Temperature$Rankine] with new value
   @override
   Temperature$Rankine withValue(
-    num val,
+    Rational val,
   ) =>
       Temperature$Rankine(val);
 
@@ -470,14 +507,14 @@ final class Temperature$Rankine extends Temperature {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Temperature]
 final class Temperature$Reaumur extends Temperature {
-  const Temperature$Reaumur([
+  Temperature$Reaumur([
     super.value,
   ]);
 
@@ -508,29 +545,29 @@ final class Temperature$Reaumur extends Temperature {
   @override
   String get displayName => 'Réaumur';
 
-  static const _ratio = 2.25;
+  static final _ratio = Rational.parse('2.25000000000000000E+000');
 
   @override
-  Temperature get anchor => const Temperature$Kelvin(_ratio);
+  Temperature get anchor => Temperature$Kelvin(_ratio);
 
-  /// 1 [Temperature$Reaumur] ≈ 2.25 [Temperature$Kelvin]
+  /// 1 [Temperature$Reaumur] ≈ 2.25000000000000000E+000 [Temperature$Kelvin]
   ///
   /// See [valueShift]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
   Temperature$Reaumur get _clone => Temperature$Reaumur(value);
 
-  /// 1 [Temperature$Reaumur] = ((1 * [ratio]) + 491.67) [Temperature$Kelvin]
+  /// 1 [Temperature$Reaumur] = ((1 * [ratio]) + 4.91670000000000000E+002) [Temperature$Kelvin]
   @override
-  num get valueShift => 491.67;
+  Rational get valueShift => Rational.parse('4.91670000000000000E+002');
 
   /// Creating [Temperature$Reaumur] with new value
   @override
   Temperature$Reaumur withValue(
-    num val,
+    Rational val,
   ) =>
       Temperature$Reaumur(val);
 
@@ -543,7 +580,7 @@ final class Temperature$Reaumur extends Temperature {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

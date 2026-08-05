@@ -14,7 +14,7 @@ part of '../../super_measurement.dart';
 /// [VolumeLumber$ThousandSquareFeet1Per2InchPanels],
 /// [VolumeLumber$ThousandSquareFeet3Per4InchPanels]
 sealed class VolumeLumber extends Unit<VolumeLumber> {
-  const VolumeLumber([
+  VolumeLumber([
     super.value,
   ]);
 
@@ -26,95 +26,96 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : VolumeLumber.anchor();
 
-  factory VolumeLumber.anchor() => const VolumeLumber$CubicInch();
+  factory VolumeLumber.anchor() => VolumeLumber$CubicInch();
 
   /// Convert to [VolumeLumber$MeterCubic]
   VolumeLumber get toMeterCubic => convertTo(
-        const VolumeLumber$MeterCubic(),
+        VolumeLumber$MeterCubic(),
       );
 
   /// Convert to [VolumeLumber$CubicFeet]
   VolumeLumber get toCubicFeet => convertTo(
-        const VolumeLumber$CubicFeet(),
+        VolumeLumber$CubicFeet(),
       );
 
   /// Convert to [VolumeLumber$CubicInch]
   VolumeLumber get toCubicInch => convertTo(
-        const VolumeLumber$CubicInch(),
+        VolumeLumber$CubicInch(),
       );
 
   /// Convert to [VolumeLumber$BoardFeet]
   VolumeLumber get toBoardFeet => convertTo(
-        const VolumeLumber$BoardFeet(),
+        VolumeLumber$BoardFeet(),
       );
 
   /// Convert to [VolumeLumber$ThousandBoardFeet]
   VolumeLumber get toThousandBoardFeet => convertTo(
-        const VolumeLumber$ThousandBoardFeet(),
+        VolumeLumber$ThousandBoardFeet(),
       );
 
   /// Convert to [VolumeLumber$Cord]
   VolumeLumber get toCord => convertTo(
-        const VolumeLumber$Cord(),
+        VolumeLumber$Cord(),
       );
 
   /// Convert to [VolumeLumber$Cord80FtCubic]
   VolumeLumber get toCord80FtCubic => convertTo(
-        const VolumeLumber$Cord80FtCubic(),
+        VolumeLumber$Cord80FtCubic(),
       );
 
   /// Convert to [VolumeLumber$CordFeet]
   VolumeLumber get toCordFeet => convertTo(
-        const VolumeLumber$CordFeet(),
+        VolumeLumber$CordFeet(),
       );
 
   /// Convert to [VolumeLumber$Cunit]
   VolumeLumber get toCunit => convertTo(
-        const VolumeLumber$Cunit(),
+        VolumeLumber$Cunit(),
       );
 
   /// Convert to [VolumeLumber$Pallet]
   VolumeLumber get toPallet => convertTo(
-        const VolumeLumber$Pallet(),
+        VolumeLumber$Pallet(),
       );
 
   /// Convert to [VolumeLumber$CrossTie]
   VolumeLumber get toCrossTie => convertTo(
-        const VolumeLumber$CrossTie(),
+        VolumeLumber$CrossTie(),
       );
 
   /// Convert to [VolumeLumber$SwitchTie]
   VolumeLumber get toSwitchTie => convertTo(
-        const VolumeLumber$SwitchTie(),
+        VolumeLumber$SwitchTie(),
       );
 
   /// Convert to [VolumeLumber$ThousandSquareFeet1Per8InchPanels]
   VolumeLumber get toThousandSquareFeet1Per8InchPanels => convertTo(
-        const VolumeLumber$ThousandSquareFeet1Per8InchPanels(),
+        VolumeLumber$ThousandSquareFeet1Per8InchPanels(),
       );
 
   /// Convert to [VolumeLumber$ThousandSquareFeet1Per4InchPanels]
   VolumeLumber get toThousandSquareFeet1Per4InchPanels => convertTo(
-        const VolumeLumber$ThousandSquareFeet1Per4InchPanels(),
+        VolumeLumber$ThousandSquareFeet1Per4InchPanels(),
       );
 
   /// Convert to [VolumeLumber$ThousandSquareFeet3Per8InchPanels]
   VolumeLumber get toThousandSquareFeet3Per8InchPanels => convertTo(
-        const VolumeLumber$ThousandSquareFeet3Per8InchPanels(),
+        VolumeLumber$ThousandSquareFeet3Per8InchPanels(),
       );
 
   /// Convert to [VolumeLumber$ThousandSquareFeet1Per2InchPanels]
   VolumeLumber get toThousandSquareFeet1Per2InchPanels => convertTo(
-        const VolumeLumber$ThousandSquareFeet1Per2InchPanels(),
+        VolumeLumber$ThousandSquareFeet1Per2InchPanels(),
       );
 
   /// Convert to [VolumeLumber$ThousandSquareFeet3Per4InchPanels]
   VolumeLumber get toThousandSquareFeet3Per4InchPanels => convertTo(
-        const VolumeLumber$ThousandSquareFeet3Per4InchPanels(),
+        VolumeLumber$ThousandSquareFeet3Per4InchPanels(),
       );
 
   @override
@@ -125,27 +126,27 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
 
   static const _majorName = 'volumeLumber';
 
-  static const meterCubic = VolumeLumber$MeterCubic();
-  static const cubicFeet = VolumeLumber$CubicFeet();
-  static const cubicInch = VolumeLumber$CubicInch();
-  static const boardFeet = VolumeLumber$BoardFeet();
-  static const thousandBoardFeet = VolumeLumber$ThousandBoardFeet();
-  static const cord = VolumeLumber$Cord();
-  static const cord80FtCubic = VolumeLumber$Cord80FtCubic();
-  static const cordFeet = VolumeLumber$CordFeet();
-  static const cunit = VolumeLumber$Cunit();
-  static const pallet = VolumeLumber$Pallet();
-  static const crossTie = VolumeLumber$CrossTie();
-  static const switchTie = VolumeLumber$SwitchTie();
-  static const thousandSquareFeet1Per8InchPanels =
+  static final meterCubic = VolumeLumber$MeterCubic();
+  static final cubicFeet = VolumeLumber$CubicFeet();
+  static final cubicInch = VolumeLumber$CubicInch();
+  static final boardFeet = VolumeLumber$BoardFeet();
+  static final thousandBoardFeet = VolumeLumber$ThousandBoardFeet();
+  static final cord = VolumeLumber$Cord();
+  static final cord80FtCubic = VolumeLumber$Cord80FtCubic();
+  static final cordFeet = VolumeLumber$CordFeet();
+  static final cunit = VolumeLumber$Cunit();
+  static final pallet = VolumeLumber$Pallet();
+  static final crossTie = VolumeLumber$CrossTie();
+  static final switchTie = VolumeLumber$SwitchTie();
+  static final thousandSquareFeet1Per8InchPanels =
       VolumeLumber$ThousandSquareFeet1Per8InchPanels();
-  static const thousandSquareFeet1Per4InchPanels =
+  static final thousandSquareFeet1Per4InchPanels =
       VolumeLumber$ThousandSquareFeet1Per4InchPanels();
-  static const thousandSquareFeet3Per8InchPanels =
+  static final thousandSquareFeet3Per8InchPanels =
       VolumeLumber$ThousandSquareFeet3Per8InchPanels();
-  static const thousandSquareFeet1Per2InchPanels =
+  static final thousandSquareFeet1Per2InchPanels =
       VolumeLumber$ThousandSquareFeet1Per2InchPanels();
-  static const thousandSquareFeet3Per4InchPanels =
+  static final thousandSquareFeet3Per4InchPanels =
       VolumeLumber$ThousandSquareFeet3Per4InchPanels();
 
   @override
@@ -154,7 +155,7 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
   @override
   EnumValues<VolumeLumber> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <VolumeLumber>[
     meterCubic,
     cubicFeet,
     cubicInch,
@@ -174,7 +175,7 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
     thousandSquareFeet3Per4InchPanels,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, VolumeLumber>{
     VolumeLumber$MeterCubic._minorName: meterCubic,
     VolumeLumber$CubicFeet._minorName: cubicFeet,
     VolumeLumber$CubicInch._minorName: cubicInch,
@@ -202,7 +203,7 @@ sealed class VolumeLumber extends Unit<VolumeLumber> {
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$MeterCubic extends VolumeLumber {
-  const VolumeLumber$MeterCubic([
+  VolumeLumber$MeterCubic([
     super.value,
   ]);
 
@@ -233,14 +234,14 @@ final class VolumeLumber$MeterCubic extends VolumeLumber {
   @override
   String get displayName => 'meter³';
 
-  static const _ratio = 61023.74409473228;
+  static final _ratio = Rational.parse('6.10237440947322840E+004');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$MeterCubic] ≈ 61023.74409473228 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$MeterCubic] ≈ 6.10237440947322840E+004 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -248,12 +249,12 @@ final class VolumeLumber$MeterCubic extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$MeterCubic] with new value
   @override
   VolumeLumber$MeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$MeterCubic(val);
 
@@ -266,14 +267,14 @@ final class VolumeLumber$MeterCubic extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$CubicFeet extends VolumeLumber {
-  const VolumeLumber$CubicFeet([
+  VolumeLumber$CubicFeet([
     super.value,
   ]);
 
@@ -304,14 +305,14 @@ final class VolumeLumber$CubicFeet extends VolumeLumber {
   @override
   String get displayName => 'cubic feet';
 
-  static const _ratio = 1728.0;
+  static final _ratio = Rational.parse('1.72800000000000000E+003');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$CubicFeet] = 1728.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$CubicFeet] = 1.72800000000000000E+003 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -319,12 +320,12 @@ final class VolumeLumber$CubicFeet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$CubicFeet] with new value
   @override
   VolumeLumber$CubicFeet withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$CubicFeet(val);
 
@@ -337,14 +338,14 @@ final class VolumeLumber$CubicFeet extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$CubicInch extends VolumeLumber {
-  const VolumeLumber$CubicInch([
+  VolumeLumber$CubicInch([
     super.value,
   ]);
 
@@ -375,14 +376,14 @@ final class VolumeLumber$CubicInch extends VolumeLumber {
   @override
   String get displayName => 'cubic inch';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
   /// Default (anchor) unit of [VolumeLumber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -390,12 +391,12 @@ final class VolumeLumber$CubicInch extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$CubicInch] with new value
   @override
   VolumeLumber$CubicInch withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$CubicInch(val);
 
@@ -408,14 +409,14 @@ final class VolumeLumber$CubicInch extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$BoardFeet extends VolumeLumber {
-  const VolumeLumber$BoardFeet([
+  VolumeLumber$BoardFeet([
     super.value,
   ]);
 
@@ -446,14 +447,14 @@ final class VolumeLumber$BoardFeet extends VolumeLumber {
   @override
   String get displayName => 'board feet';
 
-  static const _ratio = 144.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+002');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$BoardFeet] = 144.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$BoardFeet] = 1.44000000000000000E+002 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -461,12 +462,12 @@ final class VolumeLumber$BoardFeet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$BoardFeet] with new value
   @override
   VolumeLumber$BoardFeet withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$BoardFeet(val);
 
@@ -479,14 +480,14 @@ final class VolumeLumber$BoardFeet extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
-  const VolumeLumber$ThousandBoardFeet([
+  VolumeLumber$ThousandBoardFeet([
     super.value,
   ]);
 
@@ -517,14 +518,14 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
   @override
   String get displayName => '1000 board feet';
 
-  static const _ratio = 144000.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+005');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$ThousandBoardFeet] = 144000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandBoardFeet] = 1.44000000000000000E+005 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -533,12 +534,12 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$ThousandBoardFeet] with new value
   @override
   VolumeLumber$ThousandBoardFeet withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$ThousandBoardFeet(val);
 
@@ -551,14 +552,14 @@ final class VolumeLumber$ThousandBoardFeet extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$Cord extends VolumeLumber {
-  const VolumeLumber$Cord([
+  VolumeLumber$Cord([
     super.value,
   ]);
 
@@ -589,14 +590,14 @@ final class VolumeLumber$Cord extends VolumeLumber {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 221184.0;
+  static final _ratio = Rational.parse('2.21184000000000000E+005');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$Cord] = 221184.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$Cord] = 2.21184000000000000E+005 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -604,12 +605,12 @@ final class VolumeLumber$Cord extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$Cord] with new value
   @override
   VolumeLumber$Cord withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$Cord(val);
 
@@ -622,14 +623,14 @@ final class VolumeLumber$Cord extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
-  const VolumeLumber$Cord80FtCubic([
+  VolumeLumber$Cord80FtCubic([
     super.value,
   ]);
 
@@ -660,14 +661,14 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
   @override
   String get displayName => 'cord (80 ft³)';
 
-  static const _ratio = 138240.0;
+  static final _ratio = Rational.parse('1.38240000000000000E+005');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$Cord80FtCubic] = 138240.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$Cord80FtCubic] = 1.38240000000000000E+005 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -675,12 +676,12 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$Cord80FtCubic] with new value
   @override
   VolumeLumber$Cord80FtCubic withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$Cord80FtCubic(val);
 
@@ -693,14 +694,14 @@ final class VolumeLumber$Cord80FtCubic extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$CordFeet extends VolumeLumber {
-  const VolumeLumber$CordFeet([
+  VolumeLumber$CordFeet([
     super.value,
   ]);
 
@@ -731,14 +732,14 @@ final class VolumeLumber$CordFeet extends VolumeLumber {
   @override
   String get displayName => 'cord feet';
 
-  static const _ratio = 27648.0;
+  static final _ratio = Rational.parse('2.76480000000000000E+004');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$CordFeet] = 27648.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$CordFeet] = 2.76480000000000000E+004 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -746,12 +747,12 @@ final class VolumeLumber$CordFeet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$CordFeet] with new value
   @override
   VolumeLumber$CordFeet withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$CordFeet(val);
 
@@ -764,14 +765,14 @@ final class VolumeLumber$CordFeet extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$Cunit extends VolumeLumber {
-  const VolumeLumber$Cunit([
+  VolumeLumber$Cunit([
     super.value,
   ]);
 
@@ -802,14 +803,14 @@ final class VolumeLumber$Cunit extends VolumeLumber {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 172800.0;
+  static final _ratio = Rational.parse('1.72800000000000000E+005');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$Cunit] = 172800.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$Cunit] = 1.72800000000000000E+005 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -817,12 +818,12 @@ final class VolumeLumber$Cunit extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$Cunit] with new value
   @override
   VolumeLumber$Cunit withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$Cunit(val);
 
@@ -835,14 +836,14 @@ final class VolumeLumber$Cunit extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$Pallet extends VolumeLumber {
-  const VolumeLumber$Pallet([
+  VolumeLumber$Pallet([
     super.value,
   ]);
 
@@ -873,14 +874,14 @@ final class VolumeLumber$Pallet extends VolumeLumber {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2448.0;
+  static final _ratio = Rational.parse('2.44800000000000000E+003');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$Pallet] = 2448.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$Pallet] = 2.44800000000000000E+003 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -888,12 +889,12 @@ final class VolumeLumber$Pallet extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$Pallet] with new value
   @override
   VolumeLumber$Pallet withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$Pallet(val);
 
@@ -906,14 +907,14 @@ final class VolumeLumber$Pallet extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$CrossTie extends VolumeLumber {
-  const VolumeLumber$CrossTie([
+  VolumeLumber$CrossTie([
     super.value,
   ]);
 
@@ -944,14 +945,14 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
   @override
   String get displayName => 'cross tie';
 
-  static const _ratio = 5760.0;
+  static final _ratio = Rational.parse('5.76000000000000000E+003');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$CrossTie] = 5760.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$CrossTie] = 5.76000000000000000E+003 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -959,12 +960,12 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$CrossTie] with new value
   @override
   VolumeLumber$CrossTie withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$CrossTie(val);
 
@@ -977,14 +978,14 @@ final class VolumeLumber$CrossTie extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeLumber]
 final class VolumeLumber$SwitchTie extends VolumeLumber {
-  const VolumeLumber$SwitchTie([
+  VolumeLumber$SwitchTie([
     super.value,
   ]);
 
@@ -1015,14 +1016,14 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
   @override
   String get displayName => 'switch tie';
 
-  static const _ratio = 9072.0;
+  static final _ratio = Rational.parse('9.07200000000000000E+003');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$SwitchTie] = 9072.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$SwitchTie] = 9.07200000000000000E+003 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1030,12 +1031,12 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$SwitchTie] with new value
   @override
   VolumeLumber$SwitchTie withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$SwitchTie(val);
 
@@ -1048,7 +1049,7 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1056,7 +1057,7 @@ final class VolumeLumber$SwitchTie extends VolumeLumber {
 /// Unit of [VolumeLumber]
 final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
     extends VolumeLumber {
-  const VolumeLumber$ThousandSquareFeet1Per8InchPanels([
+  VolumeLumber$ThousandSquareFeet1Per8InchPanels([
     super.value,
   ]);
 
@@ -1087,14 +1088,14 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
   @override
   String get displayName => '1000 square feet (1/8-inch panels)';
 
-  static const _ratio = 18000.0;
+  static final _ratio = Rational.parse('1.80000000000000000E+004');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$ThousandSquareFeet1Per8InchPanels] = 18000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet1Per8InchPanels] = 1.80000000000000000E+004 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1103,12 +1104,12 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per8InchPanels] with new value
   @override
   VolumeLumber$ThousandSquareFeet1Per8InchPanels withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$ThousandSquareFeet1Per8InchPanels(val);
 
@@ -1121,7 +1122,7 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1129,7 +1130,7 @@ final class VolumeLumber$ThousandSquareFeet1Per8InchPanels
 /// Unit of [VolumeLumber]
 final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
     extends VolumeLumber {
-  const VolumeLumber$ThousandSquareFeet1Per4InchPanels([
+  VolumeLumber$ThousandSquareFeet1Per4InchPanels([
     super.value,
   ]);
 
@@ -1160,14 +1161,14 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
   @override
   String get displayName => '1000 square feet (1/4-inch panels)';
 
-  static const _ratio = 36000.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+004');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$ThousandSquareFeet1Per4InchPanels] = 36000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet1Per4InchPanels] = 3.60000000000000000E+004 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1176,12 +1177,12 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per4InchPanels] with new value
   @override
   VolumeLumber$ThousandSquareFeet1Per4InchPanels withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$ThousandSquareFeet1Per4InchPanels(val);
 
@@ -1194,7 +1195,7 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1202,7 +1203,7 @@ final class VolumeLumber$ThousandSquareFeet1Per4InchPanels
 /// Unit of [VolumeLumber]
 final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
     extends VolumeLumber {
-  const VolumeLumber$ThousandSquareFeet3Per8InchPanels([
+  VolumeLumber$ThousandSquareFeet3Per8InchPanels([
     super.value,
   ]);
 
@@ -1233,14 +1234,14 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
   @override
   String get displayName => '1000 square feet (3/8-inch panels)';
 
-  static const _ratio = 54000.0;
+  static final _ratio = Rational.parse('5.40000000000000000E+004');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$ThousandSquareFeet3Per8InchPanels] = 54000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet3Per8InchPanels] = 5.40000000000000000E+004 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1249,12 +1250,12 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$ThousandSquareFeet3Per8InchPanels] with new value
   @override
   VolumeLumber$ThousandSquareFeet3Per8InchPanels withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$ThousandSquareFeet3Per8InchPanels(val);
 
@@ -1267,7 +1268,7 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1275,7 +1276,7 @@ final class VolumeLumber$ThousandSquareFeet3Per8InchPanels
 /// Unit of [VolumeLumber]
 final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
     extends VolumeLumber {
-  const VolumeLumber$ThousandSquareFeet1Per2InchPanels([
+  VolumeLumber$ThousandSquareFeet1Per2InchPanels([
     super.value,
   ]);
 
@@ -1306,14 +1307,14 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
   @override
   String get displayName => '1000 square feet (1/2-inch panels)';
 
-  static const _ratio = 72000.0;
+  static final _ratio = Rational.parse('7.20000000000000000E+004');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$ThousandSquareFeet1Per2InchPanels] = 72000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet1Per2InchPanels] = 7.20000000000000000E+004 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1322,12 +1323,12 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$ThousandSquareFeet1Per2InchPanels] with new value
   @override
   VolumeLumber$ThousandSquareFeet1Per2InchPanels withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$ThousandSquareFeet1Per2InchPanels(val);
 
@@ -1340,7 +1341,7 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1348,7 +1349,7 @@ final class VolumeLumber$ThousandSquareFeet1Per2InchPanels
 /// Unit of [VolumeLumber]
 final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
     extends VolumeLumber {
-  const VolumeLumber$ThousandSquareFeet3Per4InchPanels([
+  VolumeLumber$ThousandSquareFeet3Per4InchPanels([
     super.value,
   ]);
 
@@ -1379,14 +1380,14 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
   @override
   String get displayName => '1000 square feet (3/4-inch panels)';
 
-  static const _ratio = 108000.0;
+  static final _ratio = Rational.parse('1.08000000000000000E+005');
 
   @override
-  VolumeLumber get anchor => const VolumeLumber$CubicInch(_ratio);
+  VolumeLumber get anchor => VolumeLumber$CubicInch(_ratio);
 
-  /// 1 [VolumeLumber$ThousandSquareFeet3Per4InchPanels] = 108000.0 [VolumeLumber$CubicInch]
+  /// 1 [VolumeLumber$ThousandSquareFeet3Per4InchPanels] = 1.08000000000000000E+005 [VolumeLumber$CubicInch]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1395,12 +1396,12 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeLumber$ThousandSquareFeet3Per4InchPanels] with new value
   @override
   VolumeLumber$ThousandSquareFeet3Per4InchPanels withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeLumber$ThousandSquareFeet3Per4InchPanels(val);
 
@@ -1413,7 +1414,7 @@ final class VolumeLumber$ThousandSquareFeet3Per4InchPanels
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

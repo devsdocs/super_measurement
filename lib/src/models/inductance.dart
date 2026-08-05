@@ -11,7 +11,7 @@ part of '../../super_measurement.dart';
 /// [Inductance$Stathenry], [Inductance$EMUOfInductance],
 /// [Inductance$ESUOfInductance]
 sealed class Inductance extends Unit<Inductance> {
-  const Inductance([
+  Inductance([
     super.value,
   ]);
 
@@ -23,115 +23,116 @@ sealed class Inductance extends Unit<Inductance> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Inductance.anchor();
 
-  factory Inductance.anchor() => const Inductance$Attohenry();
+  factory Inductance.anchor() => Inductance$Attohenry();
 
   /// Convert to [Inductance$Exahenry]
   Inductance get toExahenry => convertTo(
-        const Inductance$Exahenry(),
+        Inductance$Exahenry(),
       );
 
   /// Convert to [Inductance$Petahenry]
   Inductance get toPetahenry => convertTo(
-        const Inductance$Petahenry(),
+        Inductance$Petahenry(),
       );
 
   /// Convert to [Inductance$Terahenry]
   Inductance get toTerahenry => convertTo(
-        const Inductance$Terahenry(),
+        Inductance$Terahenry(),
       );
 
   /// Convert to [Inductance$Gigahenry]
   Inductance get toGigahenry => convertTo(
-        const Inductance$Gigahenry(),
+        Inductance$Gigahenry(),
       );
 
   /// Convert to [Inductance$Megahenry]
   Inductance get toMegahenry => convertTo(
-        const Inductance$Megahenry(),
+        Inductance$Megahenry(),
       );
 
   /// Convert to [Inductance$Kilohenry]
   Inductance get toKilohenry => convertTo(
-        const Inductance$Kilohenry(),
+        Inductance$Kilohenry(),
       );
 
   /// Convert to [Inductance$Hectohenry]
   Inductance get toHectohenry => convertTo(
-        const Inductance$Hectohenry(),
+        Inductance$Hectohenry(),
       );
 
   /// Convert to [Inductance$Dekahenry]
   Inductance get toDekahenry => convertTo(
-        const Inductance$Dekahenry(),
+        Inductance$Dekahenry(),
       );
 
   /// Convert to [Inductance$Henry]
   Inductance get toHenry => convertTo(
-        const Inductance$Henry(),
+        Inductance$Henry(),
       );
 
   /// Convert to [Inductance$Decihenry]
   Inductance get toDecihenry => convertTo(
-        const Inductance$Decihenry(),
+        Inductance$Decihenry(),
       );
 
   /// Convert to [Inductance$Centihenry]
   Inductance get toCentihenry => convertTo(
-        const Inductance$Centihenry(),
+        Inductance$Centihenry(),
       );
 
   /// Convert to [Inductance$Millihenry]
   Inductance get toMillihenry => convertTo(
-        const Inductance$Millihenry(),
+        Inductance$Millihenry(),
       );
 
   /// Convert to [Inductance$Microhenry]
   Inductance get toMicrohenry => convertTo(
-        const Inductance$Microhenry(),
+        Inductance$Microhenry(),
       );
 
   /// Convert to [Inductance$Nanohenry]
   Inductance get toNanohenry => convertTo(
-        const Inductance$Nanohenry(),
+        Inductance$Nanohenry(),
       );
 
   /// Convert to [Inductance$Picohenry]
   Inductance get toPicohenry => convertTo(
-        const Inductance$Picohenry(),
+        Inductance$Picohenry(),
       );
 
   /// Convert to [Inductance$Femtohenry]
   Inductance get toFemtohenry => convertTo(
-        const Inductance$Femtohenry(),
+        Inductance$Femtohenry(),
       );
 
   /// Convert to [Inductance$Attohenry]
   Inductance get toAttohenry => convertTo(
-        const Inductance$Attohenry(),
+        Inductance$Attohenry(),
       );
 
   /// Convert to [Inductance$Abhenry]
   Inductance get toAbhenry => convertTo(
-        const Inductance$Abhenry(),
+        Inductance$Abhenry(),
       );
 
   /// Convert to [Inductance$Stathenry]
   Inductance get toStathenry => convertTo(
-        const Inductance$Stathenry(),
+        Inductance$Stathenry(),
       );
 
   /// Convert to [Inductance$EMUOfInductance]
   Inductance get toEMUOfInductance => convertTo(
-        const Inductance$EMUOfInductance(),
+        Inductance$EMUOfInductance(),
       );
 
   /// Convert to [Inductance$ESUOfInductance]
   Inductance get toESUOfInductance => convertTo(
-        const Inductance$ESUOfInductance(),
+        Inductance$ESUOfInductance(),
       );
 
   @override
@@ -142,27 +143,27 @@ sealed class Inductance extends Unit<Inductance> {
 
   static const _majorName = 'inductance';
 
-  static const exahenry = Inductance$Exahenry();
-  static const petahenry = Inductance$Petahenry();
-  static const terahenry = Inductance$Terahenry();
-  static const gigahenry = Inductance$Gigahenry();
-  static const megahenry = Inductance$Megahenry();
-  static const kilohenry = Inductance$Kilohenry();
-  static const hectohenry = Inductance$Hectohenry();
-  static const dekahenry = Inductance$Dekahenry();
-  static const henry = Inductance$Henry();
-  static const decihenry = Inductance$Decihenry();
-  static const centihenry = Inductance$Centihenry();
-  static const millihenry = Inductance$Millihenry();
-  static const microhenry = Inductance$Microhenry();
-  static const nanohenry = Inductance$Nanohenry();
-  static const picohenry = Inductance$Picohenry();
-  static const femtohenry = Inductance$Femtohenry();
-  static const attohenry = Inductance$Attohenry();
-  static const abhenry = Inductance$Abhenry();
-  static const stathenry = Inductance$Stathenry();
-  static const eMUOfInductance = Inductance$EMUOfInductance();
-  static const eSUOfInductance = Inductance$ESUOfInductance();
+  static final exahenry = Inductance$Exahenry();
+  static final petahenry = Inductance$Petahenry();
+  static final terahenry = Inductance$Terahenry();
+  static final gigahenry = Inductance$Gigahenry();
+  static final megahenry = Inductance$Megahenry();
+  static final kilohenry = Inductance$Kilohenry();
+  static final hectohenry = Inductance$Hectohenry();
+  static final dekahenry = Inductance$Dekahenry();
+  static final henry = Inductance$Henry();
+  static final decihenry = Inductance$Decihenry();
+  static final centihenry = Inductance$Centihenry();
+  static final millihenry = Inductance$Millihenry();
+  static final microhenry = Inductance$Microhenry();
+  static final nanohenry = Inductance$Nanohenry();
+  static final picohenry = Inductance$Picohenry();
+  static final femtohenry = Inductance$Femtohenry();
+  static final attohenry = Inductance$Attohenry();
+  static final abhenry = Inductance$Abhenry();
+  static final stathenry = Inductance$Stathenry();
+  static final eMUOfInductance = Inductance$EMUOfInductance();
+  static final eSUOfInductance = Inductance$ESUOfInductance();
 
   @override
   List<Inductance> get units => values;
@@ -170,7 +171,7 @@ sealed class Inductance extends Unit<Inductance> {
   @override
   EnumValues<Inductance> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Inductance>[
     exahenry,
     petahenry,
     terahenry,
@@ -194,7 +195,7 @@ sealed class Inductance extends Unit<Inductance> {
     eSUOfInductance,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Inductance>{
     Inductance$Exahenry._minorName: exahenry,
     Inductance$Petahenry._minorName: petahenry,
     Inductance$Terahenry._minorName: terahenry,
@@ -221,7 +222,7 @@ sealed class Inductance extends Unit<Inductance> {
 
 /// Unit of [Inductance]
 final class Inductance$Exahenry extends Inductance {
-  const Inductance$Exahenry([
+  Inductance$Exahenry([
     super.value,
   ]);
 
@@ -252,14 +253,14 @@ final class Inductance$Exahenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+36;
+  static final _ratio = Rational.parse('1.00000000000000000E+036');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Exahenry] = 1e+36 [Inductance$Attohenry]
+  /// 1 [Inductance$Exahenry] = 1.00000000000000000E+036 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -267,12 +268,12 @@ final class Inductance$Exahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Exahenry] with new value
   @override
   Inductance$Exahenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Exahenry(val);
 
@@ -285,14 +286,14 @@ final class Inductance$Exahenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Petahenry extends Inductance {
-  const Inductance$Petahenry([
+  Inductance$Petahenry([
     super.value,
   ]);
 
@@ -323,14 +324,14 @@ final class Inductance$Petahenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+33;
+  static final _ratio = Rational.parse('1.00000000000000000E+033');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Petahenry] = 1e+33 [Inductance$Attohenry]
+  /// 1 [Inductance$Petahenry] = 1.00000000000000000E+033 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -338,12 +339,12 @@ final class Inductance$Petahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Petahenry] with new value
   @override
   Inductance$Petahenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Petahenry(val);
 
@@ -356,14 +357,14 @@ final class Inductance$Petahenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Terahenry extends Inductance {
-  const Inductance$Terahenry([
+  Inductance$Terahenry([
     super.value,
   ]);
 
@@ -394,14 +395,14 @@ final class Inductance$Terahenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+30;
+  static final _ratio = Rational.parse('1.00000000000000000E+030');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Terahenry] = 1e+30 [Inductance$Attohenry]
+  /// 1 [Inductance$Terahenry] = 1.00000000000000000E+030 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -409,12 +410,12 @@ final class Inductance$Terahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Terahenry] with new value
   @override
   Inductance$Terahenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Terahenry(val);
 
@@ -427,14 +428,14 @@ final class Inductance$Terahenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Gigahenry extends Inductance {
-  const Inductance$Gigahenry([
+  Inductance$Gigahenry([
     super.value,
   ]);
 
@@ -465,14 +466,14 @@ final class Inductance$Gigahenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+27;
+  static final _ratio = Rational.parse('1.00000000000000000E+027');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Gigahenry] = 1e+27 [Inductance$Attohenry]
+  /// 1 [Inductance$Gigahenry] = 1.00000000000000000E+027 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -480,12 +481,12 @@ final class Inductance$Gigahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Gigahenry] with new value
   @override
   Inductance$Gigahenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Gigahenry(val);
 
@@ -498,14 +499,14 @@ final class Inductance$Gigahenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Megahenry extends Inductance {
-  const Inductance$Megahenry([
+  Inductance$Megahenry([
     super.value,
   ]);
 
@@ -536,14 +537,14 @@ final class Inductance$Megahenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+24;
+  static final _ratio = Rational.parse('1.00000000000000000E+024');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Megahenry] = 1e+24 [Inductance$Attohenry]
+  /// 1 [Inductance$Megahenry] = 1.00000000000000000E+024 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -551,12 +552,12 @@ final class Inductance$Megahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Megahenry] with new value
   @override
   Inductance$Megahenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Megahenry(val);
 
@@ -569,14 +570,14 @@ final class Inductance$Megahenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Kilohenry extends Inductance {
-  const Inductance$Kilohenry([
+  Inductance$Kilohenry([
     super.value,
   ]);
 
@@ -607,14 +608,14 @@ final class Inductance$Kilohenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+21;
+  static final _ratio = Rational.parse('1.00000000000000000E+021');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Kilohenry] = 1e+21 [Inductance$Attohenry]
+  /// 1 [Inductance$Kilohenry] = 1.00000000000000000E+021 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -622,12 +623,12 @@ final class Inductance$Kilohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Kilohenry] with new value
   @override
   Inductance$Kilohenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Kilohenry(val);
 
@@ -640,14 +641,14 @@ final class Inductance$Kilohenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Hectohenry extends Inductance {
-  const Inductance$Hectohenry([
+  Inductance$Hectohenry([
     super.value,
   ]);
 
@@ -678,14 +679,14 @@ final class Inductance$Hectohenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+020');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Hectohenry] = 100000000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Hectohenry] = 1.00000000000000000E+020 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -693,12 +694,12 @@ final class Inductance$Hectohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Hectohenry] with new value
   @override
   Inductance$Hectohenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Hectohenry(val);
 
@@ -711,14 +712,14 @@ final class Inductance$Hectohenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Dekahenry extends Inductance {
-  const Inductance$Dekahenry([
+  Inductance$Dekahenry([
     super.value,
   ]);
 
@@ -749,14 +750,14 @@ final class Inductance$Dekahenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+019');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Dekahenry] = 10000000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Dekahenry] = 1.00000000000000000E+019 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -764,12 +765,12 @@ final class Inductance$Dekahenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Dekahenry] with new value
   @override
   Inductance$Dekahenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Dekahenry(val);
 
@@ -782,14 +783,14 @@ final class Inductance$Dekahenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Henry extends Inductance {
-  const Inductance$Henry([
+  Inductance$Henry([
     super.value,
   ]);
 
@@ -820,14 +821,14 @@ final class Inductance$Henry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Henry] = 1000000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Henry] = 1.00000000000000000E+018 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -835,12 +836,12 @@ final class Inductance$Henry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Henry] with new value
   @override
   Inductance$Henry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Henry(val);
 
@@ -853,14 +854,14 @@ final class Inductance$Henry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Decihenry extends Inductance {
-  const Inductance$Decihenry([
+  Inductance$Decihenry([
     super.value,
   ]);
 
@@ -891,14 +892,14 @@ final class Inductance$Decihenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+017');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Decihenry] = 100000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Decihenry] = 1.00000000000000000E+017 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -906,12 +907,12 @@ final class Inductance$Decihenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Decihenry] with new value
   @override
   Inductance$Decihenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Decihenry(val);
 
@@ -924,14 +925,14 @@ final class Inductance$Decihenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Centihenry extends Inductance {
-  const Inductance$Centihenry([
+  Inductance$Centihenry([
     super.value,
   ]);
 
@@ -962,14 +963,14 @@ final class Inductance$Centihenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+016');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Centihenry] = 10000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Centihenry] = 1.00000000000000000E+016 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -977,12 +978,12 @@ final class Inductance$Centihenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Centihenry] with new value
   @override
   Inductance$Centihenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Centihenry(val);
 
@@ -995,14 +996,14 @@ final class Inductance$Centihenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Millihenry extends Inductance {
-  const Inductance$Millihenry([
+  Inductance$Millihenry([
     super.value,
   ]);
 
@@ -1033,14 +1034,14 @@ final class Inductance$Millihenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Millihenry] = 1000000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Millihenry] = 1.00000000000000000E+015 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1048,12 +1049,12 @@ final class Inductance$Millihenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Millihenry] with new value
   @override
   Inductance$Millihenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Millihenry(val);
 
@@ -1066,14 +1067,14 @@ final class Inductance$Millihenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Microhenry extends Inductance {
-  const Inductance$Microhenry([
+  Inductance$Microhenry([
     super.value,
   ]);
 
@@ -1104,14 +1105,14 @@ final class Inductance$Microhenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Microhenry] = 1000000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Microhenry] = 1.00000000000000000E+012 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1119,12 +1120,12 @@ final class Inductance$Microhenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Microhenry] with new value
   @override
   Inductance$Microhenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Microhenry(val);
 
@@ -1137,14 +1138,14 @@ final class Inductance$Microhenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Nanohenry extends Inductance {
-  const Inductance$Nanohenry([
+  Inductance$Nanohenry([
     super.value,
   ]);
 
@@ -1175,14 +1176,14 @@ final class Inductance$Nanohenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Nanohenry] = 1000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Nanohenry] = 1.00000000000000000E+009 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1190,12 +1191,12 @@ final class Inductance$Nanohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Nanohenry] with new value
   @override
   Inductance$Nanohenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Nanohenry(val);
 
@@ -1208,14 +1209,14 @@ final class Inductance$Nanohenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Picohenry extends Inductance {
-  const Inductance$Picohenry([
+  Inductance$Picohenry([
     super.value,
   ]);
 
@@ -1246,14 +1247,14 @@ final class Inductance$Picohenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Picohenry] = 1000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Picohenry] = 1.00000000000000000E+006 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1261,12 +1262,12 @@ final class Inductance$Picohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Picohenry] with new value
   @override
   Inductance$Picohenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Picohenry(val);
 
@@ -1279,14 +1280,14 @@ final class Inductance$Picohenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Femtohenry extends Inductance {
-  const Inductance$Femtohenry([
+  Inductance$Femtohenry([
     super.value,
   ]);
 
@@ -1317,14 +1318,14 @@ final class Inductance$Femtohenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Femtohenry] = 1000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Femtohenry] = 1.00000000000000000E+003 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1332,12 +1333,12 @@ final class Inductance$Femtohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Femtohenry] with new value
   @override
   Inductance$Femtohenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Femtohenry(val);
 
@@ -1350,14 +1351,14 @@ final class Inductance$Femtohenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Attohenry extends Inductance {
-  const Inductance$Attohenry([
+  Inductance$Attohenry([
     super.value,
   ]);
 
@@ -1388,14 +1389,14 @@ final class Inductance$Attohenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
   /// Default (anchor) unit of [Inductance]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1403,12 +1404,12 @@ final class Inductance$Attohenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Attohenry] with new value
   @override
   Inductance$Attohenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Attohenry(val);
 
@@ -1421,14 +1422,14 @@ final class Inductance$Attohenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Abhenry extends Inductance {
-  const Inductance$Abhenry([
+  Inductance$Abhenry([
     super.value,
   ]);
 
@@ -1459,14 +1460,14 @@ final class Inductance$Abhenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Abhenry] = 1000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$Abhenry] = 1.00000000000000000E+009 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1474,12 +1475,12 @@ final class Inductance$Abhenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Abhenry] with new value
   @override
   Inductance$Abhenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Abhenry(val);
 
@@ -1492,14 +1493,14 @@ final class Inductance$Abhenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$Stathenry extends Inductance {
-  const Inductance$Stathenry([
+  Inductance$Stathenry([
     super.value,
   ]);
 
@@ -1530,14 +1531,14 @@ final class Inductance$Stathenry extends Inductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8.987552e+29;
+  static final _ratio = Rational.parse('8.98755200000000000E+029');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$Stathenry] = 8.987552e+29 [Inductance$Attohenry]
+  /// 1 [Inductance$Stathenry] = 8.98755200000000000E+029 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1545,12 +1546,12 @@ final class Inductance$Stathenry extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$Stathenry] with new value
   @override
   Inductance$Stathenry withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$Stathenry(val);
 
@@ -1563,14 +1564,14 @@ final class Inductance$Stathenry extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$EMUOfInductance extends Inductance {
-  const Inductance$EMUOfInductance([
+  Inductance$EMUOfInductance([
     super.value,
   ]);
 
@@ -1601,14 +1602,14 @@ final class Inductance$EMUOfInductance extends Inductance {
   @override
   String get displayName => 'EMU of inductance';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$EMUOfInductance] = 1000000000.0 [Inductance$Attohenry]
+  /// 1 [Inductance$EMUOfInductance] = 1.00000000000000000E+009 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1616,12 +1617,12 @@ final class Inductance$EMUOfInductance extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$EMUOfInductance] with new value
   @override
   Inductance$EMUOfInductance withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$EMUOfInductance(val);
 
@@ -1634,14 +1635,14 @@ final class Inductance$EMUOfInductance extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Inductance]
 final class Inductance$ESUOfInductance extends Inductance {
-  const Inductance$ESUOfInductance([
+  Inductance$ESUOfInductance([
     super.value,
   ]);
 
@@ -1672,14 +1673,14 @@ final class Inductance$ESUOfInductance extends Inductance {
   @override
   String get displayName => 'ESU of inductance';
 
-  static const _ratio = 8.987552e+29;
+  static final _ratio = Rational.parse('8.98755200000000000E+029');
 
   @override
-  Inductance get anchor => const Inductance$Attohenry(_ratio);
+  Inductance get anchor => Inductance$Attohenry(_ratio);
 
-  /// 1 [Inductance$ESUOfInductance] = 8.987552e+29 [Inductance$Attohenry]
+  /// 1 [Inductance$ESUOfInductance] = 8.98755200000000000E+029 [Inductance$Attohenry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1687,12 +1688,12 @@ final class Inductance$ESUOfInductance extends Inductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Inductance$ESUOfInductance] with new value
   @override
   Inductance$ESUOfInductance withValue(
-    num val,
+    Rational val,
   ) =>
       Inductance$ESUOfInductance(val);
 
@@ -1705,7 +1706,7 @@ final class Inductance$ESUOfInductance extends Inductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

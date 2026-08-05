@@ -13,7 +13,7 @@ part of '../../super_measurement.dart';
 /// [Area$VarasConuquerasCuad], [Area$Strema], [Area$CircularInch],
 /// [Area$CircularMil], [Area$Tahulla]
 sealed class Area extends Unit<Area> {
-  const Area([
+  Area([
     super.value,
   ]);
 
@@ -25,175 +25,176 @@ sealed class Area extends Unit<Area> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Area.anchor();
 
-  factory Area.anchor() => const Area$Barn();
+  factory Area.anchor() => Area$Barn();
 
   /// Convert to [Area$KilometerSquare]
   Area get toKilometerSquare => convertTo(
-        const Area$KilometerSquare(),
+        Area$KilometerSquare(),
       );
 
   /// Convert to [Area$HectometerSquare]
   Area get toHectometerSquare => convertTo(
-        const Area$HectometerSquare(),
+        Area$HectometerSquare(),
       );
 
   /// Convert to [Area$DekameterSquare]
   Area get toDekameterSquare => convertTo(
-        const Area$DekameterSquare(),
+        Area$DekameterSquare(),
       );
 
   /// Convert to [Area$MeterSquare]
   Area get toMeterSquare => convertTo(
-        const Area$MeterSquare(),
+        Area$MeterSquare(),
       );
 
   /// Convert to [Area$DecimeterSquare]
   Area get toDecimeterSquare => convertTo(
-        const Area$DecimeterSquare(),
+        Area$DecimeterSquare(),
       );
 
   /// Convert to [Area$CentimeterSquare]
   Area get toCentimeterSquare => convertTo(
-        const Area$CentimeterSquare(),
+        Area$CentimeterSquare(),
       );
 
   /// Convert to [Area$MillimeterSquare]
   Area get toMillimeterSquare => convertTo(
-        const Area$MillimeterSquare(),
+        Area$MillimeterSquare(),
       );
 
   /// Convert to [Area$MicrometerSquare]
   Area get toMicrometerSquare => convertTo(
-        const Area$MicrometerSquare(),
+        Area$MicrometerSquare(),
       );
 
   /// Convert to [Area$NanometerSquare]
   Area get toNanometerSquare => convertTo(
-        const Area$NanometerSquare(),
+        Area$NanometerSquare(),
       );
 
   /// Convert to [Area$Hectare]
   Area get toHectare => convertTo(
-        const Area$Hectare(),
+        Area$Hectare(),
       );
 
   /// Convert to [Area$Are]
   Area get toAre => convertTo(
-        const Area$Are(),
+        Area$Are(),
       );
 
   /// Convert to [Area$Barn]
   Area get toBarn => convertTo(
-        const Area$Barn(),
+        Area$Barn(),
       );
 
   /// Convert to [Area$MileSquare]
   Area get toMileSquare => convertTo(
-        const Area$MileSquare(),
+        Area$MileSquare(),
       );
 
   /// Convert to [Area$YardSquare]
   Area get toYardSquare => convertTo(
-        const Area$YardSquare(),
+        Area$YardSquare(),
       );
 
   /// Convert to [Area$FootSquare]
   Area get toFootSquare => convertTo(
-        const Area$FootSquare(),
+        Area$FootSquare(),
       );
 
   /// Convert to [Area$InchSquare]
   Area get toInchSquare => convertTo(
-        const Area$InchSquare(),
+        Area$InchSquare(),
       );
 
   /// Convert to [Area$Township]
   Area get toTownship => convertTo(
-        const Area$Township(),
+        Area$Township(),
       );
 
   /// Convert to [Area$Section]
   Area get toSection => convertTo(
-        const Area$Section(),
+        Area$Section(),
       );
 
   /// Convert to [Area$Acre]
   Area get toAcre => convertTo(
-        const Area$Acre(),
+        Area$Acre(),
       );
 
   /// Convert to [Area$Rood]
   Area get toRood => convertTo(
-        const Area$Rood(),
+        Area$Rood(),
       );
 
   /// Convert to [Area$ChainSquare]
   Area get toChainSquare => convertTo(
-        const Area$ChainSquare(),
+        Area$ChainSquare(),
       );
 
   /// Convert to [Area$RodSquare]
   Area get toRodSquare => convertTo(
-        const Area$RodSquare(),
+        Area$RodSquare(),
       );
 
   /// Convert to [Area$PerchSquare]
   Area get toPerchSquare => convertTo(
-        const Area$PerchSquare(),
+        Area$PerchSquare(),
       );
 
   /// Convert to [Area$PoleSquare]
   Area get toPoleSquare => convertTo(
-        const Area$PoleSquare(),
+        Area$PoleSquare(),
       );
 
   /// Convert to [Area$Arpent]
   Area get toArpent => convertTo(
-        const Area$Arpent(),
+        Area$Arpent(),
       );
 
   /// Convert to [Area$Cuerda]
   Area get toCuerda => convertTo(
-        const Area$Cuerda(),
+        Area$Cuerda(),
       );
 
   /// Convert to [Area$Plaza]
   Area get toPlaza => convertTo(
-        const Area$Plaza(),
+        Area$Plaza(),
       );
 
   /// Convert to [Area$VarasCastellanasCuad]
   Area get toVarasCastellanasCuad => convertTo(
-        const Area$VarasCastellanasCuad(),
+        Area$VarasCastellanasCuad(),
       );
 
   /// Convert to [Area$VarasConuquerasCuad]
   Area get toVarasConuquerasCuad => convertTo(
-        const Area$VarasConuquerasCuad(),
+        Area$VarasConuquerasCuad(),
       );
 
   /// Convert to [Area$Strema]
   Area get toStrema => convertTo(
-        const Area$Strema(),
+        Area$Strema(),
       );
 
   /// Convert to [Area$CircularInch]
   Area get toCircularInch => convertTo(
-        const Area$CircularInch(),
+        Area$CircularInch(),
       );
 
   /// Convert to [Area$CircularMil]
   Area get toCircularMil => convertTo(
-        const Area$CircularMil(),
+        Area$CircularMil(),
       );
 
   /// Convert to [Area$Tahulla]
   Area get toTahulla => convertTo(
-        const Area$Tahulla(),
+        Area$Tahulla(),
       );
 
   @override
@@ -204,39 +205,39 @@ sealed class Area extends Unit<Area> {
 
   static const _majorName = 'area';
 
-  static const kilometerSquare = Area$KilometerSquare();
-  static const hectometerSquare = Area$HectometerSquare();
-  static const dekameterSquare = Area$DekameterSquare();
-  static const meterSquare = Area$MeterSquare();
-  static const decimeterSquare = Area$DecimeterSquare();
-  static const centimeterSquare = Area$CentimeterSquare();
-  static const millimeterSquare = Area$MillimeterSquare();
-  static const micrometerSquare = Area$MicrometerSquare();
-  static const nanometerSquare = Area$NanometerSquare();
-  static const hectare = Area$Hectare();
-  static const are = Area$Are();
-  static const barn = Area$Barn();
-  static const mileSquare = Area$MileSquare();
-  static const yardSquare = Area$YardSquare();
-  static const footSquare = Area$FootSquare();
-  static const inchSquare = Area$InchSquare();
-  static const township = Area$Township();
-  static const section = Area$Section();
-  static const acre = Area$Acre();
-  static const rood = Area$Rood();
-  static const chainSquare = Area$ChainSquare();
-  static const rodSquare = Area$RodSquare();
-  static const perchSquare = Area$PerchSquare();
-  static const poleSquare = Area$PoleSquare();
-  static const arpent = Area$Arpent();
-  static const cuerda = Area$Cuerda();
-  static const plaza = Area$Plaza();
-  static const varasCastellanasCuad = Area$VarasCastellanasCuad();
-  static const varasConuquerasCuad = Area$VarasConuquerasCuad();
-  static const strema = Area$Strema();
-  static const circularInch = Area$CircularInch();
-  static const circularMil = Area$CircularMil();
-  static const tahulla = Area$Tahulla();
+  static final kilometerSquare = Area$KilometerSquare();
+  static final hectometerSquare = Area$HectometerSquare();
+  static final dekameterSquare = Area$DekameterSquare();
+  static final meterSquare = Area$MeterSquare();
+  static final decimeterSquare = Area$DecimeterSquare();
+  static final centimeterSquare = Area$CentimeterSquare();
+  static final millimeterSquare = Area$MillimeterSquare();
+  static final micrometerSquare = Area$MicrometerSquare();
+  static final nanometerSquare = Area$NanometerSquare();
+  static final hectare = Area$Hectare();
+  static final are = Area$Are();
+  static final barn = Area$Barn();
+  static final mileSquare = Area$MileSquare();
+  static final yardSquare = Area$YardSquare();
+  static final footSquare = Area$FootSquare();
+  static final inchSquare = Area$InchSquare();
+  static final township = Area$Township();
+  static final section = Area$Section();
+  static final acre = Area$Acre();
+  static final rood = Area$Rood();
+  static final chainSquare = Area$ChainSquare();
+  static final rodSquare = Area$RodSquare();
+  static final perchSquare = Area$PerchSquare();
+  static final poleSquare = Area$PoleSquare();
+  static final arpent = Area$Arpent();
+  static final cuerda = Area$Cuerda();
+  static final plaza = Area$Plaza();
+  static final varasCastellanasCuad = Area$VarasCastellanasCuad();
+  static final varasConuquerasCuad = Area$VarasConuquerasCuad();
+  static final strema = Area$Strema();
+  static final circularInch = Area$CircularInch();
+  static final circularMil = Area$CircularMil();
+  static final tahulla = Area$Tahulla();
 
   @override
   List<Area> get units => values;
@@ -244,7 +245,7 @@ sealed class Area extends Unit<Area> {
   @override
   EnumValues<Area> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Area>[
     kilometerSquare,
     hectometerSquare,
     dekameterSquare,
@@ -280,7 +281,7 @@ sealed class Area extends Unit<Area> {
     tahulla,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Area>{
     Area$KilometerSquare._minorName: kilometerSquare,
     Area$HectometerSquare._minorName: hectometerSquare,
     Area$DekameterSquare._minorName: dekameterSquare,
@@ -319,7 +320,7 @@ sealed class Area extends Unit<Area> {
 
 /// Unit of [Area]
 final class Area$KilometerSquare extends Area {
-  const Area$KilometerSquare([
+  Area$KilometerSquare([
     super.value,
   ]);
 
@@ -350,14 +351,14 @@ final class Area$KilometerSquare extends Area {
   @override
   String get displayName => 'kilometer²';
 
-  static const _ratio = 1e+34;
+  static final _ratio = Rational.parse('1.00000000000000000E+034');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$KilometerSquare] = 1e+34 [Area$Barn]
+  /// 1 [Area$KilometerSquare] = 1.00000000000000000E+034 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -365,12 +366,12 @@ final class Area$KilometerSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$KilometerSquare] with new value
   @override
   Area$KilometerSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$KilometerSquare(val);
 
@@ -383,14 +384,14 @@ final class Area$KilometerSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$HectometerSquare extends Area {
-  const Area$HectometerSquare([
+  Area$HectometerSquare([
     super.value,
   ]);
 
@@ -421,14 +422,14 @@ final class Area$HectometerSquare extends Area {
   @override
   String get displayName => 'hectometer²';
 
-  static const _ratio = 1e+32;
+  static final _ratio = Rational.parse('1.00000000000000000E+032');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$HectometerSquare] = 1e+32 [Area$Barn]
+  /// 1 [Area$HectometerSquare] = 1.00000000000000000E+032 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -436,12 +437,12 @@ final class Area$HectometerSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$HectometerSquare] with new value
   @override
   Area$HectometerSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$HectometerSquare(val);
 
@@ -454,14 +455,14 @@ final class Area$HectometerSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$DekameterSquare extends Area {
-  const Area$DekameterSquare([
+  Area$DekameterSquare([
     super.value,
   ]);
 
@@ -492,14 +493,14 @@ final class Area$DekameterSquare extends Area {
   @override
   String get displayName => 'dekameter²';
 
-  static const _ratio = 1e+30;
+  static final _ratio = Rational.parse('1.00000000000000000E+030');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$DekameterSquare] = 1e+30 [Area$Barn]
+  /// 1 [Area$DekameterSquare] = 1.00000000000000000E+030 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -507,12 +508,12 @@ final class Area$DekameterSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$DekameterSquare] with new value
   @override
   Area$DekameterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$DekameterSquare(val);
 
@@ -525,14 +526,14 @@ final class Area$DekameterSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$MeterSquare extends Area {
-  const Area$MeterSquare([
+  Area$MeterSquare([
     super.value,
   ]);
 
@@ -563,14 +564,14 @@ final class Area$MeterSquare extends Area {
   @override
   String get displayName => 'meter²';
 
-  static const _ratio = 1e+28;
+  static final _ratio = Rational.parse('1.00000000000000000E+028');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$MeterSquare] = 1e+28 [Area$Barn]
+  /// 1 [Area$MeterSquare] = 1.00000000000000000E+028 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -578,12 +579,12 @@ final class Area$MeterSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$MeterSquare] with new value
   @override
   Area$MeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$MeterSquare(val);
 
@@ -596,14 +597,14 @@ final class Area$MeterSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$DecimeterSquare extends Area {
-  const Area$DecimeterSquare([
+  Area$DecimeterSquare([
     super.value,
   ]);
 
@@ -634,14 +635,14 @@ final class Area$DecimeterSquare extends Area {
   @override
   String get displayName => 'decimeter²';
 
-  static const _ratio = 1e+26;
+  static final _ratio = Rational.parse('1.00000000000000000E+026');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$DecimeterSquare] = 1e+26 [Area$Barn]
+  /// 1 [Area$DecimeterSquare] = 1.00000000000000000E+026 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -649,12 +650,12 @@ final class Area$DecimeterSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$DecimeterSquare] with new value
   @override
   Area$DecimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$DecimeterSquare(val);
 
@@ -667,14 +668,14 @@ final class Area$DecimeterSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$CentimeterSquare extends Area {
-  const Area$CentimeterSquare([
+  Area$CentimeterSquare([
     super.value,
   ]);
 
@@ -705,14 +706,14 @@ final class Area$CentimeterSquare extends Area {
   @override
   String get displayName => 'centimeter²';
 
-  static const _ratio = 1e+24;
+  static final _ratio = Rational.parse('1.00000000000000000E+024');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$CentimeterSquare] = 1e+24 [Area$Barn]
+  /// 1 [Area$CentimeterSquare] = 1.00000000000000000E+024 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -720,12 +721,12 @@ final class Area$CentimeterSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$CentimeterSquare] with new value
   @override
   Area$CentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$CentimeterSquare(val);
 
@@ -738,14 +739,14 @@ final class Area$CentimeterSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$MillimeterSquare extends Area {
-  const Area$MillimeterSquare([
+  Area$MillimeterSquare([
     super.value,
   ]);
 
@@ -776,14 +777,14 @@ final class Area$MillimeterSquare extends Area {
   @override
   String get displayName => 'millimeter²';
 
-  static const _ratio = 1e+22;
+  static final _ratio = Rational.parse('1.00000000000000000E+022');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$MillimeterSquare] = 1e+22 [Area$Barn]
+  /// 1 [Area$MillimeterSquare] = 1.00000000000000000E+022 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -791,12 +792,12 @@ final class Area$MillimeterSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$MillimeterSquare] with new value
   @override
   Area$MillimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$MillimeterSquare(val);
 
@@ -809,14 +810,14 @@ final class Area$MillimeterSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$MicrometerSquare extends Area {
-  const Area$MicrometerSquare([
+  Area$MicrometerSquare([
     super.value,
   ]);
 
@@ -847,14 +848,14 @@ final class Area$MicrometerSquare extends Area {
   @override
   String get displayName => 'micrometer²';
 
-  static const _ratio = 10000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+016');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$MicrometerSquare] = 10000000000000000.0 [Area$Barn]
+  /// 1 [Area$MicrometerSquare] = 1.00000000000000000E+016 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -862,12 +863,12 @@ final class Area$MicrometerSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$MicrometerSquare] with new value
   @override
   Area$MicrometerSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$MicrometerSquare(val);
 
@@ -880,14 +881,14 @@ final class Area$MicrometerSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$NanometerSquare extends Area {
-  const Area$NanometerSquare([
+  Area$NanometerSquare([
     super.value,
   ]);
 
@@ -918,14 +919,14 @@ final class Area$NanometerSquare extends Area {
   @override
   String get displayName => 'nanometer²';
 
-  static const _ratio = 10000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+010');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$NanometerSquare] = 10000000000.0 [Area$Barn]
+  /// 1 [Area$NanometerSquare] = 1.00000000000000000E+010 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -933,12 +934,12 @@ final class Area$NanometerSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$NanometerSquare] with new value
   @override
   Area$NanometerSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$NanometerSquare(val);
 
@@ -951,14 +952,14 @@ final class Area$NanometerSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Hectare extends Area {
-  const Area$Hectare([
+  Area$Hectare([
     super.value,
   ]);
 
@@ -989,14 +990,14 @@ final class Area$Hectare extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+32;
+  static final _ratio = Rational.parse('1.00000000000000000E+032');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Hectare] = 1e+32 [Area$Barn]
+  /// 1 [Area$Hectare] = 1.00000000000000000E+032 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1004,12 +1005,12 @@ final class Area$Hectare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Hectare] with new value
   @override
   Area$Hectare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Hectare(val);
 
@@ -1022,14 +1023,14 @@ final class Area$Hectare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Are extends Area {
-  const Area$Are([
+  Area$Are([
     super.value,
   ]);
 
@@ -1060,14 +1061,14 @@ final class Area$Are extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+30;
+  static final _ratio = Rational.parse('1.00000000000000000E+030');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Are] = 1e+30 [Area$Barn]
+  /// 1 [Area$Are] = 1.00000000000000000E+030 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1075,12 +1076,12 @@ final class Area$Are extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Are] with new value
   @override
   Area$Are withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Are(val);
 
@@ -1093,14 +1094,14 @@ final class Area$Are extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Barn extends Area {
-  const Area$Barn([
+  Area$Barn([
     super.value,
   ]);
 
@@ -1131,14 +1132,14 @@ final class Area$Barn extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
   /// Default (anchor) unit of [Area]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1146,12 +1147,12 @@ final class Area$Barn extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Barn] with new value
   @override
   Area$Barn withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Barn(val);
 
@@ -1164,14 +1165,14 @@ final class Area$Barn extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$MileSquare extends Area {
-  const Area$MileSquare([
+  Area$MileSquare([
     super.value,
   ]);
 
@@ -1202,14 +1203,14 @@ final class Area$MileSquare extends Area {
   @override
   String get displayName => 'mile²';
 
-  static const _ratio = 2.5899881103389906e+34;
+  static final _ratio = Rational.parse('2.58998811033899076E+034');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$MileSquare] = 2.5899881103389906e+34 [Area$Barn]
+  /// 1 [Area$MileSquare] = 2.58998811033899076E+034 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1217,12 +1218,12 @@ final class Area$MileSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$MileSquare] with new value
   @override
   Area$MileSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$MileSquare(val);
 
@@ -1235,14 +1236,14 @@ final class Area$MileSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$YardSquare extends Area {
-  const Area$YardSquare([
+  Area$YardSquare([
     super.value,
   ]);
 
@@ -1273,14 +1274,14 @@ final class Area$YardSquare extends Area {
   @override
   String get displayName => 'yard²';
 
-  static const _ratio = 8.361273600009655e+27;
+  static final _ratio = Rational.parse('8.36127360000965509E+027');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$YardSquare] = 8.361273600009655e+27 [Area$Barn]
+  /// 1 [Area$YardSquare] = 8.36127360000965509E+027 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1288,12 +1289,12 @@ final class Area$YardSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$YardSquare] with new value
   @override
   Area$YardSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$YardSquare(val);
 
@@ -1306,14 +1307,14 @@ final class Area$YardSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$FootSquare extends Area {
-  const Area$FootSquare([
+  Area$FootSquare([
     super.value,
   ]);
 
@@ -1344,14 +1345,14 @@ final class Area$FootSquare extends Area {
   @override
   String get displayName => 'foot²';
 
-  static const _ratio = 9.290304000010727e+26;
+  static final _ratio = Rational.parse('9.29030400001072788E+026');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$FootSquare] = 9.290304000010727e+26 [Area$Barn]
+  /// 1 [Area$FootSquare] = 9.29030400001072788E+026 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1359,12 +1360,12 @@ final class Area$FootSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$FootSquare] with new value
   @override
   Area$FootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$FootSquare(val);
 
@@ -1377,14 +1378,14 @@ final class Area$FootSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$InchSquare extends Area {
-  const Area$InchSquare([
+  Area$InchSquare([
     super.value,
   ]);
 
@@ -1415,14 +1416,14 @@ final class Area$InchSquare extends Area {
   @override
   String get displayName => 'inch²';
 
-  static const _ratio = 6.451600000007449e+24;
+  static final _ratio = Rational.parse('6.45160000000744991E+024');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$InchSquare] = 6.451600000007449e+24 [Area$Barn]
+  /// 1 [Area$InchSquare] = 6.45160000000744991E+024 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1430,12 +1431,12 @@ final class Area$InchSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$InchSquare] with new value
   @override
   Area$InchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$InchSquare(val);
 
@@ -1448,14 +1449,14 @@ final class Area$InchSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Township extends Area {
-  const Area$Township([
+  Area$Township([
     super.value,
   ]);
 
@@ -1486,14 +1487,14 @@ final class Area$Township extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 9.323957197220366e+35;
+  static final _ratio = Rational.parse('9.32395719722036674E+035');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Township] = 9.323957197220366e+35 [Area$Barn]
+  /// 1 [Area$Township] = 9.32395719722036674E+035 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1501,12 +1502,12 @@ final class Area$Township extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Township] with new value
   @override
   Area$Township withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Township(val);
 
@@ -1519,14 +1520,14 @@ final class Area$Township extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Section extends Area {
-  const Area$Section([
+  Area$Section([
     super.value,
   ]);
 
@@ -1557,14 +1558,14 @@ final class Area$Section extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.5899881103389906e+34;
+  static final _ratio = Rational.parse('2.58998811033899076E+034');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Section] = 2.5899881103389906e+34 [Area$Barn]
+  /// 1 [Area$Section] = 2.58998811033899076E+034 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1572,12 +1573,12 @@ final class Area$Section extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Section] with new value
   @override
   Area$Section withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Section(val);
 
@@ -1590,14 +1591,14 @@ final class Area$Section extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Acre extends Area {
-  const Area$Acre([
+  Area$Acre([
     super.value,
   ]);
 
@@ -1628,14 +1629,14 @@ final class Area$Acre extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 4.046856422404673e+31;
+  static final _ratio = Rational.parse('4.04685642240467306E+031');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Acre] = 4.046856422404673e+31 [Area$Barn]
+  /// 1 [Area$Acre] = 4.04685642240467306E+031 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1643,12 +1644,12 @@ final class Area$Acre extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Acre] with new value
   @override
   Area$Acre withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Acre(val);
 
@@ -1661,14 +1662,14 @@ final class Area$Acre extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Rood extends Area {
-  const Area$Rood([
+  Area$Rood([
     super.value,
   ]);
 
@@ -1699,14 +1700,14 @@ final class Area$Rood extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0117141056011683e+31;
+  static final _ratio = Rational.parse('1.01171410560116827E+031');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Rood] = 1.0117141056011683e+31 [Area$Barn]
+  /// 1 [Area$Rood] = 1.01171410560116827E+031 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1714,12 +1715,12 @@ final class Area$Rood extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Rood] with new value
   @override
   Area$Rood withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Rood(val);
 
@@ -1732,14 +1733,14 @@ final class Area$Rood extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$ChainSquare extends Area {
-  const Area$ChainSquare([
+  Area$ChainSquare([
     super.value,
   ]);
 
@@ -1770,14 +1771,14 @@ final class Area$ChainSquare extends Area {
   @override
   String get displayName => 'chain²';
 
-  static const _ratio = 4.046856422404673e+30;
+  static final _ratio = Rational.parse('4.04685642240467306E+030');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$ChainSquare] = 4.046856422404673e+30 [Area$Barn]
+  /// 1 [Area$ChainSquare] = 4.04685642240467306E+030 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1785,12 +1786,12 @@ final class Area$ChainSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$ChainSquare] with new value
   @override
   Area$ChainSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$ChainSquare(val);
 
@@ -1803,14 +1804,14 @@ final class Area$ChainSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$RodSquare extends Area {
-  const Area$RodSquare([
+  Area$RodSquare([
     super.value,
   ]);
 
@@ -1841,14 +1842,14 @@ final class Area$RodSquare extends Area {
   @override
   String get displayName => 'rod²';
 
-  static const _ratio = 2.5292852640029207e+29;
+  static final _ratio = Rational.parse('2.52928526400292066E+029');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$RodSquare] = 2.5292852640029207e+29 [Area$Barn]
+  /// 1 [Area$RodSquare] = 2.52928526400292066E+029 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1856,12 +1857,12 @@ final class Area$RodSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$RodSquare] with new value
   @override
   Area$RodSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$RodSquare(val);
 
@@ -1874,14 +1875,14 @@ final class Area$RodSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$PerchSquare extends Area {
-  const Area$PerchSquare([
+  Area$PerchSquare([
     super.value,
   ]);
 
@@ -1912,14 +1913,14 @@ final class Area$PerchSquare extends Area {
   @override
   String get displayName => 'perch²';
 
-  static const _ratio = 2.5292852640029207e+29;
+  static final _ratio = Rational.parse('2.52928526400292066E+029');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$PerchSquare] = 2.5292852640029207e+29 [Area$Barn]
+  /// 1 [Area$PerchSquare] = 2.52928526400292066E+029 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1927,12 +1928,12 @@ final class Area$PerchSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$PerchSquare] with new value
   @override
   Area$PerchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$PerchSquare(val);
 
@@ -1945,14 +1946,14 @@ final class Area$PerchSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$PoleSquare extends Area {
-  const Area$PoleSquare([
+  Area$PoleSquare([
     super.value,
   ]);
 
@@ -1983,14 +1984,14 @@ final class Area$PoleSquare extends Area {
   @override
   String get displayName => 'pole²';
 
-  static const _ratio = 2.5292852640029207e+29;
+  static final _ratio = Rational.parse('2.52928526400292066E+029');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$PoleSquare] = 2.5292852640029207e+29 [Area$Barn]
+  /// 1 [Area$PoleSquare] = 2.52928526400292066E+029 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1998,12 +1999,12 @@ final class Area$PoleSquare extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$PoleSquare] with new value
   @override
   Area$PoleSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Area$PoleSquare(val);
 
@@ -2016,14 +2017,14 @@ final class Area$PoleSquare extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Arpent extends Area {
-  const Area$Arpent([
+  Area$Arpent([
     super.value,
   ]);
 
@@ -2054,14 +2055,14 @@ final class Area$Arpent extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 4.041282240004667e+31;
+  static final _ratio = Rational.parse('4.04128224000466663E+031');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Arpent] = 4.041282240004667e+31 [Area$Barn]
+  /// 1 [Area$Arpent] = 4.04128224000466663E+031 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2069,12 +2070,12 @@ final class Area$Arpent extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Arpent] with new value
   @override
   Area$Arpent withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Arpent(val);
 
@@ -2087,14 +2088,14 @@ final class Area$Arpent extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Cuerda extends Area {
-  const Area$Cuerda([
+  Area$Cuerda([
     super.value,
   ]);
 
@@ -2125,14 +2126,14 @@ final class Area$Cuerda extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.930395625e+31;
+  static final _ratio = Rational.parse('3.93039562500000000E+031');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Cuerda] = 3.930395625e+31 [Area$Barn]
+  /// 1 [Area$Cuerda] = 3.93039562500000000E+031 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2140,12 +2141,12 @@ final class Area$Cuerda extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Cuerda] with new value
   @override
   Area$Cuerda withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Cuerda(val);
 
@@ -2158,14 +2159,14 @@ final class Area$Cuerda extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Plaza extends Area {
-  const Area$Plaza([
+  Area$Plaza([
     super.value,
   ]);
 
@@ -2196,14 +2197,14 @@ final class Area$Plaza extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.4e+31;
+  static final _ratio = Rational.parse('6.40000000000000000E+031');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Plaza] = 6.4e+31 [Area$Barn]
+  /// 1 [Area$Plaza] = 6.40000000000000000E+031 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2211,12 +2212,12 @@ final class Area$Plaza extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Plaza] with new value
   @override
   Area$Plaza withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Plaza(val);
 
@@ -2229,14 +2230,14 @@ final class Area$Plaza extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$VarasCastellanasCuad extends Area {
-  const Area$VarasCastellanasCuad([
+  Area$VarasCastellanasCuad([
     super.value,
   ]);
 
@@ -2267,14 +2268,14 @@ final class Area$VarasCastellanasCuad extends Area {
   @override
   String get displayName => 'varas castellanas cuad';
 
-  static const _ratio = 6.98737e+27;
+  static final _ratio = Rational.parse('6.98737000000000000E+027');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$VarasCastellanasCuad] = 6.98737e+27 [Area$Barn]
+  /// 1 [Area$VarasCastellanasCuad] = 6.98737000000000000E+027 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2282,12 +2283,12 @@ final class Area$VarasCastellanasCuad extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$VarasCastellanasCuad] with new value
   @override
   Area$VarasCastellanasCuad withValue(
-    num val,
+    Rational val,
   ) =>
       Area$VarasCastellanasCuad(val);
 
@@ -2300,14 +2301,14 @@ final class Area$VarasCastellanasCuad extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$VarasConuquerasCuad extends Area {
-  const Area$VarasConuquerasCuad([
+  Area$VarasConuquerasCuad([
     super.value,
   ]);
 
@@ -2338,14 +2339,14 @@ final class Area$VarasConuquerasCuad extends Area {
   @override
   String get displayName => 'varas conuqueras cuad';
 
-  static const _ratio = 6.288633e+28;
+  static final _ratio = Rational.parse('6.28863300000000000E+028');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$VarasConuquerasCuad] = 6.288633e+28 [Area$Barn]
+  /// 1 [Area$VarasConuquerasCuad] = 6.28863300000000000E+028 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2353,12 +2354,12 @@ final class Area$VarasConuquerasCuad extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$VarasConuquerasCuad] with new value
   @override
   Area$VarasConuquerasCuad withValue(
-    num val,
+    Rational val,
   ) =>
       Area$VarasConuquerasCuad(val);
 
@@ -2371,14 +2372,14 @@ final class Area$VarasConuquerasCuad extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Strema extends Area {
-  const Area$Strema([
+  Area$Strema([
     super.value,
   ]);
 
@@ -2409,14 +2410,14 @@ final class Area$Strema extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e+31;
+  static final _ratio = Rational.parse('1.00000000000000000E+031');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Strema] = 1e+31 [Area$Barn]
+  /// 1 [Area$Strema] = 1.00000000000000000E+031 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2424,12 +2425,12 @@ final class Area$Strema extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Strema] with new value
   @override
   Area$Strema withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Strema(val);
 
@@ -2442,14 +2443,14 @@ final class Area$Strema extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$CircularInch extends Area {
-  const Area$CircularInch([
+  Area$CircularInch([
     super.value,
   ]);
 
@@ -2480,14 +2481,14 @@ final class Area$CircularInch extends Area {
   @override
   String get displayName => 'circular inch';
 
-  static const _ratio = 5.06707479098e+24;
+  static final _ratio = Rational.parse('5.06707479098000000E+024');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$CircularInch] = 5.06707479098e+24 [Area$Barn]
+  /// 1 [Area$CircularInch] = 5.06707479098000000E+024 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2495,12 +2496,12 @@ final class Area$CircularInch extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$CircularInch] with new value
   @override
   Area$CircularInch withValue(
-    num val,
+    Rational val,
   ) =>
       Area$CircularInch(val);
 
@@ -2513,14 +2514,14 @@ final class Area$CircularInch extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$CircularMil extends Area {
-  const Area$CircularMil([
+  Area$CircularMil([
     super.value,
   ]);
 
@@ -2551,14 +2552,14 @@ final class Area$CircularMil extends Area {
   @override
   String get displayName => 'circular mil';
 
-  static const _ratio = 5067074790980000000.0;
+  static final _ratio = Rational.parse('5.06707479098000000E+018');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$CircularMil] = 5067074790980000000.0 [Area$Barn]
+  /// 1 [Area$CircularMil] = 5.06707479098000000E+018 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2566,12 +2567,12 @@ final class Area$CircularMil extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$CircularMil] with new value
   @override
   Area$CircularMil withValue(
-    num val,
+    Rational val,
   ) =>
       Area$CircularMil(val);
 
@@ -2584,14 +2585,14 @@ final class Area$CircularMil extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Area]
 final class Area$Tahulla extends Area {
-  const Area$Tahulla([
+  Area$Tahulla([
     super.value,
   ]);
 
@@ -2622,14 +2623,14 @@ final class Area$Tahulla extends Area {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.118e+31;
+  static final _ratio = Rational.parse('1.11800000000000000E+031');
 
   @override
-  Area get anchor => const Area$Barn(_ratio);
+  Area get anchor => Area$Barn(_ratio);
 
-  /// 1 [Area$Tahulla] = 1.118e+31 [Area$Barn]
+  /// 1 [Area$Tahulla] = 1.11800000000000000E+031 [Area$Barn]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2637,12 +2638,12 @@ final class Area$Tahulla extends Area {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Area$Tahulla] with new value
   @override
   Area$Tahulla withValue(
-    num val,
+    Rational val,
   ) =>
       Area$Tahulla(val);
 
@@ -2655,7 +2656,7 @@ final class Area$Tahulla extends Area {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

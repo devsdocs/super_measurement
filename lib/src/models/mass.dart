@@ -21,7 +21,7 @@ part of '../../super_measurement.dart';
 /// [Mass$QuadransBiblicalRoman], [Mass$LeptonBiblicalRoman],
 /// [Mass$AtomicMassUnit]
 sealed class Mass extends Unit<Mass> {
-  const Mass([
+  Mass([
     super.value,
   ]);
 
@@ -33,290 +33,291 @@ sealed class Mass extends Unit<Mass> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Mass.anchor();
 
-  factory Mass.anchor() => const Mass$Dalton();
+  factory Mass.anchor() => Mass$Dalton();
 
   /// Convert to [Mass$Exagram]
   Mass get toExagram => convertTo(
-        const Mass$Exagram(),
+        Mass$Exagram(),
       );
 
   /// Convert to [Mass$Petagram]
   Mass get toPetagram => convertTo(
-        const Mass$Petagram(),
+        Mass$Petagram(),
       );
 
   /// Convert to [Mass$Teragram]
   Mass get toTeragram => convertTo(
-        const Mass$Teragram(),
+        Mass$Teragram(),
       );
 
   /// Convert to [Mass$Gigagram]
   Mass get toGigagram => convertTo(
-        const Mass$Gigagram(),
+        Mass$Gigagram(),
       );
 
   /// Convert to [Mass$Megagram]
   Mass get toMegagram => convertTo(
-        const Mass$Megagram(),
+        Mass$Megagram(),
       );
 
   /// Convert to [Mass$Kilogram]
   Mass get toKilogram => convertTo(
-        const Mass$Kilogram(),
+        Mass$Kilogram(),
       );
 
   /// Convert to [Mass$Hectogram]
   Mass get toHectogram => convertTo(
-        const Mass$Hectogram(),
+        Mass$Hectogram(),
       );
 
   /// Convert to [Mass$Dekagram]
   Mass get toDekagram => convertTo(
-        const Mass$Dekagram(),
+        Mass$Dekagram(),
       );
 
   /// Convert to [Mass$Gram]
   Mass get toGram => convertTo(
-        const Mass$Gram(),
+        Mass$Gram(),
       );
 
   /// Convert to [Mass$Decigram]
   Mass get toDecigram => convertTo(
-        const Mass$Decigram(),
+        Mass$Decigram(),
       );
 
   /// Convert to [Mass$Centigram]
   Mass get toCentigram => convertTo(
-        const Mass$Centigram(),
+        Mass$Centigram(),
       );
 
   /// Convert to [Mass$Milligram]
   Mass get toMilligram => convertTo(
-        const Mass$Milligram(),
+        Mass$Milligram(),
       );
 
   /// Convert to [Mass$Microgram]
   Mass get toMicrogram => convertTo(
-        const Mass$Microgram(),
+        Mass$Microgram(),
       );
 
   /// Convert to [Mass$Nanogram]
   Mass get toNanogram => convertTo(
-        const Mass$Nanogram(),
+        Mass$Nanogram(),
       );
 
   /// Convert to [Mass$Picogram]
   Mass get toPicogram => convertTo(
-        const Mass$Picogram(),
+        Mass$Picogram(),
       );
 
   /// Convert to [Mass$Femtogram]
   Mass get toFemtogram => convertTo(
-        const Mass$Femtogram(),
+        Mass$Femtogram(),
       );
 
   /// Convert to [Mass$Attogram]
   Mass get toAttogram => convertTo(
-        const Mass$Attogram(),
+        Mass$Attogram(),
       );
 
   /// Convert to [Mass$Quintal]
   Mass get toQuintal => convertTo(
-        const Mass$Quintal(),
+        Mass$Quintal(),
       );
 
   /// Convert to [Mass$Dyne]
   Mass get toDyne => convertTo(
-        const Mass$Dyne(),
+        Mass$Dyne(),
       );
 
   /// Convert to [Mass$Dalton]
   Mass get toDalton => convertTo(
-        const Mass$Dalton(),
+        Mass$Dalton(),
       );
 
   /// Convert to [Mass$Kip]
   Mass get toKip => convertTo(
-        const Mass$Kip(),
+        Mass$Kip(),
       );
 
   /// Convert to [Mass$Pound]
   Mass get toPound => convertTo(
-        const Mass$Pound(),
+        Mass$Pound(),
       );
 
   /// Convert to [Mass$Ounce]
   Mass get toOunce => convertTo(
-        const Mass$Ounce(),
+        Mass$Ounce(),
       );
 
   /// Convert to [Mass$Poundal]
   Mass get toPoundal => convertTo(
-        const Mass$Poundal(),
+        Mass$Poundal(),
       );
 
   /// Convert to [Mass$Slug]
   Mass get toSlug => convertTo(
-        const Mass$Slug(),
+        Mass$Slug(),
       );
 
   /// Convert to [Mass$Ton]
   Mass get toTon => convertTo(
-        const Mass$Ton(),
+        Mass$Ton(),
       );
 
   /// Convert to [Mass$TonLong]
   Mass get toTonLong => convertTo(
-        const Mass$TonLong(),
+        Mass$TonLong(),
       );
 
   /// Convert to [Mass$TonMetric]
   Mass get toTonMetric => convertTo(
-        const Mass$TonMetric(),
+        Mass$TonMetric(),
       );
 
   /// Convert to [Mass$Hundredweight]
   Mass get toHundredweight => convertTo(
-        const Mass$Hundredweight(),
+        Mass$Hundredweight(),
       );
 
   /// Convert to [Mass$HundredweightUK]
   Mass get toHundredweightUK => convertTo(
-        const Mass$HundredweightUK(),
+        Mass$HundredweightUK(),
       );
 
   /// Convert to [Mass$Quarter]
   Mass get toQuarter => convertTo(
-        const Mass$Quarter(),
+        Mass$Quarter(),
       );
 
   /// Convert to [Mass$QuarterUK]
   Mass get toQuarterUK => convertTo(
-        const Mass$QuarterUK(),
+        Mass$QuarterUK(),
       );
 
   /// Convert to [Mass$Stone]
   Mass get toStone => convertTo(
-        const Mass$Stone(),
+        Mass$Stone(),
       );
 
   /// Convert to [Mass$StoneUK]
   Mass get toStoneUK => convertTo(
-        const Mass$StoneUK(),
+        Mass$StoneUK(),
       );
 
   /// Convert to [Mass$Tonne]
   Mass get toTonne => convertTo(
-        const Mass$Tonne(),
+        Mass$Tonne(),
       );
 
   /// Convert to [Mass$TroyPound]
   Mass get toTroyPound => convertTo(
-        const Mass$TroyPound(),
+        Mass$TroyPound(),
       );
 
   /// Convert to [Mass$TroyOunce]
   Mass get toTroyOunce => convertTo(
-        const Mass$TroyOunce(),
+        Mass$TroyOunce(),
       );
 
   /// Convert to [Mass$Carat]
   Mass get toCarat => convertTo(
-        const Mass$Carat(),
+        Mass$Carat(),
       );
 
   /// Convert to [Mass$Grain]
   Mass get toGrain => convertTo(
-        const Mass$Grain(),
+        Mass$Grain(),
       );
 
   /// Convert to [Mass$Pennyweight]
   Mass get toPennyweight => convertTo(
-        const Mass$Pennyweight(),
+        Mass$Pennyweight(),
       );
 
   /// Convert to [Mass$Scruple]
   Mass get toScruple => convertTo(
-        const Mass$Scruple(),
+        Mass$Scruple(),
       );
 
   /// Convert to [Mass$TalentBiblicalHebrew]
   Mass get toTalentBiblicalHebrew => convertTo(
-        const Mass$TalentBiblicalHebrew(),
+        Mass$TalentBiblicalHebrew(),
       );
 
   /// Convert to [Mass$MinaBiblicalHebrew]
   Mass get toMinaBiblicalHebrew => convertTo(
-        const Mass$MinaBiblicalHebrew(),
+        Mass$MinaBiblicalHebrew(),
       );
 
   /// Convert to [Mass$ShekelBiblicalHebrew]
   Mass get toShekelBiblicalHebrew => convertTo(
-        const Mass$ShekelBiblicalHebrew(),
+        Mass$ShekelBiblicalHebrew(),
       );
 
   /// Convert to [Mass$BekahBiblicalHebrew]
   Mass get toBekahBiblicalHebrew => convertTo(
-        const Mass$BekahBiblicalHebrew(),
+        Mass$BekahBiblicalHebrew(),
       );
 
   /// Convert to [Mass$GerahBiblicalHebrew]
   Mass get toGerahBiblicalHebrew => convertTo(
-        const Mass$GerahBiblicalHebrew(),
+        Mass$GerahBiblicalHebrew(),
       );
 
   /// Convert to [Mass$TalentBiblicalGreek]
   Mass get toTalentBiblicalGreek => convertTo(
-        const Mass$TalentBiblicalGreek(),
+        Mass$TalentBiblicalGreek(),
       );
 
   /// Convert to [Mass$MinaBiblicalGreek]
   Mass get toMinaBiblicalGreek => convertTo(
-        const Mass$MinaBiblicalGreek(),
+        Mass$MinaBiblicalGreek(),
       );
 
   /// Convert to [Mass$TetradrachmaBiblicalGreek]
   Mass get toTetradrachmaBiblicalGreek => convertTo(
-        const Mass$TetradrachmaBiblicalGreek(),
+        Mass$TetradrachmaBiblicalGreek(),
       );
 
   /// Convert to [Mass$DidrachmaBiblicalGreek]
   Mass get toDidrachmaBiblicalGreek => convertTo(
-        const Mass$DidrachmaBiblicalGreek(),
+        Mass$DidrachmaBiblicalGreek(),
       );
 
   /// Convert to [Mass$DrachmaBiblicalGreek]
   Mass get toDrachmaBiblicalGreek => convertTo(
-        const Mass$DrachmaBiblicalGreek(),
+        Mass$DrachmaBiblicalGreek(),
       );
 
   /// Convert to [Mass$DenariusBiblicalRoman]
   Mass get toDenariusBiblicalRoman => convertTo(
-        const Mass$DenariusBiblicalRoman(),
+        Mass$DenariusBiblicalRoman(),
       );
 
   /// Convert to [Mass$AssarionBiblicalRoman]
   Mass get toAssarionBiblicalRoman => convertTo(
-        const Mass$AssarionBiblicalRoman(),
+        Mass$AssarionBiblicalRoman(),
       );
 
   /// Convert to [Mass$QuadransBiblicalRoman]
   Mass get toQuadransBiblicalRoman => convertTo(
-        const Mass$QuadransBiblicalRoman(),
+        Mass$QuadransBiblicalRoman(),
       );
 
   /// Convert to [Mass$LeptonBiblicalRoman]
   Mass get toLeptonBiblicalRoman => convertTo(
-        const Mass$LeptonBiblicalRoman(),
+        Mass$LeptonBiblicalRoman(),
       );
 
   /// Convert to [Mass$AtomicMassUnit]
   Mass get toAtomicMassUnit => convertTo(
-        const Mass$AtomicMassUnit(),
+        Mass$AtomicMassUnit(),
       );
 
   @override
@@ -327,62 +328,62 @@ sealed class Mass extends Unit<Mass> {
 
   static const _majorName = 'mass';
 
-  static const exagram = Mass$Exagram();
-  static const petagram = Mass$Petagram();
-  static const teragram = Mass$Teragram();
-  static const gigagram = Mass$Gigagram();
-  static const megagram = Mass$Megagram();
-  static const kilogram = Mass$Kilogram();
-  static const hectogram = Mass$Hectogram();
-  static const dekagram = Mass$Dekagram();
-  static const gram = Mass$Gram();
-  static const decigram = Mass$Decigram();
-  static const centigram = Mass$Centigram();
-  static const milligram = Mass$Milligram();
-  static const microgram = Mass$Microgram();
-  static const nanogram = Mass$Nanogram();
-  static const picogram = Mass$Picogram();
-  static const femtogram = Mass$Femtogram();
-  static const attogram = Mass$Attogram();
-  static const quintal = Mass$Quintal();
-  static const dyne = Mass$Dyne();
-  static const dalton = Mass$Dalton();
-  static const kip = Mass$Kip();
-  static const pound = Mass$Pound();
-  static const ounce = Mass$Ounce();
-  static const poundal = Mass$Poundal();
-  static const slug = Mass$Slug();
-  static const ton = Mass$Ton();
-  static const tonLong = Mass$TonLong();
-  static const tonMetric = Mass$TonMetric();
-  static const hundredweight = Mass$Hundredweight();
-  static const hundredweightUK = Mass$HundredweightUK();
-  static const quarter = Mass$Quarter();
-  static const quarterUK = Mass$QuarterUK();
-  static const stone = Mass$Stone();
-  static const stoneUK = Mass$StoneUK();
-  static const tonne = Mass$Tonne();
-  static const troyPound = Mass$TroyPound();
-  static const troyOunce = Mass$TroyOunce();
-  static const carat = Mass$Carat();
-  static const grain = Mass$Grain();
-  static const pennyweight = Mass$Pennyweight();
-  static const scruple = Mass$Scruple();
-  static const talentBiblicalHebrew = Mass$TalentBiblicalHebrew();
-  static const minaBiblicalHebrew = Mass$MinaBiblicalHebrew();
-  static const shekelBiblicalHebrew = Mass$ShekelBiblicalHebrew();
-  static const bekahBiblicalHebrew = Mass$BekahBiblicalHebrew();
-  static const gerahBiblicalHebrew = Mass$GerahBiblicalHebrew();
-  static const talentBiblicalGreek = Mass$TalentBiblicalGreek();
-  static const minaBiblicalGreek = Mass$MinaBiblicalGreek();
-  static const tetradrachmaBiblicalGreek = Mass$TetradrachmaBiblicalGreek();
-  static const didrachmaBiblicalGreek = Mass$DidrachmaBiblicalGreek();
-  static const drachmaBiblicalGreek = Mass$DrachmaBiblicalGreek();
-  static const denariusBiblicalRoman = Mass$DenariusBiblicalRoman();
-  static const assarionBiblicalRoman = Mass$AssarionBiblicalRoman();
-  static const quadransBiblicalRoman = Mass$QuadransBiblicalRoman();
-  static const leptonBiblicalRoman = Mass$LeptonBiblicalRoman();
-  static const atomicMassUnit = Mass$AtomicMassUnit();
+  static final exagram = Mass$Exagram();
+  static final petagram = Mass$Petagram();
+  static final teragram = Mass$Teragram();
+  static final gigagram = Mass$Gigagram();
+  static final megagram = Mass$Megagram();
+  static final kilogram = Mass$Kilogram();
+  static final hectogram = Mass$Hectogram();
+  static final dekagram = Mass$Dekagram();
+  static final gram = Mass$Gram();
+  static final decigram = Mass$Decigram();
+  static final centigram = Mass$Centigram();
+  static final milligram = Mass$Milligram();
+  static final microgram = Mass$Microgram();
+  static final nanogram = Mass$Nanogram();
+  static final picogram = Mass$Picogram();
+  static final femtogram = Mass$Femtogram();
+  static final attogram = Mass$Attogram();
+  static final quintal = Mass$Quintal();
+  static final dyne = Mass$Dyne();
+  static final dalton = Mass$Dalton();
+  static final kip = Mass$Kip();
+  static final pound = Mass$Pound();
+  static final ounce = Mass$Ounce();
+  static final poundal = Mass$Poundal();
+  static final slug = Mass$Slug();
+  static final ton = Mass$Ton();
+  static final tonLong = Mass$TonLong();
+  static final tonMetric = Mass$TonMetric();
+  static final hundredweight = Mass$Hundredweight();
+  static final hundredweightUK = Mass$HundredweightUK();
+  static final quarter = Mass$Quarter();
+  static final quarterUK = Mass$QuarterUK();
+  static final stone = Mass$Stone();
+  static final stoneUK = Mass$StoneUK();
+  static final tonne = Mass$Tonne();
+  static final troyPound = Mass$TroyPound();
+  static final troyOunce = Mass$TroyOunce();
+  static final carat = Mass$Carat();
+  static final grain = Mass$Grain();
+  static final pennyweight = Mass$Pennyweight();
+  static final scruple = Mass$Scruple();
+  static final talentBiblicalHebrew = Mass$TalentBiblicalHebrew();
+  static final minaBiblicalHebrew = Mass$MinaBiblicalHebrew();
+  static final shekelBiblicalHebrew = Mass$ShekelBiblicalHebrew();
+  static final bekahBiblicalHebrew = Mass$BekahBiblicalHebrew();
+  static final gerahBiblicalHebrew = Mass$GerahBiblicalHebrew();
+  static final talentBiblicalGreek = Mass$TalentBiblicalGreek();
+  static final minaBiblicalGreek = Mass$MinaBiblicalGreek();
+  static final tetradrachmaBiblicalGreek = Mass$TetradrachmaBiblicalGreek();
+  static final didrachmaBiblicalGreek = Mass$DidrachmaBiblicalGreek();
+  static final drachmaBiblicalGreek = Mass$DrachmaBiblicalGreek();
+  static final denariusBiblicalRoman = Mass$DenariusBiblicalRoman();
+  static final assarionBiblicalRoman = Mass$AssarionBiblicalRoman();
+  static final quadransBiblicalRoman = Mass$QuadransBiblicalRoman();
+  static final leptonBiblicalRoman = Mass$LeptonBiblicalRoman();
+  static final atomicMassUnit = Mass$AtomicMassUnit();
 
   @override
   List<Mass> get units => values;
@@ -390,7 +391,7 @@ sealed class Mass extends Unit<Mass> {
   @override
   EnumValues<Mass> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Mass>[
     exagram,
     petagram,
     teragram,
@@ -449,7 +450,7 @@ sealed class Mass extends Unit<Mass> {
     atomicMassUnit,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Mass>{
     Mass$Exagram._minorName: exagram,
     Mass$Petagram._minorName: petagram,
     Mass$Teragram._minorName: teragram,
@@ -511,7 +512,7 @@ sealed class Mass extends Unit<Mass> {
 
 /// Unit of [Mass]
 final class Mass$Exagram extends Mass {
-  const Mass$Exagram([
+  Mass$Exagram([
     super.value,
   ]);
 
@@ -542,14 +543,14 @@ final class Mass$Exagram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+41;
+  static final _ratio = Rational.parse('6.02217364335000000E+041');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Exagram] = 6.02217364335e+41 [Mass$Dalton]
+  /// 1 [Mass$Exagram] = 6.02217364335000000E+041 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -557,12 +558,12 @@ final class Mass$Exagram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Exagram] with new value
   @override
   Mass$Exagram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Exagram(val);
 
@@ -575,14 +576,14 @@ final class Mass$Exagram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Petagram extends Mass {
-  const Mass$Petagram([
+  Mass$Petagram([
     super.value,
   ]);
 
@@ -613,14 +614,14 @@ final class Mass$Petagram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+38;
+  static final _ratio = Rational.parse('6.02217364335000000E+038');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Petagram] = 6.02217364335e+38 [Mass$Dalton]
+  /// 1 [Mass$Petagram] = 6.02217364335000000E+038 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -628,12 +629,12 @@ final class Mass$Petagram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Petagram] with new value
   @override
   Mass$Petagram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Petagram(val);
 
@@ -646,14 +647,14 @@ final class Mass$Petagram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Teragram extends Mass {
-  const Mass$Teragram([
+  Mass$Teragram([
     super.value,
   ]);
 
@@ -684,14 +685,14 @@ final class Mass$Teragram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+35;
+  static final _ratio = Rational.parse('6.02217364335000000E+035');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Teragram] = 6.02217364335e+35 [Mass$Dalton]
+  /// 1 [Mass$Teragram] = 6.02217364335000000E+035 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -699,12 +700,12 @@ final class Mass$Teragram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Teragram] with new value
   @override
   Mass$Teragram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Teragram(val);
 
@@ -717,14 +718,14 @@ final class Mass$Teragram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Gigagram extends Mass {
-  const Mass$Gigagram([
+  Mass$Gigagram([
     super.value,
   ]);
 
@@ -755,14 +756,14 @@ final class Mass$Gigagram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+32;
+  static final _ratio = Rational.parse('6.02217364335000000E+032');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Gigagram] = 6.02217364335e+32 [Mass$Dalton]
+  /// 1 [Mass$Gigagram] = 6.02217364335000000E+032 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -770,12 +771,12 @@ final class Mass$Gigagram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Gigagram] with new value
   @override
   Mass$Gigagram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Gigagram(val);
 
@@ -788,14 +789,14 @@ final class Mass$Gigagram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Megagram extends Mass {
-  const Mass$Megagram([
+  Mass$Megagram([
     super.value,
   ]);
 
@@ -826,14 +827,14 @@ final class Mass$Megagram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+29;
+  static final _ratio = Rational.parse('6.02217364335000000E+029');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Megagram] = 6.02217364335e+29 [Mass$Dalton]
+  /// 1 [Mass$Megagram] = 6.02217364335000000E+029 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -841,12 +842,12 @@ final class Mass$Megagram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Megagram] with new value
   @override
   Mass$Megagram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Megagram(val);
 
@@ -859,14 +860,14 @@ final class Mass$Megagram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Kilogram extends Mass {
-  const Mass$Kilogram([
+  Mass$Kilogram([
     super.value,
   ]);
 
@@ -897,14 +898,14 @@ final class Mass$Kilogram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+26;
+  static final _ratio = Rational.parse('6.02217364335000000E+026');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Kilogram] = 6.02217364335e+26 [Mass$Dalton]
+  /// 1 [Mass$Kilogram] = 6.02217364335000000E+026 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -912,12 +913,12 @@ final class Mass$Kilogram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Kilogram] with new value
   @override
   Mass$Kilogram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Kilogram(val);
 
@@ -930,14 +931,14 @@ final class Mass$Kilogram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Hectogram extends Mass {
-  const Mass$Hectogram([
+  Mass$Hectogram([
     super.value,
   ]);
 
@@ -968,14 +969,14 @@ final class Mass$Hectogram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+25;
+  static final _ratio = Rational.parse('6.02217364335000000E+025');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Hectogram] = 6.02217364335e+25 [Mass$Dalton]
+  /// 1 [Mass$Hectogram] = 6.02217364335000000E+025 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -983,12 +984,12 @@ final class Mass$Hectogram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Hectogram] with new value
   @override
   Mass$Hectogram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Hectogram(val);
 
@@ -1001,14 +1002,14 @@ final class Mass$Hectogram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Dekagram extends Mass {
-  const Mass$Dekagram([
+  Mass$Dekagram([
     super.value,
   ]);
 
@@ -1039,14 +1040,14 @@ final class Mass$Dekagram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+24;
+  static final _ratio = Rational.parse('6.02217364335000000E+024');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Dekagram] = 6.02217364335e+24 [Mass$Dalton]
+  /// 1 [Mass$Dekagram] = 6.02217364335000000E+024 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1054,12 +1055,12 @@ final class Mass$Dekagram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Dekagram] with new value
   @override
   Mass$Dekagram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Dekagram(val);
 
@@ -1072,14 +1073,14 @@ final class Mass$Dekagram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Gram extends Mass {
-  const Mass$Gram([
+  Mass$Gram([
     super.value,
   ]);
 
@@ -1110,14 +1111,14 @@ final class Mass$Gram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+23;
+  static final _ratio = Rational.parse('6.02217364335000000E+023');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Gram] = 6.02217364335e+23 [Mass$Dalton]
+  /// 1 [Mass$Gram] = 6.02217364335000000E+023 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1125,12 +1126,12 @@ final class Mass$Gram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Gram] with new value
   @override
   Mass$Gram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Gram(val);
 
@@ -1143,14 +1144,14 @@ final class Mass$Gram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Decigram extends Mass {
-  const Mass$Decigram([
+  Mass$Decigram([
     super.value,
   ]);
 
@@ -1181,14 +1182,14 @@ final class Mass$Decigram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+22;
+  static final _ratio = Rational.parse('6.02217364335000000E+022');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Decigram] = 6.02217364335e+22 [Mass$Dalton]
+  /// 1 [Mass$Decigram] = 6.02217364335000000E+022 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1196,12 +1197,12 @@ final class Mass$Decigram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Decigram] with new value
   @override
   Mass$Decigram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Decigram(val);
 
@@ -1214,14 +1215,14 @@ final class Mass$Decigram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Centigram extends Mass {
-  const Mass$Centigram([
+  Mass$Centigram([
     super.value,
   ]);
 
@@ -1252,14 +1253,14 @@ final class Mass$Centigram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+21;
+  static final _ratio = Rational.parse('6.02217364335000000E+021');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Centigram] = 6.02217364335e+21 [Mass$Dalton]
+  /// 1 [Mass$Centigram] = 6.02217364335000000E+021 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1267,12 +1268,12 @@ final class Mass$Centigram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Centigram] with new value
   @override
   Mass$Centigram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Centigram(val);
 
@@ -1285,14 +1286,14 @@ final class Mass$Centigram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Milligram extends Mass {
-  const Mass$Milligram([
+  Mass$Milligram([
     super.value,
   ]);
 
@@ -1323,14 +1324,14 @@ final class Mass$Milligram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 602217364335000000000.0;
+  static final _ratio = Rational.parse('6.02217364335000000E+020');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Milligram] = 602217364335000000000.0 [Mass$Dalton]
+  /// 1 [Mass$Milligram] = 6.02217364335000000E+020 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1338,12 +1339,12 @@ final class Mass$Milligram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Milligram] with new value
   @override
   Mass$Milligram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Milligram(val);
 
@@ -1356,14 +1357,14 @@ final class Mass$Milligram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Microgram extends Mass {
-  const Mass$Microgram([
+  Mass$Microgram([
     super.value,
   ]);
 
@@ -1394,14 +1395,14 @@ final class Mass$Microgram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 602217364335000000.0;
+  static final _ratio = Rational.parse('6.02217364335000000E+017');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Microgram] = 602217364335000000.0 [Mass$Dalton]
+  /// 1 [Mass$Microgram] = 6.02217364335000000E+017 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1409,12 +1410,12 @@ final class Mass$Microgram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Microgram] with new value
   @override
   Mass$Microgram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Microgram(val);
 
@@ -1427,14 +1428,14 @@ final class Mass$Microgram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Nanogram extends Mass {
-  const Mass$Nanogram([
+  Mass$Nanogram([
     super.value,
   ]);
 
@@ -1465,14 +1466,14 @@ final class Mass$Nanogram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 602217364335000.0;
+  static final _ratio = Rational.parse('6.02217364335000000E+014');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Nanogram] = 602217364335000.0 [Mass$Dalton]
+  /// 1 [Mass$Nanogram] = 6.02217364335000000E+014 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1480,12 +1481,12 @@ final class Mass$Nanogram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Nanogram] with new value
   @override
   Mass$Nanogram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Nanogram(val);
 
@@ -1498,14 +1499,14 @@ final class Mass$Nanogram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Picogram extends Mass {
-  const Mass$Picogram([
+  Mass$Picogram([
     super.value,
   ]);
 
@@ -1536,14 +1537,14 @@ final class Mass$Picogram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 602217364335.0;
+  static final _ratio = Rational.parse('6.02217364335000000E+011');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Picogram] = 602217364335.0 [Mass$Dalton]
+  /// 1 [Mass$Picogram] = 6.02217364335000000E+011 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1551,12 +1552,12 @@ final class Mass$Picogram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Picogram] with new value
   @override
   Mass$Picogram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Picogram(val);
 
@@ -1569,14 +1570,14 @@ final class Mass$Picogram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Femtogram extends Mass {
-  const Mass$Femtogram([
+  Mass$Femtogram([
     super.value,
   ]);
 
@@ -1607,14 +1608,14 @@ final class Mass$Femtogram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 602217364.335;
+  static final _ratio = Rational.parse('6.02217364335000000E+008');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Femtogram] ≈ 602217364.335 [Mass$Dalton]
+  /// 1 [Mass$Femtogram] ≈ 6.02217364335000000E+008 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1622,12 +1623,12 @@ final class Mass$Femtogram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Femtogram] with new value
   @override
   Mass$Femtogram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Femtogram(val);
 
@@ -1640,14 +1641,14 @@ final class Mass$Femtogram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Attogram extends Mass {
-  const Mass$Attogram([
+  Mass$Attogram([
     super.value,
   ]);
 
@@ -1678,14 +1679,14 @@ final class Mass$Attogram extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 602217.364335;
+  static final _ratio = Rational.parse('6.02217364335000000E+005');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Attogram] ≈ 602217.364335 [Mass$Dalton]
+  /// 1 [Mass$Attogram] ≈ 6.02217364335000000E+005 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1693,12 +1694,12 @@ final class Mass$Attogram extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Attogram] with new value
   @override
   Mass$Attogram withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Attogram(val);
 
@@ -1711,14 +1712,14 @@ final class Mass$Attogram extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Quintal extends Mass {
-  const Mass$Quintal([
+  Mass$Quintal([
     super.value,
   ]);
 
@@ -1749,14 +1750,14 @@ final class Mass$Quintal extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+28;
+  static final _ratio = Rational.parse('6.02217364335000000E+028');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Quintal] = 6.02217364335e+28 [Mass$Dalton]
+  /// 1 [Mass$Quintal] = 6.02217364335000000E+028 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1764,12 +1765,12 @@ final class Mass$Quintal extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Quintal] with new value
   @override
   Mass$Quintal withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Quintal(val);
 
@@ -1782,14 +1783,14 @@ final class Mass$Quintal extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Dyne extends Mass {
-  const Mass$Dyne([
+  Mass$Dyne([
     super.value,
   ]);
 
@@ -1820,14 +1821,14 @@ final class Mass$Dyne extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 614090810149235500000.0;
+  static final _ratio = Rational.parse('6.14090810149235468E+020');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Dyne] = 614090810149235500000.0 [Mass$Dalton]
+  /// 1 [Mass$Dyne] = 6.14090810149235468E+020 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1835,12 +1836,12 @@ final class Mass$Dyne extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Dyne] with new value
   @override
   Mass$Dyne withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Dyne(val);
 
@@ -1853,14 +1854,14 @@ final class Mass$Dyne extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Dalton extends Mass {
-  const Mass$Dalton([
+  Mass$Dalton([
     super.value,
   ]);
 
@@ -1891,14 +1892,14 @@ final class Mass$Dalton extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0000053356450456;
+  static final _ratio = Rational.parse('1.00000533564504556E+000');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
   /// Default (anchor) unit of [Mass]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1906,12 +1907,12 @@ final class Mass$Dalton extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Dalton] with new value
   @override
   Mass$Dalton withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Dalton(val);
 
@@ -1924,14 +1925,14 @@ final class Mass$Dalton extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Kip extends Mass {
-  const Mass$Kip([
+  Mass$Kip([
     super.value,
   ]);
 
@@ -1962,14 +1963,14 @@ final class Mass$Kip extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.7316120154386614e+29;
+  static final _ratio = Rational.parse('2.73161201543866124E+029');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Kip] = 2.7316120154386614e+29 [Mass$Dalton]
+  /// 1 [Mass$Kip] = 2.73161201543866124E+029 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1977,12 +1978,12 @@ final class Mass$Kip extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Kip] with new value
   @override
   Mass$Kip withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Kip(val);
 
@@ -1995,14 +1996,14 @@ final class Mass$Kip extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Pound extends Mass {
-  const Mass$Pound([
+  Mass$Pound([
     super.value,
   ]);
 
@@ -2033,14 +2034,14 @@ final class Mass$Pound extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.731612015438661e+26;
+  static final _ratio = Rational.parse('2.73161201543866124E+026');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Pound] = 2.731612015438661e+26 [Mass$Dalton]
+  /// 1 [Mass$Pound] = 2.73161201543866124E+026 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2048,12 +2049,12 @@ final class Mass$Pound extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Pound] with new value
   @override
   Mass$Pound withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Pound(val);
 
@@ -2066,14 +2067,14 @@ final class Mass$Pound extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Ounce extends Mass {
-  const Mass$Ounce([
+  Mass$Ounce([
     super.value,
   ]);
 
@@ -2104,14 +2105,14 @@ final class Mass$Ounce extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.7072575096491634e+25;
+  static final _ratio = Rational.parse('1.70725750964916328E+025');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Ounce] = 1.7072575096491634e+25 [Mass$Dalton]
+  /// 1 [Mass$Ounce] = 1.70725750964916328E+025 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2119,12 +2120,12 @@ final class Mass$Ounce extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Ounce] with new value
   @override
   Mass$Ounce withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Ounce(val);
 
@@ -2137,14 +2138,14 @@ final class Mass$Ounce extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Poundal extends Mass {
-  const Mass$Poundal([
+  Mass$Poundal([
     super.value,
   ]);
 
@@ -2175,14 +2176,14 @@ final class Mass$Poundal extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8.483267128683199e+24;
+  static final _ratio = Rational.parse('8.48326712868319886E+024');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Poundal] = 8.483267128683199e+24 [Mass$Dalton]
+  /// 1 [Mass$Poundal] = 8.48326712868319886E+024 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2190,12 +2191,12 @@ final class Mass$Poundal extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Poundal] with new value
   @override
   Mass$Poundal withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Poundal(val);
 
@@ -2208,14 +2209,14 @@ final class Mass$Poundal extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Slug extends Mass {
-  const Mass$Slug([
+  Mass$Slug([
     super.value,
   ]);
 
@@ -2246,14 +2247,14 @@ final class Mass$Slug extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8.788701762204175e+27;
+  static final _ratio = Rational.parse('8.78870176220417454E+027');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Slug] = 8.788701762204175e+27 [Mass$Dalton]
+  /// 1 [Mass$Slug] = 8.78870176220417454E+027 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2261,12 +2262,12 @@ final class Mass$Slug extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Slug] with new value
   @override
   Mass$Slug withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Slug(val);
 
@@ -2279,14 +2280,14 @@ final class Mass$Slug extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Ton extends Mass {
-  const Mass$Ton([
+  Mass$Ton([
     super.value,
   ]);
 
@@ -2317,14 +2318,14 @@ final class Mass$Ton extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 5.463224030877323e+29;
+  static final _ratio = Rational.parse('5.46322403087732248E+029');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Ton] = 5.463224030877323e+29 [Mass$Dalton]
+  /// 1 [Mass$Ton] = 5.46322403087732248E+029 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2332,12 +2333,12 @@ final class Mass$Ton extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Ton] with new value
   @override
   Mass$Ton withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Ton(val);
 
@@ -2350,14 +2351,14 @@ final class Mass$Ton extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$TonLong extends Mass {
-  const Mass$TonLong([
+  Mass$TonLong([
     super.value,
   ]);
 
@@ -2388,14 +2389,14 @@ final class Mass$TonLong extends Mass {
   @override
   String get displayName => 'ton (long)';
 
-  static const _ratio = 6.118810914582601e+29;
+  static final _ratio = Rational.parse('6.11881091458260118E+029');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$TonLong] = 6.118810914582601e+29 [Mass$Dalton]
+  /// 1 [Mass$TonLong] = 6.11881091458260118E+029 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2403,12 +2404,12 @@ final class Mass$TonLong extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$TonLong] with new value
   @override
   Mass$TonLong withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$TonLong(val);
 
@@ -2421,14 +2422,14 @@ final class Mass$TonLong extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$TonMetric extends Mass {
-  const Mass$TonMetric([
+  Mass$TonMetric([
     super.value,
   ]);
 
@@ -2459,14 +2460,14 @@ final class Mass$TonMetric extends Mass {
   @override
   String get displayName => 'ton (metric)';
 
-  static const _ratio = 6.02217364335e+29;
+  static final _ratio = Rational.parse('6.02217364335000000E+029');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$TonMetric] = 6.02217364335e+29 [Mass$Dalton]
+  /// 1 [Mass$TonMetric] = 6.02217364335000000E+029 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2474,12 +2475,12 @@ final class Mass$TonMetric extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$TonMetric] with new value
   @override
   Mass$TonMetric withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$TonMetric(val);
 
@@ -2492,14 +2493,14 @@ final class Mass$TonMetric extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Hundredweight extends Mass {
-  const Mass$Hundredweight([
+  Mass$Hundredweight([
     super.value,
   ]);
 
@@ -2530,14 +2531,14 @@ final class Mass$Hundredweight extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.7316120154386614e+28;
+  static final _ratio = Rational.parse('2.73161201543866124E+028');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Hundredweight] = 2.7316120154386614e+28 [Mass$Dalton]
+  /// 1 [Mass$Hundredweight] = 2.73161201543866124E+028 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2545,12 +2546,12 @@ final class Mass$Hundredweight extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Hundredweight] with new value
   @override
   Mass$Hundredweight withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Hundredweight(val);
 
@@ -2563,14 +2564,14 @@ final class Mass$Hundredweight extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$HundredweightUK extends Mass {
-  const Mass$HundredweightUK([
+  Mass$HundredweightUK([
     super.value,
   ]);
 
@@ -2601,14 +2602,14 @@ final class Mass$HundredweightUK extends Mass {
   @override
   String get displayName => 'hundredweight (UK)';
 
-  static const _ratio = 3.0594054572913004e+28;
+  static final _ratio = Rational.parse('3.05940545729130059E+028');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$HundredweightUK] = 3.0594054572913004e+28 [Mass$Dalton]
+  /// 1 [Mass$HundredweightUK] = 3.05940545729130059E+028 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2616,12 +2617,12 @@ final class Mass$HundredweightUK extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$HundredweightUK] with new value
   @override
   Mass$HundredweightUK withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$HundredweightUK(val);
 
@@ -2634,14 +2635,14 @@ final class Mass$HundredweightUK extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Quarter extends Mass {
-  const Mass$Quarter([
+  Mass$Quarter([
     super.value,
   ]);
 
@@ -2672,14 +2673,14 @@ final class Mass$Quarter extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.829030038596654e+27;
+  static final _ratio = Rational.parse('6.82903003859665310E+027');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Quarter] = 6.829030038596654e+27 [Mass$Dalton]
+  /// 1 [Mass$Quarter] = 6.82903003859665310E+027 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2687,12 +2688,12 @@ final class Mass$Quarter extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Quarter] with new value
   @override
   Mass$Quarter withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Quarter(val);
 
@@ -2705,14 +2706,14 @@ final class Mass$Quarter extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$QuarterUK extends Mass {
-  const Mass$QuarterUK([
+  Mass$QuarterUK([
     super.value,
   ]);
 
@@ -2743,14 +2744,14 @@ final class Mass$QuarterUK extends Mass {
   @override
   String get displayName => 'quarter (UK)';
 
-  static const _ratio = 7.648513643228251e+27;
+  static final _ratio = Rational.parse('7.64851364322825147E+027');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$QuarterUK] = 7.648513643228251e+27 [Mass$Dalton]
+  /// 1 [Mass$QuarterUK] = 7.64851364322825147E+027 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2758,12 +2759,12 @@ final class Mass$QuarterUK extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$QuarterUK] with new value
   @override
   Mass$QuarterUK withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$QuarterUK(val);
 
@@ -2776,14 +2777,14 @@ final class Mass$QuarterUK extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Stone extends Mass {
-  const Mass$Stone([
+  Mass$Stone([
     super.value,
   ]);
 
@@ -2814,14 +2815,14 @@ final class Mass$Stone extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.414515019298327e+27;
+  static final _ratio = Rational.parse('3.41451501929832655E+027');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Stone] = 3.414515019298327e+27 [Mass$Dalton]
+  /// 1 [Mass$Stone] = 3.41451501929832655E+027 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2829,12 +2830,12 @@ final class Mass$Stone extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Stone] with new value
   @override
   Mass$Stone withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Stone(val);
 
@@ -2847,14 +2848,14 @@ final class Mass$Stone extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$StoneUK extends Mass {
-  const Mass$StoneUK([
+  Mass$StoneUK([
     super.value,
   ]);
 
@@ -2885,14 +2886,14 @@ final class Mass$StoneUK extends Mass {
   @override
   String get displayName => 'stone (UK)';
 
-  static const _ratio = 3.8242568216141255e+27;
+  static final _ratio = Rational.parse('3.82425682161412574E+027');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$StoneUK] = 3.8242568216141255e+27 [Mass$Dalton]
+  /// 1 [Mass$StoneUK] = 3.82425682161412574E+027 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2900,12 +2901,12 @@ final class Mass$StoneUK extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$StoneUK] with new value
   @override
   Mass$StoneUK withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$StoneUK(val);
 
@@ -2918,14 +2919,14 @@ final class Mass$StoneUK extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Tonne extends Mass {
-  const Mass$Tonne([
+  Mass$Tonne([
     super.value,
   ]);
 
@@ -2956,14 +2957,14 @@ final class Mass$Tonne extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.02217364335e+29;
+  static final _ratio = Rational.parse('6.02217364335000000E+029');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Tonne] = 6.02217364335e+29 [Mass$Dalton]
+  /// 1 [Mass$Tonne] = 6.02217364335000000E+029 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2971,12 +2972,12 @@ final class Mass$Tonne extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Tonne] with new value
   @override
   Mass$Tonne withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Tonne(val);
 
@@ -2989,14 +2990,14 @@ final class Mass$Tonne extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$TroyPound extends Mass {
-  const Mass$TroyPound([
+  Mass$TroyPound([
     super.value,
   ]);
 
@@ -3027,14 +3028,14 @@ final class Mass$TroyPound extends Mass {
   @override
   String get displayName => 'troy pound';
 
-  static const _ratio = 2.247726328338798e+26;
+  static final _ratio = Rational.parse('2.24772632833879793E+026');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$TroyPound] = 2.247726328338798e+26 [Mass$Dalton]
+  /// 1 [Mass$TroyPound] = 2.24772632833879793E+026 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3042,12 +3043,12 @@ final class Mass$TroyPound extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$TroyPound] with new value
   @override
   Mass$TroyPound withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$TroyPound(val);
 
@@ -3060,14 +3061,14 @@ final class Mass$TroyPound extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$TroyOunce extends Mass {
-  const Mass$TroyOunce([
+  Mass$TroyOunce([
     super.value,
   ]);
 
@@ -3098,14 +3099,14 @@ final class Mass$TroyOunce extends Mass {
   @override
   String get displayName => 'troy ounce';
 
-  static const _ratio = 1.873105273615665e+25;
+  static final _ratio = Rational.parse('1.87310527361566494E+025');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$TroyOunce] = 1.873105273615665e+25 [Mass$Dalton]
+  /// 1 [Mass$TroyOunce] = 1.87310527361566494E+025 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3113,12 +3114,12 @@ final class Mass$TroyOunce extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$TroyOunce] with new value
   @override
   Mass$TroyOunce withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$TroyOunce(val);
 
@@ -3131,14 +3132,14 @@ final class Mass$TroyOunce extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Carat extends Mass {
-  const Mass$Carat([
+  Mass$Carat([
     super.value,
   ]);
 
@@ -3169,14 +3170,14 @@ final class Mass$Carat extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.20443472867e+23;
+  static final _ratio = Rational.parse('1.20443472867000000E+023');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Carat] = 1.20443472867e+23 [Mass$Dalton]
+  /// 1 [Mass$Carat] = 1.20443472867000000E+023 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3184,12 +3185,12 @@ final class Mass$Carat extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Carat] with new value
   @override
   Mass$Carat withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Carat(val);
 
@@ -3202,14 +3203,14 @@ final class Mass$Carat extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Grain extends Mass {
-  const Mass$Grain([
+  Mass$Grain([
     super.value,
   ]);
 
@@ -3240,14 +3241,14 @@ final class Mass$Grain extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.9023028792085635e+22;
+  static final _ratio = Rational.parse('3.90230287920856384E+022');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Grain] = 3.9023028792085635e+22 [Mass$Dalton]
+  /// 1 [Mass$Grain] = 3.90230287920856384E+022 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3255,12 +3256,12 @@ final class Mass$Grain extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Grain] with new value
   @override
   Mass$Grain withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Grain(val);
 
@@ -3273,14 +3274,14 @@ final class Mass$Grain extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Pennyweight extends Mass {
-  const Mass$Pennyweight([
+  Mass$Pennyweight([
     super.value,
   ]);
 
@@ -3311,14 +3312,14 @@ final class Mass$Pennyweight extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 9.365526910100554e+23;
+  static final _ratio = Rational.parse('9.36552691010055323E+023');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Pennyweight] = 9.365526910100554e+23 [Mass$Dalton]
+  /// 1 [Mass$Pennyweight] = 9.36552691010055323E+023 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3326,12 +3327,12 @@ final class Mass$Pennyweight extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Pennyweight] with new value
   @override
   Mass$Pennyweight withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Pennyweight(val);
 
@@ -3344,14 +3345,14 @@ final class Mass$Pennyweight extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$Scruple extends Mass {
-  const Mass$Scruple([
+  Mass$Scruple([
     super.value,
   ]);
 
@@ -3382,14 +3383,14 @@ final class Mass$Scruple extends Mass {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 7.804605758417128e+23;
+  static final _ratio = Rational.parse('7.80460575841712769E+023');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$Scruple] = 7.804605758417128e+23 [Mass$Dalton]
+  /// 1 [Mass$Scruple] = 7.80460575841712769E+023 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3397,12 +3398,12 @@ final class Mass$Scruple extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$Scruple] with new value
   @override
   Mass$Scruple withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$Scruple(val);
 
@@ -3415,14 +3416,14 @@ final class Mass$Scruple extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$TalentBiblicalHebrew extends Mass {
-  const Mass$TalentBiblicalHebrew([
+  Mass$TalentBiblicalHebrew([
     super.value,
   ]);
 
@@ -3453,14 +3454,14 @@ final class Mass$TalentBiblicalHebrew extends Mass {
   @override
   String get displayName => 'talent (Biblical Hebrew)';
 
-  static const _ratio = 2.0595833860257e+28;
+  static final _ratio = Rational.parse('2.05958338602570000E+028');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$TalentBiblicalHebrew] = 2.0595833860257e+28 [Mass$Dalton]
+  /// 1 [Mass$TalentBiblicalHebrew] = 2.05958338602570000E+028 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3468,12 +3469,12 @@ final class Mass$TalentBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$TalentBiblicalHebrew] with new value
   @override
   Mass$TalentBiblicalHebrew withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$TalentBiblicalHebrew(val);
 
@@ -3486,14 +3487,14 @@ final class Mass$TalentBiblicalHebrew extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$MinaBiblicalHebrew extends Mass {
-  const Mass$MinaBiblicalHebrew([
+  Mass$MinaBiblicalHebrew([
     super.value,
   ]);
 
@@ -3524,14 +3525,14 @@ final class Mass$MinaBiblicalHebrew extends Mass {
   @override
   String get displayName => 'mina (Biblical Hebrew)';
 
-  static const _ratio = 3.4326389767095e+26;
+  static final _ratio = Rational.parse('3.43263897670950000E+026');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$MinaBiblicalHebrew] = 3.4326389767095e+26 [Mass$Dalton]
+  /// 1 [Mass$MinaBiblicalHebrew] = 3.43263897670950000E+026 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3539,12 +3540,12 @@ final class Mass$MinaBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$MinaBiblicalHebrew] with new value
   @override
   Mass$MinaBiblicalHebrew withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$MinaBiblicalHebrew(val);
 
@@ -3557,14 +3558,14 @@ final class Mass$MinaBiblicalHebrew extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$ShekelBiblicalHebrew extends Mass {
-  const Mass$ShekelBiblicalHebrew([
+  Mass$ShekelBiblicalHebrew([
     super.value,
   ]);
 
@@ -3595,14 +3596,14 @@ final class Mass$ShekelBiblicalHebrew extends Mass {
   @override
   String get displayName => 'shekel (Biblical Hebrew)';
 
-  static const _ratio = 6.865277953419e+24;
+  static final _ratio = Rational.parse('6.86527795341900000E+024');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$ShekelBiblicalHebrew] = 6.865277953419e+24 [Mass$Dalton]
+  /// 1 [Mass$ShekelBiblicalHebrew] = 6.86527795341900000E+024 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3610,12 +3611,12 @@ final class Mass$ShekelBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$ShekelBiblicalHebrew] with new value
   @override
   Mass$ShekelBiblicalHebrew withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$ShekelBiblicalHebrew(val);
 
@@ -3628,14 +3629,14 @@ final class Mass$ShekelBiblicalHebrew extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$BekahBiblicalHebrew extends Mass {
-  const Mass$BekahBiblicalHebrew([
+  Mass$BekahBiblicalHebrew([
     super.value,
   ]);
 
@@ -3666,14 +3667,14 @@ final class Mass$BekahBiblicalHebrew extends Mass {
   @override
   String get displayName => 'bekah (Biblical Hebrew)';
 
-  static const _ratio = 3.4326389767095e+24;
+  static final _ratio = Rational.parse('3.43263897670950000E+024');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$BekahBiblicalHebrew] = 3.4326389767095e+24 [Mass$Dalton]
+  /// 1 [Mass$BekahBiblicalHebrew] = 3.43263897670950000E+024 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3681,12 +3682,12 @@ final class Mass$BekahBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$BekahBiblicalHebrew] with new value
   @override
   Mass$BekahBiblicalHebrew withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$BekahBiblicalHebrew(val);
 
@@ -3699,14 +3700,14 @@ final class Mass$BekahBiblicalHebrew extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$GerahBiblicalHebrew extends Mass {
-  const Mass$GerahBiblicalHebrew([
+  Mass$GerahBiblicalHebrew([
     super.value,
   ]);
 
@@ -3737,14 +3738,14 @@ final class Mass$GerahBiblicalHebrew extends Mass {
   @override
   String get displayName => 'gerah (Biblical Hebrew)';
 
-  static const _ratio = 3.4326389767095e+23;
+  static final _ratio = Rational.parse('3.43263897670950000E+023');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$GerahBiblicalHebrew] = 3.4326389767095e+23 [Mass$Dalton]
+  /// 1 [Mass$GerahBiblicalHebrew] = 3.43263897670950000E+023 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3752,12 +3753,12 @@ final class Mass$GerahBiblicalHebrew extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$GerahBiblicalHebrew] with new value
   @override
   Mass$GerahBiblicalHebrew withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$GerahBiblicalHebrew(val);
 
@@ -3770,14 +3771,14 @@ final class Mass$GerahBiblicalHebrew extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$TalentBiblicalGreek extends Mass {
-  const Mass$TalentBiblicalGreek([
+  Mass$TalentBiblicalGreek([
     super.value,
   ]);
 
@@ -3808,14 +3809,14 @@ final class Mass$TalentBiblicalGreek extends Mass {
   @override
   String get displayName => 'talent (Biblical Greek)';
 
-  static const _ratio = 1.2285234232434e+28;
+  static final _ratio = Rational.parse('1.22852342324340000E+028');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$TalentBiblicalGreek] = 1.2285234232434e+28 [Mass$Dalton]
+  /// 1 [Mass$TalentBiblicalGreek] = 1.22852342324340000E+028 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3823,12 +3824,12 @@ final class Mass$TalentBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$TalentBiblicalGreek] with new value
   @override
   Mass$TalentBiblicalGreek withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$TalentBiblicalGreek(val);
 
@@ -3841,14 +3842,14 @@ final class Mass$TalentBiblicalGreek extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$MinaBiblicalGreek extends Mass {
-  const Mass$MinaBiblicalGreek([
+  Mass$MinaBiblicalGreek([
     super.value,
   ]);
 
@@ -3879,14 +3880,14 @@ final class Mass$MinaBiblicalGreek extends Mass {
   @override
   String get displayName => 'mina (Biblical Greek)';
 
-  static const _ratio = 2.047539038739e+26;
+  static final _ratio = Rational.parse('2.04753903873900000E+026');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$MinaBiblicalGreek] = 2.047539038739e+26 [Mass$Dalton]
+  /// 1 [Mass$MinaBiblicalGreek] = 2.04753903873900000E+026 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3894,12 +3895,12 @@ final class Mass$MinaBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$MinaBiblicalGreek] with new value
   @override
   Mass$MinaBiblicalGreek withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$MinaBiblicalGreek(val);
 
@@ -3912,14 +3913,14 @@ final class Mass$MinaBiblicalGreek extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$TetradrachmaBiblicalGreek extends Mass {
-  const Mass$TetradrachmaBiblicalGreek([
+  Mass$TetradrachmaBiblicalGreek([
     super.value,
   ]);
 
@@ -3950,14 +3951,14 @@ final class Mass$TetradrachmaBiblicalGreek extends Mass {
   @override
   String get displayName => 'tetradrachma (Biblical Greek)';
 
-  static const _ratio = 8.190156154956e+24;
+  static final _ratio = Rational.parse('8.19015615495600000E+024');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$TetradrachmaBiblicalGreek] = 8.190156154956e+24 [Mass$Dalton]
+  /// 1 [Mass$TetradrachmaBiblicalGreek] = 8.19015615495600000E+024 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3966,12 +3967,12 @@ final class Mass$TetradrachmaBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$TetradrachmaBiblicalGreek] with new value
   @override
   Mass$TetradrachmaBiblicalGreek withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$TetradrachmaBiblicalGreek(val);
 
@@ -3984,14 +3985,14 @@ final class Mass$TetradrachmaBiblicalGreek extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$DidrachmaBiblicalGreek extends Mass {
-  const Mass$DidrachmaBiblicalGreek([
+  Mass$DidrachmaBiblicalGreek([
     super.value,
   ]);
 
@@ -4022,14 +4023,14 @@ final class Mass$DidrachmaBiblicalGreek extends Mass {
   @override
   String get displayName => 'didrachma (Biblical Greek)';
 
-  static const _ratio = 4.095078077478e+24;
+  static final _ratio = Rational.parse('4.09507807747800000E+024');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$DidrachmaBiblicalGreek] = 4.095078077478e+24 [Mass$Dalton]
+  /// 1 [Mass$DidrachmaBiblicalGreek] = 4.09507807747800000E+024 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4037,12 +4038,12 @@ final class Mass$DidrachmaBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$DidrachmaBiblicalGreek] with new value
   @override
   Mass$DidrachmaBiblicalGreek withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$DidrachmaBiblicalGreek(val);
 
@@ -4055,14 +4056,14 @@ final class Mass$DidrachmaBiblicalGreek extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$DrachmaBiblicalGreek extends Mass {
-  const Mass$DrachmaBiblicalGreek([
+  Mass$DrachmaBiblicalGreek([
     super.value,
   ]);
 
@@ -4093,14 +4094,14 @@ final class Mass$DrachmaBiblicalGreek extends Mass {
   @override
   String get displayName => 'drachma (Biblical Greek)';
 
-  static const _ratio = 2.047539038739e+24;
+  static final _ratio = Rational.parse('2.04753903873900000E+024');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$DrachmaBiblicalGreek] = 2.047539038739e+24 [Mass$Dalton]
+  /// 1 [Mass$DrachmaBiblicalGreek] = 2.04753903873900000E+024 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4108,12 +4109,12 @@ final class Mass$DrachmaBiblicalGreek extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$DrachmaBiblicalGreek] with new value
   @override
   Mass$DrachmaBiblicalGreek withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$DrachmaBiblicalGreek(val);
 
@@ -4126,14 +4127,14 @@ final class Mass$DrachmaBiblicalGreek extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$DenariusBiblicalRoman extends Mass {
-  const Mass$DenariusBiblicalRoman([
+  Mass$DenariusBiblicalRoman([
     super.value,
   ]);
 
@@ -4164,14 +4165,14 @@ final class Mass$DenariusBiblicalRoman extends Mass {
   @override
   String get displayName => 'denarius (Biblical Roman)';
 
-  static const _ratio = 2.31853685268975e+24;
+  static final _ratio = Rational.parse('2.31853685268975000E+024');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$DenariusBiblicalRoman] = 2.31853685268975e+24 [Mass$Dalton]
+  /// 1 [Mass$DenariusBiblicalRoman] = 2.31853685268975000E+024 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4179,12 +4180,12 @@ final class Mass$DenariusBiblicalRoman extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$DenariusBiblicalRoman] with new value
   @override
   Mass$DenariusBiblicalRoman withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$DenariusBiblicalRoman(val);
 
@@ -4197,14 +4198,14 @@ final class Mass$DenariusBiblicalRoman extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$AssarionBiblicalRoman extends Mass {
-  const Mass$AssarionBiblicalRoman([
+  Mass$AssarionBiblicalRoman([
     super.value,
   ]);
 
@@ -4235,14 +4236,14 @@ final class Mass$AssarionBiblicalRoman extends Mass {
   @override
   String get displayName => 'assarion (Biblical Roman)';
 
-  static const _ratio = 1.4490855329310938e+23;
+  static final _ratio = Rational.parse('1.44908553293109375E+023');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$AssarionBiblicalRoman] = 1.4490855329310938e+23 [Mass$Dalton]
+  /// 1 [Mass$AssarionBiblicalRoman] = 1.44908553293109375E+023 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4250,12 +4251,12 @@ final class Mass$AssarionBiblicalRoman extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$AssarionBiblicalRoman] with new value
   @override
   Mass$AssarionBiblicalRoman withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$AssarionBiblicalRoman(val);
 
@@ -4268,14 +4269,14 @@ final class Mass$AssarionBiblicalRoman extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$QuadransBiblicalRoman extends Mass {
-  const Mass$QuadransBiblicalRoman([
+  Mass$QuadransBiblicalRoman([
     super.value,
   ]);
 
@@ -4306,14 +4307,14 @@ final class Mass$QuadransBiblicalRoman extends Mass {
   @override
   String get displayName => 'quadrans (Biblical Roman)';
 
-  static const _ratio = 3.6227138323277345e+22;
+  static final _ratio = Rational.parse('3.62271383232773438E+022');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$QuadransBiblicalRoman] = 3.6227138323277345e+22 [Mass$Dalton]
+  /// 1 [Mass$QuadransBiblicalRoman] = 3.62271383232773438E+022 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4321,12 +4322,12 @@ final class Mass$QuadransBiblicalRoman extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$QuadransBiblicalRoman] with new value
   @override
   Mass$QuadransBiblicalRoman withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$QuadransBiblicalRoman(val);
 
@@ -4339,14 +4340,14 @@ final class Mass$QuadransBiblicalRoman extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$LeptonBiblicalRoman extends Mass {
-  const Mass$LeptonBiblicalRoman([
+  Mass$LeptonBiblicalRoman([
     super.value,
   ]);
 
@@ -4377,14 +4378,14 @@ final class Mass$LeptonBiblicalRoman extends Mass {
   @override
   String get displayName => 'lepton (Biblical Roman)';
 
-  static const _ratio = 1.8113569161638673e+22;
+  static final _ratio = Rational.parse('1.81135691616386719E+022');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$LeptonBiblicalRoman] = 1.8113569161638673e+22 [Mass$Dalton]
+  /// 1 [Mass$LeptonBiblicalRoman] = 1.81135691616386719E+022 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4392,12 +4393,12 @@ final class Mass$LeptonBiblicalRoman extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$LeptonBiblicalRoman] with new value
   @override
   Mass$LeptonBiblicalRoman withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$LeptonBiblicalRoman(val);
 
@@ -4410,14 +4411,14 @@ final class Mass$LeptonBiblicalRoman extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Mass]
 final class Mass$AtomicMassUnit extends Mass {
-  const Mass$AtomicMassUnit([
+  Mass$AtomicMassUnit([
     super.value,
   ]);
 
@@ -4448,14 +4449,14 @@ final class Mass$AtomicMassUnit extends Mass {
   @override
   String get displayName => 'atomic mass unit';
 
-  static const _ratio = 1.0000053356450456;
+  static final _ratio = Rational.parse('1.00000533564504556E+000');
 
   @override
-  Mass get anchor => const Mass$Dalton(_ratio);
+  Mass get anchor => Mass$Dalton(_ratio);
 
-  /// 1 [Mass$AtomicMassUnit] ≈ 1.0000053356450456 [Mass$Dalton]
+  /// 1 [Mass$AtomicMassUnit] ≈ 1.00000533564504556E+000 [Mass$Dalton]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4463,12 +4464,12 @@ final class Mass$AtomicMassUnit extends Mass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Mass$AtomicMassUnit] with new value
   @override
   Mass$AtomicMassUnit withValue(
-    num val,
+    Rational val,
   ) =>
       Mass$AtomicMassUnit(val);
 
@@ -4481,7 +4482,7 @@ final class Mass$AtomicMassUnit extends Mass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

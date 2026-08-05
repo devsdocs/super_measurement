@@ -5,7 +5,7 @@ part of '../../super_measurement.dart';
 /// [LatentHeat$CaloriePerGram], [LatentHeat$KilojoulePerKilogram],
 /// [LatentHeat$BTUPerPound]
 sealed class LatentHeat extends Unit<LatentHeat> {
-  const LatentHeat([
+  LatentHeat([
     super.value,
   ]);
 
@@ -17,25 +17,26 @@ sealed class LatentHeat extends Unit<LatentHeat> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : LatentHeat.anchor();
 
-  factory LatentHeat.anchor() => const LatentHeat$KilojoulePerKilogram();
+  factory LatentHeat.anchor() => LatentHeat$KilojoulePerKilogram();
 
   /// Convert to [LatentHeat$CaloriePerGram]
   LatentHeat get toCaloriePerGram => convertTo(
-        const LatentHeat$CaloriePerGram(),
+        LatentHeat$CaloriePerGram(),
       );
 
   /// Convert to [LatentHeat$KilojoulePerKilogram]
   LatentHeat get toKilojoulePerKilogram => convertTo(
-        const LatentHeat$KilojoulePerKilogram(),
+        LatentHeat$KilojoulePerKilogram(),
       );
 
   /// Convert to [LatentHeat$BTUPerPound]
   LatentHeat get toBTUPerPound => convertTo(
-        const LatentHeat$BTUPerPound(),
+        LatentHeat$BTUPerPound(),
       );
 
   @override
@@ -46,9 +47,9 @@ sealed class LatentHeat extends Unit<LatentHeat> {
 
   static const _majorName = 'latentHeat';
 
-  static const caloriePerGram = LatentHeat$CaloriePerGram();
-  static const kilojoulePerKilogram = LatentHeat$KilojoulePerKilogram();
-  static const bTUPerPound = LatentHeat$BTUPerPound();
+  static final caloriePerGram = LatentHeat$CaloriePerGram();
+  static final kilojoulePerKilogram = LatentHeat$KilojoulePerKilogram();
+  static final bTUPerPound = LatentHeat$BTUPerPound();
 
   @override
   List<LatentHeat> get units => values;
@@ -56,13 +57,13 @@ sealed class LatentHeat extends Unit<LatentHeat> {
   @override
   EnumValues<LatentHeat> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <LatentHeat>[
     caloriePerGram,
     kilojoulePerKilogram,
     bTUPerPound,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, LatentHeat>{
     LatentHeat$CaloriePerGram._minorName: caloriePerGram,
     LatentHeat$KilojoulePerKilogram._minorName: kilojoulePerKilogram,
     LatentHeat$BTUPerPound._minorName: bTUPerPound,
@@ -71,7 +72,7 @@ sealed class LatentHeat extends Unit<LatentHeat> {
 
 /// Unit of [LatentHeat]
 final class LatentHeat$CaloriePerGram extends LatentHeat {
-  const LatentHeat$CaloriePerGram([
+  LatentHeat$CaloriePerGram([
     super.value,
   ]);
 
@@ -102,14 +103,14 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
   @override
   String get displayName => 'calorie/gram';
 
-  static const _ratio = 4.1868;
+  static final _ratio = Rational.parse('4.18680000000000000E+000');
 
   @override
-  LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram(_ratio);
+  LatentHeat get anchor => LatentHeat$KilojoulePerKilogram(_ratio);
 
-  /// 1 [LatentHeat$CaloriePerGram] ≈ 4.1868 [LatentHeat$KilojoulePerKilogram]
+  /// 1 [LatentHeat$CaloriePerGram] ≈ 4.18680000000000000E+000 [LatentHeat$KilojoulePerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -117,12 +118,12 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LatentHeat$CaloriePerGram] with new value
   @override
   LatentHeat$CaloriePerGram withValue(
-    num val,
+    Rational val,
   ) =>
       LatentHeat$CaloriePerGram(val);
 
@@ -135,14 +136,14 @@ final class LatentHeat$CaloriePerGram extends LatentHeat {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LatentHeat]
 final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
-  const LatentHeat$KilojoulePerKilogram([
+  LatentHeat$KilojoulePerKilogram([
     super.value,
   ]);
 
@@ -173,14 +174,14 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
   @override
   String get displayName => 'kilojoule/kilogram';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram(_ratio);
+  LatentHeat get anchor => LatentHeat$KilojoulePerKilogram(_ratio);
 
   /// Default (anchor) unit of [LatentHeat]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -189,12 +190,12 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LatentHeat$KilojoulePerKilogram] with new value
   @override
   LatentHeat$KilojoulePerKilogram withValue(
-    num val,
+    Rational val,
   ) =>
       LatentHeat$KilojoulePerKilogram(val);
 
@@ -207,14 +208,14 @@ final class LatentHeat$KilojoulePerKilogram extends LatentHeat {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LatentHeat]
 final class LatentHeat$BTUPerPound extends LatentHeat {
-  const LatentHeat$BTUPerPound([
+  LatentHeat$BTUPerPound([
     super.value,
   ]);
 
@@ -245,14 +246,14 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
   @override
   String get displayName => 'BTU/pound';
 
-  static const _ratio = 2.326;
+  static final _ratio = Rational.parse('2.32600000000000000E+000');
 
   @override
-  LatentHeat get anchor => const LatentHeat$KilojoulePerKilogram(_ratio);
+  LatentHeat get anchor => LatentHeat$KilojoulePerKilogram(_ratio);
 
-  /// 1 [LatentHeat$BTUPerPound] ≈ 2.326 [LatentHeat$KilojoulePerKilogram]
+  /// 1 [LatentHeat$BTUPerPound] ≈ 2.32600000000000000E+000 [LatentHeat$KilojoulePerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -260,12 +261,12 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LatentHeat$BTUPerPound] with new value
   @override
   LatentHeat$BTUPerPound withValue(
-    num val,
+    Rational val,
   ) =>
       LatentHeat$BTUPerPound(val);
 
@@ -278,7 +279,7 @@ final class LatentHeat$BTUPerPound extends LatentHeat {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

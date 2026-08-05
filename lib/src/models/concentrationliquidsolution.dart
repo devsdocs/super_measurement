@@ -15,7 +15,7 @@ part of '../../super_measurement.dart';
 /// [ConcentrationLiquidSolution$PoundPerMillionUSGallon]
 sealed class ConcentrationLiquidSolution
     extends Unit<ConcentrationLiquidSolution> {
-  const ConcentrationLiquidSolution([
+  ConcentrationLiquidSolution([
     super.value,
   ]);
 
@@ -28,66 +28,67 @@ sealed class ConcentrationLiquidSolution
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : ConcentrationLiquidSolution.anchor();
 
   factory ConcentrationLiquidSolution.anchor() =>
-      const ConcentrationLiquidSolution$KilogramPerLiter();
+      ConcentrationLiquidSolution$KilogramPerLiter();
 
   /// Convert to [ConcentrationLiquidSolution$KilogramPerLiter]
   ConcentrationLiquidSolution get toKilogramPerLiter => convertTo(
-        const ConcentrationLiquidSolution$KilogramPerLiter(),
+        ConcentrationLiquidSolution$KilogramPerLiter(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$GramPerLiter]
   ConcentrationLiquidSolution get toGramPerLiter => convertTo(
-        const ConcentrationLiquidSolution$GramPerLiter(),
+        ConcentrationLiquidSolution$GramPerLiter(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$MilligramPerLiter]
   ConcentrationLiquidSolution get toMilligramPerLiter => convertTo(
-        const ConcentrationLiquidSolution$MilligramPerLiter(),
+        ConcentrationLiquidSolution$MilligramPerLiter(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$PartPerMillionPpm]
   ConcentrationLiquidSolution get toPartPerMillionPpm => convertTo(
-        const ConcentrationLiquidSolution$PartPerMillionPpm(),
+        ConcentrationLiquidSolution$PartPerMillionPpm(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$GrainPerGallonUK]
   ConcentrationLiquidSolution get toGrainPerGallonUK => convertTo(
-        const ConcentrationLiquidSolution$GrainPerGallonUK(),
+        ConcentrationLiquidSolution$GrainPerGallonUK(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$GrainPerGallonUS]
   ConcentrationLiquidSolution get toGrainPerGallonUS => convertTo(
-        const ConcentrationLiquidSolution$GrainPerGallonUS(),
+        ConcentrationLiquidSolution$GrainPerGallonUS(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$PoundPerFootCubic]
   ConcentrationLiquidSolution get toPoundPerFootCubic => convertTo(
-        const ConcentrationLiquidSolution$PoundPerFootCubic(),
+        ConcentrationLiquidSolution$PoundPerFootCubic(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$PoundPerGallonUK]
   ConcentrationLiquidSolution get toPoundPerGallonUK => convertTo(
-        const ConcentrationLiquidSolution$PoundPerGallonUK(),
+        ConcentrationLiquidSolution$PoundPerGallonUK(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$PoundPerGallonUS]
   ConcentrationLiquidSolution get toPoundPerGallonUS => convertTo(
-        const ConcentrationLiquidSolution$PoundPerGallonUS(),
+        ConcentrationLiquidSolution$PoundPerGallonUS(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$PoundPerMillionUKGallon]
   ConcentrationLiquidSolution get toPoundPerMillionUKGallon => convertTo(
-        const ConcentrationLiquidSolution$PoundPerMillionUKGallon(),
+        ConcentrationLiquidSolution$PoundPerMillionUKGallon(),
       );
 
   /// Convert to [ConcentrationLiquidSolution$PoundPerMillionUSGallon]
   ConcentrationLiquidSolution get toPoundPerMillionUSGallon => convertTo(
-        const ConcentrationLiquidSolution$PoundPerMillionUSGallon(),
+        ConcentrationLiquidSolution$PoundPerMillionUSGallon(),
       );
 
   @override
@@ -98,26 +99,26 @@ sealed class ConcentrationLiquidSolution
 
   static const _majorName = 'concentrationLiquidSolution';
 
-  static const kilogramPerLiter =
+  static final kilogramPerLiter =
       ConcentrationLiquidSolution$KilogramPerLiter();
-  static const gramPerLiter = ConcentrationLiquidSolution$GramPerLiter();
-  static const milligramPerLiter =
+  static final gramPerLiter = ConcentrationLiquidSolution$GramPerLiter();
+  static final milligramPerLiter =
       ConcentrationLiquidSolution$MilligramPerLiter();
-  static const partPerMillionPpm =
+  static final partPerMillionPpm =
       ConcentrationLiquidSolution$PartPerMillionPpm();
-  static const grainPerGallonUK =
+  static final grainPerGallonUK =
       ConcentrationLiquidSolution$GrainPerGallonUK();
-  static const grainPerGallonUS =
+  static final grainPerGallonUS =
       ConcentrationLiquidSolution$GrainPerGallonUS();
-  static const poundPerFootCubic =
+  static final poundPerFootCubic =
       ConcentrationLiquidSolution$PoundPerFootCubic();
-  static const poundPerGallonUK =
+  static final poundPerGallonUK =
       ConcentrationLiquidSolution$PoundPerGallonUK();
-  static const poundPerGallonUS =
+  static final poundPerGallonUS =
       ConcentrationLiquidSolution$PoundPerGallonUS();
-  static const poundPerMillionUKGallon =
+  static final poundPerMillionUKGallon =
       ConcentrationLiquidSolution$PoundPerMillionUKGallon();
-  static const poundPerMillionUSGallon =
+  static final poundPerMillionUSGallon =
       ConcentrationLiquidSolution$PoundPerMillionUSGallon();
 
   @override
@@ -126,7 +127,7 @@ sealed class ConcentrationLiquidSolution
   @override
   EnumValues<ConcentrationLiquidSolution> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <ConcentrationLiquidSolution>[
     kilogramPerLiter,
     gramPerLiter,
     milligramPerLiter,
@@ -140,7 +141,7 @@ sealed class ConcentrationLiquidSolution
     poundPerMillionUSGallon,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, ConcentrationLiquidSolution>{
     ConcentrationLiquidSolution$KilogramPerLiter._minorName: kilogramPerLiter,
     ConcentrationLiquidSolution$GramPerLiter._minorName: gramPerLiter,
     ConcentrationLiquidSolution$MilligramPerLiter._minorName: milligramPerLiter,
@@ -160,7 +161,7 @@ sealed class ConcentrationLiquidSolution
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$KilogramPerLiter
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$KilogramPerLiter([
+  ConcentrationLiquidSolution$KilogramPerLiter([
     super.value,
   ]);
 
@@ -191,15 +192,15 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
   @override
   String get displayName => 'kilogram/liter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
   /// Default (anchor) unit of [ConcentrationLiquidSolution]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -208,12 +209,12 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$KilogramPerLiter] with new value
   @override
   ConcentrationLiquidSolution$KilogramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$KilogramPerLiter(val);
 
@@ -226,7 +227,7 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -234,7 +235,7 @@ final class ConcentrationLiquidSolution$KilogramPerLiter
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$GramPerLiter
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$GramPerLiter([
+  ConcentrationLiquidSolution$GramPerLiter([
     super.value,
   ]);
 
@@ -265,15 +266,15 @@ final class ConcentrationLiquidSolution$GramPerLiter
   @override
   String get displayName => 'gram/liter';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$GramPerLiter] ≈ 0.001 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$GramPerLiter] ≈ 1.00000000000000000E-003 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -282,12 +283,12 @@ final class ConcentrationLiquidSolution$GramPerLiter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$GramPerLiter] with new value
   @override
   ConcentrationLiquidSolution$GramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$GramPerLiter(val);
 
@@ -300,7 +301,7 @@ final class ConcentrationLiquidSolution$GramPerLiter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -308,7 +309,7 @@ final class ConcentrationLiquidSolution$GramPerLiter
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$MilligramPerLiter
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$MilligramPerLiter([
+  ConcentrationLiquidSolution$MilligramPerLiter([
     super.value,
   ]);
 
@@ -339,15 +340,15 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
   @override
   String get displayName => 'milligram/liter';
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$MilligramPerLiter] ≈ 0.000001 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$MilligramPerLiter] ≈ 1.00000000000000000E-006 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -356,12 +357,12 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$MilligramPerLiter] with new value
   @override
   ConcentrationLiquidSolution$MilligramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$MilligramPerLiter(val);
 
@@ -374,7 +375,7 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -382,7 +383,7 @@ final class ConcentrationLiquidSolution$MilligramPerLiter
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$PartPerMillionPpm
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$PartPerMillionPpm([
+  ConcentrationLiquidSolution$PartPerMillionPpm([
     super.value,
   ]);
 
@@ -413,15 +414,15 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
   @override
   String get displayName => 'part/million (ppm)';
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$PartPerMillionPpm] ≈ 0.000001 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PartPerMillionPpm] ≈ 1.00000000000000000E-006 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -430,12 +431,12 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$PartPerMillionPpm] with new value
   @override
   ConcentrationLiquidSolution$PartPerMillionPpm withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$PartPerMillionPpm(val);
 
@@ -448,7 +449,7 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -456,7 +457,7 @@ final class ConcentrationLiquidSolution$PartPerMillionPpm
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$GrainPerGallonUK
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$GrainPerGallonUK([
+  ConcentrationLiquidSolution$GrainPerGallonUK([
     super.value,
   ]);
 
@@ -487,15 +488,15 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
   @override
   String get displayName => 'grain/gallon (UK)';
 
-  static const _ratio = 0.000014253767523300243;
+  static final _ratio = Rational.parse('1.42537675233002426E-005');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$GrainPerGallonUK] ≈ 0.000014253767523300243 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$GrainPerGallonUK] ≈ 1.42537675233002426E-005 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -504,12 +505,12 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$GrainPerGallonUK] with new value
   @override
   ConcentrationLiquidSolution$GrainPerGallonUK withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$GrainPerGallonUK(val);
 
@@ -522,7 +523,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -530,7 +531,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUK
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$GrainPerGallonUS
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$GrainPerGallonUS([
+  ConcentrationLiquidSolution$GrainPerGallonUS([
     super.value,
   ]);
 
@@ -561,15 +562,15 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
   @override
   String get displayName => 'grain/gallon (US)';
 
-  static const _ratio = 0.000017118061045270948;
+  static final _ratio = Rational.parse('1.71180610452709469E-005');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$GrainPerGallonUS] ≈ 0.000017118061045270948 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$GrainPerGallonUS] ≈ 1.71180610452709469E-005 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -578,12 +579,12 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$GrainPerGallonUS] with new value
   @override
   ConcentrationLiquidSolution$GrainPerGallonUS withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$GrainPerGallonUS(val);
 
@@ -596,7 +597,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -604,7 +605,7 @@ final class ConcentrationLiquidSolution$GrainPerGallonUS
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$PoundPerFootCubic
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$PoundPerFootCubic([
+  ConcentrationLiquidSolution$PoundPerFootCubic([
     super.value,
   ]);
 
@@ -635,15 +636,15 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
   @override
   String get displayName => 'pound/foot³';
 
-  static const _ratio = 0.01601846337396014;
+  static final _ratio = Rational.parse('1.60184633739601396E-002');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerFootCubic] ≈ 0.01601846337396014 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerFootCubic] ≈ 1.60184633739601396E-002 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -652,12 +653,12 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$PoundPerFootCubic] with new value
   @override
   ConcentrationLiquidSolution$PoundPerFootCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$PoundPerFootCubic(val);
 
@@ -670,7 +671,7 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -678,7 +679,7 @@ final class ConcentrationLiquidSolution$PoundPerFootCubic
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$PoundPerGallonUK
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$PoundPerGallonUK([
+  ConcentrationLiquidSolution$PoundPerGallonUK([
     super.value,
   ]);
 
@@ -709,15 +710,15 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
   @override
   String get displayName => 'pound/gallon (UK)';
 
-  static const _ratio = 0.0997763726631017;
+  static final _ratio = Rational.parse('9.97763726631016984E-002');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerGallonUK] ≈ 0.0997763726631017 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerGallonUK] ≈ 9.97763726631016984E-002 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -726,12 +727,12 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$PoundPerGallonUK] with new value
   @override
   ConcentrationLiquidSolution$PoundPerGallonUK withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$PoundPerGallonUK(val);
 
@@ -744,7 +745,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -752,7 +753,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUK
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$PoundPerGallonUS
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$PoundPerGallonUS([
+  ConcentrationLiquidSolution$PoundPerGallonUS([
     super.value,
   ]);
 
@@ -783,15 +784,15 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
   @override
   String get displayName => 'pound/gallon (US)';
 
-  static const _ratio = 0.11982642731689663;
+  static final _ratio = Rational.parse('1.19826427316896629E-001');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerGallonUS] ≈ 0.11982642731689663 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerGallonUS] ≈ 1.19826427316896629E-001 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -800,12 +801,12 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$PoundPerGallonUS] with new value
   @override
   ConcentrationLiquidSolution$PoundPerGallonUS withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$PoundPerGallonUS(val);
 
@@ -818,7 +819,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -826,7 +827,7 @@ final class ConcentrationLiquidSolution$PoundPerGallonUS
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$PoundPerMillionUKGallon([
+  ConcentrationLiquidSolution$PoundPerMillionUKGallon([
     super.value,
   ]);
 
@@ -857,15 +858,15 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
   @override
   String get displayName => 'pound/million UK gallon';
 
-  static const _ratio = 9.97763726631017e-8;
+  static final _ratio = Rational.parse('9.97763726631016984E-008');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerMillionUKGallon] ≈ 9.97763726631017e-8 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerMillionUKGallon] ≈ 9.97763726631016984E-008 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -874,12 +875,12 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$PoundPerMillionUKGallon] with new value
   @override
   ConcentrationLiquidSolution$PoundPerMillionUKGallon withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$PoundPerMillionUKGallon(val);
 
@@ -892,7 +893,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -900,7 +901,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUKGallon
 /// Unit of [ConcentrationLiquidSolution]
 final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
     extends ConcentrationLiquidSolution {
-  const ConcentrationLiquidSolution$PoundPerMillionUSGallon([
+  ConcentrationLiquidSolution$PoundPerMillionUSGallon([
     super.value,
   ]);
 
@@ -931,15 +932,15 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
   @override
   String get displayName => 'pound/million US gallon';
 
-  static const _ratio = 1.1982642731689662e-7;
+  static final _ratio = Rational.parse('1.19826427316896629E-007');
 
   @override
   ConcentrationLiquidSolution get anchor =>
-      const ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
+      ConcentrationLiquidSolution$KilogramPerLiter(_ratio);
 
-  /// 1 [ConcentrationLiquidSolution$PoundPerMillionUSGallon] ≈ 1.1982642731689662e-7 [ConcentrationLiquidSolution$KilogramPerLiter]
+  /// 1 [ConcentrationLiquidSolution$PoundPerMillionUSGallon] ≈ 1.19826427316896629E-007 [ConcentrationLiquidSolution$KilogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -948,12 +949,12 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationLiquidSolution$PoundPerMillionUSGallon] with new value
   @override
   ConcentrationLiquidSolution$PoundPerMillionUSGallon withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationLiquidSolution$PoundPerMillionUSGallon(val);
 
@@ -966,7 +967,7 @@ final class ConcentrationLiquidSolution$PoundPerMillionUSGallon
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

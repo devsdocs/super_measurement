@@ -1,9 +1,16 @@
 part of '../../super_measurement.dart';
 
 sealed class Unit<T extends Unit<T>> implements Comparable<T> {
-  const Unit([this.value = 0]);
+  Unit([Object? value]) : value = _toRational(value);
 
-  final num value;
+  static Rational _toRational(Object? value) {
+    if (value is Rational) return value;
+    if (value is num) return Rational.parse(value.toString());
+    if (value is String) return Rational.parse(value);
+    return Rational.zero;
+  }
+
+  final Rational value;
 
   T get _clone;
 
@@ -13,9 +20,9 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
 
   EnumValues<T> get unitsAsMap;
 
-  num get ratio;
+  Rational get ratio;
 
-  num get valueShift;
+  Rational get valueShift;
 
   String get symbol;
 
@@ -29,32 +36,29 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
 
   String get label;
 
-  T withValue(num val);
+  T withValue(Rational val);
 
   Map<String, dynamic> toJson();
 
   // AnchorRatio<T> get _anchorRatio;
 
-  bool get _isShiftedValue => valueShift != 0;
+  bool get _isShiftedValue => valueShift != Rational.zero;
 
   bool _convertAndCompare(String operator, T other) {
-    // Instead of converting to anchor (which might overflow),
-    // convert other to this unit's type for comparison
-    final otherConverted = other.convertTo(_clone).value.toIntIfTrue;
-    final thisValue = value.toIntIfTrue;
-    const epsilon = 1e-10;
+    final otherConverted = other.convertTo(_clone).value;
+    final thisValue = value;
 
     switch (operator) {
       case '==':
-        return (thisValue - otherConverted).abs() < epsilon;
+        return thisValue == otherConverted;
       case '>':
-        return thisValue > otherConverted + epsilon;
+        return thisValue > otherConverted;
       case '>=':
-        return thisValue >= otherConverted - epsilon;
+        return thisValue >= otherConverted;
       case '<':
-        return thisValue < otherConverted - epsilon;
+        return thisValue < otherConverted;
       default:
-        return thisValue <= otherConverted + epsilon;
+        return thisValue <= otherConverted;
     }
   }
 
@@ -79,8 +83,8 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
     }
 
     // Zero value is always zero (except for shifted values like temperature)
-    if (value == 0 && !_isShiftedValue && !result._isShiftedValue) {
-      return result.withValue(0);
+    if (value == Rational.zero && !_isShiftedValue && !result._isShiftedValue) {
+      return result.withValue(Rational.zero);
     }
 
     // Handle units with value shifts (like temperature)
@@ -141,10 +145,10 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is T && runtimeType == other.runtimeType;
+      other is T && convertTo(anchor).value == other.convertTo(anchor).value;
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => convertTo(anchor).value.hashCode;
 
   @override
   int compareTo(T other) {
@@ -160,13 +164,17 @@ sealed class Unit<T extends Unit<T>> implements Comparable<T> {
 
   @override
   String toString() {
-    final value = this.value.toDouble().toIntIfTrue;
-    return '$value $label ($symbol)';
+    final val = value.toDouble();
+    final disp = val % 1 == 0 ? val.toInt() : val;
+    return '$disp $label ($symbol)';
   }
 
   /// Get the exact precision on value calculation
   T withPrecision([Precision precision = Precision.two]) => withValue(
-        value == 0 ? 0 : value.toDouble().toPrecision(precision.value),
+        value == Rational.zero
+            ? Rational.zero
+            : Rational.parse(
+                value.toDouble().toPrecision(precision.value).toString()),
       );
 }
 
@@ -182,7 +190,7 @@ class _ConversionRatio<T extends Unit<T>> {
 }
 
 class EnumValues<T> {
-  const EnumValues(this.map);
+  EnumValues(this.map);
   final Map<String, T> map;
 
   Map<T, String> get reverse => map.map((k, v) => MapEntry(v, k));

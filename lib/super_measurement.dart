@@ -2,6 +2,8 @@
 library;
 
 import 'dart:math';
+import 'package:super_measurement/src/rational.dart';
+export 'package:super_measurement/src/rational.dart';
 
 part 'src/extension/iterable.dart';
 part 'src/extension/iterable_generic.dart';

@@ -11,7 +11,7 @@ part of '../../super_measurement.dart';
 /// [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF],
 /// [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC]
 sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
-  const HeatTransferCoefficient([
+  HeatTransferCoefficient([
     super.value,
   ]);
 
@@ -24,54 +24,55 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : HeatTransferCoefficient.anchor();
 
   factory HeatTransferCoefficient.anchor() =>
-      const HeatTransferCoefficient$WattPerMeterSquareK();
+      HeatTransferCoefficient$WattPerMeterSquareK();
 
   /// Convert to [HeatTransferCoefficient$WattPerMeterSquareK]
   HeatTransferCoefficient get toWattPerMeterSquareK => convertTo(
-        const HeatTransferCoefficient$WattPerMeterSquareK(),
+        HeatTransferCoefficient$WattPerMeterSquareK(),
       );
 
   /// Convert to [HeatTransferCoefficient$WattPerMeterSquareDegreeC]
   HeatTransferCoefficient get toWattPerMeterSquareDegreeC => convertTo(
-        const HeatTransferCoefficient$WattPerMeterSquareDegreeC(),
+        HeatTransferCoefficient$WattPerMeterSquareDegreeC(),
       );
 
   /// Convert to [HeatTransferCoefficient$JoulePerSecondMeterSquareK]
   HeatTransferCoefficient get toJoulePerSecondMeterSquareK => convertTo(
-        const HeatTransferCoefficient$JoulePerSecondMeterSquareK(),
+        HeatTransferCoefficient$JoulePerSecondMeterSquareK(),
       );
 
   /// Convert to [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC]
   HeatTransferCoefficient get toKilocaloriePerHourMeterSquareDegreeC =>
       convertTo(
-        const HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC(),
+        HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC(),
       );
 
   /// Convert to [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC]
   HeatTransferCoefficient get toKilocaloriePerHourFootSquareDegreeC =>
       convertTo(
-        const HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC(),
+        HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC(),
       );
 
   /// Convert to [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC]
   HeatTransferCoefficient get toCaloriePerSecondCentimeterSquareDegreeC =>
       convertTo(
-        const HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC(),
+        HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC(),
       );
 
   /// Convert to [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF]
   HeatTransferCoefficient get toBTUPerHourFootSquareDegreeF => convertTo(
-        const HeatTransferCoefficient$BTUPerHourFootSquareDegreeF(),
+        HeatTransferCoefficient$BTUPerHourFootSquareDegreeF(),
       );
 
   /// Convert to [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC]
   HeatTransferCoefficient get toCHUPerHourFootSquareDegreeC => convertTo(
-        const HeatTransferCoefficient$CHUPerHourFootSquareDegreeC(),
+        HeatTransferCoefficient$CHUPerHourFootSquareDegreeC(),
       );
 
   @override
@@ -82,21 +83,21 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
 
   static const _majorName = 'heatTransferCoefficient';
 
-  static const wattPerMeterSquareK =
+  static final wattPerMeterSquareK =
       HeatTransferCoefficient$WattPerMeterSquareK();
-  static const wattPerMeterSquareDegreeC =
+  static final wattPerMeterSquareDegreeC =
       HeatTransferCoefficient$WattPerMeterSquareDegreeC();
-  static const joulePerSecondMeterSquareK =
+  static final joulePerSecondMeterSquareK =
       HeatTransferCoefficient$JoulePerSecondMeterSquareK();
-  static const kilocaloriePerHourMeterSquareDegreeC =
+  static final kilocaloriePerHourMeterSquareDegreeC =
       HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC();
-  static const kilocaloriePerHourFootSquareDegreeC =
+  static final kilocaloriePerHourFootSquareDegreeC =
       HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC();
-  static const caloriePerSecondCentimeterSquareDegreeC =
+  static final caloriePerSecondCentimeterSquareDegreeC =
       HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC();
-  static const bTUPerHourFootSquareDegreeF =
+  static final bTUPerHourFootSquareDegreeF =
       HeatTransferCoefficient$BTUPerHourFootSquareDegreeF();
-  static const cHUPerHourFootSquareDegreeC =
+  static final cHUPerHourFootSquareDegreeC =
       HeatTransferCoefficient$CHUPerHourFootSquareDegreeC();
 
   @override
@@ -105,7 +106,7 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
   @override
   EnumValues<HeatTransferCoefficient> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <HeatTransferCoefficient>[
     wattPerMeterSquareK,
     wattPerMeterSquareDegreeC,
     joulePerSecondMeterSquareK,
@@ -116,7 +117,7 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
     cHUPerHourFootSquareDegreeC,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, HeatTransferCoefficient>{
     HeatTransferCoefficient$WattPerMeterSquareK._minorName: wattPerMeterSquareK,
     HeatTransferCoefficient$WattPerMeterSquareDegreeC._minorName:
         wattPerMeterSquareDegreeC,
@@ -138,7 +139,7 @@ sealed class HeatTransferCoefficient extends Unit<HeatTransferCoefficient> {
 /// Unit of [HeatTransferCoefficient]
 final class HeatTransferCoefficient$WattPerMeterSquareK
     extends HeatTransferCoefficient {
-  const HeatTransferCoefficient$WattPerMeterSquareK([
+  HeatTransferCoefficient$WattPerMeterSquareK([
     super.value,
   ]);
 
@@ -169,15 +170,15 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
   @override
   String get displayName => 'watt/meter² K';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+      HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
   /// Default (anchor) unit of [HeatTransferCoefficient]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -186,12 +187,12 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatTransferCoefficient$WattPerMeterSquareK] with new value
   @override
   HeatTransferCoefficient$WattPerMeterSquareK withValue(
-    num val,
+    Rational val,
   ) =>
       HeatTransferCoefficient$WattPerMeterSquareK(val);
 
@@ -204,7 +205,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -212,7 +213,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareK
 /// Unit of [HeatTransferCoefficient]
 final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
     extends HeatTransferCoefficient {
-  const HeatTransferCoefficient$WattPerMeterSquareDegreeC([
+  HeatTransferCoefficient$WattPerMeterSquareDegreeC([
     super.value,
   ]);
 
@@ -243,15 +244,15 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
   @override
   String get displayName => 'watt/meter² °C';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+      HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
-  /// 1 [HeatTransferCoefficient$WattPerMeterSquareDegreeC] = 1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$WattPerMeterSquareDegreeC] = 1.00000000000000000E+000 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -260,12 +261,12 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatTransferCoefficient$WattPerMeterSquareDegreeC] with new value
   @override
   HeatTransferCoefficient$WattPerMeterSquareDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       HeatTransferCoefficient$WattPerMeterSquareDegreeC(val);
 
@@ -278,7 +279,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -286,7 +287,7 @@ final class HeatTransferCoefficient$WattPerMeterSquareDegreeC
 /// Unit of [HeatTransferCoefficient]
 final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
     extends HeatTransferCoefficient {
-  const HeatTransferCoefficient$JoulePerSecondMeterSquareK([
+  HeatTransferCoefficient$JoulePerSecondMeterSquareK([
     super.value,
   ]);
 
@@ -317,15 +318,15 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
   @override
   String get displayName => 'joule/second meter² K';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+      HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
-  /// 1 [HeatTransferCoefficient$JoulePerSecondMeterSquareK] = 1.0 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$JoulePerSecondMeterSquareK] = 1.00000000000000000E+000 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -334,12 +335,12 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatTransferCoefficient$JoulePerSecondMeterSquareK] with new value
   @override
   HeatTransferCoefficient$JoulePerSecondMeterSquareK withValue(
-    num val,
+    Rational val,
   ) =>
       HeatTransferCoefficient$JoulePerSecondMeterSquareK(val);
 
@@ -352,7 +353,7 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -360,7 +361,7 @@ final class HeatTransferCoefficient$JoulePerSecondMeterSquareK
 /// Unit of [HeatTransferCoefficient]
 final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
     extends HeatTransferCoefficient {
-  const HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC([
+  HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC([
     super.value,
   ]);
 
@@ -391,15 +392,15 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
   @override
   String get displayName => 'kilocalorie/hour meter² °C';
 
-  static const _ratio = 1.163;
+  static final _ratio = Rational.parse('1.16300000000000000E+000');
 
   @override
   HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+      HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
-  /// 1 [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] ≈ 1.163 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] ≈ 1.16300000000000000E+000 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -408,12 +409,12 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC] with new value
   @override
   HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC(val);
 
@@ -426,7 +427,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -434,7 +435,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourMeterSquareDegreeC
 /// Unit of [HeatTransferCoefficient]
 final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
     extends HeatTransferCoefficient {
-  const HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC([
+  HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC([
     super.value,
   ]);
 
@@ -465,15 +466,15 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
   @override
   String get displayName => 'kilocalorie/hour foot² °C';
 
-  static const _ratio = 12.51842782;
+  static final _ratio = Rational.parse('1.25184278200000000E+001');
 
   @override
   HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+      HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
-  /// 1 [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] ≈ 12.51842782 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] ≈ 1.25184278200000000E+001 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -482,12 +483,12 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC] with new value
   @override
   HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC(val);
 
@@ -500,7 +501,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -508,7 +509,7 @@ final class HeatTransferCoefficient$KilocaloriePerHourFootSquareDegreeC
 /// Unit of [HeatTransferCoefficient]
 final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
     extends HeatTransferCoefficient {
-  const HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC([
+  HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC([
     super.value,
   ]);
 
@@ -539,15 +540,15 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
   @override
   String get displayName => 'calorie/second centimeter² °C';
 
-  static const _ratio = 41868.0;
+  static final _ratio = Rational.parse('4.18680000000000000E+004');
 
   @override
   HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+      HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
-  /// 1 [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] = 41868.0 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] = 4.18680000000000000E+004 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -556,12 +557,12 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC] with new value
   @override
   HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC(val);
 
@@ -574,7 +575,7 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -582,7 +583,7 @@ final class HeatTransferCoefficient$CaloriePerSecondCentimeterSquareDegreeC
 /// Unit of [HeatTransferCoefficient]
 final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
     extends HeatTransferCoefficient {
-  const HeatTransferCoefficient$BTUPerHourFootSquareDegreeF([
+  HeatTransferCoefficient$BTUPerHourFootSquareDegreeF([
     super.value,
   ]);
 
@@ -613,15 +614,15 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
   @override
   String get displayName => 'BTU/hour foot² °F';
 
-  static const _ratio = 5.678263398;
+  static final _ratio = Rational.parse('5.67826339800000000E+000');
 
   @override
   HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+      HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
-  /// 1 [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] ≈ 5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] ≈ 5.67826339800000000E+000 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -630,12 +631,12 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatTransferCoefficient$BTUPerHourFootSquareDegreeF] with new value
   @override
   HeatTransferCoefficient$BTUPerHourFootSquareDegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       HeatTransferCoefficient$BTUPerHourFootSquareDegreeF(val);
 
@@ -648,7 +649,7 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -656,7 +657,7 @@ final class HeatTransferCoefficient$BTUPerHourFootSquareDegreeF
 /// Unit of [HeatTransferCoefficient]
 final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
     extends HeatTransferCoefficient {
-  const HeatTransferCoefficient$CHUPerHourFootSquareDegreeC([
+  HeatTransferCoefficient$CHUPerHourFootSquareDegreeC([
     super.value,
   ]);
 
@@ -687,15 +688,15 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
   @override
   String get displayName => 'CHU/hour foot² °C';
 
-  static const _ratio = 5.678263398;
+  static final _ratio = Rational.parse('5.67826339800000000E+000');
 
   @override
   HeatTransferCoefficient get anchor =>
-      const HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
+      HeatTransferCoefficient$WattPerMeterSquareK(_ratio);
 
-  /// 1 [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] ≈ 5.678263398 [HeatTransferCoefficient$WattPerMeterSquareK]
+  /// 1 [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] ≈ 5.67826339800000000E+000 [HeatTransferCoefficient$WattPerMeterSquareK]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -704,12 +705,12 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatTransferCoefficient$CHUPerHourFootSquareDegreeC] with new value
   @override
   HeatTransferCoefficient$CHUPerHourFootSquareDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       HeatTransferCoefficient$CHUPerHourFootSquareDegreeC(val);
 
@@ -722,7 +723,7 @@ final class HeatTransferCoefficient$CHUPerHourFootSquareDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

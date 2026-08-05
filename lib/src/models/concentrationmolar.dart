@@ -14,7 +14,7 @@ part of '../../super_measurement.dart';
 /// [ConcentrationMolar$MillimolPerCentimeterCubic],
 /// [ConcentrationMolar$MillimolPerMillimeterCubic]
 sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
-  const ConcentrationMolar([
+  ConcentrationMolar([
     super.value,
   ]);
 
@@ -26,70 +26,71 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : ConcentrationMolar.anchor();
 
-  factory ConcentrationMolar.anchor() => const ConcentrationMolar$MolPerLiter();
+  factory ConcentrationMolar.anchor() => ConcentrationMolar$MolPerLiter();
 
   /// Convert to [ConcentrationMolar$MolPerMeterCubic]
   ConcentrationMolar get toMolPerMeterCubic => convertTo(
-        const ConcentrationMolar$MolPerMeterCubic(),
+        ConcentrationMolar$MolPerMeterCubic(),
       );
 
   /// Convert to [ConcentrationMolar$MolPerLiter]
   ConcentrationMolar get toMolPerLiter => convertTo(
-        const ConcentrationMolar$MolPerLiter(),
+        ConcentrationMolar$MolPerLiter(),
       );
 
   /// Convert to [ConcentrationMolar$MolPerCentimeterCubic]
   ConcentrationMolar get toMolPerCentimeterCubic => convertTo(
-        const ConcentrationMolar$MolPerCentimeterCubic(),
+        ConcentrationMolar$MolPerCentimeterCubic(),
       );
 
   /// Convert to [ConcentrationMolar$MolPerMillimeterCubic]
   ConcentrationMolar get toMolPerMillimeterCubic => convertTo(
-        const ConcentrationMolar$MolPerMillimeterCubic(),
+        ConcentrationMolar$MolPerMillimeterCubic(),
       );
 
   /// Convert to [ConcentrationMolar$KilomolPerMeterCubic]
   ConcentrationMolar get toKilomolPerMeterCubic => convertTo(
-        const ConcentrationMolar$KilomolPerMeterCubic(),
+        ConcentrationMolar$KilomolPerMeterCubic(),
       );
 
   /// Convert to [ConcentrationMolar$KilomolPerLiter]
   ConcentrationMolar get toKilomolPerLiter => convertTo(
-        const ConcentrationMolar$KilomolPerLiter(),
+        ConcentrationMolar$KilomolPerLiter(),
       );
 
   /// Convert to [ConcentrationMolar$KilomolPerCentimeterCubic]
   ConcentrationMolar get toKilomolPerCentimeterCubic => convertTo(
-        const ConcentrationMolar$KilomolPerCentimeterCubic(),
+        ConcentrationMolar$KilomolPerCentimeterCubic(),
       );
 
   /// Convert to [ConcentrationMolar$KilomolPerMillimeterCubic]
   ConcentrationMolar get toKilomolPerMillimeterCubic => convertTo(
-        const ConcentrationMolar$KilomolPerMillimeterCubic(),
+        ConcentrationMolar$KilomolPerMillimeterCubic(),
       );
 
   /// Convert to [ConcentrationMolar$MillimolPerMeterCubic]
   ConcentrationMolar get toMillimolPerMeterCubic => convertTo(
-        const ConcentrationMolar$MillimolPerMeterCubic(),
+        ConcentrationMolar$MillimolPerMeterCubic(),
       );
 
   /// Convert to [ConcentrationMolar$MillimolPerLiter]
   ConcentrationMolar get toMillimolPerLiter => convertTo(
-        const ConcentrationMolar$MillimolPerLiter(),
+        ConcentrationMolar$MillimolPerLiter(),
       );
 
   /// Convert to [ConcentrationMolar$MillimolPerCentimeterCubic]
   ConcentrationMolar get toMillimolPerCentimeterCubic => convertTo(
-        const ConcentrationMolar$MillimolPerCentimeterCubic(),
+        ConcentrationMolar$MillimolPerCentimeterCubic(),
       );
 
   /// Convert to [ConcentrationMolar$MillimolPerMillimeterCubic]
   ConcentrationMolar get toMillimolPerMillimeterCubic => convertTo(
-        const ConcentrationMolar$MillimolPerMillimeterCubic(),
+        ConcentrationMolar$MillimolPerMillimeterCubic(),
       );
 
   @override
@@ -100,24 +101,24 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
 
   static const _majorName = 'concentrationMolar';
 
-  static const molPerMeterCubic = ConcentrationMolar$MolPerMeterCubic();
-  static const molPerLiter = ConcentrationMolar$MolPerLiter();
-  static const molPerCentimeterCubic =
+  static final molPerMeterCubic = ConcentrationMolar$MolPerMeterCubic();
+  static final molPerLiter = ConcentrationMolar$MolPerLiter();
+  static final molPerCentimeterCubic =
       ConcentrationMolar$MolPerCentimeterCubic();
-  static const molPerMillimeterCubic =
+  static final molPerMillimeterCubic =
       ConcentrationMolar$MolPerMillimeterCubic();
-  static const kilomolPerMeterCubic = ConcentrationMolar$KilomolPerMeterCubic();
-  static const kilomolPerLiter = ConcentrationMolar$KilomolPerLiter();
-  static const kilomolPerCentimeterCubic =
+  static final kilomolPerMeterCubic = ConcentrationMolar$KilomolPerMeterCubic();
+  static final kilomolPerLiter = ConcentrationMolar$KilomolPerLiter();
+  static final kilomolPerCentimeterCubic =
       ConcentrationMolar$KilomolPerCentimeterCubic();
-  static const kilomolPerMillimeterCubic =
+  static final kilomolPerMillimeterCubic =
       ConcentrationMolar$KilomolPerMillimeterCubic();
-  static const millimolPerMeterCubic =
+  static final millimolPerMeterCubic =
       ConcentrationMolar$MillimolPerMeterCubic();
-  static const millimolPerLiter = ConcentrationMolar$MillimolPerLiter();
-  static const millimolPerCentimeterCubic =
+  static final millimolPerLiter = ConcentrationMolar$MillimolPerLiter();
+  static final millimolPerCentimeterCubic =
       ConcentrationMolar$MillimolPerCentimeterCubic();
-  static const millimolPerMillimeterCubic =
+  static final millimolPerMillimeterCubic =
       ConcentrationMolar$MillimolPerMillimeterCubic();
 
   @override
@@ -126,7 +127,7 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
   @override
   EnumValues<ConcentrationMolar> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <ConcentrationMolar>[
     molPerMeterCubic,
     molPerLiter,
     molPerCentimeterCubic,
@@ -141,7 +142,7 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
     millimolPerMillimeterCubic,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, ConcentrationMolar>{
     ConcentrationMolar$MolPerMeterCubic._minorName: molPerMeterCubic,
     ConcentrationMolar$MolPerLiter._minorName: molPerLiter,
     ConcentrationMolar$MolPerCentimeterCubic._minorName: molPerCentimeterCubic,
@@ -163,7 +164,7 @@ sealed class ConcentrationMolar extends Unit<ConcentrationMolar> {
 
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
-  const ConcentrationMolar$MolPerMeterCubic([
+  ConcentrationMolar$MolPerMeterCubic([
     super.value,
   ]);
 
@@ -194,14 +195,14 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
   @override
   String get displayName => 'mol/meter³';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$MolPerMeterCubic] ≈ 0.001 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MolPerMeterCubic] ≈ 1.00000000000000000E-003 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -210,12 +211,12 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$MolPerMeterCubic] with new value
   @override
   ConcentrationMolar$MolPerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$MolPerMeterCubic(val);
 
@@ -228,14 +229,14 @@ final class ConcentrationMolar$MolPerMeterCubic extends ConcentrationMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
-  const ConcentrationMolar$MolPerLiter([
+  ConcentrationMolar$MolPerLiter([
     super.value,
   ]);
 
@@ -266,14 +267,14 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
   @override
   String get displayName => 'mol/liter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
   /// Default (anchor) unit of [ConcentrationMolar]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -282,12 +283,12 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$MolPerLiter] with new value
   @override
   ConcentrationMolar$MolPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$MolPerLiter(val);
 
@@ -300,7 +301,7 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -308,7 +309,7 @@ final class ConcentrationMolar$MolPerLiter extends ConcentrationMolar {
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$MolPerCentimeterCubic
     extends ConcentrationMolar {
-  const ConcentrationMolar$MolPerCentimeterCubic([
+  ConcentrationMolar$MolPerCentimeterCubic([
     super.value,
   ]);
 
@@ -339,14 +340,14 @@ final class ConcentrationMolar$MolPerCentimeterCubic
   @override
   String get displayName => 'mol/centimeter³';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$MolPerCentimeterCubic] = 1000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MolPerCentimeterCubic] = 1.00000000000000000E+003 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -355,12 +356,12 @@ final class ConcentrationMolar$MolPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$MolPerCentimeterCubic] with new value
   @override
   ConcentrationMolar$MolPerCentimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$MolPerCentimeterCubic(val);
 
@@ -373,7 +374,7 @@ final class ConcentrationMolar$MolPerCentimeterCubic
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -381,7 +382,7 @@ final class ConcentrationMolar$MolPerCentimeterCubic
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$MolPerMillimeterCubic
     extends ConcentrationMolar {
-  const ConcentrationMolar$MolPerMillimeterCubic([
+  ConcentrationMolar$MolPerMillimeterCubic([
     super.value,
   ]);
 
@@ -412,14 +413,14 @@ final class ConcentrationMolar$MolPerMillimeterCubic
   @override
   String get displayName => 'mol/millimeter³';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$MolPerMillimeterCubic] = 1000000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MolPerMillimeterCubic] = 1.00000000000000000E+006 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -428,12 +429,12 @@ final class ConcentrationMolar$MolPerMillimeterCubic
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$MolPerMillimeterCubic] with new value
   @override
   ConcentrationMolar$MolPerMillimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$MolPerMillimeterCubic(val);
 
@@ -446,14 +447,14 @@ final class ConcentrationMolar$MolPerMillimeterCubic
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
-  const ConcentrationMolar$KilomolPerMeterCubic([
+  ConcentrationMolar$KilomolPerMeterCubic([
     super.value,
   ]);
 
@@ -484,14 +485,14 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
   @override
   String get displayName => 'kilomol/meter³';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$KilomolPerMeterCubic] = 1.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$KilomolPerMeterCubic] = 1.00000000000000000E+000 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -500,12 +501,12 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$KilomolPerMeterCubic] with new value
   @override
   ConcentrationMolar$KilomolPerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$KilomolPerMeterCubic(val);
 
@@ -518,14 +519,14 @@ final class ConcentrationMolar$KilomolPerMeterCubic extends ConcentrationMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
-  const ConcentrationMolar$KilomolPerLiter([
+  ConcentrationMolar$KilomolPerLiter([
     super.value,
   ]);
 
@@ -556,14 +557,14 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
   @override
   String get displayName => 'kilomol/liter';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$KilomolPerLiter] = 1000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$KilomolPerLiter] = 1.00000000000000000E+003 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -572,12 +573,12 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$KilomolPerLiter] with new value
   @override
   ConcentrationMolar$KilomolPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$KilomolPerLiter(val);
 
@@ -590,7 +591,7 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -598,7 +599,7 @@ final class ConcentrationMolar$KilomolPerLiter extends ConcentrationMolar {
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$KilomolPerCentimeterCubic
     extends ConcentrationMolar {
-  const ConcentrationMolar$KilomolPerCentimeterCubic([
+  ConcentrationMolar$KilomolPerCentimeterCubic([
     super.value,
   ]);
 
@@ -629,14 +630,14 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
   @override
   String get displayName => 'kilomol/centimeter³';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$KilomolPerCentimeterCubic] = 1000000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$KilomolPerCentimeterCubic] = 1.00000000000000000E+006 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -645,12 +646,12 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$KilomolPerCentimeterCubic] with new value
   @override
   ConcentrationMolar$KilomolPerCentimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$KilomolPerCentimeterCubic(val);
 
@@ -663,7 +664,7 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -671,7 +672,7 @@ final class ConcentrationMolar$KilomolPerCentimeterCubic
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$KilomolPerMillimeterCubic
     extends ConcentrationMolar {
-  const ConcentrationMolar$KilomolPerMillimeterCubic([
+  ConcentrationMolar$KilomolPerMillimeterCubic([
     super.value,
   ]);
 
@@ -702,14 +703,14 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
   @override
   String get displayName => 'kilomol/millimeter³';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$KilomolPerMillimeterCubic] = 1000000000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$KilomolPerMillimeterCubic] = 1.00000000000000000E+009 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -718,12 +719,12 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$KilomolPerMillimeterCubic] with new value
   @override
   ConcentrationMolar$KilomolPerMillimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$KilomolPerMillimeterCubic(val);
 
@@ -736,7 +737,7 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -744,7 +745,7 @@ final class ConcentrationMolar$KilomolPerMillimeterCubic
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$MillimolPerMeterCubic
     extends ConcentrationMolar {
-  const ConcentrationMolar$MillimolPerMeterCubic([
+  ConcentrationMolar$MillimolPerMeterCubic([
     super.value,
   ]);
 
@@ -775,14 +776,14 @@ final class ConcentrationMolar$MillimolPerMeterCubic
   @override
   String get displayName => 'millimol/meter³';
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$MillimolPerMeterCubic] ≈ 0.000001 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MillimolPerMeterCubic] ≈ 1.00000000000000000E-006 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -791,12 +792,12 @@ final class ConcentrationMolar$MillimolPerMeterCubic
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$MillimolPerMeterCubic] with new value
   @override
   ConcentrationMolar$MillimolPerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$MillimolPerMeterCubic(val);
 
@@ -809,14 +810,14 @@ final class ConcentrationMolar$MillimolPerMeterCubic
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
-  const ConcentrationMolar$MillimolPerLiter([
+  ConcentrationMolar$MillimolPerLiter([
     super.value,
   ]);
 
@@ -847,14 +848,14 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
   @override
   String get displayName => 'millimol/liter';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$MillimolPerLiter] ≈ 0.001 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MillimolPerLiter] ≈ 1.00000000000000000E-003 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -863,12 +864,12 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$MillimolPerLiter] with new value
   @override
   ConcentrationMolar$MillimolPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$MillimolPerLiter(val);
 
@@ -881,7 +882,7 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -889,7 +890,7 @@ final class ConcentrationMolar$MillimolPerLiter extends ConcentrationMolar {
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$MillimolPerCentimeterCubic
     extends ConcentrationMolar {
-  const ConcentrationMolar$MillimolPerCentimeterCubic([
+  ConcentrationMolar$MillimolPerCentimeterCubic([
     super.value,
   ]);
 
@@ -920,14 +921,14 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
   @override
   String get displayName => 'millimol/centimeter³';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$MillimolPerCentimeterCubic] = 1.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MillimolPerCentimeterCubic] = 1.00000000000000000E+000 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -936,12 +937,12 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$MillimolPerCentimeterCubic] with new value
   @override
   ConcentrationMolar$MillimolPerCentimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$MillimolPerCentimeterCubic(val);
 
@@ -954,7 +955,7 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -962,7 +963,7 @@ final class ConcentrationMolar$MillimolPerCentimeterCubic
 /// Unit of [ConcentrationMolar]
 final class ConcentrationMolar$MillimolPerMillimeterCubic
     extends ConcentrationMolar {
-  const ConcentrationMolar$MillimolPerMillimeterCubic([
+  ConcentrationMolar$MillimolPerMillimeterCubic([
     super.value,
   ]);
 
@@ -993,14 +994,14 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
   @override
   String get displayName => 'millimol/millimeter³';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  ConcentrationMolar get anchor => const ConcentrationMolar$MolPerLiter(_ratio);
+  ConcentrationMolar get anchor => ConcentrationMolar$MolPerLiter(_ratio);
 
-  /// 1 [ConcentrationMolar$MillimolPerMillimeterCubic] = 1000.0 [ConcentrationMolar$MolPerLiter]
+  /// 1 [ConcentrationMolar$MillimolPerMillimeterCubic] = 1.00000000000000000E+003 [ConcentrationMolar$MolPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1009,12 +1010,12 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ConcentrationMolar$MillimolPerMillimeterCubic] with new value
   @override
   ConcentrationMolar$MillimolPerMillimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       ConcentrationMolar$MillimolPerMillimeterCubic(val);
 
@@ -1027,7 +1028,7 @@ final class ConcentrationMolar$MillimolPerMillimeterCubic
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

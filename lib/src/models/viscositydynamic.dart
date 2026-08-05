@@ -21,7 +21,7 @@ part of '../../super_measurement.dart';
 /// [ViscosityDynamic$SlugPerFootSecond],
 /// [ViscosityDynamic$PoundPerFootSecond], [ViscosityDynamic$PoundPerFootHour]
 sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
-  const ViscosityDynamic([
+  ViscosityDynamic([
     super.value,
   ]);
 
@@ -33,146 +33,147 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : ViscosityDynamic.anchor();
 
   factory ViscosityDynamic.anchor() =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare();
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare();
 
   /// Convert to [ViscosityDynamic$NewtonSecondPerMeterSquare]
   ViscosityDynamic get toNewtonSecondPerMeterSquare => convertTo(
-        const ViscosityDynamic$NewtonSecondPerMeterSquare(),
+        ViscosityDynamic$NewtonSecondPerMeterSquare(),
       );
 
   /// Convert to [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   ViscosityDynamic get toMillinewtonSecondPerMeterSquare => convertTo(
-        const ViscosityDynamic$MillinewtonSecondPerMeterSquare(),
+        ViscosityDynamic$MillinewtonSecondPerMeterSquare(),
       );
 
   /// Convert to [ViscosityDynamic$DyneSecondPerCentimeterSquare]
   ViscosityDynamic get toDyneSecondPerCentimeterSquare => convertTo(
-        const ViscosityDynamic$DyneSecondPerCentimeterSquare(),
+        ViscosityDynamic$DyneSecondPerCentimeterSquare(),
       );
 
   /// Convert to [ViscosityDynamic$Exapoise]
   ViscosityDynamic get toExapoise => convertTo(
-        const ViscosityDynamic$Exapoise(),
+        ViscosityDynamic$Exapoise(),
       );
 
   /// Convert to [ViscosityDynamic$Petapoise]
   ViscosityDynamic get toPetapoise => convertTo(
-        const ViscosityDynamic$Petapoise(),
+        ViscosityDynamic$Petapoise(),
       );
 
   /// Convert to [ViscosityDynamic$Terapoise]
   ViscosityDynamic get toTerapoise => convertTo(
-        const ViscosityDynamic$Terapoise(),
+        ViscosityDynamic$Terapoise(),
       );
 
   /// Convert to [ViscosityDynamic$Gigapoise]
   ViscosityDynamic get toGigapoise => convertTo(
-        const ViscosityDynamic$Gigapoise(),
+        ViscosityDynamic$Gigapoise(),
       );
 
   /// Convert to [ViscosityDynamic$Megapoise]
   ViscosityDynamic get toMegapoise => convertTo(
-        const ViscosityDynamic$Megapoise(),
+        ViscosityDynamic$Megapoise(),
       );
 
   /// Convert to [ViscosityDynamic$Kilopoise]
   ViscosityDynamic get toKilopoise => convertTo(
-        const ViscosityDynamic$Kilopoise(),
+        ViscosityDynamic$Kilopoise(),
       );
 
   /// Convert to [ViscosityDynamic$Hectopoise]
   ViscosityDynamic get toHectopoise => convertTo(
-        const ViscosityDynamic$Hectopoise(),
+        ViscosityDynamic$Hectopoise(),
       );
 
   /// Convert to [ViscosityDynamic$Dekapoise]
   ViscosityDynamic get toDekapoise => convertTo(
-        const ViscosityDynamic$Dekapoise(),
+        ViscosityDynamic$Dekapoise(),
       );
 
   /// Convert to [ViscosityDynamic$Poise]
   ViscosityDynamic get toPoise => convertTo(
-        const ViscosityDynamic$Poise(),
+        ViscosityDynamic$Poise(),
       );
 
   /// Convert to [ViscosityDynamic$Decipoise]
   ViscosityDynamic get toDecipoise => convertTo(
-        const ViscosityDynamic$Decipoise(),
+        ViscosityDynamic$Decipoise(),
       );
 
   /// Convert to [ViscosityDynamic$Centipoise]
   ViscosityDynamic get toCentipoise => convertTo(
-        const ViscosityDynamic$Centipoise(),
+        ViscosityDynamic$Centipoise(),
       );
 
   /// Convert to [ViscosityDynamic$Millipoise]
   ViscosityDynamic get toMillipoise => convertTo(
-        const ViscosityDynamic$Millipoise(),
+        ViscosityDynamic$Millipoise(),
       );
 
   /// Convert to [ViscosityDynamic$Micropoise]
   ViscosityDynamic get toMicropoise => convertTo(
-        const ViscosityDynamic$Micropoise(),
+        ViscosityDynamic$Micropoise(),
       );
 
   /// Convert to [ViscosityDynamic$Nanopoise]
   ViscosityDynamic get toNanopoise => convertTo(
-        const ViscosityDynamic$Nanopoise(),
+        ViscosityDynamic$Nanopoise(),
       );
 
   /// Convert to [ViscosityDynamic$Picopoise]
   ViscosityDynamic get toPicopoise => convertTo(
-        const ViscosityDynamic$Picopoise(),
+        ViscosityDynamic$Picopoise(),
       );
 
   /// Convert to [ViscosityDynamic$Femtopoise]
   ViscosityDynamic get toFemtopoise => convertTo(
-        const ViscosityDynamic$Femtopoise(),
+        ViscosityDynamic$Femtopoise(),
       );
 
   /// Convert to [ViscosityDynamic$Attopoise]
   ViscosityDynamic get toAttopoise => convertTo(
-        const ViscosityDynamic$Attopoise(),
+        ViscosityDynamic$Attopoise(),
       );
 
   /// Convert to [ViscosityDynamic$PoundForceSecondPerInchSquare]
   ViscosityDynamic get toPoundForceSecondPerInchSquare => convertTo(
-        const ViscosityDynamic$PoundForceSecondPerInchSquare(),
+        ViscosityDynamic$PoundForceSecondPerInchSquare(),
       );
 
   /// Convert to [ViscosityDynamic$PoundForceSecondPerFootSquare]
   ViscosityDynamic get toPoundForceSecondPerFootSquare => convertTo(
-        const ViscosityDynamic$PoundForceSecondPerFootSquare(),
+        ViscosityDynamic$PoundForceSecondPerFootSquare(),
       );
 
   /// Convert to [ViscosityDynamic$PoundalSecondPerFootSquare]
   ViscosityDynamic get toPoundalSecondPerFootSquare => convertTo(
-        const ViscosityDynamic$PoundalSecondPerFootSquare(),
+        ViscosityDynamic$PoundalSecondPerFootSquare(),
       );
 
   /// Convert to [ViscosityDynamic$GramPerCentimeterSecond]
   ViscosityDynamic get toGramPerCentimeterSecond => convertTo(
-        const ViscosityDynamic$GramPerCentimeterSecond(),
+        ViscosityDynamic$GramPerCentimeterSecond(),
       );
 
   /// Convert to [ViscosityDynamic$SlugPerFootSecond]
   ViscosityDynamic get toSlugPerFootSecond => convertTo(
-        const ViscosityDynamic$SlugPerFootSecond(),
+        ViscosityDynamic$SlugPerFootSecond(),
       );
 
   /// Convert to [ViscosityDynamic$PoundPerFootSecond]
   ViscosityDynamic get toPoundPerFootSecond => convertTo(
-        const ViscosityDynamic$PoundPerFootSecond(),
+        ViscosityDynamic$PoundPerFootSecond(),
       );
 
   /// Convert to [ViscosityDynamic$PoundPerFootHour]
   ViscosityDynamic get toPoundPerFootHour => convertTo(
-        const ViscosityDynamic$PoundPerFootHour(),
+        ViscosityDynamic$PoundPerFootHour(),
       );
 
   @override
@@ -183,40 +184,40 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
 
   static const _majorName = 'viscosityDynamic';
 
-  static const newtonSecondPerMeterSquare =
+  static final newtonSecondPerMeterSquare =
       ViscosityDynamic$NewtonSecondPerMeterSquare();
-  static const millinewtonSecondPerMeterSquare =
+  static final millinewtonSecondPerMeterSquare =
       ViscosityDynamic$MillinewtonSecondPerMeterSquare();
-  static const dyneSecondPerCentimeterSquare =
+  static final dyneSecondPerCentimeterSquare =
       ViscosityDynamic$DyneSecondPerCentimeterSquare();
-  static const exapoise = ViscosityDynamic$Exapoise();
-  static const petapoise = ViscosityDynamic$Petapoise();
-  static const terapoise = ViscosityDynamic$Terapoise();
-  static const gigapoise = ViscosityDynamic$Gigapoise();
-  static const megapoise = ViscosityDynamic$Megapoise();
-  static const kilopoise = ViscosityDynamic$Kilopoise();
-  static const hectopoise = ViscosityDynamic$Hectopoise();
-  static const dekapoise = ViscosityDynamic$Dekapoise();
-  static const poise = ViscosityDynamic$Poise();
-  static const decipoise = ViscosityDynamic$Decipoise();
-  static const centipoise = ViscosityDynamic$Centipoise();
-  static const millipoise = ViscosityDynamic$Millipoise();
-  static const micropoise = ViscosityDynamic$Micropoise();
-  static const nanopoise = ViscosityDynamic$Nanopoise();
-  static const picopoise = ViscosityDynamic$Picopoise();
-  static const femtopoise = ViscosityDynamic$Femtopoise();
-  static const attopoise = ViscosityDynamic$Attopoise();
-  static const poundForceSecondPerInchSquare =
+  static final exapoise = ViscosityDynamic$Exapoise();
+  static final petapoise = ViscosityDynamic$Petapoise();
+  static final terapoise = ViscosityDynamic$Terapoise();
+  static final gigapoise = ViscosityDynamic$Gigapoise();
+  static final megapoise = ViscosityDynamic$Megapoise();
+  static final kilopoise = ViscosityDynamic$Kilopoise();
+  static final hectopoise = ViscosityDynamic$Hectopoise();
+  static final dekapoise = ViscosityDynamic$Dekapoise();
+  static final poise = ViscosityDynamic$Poise();
+  static final decipoise = ViscosityDynamic$Decipoise();
+  static final centipoise = ViscosityDynamic$Centipoise();
+  static final millipoise = ViscosityDynamic$Millipoise();
+  static final micropoise = ViscosityDynamic$Micropoise();
+  static final nanopoise = ViscosityDynamic$Nanopoise();
+  static final picopoise = ViscosityDynamic$Picopoise();
+  static final femtopoise = ViscosityDynamic$Femtopoise();
+  static final attopoise = ViscosityDynamic$Attopoise();
+  static final poundForceSecondPerInchSquare =
       ViscosityDynamic$PoundForceSecondPerInchSquare();
-  static const poundForceSecondPerFootSquare =
+  static final poundForceSecondPerFootSquare =
       ViscosityDynamic$PoundForceSecondPerFootSquare();
-  static const poundalSecondPerFootSquare =
+  static final poundalSecondPerFootSquare =
       ViscosityDynamic$PoundalSecondPerFootSquare();
-  static const gramPerCentimeterSecond =
+  static final gramPerCentimeterSecond =
       ViscosityDynamic$GramPerCentimeterSecond();
-  static const slugPerFootSecond = ViscosityDynamic$SlugPerFootSecond();
-  static const poundPerFootSecond = ViscosityDynamic$PoundPerFootSecond();
-  static const poundPerFootHour = ViscosityDynamic$PoundPerFootHour();
+  static final slugPerFootSecond = ViscosityDynamic$SlugPerFootSecond();
+  static final poundPerFootSecond = ViscosityDynamic$PoundPerFootSecond();
+  static final poundPerFootHour = ViscosityDynamic$PoundPerFootHour();
 
   @override
   List<ViscosityDynamic> get units => values;
@@ -224,7 +225,7 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
   @override
   EnumValues<ViscosityDynamic> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <ViscosityDynamic>[
     newtonSecondPerMeterSquare,
     millinewtonSecondPerMeterSquare,
     dyneSecondPerCentimeterSquare,
@@ -254,7 +255,7 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
     poundPerFootHour,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, ViscosityDynamic>{
     ViscosityDynamic$NewtonSecondPerMeterSquare._minorName:
         newtonSecondPerMeterSquare,
     ViscosityDynamic$MillinewtonSecondPerMeterSquare._minorName:
@@ -295,7 +296,7 @@ sealed class ViscosityDynamic extends Unit<ViscosityDynamic> {
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$NewtonSecondPerMeterSquare
     extends ViscosityDynamic {
-  const ViscosityDynamic$NewtonSecondPerMeterSquare([
+  ViscosityDynamic$NewtonSecondPerMeterSquare([
     super.value,
   ]);
 
@@ -326,15 +327,15 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
   @override
   String get displayName => 'newton-second/meter²';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$NewtonSecondPerMeterSquare] = 1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$NewtonSecondPerMeterSquare] = 1.00000000000000000E+003 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -343,12 +344,12 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$NewtonSecondPerMeterSquare] with new value
   @override
   ViscosityDynamic$NewtonSecondPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$NewtonSecondPerMeterSquare(val);
 
@@ -361,7 +362,7 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -369,7 +370,7 @@ final class ViscosityDynamic$NewtonSecondPerMeterSquare
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
     extends ViscosityDynamic {
-  const ViscosityDynamic$MillinewtonSecondPerMeterSquare([
+  ViscosityDynamic$MillinewtonSecondPerMeterSquare([
     super.value,
   ]);
 
@@ -400,15 +401,15 @@ final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
   @override
   String get displayName => 'millinewton-second/meter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
   /// Default (anchor) unit of [ViscosityDynamic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -417,12 +418,12 @@ final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$MillinewtonSecondPerMeterSquare] with new value
   @override
   ViscosityDynamic$MillinewtonSecondPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$MillinewtonSecondPerMeterSquare(val);
 
@@ -435,7 +436,7 @@ final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -443,7 +444,7 @@ final class ViscosityDynamic$MillinewtonSecondPerMeterSquare
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$DyneSecondPerCentimeterSquare
     extends ViscosityDynamic {
-  const ViscosityDynamic$DyneSecondPerCentimeterSquare([
+  ViscosityDynamic$DyneSecondPerCentimeterSquare([
     super.value,
   ]);
 
@@ -474,15 +475,15 @@ final class ViscosityDynamic$DyneSecondPerCentimeterSquare
   @override
   String get displayName => 'dyne-second/centimeter²';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$DyneSecondPerCentimeterSquare] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$DyneSecondPerCentimeterSquare] = 1.00000000000000000E+002 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -491,12 +492,12 @@ final class ViscosityDynamic$DyneSecondPerCentimeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$DyneSecondPerCentimeterSquare] with new value
   @override
   ViscosityDynamic$DyneSecondPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$DyneSecondPerCentimeterSquare(val);
 
@@ -509,14 +510,14 @@ final class ViscosityDynamic$DyneSecondPerCentimeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
-  const ViscosityDynamic$Exapoise([
+  ViscosityDynamic$Exapoise([
     super.value,
   ]);
 
@@ -547,15 +548,15 @@ final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+020');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Exapoise] = 100000000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Exapoise] = 1.00000000000000000E+020 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -563,12 +564,12 @@ final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Exapoise] with new value
   @override
   ViscosityDynamic$Exapoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Exapoise(val);
 
@@ -581,14 +582,14 @@ final class ViscosityDynamic$Exapoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
-  const ViscosityDynamic$Petapoise([
+  ViscosityDynamic$Petapoise([
     super.value,
   ]);
 
@@ -619,15 +620,15 @@ final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+017');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Petapoise] = 100000000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Petapoise] = 1.00000000000000000E+017 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -635,12 +636,12 @@ final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Petapoise] with new value
   @override
   ViscosityDynamic$Petapoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Petapoise(val);
 
@@ -653,14 +654,14 @@ final class ViscosityDynamic$Petapoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
-  const ViscosityDynamic$Terapoise([
+  ViscosityDynamic$Terapoise([
     super.value,
   ]);
 
@@ -691,15 +692,15 @@ final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+014');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Terapoise] = 100000000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Terapoise] = 1.00000000000000000E+014 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -707,12 +708,12 @@ final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Terapoise] with new value
   @override
   ViscosityDynamic$Terapoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Terapoise(val);
 
@@ -725,14 +726,14 @@ final class ViscosityDynamic$Terapoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
-  const ViscosityDynamic$Gigapoise([
+  ViscosityDynamic$Gigapoise([
     super.value,
   ]);
 
@@ -763,15 +764,15 @@ final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+011');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Gigapoise] = 100000000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Gigapoise] = 1.00000000000000000E+011 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -779,12 +780,12 @@ final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Gigapoise] with new value
   @override
   ViscosityDynamic$Gigapoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Gigapoise(val);
 
@@ -797,14 +798,14 @@ final class ViscosityDynamic$Gigapoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
-  const ViscosityDynamic$Megapoise([
+  ViscosityDynamic$Megapoise([
     super.value,
   ]);
 
@@ -835,15 +836,15 @@ final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+008');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Megapoise] = 100000000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Megapoise] = 1.00000000000000000E+008 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -851,12 +852,12 @@ final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Megapoise] with new value
   @override
   ViscosityDynamic$Megapoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Megapoise(val);
 
@@ -869,14 +870,14 @@ final class ViscosityDynamic$Megapoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
-  const ViscosityDynamic$Kilopoise([
+  ViscosityDynamic$Kilopoise([
     super.value,
   ]);
 
@@ -907,15 +908,15 @@ final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Kilopoise] = 100000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Kilopoise] = 1.00000000000000000E+005 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -923,12 +924,12 @@ final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Kilopoise] with new value
   @override
   ViscosityDynamic$Kilopoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Kilopoise(val);
 
@@ -941,14 +942,14 @@ final class ViscosityDynamic$Kilopoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
-  const ViscosityDynamic$Hectopoise([
+  ViscosityDynamic$Hectopoise([
     super.value,
   ]);
 
@@ -979,15 +980,15 @@ final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Hectopoise] = 10000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Hectopoise] = 1.00000000000000000E+004 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -995,12 +996,12 @@ final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Hectopoise] with new value
   @override
   ViscosityDynamic$Hectopoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Hectopoise(val);
 
@@ -1013,14 +1014,14 @@ final class ViscosityDynamic$Hectopoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
-  const ViscosityDynamic$Dekapoise([
+  ViscosityDynamic$Dekapoise([
     super.value,
   ]);
 
@@ -1051,15 +1052,15 @@ final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Dekapoise] = 1000.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Dekapoise] = 1.00000000000000000E+003 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1067,12 +1068,12 @@ final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Dekapoise] with new value
   @override
   ViscosityDynamic$Dekapoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Dekapoise(val);
 
@@ -1085,14 +1086,14 @@ final class ViscosityDynamic$Dekapoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Poise extends ViscosityDynamic {
-  const ViscosityDynamic$Poise([
+  ViscosityDynamic$Poise([
     super.value,
   ]);
 
@@ -1123,15 +1124,15 @@ final class ViscosityDynamic$Poise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Poise] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Poise] = 1.00000000000000000E+002 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1139,12 +1140,12 @@ final class ViscosityDynamic$Poise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Poise] with new value
   @override
   ViscosityDynamic$Poise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Poise(val);
 
@@ -1157,14 +1158,14 @@ final class ViscosityDynamic$Poise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
-  const ViscosityDynamic$Decipoise([
+  ViscosityDynamic$Decipoise([
     super.value,
   ]);
 
@@ -1195,15 +1196,15 @@ final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Decipoise] = 10.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Decipoise] = 1.00000000000000000E+001 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1211,12 +1212,12 @@ final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Decipoise] with new value
   @override
   ViscosityDynamic$Decipoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Decipoise(val);
 
@@ -1229,14 +1230,14 @@ final class ViscosityDynamic$Decipoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
-  const ViscosityDynamic$Centipoise([
+  ViscosityDynamic$Centipoise([
     super.value,
   ]);
 
@@ -1267,15 +1268,15 @@ final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Centipoise] = 1.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Centipoise] = 1.00000000000000000E+000 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1283,12 +1284,12 @@ final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Centipoise] with new value
   @override
   ViscosityDynamic$Centipoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Centipoise(val);
 
@@ -1301,14 +1302,14 @@ final class ViscosityDynamic$Centipoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
-  const ViscosityDynamic$Millipoise([
+  ViscosityDynamic$Millipoise([
     super.value,
   ]);
 
@@ -1339,15 +1340,15 @@ final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Millipoise] ≈ 0.1 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Millipoise] ≈ 1.00000000000000000E-001 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1355,12 +1356,12 @@ final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Millipoise] with new value
   @override
   ViscosityDynamic$Millipoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Millipoise(val);
 
@@ -1373,14 +1374,14 @@ final class ViscosityDynamic$Millipoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
-  const ViscosityDynamic$Micropoise([
+  ViscosityDynamic$Micropoise([
     super.value,
   ]);
 
@@ -1411,15 +1412,15 @@ final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.0001;
+  static final _ratio = Rational.parse('1.00000000000000000E-004');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Micropoise] ≈ 0.0001 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Micropoise] ≈ 1.00000000000000000E-004 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1427,12 +1428,12 @@ final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Micropoise] with new value
   @override
   ViscosityDynamic$Micropoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Micropoise(val);
 
@@ -1445,14 +1446,14 @@ final class ViscosityDynamic$Micropoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
-  const ViscosityDynamic$Nanopoise([
+  ViscosityDynamic$Nanopoise([
     super.value,
   ]);
 
@@ -1483,15 +1484,15 @@ final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-7;
+  static final _ratio = Rational.parse('1.00000000000000000E-007');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Nanopoise] ≈ 1e-7 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Nanopoise] ≈ 1.00000000000000000E-007 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1499,12 +1500,12 @@ final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Nanopoise] with new value
   @override
   ViscosityDynamic$Nanopoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Nanopoise(val);
 
@@ -1517,14 +1518,14 @@ final class ViscosityDynamic$Nanopoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
-  const ViscosityDynamic$Picopoise([
+  ViscosityDynamic$Picopoise([
     super.value,
   ]);
 
@@ -1555,15 +1556,15 @@ final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-10;
+  static final _ratio = Rational.parse('1.00000000000000000E-010');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Picopoise] ≈ 1e-10 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Picopoise] ≈ 1.00000000000000000E-010 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1571,12 +1572,12 @@ final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Picopoise] with new value
   @override
   ViscosityDynamic$Picopoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Picopoise(val);
 
@@ -1589,14 +1590,14 @@ final class ViscosityDynamic$Picopoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
-  const ViscosityDynamic$Femtopoise([
+  ViscosityDynamic$Femtopoise([
     super.value,
   ]);
 
@@ -1627,15 +1628,15 @@ final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-13;
+  static final _ratio = Rational.parse('1.00000000000000000E-013');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Femtopoise] ≈ 1e-13 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Femtopoise] ≈ 1.00000000000000000E-013 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1643,12 +1644,12 @@ final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Femtopoise] with new value
   @override
   ViscosityDynamic$Femtopoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Femtopoise(val);
 
@@ -1661,14 +1662,14 @@ final class ViscosityDynamic$Femtopoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
-  const ViscosityDynamic$Attopoise([
+  ViscosityDynamic$Attopoise([
     super.value,
   ]);
 
@@ -1699,15 +1700,15 @@ final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-16;
+  static final _ratio = Rational.parse('1.00000000000000000E-016');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$Attopoise] ≈ 1e-16 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$Attopoise] ≈ 1.00000000000000000E-016 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1715,12 +1716,12 @@ final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$Attopoise] with new value
   @override
   ViscosityDynamic$Attopoise withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$Attopoise(val);
 
@@ -1733,7 +1734,7 @@ final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1741,7 +1742,7 @@ final class ViscosityDynamic$Attopoise extends ViscosityDynamic {
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$PoundForceSecondPerInchSquare
     extends ViscosityDynamic {
-  const ViscosityDynamic$PoundForceSecondPerInchSquare([
+  ViscosityDynamic$PoundForceSecondPerInchSquare([
     super.value,
   ]);
 
@@ -1772,15 +1773,15 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
   @override
   String get displayName => 'pound force-second/inch²';
 
-  static const _ratio = 6894757.0;
+  static final _ratio = Rational.parse('6.89475700000000000E+006');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$PoundForceSecondPerInchSquare] = 6894757.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundForceSecondPerInchSquare] = 6.89475700000000000E+006 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1789,12 +1790,12 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$PoundForceSecondPerInchSquare] with new value
   @override
   ViscosityDynamic$PoundForceSecondPerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$PoundForceSecondPerInchSquare(val);
 
@@ -1807,7 +1808,7 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1815,7 +1816,7 @@ final class ViscosityDynamic$PoundForceSecondPerInchSquare
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$PoundForceSecondPerFootSquare
     extends ViscosityDynamic {
-  const ViscosityDynamic$PoundForceSecondPerFootSquare([
+  ViscosityDynamic$PoundForceSecondPerFootSquare([
     super.value,
   ]);
 
@@ -1846,15 +1847,15 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
   @override
   String get displayName => 'pound force-second/foot²';
 
-  static const _ratio = 47880.25898022151;
+  static final _ratio = Rational.parse('4.78802589802215078E+004');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$PoundForceSecondPerFootSquare] ≈ 47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundForceSecondPerFootSquare] ≈ 4.78802589802215078E+004 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1863,12 +1864,12 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$PoundForceSecondPerFootSquare] with new value
   @override
   ViscosityDynamic$PoundForceSecondPerFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$PoundForceSecondPerFootSquare(val);
 
@@ -1881,7 +1882,7 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1889,7 +1890,7 @@ final class ViscosityDynamic$PoundForceSecondPerFootSquare
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$PoundalSecondPerFootSquare
     extends ViscosityDynamic {
-  const ViscosityDynamic$PoundalSecondPerFootSquare([
+  ViscosityDynamic$PoundalSecondPerFootSquare([
     super.value,
   ]);
 
@@ -1920,15 +1921,15 @@ final class ViscosityDynamic$PoundalSecondPerFootSquare
   @override
   String get displayName => 'poundal-second/foot²';
 
-  static const _ratio = 1488.1639435684617;
+  static final _ratio = Rational.parse('1.48816394356846170E+003');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$PoundalSecondPerFootSquare] ≈ 1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundalSecondPerFootSquare] ≈ 1.48816394356846170E+003 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1937,12 +1938,12 @@ final class ViscosityDynamic$PoundalSecondPerFootSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$PoundalSecondPerFootSquare] with new value
   @override
   ViscosityDynamic$PoundalSecondPerFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$PoundalSecondPerFootSquare(val);
 
@@ -1955,14 +1956,14 @@ final class ViscosityDynamic$PoundalSecondPerFootSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
-  const ViscosityDynamic$GramPerCentimeterSecond([
+  ViscosityDynamic$GramPerCentimeterSecond([
     super.value,
   ]);
 
@@ -1993,15 +1994,15 @@ final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
   @override
   String get displayName => 'gram/centimeter-second';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$GramPerCentimeterSecond] = 100.0 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$GramPerCentimeterSecond] = 1.00000000000000000E+002 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2010,12 +2011,12 @@ final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$GramPerCentimeterSecond] with new value
   @override
   ViscosityDynamic$GramPerCentimeterSecond withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$GramPerCentimeterSecond(val);
 
@@ -2028,14 +2029,14 @@ final class ViscosityDynamic$GramPerCentimeterSecond extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
-  const ViscosityDynamic$SlugPerFootSecond([
+  ViscosityDynamic$SlugPerFootSecond([
     super.value,
   ]);
 
@@ -2066,15 +2067,15 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
   @override
   String get displayName => 'slug/foot-second';
 
-  static const _ratio = 47880.25898022151;
+  static final _ratio = Rational.parse('4.78802589802215078E+004');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$SlugPerFootSecond] ≈ 47880.25898022151 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$SlugPerFootSecond] ≈ 4.78802589802215078E+004 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2083,12 +2084,12 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$SlugPerFootSecond] with new value
   @override
   ViscosityDynamic$SlugPerFootSecond withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$SlugPerFootSecond(val);
 
@@ -2101,14 +2102,14 @@ final class ViscosityDynamic$SlugPerFootSecond extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
-  const ViscosityDynamic$PoundPerFootSecond([
+  ViscosityDynamic$PoundPerFootSecond([
     super.value,
   ]);
 
@@ -2139,15 +2140,15 @@ final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
   @override
   String get displayName => 'pound/foot-second';
 
-  static const _ratio = 1488.1639435684617;
+  static final _ratio = Rational.parse('1.48816394356846170E+003');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$PoundPerFootSecond] ≈ 1488.1639435684617 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundPerFootSecond] ≈ 1.48816394356846170E+003 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2156,12 +2157,12 @@ final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$PoundPerFootSecond] with new value
   @override
   ViscosityDynamic$PoundPerFootSecond withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$PoundPerFootSecond(val);
 
@@ -2174,14 +2175,14 @@ final class ViscosityDynamic$PoundPerFootSecond extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ViscosityDynamic]
 final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
-  const ViscosityDynamic$PoundPerFootHour([
+  ViscosityDynamic$PoundPerFootHour([
     super.value,
   ]);
 
@@ -2212,15 +2213,15 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
   @override
   String get displayName => 'pound/foot-hour';
 
-  static const _ratio = 0.4133789;
+  static final _ratio = Rational.parse('4.13378900000000000E-001');
 
   @override
   ViscosityDynamic get anchor =>
-      const ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
+      ViscosityDynamic$MillinewtonSecondPerMeterSquare(_ratio);
 
-  /// 1 [ViscosityDynamic$PoundPerFootHour] ≈ 0.4133789 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
+  /// 1 [ViscosityDynamic$PoundPerFootHour] ≈ 4.13378900000000000E-001 [ViscosityDynamic$MillinewtonSecondPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2229,12 +2230,12 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ViscosityDynamic$PoundPerFootHour] with new value
   @override
   ViscosityDynamic$PoundPerFootHour withValue(
-    num val,
+    Rational val,
   ) =>
       ViscosityDynamic$PoundPerFootHour(val);
 
@@ -2247,7 +2248,7 @@ final class ViscosityDynamic$PoundPerFootHour extends ViscosityDynamic {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

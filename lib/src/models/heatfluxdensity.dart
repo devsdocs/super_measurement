@@ -20,7 +20,7 @@ part of '../../super_measurement.dart';
 /// [HeatFluxDensity$BTUPerMinuteFootSquare],
 /// [HeatFluxDensity$CHUPerHourFootSquare]
 sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
-  const HeatFluxDensity([
+  HeatFluxDensity([
     super.value,
   ]);
 
@@ -32,96 +32,96 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : HeatFluxDensity.anchor();
 
-  factory HeatFluxDensity.anchor() =>
-      const HeatFluxDensity$WattPerMeterSquare();
+  factory HeatFluxDensity.anchor() => HeatFluxDensity$WattPerMeterSquare();
 
   /// Convert to [HeatFluxDensity$KilowattPerMeterSquare]
   HeatFluxDensity get toKilowattPerMeterSquare => convertTo(
-        const HeatFluxDensity$KilowattPerMeterSquare(),
+        HeatFluxDensity$KilowattPerMeterSquare(),
       );
 
   /// Convert to [HeatFluxDensity$WattPerMeterSquare]
   HeatFluxDensity get toWattPerMeterSquare => convertTo(
-        const HeatFluxDensity$WattPerMeterSquare(),
+        HeatFluxDensity$WattPerMeterSquare(),
       );
 
   /// Convert to [HeatFluxDensity$WattPerCentimeterSquare]
   HeatFluxDensity get toWattPerCentimeterSquare => convertTo(
-        const HeatFluxDensity$WattPerCentimeterSquare(),
+        HeatFluxDensity$WattPerCentimeterSquare(),
       );
 
   /// Convert to [HeatFluxDensity$WattPerInchSquare]
   HeatFluxDensity get toWattPerInchSquare => convertTo(
-        const HeatFluxDensity$WattPerInchSquare(),
+        HeatFluxDensity$WattPerInchSquare(),
       );
 
   /// Convert to [HeatFluxDensity$JoulePerSecondMeterSquare]
   HeatFluxDensity get toJoulePerSecondMeterSquare => convertTo(
-        const HeatFluxDensity$JoulePerSecondMeterSquare(),
+        HeatFluxDensity$JoulePerSecondMeterSquare(),
       );
 
   /// Convert to [HeatFluxDensity$KilocaloriePerHourMeterSquare]
   HeatFluxDensity get toKilocaloriePerHourMeterSquare => convertTo(
-        const HeatFluxDensity$KilocaloriePerHourMeterSquare(),
+        HeatFluxDensity$KilocaloriePerHourMeterSquare(),
       );
 
   /// Convert to [HeatFluxDensity$KilocaloriePerHourFootSquare]
   HeatFluxDensity get toKilocaloriePerHourFootSquare => convertTo(
-        const HeatFluxDensity$KilocaloriePerHourFootSquare(),
+        HeatFluxDensity$KilocaloriePerHourFootSquare(),
       );
 
   /// Convert to [HeatFluxDensity$CaloriePerSecondCentimeterSquare]
   HeatFluxDensity get toCaloriePerSecondCentimeterSquare => convertTo(
-        const HeatFluxDensity$CaloriePerSecondCentimeterSquare(),
+        HeatFluxDensity$CaloriePerSecondCentimeterSquare(),
       );
 
   /// Convert to [HeatFluxDensity$GramCaloriePerHourCentimeterSquare]
   HeatFluxDensity get toGramCaloriePerHourCentimeterSquare => convertTo(
-        const HeatFluxDensity$GramCaloriePerHourCentimeterSquare(),
+        HeatFluxDensity$GramCaloriePerHourCentimeterSquare(),
       );
 
   /// Convert to [HeatFluxDensity$DynePerHourCentimeter]
   HeatFluxDensity get toDynePerHourCentimeter => convertTo(
-        const HeatFluxDensity$DynePerHourCentimeter(),
+        HeatFluxDensity$DynePerHourCentimeter(),
       );
 
   /// Convert to [HeatFluxDensity$ErgPerHourMillimeterSquare]
   HeatFluxDensity get toErgPerHourMillimeterSquare => convertTo(
-        const HeatFluxDensity$ErgPerHourMillimeterSquare(),
+        HeatFluxDensity$ErgPerHourMillimeterSquare(),
       );
 
   /// Convert to [HeatFluxDensity$FootPoundPerMinuteFootSquare]
   HeatFluxDensity get toFootPoundPerMinuteFootSquare => convertTo(
-        const HeatFluxDensity$FootPoundPerMinuteFootSquare(),
+        HeatFluxDensity$FootPoundPerMinuteFootSquare(),
       );
 
   /// Convert to [HeatFluxDensity$HorsepowerMetricPerFootSquare]
   HeatFluxDensity get toHorsepowerMetricPerFootSquare => convertTo(
-        const HeatFluxDensity$HorsepowerMetricPerFootSquare(),
+        HeatFluxDensity$HorsepowerMetricPerFootSquare(),
       );
 
   /// Convert to [HeatFluxDensity$HorsepowerUKPerFootSquare]
   HeatFluxDensity get toHorsepowerUKPerFootSquare => convertTo(
-        const HeatFluxDensity$HorsepowerUKPerFootSquare(),
+        HeatFluxDensity$HorsepowerUKPerFootSquare(),
       );
 
   /// Convert to [HeatFluxDensity$BTUPerHourFootSquare]
   HeatFluxDensity get toBTUPerHourFootSquare => convertTo(
-        const HeatFluxDensity$BTUPerHourFootSquare(),
+        HeatFluxDensity$BTUPerHourFootSquare(),
       );
 
   /// Convert to [HeatFluxDensity$BTUPerMinuteFootSquare]
   HeatFluxDensity get toBTUPerMinuteFootSquare => convertTo(
-        const HeatFluxDensity$BTUPerMinuteFootSquare(),
+        HeatFluxDensity$BTUPerMinuteFootSquare(),
       );
 
   /// Convert to [HeatFluxDensity$CHUPerHourFootSquare]
   HeatFluxDensity get toCHUPerHourFootSquare => convertTo(
-        const HeatFluxDensity$CHUPerHourFootSquare(),
+        HeatFluxDensity$CHUPerHourFootSquare(),
       );
 
   @override
@@ -132,35 +132,35 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
 
   static const _majorName = 'heatFluxDensity';
 
-  static const kilowattPerMeterSquare =
+  static final kilowattPerMeterSquare =
       HeatFluxDensity$KilowattPerMeterSquare();
-  static const wattPerMeterSquare = HeatFluxDensity$WattPerMeterSquare();
-  static const wattPerCentimeterSquare =
+  static final wattPerMeterSquare = HeatFluxDensity$WattPerMeterSquare();
+  static final wattPerCentimeterSquare =
       HeatFluxDensity$WattPerCentimeterSquare();
-  static const wattPerInchSquare = HeatFluxDensity$WattPerInchSquare();
-  static const joulePerSecondMeterSquare =
+  static final wattPerInchSquare = HeatFluxDensity$WattPerInchSquare();
+  static final joulePerSecondMeterSquare =
       HeatFluxDensity$JoulePerSecondMeterSquare();
-  static const kilocaloriePerHourMeterSquare =
+  static final kilocaloriePerHourMeterSquare =
       HeatFluxDensity$KilocaloriePerHourMeterSquare();
-  static const kilocaloriePerHourFootSquare =
+  static final kilocaloriePerHourFootSquare =
       HeatFluxDensity$KilocaloriePerHourFootSquare();
-  static const caloriePerSecondCentimeterSquare =
+  static final caloriePerSecondCentimeterSquare =
       HeatFluxDensity$CaloriePerSecondCentimeterSquare();
-  static const gramCaloriePerHourCentimeterSquare =
+  static final gramCaloriePerHourCentimeterSquare =
       HeatFluxDensity$GramCaloriePerHourCentimeterSquare();
-  static const dynePerHourCentimeter = HeatFluxDensity$DynePerHourCentimeter();
-  static const ergPerHourMillimeterSquare =
+  static final dynePerHourCentimeter = HeatFluxDensity$DynePerHourCentimeter();
+  static final ergPerHourMillimeterSquare =
       HeatFluxDensity$ErgPerHourMillimeterSquare();
-  static const footPoundPerMinuteFootSquare =
+  static final footPoundPerMinuteFootSquare =
       HeatFluxDensity$FootPoundPerMinuteFootSquare();
-  static const horsepowerMetricPerFootSquare =
+  static final horsepowerMetricPerFootSquare =
       HeatFluxDensity$HorsepowerMetricPerFootSquare();
-  static const horsepowerUKPerFootSquare =
+  static final horsepowerUKPerFootSquare =
       HeatFluxDensity$HorsepowerUKPerFootSquare();
-  static const bTUPerHourFootSquare = HeatFluxDensity$BTUPerHourFootSquare();
-  static const bTUPerMinuteFootSquare =
+  static final bTUPerHourFootSquare = HeatFluxDensity$BTUPerHourFootSquare();
+  static final bTUPerMinuteFootSquare =
       HeatFluxDensity$BTUPerMinuteFootSquare();
-  static const cHUPerHourFootSquare = HeatFluxDensity$CHUPerHourFootSquare();
+  static final cHUPerHourFootSquare = HeatFluxDensity$CHUPerHourFootSquare();
 
   @override
   List<HeatFluxDensity> get units => values;
@@ -168,7 +168,7 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
   @override
   EnumValues<HeatFluxDensity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <HeatFluxDensity>[
     kilowattPerMeterSquare,
     wattPerMeterSquare,
     wattPerCentimeterSquare,
@@ -188,7 +188,7 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
     cHUPerHourFootSquare,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, HeatFluxDensity>{
     HeatFluxDensity$KilowattPerMeterSquare._minorName: kilowattPerMeterSquare,
     HeatFluxDensity$WattPerMeterSquare._minorName: wattPerMeterSquare,
     HeatFluxDensity$WattPerCentimeterSquare._minorName: wattPerCentimeterSquare,
@@ -220,7 +220,7 @@ sealed class HeatFluxDensity extends Unit<HeatFluxDensity> {
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
-  const HeatFluxDensity$KilowattPerMeterSquare([
+  HeatFluxDensity$KilowattPerMeterSquare([
     super.value,
   ]);
 
@@ -251,15 +251,14 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
   @override
   String get displayName => 'kilowatt/meter²';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$KilowattPerMeterSquare] = 1000.0 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$KilowattPerMeterSquare] = 1.00000000000000000E+003 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -268,12 +267,12 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$KilowattPerMeterSquare] with new value
   @override
   HeatFluxDensity$KilowattPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$KilowattPerMeterSquare(val);
 
@@ -286,14 +285,14 @@ final class HeatFluxDensity$KilowattPerMeterSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
-  const HeatFluxDensity$WattPerMeterSquare([
+  HeatFluxDensity$WattPerMeterSquare([
     super.value,
   ]);
 
@@ -324,15 +323,14 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
   @override
   String get displayName => 'watt/meter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
   /// Default (anchor) unit of [HeatFluxDensity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -341,12 +339,12 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$WattPerMeterSquare] with new value
   @override
   HeatFluxDensity$WattPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$WattPerMeterSquare(val);
 
@@ -359,14 +357,14 @@ final class HeatFluxDensity$WattPerMeterSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
-  const HeatFluxDensity$WattPerCentimeterSquare([
+  HeatFluxDensity$WattPerCentimeterSquare([
     super.value,
   ]);
 
@@ -397,15 +395,14 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
   @override
   String get displayName => 'watt/centimeter²';
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$WattPerCentimeterSquare] = 10000.0 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$WattPerCentimeterSquare] = 1.00000000000000000E+004 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -414,12 +411,12 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$WattPerCentimeterSquare] with new value
   @override
   HeatFluxDensity$WattPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$WattPerCentimeterSquare(val);
 
@@ -432,14 +429,14 @@ final class HeatFluxDensity$WattPerCentimeterSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
-  const HeatFluxDensity$WattPerInchSquare([
+  HeatFluxDensity$WattPerInchSquare([
     super.value,
   ]);
 
@@ -470,15 +467,14 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
   @override
   String get displayName => 'watt/inch²';
 
-  static const _ratio = 1550.0031011409837;
+  static final _ratio = Rational.parse('1.55000310114098373E+003');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$WattPerInchSquare] ≈ 1550.0031011409837 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$WattPerInchSquare] ≈ 1.55000310114098373E+003 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -487,12 +483,12 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$WattPerInchSquare] with new value
   @override
   HeatFluxDensity$WattPerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$WattPerInchSquare(val);
 
@@ -505,14 +501,14 @@ final class HeatFluxDensity$WattPerInchSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
-  const HeatFluxDensity$JoulePerSecondMeterSquare([
+  HeatFluxDensity$JoulePerSecondMeterSquare([
     super.value,
   ]);
 
@@ -543,15 +539,14 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
   @override
   String get displayName => 'joule/second meter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$JoulePerSecondMeterSquare] = 1.0 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$JoulePerSecondMeterSquare] = 1.00000000000000000E+000 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -560,12 +555,12 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$JoulePerSecondMeterSquare] with new value
   @override
   HeatFluxDensity$JoulePerSecondMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$JoulePerSecondMeterSquare(val);
 
@@ -578,7 +573,7 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -586,7 +581,7 @@ final class HeatFluxDensity$JoulePerSecondMeterSquare extends HeatFluxDensity {
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$KilocaloriePerHourMeterSquare
     extends HeatFluxDensity {
-  const HeatFluxDensity$KilocaloriePerHourMeterSquare([
+  HeatFluxDensity$KilocaloriePerHourMeterSquare([
     super.value,
   ]);
 
@@ -617,15 +612,14 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
   @override
   String get displayName => 'kilocalorie/hour meter²';
 
-  static const _ratio = 1.163;
+  static final _ratio = Rational.parse('1.16300000000000000E+000');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$KilocaloriePerHourMeterSquare] ≈ 1.163 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$KilocaloriePerHourMeterSquare] ≈ 1.16300000000000000E+000 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -634,12 +628,12 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$KilocaloriePerHourMeterSquare] with new value
   @override
   HeatFluxDensity$KilocaloriePerHourMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$KilocaloriePerHourMeterSquare(val);
 
@@ -652,7 +646,7 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -660,7 +654,7 @@ final class HeatFluxDensity$KilocaloriePerHourMeterSquare
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$KilocaloriePerHourFootSquare
     extends HeatFluxDensity {
-  const HeatFluxDensity$KilocaloriePerHourFootSquare([
+  HeatFluxDensity$KilocaloriePerHourFootSquare([
     super.value,
   ]);
 
@@ -691,15 +685,14 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
   @override
   String get displayName => 'kilocalorie/hour foot²';
 
-  static const _ratio = 12.51842782;
+  static final _ratio = Rational.parse('1.25184278200000000E+001');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$KilocaloriePerHourFootSquare] ≈ 12.51842782 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$KilocaloriePerHourFootSquare] ≈ 1.25184278200000000E+001 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -708,12 +701,12 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$KilocaloriePerHourFootSquare] with new value
   @override
   HeatFluxDensity$KilocaloriePerHourFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$KilocaloriePerHourFootSquare(val);
 
@@ -726,7 +719,7 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -734,7 +727,7 @@ final class HeatFluxDensity$KilocaloriePerHourFootSquare
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
     extends HeatFluxDensity {
-  const HeatFluxDensity$CaloriePerSecondCentimeterSquare([
+  HeatFluxDensity$CaloriePerSecondCentimeterSquare([
     super.value,
   ]);
 
@@ -765,15 +758,14 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
   @override
   String get displayName => 'calorie/second centimeter²';
 
-  static const _ratio = 41868.0;
+  static final _ratio = Rational.parse('4.18680000000000000E+004');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$CaloriePerSecondCentimeterSquare] = 41868.0 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$CaloriePerSecondCentimeterSquare] = 4.18680000000000000E+004 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -782,12 +774,12 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$CaloriePerSecondCentimeterSquare] with new value
   @override
   HeatFluxDensity$CaloriePerSecondCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$CaloriePerSecondCentimeterSquare(val);
 
@@ -800,7 +792,7 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -808,7 +800,7 @@ final class HeatFluxDensity$CaloriePerSecondCentimeterSquare
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
     extends HeatFluxDensity {
-  const HeatFluxDensity$GramCaloriePerHourCentimeterSquare([
+  HeatFluxDensity$GramCaloriePerHourCentimeterSquare([
     super.value,
   ]);
 
@@ -839,15 +831,14 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
   @override
   String get displayName => 'gram calorie/hour centimeter²';
 
-  static const _ratio = 11.630000000797818;
+  static final _ratio = Rational.parse('1.16300000007978180E+001');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$GramCaloriePerHourCentimeterSquare] ≈ 11.630000000797818 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$GramCaloriePerHourCentimeterSquare] ≈ 1.16300000007978180E+001 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -856,12 +847,12 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$GramCaloriePerHourCentimeterSquare] with new value
   @override
   HeatFluxDensity$GramCaloriePerHourCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$GramCaloriePerHourCentimeterSquare(val);
 
@@ -874,14 +865,14 @@ final class HeatFluxDensity$GramCaloriePerHourCentimeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
-  const HeatFluxDensity$DynePerHourCentimeter([
+  HeatFluxDensity$DynePerHourCentimeter([
     super.value,
   ]);
 
@@ -912,15 +903,14 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
   @override
   String get displayName => 'dyne/hour centimeter';
 
-  static const _ratio = 2.7777777777777776e-7;
+  static final _ratio = Rational.parse('2.77777777777777778E-007');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$DynePerHourCentimeter] ≈ 2.7777777777777776e-7 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$DynePerHourCentimeter] ≈ 2.77777777777777778E-007 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -929,12 +919,12 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$DynePerHourCentimeter] with new value
   @override
   HeatFluxDensity$DynePerHourCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$DynePerHourCentimeter(val);
 
@@ -947,14 +937,14 @@ final class HeatFluxDensity$DynePerHourCentimeter extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
-  const HeatFluxDensity$ErgPerHourMillimeterSquare([
+  HeatFluxDensity$ErgPerHourMillimeterSquare([
     super.value,
   ]);
 
@@ -985,15 +975,14 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
   @override
   String get displayName => 'erg/hour millimeter²';
 
-  static const _ratio = 0.00002777777777777778;
+  static final _ratio = Rational.parse('2.77777777777777778E-005');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$ErgPerHourMillimeterSquare] ≈ 0.00002777777777777778 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$ErgPerHourMillimeterSquare] ≈ 2.77777777777777778E-005 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1002,12 +991,12 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$ErgPerHourMillimeterSquare] with new value
   @override
   HeatFluxDensity$ErgPerHourMillimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$ErgPerHourMillimeterSquare(val);
 
@@ -1020,7 +1009,7 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1028,7 +1017,7 @@ final class HeatFluxDensity$ErgPerHourMillimeterSquare extends HeatFluxDensity {
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$FootPoundPerMinuteFootSquare
     extends HeatFluxDensity {
-  const HeatFluxDensity$FootPoundPerMinuteFootSquare([
+  HeatFluxDensity$FootPoundPerMinuteFootSquare([
     super.value,
   ]);
 
@@ -1059,15 +1048,14 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
   @override
   String get displayName => 'foot pound/minute foot²';
 
-  static const _ratio = 0.2432317155850531;
+  static final _ratio = Rational.parse('2.43231715585053107E-001');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$FootPoundPerMinuteFootSquare] ≈ 0.2432317155850531 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$FootPoundPerMinuteFootSquare] ≈ 2.43231715585053107E-001 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1076,12 +1064,12 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$FootPoundPerMinuteFootSquare] with new value
   @override
   HeatFluxDensity$FootPoundPerMinuteFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$FootPoundPerMinuteFootSquare(val);
 
@@ -1094,7 +1082,7 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -1102,7 +1090,7 @@ final class HeatFluxDensity$FootPoundPerMinuteFootSquare
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$HorsepowerMetricPerFootSquare
     extends HeatFluxDensity {
-  const HeatFluxDensity$HorsepowerMetricPerFootSquare([
+  HeatFluxDensity$HorsepowerMetricPerFootSquare([
     super.value,
   ]);
 
@@ -1133,15 +1121,14 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
   @override
   String get displayName => 'horsepower (metric)/foot²';
 
-  static const _ratio = 7916.8426580213;
+  static final _ratio = Rational.parse('7.91684265802129972E+003');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$HorsepowerMetricPerFootSquare] ≈ 7916.8426580213 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$HorsepowerMetricPerFootSquare] ≈ 7.91684265802129972E+003 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1150,12 +1137,12 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$HorsepowerMetricPerFootSquare] with new value
   @override
   HeatFluxDensity$HorsepowerMetricPerFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$HorsepowerMetricPerFootSquare(val);
 
@@ -1168,14 +1155,14 @@ final class HeatFluxDensity$HorsepowerMetricPerFootSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
-  const HeatFluxDensity$HorsepowerUKPerFootSquare([
+  HeatFluxDensity$HorsepowerUKPerFootSquare([
     super.value,
   ]);
 
@@ -1206,15 +1193,14 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
   @override
   String get displayName => 'horsepower (UK)/foot²';
 
-  static const _ratio = 8026.646617253367;
+  static final _ratio = Rational.parse('8.02664661725336735E+003');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$HorsepowerUKPerFootSquare] ≈ 8026.646617253367 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$HorsepowerUKPerFootSquare] ≈ 8.02664661725336735E+003 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1223,12 +1209,12 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$HorsepowerUKPerFootSquare] with new value
   @override
   HeatFluxDensity$HorsepowerUKPerFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$HorsepowerUKPerFootSquare(val);
 
@@ -1241,14 +1227,14 @@ final class HeatFluxDensity$HorsepowerUKPerFootSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
-  const HeatFluxDensity$BTUPerHourFootSquare([
+  HeatFluxDensity$BTUPerHourFootSquare([
     super.value,
   ]);
 
@@ -1279,15 +1265,14 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
   @override
   String get displayName => 'BTU/hour foot²';
 
-  static const _ratio = 3.154590778;
+  static final _ratio = Rational.parse('3.15459077800000000E+000');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$BTUPerHourFootSquare] ≈ 3.154590778 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$BTUPerHourFootSquare] ≈ 3.15459077800000000E+000 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1296,12 +1281,12 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$BTUPerHourFootSquare] with new value
   @override
   HeatFluxDensity$BTUPerHourFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$BTUPerHourFootSquare(val);
 
@@ -1314,14 +1299,14 @@ final class HeatFluxDensity$BTUPerHourFootSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
-  const HeatFluxDensity$BTUPerMinuteFootSquare([
+  HeatFluxDensity$BTUPerMinuteFootSquare([
     super.value,
   ]);
 
@@ -1352,15 +1337,14 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
   @override
   String get displayName => 'BTU/minute foot²';
 
-  static const _ratio = 189.27544653946458;
+  static final _ratio = Rational.parse('1.89275446539464586E+002');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$BTUPerMinuteFootSquare] ≈ 189.27544653946458 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$BTUPerMinuteFootSquare] ≈ 1.89275446539464586E+002 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1369,12 +1353,12 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$BTUPerMinuteFootSquare] with new value
   @override
   HeatFluxDensity$BTUPerMinuteFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$BTUPerMinuteFootSquare(val);
 
@@ -1387,14 +1371,14 @@ final class HeatFluxDensity$BTUPerMinuteFootSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [HeatFluxDensity]
 final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
-  const HeatFluxDensity$CHUPerHourFootSquare([
+  HeatFluxDensity$CHUPerHourFootSquare([
     super.value,
   ]);
 
@@ -1425,15 +1409,14 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
   @override
   String get displayName => 'CHU/hour foot²';
 
-  static const _ratio = 5.678263398;
+  static final _ratio = Rational.parse('5.67826339800000000E+000');
 
   @override
-  HeatFluxDensity get anchor =>
-      const HeatFluxDensity$WattPerMeterSquare(_ratio);
+  HeatFluxDensity get anchor => HeatFluxDensity$WattPerMeterSquare(_ratio);
 
-  /// 1 [HeatFluxDensity$CHUPerHourFootSquare] ≈ 5.678263398 [HeatFluxDensity$WattPerMeterSquare]
+  /// 1 [HeatFluxDensity$CHUPerHourFootSquare] ≈ 5.67826339800000000E+000 [HeatFluxDensity$WattPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1442,12 +1425,12 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [HeatFluxDensity$CHUPerHourFootSquare] with new value
   @override
   HeatFluxDensity$CHUPerHourFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       HeatFluxDensity$CHUPerHourFootSquare(val);
 
@@ -1460,7 +1443,7 @@ final class HeatFluxDensity$CHUPerHourFootSquare extends HeatFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

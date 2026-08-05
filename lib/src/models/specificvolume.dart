@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [SpecificVolume$FeetCubicPerKilogram], [SpecificVolume$FeetCubicPerPound],
 /// [SpecificVolume$GallonUKPerPound]
 sealed class SpecificVolume extends Unit<SpecificVolume> {
-  const SpecificVolume([
+  SpecificVolume([
     super.value,
   ]);
 
@@ -20,46 +20,46 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : SpecificVolume.anchor();
 
-  factory SpecificVolume.anchor() =>
-      const SpecificVolume$MeterCubicPerKilogram();
+  factory SpecificVolume.anchor() => SpecificVolume$MeterCubicPerKilogram();
 
   /// Convert to [SpecificVolume$MeterCubicPerKilogram]
   SpecificVolume get toMeterCubicPerKilogram => convertTo(
-        const SpecificVolume$MeterCubicPerKilogram(),
+        SpecificVolume$MeterCubicPerKilogram(),
       );
 
   /// Convert to [SpecificVolume$CentimeterCubicPerGram]
   SpecificVolume get toCentimeterCubicPerGram => convertTo(
-        const SpecificVolume$CentimeterCubicPerGram(),
+        SpecificVolume$CentimeterCubicPerGram(),
       );
 
   /// Convert to [SpecificVolume$LiterPerKilogram]
   SpecificVolume get toLiterPerKilogram => convertTo(
-        const SpecificVolume$LiterPerKilogram(),
+        SpecificVolume$LiterPerKilogram(),
       );
 
   /// Convert to [SpecificVolume$LiterPerGram]
   SpecificVolume get toLiterPerGram => convertTo(
-        const SpecificVolume$LiterPerGram(),
+        SpecificVolume$LiterPerGram(),
       );
 
   /// Convert to [SpecificVolume$FeetCubicPerKilogram]
   SpecificVolume get toFeetCubicPerKilogram => convertTo(
-        const SpecificVolume$FeetCubicPerKilogram(),
+        SpecificVolume$FeetCubicPerKilogram(),
       );
 
   /// Convert to [SpecificVolume$FeetCubicPerPound]
   SpecificVolume get toFeetCubicPerPound => convertTo(
-        const SpecificVolume$FeetCubicPerPound(),
+        SpecificVolume$FeetCubicPerPound(),
       );
 
   /// Convert to [SpecificVolume$GallonUKPerPound]
   SpecificVolume get toGallonUKPerPound => convertTo(
-        const SpecificVolume$GallonUKPerPound(),
+        SpecificVolume$GallonUKPerPound(),
       );
 
   @override
@@ -70,13 +70,13 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
 
   static const _majorName = 'specificVolume';
 
-  static const meterCubicPerKilogram = SpecificVolume$MeterCubicPerKilogram();
-  static const centimeterCubicPerGram = SpecificVolume$CentimeterCubicPerGram();
-  static const literPerKilogram = SpecificVolume$LiterPerKilogram();
-  static const literPerGram = SpecificVolume$LiterPerGram();
-  static const feetCubicPerKilogram = SpecificVolume$FeetCubicPerKilogram();
-  static const feetCubicPerPound = SpecificVolume$FeetCubicPerPound();
-  static const gallonUKPerPound = SpecificVolume$GallonUKPerPound();
+  static final meterCubicPerKilogram = SpecificVolume$MeterCubicPerKilogram();
+  static final centimeterCubicPerGram = SpecificVolume$CentimeterCubicPerGram();
+  static final literPerKilogram = SpecificVolume$LiterPerKilogram();
+  static final literPerGram = SpecificVolume$LiterPerGram();
+  static final feetCubicPerKilogram = SpecificVolume$FeetCubicPerKilogram();
+  static final feetCubicPerPound = SpecificVolume$FeetCubicPerPound();
+  static final gallonUKPerPound = SpecificVolume$GallonUKPerPound();
 
   @override
   List<SpecificVolume> get units => values;
@@ -84,7 +84,7 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
   @override
   EnumValues<SpecificVolume> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <SpecificVolume>[
     meterCubicPerKilogram,
     centimeterCubicPerGram,
     literPerKilogram,
@@ -94,7 +94,7 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
     gallonUKPerPound,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, SpecificVolume>{
     SpecificVolume$MeterCubicPerKilogram._minorName: meterCubicPerKilogram,
     SpecificVolume$CentimeterCubicPerGram._minorName: centimeterCubicPerGram,
     SpecificVolume$LiterPerKilogram._minorName: literPerKilogram,
@@ -107,7 +107,7 @@ sealed class SpecificVolume extends Unit<SpecificVolume> {
 
 /// Unit of [SpecificVolume]
 final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
-  const SpecificVolume$MeterCubicPerKilogram([
+  SpecificVolume$MeterCubicPerKilogram([
     super.value,
   ]);
 
@@ -138,15 +138,14 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
   @override
   String get displayName => 'meter³/kilogram';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  SpecificVolume get anchor =>
-      const SpecificVolume$MeterCubicPerKilogram(_ratio);
+  SpecificVolume get anchor => SpecificVolume$MeterCubicPerKilogram(_ratio);
 
   /// Default (anchor) unit of [SpecificVolume]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -155,12 +154,12 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificVolume$MeterCubicPerKilogram] with new value
   @override
   SpecificVolume$MeterCubicPerKilogram withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificVolume$MeterCubicPerKilogram(val);
 
@@ -173,14 +172,14 @@ final class SpecificVolume$MeterCubicPerKilogram extends SpecificVolume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SpecificVolume]
 final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
-  const SpecificVolume$CentimeterCubicPerGram([
+  SpecificVolume$CentimeterCubicPerGram([
     super.value,
   ]);
 
@@ -211,15 +210,14 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
   @override
   String get displayName => 'centimeter³/gram';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  SpecificVolume get anchor =>
-      const SpecificVolume$MeterCubicPerKilogram(_ratio);
+  SpecificVolume get anchor => SpecificVolume$MeterCubicPerKilogram(_ratio);
 
-  /// 1 [SpecificVolume$CentimeterCubicPerGram] ≈ 0.001 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$CentimeterCubicPerGram] ≈ 1.00000000000000000E-003 [SpecificVolume$MeterCubicPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -228,12 +226,12 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificVolume$CentimeterCubicPerGram] with new value
   @override
   SpecificVolume$CentimeterCubicPerGram withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificVolume$CentimeterCubicPerGram(val);
 
@@ -246,14 +244,14 @@ final class SpecificVolume$CentimeterCubicPerGram extends SpecificVolume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SpecificVolume]
 final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
-  const SpecificVolume$LiterPerKilogram([
+  SpecificVolume$LiterPerKilogram([
     super.value,
   ]);
 
@@ -284,15 +282,14 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
   @override
   String get displayName => 'liter/kilogram';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  SpecificVolume get anchor =>
-      const SpecificVolume$MeterCubicPerKilogram(_ratio);
+  SpecificVolume get anchor => SpecificVolume$MeterCubicPerKilogram(_ratio);
 
-  /// 1 [SpecificVolume$LiterPerKilogram] ≈ 0.001 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$LiterPerKilogram] ≈ 1.00000000000000000E-003 [SpecificVolume$MeterCubicPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -301,12 +298,12 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificVolume$LiterPerKilogram] with new value
   @override
   SpecificVolume$LiterPerKilogram withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificVolume$LiterPerKilogram(val);
 
@@ -319,14 +316,14 @@ final class SpecificVolume$LiterPerKilogram extends SpecificVolume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SpecificVolume]
 final class SpecificVolume$LiterPerGram extends SpecificVolume {
-  const SpecificVolume$LiterPerGram([
+  SpecificVolume$LiterPerGram([
     super.value,
   ]);
 
@@ -357,15 +354,14 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
   @override
   String get displayName => 'liter/gram';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  SpecificVolume get anchor =>
-      const SpecificVolume$MeterCubicPerKilogram(_ratio);
+  SpecificVolume get anchor => SpecificVolume$MeterCubicPerKilogram(_ratio);
 
-  /// 1 [SpecificVolume$LiterPerGram] = 1.0 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$LiterPerGram] = 1.00000000000000000E+000 [SpecificVolume$MeterCubicPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -373,12 +369,12 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificVolume$LiterPerGram] with new value
   @override
   SpecificVolume$LiterPerGram withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificVolume$LiterPerGram(val);
 
@@ -391,14 +387,14 @@ final class SpecificVolume$LiterPerGram extends SpecificVolume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SpecificVolume]
 final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
-  const SpecificVolume$FeetCubicPerKilogram([
+  SpecificVolume$FeetCubicPerKilogram([
     super.value,
   ]);
 
@@ -429,15 +425,14 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
   @override
   String get displayName => 'feet³/kilogram';
 
-  static const _ratio = 0.028316846593193615;
+  static final _ratio = Rational.parse('2.83168465931936169E-002');
 
   @override
-  SpecificVolume get anchor =>
-      const SpecificVolume$MeterCubicPerKilogram(_ratio);
+  SpecificVolume get anchor => SpecificVolume$MeterCubicPerKilogram(_ratio);
 
-  /// 1 [SpecificVolume$FeetCubicPerKilogram] ≈ 0.028316846593193615 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$FeetCubicPerKilogram] ≈ 2.83168465931936169E-002 [SpecificVolume$MeterCubicPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -446,12 +441,12 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificVolume$FeetCubicPerKilogram] with new value
   @override
   SpecificVolume$FeetCubicPerKilogram withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificVolume$FeetCubicPerKilogram(val);
 
@@ -464,14 +459,14 @@ final class SpecificVolume$FeetCubicPerKilogram extends SpecificVolume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SpecificVolume]
 final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
-  const SpecificVolume$FeetCubicPerPound([
+  SpecificVolume$FeetCubicPerPound([
     super.value,
   ]);
 
@@ -502,15 +497,14 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
   @override
   String get displayName => 'feet³/pound';
 
-  static const _ratio = 0.06242795995;
+  static final _ratio = Rational.parse('6.24279599500000000E-002');
 
   @override
-  SpecificVolume get anchor =>
-      const SpecificVolume$MeterCubicPerKilogram(_ratio);
+  SpecificVolume get anchor => SpecificVolume$MeterCubicPerKilogram(_ratio);
 
-  /// 1 [SpecificVolume$FeetCubicPerPound] ≈ 0.06242795995 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$FeetCubicPerPound] ≈ 6.24279599500000000E-002 [SpecificVolume$MeterCubicPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -519,12 +513,12 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificVolume$FeetCubicPerPound] with new value
   @override
   SpecificVolume$FeetCubicPerPound withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificVolume$FeetCubicPerPound(val);
 
@@ -537,14 +531,14 @@ final class SpecificVolume$FeetCubicPerPound extends SpecificVolume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SpecificVolume]
 final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
-  const SpecificVolume$GallonUKPerPound([
+  SpecificVolume$GallonUKPerPound([
     super.value,
   ]);
 
@@ -575,15 +569,14 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
   @override
   String get displayName => 'gallon (UK)/pound';
 
-  static const _ratio = 0.010022412755827792;
+  static final _ratio = Rational.parse('1.00224127558277921E-002');
 
   @override
-  SpecificVolume get anchor =>
-      const SpecificVolume$MeterCubicPerKilogram(_ratio);
+  SpecificVolume get anchor => SpecificVolume$MeterCubicPerKilogram(_ratio);
 
-  /// 1 [SpecificVolume$GallonUKPerPound] ≈ 0.010022412755827792 [SpecificVolume$MeterCubicPerKilogram]
+  /// 1 [SpecificVolume$GallonUKPerPound] ≈ 1.00224127558277921E-002 [SpecificVolume$MeterCubicPerKilogram]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -592,12 +585,12 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SpecificVolume$GallonUKPerPound] with new value
   @override
   SpecificVolume$GallonUKPerPound withValue(
-    num val,
+    Rational val,
   ) =>
       SpecificVolume$GallonUKPerPound(val);
 
@@ -610,7 +603,7 @@ final class SpecificVolume$GallonUKPerPound extends SpecificVolume {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

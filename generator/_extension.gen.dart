@@ -20,7 +20,7 @@ void generateExtension() {
         '/// Combine all [$name] in [Iterable] to [${e.keys.first}]',
       );
       iterableExtensionBuff.writeln(
-        '$name get to${e.keys.first.split(r'$').last} => combineTo(const ${e.keys.first}(),);',
+        '$name get to${e.keys.first.split(r'$').last} => combineTo(${e.keys.first}(),);',
       );
       numExtensionBuff.writeln(
         '/// Get [${e.keys.first}] using [num]',

@@ -12,54 +12,95 @@ extension TemperatureHelper on Temperature {
 
     // Handle all possible temperature conversions with direct formulas
     if (this is Temperature$Kelvin) {
-      if (to is Temperature$Celsius) return to.withValue(value - 273.15);
-      if (to is Temperature$Fahrenheit) {
-        return to.withValue((value * 9 / 5) - 459.67);
+      if (to is Temperature$Celsius) {
+        return to.withValue(value - Rational.parse('273.15'));
       }
-      if (to is Temperature$Rankine) return to.withValue(value * 9 / 5);
-      if (to is Temperature$Reaumur) {
-        return to.withValue((value - 273.15) * 4 / 5);
-      }
-    } else if (this is Temperature$Celsius) {
-      if (to is Temperature$Kelvin) return to.withValue(value + 273.15);
       if (to is Temperature$Fahrenheit) {
-        return to.withValue((value * 9 / 5) + 32);
+        return to.withValue(
+            (value * (Rational.fromInt(9) / Rational.fromInt(5))) -
+                Rational.parse('459.67'));
       }
       if (to is Temperature$Rankine) {
-        return to.withValue((value + 273.15) * 9 / 5);
+        return to
+            .withValue(value * (Rational.fromInt(9) / Rational.fromInt(5)));
       }
-      if (to is Temperature$Reaumur) return to.withValue(value * 4 / 5);
+      if (to is Temperature$Reaumur) {
+        return to.withValue((value - Rational.parse('273.15')) *
+            (Rational.fromInt(4) / Rational.fromInt(5)));
+      }
+    } else if (this is Temperature$Celsius) {
+      if (to is Temperature$Kelvin) {
+        return to.withValue(value + Rational.parse('273.15'));
+      }
+      if (to is Temperature$Fahrenheit) {
+        return to.withValue(
+            (value * (Rational.fromInt(9) / Rational.fromInt(5))) +
+                Rational.fromInt(32));
+      }
+      if (to is Temperature$Rankine) {
+        return to.withValue((value + Rational.parse('273.15')) *
+            (Rational.fromInt(9) / Rational.fromInt(5)));
+      }
+      if (to is Temperature$Reaumur) {
+        return to
+            .withValue(value * (Rational.fromInt(4) / Rational.fromInt(5)));
+      }
     } else if (this is Temperature$Fahrenheit) {
       if (to is Temperature$Kelvin) {
-        return to.withValue((value + 459.67) * 5 / 9);
+        return to.withValue((value + Rational.parse('459.67')) *
+            (Rational.fromInt(5) / Rational.fromInt(9)));
       }
-      if (to is Temperature$Celsius) return to.withValue((value - 32) * 5 / 9);
-      if (to is Temperature$Rankine) return to.withValue(value + 459.67);
-      if (to is Temperature$Reaumur) return to.withValue((value - 32) * 4 / 9);
-    } else if (this is Temperature$Rankine) {
-      if (to is Temperature$Kelvin) return to.withValue(value * 5 / 9);
       if (to is Temperature$Celsius) {
-        return to.withValue((value - 491.67) * 5 / 9);
+        return to.withValue((value - Rational.fromInt(32)) *
+            (Rational.fromInt(5) / Rational.fromInt(9)));
       }
-      if (to is Temperature$Fahrenheit) return to.withValue(value - 459.67);
+      if (to is Temperature$Rankine) {
+        return to.withValue(value + Rational.parse('459.67'));
+      }
       if (to is Temperature$Reaumur) {
-        return to.withValue((value - 491.67) * 4 / 9);
+        return to.withValue((value - Rational.fromInt(32)) *
+            (Rational.fromInt(4) / Rational.fromInt(9)));
+      }
+    } else if (this is Temperature$Rankine) {
+      if (to is Temperature$Kelvin) {
+        return to
+            .withValue(value * (Rational.fromInt(5) / Rational.fromInt(9)));
+      }
+      if (to is Temperature$Celsius) {
+        return to.withValue((value - Rational.parse('491.67')) *
+            (Rational.fromInt(5) / Rational.fromInt(9)));
+      }
+      if (to is Temperature$Fahrenheit) {
+        return to.withValue(value - Rational.parse('459.67'));
+      }
+      if (to is Temperature$Reaumur) {
+        return to.withValue((value - Rational.parse('491.67')) *
+            (Rational.fromInt(4) / Rational.fromInt(9)));
       }
     } else if (this is Temperature$Reaumur) {
       if (to is Temperature$Kelvin) {
-        return to.withValue((value * 5 / 4) + 273.15);
+        return to.withValue(
+            (value * (Rational.fromInt(5) / Rational.fromInt(4))) +
+                Rational.parse('273.15'));
       }
-      if (to is Temperature$Celsius) return to.withValue(value * 5 / 4);
+      if (to is Temperature$Celsius) {
+        return to
+            .withValue(value * (Rational.fromInt(5) / Rational.fromInt(4)));
+      }
       if (to is Temperature$Fahrenheit) {
-        return to.withValue((value * 9 / 4) + 32);
+        return to.withValue(
+            (value * (Rational.fromInt(9) / Rational.fromInt(4))) +
+                Rational.fromInt(32));
       }
       if (to is Temperature$Rankine) {
-        return to.withValue((value * 9 / 4) + 491.67);
+        return to.withValue(
+            (value * (Rational.fromInt(9) / Rational.fromInt(4))) +
+                Rational.parse('491.67'));
       }
     }
 
     // Fallback
-    return to.withValue(0);
+    return to.withValue(Rational.zero);
   }
 }
 
@@ -67,7 +108,9 @@ extension TemperatureHelper on Temperature {
 extension TemperatureIterableHelper on Iterable<Temperature> {
   /// Safely combine temperature values
   Temperature combineTemperatures() {
-    if (isEmpty) return const Temperature$Celsius();
+    if (isEmpty) {
+      return Temperature$Celsius();
+    }
 
     // Convert all temperatures to Kelvin for proper addition
     final values = map((t) => t.toKelvin.value);

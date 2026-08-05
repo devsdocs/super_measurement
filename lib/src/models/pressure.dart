@@ -22,7 +22,7 @@ part of '../../super_measurement.dart';
 /// [Pressure$CentimeterWater4DegreeC], [Pressure$InchWater60DegreeF],
 /// [Pressure$FootWater60DegreeF]
 sealed class Pressure extends Unit<Pressure> {
-  const Pressure([
+  Pressure([
     super.value,
   ]);
 
@@ -34,220 +34,221 @@ sealed class Pressure extends Unit<Pressure> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Pressure.anchor();
 
-  factory Pressure.anchor() => const Pressure$Decipascal();
+  factory Pressure.anchor() => Pressure$Decipascal();
 
   /// Convert to [Pressure$Exapascal]
   Pressure get toExapascal => convertTo(
-        const Pressure$Exapascal(),
+        Pressure$Exapascal(),
       );
 
   /// Convert to [Pressure$Petapascal]
   Pressure get toPetapascal => convertTo(
-        const Pressure$Petapascal(),
+        Pressure$Petapascal(),
       );
 
   /// Convert to [Pressure$Terapascal]
   Pressure get toTerapascal => convertTo(
-        const Pressure$Terapascal(),
+        Pressure$Terapascal(),
       );
 
   /// Convert to [Pressure$Gigapascal]
   Pressure get toGigapascal => convertTo(
-        const Pressure$Gigapascal(),
+        Pressure$Gigapascal(),
       );
 
   /// Convert to [Pressure$Megapascal]
   Pressure get toMegapascal => convertTo(
-        const Pressure$Megapascal(),
+        Pressure$Megapascal(),
       );
 
   /// Convert to [Pressure$Kilopascal]
   Pressure get toKilopascal => convertTo(
-        const Pressure$Kilopascal(),
+        Pressure$Kilopascal(),
       );
 
   /// Convert to [Pressure$Hectopascal]
   Pressure get toHectopascal => convertTo(
-        const Pressure$Hectopascal(),
+        Pressure$Hectopascal(),
       );
 
   /// Convert to [Pressure$Dekapascal]
   Pressure get toDekapascal => convertTo(
-        const Pressure$Dekapascal(),
+        Pressure$Dekapascal(),
       );
 
   /// Convert to [Pressure$Pascal]
   Pressure get toPascal => convertTo(
-        const Pressure$Pascal(),
+        Pressure$Pascal(),
       );
 
   /// Convert to [Pressure$Decipascal]
   Pressure get toDecipascal => convertTo(
-        const Pressure$Decipascal(),
+        Pressure$Decipascal(),
       );
 
   /// Convert to [Pressure$Centipascal]
   Pressure get toCentipascal => convertTo(
-        const Pressure$Centipascal(),
+        Pressure$Centipascal(),
       );
 
   /// Convert to [Pressure$Millipascal]
   Pressure get toMillipascal => convertTo(
-        const Pressure$Millipascal(),
+        Pressure$Millipascal(),
       );
 
   /// Convert to [Pressure$Micropascal]
   Pressure get toMicropascal => convertTo(
-        const Pressure$Micropascal(),
+        Pressure$Micropascal(),
       );
 
   /// Convert to [Pressure$Nanopascal]
   Pressure get toNanopascal => convertTo(
-        const Pressure$Nanopascal(),
+        Pressure$Nanopascal(),
       );
 
   /// Convert to [Pressure$Picopascal]
   Pressure get toPicopascal => convertTo(
-        const Pressure$Picopascal(),
+        Pressure$Picopascal(),
       );
 
   /// Convert to [Pressure$Femtopascal]
   Pressure get toFemtopascal => convertTo(
-        const Pressure$Femtopascal(),
+        Pressure$Femtopascal(),
       );
 
   /// Convert to [Pressure$Attopascal]
   Pressure get toAttopascal => convertTo(
-        const Pressure$Attopascal(),
+        Pressure$Attopascal(),
       );
 
   /// Convert to [Pressure$KilonewtonPerMeterSquare]
   Pressure get toKilonewtonPerMeterSquare => convertTo(
-        const Pressure$KilonewtonPerMeterSquare(),
+        Pressure$KilonewtonPerMeterSquare(),
       );
 
   /// Convert to [Pressure$NewtonPerMeterSquare]
   Pressure get toNewtonPerMeterSquare => convertTo(
-        const Pressure$NewtonPerMeterSquare(),
+        Pressure$NewtonPerMeterSquare(),
       );
 
   /// Convert to [Pressure$NewtonPerCentimeterSquare]
   Pressure get toNewtonPerCentimeterSquare => convertTo(
-        const Pressure$NewtonPerCentimeterSquare(),
+        Pressure$NewtonPerCentimeterSquare(),
       );
 
   /// Convert to [Pressure$NewtonPerMillimeterSquare]
   Pressure get toNewtonPerMillimeterSquare => convertTo(
-        const Pressure$NewtonPerMillimeterSquare(),
+        Pressure$NewtonPerMillimeterSquare(),
       );
 
   /// Convert to [Pressure$Bar]
   Pressure get toBar => convertTo(
-        const Pressure$Bar(),
+        Pressure$Bar(),
       );
 
   /// Convert to [Pressure$Millibar]
   Pressure get toMillibar => convertTo(
-        const Pressure$Millibar(),
+        Pressure$Millibar(),
       );
 
   /// Convert to [Pressure$Microbar]
   Pressure get toMicrobar => convertTo(
-        const Pressure$Microbar(),
+        Pressure$Microbar(),
       );
 
   /// Convert to [Pressure$Atmosphere]
   Pressure get toAtmosphere => convertTo(
-        const Pressure$Atmosphere(),
+        Pressure$Atmosphere(),
       );
 
   /// Convert to [Pressure$Psi]
   Pressure get toPsi => convertTo(
-        const Pressure$Psi(),
+        Pressure$Psi(),
       );
 
   /// Convert to [Pressure$DynePerCentimeterSquare]
   Pressure get toDynePerCentimeterSquare => convertTo(
-        const Pressure$DynePerCentimeterSquare(),
+        Pressure$DynePerCentimeterSquare(),
       );
 
   /// Convert to [Pressure$KilogramPerMeterSquare]
   Pressure get toKilogramPerMeterSquare => convertTo(
-        const Pressure$KilogramPerMeterSquare(),
+        Pressure$KilogramPerMeterSquare(),
       );
 
   /// Convert to [Pressure$KilogramPerCentimeterSquare]
   Pressure get toKilogramPerCentimeterSquare => convertTo(
-        const Pressure$KilogramPerCentimeterSquare(),
+        Pressure$KilogramPerCentimeterSquare(),
       );
 
   /// Convert to [Pressure$KilogramPerMillimeterSquare]
   Pressure get toKilogramPerMillimeterSquare => convertTo(
-        const Pressure$KilogramPerMillimeterSquare(),
+        Pressure$KilogramPerMillimeterSquare(),
       );
 
   /// Convert to [Pressure$TonPerFootSquare]
   Pressure get toTonPerFootSquare => convertTo(
-        const Pressure$TonPerFootSquare(),
+        Pressure$TonPerFootSquare(),
       );
 
   /// Convert to [Pressure$TonPerInchSquare]
   Pressure get toTonPerInchSquare => convertTo(
-        const Pressure$TonPerInchSquare(),
+        Pressure$TonPerInchSquare(),
       );
 
   /// Convert to [Pressure$PoundPerFootSquare]
   Pressure get toPoundPerFootSquare => convertTo(
-        const Pressure$PoundPerFootSquare(),
+        Pressure$PoundPerFootSquare(),
       );
 
   /// Convert to [Pressure$PoundPerInchSquare]
   Pressure get toPoundPerInchSquare => convertTo(
-        const Pressure$PoundPerInchSquare(),
+        Pressure$PoundPerInchSquare(),
       );
 
   /// Convert to [Pressure$KipPerInchSquare]
   Pressure get toKipPerInchSquare => convertTo(
-        const Pressure$KipPerInchSquare(),
+        Pressure$KipPerInchSquare(),
       );
 
   /// Convert to [Pressure$Torr]
   Pressure get toTorr => convertTo(
-        const Pressure$Torr(),
+        Pressure$Torr(),
       );
 
   /// Convert to [Pressure$CentimeterMercury0DegreeC]
   Pressure get toCentimeterMercury0DegreeC => convertTo(
-        const Pressure$CentimeterMercury0DegreeC(),
+        Pressure$CentimeterMercury0DegreeC(),
       );
 
   /// Convert to [Pressure$MillimeterMercury0DegreeC]
   Pressure get toMillimeterMercury0DegreeC => convertTo(
-        const Pressure$MillimeterMercury0DegreeC(),
+        Pressure$MillimeterMercury0DegreeC(),
       );
 
   /// Convert to [Pressure$InchMercury32DegreeF]
   Pressure get toInchMercury32DegreeF => convertTo(
-        const Pressure$InchMercury32DegreeF(),
+        Pressure$InchMercury32DegreeF(),
       );
 
   /// Convert to [Pressure$CentimeterWater4DegreeC]
   Pressure get toCentimeterWater4DegreeC => convertTo(
-        const Pressure$CentimeterWater4DegreeC(),
+        Pressure$CentimeterWater4DegreeC(),
       );
 
   /// Convert to [Pressure$InchWater60DegreeF]
   Pressure get toInchWater60DegreeF => convertTo(
-        const Pressure$InchWater60DegreeF(),
+        Pressure$InchWater60DegreeF(),
       );
 
   /// Convert to [Pressure$FootWater60DegreeF]
   Pressure get toFootWater60DegreeF => convertTo(
-        const Pressure$FootWater60DegreeF(),
+        Pressure$FootWater60DegreeF(),
       );
 
   @override
@@ -258,50 +259,50 @@ sealed class Pressure extends Unit<Pressure> {
 
   static const _majorName = 'pressure';
 
-  static const exapascal = Pressure$Exapascal();
-  static const petapascal = Pressure$Petapascal();
-  static const terapascal = Pressure$Terapascal();
-  static const gigapascal = Pressure$Gigapascal();
-  static const megapascal = Pressure$Megapascal();
-  static const kilopascal = Pressure$Kilopascal();
-  static const hectopascal = Pressure$Hectopascal();
-  static const dekapascal = Pressure$Dekapascal();
-  static const pascal = Pressure$Pascal();
-  static const decipascal = Pressure$Decipascal();
-  static const centipascal = Pressure$Centipascal();
-  static const millipascal = Pressure$Millipascal();
-  static const micropascal = Pressure$Micropascal();
-  static const nanopascal = Pressure$Nanopascal();
-  static const picopascal = Pressure$Picopascal();
-  static const femtopascal = Pressure$Femtopascal();
-  static const attopascal = Pressure$Attopascal();
-  static const kilonewtonPerMeterSquare = Pressure$KilonewtonPerMeterSquare();
-  static const newtonPerMeterSquare = Pressure$NewtonPerMeterSquare();
-  static const newtonPerCentimeterSquare = Pressure$NewtonPerCentimeterSquare();
-  static const newtonPerMillimeterSquare = Pressure$NewtonPerMillimeterSquare();
-  static const bar = Pressure$Bar();
-  static const millibar = Pressure$Millibar();
-  static const microbar = Pressure$Microbar();
-  static const atmosphere = Pressure$Atmosphere();
-  static const psi = Pressure$Psi();
-  static const dynePerCentimeterSquare = Pressure$DynePerCentimeterSquare();
-  static const kilogramPerMeterSquare = Pressure$KilogramPerMeterSquare();
-  static const kilogramPerCentimeterSquare =
+  static final exapascal = Pressure$Exapascal();
+  static final petapascal = Pressure$Petapascal();
+  static final terapascal = Pressure$Terapascal();
+  static final gigapascal = Pressure$Gigapascal();
+  static final megapascal = Pressure$Megapascal();
+  static final kilopascal = Pressure$Kilopascal();
+  static final hectopascal = Pressure$Hectopascal();
+  static final dekapascal = Pressure$Dekapascal();
+  static final pascal = Pressure$Pascal();
+  static final decipascal = Pressure$Decipascal();
+  static final centipascal = Pressure$Centipascal();
+  static final millipascal = Pressure$Millipascal();
+  static final micropascal = Pressure$Micropascal();
+  static final nanopascal = Pressure$Nanopascal();
+  static final picopascal = Pressure$Picopascal();
+  static final femtopascal = Pressure$Femtopascal();
+  static final attopascal = Pressure$Attopascal();
+  static final kilonewtonPerMeterSquare = Pressure$KilonewtonPerMeterSquare();
+  static final newtonPerMeterSquare = Pressure$NewtonPerMeterSquare();
+  static final newtonPerCentimeterSquare = Pressure$NewtonPerCentimeterSquare();
+  static final newtonPerMillimeterSquare = Pressure$NewtonPerMillimeterSquare();
+  static final bar = Pressure$Bar();
+  static final millibar = Pressure$Millibar();
+  static final microbar = Pressure$Microbar();
+  static final atmosphere = Pressure$Atmosphere();
+  static final psi = Pressure$Psi();
+  static final dynePerCentimeterSquare = Pressure$DynePerCentimeterSquare();
+  static final kilogramPerMeterSquare = Pressure$KilogramPerMeterSquare();
+  static final kilogramPerCentimeterSquare =
       Pressure$KilogramPerCentimeterSquare();
-  static const kilogramPerMillimeterSquare =
+  static final kilogramPerMillimeterSquare =
       Pressure$KilogramPerMillimeterSquare();
-  static const tonPerFootSquare = Pressure$TonPerFootSquare();
-  static const tonPerInchSquare = Pressure$TonPerInchSquare();
-  static const poundPerFootSquare = Pressure$PoundPerFootSquare();
-  static const poundPerInchSquare = Pressure$PoundPerInchSquare();
-  static const kipPerInchSquare = Pressure$KipPerInchSquare();
-  static const torr = Pressure$Torr();
-  static const centimeterMercury0DegreeC = Pressure$CentimeterMercury0DegreeC();
-  static const millimeterMercury0DegreeC = Pressure$MillimeterMercury0DegreeC();
-  static const inchMercury32DegreeF = Pressure$InchMercury32DegreeF();
-  static const centimeterWater4DegreeC = Pressure$CentimeterWater4DegreeC();
-  static const inchWater60DegreeF = Pressure$InchWater60DegreeF();
-  static const footWater60DegreeF = Pressure$FootWater60DegreeF();
+  static final tonPerFootSquare = Pressure$TonPerFootSquare();
+  static final tonPerInchSquare = Pressure$TonPerInchSquare();
+  static final poundPerFootSquare = Pressure$PoundPerFootSquare();
+  static final poundPerInchSquare = Pressure$PoundPerInchSquare();
+  static final kipPerInchSquare = Pressure$KipPerInchSquare();
+  static final torr = Pressure$Torr();
+  static final centimeterMercury0DegreeC = Pressure$CentimeterMercury0DegreeC();
+  static final millimeterMercury0DegreeC = Pressure$MillimeterMercury0DegreeC();
+  static final inchMercury32DegreeF = Pressure$InchMercury32DegreeF();
+  static final centimeterWater4DegreeC = Pressure$CentimeterWater4DegreeC();
+  static final inchWater60DegreeF = Pressure$InchWater60DegreeF();
+  static final footWater60DegreeF = Pressure$FootWater60DegreeF();
 
   @override
   List<Pressure> get units => values;
@@ -309,7 +310,7 @@ sealed class Pressure extends Unit<Pressure> {
   @override
   EnumValues<Pressure> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Pressure>[
     exapascal,
     petapascal,
     terapascal,
@@ -354,7 +355,7 @@ sealed class Pressure extends Unit<Pressure> {
     footWater60DegreeF,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Pressure>{
     Pressure$Exapascal._minorName: exapascal,
     Pressure$Petapascal._minorName: petapascal,
     Pressure$Terapascal._minorName: terapascal,
@@ -404,7 +405,7 @@ sealed class Pressure extends Unit<Pressure> {
 
 /// Unit of [Pressure]
 final class Pressure$Exapascal extends Pressure {
-  const Pressure$Exapascal([
+  Pressure$Exapascal([
     super.value,
   ]);
 
@@ -435,14 +436,14 @@ final class Pressure$Exapascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+019');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Exapascal] = 10000000000000000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Exapascal] = 1.00000000000000000E+019 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -450,12 +451,12 @@ final class Pressure$Exapascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Exapascal] with new value
   @override
   Pressure$Exapascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Exapascal(val);
 
@@ -468,14 +469,14 @@ final class Pressure$Exapascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Petapascal extends Pressure {
-  const Pressure$Petapascal([
+  Pressure$Petapascal([
     super.value,
   ]);
 
@@ -506,14 +507,14 @@ final class Pressure$Petapascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+016');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Petapascal] = 10000000000000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Petapascal] = 1.00000000000000000E+016 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -521,12 +522,12 @@ final class Pressure$Petapascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Petapascal] with new value
   @override
   Pressure$Petapascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Petapascal(val);
 
@@ -539,14 +540,14 @@ final class Pressure$Petapascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Terapascal extends Pressure {
-  const Pressure$Terapascal([
+  Pressure$Terapascal([
     super.value,
   ]);
 
@@ -577,14 +578,14 @@ final class Pressure$Terapascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+013');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Terapascal] = 10000000000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Terapascal] = 1.00000000000000000E+013 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -592,12 +593,12 @@ final class Pressure$Terapascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Terapascal] with new value
   @override
   Pressure$Terapascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Terapascal(val);
 
@@ -610,14 +611,14 @@ final class Pressure$Terapascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Gigapascal extends Pressure {
-  const Pressure$Gigapascal([
+  Pressure$Gigapascal([
     super.value,
   ]);
 
@@ -648,14 +649,14 @@ final class Pressure$Gigapascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+010');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Gigapascal] = 10000000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Gigapascal] = 1.00000000000000000E+010 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -663,12 +664,12 @@ final class Pressure$Gigapascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Gigapascal] with new value
   @override
   Pressure$Gigapascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Gigapascal(val);
 
@@ -681,14 +682,14 @@ final class Pressure$Gigapascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Megapascal extends Pressure {
-  const Pressure$Megapascal([
+  Pressure$Megapascal([
     super.value,
   ]);
 
@@ -719,14 +720,14 @@ final class Pressure$Megapascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+007');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Megapascal] = 10000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Megapascal] = 1.00000000000000000E+007 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -734,12 +735,12 @@ final class Pressure$Megapascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Megapascal] with new value
   @override
   Pressure$Megapascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Megapascal(val);
 
@@ -752,14 +753,14 @@ final class Pressure$Megapascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Kilopascal extends Pressure {
-  const Pressure$Kilopascal([
+  Pressure$Kilopascal([
     super.value,
   ]);
 
@@ -790,14 +791,14 @@ final class Pressure$Kilopascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Kilopascal] = 10000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Kilopascal] = 1.00000000000000000E+004 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -805,12 +806,12 @@ final class Pressure$Kilopascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Kilopascal] with new value
   @override
   Pressure$Kilopascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Kilopascal(val);
 
@@ -823,14 +824,14 @@ final class Pressure$Kilopascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Hectopascal extends Pressure {
-  const Pressure$Hectopascal([
+  Pressure$Hectopascal([
     super.value,
   ]);
 
@@ -861,14 +862,14 @@ final class Pressure$Hectopascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Hectopascal] = 1000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Hectopascal] = 1.00000000000000000E+003 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -876,12 +877,12 @@ final class Pressure$Hectopascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Hectopascal] with new value
   @override
   Pressure$Hectopascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Hectopascal(val);
 
@@ -894,14 +895,14 @@ final class Pressure$Hectopascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Dekapascal extends Pressure {
-  const Pressure$Dekapascal([
+  Pressure$Dekapascal([
     super.value,
   ]);
 
@@ -932,14 +933,14 @@ final class Pressure$Dekapascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Dekapascal] = 100.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Dekapascal] = 1.00000000000000000E+002 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -947,12 +948,12 @@ final class Pressure$Dekapascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Dekapascal] with new value
   @override
   Pressure$Dekapascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Dekapascal(val);
 
@@ -965,14 +966,14 @@ final class Pressure$Dekapascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Pascal extends Pressure {
-  const Pressure$Pascal([
+  Pressure$Pascal([
     super.value,
   ]);
 
@@ -1003,14 +1004,14 @@ final class Pressure$Pascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Pascal] = 10.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Pascal] = 1.00000000000000000E+001 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1018,12 +1019,12 @@ final class Pressure$Pascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Pascal] with new value
   @override
   Pressure$Pascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Pascal(val);
 
@@ -1036,14 +1037,14 @@ final class Pressure$Pascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Decipascal extends Pressure {
-  const Pressure$Decipascal([
+  Pressure$Decipascal([
     super.value,
   ]);
 
@@ -1074,14 +1075,14 @@ final class Pressure$Decipascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
   /// Default (anchor) unit of [Pressure]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1089,12 +1090,12 @@ final class Pressure$Decipascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Decipascal] with new value
   @override
   Pressure$Decipascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Decipascal(val);
 
@@ -1107,14 +1108,14 @@ final class Pressure$Decipascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Centipascal extends Pressure {
-  const Pressure$Centipascal([
+  Pressure$Centipascal([
     super.value,
   ]);
 
@@ -1145,14 +1146,14 @@ final class Pressure$Centipascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.1;
+  static final _ratio = Rational.parse('1.00000000000000000E-001');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Centipascal] ≈ 0.1 [Pressure$Decipascal]
+  /// 1 [Pressure$Centipascal] ≈ 1.00000000000000000E-001 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1160,12 +1161,12 @@ final class Pressure$Centipascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Centipascal] with new value
   @override
   Pressure$Centipascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Centipascal(val);
 
@@ -1178,14 +1179,14 @@ final class Pressure$Centipascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Millipascal extends Pressure {
-  const Pressure$Millipascal([
+  Pressure$Millipascal([
     super.value,
   ]);
 
@@ -1216,14 +1217,14 @@ final class Pressure$Millipascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Millipascal] ≈ 0.01 [Pressure$Decipascal]
+  /// 1 [Pressure$Millipascal] ≈ 1.00000000000000000E-002 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1231,12 +1232,12 @@ final class Pressure$Millipascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Millipascal] with new value
   @override
   Pressure$Millipascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Millipascal(val);
 
@@ -1249,14 +1250,14 @@ final class Pressure$Millipascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Micropascal extends Pressure {
-  const Pressure$Micropascal([
+  Pressure$Micropascal([
     super.value,
   ]);
 
@@ -1287,14 +1288,14 @@ final class Pressure$Micropascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.00001;
+  static final _ratio = Rational.parse('1.00000000000000000E-005');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Micropascal] ≈ 0.00001 [Pressure$Decipascal]
+  /// 1 [Pressure$Micropascal] ≈ 1.00000000000000000E-005 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1302,12 +1303,12 @@ final class Pressure$Micropascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Micropascal] with new value
   @override
   Pressure$Micropascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Micropascal(val);
 
@@ -1320,14 +1321,14 @@ final class Pressure$Micropascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Nanopascal extends Pressure {
-  const Pressure$Nanopascal([
+  Pressure$Nanopascal([
     super.value,
   ]);
 
@@ -1358,14 +1359,14 @@ final class Pressure$Nanopascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-8;
+  static final _ratio = Rational.parse('1.00000000000000000E-008');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Nanopascal] ≈ 1e-8 [Pressure$Decipascal]
+  /// 1 [Pressure$Nanopascal] ≈ 1.00000000000000000E-008 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1373,12 +1374,12 @@ final class Pressure$Nanopascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Nanopascal] with new value
   @override
   Pressure$Nanopascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Nanopascal(val);
 
@@ -1391,14 +1392,14 @@ final class Pressure$Nanopascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Picopascal extends Pressure {
-  const Pressure$Picopascal([
+  Pressure$Picopascal([
     super.value,
   ]);
 
@@ -1429,14 +1430,14 @@ final class Pressure$Picopascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-11;
+  static final _ratio = Rational.parse('1.00000000000000000E-011');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Picopascal] ≈ 1e-11 [Pressure$Decipascal]
+  /// 1 [Pressure$Picopascal] ≈ 1.00000000000000000E-011 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1444,12 +1445,12 @@ final class Pressure$Picopascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Picopascal] with new value
   @override
   Pressure$Picopascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Picopascal(val);
 
@@ -1462,14 +1463,14 @@ final class Pressure$Picopascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Femtopascal extends Pressure {
-  const Pressure$Femtopascal([
+  Pressure$Femtopascal([
     super.value,
   ]);
 
@@ -1500,14 +1501,14 @@ final class Pressure$Femtopascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-14;
+  static final _ratio = Rational.parse('1.00000000000000000E-014');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Femtopascal] ≈ 1e-14 [Pressure$Decipascal]
+  /// 1 [Pressure$Femtopascal] ≈ 1.00000000000000000E-014 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1515,12 +1516,12 @@ final class Pressure$Femtopascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Femtopascal] with new value
   @override
   Pressure$Femtopascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Femtopascal(val);
 
@@ -1533,14 +1534,14 @@ final class Pressure$Femtopascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Attopascal extends Pressure {
-  const Pressure$Attopascal([
+  Pressure$Attopascal([
     super.value,
   ]);
 
@@ -1571,14 +1572,14 @@ final class Pressure$Attopascal extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-17;
+  static final _ratio = Rational.parse('1.00000000000000000E-017');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Attopascal] ≈ 1e-17 [Pressure$Decipascal]
+  /// 1 [Pressure$Attopascal] ≈ 1.00000000000000000E-017 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1586,12 +1587,12 @@ final class Pressure$Attopascal extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Attopascal] with new value
   @override
   Pressure$Attopascal withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Attopascal(val);
 
@@ -1604,14 +1605,14 @@ final class Pressure$Attopascal extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$KilonewtonPerMeterSquare extends Pressure {
-  const Pressure$KilonewtonPerMeterSquare([
+  Pressure$KilonewtonPerMeterSquare([
     super.value,
   ]);
 
@@ -1642,14 +1643,14 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
   @override
   String get displayName => 'kilonewton/meter²';
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$KilonewtonPerMeterSquare] = 10000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$KilonewtonPerMeterSquare] = 1.00000000000000000E+004 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1658,12 +1659,12 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$KilonewtonPerMeterSquare] with new value
   @override
   Pressure$KilonewtonPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$KilonewtonPerMeterSquare(val);
 
@@ -1676,14 +1677,14 @@ final class Pressure$KilonewtonPerMeterSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$NewtonPerMeterSquare extends Pressure {
-  const Pressure$NewtonPerMeterSquare([
+  Pressure$NewtonPerMeterSquare([
     super.value,
   ]);
 
@@ -1714,14 +1715,14 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
   @override
   String get displayName => 'newton/meter²';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$NewtonPerMeterSquare] = 10.0 [Pressure$Decipascal]
+  /// 1 [Pressure$NewtonPerMeterSquare] = 1.00000000000000000E+001 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1730,12 +1731,12 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$NewtonPerMeterSquare] with new value
   @override
   Pressure$NewtonPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$NewtonPerMeterSquare(val);
 
@@ -1748,14 +1749,14 @@ final class Pressure$NewtonPerMeterSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$NewtonPerCentimeterSquare extends Pressure {
-  const Pressure$NewtonPerCentimeterSquare([
+  Pressure$NewtonPerCentimeterSquare([
     super.value,
   ]);
 
@@ -1786,14 +1787,14 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
   @override
   String get displayName => 'newton/centimeter²';
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$NewtonPerCentimeterSquare] = 100000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$NewtonPerCentimeterSquare] = 1.00000000000000000E+005 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1802,12 +1803,12 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$NewtonPerCentimeterSquare] with new value
   @override
   Pressure$NewtonPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$NewtonPerCentimeterSquare(val);
 
@@ -1820,14 +1821,14 @@ final class Pressure$NewtonPerCentimeterSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$NewtonPerMillimeterSquare extends Pressure {
-  const Pressure$NewtonPerMillimeterSquare([
+  Pressure$NewtonPerMillimeterSquare([
     super.value,
   ]);
 
@@ -1858,14 +1859,14 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
   @override
   String get displayName => 'newton/millimeter²';
 
-  static const _ratio = 10000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+007');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$NewtonPerMillimeterSquare] = 10000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$NewtonPerMillimeterSquare] = 1.00000000000000000E+007 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1874,12 +1875,12 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$NewtonPerMillimeterSquare] with new value
   @override
   Pressure$NewtonPerMillimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$NewtonPerMillimeterSquare(val);
 
@@ -1892,14 +1893,14 @@ final class Pressure$NewtonPerMillimeterSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Bar extends Pressure {
-  const Pressure$Bar([
+  Pressure$Bar([
     super.value,
   ]);
 
@@ -1930,14 +1931,14 @@ final class Pressure$Bar extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Bar] = 1000000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Bar] = 1.00000000000000000E+006 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1945,12 +1946,12 @@ final class Pressure$Bar extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Bar] with new value
   @override
   Pressure$Bar withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Bar(val);
 
@@ -1963,14 +1964,14 @@ final class Pressure$Bar extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Millibar extends Pressure {
-  const Pressure$Millibar([
+  Pressure$Millibar([
     super.value,
   ]);
 
@@ -2001,14 +2002,14 @@ final class Pressure$Millibar extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Millibar] = 1000.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Millibar] = 1.00000000000000000E+003 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2016,12 +2017,12 @@ final class Pressure$Millibar extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Millibar] with new value
   @override
   Pressure$Millibar withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Millibar(val);
 
@@ -2034,14 +2035,14 @@ final class Pressure$Millibar extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Microbar extends Pressure {
-  const Pressure$Microbar([
+  Pressure$Microbar([
     super.value,
   ]);
 
@@ -2072,14 +2073,14 @@ final class Pressure$Microbar extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Microbar] = 1.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Microbar] = 1.00000000000000000E+000 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2087,12 +2088,12 @@ final class Pressure$Microbar extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Microbar] with new value
   @override
   Pressure$Microbar withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Microbar(val);
 
@@ -2105,14 +2106,14 @@ final class Pressure$Microbar extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Atmosphere extends Pressure {
-  const Pressure$Atmosphere([
+  Pressure$Atmosphere([
     super.value,
   ]);
 
@@ -2143,14 +2144,14 @@ final class Pressure$Atmosphere extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1013250.0;
+  static final _ratio = Rational.parse('1.01325000000000000E+006');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Atmosphere] = 1013250.0 [Pressure$Decipascal]
+  /// 1 [Pressure$Atmosphere] = 1.01325000000000000E+006 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2158,12 +2159,12 @@ final class Pressure$Atmosphere extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Atmosphere] with new value
   @override
   Pressure$Atmosphere withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Atmosphere(val);
 
@@ -2176,14 +2177,14 @@ final class Pressure$Atmosphere extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Psi extends Pressure {
-  const Pressure$Psi([
+  Pressure$Psi([
     super.value,
   ]);
 
@@ -2214,14 +2215,14 @@ final class Pressure$Psi extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 68947.57293178307;
+  static final _ratio = Rational.parse('6.89475729317830694E+004');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Psi] ≈ 68947.57293178307 [Pressure$Decipascal]
+  /// 1 [Pressure$Psi] ≈ 6.89475729317830694E+004 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2229,12 +2230,12 @@ final class Pressure$Psi extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Psi] with new value
   @override
   Pressure$Psi withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Psi(val);
 
@@ -2247,14 +2248,14 @@ final class Pressure$Psi extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$DynePerCentimeterSquare extends Pressure {
-  const Pressure$DynePerCentimeterSquare([
+  Pressure$DynePerCentimeterSquare([
     super.value,
   ]);
 
@@ -2285,14 +2286,14 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
   @override
   String get displayName => 'dyne/centimeter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$DynePerCentimeterSquare] = 1.0 [Pressure$Decipascal]
+  /// 1 [Pressure$DynePerCentimeterSquare] = 1.00000000000000000E+000 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2301,12 +2302,12 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$DynePerCentimeterSquare] with new value
   @override
   Pressure$DynePerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$DynePerCentimeterSquare(val);
 
@@ -2319,14 +2320,14 @@ final class Pressure$DynePerCentimeterSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$KilogramPerMeterSquare extends Pressure {
-  const Pressure$KilogramPerMeterSquare([
+  Pressure$KilogramPerMeterSquare([
     super.value,
   ]);
 
@@ -2357,14 +2358,14 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
   @override
   String get displayName => 'kilogram/meter²';
 
-  static const _ratio = 98.0665;
+  static final _ratio = Rational.parse('9.80665000000000000E+001');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$KilogramPerMeterSquare] ≈ 98.0665 [Pressure$Decipascal]
+  /// 1 [Pressure$KilogramPerMeterSquare] ≈ 9.80665000000000000E+001 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2373,12 +2374,12 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$KilogramPerMeterSquare] with new value
   @override
   Pressure$KilogramPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$KilogramPerMeterSquare(val);
 
@@ -2391,14 +2392,14 @@ final class Pressure$KilogramPerMeterSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$KilogramPerCentimeterSquare extends Pressure {
-  const Pressure$KilogramPerCentimeterSquare([
+  Pressure$KilogramPerCentimeterSquare([
     super.value,
   ]);
 
@@ -2429,14 +2430,14 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
   @override
   String get displayName => 'kilogram/centimeter²';
 
-  static const _ratio = 980665.0;
+  static final _ratio = Rational.parse('9.80665000000000000E+005');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$KilogramPerCentimeterSquare] = 980665.0 [Pressure$Decipascal]
+  /// 1 [Pressure$KilogramPerCentimeterSquare] = 9.80665000000000000E+005 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2445,12 +2446,12 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$KilogramPerCentimeterSquare] with new value
   @override
   Pressure$KilogramPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$KilogramPerCentimeterSquare(val);
 
@@ -2463,14 +2464,14 @@ final class Pressure$KilogramPerCentimeterSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$KilogramPerMillimeterSquare extends Pressure {
-  const Pressure$KilogramPerMillimeterSquare([
+  Pressure$KilogramPerMillimeterSquare([
     super.value,
   ]);
 
@@ -2501,14 +2502,14 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
   @override
   String get displayName => 'kilogram/millimeter²';
 
-  static const _ratio = 98066500.0;
+  static final _ratio = Rational.parse('9.80665000000000000E+007');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$KilogramPerMillimeterSquare] = 98066500.0 [Pressure$Decipascal]
+  /// 1 [Pressure$KilogramPerMillimeterSquare] = 9.80665000000000000E+007 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2517,12 +2518,12 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$KilogramPerMillimeterSquare] with new value
   @override
   Pressure$KilogramPerMillimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$KilogramPerMillimeterSquare(val);
 
@@ -2535,14 +2536,14 @@ final class Pressure$KilogramPerMillimeterSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$TonPerFootSquare extends Pressure {
-  const Pressure$TonPerFootSquare([
+  Pressure$TonPerFootSquare([
     super.value,
   ]);
 
@@ -2573,14 +2574,14 @@ final class Pressure$TonPerFootSquare extends Pressure {
   @override
   String get displayName => 'ton/foot²';
 
-  static const _ratio = 957605.1796080982;
+  static final _ratio = Rational.parse('9.57605179608098186E+005');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$TonPerFootSquare] ≈ 957605.1796080982 [Pressure$Decipascal]
+  /// 1 [Pressure$TonPerFootSquare] ≈ 9.57605179608098186E+005 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2588,12 +2589,12 @@ final class Pressure$TonPerFootSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$TonPerFootSquare] with new value
   @override
   Pressure$TonPerFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$TonPerFootSquare(val);
 
@@ -2606,14 +2607,14 @@ final class Pressure$TonPerFootSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$TonPerInchSquare extends Pressure {
-  const Pressure$TonPerInchSquare([
+  Pressure$TonPerInchSquare([
     super.value,
   ]);
 
@@ -2644,14 +2645,14 @@ final class Pressure$TonPerInchSquare extends Pressure {
   @override
   String get displayName => 'ton/inch²';
 
-  static const _ratio = 137895145.86356613;
+  static final _ratio = Rational.parse('1.37895145863566139E+008');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$TonPerInchSquare] ≈ 137895145.86356613 [Pressure$Decipascal]
+  /// 1 [Pressure$TonPerInchSquare] ≈ 1.37895145863566139E+008 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2659,12 +2660,12 @@ final class Pressure$TonPerInchSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$TonPerInchSquare] with new value
   @override
   Pressure$TonPerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$TonPerInchSquare(val);
 
@@ -2677,14 +2678,14 @@ final class Pressure$TonPerInchSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$PoundPerFootSquare extends Pressure {
-  const Pressure$PoundPerFootSquare([
+  Pressure$PoundPerFootSquare([
     super.value,
   ]);
 
@@ -2715,14 +2716,14 @@ final class Pressure$PoundPerFootSquare extends Pressure {
   @override
   String get displayName => 'pound/foot²';
 
-  static const _ratio = 478.8025898040491;
+  static final _ratio = Rational.parse('4.78802589804049093E+002');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$PoundPerFootSquare] ≈ 478.8025898040491 [Pressure$Decipascal]
+  /// 1 [Pressure$PoundPerFootSquare] ≈ 4.78802589804049093E+002 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2730,12 +2731,12 @@ final class Pressure$PoundPerFootSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$PoundPerFootSquare] with new value
   @override
   Pressure$PoundPerFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$PoundPerFootSquare(val);
 
@@ -2748,14 +2749,14 @@ final class Pressure$PoundPerFootSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$PoundPerInchSquare extends Pressure {
-  const Pressure$PoundPerInchSquare([
+  Pressure$PoundPerInchSquare([
     super.value,
   ]);
 
@@ -2786,14 +2787,14 @@ final class Pressure$PoundPerInchSquare extends Pressure {
   @override
   String get displayName => 'pound/inch²';
 
-  static const _ratio = 68947.57293178307;
+  static final _ratio = Rational.parse('6.89475729317830694E+004');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$PoundPerInchSquare] ≈ 68947.57293178307 [Pressure$Decipascal]
+  /// 1 [Pressure$PoundPerInchSquare] ≈ 6.89475729317830694E+004 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2801,12 +2802,12 @@ final class Pressure$PoundPerInchSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$PoundPerInchSquare] with new value
   @override
   Pressure$PoundPerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$PoundPerInchSquare(val);
 
@@ -2819,14 +2820,14 @@ final class Pressure$PoundPerInchSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$KipPerInchSquare extends Pressure {
-  const Pressure$KipPerInchSquare([
+  Pressure$KipPerInchSquare([
     super.value,
   ]);
 
@@ -2857,14 +2858,14 @@ final class Pressure$KipPerInchSquare extends Pressure {
   @override
   String get displayName => 'kip/inch²';
 
-  static const _ratio = 68947572.93178307;
+  static final _ratio = Rational.parse('6.89475729317830694E+007');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$KipPerInchSquare] ≈ 68947572.93178307 [Pressure$Decipascal]
+  /// 1 [Pressure$KipPerInchSquare] ≈ 6.89475729317830694E+007 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2872,12 +2873,12 @@ final class Pressure$KipPerInchSquare extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$KipPerInchSquare] with new value
   @override
   Pressure$KipPerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$KipPerInchSquare(val);
 
@@ -2890,14 +2891,14 @@ final class Pressure$KipPerInchSquare extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$Torr extends Pressure {
-  const Pressure$Torr([
+  Pressure$Torr([
     super.value,
   ]);
 
@@ -2928,14 +2929,14 @@ final class Pressure$Torr extends Pressure {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1333.223684210828;
+  static final _ratio = Rational.parse('1.33322368421082804E+003');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$Torr] ≈ 1333.223684210828 [Pressure$Decipascal]
+  /// 1 [Pressure$Torr] ≈ 1.33322368421082804E+003 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2943,12 +2944,12 @@ final class Pressure$Torr extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$Torr] with new value
   @override
   Pressure$Torr withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$Torr(val);
 
@@ -2961,14 +2962,14 @@ final class Pressure$Torr extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$CentimeterMercury0DegreeC extends Pressure {
-  const Pressure$CentimeterMercury0DegreeC([
+  Pressure$CentimeterMercury0DegreeC([
     super.value,
   ]);
 
@@ -2999,14 +3000,14 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
   @override
   String get displayName => 'centimeter mercury (0°C)';
 
-  static const _ratio = 13332.2368421083;
+  static final _ratio = Rational.parse('1.33322368421083000E+004');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$CentimeterMercury0DegreeC] ≈ 13332.2368421083 [Pressure$Decipascal]
+  /// 1 [Pressure$CentimeterMercury0DegreeC] ≈ 1.33322368421083000E+004 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3015,12 +3016,12 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$CentimeterMercury0DegreeC] with new value
   @override
   Pressure$CentimeterMercury0DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$CentimeterMercury0DegreeC(val);
 
@@ -3033,14 +3034,14 @@ final class Pressure$CentimeterMercury0DegreeC extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$MillimeterMercury0DegreeC extends Pressure {
-  const Pressure$MillimeterMercury0DegreeC([
+  Pressure$MillimeterMercury0DegreeC([
     super.value,
   ]);
 
@@ -3071,14 +3072,14 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
   @override
   String get displayName => 'millimeter mercury (0°C)';
 
-  static const _ratio = 1333.223684210828;
+  static final _ratio = Rational.parse('1.33322368421082804E+003');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$MillimeterMercury0DegreeC] ≈ 1333.223684210828 [Pressure$Decipascal]
+  /// 1 [Pressure$MillimeterMercury0DegreeC] ≈ 1.33322368421082804E+003 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3087,12 +3088,12 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$MillimeterMercury0DegreeC] with new value
   @override
   Pressure$MillimeterMercury0DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$MillimeterMercury0DegreeC(val);
 
@@ -3105,14 +3106,14 @@ final class Pressure$MillimeterMercury0DegreeC extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$InchMercury32DegreeF extends Pressure {
-  const Pressure$InchMercury32DegreeF([
+  Pressure$InchMercury32DegreeF([
     super.value,
   ]);
 
@@ -3143,14 +3144,14 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
   @override
   String get displayName => 'inch mercury (32°F)';
 
-  static const _ratio = 33863.88157899115;
+  static final _ratio = Rational.parse('3.38638815789911509E+004');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$InchMercury32DegreeF] ≈ 33863.88157899115 [Pressure$Decipascal]
+  /// 1 [Pressure$InchMercury32DegreeF] ≈ 3.38638815789911509E+004 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3159,12 +3160,12 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$InchMercury32DegreeF] with new value
   @override
   Pressure$InchMercury32DegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$InchMercury32DegreeF(val);
 
@@ -3177,14 +3178,14 @@ final class Pressure$InchMercury32DegreeF extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$CentimeterWater4DegreeC extends Pressure {
-  const Pressure$CentimeterWater4DegreeC([
+  Pressure$CentimeterWater4DegreeC([
     super.value,
   ]);
 
@@ -3215,14 +3216,14 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
   @override
   String get displayName => 'centimeter water (4°C)';
 
-  static const _ratio = 980.638;
+  static final _ratio = Rational.parse('9.80638000000000000E+002');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$CentimeterWater4DegreeC] ≈ 980.638 [Pressure$Decipascal]
+  /// 1 [Pressure$CentimeterWater4DegreeC] ≈ 9.80638000000000000E+002 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3231,12 +3232,12 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$CentimeterWater4DegreeC] with new value
   @override
   Pressure$CentimeterWater4DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$CentimeterWater4DegreeC(val);
 
@@ -3249,14 +3250,14 @@ final class Pressure$CentimeterWater4DegreeC extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$InchWater60DegreeF extends Pressure {
-  const Pressure$InchWater60DegreeF([
+  Pressure$InchWater60DegreeF([
     super.value,
   ]);
 
@@ -3287,14 +3288,14 @@ final class Pressure$InchWater60DegreeF extends Pressure {
   @override
   String get displayName => 'inch water (60°F)';
 
-  static const _ratio = 2488.4;
+  static final _ratio = Rational.parse('2.48840000000000000E+003');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$InchWater60DegreeF] ≈ 2488.4 [Pressure$Decipascal]
+  /// 1 [Pressure$InchWater60DegreeF] ≈ 2.48840000000000000E+003 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3302,12 +3303,12 @@ final class Pressure$InchWater60DegreeF extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$InchWater60DegreeF] with new value
   @override
   Pressure$InchWater60DegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$InchWater60DegreeF(val);
 
@@ -3320,14 +3321,14 @@ final class Pressure$InchWater60DegreeF extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Pressure]
 final class Pressure$FootWater60DegreeF extends Pressure {
-  const Pressure$FootWater60DegreeF([
+  Pressure$FootWater60DegreeF([
     super.value,
   ]);
 
@@ -3358,14 +3359,14 @@ final class Pressure$FootWater60DegreeF extends Pressure {
   @override
   String get displayName => 'foot water (60°F)';
 
-  static const _ratio = 29860.8;
+  static final _ratio = Rational.parse('2.98608000000000000E+004');
 
   @override
-  Pressure get anchor => const Pressure$Decipascal(_ratio);
+  Pressure get anchor => Pressure$Decipascal(_ratio);
 
-  /// 1 [Pressure$FootWater60DegreeF] ≈ 29860.8 [Pressure$Decipascal]
+  /// 1 [Pressure$FootWater60DegreeF] ≈ 2.98608000000000000E+004 [Pressure$Decipascal]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3373,12 +3374,12 @@ final class Pressure$FootWater60DegreeF extends Pressure {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Pressure$FootWater60DegreeF] with new value
   @override
   Pressure$FootWater60DegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       Pressure$FootWater60DegreeF(val);
 
@@ -3391,7 +3392,7 @@ final class Pressure$FootWater60DegreeF extends Pressure {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

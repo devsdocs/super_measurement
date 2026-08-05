@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [Illumination$LumenPerFootSquare],
 /// [Illumination$WattPerCentimeterSquareAt555nm]
 sealed class Illumination extends Unit<Illumination> {
-  const Illumination([
+  Illumination([
     super.value,
   ]);
 
@@ -22,65 +22,66 @@ sealed class Illumination extends Unit<Illumination> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Illumination.anchor();
 
-  factory Illumination.anchor() => const Illumination$Nox();
+  factory Illumination.anchor() => Illumination$Nox();
 
   /// Convert to [Illumination$MeterCandle]
   Illumination get toMeterCandle => convertTo(
-        const Illumination$MeterCandle(),
+        Illumination$MeterCandle(),
       );
 
   /// Convert to [Illumination$CentimeterCandle]
   Illumination get toCentimeterCandle => convertTo(
-        const Illumination$CentimeterCandle(),
+        Illumination$CentimeterCandle(),
       );
 
   /// Convert to [Illumination$FootCandle]
   Illumination get toFootCandle => convertTo(
-        const Illumination$FootCandle(),
+        Illumination$FootCandle(),
       );
 
   /// Convert to [Illumination$Flame]
   Illumination get toFlame => convertTo(
-        const Illumination$Flame(),
+        Illumination$Flame(),
       );
 
   /// Convert to [Illumination$Phot]
   Illumination get toPhot => convertTo(
-        const Illumination$Phot(),
+        Illumination$Phot(),
       );
 
   /// Convert to [Illumination$Nox]
   Illumination get toNox => convertTo(
-        const Illumination$Nox(),
+        Illumination$Nox(),
       );
 
   /// Convert to [Illumination$Lux]
   Illumination get toLux => convertTo(
-        const Illumination$Lux(),
+        Illumination$Lux(),
       );
 
   /// Convert to [Illumination$LumenPerMeterSquare]
   Illumination get toLumenPerMeterSquare => convertTo(
-        const Illumination$LumenPerMeterSquare(),
+        Illumination$LumenPerMeterSquare(),
       );
 
   /// Convert to [Illumination$LumenPerCentimeterSquare]
   Illumination get toLumenPerCentimeterSquare => convertTo(
-        const Illumination$LumenPerCentimeterSquare(),
+        Illumination$LumenPerCentimeterSquare(),
       );
 
   /// Convert to [Illumination$LumenPerFootSquare]
   Illumination get toLumenPerFootSquare => convertTo(
-        const Illumination$LumenPerFootSquare(),
+        Illumination$LumenPerFootSquare(),
       );
 
   /// Convert to [Illumination$WattPerCentimeterSquareAt555nm]
   Illumination get toWattPerCentimeterSquareAt555nm => convertTo(
-        const Illumination$WattPerCentimeterSquareAt555nm(),
+        Illumination$WattPerCentimeterSquareAt555nm(),
       );
 
   @override
@@ -91,18 +92,18 @@ sealed class Illumination extends Unit<Illumination> {
 
   static const _majorName = 'illumination';
 
-  static const meterCandle = Illumination$MeterCandle();
-  static const centimeterCandle = Illumination$CentimeterCandle();
-  static const footCandle = Illumination$FootCandle();
-  static const flame = Illumination$Flame();
-  static const phot = Illumination$Phot();
-  static const nox = Illumination$Nox();
-  static const lux = Illumination$Lux();
-  static const lumenPerMeterSquare = Illumination$LumenPerMeterSquare();
-  static const lumenPerCentimeterSquare =
+  static final meterCandle = Illumination$MeterCandle();
+  static final centimeterCandle = Illumination$CentimeterCandle();
+  static final footCandle = Illumination$FootCandle();
+  static final flame = Illumination$Flame();
+  static final phot = Illumination$Phot();
+  static final nox = Illumination$Nox();
+  static final lux = Illumination$Lux();
+  static final lumenPerMeterSquare = Illumination$LumenPerMeterSquare();
+  static final lumenPerCentimeterSquare =
       Illumination$LumenPerCentimeterSquare();
-  static const lumenPerFootSquare = Illumination$LumenPerFootSquare();
-  static const wattPerCentimeterSquareAt555nm =
+  static final lumenPerFootSquare = Illumination$LumenPerFootSquare();
+  static final wattPerCentimeterSquareAt555nm =
       Illumination$WattPerCentimeterSquareAt555nm();
 
   @override
@@ -111,7 +112,7 @@ sealed class Illumination extends Unit<Illumination> {
   @override
   EnumValues<Illumination> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Illumination>[
     meterCandle,
     centimeterCandle,
     footCandle,
@@ -125,7 +126,7 @@ sealed class Illumination extends Unit<Illumination> {
     wattPerCentimeterSquareAt555nm,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Illumination>{
     Illumination$MeterCandle._minorName: meterCandle,
     Illumination$CentimeterCandle._minorName: centimeterCandle,
     Illumination$FootCandle._minorName: footCandle,
@@ -143,7 +144,7 @@ sealed class Illumination extends Unit<Illumination> {
 
 /// Unit of [Illumination]
 final class Illumination$MeterCandle extends Illumination {
-  const Illumination$MeterCandle([
+  Illumination$MeterCandle([
     super.value,
   ]);
 
@@ -174,14 +175,14 @@ final class Illumination$MeterCandle extends Illumination {
   @override
   String get displayName => 'meter-candle';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$MeterCandle] = 1000.0 [Illumination$Nox]
+  /// 1 [Illumination$MeterCandle] = 1.00000000000000000E+003 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -189,12 +190,12 @@ final class Illumination$MeterCandle extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$MeterCandle] with new value
   @override
   Illumination$MeterCandle withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$MeterCandle(val);
 
@@ -207,14 +208,14 @@ final class Illumination$MeterCandle extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$CentimeterCandle extends Illumination {
-  const Illumination$CentimeterCandle([
+  Illumination$CentimeterCandle([
     super.value,
   ]);
 
@@ -245,14 +246,14 @@ final class Illumination$CentimeterCandle extends Illumination {
   @override
   String get displayName => 'centimeter-candle';
 
-  static const _ratio = 10000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+007');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$CentimeterCandle] = 10000000.0 [Illumination$Nox]
+  /// 1 [Illumination$CentimeterCandle] = 1.00000000000000000E+007 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -261,12 +262,12 @@ final class Illumination$CentimeterCandle extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$CentimeterCandle] with new value
   @override
   Illumination$CentimeterCandle withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$CentimeterCandle(val);
 
@@ -279,14 +280,14 @@ final class Illumination$CentimeterCandle extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$FootCandle extends Illumination {
-  const Illumination$FootCandle([
+  Illumination$FootCandle([
     super.value,
   ]);
 
@@ -317,14 +318,14 @@ final class Illumination$FootCandle extends Illumination {
   @override
   String get displayName => 'foot-candle';
 
-  static const _ratio = 10763.9104167;
+  static final _ratio = Rational.parse('1.07639104167000000E+004');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$FootCandle] ≈ 10763.9104167 [Illumination$Nox]
+  /// 1 [Illumination$FootCandle] ≈ 1.07639104167000000E+004 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -332,12 +333,12 @@ final class Illumination$FootCandle extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$FootCandle] with new value
   @override
   Illumination$FootCandle withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$FootCandle(val);
 
@@ -350,14 +351,14 @@ final class Illumination$FootCandle extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$Flame extends Illumination {
-  const Illumination$Flame([
+  Illumination$Flame([
     super.value,
   ]);
 
@@ -388,14 +389,14 @@ final class Illumination$Flame extends Illumination {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 43055.6416668;
+  static final _ratio = Rational.parse('4.30556416668000000E+004');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$Flame] ≈ 43055.6416668 [Illumination$Nox]
+  /// 1 [Illumination$Flame] ≈ 4.30556416668000000E+004 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -403,12 +404,12 @@ final class Illumination$Flame extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$Flame] with new value
   @override
   Illumination$Flame withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$Flame(val);
 
@@ -421,14 +422,14 @@ final class Illumination$Flame extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$Phot extends Illumination {
-  const Illumination$Phot([
+  Illumination$Phot([
     super.value,
   ]);
 
@@ -459,14 +460,14 @@ final class Illumination$Phot extends Illumination {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+007');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$Phot] = 10000000.0 [Illumination$Nox]
+  /// 1 [Illumination$Phot] = 1.00000000000000000E+007 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -474,12 +475,12 @@ final class Illumination$Phot extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$Phot] with new value
   @override
   Illumination$Phot withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$Phot(val);
 
@@ -492,14 +493,14 @@ final class Illumination$Phot extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$Nox extends Illumination {
-  const Illumination$Nox([
+  Illumination$Nox([
     super.value,
   ]);
 
@@ -530,14 +531,14 @@ final class Illumination$Nox extends Illumination {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
   /// Default (anchor) unit of [Illumination]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -545,12 +546,12 @@ final class Illumination$Nox extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$Nox] with new value
   @override
   Illumination$Nox withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$Nox(val);
 
@@ -563,14 +564,14 @@ final class Illumination$Nox extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$Lux extends Illumination {
-  const Illumination$Lux([
+  Illumination$Lux([
     super.value,
   ]);
 
@@ -601,14 +602,14 @@ final class Illumination$Lux extends Illumination {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$Lux] = 1000.0 [Illumination$Nox]
+  /// 1 [Illumination$Lux] = 1.00000000000000000E+003 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -616,12 +617,12 @@ final class Illumination$Lux extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$Lux] with new value
   @override
   Illumination$Lux withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$Lux(val);
 
@@ -634,14 +635,14 @@ final class Illumination$Lux extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$LumenPerMeterSquare extends Illumination {
-  const Illumination$LumenPerMeterSquare([
+  Illumination$LumenPerMeterSquare([
     super.value,
   ]);
 
@@ -672,14 +673,14 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
   @override
   String get displayName => 'lumen/meter²';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$LumenPerMeterSquare] = 1000.0 [Illumination$Nox]
+  /// 1 [Illumination$LumenPerMeterSquare] = 1.00000000000000000E+003 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -688,12 +689,12 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$LumenPerMeterSquare] with new value
   @override
   Illumination$LumenPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$LumenPerMeterSquare(val);
 
@@ -706,14 +707,14 @@ final class Illumination$LumenPerMeterSquare extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$LumenPerCentimeterSquare extends Illumination {
-  const Illumination$LumenPerCentimeterSquare([
+  Illumination$LumenPerCentimeterSquare([
     super.value,
   ]);
 
@@ -744,14 +745,14 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
   @override
   String get displayName => 'lumen/centimeter²';
 
-  static const _ratio = 10000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+007');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$LumenPerCentimeterSquare] = 10000000.0 [Illumination$Nox]
+  /// 1 [Illumination$LumenPerCentimeterSquare] = 1.00000000000000000E+007 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -760,12 +761,12 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$LumenPerCentimeterSquare] with new value
   @override
   Illumination$LumenPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$LumenPerCentimeterSquare(val);
 
@@ -778,14 +779,14 @@ final class Illumination$LumenPerCentimeterSquare extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$LumenPerFootSquare extends Illumination {
-  const Illumination$LumenPerFootSquare([
+  Illumination$LumenPerFootSquare([
     super.value,
   ]);
 
@@ -816,14 +817,14 @@ final class Illumination$LumenPerFootSquare extends Illumination {
   @override
   String get displayName => 'lumen/foot²';
 
-  static const _ratio = 10763.9104167;
+  static final _ratio = Rational.parse('1.07639104167000000E+004');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$LumenPerFootSquare] ≈ 10763.9104167 [Illumination$Nox]
+  /// 1 [Illumination$LumenPerFootSquare] ≈ 1.07639104167000000E+004 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -832,12 +833,12 @@ final class Illumination$LumenPerFootSquare extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$LumenPerFootSquare] with new value
   @override
   Illumination$LumenPerFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$LumenPerFootSquare(val);
 
@@ -850,14 +851,14 @@ final class Illumination$LumenPerFootSquare extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Illumination]
 final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
-  const Illumination$WattPerCentimeterSquareAt555nm([
+  Illumination$WattPerCentimeterSquareAt555nm([
     super.value,
   ]);
 
@@ -888,14 +889,14 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
   @override
   String get displayName => 'watt/centimeter² (at 555nm)';
 
-  static const _ratio = 6830000000.0;
+  static final _ratio = Rational.parse('6.83000000000000000E+009');
 
   @override
-  Illumination get anchor => const Illumination$Nox(_ratio);
+  Illumination get anchor => Illumination$Nox(_ratio);
 
-  /// 1 [Illumination$WattPerCentimeterSquareAt555nm] = 6830000000.0 [Illumination$Nox]
+  /// 1 [Illumination$WattPerCentimeterSquareAt555nm] = 6.83000000000000000E+009 [Illumination$Nox]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -904,12 +905,12 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Illumination$WattPerCentimeterSquareAt555nm] with new value
   @override
   Illumination$WattPerCentimeterSquareAt555nm withValue(
-    num val,
+    Rational val,
   ) =>
       Illumination$WattPerCentimeterSquareAt555nm(val);
 
@@ -922,7 +923,7 @@ final class Illumination$WattPerCentimeterSquareAt555nm extends Illumination {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

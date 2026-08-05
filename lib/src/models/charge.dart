@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [Charge$AmpereHour], [Charge$AmpereMinute], [Charge$AmpereSecond],
 /// [Charge$Faraday], [Charge$ElectronicCharge]
 sealed class Charge extends Unit<Charge> {
-  const Charge([
+  Charge([
     super.value,
   ]);
 
@@ -21,90 +21,91 @@ sealed class Charge extends Unit<Charge> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Charge.anchor();
 
-  factory Charge.anchor() => const Charge$Coulomb();
+  factory Charge.anchor() => Charge$Coulomb();
 
   /// Convert to [Charge$Megacoulomb]
   Charge get toMegacoulomb => convertTo(
-        const Charge$Megacoulomb(),
+        Charge$Megacoulomb(),
       );
 
   /// Convert to [Charge$Kilocoulomb]
   Charge get toKilocoulomb => convertTo(
-        const Charge$Kilocoulomb(),
+        Charge$Kilocoulomb(),
       );
 
   /// Convert to [Charge$Coulomb]
   Charge get toCoulomb => convertTo(
-        const Charge$Coulomb(),
+        Charge$Coulomb(),
       );
 
   /// Convert to [Charge$CoulombInternational]
   Charge get toCoulombInternational => convertTo(
-        const Charge$CoulombInternational(),
+        Charge$CoulombInternational(),
       );
 
   /// Convert to [Charge$Millicoulomb]
   Charge get toMillicoulomb => convertTo(
-        const Charge$Millicoulomb(),
+        Charge$Millicoulomb(),
       );
 
   /// Convert to [Charge$Microcoulomb]
   Charge get toMicrocoulomb => convertTo(
-        const Charge$Microcoulomb(),
+        Charge$Microcoulomb(),
       );
 
   /// Convert to [Charge$Nanocoulomb]
   Charge get toNanocoulomb => convertTo(
-        const Charge$Nanocoulomb(),
+        Charge$Nanocoulomb(),
       );
 
   /// Convert to [Charge$Picocoulomb]
   Charge get toPicocoulomb => convertTo(
-        const Charge$Picocoulomb(),
+        Charge$Picocoulomb(),
       );
 
   /// Convert to [Charge$Abcoulomb]
   Charge get toAbcoulomb => convertTo(
-        const Charge$Abcoulomb(),
+        Charge$Abcoulomb(),
       );
 
   /// Convert to [Charge$Statcoulomb]
   Charge get toStatcoulomb => convertTo(
-        const Charge$Statcoulomb(),
+        Charge$Statcoulomb(),
       );
 
   /// Convert to [Charge$Franklin]
   Charge get toFranklin => convertTo(
-        const Charge$Franklin(),
+        Charge$Franklin(),
       );
 
   /// Convert to [Charge$AmpereHour]
   Charge get toAmpereHour => convertTo(
-        const Charge$AmpereHour(),
+        Charge$AmpereHour(),
       );
 
   /// Convert to [Charge$AmpereMinute]
   Charge get toAmpereMinute => convertTo(
-        const Charge$AmpereMinute(),
+        Charge$AmpereMinute(),
       );
 
   /// Convert to [Charge$AmpereSecond]
   Charge get toAmpereSecond => convertTo(
-        const Charge$AmpereSecond(),
+        Charge$AmpereSecond(),
       );
 
   /// Convert to [Charge$Faraday]
   Charge get toFaraday => convertTo(
-        const Charge$Faraday(),
+        Charge$Faraday(),
       );
 
   /// Convert to [Charge$ElectronicCharge]
   Charge get toElectronicCharge => convertTo(
-        const Charge$ElectronicCharge(),
+        Charge$ElectronicCharge(),
       );
 
   @override
@@ -115,22 +116,22 @@ sealed class Charge extends Unit<Charge> {
 
   static const _majorName = 'charge';
 
-  static const megacoulomb = Charge$Megacoulomb();
-  static const kilocoulomb = Charge$Kilocoulomb();
-  static const coulomb = Charge$Coulomb();
-  static const coulombInternational = Charge$CoulombInternational();
-  static const millicoulomb = Charge$Millicoulomb();
-  static const microcoulomb = Charge$Microcoulomb();
-  static const nanocoulomb = Charge$Nanocoulomb();
-  static const picocoulomb = Charge$Picocoulomb();
-  static const abcoulomb = Charge$Abcoulomb();
-  static const statcoulomb = Charge$Statcoulomb();
-  static const franklin = Charge$Franklin();
-  static const ampereHour = Charge$AmpereHour();
-  static const ampereMinute = Charge$AmpereMinute();
-  static const ampereSecond = Charge$AmpereSecond();
-  static const faraday = Charge$Faraday();
-  static const electronicCharge = Charge$ElectronicCharge();
+  static final megacoulomb = Charge$Megacoulomb();
+  static final kilocoulomb = Charge$Kilocoulomb();
+  static final coulomb = Charge$Coulomb();
+  static final coulombInternational = Charge$CoulombInternational();
+  static final millicoulomb = Charge$Millicoulomb();
+  static final microcoulomb = Charge$Microcoulomb();
+  static final nanocoulomb = Charge$Nanocoulomb();
+  static final picocoulomb = Charge$Picocoulomb();
+  static final abcoulomb = Charge$Abcoulomb();
+  static final statcoulomb = Charge$Statcoulomb();
+  static final franklin = Charge$Franklin();
+  static final ampereHour = Charge$AmpereHour();
+  static final ampereMinute = Charge$AmpereMinute();
+  static final ampereSecond = Charge$AmpereSecond();
+  static final faraday = Charge$Faraday();
+  static final electronicCharge = Charge$ElectronicCharge();
 
   @override
   List<Charge> get units => values;
@@ -138,7 +139,7 @@ sealed class Charge extends Unit<Charge> {
   @override
   EnumValues<Charge> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Charge>[
     megacoulomb,
     kilocoulomb,
     coulomb,
@@ -157,7 +158,7 @@ sealed class Charge extends Unit<Charge> {
     electronicCharge,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Charge>{
     Charge$Megacoulomb._minorName: megacoulomb,
     Charge$Kilocoulomb._minorName: kilocoulomb,
     Charge$Coulomb._minorName: coulomb,
@@ -179,7 +180,7 @@ sealed class Charge extends Unit<Charge> {
 
 /// Unit of [Charge]
 final class Charge$Megacoulomb extends Charge {
-  const Charge$Megacoulomb([
+  Charge$Megacoulomb([
     super.value,
   ]);
 
@@ -210,14 +211,14 @@ final class Charge$Megacoulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Megacoulomb] = 1000000.0 [Charge$Coulomb]
+  /// 1 [Charge$Megacoulomb] = 1.00000000000000000E+006 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -225,12 +226,12 @@ final class Charge$Megacoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Megacoulomb] with new value
   @override
   Charge$Megacoulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Megacoulomb(val);
 
@@ -243,14 +244,14 @@ final class Charge$Megacoulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Kilocoulomb extends Charge {
-  const Charge$Kilocoulomb([
+  Charge$Kilocoulomb([
     super.value,
   ]);
 
@@ -281,14 +282,14 @@ final class Charge$Kilocoulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Kilocoulomb] = 1000.0 [Charge$Coulomb]
+  /// 1 [Charge$Kilocoulomb] = 1.00000000000000000E+003 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -296,12 +297,12 @@ final class Charge$Kilocoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Kilocoulomb] with new value
   @override
   Charge$Kilocoulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Kilocoulomb(val);
 
@@ -314,14 +315,14 @@ final class Charge$Kilocoulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Coulomb extends Charge {
-  const Charge$Coulomb([
+  Charge$Coulomb([
     super.value,
   ]);
 
@@ -352,14 +353,14 @@ final class Charge$Coulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
   /// Default (anchor) unit of [Charge]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -367,12 +368,12 @@ final class Charge$Coulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Coulomb] with new value
   @override
   Charge$Coulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Coulomb(val);
 
@@ -385,14 +386,14 @@ final class Charge$Coulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$CoulombInternational extends Charge {
-  const Charge$CoulombInternational([
+  Charge$CoulombInternational([
     super.value,
   ]);
 
@@ -423,14 +424,14 @@ final class Charge$CoulombInternational extends Charge {
   @override
   String get displayName => 'coulomb (international)';
 
-  static const _ratio = 0.999835027;
+  static final _ratio = Rational.parse('9.99835027000000000E-001');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$CoulombInternational] ≈ 0.999835027 [Charge$Coulomb]
+  /// 1 [Charge$CoulombInternational] ≈ 9.99835027000000000E-001 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -438,12 +439,12 @@ final class Charge$CoulombInternational extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$CoulombInternational] with new value
   @override
   Charge$CoulombInternational withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$CoulombInternational(val);
 
@@ -456,14 +457,14 @@ final class Charge$CoulombInternational extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Millicoulomb extends Charge {
-  const Charge$Millicoulomb([
+  Charge$Millicoulomb([
     super.value,
   ]);
 
@@ -494,14 +495,14 @@ final class Charge$Millicoulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Millicoulomb] ≈ 0.001 [Charge$Coulomb]
+  /// 1 [Charge$Millicoulomb] ≈ 1.00000000000000000E-003 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -509,12 +510,12 @@ final class Charge$Millicoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Millicoulomb] with new value
   @override
   Charge$Millicoulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Millicoulomb(val);
 
@@ -527,14 +528,14 @@ final class Charge$Millicoulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Microcoulomb extends Charge {
-  const Charge$Microcoulomb([
+  Charge$Microcoulomb([
     super.value,
   ]);
 
@@ -565,14 +566,14 @@ final class Charge$Microcoulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Microcoulomb] ≈ 0.000001 [Charge$Coulomb]
+  /// 1 [Charge$Microcoulomb] ≈ 1.00000000000000000E-006 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -580,12 +581,12 @@ final class Charge$Microcoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Microcoulomb] with new value
   @override
   Charge$Microcoulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Microcoulomb(val);
 
@@ -598,14 +599,14 @@ final class Charge$Microcoulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Nanocoulomb extends Charge {
-  const Charge$Nanocoulomb([
+  Charge$Nanocoulomb([
     super.value,
   ]);
 
@@ -636,14 +637,14 @@ final class Charge$Nanocoulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Nanocoulomb] ≈ 1e-9 [Charge$Coulomb]
+  /// 1 [Charge$Nanocoulomb] ≈ 1.00000000000000000E-009 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -651,12 +652,12 @@ final class Charge$Nanocoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Nanocoulomb] with new value
   @override
   Charge$Nanocoulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Nanocoulomb(val);
 
@@ -669,14 +670,14 @@ final class Charge$Nanocoulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Picocoulomb extends Charge {
-  const Charge$Picocoulomb([
+  Charge$Picocoulomb([
     super.value,
   ]);
 
@@ -707,14 +708,14 @@ final class Charge$Picocoulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-12;
+  static final _ratio = Rational.parse('1.00000000000000000E-012');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Picocoulomb] ≈ 1e-12 [Charge$Coulomb]
+  /// 1 [Charge$Picocoulomb] ≈ 1.00000000000000000E-012 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -722,12 +723,12 @@ final class Charge$Picocoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Picocoulomb] with new value
   @override
   Charge$Picocoulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Picocoulomb(val);
 
@@ -740,14 +741,14 @@ final class Charge$Picocoulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Abcoulomb extends Charge {
-  const Charge$Abcoulomb([
+  Charge$Abcoulomb([
     super.value,
   ]);
 
@@ -778,14 +779,14 @@ final class Charge$Abcoulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Abcoulomb] = 10.0 [Charge$Coulomb]
+  /// 1 [Charge$Abcoulomb] = 1.00000000000000000E+001 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -793,12 +794,12 @@ final class Charge$Abcoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Abcoulomb] with new value
   @override
   Charge$Abcoulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Abcoulomb(val);
 
@@ -811,14 +812,14 @@ final class Charge$Abcoulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Statcoulomb extends Charge {
-  const Charge$Statcoulomb([
+  Charge$Statcoulomb([
     super.value,
   ]);
 
@@ -849,14 +850,14 @@ final class Charge$Statcoulomb extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.335646048e-10;
+  static final _ratio = Rational.parse('3.33564604800000000E-010');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Statcoulomb] ≈ 3.335646048e-10 [Charge$Coulomb]
+  /// 1 [Charge$Statcoulomb] ≈ 3.33564604800000000E-010 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -864,12 +865,12 @@ final class Charge$Statcoulomb extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Statcoulomb] with new value
   @override
   Charge$Statcoulomb withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Statcoulomb(val);
 
@@ -882,14 +883,14 @@ final class Charge$Statcoulomb extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Franklin extends Charge {
-  const Charge$Franklin([
+  Charge$Franklin([
     super.value,
   ]);
 
@@ -920,14 +921,14 @@ final class Charge$Franklin extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.335646048e-10;
+  static final _ratio = Rational.parse('3.33564604800000000E-010');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Franklin] ≈ 3.335646048e-10 [Charge$Coulomb]
+  /// 1 [Charge$Franklin] ≈ 3.33564604800000000E-010 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -935,12 +936,12 @@ final class Charge$Franklin extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Franklin] with new value
   @override
   Charge$Franklin withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Franklin(val);
 
@@ -953,14 +954,14 @@ final class Charge$Franklin extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$AmpereHour extends Charge {
-  const Charge$AmpereHour([
+  Charge$AmpereHour([
     super.value,
   ]);
 
@@ -991,14 +992,14 @@ final class Charge$AmpereHour extends Charge {
   @override
   String get displayName => 'ampere-hour';
 
-  static const _ratio = 3600.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+003');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$AmpereHour] = 3600.0 [Charge$Coulomb]
+  /// 1 [Charge$AmpereHour] = 3.60000000000000000E+003 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1006,12 +1007,12 @@ final class Charge$AmpereHour extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$AmpereHour] with new value
   @override
   Charge$AmpereHour withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$AmpereHour(val);
 
@@ -1024,14 +1025,14 @@ final class Charge$AmpereHour extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$AmpereMinute extends Charge {
-  const Charge$AmpereMinute([
+  Charge$AmpereMinute([
     super.value,
   ]);
 
@@ -1062,14 +1063,14 @@ final class Charge$AmpereMinute extends Charge {
   @override
   String get displayName => 'ampere-minute';
 
-  static const _ratio = 60.0;
+  static final _ratio = Rational.parse('6.00000000000000000E+001');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$AmpereMinute] = 60.0 [Charge$Coulomb]
+  /// 1 [Charge$AmpereMinute] = 6.00000000000000000E+001 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1077,12 +1078,12 @@ final class Charge$AmpereMinute extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$AmpereMinute] with new value
   @override
   Charge$AmpereMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$AmpereMinute(val);
 
@@ -1095,14 +1096,14 @@ final class Charge$AmpereMinute extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$AmpereSecond extends Charge {
-  const Charge$AmpereSecond([
+  Charge$AmpereSecond([
     super.value,
   ]);
 
@@ -1133,14 +1134,14 @@ final class Charge$AmpereSecond extends Charge {
   @override
   String get displayName => 'ampere-second';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$AmpereSecond] = 1.0 [Charge$Coulomb]
+  /// 1 [Charge$AmpereSecond] = 1.00000000000000000E+000 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1148,12 +1149,12 @@ final class Charge$AmpereSecond extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$AmpereSecond] with new value
   @override
   Charge$AmpereSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$AmpereSecond(val);
 
@@ -1166,14 +1167,14 @@ final class Charge$AmpereSecond extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$Faraday extends Charge {
-  const Charge$Faraday([
+  Charge$Faraday([
     super.value,
   ]);
 
@@ -1204,14 +1205,14 @@ final class Charge$Faraday extends Charge {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 96485.3365;
+  static final _ratio = Rational.parse('9.64853365000000000E+004');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$Faraday] ≈ 96485.3365 [Charge$Coulomb]
+  /// 1 [Charge$Faraday] ≈ 9.64853365000000000E+004 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1219,12 +1220,12 @@ final class Charge$Faraday extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$Faraday] with new value
   @override
   Charge$Faraday withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$Faraday(val);
 
@@ -1237,14 +1238,14 @@ final class Charge$Faraday extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Charge]
 final class Charge$ElectronicCharge extends Charge {
-  const Charge$ElectronicCharge([
+  Charge$ElectronicCharge([
     super.value,
   ]);
 
@@ -1275,14 +1276,14 @@ final class Charge$ElectronicCharge extends Charge {
   @override
   String get displayName => 'electronic charge';
 
-  static const _ratio = 1.6022e-19;
+  static final _ratio = Rational.parse('1.60220000000000000E-019');
 
   @override
-  Charge get anchor => const Charge$Coulomb(_ratio);
+  Charge get anchor => Charge$Coulomb(_ratio);
 
-  /// 1 [Charge$ElectronicCharge] ≈ 1.6022e-19 [Charge$Coulomb]
+  /// 1 [Charge$ElectronicCharge] ≈ 1.60220000000000000E-019 [Charge$Coulomb]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1290,12 +1291,12 @@ final class Charge$ElectronicCharge extends Charge {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Charge$ElectronicCharge] with new value
   @override
   Charge$ElectronicCharge withValue(
-    num val,
+    Rational val,
   ) =>
       Charge$ElectronicCharge(val);
 
@@ -1308,7 +1309,7 @@ final class Charge$ElectronicCharge extends Charge {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

@@ -12,7 +12,7 @@ part of '../../super_measurement.dart';
 /// [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons],
 /// [RadiationDoseEquivalent$GrayWr20AlphaParticles]
 sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
-  const RadiationDoseEquivalent([
+  RadiationDoseEquivalent([
     super.value,
   ]);
 
@@ -25,61 +25,61 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : RadiationDoseEquivalent.anchor();
 
-  factory RadiationDoseEquivalent.anchor() =>
-      const RadiationDoseEquivalent$Sievert();
+  factory RadiationDoseEquivalent.anchor() => RadiationDoseEquivalent$Sievert();
 
   /// Convert to [RadiationDoseEquivalent$Sievert]
   RadiationDoseEquivalent get toSievert => convertTo(
-        const RadiationDoseEquivalent$Sievert(),
+        RadiationDoseEquivalent$Sievert(),
       );
 
   /// Convert to [RadiationDoseEquivalent$Millisievert]
   RadiationDoseEquivalent get toMillisievert => convertTo(
-        const RadiationDoseEquivalent$Millisievert(),
+        RadiationDoseEquivalent$Millisievert(),
       );
 
   /// Convert to [RadiationDoseEquivalent$Microsievert]
   RadiationDoseEquivalent get toMicrosievert => convertTo(
-        const RadiationDoseEquivalent$Microsievert(),
+        RadiationDoseEquivalent$Microsievert(),
       );
 
   /// Convert to [RadiationDoseEquivalent$JoulePerKilogram]
   RadiationDoseEquivalent get toJoulePerKilogram => convertTo(
-        const RadiationDoseEquivalent$JoulePerKilogram(),
+        RadiationDoseEquivalent$JoulePerKilogram(),
       );
 
   /// Convert to [RadiationDoseEquivalent$MeterSquarePerSecondSquare]
   RadiationDoseEquivalent get toMeterSquarePerSecondSquare => convertTo(
-        const RadiationDoseEquivalent$MeterSquarePerSecondSquare(),
+        RadiationDoseEquivalent$MeterSquarePerSecondSquare(),
       );
 
   /// Convert to [RadiationDoseEquivalent$RemRoentgenEqMan]
   RadiationDoseEquivalent get toRemRoentgenEqMan => convertTo(
-        const RadiationDoseEquivalent$RemRoentgenEqMan(),
+        RadiationDoseEquivalent$RemRoentgenEqMan(),
       );
 
   /// Convert to [RadiationDoseEquivalent$Millirem]
   RadiationDoseEquivalent get toMillirem => convertTo(
-        const RadiationDoseEquivalent$Millirem(),
+        RadiationDoseEquivalent$Millirem(),
       );
 
   /// Convert to [RadiationDoseEquivalent$IntensityMillicurie]
   RadiationDoseEquivalent get toIntensityMillicurie => convertTo(
-        const RadiationDoseEquivalent$IntensityMillicurie(),
+        RadiationDoseEquivalent$IntensityMillicurie(),
       );
 
   /// Convert to [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons]
   RadiationDoseEquivalent get toGrayWr1XRayGammaRayElectrons => convertTo(
-        const RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons(),
+        RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons(),
       );
 
   /// Convert to [RadiationDoseEquivalent$GrayWr20AlphaParticles]
   RadiationDoseEquivalent get toGrayWr20AlphaParticles => convertTo(
-        const RadiationDoseEquivalent$GrayWr20AlphaParticles(),
+        RadiationDoseEquivalent$GrayWr20AlphaParticles(),
       );
 
   @override
@@ -90,19 +90,19 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
 
   static const _majorName = 'radiationDoseEquivalent';
 
-  static const sievert = RadiationDoseEquivalent$Sievert();
-  static const millisievert = RadiationDoseEquivalent$Millisievert();
-  static const microsievert = RadiationDoseEquivalent$Microsievert();
-  static const joulePerKilogram = RadiationDoseEquivalent$JoulePerKilogram();
-  static const meterSquarePerSecondSquare =
+  static final sievert = RadiationDoseEquivalent$Sievert();
+  static final millisievert = RadiationDoseEquivalent$Millisievert();
+  static final microsievert = RadiationDoseEquivalent$Microsievert();
+  static final joulePerKilogram = RadiationDoseEquivalent$JoulePerKilogram();
+  static final meterSquarePerSecondSquare =
       RadiationDoseEquivalent$MeterSquarePerSecondSquare();
-  static const remRoentgenEqMan = RadiationDoseEquivalent$RemRoentgenEqMan();
-  static const millirem = RadiationDoseEquivalent$Millirem();
-  static const intensityMillicurie =
+  static final remRoentgenEqMan = RadiationDoseEquivalent$RemRoentgenEqMan();
+  static final millirem = RadiationDoseEquivalent$Millirem();
+  static final intensityMillicurie =
       RadiationDoseEquivalent$IntensityMillicurie();
-  static const grayWr1XRayGammaRayElectrons =
+  static final grayWr1XRayGammaRayElectrons =
       RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons();
-  static const grayWr20AlphaParticles =
+  static final grayWr20AlphaParticles =
       RadiationDoseEquivalent$GrayWr20AlphaParticles();
 
   @override
@@ -111,7 +111,7 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
   @override
   EnumValues<RadiationDoseEquivalent> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <RadiationDoseEquivalent>[
     sievert,
     millisievert,
     microsievert,
@@ -124,7 +124,7 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
     grayWr20AlphaParticles,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, RadiationDoseEquivalent>{
     RadiationDoseEquivalent$Sievert._minorName: sievert,
     RadiationDoseEquivalent$Millisievert._minorName: millisievert,
     RadiationDoseEquivalent$Microsievert._minorName: microsievert,
@@ -143,7 +143,7 @@ sealed class RadiationDoseEquivalent extends Unit<RadiationDoseEquivalent> {
 
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$Sievert([
+  RadiationDoseEquivalent$Sievert([
     super.value,
   ]);
 
@@ -174,15 +174,14 @@ final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
   /// Default (anchor) unit of [RadiationDoseEquivalent]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -191,12 +190,12 @@ final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$Sievert] with new value
   @override
   RadiationDoseEquivalent$Sievert withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$Sievert(val);
 
@@ -209,7 +208,7 @@ final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -217,7 +216,7 @@ final class RadiationDoseEquivalent$Sievert extends RadiationDoseEquivalent {
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$Millisievert
     extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$Millisievert([
+  RadiationDoseEquivalent$Millisievert([
     super.value,
   ]);
 
@@ -248,15 +247,14 @@ final class RadiationDoseEquivalent$Millisievert
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$Millisievert] ≈ 0.001 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$Millisievert] ≈ 1.00000000000000000E-003 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -265,12 +263,12 @@ final class RadiationDoseEquivalent$Millisievert
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$Millisievert] with new value
   @override
   RadiationDoseEquivalent$Millisievert withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$Millisievert(val);
 
@@ -283,7 +281,7 @@ final class RadiationDoseEquivalent$Millisievert
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -291,7 +289,7 @@ final class RadiationDoseEquivalent$Millisievert
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$Microsievert
     extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$Microsievert([
+  RadiationDoseEquivalent$Microsievert([
     super.value,
   ]);
 
@@ -322,15 +320,14 @@ final class RadiationDoseEquivalent$Microsievert
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$Microsievert] ≈ 0.000001 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$Microsievert] ≈ 1.00000000000000000E-006 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -339,12 +336,12 @@ final class RadiationDoseEquivalent$Microsievert
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$Microsievert] with new value
   @override
   RadiationDoseEquivalent$Microsievert withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$Microsievert(val);
 
@@ -357,7 +354,7 @@ final class RadiationDoseEquivalent$Microsievert
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -365,7 +362,7 @@ final class RadiationDoseEquivalent$Microsievert
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$JoulePerKilogram
     extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$JoulePerKilogram([
+  RadiationDoseEquivalent$JoulePerKilogram([
     super.value,
   ]);
 
@@ -396,15 +393,14 @@ final class RadiationDoseEquivalent$JoulePerKilogram
   @override
   String get displayName => 'joule/kilogram';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$JoulePerKilogram] = 1.0 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$JoulePerKilogram] = 1.00000000000000000E+000 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -413,12 +409,12 @@ final class RadiationDoseEquivalent$JoulePerKilogram
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$JoulePerKilogram] with new value
   @override
   RadiationDoseEquivalent$JoulePerKilogram withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$JoulePerKilogram(val);
 
@@ -431,7 +427,7 @@ final class RadiationDoseEquivalent$JoulePerKilogram
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -439,7 +435,7 @@ final class RadiationDoseEquivalent$JoulePerKilogram
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
     extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$MeterSquarePerSecondSquare([
+  RadiationDoseEquivalent$MeterSquarePerSecondSquare([
     super.value,
   ]);
 
@@ -470,15 +466,14 @@ final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
   @override
   String get displayName => 'meter²/second²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$MeterSquarePerSecondSquare] = 1.0 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$MeterSquarePerSecondSquare] = 1.00000000000000000E+000 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -487,12 +482,12 @@ final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$MeterSquarePerSecondSquare] with new value
   @override
   RadiationDoseEquivalent$MeterSquarePerSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$MeterSquarePerSecondSquare(val);
 
@@ -505,7 +500,7 @@ final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -513,7 +508,7 @@ final class RadiationDoseEquivalent$MeterSquarePerSecondSquare
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$RemRoentgenEqMan
     extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$RemRoentgenEqMan([
+  RadiationDoseEquivalent$RemRoentgenEqMan([
     super.value,
   ]);
 
@@ -544,15 +539,14 @@ final class RadiationDoseEquivalent$RemRoentgenEqMan
   @override
   String get displayName => 'rem (Roentgen eq. man)';
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$RemRoentgenEqMan] ≈ 0.01 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$RemRoentgenEqMan] ≈ 1.00000000000000000E-002 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -561,12 +555,12 @@ final class RadiationDoseEquivalent$RemRoentgenEqMan
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$RemRoentgenEqMan] with new value
   @override
   RadiationDoseEquivalent$RemRoentgenEqMan withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$RemRoentgenEqMan(val);
 
@@ -579,14 +573,14 @@ final class RadiationDoseEquivalent$RemRoentgenEqMan
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$Millirem([
+  RadiationDoseEquivalent$Millirem([
     super.value,
   ]);
 
@@ -617,15 +611,14 @@ final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.00001;
+  static final _ratio = Rational.parse('1.00000000000000000E-005');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$Millirem] ≈ 0.00001 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$Millirem] ≈ 1.00000000000000000E-005 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -634,12 +627,12 @@ final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$Millirem] with new value
   @override
   RadiationDoseEquivalent$Millirem withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$Millirem(val);
 
@@ -652,7 +645,7 @@ final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -660,7 +653,7 @@ final class RadiationDoseEquivalent$Millirem extends RadiationDoseEquivalent {
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$IntensityMillicurie
     extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$IntensityMillicurie([
+  RadiationDoseEquivalent$IntensityMillicurie([
     super.value,
   ]);
 
@@ -691,15 +684,14 @@ final class RadiationDoseEquivalent$IntensityMillicurie
   @override
   String get displayName => 'intensity millicurie';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$IntensityMillicurie] = 1.0 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$IntensityMillicurie] = 1.00000000000000000E+000 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -708,12 +700,12 @@ final class RadiationDoseEquivalent$IntensityMillicurie
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$IntensityMillicurie] with new value
   @override
   RadiationDoseEquivalent$IntensityMillicurie withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$IntensityMillicurie(val);
 
@@ -726,7 +718,7 @@ final class RadiationDoseEquivalent$IntensityMillicurie
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -734,7 +726,7 @@ final class RadiationDoseEquivalent$IntensityMillicurie
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
     extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons([
+  RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons([
     super.value,
   ]);
 
@@ -765,15 +757,14 @@ final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
   @override
   String get displayName => 'gray (Wr=1, X-ray, gamma ray, electrons)';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons] = 1.0 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons] = 1.00000000000000000E+000 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -782,12 +773,12 @@ final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons] with new value
   @override
   RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons(val);
 
@@ -800,7 +791,7 @@ final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -808,7 +799,7 @@ final class RadiationDoseEquivalent$GrayWr1XRayGammaRayElectrons
 /// Unit of [RadiationDoseEquivalent]
 final class RadiationDoseEquivalent$GrayWr20AlphaParticles
     extends RadiationDoseEquivalent {
-  const RadiationDoseEquivalent$GrayWr20AlphaParticles([
+  RadiationDoseEquivalent$GrayWr20AlphaParticles([
     super.value,
   ]);
 
@@ -839,15 +830,14 @@ final class RadiationDoseEquivalent$GrayWr20AlphaParticles
   @override
   String get displayName => 'gray (Wr=20, alpha particles)';
 
-  static const _ratio = 20.0;
+  static final _ratio = Rational.parse('2.00000000000000000E+001');
 
   @override
-  RadiationDoseEquivalent get anchor =>
-      const RadiationDoseEquivalent$Sievert(_ratio);
+  RadiationDoseEquivalent get anchor => RadiationDoseEquivalent$Sievert(_ratio);
 
-  /// 1 [RadiationDoseEquivalent$GrayWr20AlphaParticles] = 20.0 [RadiationDoseEquivalent$Sievert]
+  /// 1 [RadiationDoseEquivalent$GrayWr20AlphaParticles] = 2.00000000000000000E+001 [RadiationDoseEquivalent$Sievert]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -856,12 +846,12 @@ final class RadiationDoseEquivalent$GrayWr20AlphaParticles
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [RadiationDoseEquivalent$GrayWr20AlphaParticles] with new value
   @override
   RadiationDoseEquivalent$GrayWr20AlphaParticles withValue(
-    num val,
+    Rational val,
   ) =>
       RadiationDoseEquivalent$GrayWr20AlphaParticles(val);
 
@@ -874,7 +864,7 @@ final class RadiationDoseEquivalent$GrayWr20AlphaParticles
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

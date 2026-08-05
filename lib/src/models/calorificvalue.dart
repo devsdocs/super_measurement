@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [CalorificValue$ThermPerFootCubic], [CalorificValue$ThermPerGallonUK],
 /// [CalorificValue$BTUPerFootCubic], [CalorificValue$CHUPerFootCubic]
 sealed class CalorificValue extends Unit<CalorificValue> {
-  const CalorificValue([
+  CalorificValue([
     super.value,
   ]);
 
@@ -22,55 +22,56 @@ sealed class CalorificValue extends Unit<CalorificValue> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : CalorificValue.anchor();
 
-  factory CalorificValue.anchor() => const CalorificValue$BTUPerFootCubic();
+  factory CalorificValue.anchor() => CalorificValue$BTUPerFootCubic();
 
   /// Convert to [CalorificValue$MegajoulePerMeterCubic]
   CalorificValue get toMegajoulePerMeterCubic => convertTo(
-        const CalorificValue$MegajoulePerMeterCubic(),
+        CalorificValue$MegajoulePerMeterCubic(),
       );
 
   /// Convert to [CalorificValue$KilojoulePerMeterCubic]
   CalorificValue get toKilojoulePerMeterCubic => convertTo(
-        const CalorificValue$KilojoulePerMeterCubic(),
+        CalorificValue$KilojoulePerMeterCubic(),
       );
 
   /// Convert to [CalorificValue$JoulePerMeterCubic]
   CalorificValue get toJoulePerMeterCubic => convertTo(
-        const CalorificValue$JoulePerMeterCubic(),
+        CalorificValue$JoulePerMeterCubic(),
       );
 
   /// Convert to [CalorificValue$KilocaloriePerMeterCubic]
   CalorificValue get toKilocaloriePerMeterCubic => convertTo(
-        const CalorificValue$KilocaloriePerMeterCubic(),
+        CalorificValue$KilocaloriePerMeterCubic(),
       );
 
   /// Convert to [CalorificValue$CaloriePerCentimeterCubic]
   CalorificValue get toCaloriePerCentimeterCubic => convertTo(
-        const CalorificValue$CaloriePerCentimeterCubic(),
+        CalorificValue$CaloriePerCentimeterCubic(),
       );
 
   /// Convert to [CalorificValue$ThermPerFootCubic]
   CalorificValue get toThermPerFootCubic => convertTo(
-        const CalorificValue$ThermPerFootCubic(),
+        CalorificValue$ThermPerFootCubic(),
       );
 
   /// Convert to [CalorificValue$ThermPerGallonUK]
   CalorificValue get toThermPerGallonUK => convertTo(
-        const CalorificValue$ThermPerGallonUK(),
+        CalorificValue$ThermPerGallonUK(),
       );
 
   /// Convert to [CalorificValue$BTUPerFootCubic]
   CalorificValue get toBTUPerFootCubic => convertTo(
-        const CalorificValue$BTUPerFootCubic(),
+        CalorificValue$BTUPerFootCubic(),
       );
 
   /// Convert to [CalorificValue$CHUPerFootCubic]
   CalorificValue get toCHUPerFootCubic => convertTo(
-        const CalorificValue$CHUPerFootCubic(),
+        CalorificValue$CHUPerFootCubic(),
       );
 
   @override
@@ -81,17 +82,17 @@ sealed class CalorificValue extends Unit<CalorificValue> {
 
   static const _majorName = 'calorificValue';
 
-  static const megajoulePerMeterCubic = CalorificValue$MegajoulePerMeterCubic();
-  static const kilojoulePerMeterCubic = CalorificValue$KilojoulePerMeterCubic();
-  static const joulePerMeterCubic = CalorificValue$JoulePerMeterCubic();
-  static const kilocaloriePerMeterCubic =
+  static final megajoulePerMeterCubic = CalorificValue$MegajoulePerMeterCubic();
+  static final kilojoulePerMeterCubic = CalorificValue$KilojoulePerMeterCubic();
+  static final joulePerMeterCubic = CalorificValue$JoulePerMeterCubic();
+  static final kilocaloriePerMeterCubic =
       CalorificValue$KilocaloriePerMeterCubic();
-  static const caloriePerCentimeterCubic =
+  static final caloriePerCentimeterCubic =
       CalorificValue$CaloriePerCentimeterCubic();
-  static const thermPerFootCubic = CalorificValue$ThermPerFootCubic();
-  static const thermPerGallonUK = CalorificValue$ThermPerGallonUK();
-  static const bTUPerFootCubic = CalorificValue$BTUPerFootCubic();
-  static const cHUPerFootCubic = CalorificValue$CHUPerFootCubic();
+  static final thermPerFootCubic = CalorificValue$ThermPerFootCubic();
+  static final thermPerGallonUK = CalorificValue$ThermPerGallonUK();
+  static final bTUPerFootCubic = CalorificValue$BTUPerFootCubic();
+  static final cHUPerFootCubic = CalorificValue$CHUPerFootCubic();
 
   @override
   List<CalorificValue> get units => values;
@@ -99,7 +100,7 @@ sealed class CalorificValue extends Unit<CalorificValue> {
   @override
   EnumValues<CalorificValue> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <CalorificValue>[
     megajoulePerMeterCubic,
     kilojoulePerMeterCubic,
     joulePerMeterCubic,
@@ -111,7 +112,7 @@ sealed class CalorificValue extends Unit<CalorificValue> {
     cHUPerFootCubic,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, CalorificValue>{
     CalorificValue$MegajoulePerMeterCubic._minorName: megajoulePerMeterCubic,
     CalorificValue$KilojoulePerMeterCubic._minorName: kilojoulePerMeterCubic,
     CalorificValue$JoulePerMeterCubic._minorName: joulePerMeterCubic,
@@ -128,7 +129,7 @@ sealed class CalorificValue extends Unit<CalorificValue> {
 
 /// Unit of [CalorificValue]
 final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
-  const CalorificValue$MegajoulePerMeterCubic([
+  CalorificValue$MegajoulePerMeterCubic([
     super.value,
   ]);
 
@@ -159,14 +160,14 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
   @override
   String get displayName => 'megajoule/meter³';
 
-  static const _ratio = 26.839191732297994;
+  static final _ratio = Rational.parse('2.68391917322979938E+001');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
-  /// 1 [CalorificValue$MegajoulePerMeterCubic] ≈ 26.839191732297994 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$MegajoulePerMeterCubic] ≈ 2.68391917322979938E+001 [CalorificValue$BTUPerFootCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -175,12 +176,12 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$MegajoulePerMeterCubic] with new value
   @override
   CalorificValue$MegajoulePerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$MegajoulePerMeterCubic(val);
 
@@ -193,14 +194,14 @@ final class CalorificValue$MegajoulePerMeterCubic extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [CalorificValue]
 final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
-  const CalorificValue$KilojoulePerMeterCubic([
+  CalorificValue$KilojoulePerMeterCubic([
     super.value,
   ]);
 
@@ -231,14 +232,14 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
   @override
   String get displayName => 'kilojoule/meter³';
 
-  static const _ratio = 0.026839191732297995;
+  static final _ratio = Rational.parse('2.68391917322979938E-002');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
-  /// 1 [CalorificValue$KilojoulePerMeterCubic] ≈ 0.026839191732297995 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$KilojoulePerMeterCubic] ≈ 2.68391917322979938E-002 [CalorificValue$BTUPerFootCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -247,12 +248,12 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$KilojoulePerMeterCubic] with new value
   @override
   CalorificValue$KilojoulePerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$KilojoulePerMeterCubic(val);
 
@@ -265,14 +266,14 @@ final class CalorificValue$KilojoulePerMeterCubic extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [CalorificValue]
 final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
-  const CalorificValue$JoulePerMeterCubic([
+  CalorificValue$JoulePerMeterCubic([
     super.value,
   ]);
 
@@ -303,14 +304,14 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
   @override
   String get displayName => 'joule/meter³';
 
-  static const _ratio = 0.000026839191732297995;
+  static final _ratio = Rational.parse('2.68391917322979938E-005');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
-  /// 1 [CalorificValue$JoulePerMeterCubic] ≈ 0.000026839191732297995 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$JoulePerMeterCubic] ≈ 2.68391917322979938E-005 [CalorificValue$BTUPerFootCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -319,12 +320,12 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$JoulePerMeterCubic] with new value
   @override
   CalorificValue$JoulePerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$JoulePerMeterCubic(val);
 
@@ -337,14 +338,14 @@ final class CalorificValue$JoulePerMeterCubic extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [CalorificValue]
 final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
-  const CalorificValue$KilocaloriePerMeterCubic([
+  CalorificValue$KilocaloriePerMeterCubic([
     super.value,
   ]);
 
@@ -375,14 +376,14 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
   @override
   String get displayName => 'kilocalorie/meter³';
 
-  static const _ratio = 0.11237032794478524;
+  static final _ratio = Rational.parse('1.12370327944785240E-001');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
-  /// 1 [CalorificValue$KilocaloriePerMeterCubic] ≈ 0.11237032794478524 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$KilocaloriePerMeterCubic] ≈ 1.12370327944785240E-001 [CalorificValue$BTUPerFootCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -391,12 +392,12 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$KilocaloriePerMeterCubic] with new value
   @override
   CalorificValue$KilocaloriePerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$KilocaloriePerMeterCubic(val);
 
@@ -409,14 +410,14 @@ final class CalorificValue$KilocaloriePerMeterCubic extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [CalorificValue]
 final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
-  const CalorificValue$CaloriePerCentimeterCubic([
+  CalorificValue$CaloriePerCentimeterCubic([
     super.value,
   ]);
 
@@ -447,14 +448,14 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
   @override
   String get displayName => 'calorie/centimeter³';
 
-  static const _ratio = 112.37032794478525;
+  static final _ratio = Rational.parse('1.12370327944785240E+002');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
-  /// 1 [CalorificValue$CaloriePerCentimeterCubic] ≈ 112.37032794478525 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$CaloriePerCentimeterCubic] ≈ 1.12370327944785240E+002 [CalorificValue$BTUPerFootCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -463,12 +464,12 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$CaloriePerCentimeterCubic] with new value
   @override
   CalorificValue$CaloriePerCentimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$CaloriePerCentimeterCubic(val);
 
@@ -481,14 +482,14 @@ final class CalorificValue$CaloriePerCentimeterCubic extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [CalorificValue]
 final class CalorificValue$ThermPerFootCubic extends CalorificValue {
-  const CalorificValue$ThermPerFootCubic([
+  CalorificValue$ThermPerFootCubic([
     super.value,
   ]);
 
@@ -519,14 +520,14 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
   @override
   String get displayName => 'therm/foot³';
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
-  /// 1 [CalorificValue$ThermPerFootCubic] = 100000.0 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$ThermPerFootCubic] = 1.00000000000000000E+005 [CalorificValue$BTUPerFootCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -535,12 +536,12 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$ThermPerFootCubic] with new value
   @override
   CalorificValue$ThermPerFootCubic withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$ThermPerFootCubic(val);
 
@@ -553,14 +554,14 @@ final class CalorificValue$ThermPerFootCubic extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [CalorificValue]
 final class CalorificValue$ThermPerGallonUK extends CalorificValue {
-  const CalorificValue$ThermPerGallonUK([
+  CalorificValue$ThermPerGallonUK([
     super.value,
   ]);
 
@@ -591,14 +592,14 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
   @override
   String get displayName => 'therm/gallon (UK)';
 
-  static const _ratio = 622883.5459840919;
+  static final _ratio = Rational.parse('6.22883545984091906E+005');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
-  /// 1 [CalorificValue$ThermPerGallonUK] ≈ 622883.5459840919 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$ThermPerGallonUK] ≈ 6.22883545984091906E+005 [CalorificValue$BTUPerFootCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -607,12 +608,12 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$ThermPerGallonUK] with new value
   @override
   CalorificValue$ThermPerGallonUK withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$ThermPerGallonUK(val);
 
@@ -625,14 +626,14 @@ final class CalorificValue$ThermPerGallonUK extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [CalorificValue]
 final class CalorificValue$BTUPerFootCubic extends CalorificValue {
-  const CalorificValue$BTUPerFootCubic([
+  CalorificValue$BTUPerFootCubic([
     super.value,
   ]);
 
@@ -663,14 +664,14 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
   @override
   String get displayName => 'BTU/foot³';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
   /// Default (anchor) unit of [CalorificValue]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -679,12 +680,12 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$BTUPerFootCubic] with new value
   @override
   CalorificValue$BTUPerFootCubic withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$BTUPerFootCubic(val);
 
@@ -697,14 +698,14 @@ final class CalorificValue$BTUPerFootCubic extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [CalorificValue]
 final class CalorificValue$CHUPerFootCubic extends CalorificValue {
-  const CalorificValue$CHUPerFootCubic([
+  CalorificValue$CHUPerFootCubic([
     super.value,
   ]);
 
@@ -735,14 +736,14 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
   @override
   String get displayName => 'CHU/foot³';
 
-  static const _ratio = 1.7999999998389649;
+  static final _ratio = Rational.parse('1.79999999983896485E+000');
 
   @override
-  CalorificValue get anchor => const CalorificValue$BTUPerFootCubic(_ratio);
+  CalorificValue get anchor => CalorificValue$BTUPerFootCubic(_ratio);
 
-  /// 1 [CalorificValue$CHUPerFootCubic] ≈ 1.7999999998389649 [CalorificValue$BTUPerFootCubic]
+  /// 1 [CalorificValue$CHUPerFootCubic] ≈ 1.79999999983896485E+000 [CalorificValue$BTUPerFootCubic]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -751,12 +752,12 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [CalorificValue$CHUPerFootCubic] with new value
   @override
   CalorificValue$CHUPerFootCubic withValue(
-    num val,
+    Rational val,
   ) =>
       CalorificValue$CHUPerFootCubic(val);
 
@@ -769,7 +770,7 @@ final class CalorificValue$CHUPerFootCubic extends CalorificValue {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

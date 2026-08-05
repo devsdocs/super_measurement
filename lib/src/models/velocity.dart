@@ -14,7 +14,7 @@ part of '../../super_measurement.dart';
 /// [Velocity$MachSIStandard], [Velocity$MachAtSeaLevel], [Velocity$Light],
 /// [Velocity$Knot]
 sealed class Velocity extends Unit<Velocity> {
-  const Velocity([
+  Velocity([
     super.value,
   ]);
 
@@ -26,120 +26,121 @@ sealed class Velocity extends Unit<Velocity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Velocity.anchor();
 
-  factory Velocity.anchor() => const Velocity$CentimeterPerHour();
+  factory Velocity.anchor() => Velocity$CentimeterPerHour();
 
   /// Convert to [Velocity$KilometerPerHour]
   Velocity get toKilometerPerHour => convertTo(
-        const Velocity$KilometerPerHour(),
+        Velocity$KilometerPerHour(),
       );
 
   /// Convert to [Velocity$KilometerPerMinute]
   Velocity get toKilometerPerMinute => convertTo(
-        const Velocity$KilometerPerMinute(),
+        Velocity$KilometerPerMinute(),
       );
 
   /// Convert to [Velocity$KilometerPerSecond]
   Velocity get toKilometerPerSecond => convertTo(
-        const Velocity$KilometerPerSecond(),
+        Velocity$KilometerPerSecond(),
       );
 
   /// Convert to [Velocity$MeterPerHour]
   Velocity get toMeterPerHour => convertTo(
-        const Velocity$MeterPerHour(),
+        Velocity$MeterPerHour(),
       );
 
   /// Convert to [Velocity$MeterPerMinute]
   Velocity get toMeterPerMinute => convertTo(
-        const Velocity$MeterPerMinute(),
+        Velocity$MeterPerMinute(),
       );
 
   /// Convert to [Velocity$MeterPerSecond]
   Velocity get toMeterPerSecond => convertTo(
-        const Velocity$MeterPerSecond(),
+        Velocity$MeterPerSecond(),
       );
 
   /// Convert to [Velocity$CentimeterPerHour]
   Velocity get toCentimeterPerHour => convertTo(
-        const Velocity$CentimeterPerHour(),
+        Velocity$CentimeterPerHour(),
       );
 
   /// Convert to [Velocity$CentimeterPerMinute]
   Velocity get toCentimeterPerMinute => convertTo(
-        const Velocity$CentimeterPerMinute(),
+        Velocity$CentimeterPerMinute(),
       );
 
   /// Convert to [Velocity$CentimeterPerSecond]
   Velocity get toCentimeterPerSecond => convertTo(
-        const Velocity$CentimeterPerSecond(),
+        Velocity$CentimeterPerSecond(),
       );
 
   /// Convert to [Velocity$MilePerHour]
   Velocity get toMilePerHour => convertTo(
-        const Velocity$MilePerHour(),
+        Velocity$MilePerHour(),
       );
 
   /// Convert to [Velocity$MilePerMinute]
   Velocity get toMilePerMinute => convertTo(
-        const Velocity$MilePerMinute(),
+        Velocity$MilePerMinute(),
       );
 
   /// Convert to [Velocity$MilePerSecond]
   Velocity get toMilePerSecond => convertTo(
-        const Velocity$MilePerSecond(),
+        Velocity$MilePerSecond(),
       );
 
   /// Convert to [Velocity$YardPerHour]
   Velocity get toYardPerHour => convertTo(
-        const Velocity$YardPerHour(),
+        Velocity$YardPerHour(),
       );
 
   /// Convert to [Velocity$YardPerMinute]
   Velocity get toYardPerMinute => convertTo(
-        const Velocity$YardPerMinute(),
+        Velocity$YardPerMinute(),
       );
 
   /// Convert to [Velocity$YardPerSecond]
   Velocity get toYardPerSecond => convertTo(
-        const Velocity$YardPerSecond(),
+        Velocity$YardPerSecond(),
       );
 
   /// Convert to [Velocity$FootPerHour]
   Velocity get toFootPerHour => convertTo(
-        const Velocity$FootPerHour(),
+        Velocity$FootPerHour(),
       );
 
   /// Convert to [Velocity$FootPerMinute]
   Velocity get toFootPerMinute => convertTo(
-        const Velocity$FootPerMinute(),
+        Velocity$FootPerMinute(),
       );
 
   /// Convert to [Velocity$FootPerSecond]
   Velocity get toFootPerSecond => convertTo(
-        const Velocity$FootPerSecond(),
+        Velocity$FootPerSecond(),
       );
 
   /// Convert to [Velocity$MachSIStandard]
   Velocity get toMachSIStandard => convertTo(
-        const Velocity$MachSIStandard(),
+        Velocity$MachSIStandard(),
       );
 
   /// Convert to [Velocity$MachAtSeaLevel]
   Velocity get toMachAtSeaLevel => convertTo(
-        const Velocity$MachAtSeaLevel(),
+        Velocity$MachAtSeaLevel(),
       );
 
   /// Convert to [Velocity$Light]
   Velocity get toLight => convertTo(
-        const Velocity$Light(),
+        Velocity$Light(),
       );
 
   /// Convert to [Velocity$Knot]
   Velocity get toKnot => convertTo(
-        const Velocity$Knot(),
+        Velocity$Knot(),
       );
 
   @override
@@ -150,28 +151,28 @@ sealed class Velocity extends Unit<Velocity> {
 
   static const _majorName = 'velocity';
 
-  static const kilometerPerHour = Velocity$KilometerPerHour();
-  static const kilometerPerMinute = Velocity$KilometerPerMinute();
-  static const kilometerPerSecond = Velocity$KilometerPerSecond();
-  static const meterPerHour = Velocity$MeterPerHour();
-  static const meterPerMinute = Velocity$MeterPerMinute();
-  static const meterPerSecond = Velocity$MeterPerSecond();
-  static const centimeterPerHour = Velocity$CentimeterPerHour();
-  static const centimeterPerMinute = Velocity$CentimeterPerMinute();
-  static const centimeterPerSecond = Velocity$CentimeterPerSecond();
-  static const milePerHour = Velocity$MilePerHour();
-  static const milePerMinute = Velocity$MilePerMinute();
-  static const milePerSecond = Velocity$MilePerSecond();
-  static const yardPerHour = Velocity$YardPerHour();
-  static const yardPerMinute = Velocity$YardPerMinute();
-  static const yardPerSecond = Velocity$YardPerSecond();
-  static const footPerHour = Velocity$FootPerHour();
-  static const footPerMinute = Velocity$FootPerMinute();
-  static const footPerSecond = Velocity$FootPerSecond();
-  static const machSIStandard = Velocity$MachSIStandard();
-  static const machAtSeaLevel = Velocity$MachAtSeaLevel();
-  static const light = Velocity$Light();
-  static const knot = Velocity$Knot();
+  static final kilometerPerHour = Velocity$KilometerPerHour();
+  static final kilometerPerMinute = Velocity$KilometerPerMinute();
+  static final kilometerPerSecond = Velocity$KilometerPerSecond();
+  static final meterPerHour = Velocity$MeterPerHour();
+  static final meterPerMinute = Velocity$MeterPerMinute();
+  static final meterPerSecond = Velocity$MeterPerSecond();
+  static final centimeterPerHour = Velocity$CentimeterPerHour();
+  static final centimeterPerMinute = Velocity$CentimeterPerMinute();
+  static final centimeterPerSecond = Velocity$CentimeterPerSecond();
+  static final milePerHour = Velocity$MilePerHour();
+  static final milePerMinute = Velocity$MilePerMinute();
+  static final milePerSecond = Velocity$MilePerSecond();
+  static final yardPerHour = Velocity$YardPerHour();
+  static final yardPerMinute = Velocity$YardPerMinute();
+  static final yardPerSecond = Velocity$YardPerSecond();
+  static final footPerHour = Velocity$FootPerHour();
+  static final footPerMinute = Velocity$FootPerMinute();
+  static final footPerSecond = Velocity$FootPerSecond();
+  static final machSIStandard = Velocity$MachSIStandard();
+  static final machAtSeaLevel = Velocity$MachAtSeaLevel();
+  static final light = Velocity$Light();
+  static final knot = Velocity$Knot();
 
   @override
   List<Velocity> get units => values;
@@ -179,7 +180,7 @@ sealed class Velocity extends Unit<Velocity> {
   @override
   EnumValues<Velocity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Velocity>[
     kilometerPerHour,
     kilometerPerMinute,
     kilometerPerSecond,
@@ -204,7 +205,7 @@ sealed class Velocity extends Unit<Velocity> {
     knot,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Velocity>{
     Velocity$KilometerPerHour._minorName: kilometerPerHour,
     Velocity$KilometerPerMinute._minorName: kilometerPerMinute,
     Velocity$KilometerPerSecond._minorName: kilometerPerSecond,
@@ -232,7 +233,7 @@ sealed class Velocity extends Unit<Velocity> {
 
 /// Unit of [Velocity]
 final class Velocity$KilometerPerHour extends Velocity {
-  const Velocity$KilometerPerHour([
+  Velocity$KilometerPerHour([
     super.value,
   ]);
 
@@ -263,14 +264,14 @@ final class Velocity$KilometerPerHour extends Velocity {
   @override
   String get displayName => 'kilometer/hour';
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$KilometerPerHour] = 100000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$KilometerPerHour] = 1.00000000000000000E+005 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -278,12 +279,12 @@ final class Velocity$KilometerPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$KilometerPerHour] with new value
   @override
   Velocity$KilometerPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$KilometerPerHour(val);
 
@@ -296,14 +297,14 @@ final class Velocity$KilometerPerHour extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$KilometerPerMinute extends Velocity {
-  const Velocity$KilometerPerMinute([
+  Velocity$KilometerPerMinute([
     super.value,
   ]);
 
@@ -334,14 +335,14 @@ final class Velocity$KilometerPerMinute extends Velocity {
   @override
   String get displayName => 'kilometer/minute';
 
-  static const _ratio = 6000000.0;
+  static final _ratio = Rational.parse('6.00000000000000000E+006');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$KilometerPerMinute] = 6000000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$KilometerPerMinute] = 6.00000000000000000E+006 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -349,12 +350,12 @@ final class Velocity$KilometerPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$KilometerPerMinute] with new value
   @override
   Velocity$KilometerPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$KilometerPerMinute(val);
 
@@ -367,14 +368,14 @@ final class Velocity$KilometerPerMinute extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$KilometerPerSecond extends Velocity {
-  const Velocity$KilometerPerSecond([
+  Velocity$KilometerPerSecond([
     super.value,
   ]);
 
@@ -405,14 +406,14 @@ final class Velocity$KilometerPerSecond extends Velocity {
   @override
   String get displayName => 'kilometer/second';
 
-  static const _ratio = 360000000.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+008');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$KilometerPerSecond] = 360000000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$KilometerPerSecond] = 3.60000000000000000E+008 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -420,12 +421,12 @@ final class Velocity$KilometerPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$KilometerPerSecond] with new value
   @override
   Velocity$KilometerPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$KilometerPerSecond(val);
 
@@ -438,14 +439,14 @@ final class Velocity$KilometerPerSecond extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$MeterPerHour extends Velocity {
-  const Velocity$MeterPerHour([
+  Velocity$MeterPerHour([
     super.value,
   ]);
 
@@ -476,14 +477,14 @@ final class Velocity$MeterPerHour extends Velocity {
   @override
   String get displayName => 'meter/hour';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$MeterPerHour] = 100.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MeterPerHour] = 1.00000000000000000E+002 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -491,12 +492,12 @@ final class Velocity$MeterPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$MeterPerHour] with new value
   @override
   Velocity$MeterPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$MeterPerHour(val);
 
@@ -509,14 +510,14 @@ final class Velocity$MeterPerHour extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$MeterPerMinute extends Velocity {
-  const Velocity$MeterPerMinute([
+  Velocity$MeterPerMinute([
     super.value,
   ]);
 
@@ -547,14 +548,14 @@ final class Velocity$MeterPerMinute extends Velocity {
   @override
   String get displayName => 'meter/minute';
 
-  static const _ratio = 6000.0;
+  static final _ratio = Rational.parse('6.00000000000000000E+003');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$MeterPerMinute] = 6000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MeterPerMinute] = 6.00000000000000000E+003 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -562,12 +563,12 @@ final class Velocity$MeterPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$MeterPerMinute] with new value
   @override
   Velocity$MeterPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$MeterPerMinute(val);
 
@@ -580,14 +581,14 @@ final class Velocity$MeterPerMinute extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$MeterPerSecond extends Velocity {
-  const Velocity$MeterPerSecond([
+  Velocity$MeterPerSecond([
     super.value,
   ]);
 
@@ -618,14 +619,14 @@ final class Velocity$MeterPerSecond extends Velocity {
   @override
   String get displayName => 'meter/second';
 
-  static const _ratio = 360000.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+005');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$MeterPerSecond] = 360000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MeterPerSecond] = 3.60000000000000000E+005 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -633,12 +634,12 @@ final class Velocity$MeterPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$MeterPerSecond] with new value
   @override
   Velocity$MeterPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$MeterPerSecond(val);
 
@@ -651,14 +652,14 @@ final class Velocity$MeterPerSecond extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$CentimeterPerHour extends Velocity {
-  const Velocity$CentimeterPerHour([
+  Velocity$CentimeterPerHour([
     super.value,
   ]);
 
@@ -689,14 +690,14 @@ final class Velocity$CentimeterPerHour extends Velocity {
   @override
   String get displayName => 'centimeter/hour';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
   /// Default (anchor) unit of [Velocity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -704,12 +705,12 @@ final class Velocity$CentimeterPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$CentimeterPerHour] with new value
   @override
   Velocity$CentimeterPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$CentimeterPerHour(val);
 
@@ -722,14 +723,14 @@ final class Velocity$CentimeterPerHour extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$CentimeterPerMinute extends Velocity {
-  const Velocity$CentimeterPerMinute([
+  Velocity$CentimeterPerMinute([
     super.value,
   ]);
 
@@ -760,14 +761,14 @@ final class Velocity$CentimeterPerMinute extends Velocity {
   @override
   String get displayName => 'centimeter/minute';
 
-  static const _ratio = 60.0;
+  static final _ratio = Rational.parse('6.00000000000000000E+001');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$CentimeterPerMinute] = 60.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$CentimeterPerMinute] = 6.00000000000000000E+001 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -776,12 +777,12 @@ final class Velocity$CentimeterPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$CentimeterPerMinute] with new value
   @override
   Velocity$CentimeterPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$CentimeterPerMinute(val);
 
@@ -794,14 +795,14 @@ final class Velocity$CentimeterPerMinute extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$CentimeterPerSecond extends Velocity {
-  const Velocity$CentimeterPerSecond([
+  Velocity$CentimeterPerSecond([
     super.value,
   ]);
 
@@ -832,14 +833,14 @@ final class Velocity$CentimeterPerSecond extends Velocity {
   @override
   String get displayName => 'centimeter/second';
 
-  static const _ratio = 3600.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+003');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$CentimeterPerSecond] = 3600.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$CentimeterPerSecond] = 3.60000000000000000E+003 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -848,12 +849,12 @@ final class Velocity$CentimeterPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$CentimeterPerSecond] with new value
   @override
   Velocity$CentimeterPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$CentimeterPerSecond(val);
 
@@ -866,14 +867,14 @@ final class Velocity$CentimeterPerSecond extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$MilePerHour extends Velocity {
-  const Velocity$MilePerHour([
+  Velocity$MilePerHour([
     super.value,
   ]);
 
@@ -904,14 +905,14 @@ final class Velocity$MilePerHour extends Velocity {
   @override
   String get displayName => 'mile/hour';
 
-  static const _ratio = 160934.4;
+  static final _ratio = Rational.parse('1.60934400000000000E+005');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$MilePerHour] ≈ 160934.4 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MilePerHour] ≈ 1.60934400000000000E+005 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -919,12 +920,12 @@ final class Velocity$MilePerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$MilePerHour] with new value
   @override
   Velocity$MilePerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$MilePerHour(val);
 
@@ -937,14 +938,14 @@ final class Velocity$MilePerHour extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$MilePerMinute extends Velocity {
-  const Velocity$MilePerMinute([
+  Velocity$MilePerMinute([
     super.value,
   ]);
 
@@ -975,14 +976,14 @@ final class Velocity$MilePerMinute extends Velocity {
   @override
   String get displayName => 'mile/minute';
 
-  static const _ratio = 9656064.0;
+  static final _ratio = Rational.parse('9.65606400000000000E+006');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$MilePerMinute] = 9656064.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MilePerMinute] = 9.65606400000000000E+006 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -990,12 +991,12 @@ final class Velocity$MilePerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$MilePerMinute] with new value
   @override
   Velocity$MilePerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$MilePerMinute(val);
 
@@ -1008,14 +1009,14 @@ final class Velocity$MilePerMinute extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$MilePerSecond extends Velocity {
-  const Velocity$MilePerSecond([
+  Velocity$MilePerSecond([
     super.value,
   ]);
 
@@ -1046,14 +1047,14 @@ final class Velocity$MilePerSecond extends Velocity {
   @override
   String get displayName => 'mile/second';
 
-  static const _ratio = 579363840.0;
+  static final _ratio = Rational.parse('5.79363840000000000E+008');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$MilePerSecond] = 579363840.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MilePerSecond] = 5.79363840000000000E+008 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1061,12 +1062,12 @@ final class Velocity$MilePerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$MilePerSecond] with new value
   @override
   Velocity$MilePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$MilePerSecond(val);
 
@@ -1079,14 +1080,14 @@ final class Velocity$MilePerSecond extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$YardPerHour extends Velocity {
-  const Velocity$YardPerHour([
+  Velocity$YardPerHour([
     super.value,
   ]);
 
@@ -1117,14 +1118,14 @@ final class Velocity$YardPerHour extends Velocity {
   @override
   String get displayName => 'yard/hour';
 
-  static const _ratio = 91.44;
+  static final _ratio = Rational.parse('9.14400000000000000E+001');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$YardPerHour] ≈ 91.44 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$YardPerHour] ≈ 9.14400000000000000E+001 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1132,12 +1133,12 @@ final class Velocity$YardPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$YardPerHour] with new value
   @override
   Velocity$YardPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$YardPerHour(val);
 
@@ -1150,14 +1151,14 @@ final class Velocity$YardPerHour extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$YardPerMinute extends Velocity {
-  const Velocity$YardPerMinute([
+  Velocity$YardPerMinute([
     super.value,
   ]);
 
@@ -1188,14 +1189,14 @@ final class Velocity$YardPerMinute extends Velocity {
   @override
   String get displayName => 'yard/minute';
 
-  static const _ratio = 5486.4;
+  static final _ratio = Rational.parse('5.48640000000000000E+003');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$YardPerMinute] ≈ 5486.4 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$YardPerMinute] ≈ 5.48640000000000000E+003 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1203,12 +1204,12 @@ final class Velocity$YardPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$YardPerMinute] with new value
   @override
   Velocity$YardPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$YardPerMinute(val);
 
@@ -1221,14 +1222,14 @@ final class Velocity$YardPerMinute extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$YardPerSecond extends Velocity {
-  const Velocity$YardPerSecond([
+  Velocity$YardPerSecond([
     super.value,
   ]);
 
@@ -1259,14 +1260,14 @@ final class Velocity$YardPerSecond extends Velocity {
   @override
   String get displayName => 'yard/second';
 
-  static const _ratio = 329184.0;
+  static final _ratio = Rational.parse('3.29184000000000000E+005');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$YardPerSecond] = 329184.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$YardPerSecond] = 3.29184000000000000E+005 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1274,12 +1275,12 @@ final class Velocity$YardPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$YardPerSecond] with new value
   @override
   Velocity$YardPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$YardPerSecond(val);
 
@@ -1292,14 +1293,14 @@ final class Velocity$YardPerSecond extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$FootPerHour extends Velocity {
-  const Velocity$FootPerHour([
+  Velocity$FootPerHour([
     super.value,
   ]);
 
@@ -1330,14 +1331,14 @@ final class Velocity$FootPerHour extends Velocity {
   @override
   String get displayName => 'foot/hour';
 
-  static const _ratio = 30.48;
+  static final _ratio = Rational.parse('3.04800000000000000E+001');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$FootPerHour] ≈ 30.48 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$FootPerHour] ≈ 3.04800000000000000E+001 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1345,12 +1346,12 @@ final class Velocity$FootPerHour extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$FootPerHour] with new value
   @override
   Velocity$FootPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$FootPerHour(val);
 
@@ -1363,14 +1364,14 @@ final class Velocity$FootPerHour extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$FootPerMinute extends Velocity {
-  const Velocity$FootPerMinute([
+  Velocity$FootPerMinute([
     super.value,
   ]);
 
@@ -1401,14 +1402,14 @@ final class Velocity$FootPerMinute extends Velocity {
   @override
   String get displayName => 'foot/minute';
 
-  static const _ratio = 1828.8;
+  static final _ratio = Rational.parse('1.82880000000000000E+003');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$FootPerMinute] ≈ 1828.8 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$FootPerMinute] ≈ 1.82880000000000000E+003 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1416,12 +1417,12 @@ final class Velocity$FootPerMinute extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$FootPerMinute] with new value
   @override
   Velocity$FootPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$FootPerMinute(val);
 
@@ -1434,14 +1435,14 @@ final class Velocity$FootPerMinute extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$FootPerSecond extends Velocity {
-  const Velocity$FootPerSecond([
+  Velocity$FootPerSecond([
     super.value,
   ]);
 
@@ -1472,14 +1473,14 @@ final class Velocity$FootPerSecond extends Velocity {
   @override
   String get displayName => 'foot/second';
 
-  static const _ratio = 109728.0;
+  static final _ratio = Rational.parse('1.09728000000000000E+005');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$FootPerSecond] = 109728.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$FootPerSecond] = 1.09728000000000000E+005 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1487,12 +1488,12 @@ final class Velocity$FootPerSecond extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$FootPerSecond] with new value
   @override
   Velocity$FootPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$FootPerSecond(val);
 
@@ -1505,14 +1506,14 @@ final class Velocity$FootPerSecond extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$MachSIStandard extends Velocity {
-  const Velocity$MachSIStandard([
+  Velocity$MachSIStandard([
     super.value,
   ]);
 
@@ -1543,14 +1544,14 @@ final class Velocity$MachSIStandard extends Velocity {
   @override
   String get displayName => 'mach (SI standard)';
 
-  static const _ratio = 106216704.00010112;
+  static final _ratio = Rational.parse('1.06216704000101118E+008');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$MachSIStandard] ≈ 106216704.00010112 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MachSIStandard] ≈ 1.06216704000101118E+008 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1558,12 +1559,12 @@ final class Velocity$MachSIStandard extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$MachSIStandard] with new value
   @override
   Velocity$MachSIStandard withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$MachSIStandard(val);
 
@@ -1576,14 +1577,14 @@ final class Velocity$MachSIStandard extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$MachAtSeaLevel extends Velocity {
-  const Velocity$MachAtSeaLevel([
+  Velocity$MachAtSeaLevel([
     super.value,
   ]);
 
@@ -1614,14 +1615,14 @@ final class Velocity$MachAtSeaLevel extends Velocity {
   @override
   String get displayName => 'mach (at sea level)';
 
-  static const _ratio = 119325600.0;
+  static final _ratio = Rational.parse('1.19325600000000000E+008');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$MachAtSeaLevel] = 119325600.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$MachAtSeaLevel] = 1.19325600000000000E+008 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1629,12 +1630,12 @@ final class Velocity$MachAtSeaLevel extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$MachAtSeaLevel] with new value
   @override
   Velocity$MachAtSeaLevel withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$MachAtSeaLevel(val);
 
@@ -1647,14 +1648,14 @@ final class Velocity$MachAtSeaLevel extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$Light extends Velocity {
-  const Velocity$Light([
+  Velocity$Light([
     super.value,
   ]);
 
@@ -1685,14 +1686,14 @@ final class Velocity$Light extends Velocity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 107925284880000.0;
+  static final _ratio = Rational.parse('1.07925284880000000E+014');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$Light] = 107925284880000.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$Light] = 1.07925284880000000E+014 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1700,12 +1701,12 @@ final class Velocity$Light extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$Light] with new value
   @override
   Velocity$Light withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$Light(val);
 
@@ -1718,14 +1719,14 @@ final class Velocity$Light extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Velocity]
 final class Velocity$Knot extends Velocity {
-  const Velocity$Knot([
+  Velocity$Knot([
     super.value,
   ]);
 
@@ -1756,14 +1757,14 @@ final class Velocity$Knot extends Velocity {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 185200.0;
+  static final _ratio = Rational.parse('1.85200000000000000E+005');
 
   @override
-  Velocity get anchor => const Velocity$CentimeterPerHour(_ratio);
+  Velocity get anchor => Velocity$CentimeterPerHour(_ratio);
 
-  /// 1 [Velocity$Knot] = 185200.0 [Velocity$CentimeterPerHour]
+  /// 1 [Velocity$Knot] = 1.85200000000000000E+005 [Velocity$CentimeterPerHour]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1771,12 +1772,12 @@ final class Velocity$Knot extends Velocity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Velocity$Knot] with new value
   @override
   Velocity$Knot withValue(
-    num val,
+    Rational val,
   ) =>
       Velocity$Knot(val);
 
@@ -1789,7 +1790,7 @@ final class Velocity$Knot extends Velocity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

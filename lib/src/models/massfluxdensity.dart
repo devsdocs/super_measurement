@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [MassFluxDensity$PoundPerHourFootSquare],
 /// [MassFluxDensity$PoundPerSecondFootSquare]
 sealed class MassFluxDensity extends Unit<MassFluxDensity> {
-  const MassFluxDensity([
+  MassFluxDensity([
     super.value,
   ]);
 
@@ -22,46 +22,47 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : MassFluxDensity.anchor();
 
   factory MassFluxDensity.anchor() =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare();
+      MassFluxDensity$KilogramPerSecondMeterSquare();
 
   /// Convert to [MassFluxDensity$KilogramPerHourMeterSquare]
   MassFluxDensity get toKilogramPerHourMeterSquare => convertTo(
-        const MassFluxDensity$KilogramPerHourMeterSquare(),
+        MassFluxDensity$KilogramPerHourMeterSquare(),
       );
 
   /// Convert to [MassFluxDensity$KilogramPerHourFootSquare]
   MassFluxDensity get toKilogramPerHourFootSquare => convertTo(
-        const MassFluxDensity$KilogramPerHourFootSquare(),
+        MassFluxDensity$KilogramPerHourFootSquare(),
       );
 
   /// Convert to [MassFluxDensity$KilogramPerSecondMeterSquare]
   MassFluxDensity get toKilogramPerSecondMeterSquare => convertTo(
-        const MassFluxDensity$KilogramPerSecondMeterSquare(),
+        MassFluxDensity$KilogramPerSecondMeterSquare(),
       );
 
   /// Convert to [MassFluxDensity$GramPerSecondMeterSquare]
   MassFluxDensity get toGramPerSecondMeterSquare => convertTo(
-        const MassFluxDensity$GramPerSecondMeterSquare(),
+        MassFluxDensity$GramPerSecondMeterSquare(),
       );
 
   /// Convert to [MassFluxDensity$GramPerSecondCentimeterSquare]
   MassFluxDensity get toGramPerSecondCentimeterSquare => convertTo(
-        const MassFluxDensity$GramPerSecondCentimeterSquare(),
+        MassFluxDensity$GramPerSecondCentimeterSquare(),
       );
 
   /// Convert to [MassFluxDensity$PoundPerHourFootSquare]
   MassFluxDensity get toPoundPerHourFootSquare => convertTo(
-        const MassFluxDensity$PoundPerHourFootSquare(),
+        MassFluxDensity$PoundPerHourFootSquare(),
       );
 
   /// Convert to [MassFluxDensity$PoundPerSecondFootSquare]
   MassFluxDensity get toPoundPerSecondFootSquare => convertTo(
-        const MassFluxDensity$PoundPerSecondFootSquare(),
+        MassFluxDensity$PoundPerSecondFootSquare(),
       );
 
   @override
@@ -72,19 +73,19 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
 
   static const _majorName = 'massFluxDensity';
 
-  static const kilogramPerHourMeterSquare =
+  static final kilogramPerHourMeterSquare =
       MassFluxDensity$KilogramPerHourMeterSquare();
-  static const kilogramPerHourFootSquare =
+  static final kilogramPerHourFootSquare =
       MassFluxDensity$KilogramPerHourFootSquare();
-  static const kilogramPerSecondMeterSquare =
+  static final kilogramPerSecondMeterSquare =
       MassFluxDensity$KilogramPerSecondMeterSquare();
-  static const gramPerSecondMeterSquare =
+  static final gramPerSecondMeterSquare =
       MassFluxDensity$GramPerSecondMeterSquare();
-  static const gramPerSecondCentimeterSquare =
+  static final gramPerSecondCentimeterSquare =
       MassFluxDensity$GramPerSecondCentimeterSquare();
-  static const poundPerHourFootSquare =
+  static final poundPerHourFootSquare =
       MassFluxDensity$PoundPerHourFootSquare();
-  static const poundPerSecondFootSquare =
+  static final poundPerSecondFootSquare =
       MassFluxDensity$PoundPerSecondFootSquare();
 
   @override
@@ -93,7 +94,7 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
   @override
   EnumValues<MassFluxDensity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <MassFluxDensity>[
     kilogramPerHourMeterSquare,
     kilogramPerHourFootSquare,
     kilogramPerSecondMeterSquare,
@@ -103,7 +104,7 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
     poundPerSecondFootSquare,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, MassFluxDensity>{
     MassFluxDensity$KilogramPerHourMeterSquare._minorName:
         kilogramPerHourMeterSquare,
     MassFluxDensity$KilogramPerHourFootSquare._minorName:
@@ -122,7 +123,7 @@ sealed class MassFluxDensity extends Unit<MassFluxDensity> {
 
 /// Unit of [MassFluxDensity]
 final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
-  const MassFluxDensity$KilogramPerHourMeterSquare([
+  MassFluxDensity$KilogramPerHourMeterSquare([
     super.value,
   ]);
 
@@ -153,15 +154,15 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
   @override
   String get displayName => 'kilogram/hour meter²';
 
-  static const _ratio = 0.0002777777777777778;
+  static final _ratio = Rational.parse('2.77777777777777778E-004');
 
   @override
   MassFluxDensity get anchor =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+      MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
-  /// 1 [MassFluxDensity$KilogramPerHourMeterSquare] ≈ 0.0002777777777777778 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$KilogramPerHourMeterSquare] ≈ 2.77777777777777778E-004 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -170,12 +171,12 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MassFluxDensity$KilogramPerHourMeterSquare] with new value
   @override
   MassFluxDensity$KilogramPerHourMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MassFluxDensity$KilogramPerHourMeterSquare(val);
 
@@ -188,14 +189,14 @@ final class MassFluxDensity$KilogramPerHourMeterSquare extends MassFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MassFluxDensity]
 final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
-  const MassFluxDensity$KilogramPerHourFootSquare([
+  MassFluxDensity$KilogramPerHourFootSquare([
     super.value,
   ]);
 
@@ -226,15 +227,15 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
   @override
   String get displayName => 'kilogram/hour foot²';
 
-  static const _ratio = 0.002989975117;
+  static final _ratio = Rational.parse('2.98997511700000000E-003');
 
   @override
   MassFluxDensity get anchor =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+      MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
-  /// 1 [MassFluxDensity$KilogramPerHourFootSquare] ≈ 0.002989975117 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$KilogramPerHourFootSquare] ≈ 2.98997511700000000E-003 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -243,12 +244,12 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MassFluxDensity$KilogramPerHourFootSquare] with new value
   @override
   MassFluxDensity$KilogramPerHourFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MassFluxDensity$KilogramPerHourFootSquare(val);
 
@@ -261,7 +262,7 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -269,7 +270,7 @@ final class MassFluxDensity$KilogramPerHourFootSquare extends MassFluxDensity {
 /// Unit of [MassFluxDensity]
 final class MassFluxDensity$KilogramPerSecondMeterSquare
     extends MassFluxDensity {
-  const MassFluxDensity$KilogramPerSecondMeterSquare([
+  MassFluxDensity$KilogramPerSecondMeterSquare([
     super.value,
   ]);
 
@@ -300,15 +301,15 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
   @override
   String get displayName => 'kilogram/second meter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   MassFluxDensity get anchor =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+      MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
   /// Default (anchor) unit of [MassFluxDensity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -317,12 +318,12 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MassFluxDensity$KilogramPerSecondMeterSquare] with new value
   @override
   MassFluxDensity$KilogramPerSecondMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MassFluxDensity$KilogramPerSecondMeterSquare(val);
 
@@ -335,14 +336,14 @@ final class MassFluxDensity$KilogramPerSecondMeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MassFluxDensity]
 final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
-  const MassFluxDensity$GramPerSecondMeterSquare([
+  MassFluxDensity$GramPerSecondMeterSquare([
     super.value,
   ]);
 
@@ -373,15 +374,15 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
   @override
   String get displayName => 'gram/second meter²';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
   MassFluxDensity get anchor =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+      MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
-  /// 1 [MassFluxDensity$GramPerSecondMeterSquare] ≈ 0.001 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$GramPerSecondMeterSquare] ≈ 1.00000000000000000E-003 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -390,12 +391,12 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MassFluxDensity$GramPerSecondMeterSquare] with new value
   @override
   MassFluxDensity$GramPerSecondMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MassFluxDensity$GramPerSecondMeterSquare(val);
 
@@ -408,7 +409,7 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -416,7 +417,7 @@ final class MassFluxDensity$GramPerSecondMeterSquare extends MassFluxDensity {
 /// Unit of [MassFluxDensity]
 final class MassFluxDensity$GramPerSecondCentimeterSquare
     extends MassFluxDensity {
-  const MassFluxDensity$GramPerSecondCentimeterSquare([
+  MassFluxDensity$GramPerSecondCentimeterSquare([
     super.value,
   ]);
 
@@ -447,15 +448,15 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
   @override
   String get displayName => 'gram/second centimeter²';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
   MassFluxDensity get anchor =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+      MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
-  /// 1 [MassFluxDensity$GramPerSecondCentimeterSquare] = 10.0 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$GramPerSecondCentimeterSquare] = 1.00000000000000000E+001 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -464,12 +465,12 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MassFluxDensity$GramPerSecondCentimeterSquare] with new value
   @override
   MassFluxDensity$GramPerSecondCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MassFluxDensity$GramPerSecondCentimeterSquare(val);
 
@@ -482,14 +483,14 @@ final class MassFluxDensity$GramPerSecondCentimeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MassFluxDensity]
 final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
-  const MassFluxDensity$PoundPerHourFootSquare([
+  MassFluxDensity$PoundPerHourFootSquare([
     super.value,
   ]);
 
@@ -520,15 +521,15 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
   @override
   String get displayName => 'pound/hour foot²';
 
-  static const _ratio = 0.001356229913;
+  static final _ratio = Rational.parse('1.35622991300000000E-003');
 
   @override
   MassFluxDensity get anchor =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+      MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
-  /// 1 [MassFluxDensity$PoundPerHourFootSquare] ≈ 0.001356229913 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$PoundPerHourFootSquare] ≈ 1.35622991300000000E-003 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -537,12 +538,12 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MassFluxDensity$PoundPerHourFootSquare] with new value
   @override
   MassFluxDensity$PoundPerHourFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MassFluxDensity$PoundPerHourFootSquare(val);
 
@@ -555,14 +556,14 @@ final class MassFluxDensity$PoundPerHourFootSquare extends MassFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MassFluxDensity]
 final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
-  const MassFluxDensity$PoundPerSecondFootSquare([
+  MassFluxDensity$PoundPerSecondFootSquare([
     super.value,
   ]);
 
@@ -593,15 +594,15 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
   @override
   String get displayName => 'pound/second foot²';
 
-  static const _ratio = 4.882427687;
+  static final _ratio = Rational.parse('4.88242768700000000E+000');
 
   @override
   MassFluxDensity get anchor =>
-      const MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
+      MassFluxDensity$KilogramPerSecondMeterSquare(_ratio);
 
-  /// 1 [MassFluxDensity$PoundPerSecondFootSquare] ≈ 4.882427687 [MassFluxDensity$KilogramPerSecondMeterSquare]
+  /// 1 [MassFluxDensity$PoundPerSecondFootSquare] ≈ 4.88242768700000000E+000 [MassFluxDensity$KilogramPerSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -610,12 +611,12 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MassFluxDensity$PoundPerSecondFootSquare] with new value
   @override
   MassFluxDensity$PoundPerSecondFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MassFluxDensity$PoundPerSecondFootSquare(val);
 
@@ -628,7 +629,7 @@ final class MassFluxDensity$PoundPerSecondFootSquare extends MassFluxDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

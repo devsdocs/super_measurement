@@ -12,7 +12,7 @@ part of '../../super_measurement.dart';
 /// [Time$Octennial], [Time$Novennial], [Time$Quindecennial],
 /// [Time$Quinquennial]
 sealed class Time extends Unit<Time> {
-  const Time([
+  Time([
     super.value,
   ]);
 
@@ -24,160 +24,161 @@ sealed class Time extends Unit<Time> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Time.anchor();
 
-  factory Time.anchor() => const Time$Attosecond();
+  factory Time.anchor() => Time$Attosecond();
 
   /// Convert to [Time$Millennium]
   Time get toMillennium => convertTo(
-        const Time$Millennium(),
+        Time$Millennium(),
       );
 
   /// Convert to [Time$Century]
   Time get toCentury => convertTo(
-        const Time$Century(),
+        Time$Century(),
       );
 
   /// Convert to [Time$Decade]
   Time get toDecade => convertTo(
-        const Time$Decade(),
+        Time$Decade(),
       );
 
   /// Convert to [Time$Year]
   Time get toYear => convertTo(
-        const Time$Year(),
+        Time$Year(),
       );
 
   /// Convert to [Time$LeapYear]
   Time get toLeapYear => convertTo(
-        const Time$LeapYear(),
+        Time$LeapYear(),
       );
 
   /// Convert to [Time$MeanYear]
   Time get toMeanYear => convertTo(
-        const Time$MeanYear(),
+        Time$MeanYear(),
       );
 
   /// Convert to [Time$SiderealYear]
   Time get toSiderealYear => convertTo(
-        const Time$SiderealYear(),
+        Time$SiderealYear(),
       );
 
   /// Convert to [Time$TropicalYear]
   Time get toTropicalYear => convertTo(
-        const Time$TropicalYear(),
+        Time$TropicalYear(),
       );
 
   /// Convert to [Time$Month]
   Time get toMonth => convertTo(
-        const Time$Month(),
+        Time$Month(),
       );
 
   /// Convert to [Time$SynodicMonth]
   Time get toSynodicMonth => convertTo(
-        const Time$SynodicMonth(),
+        Time$SynodicMonth(),
       );
 
   /// Convert to [Time$Fortnight]
   Time get toFortnight => convertTo(
-        const Time$Fortnight(),
+        Time$Fortnight(),
       );
 
   /// Convert to [Time$Week]
   Time get toWeek => convertTo(
-        const Time$Week(),
+        Time$Week(),
       );
 
   /// Convert to [Time$Day]
   Time get toDay => convertTo(
-        const Time$Day(),
+        Time$Day(),
       );
 
   /// Convert to [Time$SiderealDay]
   Time get toSiderealDay => convertTo(
-        const Time$SiderealDay(),
+        Time$SiderealDay(),
       );
 
   /// Convert to [Time$Hour]
   Time get toHour => convertTo(
-        const Time$Hour(),
+        Time$Hour(),
       );
 
   /// Convert to [Time$SiderealHour]
   Time get toSiderealHour => convertTo(
-        const Time$SiderealHour(),
+        Time$SiderealHour(),
       );
 
   /// Convert to [Time$Minute]
   Time get toMinute => convertTo(
-        const Time$Minute(),
+        Time$Minute(),
       );
 
   /// Convert to [Time$Second]
   Time get toSecond => convertTo(
-        const Time$Second(),
+        Time$Second(),
       );
 
   /// Convert to [Time$Millisecond]
   Time get toMillisecond => convertTo(
-        const Time$Millisecond(),
+        Time$Millisecond(),
       );
 
   /// Convert to [Time$Microsecond]
   Time get toMicrosecond => convertTo(
-        const Time$Microsecond(),
+        Time$Microsecond(),
       );
 
   /// Convert to [Time$Nanosecond]
   Time get toNanosecond => convertTo(
-        const Time$Nanosecond(),
+        Time$Nanosecond(),
       );
 
   /// Convert to [Time$Picosecond]
   Time get toPicosecond => convertTo(
-        const Time$Picosecond(),
+        Time$Picosecond(),
       );
 
   /// Convert to [Time$Femtosecond]
   Time get toFemtosecond => convertTo(
-        const Time$Femtosecond(),
+        Time$Femtosecond(),
       );
 
   /// Convert to [Time$Attosecond]
   Time get toAttosecond => convertTo(
-        const Time$Attosecond(),
+        Time$Attosecond(),
       );
 
   /// Convert to [Time$Shake]
   Time get toShake => convertTo(
-        const Time$Shake(),
+        Time$Shake(),
       );
 
   /// Convert to [Time$Septennial]
   Time get toSeptennial => convertTo(
-        const Time$Septennial(),
+        Time$Septennial(),
       );
 
   /// Convert to [Time$Octennial]
   Time get toOctennial => convertTo(
-        const Time$Octennial(),
+        Time$Octennial(),
       );
 
   /// Convert to [Time$Novennial]
   Time get toNovennial => convertTo(
-        const Time$Novennial(),
+        Time$Novennial(),
       );
 
   /// Convert to [Time$Quindecennial]
   Time get toQuindecennial => convertTo(
-        const Time$Quindecennial(),
+        Time$Quindecennial(),
       );
 
   /// Convert to [Time$Quinquennial]
   Time get toQuinquennial => convertTo(
-        const Time$Quinquennial(),
+        Time$Quinquennial(),
       );
 
   @override
@@ -188,36 +189,36 @@ sealed class Time extends Unit<Time> {
 
   static const _majorName = 'time';
 
-  static const millennium = Time$Millennium();
-  static const century = Time$Century();
-  static const decade = Time$Decade();
-  static const year = Time$Year();
-  static const leapYear = Time$LeapYear();
-  static const meanYear = Time$MeanYear();
-  static const siderealYear = Time$SiderealYear();
-  static const tropicalYear = Time$TropicalYear();
-  static const month = Time$Month();
-  static const synodicMonth = Time$SynodicMonth();
-  static const fortnight = Time$Fortnight();
-  static const week = Time$Week();
-  static const day = Time$Day();
-  static const siderealDay = Time$SiderealDay();
-  static const hour = Time$Hour();
-  static const siderealHour = Time$SiderealHour();
-  static const minute = Time$Minute();
-  static const second = Time$Second();
-  static const millisecond = Time$Millisecond();
-  static const microsecond = Time$Microsecond();
-  static const nanosecond = Time$Nanosecond();
-  static const picosecond = Time$Picosecond();
-  static const femtosecond = Time$Femtosecond();
-  static const attosecond = Time$Attosecond();
-  static const shake = Time$Shake();
-  static const septennial = Time$Septennial();
-  static const octennial = Time$Octennial();
-  static const novennial = Time$Novennial();
-  static const quindecennial = Time$Quindecennial();
-  static const quinquennial = Time$Quinquennial();
+  static final millennium = Time$Millennium();
+  static final century = Time$Century();
+  static final decade = Time$Decade();
+  static final year = Time$Year();
+  static final leapYear = Time$LeapYear();
+  static final meanYear = Time$MeanYear();
+  static final siderealYear = Time$SiderealYear();
+  static final tropicalYear = Time$TropicalYear();
+  static final month = Time$Month();
+  static final synodicMonth = Time$SynodicMonth();
+  static final fortnight = Time$Fortnight();
+  static final week = Time$Week();
+  static final day = Time$Day();
+  static final siderealDay = Time$SiderealDay();
+  static final hour = Time$Hour();
+  static final siderealHour = Time$SiderealHour();
+  static final minute = Time$Minute();
+  static final second = Time$Second();
+  static final millisecond = Time$Millisecond();
+  static final microsecond = Time$Microsecond();
+  static final nanosecond = Time$Nanosecond();
+  static final picosecond = Time$Picosecond();
+  static final femtosecond = Time$Femtosecond();
+  static final attosecond = Time$Attosecond();
+  static final shake = Time$Shake();
+  static final septennial = Time$Septennial();
+  static final octennial = Time$Octennial();
+  static final novennial = Time$Novennial();
+  static final quindecennial = Time$Quindecennial();
+  static final quinquennial = Time$Quinquennial();
 
   @override
   List<Time> get units => values;
@@ -225,7 +226,7 @@ sealed class Time extends Unit<Time> {
   @override
   EnumValues<Time> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Time>[
     millennium,
     century,
     decade,
@@ -258,7 +259,7 @@ sealed class Time extends Unit<Time> {
     quinquennial,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Time>{
     Time$Millennium._minorName: millennium,
     Time$Century._minorName: century,
     Time$Decade._minorName: decade,
@@ -294,7 +295,7 @@ sealed class Time extends Unit<Time> {
 
 /// Unit of [Time]
 final class Time$Millennium extends Time {
-  const Time$Millennium([
+  Time$Millennium([
     super.value,
   ]);
 
@@ -325,14 +326,14 @@ final class Time$Millennium extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.1536e+28;
+  static final _ratio = Rational.parse('3.15360000000000000E+028');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Millennium] = 3.1536e+28 [Time$Attosecond]
+  /// 1 [Time$Millennium] = 3.15360000000000000E+028 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -340,12 +341,12 @@ final class Time$Millennium extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Millennium] with new value
   @override
   Time$Millennium withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Millennium(val);
 
@@ -358,14 +359,14 @@ final class Time$Millennium extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Century extends Time {
-  const Time$Century([
+  Time$Century([
     super.value,
   ]);
 
@@ -396,14 +397,14 @@ final class Time$Century extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.1536e+27;
+  static final _ratio = Rational.parse('3.15360000000000000E+027');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Century] = 3.1536e+27 [Time$Attosecond]
+  /// 1 [Time$Century] = 3.15360000000000000E+027 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -411,12 +412,12 @@ final class Time$Century extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Century] with new value
   @override
   Time$Century withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Century(val);
 
@@ -429,14 +430,14 @@ final class Time$Century extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Decade extends Time {
-  const Time$Decade([
+  Time$Decade([
     super.value,
   ]);
 
@@ -467,14 +468,14 @@ final class Time$Decade extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.1536e+26;
+  static final _ratio = Rational.parse('3.15360000000000000E+026');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Decade] = 3.1536e+26 [Time$Attosecond]
+  /// 1 [Time$Decade] = 3.15360000000000000E+026 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -482,12 +483,12 @@ final class Time$Decade extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Decade] with new value
   @override
   Time$Decade withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Decade(val);
 
@@ -500,14 +501,14 @@ final class Time$Decade extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Year extends Time {
-  const Time$Year([
+  Time$Year([
     super.value,
   ]);
 
@@ -538,14 +539,14 @@ final class Time$Year extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.1536e+25;
+  static final _ratio = Rational.parse('3.15360000000000000E+025');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Year] = 3.1536e+25 [Time$Attosecond]
+  /// 1 [Time$Year] = 3.15360000000000000E+025 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -553,12 +554,12 @@ final class Time$Year extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Year] with new value
   @override
   Time$Year withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Year(val);
 
@@ -571,14 +572,14 @@ final class Time$Year extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$LeapYear extends Time {
-  const Time$LeapYear([
+  Time$LeapYear([
     super.value,
   ]);
 
@@ -609,14 +610,14 @@ final class Time$LeapYear extends Time {
   @override
   String get displayName => 'leap year';
 
-  static const _ratio = 3.16224e+25;
+  static final _ratio = Rational.parse('3.16224000000000000E+025');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$LeapYear] = 3.16224e+25 [Time$Attosecond]
+  /// 1 [Time$LeapYear] = 3.16224000000000000E+025 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -624,12 +625,12 @@ final class Time$LeapYear extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$LeapYear] with new value
   @override
   Time$LeapYear withValue(
-    num val,
+    Rational val,
   ) =>
       Time$LeapYear(val);
 
@@ -642,14 +643,14 @@ final class Time$LeapYear extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$MeanYear extends Time {
-  const Time$MeanYear([
+  Time$MeanYear([
     super.value,
   ]);
 
@@ -680,14 +681,14 @@ final class Time$MeanYear extends Time {
   @override
   String get displayName => 'mean year';
 
-  static const _ratio = 3.15576e+25;
+  static final _ratio = Rational.parse('3.15576000000000000E+025');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$MeanYear] = 3.15576e+25 [Time$Attosecond]
+  /// 1 [Time$MeanYear] = 3.15576000000000000E+025 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -695,12 +696,12 @@ final class Time$MeanYear extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$MeanYear] with new value
   @override
   Time$MeanYear withValue(
-    num val,
+    Rational val,
   ) =>
       Time$MeanYear(val);
 
@@ -713,14 +714,14 @@ final class Time$MeanYear extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$SiderealYear extends Time {
-  const Time$SiderealYear([
+  Time$SiderealYear([
     super.value,
   ]);
 
@@ -751,14 +752,14 @@ final class Time$SiderealYear extends Time {
   @override
   String get displayName => 'sidereal year';
 
-  static const _ratio = 3.1558149504e+25;
+  static final _ratio = Rational.parse('3.15581495040000000E+025');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$SiderealYear] = 3.1558149504e+25 [Time$Attosecond]
+  /// 1 [Time$SiderealYear] = 3.15581495040000000E+025 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -766,12 +767,12 @@ final class Time$SiderealYear extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$SiderealYear] with new value
   @override
   Time$SiderealYear withValue(
-    num val,
+    Rational val,
   ) =>
       Time$SiderealYear(val);
 
@@ -784,14 +785,14 @@ final class Time$SiderealYear extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$TropicalYear extends Time {
-  const Time$TropicalYear([
+  Time$TropicalYear([
     super.value,
   ]);
 
@@ -822,14 +823,14 @@ final class Time$TropicalYear extends Time {
   @override
   String get displayName => 'tropical year';
 
-  static const _ratio = 3.155692608e+25;
+  static final _ratio = Rational.parse('3.15569260800000000E+025');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$TropicalYear] = 3.155692608e+25 [Time$Attosecond]
+  /// 1 [Time$TropicalYear] = 3.15569260800000000E+025 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -837,12 +838,12 @@ final class Time$TropicalYear extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$TropicalYear] with new value
   @override
   Time$TropicalYear withValue(
-    num val,
+    Rational val,
   ) =>
       Time$TropicalYear(val);
 
@@ -855,14 +856,14 @@ final class Time$TropicalYear extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Month extends Time {
-  const Time$Month([
+  Time$Month([
     super.value,
   ]);
 
@@ -893,14 +894,14 @@ final class Time$Month extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.592e+24;
+  static final _ratio = Rational.parse('2.59200000000000000E+024');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Month] = 2.592e+24 [Time$Attosecond]
+  /// 1 [Time$Month] = 2.59200000000000000E+024 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -908,12 +909,12 @@ final class Time$Month extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Month] with new value
   @override
   Time$Month withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Month(val);
 
@@ -926,14 +927,14 @@ final class Time$Month extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$SynodicMonth extends Time {
-  const Time$SynodicMonth([
+  Time$SynodicMonth([
     super.value,
   ]);
 
@@ -964,14 +965,14 @@ final class Time$SynodicMonth extends Time {
   @override
   String get displayName => 'synodic month';
 
-  static const _ratio = 2.55144384e+24;
+  static final _ratio = Rational.parse('2.55144384000000000E+024');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$SynodicMonth] = 2.55144384e+24 [Time$Attosecond]
+  /// 1 [Time$SynodicMonth] = 2.55144384000000000E+024 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -979,12 +980,12 @@ final class Time$SynodicMonth extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$SynodicMonth] with new value
   @override
   Time$SynodicMonth withValue(
-    num val,
+    Rational val,
   ) =>
       Time$SynodicMonth(val);
 
@@ -997,14 +998,14 @@ final class Time$SynodicMonth extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Fortnight extends Time {
-  const Time$Fortnight([
+  Time$Fortnight([
     super.value,
   ]);
 
@@ -1035,14 +1036,14 @@ final class Time$Fortnight extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.2096e+24;
+  static final _ratio = Rational.parse('1.20960000000000000E+024');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Fortnight] = 1.2096e+24 [Time$Attosecond]
+  /// 1 [Time$Fortnight] = 1.20960000000000000E+024 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1050,12 +1051,12 @@ final class Time$Fortnight extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Fortnight] with new value
   @override
   Time$Fortnight withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Fortnight(val);
 
@@ -1068,14 +1069,14 @@ final class Time$Fortnight extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Week extends Time {
-  const Time$Week([
+  Time$Week([
     super.value,
   ]);
 
@@ -1106,14 +1107,14 @@ final class Time$Week extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 6.048e+23;
+  static final _ratio = Rational.parse('6.04800000000000000E+023');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Week] = 6.048e+23 [Time$Attosecond]
+  /// 1 [Time$Week] = 6.04800000000000000E+023 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1121,12 +1122,12 @@ final class Time$Week extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Week] with new value
   @override
   Time$Week withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Week(val);
 
@@ -1139,14 +1140,14 @@ final class Time$Week extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Day extends Time {
-  const Time$Day([
+  Time$Day([
     super.value,
   ]);
 
@@ -1177,14 +1178,14 @@ final class Time$Day extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8.64e+22;
+  static final _ratio = Rational.parse('8.64000000000000000E+022');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Day] = 8.64e+22 [Time$Attosecond]
+  /// 1 [Time$Day] = 8.64000000000000000E+022 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1192,12 +1193,12 @@ final class Time$Day extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Day] with new value
   @override
   Time$Day withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Day(val);
 
@@ -1210,14 +1211,14 @@ final class Time$Day extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$SiderealDay extends Time {
-  const Time$SiderealDay([
+  Time$SiderealDay([
     super.value,
   ]);
 
@@ -1248,14 +1249,14 @@ final class Time$SiderealDay extends Time {
   @override
   String get displayName => 'sidereal day';
 
-  static const _ratio = 8.6164091e+22;
+  static final _ratio = Rational.parse('8.61640910000000000E+022');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$SiderealDay] = 8.6164091e+22 [Time$Attosecond]
+  /// 1 [Time$SiderealDay] = 8.61640910000000000E+022 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1263,12 +1264,12 @@ final class Time$SiderealDay extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$SiderealDay] with new value
   @override
   Time$SiderealDay withValue(
-    num val,
+    Rational val,
   ) =>
       Time$SiderealDay(val);
 
@@ -1281,14 +1282,14 @@ final class Time$SiderealDay extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Hour extends Time {
-  const Time$Hour([
+  Time$Hour([
     super.value,
   ]);
 
@@ -1319,14 +1320,14 @@ final class Time$Hour extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.6e+21;
+  static final _ratio = Rational.parse('3.60000000000000000E+021');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Hour] = 3.6e+21 [Time$Attosecond]
+  /// 1 [Time$Hour] = 3.60000000000000000E+021 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1334,12 +1335,12 @@ final class Time$Hour extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Hour] with new value
   @override
   Time$Hour withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Hour(val);
 
@@ -1352,14 +1353,14 @@ final class Time$Hour extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$SiderealHour extends Time {
-  const Time$SiderealHour([
+  Time$SiderealHour([
     super.value,
   ]);
 
@@ -1390,14 +1391,14 @@ final class Time$SiderealHour extends Time {
   @override
   String get displayName => 'sidereal hour';
 
-  static const _ratio = 3.59017e+21;
+  static final _ratio = Rational.parse('3.59017000000000000E+021');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$SiderealHour] = 3.59017e+21 [Time$Attosecond]
+  /// 1 [Time$SiderealHour] = 3.59017000000000000E+021 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1405,12 +1406,12 @@ final class Time$SiderealHour extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$SiderealHour] with new value
   @override
   Time$SiderealHour withValue(
-    num val,
+    Rational val,
   ) =>
       Time$SiderealHour(val);
 
@@ -1423,14 +1424,14 @@ final class Time$SiderealHour extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Minute extends Time {
-  const Time$Minute([
+  Time$Minute([
     super.value,
   ]);
 
@@ -1461,14 +1462,14 @@ final class Time$Minute extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 60000000000000000000.0;
+  static final _ratio = Rational.parse('6.00000000000000000E+019');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Minute] = 60000000000000000000.0 [Time$Attosecond]
+  /// 1 [Time$Minute] = 6.00000000000000000E+019 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1476,12 +1477,12 @@ final class Time$Minute extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Minute] with new value
   @override
   Time$Minute withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Minute(val);
 
@@ -1494,14 +1495,14 @@ final class Time$Minute extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Second extends Time {
-  const Time$Second([
+  Time$Second([
     super.value,
   ]);
 
@@ -1532,14 +1533,14 @@ final class Time$Second extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Second] = 1000000000000000000.0 [Time$Attosecond]
+  /// 1 [Time$Second] = 1.00000000000000000E+018 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1547,12 +1548,12 @@ final class Time$Second extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Second] with new value
   @override
   Time$Second withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Second(val);
 
@@ -1565,14 +1566,14 @@ final class Time$Second extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Millisecond extends Time {
-  const Time$Millisecond([
+  Time$Millisecond([
     super.value,
   ]);
 
@@ -1603,14 +1604,14 @@ final class Time$Millisecond extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Millisecond] = 1000000000000000.0 [Time$Attosecond]
+  /// 1 [Time$Millisecond] = 1.00000000000000000E+015 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1618,12 +1619,12 @@ final class Time$Millisecond extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Millisecond] with new value
   @override
   Time$Millisecond withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Millisecond(val);
 
@@ -1636,14 +1637,14 @@ final class Time$Millisecond extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Microsecond extends Time {
-  const Time$Microsecond([
+  Time$Microsecond([
     super.value,
   ]);
 
@@ -1674,14 +1675,14 @@ final class Time$Microsecond extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Microsecond] = 1000000000000.0 [Time$Attosecond]
+  /// 1 [Time$Microsecond] = 1.00000000000000000E+012 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1689,12 +1690,12 @@ final class Time$Microsecond extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Microsecond] with new value
   @override
   Time$Microsecond withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Microsecond(val);
 
@@ -1707,14 +1708,14 @@ final class Time$Microsecond extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Nanosecond extends Time {
-  const Time$Nanosecond([
+  Time$Nanosecond([
     super.value,
   ]);
 
@@ -1745,14 +1746,14 @@ final class Time$Nanosecond extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Nanosecond] = 1000000000.0 [Time$Attosecond]
+  /// 1 [Time$Nanosecond] = 1.00000000000000000E+009 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1760,12 +1761,12 @@ final class Time$Nanosecond extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Nanosecond] with new value
   @override
   Time$Nanosecond withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Nanosecond(val);
 
@@ -1778,14 +1779,14 @@ final class Time$Nanosecond extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Picosecond extends Time {
-  const Time$Picosecond([
+  Time$Picosecond([
     super.value,
   ]);
 
@@ -1816,14 +1817,14 @@ final class Time$Picosecond extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Picosecond] = 1000000.0 [Time$Attosecond]
+  /// 1 [Time$Picosecond] = 1.00000000000000000E+006 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1831,12 +1832,12 @@ final class Time$Picosecond extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Picosecond] with new value
   @override
   Time$Picosecond withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Picosecond(val);
 
@@ -1849,14 +1850,14 @@ final class Time$Picosecond extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Femtosecond extends Time {
-  const Time$Femtosecond([
+  Time$Femtosecond([
     super.value,
   ]);
 
@@ -1887,14 +1888,14 @@ final class Time$Femtosecond extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Femtosecond] = 1000.0 [Time$Attosecond]
+  /// 1 [Time$Femtosecond] = 1.00000000000000000E+003 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1902,12 +1903,12 @@ final class Time$Femtosecond extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Femtosecond] with new value
   @override
   Time$Femtosecond withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Femtosecond(val);
 
@@ -1920,14 +1921,14 @@ final class Time$Femtosecond extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Attosecond extends Time {
-  const Time$Attosecond([
+  Time$Attosecond([
     super.value,
   ]);
 
@@ -1958,14 +1959,14 @@ final class Time$Attosecond extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
   /// Default (anchor) unit of [Time]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1973,12 +1974,12 @@ final class Time$Attosecond extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Attosecond] with new value
   @override
   Time$Attosecond withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Attosecond(val);
 
@@ -1991,14 +1992,14 @@ final class Time$Attosecond extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Shake extends Time {
-  const Time$Shake([
+  Time$Shake([
     super.value,
   ]);
 
@@ -2029,14 +2030,14 @@ final class Time$Shake extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+010');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Shake] = 10000000000.0 [Time$Attosecond]
+  /// 1 [Time$Shake] = 1.00000000000000000E+010 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2044,12 +2045,12 @@ final class Time$Shake extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Shake] with new value
   @override
   Time$Shake withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Shake(val);
 
@@ -2062,14 +2063,14 @@ final class Time$Shake extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Septennial extends Time {
-  const Time$Septennial([
+  Time$Septennial([
     super.value,
   ]);
 
@@ -2100,14 +2101,14 @@ final class Time$Septennial extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.20752e+26;
+  static final _ratio = Rational.parse('2.20752000000000000E+026');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Septennial] = 2.20752e+26 [Time$Attosecond]
+  /// 1 [Time$Septennial] = 2.20752000000000000E+026 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2115,12 +2116,12 @@ final class Time$Septennial extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Septennial] with new value
   @override
   Time$Septennial withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Septennial(val);
 
@@ -2133,14 +2134,14 @@ final class Time$Septennial extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Octennial extends Time {
-  const Time$Octennial([
+  Time$Octennial([
     super.value,
   ]);
 
@@ -2171,14 +2172,14 @@ final class Time$Octennial extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.52288e+26;
+  static final _ratio = Rational.parse('2.52288000000000000E+026');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Octennial] = 2.52288e+26 [Time$Attosecond]
+  /// 1 [Time$Octennial] = 2.52288000000000000E+026 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2186,12 +2187,12 @@ final class Time$Octennial extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Octennial] with new value
   @override
   Time$Octennial withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Octennial(val);
 
@@ -2204,14 +2205,14 @@ final class Time$Octennial extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Novennial extends Time {
-  const Time$Novennial([
+  Time$Novennial([
     super.value,
   ]);
 
@@ -2242,14 +2243,14 @@ final class Time$Novennial extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 2.83824e+26;
+  static final _ratio = Rational.parse('2.83824000000000000E+026');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Novennial] = 2.83824e+26 [Time$Attosecond]
+  /// 1 [Time$Novennial] = 2.83824000000000000E+026 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2257,12 +2258,12 @@ final class Time$Novennial extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Novennial] with new value
   @override
   Time$Novennial withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Novennial(val);
 
@@ -2275,14 +2276,14 @@ final class Time$Novennial extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Quindecennial extends Time {
-  const Time$Quindecennial([
+  Time$Quindecennial([
     super.value,
   ]);
 
@@ -2313,14 +2314,14 @@ final class Time$Quindecennial extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 4.7304e+26;
+  static final _ratio = Rational.parse('4.73040000000000000E+026');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Quindecennial] = 4.7304e+26 [Time$Attosecond]
+  /// 1 [Time$Quindecennial] = 4.73040000000000000E+026 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2328,12 +2329,12 @@ final class Time$Quindecennial extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Quindecennial] with new value
   @override
   Time$Quindecennial withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Quindecennial(val);
 
@@ -2346,14 +2347,14 @@ final class Time$Quindecennial extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Time]
 final class Time$Quinquennial extends Time {
-  const Time$Quinquennial([
+  Time$Quinquennial([
     super.value,
   ]);
 
@@ -2384,14 +2385,14 @@ final class Time$Quinquennial extends Time {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.5768e+26;
+  static final _ratio = Rational.parse('1.57680000000000000E+026');
 
   @override
-  Time get anchor => const Time$Attosecond(_ratio);
+  Time get anchor => Time$Attosecond(_ratio);
 
-  /// 1 [Time$Quinquennial] = 1.5768e+26 [Time$Attosecond]
+  /// 1 [Time$Quinquennial] = 1.57680000000000000E+026 [Time$Attosecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2399,12 +2400,12 @@ final class Time$Quinquennial extends Time {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Time$Quinquennial] with new value
   @override
   Time$Quinquennial withValue(
-    num val,
+    Rational val,
   ) =>
       Time$Quinquennial(val);
 
@@ -2417,7 +2418,7 @@ final class Time$Quinquennial extends Time {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

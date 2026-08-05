@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [Current$EMUOfCurrent], [Current$ESUOfCurrent], [Current$CGSEMUnit],
 /// [Current$CGSESUnit]
 sealed class Current extends Unit<Current> {
-  const Current([
+  Current([
     super.value,
   ]);
 
@@ -19,60 +19,61 @@ sealed class Current extends Unit<Current> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Current.anchor();
 
-  factory Current.anchor() => const Current$Milliampere();
+  factory Current.anchor() => Current$Milliampere();
 
   /// Convert to [Current$Kiloampere]
   Current get toKiloampere => convertTo(
-        const Current$Kiloampere(),
+        Current$Kiloampere(),
       );
 
   /// Convert to [Current$Ampere]
   Current get toAmpere => convertTo(
-        const Current$Ampere(),
+        Current$Ampere(),
       );
 
   /// Convert to [Current$Milliampere]
   Current get toMilliampere => convertTo(
-        const Current$Milliampere(),
+        Current$Milliampere(),
       );
 
   /// Convert to [Current$Biot]
   Current get toBiot => convertTo(
-        const Current$Biot(),
+        Current$Biot(),
       );
 
   /// Convert to [Current$Abampere]
   Current get toAbampere => convertTo(
-        const Current$Abampere(),
+        Current$Abampere(),
       );
 
   /// Convert to [Current$Statampere]
   Current get toStatampere => convertTo(
-        const Current$Statampere(),
+        Current$Statampere(),
       );
 
   /// Convert to [Current$EMUOfCurrent]
   Current get toEMUOfCurrent => convertTo(
-        const Current$EMUOfCurrent(),
+        Current$EMUOfCurrent(),
       );
 
   /// Convert to [Current$ESUOfCurrent]
   Current get toESUOfCurrent => convertTo(
-        const Current$ESUOfCurrent(),
+        Current$ESUOfCurrent(),
       );
 
   /// Convert to [Current$CGSEMUnit]
   Current get toCGSEMUnit => convertTo(
-        const Current$CGSEMUnit(),
+        Current$CGSEMUnit(),
       );
 
   /// Convert to [Current$CGSESUnit]
   Current get toCGSESUnit => convertTo(
-        const Current$CGSESUnit(),
+        Current$CGSESUnit(),
       );
 
   @override
@@ -83,16 +84,16 @@ sealed class Current extends Unit<Current> {
 
   static const _majorName = 'current';
 
-  static const kiloampere = Current$Kiloampere();
-  static const ampere = Current$Ampere();
-  static const milliampere = Current$Milliampere();
-  static const biot = Current$Biot();
-  static const abampere = Current$Abampere();
-  static const statampere = Current$Statampere();
-  static const eMUOfCurrent = Current$EMUOfCurrent();
-  static const eSUOfCurrent = Current$ESUOfCurrent();
-  static const cGSEMUnit = Current$CGSEMUnit();
-  static const cGSESUnit = Current$CGSESUnit();
+  static final kiloampere = Current$Kiloampere();
+  static final ampere = Current$Ampere();
+  static final milliampere = Current$Milliampere();
+  static final biot = Current$Biot();
+  static final abampere = Current$Abampere();
+  static final statampere = Current$Statampere();
+  static final eMUOfCurrent = Current$EMUOfCurrent();
+  static final eSUOfCurrent = Current$ESUOfCurrent();
+  static final cGSEMUnit = Current$CGSEMUnit();
+  static final cGSESUnit = Current$CGSESUnit();
 
   @override
   List<Current> get units => values;
@@ -100,7 +101,7 @@ sealed class Current extends Unit<Current> {
   @override
   EnumValues<Current> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Current>[
     kiloampere,
     ampere,
     milliampere,
@@ -113,7 +114,7 @@ sealed class Current extends Unit<Current> {
     cGSESUnit,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Current>{
     Current$Kiloampere._minorName: kiloampere,
     Current$Ampere._minorName: ampere,
     Current$Milliampere._minorName: milliampere,
@@ -129,7 +130,7 @@ sealed class Current extends Unit<Current> {
 
 /// Unit of [Current]
 final class Current$Kiloampere extends Current {
-  const Current$Kiloampere([
+  Current$Kiloampere([
     super.value,
   ]);
 
@@ -160,14 +161,14 @@ final class Current$Kiloampere extends Current {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$Kiloampere] = 1000000.0 [Current$Milliampere]
+  /// 1 [Current$Kiloampere] = 1.00000000000000000E+006 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -175,12 +176,12 @@ final class Current$Kiloampere extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$Kiloampere] with new value
   @override
   Current$Kiloampere withValue(
-    num val,
+    Rational val,
   ) =>
       Current$Kiloampere(val);
 
@@ -193,14 +194,14 @@ final class Current$Kiloampere extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$Ampere extends Current {
-  const Current$Ampere([
+  Current$Ampere([
     super.value,
   ]);
 
@@ -231,14 +232,14 @@ final class Current$Ampere extends Current {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$Ampere] = 1000.0 [Current$Milliampere]
+  /// 1 [Current$Ampere] = 1.00000000000000000E+003 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -246,12 +247,12 @@ final class Current$Ampere extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$Ampere] with new value
   @override
   Current$Ampere withValue(
-    num val,
+    Rational val,
   ) =>
       Current$Ampere(val);
 
@@ -264,14 +265,14 @@ final class Current$Ampere extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$Milliampere extends Current {
-  const Current$Milliampere([
+  Current$Milliampere([
     super.value,
   ]);
 
@@ -302,14 +303,14 @@ final class Current$Milliampere extends Current {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
   /// Default (anchor) unit of [Current]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -317,12 +318,12 @@ final class Current$Milliampere extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$Milliampere] with new value
   @override
   Current$Milliampere withValue(
-    num val,
+    Rational val,
   ) =>
       Current$Milliampere(val);
 
@@ -335,14 +336,14 @@ final class Current$Milliampere extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$Biot extends Current {
-  const Current$Biot([
+  Current$Biot([
     super.value,
   ]);
 
@@ -373,14 +374,14 @@ final class Current$Biot extends Current {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$Biot] = 10000.0 [Current$Milliampere]
+  /// 1 [Current$Biot] = 1.00000000000000000E+004 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -388,12 +389,12 @@ final class Current$Biot extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$Biot] with new value
   @override
   Current$Biot withValue(
-    num val,
+    Rational val,
   ) =>
       Current$Biot(val);
 
@@ -406,14 +407,14 @@ final class Current$Biot extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$Abampere extends Current {
-  const Current$Abampere([
+  Current$Abampere([
     super.value,
   ]);
 
@@ -444,14 +445,14 @@ final class Current$Abampere extends Current {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$Abampere] = 10000.0 [Current$Milliampere]
+  /// 1 [Current$Abampere] = 1.00000000000000000E+004 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -459,12 +460,12 @@ final class Current$Abampere extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$Abampere] with new value
   @override
   Current$Abampere withValue(
-    num val,
+    Rational val,
   ) =>
       Current$Abampere(val);
 
@@ -477,14 +478,14 @@ final class Current$Abampere extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$Statampere extends Current {
-  const Current$Statampere([
+  Current$Statampere([
     super.value,
   ]);
 
@@ -515,14 +516,14 @@ final class Current$Statampere extends Current {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.335641e-7;
+  static final _ratio = Rational.parse('3.33564100000000000E-007');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$Statampere] ≈ 3.335641e-7 [Current$Milliampere]
+  /// 1 [Current$Statampere] ≈ 3.33564100000000000E-007 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -530,12 +531,12 @@ final class Current$Statampere extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$Statampere] with new value
   @override
   Current$Statampere withValue(
-    num val,
+    Rational val,
   ) =>
       Current$Statampere(val);
 
@@ -548,14 +549,14 @@ final class Current$Statampere extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$EMUOfCurrent extends Current {
-  const Current$EMUOfCurrent([
+  Current$EMUOfCurrent([
     super.value,
   ]);
 
@@ -586,14 +587,14 @@ final class Current$EMUOfCurrent extends Current {
   @override
   String get displayName => 'EMU of current';
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$EMUOfCurrent] = 10000.0 [Current$Milliampere]
+  /// 1 [Current$EMUOfCurrent] = 1.00000000000000000E+004 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -601,12 +602,12 @@ final class Current$EMUOfCurrent extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$EMUOfCurrent] with new value
   @override
   Current$EMUOfCurrent withValue(
-    num val,
+    Rational val,
   ) =>
       Current$EMUOfCurrent(val);
 
@@ -619,14 +620,14 @@ final class Current$EMUOfCurrent extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$ESUOfCurrent extends Current {
-  const Current$ESUOfCurrent([
+  Current$ESUOfCurrent([
     super.value,
   ]);
 
@@ -657,14 +658,14 @@ final class Current$ESUOfCurrent extends Current {
   @override
   String get displayName => 'ESU of current';
 
-  static const _ratio = 3.335641e-7;
+  static final _ratio = Rational.parse('3.33564100000000000E-007');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$ESUOfCurrent] ≈ 3.335641e-7 [Current$Milliampere]
+  /// 1 [Current$ESUOfCurrent] ≈ 3.33564100000000000E-007 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -672,12 +673,12 @@ final class Current$ESUOfCurrent extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$ESUOfCurrent] with new value
   @override
   Current$ESUOfCurrent withValue(
-    num val,
+    Rational val,
   ) =>
       Current$ESUOfCurrent(val);
 
@@ -690,14 +691,14 @@ final class Current$ESUOfCurrent extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$CGSEMUnit extends Current {
-  const Current$CGSEMUnit([
+  Current$CGSEMUnit([
     super.value,
   ]);
 
@@ -728,14 +729,14 @@ final class Current$CGSEMUnit extends Current {
   @override
   String get displayName => 'CGS e.m. unit';
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$CGSEMUnit] = 10000.0 [Current$Milliampere]
+  /// 1 [Current$CGSEMUnit] = 1.00000000000000000E+004 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -743,12 +744,12 @@ final class Current$CGSEMUnit extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$CGSEMUnit] with new value
   @override
   Current$CGSEMUnit withValue(
-    num val,
+    Rational val,
   ) =>
       Current$CGSEMUnit(val);
 
@@ -761,14 +762,14 @@ final class Current$CGSEMUnit extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Current]
 final class Current$CGSESUnit extends Current {
-  const Current$CGSESUnit([
+  Current$CGSESUnit([
     super.value,
   ]);
 
@@ -799,14 +800,14 @@ final class Current$CGSESUnit extends Current {
   @override
   String get displayName => 'CGS e.s. unit';
 
-  static const _ratio = 3.335641e-7;
+  static final _ratio = Rational.parse('3.33564100000000000E-007');
 
   @override
-  Current get anchor => const Current$Milliampere(_ratio);
+  Current get anchor => Current$Milliampere(_ratio);
 
-  /// 1 [Current$CGSESUnit] ≈ 3.335641e-7 [Current$Milliampere]
+  /// 1 [Current$CGSESUnit] ≈ 3.33564100000000000E-007 [Current$Milliampere]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -814,12 +815,12 @@ final class Current$CGSESUnit extends Current {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Current$CGSESUnit] with new value
   @override
   Current$CGSESUnit withValue(
-    num val,
+    Rational val,
   ) =>
       Current$CGSESUnit(val);
 
@@ -832,7 +833,7 @@ final class Current$CGSESUnit extends Current {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

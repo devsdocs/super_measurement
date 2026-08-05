@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [Permeability$PermeabilityInches0DegreeC],
 /// [Permeability$PermeabilityInches23DegreeC]
 sealed class Permeability extends Unit<Permeability> {
-  const Permeability([
+  Permeability([
     super.value,
   ]);
 
@@ -19,36 +19,37 @@ sealed class Permeability extends Unit<Permeability> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Permeability.anchor();
 
   factory Permeability.anchor() =>
-      const Permeability$KilogramPerPascalSecondMeterSquare();
+      Permeability$KilogramPerPascalSecondMeterSquare();
 
   /// Convert to [Permeability$KilogramPerPascalSecondMeterSquare]
   Permeability get toKilogramPerPascalSecondMeterSquare => convertTo(
-        const Permeability$KilogramPerPascalSecondMeterSquare(),
+        Permeability$KilogramPerPascalSecondMeterSquare(),
       );
 
   /// Convert to [Permeability$Permeability0DegreeC]
   Permeability get toPermeability0DegreeC => convertTo(
-        const Permeability$Permeability0DegreeC(),
+        Permeability$Permeability0DegreeC(),
       );
 
   /// Convert to [Permeability$Permeability23DegreeC]
   Permeability get toPermeability23DegreeC => convertTo(
-        const Permeability$Permeability23DegreeC(),
+        Permeability$Permeability23DegreeC(),
       );
 
   /// Convert to [Permeability$PermeabilityInches0DegreeC]
   Permeability get toPermeabilityInches0DegreeC => convertTo(
-        const Permeability$PermeabilityInches0DegreeC(),
+        Permeability$PermeabilityInches0DegreeC(),
       );
 
   /// Convert to [Permeability$PermeabilityInches23DegreeC]
   Permeability get toPermeabilityInches23DegreeC => convertTo(
-        const Permeability$PermeabilityInches23DegreeC(),
+        Permeability$PermeabilityInches23DegreeC(),
       );
 
   @override
@@ -59,13 +60,13 @@ sealed class Permeability extends Unit<Permeability> {
 
   static const _majorName = 'permeability';
 
-  static const kilogramPerPascalSecondMeterSquare =
+  static final kilogramPerPascalSecondMeterSquare =
       Permeability$KilogramPerPascalSecondMeterSquare();
-  static const permeability0DegreeC = Permeability$Permeability0DegreeC();
-  static const permeability23DegreeC = Permeability$Permeability23DegreeC();
-  static const permeabilityInches0DegreeC =
+  static final permeability0DegreeC = Permeability$Permeability0DegreeC();
+  static final permeability23DegreeC = Permeability$Permeability23DegreeC();
+  static final permeabilityInches0DegreeC =
       Permeability$PermeabilityInches0DegreeC();
-  static const permeabilityInches23DegreeC =
+  static final permeabilityInches23DegreeC =
       Permeability$PermeabilityInches23DegreeC();
 
   @override
@@ -74,7 +75,7 @@ sealed class Permeability extends Unit<Permeability> {
   @override
   EnumValues<Permeability> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Permeability>[
     kilogramPerPascalSecondMeterSquare,
     permeability0DegreeC,
     permeability23DegreeC,
@@ -82,7 +83,7 @@ sealed class Permeability extends Unit<Permeability> {
     permeabilityInches23DegreeC,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Permeability>{
     Permeability$KilogramPerPascalSecondMeterSquare._minorName:
         kilogramPerPascalSecondMeterSquare,
     Permeability$Permeability0DegreeC._minorName: permeability0DegreeC,
@@ -97,7 +98,7 @@ sealed class Permeability extends Unit<Permeability> {
 /// Unit of [Permeability]
 final class Permeability$KilogramPerPascalSecondMeterSquare
     extends Permeability {
-  const Permeability$KilogramPerPascalSecondMeterSquare([
+  Permeability$KilogramPerPascalSecondMeterSquare([
     super.value,
   ]);
 
@@ -128,15 +129,15 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
   @override
   String get displayName => 'kilogram/(pascal-second-meter²)';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   Permeability get anchor =>
-      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
+      Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
 
   /// Default (anchor) unit of [Permeability]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -145,12 +146,12 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Permeability$KilogramPerPascalSecondMeterSquare] with new value
   @override
   Permeability$KilogramPerPascalSecondMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       Permeability$KilogramPerPascalSecondMeterSquare(val);
 
@@ -163,14 +164,14 @@ final class Permeability$KilogramPerPascalSecondMeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Permeability]
 final class Permeability$Permeability0DegreeC extends Permeability {
-  const Permeability$Permeability0DegreeC([
+  Permeability$Permeability0DegreeC([
     super.value,
   ]);
 
@@ -201,15 +202,15 @@ final class Permeability$Permeability0DegreeC extends Permeability {
   @override
   String get displayName => 'permeability (0°C)';
 
-  static const _ratio = 5.72135e-11;
+  static final _ratio = Rational.parse('5.72135000000000000E-011');
 
   @override
   Permeability get anchor =>
-      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
+      Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
 
-  /// 1 [Permeability$Permeability0DegreeC] ≈ 5.72135e-11 [Permeability$KilogramPerPascalSecondMeterSquare]
+  /// 1 [Permeability$Permeability0DegreeC] ≈ 5.72135000000000000E-011 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -218,12 +219,12 @@ final class Permeability$Permeability0DegreeC extends Permeability {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Permeability$Permeability0DegreeC] with new value
   @override
   Permeability$Permeability0DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Permeability$Permeability0DegreeC(val);
 
@@ -236,14 +237,14 @@ final class Permeability$Permeability0DegreeC extends Permeability {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Permeability]
 final class Permeability$Permeability23DegreeC extends Permeability {
-  const Permeability$Permeability23DegreeC([
+  Permeability$Permeability23DegreeC([
     super.value,
   ]);
 
@@ -274,15 +275,15 @@ final class Permeability$Permeability23DegreeC extends Permeability {
   @override
   String get displayName => 'permeability (23°C)';
 
-  static const _ratio = 5.74525e-11;
+  static final _ratio = Rational.parse('5.74525000000000000E-011');
 
   @override
   Permeability get anchor =>
-      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
+      Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
 
-  /// 1 [Permeability$Permeability23DegreeC] ≈ 5.74525e-11 [Permeability$KilogramPerPascalSecondMeterSquare]
+  /// 1 [Permeability$Permeability23DegreeC] ≈ 5.74525000000000000E-011 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -291,12 +292,12 @@ final class Permeability$Permeability23DegreeC extends Permeability {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Permeability$Permeability23DegreeC] with new value
   @override
   Permeability$Permeability23DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Permeability$Permeability23DegreeC(val);
 
@@ -309,14 +310,14 @@ final class Permeability$Permeability23DegreeC extends Permeability {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Permeability]
 final class Permeability$PermeabilityInches0DegreeC extends Permeability {
-  const Permeability$PermeabilityInches0DegreeC([
+  Permeability$PermeabilityInches0DegreeC([
     super.value,
   ]);
 
@@ -347,15 +348,15 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
   @override
   String get displayName => 'permeability inches (0°C)';
 
-  static const _ratio = 1.45322e-12;
+  static final _ratio = Rational.parse('1.45322000000000000E-012');
 
   @override
   Permeability get anchor =>
-      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
+      Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
 
-  /// 1 [Permeability$PermeabilityInches0DegreeC] ≈ 1.45322e-12 [Permeability$KilogramPerPascalSecondMeterSquare]
+  /// 1 [Permeability$PermeabilityInches0DegreeC] ≈ 1.45322000000000000E-012 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -364,12 +365,12 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Permeability$PermeabilityInches0DegreeC] with new value
   @override
   Permeability$PermeabilityInches0DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Permeability$PermeabilityInches0DegreeC(val);
 
@@ -382,14 +383,14 @@ final class Permeability$PermeabilityInches0DegreeC extends Permeability {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Permeability]
 final class Permeability$PermeabilityInches23DegreeC extends Permeability {
-  const Permeability$PermeabilityInches23DegreeC([
+  Permeability$PermeabilityInches23DegreeC([
     super.value,
   ]);
 
@@ -420,15 +421,15 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
   @override
   String get displayName => 'permeability inches (23°C)';
 
-  static const _ratio = 1.45929e-12;
+  static final _ratio = Rational.parse('1.45929000000000000E-012');
 
   @override
   Permeability get anchor =>
-      const Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
+      Permeability$KilogramPerPascalSecondMeterSquare(_ratio);
 
-  /// 1 [Permeability$PermeabilityInches23DegreeC] ≈ 1.45929e-12 [Permeability$KilogramPerPascalSecondMeterSquare]
+  /// 1 [Permeability$PermeabilityInches23DegreeC] ≈ 1.45929000000000000E-012 [Permeability$KilogramPerPascalSecondMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -437,12 +438,12 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Permeability$PermeabilityInches23DegreeC] with new value
   @override
   Permeability$PermeabilityInches23DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Permeability$PermeabilityInches23DegreeC(val);
 
@@ -455,7 +456,7 @@ final class Permeability$PermeabilityInches23DegreeC extends Permeability {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

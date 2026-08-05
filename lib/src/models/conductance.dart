@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [Conductance$Siemens], [Conductance$Millisiemens],
 /// [Conductance$Microsiemens], [Conductance$Abmho], [Conductance$Statmho]
 sealed class Conductance extends Unit<Conductance> {
-  const Conductance([
+  Conductance([
     super.value,
   ]);
 
@@ -19,60 +19,61 @@ sealed class Conductance extends Unit<Conductance> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Conductance.anchor();
 
-  factory Conductance.anchor() => const Conductance$Statmho();
+  factory Conductance.anchor() => Conductance$Statmho();
 
   /// Convert to [Conductance$Mho]
   Conductance get toMho => convertTo(
-        const Conductance$Mho(),
+        Conductance$Mho(),
       );
 
   /// Convert to [Conductance$Gemmho]
   Conductance get toGemmho => convertTo(
-        const Conductance$Gemmho(),
+        Conductance$Gemmho(),
       );
 
   /// Convert to [Conductance$Micromho]
   Conductance get toMicromho => convertTo(
-        const Conductance$Micromho(),
+        Conductance$Micromho(),
       );
 
   /// Convert to [Conductance$Megasiemens]
   Conductance get toMegasiemens => convertTo(
-        const Conductance$Megasiemens(),
+        Conductance$Megasiemens(),
       );
 
   /// Convert to [Conductance$Kilosiemens]
   Conductance get toKilosiemens => convertTo(
-        const Conductance$Kilosiemens(),
+        Conductance$Kilosiemens(),
       );
 
   /// Convert to [Conductance$Siemens]
   Conductance get toSiemens => convertTo(
-        const Conductance$Siemens(),
+        Conductance$Siemens(),
       );
 
   /// Convert to [Conductance$Millisiemens]
   Conductance get toMillisiemens => convertTo(
-        const Conductance$Millisiemens(),
+        Conductance$Millisiemens(),
       );
 
   /// Convert to [Conductance$Microsiemens]
   Conductance get toMicrosiemens => convertTo(
-        const Conductance$Microsiemens(),
+        Conductance$Microsiemens(),
       );
 
   /// Convert to [Conductance$Abmho]
   Conductance get toAbmho => convertTo(
-        const Conductance$Abmho(),
+        Conductance$Abmho(),
       );
 
   /// Convert to [Conductance$Statmho]
   Conductance get toStatmho => convertTo(
-        const Conductance$Statmho(),
+        Conductance$Statmho(),
       );
 
   @override
@@ -83,16 +84,16 @@ sealed class Conductance extends Unit<Conductance> {
 
   static const _majorName = 'conductance';
 
-  static const mho = Conductance$Mho();
-  static const gemmho = Conductance$Gemmho();
-  static const micromho = Conductance$Micromho();
-  static const megasiemens = Conductance$Megasiemens();
-  static const kilosiemens = Conductance$Kilosiemens();
-  static const siemens = Conductance$Siemens();
-  static const millisiemens = Conductance$Millisiemens();
-  static const microsiemens = Conductance$Microsiemens();
-  static const abmho = Conductance$Abmho();
-  static const statmho = Conductance$Statmho();
+  static final mho = Conductance$Mho();
+  static final gemmho = Conductance$Gemmho();
+  static final micromho = Conductance$Micromho();
+  static final megasiemens = Conductance$Megasiemens();
+  static final kilosiemens = Conductance$Kilosiemens();
+  static final siemens = Conductance$Siemens();
+  static final millisiemens = Conductance$Millisiemens();
+  static final microsiemens = Conductance$Microsiemens();
+  static final abmho = Conductance$Abmho();
+  static final statmho = Conductance$Statmho();
 
   @override
   List<Conductance> get units => values;
@@ -100,7 +101,7 @@ sealed class Conductance extends Unit<Conductance> {
   @override
   EnumValues<Conductance> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Conductance>[
     mho,
     gemmho,
     micromho,
@@ -113,7 +114,7 @@ sealed class Conductance extends Unit<Conductance> {
     statmho,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Conductance>{
     Conductance$Mho._minorName: mho,
     Conductance$Gemmho._minorName: gemmho,
     Conductance$Micromho._minorName: micromho,
@@ -129,7 +130,7 @@ sealed class Conductance extends Unit<Conductance> {
 
 /// Unit of [Conductance]
 final class Conductance$Mho extends Conductance {
-  const Conductance$Mho([
+  Conductance$Mho([
     super.value,
   ]);
 
@@ -160,14 +161,14 @@ final class Conductance$Mho extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000000000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+011');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Mho] = 899000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Mho] = 8.99000000000000000E+011 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -175,12 +176,12 @@ final class Conductance$Mho extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Mho] with new value
   @override
   Conductance$Mho withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Mho(val);
 
@@ -193,14 +194,14 @@ final class Conductance$Mho extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Gemmho extends Conductance {
-  const Conductance$Gemmho([
+  Conductance$Gemmho([
     super.value,
   ]);
 
@@ -231,14 +232,14 @@ final class Conductance$Gemmho extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+005');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Gemmho] = 899000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Gemmho] = 8.99000000000000000E+005 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -246,12 +247,12 @@ final class Conductance$Gemmho extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Gemmho] with new value
   @override
   Conductance$Gemmho withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Gemmho(val);
 
@@ -264,14 +265,14 @@ final class Conductance$Gemmho extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Micromho extends Conductance {
-  const Conductance$Micromho([
+  Conductance$Micromho([
     super.value,
   ]);
 
@@ -302,14 +303,14 @@ final class Conductance$Micromho extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+005');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Micromho] = 899000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Micromho] = 8.99000000000000000E+005 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -317,12 +318,12 @@ final class Conductance$Micromho extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Micromho] with new value
   @override
   Conductance$Micromho withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Micromho(val);
 
@@ -335,14 +336,14 @@ final class Conductance$Micromho extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Megasiemens extends Conductance {
-  const Conductance$Megasiemens([
+  Conductance$Megasiemens([
     super.value,
   ]);
 
@@ -373,14 +374,14 @@ final class Conductance$Megasiemens extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000000000000000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+017');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Megasiemens] = 899000000000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Megasiemens] = 8.99000000000000000E+017 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -388,12 +389,12 @@ final class Conductance$Megasiemens extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Megasiemens] with new value
   @override
   Conductance$Megasiemens withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Megasiemens(val);
 
@@ -406,14 +407,14 @@ final class Conductance$Megasiemens extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Kilosiemens extends Conductance {
-  const Conductance$Kilosiemens([
+  Conductance$Kilosiemens([
     super.value,
   ]);
 
@@ -444,14 +445,14 @@ final class Conductance$Kilosiemens extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000000000000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+014');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Kilosiemens] = 899000000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Kilosiemens] = 8.99000000000000000E+014 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -459,12 +460,12 @@ final class Conductance$Kilosiemens extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Kilosiemens] with new value
   @override
   Conductance$Kilosiemens withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Kilosiemens(val);
 
@@ -477,14 +478,14 @@ final class Conductance$Kilosiemens extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Siemens extends Conductance {
-  const Conductance$Siemens([
+  Conductance$Siemens([
     super.value,
   ]);
 
@@ -515,14 +516,14 @@ final class Conductance$Siemens extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000000000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+011');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Siemens] = 899000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Siemens] = 8.99000000000000000E+011 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -530,12 +531,12 @@ final class Conductance$Siemens extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Siemens] with new value
   @override
   Conductance$Siemens withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Siemens(val);
 
@@ -548,14 +549,14 @@ final class Conductance$Siemens extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Millisiemens extends Conductance {
-  const Conductance$Millisiemens([
+  Conductance$Millisiemens([
     super.value,
   ]);
 
@@ -586,14 +587,14 @@ final class Conductance$Millisiemens extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+008');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Millisiemens] = 899000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Millisiemens] = 8.99000000000000000E+008 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -601,12 +602,12 @@ final class Conductance$Millisiemens extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Millisiemens] with new value
   @override
   Conductance$Millisiemens withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Millisiemens(val);
 
@@ -619,14 +620,14 @@ final class Conductance$Millisiemens extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Microsiemens extends Conductance {
-  const Conductance$Microsiemens([
+  Conductance$Microsiemens([
     super.value,
   ]);
 
@@ -657,14 +658,14 @@ final class Conductance$Microsiemens extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+005');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Microsiemens] = 899000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Microsiemens] = 8.99000000000000000E+005 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -672,12 +673,12 @@ final class Conductance$Microsiemens extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Microsiemens] with new value
   @override
   Conductance$Microsiemens withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Microsiemens(val);
 
@@ -690,14 +691,14 @@ final class Conductance$Microsiemens extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Abmho extends Conductance {
-  const Conductance$Abmho([
+  Conductance$Abmho([
     super.value,
   ]);
 
@@ -728,14 +729,14 @@ final class Conductance$Abmho extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 899000000000000000000.0;
+  static final _ratio = Rational.parse('8.99000000000000000E+020');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
-  /// 1 [Conductance$Abmho] = 899000000000000000000.0 [Conductance$Statmho]
+  /// 1 [Conductance$Abmho] = 8.99000000000000000E+020 [Conductance$Statmho]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -743,12 +744,12 @@ final class Conductance$Abmho extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Abmho] with new value
   @override
   Conductance$Abmho withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Abmho(val);
 
@@ -761,14 +762,14 @@ final class Conductance$Abmho extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Conductance]
 final class Conductance$Statmho extends Conductance {
-  const Conductance$Statmho([
+  Conductance$Statmho([
     super.value,
   ]);
 
@@ -799,14 +800,14 @@ final class Conductance$Statmho extends Conductance {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Conductance get anchor => const Conductance$Statmho(_ratio);
+  Conductance get anchor => Conductance$Statmho(_ratio);
 
   /// Default (anchor) unit of [Conductance]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -814,12 +815,12 @@ final class Conductance$Statmho extends Conductance {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Conductance$Statmho] with new value
   @override
   Conductance$Statmho withValue(
-    num val,
+    Rational val,
   ) =>
       Conductance$Statmho(val);
 
@@ -832,7 +833,7 @@ final class Conductance$Statmho extends Conductance {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

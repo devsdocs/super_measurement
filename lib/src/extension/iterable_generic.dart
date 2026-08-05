@@ -4,13 +4,13 @@ extension IterableOfTExtendsUnit<T extends Unit<T>> on Iterable<T> {
   /// Combine all element in this to [unit],
   /// value of [unit] is ignored
   T combineTo<E extends Unit<T>>(E unit) => isEmpty
-      ? (unit as T).withValue(0)
+      ? (unit as T).withValue(Rational.zero)
       : any((e) => e._isShiftedValue) || unit._isShiftedValue
           ? (unit as T).withValue(
               map((e) => e.convertTo(unit).value).reduce((a, b) => a + b),
             )
           : fold(
-              unit.withValue(0),
+              unit.withValue(Rational.zero),
               (a, e) => a + e,
             );
 
@@ -53,9 +53,10 @@ extension IterableOfTExtendsUnit<T extends Unit<T>> on Iterable<T> {
 
   /// Combine all element in this to [unit] and returning the value,
   /// value of [unit] is ignored
-  num totalValueIn(T unit) => combineTo(unit).value;
+  Rational totalValueIn(T unit) => combineTo(unit).value;
 
   /// Combine all element in this to [unit] and returning the average value,
   /// value of [unit] is ignored
-  num averageValueIn(T unit) => totalValueIn(unit) / length;
+  Rational averageValueIn(T unit) =>
+      totalValueIn(unit) / Rational.fromInt(length);
 }

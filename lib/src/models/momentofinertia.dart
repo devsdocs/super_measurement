@@ -14,7 +14,7 @@ part of '../../super_measurement.dart';
 /// [MomentOfInertia$PoundInchSquare],
 /// [MomentOfInertia$PoundInchSecondSquare], [MomentOfInertia$SlugFootSquare]
 sealed class MomentOfInertia extends Unit<MomentOfInertia> {
-  const MomentOfInertia([
+  MomentOfInertia([
     super.value,
   ]);
 
@@ -26,71 +26,72 @@ sealed class MomentOfInertia extends Unit<MomentOfInertia> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : MomentOfInertia.anchor();
 
   factory MomentOfInertia.anchor() =>
-      const MomentOfInertia$KilogramCentimeterSquare();
+      MomentOfInertia$KilogramCentimeterSquare();
 
   /// Convert to [MomentOfInertia$KilogramMeterSquare]
   MomentOfInertia get toKilogramMeterSquare => convertTo(
-        const MomentOfInertia$KilogramMeterSquare(),
+        MomentOfInertia$KilogramMeterSquare(),
       );
 
   /// Convert to [MomentOfInertia$KilogramCentimeterSquare]
   MomentOfInertia get toKilogramCentimeterSquare => convertTo(
-        const MomentOfInertia$KilogramCentimeterSquare(),
+        MomentOfInertia$KilogramCentimeterSquare(),
       );
 
   /// Convert to [MomentOfInertia$GramCentimeterSquare]
   MomentOfInertia get toGramCentimeterSquare => convertTo(
-        const MomentOfInertia$GramCentimeterSquare(),
+        MomentOfInertia$GramCentimeterSquare(),
       );
 
   /// Convert to [MomentOfInertia$KilogramForceMeterSecondSquare]
   MomentOfInertia get toKilogramForceMeterSecondSquare => convertTo(
-        const MomentOfInertia$KilogramForceMeterSecondSquare(),
+        MomentOfInertia$KilogramForceMeterSecondSquare(),
       );
 
   /// Convert to [MomentOfInertia$KilogramForceCentimeterSecondSquare]
   MomentOfInertia get toKilogramForceCentimeterSecondSquare => convertTo(
-        const MomentOfInertia$KilogramForceCentimeterSecondSquare(),
+        MomentOfInertia$KilogramForceCentimeterSecondSquare(),
       );
 
   /// Convert to [MomentOfInertia$OunceInchSquare]
   MomentOfInertia get toOunceInchSquare => convertTo(
-        const MomentOfInertia$OunceInchSquare(),
+        MomentOfInertia$OunceInchSquare(),
       );
 
   /// Convert to [MomentOfInertia$OunceInchSecondSquare]
   MomentOfInertia get toOunceInchSecondSquare => convertTo(
-        const MomentOfInertia$OunceInchSecondSquare(),
+        MomentOfInertia$OunceInchSecondSquare(),
       );
 
   /// Convert to [MomentOfInertia$PoundFootSquare]
   MomentOfInertia get toPoundFootSquare => convertTo(
-        const MomentOfInertia$PoundFootSquare(),
+        MomentOfInertia$PoundFootSquare(),
       );
 
   /// Convert to [MomentOfInertia$PoundFootSecondSquare]
   MomentOfInertia get toPoundFootSecondSquare => convertTo(
-        const MomentOfInertia$PoundFootSecondSquare(),
+        MomentOfInertia$PoundFootSecondSquare(),
       );
 
   /// Convert to [MomentOfInertia$PoundInchSquare]
   MomentOfInertia get toPoundInchSquare => convertTo(
-        const MomentOfInertia$PoundInchSquare(),
+        MomentOfInertia$PoundInchSquare(),
       );
 
   /// Convert to [MomentOfInertia$PoundInchSecondSquare]
   MomentOfInertia get toPoundInchSecondSquare => convertTo(
-        const MomentOfInertia$PoundInchSecondSquare(),
+        MomentOfInertia$PoundInchSecondSquare(),
       );
 
   /// Convert to [MomentOfInertia$SlugFootSquare]
   MomentOfInertia get toSlugFootSquare => convertTo(
-        const MomentOfInertia$SlugFootSquare(),
+        MomentOfInertia$SlugFootSquare(),
       );
 
   @override
@@ -101,21 +102,21 @@ sealed class MomentOfInertia extends Unit<MomentOfInertia> {
 
   static const _majorName = 'momentOfInertia';
 
-  static const kilogramMeterSquare = MomentOfInertia$KilogramMeterSquare();
-  static const kilogramCentimeterSquare =
+  static final kilogramMeterSquare = MomentOfInertia$KilogramMeterSquare();
+  static final kilogramCentimeterSquare =
       MomentOfInertia$KilogramCentimeterSquare();
-  static const gramCentimeterSquare = MomentOfInertia$GramCentimeterSquare();
-  static const kilogramForceMeterSecondSquare =
+  static final gramCentimeterSquare = MomentOfInertia$GramCentimeterSquare();
+  static final kilogramForceMeterSecondSquare =
       MomentOfInertia$KilogramForceMeterSecondSquare();
-  static const kilogramForceCentimeterSecondSquare =
+  static final kilogramForceCentimeterSecondSquare =
       MomentOfInertia$KilogramForceCentimeterSecondSquare();
-  static const ounceInchSquare = MomentOfInertia$OunceInchSquare();
-  static const ounceInchSecondSquare = MomentOfInertia$OunceInchSecondSquare();
-  static const poundFootSquare = MomentOfInertia$PoundFootSquare();
-  static const poundFootSecondSquare = MomentOfInertia$PoundFootSecondSquare();
-  static const poundInchSquare = MomentOfInertia$PoundInchSquare();
-  static const poundInchSecondSquare = MomentOfInertia$PoundInchSecondSquare();
-  static const slugFootSquare = MomentOfInertia$SlugFootSquare();
+  static final ounceInchSquare = MomentOfInertia$OunceInchSquare();
+  static final ounceInchSecondSquare = MomentOfInertia$OunceInchSecondSquare();
+  static final poundFootSquare = MomentOfInertia$PoundFootSquare();
+  static final poundFootSecondSquare = MomentOfInertia$PoundFootSecondSquare();
+  static final poundInchSquare = MomentOfInertia$PoundInchSquare();
+  static final poundInchSecondSquare = MomentOfInertia$PoundInchSecondSquare();
+  static final slugFootSquare = MomentOfInertia$SlugFootSquare();
 
   @override
   List<MomentOfInertia> get units => values;
@@ -123,7 +124,7 @@ sealed class MomentOfInertia extends Unit<MomentOfInertia> {
   @override
   EnumValues<MomentOfInertia> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <MomentOfInertia>[
     kilogramMeterSquare,
     kilogramCentimeterSquare,
     gramCentimeterSquare,
@@ -138,7 +139,7 @@ sealed class MomentOfInertia extends Unit<MomentOfInertia> {
     slugFootSquare,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, MomentOfInertia>{
     MomentOfInertia$KilogramMeterSquare._minorName: kilogramMeterSquare,
     MomentOfInertia$KilogramCentimeterSquare._minorName:
         kilogramCentimeterSquare,
@@ -159,7 +160,7 @@ sealed class MomentOfInertia extends Unit<MomentOfInertia> {
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$KilogramMeterSquare extends MomentOfInertia {
-  const MomentOfInertia$KilogramMeterSquare([
+  MomentOfInertia$KilogramMeterSquare([
     super.value,
   ]);
 
@@ -190,15 +191,15 @@ final class MomentOfInertia$KilogramMeterSquare extends MomentOfInertia {
   @override
   String get displayName => 'kilogram meter²';
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$KilogramMeterSquare] = 10000.0 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$KilogramMeterSquare] = 1.00000000000000000E+004 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -207,12 +208,12 @@ final class MomentOfInertia$KilogramMeterSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$KilogramMeterSquare] with new value
   @override
   MomentOfInertia$KilogramMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$KilogramMeterSquare(val);
 
@@ -225,14 +226,14 @@ final class MomentOfInertia$KilogramMeterSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$KilogramCentimeterSquare extends MomentOfInertia {
-  const MomentOfInertia$KilogramCentimeterSquare([
+  MomentOfInertia$KilogramCentimeterSquare([
     super.value,
   ]);
 
@@ -263,15 +264,15 @@ final class MomentOfInertia$KilogramCentimeterSquare extends MomentOfInertia {
   @override
   String get displayName => 'kilogram centimeter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
   /// Default (anchor) unit of [MomentOfInertia]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -280,12 +281,12 @@ final class MomentOfInertia$KilogramCentimeterSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$KilogramCentimeterSquare] with new value
   @override
   MomentOfInertia$KilogramCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$KilogramCentimeterSquare(val);
 
@@ -298,14 +299,14 @@ final class MomentOfInertia$KilogramCentimeterSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$GramCentimeterSquare extends MomentOfInertia {
-  const MomentOfInertia$GramCentimeterSquare([
+  MomentOfInertia$GramCentimeterSquare([
     super.value,
   ]);
 
@@ -336,15 +337,15 @@ final class MomentOfInertia$GramCentimeterSquare extends MomentOfInertia {
   @override
   String get displayName => 'gram centimeter²';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$GramCentimeterSquare] ≈ 0.001 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$GramCentimeterSquare] ≈ 1.00000000000000000E-003 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -353,12 +354,12 @@ final class MomentOfInertia$GramCentimeterSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$GramCentimeterSquare] with new value
   @override
   MomentOfInertia$GramCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$GramCentimeterSquare(val);
 
@@ -371,7 +372,7 @@ final class MomentOfInertia$GramCentimeterSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -379,7 +380,7 @@ final class MomentOfInertia$GramCentimeterSquare extends MomentOfInertia {
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$KilogramForceMeterSecondSquare
     extends MomentOfInertia {
-  const MomentOfInertia$KilogramForceMeterSecondSquare([
+  MomentOfInertia$KilogramForceMeterSecondSquare([
     super.value,
   ]);
 
@@ -410,15 +411,15 @@ final class MomentOfInertia$KilogramForceMeterSecondSquare
   @override
   String get displayName => 'kilogram force meter second²';
 
-  static const _ratio = 98066.5;
+  static final _ratio = Rational.parse('9.80665000000000000E+004');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$KilogramForceMeterSecondSquare] ≈ 98066.5 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$KilogramForceMeterSecondSquare] ≈ 9.80665000000000000E+004 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -427,12 +428,12 @@ final class MomentOfInertia$KilogramForceMeterSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$KilogramForceMeterSecondSquare] with new value
   @override
   MomentOfInertia$KilogramForceMeterSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$KilogramForceMeterSecondSquare(val);
 
@@ -445,7 +446,7 @@ final class MomentOfInertia$KilogramForceMeterSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -453,7 +454,7 @@ final class MomentOfInertia$KilogramForceMeterSecondSquare
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$KilogramForceCentimeterSecondSquare
     extends MomentOfInertia {
-  const MomentOfInertia$KilogramForceCentimeterSecondSquare([
+  MomentOfInertia$KilogramForceCentimeterSecondSquare([
     super.value,
   ]);
 
@@ -484,15 +485,15 @@ final class MomentOfInertia$KilogramForceCentimeterSecondSquare
   @override
   String get displayName => 'kilogram force centimeter second²';
 
-  static const _ratio = 980.665;
+  static final _ratio = Rational.parse('9.80665000000000000E+002');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$KilogramForceCentimeterSecondSquare] ≈ 980.665 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$KilogramForceCentimeterSecondSquare] ≈ 9.80665000000000000E+002 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -501,12 +502,12 @@ final class MomentOfInertia$KilogramForceCentimeterSecondSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$KilogramForceCentimeterSecondSquare] with new value
   @override
   MomentOfInertia$KilogramForceCentimeterSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$KilogramForceCentimeterSecondSquare(val);
 
@@ -519,14 +520,14 @@ final class MomentOfInertia$KilogramForceCentimeterSecondSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$OunceInchSquare extends MomentOfInertia {
-  const MomentOfInertia$OunceInchSquare([
+  MomentOfInertia$OunceInchSquare([
     super.value,
   ]);
 
@@ -557,15 +558,15 @@ final class MomentOfInertia$OunceInchSquare extends MomentOfInertia {
   @override
   String get displayName => 'ounce inch²';
 
-  static const _ratio = 0.1828997851875;
+  static final _ratio = Rational.parse('1.82899785187500000E-001');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$OunceInchSquare] ≈ 0.1828997851875 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$OunceInchSquare] ≈ 1.82899785187500000E-001 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -574,12 +575,12 @@ final class MomentOfInertia$OunceInchSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$OunceInchSquare] with new value
   @override
   MomentOfInertia$OunceInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$OunceInchSquare(val);
 
@@ -592,14 +593,14 @@ final class MomentOfInertia$OunceInchSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$OunceInchSecondSquare extends MomentOfInertia {
-  const MomentOfInertia$OunceInchSecondSquare([
+  MomentOfInertia$OunceInchSecondSquare([
     super.value,
   ]);
 
@@ -630,15 +631,15 @@ final class MomentOfInertia$OunceInchSecondSquare extends MomentOfInertia {
   @override
   String get displayName => 'ounce inch second²';
 
-  static const _ratio = 70.61551885;
+  static final _ratio = Rational.parse('7.06155188500000000E+001');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$OunceInchSecondSquare] ≈ 70.61551885 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$OunceInchSecondSquare] ≈ 7.06155188500000000E+001 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -647,12 +648,12 @@ final class MomentOfInertia$OunceInchSecondSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$OunceInchSecondSquare] with new value
   @override
   MomentOfInertia$OunceInchSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$OunceInchSecondSquare(val);
 
@@ -665,14 +666,14 @@ final class MomentOfInertia$OunceInchSecondSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$PoundFootSquare extends MomentOfInertia {
-  const MomentOfInertia$PoundFootSquare([
+  MomentOfInertia$PoundFootSquare([
     super.value,
   ]);
 
@@ -703,15 +704,15 @@ final class MomentOfInertia$PoundFootSquare extends MomentOfInertia {
   @override
   String get displayName => 'pound foot²';
 
-  static const _ratio = 421.401105;
+  static final _ratio = Rational.parse('4.21401105000000000E+002');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$PoundFootSquare] ≈ 421.401105 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$PoundFootSquare] ≈ 4.21401105000000000E+002 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -720,12 +721,12 @@ final class MomentOfInertia$PoundFootSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$PoundFootSquare] with new value
   @override
   MomentOfInertia$PoundFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$PoundFootSquare(val);
 
@@ -738,14 +739,14 @@ final class MomentOfInertia$PoundFootSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$PoundFootSecondSquare extends MomentOfInertia {
-  const MomentOfInertia$PoundFootSecondSquare([
+  MomentOfInertia$PoundFootSecondSquare([
     super.value,
   ]);
 
@@ -776,15 +777,15 @@ final class MomentOfInertia$PoundFootSecondSquare extends MomentOfInertia {
   @override
   String get displayName => 'pound foot second²';
 
-  static const _ratio = 13558.1796192;
+  static final _ratio = Rational.parse('1.35581796192000000E+004');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$PoundFootSecondSquare] ≈ 13558.1796192 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$PoundFootSecondSquare] ≈ 1.35581796192000000E+004 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -793,12 +794,12 @@ final class MomentOfInertia$PoundFootSecondSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$PoundFootSecondSquare] with new value
   @override
   MomentOfInertia$PoundFootSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$PoundFootSecondSquare(val);
 
@@ -811,14 +812,14 @@ final class MomentOfInertia$PoundFootSecondSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$PoundInchSquare extends MomentOfInertia {
-  const MomentOfInertia$PoundInchSquare([
+  MomentOfInertia$PoundInchSquare([
     super.value,
   ]);
 
@@ -849,15 +850,15 @@ final class MomentOfInertia$PoundInchSquare extends MomentOfInertia {
   @override
   String get displayName => 'pound inch²';
 
-  static const _ratio = 2.926396563;
+  static final _ratio = Rational.parse('2.92639656300000000E+000');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$PoundInchSquare] ≈ 2.926396563 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$PoundInchSquare] ≈ 2.92639656300000000E+000 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -866,12 +867,12 @@ final class MomentOfInertia$PoundInchSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$PoundInchSquare] with new value
   @override
   MomentOfInertia$PoundInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$PoundInchSquare(val);
 
@@ -884,14 +885,14 @@ final class MomentOfInertia$PoundInchSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$PoundInchSecondSquare extends MomentOfInertia {
-  const MomentOfInertia$PoundInchSecondSquare([
+  MomentOfInertia$PoundInchSecondSquare([
     super.value,
   ]);
 
@@ -922,15 +923,15 @@ final class MomentOfInertia$PoundInchSecondSquare extends MomentOfInertia {
   @override
   String get displayName => 'pound inch second²';
 
-  static const _ratio = 1129.8483016;
+  static final _ratio = Rational.parse('1.12984830160000000E+003');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$PoundInchSecondSquare] ≈ 1129.8483016 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$PoundInchSecondSquare] ≈ 1.12984830160000000E+003 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -939,12 +940,12 @@ final class MomentOfInertia$PoundInchSecondSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$PoundInchSecondSquare] with new value
   @override
   MomentOfInertia$PoundInchSecondSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$PoundInchSecondSquare(val);
 
@@ -957,14 +958,14 @@ final class MomentOfInertia$PoundInchSecondSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MomentOfInertia]
 final class MomentOfInertia$SlugFootSquare extends MomentOfInertia {
-  const MomentOfInertia$SlugFootSquare([
+  MomentOfInertia$SlugFootSquare([
     super.value,
   ]);
 
@@ -995,15 +996,15 @@ final class MomentOfInertia$SlugFootSquare extends MomentOfInertia {
   @override
   String get displayName => 'slug foot²';
 
-  static const _ratio = 13558.1796192;
+  static final _ratio = Rational.parse('1.35581796192000000E+004');
 
   @override
   MomentOfInertia get anchor =>
-      const MomentOfInertia$KilogramCentimeterSquare(_ratio);
+      MomentOfInertia$KilogramCentimeterSquare(_ratio);
 
-  /// 1 [MomentOfInertia$SlugFootSquare] ≈ 13558.1796192 [MomentOfInertia$KilogramCentimeterSquare]
+  /// 1 [MomentOfInertia$SlugFootSquare] ≈ 1.35581796192000000E+004 [MomentOfInertia$KilogramCentimeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1012,12 +1013,12 @@ final class MomentOfInertia$SlugFootSquare extends MomentOfInertia {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MomentOfInertia$SlugFootSquare] with new value
   @override
   MomentOfInertia$SlugFootSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MomentOfInertia$SlugFootSquare(val);
 
@@ -1030,7 +1031,7 @@ final class MomentOfInertia$SlugFootSquare extends MomentOfInertia {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

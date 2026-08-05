@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [SurfaceTension$ErgPerMillimeterSquare], [SurfaceTension$PoundalPerInch],
 /// [SurfaceTension$PoundForcePerInch]
 sealed class SurfaceTension extends Unit<SurfaceTension> {
-  const SurfaceTension([
+  SurfaceTension([
     super.value,
   ]);
 
@@ -21,50 +21,51 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : SurfaceTension.anchor();
 
-  factory SurfaceTension.anchor() => const SurfaceTension$MillinewtonPerMeter();
+  factory SurfaceTension.anchor() => SurfaceTension$MillinewtonPerMeter();
 
   /// Convert to [SurfaceTension$NewtonPerMeter]
   SurfaceTension get toNewtonPerMeter => convertTo(
-        const SurfaceTension$NewtonPerMeter(),
+        SurfaceTension$NewtonPerMeter(),
       );
 
   /// Convert to [SurfaceTension$MillinewtonPerMeter]
   SurfaceTension get toMillinewtonPerMeter => convertTo(
-        const SurfaceTension$MillinewtonPerMeter(),
+        SurfaceTension$MillinewtonPerMeter(),
       );
 
   /// Convert to [SurfaceTension$GramForcePerCentimeter]
   SurfaceTension get toGramForcePerCentimeter => convertTo(
-        const SurfaceTension$GramForcePerCentimeter(),
+        SurfaceTension$GramForcePerCentimeter(),
       );
 
   /// Convert to [SurfaceTension$DynePerCentimeter]
   SurfaceTension get toDynePerCentimeter => convertTo(
-        const SurfaceTension$DynePerCentimeter(),
+        SurfaceTension$DynePerCentimeter(),
       );
 
   /// Convert to [SurfaceTension$ErgPerCentimeterSquare]
   SurfaceTension get toErgPerCentimeterSquare => convertTo(
-        const SurfaceTension$ErgPerCentimeterSquare(),
+        SurfaceTension$ErgPerCentimeterSquare(),
       );
 
   /// Convert to [SurfaceTension$ErgPerMillimeterSquare]
   SurfaceTension get toErgPerMillimeterSquare => convertTo(
-        const SurfaceTension$ErgPerMillimeterSquare(),
+        SurfaceTension$ErgPerMillimeterSquare(),
       );
 
   /// Convert to [SurfaceTension$PoundalPerInch]
   SurfaceTension get toPoundalPerInch => convertTo(
-        const SurfaceTension$PoundalPerInch(),
+        SurfaceTension$PoundalPerInch(),
       );
 
   /// Convert to [SurfaceTension$PoundForcePerInch]
   SurfaceTension get toPoundForcePerInch => convertTo(
-        const SurfaceTension$PoundForcePerInch(),
+        SurfaceTension$PoundForcePerInch(),
       );
 
   @override
@@ -75,14 +76,14 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
 
   static const _majorName = 'surfaceTension';
 
-  static const newtonPerMeter = SurfaceTension$NewtonPerMeter();
-  static const millinewtonPerMeter = SurfaceTension$MillinewtonPerMeter();
-  static const gramForcePerCentimeter = SurfaceTension$GramForcePerCentimeter();
-  static const dynePerCentimeter = SurfaceTension$DynePerCentimeter();
-  static const ergPerCentimeterSquare = SurfaceTension$ErgPerCentimeterSquare();
-  static const ergPerMillimeterSquare = SurfaceTension$ErgPerMillimeterSquare();
-  static const poundalPerInch = SurfaceTension$PoundalPerInch();
-  static const poundForcePerInch = SurfaceTension$PoundForcePerInch();
+  static final newtonPerMeter = SurfaceTension$NewtonPerMeter();
+  static final millinewtonPerMeter = SurfaceTension$MillinewtonPerMeter();
+  static final gramForcePerCentimeter = SurfaceTension$GramForcePerCentimeter();
+  static final dynePerCentimeter = SurfaceTension$DynePerCentimeter();
+  static final ergPerCentimeterSquare = SurfaceTension$ErgPerCentimeterSquare();
+  static final ergPerMillimeterSquare = SurfaceTension$ErgPerMillimeterSquare();
+  static final poundalPerInch = SurfaceTension$PoundalPerInch();
+  static final poundForcePerInch = SurfaceTension$PoundForcePerInch();
 
   @override
   List<SurfaceTension> get units => values;
@@ -90,7 +91,7 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
   @override
   EnumValues<SurfaceTension> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <SurfaceTension>[
     newtonPerMeter,
     millinewtonPerMeter,
     gramForcePerCentimeter,
@@ -101,7 +102,7 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
     poundForcePerInch,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, SurfaceTension>{
     SurfaceTension$NewtonPerMeter._minorName: newtonPerMeter,
     SurfaceTension$MillinewtonPerMeter._minorName: millinewtonPerMeter,
     SurfaceTension$GramForcePerCentimeter._minorName: gramForcePerCentimeter,
@@ -115,7 +116,7 @@ sealed class SurfaceTension extends Unit<SurfaceTension> {
 
 /// Unit of [SurfaceTension]
 final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
-  const SurfaceTension$NewtonPerMeter([
+  SurfaceTension$NewtonPerMeter([
     super.value,
   ]);
 
@@ -146,14 +147,14 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
   @override
   String get displayName => 'newton/meter';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+  SurfaceTension get anchor => SurfaceTension$MillinewtonPerMeter(_ratio);
 
-  /// 1 [SurfaceTension$NewtonPerMeter] = 1000.0 [SurfaceTension$MillinewtonPerMeter]
+  /// 1 [SurfaceTension$NewtonPerMeter] = 1.00000000000000000E+003 [SurfaceTension$MillinewtonPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -162,12 +163,12 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceTension$NewtonPerMeter] with new value
   @override
   SurfaceTension$NewtonPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceTension$NewtonPerMeter(val);
 
@@ -180,14 +181,14 @@ final class SurfaceTension$NewtonPerMeter extends SurfaceTension {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SurfaceTension]
 final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
-  const SurfaceTension$MillinewtonPerMeter([
+  SurfaceTension$MillinewtonPerMeter([
     super.value,
   ]);
 
@@ -218,14 +219,14 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
   @override
   String get displayName => 'millinewton/meter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+  SurfaceTension get anchor => SurfaceTension$MillinewtonPerMeter(_ratio);
 
   /// Default (anchor) unit of [SurfaceTension]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -234,12 +235,12 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceTension$MillinewtonPerMeter] with new value
   @override
   SurfaceTension$MillinewtonPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceTension$MillinewtonPerMeter(val);
 
@@ -252,14 +253,14 @@ final class SurfaceTension$MillinewtonPerMeter extends SurfaceTension {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SurfaceTension]
 final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
-  const SurfaceTension$GramForcePerCentimeter([
+  SurfaceTension$GramForcePerCentimeter([
     super.value,
   ]);
 
@@ -290,14 +291,14 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
   @override
   String get displayName => 'gram force/centimeter';
 
-  static const _ratio = 980.6649999787735;
+  static final _ratio = Rational.parse('9.80664999978773506E+002');
 
   @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+  SurfaceTension get anchor => SurfaceTension$MillinewtonPerMeter(_ratio);
 
-  /// 1 [SurfaceTension$GramForcePerCentimeter] ≈ 980.6649999787735 [SurfaceTension$MillinewtonPerMeter]
+  /// 1 [SurfaceTension$GramForcePerCentimeter] ≈ 9.80664999978773506E+002 [SurfaceTension$MillinewtonPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -306,12 +307,12 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceTension$GramForcePerCentimeter] with new value
   @override
   SurfaceTension$GramForcePerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceTension$GramForcePerCentimeter(val);
 
@@ -324,14 +325,14 @@ final class SurfaceTension$GramForcePerCentimeter extends SurfaceTension {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SurfaceTension]
 final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
-  const SurfaceTension$DynePerCentimeter([
+  SurfaceTension$DynePerCentimeter([
     super.value,
   ]);
 
@@ -362,14 +363,14 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
   @override
   String get displayName => 'dyne/centimeter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+  SurfaceTension get anchor => SurfaceTension$MillinewtonPerMeter(_ratio);
 
-  /// 1 [SurfaceTension$DynePerCentimeter] = 1.0 [SurfaceTension$MillinewtonPerMeter]
+  /// 1 [SurfaceTension$DynePerCentimeter] = 1.00000000000000000E+000 [SurfaceTension$MillinewtonPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -378,12 +379,12 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceTension$DynePerCentimeter] with new value
   @override
   SurfaceTension$DynePerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceTension$DynePerCentimeter(val);
 
@@ -396,14 +397,14 @@ final class SurfaceTension$DynePerCentimeter extends SurfaceTension {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SurfaceTension]
 final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
-  const SurfaceTension$ErgPerCentimeterSquare([
+  SurfaceTension$ErgPerCentimeterSquare([
     super.value,
   ]);
 
@@ -434,14 +435,14 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
   @override
   String get displayName => 'erg/centimeter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+  SurfaceTension get anchor => SurfaceTension$MillinewtonPerMeter(_ratio);
 
-  /// 1 [SurfaceTension$ErgPerCentimeterSquare] = 1.0 [SurfaceTension$MillinewtonPerMeter]
+  /// 1 [SurfaceTension$ErgPerCentimeterSquare] = 1.00000000000000000E+000 [SurfaceTension$MillinewtonPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -450,12 +451,12 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceTension$ErgPerCentimeterSquare] with new value
   @override
   SurfaceTension$ErgPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceTension$ErgPerCentimeterSquare(val);
 
@@ -468,14 +469,14 @@ final class SurfaceTension$ErgPerCentimeterSquare extends SurfaceTension {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SurfaceTension]
 final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
-  const SurfaceTension$ErgPerMillimeterSquare([
+  SurfaceTension$ErgPerMillimeterSquare([
     super.value,
   ]);
 
@@ -506,14 +507,14 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
   @override
   String get displayName => 'erg/millimeter²';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+  SurfaceTension get anchor => SurfaceTension$MillinewtonPerMeter(_ratio);
 
-  /// 1 [SurfaceTension$ErgPerMillimeterSquare] = 100.0 [SurfaceTension$MillinewtonPerMeter]
+  /// 1 [SurfaceTension$ErgPerMillimeterSquare] = 1.00000000000000000E+002 [SurfaceTension$MillinewtonPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -522,12 +523,12 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceTension$ErgPerMillimeterSquare] with new value
   @override
   SurfaceTension$ErgPerMillimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceTension$ErgPerMillimeterSquare(val);
 
@@ -540,14 +541,14 @@ final class SurfaceTension$ErgPerMillimeterSquare extends SurfaceTension {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SurfaceTension]
 final class SurfaceTension$PoundalPerInch extends SurfaceTension {
-  const SurfaceTension$PoundalPerInch([
+  SurfaceTension$PoundalPerInch([
     super.value,
   ]);
 
@@ -578,14 +579,14 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
   @override
   String get displayName => 'poundal/inch';
 
-  static const _ratio = 5443.108492;
+  static final _ratio = Rational.parse('5.44310849200000000E+003');
 
   @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+  SurfaceTension get anchor => SurfaceTension$MillinewtonPerMeter(_ratio);
 
-  /// 1 [SurfaceTension$PoundalPerInch] ≈ 5443.108492 [SurfaceTension$MillinewtonPerMeter]
+  /// 1 [SurfaceTension$PoundalPerInch] ≈ 5.44310849200000000E+003 [SurfaceTension$MillinewtonPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -594,12 +595,12 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceTension$PoundalPerInch] with new value
   @override
   SurfaceTension$PoundalPerInch withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceTension$PoundalPerInch(val);
 
@@ -612,14 +613,14 @@ final class SurfaceTension$PoundalPerInch extends SurfaceTension {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [SurfaceTension]
 final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
-  const SurfaceTension$PoundForcePerInch([
+  SurfaceTension$PoundForcePerInch([
     super.value,
   ]);
 
@@ -650,14 +651,14 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
   @override
   String get displayName => 'pound force/inch';
 
-  static const _ratio = 175126.837;
+  static final _ratio = Rational.parse('1.75126837000000000E+005');
 
   @override
-  SurfaceTension get anchor => const SurfaceTension$MillinewtonPerMeter(_ratio);
+  SurfaceTension get anchor => SurfaceTension$MillinewtonPerMeter(_ratio);
 
-  /// 1 [SurfaceTension$PoundForcePerInch] ≈ 175126.837 [SurfaceTension$MillinewtonPerMeter]
+  /// 1 [SurfaceTension$PoundForcePerInch] ≈ 1.75126837000000000E+005 [SurfaceTension$MillinewtonPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -666,12 +667,12 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceTension$PoundForcePerInch] with new value
   @override
   SurfaceTension$PoundForcePerInch withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceTension$PoundForcePerInch(val);
 
@@ -684,7 +685,7 @@ final class SurfaceTension$PoundForcePerInch extends SurfaceTension {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

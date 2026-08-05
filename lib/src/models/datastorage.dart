@@ -22,7 +22,7 @@ part of '../../super_measurement.dart';
 /// [DataStorage$DVD2Layers2Sides], [DataStorage$BluRay1Layer],
 /// [DataStorage$BluRay2Layer]
 sealed class DataStorage extends Unit<DataStorage> {
-  const DataStorage([
+  DataStorage([
     super.value,
   ]);
 
@@ -34,220 +34,221 @@ sealed class DataStorage extends Unit<DataStorage> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : DataStorage.anchor();
 
-  factory DataStorage.anchor() => const DataStorage$Bit();
+  factory DataStorage.anchor() => DataStorage$Bit();
 
   /// Convert to [DataStorage$Bit]
   DataStorage get toBit => convertTo(
-        const DataStorage$Bit(),
+        DataStorage$Bit(),
       );
 
   /// Convert to [DataStorage$Nibble]
   DataStorage get toNibble => convertTo(
-        const DataStorage$Nibble(),
+        DataStorage$Nibble(),
       );
 
   /// Convert to [DataStorage$Byte]
   DataStorage get toByte => convertTo(
-        const DataStorage$Byte(),
+        DataStorage$Byte(),
       );
 
   /// Convert to [DataStorage$Word]
   DataStorage get toWord => convertTo(
-        const DataStorage$Word(),
+        DataStorage$Word(),
       );
 
   /// Convert to [DataStorage$DoubleWord]
   DataStorage get toDoubleWord => convertTo(
-        const DataStorage$DoubleWord(),
+        DataStorage$DoubleWord(),
       );
 
   /// Convert to [DataStorage$QuadrupleWord]
   DataStorage get toQuadrupleWord => convertTo(
-        const DataStorage$QuadrupleWord(),
+        DataStorage$QuadrupleWord(),
       );
 
   /// Convert to [DataStorage$Block]
   DataStorage get toBlock => convertTo(
-        const DataStorage$Block(),
+        DataStorage$Block(),
       );
 
   /// Convert to [DataStorage$Kilobit]
   DataStorage get toKilobit => convertTo(
-        const DataStorage$Kilobit(),
+        DataStorage$Kilobit(),
       );
 
   /// Convert to [DataStorage$Kilobyte]
   DataStorage get toKilobyte => convertTo(
-        const DataStorage$Kilobyte(),
+        DataStorage$Kilobyte(),
       );
 
   /// Convert to [DataStorage$Kilobyte10PowerOf3Bytes]
   DataStorage get toKilobyte10PowerOf3Bytes => convertTo(
-        const DataStorage$Kilobyte10PowerOf3Bytes(),
+        DataStorage$Kilobyte10PowerOf3Bytes(),
       );
 
   /// Convert to [DataStorage$Megabit]
   DataStorage get toMegabit => convertTo(
-        const DataStorage$Megabit(),
+        DataStorage$Megabit(),
       );
 
   /// Convert to [DataStorage$Megabyte]
   DataStorage get toMegabyte => convertTo(
-        const DataStorage$Megabyte(),
+        DataStorage$Megabyte(),
       );
 
   /// Convert to [DataStorage$Megabyte10PowerOf6Bytes]
   DataStorage get toMegabyte10PowerOf6Bytes => convertTo(
-        const DataStorage$Megabyte10PowerOf6Bytes(),
+        DataStorage$Megabyte10PowerOf6Bytes(),
       );
 
   /// Convert to [DataStorage$Gigabit]
   DataStorage get toGigabit => convertTo(
-        const DataStorage$Gigabit(),
+        DataStorage$Gigabit(),
       );
 
   /// Convert to [DataStorage$Gigabyte]
   DataStorage get toGigabyte => convertTo(
-        const DataStorage$Gigabyte(),
+        DataStorage$Gigabyte(),
       );
 
   /// Convert to [DataStorage$Gigabyte10PowerOf9Bytes]
   DataStorage get toGigabyte10PowerOf9Bytes => convertTo(
-        const DataStorage$Gigabyte10PowerOf9Bytes(),
+        DataStorage$Gigabyte10PowerOf9Bytes(),
       );
 
   /// Convert to [DataStorage$Terabit]
   DataStorage get toTerabit => convertTo(
-        const DataStorage$Terabit(),
+        DataStorage$Terabit(),
       );
 
   /// Convert to [DataStorage$Terabyte]
   DataStorage get toTerabyte => convertTo(
-        const DataStorage$Terabyte(),
+        DataStorage$Terabyte(),
       );
 
   /// Convert to [DataStorage$Terabyte10PowerOf12Bytes]
   DataStorage get toTerabyte10PowerOf12Bytes => convertTo(
-        const DataStorage$Terabyte10PowerOf12Bytes(),
+        DataStorage$Terabyte10PowerOf12Bytes(),
       );
 
   /// Convert to [DataStorage$Petabit]
   DataStorage get toPetabit => convertTo(
-        const DataStorage$Petabit(),
+        DataStorage$Petabit(),
       );
 
   /// Convert to [DataStorage$Petabyte]
   DataStorage get toPetabyte => convertTo(
-        const DataStorage$Petabyte(),
+        DataStorage$Petabyte(),
       );
 
   /// Convert to [DataStorage$Petabyte10PowerOf15Bytes]
   DataStorage get toPetabyte10PowerOf15Bytes => convertTo(
-        const DataStorage$Petabyte10PowerOf15Bytes(),
+        DataStorage$Petabyte10PowerOf15Bytes(),
       );
 
   /// Convert to [DataStorage$Exabit]
   DataStorage get toExabit => convertTo(
-        const DataStorage$Exabit(),
+        DataStorage$Exabit(),
       );
 
   /// Convert to [DataStorage$Exabyte]
   DataStorage get toExabyte => convertTo(
-        const DataStorage$Exabyte(),
+        DataStorage$Exabyte(),
       );
 
   /// Convert to [DataStorage$Exabyte10PowerOf18Bytes]
   DataStorage get toExabyte10PowerOf18Bytes => convertTo(
-        const DataStorage$Exabyte10PowerOf18Bytes(),
+        DataStorage$Exabyte10PowerOf18Bytes(),
       );
 
   /// Convert to [DataStorage$FloppyDisk35DD]
   DataStorage get toFloppyDisk35DD => convertTo(
-        const DataStorage$FloppyDisk35DD(),
+        DataStorage$FloppyDisk35DD(),
       );
 
   /// Convert to [DataStorage$FloppyDisk35HD]
   DataStorage get toFloppyDisk35HD => convertTo(
-        const DataStorage$FloppyDisk35HD(),
+        DataStorage$FloppyDisk35HD(),
       );
 
   /// Convert to [DataStorage$FloppyDisk35ED]
   DataStorage get toFloppyDisk35ED => convertTo(
-        const DataStorage$FloppyDisk35ED(),
+        DataStorage$FloppyDisk35ED(),
       );
 
   /// Convert to [DataStorage$FloppyDisk525DD]
   DataStorage get toFloppyDisk525DD => convertTo(
-        const DataStorage$FloppyDisk525DD(),
+        DataStorage$FloppyDisk525DD(),
       );
 
   /// Convert to [DataStorage$FloppyDisk525HD]
   DataStorage get toFloppyDisk525HD => convertTo(
-        const DataStorage$FloppyDisk525HD(),
+        DataStorage$FloppyDisk525HD(),
       );
 
   /// Convert to [DataStorage$Zip100]
   DataStorage get toZip100 => convertTo(
-        const DataStorage$Zip100(),
+        DataStorage$Zip100(),
       );
 
   /// Convert to [DataStorage$Zip250]
   DataStorage get toZip250 => convertTo(
-        const DataStorage$Zip250(),
+        DataStorage$Zip250(),
       );
 
   /// Convert to [DataStorage$Jaz1GB]
   DataStorage get toJaz1GB => convertTo(
-        const DataStorage$Jaz1GB(),
+        DataStorage$Jaz1GB(),
       );
 
   /// Convert to [DataStorage$Jaz2GB]
   DataStorage get toJaz2GB => convertTo(
-        const DataStorage$Jaz2GB(),
+        DataStorage$Jaz2GB(),
       );
 
   /// Convert to [DataStorage$CD74Minute]
   DataStorage get toCD74Minute => convertTo(
-        const DataStorage$CD74Minute(),
+        DataStorage$CD74Minute(),
       );
 
   /// Convert to [DataStorage$CD80Minute]
   DataStorage get toCD80Minute => convertTo(
-        const DataStorage$CD80Minute(),
+        DataStorage$CD80Minute(),
       );
 
   /// Convert to [DataStorage$DVD1Layer1Side]
   DataStorage get toDVD1Layer1Side => convertTo(
-        const DataStorage$DVD1Layer1Side(),
+        DataStorage$DVD1Layer1Side(),
       );
 
   /// Convert to [DataStorage$DVD2Layers1Side]
   DataStorage get toDVD2Layers1Side => convertTo(
-        const DataStorage$DVD2Layers1Side(),
+        DataStorage$DVD2Layers1Side(),
       );
 
   /// Convert to [DataStorage$DVD1Layer2Sides]
   DataStorage get toDVD1Layer2Sides => convertTo(
-        const DataStorage$DVD1Layer2Sides(),
+        DataStorage$DVD1Layer2Sides(),
       );
 
   /// Convert to [DataStorage$DVD2Layers2Sides]
   DataStorage get toDVD2Layers2Sides => convertTo(
-        const DataStorage$DVD2Layers2Sides(),
+        DataStorage$DVD2Layers2Sides(),
       );
 
   /// Convert to [DataStorage$BluRay1Layer]
   DataStorage get toBluRay1Layer => convertTo(
-        const DataStorage$BluRay1Layer(),
+        DataStorage$BluRay1Layer(),
       );
 
   /// Convert to [DataStorage$BluRay2Layer]
   DataStorage get toBluRay2Layer => convertTo(
-        const DataStorage$BluRay2Layer(),
+        DataStorage$BluRay2Layer(),
       );
 
   @override
@@ -258,50 +259,50 @@ sealed class DataStorage extends Unit<DataStorage> {
 
   static const _majorName = 'dataStorage';
 
-  static const bit = DataStorage$Bit();
-  static const nibble = DataStorage$Nibble();
-  static const byte = DataStorage$Byte();
-  static const word = DataStorage$Word();
-  static const doubleWord = DataStorage$DoubleWord();
-  static const quadrupleWord = DataStorage$QuadrupleWord();
-  static const block = DataStorage$Block();
-  static const kilobit = DataStorage$Kilobit();
-  static const kilobyte = DataStorage$Kilobyte();
-  static const kilobyte10PowerOf3Bytes = DataStorage$Kilobyte10PowerOf3Bytes();
-  static const megabit = DataStorage$Megabit();
-  static const megabyte = DataStorage$Megabyte();
-  static const megabyte10PowerOf6Bytes = DataStorage$Megabyte10PowerOf6Bytes();
-  static const gigabit = DataStorage$Gigabit();
-  static const gigabyte = DataStorage$Gigabyte();
-  static const gigabyte10PowerOf9Bytes = DataStorage$Gigabyte10PowerOf9Bytes();
-  static const terabit = DataStorage$Terabit();
-  static const terabyte = DataStorage$Terabyte();
-  static const terabyte10PowerOf12Bytes =
+  static final bit = DataStorage$Bit();
+  static final nibble = DataStorage$Nibble();
+  static final byte = DataStorage$Byte();
+  static final word = DataStorage$Word();
+  static final doubleWord = DataStorage$DoubleWord();
+  static final quadrupleWord = DataStorage$QuadrupleWord();
+  static final block = DataStorage$Block();
+  static final kilobit = DataStorage$Kilobit();
+  static final kilobyte = DataStorage$Kilobyte();
+  static final kilobyte10PowerOf3Bytes = DataStorage$Kilobyte10PowerOf3Bytes();
+  static final megabit = DataStorage$Megabit();
+  static final megabyte = DataStorage$Megabyte();
+  static final megabyte10PowerOf6Bytes = DataStorage$Megabyte10PowerOf6Bytes();
+  static final gigabit = DataStorage$Gigabit();
+  static final gigabyte = DataStorage$Gigabyte();
+  static final gigabyte10PowerOf9Bytes = DataStorage$Gigabyte10PowerOf9Bytes();
+  static final terabit = DataStorage$Terabit();
+  static final terabyte = DataStorage$Terabyte();
+  static final terabyte10PowerOf12Bytes =
       DataStorage$Terabyte10PowerOf12Bytes();
-  static const petabit = DataStorage$Petabit();
-  static const petabyte = DataStorage$Petabyte();
-  static const petabyte10PowerOf15Bytes =
+  static final petabit = DataStorage$Petabit();
+  static final petabyte = DataStorage$Petabyte();
+  static final petabyte10PowerOf15Bytes =
       DataStorage$Petabyte10PowerOf15Bytes();
-  static const exabit = DataStorage$Exabit();
-  static const exabyte = DataStorage$Exabyte();
-  static const exabyte10PowerOf18Bytes = DataStorage$Exabyte10PowerOf18Bytes();
-  static const floppyDisk35DD = DataStorage$FloppyDisk35DD();
-  static const floppyDisk35HD = DataStorage$FloppyDisk35HD();
-  static const floppyDisk35ED = DataStorage$FloppyDisk35ED();
-  static const floppyDisk525DD = DataStorage$FloppyDisk525DD();
-  static const floppyDisk525HD = DataStorage$FloppyDisk525HD();
-  static const zip100 = DataStorage$Zip100();
-  static const zip250 = DataStorage$Zip250();
-  static const jaz1GB = DataStorage$Jaz1GB();
-  static const jaz2GB = DataStorage$Jaz2GB();
-  static const cD74Minute = DataStorage$CD74Minute();
-  static const cD80Minute = DataStorage$CD80Minute();
-  static const dVD1Layer1Side = DataStorage$DVD1Layer1Side();
-  static const dVD2Layers1Side = DataStorage$DVD2Layers1Side();
-  static const dVD1Layer2Sides = DataStorage$DVD1Layer2Sides();
-  static const dVD2Layers2Sides = DataStorage$DVD2Layers2Sides();
-  static const bluRay1Layer = DataStorage$BluRay1Layer();
-  static const bluRay2Layer = DataStorage$BluRay2Layer();
+  static final exabit = DataStorage$Exabit();
+  static final exabyte = DataStorage$Exabyte();
+  static final exabyte10PowerOf18Bytes = DataStorage$Exabyte10PowerOf18Bytes();
+  static final floppyDisk35DD = DataStorage$FloppyDisk35DD();
+  static final floppyDisk35HD = DataStorage$FloppyDisk35HD();
+  static final floppyDisk35ED = DataStorage$FloppyDisk35ED();
+  static final floppyDisk525DD = DataStorage$FloppyDisk525DD();
+  static final floppyDisk525HD = DataStorage$FloppyDisk525HD();
+  static final zip100 = DataStorage$Zip100();
+  static final zip250 = DataStorage$Zip250();
+  static final jaz1GB = DataStorage$Jaz1GB();
+  static final jaz2GB = DataStorage$Jaz2GB();
+  static final cD74Minute = DataStorage$CD74Minute();
+  static final cD80Minute = DataStorage$CD80Minute();
+  static final dVD1Layer1Side = DataStorage$DVD1Layer1Side();
+  static final dVD2Layers1Side = DataStorage$DVD2Layers1Side();
+  static final dVD1Layer2Sides = DataStorage$DVD1Layer2Sides();
+  static final dVD2Layers2Sides = DataStorage$DVD2Layers2Sides();
+  static final bluRay1Layer = DataStorage$BluRay1Layer();
+  static final bluRay2Layer = DataStorage$BluRay2Layer();
 
   @override
   List<DataStorage> get units => values;
@@ -309,7 +310,7 @@ sealed class DataStorage extends Unit<DataStorage> {
   @override
   EnumValues<DataStorage> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <DataStorage>[
     bit,
     nibble,
     byte,
@@ -354,7 +355,7 @@ sealed class DataStorage extends Unit<DataStorage> {
     bluRay2Layer,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, DataStorage>{
     DataStorage$Bit._minorName: bit,
     DataStorage$Nibble._minorName: nibble,
     DataStorage$Byte._minorName: byte,
@@ -402,7 +403,7 @@ sealed class DataStorage extends Unit<DataStorage> {
 
 /// Unit of [DataStorage]
 final class DataStorage$Bit extends DataStorage {
-  const DataStorage$Bit([
+  DataStorage$Bit([
     super.value,
   ]);
 
@@ -433,14 +434,14 @@ final class DataStorage$Bit extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
   /// Default (anchor) unit of [DataStorage]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -448,12 +449,12 @@ final class DataStorage$Bit extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Bit] with new value
   @override
   DataStorage$Bit withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Bit(val);
 
@@ -466,14 +467,14 @@ final class DataStorage$Bit extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Nibble extends DataStorage {
-  const DataStorage$Nibble([
+  DataStorage$Nibble([
     super.value,
   ]);
 
@@ -504,14 +505,14 @@ final class DataStorage$Nibble extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 4.0;
+  static final _ratio = Rational.parse('4.00000000000000000E+000');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Nibble] = 4.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Nibble] = 4.00000000000000000E+000 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -519,12 +520,12 @@ final class DataStorage$Nibble extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Nibble] with new value
   @override
   DataStorage$Nibble withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Nibble(val);
 
@@ -537,14 +538,14 @@ final class DataStorage$Nibble extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Byte extends DataStorage {
-  const DataStorage$Byte([
+  DataStorage$Byte([
     super.value,
   ]);
 
@@ -575,14 +576,14 @@ final class DataStorage$Byte extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+000');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Byte] = 8.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Byte] = 8.00000000000000000E+000 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -590,12 +591,12 @@ final class DataStorage$Byte extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Byte] with new value
   @override
   DataStorage$Byte withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Byte(val);
 
@@ -608,14 +609,14 @@ final class DataStorage$Byte extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Word extends DataStorage {
-  const DataStorage$Word([
+  DataStorage$Word([
     super.value,
   ]);
 
@@ -646,14 +647,14 @@ final class DataStorage$Word extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 16.0;
+  static final _ratio = Rational.parse('1.60000000000000000E+001');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Word] = 16.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Word] = 1.60000000000000000E+001 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -661,12 +662,12 @@ final class DataStorage$Word extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Word] with new value
   @override
   DataStorage$Word withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Word(val);
 
@@ -679,14 +680,14 @@ final class DataStorage$Word extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$DoubleWord extends DataStorage {
-  const DataStorage$DoubleWord([
+  DataStorage$DoubleWord([
     super.value,
   ]);
 
@@ -717,14 +718,14 @@ final class DataStorage$DoubleWord extends DataStorage {
   @override
   String get displayName => 'double-word';
 
-  static const _ratio = 32.0;
+  static final _ratio = Rational.parse('3.20000000000000000E+001');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$DoubleWord] = 32.0 [DataStorage$Bit]
+  /// 1 [DataStorage$DoubleWord] = 3.20000000000000000E+001 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -732,12 +733,12 @@ final class DataStorage$DoubleWord extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$DoubleWord] with new value
   @override
   DataStorage$DoubleWord withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$DoubleWord(val);
 
@@ -750,14 +751,14 @@ final class DataStorage$DoubleWord extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$QuadrupleWord extends DataStorage {
-  const DataStorage$QuadrupleWord([
+  DataStorage$QuadrupleWord([
     super.value,
   ]);
 
@@ -788,14 +789,14 @@ final class DataStorage$QuadrupleWord extends DataStorage {
   @override
   String get displayName => 'quadruple-word';
 
-  static const _ratio = 64.0;
+  static final _ratio = Rational.parse('6.40000000000000000E+001');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$QuadrupleWord] = 64.0 [DataStorage$Bit]
+  /// 1 [DataStorage$QuadrupleWord] = 6.40000000000000000E+001 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -803,12 +804,12 @@ final class DataStorage$QuadrupleWord extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$QuadrupleWord] with new value
   @override
   DataStorage$QuadrupleWord withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$QuadrupleWord(val);
 
@@ -821,14 +822,14 @@ final class DataStorage$QuadrupleWord extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Block extends DataStorage {
-  const DataStorage$Block([
+  DataStorage$Block([
     super.value,
   ]);
 
@@ -859,14 +860,14 @@ final class DataStorage$Block extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 4096.0;
+  static final _ratio = Rational.parse('4.09600000000000000E+003');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Block] = 4096.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Block] = 4.09600000000000000E+003 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -874,12 +875,12 @@ final class DataStorage$Block extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Block] with new value
   @override
   DataStorage$Block withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Block(val);
 
@@ -892,14 +893,14 @@ final class DataStorage$Block extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Kilobit extends DataStorage {
-  const DataStorage$Kilobit([
+  DataStorage$Kilobit([
     super.value,
   ]);
 
@@ -930,14 +931,14 @@ final class DataStorage$Kilobit extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1024.0;
+  static final _ratio = Rational.parse('1.02400000000000000E+003');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Kilobit] = 1024.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Kilobit] = 1.02400000000000000E+003 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -945,12 +946,12 @@ final class DataStorage$Kilobit extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Kilobit] with new value
   @override
   DataStorage$Kilobit withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Kilobit(val);
 
@@ -963,14 +964,14 @@ final class DataStorage$Kilobit extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Kilobyte extends DataStorage {
-  const DataStorage$Kilobyte([
+  DataStorage$Kilobyte([
     super.value,
   ]);
 
@@ -1001,14 +1002,14 @@ final class DataStorage$Kilobyte extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8192.0;
+  static final _ratio = Rational.parse('8.19200000000000000E+003');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Kilobyte] = 8192.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Kilobyte] = 8.19200000000000000E+003 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1016,12 +1017,12 @@ final class DataStorage$Kilobyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Kilobyte] with new value
   @override
   DataStorage$Kilobyte withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Kilobyte(val);
 
@@ -1034,14 +1035,14 @@ final class DataStorage$Kilobyte extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Kilobyte10PowerOf3Bytes extends DataStorage {
-  const DataStorage$Kilobyte10PowerOf3Bytes([
+  DataStorage$Kilobyte10PowerOf3Bytes([
     super.value,
   ]);
 
@@ -1072,14 +1073,14 @@ final class DataStorage$Kilobyte10PowerOf3Bytes extends DataStorage {
   @override
   String get displayName => 'kilobyte (10^3 bytes)';
 
-  static const _ratio = 8000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+003');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Kilobyte10PowerOf3Bytes] = 8000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Kilobyte10PowerOf3Bytes] = 8.00000000000000000E+003 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1088,12 +1089,12 @@ final class DataStorage$Kilobyte10PowerOf3Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Kilobyte10PowerOf3Bytes] with new value
   @override
   DataStorage$Kilobyte10PowerOf3Bytes withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Kilobyte10PowerOf3Bytes(val);
 
@@ -1106,14 +1107,14 @@ final class DataStorage$Kilobyte10PowerOf3Bytes extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Megabit extends DataStorage {
-  const DataStorage$Megabit([
+  DataStorage$Megabit([
     super.value,
   ]);
 
@@ -1144,14 +1145,14 @@ final class DataStorage$Megabit extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1048576.0;
+  static final _ratio = Rational.parse('1.04857600000000000E+006');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Megabit] = 1048576.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Megabit] = 1.04857600000000000E+006 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1159,12 +1160,12 @@ final class DataStorage$Megabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Megabit] with new value
   @override
   DataStorage$Megabit withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Megabit(val);
 
@@ -1177,14 +1178,14 @@ final class DataStorage$Megabit extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Megabyte extends DataStorage {
-  const DataStorage$Megabyte([
+  DataStorage$Megabyte([
     super.value,
   ]);
 
@@ -1215,14 +1216,14 @@ final class DataStorage$Megabyte extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8388608.0;
+  static final _ratio = Rational.parse('8.38860800000000000E+006');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Megabyte] = 8388608.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Megabyte] = 8.38860800000000000E+006 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1230,12 +1231,12 @@ final class DataStorage$Megabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Megabyte] with new value
   @override
   DataStorage$Megabyte withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Megabyte(val);
 
@@ -1248,14 +1249,14 @@ final class DataStorage$Megabyte extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Megabyte10PowerOf6Bytes extends DataStorage {
-  const DataStorage$Megabyte10PowerOf6Bytes([
+  DataStorage$Megabyte10PowerOf6Bytes([
     super.value,
   ]);
 
@@ -1286,14 +1287,14 @@ final class DataStorage$Megabyte10PowerOf6Bytes extends DataStorage {
   @override
   String get displayName => 'megabyte (10^6 bytes)';
 
-  static const _ratio = 8000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+006');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Megabyte10PowerOf6Bytes] = 8000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Megabyte10PowerOf6Bytes] = 8.00000000000000000E+006 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1302,12 +1303,12 @@ final class DataStorage$Megabyte10PowerOf6Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Megabyte10PowerOf6Bytes] with new value
   @override
   DataStorage$Megabyte10PowerOf6Bytes withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Megabyte10PowerOf6Bytes(val);
 
@@ -1320,14 +1321,14 @@ final class DataStorage$Megabyte10PowerOf6Bytes extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Gigabit extends DataStorage {
-  const DataStorage$Gigabit([
+  DataStorage$Gigabit([
     super.value,
   ]);
 
@@ -1358,14 +1359,14 @@ final class DataStorage$Gigabit extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1073741824.0;
+  static final _ratio = Rational.parse('1.07374182400000000E+009');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Gigabit] = 1073741824.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Gigabit] = 1.07374182400000000E+009 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1373,12 +1374,12 @@ final class DataStorage$Gigabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Gigabit] with new value
   @override
   DataStorage$Gigabit withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Gigabit(val);
 
@@ -1391,14 +1392,14 @@ final class DataStorage$Gigabit extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Gigabyte extends DataStorage {
-  const DataStorage$Gigabyte([
+  DataStorage$Gigabyte([
     super.value,
   ]);
 
@@ -1429,14 +1430,14 @@ final class DataStorage$Gigabyte extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8589934592.0;
+  static final _ratio = Rational.parse('8.58993459200000000E+009');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Gigabyte] = 8589934592.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Gigabyte] = 8.58993459200000000E+009 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1444,12 +1445,12 @@ final class DataStorage$Gigabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Gigabyte] with new value
   @override
   DataStorage$Gigabyte withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Gigabyte(val);
 
@@ -1462,14 +1463,14 @@ final class DataStorage$Gigabyte extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Gigabyte10PowerOf9Bytes extends DataStorage {
-  const DataStorage$Gigabyte10PowerOf9Bytes([
+  DataStorage$Gigabyte10PowerOf9Bytes([
     super.value,
   ]);
 
@@ -1500,14 +1501,14 @@ final class DataStorage$Gigabyte10PowerOf9Bytes extends DataStorage {
   @override
   String get displayName => 'gigabyte (10^9 bytes)';
 
-  static const _ratio = 8000000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+009');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Gigabyte10PowerOf9Bytes] = 8000000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Gigabyte10PowerOf9Bytes] = 8.00000000000000000E+009 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1516,12 +1517,12 @@ final class DataStorage$Gigabyte10PowerOf9Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Gigabyte10PowerOf9Bytes] with new value
   @override
   DataStorage$Gigabyte10PowerOf9Bytes withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Gigabyte10PowerOf9Bytes(val);
 
@@ -1534,14 +1535,14 @@ final class DataStorage$Gigabyte10PowerOf9Bytes extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Terabit extends DataStorage {
-  const DataStorage$Terabit([
+  DataStorage$Terabit([
     super.value,
   ]);
 
@@ -1572,14 +1573,14 @@ final class DataStorage$Terabit extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1099511627776.0;
+  static final _ratio = Rational.parse('1.09951162777600000E+012');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Terabit] = 1099511627776.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Terabit] = 1.09951162777600000E+012 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1587,12 +1588,12 @@ final class DataStorage$Terabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Terabit] with new value
   @override
   DataStorage$Terabit withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Terabit(val);
 
@@ -1605,14 +1606,14 @@ final class DataStorage$Terabit extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Terabyte extends DataStorage {
-  const DataStorage$Terabyte([
+  DataStorage$Terabyte([
     super.value,
   ]);
 
@@ -1643,14 +1644,14 @@ final class DataStorage$Terabyte extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8796093022208.0;
+  static final _ratio = Rational.parse('8.79609302220800000E+012');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Terabyte] = 8796093022208.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Terabyte] = 8.79609302220800000E+012 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1658,12 +1659,12 @@ final class DataStorage$Terabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Terabyte] with new value
   @override
   DataStorage$Terabyte withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Terabyte(val);
 
@@ -1676,14 +1677,14 @@ final class DataStorage$Terabyte extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Terabyte10PowerOf12Bytes extends DataStorage {
-  const DataStorage$Terabyte10PowerOf12Bytes([
+  DataStorage$Terabyte10PowerOf12Bytes([
     super.value,
   ]);
 
@@ -1714,14 +1715,14 @@ final class DataStorage$Terabyte10PowerOf12Bytes extends DataStorage {
   @override
   String get displayName => 'terabyte (10^12 bytes)';
 
-  static const _ratio = 8000000000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+012');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Terabyte10PowerOf12Bytes] = 8000000000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Terabyte10PowerOf12Bytes] = 8.00000000000000000E+012 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1730,12 +1731,12 @@ final class DataStorage$Terabyte10PowerOf12Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Terabyte10PowerOf12Bytes] with new value
   @override
   DataStorage$Terabyte10PowerOf12Bytes withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Terabyte10PowerOf12Bytes(val);
 
@@ -1748,14 +1749,14 @@ final class DataStorage$Terabyte10PowerOf12Bytes extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Petabit extends DataStorage {
-  const DataStorage$Petabit([
+  DataStorage$Petabit([
     super.value,
   ]);
 
@@ -1786,14 +1787,14 @@ final class DataStorage$Petabit extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1125899906842624.0;
+  static final _ratio = Rational.parse('1.12589990684262400E+015');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Petabit] = 1125899906842624.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Petabit] = 1.12589990684262400E+015 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1801,12 +1802,12 @@ final class DataStorage$Petabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Petabit] with new value
   @override
   DataStorage$Petabit withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Petabit(val);
 
@@ -1819,14 +1820,14 @@ final class DataStorage$Petabit extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Petabyte extends DataStorage {
-  const DataStorage$Petabyte([
+  DataStorage$Petabyte([
     super.value,
   ]);
 
@@ -1857,14 +1858,14 @@ final class DataStorage$Petabyte extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 9007199254740992.0;
+  static final _ratio = Rational.parse('9.00719925474099200E+015');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Petabyte] = 9007199254740992.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Petabyte] = 9.00719925474099200E+015 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1872,12 +1873,12 @@ final class DataStorage$Petabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Petabyte] with new value
   @override
   DataStorage$Petabyte withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Petabyte(val);
 
@@ -1890,14 +1891,14 @@ final class DataStorage$Petabyte extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Petabyte10PowerOf15Bytes extends DataStorage {
-  const DataStorage$Petabyte10PowerOf15Bytes([
+  DataStorage$Petabyte10PowerOf15Bytes([
     super.value,
   ]);
 
@@ -1928,14 +1929,14 @@ final class DataStorage$Petabyte10PowerOf15Bytes extends DataStorage {
   @override
   String get displayName => 'petabyte (10^15 bytes)';
 
-  static const _ratio = 8000000000000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+015');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Petabyte10PowerOf15Bytes] = 8000000000000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Petabyte10PowerOf15Bytes] = 8.00000000000000000E+015 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1944,12 +1945,12 @@ final class DataStorage$Petabyte10PowerOf15Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Petabyte10PowerOf15Bytes] with new value
   @override
   DataStorage$Petabyte10PowerOf15Bytes withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Petabyte10PowerOf15Bytes(val);
 
@@ -1962,14 +1963,14 @@ final class DataStorage$Petabyte10PowerOf15Bytes extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Exabit extends DataStorage {
-  const DataStorage$Exabit([
+  DataStorage$Exabit([
     super.value,
   ]);
 
@@ -2000,14 +2001,14 @@ final class DataStorage$Exabit extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1152921504606847000.0;
+  static final _ratio = Rational.parse('1.15292150460684698E+018');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Exabit] = 1152921504606847000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Exabit] = 1.15292150460684698E+018 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2015,12 +2016,12 @@ final class DataStorage$Exabit extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Exabit] with new value
   @override
   DataStorage$Exabit withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Exabit(val);
 
@@ -2033,14 +2034,14 @@ final class DataStorage$Exabit extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Exabyte extends DataStorage {
-  const DataStorage$Exabyte([
+  DataStorage$Exabyte([
     super.value,
   ]);
 
@@ -2071,14 +2072,14 @@ final class DataStorage$Exabyte extends DataStorage {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 9223372036854776000.0;
+  static final _ratio = Rational.parse('9.22337203685477581E+018');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Exabyte] = 9223372036854776000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Exabyte] = 9.22337203685477581E+018 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2086,12 +2087,12 @@ final class DataStorage$Exabyte extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Exabyte] with new value
   @override
   DataStorage$Exabyte withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Exabyte(val);
 
@@ -2104,14 +2105,14 @@ final class DataStorage$Exabyte extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Exabyte10PowerOf18Bytes extends DataStorage {
-  const DataStorage$Exabyte10PowerOf18Bytes([
+  DataStorage$Exabyte10PowerOf18Bytes([
     super.value,
   ]);
 
@@ -2142,14 +2143,14 @@ final class DataStorage$Exabyte10PowerOf18Bytes extends DataStorage {
   @override
   String get displayName => 'exabyte (10^18 bytes)';
 
-  static const _ratio = 8000000000000000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+018');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Exabyte10PowerOf18Bytes] = 8000000000000000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Exabyte10PowerOf18Bytes] = 8.00000000000000000E+018 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2158,12 +2159,12 @@ final class DataStorage$Exabyte10PowerOf18Bytes extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Exabyte10PowerOf18Bytes] with new value
   @override
   DataStorage$Exabyte10PowerOf18Bytes withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Exabyte10PowerOf18Bytes(val);
 
@@ -2176,14 +2177,14 @@ final class DataStorage$Exabyte10PowerOf18Bytes extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$FloppyDisk35DD extends DataStorage {
-  const DataStorage$FloppyDisk35DD([
+  DataStorage$FloppyDisk35DD([
     super.value,
   ]);
 
@@ -2214,14 +2215,14 @@ final class DataStorage$FloppyDisk35DD extends DataStorage {
   @override
   String get displayName => 'floppy disk (3.5", DD)';
 
-  static const _ratio = 5830656.0;
+  static final _ratio = Rational.parse('5.83065600000000000E+006');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$FloppyDisk35DD] = 5830656.0 [DataStorage$Bit]
+  /// 1 [DataStorage$FloppyDisk35DD] = 5.83065600000000000E+006 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2229,12 +2230,12 @@ final class DataStorage$FloppyDisk35DD extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$FloppyDisk35DD] with new value
   @override
   DataStorage$FloppyDisk35DD withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$FloppyDisk35DD(val);
 
@@ -2247,14 +2248,14 @@ final class DataStorage$FloppyDisk35DD extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$FloppyDisk35HD extends DataStorage {
-  const DataStorage$FloppyDisk35HD([
+  DataStorage$FloppyDisk35HD([
     super.value,
   ]);
 
@@ -2285,14 +2286,14 @@ final class DataStorage$FloppyDisk35HD extends DataStorage {
   @override
   String get displayName => 'floppy disk (3.5", HD)';
 
-  static const _ratio = 11661312.0;
+  static final _ratio = Rational.parse('1.16613120000000000E+007');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$FloppyDisk35HD] = 11661312.0 [DataStorage$Bit]
+  /// 1 [DataStorage$FloppyDisk35HD] = 1.16613120000000000E+007 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2300,12 +2301,12 @@ final class DataStorage$FloppyDisk35HD extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$FloppyDisk35HD] with new value
   @override
   DataStorage$FloppyDisk35HD withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$FloppyDisk35HD(val);
 
@@ -2318,14 +2319,14 @@ final class DataStorage$FloppyDisk35HD extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$FloppyDisk35ED extends DataStorage {
-  const DataStorage$FloppyDisk35ED([
+  DataStorage$FloppyDisk35ED([
     super.value,
   ]);
 
@@ -2356,14 +2357,14 @@ final class DataStorage$FloppyDisk35ED extends DataStorage {
   @override
   String get displayName => 'floppy disk (3.5", ED)';
 
-  static const _ratio = 23322624.0;
+  static final _ratio = Rational.parse('2.33226240000000000E+007');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$FloppyDisk35ED] = 23322624.0 [DataStorage$Bit]
+  /// 1 [DataStorage$FloppyDisk35ED] = 2.33226240000000000E+007 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2371,12 +2372,12 @@ final class DataStorage$FloppyDisk35ED extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$FloppyDisk35ED] with new value
   @override
   DataStorage$FloppyDisk35ED withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$FloppyDisk35ED(val);
 
@@ -2389,14 +2390,14 @@ final class DataStorage$FloppyDisk35ED extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$FloppyDisk525DD extends DataStorage {
-  const DataStorage$FloppyDisk525DD([
+  DataStorage$FloppyDisk525DD([
     super.value,
   ]);
 
@@ -2427,14 +2428,14 @@ final class DataStorage$FloppyDisk525DD extends DataStorage {
   @override
   String get displayName => 'floppy disk (5.25", DD)';
 
-  static const _ratio = 2915328.0;
+  static final _ratio = Rational.parse('2.91532800000000000E+006');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$FloppyDisk525DD] = 2915328.0 [DataStorage$Bit]
+  /// 1 [DataStorage$FloppyDisk525DD] = 2.91532800000000000E+006 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2442,12 +2443,12 @@ final class DataStorage$FloppyDisk525DD extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$FloppyDisk525DD] with new value
   @override
   DataStorage$FloppyDisk525DD withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$FloppyDisk525DD(val);
 
@@ -2460,14 +2461,14 @@ final class DataStorage$FloppyDisk525DD extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$FloppyDisk525HD extends DataStorage {
-  const DataStorage$FloppyDisk525HD([
+  DataStorage$FloppyDisk525HD([
     super.value,
   ]);
 
@@ -2498,14 +2499,14 @@ final class DataStorage$FloppyDisk525HD extends DataStorage {
   @override
   String get displayName => 'floppy disk (5.25", HD)';
 
-  static const _ratio = 9711616.0;
+  static final _ratio = Rational.parse('9.71161600000000000E+006');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$FloppyDisk525HD] = 9711616.0 [DataStorage$Bit]
+  /// 1 [DataStorage$FloppyDisk525HD] = 9.71161600000000000E+006 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2513,12 +2514,12 @@ final class DataStorage$FloppyDisk525HD extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$FloppyDisk525HD] with new value
   @override
   DataStorage$FloppyDisk525HD withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$FloppyDisk525HD(val);
 
@@ -2531,14 +2532,14 @@ final class DataStorage$FloppyDisk525HD extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Zip100 extends DataStorage {
-  const DataStorage$Zip100([
+  DataStorage$Zip100([
     super.value,
   ]);
 
@@ -2569,14 +2570,14 @@ final class DataStorage$Zip100 extends DataStorage {
   @override
   String get displayName => 'Zip 100';
 
-  static const _ratio = 803454976.0;
+  static final _ratio = Rational.parse('8.03454976000000000E+008');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Zip100] = 803454976.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Zip100] = 8.03454976000000000E+008 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2584,12 +2585,12 @@ final class DataStorage$Zip100 extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Zip100] with new value
   @override
   DataStorage$Zip100 withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Zip100(val);
 
@@ -2602,14 +2603,14 @@ final class DataStorage$Zip100 extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Zip250 extends DataStorage {
-  const DataStorage$Zip250([
+  DataStorage$Zip250([
     super.value,
   ]);
 
@@ -2640,14 +2641,14 @@ final class DataStorage$Zip250 extends DataStorage {
   @override
   String get displayName => 'Zip 250';
 
-  static const _ratio = 2008637440.0;
+  static final _ratio = Rational.parse('2.00863744000000000E+009');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Zip250] = 2008637440.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Zip250] = 2.00863744000000000E+009 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2655,12 +2656,12 @@ final class DataStorage$Zip250 extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Zip250] with new value
   @override
   DataStorage$Zip250 withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Zip250(val);
 
@@ -2673,14 +2674,14 @@ final class DataStorage$Zip250 extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Jaz1GB extends DataStorage {
-  const DataStorage$Jaz1GB([
+  DataStorage$Jaz1GB([
     super.value,
   ]);
 
@@ -2711,14 +2712,14 @@ final class DataStorage$Jaz1GB extends DataStorage {
   @override
   String get displayName => 'Jaz 1GB';
 
-  static const _ratio = 8589934592.0;
+  static final _ratio = Rational.parse('8.58993459200000000E+009');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Jaz1GB] = 8589934592.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Jaz1GB] = 8.58993459200000000E+009 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2726,12 +2727,12 @@ final class DataStorage$Jaz1GB extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Jaz1GB] with new value
   @override
   DataStorage$Jaz1GB withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Jaz1GB(val);
 
@@ -2744,14 +2745,14 @@ final class DataStorage$Jaz1GB extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$Jaz2GB extends DataStorage {
-  const DataStorage$Jaz2GB([
+  DataStorage$Jaz2GB([
     super.value,
   ]);
 
@@ -2782,14 +2783,14 @@ final class DataStorage$Jaz2GB extends DataStorage {
   @override
   String get displayName => 'Jaz 2GB';
 
-  static const _ratio = 17179869184.0;
+  static final _ratio = Rational.parse('1.71798691840000000E+010');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$Jaz2GB] = 17179869184.0 [DataStorage$Bit]
+  /// 1 [DataStorage$Jaz2GB] = 1.71798691840000000E+010 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2797,12 +2798,12 @@ final class DataStorage$Jaz2GB extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$Jaz2GB] with new value
   @override
   DataStorage$Jaz2GB withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$Jaz2GB(val);
 
@@ -2815,14 +2816,14 @@ final class DataStorage$Jaz2GB extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$CD74Minute extends DataStorage {
-  const DataStorage$CD74Minute([
+  DataStorage$CD74Minute([
     super.value,
   ]);
 
@@ -2853,14 +2854,14 @@ final class DataStorage$CD74Minute extends DataStorage {
   @override
   String get displayName => 'CD (74 minute)';
 
-  static const _ratio = 5455872000.0;
+  static final _ratio = Rational.parse('5.45587200000000000E+009');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$CD74Minute] = 5455872000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$CD74Minute] = 5.45587200000000000E+009 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2868,12 +2869,12 @@ final class DataStorage$CD74Minute extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$CD74Minute] with new value
   @override
   DataStorage$CD74Minute withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$CD74Minute(val);
 
@@ -2886,14 +2887,14 @@ final class DataStorage$CD74Minute extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$CD80Minute extends DataStorage {
-  const DataStorage$CD80Minute([
+  DataStorage$CD80Minute([
     super.value,
   ]);
 
@@ -2924,14 +2925,14 @@ final class DataStorage$CD80Minute extends DataStorage {
   @override
   String get displayName => 'CD (80 minute)';
 
-  static const _ratio = 5898240000.0;
+  static final _ratio = Rational.parse('5.89824000000000000E+009');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$CD80Minute] = 5898240000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$CD80Minute] = 5.89824000000000000E+009 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2939,12 +2940,12 @@ final class DataStorage$CD80Minute extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$CD80Minute] with new value
   @override
   DataStorage$CD80Minute withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$CD80Minute(val);
 
@@ -2957,14 +2958,14 @@ final class DataStorage$CD80Minute extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$DVD1Layer1Side extends DataStorage {
-  const DataStorage$DVD1Layer1Side([
+  DataStorage$DVD1Layer1Side([
     super.value,
   ]);
 
@@ -2995,14 +2996,14 @@ final class DataStorage$DVD1Layer1Side extends DataStorage {
   @override
   String get displayName => 'DVD (1 layer, 1 side)';
 
-  static const _ratio = 37600000000.0;
+  static final _ratio = Rational.parse('3.76000000000000000E+010');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$DVD1Layer1Side] = 37600000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$DVD1Layer1Side] = 3.76000000000000000E+010 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3010,12 +3011,12 @@ final class DataStorage$DVD1Layer1Side extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$DVD1Layer1Side] with new value
   @override
   DataStorage$DVD1Layer1Side withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$DVD1Layer1Side(val);
 
@@ -3028,14 +3029,14 @@ final class DataStorage$DVD1Layer1Side extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$DVD2Layers1Side extends DataStorage {
-  const DataStorage$DVD2Layers1Side([
+  DataStorage$DVD2Layers1Side([
     super.value,
   ]);
 
@@ -3066,14 +3067,14 @@ final class DataStorage$DVD2Layers1Side extends DataStorage {
   @override
   String get displayName => 'DVD (2 layers, 1 side)';
 
-  static const _ratio = 68320000000.0;
+  static final _ratio = Rational.parse('6.83200000000000000E+010');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$DVD2Layers1Side] = 68320000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$DVD2Layers1Side] = 6.83200000000000000E+010 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3081,12 +3082,12 @@ final class DataStorage$DVD2Layers1Side extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$DVD2Layers1Side] with new value
   @override
   DataStorage$DVD2Layers1Side withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$DVD2Layers1Side(val);
 
@@ -3099,14 +3100,14 @@ final class DataStorage$DVD2Layers1Side extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$DVD1Layer2Sides extends DataStorage {
-  const DataStorage$DVD1Layer2Sides([
+  DataStorage$DVD1Layer2Sides([
     super.value,
   ]);
 
@@ -3137,14 +3138,14 @@ final class DataStorage$DVD1Layer2Sides extends DataStorage {
   @override
   String get displayName => 'DVD (1 layer, 2 sides)';
 
-  static const _ratio = 75200000000.0;
+  static final _ratio = Rational.parse('7.52000000000000000E+010');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$DVD1Layer2Sides] = 75200000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$DVD1Layer2Sides] = 7.52000000000000000E+010 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3152,12 +3153,12 @@ final class DataStorage$DVD1Layer2Sides extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$DVD1Layer2Sides] with new value
   @override
   DataStorage$DVD1Layer2Sides withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$DVD1Layer2Sides(val);
 
@@ -3170,14 +3171,14 @@ final class DataStorage$DVD1Layer2Sides extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$DVD2Layers2Sides extends DataStorage {
-  const DataStorage$DVD2Layers2Sides([
+  DataStorage$DVD2Layers2Sides([
     super.value,
   ]);
 
@@ -3208,14 +3209,14 @@ final class DataStorage$DVD2Layers2Sides extends DataStorage {
   @override
   String get displayName => 'DVD (2 layers, 2 sides)';
 
-  static const _ratio = 136640000000.0;
+  static final _ratio = Rational.parse('1.36640000000000000E+011');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$DVD2Layers2Sides] = 136640000000.0 [DataStorage$Bit]
+  /// 1 [DataStorage$DVD2Layers2Sides] = 1.36640000000000000E+011 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3224,12 +3225,12 @@ final class DataStorage$DVD2Layers2Sides extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$DVD2Layers2Sides] with new value
   @override
   DataStorage$DVD2Layers2Sides withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$DVD2Layers2Sides(val);
 
@@ -3242,14 +3243,14 @@ final class DataStorage$DVD2Layers2Sides extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$BluRay1Layer extends DataStorage {
-  const DataStorage$BluRay1Layer([
+  DataStorage$BluRay1Layer([
     super.value,
   ]);
 
@@ -3280,14 +3281,14 @@ final class DataStorage$BluRay1Layer extends DataStorage {
   @override
   String get displayName => 'Blu-ray (1 layer)';
 
-  static const _ratio = 200202518528.0;
+  static final _ratio = Rational.parse('2.00202518528000000E+011');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$BluRay1Layer] = 200202518528.0 [DataStorage$Bit]
+  /// 1 [DataStorage$BluRay1Layer] = 2.00202518528000000E+011 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3295,12 +3296,12 @@ final class DataStorage$BluRay1Layer extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$BluRay1Layer] with new value
   @override
   DataStorage$BluRay1Layer withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$BluRay1Layer(val);
 
@@ -3313,14 +3314,14 @@ final class DataStorage$BluRay1Layer extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataStorage]
 final class DataStorage$BluRay2Layer extends DataStorage {
-  const DataStorage$BluRay2Layer([
+  DataStorage$BluRay2Layer([
     super.value,
   ]);
 
@@ -3351,14 +3352,14 @@ final class DataStorage$BluRay2Layer extends DataStorage {
   @override
   String get displayName => 'Blu-ray (2 layer)';
 
-  static const _ratio = 400405037056.0;
+  static final _ratio = Rational.parse('4.00405037056000000E+011');
 
   @override
-  DataStorage get anchor => const DataStorage$Bit(_ratio);
+  DataStorage get anchor => DataStorage$Bit(_ratio);
 
-  /// 1 [DataStorage$BluRay2Layer] = 400405037056.0 [DataStorage$Bit]
+  /// 1 [DataStorage$BluRay2Layer] = 4.00405037056000000E+011 [DataStorage$Bit]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3366,12 +3367,12 @@ final class DataStorage$BluRay2Layer extends DataStorage {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataStorage$BluRay2Layer] with new value
   @override
   DataStorage$BluRay2Layer withValue(
-    num val,
+    Rational val,
   ) =>
       DataStorage$BluRay2Layer(val);
 
@@ -3384,7 +3385,7 @@ final class DataStorage$BluRay2Layer extends DataStorage {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

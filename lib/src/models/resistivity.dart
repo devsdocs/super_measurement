@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [Resistivity$MicrohmInch], [Resistivity$AbohmCentimeter],
 /// [Resistivity$StatohmCentimeter], [Resistivity$CircularMilOhmPerFoot]
 sealed class Resistivity extends Unit<Resistivity> {
-  const Resistivity([
+  Resistivity([
     super.value,
   ]);
 
@@ -19,50 +19,51 @@ sealed class Resistivity extends Unit<Resistivity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Resistivity.anchor();
 
-  factory Resistivity.anchor() => const Resistivity$OhmMeter();
+  factory Resistivity.anchor() => Resistivity$OhmMeter();
 
   /// Convert to [Resistivity$OhmMeter]
   Resistivity get toOhmMeter => convertTo(
-        const Resistivity$OhmMeter(),
+        Resistivity$OhmMeter(),
       );
 
   /// Convert to [Resistivity$OhmCentimeter]
   Resistivity get toOhmCentimeter => convertTo(
-        const Resistivity$OhmCentimeter(),
+        Resistivity$OhmCentimeter(),
       );
 
   /// Convert to [Resistivity$OhmInch]
   Resistivity get toOhmInch => convertTo(
-        const Resistivity$OhmInch(),
+        Resistivity$OhmInch(),
       );
 
   /// Convert to [Resistivity$MicrohmCentimeter]
   Resistivity get toMicrohmCentimeter => convertTo(
-        const Resistivity$MicrohmCentimeter(),
+        Resistivity$MicrohmCentimeter(),
       );
 
   /// Convert to [Resistivity$MicrohmInch]
   Resistivity get toMicrohmInch => convertTo(
-        const Resistivity$MicrohmInch(),
+        Resistivity$MicrohmInch(),
       );
 
   /// Convert to [Resistivity$AbohmCentimeter]
   Resistivity get toAbohmCentimeter => convertTo(
-        const Resistivity$AbohmCentimeter(),
+        Resistivity$AbohmCentimeter(),
       );
 
   /// Convert to [Resistivity$StatohmCentimeter]
   Resistivity get toStatohmCentimeter => convertTo(
-        const Resistivity$StatohmCentimeter(),
+        Resistivity$StatohmCentimeter(),
       );
 
   /// Convert to [Resistivity$CircularMilOhmPerFoot]
   Resistivity get toCircularMilOhmPerFoot => convertTo(
-        const Resistivity$CircularMilOhmPerFoot(),
+        Resistivity$CircularMilOhmPerFoot(),
       );
 
   @override
@@ -73,14 +74,14 @@ sealed class Resistivity extends Unit<Resistivity> {
 
   static const _majorName = 'resistivity';
 
-  static const ohmMeter = Resistivity$OhmMeter();
-  static const ohmCentimeter = Resistivity$OhmCentimeter();
-  static const ohmInch = Resistivity$OhmInch();
-  static const microhmCentimeter = Resistivity$MicrohmCentimeter();
-  static const microhmInch = Resistivity$MicrohmInch();
-  static const abohmCentimeter = Resistivity$AbohmCentimeter();
-  static const statohmCentimeter = Resistivity$StatohmCentimeter();
-  static const circularMilOhmPerFoot = Resistivity$CircularMilOhmPerFoot();
+  static final ohmMeter = Resistivity$OhmMeter();
+  static final ohmCentimeter = Resistivity$OhmCentimeter();
+  static final ohmInch = Resistivity$OhmInch();
+  static final microhmCentimeter = Resistivity$MicrohmCentimeter();
+  static final microhmInch = Resistivity$MicrohmInch();
+  static final abohmCentimeter = Resistivity$AbohmCentimeter();
+  static final statohmCentimeter = Resistivity$StatohmCentimeter();
+  static final circularMilOhmPerFoot = Resistivity$CircularMilOhmPerFoot();
 
   @override
   List<Resistivity> get units => values;
@@ -88,7 +89,7 @@ sealed class Resistivity extends Unit<Resistivity> {
   @override
   EnumValues<Resistivity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Resistivity>[
     ohmMeter,
     ohmCentimeter,
     ohmInch,
@@ -99,7 +100,7 @@ sealed class Resistivity extends Unit<Resistivity> {
     circularMilOhmPerFoot,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Resistivity>{
     Resistivity$OhmMeter._minorName: ohmMeter,
     Resistivity$OhmCentimeter._minorName: ohmCentimeter,
     Resistivity$OhmInch._minorName: ohmInch,
@@ -113,7 +114,7 @@ sealed class Resistivity extends Unit<Resistivity> {
 
 /// Unit of [Resistivity]
 final class Resistivity$OhmMeter extends Resistivity {
-  const Resistivity$OhmMeter([
+  Resistivity$OhmMeter([
     super.value,
   ]);
 
@@ -144,14 +145,14 @@ final class Resistivity$OhmMeter extends Resistivity {
   @override
   String get displayName => 'ohm meter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+  Resistivity get anchor => Resistivity$OhmMeter(_ratio);
 
   /// Default (anchor) unit of [Resistivity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -159,12 +160,12 @@ final class Resistivity$OhmMeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistivity$OhmMeter] with new value
   @override
   Resistivity$OhmMeter withValue(
-    num val,
+    Rational val,
   ) =>
       Resistivity$OhmMeter(val);
 
@@ -177,14 +178,14 @@ final class Resistivity$OhmMeter extends Resistivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistivity]
 final class Resistivity$OhmCentimeter extends Resistivity {
-  const Resistivity$OhmCentimeter([
+  Resistivity$OhmCentimeter([
     super.value,
   ]);
 
@@ -215,14 +216,14 @@ final class Resistivity$OhmCentimeter extends Resistivity {
   @override
   String get displayName => 'ohm centimeter';
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+  Resistivity get anchor => Resistivity$OhmMeter(_ratio);
 
-  /// 1 [Resistivity$OhmCentimeter] ≈ 0.01 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$OhmCentimeter] ≈ 1.00000000000000000E-002 [Resistivity$OhmMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -230,12 +231,12 @@ final class Resistivity$OhmCentimeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistivity$OhmCentimeter] with new value
   @override
   Resistivity$OhmCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Resistivity$OhmCentimeter(val);
 
@@ -248,14 +249,14 @@ final class Resistivity$OhmCentimeter extends Resistivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistivity]
 final class Resistivity$OhmInch extends Resistivity {
-  const Resistivity$OhmInch([
+  Resistivity$OhmInch([
     super.value,
   ]);
 
@@ -286,14 +287,14 @@ final class Resistivity$OhmInch extends Resistivity {
   @override
   String get displayName => 'ohm inch';
 
-  static const _ratio = 0.0254;
+  static final _ratio = Rational.parse('2.54000000000000000E-002');
 
   @override
-  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+  Resistivity get anchor => Resistivity$OhmMeter(_ratio);
 
-  /// 1 [Resistivity$OhmInch] ≈ 0.0254 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$OhmInch] ≈ 2.54000000000000000E-002 [Resistivity$OhmMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -301,12 +302,12 @@ final class Resistivity$OhmInch extends Resistivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistivity$OhmInch] with new value
   @override
   Resistivity$OhmInch withValue(
-    num val,
+    Rational val,
   ) =>
       Resistivity$OhmInch(val);
 
@@ -319,14 +320,14 @@ final class Resistivity$OhmInch extends Resistivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistivity]
 final class Resistivity$MicrohmCentimeter extends Resistivity {
-  const Resistivity$MicrohmCentimeter([
+  Resistivity$MicrohmCentimeter([
     super.value,
   ]);
 
@@ -357,14 +358,14 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
   @override
   String get displayName => 'microhm centimeter';
 
-  static const _ratio = 1e-8;
+  static final _ratio = Rational.parse('1.00000000000000000E-008');
 
   @override
-  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+  Resistivity get anchor => Resistivity$OhmMeter(_ratio);
 
-  /// 1 [Resistivity$MicrohmCentimeter] ≈ 1e-8 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$MicrohmCentimeter] ≈ 1.00000000000000000E-008 [Resistivity$OhmMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -373,12 +374,12 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistivity$MicrohmCentimeter] with new value
   @override
   Resistivity$MicrohmCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Resistivity$MicrohmCentimeter(val);
 
@@ -391,14 +392,14 @@ final class Resistivity$MicrohmCentimeter extends Resistivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistivity]
 final class Resistivity$MicrohmInch extends Resistivity {
-  const Resistivity$MicrohmInch([
+  Resistivity$MicrohmInch([
     super.value,
   ]);
 
@@ -429,14 +430,14 @@ final class Resistivity$MicrohmInch extends Resistivity {
   @override
   String get displayName => 'microhm inch';
 
-  static const _ratio = 2.54e-8;
+  static final _ratio = Rational.parse('2.54000000000000000E-008');
 
   @override
-  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+  Resistivity get anchor => Resistivity$OhmMeter(_ratio);
 
-  /// 1 [Resistivity$MicrohmInch] ≈ 2.54e-8 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$MicrohmInch] ≈ 2.54000000000000000E-008 [Resistivity$OhmMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -444,12 +445,12 @@ final class Resistivity$MicrohmInch extends Resistivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistivity$MicrohmInch] with new value
   @override
   Resistivity$MicrohmInch withValue(
-    num val,
+    Rational val,
   ) =>
       Resistivity$MicrohmInch(val);
 
@@ -462,14 +463,14 @@ final class Resistivity$MicrohmInch extends Resistivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistivity]
 final class Resistivity$AbohmCentimeter extends Resistivity {
-  const Resistivity$AbohmCentimeter([
+  Resistivity$AbohmCentimeter([
     super.value,
   ]);
 
@@ -500,14 +501,14 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
   @override
   String get displayName => 'Abohm centimeter';
 
-  static const _ratio = 1e-11;
+  static final _ratio = Rational.parse('1.00000000000000000E-011');
 
   @override
-  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+  Resistivity get anchor => Resistivity$OhmMeter(_ratio);
 
-  /// 1 [Resistivity$AbohmCentimeter] ≈ 1e-11 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$AbohmCentimeter] ≈ 1.00000000000000000E-011 [Resistivity$OhmMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -515,12 +516,12 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistivity$AbohmCentimeter] with new value
   @override
   Resistivity$AbohmCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Resistivity$AbohmCentimeter(val);
 
@@ -533,14 +534,14 @@ final class Resistivity$AbohmCentimeter extends Resistivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistivity]
 final class Resistivity$StatohmCentimeter extends Resistivity {
-  const Resistivity$StatohmCentimeter([
+  Resistivity$StatohmCentimeter([
     super.value,
   ]);
 
@@ -571,14 +572,14 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
   @override
   String get displayName => 'Statohm centimeter';
 
-  static const _ratio = 8987524324.0;
+  static final _ratio = Rational.parse('8.98752432400000000E+009');
 
   @override
-  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+  Resistivity get anchor => Resistivity$OhmMeter(_ratio);
 
-  /// 1 [Resistivity$StatohmCentimeter] = 8987524324.0 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$StatohmCentimeter] = 8.98752432400000000E+009 [Resistivity$OhmMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -587,12 +588,12 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistivity$StatohmCentimeter] with new value
   @override
   Resistivity$StatohmCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       Resistivity$StatohmCentimeter(val);
 
@@ -605,14 +606,14 @@ final class Resistivity$StatohmCentimeter extends Resistivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Resistivity]
 final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
-  const Resistivity$CircularMilOhmPerFoot([
+  Resistivity$CircularMilOhmPerFoot([
     super.value,
   ]);
 
@@ -643,14 +644,14 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
   @override
   String get displayName => 'circular mil ohm/foot';
 
-  static const _ratio = 1.662426113e-9;
+  static final _ratio = Rational.parse('1.66242611300000000E-009');
 
   @override
-  Resistivity get anchor => const Resistivity$OhmMeter(_ratio);
+  Resistivity get anchor => Resistivity$OhmMeter(_ratio);
 
-  /// 1 [Resistivity$CircularMilOhmPerFoot] ≈ 1.662426113e-9 [Resistivity$OhmMeter]
+  /// 1 [Resistivity$CircularMilOhmPerFoot] ≈ 1.66242611300000000E-009 [Resistivity$OhmMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -659,12 +660,12 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Resistivity$CircularMilOhmPerFoot] with new value
   @override
   Resistivity$CircularMilOhmPerFoot withValue(
-    num val,
+    Rational val,
   ) =>
       Resistivity$CircularMilOhmPerFoot(val);
 
@@ -677,7 +678,7 @@ final class Resistivity$CircularMilOhmPerFoot extends Resistivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

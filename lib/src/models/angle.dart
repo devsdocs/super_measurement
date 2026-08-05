@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [Angle$Circle], [Angle$Turn], [Angle$Quadrant], [Angle$RightAngle],
 /// [Angle$Sextant], [Angle$Octant], [Angle$PercentOfFullCircle]
 sealed class Angle extends Unit<Angle> {
-  const Angle([
+  Angle([
     super.value,
   ]);
 
@@ -19,85 +19,86 @@ sealed class Angle extends Unit<Angle> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Angle.anchor();
 
-  factory Angle.anchor() => const Angle$Second();
+  factory Angle.anchor() => Angle$Second();
 
   /// Convert to [Angle$Degree]
   Angle get toDegree => convertTo(
-        const Angle$Degree(),
+        Angle$Degree(),
       );
 
   /// Convert to [Angle$Radian]
   Angle get toRadian => convertTo(
-        const Angle$Radian(),
+        Angle$Radian(),
       );
 
   /// Convert to [Angle$Grad]
   Angle get toGrad => convertTo(
-        const Angle$Grad(),
+        Angle$Grad(),
       );
 
   /// Convert to [Angle$Minute]
   Angle get toMinute => convertTo(
-        const Angle$Minute(),
+        Angle$Minute(),
       );
 
   /// Convert to [Angle$Second]
   Angle get toSecond => convertTo(
-        const Angle$Second(),
+        Angle$Second(),
       );
 
   /// Convert to [Angle$Sign]
   Angle get toSign => convertTo(
-        const Angle$Sign(),
+        Angle$Sign(),
       );
 
   /// Convert to [Angle$Mil]
   Angle get toMil => convertTo(
-        const Angle$Mil(),
+        Angle$Mil(),
       );
 
   /// Convert to [Angle$Revolution]
   Angle get toRevolution => convertTo(
-        const Angle$Revolution(),
+        Angle$Revolution(),
       );
 
   /// Convert to [Angle$Circle]
   Angle get toCircle => convertTo(
-        const Angle$Circle(),
+        Angle$Circle(),
       );
 
   /// Convert to [Angle$Turn]
   Angle get toTurn => convertTo(
-        const Angle$Turn(),
+        Angle$Turn(),
       );
 
   /// Convert to [Angle$Quadrant]
   Angle get toQuadrant => convertTo(
-        const Angle$Quadrant(),
+        Angle$Quadrant(),
       );
 
   /// Convert to [Angle$RightAngle]
   Angle get toRightAngle => convertTo(
-        const Angle$RightAngle(),
+        Angle$RightAngle(),
       );
 
   /// Convert to [Angle$Sextant]
   Angle get toSextant => convertTo(
-        const Angle$Sextant(),
+        Angle$Sextant(),
       );
 
   /// Convert to [Angle$Octant]
   Angle get toOctant => convertTo(
-        const Angle$Octant(),
+        Angle$Octant(),
       );
 
   /// Convert to [Angle$PercentOfFullCircle]
   Angle get toPercentOfFullCircle => convertTo(
-        const Angle$PercentOfFullCircle(),
+        Angle$PercentOfFullCircle(),
       );
 
   @override
@@ -108,21 +109,21 @@ sealed class Angle extends Unit<Angle> {
 
   static const _majorName = 'angle';
 
-  static const degree = Angle$Degree();
-  static const radian = Angle$Radian();
-  static const grad = Angle$Grad();
-  static const minute = Angle$Minute();
-  static const second = Angle$Second();
-  static const sign = Angle$Sign();
-  static const mil = Angle$Mil();
-  static const revolution = Angle$Revolution();
-  static const circle = Angle$Circle();
-  static const turn = Angle$Turn();
-  static const quadrant = Angle$Quadrant();
-  static const rightAngle = Angle$RightAngle();
-  static const sextant = Angle$Sextant();
-  static const octant = Angle$Octant();
-  static const percentOfFullCircle = Angle$PercentOfFullCircle();
+  static final degree = Angle$Degree();
+  static final radian = Angle$Radian();
+  static final grad = Angle$Grad();
+  static final minute = Angle$Minute();
+  static final second = Angle$Second();
+  static final sign = Angle$Sign();
+  static final mil = Angle$Mil();
+  static final revolution = Angle$Revolution();
+  static final circle = Angle$Circle();
+  static final turn = Angle$Turn();
+  static final quadrant = Angle$Quadrant();
+  static final rightAngle = Angle$RightAngle();
+  static final sextant = Angle$Sextant();
+  static final octant = Angle$Octant();
+  static final percentOfFullCircle = Angle$PercentOfFullCircle();
 
   @override
   List<Angle> get units => values;
@@ -130,7 +131,7 @@ sealed class Angle extends Unit<Angle> {
   @override
   EnumValues<Angle> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Angle>[
     degree,
     radian,
     grad,
@@ -148,7 +149,7 @@ sealed class Angle extends Unit<Angle> {
     percentOfFullCircle,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Angle>{
     Angle$Degree._minorName: degree,
     Angle$Radian._minorName: radian,
     Angle$Grad._minorName: grad,
@@ -169,7 +170,7 @@ sealed class Angle extends Unit<Angle> {
 
 /// Unit of [Angle]
 final class Angle$Degree extends Angle {
-  const Angle$Degree([
+  Angle$Degree([
     super.value,
   ]);
 
@@ -200,14 +201,14 @@ final class Angle$Degree extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3600.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+003');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Degree] = 3600.0 [Angle$Second]
+  /// 1 [Angle$Degree] = 3.60000000000000000E+003 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -215,12 +216,12 @@ final class Angle$Degree extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Degree] with new value
   @override
   Angle$Degree withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Degree(val);
 
@@ -233,14 +234,14 @@ final class Angle$Degree extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Radian extends Angle {
-  const Angle$Radian([
+  Angle$Radian([
     super.value,
   ]);
 
@@ -271,14 +272,14 @@ final class Angle$Radian extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 206264.80624709636;
+  static final _ratio = Rational.parse('2.06264806247096355E+005');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Radian] ≈ 206264.80624709636 [Angle$Second]
+  /// 1 [Angle$Radian] ≈ 2.06264806247096355E+005 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -286,12 +287,12 @@ final class Angle$Radian extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Radian] with new value
   @override
   Angle$Radian withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Radian(val);
 
@@ -304,14 +305,14 @@ final class Angle$Radian extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Grad extends Angle {
-  const Angle$Grad([
+  Angle$Grad([
     super.value,
   ]);
 
@@ -342,14 +343,14 @@ final class Angle$Grad extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3240.0;
+  static final _ratio = Rational.parse('3.24000000000000000E+003');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Grad] = 3240.0 [Angle$Second]
+  /// 1 [Angle$Grad] = 3.24000000000000000E+003 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -357,12 +358,12 @@ final class Angle$Grad extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Grad] with new value
   @override
   Angle$Grad withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Grad(val);
 
@@ -375,14 +376,14 @@ final class Angle$Grad extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Minute extends Angle {
-  const Angle$Minute([
+  Angle$Minute([
     super.value,
   ]);
 
@@ -413,14 +414,14 @@ final class Angle$Minute extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 60.0;
+  static final _ratio = Rational.parse('6.00000000000000000E+001');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Minute] = 60.0 [Angle$Second]
+  /// 1 [Angle$Minute] = 6.00000000000000000E+001 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -428,12 +429,12 @@ final class Angle$Minute extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Minute] with new value
   @override
   Angle$Minute withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Minute(val);
 
@@ -446,14 +447,14 @@ final class Angle$Minute extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Second extends Angle {
-  const Angle$Second([
+  Angle$Second([
     super.value,
   ]);
 
@@ -484,14 +485,14 @@ final class Angle$Second extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
   /// Default (anchor) unit of [Angle]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -499,12 +500,12 @@ final class Angle$Second extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Second] with new value
   @override
   Angle$Second withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Second(val);
 
@@ -517,14 +518,14 @@ final class Angle$Second extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Sign extends Angle {
-  const Angle$Sign([
+  Angle$Sign([
     super.value,
   ]);
 
@@ -555,14 +556,14 @@ final class Angle$Sign extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 108000.0;
+  static final _ratio = Rational.parse('1.08000000000000000E+005');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Sign] = 108000.0 [Angle$Second]
+  /// 1 [Angle$Sign] = 1.08000000000000000E+005 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -570,12 +571,12 @@ final class Angle$Sign extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Sign] with new value
   @override
   Angle$Sign withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Sign(val);
 
@@ -588,14 +589,14 @@ final class Angle$Sign extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Mil extends Angle {
-  const Angle$Mil([
+  Angle$Mil([
     super.value,
   ]);
 
@@ -626,14 +627,14 @@ final class Angle$Mil extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 202.5;
+  static final _ratio = Rational.parse('2.02500000000000000E+002');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Mil] ≈ 202.5 [Angle$Second]
+  /// 1 [Angle$Mil] ≈ 2.02500000000000000E+002 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -641,12 +642,12 @@ final class Angle$Mil extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Mil] with new value
   @override
   Angle$Mil withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Mil(val);
 
@@ -659,14 +660,14 @@ final class Angle$Mil extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Revolution extends Angle {
-  const Angle$Revolution([
+  Angle$Revolution([
     super.value,
   ]);
 
@@ -697,14 +698,14 @@ final class Angle$Revolution extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1296000.0;
+  static final _ratio = Rational.parse('1.29600000000000000E+006');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Revolution] = 1296000.0 [Angle$Second]
+  /// 1 [Angle$Revolution] = 1.29600000000000000E+006 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -712,12 +713,12 @@ final class Angle$Revolution extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Revolution] with new value
   @override
   Angle$Revolution withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Revolution(val);
 
@@ -730,14 +731,14 @@ final class Angle$Revolution extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Circle extends Angle {
-  const Angle$Circle([
+  Angle$Circle([
     super.value,
   ]);
 
@@ -768,14 +769,14 @@ final class Angle$Circle extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1296000.0;
+  static final _ratio = Rational.parse('1.29600000000000000E+006');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Circle] = 1296000.0 [Angle$Second]
+  /// 1 [Angle$Circle] = 1.29600000000000000E+006 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -783,12 +784,12 @@ final class Angle$Circle extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Circle] with new value
   @override
   Angle$Circle withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Circle(val);
 
@@ -801,14 +802,14 @@ final class Angle$Circle extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Turn extends Angle {
-  const Angle$Turn([
+  Angle$Turn([
     super.value,
   ]);
 
@@ -839,14 +840,14 @@ final class Angle$Turn extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1296000.0;
+  static final _ratio = Rational.parse('1.29600000000000000E+006');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Turn] = 1296000.0 [Angle$Second]
+  /// 1 [Angle$Turn] = 1.29600000000000000E+006 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -854,12 +855,12 @@ final class Angle$Turn extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Turn] with new value
   @override
   Angle$Turn withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Turn(val);
 
@@ -872,14 +873,14 @@ final class Angle$Turn extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Quadrant extends Angle {
-  const Angle$Quadrant([
+  Angle$Quadrant([
     super.value,
   ]);
 
@@ -910,14 +911,14 @@ final class Angle$Quadrant extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 324000.0;
+  static final _ratio = Rational.parse('3.24000000000000000E+005');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Quadrant] = 324000.0 [Angle$Second]
+  /// 1 [Angle$Quadrant] = 3.24000000000000000E+005 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -925,12 +926,12 @@ final class Angle$Quadrant extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Quadrant] with new value
   @override
   Angle$Quadrant withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Quadrant(val);
 
@@ -943,14 +944,14 @@ final class Angle$Quadrant extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$RightAngle extends Angle {
-  const Angle$RightAngle([
+  Angle$RightAngle([
     super.value,
   ]);
 
@@ -981,14 +982,14 @@ final class Angle$RightAngle extends Angle {
   @override
   String get displayName => 'right angle';
 
-  static const _ratio = 324000.0;
+  static final _ratio = Rational.parse('3.24000000000000000E+005');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$RightAngle] = 324000.0 [Angle$Second]
+  /// 1 [Angle$RightAngle] = 3.24000000000000000E+005 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -996,12 +997,12 @@ final class Angle$RightAngle extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$RightAngle] with new value
   @override
   Angle$RightAngle withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$RightAngle(val);
 
@@ -1014,14 +1015,14 @@ final class Angle$RightAngle extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Sextant extends Angle {
-  const Angle$Sextant([
+  Angle$Sextant([
     super.value,
   ]);
 
@@ -1052,14 +1053,14 @@ final class Angle$Sextant extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 216000.0;
+  static final _ratio = Rational.parse('2.16000000000000000E+005');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Sextant] = 216000.0 [Angle$Second]
+  /// 1 [Angle$Sextant] = 2.16000000000000000E+005 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1067,12 +1068,12 @@ final class Angle$Sextant extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Sextant] with new value
   @override
   Angle$Sextant withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Sextant(val);
 
@@ -1085,14 +1086,14 @@ final class Angle$Sextant extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$Octant extends Angle {
-  const Angle$Octant([
+  Angle$Octant([
     super.value,
   ]);
 
@@ -1123,14 +1124,14 @@ final class Angle$Octant extends Angle {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 162000.0;
+  static final _ratio = Rational.parse('1.62000000000000000E+005');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$Octant] = 162000.0 [Angle$Second]
+  /// 1 [Angle$Octant] = 1.62000000000000000E+005 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1138,12 +1139,12 @@ final class Angle$Octant extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$Octant] with new value
   @override
   Angle$Octant withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$Octant(val);
 
@@ -1156,14 +1157,14 @@ final class Angle$Octant extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Angle]
 final class Angle$PercentOfFullCircle extends Angle {
-  const Angle$PercentOfFullCircle([
+  Angle$PercentOfFullCircle([
     super.value,
   ]);
 
@@ -1194,14 +1195,14 @@ final class Angle$PercentOfFullCircle extends Angle {
   @override
   String get displayName => 'percent of full circle';
 
-  static const _ratio = 12960.0;
+  static final _ratio = Rational.parse('1.29600000000000000E+004');
 
   @override
-  Angle get anchor => const Angle$Second(_ratio);
+  Angle get anchor => Angle$Second(_ratio);
 
-  /// 1 [Angle$PercentOfFullCircle] = 12960.0 [Angle$Second]
+  /// 1 [Angle$PercentOfFullCircle] = 1.29600000000000000E+004 [Angle$Second]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1209,12 +1210,12 @@ final class Angle$PercentOfFullCircle extends Angle {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Angle$PercentOfFullCircle] with new value
   @override
   Angle$PercentOfFullCircle withValue(
-    num val,
+    Rational val,
   ) =>
       Angle$PercentOfFullCircle(val);
 
@@ -1227,7 +1228,7 @@ final class Angle$PercentOfFullCircle extends Angle {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

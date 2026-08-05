@@ -16,7 +16,7 @@ part of '../../super_measurement.dart';
 /// [FlowMass$PoundPerSecond], [FlowMass$PoundPerMinute],
 /// [FlowMass$PoundPerHour], [FlowMass$PoundPerDay]
 sealed class FlowMass extends Unit<FlowMass> {
-  const FlowMass([
+  FlowMass([
     super.value,
   ]);
 
@@ -28,140 +28,141 @@ sealed class FlowMass extends Unit<FlowMass> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : FlowMass.anchor();
 
-  factory FlowMass.anchor() => const FlowMass$KilogramPerDay();
+  factory FlowMass.anchor() => FlowMass$KilogramPerDay();
 
   /// Convert to [FlowMass$GramPerSecond]
   FlowMass get toGramPerSecond => convertTo(
-        const FlowMass$GramPerSecond(),
+        FlowMass$GramPerSecond(),
       );
 
   /// Convert to [FlowMass$GramPerMinute]
   FlowMass get toGramPerMinute => convertTo(
-        const FlowMass$GramPerMinute(),
+        FlowMass$GramPerMinute(),
       );
 
   /// Convert to [FlowMass$GramPerHour]
   FlowMass get toGramPerHour => convertTo(
-        const FlowMass$GramPerHour(),
+        FlowMass$GramPerHour(),
       );
 
   /// Convert to [FlowMass$GramPerDay]
   FlowMass get toGramPerDay => convertTo(
-        const FlowMass$GramPerDay(),
+        FlowMass$GramPerDay(),
       );
 
   /// Convert to [FlowMass$MilligramPerMinute]
   FlowMass get toMilligramPerMinute => convertTo(
-        const FlowMass$MilligramPerMinute(),
+        FlowMass$MilligramPerMinute(),
       );
 
   /// Convert to [FlowMass$MilligramPerHour]
   FlowMass get toMilligramPerHour => convertTo(
-        const FlowMass$MilligramPerHour(),
+        FlowMass$MilligramPerHour(),
       );
 
   /// Convert to [FlowMass$MilligramPerDay]
   FlowMass get toMilligramPerDay => convertTo(
-        const FlowMass$MilligramPerDay(),
+        FlowMass$MilligramPerDay(),
       );
 
   /// Convert to [FlowMass$KilogramPerMinute]
   FlowMass get toKilogramPerMinute => convertTo(
-        const FlowMass$KilogramPerMinute(),
+        FlowMass$KilogramPerMinute(),
       );
 
   /// Convert to [FlowMass$KilogramPerHour]
   FlowMass get toKilogramPerHour => convertTo(
-        const FlowMass$KilogramPerHour(),
+        FlowMass$KilogramPerHour(),
       );
 
   /// Convert to [FlowMass$KilogramPerDay]
   FlowMass get toKilogramPerDay => convertTo(
-        const FlowMass$KilogramPerDay(),
+        FlowMass$KilogramPerDay(),
       );
 
   /// Convert to [FlowMass$ExagramPerSecond]
   FlowMass get toExagramPerSecond => convertTo(
-        const FlowMass$ExagramPerSecond(),
+        FlowMass$ExagramPerSecond(),
       );
 
   /// Convert to [FlowMass$PetagramPerSecond]
   FlowMass get toPetagramPerSecond => convertTo(
-        const FlowMass$PetagramPerSecond(),
+        FlowMass$PetagramPerSecond(),
       );
 
   /// Convert to [FlowMass$TeragramPerSecond]
   FlowMass get toTeragramPerSecond => convertTo(
-        const FlowMass$TeragramPerSecond(),
+        FlowMass$TeragramPerSecond(),
       );
 
   /// Convert to [FlowMass$GigagramPerSecond]
   FlowMass get toGigagramPerSecond => convertTo(
-        const FlowMass$GigagramPerSecond(),
+        FlowMass$GigagramPerSecond(),
       );
 
   /// Convert to [FlowMass$MegagramPerSecond]
   FlowMass get toMegagramPerSecond => convertTo(
-        const FlowMass$MegagramPerSecond(),
+        FlowMass$MegagramPerSecond(),
       );
 
   /// Convert to [FlowMass$KilogramPerSecond]
   FlowMass get toKilogramPerSecond => convertTo(
-        const FlowMass$KilogramPerSecond(),
+        FlowMass$KilogramPerSecond(),
       );
 
   /// Convert to [FlowMass$HectogramPerSecond]
   FlowMass get toHectogramPerSecond => convertTo(
-        const FlowMass$HectogramPerSecond(),
+        FlowMass$HectogramPerSecond(),
       );
 
   /// Convert to [FlowMass$DekagramPerSecond]
   FlowMass get toDekagramPerSecond => convertTo(
-        const FlowMass$DekagramPerSecond(),
+        FlowMass$DekagramPerSecond(),
       );
 
   /// Convert to [FlowMass$DecigramPerSecond]
   FlowMass get toDecigramPerSecond => convertTo(
-        const FlowMass$DecigramPerSecond(),
+        FlowMass$DecigramPerSecond(),
       );
 
   /// Convert to [FlowMass$CentigramPerSecond]
   FlowMass get toCentigramPerSecond => convertTo(
-        const FlowMass$CentigramPerSecond(),
+        FlowMass$CentigramPerSecond(),
       );
 
   /// Convert to [FlowMass$MilligramPerSecond]
   FlowMass get toMilligramPerSecond => convertTo(
-        const FlowMass$MilligramPerSecond(),
+        FlowMass$MilligramPerSecond(),
       );
 
   /// Convert to [FlowMass$MicrogramPerSecond]
   FlowMass get toMicrogramPerSecond => convertTo(
-        const FlowMass$MicrogramPerSecond(),
+        FlowMass$MicrogramPerSecond(),
       );
 
   /// Convert to [FlowMass$PoundPerSecond]
   FlowMass get toPoundPerSecond => convertTo(
-        const FlowMass$PoundPerSecond(),
+        FlowMass$PoundPerSecond(),
       );
 
   /// Convert to [FlowMass$PoundPerMinute]
   FlowMass get toPoundPerMinute => convertTo(
-        const FlowMass$PoundPerMinute(),
+        FlowMass$PoundPerMinute(),
       );
 
   /// Convert to [FlowMass$PoundPerHour]
   FlowMass get toPoundPerHour => convertTo(
-        const FlowMass$PoundPerHour(),
+        FlowMass$PoundPerHour(),
       );
 
   /// Convert to [FlowMass$PoundPerDay]
   FlowMass get toPoundPerDay => convertTo(
-        const FlowMass$PoundPerDay(),
+        FlowMass$PoundPerDay(),
       );
 
   @override
@@ -172,32 +173,32 @@ sealed class FlowMass extends Unit<FlowMass> {
 
   static const _majorName = 'flowMass';
 
-  static const gramPerSecond = FlowMass$GramPerSecond();
-  static const gramPerMinute = FlowMass$GramPerMinute();
-  static const gramPerHour = FlowMass$GramPerHour();
-  static const gramPerDay = FlowMass$GramPerDay();
-  static const milligramPerMinute = FlowMass$MilligramPerMinute();
-  static const milligramPerHour = FlowMass$MilligramPerHour();
-  static const milligramPerDay = FlowMass$MilligramPerDay();
-  static const kilogramPerMinute = FlowMass$KilogramPerMinute();
-  static const kilogramPerHour = FlowMass$KilogramPerHour();
-  static const kilogramPerDay = FlowMass$KilogramPerDay();
-  static const exagramPerSecond = FlowMass$ExagramPerSecond();
-  static const petagramPerSecond = FlowMass$PetagramPerSecond();
-  static const teragramPerSecond = FlowMass$TeragramPerSecond();
-  static const gigagramPerSecond = FlowMass$GigagramPerSecond();
-  static const megagramPerSecond = FlowMass$MegagramPerSecond();
-  static const kilogramPerSecond = FlowMass$KilogramPerSecond();
-  static const hectogramPerSecond = FlowMass$HectogramPerSecond();
-  static const dekagramPerSecond = FlowMass$DekagramPerSecond();
-  static const decigramPerSecond = FlowMass$DecigramPerSecond();
-  static const centigramPerSecond = FlowMass$CentigramPerSecond();
-  static const milligramPerSecond = FlowMass$MilligramPerSecond();
-  static const microgramPerSecond = FlowMass$MicrogramPerSecond();
-  static const poundPerSecond = FlowMass$PoundPerSecond();
-  static const poundPerMinute = FlowMass$PoundPerMinute();
-  static const poundPerHour = FlowMass$PoundPerHour();
-  static const poundPerDay = FlowMass$PoundPerDay();
+  static final gramPerSecond = FlowMass$GramPerSecond();
+  static final gramPerMinute = FlowMass$GramPerMinute();
+  static final gramPerHour = FlowMass$GramPerHour();
+  static final gramPerDay = FlowMass$GramPerDay();
+  static final milligramPerMinute = FlowMass$MilligramPerMinute();
+  static final milligramPerHour = FlowMass$MilligramPerHour();
+  static final milligramPerDay = FlowMass$MilligramPerDay();
+  static final kilogramPerMinute = FlowMass$KilogramPerMinute();
+  static final kilogramPerHour = FlowMass$KilogramPerHour();
+  static final kilogramPerDay = FlowMass$KilogramPerDay();
+  static final exagramPerSecond = FlowMass$ExagramPerSecond();
+  static final petagramPerSecond = FlowMass$PetagramPerSecond();
+  static final teragramPerSecond = FlowMass$TeragramPerSecond();
+  static final gigagramPerSecond = FlowMass$GigagramPerSecond();
+  static final megagramPerSecond = FlowMass$MegagramPerSecond();
+  static final kilogramPerSecond = FlowMass$KilogramPerSecond();
+  static final hectogramPerSecond = FlowMass$HectogramPerSecond();
+  static final dekagramPerSecond = FlowMass$DekagramPerSecond();
+  static final decigramPerSecond = FlowMass$DecigramPerSecond();
+  static final centigramPerSecond = FlowMass$CentigramPerSecond();
+  static final milligramPerSecond = FlowMass$MilligramPerSecond();
+  static final microgramPerSecond = FlowMass$MicrogramPerSecond();
+  static final poundPerSecond = FlowMass$PoundPerSecond();
+  static final poundPerMinute = FlowMass$PoundPerMinute();
+  static final poundPerHour = FlowMass$PoundPerHour();
+  static final poundPerDay = FlowMass$PoundPerDay();
 
   @override
   List<FlowMass> get units => values;
@@ -205,7 +206,7 @@ sealed class FlowMass extends Unit<FlowMass> {
   @override
   EnumValues<FlowMass> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <FlowMass>[
     gramPerSecond,
     gramPerMinute,
     gramPerHour,
@@ -234,7 +235,7 @@ sealed class FlowMass extends Unit<FlowMass> {
     poundPerDay,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, FlowMass>{
     FlowMass$GramPerSecond._minorName: gramPerSecond,
     FlowMass$GramPerMinute._minorName: gramPerMinute,
     FlowMass$GramPerHour._minorName: gramPerHour,
@@ -266,7 +267,7 @@ sealed class FlowMass extends Unit<FlowMass> {
 
 /// Unit of [FlowMass]
 final class FlowMass$GramPerSecond extends FlowMass {
-  const FlowMass$GramPerSecond([
+  FlowMass$GramPerSecond([
     super.value,
   ]);
 
@@ -297,14 +298,14 @@ final class FlowMass$GramPerSecond extends FlowMass {
   @override
   String get displayName => 'gram/second';
 
-  static const _ratio = 86.4;
+  static final _ratio = Rational.parse('8.64000000000000000E+001');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$GramPerSecond] ≈ 86.4 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GramPerSecond] ≈ 8.64000000000000000E+001 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -312,12 +313,12 @@ final class FlowMass$GramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$GramPerSecond] with new value
   @override
   FlowMass$GramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$GramPerSecond(val);
 
@@ -330,14 +331,14 @@ final class FlowMass$GramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$GramPerMinute extends FlowMass {
-  const FlowMass$GramPerMinute([
+  FlowMass$GramPerMinute([
     super.value,
   ]);
 
@@ -368,14 +369,14 @@ final class FlowMass$GramPerMinute extends FlowMass {
   @override
   String get displayName => 'gram/minute';
 
-  static const _ratio = 1.44;
+  static final _ratio = Rational.parse('1.44000000000000000E+000');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$GramPerMinute] ≈ 1.44 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GramPerMinute] ≈ 1.44000000000000000E+000 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -383,12 +384,12 @@ final class FlowMass$GramPerMinute extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$GramPerMinute] with new value
   @override
   FlowMass$GramPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$GramPerMinute(val);
 
@@ -401,14 +402,14 @@ final class FlowMass$GramPerMinute extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$GramPerHour extends FlowMass {
-  const FlowMass$GramPerHour([
+  FlowMass$GramPerHour([
     super.value,
   ]);
 
@@ -439,14 +440,14 @@ final class FlowMass$GramPerHour extends FlowMass {
   @override
   String get displayName => 'gram/hour';
 
-  static const _ratio = 0.024;
+  static final _ratio = Rational.parse('2.40000000000000000E-002');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$GramPerHour] ≈ 0.024 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GramPerHour] ≈ 2.40000000000000000E-002 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -454,12 +455,12 @@ final class FlowMass$GramPerHour extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$GramPerHour] with new value
   @override
   FlowMass$GramPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$GramPerHour(val);
 
@@ -472,14 +473,14 @@ final class FlowMass$GramPerHour extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$GramPerDay extends FlowMass {
-  const FlowMass$GramPerDay([
+  FlowMass$GramPerDay([
     super.value,
   ]);
 
@@ -510,14 +511,14 @@ final class FlowMass$GramPerDay extends FlowMass {
   @override
   String get displayName => 'gram/day';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$GramPerDay] ≈ 0.001 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GramPerDay] ≈ 1.00000000000000000E-003 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -525,12 +526,12 @@ final class FlowMass$GramPerDay extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$GramPerDay] with new value
   @override
   FlowMass$GramPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$GramPerDay(val);
 
@@ -543,14 +544,14 @@ final class FlowMass$GramPerDay extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$MilligramPerMinute extends FlowMass {
-  const FlowMass$MilligramPerMinute([
+  FlowMass$MilligramPerMinute([
     super.value,
   ]);
 
@@ -581,14 +582,14 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
   @override
   String get displayName => 'milligram/minute';
 
-  static const _ratio = 0.00144;
+  static final _ratio = Rational.parse('1.44000000000000000E-003');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$MilligramPerMinute] ≈ 0.00144 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MilligramPerMinute] ≈ 1.44000000000000000E-003 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -596,12 +597,12 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$MilligramPerMinute] with new value
   @override
   FlowMass$MilligramPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$MilligramPerMinute(val);
 
@@ -614,14 +615,14 @@ final class FlowMass$MilligramPerMinute extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$MilligramPerHour extends FlowMass {
-  const FlowMass$MilligramPerHour([
+  FlowMass$MilligramPerHour([
     super.value,
   ]);
 
@@ -652,14 +653,14 @@ final class FlowMass$MilligramPerHour extends FlowMass {
   @override
   String get displayName => 'milligram/hour';
 
-  static const _ratio = 0.000024;
+  static final _ratio = Rational.parse('2.40000000000000000E-005');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$MilligramPerHour] ≈ 0.000024 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MilligramPerHour] ≈ 2.40000000000000000E-005 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -667,12 +668,12 @@ final class FlowMass$MilligramPerHour extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$MilligramPerHour] with new value
   @override
   FlowMass$MilligramPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$MilligramPerHour(val);
 
@@ -685,14 +686,14 @@ final class FlowMass$MilligramPerHour extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$MilligramPerDay extends FlowMass {
-  const FlowMass$MilligramPerDay([
+  FlowMass$MilligramPerDay([
     super.value,
   ]);
 
@@ -723,14 +724,14 @@ final class FlowMass$MilligramPerDay extends FlowMass {
   @override
   String get displayName => 'milligram/day';
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$MilligramPerDay] ≈ 0.000001 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MilligramPerDay] ≈ 1.00000000000000000E-006 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -738,12 +739,12 @@ final class FlowMass$MilligramPerDay extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$MilligramPerDay] with new value
   @override
   FlowMass$MilligramPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$MilligramPerDay(val);
 
@@ -756,14 +757,14 @@ final class FlowMass$MilligramPerDay extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$KilogramPerMinute extends FlowMass {
-  const FlowMass$KilogramPerMinute([
+  FlowMass$KilogramPerMinute([
     super.value,
   ]);
 
@@ -794,14 +795,14 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
   @override
   String get displayName => 'kilogram/minute';
 
-  static const _ratio = 1440.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+003');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$KilogramPerMinute] = 1440.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$KilogramPerMinute] = 1.44000000000000000E+003 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -809,12 +810,12 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$KilogramPerMinute] with new value
   @override
   FlowMass$KilogramPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$KilogramPerMinute(val);
 
@@ -827,14 +828,14 @@ final class FlowMass$KilogramPerMinute extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$KilogramPerHour extends FlowMass {
-  const FlowMass$KilogramPerHour([
+  FlowMass$KilogramPerHour([
     super.value,
   ]);
 
@@ -865,14 +866,14 @@ final class FlowMass$KilogramPerHour extends FlowMass {
   @override
   String get displayName => 'kilogram/hour';
 
-  static const _ratio = 24.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+001');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$KilogramPerHour] = 24.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$KilogramPerHour] = 2.40000000000000000E+001 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -880,12 +881,12 @@ final class FlowMass$KilogramPerHour extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$KilogramPerHour] with new value
   @override
   FlowMass$KilogramPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$KilogramPerHour(val);
 
@@ -898,14 +899,14 @@ final class FlowMass$KilogramPerHour extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$KilogramPerDay extends FlowMass {
-  const FlowMass$KilogramPerDay([
+  FlowMass$KilogramPerDay([
     super.value,
   ]);
 
@@ -936,14 +937,14 @@ final class FlowMass$KilogramPerDay extends FlowMass {
   @override
   String get displayName => 'kilogram/day';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
   /// Default (anchor) unit of [FlowMass]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -951,12 +952,12 @@ final class FlowMass$KilogramPerDay extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$KilogramPerDay] with new value
   @override
   FlowMass$KilogramPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$KilogramPerDay(val);
 
@@ -969,14 +970,14 @@ final class FlowMass$KilogramPerDay extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$ExagramPerSecond extends FlowMass {
-  const FlowMass$ExagramPerSecond([
+  FlowMass$ExagramPerSecond([
     super.value,
   ]);
 
@@ -1007,14 +1008,14 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
   @override
   String get displayName => 'exagram/second';
 
-  static const _ratio = 86400000000000000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+019');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$ExagramPerSecond] = 86400000000000000000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$ExagramPerSecond] = 8.64000000000000000E+019 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1022,12 +1023,12 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$ExagramPerSecond] with new value
   @override
   FlowMass$ExagramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$ExagramPerSecond(val);
 
@@ -1040,14 +1041,14 @@ final class FlowMass$ExagramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$PetagramPerSecond extends FlowMass {
-  const FlowMass$PetagramPerSecond([
+  FlowMass$PetagramPerSecond([
     super.value,
   ]);
 
@@ -1078,14 +1079,14 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
   @override
   String get displayName => 'petagram/second';
 
-  static const _ratio = 86400000000000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+016');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$PetagramPerSecond] = 86400000000000000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PetagramPerSecond] = 8.64000000000000000E+016 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1093,12 +1094,12 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$PetagramPerSecond] with new value
   @override
   FlowMass$PetagramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$PetagramPerSecond(val);
 
@@ -1111,14 +1112,14 @@ final class FlowMass$PetagramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$TeragramPerSecond extends FlowMass {
-  const FlowMass$TeragramPerSecond([
+  FlowMass$TeragramPerSecond([
     super.value,
   ]);
 
@@ -1149,14 +1150,14 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
   @override
   String get displayName => 'teragram/second';
 
-  static const _ratio = 86400000000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+013');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$TeragramPerSecond] = 86400000000000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$TeragramPerSecond] = 8.64000000000000000E+013 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1164,12 +1165,12 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$TeragramPerSecond] with new value
   @override
   FlowMass$TeragramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$TeragramPerSecond(val);
 
@@ -1182,14 +1183,14 @@ final class FlowMass$TeragramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$GigagramPerSecond extends FlowMass {
-  const FlowMass$GigagramPerSecond([
+  FlowMass$GigagramPerSecond([
     super.value,
   ]);
 
@@ -1220,14 +1221,14 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
   @override
   String get displayName => 'gigagram/second';
 
-  static const _ratio = 86400000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+010');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$GigagramPerSecond] = 86400000000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$GigagramPerSecond] = 8.64000000000000000E+010 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1235,12 +1236,12 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$GigagramPerSecond] with new value
   @override
   FlowMass$GigagramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$GigagramPerSecond(val);
 
@@ -1253,14 +1254,14 @@ final class FlowMass$GigagramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$MegagramPerSecond extends FlowMass {
-  const FlowMass$MegagramPerSecond([
+  FlowMass$MegagramPerSecond([
     super.value,
   ]);
 
@@ -1291,14 +1292,14 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
   @override
   String get displayName => 'megagram/second';
 
-  static const _ratio = 86400000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+007');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$MegagramPerSecond] = 86400000.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MegagramPerSecond] = 8.64000000000000000E+007 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1306,12 +1307,12 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$MegagramPerSecond] with new value
   @override
   FlowMass$MegagramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$MegagramPerSecond(val);
 
@@ -1324,14 +1325,14 @@ final class FlowMass$MegagramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$KilogramPerSecond extends FlowMass {
-  const FlowMass$KilogramPerSecond([
+  FlowMass$KilogramPerSecond([
     super.value,
   ]);
 
@@ -1362,14 +1363,14 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
   @override
   String get displayName => 'kilogram/second';
 
-  static const _ratio = 86400.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+004');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$KilogramPerSecond] = 86400.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$KilogramPerSecond] = 8.64000000000000000E+004 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1377,12 +1378,12 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$KilogramPerSecond] with new value
   @override
   FlowMass$KilogramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$KilogramPerSecond(val);
 
@@ -1395,14 +1396,14 @@ final class FlowMass$KilogramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$HectogramPerSecond extends FlowMass {
-  const FlowMass$HectogramPerSecond([
+  FlowMass$HectogramPerSecond([
     super.value,
   ]);
 
@@ -1433,14 +1434,14 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
   @override
   String get displayName => 'hectogram/second';
 
-  static const _ratio = 8640.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+003');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$HectogramPerSecond] = 8640.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$HectogramPerSecond] = 8.64000000000000000E+003 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1448,12 +1449,12 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$HectogramPerSecond] with new value
   @override
   FlowMass$HectogramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$HectogramPerSecond(val);
 
@@ -1466,14 +1467,14 @@ final class FlowMass$HectogramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$DekagramPerSecond extends FlowMass {
-  const FlowMass$DekagramPerSecond([
+  FlowMass$DekagramPerSecond([
     super.value,
   ]);
 
@@ -1504,14 +1505,14 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
   @override
   String get displayName => 'dekagram/second';
 
-  static const _ratio = 864.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+002');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$DekagramPerSecond] = 864.0 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$DekagramPerSecond] = 8.64000000000000000E+002 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1519,12 +1520,12 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$DekagramPerSecond] with new value
   @override
   FlowMass$DekagramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$DekagramPerSecond(val);
 
@@ -1537,14 +1538,14 @@ final class FlowMass$DekagramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$DecigramPerSecond extends FlowMass {
-  const FlowMass$DecigramPerSecond([
+  FlowMass$DecigramPerSecond([
     super.value,
   ]);
 
@@ -1575,14 +1576,14 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
   @override
   String get displayName => 'decigram/second';
 
-  static const _ratio = 8.64;
+  static final _ratio = Rational.parse('8.64000000000000000E+000');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$DecigramPerSecond] ≈ 8.64 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$DecigramPerSecond] ≈ 8.64000000000000000E+000 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1590,12 +1591,12 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$DecigramPerSecond] with new value
   @override
   FlowMass$DecigramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$DecigramPerSecond(val);
 
@@ -1608,14 +1609,14 @@ final class FlowMass$DecigramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$CentigramPerSecond extends FlowMass {
-  const FlowMass$CentigramPerSecond([
+  FlowMass$CentigramPerSecond([
     super.value,
   ]);
 
@@ -1646,14 +1647,14 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
   @override
   String get displayName => 'centigram/second';
 
-  static const _ratio = 0.864;
+  static final _ratio = Rational.parse('8.64000000000000000E-001');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$CentigramPerSecond] ≈ 0.864 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$CentigramPerSecond] ≈ 8.64000000000000000E-001 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1661,12 +1662,12 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$CentigramPerSecond] with new value
   @override
   FlowMass$CentigramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$CentigramPerSecond(val);
 
@@ -1679,14 +1680,14 @@ final class FlowMass$CentigramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$MilligramPerSecond extends FlowMass {
-  const FlowMass$MilligramPerSecond([
+  FlowMass$MilligramPerSecond([
     super.value,
   ]);
 
@@ -1717,14 +1718,14 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
   @override
   String get displayName => 'milligram/second';
 
-  static const _ratio = 0.0864;
+  static final _ratio = Rational.parse('8.64000000000000000E-002');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$MilligramPerSecond] ≈ 0.0864 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MilligramPerSecond] ≈ 8.64000000000000000E-002 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1732,12 +1733,12 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$MilligramPerSecond] with new value
   @override
   FlowMass$MilligramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$MilligramPerSecond(val);
 
@@ -1750,14 +1751,14 @@ final class FlowMass$MilligramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$MicrogramPerSecond extends FlowMass {
-  const FlowMass$MicrogramPerSecond([
+  FlowMass$MicrogramPerSecond([
     super.value,
   ]);
 
@@ -1788,14 +1789,14 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
   @override
   String get displayName => 'microgram/second';
 
-  static const _ratio = 0.0000864;
+  static final _ratio = Rational.parse('8.64000000000000000E-005');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$MicrogramPerSecond] ≈ 0.0000864 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$MicrogramPerSecond] ≈ 8.64000000000000000E-005 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1803,12 +1804,12 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$MicrogramPerSecond] with new value
   @override
   FlowMass$MicrogramPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$MicrogramPerSecond(val);
 
@@ -1821,14 +1822,14 @@ final class FlowMass$MicrogramPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$PoundPerSecond extends FlowMass {
-  const FlowMass$PoundPerSecond([
+  FlowMass$PoundPerSecond([
     super.value,
   ]);
 
@@ -1859,14 +1860,14 @@ final class FlowMass$PoundPerSecond extends FlowMass {
   @override
   String get displayName => 'pound/second';
 
-  static const _ratio = 39190.38077;
+  static final _ratio = Rational.parse('3.91903807700000000E+004');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$PoundPerSecond] ≈ 39190.38077 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PoundPerSecond] ≈ 3.91903807700000000E+004 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1874,12 +1875,12 @@ final class FlowMass$PoundPerSecond extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$PoundPerSecond] with new value
   @override
   FlowMass$PoundPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$PoundPerSecond(val);
 
@@ -1892,14 +1893,14 @@ final class FlowMass$PoundPerSecond extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$PoundPerMinute extends FlowMass {
-  const FlowMass$PoundPerMinute([
+  FlowMass$PoundPerMinute([
     super.value,
   ]);
 
@@ -1930,14 +1931,14 @@ final class FlowMass$PoundPerMinute extends FlowMass {
   @override
   String get displayName => 'pound/minute';
 
-  static const _ratio = 653.1730128;
+  static final _ratio = Rational.parse('6.53173012800000000E+002');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$PoundPerMinute] ≈ 653.1730128 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PoundPerMinute] ≈ 6.53173012800000000E+002 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1945,12 +1946,12 @@ final class FlowMass$PoundPerMinute extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$PoundPerMinute] with new value
   @override
   FlowMass$PoundPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$PoundPerMinute(val);
 
@@ -1963,14 +1964,14 @@ final class FlowMass$PoundPerMinute extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$PoundPerHour extends FlowMass {
-  const FlowMass$PoundPerHour([
+  FlowMass$PoundPerHour([
     super.value,
   ]);
 
@@ -2001,14 +2002,14 @@ final class FlowMass$PoundPerHour extends FlowMass {
   @override
   String get displayName => 'pound/hour';
 
-  static const _ratio = 10.88621688;
+  static final _ratio = Rational.parse('1.08862168800000000E+001');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$PoundPerHour] ≈ 10.88621688 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PoundPerHour] ≈ 1.08862168800000000E+001 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2016,12 +2017,12 @@ final class FlowMass$PoundPerHour extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$PoundPerHour] with new value
   @override
   FlowMass$PoundPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$PoundPerHour(val);
 
@@ -2034,14 +2035,14 @@ final class FlowMass$PoundPerHour extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [FlowMass]
 final class FlowMass$PoundPerDay extends FlowMass {
-  const FlowMass$PoundPerDay([
+  FlowMass$PoundPerDay([
     super.value,
   ]);
 
@@ -2072,14 +2073,14 @@ final class FlowMass$PoundPerDay extends FlowMass {
   @override
   String get displayName => 'pound/day';
 
-  static const _ratio = 0.45359237;
+  static final _ratio = Rational.parse('4.53592370000000000E-001');
 
   @override
-  FlowMass get anchor => const FlowMass$KilogramPerDay(_ratio);
+  FlowMass get anchor => FlowMass$KilogramPerDay(_ratio);
 
-  /// 1 [FlowMass$PoundPerDay] ≈ 0.45359237 [FlowMass$KilogramPerDay]
+  /// 1 [FlowMass$PoundPerDay] ≈ 4.53592370000000000E-001 [FlowMass$KilogramPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2087,12 +2088,12 @@ final class FlowMass$PoundPerDay extends FlowMass {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [FlowMass$PoundPerDay] with new value
   @override
   FlowMass$PoundPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       FlowMass$PoundPerDay(val);
 
@@ -2105,7 +2106,7 @@ final class FlowMass$PoundPerDay extends FlowMass {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

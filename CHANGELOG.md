@@ -1,3 +1,10 @@
+## 5.0.0
+- **MAJOR BREAKING CHANGE**: Migrated entirely to exact `Rational` math (BigInt-backed) for all internal conversions to eliminate floating-point precision drift.
+- **BREAKING**: Removed `const` from unit constructors since `Rational` is not a compile-time constant. All `const Length$Meter(...)` must now use `final` or just omit the keyword.
+- **BREAKING**: The `.value` property is now a `Rational` instead of a `num`. Use `.value.toDouble()` to extract native dart numbers.
+- Fixed `hashCode` and `operator ==` contracts: Sets/Maps will now correctly group equivalent units (e.g., `Length$Meter(1) == Length$Centimeter(100)` correctly evaluates to true with identical hashes).
+- Rewrote Temperature module conversions using strictly exact Rational representations for coefficients.
+
 ## 4.0.2
 - Fix Unit equality operator to compare by runtime type only, not by value
 - This allows proper unit type matching in converters where Unit objects may have different values but represent the same unit type

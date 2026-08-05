@@ -10,7 +10,7 @@ part of '../../super_measurement.dart';
 /// [EUCurrency$PortugueseEscudoPTE], [EUCurrency$ItalianLireITL],
 /// [EUCurrency$GreekDrachmaGRD]
 sealed class EUCurrency extends Unit<EUCurrency> {
-  const EUCurrency([
+  EUCurrency([
     super.value,
   ]);
 
@@ -22,75 +22,76 @@ sealed class EUCurrency extends Unit<EUCurrency> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : EUCurrency.anchor();
 
-  factory EUCurrency.anchor() => const EUCurrency$EuroEUR();
+  factory EUCurrency.anchor() => EUCurrency$EuroEUR();
 
   /// Convert to [EUCurrency$EuroEUR]
   EUCurrency get toEuroEUR => convertTo(
-        const EUCurrency$EuroEUR(),
+        EUCurrency$EuroEUR(),
       );
 
   /// Convert to [EUCurrency$IrishPoundIEP]
   EUCurrency get toIrishPoundIEP => convertTo(
-        const EUCurrency$IrishPoundIEP(),
+        EUCurrency$IrishPoundIEP(),
       );
 
   /// Convert to [EUCurrency$DeutschMarkDEM]
   EUCurrency get toDeutschMarkDEM => convertTo(
-        const EUCurrency$DeutschMarkDEM(),
+        EUCurrency$DeutschMarkDEM(),
       );
 
   /// Convert to [EUCurrency$DutchGuildenNLG]
   EUCurrency get toDutchGuildenNLG => convertTo(
-        const EUCurrency$DutchGuildenNLG(),
+        EUCurrency$DutchGuildenNLG(),
       );
 
   /// Convert to [EUCurrency$FinnishMarkFIM]
   EUCurrency get toFinnishMarkFIM => convertTo(
-        const EUCurrency$FinnishMarkFIM(),
+        EUCurrency$FinnishMarkFIM(),
       );
 
   /// Convert to [EUCurrency$FrenchFrancFRF]
   EUCurrency get toFrenchFrancFRF => convertTo(
-        const EUCurrency$FrenchFrancFRF(),
+        EUCurrency$FrenchFrancFRF(),
       );
 
   /// Convert to [EUCurrency$AustrianSchillingATS]
   EUCurrency get toAustrianSchillingATS => convertTo(
-        const EUCurrency$AustrianSchillingATS(),
+        EUCurrency$AustrianSchillingATS(),
       );
 
   /// Convert to [EUCurrency$BelgianFrancBEF]
   EUCurrency get toBelgianFrancBEF => convertTo(
-        const EUCurrency$BelgianFrancBEF(),
+        EUCurrency$BelgianFrancBEF(),
       );
 
   /// Convert to [EUCurrency$LuxembourgFrancLUF]
   EUCurrency get toLuxembourgFrancLUF => convertTo(
-        const EUCurrency$LuxembourgFrancLUF(),
+        EUCurrency$LuxembourgFrancLUF(),
       );
 
   /// Convert to [EUCurrency$SpanishPesetaESP]
   EUCurrency get toSpanishPesetaESP => convertTo(
-        const EUCurrency$SpanishPesetaESP(),
+        EUCurrency$SpanishPesetaESP(),
       );
 
   /// Convert to [EUCurrency$PortugueseEscudoPTE]
   EUCurrency get toPortugueseEscudoPTE => convertTo(
-        const EUCurrency$PortugueseEscudoPTE(),
+        EUCurrency$PortugueseEscudoPTE(),
       );
 
   /// Convert to [EUCurrency$ItalianLireITL]
   EUCurrency get toItalianLireITL => convertTo(
-        const EUCurrency$ItalianLireITL(),
+        EUCurrency$ItalianLireITL(),
       );
 
   /// Convert to [EUCurrency$GreekDrachmaGRD]
   EUCurrency get toGreekDrachmaGRD => convertTo(
-        const EUCurrency$GreekDrachmaGRD(),
+        EUCurrency$GreekDrachmaGRD(),
       );
 
   @override
@@ -101,19 +102,19 @@ sealed class EUCurrency extends Unit<EUCurrency> {
 
   static const _majorName = 'eUCurrency';
 
-  static const euroEUR = EUCurrency$EuroEUR();
-  static const irishPoundIEP = EUCurrency$IrishPoundIEP();
-  static const deutschMarkDEM = EUCurrency$DeutschMarkDEM();
-  static const dutchGuildenNLG = EUCurrency$DutchGuildenNLG();
-  static const finnishMarkFIM = EUCurrency$FinnishMarkFIM();
-  static const frenchFrancFRF = EUCurrency$FrenchFrancFRF();
-  static const austrianSchillingATS = EUCurrency$AustrianSchillingATS();
-  static const belgianFrancBEF = EUCurrency$BelgianFrancBEF();
-  static const luxembourgFrancLUF = EUCurrency$LuxembourgFrancLUF();
-  static const spanishPesetaESP = EUCurrency$SpanishPesetaESP();
-  static const portugueseEscudoPTE = EUCurrency$PortugueseEscudoPTE();
-  static const italianLireITL = EUCurrency$ItalianLireITL();
-  static const greekDrachmaGRD = EUCurrency$GreekDrachmaGRD();
+  static final euroEUR = EUCurrency$EuroEUR();
+  static final irishPoundIEP = EUCurrency$IrishPoundIEP();
+  static final deutschMarkDEM = EUCurrency$DeutschMarkDEM();
+  static final dutchGuildenNLG = EUCurrency$DutchGuildenNLG();
+  static final finnishMarkFIM = EUCurrency$FinnishMarkFIM();
+  static final frenchFrancFRF = EUCurrency$FrenchFrancFRF();
+  static final austrianSchillingATS = EUCurrency$AustrianSchillingATS();
+  static final belgianFrancBEF = EUCurrency$BelgianFrancBEF();
+  static final luxembourgFrancLUF = EUCurrency$LuxembourgFrancLUF();
+  static final spanishPesetaESP = EUCurrency$SpanishPesetaESP();
+  static final portugueseEscudoPTE = EUCurrency$PortugueseEscudoPTE();
+  static final italianLireITL = EUCurrency$ItalianLireITL();
+  static final greekDrachmaGRD = EUCurrency$GreekDrachmaGRD();
 
   @override
   List<EUCurrency> get units => values;
@@ -121,7 +122,7 @@ sealed class EUCurrency extends Unit<EUCurrency> {
   @override
   EnumValues<EUCurrency> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <EUCurrency>[
     euroEUR,
     irishPoundIEP,
     deutschMarkDEM,
@@ -137,7 +138,7 @@ sealed class EUCurrency extends Unit<EUCurrency> {
     greekDrachmaGRD,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, EUCurrency>{
     EUCurrency$EuroEUR._minorName: euroEUR,
     EUCurrency$IrishPoundIEP._minorName: irishPoundIEP,
     EUCurrency$DeutschMarkDEM._minorName: deutschMarkDEM,
@@ -156,7 +157,7 @@ sealed class EUCurrency extends Unit<EUCurrency> {
 
 /// Unit of [EUCurrency]
 final class EUCurrency$EuroEUR extends EUCurrency {
-  const EUCurrency$EuroEUR([
+  EUCurrency$EuroEUR([
     super.value,
   ]);
 
@@ -187,14 +188,14 @@ final class EUCurrency$EuroEUR extends EUCurrency {
   @override
   String get displayName => 'Euro (EUR)';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
   /// Default (anchor) unit of [EUCurrency]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -202,12 +203,12 @@ final class EUCurrency$EuroEUR extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$EuroEUR] with new value
   @override
   EUCurrency$EuroEUR withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$EuroEUR(val);
 
@@ -220,14 +221,14 @@ final class EUCurrency$EuroEUR extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$IrishPoundIEP extends EUCurrency {
-  const EUCurrency$IrishPoundIEP([
+  EUCurrency$IrishPoundIEP([
     super.value,
   ]);
 
@@ -258,14 +259,14 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
   @override
   String get displayName => 'Irish Pound (IEP)';
 
-  static const _ratio = 1.269738078;
+  static final _ratio = Rational.parse('1.26973807800000000E+000');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$IrishPoundIEP] ≈ 1.269738078 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$IrishPoundIEP] ≈ 1.26973807800000000E+000 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -273,12 +274,12 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$IrishPoundIEP] with new value
   @override
   EUCurrency$IrishPoundIEP withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$IrishPoundIEP(val);
 
@@ -291,14 +292,14 @@ final class EUCurrency$IrishPoundIEP extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$DeutschMarkDEM extends EUCurrency {
-  const EUCurrency$DeutschMarkDEM([
+  EUCurrency$DeutschMarkDEM([
     super.value,
   ]);
 
@@ -329,14 +330,14 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
   @override
   String get displayName => 'Deutsch Mark (DEM)';
 
-  static const _ratio = 0.5112918812;
+  static final _ratio = Rational.parse('5.11291881200000000E-001');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$DeutschMarkDEM] ≈ 0.5112918812 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$DeutschMarkDEM] ≈ 5.11291881200000000E-001 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -344,12 +345,12 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$DeutschMarkDEM] with new value
   @override
   EUCurrency$DeutschMarkDEM withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$DeutschMarkDEM(val);
 
@@ -362,14 +363,14 @@ final class EUCurrency$DeutschMarkDEM extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$DutchGuildenNLG extends EUCurrency {
-  const EUCurrency$DutchGuildenNLG([
+  EUCurrency$DutchGuildenNLG([
     super.value,
   ]);
 
@@ -400,14 +401,14 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
   @override
   String get displayName => 'Dutch Guilden (NLG)';
 
-  static const _ratio = 0.4537802161;
+  static final _ratio = Rational.parse('4.53780216100000000E-001');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$DutchGuildenNLG] ≈ 0.4537802161 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$DutchGuildenNLG] ≈ 4.53780216100000000E-001 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -415,12 +416,12 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$DutchGuildenNLG] with new value
   @override
   EUCurrency$DutchGuildenNLG withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$DutchGuildenNLG(val);
 
@@ -433,14 +434,14 @@ final class EUCurrency$DutchGuildenNLG extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$FinnishMarkFIM extends EUCurrency {
-  const EUCurrency$FinnishMarkFIM([
+  EUCurrency$FinnishMarkFIM([
     super.value,
   ]);
 
@@ -471,14 +472,14 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
   @override
   String get displayName => 'Finnish Mark (FIM)';
 
-  static const _ratio = 0.1681879265;
+  static final _ratio = Rational.parse('1.68187926500000000E-001');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$FinnishMarkFIM] ≈ 0.1681879265 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$FinnishMarkFIM] ≈ 1.68187926500000000E-001 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -486,12 +487,12 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$FinnishMarkFIM] with new value
   @override
   EUCurrency$FinnishMarkFIM withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$FinnishMarkFIM(val);
 
@@ -504,14 +505,14 @@ final class EUCurrency$FinnishMarkFIM extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$FrenchFrancFRF extends EUCurrency {
-  const EUCurrency$FrenchFrancFRF([
+  EUCurrency$FrenchFrancFRF([
     super.value,
   ]);
 
@@ -542,14 +543,14 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
   @override
   String get displayName => 'French Franc (FRF)';
 
-  static const _ratio = 0.1524490172;
+  static final _ratio = Rational.parse('1.52449017200000000E-001');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$FrenchFrancFRF] ≈ 0.1524490172 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$FrenchFrancFRF] ≈ 1.52449017200000000E-001 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -557,12 +558,12 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$FrenchFrancFRF] with new value
   @override
   EUCurrency$FrenchFrancFRF withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$FrenchFrancFRF(val);
 
@@ -575,14 +576,14 @@ final class EUCurrency$FrenchFrancFRF extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$AustrianSchillingATS extends EUCurrency {
-  const EUCurrency$AustrianSchillingATS([
+  EUCurrency$AustrianSchillingATS([
     super.value,
   ]);
 
@@ -613,14 +614,14 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
   @override
   String get displayName => 'Austrian Schilling (ATS)';
 
-  static const _ratio = 0.07267283417;
+  static final _ratio = Rational.parse('7.26728341700000000E-002');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$AustrianSchillingATS] ≈ 0.07267283417 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$AustrianSchillingATS] ≈ 7.26728341700000000E-002 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -629,12 +630,12 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$AustrianSchillingATS] with new value
   @override
   EUCurrency$AustrianSchillingATS withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$AustrianSchillingATS(val);
 
@@ -647,14 +648,14 @@ final class EUCurrency$AustrianSchillingATS extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$BelgianFrancBEF extends EUCurrency {
-  const EUCurrency$BelgianFrancBEF([
+  EUCurrency$BelgianFrancBEF([
     super.value,
   ]);
 
@@ -685,14 +686,14 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
   @override
   String get displayName => 'Belgian Franc (BEF)';
 
-  static const _ratio = 0.02478935248;
+  static final _ratio = Rational.parse('2.47893524800000000E-002');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$BelgianFrancBEF] ≈ 0.02478935248 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$BelgianFrancBEF] ≈ 2.47893524800000000E-002 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -700,12 +701,12 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$BelgianFrancBEF] with new value
   @override
   EUCurrency$BelgianFrancBEF withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$BelgianFrancBEF(val);
 
@@ -718,14 +719,14 @@ final class EUCurrency$BelgianFrancBEF extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
-  const EUCurrency$LuxembourgFrancLUF([
+  EUCurrency$LuxembourgFrancLUF([
     super.value,
   ]);
 
@@ -756,14 +757,14 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
   @override
   String get displayName => 'Luxembourg Franc (LUF)';
 
-  static const _ratio = 0.02478935248;
+  static final _ratio = Rational.parse('2.47893524800000000E-002');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$LuxembourgFrancLUF] ≈ 0.02478935248 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$LuxembourgFrancLUF] ≈ 2.47893524800000000E-002 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -772,12 +773,12 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$LuxembourgFrancLUF] with new value
   @override
   EUCurrency$LuxembourgFrancLUF withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$LuxembourgFrancLUF(val);
 
@@ -790,14 +791,14 @@ final class EUCurrency$LuxembourgFrancLUF extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$SpanishPesetaESP extends EUCurrency {
-  const EUCurrency$SpanishPesetaESP([
+  EUCurrency$SpanishPesetaESP([
     super.value,
   ]);
 
@@ -828,14 +829,14 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
   @override
   String get displayName => 'Spanish Peseta (ESP)';
 
-  static const _ratio = 0.006010121044;
+  static final _ratio = Rational.parse('6.01012104400000000E-003');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$SpanishPesetaESP] ≈ 0.006010121044 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$SpanishPesetaESP] ≈ 6.01012104400000000E-003 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -843,12 +844,12 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$SpanishPesetaESP] with new value
   @override
   EUCurrency$SpanishPesetaESP withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$SpanishPesetaESP(val);
 
@@ -861,14 +862,14 @@ final class EUCurrency$SpanishPesetaESP extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
-  const EUCurrency$PortugueseEscudoPTE([
+  EUCurrency$PortugueseEscudoPTE([
     super.value,
   ]);
 
@@ -899,14 +900,14 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
   @override
   String get displayName => 'Portuguese Escudo (PTE)';
 
-  static const _ratio = 0.004987978971;
+  static final _ratio = Rational.parse('4.98797897100000000E-003');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$PortugueseEscudoPTE] ≈ 0.004987978971 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$PortugueseEscudoPTE] ≈ 4.98797897100000000E-003 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -915,12 +916,12 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$PortugueseEscudoPTE] with new value
   @override
   EUCurrency$PortugueseEscudoPTE withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$PortugueseEscudoPTE(val);
 
@@ -933,14 +934,14 @@ final class EUCurrency$PortugueseEscudoPTE extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$ItalianLireITL extends EUCurrency {
-  const EUCurrency$ItalianLireITL([
+  EUCurrency$ItalianLireITL([
     super.value,
   ]);
 
@@ -971,14 +972,14 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
   @override
   String get displayName => 'Italian Lire (ITL)';
 
-  static const _ratio = 0.0005164568991;
+  static final _ratio = Rational.parse('5.16456899100000000E-004');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$ItalianLireITL] ≈ 0.0005164568991 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$ItalianLireITL] ≈ 5.16456899100000000E-004 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -986,12 +987,12 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$ItalianLireITL] with new value
   @override
   EUCurrency$ItalianLireITL withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$ItalianLireITL(val);
 
@@ -1004,14 +1005,14 @@ final class EUCurrency$ItalianLireITL extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [EUCurrency]
 final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
-  const EUCurrency$GreekDrachmaGRD([
+  EUCurrency$GreekDrachmaGRD([
     super.value,
   ]);
 
@@ -1042,14 +1043,14 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
   @override
   String get displayName => 'Greek Drachma (GRD)';
 
-  static const _ratio = 0.00293470286133529;
+  static final _ratio = Rational.parse('2.93470286133528980E-003');
 
   @override
-  EUCurrency get anchor => const EUCurrency$EuroEUR(_ratio);
+  EUCurrency get anchor => EUCurrency$EuroEUR(_ratio);
 
-  /// 1 [EUCurrency$GreekDrachmaGRD] ≈ 0.00293470286133529 [EUCurrency$EuroEUR]
+  /// 1 [EUCurrency$GreekDrachmaGRD] ≈ 2.93470286133528980E-003 [EUCurrency$EuroEUR]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1057,12 +1058,12 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [EUCurrency$GreekDrachmaGRD] with new value
   @override
   EUCurrency$GreekDrachmaGRD withValue(
-    num val,
+    Rational val,
   ) =>
       EUCurrency$GreekDrachmaGRD(val);
 
@@ -1075,7 +1076,7 @@ final class EUCurrency$GreekDrachmaGRD extends EUCurrency {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

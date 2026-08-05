@@ -7,7 +7,7 @@ part of '../../super_measurement.dart';
 /// [MagneticFlux$MaxwellInternational], [MagneticFlux$TeslaMeterSquare],
 /// [MagneticFlux$TeslaCentimeterSquare], [MagneticFlux$GaussCentimeterSquare]
 sealed class MagneticFlux extends Unit<MagneticFlux> {
-  const MagneticFlux([
+  MagneticFlux([
     super.value,
   ]);
 
@@ -19,60 +19,61 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : MagneticFlux.anchor();
 
-  factory MagneticFlux.anchor() => const MagneticFlux$Weber();
+  factory MagneticFlux.anchor() => MagneticFlux$Weber();
 
   /// Convert to [MagneticFlux$Weber]
   MagneticFlux get toWeber => convertTo(
-        const MagneticFlux$Weber(),
+        MagneticFlux$Weber(),
       );
 
   /// Convert to [MagneticFlux$VoltSecond]
   MagneticFlux get toVoltSecond => convertTo(
-        const MagneticFlux$VoltSecond(),
+        MagneticFlux$VoltSecond(),
       );
 
   /// Convert to [MagneticFlux$Megaline]
   MagneticFlux get toMegaline => convertTo(
-        const MagneticFlux$Megaline(),
+        MagneticFlux$Megaline(),
       );
 
   /// Convert to [MagneticFlux$Kiloline]
   MagneticFlux get toKiloline => convertTo(
-        const MagneticFlux$Kiloline(),
+        MagneticFlux$Kiloline(),
       );
 
   /// Convert to [MagneticFlux$Line]
   MagneticFlux get toLine => convertTo(
-        const MagneticFlux$Line(),
+        MagneticFlux$Line(),
       );
 
   /// Convert to [MagneticFlux$Maxwell]
   MagneticFlux get toMaxwell => convertTo(
-        const MagneticFlux$Maxwell(),
+        MagneticFlux$Maxwell(),
       );
 
   /// Convert to [MagneticFlux$MaxwellInternational]
   MagneticFlux get toMaxwellInternational => convertTo(
-        const MagneticFlux$MaxwellInternational(),
+        MagneticFlux$MaxwellInternational(),
       );
 
   /// Convert to [MagneticFlux$TeslaMeterSquare]
   MagneticFlux get toTeslaMeterSquare => convertTo(
-        const MagneticFlux$TeslaMeterSquare(),
+        MagneticFlux$TeslaMeterSquare(),
       );
 
   /// Convert to [MagneticFlux$TeslaCentimeterSquare]
   MagneticFlux get toTeslaCentimeterSquare => convertTo(
-        const MagneticFlux$TeslaCentimeterSquare(),
+        MagneticFlux$TeslaCentimeterSquare(),
       );
 
   /// Convert to [MagneticFlux$GaussCentimeterSquare]
   MagneticFlux get toGaussCentimeterSquare => convertTo(
-        const MagneticFlux$GaussCentimeterSquare(),
+        MagneticFlux$GaussCentimeterSquare(),
       );
 
   @override
@@ -83,16 +84,16 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
 
   static const _majorName = 'magneticFlux';
 
-  static const weber = MagneticFlux$Weber();
-  static const voltSecond = MagneticFlux$VoltSecond();
-  static const megaline = MagneticFlux$Megaline();
-  static const kiloline = MagneticFlux$Kiloline();
-  static const line = MagneticFlux$Line();
-  static const maxwell = MagneticFlux$Maxwell();
-  static const maxwellInternational = MagneticFlux$MaxwellInternational();
-  static const teslaMeterSquare = MagneticFlux$TeslaMeterSquare();
-  static const teslaCentimeterSquare = MagneticFlux$TeslaCentimeterSquare();
-  static const gaussCentimeterSquare = MagneticFlux$GaussCentimeterSquare();
+  static final weber = MagneticFlux$Weber();
+  static final voltSecond = MagneticFlux$VoltSecond();
+  static final megaline = MagneticFlux$Megaline();
+  static final kiloline = MagneticFlux$Kiloline();
+  static final line = MagneticFlux$Line();
+  static final maxwell = MagneticFlux$Maxwell();
+  static final maxwellInternational = MagneticFlux$MaxwellInternational();
+  static final teslaMeterSquare = MagneticFlux$TeslaMeterSquare();
+  static final teslaCentimeterSquare = MagneticFlux$TeslaCentimeterSquare();
+  static final gaussCentimeterSquare = MagneticFlux$GaussCentimeterSquare();
 
   @override
   List<MagneticFlux> get units => values;
@@ -100,7 +101,7 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
   @override
   EnumValues<MagneticFlux> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <MagneticFlux>[
     weber,
     voltSecond,
     megaline,
@@ -113,7 +114,7 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
     gaussCentimeterSquare,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, MagneticFlux>{
     MagneticFlux$Weber._minorName: weber,
     MagneticFlux$VoltSecond._minorName: voltSecond,
     MagneticFlux$Megaline._minorName: megaline,
@@ -129,7 +130,7 @@ sealed class MagneticFlux extends Unit<MagneticFlux> {
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$Weber extends MagneticFlux {
-  const MagneticFlux$Weber([
+  MagneticFlux$Weber([
     super.value,
   ]);
 
@@ -160,14 +161,14 @@ final class MagneticFlux$Weber extends MagneticFlux {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
   /// Default (anchor) unit of [MagneticFlux]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -175,12 +176,12 @@ final class MagneticFlux$Weber extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$Weber] with new value
   @override
   MagneticFlux$Weber withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$Weber(val);
 
@@ -193,14 +194,14 @@ final class MagneticFlux$Weber extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$VoltSecond extends MagneticFlux {
-  const MagneticFlux$VoltSecond([
+  MagneticFlux$VoltSecond([
     super.value,
   ]);
 
@@ -231,14 +232,14 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
   @override
   String get displayName => 'volt second';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$VoltSecond] = 1.0 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$VoltSecond] = 1.00000000000000000E+000 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -246,12 +247,12 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$VoltSecond] with new value
   @override
   MagneticFlux$VoltSecond withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$VoltSecond(val);
 
@@ -264,14 +265,14 @@ final class MagneticFlux$VoltSecond extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$Megaline extends MagneticFlux {
-  const MagneticFlux$Megaline([
+  MagneticFlux$Megaline([
     super.value,
   ]);
 
@@ -302,14 +303,14 @@ final class MagneticFlux$Megaline extends MagneticFlux {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.01;
+  static final _ratio = Rational.parse('1.00000000000000000E-002');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$Megaline] ≈ 0.01 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$Megaline] ≈ 1.00000000000000000E-002 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -317,12 +318,12 @@ final class MagneticFlux$Megaline extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$Megaline] with new value
   @override
   MagneticFlux$Megaline withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$Megaline(val);
 
@@ -335,14 +336,14 @@ final class MagneticFlux$Megaline extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$Kiloline extends MagneticFlux {
-  const MagneticFlux$Kiloline([
+  MagneticFlux$Kiloline([
     super.value,
   ]);
 
@@ -373,14 +374,14 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 0.00001;
+  static final _ratio = Rational.parse('1.00000000000000000E-005');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$Kiloline] ≈ 0.00001 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$Kiloline] ≈ 1.00000000000000000E-005 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -388,12 +389,12 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$Kiloline] with new value
   @override
   MagneticFlux$Kiloline withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$Kiloline(val);
 
@@ -406,14 +407,14 @@ final class MagneticFlux$Kiloline extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$Line extends MagneticFlux {
-  const MagneticFlux$Line([
+  MagneticFlux$Line([
     super.value,
   ]);
 
@@ -444,14 +445,14 @@ final class MagneticFlux$Line extends MagneticFlux {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-8;
+  static final _ratio = Rational.parse('1.00000000000000000E-008');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$Line] ≈ 1e-8 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$Line] ≈ 1.00000000000000000E-008 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -459,12 +460,12 @@ final class MagneticFlux$Line extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$Line] with new value
   @override
   MagneticFlux$Line withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$Line(val);
 
@@ -477,14 +478,14 @@ final class MagneticFlux$Line extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$Maxwell extends MagneticFlux {
-  const MagneticFlux$Maxwell([
+  MagneticFlux$Maxwell([
     super.value,
   ]);
 
@@ -515,14 +516,14 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1e-8;
+  static final _ratio = Rational.parse('1.00000000000000000E-008');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$Maxwell] ≈ 1e-8 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$Maxwell] ≈ 1.00000000000000000E-008 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -530,12 +531,12 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$Maxwell] with new value
   @override
   MagneticFlux$Maxwell withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$Maxwell(val);
 
@@ -548,14 +549,14 @@ final class MagneticFlux$Maxwell extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$MaxwellInternational extends MagneticFlux {
-  const MagneticFlux$MaxwellInternational([
+  MagneticFlux$MaxwellInternational([
     super.value,
   ]);
 
@@ -586,14 +587,14 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
   @override
   String get displayName => 'maxwell (International)';
 
-  static const _ratio = 1.000331e-8;
+  static final _ratio = Rational.parse('1.00033100000000000E-008');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$MaxwellInternational] ≈ 1.000331e-8 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$MaxwellInternational] ≈ 1.00033100000000000E-008 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -602,12 +603,12 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$MaxwellInternational] with new value
   @override
   MagneticFlux$MaxwellInternational withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$MaxwellInternational(val);
 
@@ -620,14 +621,14 @@ final class MagneticFlux$MaxwellInternational extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
-  const MagneticFlux$TeslaMeterSquare([
+  MagneticFlux$TeslaMeterSquare([
     super.value,
   ]);
 
@@ -658,14 +659,14 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
   @override
   String get displayName => 'tesla meter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$TeslaMeterSquare] = 1.0 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$TeslaMeterSquare] = 1.00000000000000000E+000 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -674,12 +675,12 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$TeslaMeterSquare] with new value
   @override
   MagneticFlux$TeslaMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$TeslaMeterSquare(val);
 
@@ -692,14 +693,14 @@ final class MagneticFlux$TeslaMeterSquare extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
-  const MagneticFlux$TeslaCentimeterSquare([
+  MagneticFlux$TeslaCentimeterSquare([
     super.value,
   ]);
 
@@ -730,14 +731,14 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
   @override
   String get displayName => 'tesla centimeter²';
 
-  static const _ratio = 0.0001;
+  static final _ratio = Rational.parse('1.00000000000000000E-004');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$TeslaCentimeterSquare] ≈ 0.0001 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$TeslaCentimeterSquare] ≈ 1.00000000000000000E-004 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -746,12 +747,12 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$TeslaCentimeterSquare] with new value
   @override
   MagneticFlux$TeslaCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$TeslaCentimeterSquare(val);
 
@@ -764,14 +765,14 @@ final class MagneticFlux$TeslaCentimeterSquare extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [MagneticFlux]
 final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
-  const MagneticFlux$GaussCentimeterSquare([
+  MagneticFlux$GaussCentimeterSquare([
     super.value,
   ]);
 
@@ -802,14 +803,14 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
   @override
   String get displayName => 'gauss centimeter²';
 
-  static const _ratio = 1e-8;
+  static final _ratio = Rational.parse('1.00000000000000000E-008');
 
   @override
-  MagneticFlux get anchor => const MagneticFlux$Weber(_ratio);
+  MagneticFlux get anchor => MagneticFlux$Weber(_ratio);
 
-  /// 1 [MagneticFlux$GaussCentimeterSquare] ≈ 1e-8 [MagneticFlux$Weber]
+  /// 1 [MagneticFlux$GaussCentimeterSquare] ≈ 1.00000000000000000E-008 [MagneticFlux$Weber]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -818,12 +819,12 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [MagneticFlux$GaussCentimeterSquare] with new value
   @override
   MagneticFlux$GaussCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       MagneticFlux$GaussCentimeterSquare(val);
 
@@ -836,7 +837,7 @@ final class MagneticFlux$GaussCentimeterSquare extends MagneticFlux {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

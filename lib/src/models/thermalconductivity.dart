@@ -12,7 +12,7 @@ part of '../../super_measurement.dart';
 /// [ThermalConductivity$WattPerMeterK],
 /// [ThermalConductivity$WattPerCentimeterDegreeC]
 sealed class ThermalConductivity extends Unit<ThermalConductivity> {
-  const ThermalConductivity([
+  ThermalConductivity([
     super.value,
   ]);
 
@@ -24,58 +24,59 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : ThermalConductivity.anchor();
 
   factory ThermalConductivity.anchor() =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
 
   /// Convert to [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   ThermalConductivity get toBTUThermochemInchPerHourFootSquareDegreeF =>
       convertTo(
-        const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(),
+        ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(),
       );
 
   /// Convert to [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF]
   ThermalConductivity get toBTUIntInchPerHourFootSquareDegreeF => convertTo(
-        const ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF(),
+        ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF(),
       );
 
   /// Convert to [ThermalConductivity$BTUThermochemPerHourFootDegreeF]
   ThermalConductivity get toBTUThermochemPerHourFootDegreeF => convertTo(
-        const ThermalConductivity$BTUThermochemPerHourFootDegreeF(),
+        ThermalConductivity$BTUThermochemPerHourFootDegreeF(),
       );
 
   /// Convert to [ThermalConductivity$BTUIntPerHourFootDegreeF]
   ThermalConductivity get toBTUIntPerHourFootDegreeF => convertTo(
-        const ThermalConductivity$BTUIntPerHourFootDegreeF(),
+        ThermalConductivity$BTUIntPerHourFootDegreeF(),
       );
 
   /// Convert to [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC]
   ThermalConductivity get toCalorieThermochemPerSecondCentimeterDegreeC =>
       convertTo(
-        const ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC(),
+        ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC(),
       );
 
   /// Convert to [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC]
   ThermalConductivity get toCalorieIntPerSecondCentimeterDegreeC => convertTo(
-        const ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC(),
+        ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC(),
       );
 
   /// Convert to [ThermalConductivity$KilowattPerMeterK]
   ThermalConductivity get toKilowattPerMeterK => convertTo(
-        const ThermalConductivity$KilowattPerMeterK(),
+        ThermalConductivity$KilowattPerMeterK(),
       );
 
   /// Convert to [ThermalConductivity$WattPerMeterK]
   ThermalConductivity get toWattPerMeterK => convertTo(
-        const ThermalConductivity$WattPerMeterK(),
+        ThermalConductivity$WattPerMeterK(),
       );
 
   /// Convert to [ThermalConductivity$WattPerCentimeterDegreeC]
   ThermalConductivity get toWattPerCentimeterDegreeC => convertTo(
-        const ThermalConductivity$WattPerCentimeterDegreeC(),
+        ThermalConductivity$WattPerCentimeterDegreeC(),
       );
 
   @override
@@ -86,21 +87,21 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
 
   static const _majorName = 'thermalConductivity';
 
-  static const bTUThermochemInchPerHourFootSquareDegreeF =
+  static final bTUThermochemInchPerHourFootSquareDegreeF =
       ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF();
-  static const bTUIntInchPerHourFootSquareDegreeF =
+  static final bTUIntInchPerHourFootSquareDegreeF =
       ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF();
-  static const bTUThermochemPerHourFootDegreeF =
+  static final bTUThermochemPerHourFootDegreeF =
       ThermalConductivity$BTUThermochemPerHourFootDegreeF();
-  static const bTUIntPerHourFootDegreeF =
+  static final bTUIntPerHourFootDegreeF =
       ThermalConductivity$BTUIntPerHourFootDegreeF();
-  static const calorieThermochemPerSecondCentimeterDegreeC =
+  static final calorieThermochemPerSecondCentimeterDegreeC =
       ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC();
-  static const calorieIntPerSecondCentimeterDegreeC =
+  static final calorieIntPerSecondCentimeterDegreeC =
       ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC();
-  static const kilowattPerMeterK = ThermalConductivity$KilowattPerMeterK();
-  static const wattPerMeterK = ThermalConductivity$WattPerMeterK();
-  static const wattPerCentimeterDegreeC =
+  static final kilowattPerMeterK = ThermalConductivity$KilowattPerMeterK();
+  static final wattPerMeterK = ThermalConductivity$WattPerMeterK();
+  static final wattPerCentimeterDegreeC =
       ThermalConductivity$WattPerCentimeterDegreeC();
 
   @override
@@ -109,7 +110,7 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
   @override
   EnumValues<ThermalConductivity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <ThermalConductivity>[
     bTUThermochemInchPerHourFootSquareDegreeF,
     bTUIntInchPerHourFootSquareDegreeF,
     bTUThermochemPerHourFootDegreeF,
@@ -121,7 +122,7 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
     wattPerCentimeterDegreeC,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, ThermalConductivity>{
     ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF._minorName:
         bTUThermochemInchPerHourFootSquareDegreeF,
     ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF._minorName:
@@ -144,7 +145,7 @@ sealed class ThermalConductivity extends Unit<ThermalConductivity> {
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
     extends ThermalConductivity {
-  const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF([
+  ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF([
     super.value,
   ]);
 
@@ -175,16 +176,15 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
   @override
   String get displayName => 'BTU (thermochem)-inch/hour-foot²-°F';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
   /// Default (anchor) unit of [ThermalConductivity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -193,12 +193,12 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF] with new value
   @override
   ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(val);
 
@@ -211,7 +211,7 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -219,7 +219,7 @@ final class ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
     extends ThermalConductivity {
-  const ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF([
+  ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF([
     super.value,
   ]);
 
@@ -250,16 +250,15 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
   @override
   String get displayName => 'BTU (int)-inch/hour-foot²-°F';
 
-  static const _ratio = 1.0006692161075852;
+  static final _ratio = Rational.parse('1.00066921610758524E+000');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
-  /// 1 [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF] ≈ 1.0006692161075852 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF] ≈ 1.00066921610758524E+000 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -268,12 +267,12 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF] with new value
   @override
   ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF(val);
 
@@ -286,7 +285,7 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -294,7 +293,7 @@ final class ThermalConductivity$BTUIntInchPerHourFootSquareDegreeF
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
     extends ThermalConductivity {
-  const ThermalConductivity$BTUThermochemPerHourFootDegreeF([
+  ThermalConductivity$BTUThermochemPerHourFootDegreeF([
     super.value,
   ]);
 
@@ -325,16 +324,15 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
   @override
   String get displayName => 'BTU (thermochem)/hour-foot-°F';
 
-  static const _ratio = 12.0;
+  static final _ratio = Rational.parse('1.20000000000000000E+001');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
-  /// 1 [ThermalConductivity$BTUThermochemPerHourFootDegreeF] = 12.0 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$BTUThermochemPerHourFootDegreeF] = 1.20000000000000000E+001 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -343,12 +341,12 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$BTUThermochemPerHourFootDegreeF] with new value
   @override
   ThermalConductivity$BTUThermochemPerHourFootDegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$BTUThermochemPerHourFootDegreeF(val);
 
@@ -361,7 +359,7 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -369,7 +367,7 @@ final class ThermalConductivity$BTUThermochemPerHourFootDegreeF
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$BTUIntPerHourFootDegreeF
     extends ThermalConductivity {
-  const ThermalConductivity$BTUIntPerHourFootDegreeF([
+  ThermalConductivity$BTUIntPerHourFootDegreeF([
     super.value,
   ]);
 
@@ -400,16 +398,15 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
   @override
   String get displayName => 'BTU (int)/hour-foot-°F';
 
-  static const _ratio = 12.008030593291023;
+  static final _ratio = Rational.parse('1.20080305932910228E+001');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
-  /// 1 [ThermalConductivity$BTUIntPerHourFootDegreeF] ≈ 12.008030593291023 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$BTUIntPerHourFootDegreeF] ≈ 1.20080305932910228E+001 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -418,12 +415,12 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$BTUIntPerHourFootDegreeF] with new value
   @override
   ThermalConductivity$BTUIntPerHourFootDegreeF withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$BTUIntPerHourFootDegreeF(val);
 
@@ -436,7 +433,7 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -444,7 +441,7 @@ final class ThermalConductivity$BTUIntPerHourFootDegreeF
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
     extends ThermalConductivity {
-  const ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC([
+  ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC([
     super.value,
   ]);
 
@@ -475,16 +472,15 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
   @override
   String get displayName => 'calorie (thermochem)/second-centimeter-°C';
 
-  static const _ratio = 2902.9059727372737;
+  static final _ratio = Rational.parse('2.90290597273727374E+003');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
-  /// 1 [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC] ≈ 2902.9059727372737 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC] ≈ 2.90290597273727374E+003 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -493,12 +489,12 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC] with new value
   @override
   ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC(val);
 
@@ -511,7 +507,7 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -519,7 +515,7 @@ final class ThermalConductivity$CalorieThermochemPerSecondCentimeterDegreeC
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
     extends ThermalConductivity {
-  const ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC([
+  ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC([
     super.value,
   ]);
 
@@ -550,16 +546,15 @@ final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
   @override
   String get displayName => 'calorie (int)/second-centimeter-°C';
 
-  static const _ratio = 2904.848644038341;
+  static final _ratio = Rational.parse('2.90484864403834075E+003');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
-  /// 1 [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC] ≈ 2904.848644038341 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC] ≈ 2.90484864403834075E+003 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -568,12 +563,12 @@ final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC] with new value
   @override
   ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC(val);
 
@@ -586,14 +581,14 @@ final class ThermalConductivity$CalorieIntPerSecondCentimeterDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
-  const ThermalConductivity$KilowattPerMeterK([
+  ThermalConductivity$KilowattPerMeterK([
     super.value,
   ]);
 
@@ -624,16 +619,15 @@ final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
   @override
   String get displayName => 'kilowatt/meter-K';
 
-  static const _ratio = 6938.111789525033;
+  static final _ratio = Rational.parse('6.93811178952503284E+003');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
-  /// 1 [ThermalConductivity$KilowattPerMeterK] ≈ 6938.111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$KilowattPerMeterK] ≈ 6.93811178952503284E+003 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -642,12 +636,12 @@ final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$KilowattPerMeterK] with new value
   @override
   ThermalConductivity$KilowattPerMeterK withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$KilowattPerMeterK(val);
 
@@ -660,14 +654,14 @@ final class ThermalConductivity$KilowattPerMeterK extends ThermalConductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
-  const ThermalConductivity$WattPerMeterK([
+  ThermalConductivity$WattPerMeterK([
     super.value,
   ]);
 
@@ -698,16 +692,15 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
   @override
   String get displayName => 'watt/meter-K';
 
-  static const _ratio = 6.938111789525033;
+  static final _ratio = Rational.parse('6.93811178952503284E+000');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
-  /// 1 [ThermalConductivity$WattPerMeterK] ≈ 6.938111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$WattPerMeterK] ≈ 6.93811178952503284E+000 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -716,12 +709,12 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$WattPerMeterK] with new value
   @override
   ThermalConductivity$WattPerMeterK withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$WattPerMeterK(val);
 
@@ -734,7 +727,7 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -742,7 +735,7 @@ final class ThermalConductivity$WattPerMeterK extends ThermalConductivity {
 /// Unit of [ThermalConductivity]
 final class ThermalConductivity$WattPerCentimeterDegreeC
     extends ThermalConductivity {
-  const ThermalConductivity$WattPerCentimeterDegreeC([
+  ThermalConductivity$WattPerCentimeterDegreeC([
     super.value,
   ]);
 
@@ -773,16 +766,15 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
   @override
   String get displayName => 'watt/centimeter-°C';
 
-  static const _ratio = 693.8111789525033;
+  static final _ratio = Rational.parse('6.93811178952503284E+002');
 
   @override
   ThermalConductivity get anchor =>
-      const ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(
-          _ratio);
+      ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF(_ratio);
 
-  /// 1 [ThermalConductivity$WattPerCentimeterDegreeC] ≈ 693.8111789525033 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
+  /// 1 [ThermalConductivity$WattPerCentimeterDegreeC] ≈ 6.93811178952503284E+002 [ThermalConductivity$BTUThermochemInchPerHourFootSquareDegreeF]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -791,12 +783,12 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [ThermalConductivity$WattPerCentimeterDegreeC] with new value
   @override
   ThermalConductivity$WattPerCentimeterDegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       ThermalConductivity$WattPerCentimeterDegreeC(val);
 
@@ -809,7 +801,7 @@ final class ThermalConductivity$WattPerCentimeterDegreeC
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [LinearChargeDensity$AbcoulombPerCentimeter],
 /// [LinearChargeDensity$AbcoulombPerInch]
 sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
-  const LinearChargeDensity([
+  LinearChargeDensity([
     super.value,
   ]);
 
@@ -21,41 +21,41 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : LinearChargeDensity.anchor();
 
-  factory LinearChargeDensity.anchor() =>
-      const LinearChargeDensity$CoulombPerMeter();
+  factory LinearChargeDensity.anchor() => LinearChargeDensity$CoulombPerMeter();
 
   /// Convert to [LinearChargeDensity$CoulombPerMeter]
   LinearChargeDensity get toCoulombPerMeter => convertTo(
-        const LinearChargeDensity$CoulombPerMeter(),
+        LinearChargeDensity$CoulombPerMeter(),
       );
 
   /// Convert to [LinearChargeDensity$CoulombPerCentimeter]
   LinearChargeDensity get toCoulombPerCentimeter => convertTo(
-        const LinearChargeDensity$CoulombPerCentimeter(),
+        LinearChargeDensity$CoulombPerCentimeter(),
       );
 
   /// Convert to [LinearChargeDensity$CoulombPerInch]
   LinearChargeDensity get toCoulombPerInch => convertTo(
-        const LinearChargeDensity$CoulombPerInch(),
+        LinearChargeDensity$CoulombPerInch(),
       );
 
   /// Convert to [LinearChargeDensity$AbcoulombPerMeter]
   LinearChargeDensity get toAbcoulombPerMeter => convertTo(
-        const LinearChargeDensity$AbcoulombPerMeter(),
+        LinearChargeDensity$AbcoulombPerMeter(),
       );
 
   /// Convert to [LinearChargeDensity$AbcoulombPerCentimeter]
   LinearChargeDensity get toAbcoulombPerCentimeter => convertTo(
-        const LinearChargeDensity$AbcoulombPerCentimeter(),
+        LinearChargeDensity$AbcoulombPerCentimeter(),
       );
 
   /// Convert to [LinearChargeDensity$AbcoulombPerInch]
   LinearChargeDensity get toAbcoulombPerInch => convertTo(
-        const LinearChargeDensity$AbcoulombPerInch(),
+        LinearChargeDensity$AbcoulombPerInch(),
       );
 
   @override
@@ -66,14 +66,14 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
 
   static const _majorName = 'linearChargeDensity';
 
-  static const coulombPerMeter = LinearChargeDensity$CoulombPerMeter();
-  static const coulombPerCentimeter =
+  static final coulombPerMeter = LinearChargeDensity$CoulombPerMeter();
+  static final coulombPerCentimeter =
       LinearChargeDensity$CoulombPerCentimeter();
-  static const coulombPerInch = LinearChargeDensity$CoulombPerInch();
-  static const abcoulombPerMeter = LinearChargeDensity$AbcoulombPerMeter();
-  static const abcoulombPerCentimeter =
+  static final coulombPerInch = LinearChargeDensity$CoulombPerInch();
+  static final abcoulombPerMeter = LinearChargeDensity$AbcoulombPerMeter();
+  static final abcoulombPerCentimeter =
       LinearChargeDensity$AbcoulombPerCentimeter();
-  static const abcoulombPerInch = LinearChargeDensity$AbcoulombPerInch();
+  static final abcoulombPerInch = LinearChargeDensity$AbcoulombPerInch();
 
   @override
   List<LinearChargeDensity> get units => values;
@@ -81,7 +81,7 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
   @override
   EnumValues<LinearChargeDensity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <LinearChargeDensity>[
     coulombPerMeter,
     coulombPerCentimeter,
     coulombPerInch,
@@ -90,7 +90,7 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
     abcoulombPerInch,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, LinearChargeDensity>{
     LinearChargeDensity$CoulombPerMeter._minorName: coulombPerMeter,
     LinearChargeDensity$CoulombPerCentimeter._minorName: coulombPerCentimeter,
     LinearChargeDensity$CoulombPerInch._minorName: coulombPerInch,
@@ -103,7 +103,7 @@ sealed class LinearChargeDensity extends Unit<LinearChargeDensity> {
 
 /// Unit of [LinearChargeDensity]
 final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
-  const LinearChargeDensity$CoulombPerMeter([
+  LinearChargeDensity$CoulombPerMeter([
     super.value,
   ]);
 
@@ -134,15 +134,14 @@ final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
   @override
   String get displayName => 'coulomb/meter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  LinearChargeDensity get anchor =>
-      const LinearChargeDensity$CoulombPerMeter(_ratio);
+  LinearChargeDensity get anchor => LinearChargeDensity$CoulombPerMeter(_ratio);
 
   /// Default (anchor) unit of [LinearChargeDensity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -151,12 +150,12 @@ final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearChargeDensity$CoulombPerMeter] with new value
   @override
   LinearChargeDensity$CoulombPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearChargeDensity$CoulombPerMeter(val);
 
@@ -169,7 +168,7 @@ final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -177,7 +176,7 @@ final class LinearChargeDensity$CoulombPerMeter extends LinearChargeDensity {
 /// Unit of [LinearChargeDensity]
 final class LinearChargeDensity$CoulombPerCentimeter
     extends LinearChargeDensity {
-  const LinearChargeDensity$CoulombPerCentimeter([
+  LinearChargeDensity$CoulombPerCentimeter([
     super.value,
   ]);
 
@@ -208,15 +207,14 @@ final class LinearChargeDensity$CoulombPerCentimeter
   @override
   String get displayName => 'coulomb/centimeter';
 
-  static const _ratio = 100.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+002');
 
   @override
-  LinearChargeDensity get anchor =>
-      const LinearChargeDensity$CoulombPerMeter(_ratio);
+  LinearChargeDensity get anchor => LinearChargeDensity$CoulombPerMeter(_ratio);
 
-  /// 1 [LinearChargeDensity$CoulombPerCentimeter] = 100.0 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$CoulombPerCentimeter] = 1.00000000000000000E+002 [LinearChargeDensity$CoulombPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -225,12 +223,12 @@ final class LinearChargeDensity$CoulombPerCentimeter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearChargeDensity$CoulombPerCentimeter] with new value
   @override
   LinearChargeDensity$CoulombPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearChargeDensity$CoulombPerCentimeter(val);
 
@@ -243,14 +241,14 @@ final class LinearChargeDensity$CoulombPerCentimeter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LinearChargeDensity]
 final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
-  const LinearChargeDensity$CoulombPerInch([
+  LinearChargeDensity$CoulombPerInch([
     super.value,
   ]);
 
@@ -281,15 +279,14 @@ final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
   @override
   String get displayName => 'coulomb/inch';
 
-  static const _ratio = 39.37007874;
+  static final _ratio = Rational.parse('3.93700787400000000E+001');
 
   @override
-  LinearChargeDensity get anchor =>
-      const LinearChargeDensity$CoulombPerMeter(_ratio);
+  LinearChargeDensity get anchor => LinearChargeDensity$CoulombPerMeter(_ratio);
 
-  /// 1 [LinearChargeDensity$CoulombPerInch] ≈ 39.37007874 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$CoulombPerInch] ≈ 3.93700787400000000E+001 [LinearChargeDensity$CoulombPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -298,12 +295,12 @@ final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearChargeDensity$CoulombPerInch] with new value
   @override
   LinearChargeDensity$CoulombPerInch withValue(
-    num val,
+    Rational val,
   ) =>
       LinearChargeDensity$CoulombPerInch(val);
 
@@ -316,14 +313,14 @@ final class LinearChargeDensity$CoulombPerInch extends LinearChargeDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LinearChargeDensity]
 final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
-  const LinearChargeDensity$AbcoulombPerMeter([
+  LinearChargeDensity$AbcoulombPerMeter([
     super.value,
   ]);
 
@@ -354,15 +351,14 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
   @override
   String get displayName => 'Abcoulomb/meter';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  LinearChargeDensity get anchor =>
-      const LinearChargeDensity$CoulombPerMeter(_ratio);
+  LinearChargeDensity get anchor => LinearChargeDensity$CoulombPerMeter(_ratio);
 
-  /// 1 [LinearChargeDensity$AbcoulombPerMeter] = 10.0 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$AbcoulombPerMeter] = 1.00000000000000000E+001 [LinearChargeDensity$CoulombPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -371,12 +367,12 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearChargeDensity$AbcoulombPerMeter] with new value
   @override
   LinearChargeDensity$AbcoulombPerMeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearChargeDensity$AbcoulombPerMeter(val);
 
@@ -389,7 +385,7 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -397,7 +393,7 @@ final class LinearChargeDensity$AbcoulombPerMeter extends LinearChargeDensity {
 /// Unit of [LinearChargeDensity]
 final class LinearChargeDensity$AbcoulombPerCentimeter
     extends LinearChargeDensity {
-  const LinearChargeDensity$AbcoulombPerCentimeter([
+  LinearChargeDensity$AbcoulombPerCentimeter([
     super.value,
   ]);
 
@@ -428,15 +424,14 @@ final class LinearChargeDensity$AbcoulombPerCentimeter
   @override
   String get displayName => 'Abcoulomb/centimeter';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  LinearChargeDensity get anchor =>
-      const LinearChargeDensity$CoulombPerMeter(_ratio);
+  LinearChargeDensity get anchor => LinearChargeDensity$CoulombPerMeter(_ratio);
 
-  /// 1 [LinearChargeDensity$AbcoulombPerCentimeter] = 1000.0 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$AbcoulombPerCentimeter] = 1.00000000000000000E+003 [LinearChargeDensity$CoulombPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -445,12 +440,12 @@ final class LinearChargeDensity$AbcoulombPerCentimeter
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearChargeDensity$AbcoulombPerCentimeter] with new value
   @override
   LinearChargeDensity$AbcoulombPerCentimeter withValue(
-    num val,
+    Rational val,
   ) =>
       LinearChargeDensity$AbcoulombPerCentimeter(val);
 
@@ -463,14 +458,14 @@ final class LinearChargeDensity$AbcoulombPerCentimeter
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [LinearChargeDensity]
 final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
-  const LinearChargeDensity$AbcoulombPerInch([
+  LinearChargeDensity$AbcoulombPerInch([
     super.value,
   ]);
 
@@ -501,15 +496,14 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
   @override
   String get displayName => 'Abcoulomb/inch';
 
-  static const _ratio = 393.7007874;
+  static final _ratio = Rational.parse('3.93700787400000000E+002');
 
   @override
-  LinearChargeDensity get anchor =>
-      const LinearChargeDensity$CoulombPerMeter(_ratio);
+  LinearChargeDensity get anchor => LinearChargeDensity$CoulombPerMeter(_ratio);
 
-  /// 1 [LinearChargeDensity$AbcoulombPerInch] ≈ 393.7007874 [LinearChargeDensity$CoulombPerMeter]
+  /// 1 [LinearChargeDensity$AbcoulombPerInch] ≈ 3.93700787400000000E+002 [LinearChargeDensity$CoulombPerMeter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -518,12 +512,12 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [LinearChargeDensity$AbcoulombPerInch] with new value
   @override
   LinearChargeDensity$AbcoulombPerInch withValue(
-    num val,
+    Rational val,
   ) =>
       LinearChargeDensity$AbcoulombPerInch(val);
 
@@ -536,7 +530,7 @@ final class LinearChargeDensity$AbcoulombPerInch extends LinearChargeDensity {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

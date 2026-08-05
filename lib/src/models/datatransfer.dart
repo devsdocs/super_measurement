@@ -86,7 +86,7 @@ part of '../../super_measurement.dart';
 /// [DataTransfer$BluRay8X], [DataTransfer$BluRay10X],
 /// [DataTransfer$BluRay12X]
 sealed class DataTransfer extends Unit<DataTransfer> {
-  const DataTransfer([
+  DataTransfer([
     super.value,
   ]);
 
@@ -98,895 +98,896 @@ sealed class DataTransfer extends Unit<DataTransfer> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : DataTransfer.anchor();
 
-  factory DataTransfer.anchor() => const DataTransfer$BitPerSecond();
+  factory DataTransfer.anchor() => DataTransfer$BitPerSecond();
 
   /// Convert to [DataTransfer$BitPerSecond]
   DataTransfer get toBitPerSecond => convertTo(
-        const DataTransfer$BitPerSecond(),
+        DataTransfer$BitPerSecond(),
       );
 
   /// Convert to [DataTransfer$BytePerSecond]
   DataTransfer get toBytePerSecond => convertTo(
-        const DataTransfer$BytePerSecond(),
+        DataTransfer$BytePerSecond(),
       );
 
   /// Convert to [DataTransfer$KilobitPerSecond]
   DataTransfer get toKilobitPerSecond => convertTo(
-        const DataTransfer$KilobitPerSecond(),
+        DataTransfer$KilobitPerSecond(),
       );
 
   /// Convert to [DataTransfer$KilobytePerSecond]
   DataTransfer get toKilobytePerSecond => convertTo(
-        const DataTransfer$KilobytePerSecond(),
+        DataTransfer$KilobytePerSecond(),
       );
 
   /// Convert to [DataTransfer$MegabitPerSecond]
   DataTransfer get toMegabitPerSecond => convertTo(
-        const DataTransfer$MegabitPerSecond(),
+        DataTransfer$MegabitPerSecond(),
       );
 
   /// Convert to [DataTransfer$MegabytePerSecond]
   DataTransfer get toMegabytePerSecond => convertTo(
-        const DataTransfer$MegabytePerSecond(),
+        DataTransfer$MegabytePerSecond(),
       );
 
   /// Convert to [DataTransfer$GigabitPerSecond]
   DataTransfer get toGigabitPerSecond => convertTo(
-        const DataTransfer$GigabitPerSecond(),
+        DataTransfer$GigabitPerSecond(),
       );
 
   /// Convert to [DataTransfer$GigabytePerSecond]
   DataTransfer get toGigabytePerSecond => convertTo(
-        const DataTransfer$GigabytePerSecond(),
+        DataTransfer$GigabytePerSecond(),
       );
 
   /// Convert to [DataTransfer$TerabitPerSecond]
   DataTransfer get toTerabitPerSecond => convertTo(
-        const DataTransfer$TerabitPerSecond(),
+        DataTransfer$TerabitPerSecond(),
       );
 
   /// Convert to [DataTransfer$TerabytePerSecond]
   DataTransfer get toTerabytePerSecond => convertTo(
-        const DataTransfer$TerabytePerSecond(),
+        DataTransfer$TerabytePerSecond(),
       );
 
   /// Convert to [DataTransfer$KibibitPerSecond]
   DataTransfer get toKibibitPerSecond => convertTo(
-        const DataTransfer$KibibitPerSecond(),
+        DataTransfer$KibibitPerSecond(),
       );
 
   /// Convert to [DataTransfer$KibibytePerSecond]
   DataTransfer get toKibibytePerSecond => convertTo(
-        const DataTransfer$KibibytePerSecond(),
+        DataTransfer$KibibytePerSecond(),
       );
 
   /// Convert to [DataTransfer$MebibitPerSecond]
   DataTransfer get toMebibitPerSecond => convertTo(
-        const DataTransfer$MebibitPerSecond(),
+        DataTransfer$MebibitPerSecond(),
       );
 
   /// Convert to [DataTransfer$MebibytePerSecond]
   DataTransfer get toMebibytePerSecond => convertTo(
-        const DataTransfer$MebibytePerSecond(),
+        DataTransfer$MebibytePerSecond(),
       );
 
   /// Convert to [DataTransfer$GibibitPerSecond]
   DataTransfer get toGibibitPerSecond => convertTo(
-        const DataTransfer$GibibitPerSecond(),
+        DataTransfer$GibibitPerSecond(),
       );
 
   /// Convert to [DataTransfer$GibibytePerSecond]
   DataTransfer get toGibibytePerSecond => convertTo(
-        const DataTransfer$GibibytePerSecond(),
+        DataTransfer$GibibytePerSecond(),
       );
 
   /// Convert to [DataTransfer$TebibitPerSecond]
   DataTransfer get toTebibitPerSecond => convertTo(
-        const DataTransfer$TebibitPerSecond(),
+        DataTransfer$TebibitPerSecond(),
       );
 
   /// Convert to [DataTransfer$TebibytePerSecond]
   DataTransfer get toTebibytePerSecond => convertTo(
-        const DataTransfer$TebibytePerSecond(),
+        DataTransfer$TebibytePerSecond(),
       );
 
   /// Convert to [DataTransfer$Ethernet]
   DataTransfer get toEthernet => convertTo(
-        const DataTransfer$Ethernet(),
+        DataTransfer$Ethernet(),
       );
 
   /// Convert to [DataTransfer$EthernetFast]
   DataTransfer get toEthernetFast => convertTo(
-        const DataTransfer$EthernetFast(),
+        DataTransfer$EthernetFast(),
       );
 
   /// Convert to [DataTransfer$EthernetGigabit]
   DataTransfer get toEthernetGigabit => convertTo(
-        const DataTransfer$EthernetGigabit(),
+        DataTransfer$EthernetGigabit(),
       );
 
   /// Convert to [DataTransfer$Ethernet10Gigabit]
   DataTransfer get toEthernet10Gigabit => convertTo(
-        const DataTransfer$Ethernet10Gigabit(),
+        DataTransfer$Ethernet10Gigabit(),
       );
 
   /// Convert to [DataTransfer$OC1]
   DataTransfer get toOC1 => convertTo(
-        const DataTransfer$OC1(),
+        DataTransfer$OC1(),
       );
 
   /// Convert to [DataTransfer$OC3]
   DataTransfer get toOC3 => convertTo(
-        const DataTransfer$OC3(),
+        DataTransfer$OC3(),
       );
 
   /// Convert to [DataTransfer$OC12]
   DataTransfer get toOC12 => convertTo(
-        const DataTransfer$OC12(),
+        DataTransfer$OC12(),
       );
 
   /// Convert to [DataTransfer$OC24]
   DataTransfer get toOC24 => convertTo(
-        const DataTransfer$OC24(),
+        DataTransfer$OC24(),
       );
 
   /// Convert to [DataTransfer$OC48]
   DataTransfer get toOC48 => convertTo(
-        const DataTransfer$OC48(),
+        DataTransfer$OC48(),
       );
 
   /// Convert to [DataTransfer$OC192]
   DataTransfer get toOC192 => convertTo(
-        const DataTransfer$OC192(),
+        DataTransfer$OC192(),
       );
 
   /// Convert to [DataTransfer$OC768]
   DataTransfer get toOC768 => convertTo(
-        const DataTransfer$OC768(),
+        DataTransfer$OC768(),
       );
 
   /// Convert to [DataTransfer$ISDNSingleChannel]
   DataTransfer get toISDNSingleChannel => convertTo(
-        const DataTransfer$ISDNSingleChannel(),
+        DataTransfer$ISDNSingleChannel(),
       );
 
   /// Convert to [DataTransfer$ISDNDualChannel]
   DataTransfer get toISDNDualChannel => convertTo(
-        const DataTransfer$ISDNDualChannel(),
+        DataTransfer$ISDNDualChannel(),
       );
 
   /// Convert to [DataTransfer$Modem110]
   DataTransfer get toModem110 => convertTo(
-        const DataTransfer$Modem110(),
+        DataTransfer$Modem110(),
       );
 
   /// Convert to [DataTransfer$Modem300]
   DataTransfer get toModem300 => convertTo(
-        const DataTransfer$Modem300(),
+        DataTransfer$Modem300(),
       );
 
   /// Convert to [DataTransfer$Modem1200]
   DataTransfer get toModem1200 => convertTo(
-        const DataTransfer$Modem1200(),
+        DataTransfer$Modem1200(),
       );
 
   /// Convert to [DataTransfer$Modem2400]
   DataTransfer get toModem2400 => convertTo(
-        const DataTransfer$Modem2400(),
+        DataTransfer$Modem2400(),
       );
 
   /// Convert to [DataTransfer$Modem9600]
   DataTransfer get toModem9600 => convertTo(
-        const DataTransfer$Modem9600(),
+        DataTransfer$Modem9600(),
       );
 
   /// Convert to [DataTransfer$Modem144k]
   DataTransfer get toModem144k => convertTo(
-        const DataTransfer$Modem144k(),
+        DataTransfer$Modem144k(),
       );
 
   /// Convert to [DataTransfer$Modem288k]
   DataTransfer get toModem288k => convertTo(
-        const DataTransfer$Modem288k(),
+        DataTransfer$Modem288k(),
       );
 
   /// Convert to [DataTransfer$Modem336k]
   DataTransfer get toModem336k => convertTo(
-        const DataTransfer$Modem336k(),
+        DataTransfer$Modem336k(),
       );
 
   /// Convert to [DataTransfer$Modem56k]
   DataTransfer get toModem56k => convertTo(
-        const DataTransfer$Modem56k(),
+        DataTransfer$Modem56k(),
       );
 
   /// Convert to [DataTransfer$SCSIAsync]
   DataTransfer get toSCSIAsync => convertTo(
-        const DataTransfer$SCSIAsync(),
+        DataTransfer$SCSIAsync(),
       );
 
   /// Convert to [DataTransfer$SCSISync]
   DataTransfer get toSCSISync => convertTo(
-        const DataTransfer$SCSISync(),
+        DataTransfer$SCSISync(),
       );
 
   /// Convert to [DataTransfer$SCSIFast]
   DataTransfer get toSCSIFast => convertTo(
-        const DataTransfer$SCSIFast(),
+        DataTransfer$SCSIFast(),
       );
 
   /// Convert to [DataTransfer$SCSIFastUltra]
   DataTransfer get toSCSIFastUltra => convertTo(
-        const DataTransfer$SCSIFastUltra(),
+        DataTransfer$SCSIFastUltra(),
       );
 
   /// Convert to [DataTransfer$SCSIFastWide]
   DataTransfer get toSCSIFastWide => convertTo(
-        const DataTransfer$SCSIFastWide(),
+        DataTransfer$SCSIFastWide(),
       );
 
   /// Convert to [DataTransfer$SCSIFastUltraWide]
   DataTransfer get toSCSIFastUltraWide => convertTo(
-        const DataTransfer$SCSIFastUltraWide(),
+        DataTransfer$SCSIFastUltraWide(),
       );
 
   /// Convert to [DataTransfer$SCSIUltra2]
   DataTransfer get toSCSIUltra2 => convertTo(
-        const DataTransfer$SCSIUltra2(),
+        DataTransfer$SCSIUltra2(),
       );
 
   /// Convert to [DataTransfer$SCSIUltra3]
   DataTransfer get toSCSIUltra3 => convertTo(
-        const DataTransfer$SCSIUltra3(),
+        DataTransfer$SCSIUltra3(),
       );
 
   /// Convert to [DataTransfer$SCSILVDUltra80]
   DataTransfer get toSCSILVDUltra80 => convertTo(
-        const DataTransfer$SCSILVDUltra80(),
+        DataTransfer$SCSILVDUltra80(),
       );
 
   /// Convert to [DataTransfer$SCSILVDUltra160]
   DataTransfer get toSCSILVDUltra160 => convertTo(
-        const DataTransfer$SCSILVDUltra160(),
+        DataTransfer$SCSILVDUltra160(),
       );
 
   /// Convert to [DataTransfer$SCSILVDUltra320]
   DataTransfer get toSCSILVDUltra320 => convertTo(
-        const DataTransfer$SCSILVDUltra320(),
+        DataTransfer$SCSILVDUltra320(),
       );
 
   /// Convert to [DataTransfer$IDEPIOMode0]
   DataTransfer get toIDEPIOMode0 => convertTo(
-        const DataTransfer$IDEPIOMode0(),
+        DataTransfer$IDEPIOMode0(),
       );
 
   /// Convert to [DataTransfer$IDEPIOMode1]
   DataTransfer get toIDEPIOMode1 => convertTo(
-        const DataTransfer$IDEPIOMode1(),
+        DataTransfer$IDEPIOMode1(),
       );
 
   /// Convert to [DataTransfer$IDEPIOMode2]
   DataTransfer get toIDEPIOMode2 => convertTo(
-        const DataTransfer$IDEPIOMode2(),
+        DataTransfer$IDEPIOMode2(),
       );
 
   /// Convert to [DataTransfer$IDEPIOMode3]
   DataTransfer get toIDEPIOMode3 => convertTo(
-        const DataTransfer$IDEPIOMode3(),
+        DataTransfer$IDEPIOMode3(),
       );
 
   /// Convert to [DataTransfer$IDEPIOMode4]
   DataTransfer get toIDEPIOMode4 => convertTo(
-        const DataTransfer$IDEPIOMode4(),
+        DataTransfer$IDEPIOMode4(),
       );
 
   /// Convert to [DataTransfer$IDEDMAMode0]
   DataTransfer get toIDEDMAMode0 => convertTo(
-        const DataTransfer$IDEDMAMode0(),
+        DataTransfer$IDEDMAMode0(),
       );
 
   /// Convert to [DataTransfer$IDEDMAMode1]
   DataTransfer get toIDEDMAMode1 => convertTo(
-        const DataTransfer$IDEDMAMode1(),
+        DataTransfer$IDEDMAMode1(),
       );
 
   /// Convert to [DataTransfer$IDEDMAMode2]
   DataTransfer get toIDEDMAMode2 => convertTo(
-        const DataTransfer$IDEDMAMode2(),
+        DataTransfer$IDEDMAMode2(),
       );
 
   /// Convert to [DataTransfer$IDEUDMAMode0]
   DataTransfer get toIDEUDMAMode0 => convertTo(
-        const DataTransfer$IDEUDMAMode0(),
+        DataTransfer$IDEUDMAMode0(),
       );
 
   /// Convert to [DataTransfer$IDEUDMAMode1]
   DataTransfer get toIDEUDMAMode1 => convertTo(
-        const DataTransfer$IDEUDMAMode1(),
+        DataTransfer$IDEUDMAMode1(),
       );
 
   /// Convert to [DataTransfer$IDEUDMAMode2]
   DataTransfer get toIDEUDMAMode2 => convertTo(
-        const DataTransfer$IDEUDMAMode2(),
+        DataTransfer$IDEUDMAMode2(),
       );
 
   /// Convert to [DataTransfer$IDEUDMAMode3]
   DataTransfer get toIDEUDMAMode3 => convertTo(
-        const DataTransfer$IDEUDMAMode3(),
+        DataTransfer$IDEUDMAMode3(),
       );
 
   /// Convert to [DataTransfer$IDEUDMAMode4]
   DataTransfer get toIDEUDMAMode4 => convertTo(
-        const DataTransfer$IDEUDMAMode4(),
+        DataTransfer$IDEUDMAMode4(),
       );
 
   /// Convert to [DataTransfer$IDEUDMAMode5]
   DataTransfer get toIDEUDMAMode5 => convertTo(
-        const DataTransfer$IDEUDMAMode5(),
+        DataTransfer$IDEUDMAMode5(),
       );
 
   /// Convert to [DataTransfer$IDEUDMAMode6]
   DataTransfer get toIDEUDMAMode6 => convertTo(
-        const DataTransfer$IDEUDMAMode6(),
+        DataTransfer$IDEUDMAMode6(),
       );
 
   /// Convert to [DataTransfer$IDEUDMA33]
   DataTransfer get toIDEUDMA33 => convertTo(
-        const DataTransfer$IDEUDMA33(),
+        DataTransfer$IDEUDMA33(),
       );
 
   /// Convert to [DataTransfer$IDEUDMA66]
   DataTransfer get toIDEUDMA66 => convertTo(
-        const DataTransfer$IDEUDMA66(),
+        DataTransfer$IDEUDMA66(),
       );
 
   /// Convert to [DataTransfer$IDEUDMA100]
   DataTransfer get toIDEUDMA100 => convertTo(
-        const DataTransfer$IDEUDMA100(),
+        DataTransfer$IDEUDMA100(),
       );
 
   /// Convert to [DataTransfer$IDEUDMA133]
   DataTransfer get toIDEUDMA133 => convertTo(
-        const DataTransfer$IDEUDMA133(),
+        DataTransfer$IDEUDMA133(),
       );
 
   /// Convert to [DataTransfer$SATA10]
   DataTransfer get toSATA10 => convertTo(
-        const DataTransfer$SATA10(),
+        DataTransfer$SATA10(),
       );
 
   /// Convert to [DataTransfer$SATA20]
   DataTransfer get toSATA20 => convertTo(
-        const DataTransfer$SATA20(),
+        DataTransfer$SATA20(),
       );
 
   /// Convert to [DataTransfer$SATA30]
   DataTransfer get toSATA30 => convertTo(
-        const DataTransfer$SATA30(),
+        DataTransfer$SATA30(),
       );
 
   /// Convert to [DataTransfer$USB]
   DataTransfer get toUSB => convertTo(
-        const DataTransfer$USB(),
+        DataTransfer$USB(),
       );
 
   /// Convert to [DataTransfer$USB20]
   DataTransfer get toUSB20 => convertTo(
-        const DataTransfer$USB20(),
+        DataTransfer$USB20(),
       );
 
   /// Convert to [DataTransfer$USB30]
   DataTransfer get toUSB30 => convertTo(
-        const DataTransfer$USB30(),
+        DataTransfer$USB30(),
       );
 
   /// Convert to [DataTransfer$FireWire400IEEE1394]
   DataTransfer get toFireWire400IEEE1394 => convertTo(
-        const DataTransfer$FireWire400IEEE1394(),
+        DataTransfer$FireWire400IEEE1394(),
       );
 
   /// Convert to [DataTransfer$FireWire800IEEE1394b]
   DataTransfer get toFireWire800IEEE1394b => convertTo(
-        const DataTransfer$FireWire800IEEE1394b(),
+        DataTransfer$FireWire800IEEE1394b(),
       );
 
   /// Convert to [DataTransfer$IrDA]
   DataTransfer get toIrDA => convertTo(
-        const DataTransfer$IrDA(),
+        DataTransfer$IrDA(),
       );
 
   /// Convert to [DataTransfer$IrDA2]
   DataTransfer get toIrDA2 => convertTo(
-        const DataTransfer$IrDA2(),
+        DataTransfer$IrDA2(),
       );
 
   /// Convert to [DataTransfer$ATM]
   DataTransfer get toATM => convertTo(
-        const DataTransfer$ATM(),
+        DataTransfer$ATM(),
       );
 
   /// Convert to [DataTransfer$T0Payload]
   DataTransfer get toT0Payload => convertTo(
-        const DataTransfer$T0Payload(),
+        DataTransfer$T0Payload(),
       );
 
   /// Convert to [DataTransfer$T0B8ZSPayload]
   DataTransfer get toT0B8ZSPayload => convertTo(
-        const DataTransfer$T0B8ZSPayload(),
+        DataTransfer$T0B8ZSPayload(),
       );
 
   /// Convert to [DataTransfer$T1Signal]
   DataTransfer get toT1Signal => convertTo(
-        const DataTransfer$T1Signal(),
+        DataTransfer$T1Signal(),
       );
 
   /// Convert to [DataTransfer$T1Payload]
   DataTransfer get toT1Payload => convertTo(
-        const DataTransfer$T1Payload(),
+        DataTransfer$T1Payload(),
       );
 
   /// Convert to [DataTransfer$T1ZPayload]
   DataTransfer get toT1ZPayload => convertTo(
-        const DataTransfer$T1ZPayload(),
+        DataTransfer$T1ZPayload(),
       );
 
   /// Convert to [DataTransfer$T1CSignal]
   DataTransfer get toT1CSignal => convertTo(
-        const DataTransfer$T1CSignal(),
+        DataTransfer$T1CSignal(),
       );
 
   /// Convert to [DataTransfer$T1CPayload]
   DataTransfer get toT1CPayload => convertTo(
-        const DataTransfer$T1CPayload(),
+        DataTransfer$T1CPayload(),
       );
 
   /// Convert to [DataTransfer$T2Signal]
   DataTransfer get toT2Signal => convertTo(
-        const DataTransfer$T2Signal(),
+        DataTransfer$T2Signal(),
       );
 
   /// Convert to [DataTransfer$T3Signal]
   DataTransfer get toT3Signal => convertTo(
-        const DataTransfer$T3Signal(),
+        DataTransfer$T3Signal(),
       );
 
   /// Convert to [DataTransfer$T3Payload]
   DataTransfer get toT3Payload => convertTo(
-        const DataTransfer$T3Payload(),
+        DataTransfer$T3Payload(),
       );
 
   /// Convert to [DataTransfer$T3ZPayload]
   DataTransfer get toT3ZPayload => convertTo(
-        const DataTransfer$T3ZPayload(),
+        DataTransfer$T3ZPayload(),
       );
 
   /// Convert to [DataTransfer$T4Signal]
   DataTransfer get toT4Signal => convertTo(
-        const DataTransfer$T4Signal(),
+        DataTransfer$T4Signal(),
       );
 
   /// Convert to [DataTransfer$EPTA1Signal]
   DataTransfer get toEPTA1Signal => convertTo(
-        const DataTransfer$EPTA1Signal(),
+        DataTransfer$EPTA1Signal(),
       );
 
   /// Convert to [DataTransfer$EPTA1Payload]
   DataTransfer get toEPTA1Payload => convertTo(
-        const DataTransfer$EPTA1Payload(),
+        DataTransfer$EPTA1Payload(),
       );
 
   /// Convert to [DataTransfer$EPTA2Signal]
   DataTransfer get toEPTA2Signal => convertTo(
-        const DataTransfer$EPTA2Signal(),
+        DataTransfer$EPTA2Signal(),
       );
 
   /// Convert to [DataTransfer$EPTA2Payload]
   DataTransfer get toEPTA2Payload => convertTo(
-        const DataTransfer$EPTA2Payload(),
+        DataTransfer$EPTA2Payload(),
       );
 
   /// Convert to [DataTransfer$EPTA3Signal]
   DataTransfer get toEPTA3Signal => convertTo(
-        const DataTransfer$EPTA3Signal(),
+        DataTransfer$EPTA3Signal(),
       );
 
   /// Convert to [DataTransfer$EPTA3Payload]
   DataTransfer get toEPTA3Payload => convertTo(
-        const DataTransfer$EPTA3Payload(),
+        DataTransfer$EPTA3Payload(),
       );
 
   /// Convert to [DataTransfer$H0]
   DataTransfer get toH0 => convertTo(
-        const DataTransfer$H0(),
+        DataTransfer$H0(),
       );
 
   /// Convert to [DataTransfer$H11]
   DataTransfer get toH11 => convertTo(
-        const DataTransfer$H11(),
+        DataTransfer$H11(),
       );
 
   /// Convert to [DataTransfer$H12]
   DataTransfer get toH12 => convertTo(
-        const DataTransfer$H12(),
+        DataTransfer$H12(),
       );
 
   /// Convert to [DataTransfer$VirtualTributary1Signal]
   DataTransfer get toVirtualTributary1Signal => convertTo(
-        const DataTransfer$VirtualTributary1Signal(),
+        DataTransfer$VirtualTributary1Signal(),
       );
 
   /// Convert to [DataTransfer$VirtualTributary1Payload]
   DataTransfer get toVirtualTributary1Payload => convertTo(
-        const DataTransfer$VirtualTributary1Payload(),
+        DataTransfer$VirtualTributary1Payload(),
       );
 
   /// Convert to [DataTransfer$VirtualTributary2Signal]
   DataTransfer get toVirtualTributary2Signal => convertTo(
-        const DataTransfer$VirtualTributary2Signal(),
+        DataTransfer$VirtualTributary2Signal(),
       );
 
   /// Convert to [DataTransfer$VirtualTributary2Payload]
   DataTransfer get toVirtualTributary2Payload => convertTo(
-        const DataTransfer$VirtualTributary2Payload(),
+        DataTransfer$VirtualTributary2Payload(),
       );
 
   /// Convert to [DataTransfer$VirtualTributary6Signal]
   DataTransfer get toVirtualTributary6Signal => convertTo(
-        const DataTransfer$VirtualTributary6Signal(),
+        DataTransfer$VirtualTributary6Signal(),
       );
 
   /// Convert to [DataTransfer$VirtualTributary6Payload]
   DataTransfer get toVirtualTributary6Payload => convertTo(
-        const DataTransfer$VirtualTributary6Payload(),
+        DataTransfer$VirtualTributary6Payload(),
       );
 
   /// Convert to [DataTransfer$STS1Signal]
   DataTransfer get toSTS1Signal => convertTo(
-        const DataTransfer$STS1Signal(),
+        DataTransfer$STS1Signal(),
       );
 
   /// Convert to [DataTransfer$STS1Payload]
   DataTransfer get toSTS1Payload => convertTo(
-        const DataTransfer$STS1Payload(),
+        DataTransfer$STS1Payload(),
       );
 
   /// Convert to [DataTransfer$STS3Signal]
   DataTransfer get toSTS3Signal => convertTo(
-        const DataTransfer$STS3Signal(),
+        DataTransfer$STS3Signal(),
       );
 
   /// Convert to [DataTransfer$STS3Payload]
   DataTransfer get toSTS3Payload => convertTo(
-        const DataTransfer$STS3Payload(),
+        DataTransfer$STS3Payload(),
       );
 
   /// Convert to [DataTransfer$STS3cSignal]
   DataTransfer get toSTS3cSignal => convertTo(
-        const DataTransfer$STS3cSignal(),
+        DataTransfer$STS3cSignal(),
       );
 
   /// Convert to [DataTransfer$STS3cPayload]
   DataTransfer get toSTS3cPayload => convertTo(
-        const DataTransfer$STS3cPayload(),
+        DataTransfer$STS3cPayload(),
       );
 
   /// Convert to [DataTransfer$STS12Signal]
   DataTransfer get toSTS12Signal => convertTo(
-        const DataTransfer$STS12Signal(),
+        DataTransfer$STS12Signal(),
       );
 
   /// Convert to [DataTransfer$STS24Signal]
   DataTransfer get toSTS24Signal => convertTo(
-        const DataTransfer$STS24Signal(),
+        DataTransfer$STS24Signal(),
       );
 
   /// Convert to [DataTransfer$STS48Signal]
   DataTransfer get toSTS48Signal => convertTo(
-        const DataTransfer$STS48Signal(),
+        DataTransfer$STS48Signal(),
       );
 
   /// Convert to [DataTransfer$STS192Signal]
   DataTransfer get toSTS192Signal => convertTo(
-        const DataTransfer$STS192Signal(),
+        DataTransfer$STS192Signal(),
       );
 
   /// Convert to [DataTransfer$STM1Signal]
   DataTransfer get toSTM1Signal => convertTo(
-        const DataTransfer$STM1Signal(),
+        DataTransfer$STM1Signal(),
       );
 
   /// Convert to [DataTransfer$STM4Signal]
   DataTransfer get toSTM4Signal => convertTo(
-        const DataTransfer$STM4Signal(),
+        DataTransfer$STM4Signal(),
       );
 
   /// Convert to [DataTransfer$STM16Signal]
   DataTransfer get toSTM16Signal => convertTo(
-        const DataTransfer$STM16Signal(),
+        DataTransfer$STM16Signal(),
       );
 
   /// Convert to [DataTransfer$STM64Signal]
   DataTransfer get toSTM64Signal => convertTo(
-        const DataTransfer$STM64Signal(),
+        DataTransfer$STM64Signal(),
       );
 
   /// Convert to [DataTransfer$CharacterPerSecond]
   DataTransfer get toCharacterPerSecond => convertTo(
-        const DataTransfer$CharacterPerSecond(),
+        DataTransfer$CharacterPerSecond(),
       );
 
   /// Convert to [DataTransfer$TokenRing]
   DataTransfer get toTokenRing => convertTo(
-        const DataTransfer$TokenRing(),
+        DataTransfer$TokenRing(),
       );
 
   /// Convert to [DataTransfer$FiberChannel]
   DataTransfer get toFiberChannel => convertTo(
-        const DataTransfer$FiberChannel(),
+        DataTransfer$FiberChannel(),
       );
 
   /// Convert to [DataTransfer$ISA8Bit]
   DataTransfer get toISA8Bit => convertTo(
-        const DataTransfer$ISA8Bit(),
+        DataTransfer$ISA8Bit(),
       );
 
   /// Convert to [DataTransfer$ISA16Bit]
   DataTransfer get toISA16Bit => convertTo(
-        const DataTransfer$ISA16Bit(),
+        DataTransfer$ISA16Bit(),
       );
 
   /// Convert to [DataTransfer$VLB]
   DataTransfer get toVLB => convertTo(
-        const DataTransfer$VLB(),
+        DataTransfer$VLB(),
       );
 
   /// Convert to [DataTransfer$PCI]
   DataTransfer get toPCI => convertTo(
-        const DataTransfer$PCI(),
+        DataTransfer$PCI(),
       );
 
   /// Convert to [DataTransfer$PCI64Bit]
   DataTransfer get toPCI64Bit => convertTo(
-        const DataTransfer$PCI64Bit(),
+        DataTransfer$PCI64Bit(),
       );
 
   /// Convert to [DataTransfer$PCI64Bit66MHz]
   DataTransfer get toPCI64Bit66MHz => convertTo(
-        const DataTransfer$PCI64Bit66MHz(),
+        DataTransfer$PCI64Bit66MHz(),
       );
 
   /// Convert to [DataTransfer$PCIX]
   DataTransfer get toPCIX => convertTo(
-        const DataTransfer$PCIX(),
+        DataTransfer$PCIX(),
       );
 
   /// Convert to [DataTransfer$AGP]
   DataTransfer get toAGP => convertTo(
-        const DataTransfer$AGP(),
+        DataTransfer$AGP(),
       );
 
   /// Convert to [DataTransfer$AGP2X]
   DataTransfer get toAGP2X => convertTo(
-        const DataTransfer$AGP2X(),
+        DataTransfer$AGP2X(),
       );
 
   /// Convert to [DataTransfer$AGP4X]
   DataTransfer get toAGP4X => convertTo(
-        const DataTransfer$AGP4X(),
+        DataTransfer$AGP4X(),
       );
 
   /// Convert to [DataTransfer$AGP8X]
   DataTransfer get toAGP8X => convertTo(
-        const DataTransfer$AGP8X(),
+        DataTransfer$AGP8X(),
       );
 
   /// Convert to [DataTransfer$PCIExpress10X1]
   DataTransfer get toPCIExpress10X1 => convertTo(
-        const DataTransfer$PCIExpress10X1(),
+        DataTransfer$PCIExpress10X1(),
       );
 
   /// Convert to [DataTransfer$PCIExpress10X4]
   DataTransfer get toPCIExpress10X4 => convertTo(
-        const DataTransfer$PCIExpress10X4(),
+        DataTransfer$PCIExpress10X4(),
       );
 
   /// Convert to [DataTransfer$PCIExpress10X8]
   DataTransfer get toPCIExpress10X8 => convertTo(
-        const DataTransfer$PCIExpress10X8(),
+        DataTransfer$PCIExpress10X8(),
       );
 
   /// Convert to [DataTransfer$PCIExpress10X16]
   DataTransfer get toPCIExpress10X16 => convertTo(
-        const DataTransfer$PCIExpress10X16(),
+        DataTransfer$PCIExpress10X16(),
       );
 
   /// Convert to [DataTransfer$PCIExpress20X1]
   DataTransfer get toPCIExpress20X1 => convertTo(
-        const DataTransfer$PCIExpress20X1(),
+        DataTransfer$PCIExpress20X1(),
       );
 
   /// Convert to [DataTransfer$PCIExpress20X4]
   DataTransfer get toPCIExpress20X4 => convertTo(
-        const DataTransfer$PCIExpress20X4(),
+        DataTransfer$PCIExpress20X4(),
       );
 
   /// Convert to [DataTransfer$PCIExpress20X8]
   DataTransfer get toPCIExpress20X8 => convertTo(
-        const DataTransfer$PCIExpress20X8(),
+        DataTransfer$PCIExpress20X8(),
       );
 
   /// Convert to [DataTransfer$PCIExpress20X16]
   DataTransfer get toPCIExpress20X16 => convertTo(
-        const DataTransfer$PCIExpress20X16(),
+        DataTransfer$PCIExpress20X16(),
       );
 
   /// Convert to [DataTransfer$PCIExpress30X1]
   DataTransfer get toPCIExpress30X1 => convertTo(
-        const DataTransfer$PCIExpress30X1(),
+        DataTransfer$PCIExpress30X1(),
       );
 
   /// Convert to [DataTransfer$PCIExpress30X4]
   DataTransfer get toPCIExpress30X4 => convertTo(
-        const DataTransfer$PCIExpress30X4(),
+        DataTransfer$PCIExpress30X4(),
       );
 
   /// Convert to [DataTransfer$PCIExpress30X8]
   DataTransfer get toPCIExpress30X8 => convertTo(
-        const DataTransfer$PCIExpress30X8(),
+        DataTransfer$PCIExpress30X8(),
       );
 
   /// Convert to [DataTransfer$PCIExpress30X16]
   DataTransfer get toPCIExpress30X16 => convertTo(
-        const DataTransfer$PCIExpress30X16(),
+        DataTransfer$PCIExpress30X16(),
       );
 
   /// Convert to [DataTransfer$CDROM1X]
   DataTransfer get toCDROM1X => convertTo(
-        const DataTransfer$CDROM1X(),
+        DataTransfer$CDROM1X(),
       );
 
   /// Convert to [DataTransfer$CDROM2X]
   DataTransfer get toCDROM2X => convertTo(
-        const DataTransfer$CDROM2X(),
+        DataTransfer$CDROM2X(),
       );
 
   /// Convert to [DataTransfer$CDROM3X]
   DataTransfer get toCDROM3X => convertTo(
-        const DataTransfer$CDROM3X(),
+        DataTransfer$CDROM3X(),
       );
 
   /// Convert to [DataTransfer$CDROM4X]
   DataTransfer get toCDROM4X => convertTo(
-        const DataTransfer$CDROM4X(),
+        DataTransfer$CDROM4X(),
       );
 
   /// Convert to [DataTransfer$CDROM6X]
   DataTransfer get toCDROM6X => convertTo(
-        const DataTransfer$CDROM6X(),
+        DataTransfer$CDROM6X(),
       );
 
   /// Convert to [DataTransfer$CDROM8X]
   DataTransfer get toCDROM8X => convertTo(
-        const DataTransfer$CDROM8X(),
+        DataTransfer$CDROM8X(),
       );
 
   /// Convert to [DataTransfer$CDROM12X]
   DataTransfer get toCDROM12X => convertTo(
-        const DataTransfer$CDROM12X(),
+        DataTransfer$CDROM12X(),
       );
 
   /// Convert to [DataTransfer$CDROM16X]
   DataTransfer get toCDROM16X => convertTo(
-        const DataTransfer$CDROM16X(),
+        DataTransfer$CDROM16X(),
       );
 
   /// Convert to [DataTransfer$CDROM24X]
   DataTransfer get toCDROM24X => convertTo(
-        const DataTransfer$CDROM24X(),
+        DataTransfer$CDROM24X(),
       );
 
   /// Convert to [DataTransfer$CDROM32X]
   DataTransfer get toCDROM32X => convertTo(
-        const DataTransfer$CDROM32X(),
+        DataTransfer$CDROM32X(),
       );
 
   /// Convert to [DataTransfer$CDROM40X]
   DataTransfer get toCDROM40X => convertTo(
-        const DataTransfer$CDROM40X(),
+        DataTransfer$CDROM40X(),
       );
 
   /// Convert to [DataTransfer$CDROM48X]
   DataTransfer get toCDROM48X => convertTo(
-        const DataTransfer$CDROM48X(),
+        DataTransfer$CDROM48X(),
       );
 
   /// Convert to [DataTransfer$CDROM52X]
   DataTransfer get toCDROM52X => convertTo(
-        const DataTransfer$CDROM52X(),
+        DataTransfer$CDROM52X(),
       );
 
   /// Convert to [DataTransfer$DVDROM1X]
   DataTransfer get toDVDROM1X => convertTo(
-        const DataTransfer$DVDROM1X(),
+        DataTransfer$DVDROM1X(),
       );
 
   /// Convert to [DataTransfer$DVDROM2X]
   DataTransfer get toDVDROM2X => convertTo(
-        const DataTransfer$DVDROM2X(),
+        DataTransfer$DVDROM2X(),
       );
 
   /// Convert to [DataTransfer$DVDROM3X]
   DataTransfer get toDVDROM3X => convertTo(
-        const DataTransfer$DVDROM3X(),
+        DataTransfer$DVDROM3X(),
       );
 
   /// Convert to [DataTransfer$DVDROM4X]
   DataTransfer get toDVDROM4X => convertTo(
-        const DataTransfer$DVDROM4X(),
+        DataTransfer$DVDROM4X(),
       );
 
   /// Convert to [DataTransfer$DVDROM6X]
   DataTransfer get toDVDROM6X => convertTo(
-        const DataTransfer$DVDROM6X(),
+        DataTransfer$DVDROM6X(),
       );
 
   /// Convert to [DataTransfer$DVDROM8X]
   DataTransfer get toDVDROM8X => convertTo(
-        const DataTransfer$DVDROM8X(),
+        DataTransfer$DVDROM8X(),
       );
 
   /// Convert to [DataTransfer$DVDROM10X]
   DataTransfer get toDVDROM10X => convertTo(
-        const DataTransfer$DVDROM10X(),
+        DataTransfer$DVDROM10X(),
       );
 
   /// Convert to [DataTransfer$DVDROM12X]
   DataTransfer get toDVDROM12X => convertTo(
-        const DataTransfer$DVDROM12X(),
+        DataTransfer$DVDROM12X(),
       );
 
   /// Convert to [DataTransfer$DVDROM16X]
   DataTransfer get toDVDROM16X => convertTo(
-        const DataTransfer$DVDROM16X(),
+        DataTransfer$DVDROM16X(),
       );
 
   /// Convert to [DataTransfer$BluRay1X]
   DataTransfer get toBluRay1X => convertTo(
-        const DataTransfer$BluRay1X(),
+        DataTransfer$BluRay1X(),
       );
 
   /// Convert to [DataTransfer$BluRay2X]
   DataTransfer get toBluRay2X => convertTo(
-        const DataTransfer$BluRay2X(),
+        DataTransfer$BluRay2X(),
       );
 
   /// Convert to [DataTransfer$BluRay4X]
   DataTransfer get toBluRay4X => convertTo(
-        const DataTransfer$BluRay4X(),
+        DataTransfer$BluRay4X(),
       );
 
   /// Convert to [DataTransfer$BluRay6X]
   DataTransfer get toBluRay6X => convertTo(
-        const DataTransfer$BluRay6X(),
+        DataTransfer$BluRay6X(),
       );
 
   /// Convert to [DataTransfer$BluRay8X]
   DataTransfer get toBluRay8X => convertTo(
-        const DataTransfer$BluRay8X(),
+        DataTransfer$BluRay8X(),
       );
 
   /// Convert to [DataTransfer$BluRay10X]
   DataTransfer get toBluRay10X => convertTo(
-        const DataTransfer$BluRay10X(),
+        DataTransfer$BluRay10X(),
       );
 
   /// Convert to [DataTransfer$BluRay12X]
   DataTransfer get toBluRay12X => convertTo(
-        const DataTransfer$BluRay12X(),
+        DataTransfer$BluRay12X(),
       );
 
   @override
@@ -997,186 +998,186 @@ sealed class DataTransfer extends Unit<DataTransfer> {
 
   static const _majorName = 'dataTransfer';
 
-  static const bitPerSecond = DataTransfer$BitPerSecond();
-  static const bytePerSecond = DataTransfer$BytePerSecond();
-  static const kilobitPerSecond = DataTransfer$KilobitPerSecond();
-  static const kilobytePerSecond = DataTransfer$KilobytePerSecond();
-  static const megabitPerSecond = DataTransfer$MegabitPerSecond();
-  static const megabytePerSecond = DataTransfer$MegabytePerSecond();
-  static const gigabitPerSecond = DataTransfer$GigabitPerSecond();
-  static const gigabytePerSecond = DataTransfer$GigabytePerSecond();
-  static const terabitPerSecond = DataTransfer$TerabitPerSecond();
-  static const terabytePerSecond = DataTransfer$TerabytePerSecond();
-  static const kibibitPerSecond = DataTransfer$KibibitPerSecond();
-  static const kibibytePerSecond = DataTransfer$KibibytePerSecond();
-  static const mebibitPerSecond = DataTransfer$MebibitPerSecond();
-  static const mebibytePerSecond = DataTransfer$MebibytePerSecond();
-  static const gibibitPerSecond = DataTransfer$GibibitPerSecond();
-  static const gibibytePerSecond = DataTransfer$GibibytePerSecond();
-  static const tebibitPerSecond = DataTransfer$TebibitPerSecond();
-  static const tebibytePerSecond = DataTransfer$TebibytePerSecond();
-  static const ethernet = DataTransfer$Ethernet();
-  static const ethernetFast = DataTransfer$EthernetFast();
-  static const ethernetGigabit = DataTransfer$EthernetGigabit();
-  static const ethernet10Gigabit = DataTransfer$Ethernet10Gigabit();
-  static const oC1 = DataTransfer$OC1();
-  static const oC3 = DataTransfer$OC3();
-  static const oC12 = DataTransfer$OC12();
-  static const oC24 = DataTransfer$OC24();
-  static const oC48 = DataTransfer$OC48();
-  static const oC192 = DataTransfer$OC192();
-  static const oC768 = DataTransfer$OC768();
-  static const iSDNSingleChannel = DataTransfer$ISDNSingleChannel();
-  static const iSDNDualChannel = DataTransfer$ISDNDualChannel();
-  static const modem110 = DataTransfer$Modem110();
-  static const modem300 = DataTransfer$Modem300();
-  static const modem1200 = DataTransfer$Modem1200();
-  static const modem2400 = DataTransfer$Modem2400();
-  static const modem9600 = DataTransfer$Modem9600();
-  static const modem144k = DataTransfer$Modem144k();
-  static const modem288k = DataTransfer$Modem288k();
-  static const modem336k = DataTransfer$Modem336k();
-  static const modem56k = DataTransfer$Modem56k();
-  static const sCSIAsync = DataTransfer$SCSIAsync();
-  static const sCSISync = DataTransfer$SCSISync();
-  static const sCSIFast = DataTransfer$SCSIFast();
-  static const sCSIFastUltra = DataTransfer$SCSIFastUltra();
-  static const sCSIFastWide = DataTransfer$SCSIFastWide();
-  static const sCSIFastUltraWide = DataTransfer$SCSIFastUltraWide();
-  static const sCSIUltra2 = DataTransfer$SCSIUltra2();
-  static const sCSIUltra3 = DataTransfer$SCSIUltra3();
-  static const sCSILVDUltra80 = DataTransfer$SCSILVDUltra80();
-  static const sCSILVDUltra160 = DataTransfer$SCSILVDUltra160();
-  static const sCSILVDUltra320 = DataTransfer$SCSILVDUltra320();
-  static const iDEPIOMode0 = DataTransfer$IDEPIOMode0();
-  static const iDEPIOMode1 = DataTransfer$IDEPIOMode1();
-  static const iDEPIOMode2 = DataTransfer$IDEPIOMode2();
-  static const iDEPIOMode3 = DataTransfer$IDEPIOMode3();
-  static const iDEPIOMode4 = DataTransfer$IDEPIOMode4();
-  static const iDEDMAMode0 = DataTransfer$IDEDMAMode0();
-  static const iDEDMAMode1 = DataTransfer$IDEDMAMode1();
-  static const iDEDMAMode2 = DataTransfer$IDEDMAMode2();
-  static const iDEUDMAMode0 = DataTransfer$IDEUDMAMode0();
-  static const iDEUDMAMode1 = DataTransfer$IDEUDMAMode1();
-  static const iDEUDMAMode2 = DataTransfer$IDEUDMAMode2();
-  static const iDEUDMAMode3 = DataTransfer$IDEUDMAMode3();
-  static const iDEUDMAMode4 = DataTransfer$IDEUDMAMode4();
-  static const iDEUDMAMode5 = DataTransfer$IDEUDMAMode5();
-  static const iDEUDMAMode6 = DataTransfer$IDEUDMAMode6();
-  static const iDEUDMA33 = DataTransfer$IDEUDMA33();
-  static const iDEUDMA66 = DataTransfer$IDEUDMA66();
-  static const iDEUDMA100 = DataTransfer$IDEUDMA100();
-  static const iDEUDMA133 = DataTransfer$IDEUDMA133();
-  static const sATA10 = DataTransfer$SATA10();
-  static const sATA20 = DataTransfer$SATA20();
-  static const sATA30 = DataTransfer$SATA30();
-  static const uSB = DataTransfer$USB();
-  static const uSB20 = DataTransfer$USB20();
-  static const uSB30 = DataTransfer$USB30();
-  static const fireWire400IEEE1394 = DataTransfer$FireWire400IEEE1394();
-  static const fireWire800IEEE1394b = DataTransfer$FireWire800IEEE1394b();
-  static const irDA = DataTransfer$IrDA();
-  static const irDA2 = DataTransfer$IrDA2();
-  static const aTM = DataTransfer$ATM();
-  static const t0Payload = DataTransfer$T0Payload();
-  static const t0B8ZSPayload = DataTransfer$T0B8ZSPayload();
-  static const t1Signal = DataTransfer$T1Signal();
-  static const t1Payload = DataTransfer$T1Payload();
-  static const t1ZPayload = DataTransfer$T1ZPayload();
-  static const t1CSignal = DataTransfer$T1CSignal();
-  static const t1CPayload = DataTransfer$T1CPayload();
-  static const t2Signal = DataTransfer$T2Signal();
-  static const t3Signal = DataTransfer$T3Signal();
-  static const t3Payload = DataTransfer$T3Payload();
-  static const t3ZPayload = DataTransfer$T3ZPayload();
-  static const t4Signal = DataTransfer$T4Signal();
-  static const ePTA1Signal = DataTransfer$EPTA1Signal();
-  static const ePTA1Payload = DataTransfer$EPTA1Payload();
-  static const ePTA2Signal = DataTransfer$EPTA2Signal();
-  static const ePTA2Payload = DataTransfer$EPTA2Payload();
-  static const ePTA3Signal = DataTransfer$EPTA3Signal();
-  static const ePTA3Payload = DataTransfer$EPTA3Payload();
-  static const h0 = DataTransfer$H0();
-  static const h11 = DataTransfer$H11();
-  static const h12 = DataTransfer$H12();
-  static const virtualTributary1Signal = DataTransfer$VirtualTributary1Signal();
-  static const virtualTributary1Payload =
+  static final bitPerSecond = DataTransfer$BitPerSecond();
+  static final bytePerSecond = DataTransfer$BytePerSecond();
+  static final kilobitPerSecond = DataTransfer$KilobitPerSecond();
+  static final kilobytePerSecond = DataTransfer$KilobytePerSecond();
+  static final megabitPerSecond = DataTransfer$MegabitPerSecond();
+  static final megabytePerSecond = DataTransfer$MegabytePerSecond();
+  static final gigabitPerSecond = DataTransfer$GigabitPerSecond();
+  static final gigabytePerSecond = DataTransfer$GigabytePerSecond();
+  static final terabitPerSecond = DataTransfer$TerabitPerSecond();
+  static final terabytePerSecond = DataTransfer$TerabytePerSecond();
+  static final kibibitPerSecond = DataTransfer$KibibitPerSecond();
+  static final kibibytePerSecond = DataTransfer$KibibytePerSecond();
+  static final mebibitPerSecond = DataTransfer$MebibitPerSecond();
+  static final mebibytePerSecond = DataTransfer$MebibytePerSecond();
+  static final gibibitPerSecond = DataTransfer$GibibitPerSecond();
+  static final gibibytePerSecond = DataTransfer$GibibytePerSecond();
+  static final tebibitPerSecond = DataTransfer$TebibitPerSecond();
+  static final tebibytePerSecond = DataTransfer$TebibytePerSecond();
+  static final ethernet = DataTransfer$Ethernet();
+  static final ethernetFast = DataTransfer$EthernetFast();
+  static final ethernetGigabit = DataTransfer$EthernetGigabit();
+  static final ethernet10Gigabit = DataTransfer$Ethernet10Gigabit();
+  static final oC1 = DataTransfer$OC1();
+  static final oC3 = DataTransfer$OC3();
+  static final oC12 = DataTransfer$OC12();
+  static final oC24 = DataTransfer$OC24();
+  static final oC48 = DataTransfer$OC48();
+  static final oC192 = DataTransfer$OC192();
+  static final oC768 = DataTransfer$OC768();
+  static final iSDNSingleChannel = DataTransfer$ISDNSingleChannel();
+  static final iSDNDualChannel = DataTransfer$ISDNDualChannel();
+  static final modem110 = DataTransfer$Modem110();
+  static final modem300 = DataTransfer$Modem300();
+  static final modem1200 = DataTransfer$Modem1200();
+  static final modem2400 = DataTransfer$Modem2400();
+  static final modem9600 = DataTransfer$Modem9600();
+  static final modem144k = DataTransfer$Modem144k();
+  static final modem288k = DataTransfer$Modem288k();
+  static final modem336k = DataTransfer$Modem336k();
+  static final modem56k = DataTransfer$Modem56k();
+  static final sCSIAsync = DataTransfer$SCSIAsync();
+  static final sCSISync = DataTransfer$SCSISync();
+  static final sCSIFast = DataTransfer$SCSIFast();
+  static final sCSIFastUltra = DataTransfer$SCSIFastUltra();
+  static final sCSIFastWide = DataTransfer$SCSIFastWide();
+  static final sCSIFastUltraWide = DataTransfer$SCSIFastUltraWide();
+  static final sCSIUltra2 = DataTransfer$SCSIUltra2();
+  static final sCSIUltra3 = DataTransfer$SCSIUltra3();
+  static final sCSILVDUltra80 = DataTransfer$SCSILVDUltra80();
+  static final sCSILVDUltra160 = DataTransfer$SCSILVDUltra160();
+  static final sCSILVDUltra320 = DataTransfer$SCSILVDUltra320();
+  static final iDEPIOMode0 = DataTransfer$IDEPIOMode0();
+  static final iDEPIOMode1 = DataTransfer$IDEPIOMode1();
+  static final iDEPIOMode2 = DataTransfer$IDEPIOMode2();
+  static final iDEPIOMode3 = DataTransfer$IDEPIOMode3();
+  static final iDEPIOMode4 = DataTransfer$IDEPIOMode4();
+  static final iDEDMAMode0 = DataTransfer$IDEDMAMode0();
+  static final iDEDMAMode1 = DataTransfer$IDEDMAMode1();
+  static final iDEDMAMode2 = DataTransfer$IDEDMAMode2();
+  static final iDEUDMAMode0 = DataTransfer$IDEUDMAMode0();
+  static final iDEUDMAMode1 = DataTransfer$IDEUDMAMode1();
+  static final iDEUDMAMode2 = DataTransfer$IDEUDMAMode2();
+  static final iDEUDMAMode3 = DataTransfer$IDEUDMAMode3();
+  static final iDEUDMAMode4 = DataTransfer$IDEUDMAMode4();
+  static final iDEUDMAMode5 = DataTransfer$IDEUDMAMode5();
+  static final iDEUDMAMode6 = DataTransfer$IDEUDMAMode6();
+  static final iDEUDMA33 = DataTransfer$IDEUDMA33();
+  static final iDEUDMA66 = DataTransfer$IDEUDMA66();
+  static final iDEUDMA100 = DataTransfer$IDEUDMA100();
+  static final iDEUDMA133 = DataTransfer$IDEUDMA133();
+  static final sATA10 = DataTransfer$SATA10();
+  static final sATA20 = DataTransfer$SATA20();
+  static final sATA30 = DataTransfer$SATA30();
+  static final uSB = DataTransfer$USB();
+  static final uSB20 = DataTransfer$USB20();
+  static final uSB30 = DataTransfer$USB30();
+  static final fireWire400IEEE1394 = DataTransfer$FireWire400IEEE1394();
+  static final fireWire800IEEE1394b = DataTransfer$FireWire800IEEE1394b();
+  static final irDA = DataTransfer$IrDA();
+  static final irDA2 = DataTransfer$IrDA2();
+  static final aTM = DataTransfer$ATM();
+  static final t0Payload = DataTransfer$T0Payload();
+  static final t0B8ZSPayload = DataTransfer$T0B8ZSPayload();
+  static final t1Signal = DataTransfer$T1Signal();
+  static final t1Payload = DataTransfer$T1Payload();
+  static final t1ZPayload = DataTransfer$T1ZPayload();
+  static final t1CSignal = DataTransfer$T1CSignal();
+  static final t1CPayload = DataTransfer$T1CPayload();
+  static final t2Signal = DataTransfer$T2Signal();
+  static final t3Signal = DataTransfer$T3Signal();
+  static final t3Payload = DataTransfer$T3Payload();
+  static final t3ZPayload = DataTransfer$T3ZPayload();
+  static final t4Signal = DataTransfer$T4Signal();
+  static final ePTA1Signal = DataTransfer$EPTA1Signal();
+  static final ePTA1Payload = DataTransfer$EPTA1Payload();
+  static final ePTA2Signal = DataTransfer$EPTA2Signal();
+  static final ePTA2Payload = DataTransfer$EPTA2Payload();
+  static final ePTA3Signal = DataTransfer$EPTA3Signal();
+  static final ePTA3Payload = DataTransfer$EPTA3Payload();
+  static final h0 = DataTransfer$H0();
+  static final h11 = DataTransfer$H11();
+  static final h12 = DataTransfer$H12();
+  static final virtualTributary1Signal = DataTransfer$VirtualTributary1Signal();
+  static final virtualTributary1Payload =
       DataTransfer$VirtualTributary1Payload();
-  static const virtualTributary2Signal = DataTransfer$VirtualTributary2Signal();
-  static const virtualTributary2Payload =
+  static final virtualTributary2Signal = DataTransfer$VirtualTributary2Signal();
+  static final virtualTributary2Payload =
       DataTransfer$VirtualTributary2Payload();
-  static const virtualTributary6Signal = DataTransfer$VirtualTributary6Signal();
-  static const virtualTributary6Payload =
+  static final virtualTributary6Signal = DataTransfer$VirtualTributary6Signal();
+  static final virtualTributary6Payload =
       DataTransfer$VirtualTributary6Payload();
-  static const sTS1Signal = DataTransfer$STS1Signal();
-  static const sTS1Payload = DataTransfer$STS1Payload();
-  static const sTS3Signal = DataTransfer$STS3Signal();
-  static const sTS3Payload = DataTransfer$STS3Payload();
-  static const sTS3cSignal = DataTransfer$STS3cSignal();
-  static const sTS3cPayload = DataTransfer$STS3cPayload();
-  static const sTS12Signal = DataTransfer$STS12Signal();
-  static const sTS24Signal = DataTransfer$STS24Signal();
-  static const sTS48Signal = DataTransfer$STS48Signal();
-  static const sTS192Signal = DataTransfer$STS192Signal();
-  static const sTM1Signal = DataTransfer$STM1Signal();
-  static const sTM4Signal = DataTransfer$STM4Signal();
-  static const sTM16Signal = DataTransfer$STM16Signal();
-  static const sTM64Signal = DataTransfer$STM64Signal();
-  static const characterPerSecond = DataTransfer$CharacterPerSecond();
-  static const tokenRing = DataTransfer$TokenRing();
-  static const fiberChannel = DataTransfer$FiberChannel();
-  static const iSA8Bit = DataTransfer$ISA8Bit();
-  static const iSA16Bit = DataTransfer$ISA16Bit();
-  static const vLB = DataTransfer$VLB();
-  static const pCI = DataTransfer$PCI();
-  static const pCI64Bit = DataTransfer$PCI64Bit();
-  static const pCI64Bit66MHz = DataTransfer$PCI64Bit66MHz();
-  static const pCIX = DataTransfer$PCIX();
-  static const aGP = DataTransfer$AGP();
-  static const aGP2X = DataTransfer$AGP2X();
-  static const aGP4X = DataTransfer$AGP4X();
-  static const aGP8X = DataTransfer$AGP8X();
-  static const pCIExpress10X1 = DataTransfer$PCIExpress10X1();
-  static const pCIExpress10X4 = DataTransfer$PCIExpress10X4();
-  static const pCIExpress10X8 = DataTransfer$PCIExpress10X8();
-  static const pCIExpress10X16 = DataTransfer$PCIExpress10X16();
-  static const pCIExpress20X1 = DataTransfer$PCIExpress20X1();
-  static const pCIExpress20X4 = DataTransfer$PCIExpress20X4();
-  static const pCIExpress20X8 = DataTransfer$PCIExpress20X8();
-  static const pCIExpress20X16 = DataTransfer$PCIExpress20X16();
-  static const pCIExpress30X1 = DataTransfer$PCIExpress30X1();
-  static const pCIExpress30X4 = DataTransfer$PCIExpress30X4();
-  static const pCIExpress30X8 = DataTransfer$PCIExpress30X8();
-  static const pCIExpress30X16 = DataTransfer$PCIExpress30X16();
-  static const cDROM1X = DataTransfer$CDROM1X();
-  static const cDROM2X = DataTransfer$CDROM2X();
-  static const cDROM3X = DataTransfer$CDROM3X();
-  static const cDROM4X = DataTransfer$CDROM4X();
-  static const cDROM6X = DataTransfer$CDROM6X();
-  static const cDROM8X = DataTransfer$CDROM8X();
-  static const cDROM12X = DataTransfer$CDROM12X();
-  static const cDROM16X = DataTransfer$CDROM16X();
-  static const cDROM24X = DataTransfer$CDROM24X();
-  static const cDROM32X = DataTransfer$CDROM32X();
-  static const cDROM40X = DataTransfer$CDROM40X();
-  static const cDROM48X = DataTransfer$CDROM48X();
-  static const cDROM52X = DataTransfer$CDROM52X();
-  static const dVDROM1X = DataTransfer$DVDROM1X();
-  static const dVDROM2X = DataTransfer$DVDROM2X();
-  static const dVDROM3X = DataTransfer$DVDROM3X();
-  static const dVDROM4X = DataTransfer$DVDROM4X();
-  static const dVDROM6X = DataTransfer$DVDROM6X();
-  static const dVDROM8X = DataTransfer$DVDROM8X();
-  static const dVDROM10X = DataTransfer$DVDROM10X();
-  static const dVDROM12X = DataTransfer$DVDROM12X();
-  static const dVDROM16X = DataTransfer$DVDROM16X();
-  static const bluRay1X = DataTransfer$BluRay1X();
-  static const bluRay2X = DataTransfer$BluRay2X();
-  static const bluRay4X = DataTransfer$BluRay4X();
-  static const bluRay6X = DataTransfer$BluRay6X();
-  static const bluRay8X = DataTransfer$BluRay8X();
-  static const bluRay10X = DataTransfer$BluRay10X();
-  static const bluRay12X = DataTransfer$BluRay12X();
+  static final sTS1Signal = DataTransfer$STS1Signal();
+  static final sTS1Payload = DataTransfer$STS1Payload();
+  static final sTS3Signal = DataTransfer$STS3Signal();
+  static final sTS3Payload = DataTransfer$STS3Payload();
+  static final sTS3cSignal = DataTransfer$STS3cSignal();
+  static final sTS3cPayload = DataTransfer$STS3cPayload();
+  static final sTS12Signal = DataTransfer$STS12Signal();
+  static final sTS24Signal = DataTransfer$STS24Signal();
+  static final sTS48Signal = DataTransfer$STS48Signal();
+  static final sTS192Signal = DataTransfer$STS192Signal();
+  static final sTM1Signal = DataTransfer$STM1Signal();
+  static final sTM4Signal = DataTransfer$STM4Signal();
+  static final sTM16Signal = DataTransfer$STM16Signal();
+  static final sTM64Signal = DataTransfer$STM64Signal();
+  static final characterPerSecond = DataTransfer$CharacterPerSecond();
+  static final tokenRing = DataTransfer$TokenRing();
+  static final fiberChannel = DataTransfer$FiberChannel();
+  static final iSA8Bit = DataTransfer$ISA8Bit();
+  static final iSA16Bit = DataTransfer$ISA16Bit();
+  static final vLB = DataTransfer$VLB();
+  static final pCI = DataTransfer$PCI();
+  static final pCI64Bit = DataTransfer$PCI64Bit();
+  static final pCI64Bit66MHz = DataTransfer$PCI64Bit66MHz();
+  static final pCIX = DataTransfer$PCIX();
+  static final aGP = DataTransfer$AGP();
+  static final aGP2X = DataTransfer$AGP2X();
+  static final aGP4X = DataTransfer$AGP4X();
+  static final aGP8X = DataTransfer$AGP8X();
+  static final pCIExpress10X1 = DataTransfer$PCIExpress10X1();
+  static final pCIExpress10X4 = DataTransfer$PCIExpress10X4();
+  static final pCIExpress10X8 = DataTransfer$PCIExpress10X8();
+  static final pCIExpress10X16 = DataTransfer$PCIExpress10X16();
+  static final pCIExpress20X1 = DataTransfer$PCIExpress20X1();
+  static final pCIExpress20X4 = DataTransfer$PCIExpress20X4();
+  static final pCIExpress20X8 = DataTransfer$PCIExpress20X8();
+  static final pCIExpress20X16 = DataTransfer$PCIExpress20X16();
+  static final pCIExpress30X1 = DataTransfer$PCIExpress30X1();
+  static final pCIExpress30X4 = DataTransfer$PCIExpress30X4();
+  static final pCIExpress30X8 = DataTransfer$PCIExpress30X8();
+  static final pCIExpress30X16 = DataTransfer$PCIExpress30X16();
+  static final cDROM1X = DataTransfer$CDROM1X();
+  static final cDROM2X = DataTransfer$CDROM2X();
+  static final cDROM3X = DataTransfer$CDROM3X();
+  static final cDROM4X = DataTransfer$CDROM4X();
+  static final cDROM6X = DataTransfer$CDROM6X();
+  static final cDROM8X = DataTransfer$CDROM8X();
+  static final cDROM12X = DataTransfer$CDROM12X();
+  static final cDROM16X = DataTransfer$CDROM16X();
+  static final cDROM24X = DataTransfer$CDROM24X();
+  static final cDROM32X = DataTransfer$CDROM32X();
+  static final cDROM40X = DataTransfer$CDROM40X();
+  static final cDROM48X = DataTransfer$CDROM48X();
+  static final cDROM52X = DataTransfer$CDROM52X();
+  static final dVDROM1X = DataTransfer$DVDROM1X();
+  static final dVDROM2X = DataTransfer$DVDROM2X();
+  static final dVDROM3X = DataTransfer$DVDROM3X();
+  static final dVDROM4X = DataTransfer$DVDROM4X();
+  static final dVDROM6X = DataTransfer$DVDROM6X();
+  static final dVDROM8X = DataTransfer$DVDROM8X();
+  static final dVDROM10X = DataTransfer$DVDROM10X();
+  static final dVDROM12X = DataTransfer$DVDROM12X();
+  static final dVDROM16X = DataTransfer$DVDROM16X();
+  static final bluRay1X = DataTransfer$BluRay1X();
+  static final bluRay2X = DataTransfer$BluRay2X();
+  static final bluRay4X = DataTransfer$BluRay4X();
+  static final bluRay6X = DataTransfer$BluRay6X();
+  static final bluRay8X = DataTransfer$BluRay8X();
+  static final bluRay10X = DataTransfer$BluRay10X();
+  static final bluRay12X = DataTransfer$BluRay12X();
 
   @override
   List<DataTransfer> get units => values;
@@ -1184,7 +1185,7 @@ sealed class DataTransfer extends Unit<DataTransfer> {
   @override
   EnumValues<DataTransfer> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <DataTransfer>[
     bitPerSecond,
     bytePerSecond,
     kilobitPerSecond,
@@ -1364,7 +1365,7 @@ sealed class DataTransfer extends Unit<DataTransfer> {
     bluRay12X,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, DataTransfer>{
     DataTransfer$BitPerSecond._minorName: bitPerSecond,
     DataTransfer$BytePerSecond._minorName: bytePerSecond,
     DataTransfer$KilobitPerSecond._minorName: kilobitPerSecond,
@@ -1547,7 +1548,7 @@ sealed class DataTransfer extends Unit<DataTransfer> {
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BitPerSecond extends DataTransfer {
-  const DataTransfer$BitPerSecond([
+  DataTransfer$BitPerSecond([
     super.value,
   ]);
 
@@ -1578,14 +1579,14 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
   @override
   String get displayName => 'bit/second';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
   /// Default (anchor) unit of [DataTransfer]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1593,12 +1594,12 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BitPerSecond] with new value
   @override
   DataTransfer$BitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BitPerSecond(val);
 
@@ -1611,14 +1612,14 @@ final class DataTransfer$BitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BytePerSecond extends DataTransfer {
-  const DataTransfer$BytePerSecond([
+  DataTransfer$BytePerSecond([
     super.value,
   ]);
 
@@ -1649,14 +1650,14 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
   @override
   String get displayName => 'byte/second';
 
-  static const _ratio = 8.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+000');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$BytePerSecond] = 8.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BytePerSecond] = 8.00000000000000000E+000 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1664,12 +1665,12 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BytePerSecond] with new value
   @override
   DataTransfer$BytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BytePerSecond(val);
 
@@ -1682,14 +1683,14 @@ final class DataTransfer$BytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$KilobitPerSecond extends DataTransfer {
-  const DataTransfer$KilobitPerSecond([
+  DataTransfer$KilobitPerSecond([
     super.value,
   ]);
 
@@ -1720,14 +1721,14 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
   @override
   String get displayName => 'kilobit/second';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$KilobitPerSecond] = 1000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$KilobitPerSecond] = 1.00000000000000000E+003 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1736,12 +1737,12 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$KilobitPerSecond] with new value
   @override
   DataTransfer$KilobitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$KilobitPerSecond(val);
 
@@ -1754,14 +1755,14 @@ final class DataTransfer$KilobitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$KilobytePerSecond extends DataTransfer {
-  const DataTransfer$KilobytePerSecond([
+  DataTransfer$KilobytePerSecond([
     super.value,
   ]);
 
@@ -1792,14 +1793,14 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
   @override
   String get displayName => 'kilobyte/second';
 
-  static const _ratio = 8000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+003');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$KilobytePerSecond] = 8000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$KilobytePerSecond] = 8.00000000000000000E+003 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1808,12 +1809,12 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$KilobytePerSecond] with new value
   @override
   DataTransfer$KilobytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$KilobytePerSecond(val);
 
@@ -1826,14 +1827,14 @@ final class DataTransfer$KilobytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$MegabitPerSecond extends DataTransfer {
-  const DataTransfer$MegabitPerSecond([
+  DataTransfer$MegabitPerSecond([
     super.value,
   ]);
 
@@ -1864,14 +1865,14 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
   @override
   String get displayName => 'megabit/second';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$MegabitPerSecond] = 1000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$MegabitPerSecond] = 1.00000000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1880,12 +1881,12 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$MegabitPerSecond] with new value
   @override
   DataTransfer$MegabitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$MegabitPerSecond(val);
 
@@ -1898,14 +1899,14 @@ final class DataTransfer$MegabitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$MegabytePerSecond extends DataTransfer {
-  const DataTransfer$MegabytePerSecond([
+  DataTransfer$MegabytePerSecond([
     super.value,
   ]);
 
@@ -1936,14 +1937,14 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
   @override
   String get displayName => 'megabyte/second';
 
-  static const _ratio = 8000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$MegabytePerSecond] = 8000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$MegabytePerSecond] = 8.00000000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1952,12 +1953,12 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$MegabytePerSecond] with new value
   @override
   DataTransfer$MegabytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$MegabytePerSecond(val);
 
@@ -1970,14 +1971,14 @@ final class DataTransfer$MegabytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$GigabitPerSecond extends DataTransfer {
-  const DataTransfer$GigabitPerSecond([
+  DataTransfer$GigabitPerSecond([
     super.value,
   ]);
 
@@ -2008,14 +2009,14 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
   @override
   String get displayName => 'gigabit/second';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$GigabitPerSecond] = 1000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$GigabitPerSecond] = 1.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2024,12 +2025,12 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$GigabitPerSecond] with new value
   @override
   DataTransfer$GigabitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$GigabitPerSecond(val);
 
@@ -2042,14 +2043,14 @@ final class DataTransfer$GigabitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$GigabytePerSecond extends DataTransfer {
-  const DataTransfer$GigabytePerSecond([
+  DataTransfer$GigabytePerSecond([
     super.value,
   ]);
 
@@ -2080,14 +2081,14 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
   @override
   String get displayName => 'gigabyte/second';
 
-  static const _ratio = 8000000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$GigabytePerSecond] = 8000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$GigabytePerSecond] = 8.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2096,12 +2097,12 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$GigabytePerSecond] with new value
   @override
   DataTransfer$GigabytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$GigabytePerSecond(val);
 
@@ -2114,14 +2115,14 @@ final class DataTransfer$GigabytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$TerabitPerSecond extends DataTransfer {
-  const DataTransfer$TerabitPerSecond([
+  DataTransfer$TerabitPerSecond([
     super.value,
   ]);
 
@@ -2152,14 +2153,14 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
   @override
   String get displayName => 'terabit/second';
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$TerabitPerSecond] = 1000000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TerabitPerSecond] = 1.00000000000000000E+012 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2168,12 +2169,12 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$TerabitPerSecond] with new value
   @override
   DataTransfer$TerabitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$TerabitPerSecond(val);
 
@@ -2186,14 +2187,14 @@ final class DataTransfer$TerabitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$TerabytePerSecond extends DataTransfer {
-  const DataTransfer$TerabytePerSecond([
+  DataTransfer$TerabytePerSecond([
     super.value,
   ]);
 
@@ -2224,14 +2225,14 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
   @override
   String get displayName => 'terabyte/second';
 
-  static const _ratio = 8000000000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+012');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$TerabytePerSecond] = 8000000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TerabytePerSecond] = 8.00000000000000000E+012 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2240,12 +2241,12 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$TerabytePerSecond] with new value
   @override
   DataTransfer$TerabytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$TerabytePerSecond(val);
 
@@ -2258,14 +2259,14 @@ final class DataTransfer$TerabytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$KibibitPerSecond extends DataTransfer {
-  const DataTransfer$KibibitPerSecond([
+  DataTransfer$KibibitPerSecond([
     super.value,
   ]);
 
@@ -2296,14 +2297,14 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
   @override
   String get displayName => 'kibibit/second';
 
-  static const _ratio = 1024.0;
+  static final _ratio = Rational.parse('1.02400000000000000E+003');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$KibibitPerSecond] = 1024.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$KibibitPerSecond] = 1.02400000000000000E+003 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2312,12 +2313,12 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$KibibitPerSecond] with new value
   @override
   DataTransfer$KibibitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$KibibitPerSecond(val);
 
@@ -2330,14 +2331,14 @@ final class DataTransfer$KibibitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$KibibytePerSecond extends DataTransfer {
-  const DataTransfer$KibibytePerSecond([
+  DataTransfer$KibibytePerSecond([
     super.value,
   ]);
 
@@ -2368,14 +2369,14 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
   @override
   String get displayName => 'kibibyte/second';
 
-  static const _ratio = 8192.0;
+  static final _ratio = Rational.parse('8.19200000000000000E+003');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$KibibytePerSecond] = 8192.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$KibibytePerSecond] = 8.19200000000000000E+003 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2384,12 +2385,12 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$KibibytePerSecond] with new value
   @override
   DataTransfer$KibibytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$KibibytePerSecond(val);
 
@@ -2402,14 +2403,14 @@ final class DataTransfer$KibibytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$MebibitPerSecond extends DataTransfer {
-  const DataTransfer$MebibitPerSecond([
+  DataTransfer$MebibitPerSecond([
     super.value,
   ]);
 
@@ -2440,14 +2441,14 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
   @override
   String get displayName => 'mebibit/second';
 
-  static const _ratio = 1048576.0;
+  static final _ratio = Rational.parse('1.04857600000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$MebibitPerSecond] = 1048576.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$MebibitPerSecond] = 1.04857600000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2456,12 +2457,12 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$MebibitPerSecond] with new value
   @override
   DataTransfer$MebibitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$MebibitPerSecond(val);
 
@@ -2474,14 +2475,14 @@ final class DataTransfer$MebibitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$MebibytePerSecond extends DataTransfer {
-  const DataTransfer$MebibytePerSecond([
+  DataTransfer$MebibytePerSecond([
     super.value,
   ]);
 
@@ -2512,14 +2513,14 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
   @override
   String get displayName => 'mebibyte/second';
 
-  static const _ratio = 8388608.0;
+  static final _ratio = Rational.parse('8.38860800000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$MebibytePerSecond] = 8388608.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$MebibytePerSecond] = 8.38860800000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2528,12 +2529,12 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$MebibytePerSecond] with new value
   @override
   DataTransfer$MebibytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$MebibytePerSecond(val);
 
@@ -2546,14 +2547,14 @@ final class DataTransfer$MebibytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$GibibitPerSecond extends DataTransfer {
-  const DataTransfer$GibibitPerSecond([
+  DataTransfer$GibibitPerSecond([
     super.value,
   ]);
 
@@ -2584,14 +2585,14 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
   @override
   String get displayName => 'gibibit/second';
 
-  static const _ratio = 1073741824.0;
+  static final _ratio = Rational.parse('1.07374182400000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$GibibitPerSecond] = 1073741824.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$GibibitPerSecond] = 1.07374182400000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2600,12 +2601,12 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$GibibitPerSecond] with new value
   @override
   DataTransfer$GibibitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$GibibitPerSecond(val);
 
@@ -2618,14 +2619,14 @@ final class DataTransfer$GibibitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$GibibytePerSecond extends DataTransfer {
-  const DataTransfer$GibibytePerSecond([
+  DataTransfer$GibibytePerSecond([
     super.value,
   ]);
 
@@ -2656,14 +2657,14 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
   @override
   String get displayName => 'gibibyte/second';
 
-  static const _ratio = 8589934592.0;
+  static final _ratio = Rational.parse('8.58993459200000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$GibibytePerSecond] = 8589934592.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$GibibytePerSecond] = 8.58993459200000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2672,12 +2673,12 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$GibibytePerSecond] with new value
   @override
   DataTransfer$GibibytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$GibibytePerSecond(val);
 
@@ -2690,14 +2691,14 @@ final class DataTransfer$GibibytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$TebibitPerSecond extends DataTransfer {
-  const DataTransfer$TebibitPerSecond([
+  DataTransfer$TebibitPerSecond([
     super.value,
   ]);
 
@@ -2728,14 +2729,14 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
   @override
   String get displayName => 'tebibit/second';
 
-  static const _ratio = 1099511627776.0;
+  static final _ratio = Rational.parse('1.09951162777600000E+012');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$TebibitPerSecond] = 1099511627776.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TebibitPerSecond] = 1.09951162777600000E+012 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2744,12 +2745,12 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$TebibitPerSecond] with new value
   @override
   DataTransfer$TebibitPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$TebibitPerSecond(val);
 
@@ -2762,14 +2763,14 @@ final class DataTransfer$TebibitPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$TebibytePerSecond extends DataTransfer {
-  const DataTransfer$TebibytePerSecond([
+  DataTransfer$TebibytePerSecond([
     super.value,
   ]);
 
@@ -2800,14 +2801,14 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
   @override
   String get displayName => 'tebibyte/second';
 
-  static const _ratio = 8796093022208.0;
+  static final _ratio = Rational.parse('8.79609302220800000E+012');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$TebibytePerSecond] = 8796093022208.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TebibytePerSecond] = 8.79609302220800000E+012 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2816,12 +2817,12 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$TebibytePerSecond] with new value
   @override
   DataTransfer$TebibytePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$TebibytePerSecond(val);
 
@@ -2834,14 +2835,14 @@ final class DataTransfer$TebibytePerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Ethernet extends DataTransfer {
-  const DataTransfer$Ethernet([
+  DataTransfer$Ethernet([
     super.value,
   ]);
 
@@ -2872,14 +2873,14 @@ final class DataTransfer$Ethernet extends DataTransfer {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Ethernet] = 10000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Ethernet] = 1.00000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2887,12 +2888,12 @@ final class DataTransfer$Ethernet extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Ethernet] with new value
   @override
   DataTransfer$Ethernet withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Ethernet(val);
 
@@ -2905,14 +2906,14 @@ final class DataTransfer$Ethernet extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$EthernetFast extends DataTransfer {
-  const DataTransfer$EthernetFast([
+  DataTransfer$EthernetFast([
     super.value,
   ]);
 
@@ -2943,14 +2944,14 @@ final class DataTransfer$EthernetFast extends DataTransfer {
   @override
   String get displayName => 'ethernet (fast)';
 
-  static const _ratio = 100000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$EthernetFast] = 100000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EthernetFast] = 1.00000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2958,12 +2959,12 @@ final class DataTransfer$EthernetFast extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$EthernetFast] with new value
   @override
   DataTransfer$EthernetFast withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$EthernetFast(val);
 
@@ -2976,14 +2977,14 @@ final class DataTransfer$EthernetFast extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$EthernetGigabit extends DataTransfer {
-  const DataTransfer$EthernetGigabit([
+  DataTransfer$EthernetGigabit([
     super.value,
   ]);
 
@@ -3014,14 +3015,14 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
   @override
   String get displayName => 'ethernet (gigabit)';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$EthernetGigabit] = 1000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EthernetGigabit] = 1.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3030,12 +3031,12 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$EthernetGigabit] with new value
   @override
   DataTransfer$EthernetGigabit withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$EthernetGigabit(val);
 
@@ -3048,14 +3049,14 @@ final class DataTransfer$EthernetGigabit extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
-  const DataTransfer$Ethernet10Gigabit([
+  DataTransfer$Ethernet10Gigabit([
     super.value,
   ]);
 
@@ -3086,14 +3087,14 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
   @override
   String get displayName => 'ethernet (10 gigabit)';
 
-  static const _ratio = 10000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Ethernet10Gigabit] = 10000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Ethernet10Gigabit] = 1.00000000000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3102,12 +3103,12 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Ethernet10Gigabit] with new value
   @override
   DataTransfer$Ethernet10Gigabit withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Ethernet10Gigabit(val);
 
@@ -3120,14 +3121,14 @@ final class DataTransfer$Ethernet10Gigabit extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$OC1 extends DataTransfer {
-  const DataTransfer$OC1([
+  DataTransfer$OC1([
     super.value,
   ]);
 
@@ -3158,14 +3159,14 @@ final class DataTransfer$OC1 extends DataTransfer {
   @override
   String get displayName => 'OC1';
 
-  static const _ratio = 51840000.0;
+  static final _ratio = Rational.parse('5.18400000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$OC1] = 51840000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC1] = 5.18400000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3173,12 +3174,12 @@ final class DataTransfer$OC1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$OC1] with new value
   @override
   DataTransfer$OC1 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$OC1(val);
 
@@ -3191,14 +3192,14 @@ final class DataTransfer$OC1 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$OC3 extends DataTransfer {
-  const DataTransfer$OC3([
+  DataTransfer$OC3([
     super.value,
   ]);
 
@@ -3229,14 +3230,14 @@ final class DataTransfer$OC3 extends DataTransfer {
   @override
   String get displayName => 'OC3';
 
-  static const _ratio = 155520000.0;
+  static final _ratio = Rational.parse('1.55520000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$OC3] = 155520000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC3] = 1.55520000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3244,12 +3245,12 @@ final class DataTransfer$OC3 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$OC3] with new value
   @override
   DataTransfer$OC3 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$OC3(val);
 
@@ -3262,14 +3263,14 @@ final class DataTransfer$OC3 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$OC12 extends DataTransfer {
-  const DataTransfer$OC12([
+  DataTransfer$OC12([
     super.value,
   ]);
 
@@ -3300,14 +3301,14 @@ final class DataTransfer$OC12 extends DataTransfer {
   @override
   String get displayName => 'OC12';
 
-  static const _ratio = 622080000.0;
+  static final _ratio = Rational.parse('6.22080000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$OC12] = 622080000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC12] = 6.22080000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3315,12 +3316,12 @@ final class DataTransfer$OC12 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$OC12] with new value
   @override
   DataTransfer$OC12 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$OC12(val);
 
@@ -3333,14 +3334,14 @@ final class DataTransfer$OC12 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$OC24 extends DataTransfer {
-  const DataTransfer$OC24([
+  DataTransfer$OC24([
     super.value,
   ]);
 
@@ -3371,14 +3372,14 @@ final class DataTransfer$OC24 extends DataTransfer {
   @override
   String get displayName => 'OC24';
 
-  static const _ratio = 1244160000.0;
+  static final _ratio = Rational.parse('1.24416000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$OC24] = 1244160000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC24] = 1.24416000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3386,12 +3387,12 @@ final class DataTransfer$OC24 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$OC24] with new value
   @override
   DataTransfer$OC24 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$OC24(val);
 
@@ -3404,14 +3405,14 @@ final class DataTransfer$OC24 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$OC48 extends DataTransfer {
-  const DataTransfer$OC48([
+  DataTransfer$OC48([
     super.value,
   ]);
 
@@ -3442,14 +3443,14 @@ final class DataTransfer$OC48 extends DataTransfer {
   @override
   String get displayName => 'OC48';
 
-  static const _ratio = 2488320000.0;
+  static final _ratio = Rational.parse('2.48832000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$OC48] = 2488320000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC48] = 2.48832000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3457,12 +3458,12 @@ final class DataTransfer$OC48 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$OC48] with new value
   @override
   DataTransfer$OC48 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$OC48(val);
 
@@ -3475,14 +3476,14 @@ final class DataTransfer$OC48 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$OC192 extends DataTransfer {
-  const DataTransfer$OC192([
+  DataTransfer$OC192([
     super.value,
   ]);
 
@@ -3513,14 +3514,14 @@ final class DataTransfer$OC192 extends DataTransfer {
   @override
   String get displayName => 'OC192';
 
-  static const _ratio = 9953280000.0;
+  static final _ratio = Rational.parse('9.95328000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$OC192] = 9953280000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC192] = 9.95328000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3528,12 +3529,12 @@ final class DataTransfer$OC192 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$OC192] with new value
   @override
   DataTransfer$OC192 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$OC192(val);
 
@@ -3546,14 +3547,14 @@ final class DataTransfer$OC192 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$OC768 extends DataTransfer {
-  const DataTransfer$OC768([
+  DataTransfer$OC768([
     super.value,
   ]);
 
@@ -3584,14 +3585,14 @@ final class DataTransfer$OC768 extends DataTransfer {
   @override
   String get displayName => 'OC768';
 
-  static const _ratio = 39813120000.0;
+  static final _ratio = Rational.parse('3.98131200000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$OC768] = 39813120000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$OC768] = 3.98131200000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3599,12 +3600,12 @@ final class DataTransfer$OC768 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$OC768] with new value
   @override
   DataTransfer$OC768 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$OC768(val);
 
@@ -3617,14 +3618,14 @@ final class DataTransfer$OC768 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$ISDNSingleChannel extends DataTransfer {
-  const DataTransfer$ISDNSingleChannel([
+  DataTransfer$ISDNSingleChannel([
     super.value,
   ]);
 
@@ -3655,14 +3656,14 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
   @override
   String get displayName => 'ISDN (single channel)';
 
-  static const _ratio = 64000.0;
+  static final _ratio = Rational.parse('6.40000000000000000E+004');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$ISDNSingleChannel] = 64000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ISDNSingleChannel] = 6.40000000000000000E+004 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3671,12 +3672,12 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$ISDNSingleChannel] with new value
   @override
   DataTransfer$ISDNSingleChannel withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$ISDNSingleChannel(val);
 
@@ -3689,14 +3690,14 @@ final class DataTransfer$ISDNSingleChannel extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$ISDNDualChannel extends DataTransfer {
-  const DataTransfer$ISDNDualChannel([
+  DataTransfer$ISDNDualChannel([
     super.value,
   ]);
 
@@ -3727,14 +3728,14 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
   @override
   String get displayName => 'ISDN (dual channel)';
 
-  static const _ratio = 128000.0;
+  static final _ratio = Rational.parse('1.28000000000000000E+005');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$ISDNDualChannel] = 128000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ISDNDualChannel] = 1.28000000000000000E+005 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3743,12 +3744,12 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$ISDNDualChannel] with new value
   @override
   DataTransfer$ISDNDualChannel withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$ISDNDualChannel(val);
 
@@ -3761,14 +3762,14 @@ final class DataTransfer$ISDNDualChannel extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem110 extends DataTransfer {
-  const DataTransfer$Modem110([
+  DataTransfer$Modem110([
     super.value,
   ]);
 
@@ -3799,14 +3800,14 @@ final class DataTransfer$Modem110 extends DataTransfer {
   @override
   String get displayName => 'modem (110)';
 
-  static const _ratio = 110.0;
+  static final _ratio = Rational.parse('1.10000000000000000E+002');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem110] = 110.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem110] = 1.10000000000000000E+002 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3814,12 +3815,12 @@ final class DataTransfer$Modem110 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem110] with new value
   @override
   DataTransfer$Modem110 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem110(val);
 
@@ -3832,14 +3833,14 @@ final class DataTransfer$Modem110 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem300 extends DataTransfer {
-  const DataTransfer$Modem300([
+  DataTransfer$Modem300([
     super.value,
   ]);
 
@@ -3870,14 +3871,14 @@ final class DataTransfer$Modem300 extends DataTransfer {
   @override
   String get displayName => 'modem (300)';
 
-  static const _ratio = 300.0;
+  static final _ratio = Rational.parse('3.00000000000000000E+002');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem300] = 300.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem300] = 3.00000000000000000E+002 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3885,12 +3886,12 @@ final class DataTransfer$Modem300 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem300] with new value
   @override
   DataTransfer$Modem300 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem300(val);
 
@@ -3903,14 +3904,14 @@ final class DataTransfer$Modem300 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem1200 extends DataTransfer {
-  const DataTransfer$Modem1200([
+  DataTransfer$Modem1200([
     super.value,
   ]);
 
@@ -3941,14 +3942,14 @@ final class DataTransfer$Modem1200 extends DataTransfer {
   @override
   String get displayName => 'modem (1200)';
 
-  static const _ratio = 1200.0;
+  static final _ratio = Rational.parse('1.20000000000000000E+003');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem1200] = 1200.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem1200] = 1.20000000000000000E+003 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3956,12 +3957,12 @@ final class DataTransfer$Modem1200 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem1200] with new value
   @override
   DataTransfer$Modem1200 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem1200(val);
 
@@ -3974,14 +3975,14 @@ final class DataTransfer$Modem1200 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem2400 extends DataTransfer {
-  const DataTransfer$Modem2400([
+  DataTransfer$Modem2400([
     super.value,
   ]);
 
@@ -4012,14 +4013,14 @@ final class DataTransfer$Modem2400 extends DataTransfer {
   @override
   String get displayName => 'modem (2400)';
 
-  static const _ratio = 2400.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+003');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem2400] = 2400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem2400] = 2.40000000000000000E+003 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4027,12 +4028,12 @@ final class DataTransfer$Modem2400 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem2400] with new value
   @override
   DataTransfer$Modem2400 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem2400(val);
 
@@ -4045,14 +4046,14 @@ final class DataTransfer$Modem2400 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem9600 extends DataTransfer {
-  const DataTransfer$Modem9600([
+  DataTransfer$Modem9600([
     super.value,
   ]);
 
@@ -4083,14 +4084,14 @@ final class DataTransfer$Modem9600 extends DataTransfer {
   @override
   String get displayName => 'modem (9600)';
 
-  static const _ratio = 9600.0;
+  static final _ratio = Rational.parse('9.60000000000000000E+003');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem9600] = 9600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem9600] = 9.60000000000000000E+003 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4098,12 +4099,12 @@ final class DataTransfer$Modem9600 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem9600] with new value
   @override
   DataTransfer$Modem9600 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem9600(val);
 
@@ -4116,14 +4117,14 @@ final class DataTransfer$Modem9600 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem144k extends DataTransfer {
-  const DataTransfer$Modem144k([
+  DataTransfer$Modem144k([
     super.value,
   ]);
 
@@ -4154,14 +4155,14 @@ final class DataTransfer$Modem144k extends DataTransfer {
   @override
   String get displayName => 'modem (14.4k)';
 
-  static const _ratio = 14400.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+004');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem144k] = 14400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem144k] = 1.44000000000000000E+004 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4169,12 +4170,12 @@ final class DataTransfer$Modem144k extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem144k] with new value
   @override
   DataTransfer$Modem144k withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem144k(val);
 
@@ -4187,14 +4188,14 @@ final class DataTransfer$Modem144k extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem288k extends DataTransfer {
-  const DataTransfer$Modem288k([
+  DataTransfer$Modem288k([
     super.value,
   ]);
 
@@ -4225,14 +4226,14 @@ final class DataTransfer$Modem288k extends DataTransfer {
   @override
   String get displayName => 'modem (28.8k)';
 
-  static const _ratio = 28800.0;
+  static final _ratio = Rational.parse('2.88000000000000000E+004');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem288k] = 28800.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem288k] = 2.88000000000000000E+004 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4240,12 +4241,12 @@ final class DataTransfer$Modem288k extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem288k] with new value
   @override
   DataTransfer$Modem288k withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem288k(val);
 
@@ -4258,14 +4259,14 @@ final class DataTransfer$Modem288k extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem336k extends DataTransfer {
-  const DataTransfer$Modem336k([
+  DataTransfer$Modem336k([
     super.value,
   ]);
 
@@ -4296,14 +4297,14 @@ final class DataTransfer$Modem336k extends DataTransfer {
   @override
   String get displayName => 'modem (33.6k)';
 
-  static const _ratio = 33600.0;
+  static final _ratio = Rational.parse('3.36000000000000000E+004');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem336k] = 33600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem336k] = 3.36000000000000000E+004 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4311,12 +4312,12 @@ final class DataTransfer$Modem336k extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem336k] with new value
   @override
   DataTransfer$Modem336k withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem336k(val);
 
@@ -4329,14 +4330,14 @@ final class DataTransfer$Modem336k extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$Modem56k extends DataTransfer {
-  const DataTransfer$Modem56k([
+  DataTransfer$Modem56k([
     super.value,
   ]);
 
@@ -4367,14 +4368,14 @@ final class DataTransfer$Modem56k extends DataTransfer {
   @override
   String get displayName => 'modem (56k)';
 
-  static const _ratio = 56000.0;
+  static final _ratio = Rational.parse('5.60000000000000000E+004');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$Modem56k] = 56000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$Modem56k] = 5.60000000000000000E+004 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4382,12 +4383,12 @@ final class DataTransfer$Modem56k extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$Modem56k] with new value
   @override
   DataTransfer$Modem56k withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$Modem56k(val);
 
@@ -4400,14 +4401,14 @@ final class DataTransfer$Modem56k extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSIAsync extends DataTransfer {
-  const DataTransfer$SCSIAsync([
+  DataTransfer$SCSIAsync([
     super.value,
   ]);
 
@@ -4438,14 +4439,14 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
   @override
   String get displayName => 'SCSI (Async)';
 
-  static const _ratio = 12000000.0;
+  static final _ratio = Rational.parse('1.20000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSIAsync] = 12000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIAsync] = 1.20000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4453,12 +4454,12 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSIAsync] with new value
   @override
   DataTransfer$SCSIAsync withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSIAsync(val);
 
@@ -4471,14 +4472,14 @@ final class DataTransfer$SCSIAsync extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSISync extends DataTransfer {
-  const DataTransfer$SCSISync([
+  DataTransfer$SCSISync([
     super.value,
   ]);
 
@@ -4509,14 +4510,14 @@ final class DataTransfer$SCSISync extends DataTransfer {
   @override
   String get displayName => 'SCSI (Sync)';
 
-  static const _ratio = 40000000.0;
+  static final _ratio = Rational.parse('4.00000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSISync] = 40000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSISync] = 4.00000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4524,12 +4525,12 @@ final class DataTransfer$SCSISync extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSISync] with new value
   @override
   DataTransfer$SCSISync withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSISync(val);
 
@@ -4542,14 +4543,14 @@ final class DataTransfer$SCSISync extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSIFast extends DataTransfer {
-  const DataTransfer$SCSIFast([
+  DataTransfer$SCSIFast([
     super.value,
   ]);
 
@@ -4580,14 +4581,14 @@ final class DataTransfer$SCSIFast extends DataTransfer {
   @override
   String get displayName => 'SCSI (Fast)';
 
-  static const _ratio = 80000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSIFast] = 80000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIFast] = 8.00000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4595,12 +4596,12 @@ final class DataTransfer$SCSIFast extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSIFast] with new value
   @override
   DataTransfer$SCSIFast withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSIFast(val);
 
@@ -4613,14 +4614,14 @@ final class DataTransfer$SCSIFast extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSIFastUltra extends DataTransfer {
-  const DataTransfer$SCSIFastUltra([
+  DataTransfer$SCSIFastUltra([
     super.value,
   ]);
 
@@ -4651,14 +4652,14 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
   @override
   String get displayName => 'SCSI (Fast Ultra)';
 
-  static const _ratio = 160000000.0;
+  static final _ratio = Rational.parse('1.60000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSIFastUltra] = 160000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIFastUltra] = 1.60000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4666,12 +4667,12 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSIFastUltra] with new value
   @override
   DataTransfer$SCSIFastUltra withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSIFastUltra(val);
 
@@ -4684,14 +4685,14 @@ final class DataTransfer$SCSIFastUltra extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSIFastWide extends DataTransfer {
-  const DataTransfer$SCSIFastWide([
+  DataTransfer$SCSIFastWide([
     super.value,
   ]);
 
@@ -4722,14 +4723,14 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
   @override
   String get displayName => 'SCSI (Fast Wide)';
 
-  static const _ratio = 160000000.0;
+  static final _ratio = Rational.parse('1.60000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSIFastWide] = 160000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIFastWide] = 1.60000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4737,12 +4738,12 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSIFastWide] with new value
   @override
   DataTransfer$SCSIFastWide withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSIFastWide(val);
 
@@ -4755,14 +4756,14 @@ final class DataTransfer$SCSIFastWide extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
-  const DataTransfer$SCSIFastUltraWide([
+  DataTransfer$SCSIFastUltraWide([
     super.value,
   ]);
 
@@ -4793,14 +4794,14 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
   @override
   String get displayName => 'SCSI (Fast Ultra Wide)';
 
-  static const _ratio = 320000000.0;
+  static final _ratio = Rational.parse('3.20000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSIFastUltraWide] = 320000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIFastUltraWide] = 3.20000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4809,12 +4810,12 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSIFastUltraWide] with new value
   @override
   DataTransfer$SCSIFastUltraWide withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSIFastUltraWide(val);
 
@@ -4827,14 +4828,14 @@ final class DataTransfer$SCSIFastUltraWide extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSIUltra2 extends DataTransfer {
-  const DataTransfer$SCSIUltra2([
+  DataTransfer$SCSIUltra2([
     super.value,
   ]);
 
@@ -4865,14 +4866,14 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
   @override
   String get displayName => 'SCSI (Ultra-2)';
 
-  static const _ratio = 640000000.0;
+  static final _ratio = Rational.parse('6.40000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSIUltra2] = 640000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIUltra2] = 6.40000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4880,12 +4881,12 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSIUltra2] with new value
   @override
   DataTransfer$SCSIUltra2 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSIUltra2(val);
 
@@ -4898,14 +4899,14 @@ final class DataTransfer$SCSIUltra2 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSIUltra3 extends DataTransfer {
-  const DataTransfer$SCSIUltra3([
+  DataTransfer$SCSIUltra3([
     super.value,
   ]);
 
@@ -4936,14 +4937,14 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
   @override
   String get displayName => 'SCSI (Ultra-3)';
 
-  static const _ratio = 1280000000.0;
+  static final _ratio = Rational.parse('1.28000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSIUltra3] = 1280000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSIUltra3] = 1.28000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4951,12 +4952,12 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSIUltra3] with new value
   @override
   DataTransfer$SCSIUltra3 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSIUltra3(val);
 
@@ -4969,14 +4970,14 @@ final class DataTransfer$SCSIUltra3 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
-  const DataTransfer$SCSILVDUltra80([
+  DataTransfer$SCSILVDUltra80([
     super.value,
   ]);
 
@@ -5007,14 +5008,14 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
   @override
   String get displayName => 'SCSI (LVD Ultra80)';
 
-  static const _ratio = 640000000.0;
+  static final _ratio = Rational.parse('6.40000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSILVDUltra80] = 640000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSILVDUltra80] = 6.40000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5022,12 +5023,12 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSILVDUltra80] with new value
   @override
   DataTransfer$SCSILVDUltra80 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSILVDUltra80(val);
 
@@ -5040,14 +5041,14 @@ final class DataTransfer$SCSILVDUltra80 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
-  const DataTransfer$SCSILVDUltra160([
+  DataTransfer$SCSILVDUltra160([
     super.value,
   ]);
 
@@ -5078,14 +5079,14 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
   @override
   String get displayName => 'SCSI (LVD Ultra160)';
 
-  static const _ratio = 1280000000.0;
+  static final _ratio = Rational.parse('1.28000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSILVDUltra160] = 1280000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSILVDUltra160] = 1.28000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5094,12 +5095,12 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSILVDUltra160] with new value
   @override
   DataTransfer$SCSILVDUltra160 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSILVDUltra160(val);
 
@@ -5112,14 +5113,14 @@ final class DataTransfer$SCSILVDUltra160 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
-  const DataTransfer$SCSILVDUltra320([
+  DataTransfer$SCSILVDUltra320([
     super.value,
   ]);
 
@@ -5150,14 +5151,14 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
   @override
   String get displayName => 'SCSI (LVD Ultra320)';
 
-  static const _ratio = 2560000000.0;
+  static final _ratio = Rational.parse('2.56000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SCSILVDUltra320] = 2560000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SCSILVDUltra320] = 2.56000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5166,12 +5167,12 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SCSILVDUltra320] with new value
   @override
   DataTransfer$SCSILVDUltra320 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SCSILVDUltra320(val);
 
@@ -5184,14 +5185,14 @@ final class DataTransfer$SCSILVDUltra320 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEPIOMode0 extends DataTransfer {
-  const DataTransfer$IDEPIOMode0([
+  DataTransfer$IDEPIOMode0([
     super.value,
   ]);
 
@@ -5222,14 +5223,14 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
   @override
   String get displayName => 'IDE (PIO mode 0)';
 
-  static const _ratio = 26400000.0;
+  static final _ratio = Rational.parse('2.64000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEPIOMode0] = 26400000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode0] = 2.64000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5237,12 +5238,12 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEPIOMode0] with new value
   @override
   DataTransfer$IDEPIOMode0 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEPIOMode0(val);
 
@@ -5255,14 +5256,14 @@ final class DataTransfer$IDEPIOMode0 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEPIOMode1 extends DataTransfer {
-  const DataTransfer$IDEPIOMode1([
+  DataTransfer$IDEPIOMode1([
     super.value,
   ]);
 
@@ -5293,14 +5294,14 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
   @override
   String get displayName => 'IDE (PIO mode 1)';
 
-  static const _ratio = 41600000.0;
+  static final _ratio = Rational.parse('4.16000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEPIOMode1] = 41600000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode1] = 4.16000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5308,12 +5309,12 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEPIOMode1] with new value
   @override
   DataTransfer$IDEPIOMode1 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEPIOMode1(val);
 
@@ -5326,14 +5327,14 @@ final class DataTransfer$IDEPIOMode1 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEPIOMode2 extends DataTransfer {
-  const DataTransfer$IDEPIOMode2([
+  DataTransfer$IDEPIOMode2([
     super.value,
   ]);
 
@@ -5364,14 +5365,14 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
   @override
   String get displayName => 'IDE (PIO mode 2)';
 
-  static const _ratio = 66400000.0;
+  static final _ratio = Rational.parse('6.64000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEPIOMode2] = 66400000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode2] = 6.64000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5379,12 +5380,12 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEPIOMode2] with new value
   @override
   DataTransfer$IDEPIOMode2 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEPIOMode2(val);
 
@@ -5397,14 +5398,14 @@ final class DataTransfer$IDEPIOMode2 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEPIOMode3 extends DataTransfer {
-  const DataTransfer$IDEPIOMode3([
+  DataTransfer$IDEPIOMode3([
     super.value,
   ]);
 
@@ -5435,14 +5436,14 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
   @override
   String get displayName => 'IDE (PIO mode 3)';
 
-  static const _ratio = 88800000.0;
+  static final _ratio = Rational.parse('8.88000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEPIOMode3] = 88800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode3] = 8.88000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5450,12 +5451,12 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEPIOMode3] with new value
   @override
   DataTransfer$IDEPIOMode3 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEPIOMode3(val);
 
@@ -5468,14 +5469,14 @@ final class DataTransfer$IDEPIOMode3 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEPIOMode4 extends DataTransfer {
-  const DataTransfer$IDEPIOMode4([
+  DataTransfer$IDEPIOMode4([
     super.value,
   ]);
 
@@ -5506,14 +5507,14 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
   @override
   String get displayName => 'IDE (PIO mode 4)';
 
-  static const _ratio = 132800000.0;
+  static final _ratio = Rational.parse('1.32800000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEPIOMode4] = 132800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEPIOMode4] = 1.32800000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5521,12 +5522,12 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEPIOMode4] with new value
   @override
   DataTransfer$IDEPIOMode4 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEPIOMode4(val);
 
@@ -5539,14 +5540,14 @@ final class DataTransfer$IDEPIOMode4 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEDMAMode0 extends DataTransfer {
-  const DataTransfer$IDEDMAMode0([
+  DataTransfer$IDEDMAMode0([
     super.value,
   ]);
 
@@ -5577,14 +5578,14 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
   @override
   String get displayName => 'IDE (DMA mode 0)';
 
-  static const _ratio = 33600000.0;
+  static final _ratio = Rational.parse('3.36000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEDMAMode0] = 33600000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEDMAMode0] = 3.36000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5592,12 +5593,12 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEDMAMode0] with new value
   @override
   DataTransfer$IDEDMAMode0 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEDMAMode0(val);
 
@@ -5610,14 +5611,14 @@ final class DataTransfer$IDEDMAMode0 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEDMAMode1 extends DataTransfer {
-  const DataTransfer$IDEDMAMode1([
+  DataTransfer$IDEDMAMode1([
     super.value,
   ]);
 
@@ -5648,14 +5649,14 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
   @override
   String get displayName => 'IDE (DMA mode 1)';
 
-  static const _ratio = 106400000.0;
+  static final _ratio = Rational.parse('1.06400000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEDMAMode1] = 106400000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEDMAMode1] = 1.06400000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5663,12 +5664,12 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEDMAMode1] with new value
   @override
   DataTransfer$IDEDMAMode1 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEDMAMode1(val);
 
@@ -5681,14 +5682,14 @@ final class DataTransfer$IDEDMAMode1 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEDMAMode2 extends DataTransfer {
-  const DataTransfer$IDEDMAMode2([
+  DataTransfer$IDEDMAMode2([
     super.value,
   ]);
 
@@ -5719,14 +5720,14 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
   @override
   String get displayName => 'IDE (DMA mode 2)';
 
-  static const _ratio = 132800000.0;
+  static final _ratio = Rational.parse('1.32800000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEDMAMode2] = 132800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEDMAMode2] = 1.32800000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5734,12 +5735,12 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEDMAMode2] with new value
   @override
   DataTransfer$IDEDMAMode2 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEDMAMode2(val);
 
@@ -5752,14 +5753,14 @@ final class DataTransfer$IDEDMAMode2 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
-  const DataTransfer$IDEUDMAMode0([
+  DataTransfer$IDEUDMAMode0([
     super.value,
   ]);
 
@@ -5790,14 +5791,14 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA mode 0)';
 
-  static const _ratio = 132800000.0;
+  static final _ratio = Rational.parse('1.32800000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMAMode0] = 132800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode0] = 1.32800000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5805,12 +5806,12 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMAMode0] with new value
   @override
   DataTransfer$IDEUDMAMode0 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMAMode0(val);
 
@@ -5823,14 +5824,14 @@ final class DataTransfer$IDEUDMAMode0 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
-  const DataTransfer$IDEUDMAMode1([
+  DataTransfer$IDEUDMAMode1([
     super.value,
   ]);
 
@@ -5861,14 +5862,14 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA mode 1)';
 
-  static const _ratio = 200000000.0;
+  static final _ratio = Rational.parse('2.00000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMAMode1] = 200000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode1] = 2.00000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5876,12 +5877,12 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMAMode1] with new value
   @override
   DataTransfer$IDEUDMAMode1 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMAMode1(val);
 
@@ -5894,14 +5895,14 @@ final class DataTransfer$IDEUDMAMode1 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
-  const DataTransfer$IDEUDMAMode2([
+  DataTransfer$IDEUDMAMode2([
     super.value,
   ]);
 
@@ -5932,14 +5933,14 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA mode 2)';
 
-  static const _ratio = 264000000.0;
+  static final _ratio = Rational.parse('2.64000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMAMode2] = 264000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode2] = 2.64000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -5947,12 +5948,12 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMAMode2] with new value
   @override
   DataTransfer$IDEUDMAMode2 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMAMode2(val);
 
@@ -5965,14 +5966,14 @@ final class DataTransfer$IDEUDMAMode2 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
-  const DataTransfer$IDEUDMAMode3([
+  DataTransfer$IDEUDMAMode3([
     super.value,
   ]);
 
@@ -6003,14 +6004,14 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA mode 3)';
 
-  static const _ratio = 400000000.0;
+  static final _ratio = Rational.parse('4.00000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMAMode3] = 400000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode3] = 4.00000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6018,12 +6019,12 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMAMode3] with new value
   @override
   DataTransfer$IDEUDMAMode3 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMAMode3(val);
 
@@ -6036,14 +6037,14 @@ final class DataTransfer$IDEUDMAMode3 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
-  const DataTransfer$IDEUDMAMode4([
+  DataTransfer$IDEUDMAMode4([
     super.value,
   ]);
 
@@ -6074,14 +6075,14 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA mode 4)';
 
-  static const _ratio = 528000000.0;
+  static final _ratio = Rational.parse('5.28000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMAMode4] = 528000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode4] = 5.28000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6089,12 +6090,12 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMAMode4] with new value
   @override
   DataTransfer$IDEUDMAMode4 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMAMode4(val);
 
@@ -6107,14 +6108,14 @@ final class DataTransfer$IDEUDMAMode4 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
-  const DataTransfer$IDEUDMAMode5([
+  DataTransfer$IDEUDMAMode5([
     super.value,
   ]);
 
@@ -6145,14 +6146,14 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA mode 5)';
 
-  static const _ratio = 800000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMAMode5] = 800000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode5] = 8.00000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6160,12 +6161,12 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMAMode5] with new value
   @override
   DataTransfer$IDEUDMAMode5 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMAMode5(val);
 
@@ -6178,14 +6179,14 @@ final class DataTransfer$IDEUDMAMode5 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
-  const DataTransfer$IDEUDMAMode6([
+  DataTransfer$IDEUDMAMode6([
     super.value,
   ]);
 
@@ -6216,14 +6217,14 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA mode 6)';
 
-  static const _ratio = 1066666666.6666666;
+  static final _ratio = Rational.parse('1.06666666666666667E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMAMode6] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMAMode6] ≈ 1.06666666666666667E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6231,12 +6232,12 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMAMode6] with new value
   @override
   DataTransfer$IDEUDMAMode6 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMAMode6(val);
 
@@ -6249,14 +6250,14 @@ final class DataTransfer$IDEUDMAMode6 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMA33 extends DataTransfer {
-  const DataTransfer$IDEUDMA33([
+  DataTransfer$IDEUDMA33([
     super.value,
   ]);
 
@@ -6287,14 +6288,14 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA-33)';
 
-  static const _ratio = 264000000.0;
+  static final _ratio = Rational.parse('2.64000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMA33] = 264000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMA33] = 2.64000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6302,12 +6303,12 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMA33] with new value
   @override
   DataTransfer$IDEUDMA33 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMA33(val);
 
@@ -6320,14 +6321,14 @@ final class DataTransfer$IDEUDMA33 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMA66 extends DataTransfer {
-  const DataTransfer$IDEUDMA66([
+  DataTransfer$IDEUDMA66([
     super.value,
   ]);
 
@@ -6358,14 +6359,14 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA-66)';
 
-  static const _ratio = 528000000.0;
+  static final _ratio = Rational.parse('5.28000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMA66] = 528000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMA66] = 5.28000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6373,12 +6374,12 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMA66] with new value
   @override
   DataTransfer$IDEUDMA66 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMA66(val);
 
@@ -6391,14 +6392,14 @@ final class DataTransfer$IDEUDMA66 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMA100 extends DataTransfer {
-  const DataTransfer$IDEUDMA100([
+  DataTransfer$IDEUDMA100([
     super.value,
   ]);
 
@@ -6429,14 +6430,14 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA-100)';
 
-  static const _ratio = 800000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMA100] = 800000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMA100] = 8.00000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6444,12 +6445,12 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMA100] with new value
   @override
   DataTransfer$IDEUDMA100 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMA100(val);
 
@@ -6462,14 +6463,14 @@ final class DataTransfer$IDEUDMA100 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IDEUDMA133 extends DataTransfer {
-  const DataTransfer$IDEUDMA133([
+  DataTransfer$IDEUDMA133([
     super.value,
   ]);
 
@@ -6500,14 +6501,14 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
   @override
   String get displayName => 'IDE (UDMA-133)';
 
-  static const _ratio = 1066666666.6666666;
+  static final _ratio = Rational.parse('1.06666666666666667E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IDEUDMA133] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IDEUDMA133] ≈ 1.06666666666666667E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6515,12 +6516,12 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IDEUDMA133] with new value
   @override
   DataTransfer$IDEUDMA133 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IDEUDMA133(val);
 
@@ -6533,14 +6534,14 @@ final class DataTransfer$IDEUDMA133 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SATA10 extends DataTransfer {
-  const DataTransfer$SATA10([
+  DataTransfer$SATA10([
     super.value,
   ]);
 
@@ -6571,14 +6572,14 @@ final class DataTransfer$SATA10 extends DataTransfer {
   @override
   String get displayName => 'SATA 1.0';
 
-  static const _ratio = 1500000000.0;
+  static final _ratio = Rational.parse('1.50000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SATA10] = 1500000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SATA10] = 1.50000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6586,12 +6587,12 @@ final class DataTransfer$SATA10 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SATA10] with new value
   @override
   DataTransfer$SATA10 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SATA10(val);
 
@@ -6604,14 +6605,14 @@ final class DataTransfer$SATA10 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SATA20 extends DataTransfer {
-  const DataTransfer$SATA20([
+  DataTransfer$SATA20([
     super.value,
   ]);
 
@@ -6642,14 +6643,14 @@ final class DataTransfer$SATA20 extends DataTransfer {
   @override
   String get displayName => 'SATA 2.0';
 
-  static const _ratio = 3000000000.0;
+  static final _ratio = Rational.parse('3.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SATA20] = 3000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SATA20] = 3.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6657,12 +6658,12 @@ final class DataTransfer$SATA20 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SATA20] with new value
   @override
   DataTransfer$SATA20 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SATA20(val);
 
@@ -6675,14 +6676,14 @@ final class DataTransfer$SATA20 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$SATA30 extends DataTransfer {
-  const DataTransfer$SATA30([
+  DataTransfer$SATA30([
     super.value,
   ]);
 
@@ -6713,14 +6714,14 @@ final class DataTransfer$SATA30 extends DataTransfer {
   @override
   String get displayName => 'SATA 3.0';
 
-  static const _ratio = 6000000000.0;
+  static final _ratio = Rational.parse('6.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$SATA30] = 6000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$SATA30] = 6.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6728,12 +6729,12 @@ final class DataTransfer$SATA30 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$SATA30] with new value
   @override
   DataTransfer$SATA30 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$SATA30(val);
 
@@ -6746,14 +6747,14 @@ final class DataTransfer$SATA30 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$USB extends DataTransfer {
-  const DataTransfer$USB([
+  DataTransfer$USB([
     super.value,
   ]);
 
@@ -6784,14 +6785,14 @@ final class DataTransfer$USB extends DataTransfer {
   @override
   String get displayName => 'USB';
 
-  static const _ratio = 12000000.0;
+  static final _ratio = Rational.parse('1.20000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$USB] = 12000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$USB] = 1.20000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6799,12 +6800,12 @@ final class DataTransfer$USB extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$USB] with new value
   @override
   DataTransfer$USB withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$USB(val);
 
@@ -6817,14 +6818,14 @@ final class DataTransfer$USB extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$USB20 extends DataTransfer {
-  const DataTransfer$USB20([
+  DataTransfer$USB20([
     super.value,
   ]);
 
@@ -6855,14 +6856,14 @@ final class DataTransfer$USB20 extends DataTransfer {
   @override
   String get displayName => 'USB 2.0';
 
-  static const _ratio = 480000000.0;
+  static final _ratio = Rational.parse('4.80000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$USB20] = 480000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$USB20] = 4.80000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6870,12 +6871,12 @@ final class DataTransfer$USB20 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$USB20] with new value
   @override
   DataTransfer$USB20 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$USB20(val);
 
@@ -6888,14 +6889,14 @@ final class DataTransfer$USB20 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$USB30 extends DataTransfer {
-  const DataTransfer$USB30([
+  DataTransfer$USB30([
     super.value,
   ]);
 
@@ -6926,14 +6927,14 @@ final class DataTransfer$USB30 extends DataTransfer {
   @override
   String get displayName => 'USB 3.0';
 
-  static const _ratio = 5000000000.0;
+  static final _ratio = Rational.parse('5.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$USB30] = 5000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$USB30] = 5.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -6941,12 +6942,12 @@ final class DataTransfer$USB30 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$USB30] with new value
   @override
   DataTransfer$USB30 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$USB30(val);
 
@@ -6959,14 +6960,14 @@ final class DataTransfer$USB30 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
-  const DataTransfer$FireWire400IEEE1394([
+  DataTransfer$FireWire400IEEE1394([
     super.value,
   ]);
 
@@ -6997,14 +6998,14 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
   @override
   String get displayName => 'FireWire 400 (IEEE-1394)';
 
-  static const _ratio = 400000000.0;
+  static final _ratio = Rational.parse('4.00000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$FireWire400IEEE1394] = 400000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$FireWire400IEEE1394] = 4.00000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7013,12 +7014,12 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$FireWire400IEEE1394] with new value
   @override
   DataTransfer$FireWire400IEEE1394 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$FireWire400IEEE1394(val);
 
@@ -7031,14 +7032,14 @@ final class DataTransfer$FireWire400IEEE1394 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
-  const DataTransfer$FireWire800IEEE1394b([
+  DataTransfer$FireWire800IEEE1394b([
     super.value,
   ]);
 
@@ -7069,14 +7070,14 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
   @override
   String get displayName => 'FireWire 800 (IEEE-1394b)';
 
-  static const _ratio = 800000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$FireWire800IEEE1394b] = 800000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$FireWire800IEEE1394b] = 8.00000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7085,12 +7086,12 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$FireWire800IEEE1394b] with new value
   @override
   DataTransfer$FireWire800IEEE1394b withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$FireWire800IEEE1394b(val);
 
@@ -7103,14 +7104,14 @@ final class DataTransfer$FireWire800IEEE1394b extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IrDA extends DataTransfer {
-  const DataTransfer$IrDA([
+  DataTransfer$IrDA([
     super.value,
   ]);
 
@@ -7141,14 +7142,14 @@ final class DataTransfer$IrDA extends DataTransfer {
   @override
   String get displayName => 'IrDA';
 
-  static const _ratio = 115200.0;
+  static final _ratio = Rational.parse('1.15200000000000000E+005');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IrDA] = 115200.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IrDA] = 1.15200000000000000E+005 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7156,12 +7157,12 @@ final class DataTransfer$IrDA extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IrDA] with new value
   @override
   DataTransfer$IrDA withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IrDA(val);
 
@@ -7174,14 +7175,14 @@ final class DataTransfer$IrDA extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$IrDA2 extends DataTransfer {
-  const DataTransfer$IrDA2([
+  DataTransfer$IrDA2([
     super.value,
   ]);
 
@@ -7212,14 +7213,14 @@ final class DataTransfer$IrDA2 extends DataTransfer {
   @override
   String get displayName => 'IrDA-2';
 
-  static const _ratio = 4000000.0;
+  static final _ratio = Rational.parse('4.00000000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$IrDA2] = 4000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$IrDA2] = 4.00000000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7227,12 +7228,12 @@ final class DataTransfer$IrDA2 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$IrDA2] with new value
   @override
   DataTransfer$IrDA2 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$IrDA2(val);
 
@@ -7245,14 +7246,14 @@ final class DataTransfer$IrDA2 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$ATM extends DataTransfer {
-  const DataTransfer$ATM([
+  DataTransfer$ATM([
     super.value,
   ]);
 
@@ -7283,14 +7284,14 @@ final class DataTransfer$ATM extends DataTransfer {
   @override
   String get displayName => 'ATM';
 
-  static const _ratio = 155000000.0;
+  static final _ratio = Rational.parse('1.55000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$ATM] = 155000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ATM] = 1.55000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7298,12 +7299,12 @@ final class DataTransfer$ATM extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$ATM] with new value
   @override
   DataTransfer$ATM withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$ATM(val);
 
@@ -7316,14 +7317,14 @@ final class DataTransfer$ATM extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T0Payload extends DataTransfer {
-  const DataTransfer$T0Payload([
+  DataTransfer$T0Payload([
     super.value,
   ]);
 
@@ -7354,14 +7355,14 @@ final class DataTransfer$T0Payload extends DataTransfer {
   @override
   String get displayName => 'T0 (payload)';
 
-  static const _ratio = 56000.0;
+  static final _ratio = Rational.parse('5.60000000000000000E+004');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T0Payload] = 56000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T0Payload] = 5.60000000000000000E+004 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7369,12 +7370,12 @@ final class DataTransfer$T0Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T0Payload] with new value
   @override
   DataTransfer$T0Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T0Payload(val);
 
@@ -7387,14 +7388,14 @@ final class DataTransfer$T0Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T0B8ZSPayload extends DataTransfer {
-  const DataTransfer$T0B8ZSPayload([
+  DataTransfer$T0B8ZSPayload([
     super.value,
   ]);
 
@@ -7425,14 +7426,14 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
   @override
   String get displayName => 'T0 (B8ZS payload)';
 
-  static const _ratio = 64000.0;
+  static final _ratio = Rational.parse('6.40000000000000000E+004');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T0B8ZSPayload] = 64000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T0B8ZSPayload] = 6.40000000000000000E+004 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7440,12 +7441,12 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T0B8ZSPayload] with new value
   @override
   DataTransfer$T0B8ZSPayload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T0B8ZSPayload(val);
 
@@ -7458,14 +7459,14 @@ final class DataTransfer$T0B8ZSPayload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T1Signal extends DataTransfer {
-  const DataTransfer$T1Signal([
+  DataTransfer$T1Signal([
     super.value,
   ]);
 
@@ -7496,14 +7497,14 @@ final class DataTransfer$T1Signal extends DataTransfer {
   @override
   String get displayName => 'T1 (signal)';
 
-  static const _ratio = 1544000.0;
+  static final _ratio = Rational.parse('1.54400000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T1Signal] = 1544000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1Signal] = 1.54400000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7511,12 +7512,12 @@ final class DataTransfer$T1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T1Signal] with new value
   @override
   DataTransfer$T1Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T1Signal(val);
 
@@ -7529,14 +7530,14 @@ final class DataTransfer$T1Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T1Payload extends DataTransfer {
-  const DataTransfer$T1Payload([
+  DataTransfer$T1Payload([
     super.value,
   ]);
 
@@ -7567,14 +7568,14 @@ final class DataTransfer$T1Payload extends DataTransfer {
   @override
   String get displayName => 'T1 (payload)';
 
-  static const _ratio = 1344000.0;
+  static final _ratio = Rational.parse('1.34400000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T1Payload] = 1344000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1Payload] = 1.34400000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7582,12 +7583,12 @@ final class DataTransfer$T1Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T1Payload] with new value
   @override
   DataTransfer$T1Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T1Payload(val);
 
@@ -7600,14 +7601,14 @@ final class DataTransfer$T1Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T1ZPayload extends DataTransfer {
-  const DataTransfer$T1ZPayload([
+  DataTransfer$T1ZPayload([
     super.value,
   ]);
 
@@ -7638,14 +7639,14 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
   @override
   String get displayName => 'T1Z (payload)';
 
-  static const _ratio = 1544000.0;
+  static final _ratio = Rational.parse('1.54400000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T1ZPayload] = 1544000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1ZPayload] = 1.54400000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7653,12 +7654,12 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T1ZPayload] with new value
   @override
   DataTransfer$T1ZPayload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T1ZPayload(val);
 
@@ -7671,14 +7672,14 @@ final class DataTransfer$T1ZPayload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T1CSignal extends DataTransfer {
-  const DataTransfer$T1CSignal([
+  DataTransfer$T1CSignal([
     super.value,
   ]);
 
@@ -7709,14 +7710,14 @@ final class DataTransfer$T1CSignal extends DataTransfer {
   @override
   String get displayName => 'T1C (signal)';
 
-  static const _ratio = 3152000.0;
+  static final _ratio = Rational.parse('3.15200000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T1CSignal] = 3152000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1CSignal] = 3.15200000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7724,12 +7725,12 @@ final class DataTransfer$T1CSignal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T1CSignal] with new value
   @override
   DataTransfer$T1CSignal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T1CSignal(val);
 
@@ -7742,14 +7743,14 @@ final class DataTransfer$T1CSignal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T1CPayload extends DataTransfer {
-  const DataTransfer$T1CPayload([
+  DataTransfer$T1CPayload([
     super.value,
   ]);
 
@@ -7780,14 +7781,14 @@ final class DataTransfer$T1CPayload extends DataTransfer {
   @override
   String get displayName => 'T1C (payload)';
 
-  static const _ratio = 2688000.0;
+  static final _ratio = Rational.parse('2.68800000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T1CPayload] = 2688000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T1CPayload] = 2.68800000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7795,12 +7796,12 @@ final class DataTransfer$T1CPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T1CPayload] with new value
   @override
   DataTransfer$T1CPayload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T1CPayload(val);
 
@@ -7813,14 +7814,14 @@ final class DataTransfer$T1CPayload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T2Signal extends DataTransfer {
-  const DataTransfer$T2Signal([
+  DataTransfer$T2Signal([
     super.value,
   ]);
 
@@ -7851,14 +7852,14 @@ final class DataTransfer$T2Signal extends DataTransfer {
   @override
   String get displayName => 'T2 (signal)';
 
-  static const _ratio = 6312000.0;
+  static final _ratio = Rational.parse('6.31200000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T2Signal] = 6312000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T2Signal] = 6.31200000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7866,12 +7867,12 @@ final class DataTransfer$T2Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T2Signal] with new value
   @override
   DataTransfer$T2Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T2Signal(val);
 
@@ -7884,14 +7885,14 @@ final class DataTransfer$T2Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T3Signal extends DataTransfer {
-  const DataTransfer$T3Signal([
+  DataTransfer$T3Signal([
     super.value,
   ]);
 
@@ -7922,14 +7923,14 @@ final class DataTransfer$T3Signal extends DataTransfer {
   @override
   String get displayName => 'T3 (signal)';
 
-  static const _ratio = 44736000.0;
+  static final _ratio = Rational.parse('4.47360000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T3Signal] = 44736000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T3Signal] = 4.47360000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -7937,12 +7938,12 @@ final class DataTransfer$T3Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T3Signal] with new value
   @override
   DataTransfer$T3Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T3Signal(val);
 
@@ -7955,14 +7956,14 @@ final class DataTransfer$T3Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T3Payload extends DataTransfer {
-  const DataTransfer$T3Payload([
+  DataTransfer$T3Payload([
     super.value,
   ]);
 
@@ -7993,14 +7994,14 @@ final class DataTransfer$T3Payload extends DataTransfer {
   @override
   String get displayName => 'T3 (payload)';
 
-  static const _ratio = 37632000.0;
+  static final _ratio = Rational.parse('3.76320000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T3Payload] = 37632000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T3Payload] = 3.76320000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8008,12 +8009,12 @@ final class DataTransfer$T3Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T3Payload] with new value
   @override
   DataTransfer$T3Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T3Payload(val);
 
@@ -8026,14 +8027,14 @@ final class DataTransfer$T3Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T3ZPayload extends DataTransfer {
-  const DataTransfer$T3ZPayload([
+  DataTransfer$T3ZPayload([
     super.value,
   ]);
 
@@ -8064,14 +8065,14 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
   @override
   String get displayName => 'T3Z (payload)';
 
-  static const _ratio = 43008000.0;
+  static final _ratio = Rational.parse('4.30080000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T3ZPayload] = 43008000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T3ZPayload] = 4.30080000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8079,12 +8080,12 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T3ZPayload] with new value
   @override
   DataTransfer$T3ZPayload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T3ZPayload(val);
 
@@ -8097,14 +8098,14 @@ final class DataTransfer$T3ZPayload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$T4Signal extends DataTransfer {
-  const DataTransfer$T4Signal([
+  DataTransfer$T4Signal([
     super.value,
   ]);
 
@@ -8135,14 +8136,14 @@ final class DataTransfer$T4Signal extends DataTransfer {
   @override
   String get displayName => 'T4 (signal)';
 
-  static const _ratio = 274176000.0;
+  static final _ratio = Rational.parse('2.74176000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$T4Signal] = 274176000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$T4Signal] = 2.74176000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8150,12 +8151,12 @@ final class DataTransfer$T4Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$T4Signal] with new value
   @override
   DataTransfer$T4Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$T4Signal(val);
 
@@ -8168,14 +8169,14 @@ final class DataTransfer$T4Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$EPTA1Signal extends DataTransfer {
-  const DataTransfer$EPTA1Signal([
+  DataTransfer$EPTA1Signal([
     super.value,
   ]);
 
@@ -8206,14 +8207,14 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
   @override
   String get displayName => 'E.P.T.A. 1 (signal)';
 
-  static const _ratio = 2048000.0;
+  static final _ratio = Rational.parse('2.04800000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$EPTA1Signal] = 2048000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA1Signal] = 2.04800000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8221,12 +8222,12 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$EPTA1Signal] with new value
   @override
   DataTransfer$EPTA1Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$EPTA1Signal(val);
 
@@ -8239,14 +8240,14 @@ final class DataTransfer$EPTA1Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$EPTA1Payload extends DataTransfer {
-  const DataTransfer$EPTA1Payload([
+  DataTransfer$EPTA1Payload([
     super.value,
   ]);
 
@@ -8277,14 +8278,14 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
   @override
   String get displayName => 'E.P.T.A. 1 (payload)';
 
-  static const _ratio = 1920000.0;
+  static final _ratio = Rational.parse('1.92000000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$EPTA1Payload] = 1920000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA1Payload] = 1.92000000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8292,12 +8293,12 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$EPTA1Payload] with new value
   @override
   DataTransfer$EPTA1Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$EPTA1Payload(val);
 
@@ -8310,14 +8311,14 @@ final class DataTransfer$EPTA1Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$EPTA2Signal extends DataTransfer {
-  const DataTransfer$EPTA2Signal([
+  DataTransfer$EPTA2Signal([
     super.value,
   ]);
 
@@ -8348,14 +8349,14 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
   @override
   String get displayName => 'E.P.T.A. 2 (signal)';
 
-  static const _ratio = 8448000.0;
+  static final _ratio = Rational.parse('8.44800000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$EPTA2Signal] = 8448000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA2Signal] = 8.44800000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8363,12 +8364,12 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$EPTA2Signal] with new value
   @override
   DataTransfer$EPTA2Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$EPTA2Signal(val);
 
@@ -8381,14 +8382,14 @@ final class DataTransfer$EPTA2Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$EPTA2Payload extends DataTransfer {
-  const DataTransfer$EPTA2Payload([
+  DataTransfer$EPTA2Payload([
     super.value,
   ]);
 
@@ -8419,14 +8420,14 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
   @override
   String get displayName => 'E.P.T.A. 2 (payload)';
 
-  static const _ratio = 7680000.0;
+  static final _ratio = Rational.parse('7.68000000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$EPTA2Payload] = 7680000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA2Payload] = 7.68000000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8434,12 +8435,12 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$EPTA2Payload] with new value
   @override
   DataTransfer$EPTA2Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$EPTA2Payload(val);
 
@@ -8452,14 +8453,14 @@ final class DataTransfer$EPTA2Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$EPTA3Signal extends DataTransfer {
-  const DataTransfer$EPTA3Signal([
+  DataTransfer$EPTA3Signal([
     super.value,
   ]);
 
@@ -8490,14 +8491,14 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
   @override
   String get displayName => 'E.P.T.A. 3 (signal)';
 
-  static const _ratio = 34368000.0;
+  static final _ratio = Rational.parse('3.43680000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$EPTA3Signal] = 34368000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA3Signal] = 3.43680000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8505,12 +8506,12 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$EPTA3Signal] with new value
   @override
   DataTransfer$EPTA3Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$EPTA3Signal(val);
 
@@ -8523,14 +8524,14 @@ final class DataTransfer$EPTA3Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$EPTA3Payload extends DataTransfer {
-  const DataTransfer$EPTA3Payload([
+  DataTransfer$EPTA3Payload([
     super.value,
   ]);
 
@@ -8561,14 +8562,14 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
   @override
   String get displayName => 'E.P.T.A. 3 (payload)';
 
-  static const _ratio = 30720000.0;
+  static final _ratio = Rational.parse('3.07200000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$EPTA3Payload] = 30720000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$EPTA3Payload] = 3.07200000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8576,12 +8577,12 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$EPTA3Payload] with new value
   @override
   DataTransfer$EPTA3Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$EPTA3Payload(val);
 
@@ -8594,14 +8595,14 @@ final class DataTransfer$EPTA3Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$H0 extends DataTransfer {
-  const DataTransfer$H0([
+  DataTransfer$H0([
     super.value,
   ]);
 
@@ -8632,14 +8633,14 @@ final class DataTransfer$H0 extends DataTransfer {
   @override
   String get displayName => 'H0';
 
-  static const _ratio = 384000.0;
+  static final _ratio = Rational.parse('3.84000000000000000E+005');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$H0] = 384000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$H0] = 3.84000000000000000E+005 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8647,12 +8648,12 @@ final class DataTransfer$H0 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$H0] with new value
   @override
   DataTransfer$H0 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$H0(val);
 
@@ -8665,14 +8666,14 @@ final class DataTransfer$H0 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$H11 extends DataTransfer {
-  const DataTransfer$H11([
+  DataTransfer$H11([
     super.value,
   ]);
 
@@ -8703,14 +8704,14 @@ final class DataTransfer$H11 extends DataTransfer {
   @override
   String get displayName => 'H11';
 
-  static const _ratio = 1536000.0;
+  static final _ratio = Rational.parse('1.53600000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$H11] = 1536000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$H11] = 1.53600000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8718,12 +8719,12 @@ final class DataTransfer$H11 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$H11] with new value
   @override
   DataTransfer$H11 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$H11(val);
 
@@ -8736,14 +8737,14 @@ final class DataTransfer$H11 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$H12 extends DataTransfer {
-  const DataTransfer$H12([
+  DataTransfer$H12([
     super.value,
   ]);
 
@@ -8774,14 +8775,14 @@ final class DataTransfer$H12 extends DataTransfer {
   @override
   String get displayName => 'H12';
 
-  static const _ratio = 1920000.0;
+  static final _ratio = Rational.parse('1.92000000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$H12] = 1920000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$H12] = 1.92000000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8789,12 +8790,12 @@ final class DataTransfer$H12 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$H12] with new value
   @override
   DataTransfer$H12 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$H12(val);
 
@@ -8807,14 +8808,14 @@ final class DataTransfer$H12 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
-  const DataTransfer$VirtualTributary1Signal([
+  DataTransfer$VirtualTributary1Signal([
     super.value,
   ]);
 
@@ -8845,14 +8846,14 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
   @override
   String get displayName => 'Virtual Tributary 1 (signal)';
 
-  static const _ratio = 1728000.0;
+  static final _ratio = Rational.parse('1.72800000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$VirtualTributary1Signal] = 1728000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary1Signal] = 1.72800000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8861,12 +8862,12 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$VirtualTributary1Signal] with new value
   @override
   DataTransfer$VirtualTributary1Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$VirtualTributary1Signal(val);
 
@@ -8879,14 +8880,14 @@ final class DataTransfer$VirtualTributary1Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
-  const DataTransfer$VirtualTributary1Payload([
+  DataTransfer$VirtualTributary1Payload([
     super.value,
   ]);
 
@@ -8917,14 +8918,14 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
   @override
   String get displayName => 'Virtual Tributary 1 (payload)';
 
-  static const _ratio = 1544000.0;
+  static final _ratio = Rational.parse('1.54400000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$VirtualTributary1Payload] = 1544000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary1Payload] = 1.54400000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -8933,12 +8934,12 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$VirtualTributary1Payload] with new value
   @override
   DataTransfer$VirtualTributary1Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$VirtualTributary1Payload(val);
 
@@ -8951,14 +8952,14 @@ final class DataTransfer$VirtualTributary1Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
-  const DataTransfer$VirtualTributary2Signal([
+  DataTransfer$VirtualTributary2Signal([
     super.value,
   ]);
 
@@ -8989,14 +8990,14 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
   @override
   String get displayName => 'Virtual Tributary 2 (signal)';
 
-  static const _ratio = 2304000.0;
+  static final _ratio = Rational.parse('2.30400000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$VirtualTributary2Signal] = 2304000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary2Signal] = 2.30400000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9005,12 +9006,12 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$VirtualTributary2Signal] with new value
   @override
   DataTransfer$VirtualTributary2Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$VirtualTributary2Signal(val);
 
@@ -9023,14 +9024,14 @@ final class DataTransfer$VirtualTributary2Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
-  const DataTransfer$VirtualTributary2Payload([
+  DataTransfer$VirtualTributary2Payload([
     super.value,
   ]);
 
@@ -9061,14 +9062,14 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
   @override
   String get displayName => 'Virtual Tributary 2 (payload)';
 
-  static const _ratio = 2048000.0;
+  static final _ratio = Rational.parse('2.04800000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$VirtualTributary2Payload] = 2048000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary2Payload] = 2.04800000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9077,12 +9078,12 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$VirtualTributary2Payload] with new value
   @override
   DataTransfer$VirtualTributary2Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$VirtualTributary2Payload(val);
 
@@ -9095,14 +9096,14 @@ final class DataTransfer$VirtualTributary2Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
-  const DataTransfer$VirtualTributary6Signal([
+  DataTransfer$VirtualTributary6Signal([
     super.value,
   ]);
 
@@ -9133,14 +9134,14 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
   @override
   String get displayName => 'Virtual Tributary 6 (signal)';
 
-  static const _ratio = 6312000.0;
+  static final _ratio = Rational.parse('6.31200000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$VirtualTributary6Signal] = 6312000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary6Signal] = 6.31200000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9149,12 +9150,12 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$VirtualTributary6Signal] with new value
   @override
   DataTransfer$VirtualTributary6Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$VirtualTributary6Signal(val);
 
@@ -9167,14 +9168,14 @@ final class DataTransfer$VirtualTributary6Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
-  const DataTransfer$VirtualTributary6Payload([
+  DataTransfer$VirtualTributary6Payload([
     super.value,
   ]);
 
@@ -9205,14 +9206,14 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
   @override
   String get displayName => 'Virtual Tributary 6 (payload)';
 
-  static const _ratio = 6000000.0;
+  static final _ratio = Rational.parse('6.00000000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$VirtualTributary6Payload] = 6000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VirtualTributary6Payload] = 6.00000000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9221,12 +9222,12 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$VirtualTributary6Payload] with new value
   @override
   DataTransfer$VirtualTributary6Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$VirtualTributary6Payload(val);
 
@@ -9239,14 +9240,14 @@ final class DataTransfer$VirtualTributary6Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS1Signal extends DataTransfer {
-  const DataTransfer$STS1Signal([
+  DataTransfer$STS1Signal([
     super.value,
   ]);
 
@@ -9277,14 +9278,14 @@ final class DataTransfer$STS1Signal extends DataTransfer {
   @override
   String get displayName => 'STS1 (signal)';
 
-  static const _ratio = 51840000.0;
+  static final _ratio = Rational.parse('5.18400000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS1Signal] = 51840000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS1Signal] = 5.18400000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9292,12 +9293,12 @@ final class DataTransfer$STS1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS1Signal] with new value
   @override
   DataTransfer$STS1Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS1Signal(val);
 
@@ -9310,14 +9311,14 @@ final class DataTransfer$STS1Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS1Payload extends DataTransfer {
-  const DataTransfer$STS1Payload([
+  DataTransfer$STS1Payload([
     super.value,
   ]);
 
@@ -9348,14 +9349,14 @@ final class DataTransfer$STS1Payload extends DataTransfer {
   @override
   String get displayName => 'STS1 (payload)';
 
-  static const _ratio = 49500000.0;
+  static final _ratio = Rational.parse('4.95000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS1Payload] = 49500000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS1Payload] = 4.95000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9363,12 +9364,12 @@ final class DataTransfer$STS1Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS1Payload] with new value
   @override
   DataTransfer$STS1Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS1Payload(val);
 
@@ -9381,14 +9382,14 @@ final class DataTransfer$STS1Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS3Signal extends DataTransfer {
-  const DataTransfer$STS3Signal([
+  DataTransfer$STS3Signal([
     super.value,
   ]);
 
@@ -9419,14 +9420,14 @@ final class DataTransfer$STS3Signal extends DataTransfer {
   @override
   String get displayName => 'STS3 (signal)';
 
-  static const _ratio = 155520000.0;
+  static final _ratio = Rational.parse('1.55520000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS3Signal] = 155520000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS3Signal] = 1.55520000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9434,12 +9435,12 @@ final class DataTransfer$STS3Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS3Signal] with new value
   @override
   DataTransfer$STS3Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS3Signal(val);
 
@@ -9452,14 +9453,14 @@ final class DataTransfer$STS3Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS3Payload extends DataTransfer {
-  const DataTransfer$STS3Payload([
+  DataTransfer$STS3Payload([
     super.value,
   ]);
 
@@ -9490,14 +9491,14 @@ final class DataTransfer$STS3Payload extends DataTransfer {
   @override
   String get displayName => 'STS3 (payload)';
 
-  static const _ratio = 150336000.0;
+  static final _ratio = Rational.parse('1.50336000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS3Payload] = 150336000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS3Payload] = 1.50336000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9505,12 +9506,12 @@ final class DataTransfer$STS3Payload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS3Payload] with new value
   @override
   DataTransfer$STS3Payload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS3Payload(val);
 
@@ -9523,14 +9524,14 @@ final class DataTransfer$STS3Payload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS3cSignal extends DataTransfer {
-  const DataTransfer$STS3cSignal([
+  DataTransfer$STS3cSignal([
     super.value,
   ]);
 
@@ -9561,14 +9562,14 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
   @override
   String get displayName => 'STS3c (signal)';
 
-  static const _ratio = 155520000.0;
+  static final _ratio = Rational.parse('1.55520000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS3cSignal] = 155520000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS3cSignal] = 1.55520000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9576,12 +9577,12 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS3cSignal] with new value
   @override
   DataTransfer$STS3cSignal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS3cSignal(val);
 
@@ -9594,14 +9595,14 @@ final class DataTransfer$STS3cSignal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS3cPayload extends DataTransfer {
-  const DataTransfer$STS3cPayload([
+  DataTransfer$STS3cPayload([
     super.value,
   ]);
 
@@ -9632,14 +9633,14 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
   @override
   String get displayName => 'STS3c (payload)';
 
-  static const _ratio = 150336000.0;
+  static final _ratio = Rational.parse('1.50336000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS3cPayload] = 150336000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS3cPayload] = 1.50336000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9647,12 +9648,12 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS3cPayload] with new value
   @override
   DataTransfer$STS3cPayload withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS3cPayload(val);
 
@@ -9665,14 +9666,14 @@ final class DataTransfer$STS3cPayload extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS12Signal extends DataTransfer {
-  const DataTransfer$STS12Signal([
+  DataTransfer$STS12Signal([
     super.value,
   ]);
 
@@ -9703,14 +9704,14 @@ final class DataTransfer$STS12Signal extends DataTransfer {
   @override
   String get displayName => 'STS12 (signal)';
 
-  static const _ratio = 622080000.0;
+  static final _ratio = Rational.parse('6.22080000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS12Signal] = 622080000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS12Signal] = 6.22080000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9718,12 +9719,12 @@ final class DataTransfer$STS12Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS12Signal] with new value
   @override
   DataTransfer$STS12Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS12Signal(val);
 
@@ -9736,14 +9737,14 @@ final class DataTransfer$STS12Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS24Signal extends DataTransfer {
-  const DataTransfer$STS24Signal([
+  DataTransfer$STS24Signal([
     super.value,
   ]);
 
@@ -9774,14 +9775,14 @@ final class DataTransfer$STS24Signal extends DataTransfer {
   @override
   String get displayName => 'STS24 (signal)';
 
-  static const _ratio = 1244160000.0;
+  static final _ratio = Rational.parse('1.24416000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS24Signal] = 1244160000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS24Signal] = 1.24416000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9789,12 +9790,12 @@ final class DataTransfer$STS24Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS24Signal] with new value
   @override
   DataTransfer$STS24Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS24Signal(val);
 
@@ -9807,14 +9808,14 @@ final class DataTransfer$STS24Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS48Signal extends DataTransfer {
-  const DataTransfer$STS48Signal([
+  DataTransfer$STS48Signal([
     super.value,
   ]);
 
@@ -9845,14 +9846,14 @@ final class DataTransfer$STS48Signal extends DataTransfer {
   @override
   String get displayName => 'STS48 (signal)';
 
-  static const _ratio = 2488320000.0;
+  static final _ratio = Rational.parse('2.48832000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS48Signal] = 2488320000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS48Signal] = 2.48832000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9860,12 +9861,12 @@ final class DataTransfer$STS48Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS48Signal] with new value
   @override
   DataTransfer$STS48Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS48Signal(val);
 
@@ -9878,14 +9879,14 @@ final class DataTransfer$STS48Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STS192Signal extends DataTransfer {
-  const DataTransfer$STS192Signal([
+  DataTransfer$STS192Signal([
     super.value,
   ]);
 
@@ -9916,14 +9917,14 @@ final class DataTransfer$STS192Signal extends DataTransfer {
   @override
   String get displayName => 'STS192 (signal)';
 
-  static const _ratio = 9953280000.0;
+  static final _ratio = Rational.parse('9.95328000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STS192Signal] = 9953280000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STS192Signal] = 9.95328000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -9931,12 +9932,12 @@ final class DataTransfer$STS192Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STS192Signal] with new value
   @override
   DataTransfer$STS192Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STS192Signal(val);
 
@@ -9949,14 +9950,14 @@ final class DataTransfer$STS192Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STM1Signal extends DataTransfer {
-  const DataTransfer$STM1Signal([
+  DataTransfer$STM1Signal([
     super.value,
   ]);
 
@@ -9987,14 +9988,14 @@ final class DataTransfer$STM1Signal extends DataTransfer {
   @override
   String get displayName => 'STM-1 (signal)';
 
-  static const _ratio = 155520000.0;
+  static final _ratio = Rational.parse('1.55520000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STM1Signal] = 155520000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STM1Signal] = 1.55520000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10002,12 +10003,12 @@ final class DataTransfer$STM1Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STM1Signal] with new value
   @override
   DataTransfer$STM1Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STM1Signal(val);
 
@@ -10020,14 +10021,14 @@ final class DataTransfer$STM1Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STM4Signal extends DataTransfer {
-  const DataTransfer$STM4Signal([
+  DataTransfer$STM4Signal([
     super.value,
   ]);
 
@@ -10058,14 +10059,14 @@ final class DataTransfer$STM4Signal extends DataTransfer {
   @override
   String get displayName => 'STM-4 (signal)';
 
-  static const _ratio = 622080000.0;
+  static final _ratio = Rational.parse('6.22080000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STM4Signal] = 622080000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STM4Signal] = 6.22080000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10073,12 +10074,12 @@ final class DataTransfer$STM4Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STM4Signal] with new value
   @override
   DataTransfer$STM4Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STM4Signal(val);
 
@@ -10091,14 +10092,14 @@ final class DataTransfer$STM4Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STM16Signal extends DataTransfer {
-  const DataTransfer$STM16Signal([
+  DataTransfer$STM16Signal([
     super.value,
   ]);
 
@@ -10129,14 +10130,14 @@ final class DataTransfer$STM16Signal extends DataTransfer {
   @override
   String get displayName => 'STM-16 (signal)';
 
-  static const _ratio = 2488320000.0;
+  static final _ratio = Rational.parse('2.48832000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STM16Signal] = 2488320000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STM16Signal] = 2.48832000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10144,12 +10145,12 @@ final class DataTransfer$STM16Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STM16Signal] with new value
   @override
   DataTransfer$STM16Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STM16Signal(val);
 
@@ -10162,14 +10163,14 @@ final class DataTransfer$STM16Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$STM64Signal extends DataTransfer {
-  const DataTransfer$STM64Signal([
+  DataTransfer$STM64Signal([
     super.value,
   ]);
 
@@ -10200,14 +10201,14 @@ final class DataTransfer$STM64Signal extends DataTransfer {
   @override
   String get displayName => 'STM-64 (signal)';
 
-  static const _ratio = 9953280000.0;
+  static final _ratio = Rational.parse('9.95328000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$STM64Signal] = 9953280000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$STM64Signal] = 9.95328000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10215,12 +10216,12 @@ final class DataTransfer$STM64Signal extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$STM64Signal] with new value
   @override
   DataTransfer$STM64Signal withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$STM64Signal(val);
 
@@ -10233,14 +10234,14 @@ final class DataTransfer$STM64Signal extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CharacterPerSecond extends DataTransfer {
-  const DataTransfer$CharacterPerSecond([
+  DataTransfer$CharacterPerSecond([
     super.value,
   ]);
 
@@ -10271,14 +10272,14 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
   @override
   String get displayName => 'character/second';
 
-  static const _ratio = 8.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+000');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CharacterPerSecond] = 8.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CharacterPerSecond] = 8.00000000000000000E+000 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10287,12 +10288,12 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CharacterPerSecond] with new value
   @override
   DataTransfer$CharacterPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CharacterPerSecond(val);
 
@@ -10305,14 +10306,14 @@ final class DataTransfer$CharacterPerSecond extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$TokenRing extends DataTransfer {
-  const DataTransfer$TokenRing([
+  DataTransfer$TokenRing([
     super.value,
   ]);
 
@@ -10343,14 +10344,14 @@ final class DataTransfer$TokenRing extends DataTransfer {
   @override
   String get displayName => 'token ring';
 
-  static const _ratio = 4000000.0;
+  static final _ratio = Rational.parse('4.00000000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$TokenRing] = 4000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$TokenRing] = 4.00000000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10358,12 +10359,12 @@ final class DataTransfer$TokenRing extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$TokenRing] with new value
   @override
   DataTransfer$TokenRing withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$TokenRing(val);
 
@@ -10376,14 +10377,14 @@ final class DataTransfer$TokenRing extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$FiberChannel extends DataTransfer {
-  const DataTransfer$FiberChannel([
+  DataTransfer$FiberChannel([
     super.value,
   ]);
 
@@ -10414,14 +10415,14 @@ final class DataTransfer$FiberChannel extends DataTransfer {
   @override
   String get displayName => 'fiber channel';
 
-  static const _ratio = 3200000000.0;
+  static final _ratio = Rational.parse('3.20000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$FiberChannel] = 3200000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$FiberChannel] = 3.20000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10429,12 +10430,12 @@ final class DataTransfer$FiberChannel extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$FiberChannel] with new value
   @override
   DataTransfer$FiberChannel withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$FiberChannel(val);
 
@@ -10447,14 +10448,14 @@ final class DataTransfer$FiberChannel extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$ISA8Bit extends DataTransfer {
-  const DataTransfer$ISA8Bit([
+  DataTransfer$ISA8Bit([
     super.value,
   ]);
 
@@ -10485,14 +10486,14 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
   @override
   String get displayName => 'ISA (8-bit)';
 
-  static const _ratio = 66666666.666666664;
+  static final _ratio = Rational.parse('6.66666666666666667E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$ISA8Bit] ≈ 66666666.666666664 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ISA8Bit] ≈ 6.66666666666666667E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10500,12 +10501,12 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$ISA8Bit] with new value
   @override
   DataTransfer$ISA8Bit withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$ISA8Bit(val);
 
@@ -10518,14 +10519,14 @@ final class DataTransfer$ISA8Bit extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$ISA16Bit extends DataTransfer {
-  const DataTransfer$ISA16Bit([
+  DataTransfer$ISA16Bit([
     super.value,
   ]);
 
@@ -10556,14 +10557,14 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
   @override
   String get displayName => 'ISA (16-bit)';
 
-  static const _ratio = 133333333.33333333;
+  static final _ratio = Rational.parse('1.33333333333333333E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$ISA16Bit] ≈ 133333333.33333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$ISA16Bit] ≈ 1.33333333333333333E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10571,12 +10572,12 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$ISA16Bit] with new value
   @override
   DataTransfer$ISA16Bit withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$ISA16Bit(val);
 
@@ -10589,14 +10590,14 @@ final class DataTransfer$ISA16Bit extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$VLB extends DataTransfer {
-  const DataTransfer$VLB([
+  DataTransfer$VLB([
     super.value,
   ]);
 
@@ -10627,14 +10628,14 @@ final class DataTransfer$VLB extends DataTransfer {
   @override
   String get displayName => 'VLB';
 
-  static const _ratio = 533333333.3333333;
+  static final _ratio = Rational.parse('5.33333333333333333E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$VLB] ≈ 533333333.3333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$VLB] ≈ 5.33333333333333333E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10642,12 +10643,12 @@ final class DataTransfer$VLB extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$VLB] with new value
   @override
   DataTransfer$VLB withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$VLB(val);
 
@@ -10660,14 +10661,14 @@ final class DataTransfer$VLB extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCI extends DataTransfer {
-  const DataTransfer$PCI([
+  DataTransfer$PCI([
     super.value,
   ]);
 
@@ -10698,14 +10699,14 @@ final class DataTransfer$PCI extends DataTransfer {
   @override
   String get displayName => 'PCI';
 
-  static const _ratio = 1066666666.6666666;
+  static final _ratio = Rational.parse('1.06666666666666667E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCI] ≈ 1066666666.6666666 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCI] ≈ 1.06666666666666667E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10713,12 +10714,12 @@ final class DataTransfer$PCI extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCI] with new value
   @override
   DataTransfer$PCI withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCI(val);
 
@@ -10731,14 +10732,14 @@ final class DataTransfer$PCI extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCI64Bit extends DataTransfer {
-  const DataTransfer$PCI64Bit([
+  DataTransfer$PCI64Bit([
     super.value,
   ]);
 
@@ -10769,14 +10770,14 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
   @override
   String get displayName => 'PCI (64-bit)';
 
-  static const _ratio = 2133333333.3333333;
+  static final _ratio = Rational.parse('2.13333333333333333E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCI64Bit] ≈ 2133333333.3333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCI64Bit] ≈ 2.13333333333333333E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10784,12 +10785,12 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCI64Bit] with new value
   @override
   DataTransfer$PCI64Bit withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCI64Bit(val);
 
@@ -10802,14 +10803,14 @@ final class DataTransfer$PCI64Bit extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
-  const DataTransfer$PCI64Bit66MHz([
+  DataTransfer$PCI64Bit66MHz([
     super.value,
   ]);
 
@@ -10840,14 +10841,14 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
   @override
   String get displayName => 'PCI (64-bit 66MHz)';
 
-  static const _ratio = 4266666666.6666665;
+  static final _ratio = Rational.parse('4.26666666666666667E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCI64Bit66MHz] ≈ 4266666666.6666665 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCI64Bit66MHz] ≈ 4.26666666666666667E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10855,12 +10856,12 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCI64Bit66MHz] with new value
   @override
   DataTransfer$PCI64Bit66MHz withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCI64Bit66MHz(val);
 
@@ -10873,14 +10874,14 @@ final class DataTransfer$PCI64Bit66MHz extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIX extends DataTransfer {
-  const DataTransfer$PCIX([
+  DataTransfer$PCIX([
     super.value,
   ]);
 
@@ -10911,14 +10912,14 @@ final class DataTransfer$PCIX extends DataTransfer {
   @override
   String get displayName => 'PCI-X';
 
-  static const _ratio = 8533333333.333333;
+  static final _ratio = Rational.parse('8.53333333333333333E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIX] ≈ 8533333333.333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIX] ≈ 8.53333333333333333E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10926,12 +10927,12 @@ final class DataTransfer$PCIX extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIX] with new value
   @override
   DataTransfer$PCIX withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIX(val);
 
@@ -10944,14 +10945,14 @@ final class DataTransfer$PCIX extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$AGP extends DataTransfer {
-  const DataTransfer$AGP([
+  DataTransfer$AGP([
     super.value,
   ]);
 
@@ -10982,14 +10983,14 @@ final class DataTransfer$AGP extends DataTransfer {
   @override
   String get displayName => 'AGP';
 
-  static const _ratio = 2133333333.3333333;
+  static final _ratio = Rational.parse('2.13333333333333333E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$AGP] ≈ 2133333333.3333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$AGP] ≈ 2.13333333333333333E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -10997,12 +10998,12 @@ final class DataTransfer$AGP extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$AGP] with new value
   @override
   DataTransfer$AGP withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$AGP(val);
 
@@ -11015,14 +11016,14 @@ final class DataTransfer$AGP extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$AGP2X extends DataTransfer {
-  const DataTransfer$AGP2X([
+  DataTransfer$AGP2X([
     super.value,
   ]);
 
@@ -11053,14 +11054,14 @@ final class DataTransfer$AGP2X extends DataTransfer {
   @override
   String get displayName => 'AGP 2X';
 
-  static const _ratio = 4266666666.6666665;
+  static final _ratio = Rational.parse('4.26666666666666667E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$AGP2X] ≈ 4266666666.6666665 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$AGP2X] ≈ 4.26666666666666667E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11068,12 +11069,12 @@ final class DataTransfer$AGP2X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$AGP2X] with new value
   @override
   DataTransfer$AGP2X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$AGP2X(val);
 
@@ -11086,14 +11087,14 @@ final class DataTransfer$AGP2X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$AGP4X extends DataTransfer {
-  const DataTransfer$AGP4X([
+  DataTransfer$AGP4X([
     super.value,
   ]);
 
@@ -11124,14 +11125,14 @@ final class DataTransfer$AGP4X extends DataTransfer {
   @override
   String get displayName => 'AGP 4X';
 
-  static const _ratio = 8533333333.333333;
+  static final _ratio = Rational.parse('8.53333333333333333E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$AGP4X] ≈ 8533333333.333333 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$AGP4X] ≈ 8.53333333333333333E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11139,12 +11140,12 @@ final class DataTransfer$AGP4X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$AGP4X] with new value
   @override
   DataTransfer$AGP4X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$AGP4X(val);
 
@@ -11157,14 +11158,14 @@ final class DataTransfer$AGP4X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$AGP8X extends DataTransfer {
-  const DataTransfer$AGP8X([
+  DataTransfer$AGP8X([
     super.value,
   ]);
 
@@ -11195,14 +11196,14 @@ final class DataTransfer$AGP8X extends DataTransfer {
   @override
   String get displayName => 'AGP 8X';
 
-  static const _ratio = 17066666666.666666;
+  static final _ratio = Rational.parse('1.70666666666666667E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$AGP8X] ≈ 17066666666.666666 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$AGP8X] ≈ 1.70666666666666667E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11210,12 +11211,12 @@ final class DataTransfer$AGP8X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$AGP8X] with new value
   @override
   DataTransfer$AGP8X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$AGP8X(val);
 
@@ -11228,14 +11229,14 @@ final class DataTransfer$AGP8X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress10X1 extends DataTransfer {
-  const DataTransfer$PCIExpress10X1([
+  DataTransfer$PCIExpress10X1([
     super.value,
   ]);
 
@@ -11266,14 +11267,14 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 1.0 (x1)';
 
-  static const _ratio = 2000000000.0;
+  static final _ratio = Rational.parse('2.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress10X1] = 2000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress10X1] = 2.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11281,12 +11282,12 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress10X1] with new value
   @override
   DataTransfer$PCIExpress10X1 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress10X1(val);
 
@@ -11299,14 +11300,14 @@ final class DataTransfer$PCIExpress10X1 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress10X4 extends DataTransfer {
-  const DataTransfer$PCIExpress10X4([
+  DataTransfer$PCIExpress10X4([
     super.value,
   ]);
 
@@ -11337,14 +11338,14 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 1.0 (x4)';
 
-  static const _ratio = 8000000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress10X4] = 8000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress10X4] = 8.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11352,12 +11353,12 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress10X4] with new value
   @override
   DataTransfer$PCIExpress10X4 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress10X4(val);
 
@@ -11370,14 +11371,14 @@ final class DataTransfer$PCIExpress10X4 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress10X8 extends DataTransfer {
-  const DataTransfer$PCIExpress10X8([
+  DataTransfer$PCIExpress10X8([
     super.value,
   ]);
 
@@ -11408,14 +11409,14 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 1.0 (x8)';
 
-  static const _ratio = 16000000000.0;
+  static final _ratio = Rational.parse('1.60000000000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress10X8] = 16000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress10X8] = 1.60000000000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11423,12 +11424,12 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress10X8] with new value
   @override
   DataTransfer$PCIExpress10X8 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress10X8(val);
 
@@ -11441,14 +11442,14 @@ final class DataTransfer$PCIExpress10X8 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress10X16 extends DataTransfer {
-  const DataTransfer$PCIExpress10X16([
+  DataTransfer$PCIExpress10X16([
     super.value,
   ]);
 
@@ -11479,14 +11480,14 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 1.0 (x16)';
 
-  static const _ratio = 32000000000.0;
+  static final _ratio = Rational.parse('3.20000000000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress10X16] = 32000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress10X16] = 3.20000000000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11495,12 +11496,12 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress10X16] with new value
   @override
   DataTransfer$PCIExpress10X16 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress10X16(val);
 
@@ -11513,14 +11514,14 @@ final class DataTransfer$PCIExpress10X16 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress20X1 extends DataTransfer {
-  const DataTransfer$PCIExpress20X1([
+  DataTransfer$PCIExpress20X1([
     super.value,
   ]);
 
@@ -11551,14 +11552,14 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 2.0 (x1)';
 
-  static const _ratio = 4000000000.0;
+  static final _ratio = Rational.parse('4.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress20X1] = 4000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress20X1] = 4.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11566,12 +11567,12 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress20X1] with new value
   @override
   DataTransfer$PCIExpress20X1 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress20X1(val);
 
@@ -11584,14 +11585,14 @@ final class DataTransfer$PCIExpress20X1 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress20X4 extends DataTransfer {
-  const DataTransfer$PCIExpress20X4([
+  DataTransfer$PCIExpress20X4([
     super.value,
   ]);
 
@@ -11622,14 +11623,14 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 2.0 (x4)';
 
-  static const _ratio = 16000000000.0;
+  static final _ratio = Rational.parse('1.60000000000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress20X4] = 16000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress20X4] = 1.60000000000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11637,12 +11638,12 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress20X4] with new value
   @override
   DataTransfer$PCIExpress20X4 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress20X4(val);
 
@@ -11655,14 +11656,14 @@ final class DataTransfer$PCIExpress20X4 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress20X8 extends DataTransfer {
-  const DataTransfer$PCIExpress20X8([
+  DataTransfer$PCIExpress20X8([
     super.value,
   ]);
 
@@ -11693,14 +11694,14 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 2.0 (x8)';
 
-  static const _ratio = 32000000000.0;
+  static final _ratio = Rational.parse('3.20000000000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress20X8] = 32000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress20X8] = 3.20000000000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11708,12 +11709,12 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress20X8] with new value
   @override
   DataTransfer$PCIExpress20X8 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress20X8(val);
 
@@ -11726,14 +11727,14 @@ final class DataTransfer$PCIExpress20X8 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress20X16 extends DataTransfer {
-  const DataTransfer$PCIExpress20X16([
+  DataTransfer$PCIExpress20X16([
     super.value,
   ]);
 
@@ -11764,14 +11765,14 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 2.0 (x16)';
 
-  static const _ratio = 64000000000.0;
+  static final _ratio = Rational.parse('6.40000000000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress20X16] = 64000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress20X16] = 6.40000000000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11780,12 +11781,12 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress20X16] with new value
   @override
   DataTransfer$PCIExpress20X16 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress20X16(val);
 
@@ -11798,14 +11799,14 @@ final class DataTransfer$PCIExpress20X16 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress30X1 extends DataTransfer {
-  const DataTransfer$PCIExpress30X1([
+  DataTransfer$PCIExpress30X1([
     super.value,
   ]);
 
@@ -11836,14 +11837,14 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 3.0 (x1)';
 
-  static const _ratio = 8000000000.0;
+  static final _ratio = Rational.parse('8.00000000000000000E+009');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress30X1] = 8000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress30X1] = 8.00000000000000000E+009 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11851,12 +11852,12 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress30X1] with new value
   @override
   DataTransfer$PCIExpress30X1 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress30X1(val);
 
@@ -11869,14 +11870,14 @@ final class DataTransfer$PCIExpress30X1 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress30X4 extends DataTransfer {
-  const DataTransfer$PCIExpress30X4([
+  DataTransfer$PCIExpress30X4([
     super.value,
   ]);
 
@@ -11907,14 +11908,14 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 3.0 (x4)';
 
-  static const _ratio = 32000000000.0;
+  static final _ratio = Rational.parse('3.20000000000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress30X4] = 32000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress30X4] = 3.20000000000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11922,12 +11923,12 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress30X4] with new value
   @override
   DataTransfer$PCIExpress30X4 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress30X4(val);
 
@@ -11940,14 +11941,14 @@ final class DataTransfer$PCIExpress30X4 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress30X8 extends DataTransfer {
-  const DataTransfer$PCIExpress30X8([
+  DataTransfer$PCIExpress30X8([
     super.value,
   ]);
 
@@ -11978,14 +11979,14 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 3.0 (x8)';
 
-  static const _ratio = 64000000000.0;
+  static final _ratio = Rational.parse('6.40000000000000000E+010');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress30X8] = 64000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress30X8] = 6.40000000000000000E+010 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -11993,12 +11994,12 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress30X8] with new value
   @override
   DataTransfer$PCIExpress30X8 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress30X8(val);
 
@@ -12011,14 +12012,14 @@ final class DataTransfer$PCIExpress30X8 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$PCIExpress30X16 extends DataTransfer {
-  const DataTransfer$PCIExpress30X16([
+  DataTransfer$PCIExpress30X16([
     super.value,
   ]);
 
@@ -12049,14 +12050,14 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
   @override
   String get displayName => 'PCI Express 3.0 (x16)';
 
-  static const _ratio = 128000000000.0;
+  static final _ratio = Rational.parse('1.28000000000000000E+011');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$PCIExpress30X16] = 128000000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$PCIExpress30X16] = 1.28000000000000000E+011 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12065,12 +12066,12 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$PCIExpress30X16] with new value
   @override
   DataTransfer$PCIExpress30X16 withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$PCIExpress30X16(val);
 
@@ -12083,14 +12084,14 @@ final class DataTransfer$PCIExpress30X16 extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM1X extends DataTransfer {
-  const DataTransfer$CDROM1X([
+  DataTransfer$CDROM1X([
     super.value,
   ]);
 
@@ -12121,14 +12122,14 @@ final class DataTransfer$CDROM1X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 1X';
 
-  static const _ratio = 1228800.0;
+  static final _ratio = Rational.parse('1.22880000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM1X] = 1228800.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM1X] = 1.22880000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12136,12 +12137,12 @@ final class DataTransfer$CDROM1X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM1X] with new value
   @override
   DataTransfer$CDROM1X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM1X(val);
 
@@ -12154,14 +12155,14 @@ final class DataTransfer$CDROM1X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM2X extends DataTransfer {
-  const DataTransfer$CDROM2X([
+  DataTransfer$CDROM2X([
     super.value,
   ]);
 
@@ -12192,14 +12193,14 @@ final class DataTransfer$CDROM2X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 2X';
 
-  static const _ratio = 2457600.0;
+  static final _ratio = Rational.parse('2.45760000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM2X] = 2457600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM2X] = 2.45760000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12207,12 +12208,12 @@ final class DataTransfer$CDROM2X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM2X] with new value
   @override
   DataTransfer$CDROM2X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM2X(val);
 
@@ -12225,14 +12226,14 @@ final class DataTransfer$CDROM2X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM3X extends DataTransfer {
-  const DataTransfer$CDROM3X([
+  DataTransfer$CDROM3X([
     super.value,
   ]);
 
@@ -12263,14 +12264,14 @@ final class DataTransfer$CDROM3X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 3X';
 
-  static const _ratio = 3686400.0;
+  static final _ratio = Rational.parse('3.68640000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM3X] = 3686400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM3X] = 3.68640000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12278,12 +12279,12 @@ final class DataTransfer$CDROM3X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM3X] with new value
   @override
   DataTransfer$CDROM3X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM3X(val);
 
@@ -12296,14 +12297,14 @@ final class DataTransfer$CDROM3X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM4X extends DataTransfer {
-  const DataTransfer$CDROM4X([
+  DataTransfer$CDROM4X([
     super.value,
   ]);
 
@@ -12334,14 +12335,14 @@ final class DataTransfer$CDROM4X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 4X';
 
-  static const _ratio = 4915200.0;
+  static final _ratio = Rational.parse('4.91520000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM4X] = 4915200.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM4X] = 4.91520000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12349,12 +12350,12 @@ final class DataTransfer$CDROM4X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM4X] with new value
   @override
   DataTransfer$CDROM4X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM4X(val);
 
@@ -12367,14 +12368,14 @@ final class DataTransfer$CDROM4X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM6X extends DataTransfer {
-  const DataTransfer$CDROM6X([
+  DataTransfer$CDROM6X([
     super.value,
   ]);
 
@@ -12405,14 +12406,14 @@ final class DataTransfer$CDROM6X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 6X';
 
-  static const _ratio = 7372800.0;
+  static final _ratio = Rational.parse('7.37280000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM6X] = 7372800.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM6X] = 7.37280000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12420,12 +12421,12 @@ final class DataTransfer$CDROM6X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM6X] with new value
   @override
   DataTransfer$CDROM6X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM6X(val);
 
@@ -12438,14 +12439,14 @@ final class DataTransfer$CDROM6X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM8X extends DataTransfer {
-  const DataTransfer$CDROM8X([
+  DataTransfer$CDROM8X([
     super.value,
   ]);
 
@@ -12476,14 +12477,14 @@ final class DataTransfer$CDROM8X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 8X';
 
-  static const _ratio = 9830400.0;
+  static final _ratio = Rational.parse('9.83040000000000000E+006');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM8X] = 9830400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM8X] = 9.83040000000000000E+006 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12491,12 +12492,12 @@ final class DataTransfer$CDROM8X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM8X] with new value
   @override
   DataTransfer$CDROM8X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM8X(val);
 
@@ -12509,14 +12510,14 @@ final class DataTransfer$CDROM8X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM12X extends DataTransfer {
-  const DataTransfer$CDROM12X([
+  DataTransfer$CDROM12X([
     super.value,
   ]);
 
@@ -12547,14 +12548,14 @@ final class DataTransfer$CDROM12X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 12X';
 
-  static const _ratio = 14745600.0;
+  static final _ratio = Rational.parse('1.47456000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM12X] = 14745600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM12X] = 1.47456000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12562,12 +12563,12 @@ final class DataTransfer$CDROM12X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM12X] with new value
   @override
   DataTransfer$CDROM12X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM12X(val);
 
@@ -12580,14 +12581,14 @@ final class DataTransfer$CDROM12X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM16X extends DataTransfer {
-  const DataTransfer$CDROM16X([
+  DataTransfer$CDROM16X([
     super.value,
   ]);
 
@@ -12618,14 +12619,14 @@ final class DataTransfer$CDROM16X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 16X';
 
-  static const _ratio = 19660800.0;
+  static final _ratio = Rational.parse('1.96608000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM16X] = 19660800.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM16X] = 1.96608000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12633,12 +12634,12 @@ final class DataTransfer$CDROM16X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM16X] with new value
   @override
   DataTransfer$CDROM16X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM16X(val);
 
@@ -12651,14 +12652,14 @@ final class DataTransfer$CDROM16X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM24X extends DataTransfer {
-  const DataTransfer$CDROM24X([
+  DataTransfer$CDROM24X([
     super.value,
   ]);
 
@@ -12689,14 +12690,14 @@ final class DataTransfer$CDROM24X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 24X';
 
-  static const _ratio = 29491200.0;
+  static final _ratio = Rational.parse('2.94912000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM24X] = 29491200.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM24X] = 2.94912000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12704,12 +12705,12 @@ final class DataTransfer$CDROM24X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM24X] with new value
   @override
   DataTransfer$CDROM24X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM24X(val);
 
@@ -12722,14 +12723,14 @@ final class DataTransfer$CDROM24X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM32X extends DataTransfer {
-  const DataTransfer$CDROM32X([
+  DataTransfer$CDROM32X([
     super.value,
   ]);
 
@@ -12760,14 +12761,14 @@ final class DataTransfer$CDROM32X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 32X';
 
-  static const _ratio = 39321600.0;
+  static final _ratio = Rational.parse('3.93216000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM32X] = 39321600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM32X] = 3.93216000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12775,12 +12776,12 @@ final class DataTransfer$CDROM32X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM32X] with new value
   @override
   DataTransfer$CDROM32X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM32X(val);
 
@@ -12793,14 +12794,14 @@ final class DataTransfer$CDROM32X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM40X extends DataTransfer {
-  const DataTransfer$CDROM40X([
+  DataTransfer$CDROM40X([
     super.value,
   ]);
 
@@ -12831,14 +12832,14 @@ final class DataTransfer$CDROM40X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 40X';
 
-  static const _ratio = 49152000.0;
+  static final _ratio = Rational.parse('4.91520000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM40X] = 49152000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM40X] = 4.91520000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12846,12 +12847,12 @@ final class DataTransfer$CDROM40X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM40X] with new value
   @override
   DataTransfer$CDROM40X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM40X(val);
 
@@ -12864,14 +12865,14 @@ final class DataTransfer$CDROM40X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM48X extends DataTransfer {
-  const DataTransfer$CDROM48X([
+  DataTransfer$CDROM48X([
     super.value,
   ]);
 
@@ -12902,14 +12903,14 @@ final class DataTransfer$CDROM48X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 48X';
 
-  static const _ratio = 58982400.0;
+  static final _ratio = Rational.parse('5.89824000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM48X] = 58982400.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM48X] = 5.89824000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12917,12 +12918,12 @@ final class DataTransfer$CDROM48X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM48X] with new value
   @override
   DataTransfer$CDROM48X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM48X(val);
 
@@ -12935,14 +12936,14 @@ final class DataTransfer$CDROM48X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$CDROM52X extends DataTransfer {
-  const DataTransfer$CDROM52X([
+  DataTransfer$CDROM52X([
     super.value,
   ]);
 
@@ -12973,14 +12974,14 @@ final class DataTransfer$CDROM52X extends DataTransfer {
   @override
   String get displayName => 'CD-ROM 52X';
 
-  static const _ratio = 63897600.0;
+  static final _ratio = Rational.parse('6.38976000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$CDROM52X] = 63897600.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$CDROM52X] = 6.38976000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -12988,12 +12989,12 @@ final class DataTransfer$CDROM52X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$CDROM52X] with new value
   @override
   DataTransfer$CDROM52X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$CDROM52X(val);
 
@@ -13006,14 +13007,14 @@ final class DataTransfer$CDROM52X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM1X extends DataTransfer {
-  const DataTransfer$DVDROM1X([
+  DataTransfer$DVDROM1X([
     super.value,
   ]);
 
@@ -13044,14 +13045,14 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 1X';
 
-  static const _ratio = 11080000.0;
+  static final _ratio = Rational.parse('1.10800000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM1X] = 11080000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM1X] = 1.10800000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13059,12 +13060,12 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM1X] with new value
   @override
   DataTransfer$DVDROM1X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM1X(val);
 
@@ -13077,14 +13078,14 @@ final class DataTransfer$DVDROM1X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM2X extends DataTransfer {
-  const DataTransfer$DVDROM2X([
+  DataTransfer$DVDROM2X([
     super.value,
   ]);
 
@@ -13115,14 +13116,14 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 2X';
 
-  static const _ratio = 22160000.0;
+  static final _ratio = Rational.parse('2.21600000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM2X] = 22160000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM2X] = 2.21600000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13130,12 +13131,12 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM2X] with new value
   @override
   DataTransfer$DVDROM2X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM2X(val);
 
@@ -13148,14 +13149,14 @@ final class DataTransfer$DVDROM2X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM3X extends DataTransfer {
-  const DataTransfer$DVDROM3X([
+  DataTransfer$DVDROM3X([
     super.value,
   ]);
 
@@ -13186,14 +13187,14 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 3X';
 
-  static const _ratio = 33240000.0;
+  static final _ratio = Rational.parse('3.32400000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM3X] = 33240000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM3X] = 3.32400000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13201,12 +13202,12 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM3X] with new value
   @override
   DataTransfer$DVDROM3X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM3X(val);
 
@@ -13219,14 +13220,14 @@ final class DataTransfer$DVDROM3X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM4X extends DataTransfer {
-  const DataTransfer$DVDROM4X([
+  DataTransfer$DVDROM4X([
     super.value,
   ]);
 
@@ -13257,14 +13258,14 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 4X';
 
-  static const _ratio = 44320000.0;
+  static final _ratio = Rational.parse('4.43200000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM4X] = 44320000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM4X] = 4.43200000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13272,12 +13273,12 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM4X] with new value
   @override
   DataTransfer$DVDROM4X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM4X(val);
 
@@ -13290,14 +13291,14 @@ final class DataTransfer$DVDROM4X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM6X extends DataTransfer {
-  const DataTransfer$DVDROM6X([
+  DataTransfer$DVDROM6X([
     super.value,
   ]);
 
@@ -13328,14 +13329,14 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 6X';
 
-  static const _ratio = 66480000.0;
+  static final _ratio = Rational.parse('6.64800000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM6X] = 66480000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM6X] = 6.64800000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13343,12 +13344,12 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM6X] with new value
   @override
   DataTransfer$DVDROM6X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM6X(val);
 
@@ -13361,14 +13362,14 @@ final class DataTransfer$DVDROM6X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM8X extends DataTransfer {
-  const DataTransfer$DVDROM8X([
+  DataTransfer$DVDROM8X([
     super.value,
   ]);
 
@@ -13399,14 +13400,14 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 8X';
 
-  static const _ratio = 88640000.0;
+  static final _ratio = Rational.parse('8.86400000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM8X] = 88640000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM8X] = 8.86400000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13414,12 +13415,12 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM8X] with new value
   @override
   DataTransfer$DVDROM8X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM8X(val);
 
@@ -13432,14 +13433,14 @@ final class DataTransfer$DVDROM8X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM10X extends DataTransfer {
-  const DataTransfer$DVDROM10X([
+  DataTransfer$DVDROM10X([
     super.value,
   ]);
 
@@ -13470,14 +13471,14 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 10X';
 
-  static const _ratio = 110800000.0;
+  static final _ratio = Rational.parse('1.10800000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM10X] = 110800000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM10X] = 1.10800000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13485,12 +13486,12 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM10X] with new value
   @override
   DataTransfer$DVDROM10X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM10X(val);
 
@@ -13503,14 +13504,14 @@ final class DataTransfer$DVDROM10X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM12X extends DataTransfer {
-  const DataTransfer$DVDROM12X([
+  DataTransfer$DVDROM12X([
     super.value,
   ]);
 
@@ -13541,14 +13542,14 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 12X';
 
-  static const _ratio = 132960000.0;
+  static final _ratio = Rational.parse('1.32960000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM12X] = 132960000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM12X] = 1.32960000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13556,12 +13557,12 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM12X] with new value
   @override
   DataTransfer$DVDROM12X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM12X(val);
 
@@ -13574,14 +13575,14 @@ final class DataTransfer$DVDROM12X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$DVDROM16X extends DataTransfer {
-  const DataTransfer$DVDROM16X([
+  DataTransfer$DVDROM16X([
     super.value,
   ]);
 
@@ -13612,14 +13613,14 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
   @override
   String get displayName => 'DVD-ROM 16X';
 
-  static const _ratio = 177280000.0;
+  static final _ratio = Rational.parse('1.77280000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$DVDROM16X] = 177280000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$DVDROM16X] = 1.77280000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13627,12 +13628,12 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$DVDROM16X] with new value
   @override
   DataTransfer$DVDROM16X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$DVDROM16X(val);
 
@@ -13645,14 +13646,14 @@ final class DataTransfer$DVDROM16X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BluRay1X extends DataTransfer {
-  const DataTransfer$BluRay1X([
+  DataTransfer$BluRay1X([
     super.value,
   ]);
 
@@ -13683,14 +13684,14 @@ final class DataTransfer$BluRay1X extends DataTransfer {
   @override
   String get displayName => 'Blu-ray 1X';
 
-  static const _ratio = 36000000.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$BluRay1X] = 36000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay1X] = 3.60000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13698,12 +13699,12 @@ final class DataTransfer$BluRay1X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BluRay1X] with new value
   @override
   DataTransfer$BluRay1X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BluRay1X(val);
 
@@ -13716,14 +13717,14 @@ final class DataTransfer$BluRay1X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BluRay2X extends DataTransfer {
-  const DataTransfer$BluRay2X([
+  DataTransfer$BluRay2X([
     super.value,
   ]);
 
@@ -13754,14 +13755,14 @@ final class DataTransfer$BluRay2X extends DataTransfer {
   @override
   String get displayName => 'Blu-ray 2X';
 
-  static const _ratio = 72000000.0;
+  static final _ratio = Rational.parse('7.20000000000000000E+007');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$BluRay2X] = 72000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay2X] = 7.20000000000000000E+007 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13769,12 +13770,12 @@ final class DataTransfer$BluRay2X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BluRay2X] with new value
   @override
   DataTransfer$BluRay2X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BluRay2X(val);
 
@@ -13787,14 +13788,14 @@ final class DataTransfer$BluRay2X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BluRay4X extends DataTransfer {
-  const DataTransfer$BluRay4X([
+  DataTransfer$BluRay4X([
     super.value,
   ]);
 
@@ -13825,14 +13826,14 @@ final class DataTransfer$BluRay4X extends DataTransfer {
   @override
   String get displayName => 'Blu-ray 4X';
 
-  static const _ratio = 144000000.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$BluRay4X] = 144000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay4X] = 1.44000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13840,12 +13841,12 @@ final class DataTransfer$BluRay4X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BluRay4X] with new value
   @override
   DataTransfer$BluRay4X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BluRay4X(val);
 
@@ -13858,14 +13859,14 @@ final class DataTransfer$BluRay4X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BluRay6X extends DataTransfer {
-  const DataTransfer$BluRay6X([
+  DataTransfer$BluRay6X([
     super.value,
   ]);
 
@@ -13896,14 +13897,14 @@ final class DataTransfer$BluRay6X extends DataTransfer {
   @override
   String get displayName => 'Blu-ray 6X';
 
-  static const _ratio = 216000000.0;
+  static final _ratio = Rational.parse('2.16000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$BluRay6X] = 216000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay6X] = 2.16000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13911,12 +13912,12 @@ final class DataTransfer$BluRay6X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BluRay6X] with new value
   @override
   DataTransfer$BluRay6X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BluRay6X(val);
 
@@ -13929,14 +13930,14 @@ final class DataTransfer$BluRay6X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BluRay8X extends DataTransfer {
-  const DataTransfer$BluRay8X([
+  DataTransfer$BluRay8X([
     super.value,
   ]);
 
@@ -13967,14 +13968,14 @@ final class DataTransfer$BluRay8X extends DataTransfer {
   @override
   String get displayName => 'Blu-ray 8X';
 
-  static const _ratio = 288000000.0;
+  static final _ratio = Rational.parse('2.88000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$BluRay8X] = 288000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay8X] = 2.88000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -13982,12 +13983,12 @@ final class DataTransfer$BluRay8X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BluRay8X] with new value
   @override
   DataTransfer$BluRay8X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BluRay8X(val);
 
@@ -14000,14 +14001,14 @@ final class DataTransfer$BluRay8X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BluRay10X extends DataTransfer {
-  const DataTransfer$BluRay10X([
+  DataTransfer$BluRay10X([
     super.value,
   ]);
 
@@ -14038,14 +14039,14 @@ final class DataTransfer$BluRay10X extends DataTransfer {
   @override
   String get displayName => 'Blu-ray 10X';
 
-  static const _ratio = 360000000.0;
+  static final _ratio = Rational.parse('3.60000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$BluRay10X] = 360000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay10X] = 3.60000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -14053,12 +14054,12 @@ final class DataTransfer$BluRay10X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BluRay10X] with new value
   @override
   DataTransfer$BluRay10X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BluRay10X(val);
 
@@ -14071,14 +14072,14 @@ final class DataTransfer$BluRay10X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [DataTransfer]
 final class DataTransfer$BluRay12X extends DataTransfer {
-  const DataTransfer$BluRay12X([
+  DataTransfer$BluRay12X([
     super.value,
   ]);
 
@@ -14109,14 +14110,14 @@ final class DataTransfer$BluRay12X extends DataTransfer {
   @override
   String get displayName => 'Blu-ray 12X';
 
-  static const _ratio = 432000000.0;
+  static final _ratio = Rational.parse('4.32000000000000000E+008');
 
   @override
-  DataTransfer get anchor => const DataTransfer$BitPerSecond(_ratio);
+  DataTransfer get anchor => DataTransfer$BitPerSecond(_ratio);
 
-  /// 1 [DataTransfer$BluRay12X] = 432000000.0 [DataTransfer$BitPerSecond]
+  /// 1 [DataTransfer$BluRay12X] = 4.32000000000000000E+008 [DataTransfer$BitPerSecond]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -14124,12 +14125,12 @@ final class DataTransfer$BluRay12X extends DataTransfer {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [DataTransfer$BluRay12X] with new value
   @override
   DataTransfer$BluRay12X withValue(
-    num val,
+    Rational val,
   ) =>
       DataTransfer$BluRay12X(val);
 
@@ -14142,7 +14143,7 @@ final class DataTransfer$BluRay12X extends DataTransfer {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

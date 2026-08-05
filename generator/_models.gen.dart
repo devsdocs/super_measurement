@@ -11,15 +11,14 @@ void generateModels() {
     final anchor = isTemperature
         ? unit.values.first.firstWhere((e) => e.keys.first.endsWith('Kelvin'))
         : unit.values.first.firstWhere(
-            (e) =>
-                (e.values.single['ratio'] == 1 ||
-                    e.values.single['ratio'] == 1.0 ||
-                    ((e.values.single['ratio'] as num)
-                            .toDouble()
-                            .toPrecision(1) ==
-                        1.0)) &&
-                ((e.values.single['valueshift'] as num?)?.toDouble() == 0.0 ||
-                    e.values.single['valueshift'] == 0),
+            (e) {
+              final rStr = e.values.single['ratio'].toString();
+              final sStr = e.values.single['valueshift']?.toString() ?? '0';
+              return (rStr == '1' ||
+                      rStr == '1.0' ||
+                      double.parse(rStr).toPrecision(1) == 1.0) &&
+                  (double.parse(sStr) == 0.0);
+            },
             orElse: () => unit.values.first.first,
           );
 
@@ -53,7 +52,7 @@ void generateModels() {
     typeBuff.writeln();
     typeBuff.writeln('sealed class $name extends Unit<$name> {');
     typeBuff.writeln();
-    typeBuff.writeln('  const $name([super.value,]);');
+    typeBuff.writeln('  $name([super.value,]);');
     typeBuff.writeln();
     typeBuff.writeln(
       '/// If there is no matched key, returning [${anchor.keys.first}] with 0 value',
@@ -62,11 +61,11 @@ void generateModels() {
       '  factory $name.fromJson(Map<String,dynamic> json) =>',
     );
     typeBuff.writeln(
-      '_checkJson(_majorName,json, valuesAsMap,) ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.withValue((json[_majorName] as Map<String, dynamic>)[_value] as num,) : $name.anchor();',
+      '_checkJson(_majorName,json, valuesAsMap,) ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!.withValue(Rational.parse((json[_majorName] as Map<String, dynamic>)[_value].toString()),) : $name.anchor();',
     );
     typeBuff.writeln();
     typeBuff.writeln(
-      '  factory $name.anchor() => const ${anchor.keys.first}();',
+      '  factory $name.anchor() => ${anchor.keys.first}();',
     );
     // typeBuff.writeln();
     // typeBuff.writeln('  @override');
@@ -86,7 +85,7 @@ void generateModels() {
       final unitType = e.keys.first;
       typeBuff.writeln('/// Convert to [$unitType]');
       typeBuff.writeln(
-        '$name get to${unitType.split(r'$').last} => convertTo(const $unitType(),);',
+        '$name get to${unitType.split(r'$').last} => convertTo($unitType(),);',
       );
       typeBuff.writeln();
     }
@@ -103,7 +102,7 @@ void generateModels() {
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(
-        'static const ${unitType.split(r'$').last.snakeCase} = $unitType();',
+        'static final ${unitType.split(r'$').last.snakeCase} = $unitType();',
       );
     }
     typeBuff.writeln();
@@ -113,7 +112,7 @@ void generateModels() {
     typeBuff.writeln('  @override');
     typeBuff.writeln('  EnumValues<$name> get unitsAsMap => valuesAsMap;');
     typeBuff.writeln();
-    typeBuff.writeln('static const values = [');
+    typeBuff.writeln('  static final values = <$name>[');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(
@@ -124,7 +123,8 @@ void generateModels() {
     typeBuff.writeln();
     typeBuff.writeln();
 
-    typeBuff.writeln('static const valuesAsMap = EnumValues({');
+    typeBuff
+        .writeln('  static final valuesAsMap = EnumValues(<String, $name>{');
     for (final e in unit.values.first) {
       final unitType = e.keys.first;
       typeBuff.writeln(
@@ -151,57 +151,57 @@ void generateModels() {
       typeBuff.writeln('      case Temperature\$Kelvin _:');
       typeBuff.writeln('        // From Kelvin to others');
       typeBuff.writeln(
-          '        if (to is Temperature\$Celsius) return to.withValue(value - 273.15);');
+          "        if (to is Temperature\$Celsius) return to.withValue(value - Rational.parse('273.15'));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Fahrenheit) return to.withValue((value * 9/5) - 459.67);');
+          "        if (to is Temperature\$Fahrenheit) return to.withValue((value * (Rational.fromInt(9) / Rational.fromInt(5))) - Rational.parse('459.67'));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Rankine) return to.withValue(value * 9/5);');
+          '        if (to is Temperature\$Rankine) return to.withValue(value * (Rational.fromInt(9) / Rational.fromInt(5)));');
       typeBuff.writeln(
-          '        if (to is Temperature\$Reaumur) return to.withValue((value - 273.15) * 4/5);');
+          "        if (to is Temperature\$Reaumur) return to.withValue((value - Rational.parse('273.15')) * (Rational.fromInt(4) / Rational.fromInt(5)));");
       typeBuff.writeln();
       typeBuff.writeln('      case Temperature\$Celsius _:');
       typeBuff.writeln('        // From Celsius to others');
       typeBuff.writeln(
-          '        if (to is Temperature\$Kelvin) return to.withValue(value + 273.15);');
+          "        if (to is Temperature\$Kelvin) return to.withValue(value + Rational.parse('273.15'));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Fahrenheit) return to.withValue((value * 9/5) + 32);');
+          '        if (to is Temperature\$Fahrenheit) return to.withValue((value * (Rational.fromInt(9) / Rational.fromInt(5))) + Rational.fromInt(32));');
       typeBuff.writeln(
-          '        if (to is Temperature\$Rankine) return to.withValue((value + 273.15) * 9/5);');
+          "        if (to is Temperature\$Rankine) return to.withValue((value + Rational.parse('273.15')) * (Rational.fromInt(9) / Rational.fromInt(5)));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Reaumur) return to.withValue(value * 4/5);');
+          '        if (to is Temperature\$Reaumur) return to.withValue(value * (Rational.fromInt(4) / Rational.fromInt(5)));');
       typeBuff.writeln();
       typeBuff.writeln('      case Temperature\$Fahrenheit _:');
       typeBuff.writeln('        // From Fahrenheit to others');
       typeBuff.writeln(
-          '        if (to is Temperature\$Kelvin) return to.withValue((value + 459.67) * 5/9);');
+          "        if (to is Temperature\$Kelvin) return to.withValue((value + Rational.parse('459.67')) * (Rational.fromInt(5) / Rational.fromInt(9)));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Celsius) return to.withValue((value - 32) * 5/9);');
+          '        if (to is Temperature\$Celsius) return to.withValue((value - Rational.fromInt(32)) * (Rational.fromInt(5) / Rational.fromInt(9)));');
       typeBuff.writeln(
-          '        if (to is Temperature\$Rankine) return to.withValue(value + 459.67);');
+          "        if (to is Temperature\$Rankine) return to.withValue(value + Rational.parse('459.67'));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Reaumur) return to.withValue((value - 32) * 4/9);');
+          '        if (to is Temperature\$Reaumur) return to.withValue((value - Rational.fromInt(32)) * (Rational.fromInt(4) / Rational.fromInt(9)));');
       typeBuff.writeln();
       typeBuff.writeln('      case Temperature\$Rankine _:');
       typeBuff.writeln('        // From Rankine to others');
       typeBuff.writeln(
-          '        if (to is Temperature\$Kelvin) return to.withValue(value * 5/9);');
+          '        if (to is Temperature\$Kelvin) return to.withValue(value * (Rational.fromInt(5) / Rational.fromInt(9)));');
       typeBuff.writeln(
-          '        if (to is Temperature\$Celsius) return to.withValue((value - 491.67) * 5/9);');
+          "        if (to is Temperature\$Celsius) return to.withValue((value - Rational.parse('491.67')) * (Rational.fromInt(5) / Rational.fromInt(9)));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Fahrenheit) return to.withValue(value - 459.67);');
+          "        if (to is Temperature\$Fahrenheit) return to.withValue(value - Rational.parse('459.67'));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Reaumur) return to.withValue((value - 491.67) * 4/9);');
+          "        if (to is Temperature\$Reaumur) return to.withValue((value - Rational.parse('491.67')) * (Rational.fromInt(4) / Rational.fromInt(9)));");
       typeBuff.writeln();
       typeBuff.writeln('      case Temperature\$Reaumur _:');
       typeBuff.writeln('        // From Réaumur to others');
       typeBuff.writeln(
-          '        if (to is Temperature\$Kelvin) return to.withValue((value * 5/4) + 273.15);');
+          "        if (to is Temperature\$Kelvin) return to.withValue((value * (Rational.fromInt(5) / Rational.fromInt(4))) + Rational.parse('273.15'));");
       typeBuff.writeln(
-          '        if (to is Temperature\$Celsius) return to.withValue(value * 5/4);');
+          '        if (to is Temperature\$Celsius) return to.withValue(value * (Rational.fromInt(5) / Rational.fromInt(4)));');
       typeBuff.writeln(
-          '        if (to is Temperature\$Fahrenheit) return to.withValue((value * 9/4) + 32);');
+          '        if (to is Temperature\$Fahrenheit) return to.withValue((value * (Rational.fromInt(9) / Rational.fromInt(4))) + Rational.fromInt(32));');
       typeBuff.writeln(
-          '        if (to is Temperature\$Rankine) return to.withValue((value * 9/4) + 491.67);');
+          "        if (to is Temperature\$Rankine) return to.withValue((value * (Rational.fromInt(9) / Rational.fromInt(4))) + Rational.parse('491.67'));");
       typeBuff.writeln('    }');
       typeBuff.writeln();
       typeBuff.writeln(
@@ -219,19 +219,13 @@ void generateModels() {
           '    final thisKelvin = convertTo(Temperature.kelvin).value;');
       typeBuff.writeln(
           '    final otherKelvin = other.convertTo(Temperature.kelvin).value;');
-      typeBuff.writeln('    const epsilon = 1e-10;');
       typeBuff.writeln();
       typeBuff.writeln('    switch (operator) {');
-      typeBuff.writeln(
-          "      case '==': return (thisKelvin - otherKelvin).abs() < epsilon;");
-      typeBuff.writeln(
-          "      case '>': return thisKelvin > otherKelvin + epsilon;");
-      typeBuff.writeln(
-          "      case '>=': return thisKelvin >= otherKelvin - epsilon;");
-      typeBuff.writeln(
-          "      case '<': return thisKelvin < otherKelvin - epsilon;");
-      typeBuff.writeln(
-          '      default: return thisKelvin <= otherKelvin + epsilon;');
+      typeBuff.writeln("      case '==': return thisKelvin == otherKelvin;");
+      typeBuff.writeln("      case '>': return thisKelvin > otherKelvin;");
+      typeBuff.writeln("      case '>=': return thisKelvin >= otherKelvin;");
+      typeBuff.writeln("      case '<': return thisKelvin < otherKelvin;");
+      typeBuff.writeln('      default: return thisKelvin <= otherKelvin;');
       typeBuff.writeln('    }');
       typeBuff.writeln('  }');
       typeBuff.writeln();
@@ -255,7 +249,7 @@ void generateModels() {
       final unitProps = e.values.first;
       typeBuff.writeln('/// Unit of [$name]');
       typeBuff.writeln('final class $unitType extends $name {');
-      typeBuff.writeln('  const $unitType([super.value,]);');
+      typeBuff.writeln('  $unitType([super.value,]);');
       typeBuff.writeln();
       typeBuff.writeln(
         '/// If there is no matched key, returning with 0 value',
@@ -299,20 +293,24 @@ void generateModels() {
         "  String get displayName => ${displayName == snakeCaseName ? '' : "'"}${displayName == snakeCaseName ? '_minorName' : displayName}${displayName == snakeCaseName ? '' : "'"};",
       );
       typeBuff.writeln();
-      typeBuff.writeln("  static const _ratio = ${unitProps['ratio']};");
+
+      final ratioStr = unitProps['ratio'].toString();
+      typeBuff.writeln("  static final _ratio = Rational.parse('$ratioStr');");
+
       typeBuff.writeln();
-      final isShiftedValue =
-          (unitProps['valueshift'] as num?)?.toDouble() != 0.0;
+
+      final shiftStr = unitProps['valueshift']?.toString() ?? '0';
+      final isShiftedValue = shiftStr != '0' && shiftStr != '0.0';
+
       typeBuff.writeln();
       typeBuff.writeln('  @override');
-      typeBuff
-          .writeln('  $name get anchor => const ${anchor.keys.first}(_ratio);');
+      typeBuff.writeln('  $name get anchor => ${anchor.keys.first}(_ratio);');
       typeBuff.writeln();
       if (unitType == anchor.keys.first) {
         typeBuff.writeln('/// Default (anchor) unit of [$name]');
       } else {
         typeBuff.writeln(
-          "/// 1 [$unitType] ${((unitProps['ratio'] ?? 1.0) as num) % 1 == 0 ? '=' : '≈'} ${unitProps['ratio']} [${anchor.keys.first}]",
+          "/// 1 [$unitType] ${double.parse(ratioStr) % 1 == 0 ? '=' : '≈'} ${unitProps['ratio']} [${anchor.keys.first}]",
         );
         if (isShiftedValue) {
           typeBuff.writeln('///');
@@ -320,7 +318,7 @@ void generateModels() {
         }
       }
       typeBuff.writeln('  @override');
-      typeBuff.writeln('  num get ratio => _ratio;');
+      typeBuff.writeln('  Rational get ratio => _ratio;');
       typeBuff.writeln();
       typeBuff.writeln(
         '/// Clone this with same value',
@@ -339,13 +337,14 @@ void generateModels() {
         );
       }
       typeBuff.writeln('  @override');
-      typeBuff.writeln('  num get valueShift => ${unitProps['valueshift']};');
+      typeBuff
+          .writeln("  Rational get valueShift => Rational.parse('$shiftStr');");
       typeBuff.writeln(
         '/// Creating [$unitType] with new value',
       );
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        '  $unitType withValue(num val,) => $unitType(val);',
+        '  $unitType withValue(Rational val,) => $unitType(val);',
       );
       typeBuff.writeln();
       typeBuff.writeln(
@@ -367,7 +366,7 @@ void generateModels() {
       );
       typeBuff.writeln('  @override');
       typeBuff.writeln(
-        '  Map<String, dynamic> toJson() => {majorName :{_unit: _minorName,_value: value,},};',
+        '  Map<String, dynamic> toJson() => {majorName :{_unit: _minorName,_value: value.toDouble(),},};',
       );
       typeBuff.writeln('}');
       typeBuff.writeln();

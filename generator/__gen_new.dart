@@ -47,13 +47,13 @@ Future<void> main() async {
         e as Map<String, dynamic>;
         final newMap = e.map(
           (k, v) => k == 'Value'
-              ? MapEntry('ratio', double.parse(v.toString()))
+              ? MapEntry('ratio', v.toString())
               : k == 'Abbreviation'
                   ? MapEntry('symbol', v)
                   : k == 'ValueShift'
                       ? MapEntry(
                           'valueshift',
-                          (v as String).isNotEmpty ? double.parse(v) : 0.0,
+                          (v as String).isNotEmpty ? v : '0',
                         )
                       : MapEntry(k.toLowerCase(), v),
         )
@@ -99,7 +99,7 @@ Future<void> main() async {
   // generateForApp();
 
   await Process.run('dart', ['format', '.']);
-  await Process.run('dart', ['fix', '--apply']);
+  // await Process.run('dart', ['fix', '--apply']);
 }
 
 List<Map<String, List<Map<String, Map<String, dynamic>>>>> allData = [];
@@ -308,8 +308,8 @@ class NewRes {
   final String? plainName;
 
   final String? shortName;
-  final double? ratio;
-  final double? valueShift;
+  final String? ratio;
+  final String? valueShift;
 
   Map<String, dynamic> toMap() => {
         'symbol': symbol,

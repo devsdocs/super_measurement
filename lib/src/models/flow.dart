@@ -32,7 +32,7 @@ part of '../../super_measurement.dart';
 /// [Flow$KilogramPerHourGasolineAt155DegreeC],
 /// [Flow$KilogramPerDayGasolineAt155DegreeC]
 sealed class Flow extends Unit<Flow> {
-  const Flow([
+  Flow([
     super.value,
   ]);
 
@@ -44,295 +44,296 @@ sealed class Flow extends Unit<Flow> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Flow.anchor();
 
-  factory Flow.anchor() => const Flow$MilliliterPerDay();
+  factory Flow.anchor() => Flow$MilliliterPerDay();
 
   /// Convert to [Flow$GallonPerDay]
   Flow get toGallonPerDay => convertTo(
-        const Flow$GallonPerDay(),
+        Flow$GallonPerDay(),
       );
 
   /// Convert to [Flow$GallonPerHour]
   Flow get toGallonPerHour => convertTo(
-        const Flow$GallonPerHour(),
+        Flow$GallonPerHour(),
       );
 
   /// Convert to [Flow$GallonPerMinute]
   Flow get toGallonPerMinute => convertTo(
-        const Flow$GallonPerMinute(),
+        Flow$GallonPerMinute(),
       );
 
   /// Convert to [Flow$GallonPerSecond]
   Flow get toGallonPerSecond => convertTo(
-        const Flow$GallonPerSecond(),
+        Flow$GallonPerSecond(),
       );
 
   /// Convert to [Flow$GallonUKPerDay]
   Flow get toGallonUKPerDay => convertTo(
-        const Flow$GallonUKPerDay(),
+        Flow$GallonUKPerDay(),
       );
 
   /// Convert to [Flow$GallonUKPerHour]
   Flow get toGallonUKPerHour => convertTo(
-        const Flow$GallonUKPerHour(),
+        Flow$GallonUKPerHour(),
       );
 
   /// Convert to [Flow$GallonUKPerMinute]
   Flow get toGallonUKPerMinute => convertTo(
-        const Flow$GallonUKPerMinute(),
+        Flow$GallonUKPerMinute(),
       );
 
   /// Convert to [Flow$GallonUKPerSecond]
   Flow get toGallonUKPerSecond => convertTo(
-        const Flow$GallonUKPerSecond(),
+        Flow$GallonUKPerSecond(),
       );
 
   /// Convert to [Flow$BarrelOilPerDay]
   Flow get toBarrelOilPerDay => convertTo(
-        const Flow$BarrelOilPerDay(),
+        Flow$BarrelOilPerDay(),
       );
 
   /// Convert to [Flow$BarrelOilPerHour]
   Flow get toBarrelOilPerHour => convertTo(
-        const Flow$BarrelOilPerHour(),
+        Flow$BarrelOilPerHour(),
       );
 
   /// Convert to [Flow$BarrelOilPerMinute]
   Flow get toBarrelOilPerMinute => convertTo(
-        const Flow$BarrelOilPerMinute(),
+        Flow$BarrelOilPerMinute(),
       );
 
   /// Convert to [Flow$BarrelOilPerSecond]
   Flow get toBarrelOilPerSecond => convertTo(
-        const Flow$BarrelOilPerSecond(),
+        Flow$BarrelOilPerSecond(),
       );
 
   /// Convert to [Flow$AcreFootPerYear]
   Flow get toAcreFootPerYear => convertTo(
-        const Flow$AcreFootPerYear(),
+        Flow$AcreFootPerYear(),
       );
 
   /// Convert to [Flow$AcreFootPerDay]
   Flow get toAcreFootPerDay => convertTo(
-        const Flow$AcreFootPerDay(),
+        Flow$AcreFootPerDay(),
       );
 
   /// Convert to [Flow$AcreFootPerHour]
   Flow get toAcreFootPerHour => convertTo(
-        const Flow$AcreFootPerHour(),
+        Flow$AcreFootPerHour(),
       );
 
   /// Convert to [Flow$HundredFootCubicPerDay]
   Flow get toHundredFootCubicPerDay => convertTo(
-        const Flow$HundredFootCubicPerDay(),
+        Flow$HundredFootCubicPerDay(),
       );
 
   /// Convert to [Flow$HundredFootCubicPerHour]
   Flow get toHundredFootCubicPerHour => convertTo(
-        const Flow$HundredFootCubicPerHour(),
+        Flow$HundredFootCubicPerHour(),
       );
 
   /// Convert to [Flow$HundredFootCubicPerMinute]
   Flow get toHundredFootCubicPerMinute => convertTo(
-        const Flow$HundredFootCubicPerMinute(),
+        Flow$HundredFootCubicPerMinute(),
       );
 
   /// Convert to [Flow$OuncePerHour]
   Flow get toOuncePerHour => convertTo(
-        const Flow$OuncePerHour(),
+        Flow$OuncePerHour(),
       );
 
   /// Convert to [Flow$OuncePerMinute]
   Flow get toOuncePerMinute => convertTo(
-        const Flow$OuncePerMinute(),
+        Flow$OuncePerMinute(),
       );
 
   /// Convert to [Flow$OuncePerSecond]
   Flow get toOuncePerSecond => convertTo(
-        const Flow$OuncePerSecond(),
+        Flow$OuncePerSecond(),
       );
 
   /// Convert to [Flow$OunceUKPerHour]
   Flow get toOunceUKPerHour => convertTo(
-        const Flow$OunceUKPerHour(),
+        Flow$OunceUKPerHour(),
       );
 
   /// Convert to [Flow$OunceUKPerMinute]
   Flow get toOunceUKPerMinute => convertTo(
-        const Flow$OunceUKPerMinute(),
+        Flow$OunceUKPerMinute(),
       );
 
   /// Convert to [Flow$OunceUKPerSecond]
   Flow get toOunceUKPerSecond => convertTo(
-        const Flow$OunceUKPerSecond(),
+        Flow$OunceUKPerSecond(),
       );
 
   /// Convert to [Flow$LiterPerDay]
   Flow get toLiterPerDay => convertTo(
-        const Flow$LiterPerDay(),
+        Flow$LiterPerDay(),
       );
 
   /// Convert to [Flow$LiterPerHour]
   Flow get toLiterPerHour => convertTo(
-        const Flow$LiterPerHour(),
+        Flow$LiterPerHour(),
       );
 
   /// Convert to [Flow$LiterPerMinute]
   Flow get toLiterPerMinute => convertTo(
-        const Flow$LiterPerMinute(),
+        Flow$LiterPerMinute(),
       );
 
   /// Convert to [Flow$LiterPerSecond]
   Flow get toLiterPerSecond => convertTo(
-        const Flow$LiterPerSecond(),
+        Flow$LiterPerSecond(),
       );
 
   /// Convert to [Flow$MilliliterPerDay]
   Flow get toMilliliterPerDay => convertTo(
-        const Flow$MilliliterPerDay(),
+        Flow$MilliliterPerDay(),
       );
 
   /// Convert to [Flow$MilliliterPerHour]
   Flow get toMilliliterPerHour => convertTo(
-        const Flow$MilliliterPerHour(),
+        Flow$MilliliterPerHour(),
       );
 
   /// Convert to [Flow$MilliliterPerMinute]
   Flow get toMilliliterPerMinute => convertTo(
-        const Flow$MilliliterPerMinute(),
+        Flow$MilliliterPerMinute(),
       );
 
   /// Convert to [Flow$MilliliterPerSecond]
   Flow get toMilliliterPerSecond => convertTo(
-        const Flow$MilliliterPerSecond(),
+        Flow$MilliliterPerSecond(),
       );
 
   /// Convert to [Flow$MeterCubicPerDay]
   Flow get toMeterCubicPerDay => convertTo(
-        const Flow$MeterCubicPerDay(),
+        Flow$MeterCubicPerDay(),
       );
 
   /// Convert to [Flow$MeterCubicPerHour]
   Flow get toMeterCubicPerHour => convertTo(
-        const Flow$MeterCubicPerHour(),
+        Flow$MeterCubicPerHour(),
       );
 
   /// Convert to [Flow$MeterCubicPerMinute]
   Flow get toMeterCubicPerMinute => convertTo(
-        const Flow$MeterCubicPerMinute(),
+        Flow$MeterCubicPerMinute(),
       );
 
   /// Convert to [Flow$MeterCubicPerSecond]
   Flow get toMeterCubicPerSecond => convertTo(
-        const Flow$MeterCubicPerSecond(),
+        Flow$MeterCubicPerSecond(),
       );
 
   /// Convert to [Flow$CentimeterCubicPerDay]
   Flow get toCentimeterCubicPerDay => convertTo(
-        const Flow$CentimeterCubicPerDay(),
+        Flow$CentimeterCubicPerDay(),
       );
 
   /// Convert to [Flow$CentimeterCubicPerHour]
   Flow get toCentimeterCubicPerHour => convertTo(
-        const Flow$CentimeterCubicPerHour(),
+        Flow$CentimeterCubicPerHour(),
       );
 
   /// Convert to [Flow$CentimeterCubicPerMinute]
   Flow get toCentimeterCubicPerMinute => convertTo(
-        const Flow$CentimeterCubicPerMinute(),
+        Flow$CentimeterCubicPerMinute(),
       );
 
   /// Convert to [Flow$CentimeterCubicPerSecond]
   Flow get toCentimeterCubicPerSecond => convertTo(
-        const Flow$CentimeterCubicPerSecond(),
+        Flow$CentimeterCubicPerSecond(),
       );
 
   /// Convert to [Flow$YardCubicPerHour]
   Flow get toYardCubicPerHour => convertTo(
-        const Flow$YardCubicPerHour(),
+        Flow$YardCubicPerHour(),
       );
 
   /// Convert to [Flow$YardCubicPerMinute]
   Flow get toYardCubicPerMinute => convertTo(
-        const Flow$YardCubicPerMinute(),
+        Flow$YardCubicPerMinute(),
       );
 
   /// Convert to [Flow$YardCubicPerSecond]
   Flow get toYardCubicPerSecond => convertTo(
-        const Flow$YardCubicPerSecond(),
+        Flow$YardCubicPerSecond(),
       );
 
   /// Convert to [Flow$FootCubicPerHour]
   Flow get toFootCubicPerHour => convertTo(
-        const Flow$FootCubicPerHour(),
+        Flow$FootCubicPerHour(),
       );
 
   /// Convert to [Flow$FootCubicPerMinute]
   Flow get toFootCubicPerMinute => convertTo(
-        const Flow$FootCubicPerMinute(),
+        Flow$FootCubicPerMinute(),
       );
 
   /// Convert to [Flow$FootCubicPerSecond]
   Flow get toFootCubicPerSecond => convertTo(
-        const Flow$FootCubicPerSecond(),
+        Flow$FootCubicPerSecond(),
       );
 
   /// Convert to [Flow$InchCubicPerHour]
   Flow get toInchCubicPerHour => convertTo(
-        const Flow$InchCubicPerHour(),
+        Flow$InchCubicPerHour(),
       );
 
   /// Convert to [Flow$InchCubicPerMinute]
   Flow get toInchCubicPerMinute => convertTo(
-        const Flow$InchCubicPerMinute(),
+        Flow$InchCubicPerMinute(),
       );
 
   /// Convert to [Flow$InchCubicPerSecond]
   Flow get toInchCubicPerSecond => convertTo(
-        const Flow$InchCubicPerSecond(),
+        Flow$InchCubicPerSecond(),
       );
 
   /// Convert to [Flow$PoundPerSecondGasolineAt155DegreeC]
   Flow get toPoundPerSecondGasolineAt155DegreeC => convertTo(
-        const Flow$PoundPerSecondGasolineAt155DegreeC(),
+        Flow$PoundPerSecondGasolineAt155DegreeC(),
       );
 
   /// Convert to [Flow$PoundPerMinuteGasolineAt155DegreeC]
   Flow get toPoundPerMinuteGasolineAt155DegreeC => convertTo(
-        const Flow$PoundPerMinuteGasolineAt155DegreeC(),
+        Flow$PoundPerMinuteGasolineAt155DegreeC(),
       );
 
   /// Convert to [Flow$PoundPerHourGasolineAt155DegreeC]
   Flow get toPoundPerHourGasolineAt155DegreeC => convertTo(
-        const Flow$PoundPerHourGasolineAt155DegreeC(),
+        Flow$PoundPerHourGasolineAt155DegreeC(),
       );
 
   /// Convert to [Flow$PoundPerDayGasolineAt155DegreeC]
   Flow get toPoundPerDayGasolineAt155DegreeC => convertTo(
-        const Flow$PoundPerDayGasolineAt155DegreeC(),
+        Flow$PoundPerDayGasolineAt155DegreeC(),
       );
 
   /// Convert to [Flow$KilogramPerSecondGasolineAt155DegreeC]
   Flow get toKilogramPerSecondGasolineAt155DegreeC => convertTo(
-        const Flow$KilogramPerSecondGasolineAt155DegreeC(),
+        Flow$KilogramPerSecondGasolineAt155DegreeC(),
       );
 
   /// Convert to [Flow$KilogramPerMinuteGasolineAt155DegreeC]
   Flow get toKilogramPerMinuteGasolineAt155DegreeC => convertTo(
-        const Flow$KilogramPerMinuteGasolineAt155DegreeC(),
+        Flow$KilogramPerMinuteGasolineAt155DegreeC(),
       );
 
   /// Convert to [Flow$KilogramPerHourGasolineAt155DegreeC]
   Flow get toKilogramPerHourGasolineAt155DegreeC => convertTo(
-        const Flow$KilogramPerHourGasolineAt155DegreeC(),
+        Flow$KilogramPerHourGasolineAt155DegreeC(),
       );
 
   /// Convert to [Flow$KilogramPerDayGasolineAt155DegreeC]
   Flow get toKilogramPerDayGasolineAt155DegreeC => convertTo(
-        const Flow$KilogramPerDayGasolineAt155DegreeC(),
+        Flow$KilogramPerDayGasolineAt155DegreeC(),
       );
 
   @override
@@ -343,70 +344,70 @@ sealed class Flow extends Unit<Flow> {
 
   static const _majorName = 'flow';
 
-  static const gallonPerDay = Flow$GallonPerDay();
-  static const gallonPerHour = Flow$GallonPerHour();
-  static const gallonPerMinute = Flow$GallonPerMinute();
-  static const gallonPerSecond = Flow$GallonPerSecond();
-  static const gallonUKPerDay = Flow$GallonUKPerDay();
-  static const gallonUKPerHour = Flow$GallonUKPerHour();
-  static const gallonUKPerMinute = Flow$GallonUKPerMinute();
-  static const gallonUKPerSecond = Flow$GallonUKPerSecond();
-  static const barrelOilPerDay = Flow$BarrelOilPerDay();
-  static const barrelOilPerHour = Flow$BarrelOilPerHour();
-  static const barrelOilPerMinute = Flow$BarrelOilPerMinute();
-  static const barrelOilPerSecond = Flow$BarrelOilPerSecond();
-  static const acreFootPerYear = Flow$AcreFootPerYear();
-  static const acreFootPerDay = Flow$AcreFootPerDay();
-  static const acreFootPerHour = Flow$AcreFootPerHour();
-  static const hundredFootCubicPerDay = Flow$HundredFootCubicPerDay();
-  static const hundredFootCubicPerHour = Flow$HundredFootCubicPerHour();
-  static const hundredFootCubicPerMinute = Flow$HundredFootCubicPerMinute();
-  static const ouncePerHour = Flow$OuncePerHour();
-  static const ouncePerMinute = Flow$OuncePerMinute();
-  static const ouncePerSecond = Flow$OuncePerSecond();
-  static const ounceUKPerHour = Flow$OunceUKPerHour();
-  static const ounceUKPerMinute = Flow$OunceUKPerMinute();
-  static const ounceUKPerSecond = Flow$OunceUKPerSecond();
-  static const literPerDay = Flow$LiterPerDay();
-  static const literPerHour = Flow$LiterPerHour();
-  static const literPerMinute = Flow$LiterPerMinute();
-  static const literPerSecond = Flow$LiterPerSecond();
-  static const milliliterPerDay = Flow$MilliliterPerDay();
-  static const milliliterPerHour = Flow$MilliliterPerHour();
-  static const milliliterPerMinute = Flow$MilliliterPerMinute();
-  static const milliliterPerSecond = Flow$MilliliterPerSecond();
-  static const meterCubicPerDay = Flow$MeterCubicPerDay();
-  static const meterCubicPerHour = Flow$MeterCubicPerHour();
-  static const meterCubicPerMinute = Flow$MeterCubicPerMinute();
-  static const meterCubicPerSecond = Flow$MeterCubicPerSecond();
-  static const centimeterCubicPerDay = Flow$CentimeterCubicPerDay();
-  static const centimeterCubicPerHour = Flow$CentimeterCubicPerHour();
-  static const centimeterCubicPerMinute = Flow$CentimeterCubicPerMinute();
-  static const centimeterCubicPerSecond = Flow$CentimeterCubicPerSecond();
-  static const yardCubicPerHour = Flow$YardCubicPerHour();
-  static const yardCubicPerMinute = Flow$YardCubicPerMinute();
-  static const yardCubicPerSecond = Flow$YardCubicPerSecond();
-  static const footCubicPerHour = Flow$FootCubicPerHour();
-  static const footCubicPerMinute = Flow$FootCubicPerMinute();
-  static const footCubicPerSecond = Flow$FootCubicPerSecond();
-  static const inchCubicPerHour = Flow$InchCubicPerHour();
-  static const inchCubicPerMinute = Flow$InchCubicPerMinute();
-  static const inchCubicPerSecond = Flow$InchCubicPerSecond();
-  static const poundPerSecondGasolineAt155DegreeC =
+  static final gallonPerDay = Flow$GallonPerDay();
+  static final gallonPerHour = Flow$GallonPerHour();
+  static final gallonPerMinute = Flow$GallonPerMinute();
+  static final gallonPerSecond = Flow$GallonPerSecond();
+  static final gallonUKPerDay = Flow$GallonUKPerDay();
+  static final gallonUKPerHour = Flow$GallonUKPerHour();
+  static final gallonUKPerMinute = Flow$GallonUKPerMinute();
+  static final gallonUKPerSecond = Flow$GallonUKPerSecond();
+  static final barrelOilPerDay = Flow$BarrelOilPerDay();
+  static final barrelOilPerHour = Flow$BarrelOilPerHour();
+  static final barrelOilPerMinute = Flow$BarrelOilPerMinute();
+  static final barrelOilPerSecond = Flow$BarrelOilPerSecond();
+  static final acreFootPerYear = Flow$AcreFootPerYear();
+  static final acreFootPerDay = Flow$AcreFootPerDay();
+  static final acreFootPerHour = Flow$AcreFootPerHour();
+  static final hundredFootCubicPerDay = Flow$HundredFootCubicPerDay();
+  static final hundredFootCubicPerHour = Flow$HundredFootCubicPerHour();
+  static final hundredFootCubicPerMinute = Flow$HundredFootCubicPerMinute();
+  static final ouncePerHour = Flow$OuncePerHour();
+  static final ouncePerMinute = Flow$OuncePerMinute();
+  static final ouncePerSecond = Flow$OuncePerSecond();
+  static final ounceUKPerHour = Flow$OunceUKPerHour();
+  static final ounceUKPerMinute = Flow$OunceUKPerMinute();
+  static final ounceUKPerSecond = Flow$OunceUKPerSecond();
+  static final literPerDay = Flow$LiterPerDay();
+  static final literPerHour = Flow$LiterPerHour();
+  static final literPerMinute = Flow$LiterPerMinute();
+  static final literPerSecond = Flow$LiterPerSecond();
+  static final milliliterPerDay = Flow$MilliliterPerDay();
+  static final milliliterPerHour = Flow$MilliliterPerHour();
+  static final milliliterPerMinute = Flow$MilliliterPerMinute();
+  static final milliliterPerSecond = Flow$MilliliterPerSecond();
+  static final meterCubicPerDay = Flow$MeterCubicPerDay();
+  static final meterCubicPerHour = Flow$MeterCubicPerHour();
+  static final meterCubicPerMinute = Flow$MeterCubicPerMinute();
+  static final meterCubicPerSecond = Flow$MeterCubicPerSecond();
+  static final centimeterCubicPerDay = Flow$CentimeterCubicPerDay();
+  static final centimeterCubicPerHour = Flow$CentimeterCubicPerHour();
+  static final centimeterCubicPerMinute = Flow$CentimeterCubicPerMinute();
+  static final centimeterCubicPerSecond = Flow$CentimeterCubicPerSecond();
+  static final yardCubicPerHour = Flow$YardCubicPerHour();
+  static final yardCubicPerMinute = Flow$YardCubicPerMinute();
+  static final yardCubicPerSecond = Flow$YardCubicPerSecond();
+  static final footCubicPerHour = Flow$FootCubicPerHour();
+  static final footCubicPerMinute = Flow$FootCubicPerMinute();
+  static final footCubicPerSecond = Flow$FootCubicPerSecond();
+  static final inchCubicPerHour = Flow$InchCubicPerHour();
+  static final inchCubicPerMinute = Flow$InchCubicPerMinute();
+  static final inchCubicPerSecond = Flow$InchCubicPerSecond();
+  static final poundPerSecondGasolineAt155DegreeC =
       Flow$PoundPerSecondGasolineAt155DegreeC();
-  static const poundPerMinuteGasolineAt155DegreeC =
+  static final poundPerMinuteGasolineAt155DegreeC =
       Flow$PoundPerMinuteGasolineAt155DegreeC();
-  static const poundPerHourGasolineAt155DegreeC =
+  static final poundPerHourGasolineAt155DegreeC =
       Flow$PoundPerHourGasolineAt155DegreeC();
-  static const poundPerDayGasolineAt155DegreeC =
+  static final poundPerDayGasolineAt155DegreeC =
       Flow$PoundPerDayGasolineAt155DegreeC();
-  static const kilogramPerSecondGasolineAt155DegreeC =
+  static final kilogramPerSecondGasolineAt155DegreeC =
       Flow$KilogramPerSecondGasolineAt155DegreeC();
-  static const kilogramPerMinuteGasolineAt155DegreeC =
+  static final kilogramPerMinuteGasolineAt155DegreeC =
       Flow$KilogramPerMinuteGasolineAt155DegreeC();
-  static const kilogramPerHourGasolineAt155DegreeC =
+  static final kilogramPerHourGasolineAt155DegreeC =
       Flow$KilogramPerHourGasolineAt155DegreeC();
-  static const kilogramPerDayGasolineAt155DegreeC =
+  static final kilogramPerDayGasolineAt155DegreeC =
       Flow$KilogramPerDayGasolineAt155DegreeC();
 
   @override
@@ -415,7 +416,7 @@ sealed class Flow extends Unit<Flow> {
   @override
   EnumValues<Flow> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Flow>[
     gallonPerDay,
     gallonPerHour,
     gallonPerMinute,
@@ -475,7 +476,7 @@ sealed class Flow extends Unit<Flow> {
     kilogramPerDayGasolineAt155DegreeC,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Flow>{
     Flow$GallonPerDay._minorName: gallonPerDay,
     Flow$GallonPerHour._minorName: gallonPerHour,
     Flow$GallonPerMinute._minorName: gallonPerMinute,
@@ -546,7 +547,7 @@ sealed class Flow extends Unit<Flow> {
 
 /// Unit of [Flow]
 final class Flow$GallonPerDay extends Flow {
-  const Flow$GallonPerDay([
+  Flow$GallonPerDay([
     super.value,
   ]);
 
@@ -577,14 +578,14 @@ final class Flow$GallonPerDay extends Flow {
   @override
   String get displayName => 'gallon/day';
 
-  static const _ratio = 3785.411784;
+  static final _ratio = Rational.parse('3.78541178400000000E+003');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$GallonPerDay] ≈ 3785.411784 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonPerDay] ≈ 3.78541178400000000E+003 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -592,12 +593,12 @@ final class Flow$GallonPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$GallonPerDay] with new value
   @override
   Flow$GallonPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$GallonPerDay(val);
 
@@ -610,14 +611,14 @@ final class Flow$GallonPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$GallonPerHour extends Flow {
-  const Flow$GallonPerHour([
+  Flow$GallonPerHour([
     super.value,
   ]);
 
@@ -648,14 +649,14 @@ final class Flow$GallonPerHour extends Flow {
   @override
   String get displayName => 'gallon/hour';
 
-  static const _ratio = 90849.882816;
+  static final _ratio = Rational.parse('9.08498828160000000E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$GallonPerHour] ≈ 90849.882816 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonPerHour] ≈ 9.08498828160000000E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -663,12 +664,12 @@ final class Flow$GallonPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$GallonPerHour] with new value
   @override
   Flow$GallonPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$GallonPerHour(val);
 
@@ -681,14 +682,14 @@ final class Flow$GallonPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$GallonPerMinute extends Flow {
-  const Flow$GallonPerMinute([
+  Flow$GallonPerMinute([
     super.value,
   ]);
 
@@ -719,14 +720,14 @@ final class Flow$GallonPerMinute extends Flow {
   @override
   String get displayName => 'gallon/minute';
 
-  static const _ratio = 5450992.96896;
+  static final _ratio = Rational.parse('5.45099296896000000E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$GallonPerMinute] ≈ 5450992.96896 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonPerMinute] ≈ 5.45099296896000000E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -734,12 +735,12 @@ final class Flow$GallonPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$GallonPerMinute] with new value
   @override
   Flow$GallonPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$GallonPerMinute(val);
 
@@ -752,14 +753,14 @@ final class Flow$GallonPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$GallonPerSecond extends Flow {
-  const Flow$GallonPerSecond([
+  Flow$GallonPerSecond([
     super.value,
   ]);
 
@@ -790,14 +791,14 @@ final class Flow$GallonPerSecond extends Flow {
   @override
   String get displayName => 'gallon/second';
 
-  static const _ratio = 327059578.1376;
+  static final _ratio = Rational.parse('3.27059578137600000E+008');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$GallonPerSecond] ≈ 327059578.1376 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonPerSecond] ≈ 3.27059578137600000E+008 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -805,12 +806,12 @@ final class Flow$GallonPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$GallonPerSecond] with new value
   @override
   Flow$GallonPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$GallonPerSecond(val);
 
@@ -823,14 +824,14 @@ final class Flow$GallonPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$GallonUKPerDay extends Flow {
-  const Flow$GallonUKPerDay([
+  Flow$GallonUKPerDay([
     super.value,
   ]);
 
@@ -861,14 +862,14 @@ final class Flow$GallonUKPerDay extends Flow {
   @override
   String get displayName => 'gallon (UK)/day';
 
-  static const _ratio = 4546.09028187501;
+  static final _ratio = Rational.parse('4.54609028187501052E+003');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$GallonUKPerDay] ≈ 4546.09028187501 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonUKPerDay] ≈ 4.54609028187501052E+003 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -876,12 +877,12 @@ final class Flow$GallonUKPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$GallonUKPerDay] with new value
   @override
   Flow$GallonUKPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$GallonUKPerDay(val);
 
@@ -894,14 +895,14 @@ final class Flow$GallonUKPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$GallonUKPerHour extends Flow {
-  const Flow$GallonUKPerHour([
+  Flow$GallonUKPerHour([
     super.value,
   ]);
 
@@ -932,14 +933,14 @@ final class Flow$GallonUKPerHour extends Flow {
   @override
   String get displayName => 'gallon (UK)/hour';
 
-  static const _ratio = 109106.16676500025;
+  static final _ratio = Rational.parse('1.09106166765000252E+005');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$GallonUKPerHour] ≈ 109106.16676500025 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonUKPerHour] ≈ 1.09106166765000252E+005 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -947,12 +948,12 @@ final class Flow$GallonUKPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$GallonUKPerHour] with new value
   @override
   Flow$GallonUKPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$GallonUKPerHour(val);
 
@@ -965,14 +966,14 @@ final class Flow$GallonUKPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$GallonUKPerMinute extends Flow {
-  const Flow$GallonUKPerMinute([
+  Flow$GallonUKPerMinute([
     super.value,
   ]);
 
@@ -1003,14 +1004,14 @@ final class Flow$GallonUKPerMinute extends Flow {
   @override
   String get displayName => 'gallon (UK)/minute';
 
-  static const _ratio = 6546370.005900015;
+  static final _ratio = Rational.parse('6.54637000590001515E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$GallonUKPerMinute] ≈ 6546370.005900015 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonUKPerMinute] ≈ 6.54637000590001515E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1018,12 +1019,12 @@ final class Flow$GallonUKPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$GallonUKPerMinute] with new value
   @override
   Flow$GallonUKPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$GallonUKPerMinute(val);
 
@@ -1036,14 +1037,14 @@ final class Flow$GallonUKPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$GallonUKPerSecond extends Flow {
-  const Flow$GallonUKPerSecond([
+  Flow$GallonUKPerSecond([
     super.value,
   ]);
 
@@ -1074,14 +1075,14 @@ final class Flow$GallonUKPerSecond extends Flow {
   @override
   String get displayName => 'gallon (UK)/second';
 
-  static const _ratio = 392782200.3540009;
+  static final _ratio = Rational.parse('3.92782200354000909E+008');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$GallonUKPerSecond] ≈ 392782200.3540009 [Flow$MilliliterPerDay]
+  /// 1 [Flow$GallonUKPerSecond] ≈ 3.92782200354000909E+008 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1089,12 +1090,12 @@ final class Flow$GallonUKPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$GallonUKPerSecond] with new value
   @override
   Flow$GallonUKPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$GallonUKPerSecond(val);
 
@@ -1107,14 +1108,14 @@ final class Flow$GallonUKPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$BarrelOilPerDay extends Flow {
-  const Flow$BarrelOilPerDay([
+  Flow$BarrelOilPerDay([
     super.value,
   ]);
 
@@ -1145,14 +1146,14 @@ final class Flow$BarrelOilPerDay extends Flow {
   @override
   String get displayName => 'barrel (oil)/day';
 
-  static const _ratio = 158987.294928;
+  static final _ratio = Rational.parse('1.58987294928000000E+005');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$BarrelOilPerDay] ≈ 158987.294928 [Flow$MilliliterPerDay]
+  /// 1 [Flow$BarrelOilPerDay] ≈ 1.58987294928000000E+005 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1160,12 +1161,12 @@ final class Flow$BarrelOilPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$BarrelOilPerDay] with new value
   @override
   Flow$BarrelOilPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$BarrelOilPerDay(val);
 
@@ -1178,14 +1179,14 @@ final class Flow$BarrelOilPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$BarrelOilPerHour extends Flow {
-  const Flow$BarrelOilPerHour([
+  Flow$BarrelOilPerHour([
     super.value,
   ]);
 
@@ -1216,14 +1217,14 @@ final class Flow$BarrelOilPerHour extends Flow {
   @override
   String get displayName => 'barrel (oil)/hour';
 
-  static const _ratio = 3815695.078272;
+  static final _ratio = Rational.parse('3.81569507827200000E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$BarrelOilPerHour] ≈ 3815695.078272 [Flow$MilliliterPerDay]
+  /// 1 [Flow$BarrelOilPerHour] ≈ 3.81569507827200000E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1231,12 +1232,12 @@ final class Flow$BarrelOilPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$BarrelOilPerHour] with new value
   @override
   Flow$BarrelOilPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$BarrelOilPerHour(val);
 
@@ -1249,14 +1250,14 @@ final class Flow$BarrelOilPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$BarrelOilPerMinute extends Flow {
-  const Flow$BarrelOilPerMinute([
+  Flow$BarrelOilPerMinute([
     super.value,
   ]);
 
@@ -1287,14 +1288,14 @@ final class Flow$BarrelOilPerMinute extends Flow {
   @override
   String get displayName => 'barrel (oil)/minute';
 
-  static const _ratio = 228941704.69632;
+  static final _ratio = Rational.parse('2.28941704696320000E+008');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$BarrelOilPerMinute] ≈ 228941704.69632 [Flow$MilliliterPerDay]
+  /// 1 [Flow$BarrelOilPerMinute] ≈ 2.28941704696320000E+008 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1302,12 +1303,12 @@ final class Flow$BarrelOilPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$BarrelOilPerMinute] with new value
   @override
   Flow$BarrelOilPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$BarrelOilPerMinute(val);
 
@@ -1320,14 +1321,14 @@ final class Flow$BarrelOilPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$BarrelOilPerSecond extends Flow {
-  const Flow$BarrelOilPerSecond([
+  Flow$BarrelOilPerSecond([
     super.value,
   ]);
 
@@ -1358,14 +1359,14 @@ final class Flow$BarrelOilPerSecond extends Flow {
   @override
   String get displayName => 'barrel (oil)/second';
 
-  static const _ratio = 13736502281.7792;
+  static final _ratio = Rational.parse('1.37365022817792000E+010');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$BarrelOilPerSecond] ≈ 13736502281.7792 [Flow$MilliliterPerDay]
+  /// 1 [Flow$BarrelOilPerSecond] ≈ 1.37365022817792000E+010 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1373,12 +1374,12 @@ final class Flow$BarrelOilPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$BarrelOilPerSecond] with new value
   @override
   Flow$BarrelOilPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$BarrelOilPerSecond(val);
 
@@ -1391,14 +1392,14 @@ final class Flow$BarrelOilPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$AcreFootPerYear extends Flow {
-  const Flow$AcreFootPerYear([
+  Flow$AcreFootPerYear([
     super.value,
   ]);
 
@@ -1429,14 +1430,14 @@ final class Flow$AcreFootPerYear extends Flow {
   @override
   String get displayName => 'acre-foot/year';
 
-  static const _ratio = 3379415.812314174;
+  static final _ratio = Rational.parse('3.37941581231417437E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$AcreFootPerYear] ≈ 3379415.812314174 [Flow$MilliliterPerDay]
+  /// 1 [Flow$AcreFootPerYear] ≈ 3.37941581231417437E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1444,12 +1445,12 @@ final class Flow$AcreFootPerYear extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$AcreFootPerYear] with new value
   @override
   Flow$AcreFootPerYear withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$AcreFootPerYear(val);
 
@@ -1462,14 +1463,14 @@ final class Flow$AcreFootPerYear extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$AcreFootPerDay extends Flow {
-  const Flow$AcreFootPerDay([
+  Flow$AcreFootPerDay([
     super.value,
   ]);
 
@@ -1500,14 +1501,14 @@ final class Flow$AcreFootPerDay extends Flow {
   @override
   String get displayName => 'acre-foot/day';
 
-  static const _ratio = 1233486771.4946737;
+  static final _ratio = Rational.parse('1.23348677149467364E+009');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$AcreFootPerDay] ≈ 1233486771.4946737 [Flow$MilliliterPerDay]
+  /// 1 [Flow$AcreFootPerDay] ≈ 1.23348677149467364E+009 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1515,12 +1516,12 @@ final class Flow$AcreFootPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$AcreFootPerDay] with new value
   @override
   Flow$AcreFootPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$AcreFootPerDay(val);
 
@@ -1533,14 +1534,14 @@ final class Flow$AcreFootPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$AcreFootPerHour extends Flow {
-  const Flow$AcreFootPerHour([
+  Flow$AcreFootPerHour([
     super.value,
   ]);
 
@@ -1571,14 +1572,14 @@ final class Flow$AcreFootPerHour extends Flow {
   @override
   String get displayName => 'acre-foot/hour';
 
-  static const _ratio = 29603682515.872166;
+  static final _ratio = Rational.parse('2.96036825158721675E+010');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$AcreFootPerHour] ≈ 29603682515.872166 [Flow$MilliliterPerDay]
+  /// 1 [Flow$AcreFootPerHour] ≈ 2.96036825158721675E+010 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1586,12 +1587,12 @@ final class Flow$AcreFootPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$AcreFootPerHour] with new value
   @override
   Flow$AcreFootPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$AcreFootPerHour(val);
 
@@ -1604,14 +1605,14 @@ final class Flow$AcreFootPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$HundredFootCubicPerDay extends Flow {
-  const Flow$HundredFootCubicPerDay([
+  Flow$HundredFootCubicPerDay([
     super.value,
   ]);
 
@@ -1642,14 +1643,14 @@ final class Flow$HundredFootCubicPerDay extends Flow {
   @override
   String get displayName => 'hundred-foot³/day';
 
-  static const _ratio = 2831684.659211768;
+  static final _ratio = Rational.parse('2.83168465921176804E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$HundredFootCubicPerDay] ≈ 2831684.659211768 [Flow$MilliliterPerDay]
+  /// 1 [Flow$HundredFootCubicPerDay] ≈ 2.83168465921176804E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1657,12 +1658,12 @@ final class Flow$HundredFootCubicPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$HundredFootCubicPerDay] with new value
   @override
   Flow$HundredFootCubicPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$HundredFootCubicPerDay(val);
 
@@ -1675,14 +1676,14 @@ final class Flow$HundredFootCubicPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$HundredFootCubicPerHour extends Flow {
-  const Flow$HundredFootCubicPerHour([
+  Flow$HundredFootCubicPerHour([
     super.value,
   ]);
 
@@ -1713,14 +1714,14 @@ final class Flow$HundredFootCubicPerHour extends Flow {
   @override
   String get displayName => 'hundred-foot³/hour';
 
-  static const _ratio = 67960431.82108243;
+  static final _ratio = Rational.parse('6.79604318210824330E+007');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$HundredFootCubicPerHour] ≈ 67960431.82108243 [Flow$MilliliterPerDay]
+  /// 1 [Flow$HundredFootCubicPerHour] ≈ 6.79604318210824330E+007 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1729,12 +1730,12 @@ final class Flow$HundredFootCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$HundredFootCubicPerHour] with new value
   @override
   Flow$HundredFootCubicPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$HundredFootCubicPerHour(val);
 
@@ -1747,14 +1748,14 @@ final class Flow$HundredFootCubicPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$HundredFootCubicPerMinute extends Flow {
-  const Flow$HundredFootCubicPerMinute([
+  Flow$HundredFootCubicPerMinute([
     super.value,
   ]);
 
@@ -1785,14 +1786,14 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
   @override
   String get displayName => 'hundred-foot³/minute';
 
-  static const _ratio = 4077625909.264946;
+  static final _ratio = Rational.parse('4.07762590926494598E+009');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$HundredFootCubicPerMinute] ≈ 4077625909.264946 [Flow$MilliliterPerDay]
+  /// 1 [Flow$HundredFootCubicPerMinute] ≈ 4.07762590926494598E+009 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1801,12 +1802,12 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$HundredFootCubicPerMinute] with new value
   @override
   Flow$HundredFootCubicPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$HundredFootCubicPerMinute(val);
 
@@ -1819,14 +1820,14 @@ final class Flow$HundredFootCubicPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$OuncePerHour extends Flow {
-  const Flow$OuncePerHour([
+  Flow$OuncePerHour([
     super.value,
   ]);
 
@@ -1857,14 +1858,14 @@ final class Flow$OuncePerHour extends Flow {
   @override
   String get displayName => 'ounce/hour';
 
-  static const _ratio = 709.7647095;
+  static final _ratio = Rational.parse('7.09764709500000000E+002');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$OuncePerHour] ≈ 709.7647095 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OuncePerHour] ≈ 7.09764709500000000E+002 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1872,12 +1873,12 @@ final class Flow$OuncePerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$OuncePerHour] with new value
   @override
   Flow$OuncePerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$OuncePerHour(val);
 
@@ -1890,14 +1891,14 @@ final class Flow$OuncePerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$OuncePerMinute extends Flow {
-  const Flow$OuncePerMinute([
+  Flow$OuncePerMinute([
     super.value,
   ]);
 
@@ -1928,14 +1929,14 @@ final class Flow$OuncePerMinute extends Flow {
   @override
   String get displayName => 'ounce/minute';
 
-  static const _ratio = 42585.88257;
+  static final _ratio = Rational.parse('4.25858825700000000E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$OuncePerMinute] ≈ 42585.88257 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OuncePerMinute] ≈ 4.25858825700000000E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1943,12 +1944,12 @@ final class Flow$OuncePerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$OuncePerMinute] with new value
   @override
   Flow$OuncePerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$OuncePerMinute(val);
 
@@ -1961,14 +1962,14 @@ final class Flow$OuncePerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$OuncePerSecond extends Flow {
-  const Flow$OuncePerSecond([
+  Flow$OuncePerSecond([
     super.value,
   ]);
 
@@ -1999,14 +2000,14 @@ final class Flow$OuncePerSecond extends Flow {
   @override
   String get displayName => 'ounce/second';
 
-  static const _ratio = 2555152.9542;
+  static final _ratio = Rational.parse('2.55515295420000000E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$OuncePerSecond] ≈ 2555152.9542 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OuncePerSecond] ≈ 2.55515295420000000E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2014,12 +2015,12 @@ final class Flow$OuncePerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$OuncePerSecond] with new value
   @override
   Flow$OuncePerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$OuncePerSecond(val);
 
@@ -2032,14 +2033,14 @@ final class Flow$OuncePerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$OunceUKPerHour extends Flow {
-  const Flow$OunceUKPerHour([
+  Flow$OunceUKPerHour([
     super.value,
   ]);
 
@@ -2070,14 +2071,14 @@ final class Flow$OunceUKPerHour extends Flow {
   @override
   String get displayName => 'ounce (UK)/hour';
 
-  static const _ratio = 681.9135422812516;
+  static final _ratio = Rational.parse('6.81913542281251578E+002');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$OunceUKPerHour] ≈ 681.9135422812516 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OunceUKPerHour] ≈ 6.81913542281251578E+002 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2085,12 +2086,12 @@ final class Flow$OunceUKPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$OunceUKPerHour] with new value
   @override
   Flow$OunceUKPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$OunceUKPerHour(val);
 
@@ -2103,14 +2104,14 @@ final class Flow$OunceUKPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$OunceUKPerMinute extends Flow {
-  const Flow$OunceUKPerMinute([
+  Flow$OunceUKPerMinute([
     super.value,
   ]);
 
@@ -2141,14 +2142,14 @@ final class Flow$OunceUKPerMinute extends Flow {
   @override
   String get displayName => 'ounce (UK)/minute';
 
-  static const _ratio = 40914.81253687509;
+  static final _ratio = Rational.parse('4.09148125368750947E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$OunceUKPerMinute] ≈ 40914.81253687509 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OunceUKPerMinute] ≈ 4.09148125368750947E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2156,12 +2157,12 @@ final class Flow$OunceUKPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$OunceUKPerMinute] with new value
   @override
   Flow$OunceUKPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$OunceUKPerMinute(val);
 
@@ -2174,14 +2175,14 @@ final class Flow$OunceUKPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$OunceUKPerSecond extends Flow {
-  const Flow$OunceUKPerSecond([
+  Flow$OunceUKPerSecond([
     super.value,
   ]);
 
@@ -2212,14 +2213,14 @@ final class Flow$OunceUKPerSecond extends Flow {
   @override
   String get displayName => 'ounce (UK)/second';
 
-  static const _ratio = 2454888.752212506;
+  static final _ratio = Rational.parse('2.45488875221250568E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$OunceUKPerSecond] ≈ 2454888.752212506 [Flow$MilliliterPerDay]
+  /// 1 [Flow$OunceUKPerSecond] ≈ 2.45488875221250568E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2227,12 +2228,12 @@ final class Flow$OunceUKPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$OunceUKPerSecond] with new value
   @override
   Flow$OunceUKPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$OunceUKPerSecond(val);
 
@@ -2245,14 +2246,14 @@ final class Flow$OunceUKPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$LiterPerDay extends Flow {
-  const Flow$LiterPerDay([
+  Flow$LiterPerDay([
     super.value,
   ]);
 
@@ -2283,14 +2284,14 @@ final class Flow$LiterPerDay extends Flow {
   @override
   String get displayName => 'liter/day';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$LiterPerDay] = 1000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$LiterPerDay] = 1.00000000000000000E+003 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2298,12 +2299,12 @@ final class Flow$LiterPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$LiterPerDay] with new value
   @override
   Flow$LiterPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$LiterPerDay(val);
 
@@ -2316,14 +2317,14 @@ final class Flow$LiterPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$LiterPerHour extends Flow {
-  const Flow$LiterPerHour([
+  Flow$LiterPerHour([
     super.value,
   ]);
 
@@ -2354,14 +2355,14 @@ final class Flow$LiterPerHour extends Flow {
   @override
   String get displayName => 'liter/hour';
 
-  static const _ratio = 24000.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$LiterPerHour] = 24000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$LiterPerHour] = 2.40000000000000000E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2369,12 +2370,12 @@ final class Flow$LiterPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$LiterPerHour] with new value
   @override
   Flow$LiterPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$LiterPerHour(val);
 
@@ -2387,14 +2388,14 @@ final class Flow$LiterPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$LiterPerMinute extends Flow {
-  const Flow$LiterPerMinute([
+  Flow$LiterPerMinute([
     super.value,
   ]);
 
@@ -2425,14 +2426,14 @@ final class Flow$LiterPerMinute extends Flow {
   @override
   String get displayName => 'liter/minute';
 
-  static const _ratio = 1440000.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$LiterPerMinute] = 1440000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$LiterPerMinute] = 1.44000000000000000E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2440,12 +2441,12 @@ final class Flow$LiterPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$LiterPerMinute] with new value
   @override
   Flow$LiterPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$LiterPerMinute(val);
 
@@ -2458,14 +2459,14 @@ final class Flow$LiterPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$LiterPerSecond extends Flow {
-  const Flow$LiterPerSecond([
+  Flow$LiterPerSecond([
     super.value,
   ]);
 
@@ -2496,14 +2497,14 @@ final class Flow$LiterPerSecond extends Flow {
   @override
   String get displayName => 'liter/second';
 
-  static const _ratio = 86400000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+007');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$LiterPerSecond] = 86400000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$LiterPerSecond] = 8.64000000000000000E+007 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2511,12 +2512,12 @@ final class Flow$LiterPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$LiterPerSecond] with new value
   @override
   Flow$LiterPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$LiterPerSecond(val);
 
@@ -2529,14 +2530,14 @@ final class Flow$LiterPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$MilliliterPerDay extends Flow {
-  const Flow$MilliliterPerDay([
+  Flow$MilliliterPerDay([
     super.value,
   ]);
 
@@ -2567,14 +2568,14 @@ final class Flow$MilliliterPerDay extends Flow {
   @override
   String get displayName => 'milliliter/day';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
   /// Default (anchor) unit of [Flow]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2582,12 +2583,12 @@ final class Flow$MilliliterPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$MilliliterPerDay] with new value
   @override
   Flow$MilliliterPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$MilliliterPerDay(val);
 
@@ -2600,14 +2601,14 @@ final class Flow$MilliliterPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$MilliliterPerHour extends Flow {
-  const Flow$MilliliterPerHour([
+  Flow$MilliliterPerHour([
     super.value,
   ]);
 
@@ -2638,14 +2639,14 @@ final class Flow$MilliliterPerHour extends Flow {
   @override
   String get displayName => 'milliliter/hour';
 
-  static const _ratio = 24.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+001');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$MilliliterPerHour] = 24.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MilliliterPerHour] = 2.40000000000000000E+001 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2653,12 +2654,12 @@ final class Flow$MilliliterPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$MilliliterPerHour] with new value
   @override
   Flow$MilliliterPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$MilliliterPerHour(val);
 
@@ -2671,14 +2672,14 @@ final class Flow$MilliliterPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$MilliliterPerMinute extends Flow {
-  const Flow$MilliliterPerMinute([
+  Flow$MilliliterPerMinute([
     super.value,
   ]);
 
@@ -2709,14 +2710,14 @@ final class Flow$MilliliterPerMinute extends Flow {
   @override
   String get displayName => 'milliliter/minute';
 
-  static const _ratio = 1440.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+003');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$MilliliterPerMinute] = 1440.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MilliliterPerMinute] = 1.44000000000000000E+003 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2724,12 +2725,12 @@ final class Flow$MilliliterPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$MilliliterPerMinute] with new value
   @override
   Flow$MilliliterPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$MilliliterPerMinute(val);
 
@@ -2742,14 +2743,14 @@ final class Flow$MilliliterPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$MilliliterPerSecond extends Flow {
-  const Flow$MilliliterPerSecond([
+  Flow$MilliliterPerSecond([
     super.value,
   ]);
 
@@ -2780,14 +2781,14 @@ final class Flow$MilliliterPerSecond extends Flow {
   @override
   String get displayName => 'milliliter/second';
 
-  static const _ratio = 86400.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$MilliliterPerSecond] = 86400.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MilliliterPerSecond] = 8.64000000000000000E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2795,12 +2796,12 @@ final class Flow$MilliliterPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$MilliliterPerSecond] with new value
   @override
   Flow$MilliliterPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$MilliliterPerSecond(val);
 
@@ -2813,14 +2814,14 @@ final class Flow$MilliliterPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$MeterCubicPerDay extends Flow {
-  const Flow$MeterCubicPerDay([
+  Flow$MeterCubicPerDay([
     super.value,
   ]);
 
@@ -2851,14 +2852,14 @@ final class Flow$MeterCubicPerDay extends Flow {
   @override
   String get displayName => 'meter³/day';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$MeterCubicPerDay] = 1000000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MeterCubicPerDay] = 1.00000000000000000E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2866,12 +2867,12 @@ final class Flow$MeterCubicPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$MeterCubicPerDay] with new value
   @override
   Flow$MeterCubicPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$MeterCubicPerDay(val);
 
@@ -2884,14 +2885,14 @@ final class Flow$MeterCubicPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$MeterCubicPerHour extends Flow {
-  const Flow$MeterCubicPerHour([
+  Flow$MeterCubicPerHour([
     super.value,
   ]);
 
@@ -2922,14 +2923,14 @@ final class Flow$MeterCubicPerHour extends Flow {
   @override
   String get displayName => 'meter³/hour';
 
-  static const _ratio = 24000000.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+007');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$MeterCubicPerHour] = 24000000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MeterCubicPerHour] = 2.40000000000000000E+007 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2937,12 +2938,12 @@ final class Flow$MeterCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$MeterCubicPerHour] with new value
   @override
   Flow$MeterCubicPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$MeterCubicPerHour(val);
 
@@ -2955,14 +2956,14 @@ final class Flow$MeterCubicPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$MeterCubicPerMinute extends Flow {
-  const Flow$MeterCubicPerMinute([
+  Flow$MeterCubicPerMinute([
     super.value,
   ]);
 
@@ -2993,14 +2994,14 @@ final class Flow$MeterCubicPerMinute extends Flow {
   @override
   String get displayName => 'meter³/minute';
 
-  static const _ratio = 1440000000.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+009');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$MeterCubicPerMinute] = 1440000000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MeterCubicPerMinute] = 1.44000000000000000E+009 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3008,12 +3009,12 @@ final class Flow$MeterCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$MeterCubicPerMinute] with new value
   @override
   Flow$MeterCubicPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$MeterCubicPerMinute(val);
 
@@ -3026,14 +3027,14 @@ final class Flow$MeterCubicPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$MeterCubicPerSecond extends Flow {
-  const Flow$MeterCubicPerSecond([
+  Flow$MeterCubicPerSecond([
     super.value,
   ]);
 
@@ -3064,14 +3065,14 @@ final class Flow$MeterCubicPerSecond extends Flow {
   @override
   String get displayName => 'meter³/second';
 
-  static const _ratio = 86400000000.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+010');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$MeterCubicPerSecond] = 86400000000.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$MeterCubicPerSecond] = 8.64000000000000000E+010 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3079,12 +3080,12 @@ final class Flow$MeterCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$MeterCubicPerSecond] with new value
   @override
   Flow$MeterCubicPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$MeterCubicPerSecond(val);
 
@@ -3097,14 +3098,14 @@ final class Flow$MeterCubicPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$CentimeterCubicPerDay extends Flow {
-  const Flow$CentimeterCubicPerDay([
+  Flow$CentimeterCubicPerDay([
     super.value,
   ]);
 
@@ -3135,14 +3136,14 @@ final class Flow$CentimeterCubicPerDay extends Flow {
   @override
   String get displayName => 'centimeter³/day';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$CentimeterCubicPerDay] = 1.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$CentimeterCubicPerDay] = 1.00000000000000000E+000 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3150,12 +3151,12 @@ final class Flow$CentimeterCubicPerDay extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$CentimeterCubicPerDay] with new value
   @override
   Flow$CentimeterCubicPerDay withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$CentimeterCubicPerDay(val);
 
@@ -3168,14 +3169,14 @@ final class Flow$CentimeterCubicPerDay extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$CentimeterCubicPerHour extends Flow {
-  const Flow$CentimeterCubicPerHour([
+  Flow$CentimeterCubicPerHour([
     super.value,
   ]);
 
@@ -3206,14 +3207,14 @@ final class Flow$CentimeterCubicPerHour extends Flow {
   @override
   String get displayName => 'centimeter³/hour';
 
-  static const _ratio = 24.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+001');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$CentimeterCubicPerHour] = 24.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$CentimeterCubicPerHour] = 2.40000000000000000E+001 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3221,12 +3222,12 @@ final class Flow$CentimeterCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$CentimeterCubicPerHour] with new value
   @override
   Flow$CentimeterCubicPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$CentimeterCubicPerHour(val);
 
@@ -3239,14 +3240,14 @@ final class Flow$CentimeterCubicPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$CentimeterCubicPerMinute extends Flow {
-  const Flow$CentimeterCubicPerMinute([
+  Flow$CentimeterCubicPerMinute([
     super.value,
   ]);
 
@@ -3277,14 +3278,14 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
   @override
   String get displayName => 'centimeter³/minute';
 
-  static const _ratio = 1440.0;
+  static final _ratio = Rational.parse('1.44000000000000000E+003');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$CentimeterCubicPerMinute] = 1440.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$CentimeterCubicPerMinute] = 1.44000000000000000E+003 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3293,12 +3294,12 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$CentimeterCubicPerMinute] with new value
   @override
   Flow$CentimeterCubicPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$CentimeterCubicPerMinute(val);
 
@@ -3311,14 +3312,14 @@ final class Flow$CentimeterCubicPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$CentimeterCubicPerSecond extends Flow {
-  const Flow$CentimeterCubicPerSecond([
+  Flow$CentimeterCubicPerSecond([
     super.value,
   ]);
 
@@ -3349,14 +3350,14 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
   @override
   String get displayName => 'centimeter³/second';
 
-  static const _ratio = 86400.0;
+  static final _ratio = Rational.parse('8.64000000000000000E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$CentimeterCubicPerSecond] = 86400.0 [Flow$MilliliterPerDay]
+  /// 1 [Flow$CentimeterCubicPerSecond] = 8.64000000000000000E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3365,12 +3366,12 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$CentimeterCubicPerSecond] with new value
   @override
   Flow$CentimeterCubicPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$CentimeterCubicPerSecond(val);
 
@@ -3383,14 +3384,14 @@ final class Flow$CentimeterCubicPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$YardCubicPerHour extends Flow {
-  const Flow$YardCubicPerHour([
+  Flow$YardCubicPerHour([
     super.value,
   ]);
 
@@ -3421,14 +3422,14 @@ final class Flow$YardCubicPerHour extends Flow {
   @override
   String get displayName => 'yard³/hour';
 
-  static const _ratio = 18349316.59251583;
+  static final _ratio = Rational.parse('1.83493165925158314E+007');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$YardCubicPerHour] ≈ 18349316.59251583 [Flow$MilliliterPerDay]
+  /// 1 [Flow$YardCubicPerHour] ≈ 1.83493165925158314E+007 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3436,12 +3437,12 @@ final class Flow$YardCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$YardCubicPerHour] with new value
   @override
   Flow$YardCubicPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$YardCubicPerHour(val);
 
@@ -3454,14 +3455,14 @@ final class Flow$YardCubicPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$YardCubicPerMinute extends Flow {
-  const Flow$YardCubicPerMinute([
+  Flow$YardCubicPerMinute([
     super.value,
   ]);
 
@@ -3492,14 +3493,14 @@ final class Flow$YardCubicPerMinute extends Flow {
   @override
   String get displayName => 'yard³/minute';
 
-  static const _ratio = 1100958995.5509498;
+  static final _ratio = Rational.parse('1.10095899555094988E+009');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$YardCubicPerMinute] ≈ 1100958995.5509498 [Flow$MilliliterPerDay]
+  /// 1 [Flow$YardCubicPerMinute] ≈ 1.10095899555094988E+009 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3507,12 +3508,12 @@ final class Flow$YardCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$YardCubicPerMinute] with new value
   @override
   Flow$YardCubicPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$YardCubicPerMinute(val);
 
@@ -3525,14 +3526,14 @@ final class Flow$YardCubicPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$YardCubicPerSecond extends Flow {
-  const Flow$YardCubicPerSecond([
+  Flow$YardCubicPerSecond([
     super.value,
   ]);
 
@@ -3563,14 +3564,14 @@ final class Flow$YardCubicPerSecond extends Flow {
   @override
   String get displayName => 'yard³/second';
 
-  static const _ratio = 66057539733.05699;
+  static final _ratio = Rational.parse('6.60575397330569931E+010');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$YardCubicPerSecond] ≈ 66057539733.05699 [Flow$MilliliterPerDay]
+  /// 1 [Flow$YardCubicPerSecond] ≈ 6.60575397330569931E+010 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3578,12 +3579,12 @@ final class Flow$YardCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$YardCubicPerSecond] with new value
   @override
   Flow$YardCubicPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$YardCubicPerSecond(val);
 
@@ -3596,14 +3597,14 @@ final class Flow$YardCubicPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$FootCubicPerHour extends Flow {
-  const Flow$FootCubicPerHour([
+  Flow$FootCubicPerHour([
     super.value,
   ]);
 
@@ -3634,14 +3635,14 @@ final class Flow$FootCubicPerHour extends Flow {
   @override
   String get displayName => 'foot³/hour';
 
-  static const _ratio = 679604.3182413271;
+  static final _ratio = Rational.parse('6.79604318241327090E+005');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$FootCubicPerHour] ≈ 679604.3182413271 [Flow$MilliliterPerDay]
+  /// 1 [Flow$FootCubicPerHour] ≈ 6.79604318241327090E+005 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3649,12 +3650,12 @@ final class Flow$FootCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$FootCubicPerHour] with new value
   @override
   Flow$FootCubicPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$FootCubicPerHour(val);
 
@@ -3667,14 +3668,14 @@ final class Flow$FootCubicPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$FootCubicPerMinute extends Flow {
-  const Flow$FootCubicPerMinute([
+  Flow$FootCubicPerMinute([
     super.value,
   ]);
 
@@ -3705,14 +3706,14 @@ final class Flow$FootCubicPerMinute extends Flow {
   @override
   String get displayName => 'foot³/minute';
 
-  static const _ratio = 40776259.09447963;
+  static final _ratio = Rational.parse('4.07762590944796254E+007');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$FootCubicPerMinute] ≈ 40776259.09447963 [Flow$MilliliterPerDay]
+  /// 1 [Flow$FootCubicPerMinute] ≈ 4.07762590944796254E+007 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3720,12 +3721,12 @@ final class Flow$FootCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$FootCubicPerMinute] with new value
   @override
   Flow$FootCubicPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$FootCubicPerMinute(val);
 
@@ -3738,14 +3739,14 @@ final class Flow$FootCubicPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$FootCubicPerSecond extends Flow {
-  const Flow$FootCubicPerSecond([
+  Flow$FootCubicPerSecond([
     super.value,
   ]);
 
@@ -3776,14 +3777,14 @@ final class Flow$FootCubicPerSecond extends Flow {
   @override
   String get displayName => 'foot³/second';
 
-  static const _ratio = 2446575545.6687775;
+  static final _ratio = Rational.parse('2.44657554566877752E+009');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$FootCubicPerSecond] ≈ 2446575545.6687775 [Flow$MilliliterPerDay]
+  /// 1 [Flow$FootCubicPerSecond] ≈ 2.44657554566877752E+009 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3791,12 +3792,12 @@ final class Flow$FootCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$FootCubicPerSecond] with new value
   @override
   Flow$FootCubicPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$FootCubicPerSecond(val);
 
@@ -3809,14 +3810,14 @@ final class Flow$FootCubicPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$InchCubicPerHour extends Flow {
-  const Flow$InchCubicPerHour([
+  Flow$InchCubicPerHour([
     super.value,
   ]);
 
@@ -3847,14 +3848,14 @@ final class Flow$InchCubicPerHour extends Flow {
   @override
   String get displayName => 'inch³/hour';
 
-  static const _ratio = 393.2895360192865;
+  static final _ratio = Rational.parse('3.93289536019286510E+002');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$InchCubicPerHour] ≈ 393.2895360192865 [Flow$MilliliterPerDay]
+  /// 1 [Flow$InchCubicPerHour] ≈ 3.93289536019286510E+002 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3862,12 +3863,12 @@ final class Flow$InchCubicPerHour extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$InchCubicPerHour] with new value
   @override
   Flow$InchCubicPerHour withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$InchCubicPerHour(val);
 
@@ -3880,14 +3881,14 @@ final class Flow$InchCubicPerHour extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$InchCubicPerMinute extends Flow {
-  const Flow$InchCubicPerMinute([
+  Flow$InchCubicPerMinute([
     super.value,
   ]);
 
@@ -3918,14 +3919,14 @@ final class Flow$InchCubicPerMinute extends Flow {
   @override
   String get displayName => 'inch³/minute';
 
-  static const _ratio = 23597.37216115719;
+  static final _ratio = Rational.parse('2.35973721611571906E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$InchCubicPerMinute] ≈ 23597.37216115719 [Flow$MilliliterPerDay]
+  /// 1 [Flow$InchCubicPerMinute] ≈ 2.35973721611571906E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -3933,12 +3934,12 @@ final class Flow$InchCubicPerMinute extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$InchCubicPerMinute] with new value
   @override
   Flow$InchCubicPerMinute withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$InchCubicPerMinute(val);
 
@@ -3951,14 +3952,14 @@ final class Flow$InchCubicPerMinute extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$InchCubicPerSecond extends Flow {
-  const Flow$InchCubicPerSecond([
+  Flow$InchCubicPerSecond([
     super.value,
   ]);
 
@@ -3989,14 +3990,14 @@ final class Flow$InchCubicPerSecond extends Flow {
   @override
   String get displayName => 'inch³/second';
 
-  static const _ratio = 1415842.3296694316;
+  static final _ratio = Rational.parse('1.41584232966943144E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$InchCubicPerSecond] ≈ 1415842.3296694316 [Flow$MilliliterPerDay]
+  /// 1 [Flow$InchCubicPerSecond] ≈ 1.41584232966943144E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4004,12 +4005,12 @@ final class Flow$InchCubicPerSecond extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$InchCubicPerSecond] with new value
   @override
   Flow$InchCubicPerSecond withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$InchCubicPerSecond(val);
 
@@ -4022,14 +4023,14 @@ final class Flow$InchCubicPerSecond extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
-  const Flow$PoundPerSecondGasolineAt155DegreeC([
+  Flow$PoundPerSecondGasolineAt155DegreeC([
     super.value,
   ]);
 
@@ -4060,14 +4061,14 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
   @override
   String get displayName => 'pound/second (Gasoline at 15.5°C)';
 
-  static const _ratio = 53008035.35;
+  static final _ratio = Rational.parse('5.30080353500000000E+007');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$PoundPerSecondGasolineAt155DegreeC] ≈ 53008035.35 [Flow$MilliliterPerDay]
+  /// 1 [Flow$PoundPerSecondGasolineAt155DegreeC] ≈ 5.30080353500000000E+007 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4076,12 +4077,12 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$PoundPerSecondGasolineAt155DegreeC] with new value
   @override
   Flow$PoundPerSecondGasolineAt155DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$PoundPerSecondGasolineAt155DegreeC(val);
 
@@ -4094,14 +4095,14 @@ final class Flow$PoundPerSecondGasolineAt155DegreeC extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
-  const Flow$PoundPerMinuteGasolineAt155DegreeC([
+  Flow$PoundPerMinuteGasolineAt155DegreeC([
     super.value,
   ]);
 
@@ -4132,14 +4133,14 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
   @override
   String get displayName => 'pound/minute (Gasoline at 15.5°C)';
 
-  static const _ratio = 883467.2559;
+  static final _ratio = Rational.parse('8.83467255900000000E+005');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$PoundPerMinuteGasolineAt155DegreeC] ≈ 883467.2559 [Flow$MilliliterPerDay]
+  /// 1 [Flow$PoundPerMinuteGasolineAt155DegreeC] ≈ 8.83467255900000000E+005 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4148,12 +4149,12 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$PoundPerMinuteGasolineAt155DegreeC] with new value
   @override
   Flow$PoundPerMinuteGasolineAt155DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$PoundPerMinuteGasolineAt155DegreeC(val);
 
@@ -4166,14 +4167,14 @@ final class Flow$PoundPerMinuteGasolineAt155DegreeC extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
-  const Flow$PoundPerHourGasolineAt155DegreeC([
+  Flow$PoundPerHourGasolineAt155DegreeC([
     super.value,
   ]);
 
@@ -4204,14 +4205,14 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
   @override
   String get displayName => 'pound/hour (Gasoline at 15.5°C)';
 
-  static const _ratio = 14724.45427;
+  static final _ratio = Rational.parse('1.47244542700000000E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$PoundPerHourGasolineAt155DegreeC] ≈ 14724.45427 [Flow$MilliliterPerDay]
+  /// 1 [Flow$PoundPerHourGasolineAt155DegreeC] ≈ 1.47244542700000000E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4220,12 +4221,12 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$PoundPerHourGasolineAt155DegreeC] with new value
   @override
   Flow$PoundPerHourGasolineAt155DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$PoundPerHourGasolineAt155DegreeC(val);
 
@@ -4238,14 +4239,14 @@ final class Flow$PoundPerHourGasolineAt155DegreeC extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
-  const Flow$PoundPerDayGasolineAt155DegreeC([
+  Flow$PoundPerDayGasolineAt155DegreeC([
     super.value,
   ]);
 
@@ -4276,14 +4277,14 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
   @override
   String get displayName => 'pound/day (Gasoline at 15.5°C)';
 
-  static const _ratio = 613.5189277;
+  static final _ratio = Rational.parse('6.13518927700000000E+002');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$PoundPerDayGasolineAt155DegreeC] ≈ 613.5189277 [Flow$MilliliterPerDay]
+  /// 1 [Flow$PoundPerDayGasolineAt155DegreeC] ≈ 6.13518927700000000E+002 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4292,12 +4293,12 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$PoundPerDayGasolineAt155DegreeC] with new value
   @override
   Flow$PoundPerDayGasolineAt155DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$PoundPerDayGasolineAt155DegreeC(val);
 
@@ -4310,14 +4311,14 @@ final class Flow$PoundPerDayGasolineAt155DegreeC extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
-  const Flow$KilogramPerSecondGasolineAt155DegreeC([
+  Flow$KilogramPerSecondGasolineAt155DegreeC([
     super.value,
   ]);
 
@@ -4348,14 +4349,14 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
   @override
   String get displayName => 'kilogram/second (Gasoline at 15.5°C)';
 
-  static const _ratio = 116862713.9;
+  static final _ratio = Rational.parse('1.16862713900000000E+008');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$KilogramPerSecondGasolineAt155DegreeC] ≈ 116862713.9 [Flow$MilliliterPerDay]
+  /// 1 [Flow$KilogramPerSecondGasolineAt155DegreeC] ≈ 1.16862713900000000E+008 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4364,12 +4365,12 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$KilogramPerSecondGasolineAt155DegreeC] with new value
   @override
   Flow$KilogramPerSecondGasolineAt155DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$KilogramPerSecondGasolineAt155DegreeC(val);
 
@@ -4382,14 +4383,14 @@ final class Flow$KilogramPerSecondGasolineAt155DegreeC extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
-  const Flow$KilogramPerMinuteGasolineAt155DegreeC([
+  Flow$KilogramPerMinuteGasolineAt155DegreeC([
     super.value,
   ]);
 
@@ -4420,14 +4421,14 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
   @override
   String get displayName => 'kilogram/minute (Gasoline at 15.5°C)';
 
-  static const _ratio = 1947711.898;
+  static final _ratio = Rational.parse('1.94771189800000000E+006');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$KilogramPerMinuteGasolineAt155DegreeC] ≈ 1947711.898 [Flow$MilliliterPerDay]
+  /// 1 [Flow$KilogramPerMinuteGasolineAt155DegreeC] ≈ 1.94771189800000000E+006 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4436,12 +4437,12 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$KilogramPerMinuteGasolineAt155DegreeC] with new value
   @override
   Flow$KilogramPerMinuteGasolineAt155DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$KilogramPerMinuteGasolineAt155DegreeC(val);
 
@@ -4454,14 +4455,14 @@ final class Flow$KilogramPerMinuteGasolineAt155DegreeC extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
-  const Flow$KilogramPerHourGasolineAt155DegreeC([
+  Flow$KilogramPerHourGasolineAt155DegreeC([
     super.value,
   ]);
 
@@ -4492,14 +4493,14 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
   @override
   String get displayName => 'kilogram/hour (Gasoline at 15.5°C)';
 
-  static const _ratio = 32461.86497;
+  static final _ratio = Rational.parse('3.24618649700000000E+004');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$KilogramPerHourGasolineAt155DegreeC] ≈ 32461.86497 [Flow$MilliliterPerDay]
+  /// 1 [Flow$KilogramPerHourGasolineAt155DegreeC] ≈ 3.24618649700000000E+004 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4508,12 +4509,12 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$KilogramPerHourGasolineAt155DegreeC] with new value
   @override
   Flow$KilogramPerHourGasolineAt155DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$KilogramPerHourGasolineAt155DegreeC(val);
 
@@ -4526,14 +4527,14 @@ final class Flow$KilogramPerHourGasolineAt155DegreeC extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Flow]
 final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
-  const Flow$KilogramPerDayGasolineAt155DegreeC([
+  Flow$KilogramPerDayGasolineAt155DegreeC([
     super.value,
   ]);
 
@@ -4564,14 +4565,14 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
   @override
   String get displayName => 'kilogram/day (Gasoline at 15.5°C)';
 
-  static const _ratio = 1352.577707;
+  static final _ratio = Rational.parse('1.35257770700000000E+003');
 
   @override
-  Flow get anchor => const Flow$MilliliterPerDay(_ratio);
+  Flow get anchor => Flow$MilliliterPerDay(_ratio);
 
-  /// 1 [Flow$KilogramPerDayGasolineAt155DegreeC] ≈ 1352.577707 [Flow$MilliliterPerDay]
+  /// 1 [Flow$KilogramPerDayGasolineAt155DegreeC] ≈ 1.35257770700000000E+003 [Flow$MilliliterPerDay]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -4580,12 +4581,12 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Flow$KilogramPerDayGasolineAt155DegreeC] with new value
   @override
   Flow$KilogramPerDayGasolineAt155DegreeC withValue(
-    num val,
+    Rational val,
   ) =>
       Flow$KilogramPerDayGasolineAt155DegreeC(val);
 
@@ -4598,7 +4599,7 @@ final class Flow$KilogramPerDayGasolineAt155DegreeC extends Flow {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

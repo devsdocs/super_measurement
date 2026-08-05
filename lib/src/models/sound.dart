@@ -4,7 +4,7 @@ part of '../../super_measurement.dart';
 ///
 /// [Sound$Bel],[Sound$Decibel],[Sound$Neper]
 sealed class Sound extends Unit<Sound> {
-  const Sound([
+  Sound([
     super.value,
   ]);
 
@@ -16,25 +16,26 @@ sealed class Sound extends Unit<Sound> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Sound.anchor();
 
-  factory Sound.anchor() => const Sound$Decibel();
+  factory Sound.anchor() => Sound$Decibel();
 
   /// Convert to [Sound$Bel]
   Sound get toBel => convertTo(
-        const Sound$Bel(),
+        Sound$Bel(),
       );
 
   /// Convert to [Sound$Decibel]
   Sound get toDecibel => convertTo(
-        const Sound$Decibel(),
+        Sound$Decibel(),
       );
 
   /// Convert to [Sound$Neper]
   Sound get toNeper => convertTo(
-        const Sound$Neper(),
+        Sound$Neper(),
       );
 
   @override
@@ -45,9 +46,9 @@ sealed class Sound extends Unit<Sound> {
 
   static const _majorName = 'sound';
 
-  static const bel = Sound$Bel();
-  static const decibel = Sound$Decibel();
-  static const neper = Sound$Neper();
+  static final bel = Sound$Bel();
+  static final decibel = Sound$Decibel();
+  static final neper = Sound$Neper();
 
   @override
   List<Sound> get units => values;
@@ -55,13 +56,13 @@ sealed class Sound extends Unit<Sound> {
   @override
   EnumValues<Sound> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Sound>[
     bel,
     decibel,
     neper,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Sound>{
     Sound$Bel._minorName: bel,
     Sound$Decibel._minorName: decibel,
     Sound$Neper._minorName: neper,
@@ -70,7 +71,7 @@ sealed class Sound extends Unit<Sound> {
 
 /// Unit of [Sound]
 final class Sound$Bel extends Sound {
-  const Sound$Bel([
+  Sound$Bel([
     super.value,
   ]);
 
@@ -101,14 +102,14 @@ final class Sound$Bel extends Sound {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
-  Sound get anchor => const Sound$Decibel(_ratio);
+  Sound get anchor => Sound$Decibel(_ratio);
 
-  /// 1 [Sound$Bel] = 10.0 [Sound$Decibel]
+  /// 1 [Sound$Bel] = 1.00000000000000000E+001 [Sound$Decibel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -116,12 +117,12 @@ final class Sound$Bel extends Sound {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Sound$Bel] with new value
   @override
   Sound$Bel withValue(
-    num val,
+    Rational val,
   ) =>
       Sound$Bel(val);
 
@@ -134,14 +135,14 @@ final class Sound$Bel extends Sound {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Sound]
 final class Sound$Decibel extends Sound {
-  const Sound$Decibel([
+  Sound$Decibel([
     super.value,
   ]);
 
@@ -172,14 +173,14 @@ final class Sound$Decibel extends Sound {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Sound get anchor => const Sound$Decibel(_ratio);
+  Sound get anchor => Sound$Decibel(_ratio);
 
   /// Default (anchor) unit of [Sound]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -187,12 +188,12 @@ final class Sound$Decibel extends Sound {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Sound$Decibel] with new value
   @override
   Sound$Decibel withValue(
-    num val,
+    Rational val,
   ) =>
       Sound$Decibel(val);
 
@@ -205,14 +206,14 @@ final class Sound$Decibel extends Sound {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Sound]
 final class Sound$Neper extends Sound {
-  const Sound$Neper([
+  Sound$Neper([
     super.value,
   ]);
 
@@ -243,14 +244,14 @@ final class Sound$Neper extends Sound {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 8.686;
+  static final _ratio = Rational.parse('8.68600000000000000E+000');
 
   @override
-  Sound get anchor => const Sound$Decibel(_ratio);
+  Sound get anchor => Sound$Decibel(_ratio);
 
-  /// 1 [Sound$Neper] ≈ 8.686 [Sound$Decibel]
+  /// 1 [Sound$Neper] ≈ 8.68600000000000000E+000 [Sound$Decibel]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -258,12 +259,12 @@ final class Sound$Neper extends Sound {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Sound$Neper] with new value
   @override
   Sound$Neper withValue(
-    num val,
+    Rational val,
   ) =>
       Sound$Neper(val);
 
@@ -276,7 +277,7 @@ final class Sound$Neper extends Sound {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

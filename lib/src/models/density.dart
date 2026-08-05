@@ -20,7 +20,7 @@ part of '../../super_measurement.dart';
 /// [Density$OuncePerFootCubic], [Density$OuncePerGallon],
 /// [Density$TonPerYardCubic], [Density$PsiPer1000Feet]
 sealed class Density extends Unit<Density> {
-  const Density([
+  Density([
     super.value,
   ]);
 
@@ -32,175 +32,176 @@ sealed class Density extends Unit<Density> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : Density.anchor();
 
-  factory Density.anchor() => const Density$NanogramPerLiter();
+  factory Density.anchor() => Density$NanogramPerLiter();
 
   /// Convert to [Density$KilogramPerMeterCubic]
   Density get toKilogramPerMeterCubic => convertTo(
-        const Density$KilogramPerMeterCubic(),
+        Density$KilogramPerMeterCubic(),
       );
 
   /// Convert to [Density$KilogramPerCentimeterCubic]
   Density get toKilogramPerCentimeterCubic => convertTo(
-        const Density$KilogramPerCentimeterCubic(),
+        Density$KilogramPerCentimeterCubic(),
       );
 
   /// Convert to [Density$GramPerMeterCubic]
   Density get toGramPerMeterCubic => convertTo(
-        const Density$GramPerMeterCubic(),
+        Density$GramPerMeterCubic(),
       );
 
   /// Convert to [Density$GramPerCentimeterCubic]
   Density get toGramPerCentimeterCubic => convertTo(
-        const Density$GramPerCentimeterCubic(),
+        Density$GramPerCentimeterCubic(),
       );
 
   /// Convert to [Density$GramPerMillimeterCubic]
   Density get toGramPerMillimeterCubic => convertTo(
-        const Density$GramPerMillimeterCubic(),
+        Density$GramPerMillimeterCubic(),
       );
 
   /// Convert to [Density$MilligramPerMeterCubic]
   Density get toMilligramPerMeterCubic => convertTo(
-        const Density$MilligramPerMeterCubic(),
+        Density$MilligramPerMeterCubic(),
       );
 
   /// Convert to [Density$MilligramPerCentimeterCubic]
   Density get toMilligramPerCentimeterCubic => convertTo(
-        const Density$MilligramPerCentimeterCubic(),
+        Density$MilligramPerCentimeterCubic(),
       );
 
   /// Convert to [Density$MilligramPerMillimeterCubic]
   Density get toMilligramPerMillimeterCubic => convertTo(
-        const Density$MilligramPerMillimeterCubic(),
+        Density$MilligramPerMillimeterCubic(),
       );
 
   /// Convert to [Density$ExagramPerLiter]
   Density get toExagramPerLiter => convertTo(
-        const Density$ExagramPerLiter(),
+        Density$ExagramPerLiter(),
       );
 
   /// Convert to [Density$PetagramPerLiter]
   Density get toPetagramPerLiter => convertTo(
-        const Density$PetagramPerLiter(),
+        Density$PetagramPerLiter(),
       );
 
   /// Convert to [Density$TeragramPerLiter]
   Density get toTeragramPerLiter => convertTo(
-        const Density$TeragramPerLiter(),
+        Density$TeragramPerLiter(),
       );
 
   /// Convert to [Density$GigagramPerLiter]
   Density get toGigagramPerLiter => convertTo(
-        const Density$GigagramPerLiter(),
+        Density$GigagramPerLiter(),
       );
 
   /// Convert to [Density$MegagramPerLiter]
   Density get toMegagramPerLiter => convertTo(
-        const Density$MegagramPerLiter(),
+        Density$MegagramPerLiter(),
       );
 
   /// Convert to [Density$KilogramPerLiter]
   Density get toKilogramPerLiter => convertTo(
-        const Density$KilogramPerLiter(),
+        Density$KilogramPerLiter(),
       );
 
   /// Convert to [Density$HectogramPerLiter]
   Density get toHectogramPerLiter => convertTo(
-        const Density$HectogramPerLiter(),
+        Density$HectogramPerLiter(),
       );
 
   /// Convert to [Density$DekagramPerLiter]
   Density get toDekagramPerLiter => convertTo(
-        const Density$DekagramPerLiter(),
+        Density$DekagramPerLiter(),
       );
 
   /// Convert to [Density$GramPerLiter]
   Density get toGramPerLiter => convertTo(
-        const Density$GramPerLiter(),
+        Density$GramPerLiter(),
       );
 
   /// Convert to [Density$DecigramPerLiter]
   Density get toDecigramPerLiter => convertTo(
-        const Density$DecigramPerLiter(),
+        Density$DecigramPerLiter(),
       );
 
   /// Convert to [Density$CentigramPerLiter]
   Density get toCentigramPerLiter => convertTo(
-        const Density$CentigramPerLiter(),
+        Density$CentigramPerLiter(),
       );
 
   /// Convert to [Density$MilligramPerLiter]
   Density get toMilligramPerLiter => convertTo(
-        const Density$MilligramPerLiter(),
+        Density$MilligramPerLiter(),
       );
 
   /// Convert to [Density$MicrogramPerLiter]
   Density get toMicrogramPerLiter => convertTo(
-        const Density$MicrogramPerLiter(),
+        Density$MicrogramPerLiter(),
       );
 
   /// Convert to [Density$NanogramPerLiter]
   Density get toNanogramPerLiter => convertTo(
-        const Density$NanogramPerLiter(),
+        Density$NanogramPerLiter(),
       );
 
   /// Convert to [Density$PicogramPerLiter]
   Density get toPicogramPerLiter => convertTo(
-        const Density$PicogramPerLiter(),
+        Density$PicogramPerLiter(),
       );
 
   /// Convert to [Density$FemtogramPerLiter]
   Density get toFemtogramPerLiter => convertTo(
-        const Density$FemtogramPerLiter(),
+        Density$FemtogramPerLiter(),
       );
 
   /// Convert to [Density$AttogramPerLiter]
   Density get toAttogramPerLiter => convertTo(
-        const Density$AttogramPerLiter(),
+        Density$AttogramPerLiter(),
       );
 
   /// Convert to [Density$PoundPerInchCubic]
   Density get toPoundPerInchCubic => convertTo(
-        const Density$PoundPerInchCubic(),
+        Density$PoundPerInchCubic(),
       );
 
   /// Convert to [Density$PoundPerFootCubic]
   Density get toPoundPerFootCubic => convertTo(
-        const Density$PoundPerFootCubic(),
+        Density$PoundPerFootCubic(),
       );
 
   /// Convert to [Density$PoundPerGallon]
   Density get toPoundPerGallon => convertTo(
-        const Density$PoundPerGallon(),
+        Density$PoundPerGallon(),
       );
 
   /// Convert to [Density$OuncePerInchCubic]
   Density get toOuncePerInchCubic => convertTo(
-        const Density$OuncePerInchCubic(),
+        Density$OuncePerInchCubic(),
       );
 
   /// Convert to [Density$OuncePerFootCubic]
   Density get toOuncePerFootCubic => convertTo(
-        const Density$OuncePerFootCubic(),
+        Density$OuncePerFootCubic(),
       );
 
   /// Convert to [Density$OuncePerGallon]
   Density get toOuncePerGallon => convertTo(
-        const Density$OuncePerGallon(),
+        Density$OuncePerGallon(),
       );
 
   /// Convert to [Density$TonPerYardCubic]
   Density get toTonPerYardCubic => convertTo(
-        const Density$TonPerYardCubic(),
+        Density$TonPerYardCubic(),
       );
 
   /// Convert to [Density$PsiPer1000Feet]
   Density get toPsiPer1000Feet => convertTo(
-        const Density$PsiPer1000Feet(),
+        Density$PsiPer1000Feet(),
       );
 
   @override
@@ -211,42 +212,42 @@ sealed class Density extends Unit<Density> {
 
   static const _majorName = 'density';
 
-  static const kilogramPerMeterCubic = Density$KilogramPerMeterCubic();
-  static const kilogramPerCentimeterCubic =
+  static final kilogramPerMeterCubic = Density$KilogramPerMeterCubic();
+  static final kilogramPerCentimeterCubic =
       Density$KilogramPerCentimeterCubic();
-  static const gramPerMeterCubic = Density$GramPerMeterCubic();
-  static const gramPerCentimeterCubic = Density$GramPerCentimeterCubic();
-  static const gramPerMillimeterCubic = Density$GramPerMillimeterCubic();
-  static const milligramPerMeterCubic = Density$MilligramPerMeterCubic();
-  static const milligramPerCentimeterCubic =
+  static final gramPerMeterCubic = Density$GramPerMeterCubic();
+  static final gramPerCentimeterCubic = Density$GramPerCentimeterCubic();
+  static final gramPerMillimeterCubic = Density$GramPerMillimeterCubic();
+  static final milligramPerMeterCubic = Density$MilligramPerMeterCubic();
+  static final milligramPerCentimeterCubic =
       Density$MilligramPerCentimeterCubic();
-  static const milligramPerMillimeterCubic =
+  static final milligramPerMillimeterCubic =
       Density$MilligramPerMillimeterCubic();
-  static const exagramPerLiter = Density$ExagramPerLiter();
-  static const petagramPerLiter = Density$PetagramPerLiter();
-  static const teragramPerLiter = Density$TeragramPerLiter();
-  static const gigagramPerLiter = Density$GigagramPerLiter();
-  static const megagramPerLiter = Density$MegagramPerLiter();
-  static const kilogramPerLiter = Density$KilogramPerLiter();
-  static const hectogramPerLiter = Density$HectogramPerLiter();
-  static const dekagramPerLiter = Density$DekagramPerLiter();
-  static const gramPerLiter = Density$GramPerLiter();
-  static const decigramPerLiter = Density$DecigramPerLiter();
-  static const centigramPerLiter = Density$CentigramPerLiter();
-  static const milligramPerLiter = Density$MilligramPerLiter();
-  static const microgramPerLiter = Density$MicrogramPerLiter();
-  static const nanogramPerLiter = Density$NanogramPerLiter();
-  static const picogramPerLiter = Density$PicogramPerLiter();
-  static const femtogramPerLiter = Density$FemtogramPerLiter();
-  static const attogramPerLiter = Density$AttogramPerLiter();
-  static const poundPerInchCubic = Density$PoundPerInchCubic();
-  static const poundPerFootCubic = Density$PoundPerFootCubic();
-  static const poundPerGallon = Density$PoundPerGallon();
-  static const ouncePerInchCubic = Density$OuncePerInchCubic();
-  static const ouncePerFootCubic = Density$OuncePerFootCubic();
-  static const ouncePerGallon = Density$OuncePerGallon();
-  static const tonPerYardCubic = Density$TonPerYardCubic();
-  static const psiPer1000Feet = Density$PsiPer1000Feet();
+  static final exagramPerLiter = Density$ExagramPerLiter();
+  static final petagramPerLiter = Density$PetagramPerLiter();
+  static final teragramPerLiter = Density$TeragramPerLiter();
+  static final gigagramPerLiter = Density$GigagramPerLiter();
+  static final megagramPerLiter = Density$MegagramPerLiter();
+  static final kilogramPerLiter = Density$KilogramPerLiter();
+  static final hectogramPerLiter = Density$HectogramPerLiter();
+  static final dekagramPerLiter = Density$DekagramPerLiter();
+  static final gramPerLiter = Density$GramPerLiter();
+  static final decigramPerLiter = Density$DecigramPerLiter();
+  static final centigramPerLiter = Density$CentigramPerLiter();
+  static final milligramPerLiter = Density$MilligramPerLiter();
+  static final microgramPerLiter = Density$MicrogramPerLiter();
+  static final nanogramPerLiter = Density$NanogramPerLiter();
+  static final picogramPerLiter = Density$PicogramPerLiter();
+  static final femtogramPerLiter = Density$FemtogramPerLiter();
+  static final attogramPerLiter = Density$AttogramPerLiter();
+  static final poundPerInchCubic = Density$PoundPerInchCubic();
+  static final poundPerFootCubic = Density$PoundPerFootCubic();
+  static final poundPerGallon = Density$PoundPerGallon();
+  static final ouncePerInchCubic = Density$OuncePerInchCubic();
+  static final ouncePerFootCubic = Density$OuncePerFootCubic();
+  static final ouncePerGallon = Density$OuncePerGallon();
+  static final tonPerYardCubic = Density$TonPerYardCubic();
+  static final psiPer1000Feet = Density$PsiPer1000Feet();
 
   @override
   List<Density> get units => values;
@@ -254,7 +255,7 @@ sealed class Density extends Unit<Density> {
   @override
   EnumValues<Density> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <Density>[
     kilogramPerMeterCubic,
     kilogramPerCentimeterCubic,
     gramPerMeterCubic,
@@ -290,7 +291,7 @@ sealed class Density extends Unit<Density> {
     psiPer1000Feet,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, Density>{
     Density$KilogramPerMeterCubic._minorName: kilogramPerMeterCubic,
     Density$KilogramPerCentimeterCubic._minorName: kilogramPerCentimeterCubic,
     Density$GramPerMeterCubic._minorName: gramPerMeterCubic,
@@ -329,7 +330,7 @@ sealed class Density extends Unit<Density> {
 
 /// Unit of [Density]
 final class Density$KilogramPerMeterCubic extends Density {
-  const Density$KilogramPerMeterCubic([
+  Density$KilogramPerMeterCubic([
     super.value,
   ]);
 
@@ -360,14 +361,14 @@ final class Density$KilogramPerMeterCubic extends Density {
   @override
   String get displayName => 'kilogram/meter³';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$KilogramPerMeterCubic] = 1000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$KilogramPerMeterCubic] = 1.00000000000000000E+009 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -376,12 +377,12 @@ final class Density$KilogramPerMeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$KilogramPerMeterCubic] with new value
   @override
   Density$KilogramPerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$KilogramPerMeterCubic(val);
 
@@ -394,14 +395,14 @@ final class Density$KilogramPerMeterCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$KilogramPerCentimeterCubic extends Density {
-  const Density$KilogramPerCentimeterCubic([
+  Density$KilogramPerCentimeterCubic([
     super.value,
   ]);
 
@@ -432,14 +433,14 @@ final class Density$KilogramPerCentimeterCubic extends Density {
   @override
   String get displayName => 'kilogram/centimeter³';
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$KilogramPerCentimeterCubic] = 1000000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$KilogramPerCentimeterCubic] = 1.00000000000000000E+015 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -448,12 +449,12 @@ final class Density$KilogramPerCentimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$KilogramPerCentimeterCubic] with new value
   @override
   Density$KilogramPerCentimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$KilogramPerCentimeterCubic(val);
 
@@ -466,14 +467,14 @@ final class Density$KilogramPerCentimeterCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$GramPerMeterCubic extends Density {
-  const Density$GramPerMeterCubic([
+  Density$GramPerMeterCubic([
     super.value,
   ]);
 
@@ -504,14 +505,14 @@ final class Density$GramPerMeterCubic extends Density {
   @override
   String get displayName => 'gram/meter³';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$GramPerMeterCubic] = 1000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GramPerMeterCubic] = 1.00000000000000000E+006 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -519,12 +520,12 @@ final class Density$GramPerMeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$GramPerMeterCubic] with new value
   @override
   Density$GramPerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$GramPerMeterCubic(val);
 
@@ -537,14 +538,14 @@ final class Density$GramPerMeterCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$GramPerCentimeterCubic extends Density {
-  const Density$GramPerCentimeterCubic([
+  Density$GramPerCentimeterCubic([
     super.value,
   ]);
 
@@ -575,14 +576,14 @@ final class Density$GramPerCentimeterCubic extends Density {
   @override
   String get displayName => 'gram/centimeter³';
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$GramPerCentimeterCubic] = 1000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GramPerCentimeterCubic] = 1.00000000000000000E+012 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -591,12 +592,12 @@ final class Density$GramPerCentimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$GramPerCentimeterCubic] with new value
   @override
   Density$GramPerCentimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$GramPerCentimeterCubic(val);
 
@@ -609,14 +610,14 @@ final class Density$GramPerCentimeterCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$GramPerMillimeterCubic extends Density {
-  const Density$GramPerMillimeterCubic([
+  Density$GramPerMillimeterCubic([
     super.value,
   ]);
 
@@ -647,14 +648,14 @@ final class Density$GramPerMillimeterCubic extends Density {
   @override
   String get displayName => 'gram/millimeter³';
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$GramPerMillimeterCubic] = 1000000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GramPerMillimeterCubic] = 1.00000000000000000E+015 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -663,12 +664,12 @@ final class Density$GramPerMillimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$GramPerMillimeterCubic] with new value
   @override
   Density$GramPerMillimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$GramPerMillimeterCubic(val);
 
@@ -681,14 +682,14 @@ final class Density$GramPerMillimeterCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$MilligramPerMeterCubic extends Density {
-  const Density$MilligramPerMeterCubic([
+  Density$MilligramPerMeterCubic([
     super.value,
   ]);
 
@@ -719,14 +720,14 @@ final class Density$MilligramPerMeterCubic extends Density {
   @override
   String get displayName => 'milligram/meter³';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$MilligramPerMeterCubic] = 1000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MilligramPerMeterCubic] = 1.00000000000000000E+003 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -735,12 +736,12 @@ final class Density$MilligramPerMeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$MilligramPerMeterCubic] with new value
   @override
   Density$MilligramPerMeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$MilligramPerMeterCubic(val);
 
@@ -753,14 +754,14 @@ final class Density$MilligramPerMeterCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$MilligramPerCentimeterCubic extends Density {
-  const Density$MilligramPerCentimeterCubic([
+  Density$MilligramPerCentimeterCubic([
     super.value,
   ]);
 
@@ -791,14 +792,14 @@ final class Density$MilligramPerCentimeterCubic extends Density {
   @override
   String get displayName => 'milligram/centimeter³';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$MilligramPerCentimeterCubic] = 1000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MilligramPerCentimeterCubic] = 1.00000000000000000E+009 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -807,12 +808,12 @@ final class Density$MilligramPerCentimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$MilligramPerCentimeterCubic] with new value
   @override
   Density$MilligramPerCentimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$MilligramPerCentimeterCubic(val);
 
@@ -825,14 +826,14 @@ final class Density$MilligramPerCentimeterCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$MilligramPerMillimeterCubic extends Density {
-  const Density$MilligramPerMillimeterCubic([
+  Density$MilligramPerMillimeterCubic([
     super.value,
   ]);
 
@@ -863,14 +864,14 @@ final class Density$MilligramPerMillimeterCubic extends Density {
   @override
   String get displayName => 'milligram/millimeter³';
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$MilligramPerMillimeterCubic] = 1000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MilligramPerMillimeterCubic] = 1.00000000000000000E+012 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -879,12 +880,12 @@ final class Density$MilligramPerMillimeterCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$MilligramPerMillimeterCubic] with new value
   @override
   Density$MilligramPerMillimeterCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$MilligramPerMillimeterCubic(val);
 
@@ -897,14 +898,14 @@ final class Density$MilligramPerMillimeterCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$ExagramPerLiter extends Density {
-  const Density$ExagramPerLiter([
+  Density$ExagramPerLiter([
     super.value,
   ]);
 
@@ -935,14 +936,14 @@ final class Density$ExagramPerLiter extends Density {
   @override
   String get displayName => 'exagram/liter';
 
-  static const _ratio = 1e+27;
+  static final _ratio = Rational.parse('1.00000000000000000E+027');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$ExagramPerLiter] = 1e+27 [Density$NanogramPerLiter]
+  /// 1 [Density$ExagramPerLiter] = 1.00000000000000000E+027 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -950,12 +951,12 @@ final class Density$ExagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$ExagramPerLiter] with new value
   @override
   Density$ExagramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$ExagramPerLiter(val);
 
@@ -968,14 +969,14 @@ final class Density$ExagramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$PetagramPerLiter extends Density {
-  const Density$PetagramPerLiter([
+  Density$PetagramPerLiter([
     super.value,
   ]);
 
@@ -1006,14 +1007,14 @@ final class Density$PetagramPerLiter extends Density {
   @override
   String get displayName => 'petagram/liter';
 
-  static const _ratio = 1e+24;
+  static final _ratio = Rational.parse('1.00000000000000000E+024');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$PetagramPerLiter] = 1e+24 [Density$NanogramPerLiter]
+  /// 1 [Density$PetagramPerLiter] = 1.00000000000000000E+024 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1021,12 +1022,12 @@ final class Density$PetagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$PetagramPerLiter] with new value
   @override
   Density$PetagramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$PetagramPerLiter(val);
 
@@ -1039,14 +1040,14 @@ final class Density$PetagramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$TeragramPerLiter extends Density {
-  const Density$TeragramPerLiter([
+  Density$TeragramPerLiter([
     super.value,
   ]);
 
@@ -1077,14 +1078,14 @@ final class Density$TeragramPerLiter extends Density {
   @override
   String get displayName => 'teragram/liter';
 
-  static const _ratio = 1e+21;
+  static final _ratio = Rational.parse('1.00000000000000000E+021');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$TeragramPerLiter] = 1e+21 [Density$NanogramPerLiter]
+  /// 1 [Density$TeragramPerLiter] = 1.00000000000000000E+021 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1092,12 +1093,12 @@ final class Density$TeragramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$TeragramPerLiter] with new value
   @override
   Density$TeragramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$TeragramPerLiter(val);
 
@@ -1110,14 +1111,14 @@ final class Density$TeragramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$GigagramPerLiter extends Density {
-  const Density$GigagramPerLiter([
+  Density$GigagramPerLiter([
     super.value,
   ]);
 
@@ -1148,14 +1149,14 @@ final class Density$GigagramPerLiter extends Density {
   @override
   String get displayName => 'gigagram/liter';
 
-  static const _ratio = 1000000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+018');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$GigagramPerLiter] = 1000000000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GigagramPerLiter] = 1.00000000000000000E+018 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1163,12 +1164,12 @@ final class Density$GigagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$GigagramPerLiter] with new value
   @override
   Density$GigagramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$GigagramPerLiter(val);
 
@@ -1181,14 +1182,14 @@ final class Density$GigagramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$MegagramPerLiter extends Density {
-  const Density$MegagramPerLiter([
+  Density$MegagramPerLiter([
     super.value,
   ]);
 
@@ -1219,14 +1220,14 @@ final class Density$MegagramPerLiter extends Density {
   @override
   String get displayName => 'megagram/liter';
 
-  static const _ratio = 1000000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+015');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$MegagramPerLiter] = 1000000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MegagramPerLiter] = 1.00000000000000000E+015 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1234,12 +1235,12 @@ final class Density$MegagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$MegagramPerLiter] with new value
   @override
   Density$MegagramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$MegagramPerLiter(val);
 
@@ -1252,14 +1253,14 @@ final class Density$MegagramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$KilogramPerLiter extends Density {
-  const Density$KilogramPerLiter([
+  Density$KilogramPerLiter([
     super.value,
   ]);
 
@@ -1290,14 +1291,14 @@ final class Density$KilogramPerLiter extends Density {
   @override
   String get displayName => 'kilogram/liter';
 
-  static const _ratio = 1000000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+012');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$KilogramPerLiter] = 1000000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$KilogramPerLiter] = 1.00000000000000000E+012 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1305,12 +1306,12 @@ final class Density$KilogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$KilogramPerLiter] with new value
   @override
   Density$KilogramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$KilogramPerLiter(val);
 
@@ -1323,14 +1324,14 @@ final class Density$KilogramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$HectogramPerLiter extends Density {
-  const Density$HectogramPerLiter([
+  Density$HectogramPerLiter([
     super.value,
   ]);
 
@@ -1361,14 +1362,14 @@ final class Density$HectogramPerLiter extends Density {
   @override
   String get displayName => 'hectogram/liter';
 
-  static const _ratio = 100000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+011');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$HectogramPerLiter] = 100000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$HectogramPerLiter] = 1.00000000000000000E+011 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1376,12 +1377,12 @@ final class Density$HectogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$HectogramPerLiter] with new value
   @override
   Density$HectogramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$HectogramPerLiter(val);
 
@@ -1394,14 +1395,14 @@ final class Density$HectogramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$DekagramPerLiter extends Density {
-  const Density$DekagramPerLiter([
+  Density$DekagramPerLiter([
     super.value,
   ]);
 
@@ -1432,14 +1433,14 @@ final class Density$DekagramPerLiter extends Density {
   @override
   String get displayName => 'dekagram/liter';
 
-  static const _ratio = 10000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+010');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$DekagramPerLiter] = 10000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$DekagramPerLiter] = 1.00000000000000000E+010 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1447,12 +1448,12 @@ final class Density$DekagramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$DekagramPerLiter] with new value
   @override
   Density$DekagramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$DekagramPerLiter(val);
 
@@ -1465,14 +1466,14 @@ final class Density$DekagramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$GramPerLiter extends Density {
-  const Density$GramPerLiter([
+  Density$GramPerLiter([
     super.value,
   ]);
 
@@ -1503,14 +1504,14 @@ final class Density$GramPerLiter extends Density {
   @override
   String get displayName => 'gram/liter';
 
-  static const _ratio = 1000000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+009');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$GramPerLiter] = 1000000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$GramPerLiter] = 1.00000000000000000E+009 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1518,12 +1519,12 @@ final class Density$GramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$GramPerLiter] with new value
   @override
   Density$GramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$GramPerLiter(val);
 
@@ -1536,14 +1537,14 @@ final class Density$GramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$DecigramPerLiter extends Density {
-  const Density$DecigramPerLiter([
+  Density$DecigramPerLiter([
     super.value,
   ]);
 
@@ -1574,14 +1575,14 @@ final class Density$DecigramPerLiter extends Density {
   @override
   String get displayName => 'decigram/liter';
 
-  static const _ratio = 100000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+008');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$DecigramPerLiter] = 100000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$DecigramPerLiter] = 1.00000000000000000E+008 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1589,12 +1590,12 @@ final class Density$DecigramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$DecigramPerLiter] with new value
   @override
   Density$DecigramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$DecigramPerLiter(val);
 
@@ -1607,14 +1608,14 @@ final class Density$DecigramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$CentigramPerLiter extends Density {
-  const Density$CentigramPerLiter([
+  Density$CentigramPerLiter([
     super.value,
   ]);
 
@@ -1645,14 +1646,14 @@ final class Density$CentigramPerLiter extends Density {
   @override
   String get displayName => 'centigram/liter';
 
-  static const _ratio = 10000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+007');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$CentigramPerLiter] = 10000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$CentigramPerLiter] = 1.00000000000000000E+007 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1660,12 +1661,12 @@ final class Density$CentigramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$CentigramPerLiter] with new value
   @override
   Density$CentigramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$CentigramPerLiter(val);
 
@@ -1678,14 +1679,14 @@ final class Density$CentigramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$MilligramPerLiter extends Density {
-  const Density$MilligramPerLiter([
+  Density$MilligramPerLiter([
     super.value,
   ]);
 
@@ -1716,14 +1717,14 @@ final class Density$MilligramPerLiter extends Density {
   @override
   String get displayName => 'milligram/liter';
 
-  static const _ratio = 1000000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+006');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$MilligramPerLiter] = 1000000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MilligramPerLiter] = 1.00000000000000000E+006 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1731,12 +1732,12 @@ final class Density$MilligramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$MilligramPerLiter] with new value
   @override
   Density$MilligramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$MilligramPerLiter(val);
 
@@ -1749,14 +1750,14 @@ final class Density$MilligramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$MicrogramPerLiter extends Density {
-  const Density$MicrogramPerLiter([
+  Density$MicrogramPerLiter([
     super.value,
   ]);
 
@@ -1787,14 +1788,14 @@ final class Density$MicrogramPerLiter extends Density {
   @override
   String get displayName => 'microgram/liter';
 
-  static const _ratio = 1000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+003');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$MicrogramPerLiter] = 1000.0 [Density$NanogramPerLiter]
+  /// 1 [Density$MicrogramPerLiter] = 1.00000000000000000E+003 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1802,12 +1803,12 @@ final class Density$MicrogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$MicrogramPerLiter] with new value
   @override
   Density$MicrogramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$MicrogramPerLiter(val);
 
@@ -1820,14 +1821,14 @@ final class Density$MicrogramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$NanogramPerLiter extends Density {
-  const Density$NanogramPerLiter([
+  Density$NanogramPerLiter([
     super.value,
   ]);
 
@@ -1858,14 +1859,14 @@ final class Density$NanogramPerLiter extends Density {
   @override
   String get displayName => 'nanogram/liter';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
   /// Default (anchor) unit of [Density]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1873,12 +1874,12 @@ final class Density$NanogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$NanogramPerLiter] with new value
   @override
   Density$NanogramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$NanogramPerLiter(val);
 
@@ -1891,14 +1892,14 @@ final class Density$NanogramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$PicogramPerLiter extends Density {
-  const Density$PicogramPerLiter([
+  Density$PicogramPerLiter([
     super.value,
   ]);
 
@@ -1929,14 +1930,14 @@ final class Density$PicogramPerLiter extends Density {
   @override
   String get displayName => 'picogram/liter';
 
-  static const _ratio = 0.001;
+  static final _ratio = Rational.parse('1.00000000000000000E-003');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$PicogramPerLiter] ≈ 0.001 [Density$NanogramPerLiter]
+  /// 1 [Density$PicogramPerLiter] ≈ 1.00000000000000000E-003 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1944,12 +1945,12 @@ final class Density$PicogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$PicogramPerLiter] with new value
   @override
   Density$PicogramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$PicogramPerLiter(val);
 
@@ -1962,14 +1963,14 @@ final class Density$PicogramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$FemtogramPerLiter extends Density {
-  const Density$FemtogramPerLiter([
+  Density$FemtogramPerLiter([
     super.value,
   ]);
 
@@ -2000,14 +2001,14 @@ final class Density$FemtogramPerLiter extends Density {
   @override
   String get displayName => 'femtogram/liter';
 
-  static const _ratio = 0.000001;
+  static final _ratio = Rational.parse('1.00000000000000000E-006');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$FemtogramPerLiter] ≈ 0.000001 [Density$NanogramPerLiter]
+  /// 1 [Density$FemtogramPerLiter] ≈ 1.00000000000000000E-006 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2015,12 +2016,12 @@ final class Density$FemtogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$FemtogramPerLiter] with new value
   @override
   Density$FemtogramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$FemtogramPerLiter(val);
 
@@ -2033,14 +2034,14 @@ final class Density$FemtogramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$AttogramPerLiter extends Density {
-  const Density$AttogramPerLiter([
+  Density$AttogramPerLiter([
     super.value,
   ]);
 
@@ -2071,14 +2072,14 @@ final class Density$AttogramPerLiter extends Density {
   @override
   String get displayName => 'attogram/liter';
 
-  static const _ratio = 1e-9;
+  static final _ratio = Rational.parse('1.00000000000000000E-009');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$AttogramPerLiter] ≈ 1e-9 [Density$NanogramPerLiter]
+  /// 1 [Density$AttogramPerLiter] ≈ 1.00000000000000000E-009 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2086,12 +2087,12 @@ final class Density$AttogramPerLiter extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$AttogramPerLiter] with new value
   @override
   Density$AttogramPerLiter withValue(
-    num val,
+    Rational val,
   ) =>
       Density$AttogramPerLiter(val);
 
@@ -2104,14 +2105,14 @@ final class Density$AttogramPerLiter extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$PoundPerInchCubic extends Density {
-  const Density$PoundPerInchCubic([
+  Density$PoundPerInchCubic([
     super.value,
   ]);
 
@@ -2142,14 +2143,14 @@ final class Density$PoundPerInchCubic extends Density {
   @override
   String get displayName => 'pound/inch³';
 
-  static const _ratio = 27679904710190.62;
+  static final _ratio = Rational.parse('2.76799047101906229E+013');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$PoundPerInchCubic] ≈ 27679904710190.62 [Density$NanogramPerLiter]
+  /// 1 [Density$PoundPerInchCubic] ≈ 2.76799047101906229E+013 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2157,12 +2158,12 @@ final class Density$PoundPerInchCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$PoundPerInchCubic] with new value
   @override
   Density$PoundPerInchCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$PoundPerInchCubic(val);
 
@@ -2175,14 +2176,14 @@ final class Density$PoundPerInchCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$PoundPerFootCubic extends Density {
-  const Density$PoundPerFootCubic([
+  Density$PoundPerFootCubic([
     super.value,
   ]);
 
@@ -2213,14 +2214,14 @@ final class Density$PoundPerFootCubic extends Density {
   @override
   String get displayName => 'pound/foot³';
 
-  static const _ratio = 16018463373.952908;
+  static final _ratio = Rational.parse('1.60184633739529068E+010');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$PoundPerFootCubic] ≈ 16018463373.952908 [Density$NanogramPerLiter]
+  /// 1 [Density$PoundPerFootCubic] ≈ 1.60184633739529068E+010 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2228,12 +2229,12 @@ final class Density$PoundPerFootCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$PoundPerFootCubic] with new value
   @override
   Density$PoundPerFootCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$PoundPerFootCubic(val);
 
@@ -2246,14 +2247,14 @@ final class Density$PoundPerFootCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$PoundPerGallon extends Density {
-  const Density$PoundPerGallon([
+  Density$PoundPerGallon([
     super.value,
   ]);
 
@@ -2284,14 +2285,14 @@ final class Density$PoundPerGallon extends Density {
   @override
   String get displayName => 'pound/gallon';
 
-  static const _ratio = 119826427316.7227;
+  static final _ratio = Rational.parse('1.19826427316722697E+011');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$PoundPerGallon] ≈ 119826427316.7227 [Density$NanogramPerLiter]
+  /// 1 [Density$PoundPerGallon] ≈ 1.19826427316722697E+011 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2299,12 +2300,12 @@ final class Density$PoundPerGallon extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$PoundPerGallon] with new value
   @override
   Density$PoundPerGallon withValue(
-    num val,
+    Rational val,
   ) =>
       Density$PoundPerGallon(val);
 
@@ -2317,14 +2318,14 @@ final class Density$PoundPerGallon extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$OuncePerInchCubic extends Density {
-  const Density$OuncePerInchCubic([
+  Density$OuncePerInchCubic([
     super.value,
   ]);
 
@@ -2355,14 +2356,14 @@ final class Density$OuncePerInchCubic extends Density {
   @override
   String get displayName => 'ounce/inch³';
 
-  static const _ratio = 1729994044386.9138;
+  static final _ratio = Rational.parse('1.72999404438691393E+012');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$OuncePerInchCubic] ≈ 1729994044386.9138 [Density$NanogramPerLiter]
+  /// 1 [Density$OuncePerInchCubic] ≈ 1.72999404438691393E+012 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2370,12 +2371,12 @@ final class Density$OuncePerInchCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$OuncePerInchCubic] with new value
   @override
   Density$OuncePerInchCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$OuncePerInchCubic(val);
 
@@ -2388,14 +2389,14 @@ final class Density$OuncePerInchCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$OuncePerFootCubic extends Density {
-  const Density$OuncePerFootCubic([
+  Density$OuncePerFootCubic([
     super.value,
   ]);
 
@@ -2426,14 +2427,14 @@ final class Density$OuncePerFootCubic extends Density {
   @override
   String get displayName => 'ounce/foot³';
 
-  static const _ratio = 1001153960.8720567;
+  static final _ratio = Rational.parse('1.00115396087205667E+009');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$OuncePerFootCubic] ≈ 1001153960.8720567 [Density$NanogramPerLiter]
+  /// 1 [Density$OuncePerFootCubic] ≈ 1.00115396087205667E+009 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2441,12 +2442,12 @@ final class Density$OuncePerFootCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$OuncePerFootCubic] with new value
   @override
   Density$OuncePerFootCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$OuncePerFootCubic(val);
 
@@ -2459,14 +2460,14 @@ final class Density$OuncePerFootCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$OuncePerGallon extends Density {
-  const Density$OuncePerGallon([
+  Density$OuncePerGallon([
     super.value,
   ]);
 
@@ -2497,14 +2498,14 @@ final class Density$OuncePerGallon extends Density {
   @override
   String get displayName => 'ounce/gallon';
 
-  static const _ratio = 7489151707.295169;
+  static final _ratio = Rational.parse('7.48915170729516856E+009');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$OuncePerGallon] ≈ 7489151707.295169 [Density$NanogramPerLiter]
+  /// 1 [Density$OuncePerGallon] ≈ 7.48915170729516856E+009 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2512,12 +2513,12 @@ final class Density$OuncePerGallon extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$OuncePerGallon] with new value
   @override
   Density$OuncePerGallon withValue(
-    num val,
+    Rational val,
   ) =>
       Density$OuncePerGallon(val);
 
@@ -2530,14 +2531,14 @@ final class Density$OuncePerGallon extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$TonPerYardCubic extends Density {
-  const Density$TonPerYardCubic([
+  Density$TonPerYardCubic([
     super.value,
   ]);
 
@@ -2568,14 +2569,14 @@ final class Density$TonPerYardCubic extends Density {
   @override
   String get displayName => 'ton/yard³';
 
-  static const _ratio = 1186552842515.03;
+  static final _ratio = Rational.parse('1.18655284251503013E+012');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$TonPerYardCubic] ≈ 1186552842515.03 [Density$NanogramPerLiter]
+  /// 1 [Density$TonPerYardCubic] ≈ 1.18655284251503013E+012 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2583,12 +2584,12 @@ final class Density$TonPerYardCubic extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$TonPerYardCubic] with new value
   @override
   Density$TonPerYardCubic withValue(
-    num val,
+    Rational val,
   ) =>
       Density$TonPerYardCubic(val);
 
@@ -2601,14 +2602,14 @@ final class Density$TonPerYardCubic extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [Density]
 final class Density$PsiPer1000Feet extends Density {
-  const Density$PsiPer1000Feet([
+  Density$PsiPer1000Feet([
     super.value,
   ]);
 
@@ -2639,14 +2640,14 @@ final class Density$PsiPer1000Feet extends Density {
   @override
   String get displayName => 'psi/1000 feet';
 
-  static const _ratio = 2306658725.8492184;
+  static final _ratio = Rational.parse('2.30665872584921858E+009');
 
   @override
-  Density get anchor => const Density$NanogramPerLiter(_ratio);
+  Density get anchor => Density$NanogramPerLiter(_ratio);
 
-  /// 1 [Density$PsiPer1000Feet] ≈ 2306658725.8492184 [Density$NanogramPerLiter]
+  /// 1 [Density$PsiPer1000Feet] ≈ 2.30665872584921858E+009 [Density$NanogramPerLiter]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -2654,12 +2655,12 @@ final class Density$PsiPer1000Feet extends Density {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [Density$PsiPer1000Feet] with new value
   @override
   Density$PsiPer1000Feet withValue(
-    num val,
+    Rational val,
   ) =>
       Density$PsiPer1000Feet(val);
 
@@ -2672,7 +2673,7 @@ final class Density$PsiPer1000Feet extends Density {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

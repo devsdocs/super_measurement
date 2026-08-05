@@ -9,7 +9,7 @@ part of '../../super_measurement.dart';
 /// [SurfaceChargeDensity$AbcoulombPerCentimeterSquare],
 /// [SurfaceChargeDensity$AbcoulombPerInchSquare]
 sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
-  const SurfaceChargeDensity([
+  SurfaceChargeDensity([
     super.value,
   ]);
 
@@ -22,41 +22,42 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : SurfaceChargeDensity.anchor();
 
   factory SurfaceChargeDensity.anchor() =>
-      const SurfaceChargeDensity$CoulombPerMeterSquare();
+      SurfaceChargeDensity$CoulombPerMeterSquare();
 
   /// Convert to [SurfaceChargeDensity$CoulombPerMeterSquare]
   SurfaceChargeDensity get toCoulombPerMeterSquare => convertTo(
-        const SurfaceChargeDensity$CoulombPerMeterSquare(),
+        SurfaceChargeDensity$CoulombPerMeterSquare(),
       );
 
   /// Convert to [SurfaceChargeDensity$CoulombPerInchSquare]
   SurfaceChargeDensity get toCoulombPerInchSquare => convertTo(
-        const SurfaceChargeDensity$CoulombPerInchSquare(),
+        SurfaceChargeDensity$CoulombPerInchSquare(),
       );
 
   /// Convert to [SurfaceChargeDensity$CoulombPerCentimeterSquare]
   SurfaceChargeDensity get toCoulombPerCentimeterSquare => convertTo(
-        const SurfaceChargeDensity$CoulombPerCentimeterSquare(),
+        SurfaceChargeDensity$CoulombPerCentimeterSquare(),
       );
 
   /// Convert to [SurfaceChargeDensity$AbcoulombPerMeterSquare]
   SurfaceChargeDensity get toAbcoulombPerMeterSquare => convertTo(
-        const SurfaceChargeDensity$AbcoulombPerMeterSquare(),
+        SurfaceChargeDensity$AbcoulombPerMeterSquare(),
       );
 
   /// Convert to [SurfaceChargeDensity$AbcoulombPerCentimeterSquare]
   SurfaceChargeDensity get toAbcoulombPerCentimeterSquare => convertTo(
-        const SurfaceChargeDensity$AbcoulombPerCentimeterSquare(),
+        SurfaceChargeDensity$AbcoulombPerCentimeterSquare(),
       );
 
   /// Convert to [SurfaceChargeDensity$AbcoulombPerInchSquare]
   SurfaceChargeDensity get toAbcoulombPerInchSquare => convertTo(
-        const SurfaceChargeDensity$AbcoulombPerInchSquare(),
+        SurfaceChargeDensity$AbcoulombPerInchSquare(),
       );
 
   @override
@@ -67,17 +68,17 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
 
   static const _majorName = 'surfaceChargeDensity';
 
-  static const coulombPerMeterSquare =
+  static final coulombPerMeterSquare =
       SurfaceChargeDensity$CoulombPerMeterSquare();
-  static const coulombPerInchSquare =
+  static final coulombPerInchSquare =
       SurfaceChargeDensity$CoulombPerInchSquare();
-  static const coulombPerCentimeterSquare =
+  static final coulombPerCentimeterSquare =
       SurfaceChargeDensity$CoulombPerCentimeterSquare();
-  static const abcoulombPerMeterSquare =
+  static final abcoulombPerMeterSquare =
       SurfaceChargeDensity$AbcoulombPerMeterSquare();
-  static const abcoulombPerCentimeterSquare =
+  static final abcoulombPerCentimeterSquare =
       SurfaceChargeDensity$AbcoulombPerCentimeterSquare();
-  static const abcoulombPerInchSquare =
+  static final abcoulombPerInchSquare =
       SurfaceChargeDensity$AbcoulombPerInchSquare();
 
   @override
@@ -86,7 +87,7 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
   @override
   EnumValues<SurfaceChargeDensity> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <SurfaceChargeDensity>[
     coulombPerMeterSquare,
     coulombPerInchSquare,
     coulombPerCentimeterSquare,
@@ -95,7 +96,7 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
     abcoulombPerInchSquare,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, SurfaceChargeDensity>{
     SurfaceChargeDensity$CoulombPerMeterSquare._minorName:
         coulombPerMeterSquare,
     SurfaceChargeDensity$CoulombPerInchSquare._minorName: coulombPerInchSquare,
@@ -113,7 +114,7 @@ sealed class SurfaceChargeDensity extends Unit<SurfaceChargeDensity> {
 /// Unit of [SurfaceChargeDensity]
 final class SurfaceChargeDensity$CoulombPerMeterSquare
     extends SurfaceChargeDensity {
-  const SurfaceChargeDensity$CoulombPerMeterSquare([
+  SurfaceChargeDensity$CoulombPerMeterSquare([
     super.value,
   ]);
 
@@ -144,15 +145,15 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
   @override
   String get displayName => 'coulomb/meter²';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
   SurfaceChargeDensity get anchor =>
-      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+      SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
   /// Default (anchor) unit of [SurfaceChargeDensity]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -161,12 +162,12 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceChargeDensity$CoulombPerMeterSquare] with new value
   @override
   SurfaceChargeDensity$CoulombPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceChargeDensity$CoulombPerMeterSquare(val);
 
@@ -179,7 +180,7 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -187,7 +188,7 @@ final class SurfaceChargeDensity$CoulombPerMeterSquare
 /// Unit of [SurfaceChargeDensity]
 final class SurfaceChargeDensity$CoulombPerInchSquare
     extends SurfaceChargeDensity {
-  const SurfaceChargeDensity$CoulombPerInchSquare([
+  SurfaceChargeDensity$CoulombPerInchSquare([
     super.value,
   ]);
 
@@ -218,15 +219,15 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
   @override
   String get displayName => 'coulomb/inch²';
 
-  static const _ratio = 1550.0031;
+  static final _ratio = Rational.parse('1.55000310000000000E+003');
 
   @override
   SurfaceChargeDensity get anchor =>
-      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+      SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
-  /// 1 [SurfaceChargeDensity$CoulombPerInchSquare] ≈ 1550.0031 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$CoulombPerInchSquare] ≈ 1.55000310000000000E+003 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -235,12 +236,12 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceChargeDensity$CoulombPerInchSquare] with new value
   @override
   SurfaceChargeDensity$CoulombPerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceChargeDensity$CoulombPerInchSquare(val);
 
@@ -253,7 +254,7 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -261,7 +262,7 @@ final class SurfaceChargeDensity$CoulombPerInchSquare
 /// Unit of [SurfaceChargeDensity]
 final class SurfaceChargeDensity$CoulombPerCentimeterSquare
     extends SurfaceChargeDensity {
-  const SurfaceChargeDensity$CoulombPerCentimeterSquare([
+  SurfaceChargeDensity$CoulombPerCentimeterSquare([
     super.value,
   ]);
 
@@ -292,15 +293,15 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
   @override
   String get displayName => 'coulomb/centimeter²';
 
-  static const _ratio = 10000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+004');
 
   @override
   SurfaceChargeDensity get anchor =>
-      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+      SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
-  /// 1 [SurfaceChargeDensity$CoulombPerCentimeterSquare] = 10000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$CoulombPerCentimeterSquare] = 1.00000000000000000E+004 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -309,12 +310,12 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceChargeDensity$CoulombPerCentimeterSquare] with new value
   @override
   SurfaceChargeDensity$CoulombPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceChargeDensity$CoulombPerCentimeterSquare(val);
 
@@ -327,7 +328,7 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -335,7 +336,7 @@ final class SurfaceChargeDensity$CoulombPerCentimeterSquare
 /// Unit of [SurfaceChargeDensity]
 final class SurfaceChargeDensity$AbcoulombPerMeterSquare
     extends SurfaceChargeDensity {
-  const SurfaceChargeDensity$AbcoulombPerMeterSquare([
+  SurfaceChargeDensity$AbcoulombPerMeterSquare([
     super.value,
   ]);
 
@@ -366,15 +367,15 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
   @override
   String get displayName => 'Abcoulomb/meter²';
 
-  static const _ratio = 10.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+001');
 
   @override
   SurfaceChargeDensity get anchor =>
-      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+      SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
-  /// 1 [SurfaceChargeDensity$AbcoulombPerMeterSquare] = 10.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$AbcoulombPerMeterSquare] = 1.00000000000000000E+001 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -383,12 +384,12 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerMeterSquare] with new value
   @override
   SurfaceChargeDensity$AbcoulombPerMeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceChargeDensity$AbcoulombPerMeterSquare(val);
 
@@ -401,7 +402,7 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -409,7 +410,7 @@ final class SurfaceChargeDensity$AbcoulombPerMeterSquare
 /// Unit of [SurfaceChargeDensity]
 final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
     extends SurfaceChargeDensity {
-  const SurfaceChargeDensity$AbcoulombPerCentimeterSquare([
+  SurfaceChargeDensity$AbcoulombPerCentimeterSquare([
     super.value,
   ]);
 
@@ -440,15 +441,15 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
   @override
   String get displayName => 'Abcoulomb/centimeter²';
 
-  static const _ratio = 100000.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+005');
 
   @override
   SurfaceChargeDensity get anchor =>
-      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+      SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
-  /// 1 [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] = 100000.0 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] = 1.00000000000000000E+005 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -457,12 +458,12 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerCentimeterSquare] with new value
   @override
   SurfaceChargeDensity$AbcoulombPerCentimeterSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceChargeDensity$AbcoulombPerCentimeterSquare(val);
 
@@ -475,7 +476,7 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
@@ -483,7 +484,7 @@ final class SurfaceChargeDensity$AbcoulombPerCentimeterSquare
 /// Unit of [SurfaceChargeDensity]
 final class SurfaceChargeDensity$AbcoulombPerInchSquare
     extends SurfaceChargeDensity {
-  const SurfaceChargeDensity$AbcoulombPerInchSquare([
+  SurfaceChargeDensity$AbcoulombPerInchSquare([
     super.value,
   ]);
 
@@ -514,15 +515,15 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
   @override
   String get displayName => 'Abcoulomb/inch²';
 
-  static const _ratio = 15500.031;
+  static final _ratio = Rational.parse('1.55000310000000000E+004');
 
   @override
   SurfaceChargeDensity get anchor =>
-      const SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
+      SurfaceChargeDensity$CoulombPerMeterSquare(_ratio);
 
-  /// 1 [SurfaceChargeDensity$AbcoulombPerInchSquare] ≈ 15500.031 [SurfaceChargeDensity$CoulombPerMeterSquare]
+  /// 1 [SurfaceChargeDensity$AbcoulombPerInchSquare] ≈ 1.55000310000000000E+004 [SurfaceChargeDensity$CoulombPerMeterSquare]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -531,12 +532,12 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [SurfaceChargeDensity$AbcoulombPerInchSquare] with new value
   @override
   SurfaceChargeDensity$AbcoulombPerInchSquare withValue(
-    num val,
+    Rational val,
   ) =>
       SurfaceChargeDensity$AbcoulombPerInchSquare(val);
 
@@ -549,7 +550,7 @@ final class SurfaceChargeDensity$AbcoulombPerInchSquare
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }

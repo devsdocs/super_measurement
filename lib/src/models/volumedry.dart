@@ -8,7 +8,7 @@ part of '../../super_measurement.dart';
 /// [VolumeDry$EphahBiblical], [VolumeDry$SeahBiblical],
 /// [VolumeDry$OmerBiblical], [VolumeDry$CabBiblical], [VolumeDry$LogBiblical]
 sealed class VolumeDry extends Unit<VolumeDry> {
-  const VolumeDry([
+  VolumeDry([
     super.value,
   ]);
 
@@ -20,75 +20,76 @@ sealed class VolumeDry extends Unit<VolumeDry> {
       )
           ? valuesAsMap.map[(json[_majorName] as Map<String, dynamic>)[_unit]]!
               .withValue(
-              (json[_majorName] as Map<String, dynamic>)[_value] as num,
+              Rational.parse((json[_majorName] as Map<String, dynamic>)[_value]
+                  .toString()),
             )
           : VolumeDry.anchor();
 
-  factory VolumeDry.anchor() => const VolumeDry$LogBiblical();
+  factory VolumeDry.anchor() => VolumeDry$LogBiblical();
 
   /// Convert to [VolumeDry$Barrel]
   VolumeDry get toBarrel => convertTo(
-        const VolumeDry$Barrel(),
+        VolumeDry$Barrel(),
       );
 
   /// Convert to [VolumeDry$Liter]
   VolumeDry get toLiter => convertTo(
-        const VolumeDry$Liter(),
+        VolumeDry$Liter(),
       );
 
   /// Convert to [VolumeDry$Pint]
   VolumeDry get toPint => convertTo(
-        const VolumeDry$Pint(),
+        VolumeDry$Pint(),
       );
 
   /// Convert to [VolumeDry$Quart]
   VolumeDry get toQuart => convertTo(
-        const VolumeDry$Quart(),
+        VolumeDry$Quart(),
       );
 
   /// Convert to [VolumeDry$Peck]
   VolumeDry get toPeck => convertTo(
-        const VolumeDry$Peck(),
+        VolumeDry$Peck(),
       );
 
   /// Convert to [VolumeDry$Bushel]
   VolumeDry get toBushel => convertTo(
-        const VolumeDry$Bushel(),
+        VolumeDry$Bushel(),
       );
 
   /// Convert to [VolumeDry$CorBiblical]
   VolumeDry get toCorBiblical => convertTo(
-        const VolumeDry$CorBiblical(),
+        VolumeDry$CorBiblical(),
       );
 
   /// Convert to [VolumeDry$HomerBiblical]
   VolumeDry get toHomerBiblical => convertTo(
-        const VolumeDry$HomerBiblical(),
+        VolumeDry$HomerBiblical(),
       );
 
   /// Convert to [VolumeDry$EphahBiblical]
   VolumeDry get toEphahBiblical => convertTo(
-        const VolumeDry$EphahBiblical(),
+        VolumeDry$EphahBiblical(),
       );
 
   /// Convert to [VolumeDry$SeahBiblical]
   VolumeDry get toSeahBiblical => convertTo(
-        const VolumeDry$SeahBiblical(),
+        VolumeDry$SeahBiblical(),
       );
 
   /// Convert to [VolumeDry$OmerBiblical]
   VolumeDry get toOmerBiblical => convertTo(
-        const VolumeDry$OmerBiblical(),
+        VolumeDry$OmerBiblical(),
       );
 
   /// Convert to [VolumeDry$CabBiblical]
   VolumeDry get toCabBiblical => convertTo(
-        const VolumeDry$CabBiblical(),
+        VolumeDry$CabBiblical(),
       );
 
   /// Convert to [VolumeDry$LogBiblical]
   VolumeDry get toLogBiblical => convertTo(
-        const VolumeDry$LogBiblical(),
+        VolumeDry$LogBiblical(),
       );
 
   @override
@@ -99,19 +100,19 @@ sealed class VolumeDry extends Unit<VolumeDry> {
 
   static const _majorName = 'volumeDry';
 
-  static const barrel = VolumeDry$Barrel();
-  static const liter = VolumeDry$Liter();
-  static const pint = VolumeDry$Pint();
-  static const quart = VolumeDry$Quart();
-  static const peck = VolumeDry$Peck();
-  static const bushel = VolumeDry$Bushel();
-  static const corBiblical = VolumeDry$CorBiblical();
-  static const homerBiblical = VolumeDry$HomerBiblical();
-  static const ephahBiblical = VolumeDry$EphahBiblical();
-  static const seahBiblical = VolumeDry$SeahBiblical();
-  static const omerBiblical = VolumeDry$OmerBiblical();
-  static const cabBiblical = VolumeDry$CabBiblical();
-  static const logBiblical = VolumeDry$LogBiblical();
+  static final barrel = VolumeDry$Barrel();
+  static final liter = VolumeDry$Liter();
+  static final pint = VolumeDry$Pint();
+  static final quart = VolumeDry$Quart();
+  static final peck = VolumeDry$Peck();
+  static final bushel = VolumeDry$Bushel();
+  static final corBiblical = VolumeDry$CorBiblical();
+  static final homerBiblical = VolumeDry$HomerBiblical();
+  static final ephahBiblical = VolumeDry$EphahBiblical();
+  static final seahBiblical = VolumeDry$SeahBiblical();
+  static final omerBiblical = VolumeDry$OmerBiblical();
+  static final cabBiblical = VolumeDry$CabBiblical();
+  static final logBiblical = VolumeDry$LogBiblical();
 
   @override
   List<VolumeDry> get units => values;
@@ -119,7 +120,7 @@ sealed class VolumeDry extends Unit<VolumeDry> {
   @override
   EnumValues<VolumeDry> get unitsAsMap => valuesAsMap;
 
-  static const values = [
+  static final values = <VolumeDry>[
     barrel,
     liter,
     pint,
@@ -135,7 +136,7 @@ sealed class VolumeDry extends Unit<VolumeDry> {
     logBiblical,
   ];
 
-  static const valuesAsMap = EnumValues({
+  static final valuesAsMap = EnumValues(<String, VolumeDry>{
     VolumeDry$Barrel._minorName: barrel,
     VolumeDry$Liter._minorName: liter,
     VolumeDry$Pint._minorName: pint,
@@ -154,7 +155,7 @@ sealed class VolumeDry extends Unit<VolumeDry> {
 
 /// Unit of [VolumeDry]
 final class VolumeDry$Barrel extends VolumeDry {
-  const VolumeDry$Barrel([
+  VolumeDry$Barrel([
     super.value,
   ]);
 
@@ -185,14 +186,14 @@ final class VolumeDry$Barrel extends VolumeDry {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 378.41605930454045;
+  static final _ratio = Rational.parse('3.78416059304540438E+002');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$Barrel] ≈ 378.41605930454045 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Barrel] ≈ 3.78416059304540438E+002 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -200,12 +201,12 @@ final class VolumeDry$Barrel extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$Barrel] with new value
   @override
   VolumeDry$Barrel withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$Barrel(val);
 
@@ -218,14 +219,14 @@ final class VolumeDry$Barrel extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$Liter extends VolumeDry {
-  const VolumeDry$Liter([
+  VolumeDry$Liter([
     super.value,
   ]);
 
@@ -256,14 +257,14 @@ final class VolumeDry$Liter extends VolumeDry {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.27272743202319;
+  static final _ratio = Rational.parse('3.27272743202318982E+000');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$Liter] ≈ 3.27272743202319 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Liter] ≈ 3.27272743202318982E+000 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -271,12 +272,12 @@ final class VolumeDry$Liter extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$Liter] with new value
   @override
   VolumeDry$Liter withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$Liter(val);
 
@@ -289,14 +290,14 @@ final class VolumeDry$Liter extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$Pint extends VolumeDry {
-  const VolumeDry$Pint([
+  VolumeDry$Pint([
     super.value,
   ]);
 
@@ -327,14 +328,14 @@ final class VolumeDry$Pint extends VolumeDry {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 1.80199799411;
+  static final _ratio = Rational.parse('1.80199799411000000E+000');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$Pint] ≈ 1.80199799411 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Pint] ≈ 1.80199799411000000E+000 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -342,12 +343,12 @@ final class VolumeDry$Pint extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$Pint] with new value
   @override
   VolumeDry$Pint withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$Pint(val);
 
@@ -360,14 +361,14 @@ final class VolumeDry$Pint extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$Quart extends VolumeDry {
-  const VolumeDry$Quart([
+  VolumeDry$Quart([
     super.value,
   ]);
 
@@ -398,14 +399,14 @@ final class VolumeDry$Quart extends VolumeDry {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 3.60399598822;
+  static final _ratio = Rational.parse('3.60399598822000000E+000');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$Quart] ≈ 3.60399598822 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Quart] ≈ 3.60399598822000000E+000 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -413,12 +414,12 @@ final class VolumeDry$Quart extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$Quart] with new value
   @override
   VolumeDry$Quart withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$Quart(val);
 
@@ -431,14 +432,14 @@ final class VolumeDry$Quart extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$Peck extends VolumeDry {
-  const VolumeDry$Peck([
+  VolumeDry$Peck([
     super.value,
   ]);
 
@@ -469,14 +470,14 @@ final class VolumeDry$Peck extends VolumeDry {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 28.83196790576;
+  static final _ratio = Rational.parse('2.88319679057600000E+001');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$Peck] ≈ 28.83196790576 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Peck] ≈ 2.88319679057600000E+001 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -484,12 +485,12 @@ final class VolumeDry$Peck extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$Peck] with new value
   @override
   VolumeDry$Peck withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$Peck(val);
 
@@ -502,14 +503,14 @@ final class VolumeDry$Peck extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$Bushel extends VolumeDry {
-  const VolumeDry$Bushel([
+  VolumeDry$Bushel([
     super.value,
   ]);
 
@@ -540,14 +541,14 @@ final class VolumeDry$Bushel extends VolumeDry {
   @override
   String get displayName => _minorName;
 
-  static const _ratio = 115.32787162304;
+  static final _ratio = Rational.parse('1.15327871623040000E+002');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$Bushel] ≈ 115.32787162304 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$Bushel] ≈ 1.15327871623040000E+002 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -555,12 +556,12 @@ final class VolumeDry$Bushel extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$Bushel] with new value
   @override
   VolumeDry$Bushel withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$Bushel(val);
 
@@ -573,14 +574,14 @@ final class VolumeDry$Bushel extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$CorBiblical extends VolumeDry {
-  const VolumeDry$CorBiblical([
+  VolumeDry$CorBiblical([
     super.value,
   ]);
 
@@ -611,14 +612,14 @@ final class VolumeDry$CorBiblical extends VolumeDry {
   @override
   String get displayName => 'cor (Biblical)';
 
-  static const _ratio = 720.0;
+  static final _ratio = Rational.parse('7.20000000000000000E+002');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$CorBiblical] = 720.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$CorBiblical] = 7.20000000000000000E+002 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -626,12 +627,12 @@ final class VolumeDry$CorBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$CorBiblical] with new value
   @override
   VolumeDry$CorBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$CorBiblical(val);
 
@@ -644,14 +645,14 @@ final class VolumeDry$CorBiblical extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$HomerBiblical extends VolumeDry {
-  const VolumeDry$HomerBiblical([
+  VolumeDry$HomerBiblical([
     super.value,
   ]);
 
@@ -682,14 +683,14 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
   @override
   String get displayName => 'homer (Biblical)';
 
-  static const _ratio = 720.0;
+  static final _ratio = Rational.parse('7.20000000000000000E+002');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$HomerBiblical] = 720.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$HomerBiblical] = 7.20000000000000000E+002 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -697,12 +698,12 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$HomerBiblical] with new value
   @override
   VolumeDry$HomerBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$HomerBiblical(val);
 
@@ -715,14 +716,14 @@ final class VolumeDry$HomerBiblical extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$EphahBiblical extends VolumeDry {
-  const VolumeDry$EphahBiblical([
+  VolumeDry$EphahBiblical([
     super.value,
   ]);
 
@@ -753,14 +754,14 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
   @override
   String get displayName => 'ephah (Biblical)';
 
-  static const _ratio = 72.0;
+  static final _ratio = Rational.parse('7.20000000000000000E+001');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$EphahBiblical] = 72.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$EphahBiblical] = 7.20000000000000000E+001 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -768,12 +769,12 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$EphahBiblical] with new value
   @override
   VolumeDry$EphahBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$EphahBiblical(val);
 
@@ -786,14 +787,14 @@ final class VolumeDry$EphahBiblical extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$SeahBiblical extends VolumeDry {
-  const VolumeDry$SeahBiblical([
+  VolumeDry$SeahBiblical([
     super.value,
   ]);
 
@@ -824,14 +825,14 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
   @override
   String get displayName => 'seah (Biblical)';
 
-  static const _ratio = 24.0;
+  static final _ratio = Rational.parse('2.40000000000000000E+001');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$SeahBiblical] = 24.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$SeahBiblical] = 2.40000000000000000E+001 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -839,12 +840,12 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$SeahBiblical] with new value
   @override
   VolumeDry$SeahBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$SeahBiblical(val);
 
@@ -857,14 +858,14 @@ final class VolumeDry$SeahBiblical extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$OmerBiblical extends VolumeDry {
-  const VolumeDry$OmerBiblical([
+  VolumeDry$OmerBiblical([
     super.value,
   ]);
 
@@ -895,14 +896,14 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
   @override
   String get displayName => 'omer (Biblical)';
 
-  static const _ratio = 7.2;
+  static final _ratio = Rational.parse('7.20000000000000000E+000');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$OmerBiblical] ≈ 7.2 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$OmerBiblical] ≈ 7.20000000000000000E+000 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -910,12 +911,12 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$OmerBiblical] with new value
   @override
   VolumeDry$OmerBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$OmerBiblical(val);
 
@@ -928,14 +929,14 @@ final class VolumeDry$OmerBiblical extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$CabBiblical extends VolumeDry {
-  const VolumeDry$CabBiblical([
+  VolumeDry$CabBiblical([
     super.value,
   ]);
 
@@ -966,14 +967,14 @@ final class VolumeDry$CabBiblical extends VolumeDry {
   @override
   String get displayName => 'cab (Biblical)';
 
-  static const _ratio = 4.0;
+  static final _ratio = Rational.parse('4.00000000000000000E+000');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
-  /// 1 [VolumeDry$CabBiblical] = 4.0 [VolumeDry$LogBiblical]
+  /// 1 [VolumeDry$CabBiblical] = 4.00000000000000000E+000 [VolumeDry$LogBiblical]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -981,12 +982,12 @@ final class VolumeDry$CabBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$CabBiblical] with new value
   @override
   VolumeDry$CabBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$CabBiblical(val);
 
@@ -999,14 +1000,14 @@ final class VolumeDry$CabBiblical extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
 
 /// Unit of [VolumeDry]
 final class VolumeDry$LogBiblical extends VolumeDry {
-  const VolumeDry$LogBiblical([
+  VolumeDry$LogBiblical([
     super.value,
   ]);
 
@@ -1037,14 +1038,14 @@ final class VolumeDry$LogBiblical extends VolumeDry {
   @override
   String get displayName => 'log (Biblical)';
 
-  static const _ratio = 1.0;
+  static final _ratio = Rational.parse('1.00000000000000000E+000');
 
   @override
-  VolumeDry get anchor => const VolumeDry$LogBiblical(_ratio);
+  VolumeDry get anchor => VolumeDry$LogBiblical(_ratio);
 
   /// Default (anchor) unit of [VolumeDry]
   @override
-  num get ratio => _ratio;
+  Rational get ratio => _ratio;
 
   /// Clone this with same value
   @override
@@ -1052,12 +1053,12 @@ final class VolumeDry$LogBiblical extends VolumeDry {
 
   /// Ignore this
   @override
-  num get valueShift => 0.0;
+  Rational get valueShift => Rational.parse('0');
 
   /// Creating [VolumeDry$LogBiblical] with new value
   @override
   VolumeDry$LogBiblical withValue(
-    num val,
+    Rational val,
   ) =>
       VolumeDry$LogBiblical(val);
 
@@ -1070,7 +1071,7 @@ final class VolumeDry$LogBiblical extends VolumeDry {
   Map<String, dynamic> toJson() => {
         majorName: {
           _unit: _minorName,
-          _value: value,
+          _value: value.toDouble(),
         },
       };
 }
