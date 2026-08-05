@@ -7,7 +7,6 @@ environment:
   sdk: ^3.5.4
 
 dependencies:
-  args: ^2.5.0
 
 dev_dependencies:
   lint: ^2.8.0
