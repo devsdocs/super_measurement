@@ -1,3 +1,6 @@
+## 5.0.1
+- Remove `args` dependency
+
 ## 5.0.0
 - **MAJOR BREAKING CHANGE**: Migrated entirely to exact `Rational` math (BigInt-backed) for all internal conversions to eliminate floating-point precision drift.
 - **BREAKING**: Removed `const` from unit constructors since `Rational` is not a compile-time constant. All `const Length$Meter(...)` must now use `final` or just omit the keyword.
